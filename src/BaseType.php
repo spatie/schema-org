@@ -20,11 +20,30 @@ abstract class BaseType implements Type
         return (new ReflectionClass($this))->getShortName();
     }
 
-    public function setProperty(string $property, $value)
+    public function setProperty(string $property, $value, $validTypes = null)
     {
+        if ($validTypes) {
+            $this->validateValue($value, $validTypes);
+        }
+
         $this->properties[$property] = $value;
 
         return $this;
+    }
+
+    protected function validateValue($value, array $validTypes)
+    {
+        foreach ($validTypes as $type) {
+            if ($type === 'string' && is_string($value)) {
+                return;
+            }
+
+            if ($value instanceof $type) {
+                return;
+            }
+        }
+
+        throw new InvalidProperty();
     }
 
     public function getProperties(): array

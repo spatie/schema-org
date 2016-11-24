@@ -5,8 +5,8 @@ namespace Spatie\SchemaOrg\Properties;
 /**
  * @mixin \Spatie\SchemaOrg\BaseType
  *
- * @todo
+ * @todo Implement `additionalProperty` (requires PropertyValue type)
  */
-trait Organization
+trait Place
 {
 }

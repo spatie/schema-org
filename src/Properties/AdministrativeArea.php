@@ -4,9 +4,7 @@ namespace Spatie\SchemaOrg\Properties;
 
 /**
  * @mixin \Spatie\SchemaOrg\BaseType
- *
- * @todo
  */
-trait Organization
+trait AdministrativeArea
 {
 }
