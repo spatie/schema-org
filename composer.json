@@ -1,11 +1,11 @@
 {
-    "name": "spatie/schema-org-builder",
+    "name": "spatie/schema-org",
     "description": ":package_description",
     "keywords": [
         "spatie",
-        "schema-org-builder"
+        "schema-org"
     ],
-    "homepage": "https://github.com/spatie/schema-org-builder",
+    "homepage": "https://github.com/spatie/schema-org",
     "license": "MIT",
     "authors": [
         {
@@ -23,12 +23,12 @@
     },
     "autoload": {
         "psr-4": {
-            "Spatie\\Skeleton\\": "src"
+            "Spatie\\SchemaOrg\\": "src"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "Spatie\\Skeleton\\Test\\": "tests"
+            "Spatie\\SchemaOrg\\Test\\": "tests"
         }
     },
     "scripts": {
