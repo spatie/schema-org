@@ -12,4 +12,9 @@ class Filters
 
         return wordwrap($text, $lineLength, "\n".str_repeat(' ', $indentation * 4).' * ');
     }
+
+    public static function lcfirst($text): string
+    {
+        return lcfirst($text);
+    }
 }

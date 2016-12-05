@@ -27,4 +27,9 @@ class TypeCollection
             $callable($type);
         }
     }
+
+    public function toArray(): array
+    {
+        return $this->types;
+    }
 }

@@ -1,0 +1,16 @@
+<?php
+
+namespace Spatie\SchemaOrg;
+
+/**
+ * Factory class for all Schema.org types.
+ */
+class Schema
+{
+{% for type in types %}    public function {{ type.name | lcfirst }}(): {{ type.name }}
+    {
+        return new {{ type.name }}();
+    }
+
+{% endfor %}
+}

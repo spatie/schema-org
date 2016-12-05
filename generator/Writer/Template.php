@@ -40,6 +40,10 @@ class Template
             new Twig_SimpleFilter('doc', [Filters::class, 'doc'], ['is_variadic' => true])
         );
 
+        $twig->addFilter(
+            new Twig_SimpleFilter('lcfirst', [Filters::class, 'lcfirst'])
+        );
+
         return $twig;
     }
 }
