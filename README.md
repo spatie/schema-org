@@ -28,8 +28,8 @@ $localBusiness->toScript();
     "name": "Spatie",
     "email": "info@spatie.be",
     "contactPoint": {
-        "@type":"ContactPoint",
-        "areaServed":"Worldwide"
+        "@type": "ContactPoint",
+        "areaServed": "Worldwide"
     }
 }
 </script>
