@@ -7,2962 +7,2962 @@ namespace Spatie\SchemaOrg;
  */
 class Schema
 {
-    public function thing(): Thing
+    public static function thing(): Thing
     {
         return new Thing();
     }
 
-    public function creativeWork(): CreativeWork
+    public static function creativeWork(): CreativeWork
     {
         return new CreativeWork();
     }
 
-    public function webPage(): WebPage
+    public static function webPage(): WebPage
     {
         return new WebPage();
     }
 
-    public function aboutPage(): AboutPage
+    public static function aboutPage(): AboutPage
     {
         return new AboutPage();
     }
 
-    public function organization(): Organization
+    public static function organization(): Organization
     {
         return new Organization();
     }
 
-    public function place(): Place
+    public static function place(): Place
     {
         return new Place();
     }
 
-    public function localBusiness(): LocalBusiness
+    public static function localBusiness(): LocalBusiness
     {
         return new LocalBusiness();
     }
 
-    public function medicalOrganization(): MedicalOrganization
+    public static function medicalOrganization(): MedicalOrganization
     {
         return new MedicalOrganization();
     }
 
-    public function dentist(): Dentist
+    public static function dentist(): Dentist
     {
         return new Dentist();
     }
 
-    public function hospital(): Hospital
+    public static function hospital(): Hospital
     {
         return new Hospital();
     }
 
-    public function physician(): Physician
+    public static function physician(): Physician
     {
         return new Physician();
     }
 
-    public function pharmacy(): Pharmacy
+    public static function pharmacy(): Pharmacy
     {
         return new Pharmacy();
     }
 
-    public function financialService(): FinancialService
+    public static function financialService(): FinancialService
     {
         return new FinancialService();
     }
 
-    public function professionalService(): ProfessionalService
+    public static function professionalService(): ProfessionalService
     {
         return new ProfessionalService();
     }
 
-    public function legalService(): LegalService
+    public static function legalService(): LegalService
     {
         return new LegalService();
     }
 
-    public function accountingService(): AccountingService
+    public static function accountingService(): AccountingService
     {
         return new AccountingService();
     }
 
-    public function administrativeArea(): AdministrativeArea
+    public static function administrativeArea(): AdministrativeArea
     {
         return new AdministrativeArea();
     }
 
-    public function entertainmentBusiness(): EntertainmentBusiness
+    public static function entertainmentBusiness(): EntertainmentBusiness
     {
         return new EntertainmentBusiness();
     }
 
-    public function adultEntertainment(): AdultEntertainment
+    public static function adultEntertainment(): AdultEntertainment
     {
         return new AdultEntertainment();
     }
 
-    public function intangible(): Intangible
+    public static function intangible(): Intangible
     {
         return new Intangible();
     }
 
-    public function offer(): Offer
+    public static function offer(): Offer
     {
         return new Offer();
     }
 
-    public function aggregateOffer(): AggregateOffer
+    public static function aggregateOffer(): AggregateOffer
     {
         return new AggregateOffer();
     }
 
-    public function rating(): Rating
+    public static function rating(): Rating
     {
         return new Rating();
     }
 
-    public function aggregateRating(): AggregateRating
+    public static function aggregateRating(): AggregateRating
     {
         return new AggregateRating();
     }
 
-    public function civicStructure(): CivicStructure
+    public static function civicStructure(): CivicStructure
     {
         return new CivicStructure();
     }
 
-    public function airport(): Airport
+    public static function airport(): Airport
     {
         return new Airport();
     }
 
-    public function amusementPark(): AmusementPark
+    public static function amusementPark(): AmusementPark
     {
         return new AmusementPark();
     }
 
-    public function animalShelter(): AnimalShelter
+    public static function animalShelter(): AnimalShelter
     {
         return new AnimalShelter();
     }
 
-    public function residence(): Residence
+    public static function residence(): Residence
     {
         return new Residence();
     }
 
-    public function apartmentComplex(): ApartmentComplex
+    public static function apartmentComplex(): ApartmentComplex
     {
         return new ApartmentComplex();
     }
 
-    public function aquarium(): Aquarium
+    public static function aquarium(): Aquarium
     {
         return new Aquarium();
     }
 
-    public function artGallery(): ArtGallery
+    public static function artGallery(): ArtGallery
     {
         return new ArtGallery();
     }
 
-    public function article(): Article
+    public static function article(): Article
     {
         return new Article();
     }
 
-    public function attorney(): Attorney
+    public static function attorney(): Attorney
     {
         return new Attorney();
     }
 
-    public function audience(): Audience
+    public static function audience(): Audience
     {
         return new Audience();
     }
 
-    public function mediaObject(): MediaObject
+    public static function mediaObject(): MediaObject
     {
         return new MediaObject();
     }
 
-    public function audioObject(): AudioObject
+    public static function audioObject(): AudioObject
     {
         return new AudioObject();
     }
 
-    public function automotiveBusiness(): AutomotiveBusiness
+    public static function automotiveBusiness(): AutomotiveBusiness
     {
         return new AutomotiveBusiness();
     }
 
-    public function autoBodyShop(): AutoBodyShop
+    public static function autoBodyShop(): AutoBodyShop
     {
         return new AutoBodyShop();
     }
 
-    public function autoDealer(): AutoDealer
+    public static function autoDealer(): AutoDealer
     {
         return new AutoDealer();
     }
 
-    public function store(): Store
+    public static function store(): Store
     {
         return new Store();
     }
 
-    public function autoPartsStore(): AutoPartsStore
+    public static function autoPartsStore(): AutoPartsStore
     {
         return new AutoPartsStore();
     }
 
-    public function autoRental(): AutoRental
+    public static function autoRental(): AutoRental
     {
         return new AutoRental();
     }
 
-    public function autoRepair(): AutoRepair
+    public static function autoRepair(): AutoRepair
     {
         return new AutoRepair();
     }
 
-    public function autoWash(): AutoWash
+    public static function autoWash(): AutoWash
     {
         return new AutoWash();
     }
 
-    public function automatedTeller(): AutomatedTeller
+    public static function automatedTeller(): AutomatedTeller
     {
         return new AutomatedTeller();
     }
 
-    public function foodEstablishment(): FoodEstablishment
+    public static function foodEstablishment(): FoodEstablishment
     {
         return new FoodEstablishment();
     }
 
-    public function bakery(): Bakery
+    public static function bakery(): Bakery
     {
         return new Bakery();
     }
 
-    public function bankOrCreditUnion(): BankOrCreditUnion
+    public static function bankOrCreditUnion(): BankOrCreditUnion
     {
         return new BankOrCreditUnion();
     }
 
-    public function barcode(): Barcode
+    public static function barcode(): Barcode
     {
         return new Barcode();
     }
 
-    public function barOrPub(): BarOrPub
+    public static function barOrPub(): BarOrPub
     {
         return new BarOrPub();
     }
 
-    public function beach(): Beach
+    public static function beach(): Beach
     {
         return new Beach();
     }
 
-    public function healthAndBeautyBusiness(): HealthAndBeautyBusiness
+    public static function healthAndBeautyBusiness(): HealthAndBeautyBusiness
     {
         return new HealthAndBeautyBusiness();
     }
 
-    public function beautySalon(): BeautySalon
+    public static function beautySalon(): BeautySalon
     {
         return new BeautySalon();
     }
 
-    public function lodgingBusiness(): LodgingBusiness
+    public static function lodgingBusiness(): LodgingBusiness
     {
         return new LodgingBusiness();
     }
 
-    public function bedAndBreakfast(): BedAndBreakfast
+    public static function bedAndBreakfast(): BedAndBreakfast
     {
         return new BedAndBreakfast();
     }
 
-    public function bikeStore(): BikeStore
+    public static function bikeStore(): BikeStore
     {
         return new BikeStore();
     }
 
-    public function blog(): Blog
+    public static function blog(): Blog
     {
         return new Blog();
     }
 
-    public function blogPosting(): BlogPosting
+    public static function blogPosting(): BlogPosting
     {
         return new BlogPosting();
     }
 
-    public function landform(): Landform
+    public static function landform(): Landform
     {
         return new Landform();
     }
 
-    public function bodyOfWater(): BodyOfWater
+    public static function bodyOfWater(): BodyOfWater
     {
         return new BodyOfWater();
     }
 
-    public function book(): Book
+    public static function book(): Book
     {
         return new Book();
     }
 
-    public function bookFormatType(): BookFormatType
+    public static function bookFormatType(): BookFormatType
     {
         return new BookFormatType();
     }
 
-    public function bookStore(): BookStore
+    public static function bookStore(): BookStore
     {
         return new BookStore();
     }
 
-    public function sportsActivityLocation(): SportsActivityLocation
+    public static function sportsActivityLocation(): SportsActivityLocation
     {
         return new SportsActivityLocation();
     }
 
-    public function bowlingAlley(): BowlingAlley
+    public static function bowlingAlley(): BowlingAlley
     {
         return new BowlingAlley();
     }
 
-    public function brewery(): Brewery
+    public static function brewery(): Brewery
     {
         return new Brewery();
     }
 
-    public function placeOfWorship(): PlaceOfWorship
+    public static function placeOfWorship(): PlaceOfWorship
     {
         return new PlaceOfWorship();
     }
 
-    public function buddhistTemple(): BuddhistTemple
+    public static function buddhistTemple(): BuddhistTemple
     {
         return new BuddhistTemple();
     }
 
-    public function busStation(): BusStation
+    public static function busStation(): BusStation
     {
         return new BusStation();
     }
 
-    public function busStop(): BusStop
+    public static function busStop(): BusStop
     {
         return new BusStop();
     }
 
-    public function event(): Event
+    public static function event(): Event
     {
         return new Event();
     }
 
-    public function businessEvent(): BusinessEvent
+    public static function businessEvent(): BusinessEvent
     {
         return new BusinessEvent();
     }
 
-    public function cafeOrCoffeeShop(): CafeOrCoffeeShop
+    public static function cafeOrCoffeeShop(): CafeOrCoffeeShop
     {
         return new CafeOrCoffeeShop();
     }
 
-    public function campground(): Campground
+    public static function campground(): Campground
     {
         return new Campground();
     }
 
-    public function canal(): Canal
+    public static function canal(): Canal
     {
         return new Canal();
     }
 
-    public function casino(): Casino
+    public static function casino(): Casino
     {
         return new Casino();
     }
 
-    public function catholicChurch(): CatholicChurch
+    public static function catholicChurch(): CatholicChurch
     {
         return new CatholicChurch();
     }
 
-    public function cemetery(): Cemetery
+    public static function cemetery(): Cemetery
     {
         return new Cemetery();
     }
 
-    public function checkoutPage(): CheckoutPage
+    public static function checkoutPage(): CheckoutPage
     {
         return new CheckoutPage();
     }
 
-    public function childCare(): ChildCare
+    public static function childCare(): ChildCare
     {
         return new ChildCare();
     }
 
-    public function childrensEvent(): ChildrensEvent
+    public static function childrensEvent(): ChildrensEvent
     {
         return new ChildrensEvent();
     }
 
-    public function church(): Church
+    public static function church(): Church
     {
         return new Church();
     }
 
-    public function city(): City
+    public static function city(): City
     {
         return new City();
     }
 
-    public function governmentBuilding(): GovernmentBuilding
+    public static function governmentBuilding(): GovernmentBuilding
     {
         return new GovernmentBuilding();
     }
 
-    public function cityHall(): CityHall
+    public static function cityHall(): CityHall
     {
         return new CityHall();
     }
 
-    public function clothingStore(): ClothingStore
+    public static function clothingStore(): ClothingStore
     {
         return new ClothingStore();
     }
 
-    public function collectionPage(): CollectionPage
+    public static function collectionPage(): CollectionPage
     {
         return new CollectionPage();
     }
 
-    public function educationalOrganization(): EducationalOrganization
+    public static function educationalOrganization(): EducationalOrganization
     {
         return new EducationalOrganization();
     }
 
-    public function collegeOrUniversity(): CollegeOrUniversity
+    public static function collegeOrUniversity(): CollegeOrUniversity
     {
         return new CollegeOrUniversity();
     }
 
-    public function comedyClub(): ComedyClub
+    public static function comedyClub(): ComedyClub
     {
         return new ComedyClub();
     }
 
-    public function comedyEvent(): ComedyEvent
+    public static function comedyEvent(): ComedyEvent
     {
         return new ComedyEvent();
     }
 
-    public function comment(): Comment
+    public static function comment(): Comment
     {
         return new Comment();
     }
 
-    public function computerStore(): ComputerStore
+    public static function computerStore(): ComputerStore
     {
         return new ComputerStore();
     }
 
-    public function contactPage(): ContactPage
+    public static function contactPage(): ContactPage
     {
         return new ContactPage();
     }
 
-    public function structuredValue(): StructuredValue
+    public static function structuredValue(): StructuredValue
     {
         return new StructuredValue();
     }
 
-    public function contactPoint(): ContactPoint
+    public static function contactPoint(): ContactPoint
     {
         return new ContactPoint();
     }
 
-    public function continent(): Continent
+    public static function continent(): Continent
     {
         return new Continent();
     }
 
-    public function convenienceStore(): ConvenienceStore
+    public static function convenienceStore(): ConvenienceStore
     {
         return new ConvenienceStore();
     }
 
-    public function corporation(): Corporation
+    public static function corporation(): Corporation
     {
         return new Corporation();
     }
 
-    public function country(): Country
+    public static function country(): Country
     {
         return new Country();
     }
 
-    public function courthouse(): Courthouse
+    public static function courthouse(): Courthouse
     {
         return new Courthouse();
     }
 
-    public function crematorium(): Crematorium
+    public static function crematorium(): Crematorium
     {
         return new Crematorium();
     }
 
-    public function danceEvent(): DanceEvent
+    public static function danceEvent(): DanceEvent
     {
         return new DanceEvent();
     }
 
-    public function performingGroup(): PerformingGroup
+    public static function performingGroup(): PerformingGroup
     {
         return new PerformingGroup();
     }
 
-    public function danceGroup(): DanceGroup
+    public static function danceGroup(): DanceGroup
     {
         return new DanceGroup();
     }
 
-    public function daySpa(): DaySpa
+    public static function daySpa(): DaySpa
     {
         return new DaySpa();
     }
 
-    public function defenceEstablishment(): DefenceEstablishment
+    public static function defenceEstablishment(): DefenceEstablishment
     {
         return new DefenceEstablishment();
     }
 
-    public function departmentStore(): DepartmentStore
+    public static function departmentStore(): DepartmentStore
     {
         return new DepartmentStore();
     }
 
-    public function quantity(): Quantity
+    public static function quantity(): Quantity
     {
         return new Quantity();
     }
 
-    public function distance(): Distance
+    public static function distance(): Distance
     {
         return new Distance();
     }
 
-    public function dryCleaningOrLaundry(): DryCleaningOrLaundry
+    public static function dryCleaningOrLaundry(): DryCleaningOrLaundry
     {
         return new DryCleaningOrLaundry();
     }
 
-    public function duration(): Duration
+    public static function duration(): Duration
     {
         return new Duration();
     }
 
-    public function educationEvent(): EducationEvent
+    public static function educationEvent(): EducationEvent
     {
         return new EducationEvent();
     }
 
-    public function homeAndConstructionBusiness(): HomeAndConstructionBusiness
+    public static function homeAndConstructionBusiness(): HomeAndConstructionBusiness
     {
         return new HomeAndConstructionBusiness();
     }
 
-    public function electrician(): Electrician
+    public static function electrician(): Electrician
     {
         return new Electrician();
     }
 
-    public function electronicsStore(): ElectronicsStore
+    public static function electronicsStore(): ElectronicsStore
     {
         return new ElectronicsStore();
     }
 
-    public function elementarySchool(): ElementarySchool
+    public static function elementarySchool(): ElementarySchool
     {
         return new ElementarySchool();
     }
 
-    public function embassy(): Embassy
+    public static function embassy(): Embassy
     {
         return new Embassy();
     }
 
-    public function emergencyService(): EmergencyService
+    public static function emergencyService(): EmergencyService
     {
         return new EmergencyService();
     }
 
-    public function employmentAgency(): EmploymentAgency
+    public static function employmentAgency(): EmploymentAgency
     {
         return new EmploymentAgency();
     }
 
-    public function energy(): Energy
+    public static function energy(): Energy
     {
         return new Energy();
     }
 
-    public function eventVenue(): EventVenue
+    public static function eventVenue(): EventVenue
     {
         return new EventVenue();
     }
 
-    public function exerciseGym(): ExerciseGym
+    public static function exerciseGym(): ExerciseGym
     {
         return new ExerciseGym();
     }
 
-    public function fastFoodRestaurant(): FastFoodRestaurant
+    public static function fastFoodRestaurant(): FastFoodRestaurant
     {
         return new FastFoodRestaurant();
     }
 
-    public function festival(): Festival
+    public static function festival(): Festival
     {
         return new Festival();
     }
 
-    public function fireStation(): FireStation
+    public static function fireStation(): FireStation
     {
         return new FireStation();
     }
 
-    public function float(): Float
+    public static function float(): Float
     {
         return new Float();
     }
 
-    public function florist(): Florist
+    public static function florist(): Florist
     {
         return new Florist();
     }
 
-    public function foodEvent(): FoodEvent
+    public static function foodEvent(): FoodEvent
     {
         return new FoodEvent();
     }
 
-    public function furnitureStore(): FurnitureStore
+    public static function furnitureStore(): FurnitureStore
     {
         return new FurnitureStore();
     }
 
-    public function gardenStore(): GardenStore
+    public static function gardenStore(): GardenStore
     {
         return new GardenStore();
     }
 
-    public function gasStation(): GasStation
+    public static function gasStation(): GasStation
     {
         return new GasStation();
     }
 
-    public function gatedResidenceCommunity(): GatedResidenceCommunity
+    public static function gatedResidenceCommunity(): GatedResidenceCommunity
     {
         return new GatedResidenceCommunity();
     }
 
-    public function generalContractor(): GeneralContractor
+    public static function generalContractor(): GeneralContractor
     {
         return new GeneralContractor();
     }
 
-    public function geoCoordinates(): GeoCoordinates
+    public static function geoCoordinates(): GeoCoordinates
     {
         return new GeoCoordinates();
     }
 
-    public function geoShape(): GeoShape
+    public static function geoShape(): GeoShape
     {
         return new GeoShape();
     }
 
-    public function geoCircle(): GeoCircle
+    public static function geoCircle(): GeoCircle
     {
         return new GeoCircle();
     }
 
-    public function golfCourse(): GolfCourse
+    public static function golfCourse(): GolfCourse
     {
         return new GolfCourse();
     }
 
-    public function governmentOffice(): GovernmentOffice
+    public static function governmentOffice(): GovernmentOffice
     {
         return new GovernmentOffice();
     }
 
-    public function governmentOrganization(): GovernmentOrganization
+    public static function governmentOrganization(): GovernmentOrganization
     {
         return new GovernmentOrganization();
     }
 
-    public function groceryStore(): GroceryStore
+    public static function groceryStore(): GroceryStore
     {
         return new GroceryStore();
     }
 
-    public function hVACBusiness(): HVACBusiness
+    public static function hVACBusiness(): HVACBusiness
     {
         return new HVACBusiness();
     }
 
-    public function hairSalon(): HairSalon
+    public static function hairSalon(): HairSalon
     {
         return new HairSalon();
     }
 
-    public function hardwareStore(): HardwareStore
+    public static function hardwareStore(): HardwareStore
     {
         return new HardwareStore();
     }
 
-    public function healthClub(): HealthClub
+    public static function healthClub(): HealthClub
     {
         return new HealthClub();
     }
 
-    public function highSchool(): HighSchool
+    public static function highSchool(): HighSchool
     {
         return new HighSchool();
     }
 
-    public function hinduTemple(): HinduTemple
+    public static function hinduTemple(): HinduTemple
     {
         return new HinduTemple();
     }
 
-    public function hobbyShop(): HobbyShop
+    public static function hobbyShop(): HobbyShop
     {
         return new HobbyShop();
     }
 
-    public function homeGoodsStore(): HomeGoodsStore
+    public static function homeGoodsStore(): HomeGoodsStore
     {
         return new HomeGoodsStore();
     }
 
-    public function hostel(): Hostel
+    public static function hostel(): Hostel
     {
         return new Hostel();
     }
 
-    public function hotel(): Hotel
+    public static function hotel(): Hotel
     {
         return new Hotel();
     }
 
-    public function housePainter(): HousePainter
+    public static function housePainter(): HousePainter
     {
         return new HousePainter();
     }
 
-    public function iceCreamShop(): IceCreamShop
+    public static function iceCreamShop(): IceCreamShop
     {
         return new IceCreamShop();
     }
 
-    public function imageGallery(): ImageGallery
+    public static function imageGallery(): ImageGallery
     {
         return new ImageGallery();
     }
 
-    public function imageObject(): ImageObject
+    public static function imageObject(): ImageObject
     {
         return new ImageObject();
     }
 
-    public function insuranceAgency(): InsuranceAgency
+    public static function insuranceAgency(): InsuranceAgency
     {
         return new InsuranceAgency();
     }
 
-    public function integer(): Integer
+    public static function integer(): Integer
     {
         return new Integer();
     }
 
-    public function internetCafe(): InternetCafe
+    public static function internetCafe(): InternetCafe
     {
         return new InternetCafe();
     }
 
-    public function itemAvailability(): ItemAvailability
+    public static function itemAvailability(): ItemAvailability
     {
         return new ItemAvailability();
     }
 
-    public function itemList(): ItemList
+    public static function itemList(): ItemList
     {
         return new ItemList();
     }
 
-    public function breadcrumbList(): BreadcrumbList
+    public static function breadcrumbList(): BreadcrumbList
     {
         return new BreadcrumbList();
     }
 
-    public function offerCatalog(): OfferCatalog
+    public static function offerCatalog(): OfferCatalog
     {
         return new OfferCatalog();
     }
 
-    public function itemPage(): ItemPage
+    public static function itemPage(): ItemPage
     {
         return new ItemPage();
     }
 
-    public function jewelryStore(): JewelryStore
+    public static function jewelryStore(): JewelryStore
     {
         return new JewelryStore();
     }
 
-    public function jobPosting(): JobPosting
+    public static function jobPosting(): JobPosting
     {
         return new JobPosting();
     }
 
-    public function lakeBodyOfWater(): LakeBodyOfWater
+    public static function lakeBodyOfWater(): LakeBodyOfWater
     {
         return new LakeBodyOfWater();
     }
 
-    public function landmarksOrHistoricalBuildings(): LandmarksOrHistoricalBuildings
+    public static function landmarksOrHistoricalBuildings(): LandmarksOrHistoricalBuildings
     {
         return new LandmarksOrHistoricalBuildings();
     }
 
-    public function language(): Language
+    public static function language(): Language
     {
         return new Language();
     }
 
-    public function computerLanguage(): ComputerLanguage
+    public static function computerLanguage(): ComputerLanguage
     {
         return new ComputerLanguage();
     }
 
-    public function legislativeBuilding(): LegislativeBuilding
+    public static function legislativeBuilding(): LegislativeBuilding
     {
         return new LegislativeBuilding();
     }
 
-    public function library(): Library
+    public static function library(): Library
     {
         return new Library();
     }
 
-    public function liquorStore(): LiquorStore
+    public static function liquorStore(): LiquorStore
     {
         return new LiquorStore();
     }
 
-    public function literaryEvent(): LiteraryEvent
+    public static function literaryEvent(): LiteraryEvent
     {
         return new LiteraryEvent();
     }
 
-    public function locksmith(): Locksmith
+    public static function locksmith(): Locksmith
     {
         return new Locksmith();
     }
 
-    public function map(): Map
+    public static function map(): Map
     {
         return new Map();
     }
 
-    public function mapCategoryType(): MapCategoryType
+    public static function mapCategoryType(): MapCategoryType
     {
         return new MapCategoryType();
     }
 
-    public function mass(): Mass
+    public static function mass(): Mass
     {
         return new Mass();
     }
 
-    public function peopleAudience(): PeopleAudience
+    public static function peopleAudience(): PeopleAudience
     {
         return new PeopleAudience();
     }
 
-    public function scholarlyArticle(): ScholarlyArticle
+    public static function scholarlyArticle(): ScholarlyArticle
     {
         return new ScholarlyArticle();
     }
 
-    public function specialty(): Specialty
+    public static function specialty(): Specialty
     {
         return new Specialty();
     }
 
-    public function mensClothingStore(): MensClothingStore
+    public static function mensClothingStore(): MensClothingStore
     {
         return new MensClothingStore();
     }
 
-    public function middleSchool(): MiddleSchool
+    public static function middleSchool(): MiddleSchool
     {
         return new MiddleSchool();
     }
 
-    public function softwareApplication(): SoftwareApplication
+    public static function softwareApplication(): SoftwareApplication
     {
         return new SoftwareApplication();
     }
 
-    public function mobileApplication(): MobileApplication
+    public static function mobileApplication(): MobileApplication
     {
         return new MobileApplication();
     }
 
-    public function mobilePhoneStore(): MobilePhoneStore
+    public static function mobilePhoneStore(): MobilePhoneStore
     {
         return new MobilePhoneStore();
     }
 
-    public function mosque(): Mosque
+    public static function mosque(): Mosque
     {
         return new Mosque();
     }
 
-    public function motel(): Motel
+    public static function motel(): Motel
     {
         return new Motel();
     }
 
-    public function motorcycleDealer(): MotorcycleDealer
+    public static function motorcycleDealer(): MotorcycleDealer
     {
         return new MotorcycleDealer();
     }
 
-    public function motorcycleRepair(): MotorcycleRepair
+    public static function motorcycleRepair(): MotorcycleRepair
     {
         return new MotorcycleRepair();
     }
 
-    public function mountain(): Mountain
+    public static function mountain(): Mountain
     {
         return new Mountain();
     }
 
-    public function movie(): Movie
+    public static function movie(): Movie
     {
         return new Movie();
     }
 
-    public function movieClip(): MovieClip
+    public static function movieClip(): MovieClip
     {
         return new MovieClip();
     }
 
-    public function movieRentalStore(): MovieRentalStore
+    public static function movieRentalStore(): MovieRentalStore
     {
         return new MovieRentalStore();
     }
 
-    public function movieTheater(): MovieTheater
+    public static function movieTheater(): MovieTheater
     {
         return new MovieTheater();
     }
 
-    public function movingCompany(): MovingCompany
+    public static function movingCompany(): MovingCompany
     {
         return new MovingCompany();
     }
 
-    public function museum(): Museum
+    public static function museum(): Museum
     {
         return new Museum();
     }
 
-    public function musicPlaylist(): MusicPlaylist
+    public static function musicPlaylist(): MusicPlaylist
     {
         return new MusicPlaylist();
     }
 
-    public function musicAlbum(): MusicAlbum
+    public static function musicAlbum(): MusicAlbum
     {
         return new MusicAlbum();
     }
 
-    public function musicEvent(): MusicEvent
+    public static function musicEvent(): MusicEvent
     {
         return new MusicEvent();
     }
 
-    public function musicGroup(): MusicGroup
+    public static function musicGroup(): MusicGroup
     {
         return new MusicGroup();
     }
 
-    public function musicRecording(): MusicRecording
+    public static function musicRecording(): MusicRecording
     {
         return new MusicRecording();
     }
 
-    public function musicStore(): MusicStore
+    public static function musicStore(): MusicStore
     {
         return new MusicStore();
     }
 
-    public function musicVenue(): MusicVenue
+    public static function musicVenue(): MusicVenue
     {
         return new MusicVenue();
     }
 
-    public function musicVideoObject(): MusicVideoObject
+    public static function musicVideoObject(): MusicVideoObject
     {
         return new MusicVideoObject();
     }
 
-    public function nGO(): NGO
+    public static function nGO(): NGO
     {
         return new NGO();
     }
 
-    public function nailSalon(): NailSalon
+    public static function nailSalon(): NailSalon
     {
         return new NailSalon();
     }
 
-    public function newsArticle(): NewsArticle
+    public static function newsArticle(): NewsArticle
     {
         return new NewsArticle();
     }
 
-    public function nightClub(): NightClub
+    public static function nightClub(): NightClub
     {
         return new NightClub();
     }
 
-    public function photograph(): Photograph
+    public static function photograph(): Photograph
     {
         return new Photograph();
     }
 
-    public function notary(): Notary
+    public static function notary(): Notary
     {
         return new Notary();
     }
 
-    public function oceanBodyOfWater(): OceanBodyOfWater
+    public static function oceanBodyOfWater(): OceanBodyOfWater
     {
         return new OceanBodyOfWater();
     }
 
-    public function offerItemCondition(): OfferItemCondition
+    public static function offerItemCondition(): OfferItemCondition
     {
         return new OfferItemCondition();
     }
 
-    public function officeEquipmentStore(): OfficeEquipmentStore
+    public static function officeEquipmentStore(): OfficeEquipmentStore
     {
         return new OfficeEquipmentStore();
     }
 
-    public function outletStore(): OutletStore
+    public static function outletStore(): OutletStore
     {
         return new OutletStore();
     }
 
-    public function painting(): Painting
+    public static function painting(): Painting
     {
         return new Painting();
     }
 
-    public function park(): Park
+    public static function park(): Park
     {
         return new Park();
     }
 
-    public function parkingFacility(): ParkingFacility
+    public static function parkingFacility(): ParkingFacility
     {
         return new ParkingFacility();
     }
 
-    public function pawnShop(): PawnShop
+    public static function pawnShop(): PawnShop
     {
         return new PawnShop();
     }
 
-    public function performingArtsTheater(): PerformingArtsTheater
+    public static function performingArtsTheater(): PerformingArtsTheater
     {
         return new PerformingArtsTheater();
     }
 
-    public function person(): Person
+    public static function person(): Person
     {
         return new Person();
     }
 
-    public function petStore(): PetStore
+    public static function petStore(): PetStore
     {
         return new PetStore();
     }
 
-    public function playground(): Playground
+    public static function playground(): Playground
     {
         return new Playground();
     }
 
-    public function plumber(): Plumber
+    public static function plumber(): Plumber
     {
         return new Plumber();
     }
 
-    public function policeStation(): PoliceStation
+    public static function policeStation(): PoliceStation
     {
         return new PoliceStation();
     }
 
-    public function pond(): Pond
+    public static function pond(): Pond
     {
         return new Pond();
     }
 
-    public function postOffice(): PostOffice
+    public static function postOffice(): PostOffice
     {
         return new PostOffice();
     }
 
-    public function postalAddress(): PostalAddress
+    public static function postalAddress(): PostalAddress
     {
         return new PostalAddress();
     }
 
-    public function preschool(): Preschool
+    public static function preschool(): Preschool
     {
         return new Preschool();
     }
 
-    public function product(): Product
+    public static function product(): Product
     {
         return new Product();
     }
 
-    public function profilePage(): ProfilePage
+    public static function profilePage(): ProfilePage
     {
         return new ProfilePage();
     }
 
-    public function publicSwimmingPool(): PublicSwimmingPool
+    public static function publicSwimmingPool(): PublicSwimmingPool
     {
         return new PublicSwimmingPool();
     }
 
-    public function rVPark(): RVPark
+    public static function rVPark(): RVPark
     {
         return new RVPark();
     }
 
-    public function radioStation(): RadioStation
+    public static function radioStation(): RadioStation
     {
         return new RadioStation();
     }
 
-    public function realEstateAgent(): RealEstateAgent
+    public static function realEstateAgent(): RealEstateAgent
     {
         return new RealEstateAgent();
     }
 
-    public function recyclingCenter(): RecyclingCenter
+    public static function recyclingCenter(): RecyclingCenter
     {
         return new RecyclingCenter();
     }
 
-    public function reservoir(): Reservoir
+    public static function reservoir(): Reservoir
     {
         return new Reservoir();
     }
 
-    public function restaurant(): Restaurant
+    public static function restaurant(): Restaurant
     {
         return new Restaurant();
     }
 
-    public function restrictedDiet(): RestrictedDiet
+    public static function restrictedDiet(): RestrictedDiet
     {
         return new RestrictedDiet();
     }
 
-    public function review(): Review
+    public static function review(): Review
     {
         return new Review();
     }
 
-    public function riverBodyOfWater(): RiverBodyOfWater
+    public static function riverBodyOfWater(): RiverBodyOfWater
     {
         return new RiverBodyOfWater();
     }
 
-    public function roofingContractor(): RoofingContractor
+    public static function roofingContractor(): RoofingContractor
     {
         return new RoofingContractor();
     }
 
-    public function saleEvent(): SaleEvent
+    public static function saleEvent(): SaleEvent
     {
         return new SaleEvent();
     }
 
-    public function school(): School
+    public static function school(): School
     {
         return new School();
     }
 
-    public function sculpture(): Sculpture
+    public static function sculpture(): Sculpture
     {
         return new Sculpture();
     }
 
-    public function screeningEvent(): ScreeningEvent
+    public static function screeningEvent(): ScreeningEvent
     {
         return new ScreeningEvent();
     }
 
-    public function seaBodyOfWater(): SeaBodyOfWater
+    public static function seaBodyOfWater(): SeaBodyOfWater
     {
         return new SeaBodyOfWater();
     }
 
-    public function searchResultsPage(): SearchResultsPage
+    public static function searchResultsPage(): SearchResultsPage
     {
         return new SearchResultsPage();
     }
 
-    public function selfStorage(): SelfStorage
+    public static function selfStorage(): SelfStorage
     {
         return new SelfStorage();
     }
 
-    public function shoeStore(): ShoeStore
+    public static function shoeStore(): ShoeStore
     {
         return new ShoeStore();
     }
 
-    public function shoppingCenter(): ShoppingCenter
+    public static function shoppingCenter(): ShoppingCenter
     {
         return new ShoppingCenter();
     }
 
-    public function singleFamilyResidence(): SingleFamilyResidence
+    public static function singleFamilyResidence(): SingleFamilyResidence
     {
         return new SingleFamilyResidence();
     }
 
-    public function webPageElement(): WebPageElement
+    public static function webPageElement(): WebPageElement
     {
         return new WebPageElement();
     }
 
-    public function siteNavigationElement(): SiteNavigationElement
+    public static function siteNavigationElement(): SiteNavigationElement
     {
         return new SiteNavigationElement();
     }
 
-    public function skiResort(): SkiResort
+    public static function skiResort(): SkiResort
     {
         return new SkiResort();
     }
 
-    public function socialEvent(): SocialEvent
+    public static function socialEvent(): SocialEvent
     {
         return new SocialEvent();
     }
 
-    public function sportingGoodsStore(): SportingGoodsStore
+    public static function sportingGoodsStore(): SportingGoodsStore
     {
         return new SportingGoodsStore();
     }
 
-    public function sportsClub(): SportsClub
+    public static function sportsClub(): SportsClub
     {
         return new SportsClub();
     }
 
-    public function sportsEvent(): SportsEvent
+    public static function sportsEvent(): SportsEvent
     {
         return new SportsEvent();
     }
 
-    public function sportsTeam(): SportsTeam
+    public static function sportsTeam(): SportsTeam
     {
         return new SportsTeam();
     }
 
-    public function stadiumOrArena(): StadiumOrArena
+    public static function stadiumOrArena(): StadiumOrArena
     {
         return new StadiumOrArena();
     }
 
-    public function state(): State
+    public static function state(): State
     {
         return new State();
     }
 
-    public function subwayStation(): SubwayStation
+    public static function subwayStation(): SubwayStation
     {
         return new SubwayStation();
     }
 
-    public function synagogue(): Synagogue
+    public static function synagogue(): Synagogue
     {
         return new Synagogue();
     }
 
-    public function episode(): Episode
+    public static function episode(): Episode
     {
         return new Episode();
     }
 
-    public function tVEpisode(): TVEpisode
+    public static function tVEpisode(): TVEpisode
     {
         return new TVEpisode();
     }
 
-    public function season(): Season
+    public static function season(): Season
     {
         return new Season();
     }
 
-    public function creativeWorkSeason(): CreativeWorkSeason
+    public static function creativeWorkSeason(): CreativeWorkSeason
     {
         return new CreativeWorkSeason();
     }
 
-    public function tVSeason(): TVSeason
+    public static function tVSeason(): TVSeason
     {
         return new TVSeason();
     }
 
-    public function series(): Series
+    public static function series(): Series
     {
         return new Series();
     }
 
-    public function creativeWorkSeries(): CreativeWorkSeries
+    public static function creativeWorkSeries(): CreativeWorkSeries
     {
         return new CreativeWorkSeries();
     }
 
-    public function tVSeries(): TVSeries
+    public static function tVSeries(): TVSeries
     {
         return new TVSeries();
     }
 
-    public function videoGameSeries(): VideoGameSeries
+    public static function videoGameSeries(): VideoGameSeries
     {
         return new VideoGameSeries();
     }
 
-    public function table(): Table
+    public static function table(): Table
     {
         return new Table();
     }
 
-    public function tattooParlor(): TattooParlor
+    public static function tattooParlor(): TattooParlor
     {
         return new TattooParlor();
     }
 
-    public function taxiStand(): TaxiStand
+    public static function taxiStand(): TaxiStand
     {
         return new TaxiStand();
     }
 
-    public function televisionStation(): TelevisionStation
+    public static function televisionStation(): TelevisionStation
     {
         return new TelevisionStation();
     }
 
-    public function tennisComplex(): TennisComplex
+    public static function tennisComplex(): TennisComplex
     {
         return new TennisComplex();
     }
 
-    public function theaterEvent(): TheaterEvent
+    public static function theaterEvent(): TheaterEvent
     {
         return new TheaterEvent();
     }
 
-    public function theaterGroup(): TheaterGroup
+    public static function theaterGroup(): TheaterGroup
     {
         return new TheaterGroup();
     }
 
-    public function tireShop(): TireShop
+    public static function tireShop(): TireShop
     {
         return new TireShop();
     }
 
-    public function touristAttraction(): TouristAttraction
+    public static function touristAttraction(): TouristAttraction
     {
         return new TouristAttraction();
     }
 
-    public function touristInformationCenter(): TouristInformationCenter
+    public static function touristInformationCenter(): TouristInformationCenter
     {
         return new TouristInformationCenter();
     }
 
-    public function toyStore(): ToyStore
+    public static function toyStore(): ToyStore
     {
         return new ToyStore();
     }
 
-    public function trainStation(): TrainStation
+    public static function trainStation(): TrainStation
     {
         return new TrainStation();
     }
 
-    public function travelAgency(): TravelAgency
+    public static function travelAgency(): TravelAgency
     {
         return new TravelAgency();
     }
 
-    public function uRL(): URL
+    public static function uRL(): URL
     {
         return new URL();
     }
 
-    public function userInteraction(): UserInteraction
+    public static function userInteraction(): UserInteraction
     {
         return new UserInteraction();
     }
 
-    public function userBlocks(): UserBlocks
+    public static function userBlocks(): UserBlocks
     {
         return new UserBlocks();
     }
 
-    public function userCheckins(): UserCheckins
+    public static function userCheckins(): UserCheckins
     {
         return new UserCheckins();
     }
 
-    public function userComments(): UserComments
+    public static function userComments(): UserComments
     {
         return new UserComments();
     }
 
-    public function userDownloads(): UserDownloads
+    public static function userDownloads(): UserDownloads
     {
         return new UserDownloads();
     }
 
-    public function userLikes(): UserLikes
+    public static function userLikes(): UserLikes
     {
         return new UserLikes();
     }
 
-    public function userPageVisits(): UserPageVisits
+    public static function userPageVisits(): UserPageVisits
     {
         return new UserPageVisits();
     }
 
-    public function userPlays(): UserPlays
+    public static function userPlays(): UserPlays
     {
         return new UserPlays();
     }
 
-    public function userPlusOnes(): UserPlusOnes
+    public static function userPlusOnes(): UserPlusOnes
     {
         return new UserPlusOnes();
     }
 
-    public function userTweets(): UserTweets
+    public static function userTweets(): UserTweets
     {
         return new UserTweets();
     }
 
-    public function videoGallery(): VideoGallery
+    public static function videoGallery(): VideoGallery
     {
         return new VideoGallery();
     }
 
-    public function videoObject(): VideoObject
+    public static function videoObject(): VideoObject
     {
         return new VideoObject();
     }
 
-    public function visualArtsEvent(): VisualArtsEvent
+    public static function visualArtsEvent(): VisualArtsEvent
     {
         return new VisualArtsEvent();
     }
 
-    public function exhibitionEvent(): ExhibitionEvent
+    public static function exhibitionEvent(): ExhibitionEvent
     {
         return new ExhibitionEvent();
     }
 
-    public function volcano(): Volcano
+    public static function volcano(): Volcano
     {
         return new Volcano();
     }
 
-    public function wPAdBlock(): WPAdBlock
+    public static function wPAdBlock(): WPAdBlock
     {
         return new WPAdBlock();
     }
 
-    public function wPFooter(): WPFooter
+    public static function wPFooter(): WPFooter
     {
         return new WPFooter();
     }
 
-    public function wPHeader(): WPHeader
+    public static function wPHeader(): WPHeader
     {
         return new WPHeader();
     }
 
-    public function wPSideBar(): WPSideBar
+    public static function wPSideBar(): WPSideBar
     {
         return new WPSideBar();
     }
 
-    public function waterfall(): Waterfall
+    public static function waterfall(): Waterfall
     {
         return new Waterfall();
     }
 
-    public function webApplication(): WebApplication
+    public static function webApplication(): WebApplication
     {
         return new WebApplication();
     }
 
-    public function wholesaleStore(): WholesaleStore
+    public static function wholesaleStore(): WholesaleStore
     {
         return new WholesaleStore();
     }
 
-    public function winery(): Winery
+    public static function winery(): Winery
     {
         return new Winery();
     }
 
-    public function zoo(): Zoo
+    public static function zoo(): Zoo
     {
         return new Zoo();
     }
 
-    public function brand(): Brand
+    public static function brand(): Brand
     {
         return new Brand();
     }
 
-    public function businessEntityType(): BusinessEntityType
+    public static function businessEntityType(): BusinessEntityType
     {
         return new BusinessEntityType();
     }
 
-    public function creditCard(): CreditCard
+    public static function creditCard(): CreditCard
     {
         return new CreditCard();
     }
 
-    public function businessFunction(): BusinessFunction
+    public static function businessFunction(): BusinessFunction
     {
         return new BusinessFunction();
     }
 
-    public function paymentMethod(): PaymentMethod
+    public static function paymentMethod(): PaymentMethod
     {
         return new PaymentMethod();
     }
 
-    public function dayOfWeek(): DayOfWeek
+    public static function dayOfWeek(): DayOfWeek
     {
         return new DayOfWeek();
     }
 
-    public function priceSpecification(): PriceSpecification
+    public static function priceSpecification(): PriceSpecification
     {
         return new PriceSpecification();
     }
 
-    public function deliveryChargeSpecification(): DeliveryChargeSpecification
+    public static function deliveryChargeSpecification(): DeliveryChargeSpecification
     {
         return new DeliveryChargeSpecification();
     }
 
-    public function deliveryMethod(): DeliveryMethod
+    public static function deliveryMethod(): DeliveryMethod
     {
         return new DeliveryMethod();
     }
 
-    public function demand(): Demand
+    public static function demand(): Demand
     {
         return new Demand();
     }
 
-    public function individualProduct(): IndividualProduct
+    public static function individualProduct(): IndividualProduct
     {
         return new IndividualProduct();
     }
 
-    public function openingHoursSpecification(): OpeningHoursSpecification
+    public static function openingHoursSpecification(): OpeningHoursSpecification
     {
         return new OpeningHoursSpecification();
     }
 
-    public function ownershipInfo(): OwnershipInfo
+    public static function ownershipInfo(): OwnershipInfo
     {
         return new OwnershipInfo();
     }
 
-    public function parcelService(): ParcelService
+    public static function parcelService(): ParcelService
     {
         return new ParcelService();
     }
 
-    public function paymentChargeSpecification(): PaymentChargeSpecification
+    public static function paymentChargeSpecification(): PaymentChargeSpecification
     {
         return new PaymentChargeSpecification();
     }
 
-    public function productModel(): ProductModel
+    public static function productModel(): ProductModel
     {
         return new ProductModel();
     }
 
-    public function qualitativeValue(): QualitativeValue
+    public static function qualitativeValue(): QualitativeValue
     {
         return new QualitativeValue();
     }
 
-    public function quantitativeValue(): QuantitativeValue
+    public static function quantitativeValue(): QuantitativeValue
     {
         return new QuantitativeValue();
     }
 
-    public function someProducts(): SomeProducts
+    public static function someProducts(): SomeProducts
     {
         return new SomeProducts();
     }
 
-    public function typeAndQuantityNode(): TypeAndQuantityNode
+    public static function typeAndQuantityNode(): TypeAndQuantityNode
     {
         return new TypeAndQuantityNode();
     }
 
-    public function unitPriceSpecification(): UnitPriceSpecification
+    public static function unitPriceSpecification(): UnitPriceSpecification
     {
         return new UnitPriceSpecification();
     }
 
-    public function warrantyPromise(): WarrantyPromise
+    public static function warrantyPromise(): WarrantyPromise
     {
         return new WarrantyPromise();
     }
 
-    public function warrantyScope(): WarrantyScope
+    public static function warrantyScope(): WarrantyScope
     {
         return new WarrantyScope();
     }
 
-    public function techArticle(): TechArticle
+    public static function techArticle(): TechArticle
     {
         return new TechArticle();
     }
 
-    public function aPIReference(): APIReference
+    public static function aPIReference(): APIReference
     {
         return new APIReference();
     }
 
-    public function code(): Code
+    public static function code(): Code
     {
         return new Code();
     }
 
-    public function softwareSourceCode(): SoftwareSourceCode
+    public static function softwareSourceCode(): SoftwareSourceCode
     {
         return new SoftwareSourceCode();
     }
 
-    public function parentAudience(): ParentAudience
+    public static function parentAudience(): ParentAudience
     {
         return new ParentAudience();
     }
 
-    public function alignmentObject(): AlignmentObject
+    public static function alignmentObject(): AlignmentObject
     {
         return new AlignmentObject();
     }
 
-    public function educationalAudience(): EducationalAudience
+    public static function educationalAudience(): EducationalAudience
     {
         return new EducationalAudience();
     }
 
-    public function dataCatalog(): DataCatalog
+    public static function dataCatalog(): DataCatalog
     {
         return new DataCatalog();
     }
 
-    public function dataDownload(): DataDownload
+    public static function dataDownload(): DataDownload
     {
         return new DataDownload();
     }
 
-    public function dataset(): Dataset
+    public static function dataset(): Dataset
     {
         return new Dataset();
     }
 
-    public function publicationEvent(): PublicationEvent
+    public static function publicationEvent(): PublicationEvent
     {
         return new PublicationEvent();
     }
 
-    public function broadcastEvent(): BroadcastEvent
+    public static function broadcastEvent(): BroadcastEvent
     {
         return new BroadcastEvent();
     }
 
-    public function broadcastService(): BroadcastService
+    public static function broadcastService(): BroadcastService
     {
         return new BroadcastService();
     }
 
-    public function clip(): Clip
+    public static function clip(): Clip
     {
         return new Clip();
     }
 
-    public function onDemandEvent(): OnDemandEvent
+    public static function onDemandEvent(): OnDemandEvent
     {
         return new OnDemandEvent();
     }
 
-    public function radioClip(): RadioClip
+    public static function radioClip(): RadioClip
     {
         return new RadioClip();
     }
 
-    public function radioEpisode(): RadioEpisode
+    public static function radioEpisode(): RadioEpisode
     {
         return new RadioEpisode();
     }
 
-    public function radioSeason(): RadioSeason
+    public static function radioSeason(): RadioSeason
     {
         return new RadioSeason();
     }
 
-    public function radioSeries(): RadioSeries
+    public static function radioSeries(): RadioSeries
     {
         return new RadioSeries();
     }
 
-    public function tVClip(): TVClip
+    public static function tVClip(): TVClip
     {
         return new TVClip();
     }
 
-    public function businessAudience(): BusinessAudience
+    public static function businessAudience(): BusinessAudience
     {
         return new BusinessAudience();
     }
 
-    public function contactPointOption(): ContactPointOption
+    public static function contactPointOption(): ContactPointOption
     {
         return new ContactPointOption();
     }
 
-    public function permit(): Permit
+    public static function permit(): Permit
     {
         return new Permit();
     }
 
-    public function governmentPermit(): GovernmentPermit
+    public static function governmentPermit(): GovernmentPermit
     {
         return new GovernmentPermit();
     }
 
-    public function service(): Service
+    public static function service(): Service
     {
         return new Service();
     }
 
-    public function governmentService(): GovernmentService
+    public static function governmentService(): GovernmentService
     {
         return new GovernmentService();
     }
 
-    public function serviceChannel(): ServiceChannel
+    public static function serviceChannel(): ServiceChannel
     {
         return new ServiceChannel();
     }
 
-    public function eventStatusType(): EventStatusType
+    public static function eventStatusType(): EventStatusType
     {
         return new EventStatusType();
     }
 
-    public function deliveryEvent(): DeliveryEvent
+    public static function deliveryEvent(): DeliveryEvent
     {
         return new DeliveryEvent();
     }
 
-    public function lockerDelivery(): LockerDelivery
+    public static function lockerDelivery(): LockerDelivery
     {
         return new LockerDelivery();
     }
 
-    public function order(): Order
+    public static function order(): Order
     {
         return new Order();
     }
 
-    public function orderStatus(): OrderStatus
+    public static function orderStatus(): OrderStatus
     {
         return new OrderStatus();
     }
 
-    public function parcelDelivery(): ParcelDelivery
+    public static function parcelDelivery(): ParcelDelivery
     {
         return new ParcelDelivery();
     }
 
-    public function orderItem(): OrderItem
+    public static function orderItem(): OrderItem
     {
         return new OrderItem();
     }
 
-    public function action(): Action
+    public static function action(): Action
     {
         return new Action();
     }
 
-    public function organizeAction(): OrganizeAction
+    public static function organizeAction(): OrganizeAction
     {
         return new OrganizeAction();
     }
 
-    public function allocateAction(): AllocateAction
+    public static function allocateAction(): AllocateAction
     {
         return new AllocateAction();
     }
 
-    public function acceptAction(): AcceptAction
+    public static function acceptAction(): AcceptAction
     {
         return new AcceptAction();
     }
 
-    public function achieveAction(): AchieveAction
+    public static function achieveAction(): AchieveAction
     {
         return new AchieveAction();
     }
 
-    public function updateAction(): UpdateAction
+    public static function updateAction(): UpdateAction
     {
         return new UpdateAction();
     }
 
-    public function addAction(): AddAction
+    public static function addAction(): AddAction
     {
         return new AddAction();
     }
 
-    public function assessAction(): AssessAction
+    public static function assessAction(): AssessAction
     {
         return new AssessAction();
     }
 
-    public function reactAction(): ReactAction
+    public static function reactAction(): ReactAction
     {
         return new ReactAction();
     }
 
-    public function agreeAction(): AgreeAction
+    public static function agreeAction(): AgreeAction
     {
         return new AgreeAction();
     }
 
-    public function insertAction(): InsertAction
+    public static function insertAction(): InsertAction
     {
         return new InsertAction();
     }
 
-    public function appendAction(): AppendAction
+    public static function appendAction(): AppendAction
     {
         return new AppendAction();
     }
 
-    public function applyAction(): ApplyAction
+    public static function applyAction(): ApplyAction
     {
         return new ApplyAction();
     }
 
-    public function moveAction(): MoveAction
+    public static function moveAction(): MoveAction
     {
         return new MoveAction();
     }
 
-    public function arriveAction(): ArriveAction
+    public static function arriveAction(): ArriveAction
     {
         return new ArriveAction();
     }
 
-    public function interactAction(): InteractAction
+    public static function interactAction(): InteractAction
     {
         return new InteractAction();
     }
 
-    public function communicateAction(): CommunicateAction
+    public static function communicateAction(): CommunicateAction
     {
         return new CommunicateAction();
     }
 
-    public function askAction(): AskAction
+    public static function askAction(): AskAction
     {
         return new AskAction();
     }
 
-    public function assignAction(): AssignAction
+    public static function assignAction(): AssignAction
     {
         return new AssignAction();
     }
 
-    public function authorizeAction(): AuthorizeAction
+    public static function authorizeAction(): AuthorizeAction
     {
         return new AuthorizeAction();
     }
 
-    public function befriendAction(): BefriendAction
+    public static function befriendAction(): BefriendAction
     {
         return new BefriendAction();
     }
 
-    public function bookmarkAction(): BookmarkAction
+    public static function bookmarkAction(): BookmarkAction
     {
         return new BookmarkAction();
     }
 
-    public function transferAction(): TransferAction
+    public static function transferAction(): TransferAction
     {
         return new TransferAction();
     }
 
-    public function borrowAction(): BorrowAction
+    public static function borrowAction(): BorrowAction
     {
         return new BorrowAction();
     }
 
-    public function tradeAction(): TradeAction
+    public static function tradeAction(): TradeAction
     {
         return new TradeAction();
     }
 
-    public function buyAction(): BuyAction
+    public static function buyAction(): BuyAction
     {
         return new BuyAction();
     }
 
-    public function planAction(): PlanAction
+    public static function planAction(): PlanAction
     {
         return new PlanAction();
     }
 
-    public function cancelAction(): CancelAction
+    public static function cancelAction(): CancelAction
     {
         return new CancelAction();
     }
 
-    public function findAction(): FindAction
+    public static function findAction(): FindAction
     {
         return new FindAction();
     }
 
-    public function checkAction(): CheckAction
+    public static function checkAction(): CheckAction
     {
         return new CheckAction();
     }
 
-    public function checkInAction(): CheckInAction
+    public static function checkInAction(): CheckInAction
     {
         return new CheckInAction();
     }
 
-    public function checkOutAction(): CheckOutAction
+    public static function checkOutAction(): CheckOutAction
     {
         return new CheckOutAction();
     }
 
-    public function chooseAction(): ChooseAction
+    public static function chooseAction(): ChooseAction
     {
         return new ChooseAction();
     }
 
-    public function commentAction(): CommentAction
+    public static function commentAction(): CommentAction
     {
         return new CommentAction();
     }
 
-    public function informAction(): InformAction
+    public static function informAction(): InformAction
     {
         return new InformAction();
     }
 
-    public function confirmAction(): ConfirmAction
+    public static function confirmAction(): ConfirmAction
     {
         return new ConfirmAction();
     }
 
-    public function consumeAction(): ConsumeAction
+    public static function consumeAction(): ConsumeAction
     {
         return new ConsumeAction();
     }
 
-    public function createAction(): CreateAction
+    public static function createAction(): CreateAction
     {
         return new CreateAction();
     }
 
-    public function cookAction(): CookAction
+    public static function cookAction(): CookAction
     {
         return new CookAction();
     }
 
-    public function deleteAction(): DeleteAction
+    public static function deleteAction(): DeleteAction
     {
         return new DeleteAction();
     }
 
-    public function departAction(): DepartAction
+    public static function departAction(): DepartAction
     {
         return new DepartAction();
     }
 
-    public function disagreeAction(): DisagreeAction
+    public static function disagreeAction(): DisagreeAction
     {
         return new DisagreeAction();
     }
 
-    public function discoverAction(): DiscoverAction
+    public static function discoverAction(): DiscoverAction
     {
         return new DiscoverAction();
     }
 
-    public function dislikeAction(): DislikeAction
+    public static function dislikeAction(): DislikeAction
     {
         return new DislikeAction();
     }
 
-    public function donateAction(): DonateAction
+    public static function donateAction(): DonateAction
     {
         return new DonateAction();
     }
 
-    public function downloadAction(): DownloadAction
+    public static function downloadAction(): DownloadAction
     {
         return new DownloadAction();
     }
 
-    public function drawAction(): DrawAction
+    public static function drawAction(): DrawAction
     {
         return new DrawAction();
     }
 
-    public function drinkAction(): DrinkAction
+    public static function drinkAction(): DrinkAction
     {
         return new DrinkAction();
     }
 
-    public function eatAction(): EatAction
+    public static function eatAction(): EatAction
     {
         return new EatAction();
     }
 
-    public function endorseAction(): EndorseAction
+    public static function endorseAction(): EndorseAction
     {
         return new EndorseAction();
     }
 
-    public function controlAction(): ControlAction
+    public static function controlAction(): ControlAction
     {
         return new ControlAction();
     }
 
-    public function activateAction(): ActivateAction
+    public static function activateAction(): ActivateAction
     {
         return new ActivateAction();
     }
 
-    public function deactivateAction(): DeactivateAction
+    public static function deactivateAction(): DeactivateAction
     {
         return new DeactivateAction();
     }
 
-    public function resumeAction(): ResumeAction
+    public static function resumeAction(): ResumeAction
     {
         return new ResumeAction();
     }
 
-    public function suspendAction(): SuspendAction
+    public static function suspendAction(): SuspendAction
     {
         return new SuspendAction();
     }
 
-    public function playAction(): PlayAction
+    public static function playAction(): PlayAction
     {
         return new PlayAction();
     }
 
-    public function exerciseAction(): ExerciseAction
+    public static function exerciseAction(): ExerciseAction
     {
         return new ExerciseAction();
     }
 
-    public function filmAction(): FilmAction
+    public static function filmAction(): FilmAction
     {
         return new FilmAction();
     }
 
-    public function followAction(): FollowAction
+    public static function followAction(): FollowAction
     {
         return new FollowAction();
     }
 
-    public function giveAction(): GiveAction
+    public static function giveAction(): GiveAction
     {
         return new GiveAction();
     }
 
-    public function ignoreAction(): IgnoreAction
+    public static function ignoreAction(): IgnoreAction
     {
         return new IgnoreAction();
     }
 
-    public function installAction(): InstallAction
+    public static function installAction(): InstallAction
     {
         return new InstallAction();
     }
 
-    public function inviteAction(): InviteAction
+    public static function inviteAction(): InviteAction
     {
         return new InviteAction();
     }
 
-    public function joinAction(): JoinAction
+    public static function joinAction(): JoinAction
     {
         return new JoinAction();
     }
 
-    public function leaveAction(): LeaveAction
+    public static function leaveAction(): LeaveAction
     {
         return new LeaveAction();
     }
 
-    public function lendAction(): LendAction
+    public static function lendAction(): LendAction
     {
         return new LendAction();
     }
 
-    public function likeAction(): LikeAction
+    public static function likeAction(): LikeAction
     {
         return new LikeAction();
     }
 
-    public function listenAction(): ListenAction
+    public static function listenAction(): ListenAction
     {
         return new ListenAction();
     }
 
-    public function loseAction(): LoseAction
+    public static function loseAction(): LoseAction
     {
         return new LoseAction();
     }
 
-    public function marryAction(): MarryAction
+    public static function marryAction(): MarryAction
     {
         return new MarryAction();
     }
 
-    public function orderAction(): OrderAction
+    public static function orderAction(): OrderAction
     {
         return new OrderAction();
     }
 
-    public function paintAction(): PaintAction
+    public static function paintAction(): PaintAction
     {
         return new PaintAction();
     }
 
-    public function payAction(): PayAction
+    public static function payAction(): PayAction
     {
         return new PayAction();
     }
 
-    public function performAction(): PerformAction
+    public static function performAction(): PerformAction
     {
         return new PerformAction();
     }
 
-    public function photographAction(): PhotographAction
+    public static function photographAction(): PhotographAction
     {
         return new PhotographAction();
     }
 
-    public function prependAction(): PrependAction
+    public static function prependAction(): PrependAction
     {
         return new PrependAction();
     }
 
-    public function quoteAction(): QuoteAction
+    public static function quoteAction(): QuoteAction
     {
         return new QuoteAction();
     }
 
-    public function readAction(): ReadAction
+    public static function readAction(): ReadAction
     {
         return new ReadAction();
     }
 
-    public function receiveAction(): ReceiveAction
+    public static function receiveAction(): ReceiveAction
     {
         return new ReceiveAction();
     }
 
-    public function registerAction(): RegisterAction
+    public static function registerAction(): RegisterAction
     {
         return new RegisterAction();
     }
 
-    public function rejectAction(): RejectAction
+    public static function rejectAction(): RejectAction
     {
         return new RejectAction();
     }
 
-    public function rentAction(): RentAction
+    public static function rentAction(): RentAction
     {
         return new RentAction();
     }
 
-    public function replaceAction(): ReplaceAction
+    public static function replaceAction(): ReplaceAction
     {
         return new ReplaceAction();
     }
 
-    public function replyAction(): ReplyAction
+    public static function replyAction(): ReplyAction
     {
         return new ReplyAction();
     }
 
-    public function reserveAction(): ReserveAction
+    public static function reserveAction(): ReserveAction
     {
         return new ReserveAction();
     }
 
-    public function returnAction(): ReturnAction
+    public static function returnAction(): ReturnAction
     {
         return new ReturnAction();
     }
 
-    public function reviewAction(): ReviewAction
+    public static function reviewAction(): ReviewAction
     {
         return new ReviewAction();
     }
 
-    public function rsvpAction(): RsvpAction
+    public static function rsvpAction(): RsvpAction
     {
         return new RsvpAction();
     }
 
-    public function rsvpResponseType(): RsvpResponseType
+    public static function rsvpResponseType(): RsvpResponseType
     {
         return new RsvpResponseType();
     }
 
-    public function scheduleAction(): ScheduleAction
+    public static function scheduleAction(): ScheduleAction
     {
         return new ScheduleAction();
     }
 
-    public function searchAction(): SearchAction
+    public static function searchAction(): SearchAction
     {
         return new SearchAction();
     }
 
-    public function sellAction(): SellAction
+    public static function sellAction(): SellAction
     {
         return new SellAction();
     }
 
-    public function sendAction(): SendAction
+    public static function sendAction(): SendAction
     {
         return new SendAction();
     }
 
-    public function shareAction(): ShareAction
+    public static function shareAction(): ShareAction
     {
         return new ShareAction();
     }
 
-    public function subscribeAction(): SubscribeAction
+    public static function subscribeAction(): SubscribeAction
     {
         return new SubscribeAction();
     }
 
-    public function takeAction(): TakeAction
+    public static function takeAction(): TakeAction
     {
         return new TakeAction();
     }
 
-    public function tieAction(): TieAction
+    public static function tieAction(): TieAction
     {
         return new TieAction();
     }
 
-    public function tipAction(): TipAction
+    public static function tipAction(): TipAction
     {
         return new TipAction();
     }
 
-    public function trackAction(): TrackAction
+    public static function trackAction(): TrackAction
     {
         return new TrackAction();
     }
 
-    public function travelAction(): TravelAction
+    public static function travelAction(): TravelAction
     {
         return new TravelAction();
     }
 
-    public function unRegisterAction(): UnRegisterAction
+    public static function unRegisterAction(): UnRegisterAction
     {
         return new UnRegisterAction();
     }
 
-    public function useAction(): UseAction
+    public static function useAction(): UseAction
     {
         return new UseAction();
     }
 
-    public function viewAction(): ViewAction
+    public static function viewAction(): ViewAction
     {
         return new ViewAction();
     }
 
-    public function voteAction(): VoteAction
+    public static function voteAction(): VoteAction
     {
         return new VoteAction();
     }
 
-    public function wantAction(): WantAction
+    public static function wantAction(): WantAction
     {
         return new WantAction();
     }
 
-    public function watchAction(): WatchAction
+    public static function watchAction(): WatchAction
     {
         return new WatchAction();
     }
 
-    public function wearAction(): WearAction
+    public static function wearAction(): WearAction
     {
         return new WearAction();
     }
 
-    public function winAction(): WinAction
+    public static function winAction(): WinAction
     {
         return new WinAction();
     }
 
-    public function writeAction(): WriteAction
+    public static function writeAction(): WriteAction
     {
         return new WriteAction();
     }
 
-    public function genderType(): GenderType
+    public static function genderType(): GenderType
     {
         return new GenderType();
     }
 
-    public function itemListOrderType(): ItemListOrderType
+    public static function itemListOrderType(): ItemListOrderType
     {
         return new ItemListOrderType();
     }
 
-    public function reservation(): Reservation
+    public static function reservation(): Reservation
     {
         return new Reservation();
     }
 
-    public function busReservation(): BusReservation
+    public static function busReservation(): BusReservation
     {
         return new BusReservation();
     }
 
-    public function eventReservation(): EventReservation
+    public static function eventReservation(): EventReservation
     {
         return new EventReservation();
     }
 
-    public function flightReservation(): FlightReservation
+    public static function flightReservation(): FlightReservation
     {
         return new FlightReservation();
     }
 
-    public function foodEstablishmentReservation(): FoodEstablishmentReservation
+    public static function foodEstablishmentReservation(): FoodEstablishmentReservation
     {
         return new FoodEstablishmentReservation();
     }
 
-    public function lodgingReservation(): LodgingReservation
+    public static function lodgingReservation(): LodgingReservation
     {
         return new LodgingReservation();
     }
 
-    public function rentalCarReservation(): RentalCarReservation
+    public static function rentalCarReservation(): RentalCarReservation
     {
         return new RentalCarReservation();
     }
 
-    public function taxiReservation(): TaxiReservation
+    public static function taxiReservation(): TaxiReservation
     {
         return new TaxiReservation();
     }
 
-    public function trainReservation(): TrainReservation
+    public static function trainReservation(): TrainReservation
     {
         return new TrainReservation();
     }
 
-    public function reservationPackage(): ReservationPackage
+    public static function reservationPackage(): ReservationPackage
     {
         return new ReservationPackage();
     }
 
-    public function reservationStatusType(): ReservationStatusType
+    public static function reservationStatusType(): ReservationStatusType
     {
         return new ReservationStatusType();
     }
 
-    public function busTrip(): BusTrip
+    public static function busTrip(): BusTrip
     {
         return new BusTrip();
     }
 
-    public function trainTrip(): TrainTrip
+    public static function trainTrip(): TrainTrip
     {
         return new TrainTrip();
     }
 
-    public function flight(): Flight
+    public static function flight(): Flight
     {
         return new Flight();
     }
 
-    public function airline(): Airline
+    public static function airline(): Airline
     {
         return new Airline();
     }
 
-    public function programMembership(): ProgramMembership
+    public static function programMembership(): ProgramMembership
     {
         return new ProgramMembership();
     }
 
-    public function ticket(): Ticket
+    public static function ticket(): Ticket
     {
         return new Ticket();
     }
 
-    public function seat(): Seat
+    public static function seat(): Seat
     {
         return new Seat();
     }
 
-    public function taxi(): Taxi
+    public static function taxi(): Taxi
     {
         return new Taxi();
     }
 
-    public function taxiService(): TaxiService
+    public static function taxiService(): TaxiService
     {
         return new TaxiService();
     }
 
-    public function vehicle(): Vehicle
+    public static function vehicle(): Vehicle
     {
         return new Vehicle();
     }
 
-    public function car(): Car
+    public static function car(): Car
     {
         return new Car();
     }
 
-    public function boardingPolicyType(): BoardingPolicyType
+    public static function boardingPolicyType(): BoardingPolicyType
     {
         return new BoardingPolicyType();
     }
 
-    public function qAPage(): QAPage
+    public static function qAPage(): QAPage
     {
         return new QAPage();
     }
 
-    public function question(): Question
+    public static function question(): Question
     {
         return new Question();
     }
 
-    public function answer(): Answer
+    public static function answer(): Answer
     {
         return new Answer();
     }
 
-    public function emailMessage(): EmailMessage
+    public static function emailMessage(): EmailMessage
     {
         return new EmailMessage();
     }
 
-    public function actionStatusType(): ActionStatusType
+    public static function actionStatusType(): ActionStatusType
     {
         return new ActionStatusType();
     }
 
-    public function entryPoint(): EntryPoint
+    public static function entryPoint(): EntryPoint
     {
         return new EntryPoint();
     }
 
-    public function propertyValueSpecification(): PropertyValueSpecification
+    public static function propertyValueSpecification(): PropertyValueSpecification
     {
         return new PropertyValueSpecification();
     }
 
-    public function role(): Role
+    public static function role(): Role
     {
         return new Role();
     }
 
-    public function performanceRole(): PerformanceRole
+    public static function performanceRole(): PerformanceRole
     {
         return new PerformanceRole();
     }
 
-    public function organizationRole(): OrganizationRole
+    public static function organizationRole(): OrganizationRole
     {
         return new OrganizationRole();
     }
 
-    public function employeeRole(): EmployeeRole
+    public static function employeeRole(): EmployeeRole
     {
         return new EmployeeRole();
     }
 
-    public function webSite(): WebSite
+    public static function webSite(): WebSite
     {
         return new WebSite();
     }
 
-    public function periodical(): Periodical
+    public static function periodical(): Periodical
     {
         return new Periodical();
     }
 
-    public function publicationVolume(): PublicationVolume
+    public static function publicationVolume(): PublicationVolume
     {
         return new PublicationVolume();
     }
 
-    public function publicationIssue(): PublicationIssue
+    public static function publicationIssue(): PublicationIssue
     {
         return new PublicationIssue();
     }
 
-    public function listItem(): ListItem
+    public static function listItem(): ListItem
     {
         return new ListItem();
     }
 
-    public function movieSeries(): MovieSeries
+    public static function movieSeries(): MovieSeries
     {
         return new MovieSeries();
     }
 
-    public function bookSeries(): BookSeries
+    public static function bookSeries(): BookSeries
     {
         return new BookSeries();
     }
 
-    public function videoGame(): VideoGame
+    public static function videoGame(): VideoGame
     {
         return new VideoGame();
     }
 
-    public function videoGameClip(): VideoGameClip
+    public static function videoGameClip(): VideoGameClip
     {
         return new VideoGameClip();
     }
 
-    public function gameServer(): GameServer
+    public static function gameServer(): GameServer
     {
         return new GameServer();
     }
 
-    public function game(): Game
+    public static function game(): Game
     {
         return new Game();
     }
 
-    public function gamePlayMode(): GamePlayMode
+    public static function gamePlayMode(): GamePlayMode
     {
         return new GamePlayMode();
     }
 
-    public function gameServerStatus(): GameServerStatus
+    public static function gameServerStatus(): GameServerStatus
     {
         return new GameServerStatus();
     }
 
-    public function musicAlbumProductionType(): MusicAlbumProductionType
+    public static function musicAlbumProductionType(): MusicAlbumProductionType
     {
         return new MusicAlbumProductionType();
     }
 
-    public function musicAlbumReleaseType(): MusicAlbumReleaseType
+    public static function musicAlbumReleaseType(): MusicAlbumReleaseType
     {
         return new MusicAlbumReleaseType();
     }
 
-    public function musicComposition(): MusicComposition
+    public static function musicComposition(): MusicComposition
     {
         return new MusicComposition();
     }
 
-    public function musicRelease(): MusicRelease
+    public static function musicRelease(): MusicRelease
     {
         return new MusicRelease();
     }
 
-    public function musicReleaseFormatType(): MusicReleaseFormatType
+    public static function musicReleaseFormatType(): MusicReleaseFormatType
     {
         return new MusicReleaseFormatType();
     }
 
-    public function sportsOrganization(): SportsOrganization
+    public static function sportsOrganization(): SportsOrganization
     {
         return new SportsOrganization();
     }
 
-    public function datedMoneySpecification(): DatedMoneySpecification
+    public static function datedMoneySpecification(): DatedMoneySpecification
     {
         return new DatedMoneySpecification();
     }
 
-    public function visualArtwork(): VisualArtwork
+    public static function visualArtwork(): VisualArtwork
     {
         return new VisualArtwork();
     }
 
-    public function invoice(): Invoice
+    public static function invoice(): Invoice
     {
         return new Invoice();
     }
 
-    public function propertyValue(): PropertyValue
+    public static function propertyValue(): PropertyValue
     {
         return new PropertyValue();
     }
 
-    public function cableOrSatelliteService(): CableOrSatelliteService
+    public static function cableOrSatelliteService(): CableOrSatelliteService
     {
         return new CableOrSatelliteService();
     }
 
-    public function broadcastChannel(): BroadcastChannel
+    public static function broadcastChannel(): BroadcastChannel
     {
         return new BroadcastChannel();
     }
 
-    public function televisionChannel(): TelevisionChannel
+    public static function televisionChannel(): TelevisionChannel
     {
         return new TelevisionChannel();
     }
 
-    public function radioChannel(): RadioChannel
+    public static function radioChannel(): RadioChannel
     {
         return new RadioChannel();
     }
 
-    public function engineSpecification(): EngineSpecification
+    public static function engineSpecification(): EngineSpecification
     {
         return new EngineSpecification();
     }
 
-    public function bridge(): Bridge
+    public static function bridge(): Bridge
     {
         return new Bridge();
     }
 
-    public function driveWheelConfigurationValue(): DriveWheelConfigurationValue
+    public static function driveWheelConfigurationValue(): DriveWheelConfigurationValue
     {
         return new DriveWheelConfigurationValue();
     }
 
-    public function steeringPositionValue(): SteeringPositionValue
+    public static function steeringPositionValue(): SteeringPositionValue
     {
         return new SteeringPositionValue();
     }
 
-    public function interactionCounter(): InteractionCounter
+    public static function interactionCounter(): InteractionCounter
     {
         return new InteractionCounter();
     }
 
-    public function socialMediaPosting(): SocialMediaPosting
+    public static function socialMediaPosting(): SocialMediaPosting
     {
         return new SocialMediaPosting();
     }
 
-    public function discussionForumPosting(): DiscussionForumPosting
+    public static function discussionForumPosting(): DiscussionForumPosting
     {
         return new DiscussionForumPosting();
     }
 
-    public function liveBlogPosting(): LiveBlogPosting
+    public static function liveBlogPosting(): LiveBlogPosting
     {
         return new LiveBlogPosting();
     }
 
-    public function paymentStatusType(): PaymentStatusType
+    public static function paymentStatusType(): PaymentStatusType
     {
         return new PaymentStatusType();
     }
 
-    public function report(): Report
+    public static function report(): Report
     {
         return new Report();
     }
 
-    public function enumeration(): Enumeration
+    public static function enumeration(): Enumeration
     {
         return new Enumeration();
     }
 
-    public function nutritionInformation(): NutritionInformation
+    public static function nutritionInformation(): NutritionInformation
     {
         return new NutritionInformation();
     }
 
-    public function recipe(): Recipe
+    public static function recipe(): Recipe
     {
         return new Recipe();
     }
 
-    public function dataFeed(): DataFeed
+    public static function dataFeed(): DataFeed
     {
         return new DataFeed();
     }
 
-    public function dataFeedItem(): DataFeedItem
+    public static function dataFeedItem(): DataFeedItem
     {
         return new DataFeedItem();
     }
 
-    public function compoundPriceSpecification(): CompoundPriceSpecification
+    public static function compoundPriceSpecification(): CompoundPriceSpecification
     {
         return new CompoundPriceSpecification();
     }
 
-    public function monetaryAmount(): MonetaryAmount
+    public static function monetaryAmount(): MonetaryAmount
     {
         return new MonetaryAmount();
     }
 
-    public function financialProduct(): FinancialProduct
+    public static function financialProduct(): FinancialProduct
     {
         return new FinancialProduct();
     }
 
-    public function bankAccount(): BankAccount
+    public static function bankAccount(): BankAccount
     {
         return new BankAccount();
     }
 
-    public function depositAccount(): DepositAccount
+    public static function depositAccount(): DepositAccount
     {
         return new DepositAccount();
     }
 
-    public function loanOrCredit(): LoanOrCredit
+    public static function loanOrCredit(): LoanOrCredit
     {
         return new LoanOrCredit();
     }
 
-    public function paymentCard(): PaymentCard
+    public static function paymentCard(): PaymentCard
     {
         return new PaymentCard();
     }
 
-    public function investmentOrDeposit(): InvestmentOrDeposit
+    public static function investmentOrDeposit(): InvestmentOrDeposit
     {
         return new InvestmentOrDeposit();
     }
 
-    public function paymentService(): PaymentService
+    public static function paymentService(): PaymentService
     {
         return new PaymentService();
     }
 
-    public function currencyConversionService(): CurrencyConversionService
+    public static function currencyConversionService(): CurrencyConversionService
     {
         return new CurrencyConversionService();
     }
 
-    public function conversation(): Conversation
+    public static function conversation(): Conversation
     {
         return new Conversation();
     }
 
-    public function message(): Message
+    public static function message(): Message
     {
         return new Message();
     }
 
-    public function digitalDocument(): DigitalDocument
+    public static function digitalDocument(): DigitalDocument
     {
         return new DigitalDocument();
     }
 
-    public function presentationDigitalDocument(): PresentationDigitalDocument
+    public static function presentationDigitalDocument(): PresentationDigitalDocument
     {
         return new PresentationDigitalDocument();
     }
 
-    public function spreadsheetDigitalDocument(): SpreadsheetDigitalDocument
+    public static function spreadsheetDigitalDocument(): SpreadsheetDigitalDocument
     {
         return new SpreadsheetDigitalDocument();
     }
 
-    public function textDigitalDocument(): TextDigitalDocument
+    public static function textDigitalDocument(): TextDigitalDocument
     {
         return new TextDigitalDocument();
     }
 
-    public function noteDigitalDocument(): NoteDigitalDocument
+    public static function noteDigitalDocument(): NoteDigitalDocument
     {
         return new NoteDigitalDocument();
     }
 
-    public function digitalDocumentPermission(): DigitalDocumentPermission
+    public static function digitalDocumentPermission(): DigitalDocumentPermission
     {
         return new DigitalDocumentPermission();
     }
 
-    public function digitalDocumentPermissionType(): DigitalDocumentPermissionType
+    public static function digitalDocumentPermissionType(): DigitalDocumentPermissionType
     {
         return new DigitalDocumentPermissionType();
     }
 
-    public function resort(): Resort
+    public static function resort(): Resort
     {
         return new Resort();
     }
 
-    public function accommodation(): Accommodation
+    public static function accommodation(): Accommodation
     {
         return new Accommodation();
     }
 
-    public function room(): Room
+    public static function room(): Room
     {
         return new Room();
     }
 
-    public function hotelRoom(): HotelRoom
+    public static function hotelRoom(): HotelRoom
     {
         return new HotelRoom();
     }
 
-    public function meetingRoom(): MeetingRoom
+    public static function meetingRoom(): MeetingRoom
     {
         return new MeetingRoom();
     }
 
-    public function campingPitch(): CampingPitch
+    public static function campingPitch(): CampingPitch
     {
         return new CampingPitch();
     }
 
-    public function suite(): Suite
+    public static function suite(): Suite
     {
         return new Suite();
     }
 
-    public function house(): House
+    public static function house(): House
     {
         return new House();
     }
 
-    public function apartment(): Apartment
+    public static function apartment(): Apartment
     {
         return new Apartment();
     }
 
-    public function foodService(): FoodService
+    public static function foodService(): FoodService
     {
         return new FoodService();
     }
 
-    public function locationFeatureSpecification(): LocationFeatureSpecification
+    public static function locationFeatureSpecification(): LocationFeatureSpecification
     {
         return new LocationFeatureSpecification();
     }
 
-    public function bedDetails(): BedDetails
+    public static function bedDetails(): BedDetails
     {
         return new BedDetails();
     }
 
-    public function course(): Course
+    public static function course(): Course
     {
         return new Course();
     }
 
-    public function courseInstance(): CourseInstance
+    public static function courseInstance(): CourseInstance
     {
         return new CourseInstance();
     }
 
-    public function claimReview(): ClaimReview
+    public static function claimReview(): ClaimReview
     {
         return new ClaimReview();
     }
 
-    public function menu(): Menu
+    public static function menu(): Menu
     {
         return new Menu();
     }
 
-    public function menuItem(): MenuItem
+    public static function menuItem(): MenuItem
     {
         return new MenuItem();
     }
 
-    public function menuSection(): MenuSection
+    public static function menuSection(): MenuSection
     {
         return new MenuSection();
     }
