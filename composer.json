@@ -1,6 +1,6 @@
 {
     "name": "spatie/schema-org",
-    "description": ":package_description",
+    "description": "A Schema.org helper and ld+json generator",
     "keywords": [
         "spatie",
         "schema-org"
@@ -16,26 +16,24 @@
         }
     ],
     "require": {
-        "php": "^7.0",
+        "php": "^7.0"
+    },
+    "require-dev": {
         "league/flysystem": "^1.0",
+        "phpunit/phpunit": "^5.0",
+        "symfony/console": "^3.2",
         "symfony/css-selector": "^3.2",
         "symfony/dom-crawler": "^3.2",
         "twig/twig": "^1.28"
     },
-    "require-dev": {
-        "guzzlehttp/guzzle": "^6.2",
-        "phpunit/phpunit": "^5.0",
-        "symfony/console": "^3.2",
-        "tightenco/collect": "^5.3"
-    },
     "autoload": {
         "psr-4": {
-            "Spatie\\SchemaOrg\\": "src",
-            "Spatie\\SchemaOrg\\Generator\\": "generator"
+            "Spatie\\SchemaOrg\\": "src"
         }
     },
     "autoload-dev": {
         "psr-4": {
+            "Spatie\\SchemaOrg\\Generator\\": "generator",
             "Spatie\\SchemaOrg\\Test\\": "tests"
         }
     },
@@ -44,5 +42,5 @@
     },
     "config": {
         "sort-packages": true
-  }
+    }
 }
