@@ -1,4 +1,4 @@
-# A fluent builder for Schema.org JSON-LD
+# A fluent Schema.org helper and ld+json generator
 
 [![Latest Version on Packagist](https://img.shields.io/packagist/v/spatie/schema-org.svg?style=flat-square)](https://packagist.org/packages/spatie/schema-org)
 [![Software License](https://img.shields.io/badge/license-MIT-brightgreen.svg?style=flat-square)](LICENSE.md)
@@ -7,7 +7,33 @@
 [![Quality Score](https://img.shields.io/scrutinizer/g/spatie/schema-org.svg?style=flat-square)](https://scrutinizer-ci.com/g/spatie/schema-org)
 [![Total Downloads](https://img.shields.io/packagist/dt/spatie/schema-org.svg?style=flat-square)](https://packagist.org/packages/spatie/schema-org)
 
-This is where your description should go. Try and limit it to a paragraph or two, and maybe throw in a mention of what PSRs you support to avoid any confusion with users and contributors.
+`spatie/schema-org` provides a fluent builder for **all** Schema.org types and their properties. The code in `src` is generated from Schema.org's [RFDa standards file](https://github.com/schemaorg/schemaorg/blob/sdo-callisto/data/schema.rdfa), so it provides objects and methods for the entire core vocabulary. The classes and methods are also fully documented as a quick reference.
+
+```php
+use Spatie\SchemaOrg\Schema;
+
+$localBusiness = Schema::localBusiness()
+    ->name('Spatie')
+    ->email('info@spatie.be')
+    ->contactPoint(Schema::contactPoint()->areaServed('Worldwide'));
+
+$localBusiness->toScript();
+```
+
+```html
+<script type="application/ld+json">
+{
+    "@context": "http:\/\/schema.org",
+    "@type": "LocalBusiness",
+    "name": "Spatie",
+    "email": "info@spatie.be"
+    "contactPoint": {
+        "@type":"ContactPoint",
+        "areaServed":"Worldwide"
+    }
+}
+</script>
+```
 
 ## Postcardware
 

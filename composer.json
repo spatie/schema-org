@@ -1,6 +1,6 @@
 {
     "name": "spatie/schema-org",
-    "description": "A Schema.org helper and ld+json generator",
+    "description": "A fluent Schema.org helper and ld+json generator",
     "keywords": [
         "spatie",
         "schema-org"
