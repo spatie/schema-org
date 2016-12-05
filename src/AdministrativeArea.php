@@ -6,10 +6,8 @@ namespace Spatie\SchemaOrg;
  * A geographical region, typically under the jurisdiction of a particular
  * government.
  *
- * @see https://schema.org/AdministrativeArea
+ * @see http://schema.org/AdministrativeArea
  */
-class AdministrativeArea extends BaseType
+class AdministrativeArea extends Place
 {
-    use Properties\Thing;
-    use Properties\AdministrativeArea;
 }

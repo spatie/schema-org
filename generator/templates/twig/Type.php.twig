@@ -1,0 +1,27 @@
+<?php
+
+namespace Spatie\SchemaOrg;
+
+/**
+ * {{ type.description | doc(0) }}
+ *
+ * @see {{ type.resource }}
+ */
+class {{ type.name }} extends {{ type.parent }}
+{
+{% for property in type.properties %}    /**
+     * {{ property.description | doc(1) }}
+     *
+     * @param {{ property.ranges | join('|') }} ${{ property.name }}
+     *
+     * @return static
+     *
+     * @see {{ property.resource }}
+     */
+    public function {{ property.name }}(${{ property.name }})
+    {
+        return $this->setProperty('{{ property.name }}', ${{ property.name }});
+    }
+
+{% endfor %}
+}

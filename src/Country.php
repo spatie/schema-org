@@ -5,12 +5,8 @@ namespace Spatie\SchemaOrg;
 /**
  * A country.
  *
- * @see https://schema.org/Country
+ * @see http://schema.org/Country
  */
-class Country extends BaseType
+class Country extends AdministrativeArea
 {
-    use Properties\Thing;
-    use Properties\Place;
-    use Properties\AdministrativeArea;
-    use Properties\Country;
 }
