@@ -26,7 +26,7 @@ $localBusiness->toScript();
     "@context": "http:\/\/schema.org",
     "@type": "LocalBusiness",
     "name": "Spatie",
-    "email": "info@spatie.be"
+    "email": "info@spatie.be",
     "contactPoint": {
         "@type":"ContactPoint",
         "areaServed":"Worldwide"
@@ -45,13 +45,6 @@ The best postcards will get published on the open source page on our website.
 
 ## Installation
 
-**Note:** Remove this paragraph if you are building a public package  
-This package is custom built for [Spatie](https://spatie.be) projects and is therefore not registered on packagist. In order to install it via composer you must specify this extra repository in `composer.json`:
-
-```json
-"repositories": [ { "type": "composer", "url": "https://satis.spatie.be/" } ]
-```
-
 You can install the package via composer:
 
 ``` bash
@@ -60,9 +53,52 @@ composer require spatie/schema-org
 
 ## Usage
 
+All types can be instantiated though the `Spatie\SchemaOrg\Schema` factory class, or with the `new` keyword.
+
 ``` php
-$skeleton = new Spatie\Skeleton();
-echo $skeleton->echoPhrase('Hello, Spatie!');
+$localBusiness = Schema::localBusiness()->name('Spatie');
+
+// Is equivalent to:
+
+$localBusiness = new LocalBusiness();
+$localBusiness->name('Spatie'); 
+```
+
+Types can be rendered to a script, or converted to an array (which contains the same data as the json in the script).
+
+```php
+$localBusiness->toScript();
+
+$localBusiness->toArray();
+```
+
+### Advanced usage
+
+If you'd need to set a custom property, you can use the `setProperty` method.
+
+```php
+$localBusiness->setProperty('foo', 'bar');
+```
+
+If you'd need to retrieve a property, you can use the `getProperty` method. You can optionally pass in a second parameter to provide a default value. 
+
+```php
+$localBusiness->getProperty('name'); // 'Spatie'
+$localBusiness->getProperty('bar'); // null
+$localBusiness->getProperty('bar', 'baz'); // 'baz'
+```
+
+All properties can be retrieved as an array with the `getProperties` method.
+
+```php
+$localBusiness->getProperties(); // ['name' => 'Spatie', ...]
+```
+
+Context and type can be retrieved with the `getContext` and `getType` methods.
+
+```php
+$localBusiness->getContext(); // 'http://schema.org'
+$localBusiness->getType(); // 'LocalBusiness'
 ```
 
 ## Changelog
