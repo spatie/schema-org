@@ -1,4 +1,4 @@
-# A fluent Schema.org helper and ld+json generator
+# A fluent builder Schema.org types and ld+json generator
 
 [![Latest Version on Packagist](https://img.shields.io/packagist/v/spatie/schema-org.svg?style=flat-square)](https://packagist.org/packages/spatie/schema-org)
 [![Software License](https://img.shields.io/badge/license-MIT-brightgreen.svg?style=flat-square)](LICENSE.md)
