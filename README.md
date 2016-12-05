@@ -72,6 +72,8 @@ $localBusiness->toScript();
 $localBusiness->toArray();
 ```
 
+There's no full API documentation for types and properties. You can refer to [the source](https://github.com/spatie/schema-org/tree/master/src) or to [the schema.org website](http://schema.org).
+
 ### Advanced usage
 
 If you'd need to set a custom property, you can use the `setProperty` method.
