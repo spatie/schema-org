@@ -106,5 +106,4 @@ class Permit extends Intangible
     {
         return $this->setProperty('issuedBy', $issuedBy);
     }
-
 }

@@ -23,5 +23,4 @@ class PlanAction extends OrganizeAction
     {
         return $this->setProperty('scheduledTime', $scheduledTime);
     }
-
 }

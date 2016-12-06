@@ -531,5 +531,4 @@ class Product extends Thing
     {
         return $this->setProperty('purchaseDate', $purchaseDate);
     }
-
 }

@@ -78,5 +78,4 @@ class APIReference extends TechArticle
     {
         return $this->setProperty('targetPlatform', $targetPlatform);
     }
-
 }

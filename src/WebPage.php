@@ -143,5 +143,4 @@ class WebPage extends CreativeWork
     {
         return $this->setProperty('specialty', $specialty);
     }
-
 }

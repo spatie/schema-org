@@ -139,5 +139,4 @@ class ExerciseAction extends PlayAction
     {
         return $this->setProperty('toLocation', $toLocation);
     }
-
 }

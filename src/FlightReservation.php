@@ -54,5 +54,4 @@ class FlightReservation extends Reservation
     {
         return $this->setProperty('passengerPriorityStatus', $passengerPriorityStatus);
     }
-
 }

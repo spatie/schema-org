@@ -110,5 +110,4 @@ class EntryPoint extends Intangible
     {
         return $this->setProperty('urlTemplate', $urlTemplate);
     }
-
 }

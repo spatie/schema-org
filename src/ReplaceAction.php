@@ -36,5 +36,4 @@ class ReplaceAction extends UpdateAction
     {
         return $this->setProperty('replacer', $replacer);
     }
-
 }

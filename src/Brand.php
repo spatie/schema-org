@@ -52,5 +52,4 @@ class Brand extends Intangible
     {
         return $this->setProperty('review', $review);
     }
-
 }

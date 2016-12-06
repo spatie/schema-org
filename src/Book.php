@@ -78,5 +78,4 @@ class Book extends CreativeWork
     {
         return $this->setProperty('numberOfPages', $numberOfPages);
     }
-
 }

@@ -246,5 +246,4 @@ class MediaObject extends CreativeWork
     {
         return $this->setProperty('regionsAllowed', $regionsAllowed);
     }
-
 }

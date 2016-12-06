@@ -23,5 +23,4 @@ class OrganizationRole extends Role
     {
         return $this->setProperty('numberedPosition', $numberedPosition);
     }
-
 }

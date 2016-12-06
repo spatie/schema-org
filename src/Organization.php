@@ -706,5 +706,4 @@ class Organization extends Thing
     {
         return $this->setProperty('leiCode', $leiCode);
     }
-
 }

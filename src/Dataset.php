@@ -111,5 +111,4 @@ class Dataset extends CreativeWork
     {
         return $this->setProperty('datasetTimeInterval', $datasetTimeInterval);
     }
-
 }

@@ -37,5 +37,4 @@ class Airline extends Organization
     {
         return $this->setProperty('iataCode', $iataCode);
     }
-
 }

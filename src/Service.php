@@ -333,5 +333,4 @@ class Service extends Intangible
     {
         return $this->setProperty('broker', $broker);
     }
-
 }

@@ -51,5 +51,4 @@ class BroadcastEvent extends PublicationEvent
     {
         return $this->setProperty('isLiveBroadcast', $isLiveBroadcast);
     }
-
 }

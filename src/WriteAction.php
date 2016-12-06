@@ -39,5 +39,4 @@ class WriteAction extends CreateAction
     {
         return $this->setProperty('language', $language);
     }
-
 }

@@ -23,5 +23,4 @@ class DataFeed extends Dataset
     {
         return $this->setProperty('dataFeedElement', $dataFeedElement);
     }
-
 }

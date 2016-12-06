@@ -37,5 +37,4 @@ class TVSeason extends CreativeWork
     {
         return $this->setProperty('partOfTVSeries', $partOfTVSeries);
     }
-
 }

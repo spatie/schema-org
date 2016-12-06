@@ -311,5 +311,4 @@ class JobPosting extends Intangible
     {
         return $this->setProperty('workHours', $workHours);
     }
-
 }

@@ -53,5 +53,4 @@ class MenuItem extends CreativeWork
     {
         return $this->setProperty('nutrition', $nutrition);
     }
-
 }

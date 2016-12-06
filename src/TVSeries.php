@@ -226,5 +226,4 @@ class TVSeries extends CreativeWork
     {
         return $this->setProperty('trailer', $trailer);
     }
-
 }

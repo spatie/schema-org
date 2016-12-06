@@ -109,8 +109,8 @@ class QuantitativeValue extends StructuredValue
 
     /**
      * A string or text indicating the unit of measurement. Useful if you cannot
-     * provide a standard unit code for
-<a href='unitCode'>unitCode</a>.
+     * provide a standard unit code for.
+     <a href='unitCode'>unitCode</a>.
      *
      * @param string $unitText
      *
@@ -122,5 +122,4 @@ class QuantitativeValue extends StructuredValue
     {
         return $this->setProperty('unitText', $unitText);
     }
-
 }

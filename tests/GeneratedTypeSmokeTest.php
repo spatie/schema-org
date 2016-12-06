@@ -2,9 +2,9 @@
 
 namespace Spatie\Skeleton\Test;
 
-use PHPUnit_Framework_TestCase;
-use Spatie\SchemaOrg\Schema;
 use Spatie\SchemaOrg\Type;
+use Spatie\SchemaOrg\Schema;
+use PHPUnit_Framework_TestCase;
 use Spatie\SchemaOrg\LocalBusiness;
 
 class GeneratedTypeSmokeTest extends PHPUnit_Framework_TestCase

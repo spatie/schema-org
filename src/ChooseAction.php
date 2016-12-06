@@ -37,5 +37,4 @@ class ChooseAction extends AssessAction
     {
         return $this->setProperty('actionOption', $actionOption);
     }
-
 }

@@ -108,5 +108,4 @@ class BusTrip extends Intangible
     {
         return $this->setProperty('arrivalBusStop', $arrivalBusStop);
     }
-
 }

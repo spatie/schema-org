@@ -18,7 +18,7 @@ namespace Spatie\SchemaOrg;
  * applied to the containing group. Schema.org attempts to anticipate some of
  * these cases, but publishers should be free to apply properties of the series
  * parts to the series as a whole wherever they seem appropriate.
-	  
+
  *
  * @see http://schema.org/CreativeWorkSeries
  */
@@ -53,5 +53,4 @@ class CreativeWorkSeries extends CreativeWork
     {
         return $this->setProperty('startDate', $startDate);
     }
-
 }

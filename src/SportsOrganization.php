@@ -23,5 +23,4 @@ class SportsOrganization extends Organization
     {
         return $this->setProperty('sport', $sport);
     }
-
 }

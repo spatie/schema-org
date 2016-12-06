@@ -140,5 +140,4 @@ class Clip extends CreativeWork
     {
         return $this->setProperty('partOfSeries', $partOfSeries);
     }
-
 }

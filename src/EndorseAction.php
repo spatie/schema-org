@@ -22,5 +22,4 @@ class EndorseAction extends ReactAction
     {
         return $this->setProperty('endorsee', $endorsee);
     }
-
 }

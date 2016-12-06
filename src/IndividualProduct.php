@@ -25,5 +25,4 @@ class IndividualProduct extends Product
     {
         return $this->setProperty('serialNumber', $serialNumber);
     }
-
 }

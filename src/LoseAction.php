@@ -22,5 +22,4 @@ class LoseAction extends AchieveAction
     {
         return $this->setProperty('winner', $winner);
     }
-
 }

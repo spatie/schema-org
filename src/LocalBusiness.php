@@ -94,5 +94,4 @@ class LocalBusiness extends Organization
     {
         return $this->setProperty('priceRange', $priceRange);
     }
-
 }

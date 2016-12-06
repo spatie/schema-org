@@ -37,5 +37,4 @@ class ReservationPackage extends Reservation
     {
         return $this->setProperty('boardingGroup', $boardingGroup);
     }
-
 }

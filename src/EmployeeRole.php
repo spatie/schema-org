@@ -38,5 +38,4 @@ class EmployeeRole extends OrganizationRole
     {
         return $this->setProperty('salaryCurrency', $salaryCurrency);
     }
-
 }

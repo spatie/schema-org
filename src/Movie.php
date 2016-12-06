@@ -158,5 +158,4 @@ class Movie extends CreativeWork
     {
         return $this->setProperty('trailer', $trailer);
     }
-
 }

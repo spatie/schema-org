@@ -34,5 +34,4 @@ class CivicStructure extends Place
     {
         return $this->setProperty('openingHours', $openingHours);
     }
-
 }

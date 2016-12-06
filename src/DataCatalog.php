@@ -22,5 +22,4 @@ class DataCatalog extends CreativeWork
     {
         return $this->setProperty('dataset', $dataset);
     }
-
 }

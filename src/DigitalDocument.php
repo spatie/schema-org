@@ -24,5 +24,4 @@ class DigitalDocument extends CreativeWork
     {
         return $this->setProperty('hasDigitalDocumentPermission', $hasDigitalDocumentPermission);
     }
-
 }

@@ -477,7 +477,7 @@ class Event extends Thing
 
     /**
      * A work featured in some event, e.g. exhibited in an ExhibitionEvent.
-    
+
      *   Specific subproperties are available for workPerformed (e.g. a play),
      * or a workPresented (a Movie at a ScreeningEvent).
      *
@@ -522,5 +522,4 @@ class Event extends Thing
     {
         return $this->setProperty('composer', $composer);
     }
-
 }

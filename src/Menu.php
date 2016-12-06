@@ -53,5 +53,4 @@ class Menu extends CreativeWork
     {
         return $this->setProperty('menuAddOn', $menuAddOn);
     }
-
 }

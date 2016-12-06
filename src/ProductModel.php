@@ -55,5 +55,4 @@ class ProductModel extends Product
     {
         return $this->setProperty('successorOf', $successorOf);
     }
-
 }

@@ -14,7 +14,7 @@ class CreativeWork extends Thing
      * Indicates (by URL or string) a particular version of a schema used in
      * some CreativeWork. For example, a document could declare a schemaVersion
      * using an URL such as http://schema.org/version/2.0/ if precise indication
-     * of schema version was required by some application. 
+     * of schema version was required by some application.
      *
      * @param string $schemaVersion
      *
@@ -875,11 +875,11 @@ class CreativeWork extends Thing
 
     /**
      * The spatialCoverage of a CreativeWork indicates the place(s) which are
-     * the focus of the content. It is a subproperty of
-      contentLocation
+     * the focus of the content. It is a subproperty of.
+     contentLocation
      * intended primarily for more technical and detailed materials. For example
      * with a Dataset, it indicates
-      areas that the dataset describes: a
+     areas that the dataset describes: a
      * dataset of New York weather would have spatialCoverage which was the
      * place: the state of New York.
      *
@@ -929,14 +929,14 @@ class CreativeWork extends Thing
      * The temporalCoverage of a CreativeWork indicates the period that the
      * content applies to, i.e. that it describes, either as a DateTime or as a
      * textual string indicating a time period in [ISO 8601 time interval
-     * format](https://en.wikipedia.org/wiki/ISO_8601#Time_intervals). In
-     
+     * format](https://en.wikipedia.org/wiki/ISO_8601#Time_intervals). In.
+
      * the case of a Dataset it will typically indicate the relevant time period
      * in a precise notation (e.g. for a 2011 census dataset, the year 2011
      * would be written "2011/2012"). Other forms of content e.g.
      * ScholarlyArticle, Book, TVSeries or TVEpisode may indicate their
      * temporalCoverage in broader terms - textually or via well-known URL.
-    
+
      *  Written works such as books may sometimes have precise temporal coverage
      * too, e.g. a work set in 1939 - 1945 can be indicated in ISO 8601 interval
      * format format via "1939/1945".
@@ -1190,5 +1190,4 @@ class CreativeWork extends Thing
     {
         return $this->setProperty('interactionStatistic', $interactionStatistic);
     }
-
 }

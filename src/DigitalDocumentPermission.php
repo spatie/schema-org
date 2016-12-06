@@ -37,5 +37,4 @@ class DigitalDocumentPermission extends Intangible
     {
         return $this->setProperty('permissionType', $permissionType);
     }
-
 }

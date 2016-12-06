@@ -136,5 +136,4 @@ class QualitativeValue extends Enumeration
     {
         return $this->setProperty('additionalProperty', $additionalProperty);
     }
-
 }

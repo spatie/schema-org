@@ -65,5 +65,4 @@ class ListItem extends Intangible
     {
         return $this->setProperty('nextItem', $nextItem);
     }
-
 }

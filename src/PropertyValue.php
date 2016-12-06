@@ -10,7 +10,7 @@ namespace Spatie\SchemaOrg;
  * and b) you can populate them. Using PropertyValue as a substitute will
  * typically not trigger the same effect as using the original, specific
  * property.
-    
+
  *
  * @see http://schema.org/PropertyValue
  */
@@ -94,8 +94,8 @@ class PropertyValue extends StructuredValue
 
     /**
      * A string or text indicating the unit of measurement. Useful if you cannot
-     * provide a standard unit code for
-<a href='unitCode'>unitCode</a>.
+     * provide a standard unit code for.
+     <a href='unitCode'>unitCode</a>.
      *
      * @param string $unitText
      *
@@ -111,15 +111,15 @@ class PropertyValue extends StructuredValue
     /**
      * A commonly used identifier for the characteristic represented by the
      * property, e.g. a manufacturer or a standard code for a property.
-     * propertyID can be
-(1) a prefixed string, mainly meant to be used with
+     * propertyID can be.
+     (1) a prefixed string, mainly meant to be used with
      * standards for product properties; (2) a site-specific, non-prefixed
      * string (e.g. the primary key of the property or the vendor-specific id of
      * the property), or (3)
-a URL indicating the type of the property, either
+     a URL indicating the type of the property, either
      * pointing to an external vocabulary, or a Web resource that describes the
      * property (e.g. a glossary entry).
-Standards bodies should promote a
+     Standards bodies should promote a
      * standard prefix for the identifiers of properties from their standards.
      *
      * @param string $propertyID
@@ -132,5 +132,4 @@ Standards bodies should promote a
     {
         return $this->setProperty('propertyID', $propertyID);
     }
-
 }

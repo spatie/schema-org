@@ -23,5 +23,4 @@ class PayAction extends TradeAction
     {
         return $this->setProperty('recipient', $recipient);
     }
-
 }

@@ -43,5 +43,4 @@ class CourseInstance extends Event
     {
         return $this->setProperty('instructor', $instructor);
     }
-
 }

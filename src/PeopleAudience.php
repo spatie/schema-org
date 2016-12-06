@@ -93,5 +93,4 @@ class PeopleAudience extends Audience
     {
         return $this->setProperty('suggestedMinAge', $suggestedMinAge);
     }
-
 }

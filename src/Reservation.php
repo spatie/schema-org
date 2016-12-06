@@ -203,5 +203,4 @@ class Reservation extends Intangible
     {
         return $this->setProperty('broker', $broker);
     }
-
 }

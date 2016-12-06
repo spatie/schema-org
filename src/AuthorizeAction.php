@@ -23,5 +23,4 @@ class AuthorizeAction extends AllocateAction
     {
         return $this->setProperty('recipient', $recipient);
     }
-
 }

@@ -68,5 +68,4 @@ class Rating extends Intangible
     {
         return $this->setProperty('worstRating', $worstRating);
     }
-
 }

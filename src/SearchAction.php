@@ -23,5 +23,4 @@ class SearchAction extends Action
     {
         return $this->setProperty('query', $query);
     }
-
 }

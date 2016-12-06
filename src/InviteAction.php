@@ -23,5 +23,4 @@ class InviteAction extends CommunicateAction
     {
         return $this->setProperty('event', $event);
     }
-
 }

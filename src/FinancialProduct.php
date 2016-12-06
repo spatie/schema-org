@@ -57,5 +57,4 @@ class FinancialProduct extends Service
     {
         return $this->setProperty('interestRate', $interestRate);
     }
-
 }

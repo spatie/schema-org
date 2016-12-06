@@ -50,5 +50,4 @@ class SportsEvent extends Event
     {
         return $this->setProperty('competitor', $competitor);
     }
-
 }

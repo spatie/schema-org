@@ -24,5 +24,4 @@ class ConsumeAction extends Action
     {
         return $this->setProperty('expectsAcceptanceOf', $expectsAcceptanceOf);
     }
-
 }

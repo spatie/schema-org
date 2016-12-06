@@ -95,5 +95,4 @@ class LodgingReservation extends Reservation
     {
         return $this->setProperty('numChildren', $numChildren);
     }
-
 }

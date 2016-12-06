@@ -181,5 +181,4 @@ class ParcelDelivery extends Intangible
     {
         return $this->setProperty('provider', $provider);
     }
-
 }

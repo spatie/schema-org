@@ -22,5 +22,4 @@ class EducationalAudience extends Audience
     {
         return $this->setProperty('educationalRole', $educationalRole);
     }
-
 }

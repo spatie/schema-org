@@ -113,5 +113,4 @@ class SoftwareSourceCode extends CreativeWork
     {
         return $this->setProperty('targetProduct', $targetProduct);
     }
-
 }

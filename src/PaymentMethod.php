@@ -15,8 +15,8 @@ namespace Spatie\SchemaOrg;
  * http://purl.org/goodrelations/v1#DirectDebit\n*
  * http://purl.org/goodrelations/v1#GoogleCheckout\n*
  * http://purl.org/goodrelations/v1#PayPal\n*
- * http://purl.org/goodrelations/v1#PaySwarm
-        
+ * http://purl.org/goodrelations/v1#PaySwarm.
+
  *
  * @see http://schema.org/PaymentMethod
  */

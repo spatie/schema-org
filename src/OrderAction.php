@@ -22,5 +22,4 @@ class OrderAction extends TradeAction
     {
         return $this->setProperty('deliveryMethod', $deliveryMethod);
     }
-
 }

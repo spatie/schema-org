@@ -52,5 +52,4 @@ class ScreeningEvent extends Event
     {
         return $this->setProperty('workPresented', $workPresented);
     }
-
 }

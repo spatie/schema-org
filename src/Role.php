@@ -77,5 +77,4 @@ class Role extends Intangible
     {
         return $this->setProperty('roleName', $roleName);
     }
-
 }

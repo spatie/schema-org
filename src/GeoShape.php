@@ -147,5 +147,4 @@ class GeoShape extends StructuredValue
     {
         return $this->setProperty('postalCode', $postalCode);
     }
-
 }

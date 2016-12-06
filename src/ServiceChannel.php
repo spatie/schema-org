@@ -13,7 +13,7 @@ class ServiceChannel extends Intangible
     /**
      * A language someone may use with the item. Please use one of the language
      * codes from the [IETF BCP 47 standard](http://tools.ietf.org/html/bcp47).
-     * See also [[inLanguage]]
+     * See also [[inLanguage]].
      *
      * @param string $availableLanguage
      *
@@ -124,5 +124,4 @@ class ServiceChannel extends Intangible
     {
         return $this->setProperty('serviceUrl', $serviceUrl);
     }
-
 }

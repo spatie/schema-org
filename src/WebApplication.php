@@ -23,5 +23,4 @@ class WebApplication extends SoftwareApplication
     {
         return $this->setProperty('browserRequirements', $browserRequirements);
     }
-
 }

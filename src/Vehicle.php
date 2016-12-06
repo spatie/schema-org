@@ -11,7 +11,7 @@ namespace Spatie\SchemaOrg;
 class Vehicle extends Product
 {
     /**
-     * The number of doors.\n\nTypical unit code(s): C62
+     * The number of doors.\n\nTypical unit code(s): C62.
      *
      * @param float|int $numberOfDoors
      *
@@ -39,7 +39,7 @@ class Vehicle extends Product
     }
 
     /**
-     * The number of axles.\n\nTypical unit code(s): C62
+     * The number of axles.\n\nTypical unit code(s): C62.
      *
      * @param float|int $numberOfAxles
      *
@@ -115,7 +115,7 @@ class Vehicle extends Product
 
     /**
      * The total number of forward gears available for the transmission system
-     * of the vehicle.\n\nTypical unit code(s): C62
+     * of the vehicle.\n\nTypical unit code(s): C62.
      *
      * @param float|int $numberOfForwardGears
      *
@@ -269,7 +269,7 @@ class Vehicle extends Product
     /**
      * The total distance travelled by the particular vehicle since its initial
      * production, as read from its odometer.\n\nTypical unit code(s): KMT for
-     * kilometers, SMI for statute miles
+     * kilometers, SMI for statute miles.
      *
      * @param \Spatie\SchemaOrg\QuantitativeValue $mileageFromOdometer
      *
@@ -299,7 +299,7 @@ class Vehicle extends Product
 
     /**
      * The number of owners of the vehicle, including the current
-     * one.\n\nTypical unit code(s): C62
+     * one.\n\nTypical unit code(s): C62.
      *
      * @param float|int $numberOfPreviousOwners
      *
@@ -402,5 +402,4 @@ class Vehicle extends Product
     {
         return $this->setProperty('vehicleSpecialUsage', $vehicleSpecialUsage);
     }
-
 }

@@ -15,7 +15,7 @@ class Apartment extends Accommodation
     /**
      * The number of rooms (excluding bathrooms and closets) of the
      * acccommodation or lodging business.
-Typical unit code(s): ROM for room or
+     Typical unit code(s): ROM for room or
      * C62 for no unit. The type of room can be put in the unitText property of
      * the QuantitativeValue.
      *
@@ -35,7 +35,7 @@ Typical unit code(s): ROM for room or
      * infants etc). For individual accommodations, this is not necessarily the
      * legal maximum but defines the permitted usage as per the contractual
      * agreement (e.g. a double room used by a single person).
-Typical unit
+     Typical unit
      * code(s): C62 for person
      *
      * @param \Spatie\SchemaOrg\QuantitativeValue $occupancy
@@ -48,5 +48,4 @@ Typical unit
     {
         return $this->setProperty('occupancy', $occupancy);
     }
-
 }

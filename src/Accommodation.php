@@ -6,11 +6,11 @@ namespace Spatie\SchemaOrg;
  * An accommodation is a place that can accommodate human beings, e.g. a hotel
  * room, a camping pitch, or a meeting room. Many accommodations are for
  * overnight stays, but this is not a mandatory requirement.
-For more specific
+ For more specific
  * types of accommodations not defined in schema.org, one can use additionalType
  * with external vocabularies.
-<br /><br />
-See also the <a
+ <br /><br />
+ See also the <a
  * href="/docs/hotels.html">dedicated document on the use of schema.org for
  * marking up hotels and other forms of accommodations</a>.
 
@@ -39,7 +39,7 @@ class Accommodation extends Place
     /**
      * The number of rooms (excluding bathrooms and closets) of the
      * acccommodation or lodging business.
-Typical unit code(s): ROM for room or
+     Typical unit code(s): ROM for room or
      * C62 for no unit. The type of room can be put in the unitText property of
      * the QuantitativeValue.
      *
@@ -57,8 +57,8 @@ Typical unit code(s): ROM for room or
     /**
      * The size of the accommodation, e.g. in square meter or
      * squarefoot.
-Typical unit code(s): MTK for square meter, FTK for square
-     * foot, or YDK for square yard 
+     Typical unit code(s): MTK for square meter, FTK for square
+     * foot, or YDK for square yard
      *
      * @param \Spatie\SchemaOrg\QuantitativeValue $floorSize
      *
@@ -99,5 +99,4 @@ Typical unit code(s): MTK for square meter, FTK for square
     {
         return $this->setProperty('petsAllowed', $petsAllowed);
     }
-
 }

@@ -173,5 +173,4 @@ class VideoGame extends SoftwareApplication
     {
         return $this->setProperty('gameServer', $gameServer);
     }
-
 }

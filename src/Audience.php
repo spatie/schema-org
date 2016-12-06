@@ -37,5 +37,4 @@ class Audience extends Intangible
     {
         return $this->setProperty('geographicArea', $geographicArea);
     }
-
 }

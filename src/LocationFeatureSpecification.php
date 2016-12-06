@@ -53,5 +53,4 @@ class LocationFeatureSpecification extends PropertyValue
     {
         return $this->setProperty('validThrough', $validThrough);
     }
-
 }

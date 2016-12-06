@@ -54,5 +54,4 @@ class LiveBlogPosting extends BlogPosting
     {
         return $this->setProperty('liveBlogUpdate', $liveBlogUpdate);
     }
-
 }

@@ -83,5 +83,4 @@ class Game extends CreativeWork
     {
         return $this->setProperty('gameLocation', $gameLocation);
     }
-
 }

@@ -51,5 +51,4 @@ class MusicPlaylist extends CreativeWork
     {
         return $this->setProperty('track', $track);
     }
-
 }

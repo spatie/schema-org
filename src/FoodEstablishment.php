@@ -70,5 +70,4 @@ class FoodEstablishment extends LocalBusiness
     {
         return $this->setProperty('starRating', $starRating);
     }
-
 }

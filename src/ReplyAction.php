@@ -25,5 +25,4 @@ class ReplyAction extends CommunicateAction
     {
         return $this->setProperty('resultComment', $resultComment);
     }
-
 }

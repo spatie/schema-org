@@ -155,5 +155,4 @@ class VideoObject extends MediaObject
     {
         return $this->setProperty('videoQuality', $videoQuality);
     }
-
 }

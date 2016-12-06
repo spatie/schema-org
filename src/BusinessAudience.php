@@ -51,5 +51,4 @@ class BusinessAudience extends Audience
     {
         return $this->setProperty('yearsInOperation', $yearsInOperation);
     }
-
 }

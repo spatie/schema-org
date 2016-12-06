@@ -52,5 +52,4 @@ class RsvpAction extends InformAction
     {
         return $this->setProperty('comment', $comment);
     }
-
 }

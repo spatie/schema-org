@@ -52,5 +52,4 @@ class TaxiReservation extends Reservation
     {
         return $this->setProperty('pickupTime', $pickupTime);
     }
-
 }

@@ -65,5 +65,4 @@ class MusicAlbum extends MusicPlaylist
     {
         return $this->setProperty('albumRelease', $albumRelease);
     }
-
 }

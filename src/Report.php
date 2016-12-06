@@ -23,5 +23,4 @@ class Report extends Article
     {
         return $this->setProperty('reportNumber', $reportNumber);
     }
-
 }

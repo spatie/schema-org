@@ -169,5 +169,4 @@ class CreativeWorkSeason extends CreativeWork
     {
         return $this->setProperty('trailer', $trailer);
     }
-
 }

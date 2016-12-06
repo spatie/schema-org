@@ -22,5 +22,4 @@ class MovieTheater extends CivicStructure
     {
         return $this->setProperty('screenCount', $screenCount);
     }
-
 }

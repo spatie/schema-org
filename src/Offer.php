@@ -260,7 +260,7 @@ class Offer extends Intangible
      * The ISO 3166-1 (ISO 3166-1 alpha-2) or ISO 3166-2 code, the place, or the
      * GeoShape for the geo-political region(s) for which the offer or delivery
      * charge specification is valid.\n\nSee also [[ineligibleRegion]].
-    
+
      *
      * @param string $eligibleRegion
      *
@@ -278,7 +278,7 @@ class Offer extends Intangible
      * GeoShape for the geo-political region(s) for which the offer or delivery
      * charge specification is not valid, e.g. a region where the transaction is
      * not allowed.\n\nSee also [[eligibleRegion]].
-      
+
      *
      * @param string $ineligibleRegion
      *
@@ -461,8 +461,8 @@ class Offer extends Intangible
      * PriceSpecification and its subtypes.\n\nUsage guidelines:\n\n* Use the
      * [[priceCurrency]] property (with [ISO 4217
      * codes](http://en.wikipedia.org/wiki/ISO_4217#Active_codes) e.g. "USD")
-     * instead of
-      including [ambiguous
+     * instead of.
+     including [ambiguous
      * symbols](http://en.wikipedia.org/wiki/Dollar_sign#Currencies_that_use_the_dollar_or_peso_sign)
      * such as '$' in the value.\n* Use '.' (Unicode 'FULL STOP' (U+002E))
      * rather than ',' to indicate a decimal point. Avoid using these symbols as
@@ -473,7 +473,7 @@ class Offer extends Intangible
      * formatting.\n* Use values from 0123456789 (Unicode 'DIGIT ZERO' (U+0030)
      * to 'DIGIT NINE' (U+0039)) rather than superficially similiar Unicode
      * symbols.
-      
+
      *
      * @param string $price
      *
@@ -646,5 +646,4 @@ class Offer extends Intangible
     {
         return $this->setProperty('priceCurrency', $priceCurrency);
     }
-
 }

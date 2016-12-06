@@ -40,5 +40,4 @@ class MoveAction extends Action
     {
         return $this->setProperty('toLocation', $toLocation);
     }
-
 }

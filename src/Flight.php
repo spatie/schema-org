@@ -267,5 +267,4 @@ class Flight extends Intangible
     {
         return $this->setProperty('webCheckinTime', $webCheckinTime);
     }
-
 }

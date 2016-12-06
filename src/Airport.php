@@ -36,5 +36,4 @@ class Airport extends CivicStructure
     {
         return $this->setProperty('icaoCode', $icaoCode);
     }
-
 }

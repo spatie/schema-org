@@ -98,5 +98,4 @@ class MovieSeries extends CreativeWorkSeries
     {
         return $this->setProperty('trailer', $trailer);
     }
-
 }

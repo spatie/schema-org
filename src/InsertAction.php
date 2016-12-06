@@ -23,5 +23,4 @@ class InsertAction extends AddAction
     {
         return $this->setProperty('toLocation', $toLocation);
     }
-
 }

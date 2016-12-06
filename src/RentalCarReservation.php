@@ -66,5 +66,4 @@ class RentalCarReservation extends Reservation
     {
         return $this->setProperty('dropoffTime', $dropoffTime);
     }
-
 }

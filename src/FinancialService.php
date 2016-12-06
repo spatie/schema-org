@@ -23,5 +23,4 @@ class FinancialService extends LocalBusiness
     {
         return $this->setProperty('feesAndCommissionsSpecification', $feesAndCommissionsSpecification);
     }
-
 }

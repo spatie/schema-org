@@ -227,5 +227,4 @@ class RadioSeries extends CreativeWorkSeries
     {
         return $this->setProperty('trailer', $trailer);
     }
-
 }

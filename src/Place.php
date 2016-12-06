@@ -44,7 +44,7 @@ class Place extends Thing
      * parentOrganization and used in structured URLs.\n\nFor example, in the
      * URL http://www.starbucks.co.uk/store-locator/etc/detail/3047 the code
      * "3047" is a branchCode for a particular branch.
-      
+
      *
      * @param string $branchCode
      *
@@ -278,7 +278,7 @@ class Place extends Thing
      * The special opening hours of a certain place.\n\nUse this to explicitly
      * override general opening hours brought in scope by
      * [[openingHoursSpecification]] or [[openingHours]].
-      
+
      *
      * @param \Spatie\SchemaOrg\OpeningHoursSpecification $specialOpeningHoursSpecification
      *
@@ -414,5 +414,4 @@ class Place extends Thing
     {
         return $this->setProperty('smokingAllowed', $smokingAllowed);
     }
-
 }

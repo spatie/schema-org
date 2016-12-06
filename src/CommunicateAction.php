@@ -69,5 +69,4 @@ class CommunicateAction extends InteractAction
     {
         return $this->setProperty('recipient', $recipient);
     }
-
 }

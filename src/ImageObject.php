@@ -65,5 +65,4 @@ class ImageObject extends MediaObject
     {
         return $this->setProperty('thumbnail', $thumbnail);
     }
-
 }

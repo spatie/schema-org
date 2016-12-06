@@ -26,5 +26,4 @@ class LeaveAction extends InteractAction
     {
         return $this->setProperty('event', $event);
     }
-
 }

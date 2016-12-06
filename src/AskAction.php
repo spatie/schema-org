@@ -23,5 +23,4 @@ class AskAction extends CommunicateAction
     {
         return $this->setProperty('question', $question);
     }
-
 }

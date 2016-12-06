@@ -23,5 +23,4 @@ class PerformAction extends PlayAction
     {
         return $this->setProperty('entertainmentBusiness', $entertainmentBusiness);
     }
-
 }
