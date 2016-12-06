@@ -83,5 +83,4 @@ class Recipe extends CreativeWork
     {
         return $this->setProperty('ingredients', $ingredients);
     }
-
 }

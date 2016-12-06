@@ -41,5 +41,4 @@ class BedDetails extends Intangible
     {
         return $this->setProperty('numberOfBeds', $numberOfBeds);
     }
-
 }

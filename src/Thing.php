@@ -169,7 +169,7 @@ class Thing extends BaseType
      * dedicated properties for representing many of these, either as textual
      * strings or as URL (URI) links. See [background
      * notes](/docs/datamodel.html#identifierBg) for more details.
-        
+
      *
      * @param \Spatie\SchemaOrg\PropertyValue $identifier
      *
@@ -181,5 +181,4 @@ class Thing extends BaseType
     {
         return $this->setProperty('identifier', $identifier);
     }
-
 }

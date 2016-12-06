@@ -36,5 +36,4 @@ class EducationalOrganization extends Organization
     {
         return $this->setProperty('alumni', $alumni);
     }
-
 }

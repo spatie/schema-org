@@ -68,5 +68,4 @@ class PublicationIssue extends CreativeWork
     {
         return $this->setProperty('pagination', $pagination);
     }
-
 }

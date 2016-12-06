@@ -54,5 +54,4 @@ class Comment extends CreativeWork
     {
         return $this->setProperty('parentItem', $parentItem);
     }
-
 }

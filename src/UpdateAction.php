@@ -36,5 +36,4 @@ class UpdateAction extends Action
     {
         return $this->setProperty('targetCollection', $targetCollection);
     }
-
 }

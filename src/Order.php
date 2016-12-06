@@ -367,5 +367,4 @@ class Order extends Intangible
     {
         return $this->setProperty('broker', $broker);
     }
-
 }

@@ -24,5 +24,4 @@ class MobileApplication extends SoftwareApplication
     {
         return $this->setProperty('carrierRequirements', $carrierRequirements);
     }
-
 }

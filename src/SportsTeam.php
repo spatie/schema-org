@@ -37,5 +37,4 @@ class SportsTeam extends SportsOrganization
     {
         return $this->setProperty('athlete', $athlete);
     }
-
 }

@@ -81,5 +81,4 @@ class ProgramMembership extends Intangible
     {
         return $this->setProperty('hostingOrganization', $hostingOrganization);
     }
-
 }

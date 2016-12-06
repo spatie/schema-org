@@ -150,5 +150,4 @@ class MusicComposition extends CreativeWork
     {
         return $this->setProperty('lyrics', $lyrics);
     }
-
 }

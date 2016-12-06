@@ -67,5 +67,4 @@ class DataFeedItem extends Intangible
     {
         return $this->setProperty('item', $item);
     }
-
 }

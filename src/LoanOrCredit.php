@@ -40,7 +40,7 @@ class LoanOrCredit extends FinancialProduct
 
     /**
      * Assets required to secure loan or credit repayments. It may take form of
-     * third party pledge, goods, financial instruments (cash, securities, etc.)
+     * third party pledge, goods, financial instruments (cash, securities, etc.).
      *
      * @param string $requiredCollateral
      *
@@ -52,5 +52,4 @@ class LoanOrCredit extends FinancialProduct
     {
         return $this->setProperty('requiredCollateral', $requiredCollateral);
     }
-
 }

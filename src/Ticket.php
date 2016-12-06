@@ -123,5 +123,4 @@ class Ticket extends Intangible
     {
         return $this->setProperty('ticketToken', $ticketToken);
     }
-
 }

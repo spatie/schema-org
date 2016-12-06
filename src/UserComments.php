@@ -81,5 +81,4 @@ class UserComments extends UserInteraction
     {
         return $this->setProperty('replyToUrl', $replyToUrl);
     }
-
 }

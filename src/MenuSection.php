@@ -39,5 +39,4 @@ class MenuSection extends CreativeWork
     {
         return $this->setProperty('hasMenuSection', $hasMenuSection);
     }
-
 }

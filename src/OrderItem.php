@@ -80,5 +80,4 @@ class OrderItem extends Intangible
     {
         return $this->setProperty('orderedItem', $orderedItem);
     }
-
 }

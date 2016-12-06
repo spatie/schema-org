@@ -27,5 +27,4 @@ class Periodical extends CreativeWorkSeries
     {
         return $this->setProperty('issn', $issn);
     }
-
 }

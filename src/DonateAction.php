@@ -24,5 +24,4 @@ class DonateAction extends TradeAction
     {
         return $this->setProperty('recipient', $recipient);
     }
-
 }

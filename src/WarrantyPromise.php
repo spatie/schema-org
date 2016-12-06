@@ -39,5 +39,4 @@ class WarrantyPromise extends StructuredValue
     {
         return $this->setProperty('warrantyScope', $warrantyScope);
     }
-
 }

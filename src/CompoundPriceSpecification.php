@@ -26,5 +26,4 @@ class CompoundPriceSpecification extends PriceSpecification
     {
         return $this->setProperty('priceComponent', $priceComponent);
     }
-
 }

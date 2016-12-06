@@ -64,5 +64,4 @@ class DeliveryEvent extends Event
     {
         return $this->setProperty('hasDeliveryMethod', $hasDeliveryMethod);
     }
-
 }

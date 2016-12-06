@@ -72,5 +72,4 @@ class MonetaryAmount extends StructuredValue
     {
         return $this->setProperty('currency', $currency);
     }
-
 }

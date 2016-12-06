@@ -22,5 +22,4 @@ class SomeProducts extends Product
     {
         return $this->setProperty('inventoryLevel', $inventoryLevel);
     }
-
 }

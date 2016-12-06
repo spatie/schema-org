@@ -25,5 +25,4 @@ class BorrowAction extends TransferAction
     {
         return $this->setProperty('lender', $lender);
     }
-
 }

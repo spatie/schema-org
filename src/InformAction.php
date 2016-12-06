@@ -24,5 +24,4 @@ class InformAction extends CommunicateAction
     {
         return $this->setProperty('event', $event);
     }
-
 }

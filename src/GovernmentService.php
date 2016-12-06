@@ -25,5 +25,4 @@ class GovernmentService extends Service
     {
         return $this->setProperty('serviceOperator', $serviceOperator);
     }
-
 }

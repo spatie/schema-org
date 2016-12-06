@@ -53,5 +53,4 @@ class BuyAction extends TradeAction
     {
         return $this->setProperty('warrantyPromise', $warrantyPromise);
     }
-
 }

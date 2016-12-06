@@ -136,5 +136,4 @@ class TrainTrip extends Intangible
     {
         return $this->setProperty('arrivalPlatform', $arrivalPlatform);
     }
-
 }

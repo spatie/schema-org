@@ -36,5 +36,4 @@ class Blog extends CreativeWork
     {
         return $this->setProperty('blogPosts', $blogPosts);
     }
-
 }

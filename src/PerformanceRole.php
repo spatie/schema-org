@@ -24,5 +24,4 @@ class PerformanceRole extends Role
     {
         return $this->setProperty('characterName', $characterName);
     }
-
 }

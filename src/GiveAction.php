@@ -27,5 +27,4 @@ class GiveAction extends TransferAction
     {
         return $this->setProperty('recipient', $recipient);
     }
-
 }

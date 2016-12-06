@@ -23,5 +23,4 @@ class VoteAction extends ChooseAction
     {
         return $this->setProperty('candidate', $candidate);
     }
-
 }

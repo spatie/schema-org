@@ -28,5 +28,4 @@ class JoinAction extends InteractAction
     {
         return $this->setProperty('event', $event);
     }
-
 }

@@ -99,7 +99,7 @@ class BroadcastService extends Service
 
     /**
      * The timezone in [ISO 8601 format](http://en.wikipedia.org/wiki/ISO_8601)
-     * for which the service bases its broadcasts
+     * for which the service bases its broadcasts.
      *
      * @param string $broadcastTimezone
      *
@@ -111,5 +111,4 @@ class BroadcastService extends Service
     {
         return $this->setProperty('broadcastTimezone', $broadcastTimezone);
     }
-
 }

@@ -34,5 +34,4 @@ class FollowAction extends InteractAction
     {
         return $this->setProperty('followee', $followee);
     }
-
 }

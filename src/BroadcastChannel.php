@@ -80,5 +80,4 @@ class BroadcastChannel extends Intangible
     {
         return $this->setProperty('providesBroadcastService', $providesBroadcastService);
     }
-
 }

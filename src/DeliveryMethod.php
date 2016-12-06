@@ -15,8 +15,8 @@ namespace Spatie\SchemaOrg;
  * http://purl.org/goodrelations/v1#DeliveryModePickUp\n*
  * http://purl.org/goodrelations/v1#DHL\n*
  * http://purl.org/goodrelations/v1#FederalExpress\n*
- * http://purl.org/goodrelations/v1#UPS
-        
+ * http://purl.org/goodrelations/v1#UPS.
+
  *
  * @see http://schema.org/DeliveryMethod
  */

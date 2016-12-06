@@ -185,5 +185,4 @@ class Action extends Thing
     {
         return $this->setProperty('target', $target);
     }
-
 }

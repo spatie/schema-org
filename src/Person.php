@@ -799,5 +799,4 @@ class Person extends Thing
     {
         return $this->setProperty('deathPlace', $deathPlace);
     }
-
 }

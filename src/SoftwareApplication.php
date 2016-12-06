@@ -359,5 +359,4 @@ class SoftwareApplication extends CreativeWork
     {
         return $this->setProperty('softwareHelp', $softwareHelp);
     }
-
 }

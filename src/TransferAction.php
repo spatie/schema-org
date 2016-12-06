@@ -39,5 +39,4 @@ class TransferAction extends Action
     {
         return $this->setProperty('toLocation', $toLocation);
     }
-
 }

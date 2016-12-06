@@ -41,5 +41,4 @@ class SendAction extends TransferAction
     {
         return $this->setProperty('recipient', $recipient);
     }
-
 }

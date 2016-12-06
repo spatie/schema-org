@@ -37,5 +37,4 @@ class ParentAudience extends PeopleAudience
     {
         return $this->setProperty('childMinAge', $childMinAge);
     }
-
 }

@@ -23,5 +23,4 @@ class TravelAction extends MoveAction
     {
         return $this->setProperty('distance', $distance);
     }
-
 }

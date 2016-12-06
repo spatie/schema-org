@@ -50,5 +50,4 @@ class GameServer extends Intangible
     {
         return $this->setProperty('game', $game);
     }
-
 }

@@ -39,5 +39,4 @@ class SellAction extends TradeAction
     {
         return $this->setProperty('warrantyPromise', $warrantyPromise);
     }
-
 }

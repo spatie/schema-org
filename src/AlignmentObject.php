@@ -82,5 +82,4 @@ class AlignmentObject extends Intangible
     {
         return $this->setProperty('targetUrl', $targetUrl);
     }
-
 }

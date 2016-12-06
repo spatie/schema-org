@@ -68,5 +68,4 @@ class AggregateOffer extends Offer
     {
         return $this->setProperty('offers', $offers);
     }
-
 }

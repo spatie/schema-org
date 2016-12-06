@@ -24,5 +24,4 @@ class SocialMediaPosting extends Article
     {
         return $this->setProperty('sharedContent', $sharedContent);
     }
-
 }

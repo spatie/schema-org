@@ -96,5 +96,4 @@ class GeoCoordinates extends StructuredValue
     {
         return $this->setProperty('postalCode', $postalCode);
     }
-
 }

@@ -53,5 +53,4 @@ class Review extends CreativeWork
     {
         return $this->setProperty('reviewRating', $reviewRating);
     }
-
 }

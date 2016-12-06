@@ -97,5 +97,4 @@ class Article extends CreativeWork
     {
         return $this->setProperty('pagination', $pagination);
     }
-
 }

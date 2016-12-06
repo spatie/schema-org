@@ -43,5 +43,4 @@ class PlayAction extends Action
     {
         return $this->setProperty('event', $event);
     }
-
 }

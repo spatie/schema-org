@@ -24,5 +24,4 @@ class InvestmentOrDeposit extends FinancialProduct
     {
         return $this->setProperty('amount', $amount);
     }
-
 }

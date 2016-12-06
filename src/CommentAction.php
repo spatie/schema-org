@@ -23,5 +23,4 @@ class CommentAction extends CommunicateAction
     {
         return $this->setProperty('resultComment', $resultComment);
     }
-
 }

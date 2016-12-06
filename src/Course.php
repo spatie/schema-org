@@ -60,5 +60,4 @@ class Course extends CreativeWork
     {
         return $this->setProperty('hasCourseInstance', $hasCourseInstance);
     }
-
 }

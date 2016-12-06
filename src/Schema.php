@@ -2966,5 +2966,4 @@ class Schema
     {
         return new MenuSection();
     }
-
 }

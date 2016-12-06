@@ -95,5 +95,4 @@ class Message extends CreativeWork
     {
         return $this->setProperty('messageAttachment', $messageAttachment);
     }
-
 }

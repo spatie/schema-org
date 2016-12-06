@@ -22,5 +22,4 @@ class Map extends CreativeWork
     {
         return $this->setProperty('mapType', $mapType);
     }
-
 }

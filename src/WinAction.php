@@ -22,5 +22,4 @@ class WinAction extends AchieveAction
     {
         return $this->setProperty('loser', $loser);
     }
-
 }

@@ -26,5 +26,4 @@ class TrackAction extends FindAction
     {
         return $this->setProperty('deliveryMethod', $deliveryMethod);
     }
-
 }

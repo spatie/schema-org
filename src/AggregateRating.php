@@ -50,5 +50,4 @@ class AggregateRating extends Rating
     {
         return $this->setProperty('reviewCount', $reviewCount);
     }
-
 }

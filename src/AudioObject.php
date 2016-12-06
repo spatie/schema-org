@@ -23,5 +23,4 @@ class AudioObject extends MediaObject
     {
         return $this->setProperty('transcript', $transcript);
     }
-
 }

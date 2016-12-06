@@ -26,5 +26,4 @@ class Corporation extends Organization
     {
         return $this->setProperty('tickerSymbol', $tickerSymbol);
     }
-
 }

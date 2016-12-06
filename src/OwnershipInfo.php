@@ -65,5 +65,4 @@ class OwnershipInfo extends StructuredValue
     {
         return $this->setProperty('typeOfGood', $typeOfGood);
     }
-
 }

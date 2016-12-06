@@ -22,5 +22,4 @@ class TVClip extends Clip
     {
         return $this->setProperty('partOfTVSeries', $partOfTVSeries);
     }
-
 }

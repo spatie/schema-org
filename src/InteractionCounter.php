@@ -25,5 +25,4 @@ class InteractionCounter extends StructuredValue
     {
         return $this->setProperty('interactionType', $interactionType);
     }
-
 }

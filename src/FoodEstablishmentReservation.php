@@ -62,5 +62,4 @@ class FoodEstablishmentReservation extends Reservation
     {
         return $this->setProperty('partySize', $partySize);
     }
-
 }

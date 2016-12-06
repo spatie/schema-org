@@ -24,5 +24,4 @@ class ReviewAction extends AssessAction
     {
         return $this->setProperty('resultReview', $resultReview);
     }
-
 }

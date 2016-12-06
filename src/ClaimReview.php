@@ -23,5 +23,4 @@ class ClaimReview extends Review
     {
         return $this->setProperty('claimReviewed', $claimReviewed);
     }
-
 }

@@ -24,5 +24,4 @@ class TipAction extends TradeAction
     {
         return $this->setProperty('recipient', $recipient);
     }
-
 }

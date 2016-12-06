@@ -37,5 +37,4 @@ class PaymentChargeSpecification extends PriceSpecification
     {
         return $this->setProperty('appliesToPaymentMethod', $appliesToPaymentMethod);
     }
-
 }

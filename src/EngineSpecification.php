@@ -25,5 +25,4 @@ class EngineSpecification extends StructuredValue
     {
         return $this->setProperty('fuelType', $fuelType);
     }
-
 }

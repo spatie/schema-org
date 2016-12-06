@@ -52,5 +52,4 @@ class TVEpisode extends Episode
     {
         return $this->setProperty('subtitleLanguage', $subtitleLanguage);
     }
-
 }

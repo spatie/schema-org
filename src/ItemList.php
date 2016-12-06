@@ -62,5 +62,4 @@ class ItemList extends Intangible
     {
         return $this->setProperty('itemListElement', $itemListElement);
     }
-
 }

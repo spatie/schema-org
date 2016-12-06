@@ -64,5 +64,4 @@ class Seat extends Intangible
     {
         return $this->setProperty('seatingType', $seatingType);
     }
-
 }

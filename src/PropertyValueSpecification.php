@@ -171,5 +171,4 @@ class PropertyValueSpecification extends Intangible
     {
         return $this->setProperty('stepValue', $stepValue);
     }
-
 }

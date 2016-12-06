@@ -93,5 +93,4 @@ class MusicRecording extends CreativeWork
     {
         return $this->setProperty('recordingOf', $recordingOf);
     }
-
 }

@@ -82,5 +82,4 @@ class NewsArticle extends Article
     {
         return $this->setProperty('printSection', $printSection);
     }
-
 }

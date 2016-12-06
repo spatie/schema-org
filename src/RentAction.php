@@ -39,5 +39,4 @@ class RentAction extends TradeAction
     {
         return $this->setProperty('realEstateAgent', $realEstateAgent);
     }
-
 }

@@ -156,5 +156,4 @@ class Episode extends CreativeWork
     {
         return $this->setProperty('trailer', $trailer);
     }
-
 }

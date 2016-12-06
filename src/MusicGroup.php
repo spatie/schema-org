@@ -95,5 +95,4 @@ class MusicGroup extends PerformingGroup
     {
         return $this->setProperty('track', $track);
     }
-
 }

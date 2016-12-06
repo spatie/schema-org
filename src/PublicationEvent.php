@@ -52,5 +52,4 @@ class PublicationEvent extends Event
     {
         return $this->setProperty('publishedOn', $publishedOn);
     }
-
 }

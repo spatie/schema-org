@@ -23,5 +23,4 @@ class CookAction extends CreateAction
     {
         return $this->setProperty('foodEvent', $foodEvent);
     }
-
 }

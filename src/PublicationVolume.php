@@ -7,7 +7,7 @@ namespace Spatie\SchemaOrg;
  * multi-volume work, often numbered. It may represent a time span, such as a
  * year.
 
-      <br/><br/>See also <a
+ <br/><br/>See also <a
  * href="http://blog.schema.org/2014/09/schemaorg-support-for-bibliographic_2.html">blog
  * post</a>.
  *
@@ -72,5 +72,4 @@ class PublicationVolume extends CreativeWork
     {
         return $this->setProperty('volumeNumber', $volumeNumber);
     }
-
 }

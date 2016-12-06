@@ -93,5 +93,4 @@ class PostalAddress extends ContactPoint
     {
         return $this->setProperty('streetAddress', $streetAddress);
     }
-
 }

@@ -84,5 +84,4 @@ class Question extends CreativeWork
     {
         return $this->setProperty('suggestedAnswer', $suggestedAnswer);
     }
-
 }

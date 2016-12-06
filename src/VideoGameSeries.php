@@ -330,5 +330,4 @@ class VideoGameSeries extends CreativeWorkSeries
     {
         return $this->setProperty('gameLocation', $gameLocation);
     }
-
 }

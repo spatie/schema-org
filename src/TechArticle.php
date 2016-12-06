@@ -38,5 +38,4 @@ class TechArticle extends Article
     {
         return $this->setProperty('proficiencyLevel', $proficiencyLevel);
     }
-
 }

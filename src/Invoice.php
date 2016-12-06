@@ -283,5 +283,4 @@ class Invoice extends Intangible
     {
         return $this->setProperty('referencesOrder', $referencesOrder);
     }
-
 }
