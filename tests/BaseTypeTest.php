@@ -2,8 +2,8 @@
 
 namespace Spatie\Skeleton\Test;
 
-use PHPUnit_Framework_TestCase;
 use Spatie\SchemaOrg\BaseType;
+use PHPUnit_Framework_TestCase;
 
 class BaseTypeTest extends PHPUnit_Framework_TestCase
 {

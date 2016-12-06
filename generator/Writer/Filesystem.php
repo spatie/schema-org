@@ -3,8 +3,8 @@
 namespace Spatie\SchemaOrg\Generator\Writer;
 
 use League\Flysystem\Adapter\Local;
-use League\Flysystem\Filesystem as Flysystem;
 use Spatie\SchemaOrg\Generator\Type;
+use League\Flysystem\Filesystem as Flysystem;
 use Spatie\SchemaOrg\Generator\TypeCollection;
 
 class Filesystem
@@ -57,7 +57,7 @@ class Filesystem
     public function createFactory(TypeCollection $types)
     {
         $this->flysystem->put(
-            "src/Schema.php",
+            'src/Schema.php',
             $this->factoryTemplate->render(['types' => $types->toArray()])
         );
     }
