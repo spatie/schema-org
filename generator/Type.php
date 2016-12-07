@@ -21,6 +21,6 @@ class Type
 
     public function addProperty(Property $property)
     {
-        $this->properties[] = $property;
+        $this->properties[$property->name] = $property;
     }
 }

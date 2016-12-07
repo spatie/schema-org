@@ -57,11 +57,6 @@ class Schema
         return new Hospital();
     }
 
-    public static function physician(): Physician
-    {
-        return new Physician();
-    }
-
     public static function pharmacy(): Pharmacy
     {
         return new Pharmacy();
@@ -640,11 +635,6 @@ class Schema
     public static function fireStation(): FireStation
     {
         return new FireStation();
-    }
-
-    public static function float(): Float
-    {
-        return new Float();
     }
 
     public static function florist(): Florist

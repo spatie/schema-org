@@ -104,6 +104,12 @@ $localBusiness->getContext(); // 'http://schema.org'
 $localBusiness->getType(); // 'LocalBusiness'
 ```
 
+## Known Issues
+
+- The `Float` type isn't available since it's a reserved keyword in PHP
+- The `Physician` type isn't available since it extends a type from the `health` extension spec
+- Some docblocks have some formatting issues
+
 ## Changelog
 
 Please see [CHANGELOG](CHANGELOG.md) for more information what has changed recently.

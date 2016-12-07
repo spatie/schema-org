@@ -36,7 +36,11 @@ class GenerateCommand extends Command
             file_get_contents($input->getArgument('source'))
         );
 
-        $output->writeln('Fresh package generated!');
+        $output->writeln('Fresh package generated! Linting...');
+
+        exec('find src -exec php -l {} \; | grep "!(No syntax)"');
+
+        $output->writeln('Done!');
 
         return 0;
     }

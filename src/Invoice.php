@@ -98,20 +98,6 @@ class Invoice extends Intangible
     /**
      * The date that payment is due.
      *
-     * @param \DateTimeInterface $paymentDue
-     *
-     * @return static
-     *
-     * @see http://schema.org/paymentDue
-     */
-    public function paymentDue($paymentDue)
-    {
-        return $this->setProperty('paymentDue', $paymentDue);
-    }
-
-    /**
-     * The date that payment is due.
-     *
      * @param \DateTimeInterface $paymentDueDate
      *
      * @return static
@@ -121,35 +107,6 @@ class Invoice extends Intangible
     public function paymentDueDate($paymentDueDate)
     {
         return $this->setProperty('paymentDueDate', $paymentDueDate);
-    }
-
-    /**
-     * The name of the credit card or other method of payment for the order.
-     *
-     * @param \Spatie\SchemaOrg\PaymentMethod $paymentMethod
-     *
-     * @return static
-     *
-     * @see http://schema.org/paymentMethod
-     */
-    public function paymentMethod($paymentMethod)
-    {
-        return $this->setProperty('paymentMethod', $paymentMethod);
-    }
-
-    /**
-     * An identifier for the method of payment used (e.g. the last 4 digits of
-     * the credit card).
-     *
-     * @param string $paymentMethodId
-     *
-     * @return static
-     *
-     * @see http://schema.org/paymentMethodId
-     */
-    public function paymentMethodId($paymentMethodId)
-    {
-        return $this->setProperty('paymentMethodId', $paymentMethodId);
     }
 
     /**

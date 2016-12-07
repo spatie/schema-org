@@ -23,18 +23,4 @@ class EducationalOrganization extends Organization
         return $this->setProperty('alumni', $alumni);
     }
 
-    /**
-     * Alumni of an organization.
-     *
-     * @param \Spatie\SchemaOrg\Person $alumni
-     *
-     * @return static
-     *
-     * @see http://schema.org/alumni
-     */
-    public function alumni($alumni)
-    {
-        return $this->setProperty('alumni', $alumni);
-    }
-
 }

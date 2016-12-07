@@ -38,16 +38,17 @@ class RdfaParser
 
                 $type->name = $this->getText($node, '[property="rdfs:label"]');
 
-                if (empty($type->name)) {
-                    return;
-                }
-
-                if ($type->name === 'DataType') {
+                if (in_array($type->name, ['', 'DataType', 'Float'])) {
                     return;
                 }
 
                 $type->description = $this->getText($node, '[property="rdfs:comment"]');
                 $type->parent = $this->getText($node, '[property="rdfs:subClassOf"]') ?: 'BaseType';
+
+                if (strpos($type->parent, ':') !== false) {
+                    return;
+                }
+
                 $type->resource = $this->getAttribute($node, 'resource');
 
                 $this->types->push($type);

@@ -158,21 +158,6 @@ class RadioSeries extends CreativeWorkSeries
     }
 
     /**
-     * The production company or studio responsible for the item e.g. series,
-     * video game, episode etc.
-     *
-     * @param \Spatie\SchemaOrg\Organization $productionCompany
-     *
-     * @return static
-     *
-     * @see http://schema.org/productionCompany
-     */
-    public function productionCompany($productionCompany)
-    {
-        return $this->setProperty('productionCompany', $productionCompany);
-    }
-
-    /**
      * A season in a media series.
      *
      * @param \Spatie\SchemaOrg\CreativeWorkSeason $season
