@@ -28,7 +28,7 @@ class LodgingBusiness extends LocalBusiness
      * codes from the [IETF BCP 47 standard](http://tools.ietf.org/html/bcp47).
      * See also [[inLanguage]]
      *
-     * @param string $availableLanguage
+     * @param \Spatie\SchemaOrg\Language|string $availableLanguage
      *
      * @return static
      *
@@ -88,7 +88,7 @@ class LodgingBusiness extends LocalBusiness
      * Indicates whether pets are allowed to enter the accommodation or lodging
      * business. More detailed information can be put in a text value.
      *
-     * @param string $petsAllowed
+     * @param bool|string $petsAllowed
      *
      * @return static
      *

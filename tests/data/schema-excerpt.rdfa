@@ -59,6 +59,12 @@
        <span>Subclass of: <a property="rdfs:subClassOf" href="http://schema.org/WebPage">WebPage</a></span>
     </div>
 
+        <div typeof="rdfs:Class" resource="http://schema.org/Organization">
+          <span class="h" property="rdfs:label">Organization</span>
+          <span property="rdfs:comment">An organization such as a school, NGO, corporation, club, etc.</span>
+           <span>Subclass of: <a property="rdfs:subClassOf" href="http://schema.org/Thing">Thing</a></span>
+        </div>
+
     <div typeof="rdfs:Class" resource="http://schema.org/MusicPlaylist">
       <span class="h" property="rdfs:label">MusicPlaylist</span>
       <span property="rdfs:comment">A collection of music tracks in playlist form.</span>
@@ -70,6 +76,30 @@
       <span property="rdfs:comment">A MusicRelease is a specific release of a music album.</span>
       <link property="dc:source" href="http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#MBZ"/>
     <span>Subclass of: <a property="rdfs:subClassOf" href="http://schema.org/MusicPlaylist">MusicPlaylist</a></span>
+    </div>
+
+    <div typeof="rdfs:Class" resource="http://schema.org/Intangible">
+      <span class="h" property="rdfs:label">Intangible</span>
+      <span property="rdfs:comment">A utility class that serves as the umbrella for a number of 'intangible' things such as quantities, structured values, etc.</span>
+       <span>Subclass of: <a property="rdfs:subClassOf" href="http://schema.org/Thing">Thing</a></span>
+    </div>
+
+    <div typeof="rdfs:Class" resource="http://schema.org/StructuredValue">
+      <span class="h" property="rdfs:label">StructuredValue</span>
+      <span property="rdfs:comment">Structured values are used when the value of a property has a more complex structure than simply being a textual value or a reference to another thing.</span>
+       <span>Subclass of: <a property="rdfs:subClassOf" href="http://schema.org/Intangible">Intangible</a></span>
+    </div>
+
+<div typeof="rdfs:Class" resource="http://schema.org/ContactPoint">
+      <span class="h" property="rdfs:label">ContactPoint</span>
+      <span property="rdfs:comment">A contact point&amp;#x2014;for example, a Customer Complaints department.</span>
+       <span>Subclass of: <a property="rdfs:subClassOf" href="http://schema.org/StructuredValue">StructuredValue</a></span>
+    </div>
+
+    <div typeof="rdfs:Class" resource="http://schema.org/PostalAddress">
+      <span class="h" property="rdfs:label">PostalAddress</span>
+      <span property="rdfs:comment">The mailing address.</span>
+       <span>Subclass of: <a property="rdfs:subClassOf" href="http://schema.org/ContactPoint">ContactPoint</a></span>
     </div>
 
     <div typeof="rdf:Property" resource="http://schema.org/schemaVersion">
@@ -96,5 +126,17 @@
           <span>Domain: <a property="http://schema.org/domainIncludes" href="http://schema.org/MusicRecording">MusicRecording</a></span>
           <span>Range: <a property="http://schema.org/rangeIncludes" href="http://schema.org/Duration">Duration</a></span>
         </div>
+
+        <div typeof="rdf:Property" resource="http://schema.org/address">
+              <span class="h" property="rdfs:label">address</span>
+              <span property="rdfs:comment">Physical address of the item.</span>
+              <span>Domain: <a property="http://schema.org/domainIncludes" href="http://schema.org/Organization">Organization</a></span>
+              <span>Domain: <a property="http://schema.org/domainIncludes" href="http://schema.org/Place">Place</a></span>
+              <span>Domain: <a property="http://schema.org/domainIncludes" href="http://schema.org/Person">Person</a></span>
+              <span>Domain: <a property="http://schema.org/domainIncludes" href="http://schema.org/GeoCoordinates">GeoCoordinates</a></span>
+              <span>Domain: <a property="http://schema.org/domainIncludes" href="http://schema.org/GeoShape">GeoShape</a></span>
+              <span>Range: <a property="http://schema.org/rangeIncludes" href="http://schema.org/PostalAddress">PostalAddress</a></span>
+              <span>Range: <a property="http://schema.org/rangeIncludes" href="http://schema.org/Text">Text</a></span>
+            </div>
   </body>
   </html>

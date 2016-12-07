@@ -19,7 +19,7 @@ class Action extends Thing
      * The direct performer or driver of the action (animate or inanimate). e.g.
      * *John* wrote a book.
      *
-     * @param \Spatie\SchemaOrg\Person $agent
+     * @param \Spatie\SchemaOrg\Organization|\Spatie\SchemaOrg\Person $agent
      *
      * @return static
      *
@@ -68,7 +68,7 @@ class Action extends Thing
      * The location of for example where the event is happening, an organization
      * is located, or where an action takes place.
      *
-     * @param string $location
+     * @param \Spatie\SchemaOrg\Place|\Spatie\SchemaOrg\PostalAddress|string $location
      *
      * @return static
      *
@@ -100,7 +100,7 @@ class Action extends Thing
      * Other co-agents that participated in the action indirectly. e.g. John
      * wrote a book with *Steve*.
      *
-     * @param \Spatie\SchemaOrg\Person $participant
+     * @param \Spatie\SchemaOrg\Organization|\Spatie\SchemaOrg\Person $participant
      *
      * @return static
      *

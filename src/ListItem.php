@@ -12,7 +12,7 @@ class ListItem extends Intangible
     /**
      * The position of an item in a series or sequence of items.
      *
-     * @param int $position
+     * @param string|int $position
      *
      * @return static
      *

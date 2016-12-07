@@ -59,7 +59,7 @@ class QuantitativeValue extends StructuredValue
      * values is 'Number'.\n* For [[PropertyValue]], it can be 'Text;',
      * 'Number', 'Boolean', or 'StructuredValue'.
      *
-     * @param \Spatie\SchemaOrg\StructuredValue $value
+     * @param float|int|string|bool|\Spatie\SchemaOrg\StructuredValue $value
      *
      * @return static
      *
@@ -74,7 +74,7 @@ class QuantitativeValue extends StructuredValue
      * A pointer to a secondary value that provides additional information on
      * the original value, e.g. a reference temperature.
      *
-     * @param \Spatie\SchemaOrg\QuantitativeValue $valueReference
+     * @param \Spatie\SchemaOrg\Enumeration|\Spatie\SchemaOrg\StructuredValue|\Spatie\SchemaOrg\PropertyValue|\Spatie\SchemaOrg\QualitativeValue|\Spatie\SchemaOrg\QuantitativeValue $valueReference
      *
      * @return static
      *

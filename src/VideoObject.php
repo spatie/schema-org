@@ -88,7 +88,7 @@ class VideoObject extends MediaObject
     /**
      * The composer of the soundtrack.
      *
-     * @param \Spatie\SchemaOrg\Person $musicBy
+     * @param \Spatie\SchemaOrg\MusicGroup|\Spatie\SchemaOrg\Person $musicBy
      *
      * @return static
      *

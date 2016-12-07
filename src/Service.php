@@ -43,7 +43,7 @@ class Service extends Intangible
     /**
      * The geographic area where a service or offered item is provided.
      *
-     * @param string $areaServed
+     * @param \Spatie\SchemaOrg\Place|\Spatie\SchemaOrg\AdministrativeArea|\Spatie\SchemaOrg\GeoShape|string $areaServed
      *
      * @return static
      *
@@ -101,7 +101,7 @@ class Service extends Intangible
      * The brand(s) associated with a product or service, or the brand(s)
      * maintained by an organization or business person.
      *
-     * @param \Spatie\SchemaOrg\Organization $brand
+     * @param \Spatie\SchemaOrg\Brand|\Spatie\SchemaOrg\Organization $brand
      *
      * @return static
      *
@@ -116,7 +116,7 @@ class Service extends Intangible
      * A category for the item. Greater signs or slashes can be used to
      * informally indicate a category hierarchy.
      *
-     * @param \Spatie\SchemaOrg\Thing $category
+     * @param string|\Spatie\SchemaOrg\Thing $category
      *
      * @return static
      *
@@ -144,7 +144,7 @@ class Service extends Intangible
     /**
      * A pointer to another, somehow related product (or multiple products).
      *
-     * @param \Spatie\SchemaOrg\Service $isRelatedTo
+     * @param \Spatie\SchemaOrg\Product|\Spatie\SchemaOrg\Service $isRelatedTo
      *
      * @return static
      *
@@ -159,7 +159,7 @@ class Service extends Intangible
      * A pointer to another, functionally similar product (or multiple
      * products).
      *
-     * @param \Spatie\SchemaOrg\Service $isSimilarTo
+     * @param \Spatie\SchemaOrg\Product|\Spatie\SchemaOrg\Service $isSimilarTo
      *
      * @return static
      *
@@ -173,7 +173,7 @@ class Service extends Intangible
     /**
      * An associated logo.
      *
-     * @param string $logo
+     * @param \Spatie\SchemaOrg\ImageObject|string $logo
      *
      * @return static
      *
@@ -247,7 +247,7 @@ class Service extends Intangible
     /**
      * The geographic area where the service is provided.
      *
-     * @param \Spatie\SchemaOrg\GeoShape $serviceArea
+     * @param \Spatie\SchemaOrg\Place|\Spatie\SchemaOrg\AdministrativeArea|\Spatie\SchemaOrg\GeoShape $serviceArea
      *
      * @return static
      *
@@ -292,7 +292,7 @@ class Service extends Intangible
      * producer. Another party (a seller) may offer those services or goods on
      * behalf of the provider. A provider may also serve as the seller.
      *
-     * @param \Spatie\SchemaOrg\Organization $provider
+     * @param \Spatie\SchemaOrg\Person|\Spatie\SchemaOrg\Organization $provider
      *
      * @return static
      *
@@ -323,7 +323,7 @@ class Service extends Intangible
      * service involved in an exchange.  If it is not clear whether an entity is
      * a broker, seller, or buyer, the latter two terms are preferred.
      *
-     * @param \Spatie\SchemaOrg\Organization $broker
+     * @param \Spatie\SchemaOrg\Person|\Spatie\SchemaOrg\Organization $broker
      *
      * @return static
      *

@@ -14,7 +14,7 @@ class TaxiReservation extends Reservation
     /**
      * Number of people the reservation should accommodate.
      *
-     * @param \Spatie\SchemaOrg\QuantitativeValue $partySize
+     * @param int|\Spatie\SchemaOrg\QuantitativeValue $partySize
      *
      * @return static
      *

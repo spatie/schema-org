@@ -27,7 +27,7 @@ class DeliveryChargeSpecification extends PriceSpecification
     /**
      * The geographic area where a service or offered item is provided.
      *
-     * @param string $areaServed
+     * @param \Spatie\SchemaOrg\Place|\Spatie\SchemaOrg\AdministrativeArea|\Spatie\SchemaOrg\GeoShape|string $areaServed
      *
      * @return static
      *
@@ -44,7 +44,7 @@ class DeliveryChargeSpecification extends PriceSpecification
      * charge specification is valid.\n\nSee also [[ineligibleRegion]].
     
      *
-     * @param string $eligibleRegion
+     * @param \Spatie\SchemaOrg\GeoShape|\Spatie\SchemaOrg\Place|string $eligibleRegion
      *
      * @return static
      *
@@ -62,7 +62,7 @@ class DeliveryChargeSpecification extends PriceSpecification
      * not allowed.\n\nSee also [[eligibleRegion]].
       
      *
-     * @param string $ineligibleRegion
+     * @param \Spatie\SchemaOrg\GeoShape|\Spatie\SchemaOrg\Place|string $ineligibleRegion
      *
      * @return static
      *

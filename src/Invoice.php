@@ -13,7 +13,7 @@ class Invoice extends Intangible
      * A category for the item. Greater signs or slashes can be used to
      * informally indicate a category hierarchy.
      *
-     * @param \Spatie\SchemaOrg\Thing $category
+     * @param string|\Spatie\SchemaOrg\Thing $category
      *
      * @return static
      *
@@ -41,7 +41,7 @@ class Invoice extends Intangible
     /**
      * Party placing the order or paying the invoice.
      *
-     * @param \Spatie\SchemaOrg\Person $customer
+     * @param \Spatie\SchemaOrg\Organization|\Spatie\SchemaOrg\Person $customer
      *
      * @return static
      *
@@ -114,7 +114,7 @@ class Invoice extends Intangible
      * producer. Another party (a seller) may offer those services or goods on
      * behalf of the provider. A provider may also serve as the seller.
      *
-     * @param \Spatie\SchemaOrg\Organization $provider
+     * @param \Spatie\SchemaOrg\Person|\Spatie\SchemaOrg\Organization $provider
      *
      * @return static
      *
@@ -131,7 +131,7 @@ class Invoice extends Intangible
      * service involved in an exchange.  If it is not clear whether an entity is
      * a broker, seller, or buyer, the latter two terms are preferred.
      *
-     * @param \Spatie\SchemaOrg\Organization $broker
+     * @param \Spatie\SchemaOrg\Person|\Spatie\SchemaOrg\Organization $broker
      *
      * @return static
      *
@@ -145,7 +145,7 @@ class Invoice extends Intangible
     /**
      * The total amount due.
      *
-     * @param \Spatie\SchemaOrg\MonetaryAmount $totalPaymentDue
+     * @param \Spatie\SchemaOrg\PriceSpecification|\Spatie\SchemaOrg\MonetaryAmount $totalPaymentDue
      *
      * @return static
      *
@@ -159,7 +159,7 @@ class Invoice extends Intangible
     /**
      * The minimum payment required at this time.
      *
-     * @param \Spatie\SchemaOrg\MonetaryAmount $minimumPaymentDue
+     * @param \Spatie\SchemaOrg\PriceSpecification|\Spatie\SchemaOrg\MonetaryAmount $minimumPaymentDue
      *
      * @return static
      *
@@ -215,7 +215,7 @@ class Invoice extends Intangible
     /**
      * The status of payment; whether the invoice has been paid or not.
      *
-     * @param string $paymentStatus
+     * @param \Spatie\SchemaOrg\PaymentStatusType|string $paymentStatus
      *
      * @return static
      *

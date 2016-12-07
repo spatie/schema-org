@@ -70,7 +70,7 @@ class OrderItem extends Intangible
     /**
      * The item ordered.
      *
-     * @param \Spatie\SchemaOrg\OrderItem $orderedItem
+     * @param \Spatie\SchemaOrg\Product|\Spatie\SchemaOrg\OrderItem $orderedItem
      *
      * @return static
      *

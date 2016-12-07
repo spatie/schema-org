@@ -44,7 +44,7 @@ class FlightReservation extends Reservation
      * The priority status assigned to a passenger for security or boarding
      * (e.g. FastTrack or Priority).
      *
-     * @param \Spatie\SchemaOrg\QualitativeValue $passengerPriorityStatus
+     * @param string|\Spatie\SchemaOrg\QualitativeValue $passengerPriorityStatus
      *
      * @return static
      *

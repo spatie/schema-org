@@ -73,7 +73,7 @@ class Game extends CreativeWork
     /**
      * Real or fictional location of the game (or part of game).
      *
-     * @param \Spatie\SchemaOrg\PostalAddress $gameLocation
+     * @param string|\Spatie\SchemaOrg\Place|\Spatie\SchemaOrg\PostalAddress $gameLocation
      *
      * @return static
      *

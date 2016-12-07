@@ -27,7 +27,7 @@ class Organization extends Thing
     /**
      * Physical address of the item.
      *
-     * @param string $address
+     * @param \Spatie\SchemaOrg\PostalAddress|string $address
      *
      * @return static
      *
@@ -56,7 +56,7 @@ class Organization extends Thing
     /**
      * The geographic area where a service or offered item is provided.
      *
-     * @param string $areaServed
+     * @param \Spatie\SchemaOrg\Place|\Spatie\SchemaOrg\AdministrativeArea|\Spatie\SchemaOrg\GeoShape|string $areaServed
      *
      * @return static
      *
@@ -114,7 +114,7 @@ class Organization extends Thing
      * The brand(s) associated with a product or service, or the brand(s)
      * maintained by an organization or business person.
      *
-     * @param \Spatie\SchemaOrg\Organization $brand
+     * @param \Spatie\SchemaOrg\Brand|\Spatie\SchemaOrg\Organization $brand
      *
      * @return static
      *
@@ -391,7 +391,7 @@ class Organization extends Thing
      * The location of for example where the event is happening, an organization
      * is located, or where an action takes place.
      *
-     * @param string $location
+     * @param \Spatie\SchemaOrg\Place|\Spatie\SchemaOrg\PostalAddress|string $location
      *
      * @return static
      *
@@ -405,7 +405,7 @@ class Organization extends Thing
     /**
      * An associated logo.
      *
-     * @param string $logo
+     * @param \Spatie\SchemaOrg\ImageObject|string $logo
      *
      * @return static
      *
@@ -433,7 +433,7 @@ class Organization extends Thing
     /**
      * A pointer to the organization or person making the offer.
      *
-     * @param \Spatie\SchemaOrg\Offer $offeredBy
+     * @param \Spatie\SchemaOrg\Person|\Spatie\SchemaOrg\Offer $offeredBy
      *
      * @return static
      *
@@ -448,7 +448,7 @@ class Organization extends Thing
      * A member of an Organization or a ProgramMembership. Organizations can be
      * members of organizations; ProgramMembership is typically for individuals.
      *
-     * @param \Spatie\SchemaOrg\Person $member
+     * @param \Spatie\SchemaOrg\Organization|\Spatie\SchemaOrg\Person $member
      *
      * @return static
      *
@@ -463,7 +463,7 @@ class Organization extends Thing
      * An Organization (or ProgramMembership) to which this Person or
      * Organization belongs.
      *
-     * @param \Spatie\SchemaOrg\ProgramMembership $memberOf
+     * @param \Spatie\SchemaOrg\Organization|\Spatie\SchemaOrg\ProgramMembership $memberOf
      *
      * @return static
      *
@@ -477,7 +477,7 @@ class Organization extends Thing
     /**
      * A member of this organization.
      *
-     * @param \Spatie\SchemaOrg\Person $members
+     * @param \Spatie\SchemaOrg\Organization|\Spatie\SchemaOrg\Person $members
      *
      * @return static
      *
@@ -520,7 +520,7 @@ class Organization extends Thing
     /**
      * Products owned by the organization or person.
      *
-     * @param \Spatie\SchemaOrg\Product $owns
+     * @param \Spatie\SchemaOrg\OwnershipInfo|\Spatie\SchemaOrg\Product $owns
      *
      * @return static
      *
@@ -577,7 +577,7 @@ class Organization extends Thing
     /**
      * The geographic area where the service is provided.
      *
-     * @param \Spatie\SchemaOrg\GeoShape $serviceArea
+     * @param \Spatie\SchemaOrg\Place|\Spatie\SchemaOrg\AdministrativeArea|\Spatie\SchemaOrg\GeoShape $serviceArea
      *
      * @return static
      *
@@ -593,7 +593,7 @@ class Organization extends Thing
      * or financial contribution. e.g. a sponsor of a Medical Study or a
      * corporate sponsor of an event.
      *
-     * @param \Spatie\SchemaOrg\Person $sponsor
+     * @param \Spatie\SchemaOrg\Organization|\Spatie\SchemaOrg\Person $sponsor
      *
      * @return static
      *
@@ -608,7 +608,7 @@ class Organization extends Thing
      * A person or organization that supports (sponsors) something through some
      * kind of financial contribution.
      *
-     * @param \Spatie\SchemaOrg\Person $funder
+     * @param \Spatie\SchemaOrg\Organization|\Spatie\SchemaOrg\Person $funder
      *
      * @return static
      *

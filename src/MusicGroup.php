@@ -85,7 +85,7 @@ class MusicGroup extends PerformingGroup
      * A music recording (track)&#x2014;usually a single song. If an ItemList is
      * given, the list should contain items of type MusicRecording.
      *
-     * @param \Spatie\SchemaOrg\MusicRecording $track
+     * @param \Spatie\SchemaOrg\ItemList|\Spatie\SchemaOrg\MusicRecording $track
      *
      * @return static
      *

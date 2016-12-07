@@ -43,7 +43,7 @@ class LodgingReservation extends Reservation
      * Textual description of the unit type (including suite vs. room, size of
      * bed, etc.).
      *
-     * @param \Spatie\SchemaOrg\QualitativeValue $lodgingUnitType
+     * @param string|\Spatie\SchemaOrg\QualitativeValue $lodgingUnitType
      *
      * @return static
      *
@@ -71,7 +71,7 @@ class LodgingReservation extends Reservation
     /**
      * The number of adults staying in the unit.
      *
-     * @param \Spatie\SchemaOrg\QuantitativeValue $numAdults
+     * @param int|\Spatie\SchemaOrg\QuantitativeValue $numAdults
      *
      * @return static
      *
@@ -85,7 +85,7 @@ class LodgingReservation extends Reservation
     /**
      * The number of children staying in the unit.
      *
-     * @param \Spatie\SchemaOrg\QuantitativeValue $numChildren
+     * @param int|\Spatie\SchemaOrg\QuantitativeValue $numChildren
      *
      * @return static
      *

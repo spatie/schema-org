@@ -47,7 +47,7 @@ class MonetaryAmount extends StructuredValue
      * values is 'Number'.\n* For [[PropertyValue]], it can be 'Text;',
      * 'Number', 'Boolean', or 'StructuredValue'.
      *
-     * @param \Spatie\SchemaOrg\StructuredValue $value
+     * @param float|int|string|bool|\Spatie\SchemaOrg\StructuredValue $value
      *
      * @return static
      *

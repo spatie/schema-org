@@ -12,7 +12,7 @@ class JobPosting extends Intangible
     /**
      * The base salary of the job or of an employee in an EmployeeRole.
      *
-     * @param \Spatie\SchemaOrg\MonetaryAmount $baseSalary
+     * @param float|int|\Spatie\SchemaOrg\PriceSpecification|\Spatie\SchemaOrg\MonetaryAmount $baseSalary
      *
      * @return static
      *

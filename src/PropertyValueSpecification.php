@@ -72,7 +72,7 @@ class PropertyValueSpecification extends Intangible
      * the default is a literal value, for properties that expect an object,
      * it's an ID reference to one of the current values.
      *
-     * @param string $defaultValue
+     * @param \Spatie\SchemaOrg\Thing|string $defaultValue
      *
      * @return static
      *

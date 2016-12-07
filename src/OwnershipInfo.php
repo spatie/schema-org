@@ -13,7 +13,7 @@ class OwnershipInfo extends StructuredValue
     /**
      * The organization or person from which the product was acquired.
      *
-     * @param \Spatie\SchemaOrg\Person $acquiredFrom
+     * @param \Spatie\SchemaOrg\Organization|\Spatie\SchemaOrg\Person $acquiredFrom
      *
      * @return static
      *
@@ -55,7 +55,7 @@ class OwnershipInfo extends StructuredValue
     /**
      * The product that this structured value is referring to.
      *
-     * @param \Spatie\SchemaOrg\Service $typeOfGood
+     * @param \Spatie\SchemaOrg\Product|\Spatie\SchemaOrg\Service $typeOfGood
      *
      * @return static
      *

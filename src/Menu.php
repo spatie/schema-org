@@ -43,7 +43,7 @@ class Menu extends CreativeWork
      * fries that can be added to this menu item. Additionally it can be a menu
      * section containing allowed add-on menu items for this menu item.
      *
-     * @param \Spatie\SchemaOrg\MenuSection $menuAddOn
+     * @param \Spatie\SchemaOrg\MenuItem|\Spatie\SchemaOrg\MenuSection $menuAddOn
      *
      * @return static
      *

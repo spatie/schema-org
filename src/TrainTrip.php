@@ -14,7 +14,7 @@ class TrainTrip extends Intangible
      * producer. Another party (a seller) may offer those services or goods on
      * behalf of the provider. A provider may also serve as the seller.
      *
-     * @param \Spatie\SchemaOrg\Organization $provider
+     * @param \Spatie\SchemaOrg\Person|\Spatie\SchemaOrg\Organization $provider
      *
      * @return static
      *

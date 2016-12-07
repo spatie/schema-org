@@ -13,7 +13,7 @@ class ChooseAction extends AssessAction
     /**
      * A sub property of object. The options subject to this action.
      *
-     * @param \Spatie\SchemaOrg\Thing $option
+     * @param string|\Spatie\SchemaOrg\Thing $option
      *
      * @return static
      *
@@ -27,7 +27,7 @@ class ChooseAction extends AssessAction
     /**
      * A sub property of object. The options subject to this action.
      *
-     * @param \Spatie\SchemaOrg\Thing $actionOption
+     * @param string|\Spatie\SchemaOrg\Thing $actionOption
      *
      * @return static
      *

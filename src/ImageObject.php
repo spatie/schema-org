@@ -26,7 +26,7 @@ class ImageObject extends MediaObject
     /**
      * exif data for this object.
      *
-     * @param \Spatie\SchemaOrg\PropertyValue $exifData
+     * @param string|\Spatie\SchemaOrg\PropertyValue $exifData
      *
      * @return static
      *

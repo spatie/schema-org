@@ -28,7 +28,7 @@ class Flight extends Intangible
      * An entity which offers (sells / leases / lends / loans) the services /
      * goods.  A seller may also be a provider.
      *
-     * @param \Spatie\SchemaOrg\Person $seller
+     * @param \Spatie\SchemaOrg\Organization|\Spatie\SchemaOrg\Person $seller
      *
      * @return static
      *
@@ -44,7 +44,7 @@ class Flight extends Intangible
      * producer. Another party (a seller) may offer those services or goods on
      * behalf of the provider. A provider may also serve as the seller.
      *
-     * @param \Spatie\SchemaOrg\Organization $provider
+     * @param \Spatie\SchemaOrg\Person|\Spatie\SchemaOrg\Organization $provider
      *
      * @return static
      *
@@ -201,7 +201,7 @@ class Flight extends Intangible
     /**
      * The kind of aircraft (e.g., "Boeing 747").
      *
-     * @param \Spatie\SchemaOrg\Vehicle $aircraft
+     * @param string|\Spatie\SchemaOrg\Vehicle $aircraft
      *
      * @return static
      *
@@ -229,7 +229,7 @@ class Flight extends Intangible
     /**
      * The estimated time the flight will take.
      *
-     * @param \Spatie\SchemaOrg\Duration $estimatedFlightDuration
+     * @param string|\Spatie\SchemaOrg\Duration $estimatedFlightDuration
      *
      * @return static
      *
@@ -243,7 +243,7 @@ class Flight extends Intangible
     /**
      * The distance of the flight.
      *
-     * @param \Spatie\SchemaOrg\Distance $flightDistance
+     * @param string|\Spatie\SchemaOrg\Distance $flightDistance
      *
      * @return static
      *

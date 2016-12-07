@@ -28,7 +28,7 @@ class Brand extends Intangible
     /**
      * An associated logo.
      *
-     * @param string $logo
+     * @param \Spatie\SchemaOrg\ImageObject|string $logo
      *
      * @return static
      *

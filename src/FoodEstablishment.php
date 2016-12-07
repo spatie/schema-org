@@ -14,7 +14,7 @@ class FoodEstablishment extends LocalBusiness
      * Boolean, an URL at which reservations can be made or (for backwards
      * compatibility) the strings ```Yes``` or ```No```.
      *
-     * @param bool $acceptsReservations
+     * @param string|bool $acceptsReservations
      *
      * @return static
      *
@@ -29,7 +29,7 @@ class FoodEstablishment extends LocalBusiness
      * Either the actual menu as a structured representation, as text, or a URL
      * of the menu.
      *
-     * @param string $menu
+     * @param \Spatie\SchemaOrg\Menu|string $menu
      *
      * @return static
      *

@@ -14,7 +14,7 @@ class BusTrip extends Intangible
      * producer. Another party (a seller) may offer those services or goods on
      * behalf of the provider. A provider may also serve as the seller.
      *
-     * @param \Spatie\SchemaOrg\Organization $provider
+     * @param \Spatie\SchemaOrg\Person|\Spatie\SchemaOrg\Organization $provider
      *
      * @return static
      *
@@ -84,7 +84,7 @@ class BusTrip extends Intangible
     /**
      * The stop or station from which the bus departs.
      *
-     * @param \Spatie\SchemaOrg\BusStop $departureBusStop
+     * @param \Spatie\SchemaOrg\BusStation|\Spatie\SchemaOrg\BusStop $departureBusStop
      *
      * @return static
      *
@@ -98,7 +98,7 @@ class BusTrip extends Intangible
     /**
      * The stop or station from which the bus arrives.
      *
-     * @param \Spatie\SchemaOrg\BusStop $arrivalBusStop
+     * @param \Spatie\SchemaOrg\BusStation|\Spatie\SchemaOrg\BusStop $arrivalBusStop
      *
      * @return static
      *

@@ -13,7 +13,7 @@ class PayAction extends TradeAction
      * A sub property of participant. The participant who is at the receiving
      * end of the action.
      *
-     * @param \Spatie\SchemaOrg\Person $recipient
+     * @param \Spatie\SchemaOrg\Audience|\Spatie\SchemaOrg\Organization|\Spatie\SchemaOrg\Person $recipient
      *
      * @return static
      *

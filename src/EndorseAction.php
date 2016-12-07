@@ -12,7 +12,7 @@ class EndorseAction extends ReactAction
     /**
      * A sub property of participant. The person/organization being supported.
      *
-     * @param \Spatie\SchemaOrg\Person $endorsee
+     * @param \Spatie\SchemaOrg\Organization|\Spatie\SchemaOrg\Person $endorsee
      *
      * @return static
      *

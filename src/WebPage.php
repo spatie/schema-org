@@ -17,7 +17,7 @@ class WebPage extends CreativeWork
      * A set of links that can help a user understand and navigate a website
      * hierarchy.
      *
-     * @param \Spatie\SchemaOrg\BreadcrumbList $breadcrumb
+     * @param string|\Spatie\SchemaOrg\BreadcrumbList $breadcrumb
      *
      * @return static
      *
@@ -89,7 +89,7 @@ class WebPage extends CreativeWork
      * People or organizations that have reviewed the content on this web page
      * for accuracy and/or completeness.
      *
-     * @param \Spatie\SchemaOrg\Person $reviewedBy
+     * @param \Spatie\SchemaOrg\Organization|\Spatie\SchemaOrg\Person $reviewedBy
      *
      * @return static
      *

@@ -12,7 +12,7 @@ class Place extends Thing
     /**
      * Physical address of the item.
      *
-     * @param string $address
+     * @param \Spatie\SchemaOrg\PostalAddress|string $address
      *
      * @return static
      *
@@ -146,7 +146,7 @@ class Place extends Thing
     /**
      * The geo coordinates of the place.
      *
-     * @param \Spatie\SchemaOrg\GeoShape $geo
+     * @param \Spatie\SchemaOrg\GeoCoordinates|\Spatie\SchemaOrg\GeoShape $geo
      *
      * @return static
      *
@@ -193,7 +193,7 @@ class Place extends Thing
     /**
      * An associated logo.
      *
-     * @param string $logo
+     * @param \Spatie\SchemaOrg\ImageObject|string $logo
      *
      * @return static
      *
@@ -207,7 +207,7 @@ class Place extends Thing
     /**
      * A URL to a map of the place.
      *
-     * @param \Spatie\SchemaOrg\Map $hasMap
+     * @param string|\Spatie\SchemaOrg\Map $hasMap
      *
      * @return static
      *
@@ -294,7 +294,7 @@ class Place extends Thing
     /**
      * A photograph of this place.
      *
-     * @param \Spatie\SchemaOrg\Photograph $photo
+     * @param \Spatie\SchemaOrg\ImageObject|\Spatie\SchemaOrg\Photograph $photo
      *
      * @return static
      *
@@ -308,7 +308,7 @@ class Place extends Thing
     /**
      * Photographs of this place.
      *
-     * @param \Spatie\SchemaOrg\Photograph $photos
+     * @param \Spatie\SchemaOrg\ImageObject|\Spatie\SchemaOrg\Photograph $photos
      *
      * @return static
      *

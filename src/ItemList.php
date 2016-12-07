@@ -30,7 +30,7 @@ class ItemList extends Intangible
     /**
      * Type of ordering (e.g. Ascending, Descending, Unordered).
      *
-     * @param string $itemListOrder
+     * @param \Spatie\SchemaOrg\ItemListOrderType|string $itemListOrder
      *
      * @return static
      *
@@ -52,7 +52,7 @@ class ItemList extends Intangible
      * your mark-up is not sufficient for indicating the order or elements.  Use
      * ListItem with a 'position' property in such cases.
      *
-     * @param \Spatie\SchemaOrg\Thing $itemListElement
+     * @param string|\Spatie\SchemaOrg\ListItem|\Spatie\SchemaOrg\Thing $itemListElement
      *
      * @return static
      *

@@ -28,7 +28,7 @@ class MusicRelease extends MusicPlaylist
      * example, Red and Blue is credited to "Stefani Germanotta Band", but by
      * Lady Gaga.
      *
-     * @param \Spatie\SchemaOrg\Organization $creditedTo
+     * @param \Spatie\SchemaOrg\Person|\Spatie\SchemaOrg\Organization $creditedTo
      *
      * @return static
      *

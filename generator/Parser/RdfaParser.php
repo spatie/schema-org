@@ -72,17 +72,17 @@ class RdfaParser
                 $property->resource = $this->getAttribute($node, 'resource');
 
                 $node
+                    ->filter('[property="http://schema.org/domainIncludes"]')
+                    ->each(function (Crawler $domain) use ($property) {
+                        $this->types->addPropertyToType($property, $domain->text());
+                    });
+
+                $node
                     ->filter('[property="http://schema.org/rangeIncludes"]')
                     ->each(function (Crawler $range) use ($property) {
                         $property->addRange(
                             $this->getTypeFromRange($this->getText($range))
                         );
-                    });
-
-                $node
-                    ->filter('[property="http://schema.org/domainIncludes"]')
-                    ->each(function (Crawler $domain) use ($property) {
-                        $this->types->addPropertyToType($property, $domain->text());
                     });
             });
     }

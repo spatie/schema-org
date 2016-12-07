@@ -104,7 +104,7 @@ class QualitativeValue extends Enumeration
      * A pointer to a secondary value that provides additional information on
      * the original value, e.g. a reference temperature.
      *
-     * @param \Spatie\SchemaOrg\QuantitativeValue $valueReference
+     * @param \Spatie\SchemaOrg\Enumeration|\Spatie\SchemaOrg\StructuredValue|\Spatie\SchemaOrg\PropertyValue|\Spatie\SchemaOrg\QualitativeValue|\Spatie\SchemaOrg\QuantitativeValue $valueReference
      *
      * @return static
      *

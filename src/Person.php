@@ -41,7 +41,7 @@ class Person extends Thing
     /**
      * Physical address of the item.
      *
-     * @param string $address
+     * @param \Spatie\SchemaOrg\PostalAddress|string $address
      *
      * @return static
      *
@@ -127,7 +127,7 @@ class Person extends Thing
      * The brand(s) associated with a product or service, or the brand(s)
      * maintained by an organization or business person.
      *
-     * @param \Spatie\SchemaOrg\Organization $brand
+     * @param \Spatie\SchemaOrg\Brand|\Spatie\SchemaOrg\Organization $brand
      *
      * @return static
      *
@@ -155,7 +155,7 @@ class Person extends Thing
     /**
      * A colleague of the person.
      *
-     * @param string $colleague
+     * @param \Spatie\SchemaOrg\Person|string $colleague
      *
      * @return static
      *
@@ -299,7 +299,7 @@ class Person extends Thing
      * http://schema.org/Female may be used, text strings are also acceptable
      * for people who do not identify as a binary gender.
      *
-     * @param \Spatie\SchemaOrg\GenderType $gender
+     * @param string|\Spatie\SchemaOrg\GenderType $gender
      *
      * @return static
      *
@@ -359,7 +359,7 @@ class Person extends Thing
     /**
      * The height of the item.
      *
-     * @param \Spatie\SchemaOrg\QuantitativeValue $height
+     * @param \Spatie\SchemaOrg\Distance|\Spatie\SchemaOrg\QuantitativeValue $height
      *
      * @return static
      *
@@ -373,7 +373,7 @@ class Person extends Thing
     /**
      * A contact location for a person's residence.
      *
-     * @param \Spatie\SchemaOrg\Place $homeLocation
+     * @param \Spatie\SchemaOrg\ContactPoint|\Spatie\SchemaOrg\Place $homeLocation
      *
      * @return static
      *
@@ -474,7 +474,7 @@ class Person extends Thing
      * An Organization (or ProgramMembership) to which this Person or
      * Organization belongs.
      *
-     * @param \Spatie\SchemaOrg\ProgramMembership $memberOf
+     * @param \Spatie\SchemaOrg\Organization|\Spatie\SchemaOrg\ProgramMembership $memberOf
      *
      * @return static
      *
@@ -518,7 +518,7 @@ class Person extends Thing
      * The total financial value of the person as calculated by subtracting
      * assets from liabilities.
      *
-     * @param \Spatie\SchemaOrg\MonetaryAmount $netWorth
+     * @param \Spatie\SchemaOrg\PriceSpecification|\Spatie\SchemaOrg\MonetaryAmount $netWorth
      *
      * @return static
      *
@@ -532,7 +532,7 @@ class Person extends Thing
     /**
      * Products owned by the organization or person.
      *
-     * @param \Spatie\SchemaOrg\Product $owns
+     * @param \Spatie\SchemaOrg\OwnershipInfo|\Spatie\SchemaOrg\Product $owns
      *
      * @return static
      *
@@ -647,7 +647,7 @@ class Person extends Thing
      * or financial contribution. e.g. a sponsor of a Medical Study or a
      * corporate sponsor of an event.
      *
-     * @param \Spatie\SchemaOrg\Person $sponsor
+     * @param \Spatie\SchemaOrg\Organization|\Spatie\SchemaOrg\Person $sponsor
      *
      * @return static
      *
@@ -662,7 +662,7 @@ class Person extends Thing
      * A person or organization that supports (sponsors) something through some
      * kind of financial contribution.
      *
-     * @param \Spatie\SchemaOrg\Person $funder
+     * @param \Spatie\SchemaOrg\Organization|\Spatie\SchemaOrg\Person $funder
      *
      * @return static
      *
@@ -747,7 +747,7 @@ class Person extends Thing
     /**
      * A contact location for a person's place of work.
      *
-     * @param \Spatie\SchemaOrg\Place $workLocation
+     * @param \Spatie\SchemaOrg\ContactPoint|\Spatie\SchemaOrg\Place $workLocation
      *
      * @return static
      *

@@ -102,7 +102,7 @@ class VideoGameSeries extends CreativeWorkSeries
     /**
      * The composer of the soundtrack.
      *
-     * @param \Spatie\SchemaOrg\Person $musicBy
+     * @param \Spatie\SchemaOrg\MusicGroup|\Spatie\SchemaOrg\Person $musicBy
      *
      * @return static
      *
@@ -306,7 +306,7 @@ class VideoGameSeries extends CreativeWorkSeries
      * href="http://en.wikipedia.org/wiki/Category:Video_game_platforms">video
      * games</a>.
      *
-     * @param \Spatie\SchemaOrg\Thing $gamePlatform
+     * @param string|\Spatie\SchemaOrg\Thing $gamePlatform
      *
      * @return static
      *
@@ -320,7 +320,7 @@ class VideoGameSeries extends CreativeWorkSeries
     /**
      * Real or fictional location of the game (or part of game).
      *
-     * @param \Spatie\SchemaOrg\PostalAddress $gameLocation
+     * @param string|\Spatie\SchemaOrg\Place|\Spatie\SchemaOrg\PostalAddress $gameLocation
      *
      * @return static
      *

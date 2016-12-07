@@ -12,7 +12,7 @@ class ContactPoint extends StructuredValue
     /**
      * The geographic area where a service or offered item is provided.
      *
-     * @param string $areaServed
+     * @param \Spatie\SchemaOrg\Place|\Spatie\SchemaOrg\AdministrativeArea|\Spatie\SchemaOrg\GeoShape|string $areaServed
      *
      * @return static
      *
@@ -28,7 +28,7 @@ class ContactPoint extends StructuredValue
      * codes from the [IETF BCP 47 standard](http://tools.ietf.org/html/bcp47).
      * See also [[inLanguage]]
      *
-     * @param string $availableLanguage
+     * @param \Spatie\SchemaOrg\Language|string $availableLanguage
      *
      * @return static
      *
@@ -118,7 +118,7 @@ class ContactPoint extends StructuredValue
      * product or product line (e.g. "iPhone") or a general category of products
      * or services (e.g. "smartphones").
      *
-     * @param string $productSupported
+     * @param \Spatie\SchemaOrg\Product|string $productSupported
      *
      * @return static
      *
@@ -132,7 +132,7 @@ class ContactPoint extends StructuredValue
     /**
      * The geographic area where the service is provided.
      *
-     * @param \Spatie\SchemaOrg\GeoShape $serviceArea
+     * @param \Spatie\SchemaOrg\Place|\Spatie\SchemaOrg\AdministrativeArea|\Spatie\SchemaOrg\GeoShape $serviceArea
      *
      * @return static
      *

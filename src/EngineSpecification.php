@@ -15,7 +15,7 @@ class EngineSpecification extends StructuredValue
      * the vehicle has only one engine, this property can be attached directly
      * to the vehicle.
      *
-     * @param string $fuelType
+     * @param string|\Spatie\SchemaOrg\QualitativeValue $fuelType
      *
      * @return static
      *

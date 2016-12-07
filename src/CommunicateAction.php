@@ -30,7 +30,7 @@ class CommunicateAction extends InteractAction
      * standard](http://tools.ietf.org/html/bcp47). See also
      * [[availableLanguage]].
      *
-     * @param \Spatie\SchemaOrg\Language $inLanguage
+     * @param string|\Spatie\SchemaOrg\Language $inLanguage
      *
      * @return static
      *
@@ -59,7 +59,7 @@ class CommunicateAction extends InteractAction
      * A sub property of participant. The participant who is at the receiving
      * end of the action.
      *
-     * @param \Spatie\SchemaOrg\Person $recipient
+     * @param \Spatie\SchemaOrg\Audience|\Spatie\SchemaOrg\Organization|\Spatie\SchemaOrg\Person $recipient
      *
      * @return static
      *

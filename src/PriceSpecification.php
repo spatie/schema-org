@@ -92,7 +92,7 @@ class PriceSpecification extends StructuredValue
      * symbols.
       
      *
-     * @param string $price
+     * @param float|int|string $price
      *
      * @return static
      *

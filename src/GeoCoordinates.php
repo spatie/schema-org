@@ -12,7 +12,7 @@ class GeoCoordinates extends StructuredValue
     /**
      * Physical address of the item.
      *
-     * @param string $address
+     * @param \Spatie\SchemaOrg\PostalAddress|string $address
      *
      * @return static
      *
@@ -27,7 +27,7 @@ class GeoCoordinates extends StructuredValue
      * The country. For example, USA. You can also provide the two-letter [ISO
      * 3166-1 alpha-2 country code](http://en.wikipedia.org/wiki/ISO_3166-1).
      *
-     * @param \Spatie\SchemaOrg\Country $addressCountry
+     * @param string|\Spatie\SchemaOrg\Country $addressCountry
      *
      * @return static
      *
@@ -42,7 +42,7 @@ class GeoCoordinates extends StructuredValue
      * The elevation of a location ([WGS
      * 84](https://en.wikipedia.org/wiki/World_Geodetic_System)).
      *
-     * @param string $elevation
+     * @param float|int|string $elevation
      *
      * @return static
      *
@@ -57,7 +57,7 @@ class GeoCoordinates extends StructuredValue
      * The latitude of a location. For example ```37.42242``` ([WGS
      * 84](https://en.wikipedia.org/wiki/World_Geodetic_System)).
      *
-     * @param string $latitude
+     * @param float|int|string $latitude
      *
      * @return static
      *
@@ -72,7 +72,7 @@ class GeoCoordinates extends StructuredValue
      * The longitude of a location. For example ```-122.08585``` ([WGS
      * 84](https://en.wikipedia.org/wiki/World_Geodetic_System)).
      *
-     * @param string $longitude
+     * @param float|int|string $longitude
      *
      * @return static
      *

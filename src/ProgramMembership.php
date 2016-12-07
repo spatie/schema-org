@@ -14,7 +14,7 @@ class ProgramMembership extends Intangible
      * A member of an Organization or a ProgramMembership. Organizations can be
      * members of organizations; ProgramMembership is typically for individuals.
      *
-     * @param \Spatie\SchemaOrg\Person $member
+     * @param \Spatie\SchemaOrg\Organization|\Spatie\SchemaOrg\Person $member
      *
      * @return static
      *
@@ -28,7 +28,7 @@ class ProgramMembership extends Intangible
     /**
      * A member of this organization.
      *
-     * @param \Spatie\SchemaOrg\Person $members
+     * @param \Spatie\SchemaOrg\Organization|\Spatie\SchemaOrg\Person $members
      *
      * @return static
      *

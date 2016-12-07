@@ -279,7 +279,7 @@ class SoftwareApplication extends CreativeWork
     /**
      * A link to a screenshot image of the app.
      *
-     * @param string $screenshot
+     * @param \Spatie\SchemaOrg\ImageObject|string $screenshot
      *
      * @return static
      *

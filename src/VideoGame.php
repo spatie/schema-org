@@ -75,7 +75,7 @@ class VideoGame extends SoftwareApplication
     /**
      * The composer of the soundtrack.
      *
-     * @param \Spatie\SchemaOrg\Person $musicBy
+     * @param \Spatie\SchemaOrg\MusicGroup|\Spatie\SchemaOrg\Person $musicBy
      *
      * @return static
      *
@@ -149,7 +149,7 @@ class VideoGame extends SoftwareApplication
      * href="http://en.wikipedia.org/wiki/Category:Video_game_platforms">video
      * games</a>.
      *
-     * @param \Spatie\SchemaOrg\Thing $gamePlatform
+     * @param string|\Spatie\SchemaOrg\Thing $gamePlatform
      *
      * @return static
      *

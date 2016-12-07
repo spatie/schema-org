@@ -104,7 +104,7 @@ class Movie extends CreativeWork
     /**
      * The composer of the soundtrack.
      *
-     * @param \Spatie\SchemaOrg\Person $musicBy
+     * @param \Spatie\SchemaOrg\MusicGroup|\Spatie\SchemaOrg\Person $musicBy
      *
      * @return static
      *
@@ -134,7 +134,7 @@ class Movie extends CreativeWork
      * Languages in which subtitles/captions are available, in [IETF BCP 47
      * standard format](http://tools.ietf.org/html/bcp47).
      *
-     * @param \Spatie\SchemaOrg\Language $subtitleLanguage
+     * @param string|\Spatie\SchemaOrg\Language $subtitleLanguage
      *
      * @return static
      *

@@ -43,7 +43,7 @@ class Clip extends CreativeWork
     /**
      * Position of the clip within an ordered group of clips.
      *
-     * @param string $clipNumber
+     * @param int|string $clipNumber
      *
      * @return static
      *
@@ -88,7 +88,7 @@ class Clip extends CreativeWork
     /**
      * The composer of the soundtrack.
      *
-     * @param \Spatie\SchemaOrg\Person $musicBy
+     * @param \Spatie\SchemaOrg\MusicGroup|\Spatie\SchemaOrg\Person $musicBy
      *
      * @return static
      *

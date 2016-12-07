@@ -58,7 +58,7 @@ class Reservation extends Intangible
     /**
      * The person or organization the reservation or ticket is for.
      *
-     * @param \Spatie\SchemaOrg\Organization $underName
+     * @param \Spatie\SchemaOrg\Person|\Spatie\SchemaOrg\Organization $underName
      *
      * @return static
      *
@@ -74,7 +74,7 @@ class Reservation extends Intangible
      * producer. Another party (a seller) may offer those services or goods on
      * behalf of the provider. A provider may also serve as the seller.
      *
-     * @param \Spatie\SchemaOrg\Organization $provider
+     * @param \Spatie\SchemaOrg\Person|\Spatie\SchemaOrg\Organization $provider
      *
      * @return static
      *
@@ -89,7 +89,7 @@ class Reservation extends Intangible
      * 'bookingAgent' is an out-dated term indicating a 'broker' that serves as
      * a booking agent.
      *
-     * @param \Spatie\SchemaOrg\Organization $bookingAgent
+     * @param \Spatie\SchemaOrg\Person|\Spatie\SchemaOrg\Organization $bookingAgent
      *
      * @return static
      *
@@ -161,7 +161,7 @@ class Reservation extends Intangible
      * The total price for the reservation or ticket, including applicable
      * taxes, shipping, etc.
      *
-     * @param \Spatie\SchemaOrg\PriceSpecification $totalPrice
+     * @param float|int|string|\Spatie\SchemaOrg\PriceSpecification $totalPrice
      *
      * @return static
      *
@@ -193,7 +193,7 @@ class Reservation extends Intangible
      * service involved in an exchange.  If it is not clear whether an entity is
      * a broker, seller, or buyer, the latter two terms are preferred.
      *
-     * @param \Spatie\SchemaOrg\Organization $broker
+     * @param \Spatie\SchemaOrg\Person|\Spatie\SchemaOrg\Organization $broker
      *
      * @return static
      *

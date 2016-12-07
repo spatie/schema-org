@@ -17,7 +17,7 @@ class FinancialProduct extends Service
      * cost of funds over the term of a loan. This includes any fees or
      * additional costs associated with the transaction.
      *
-     * @param float|int $annualPercentageRate
+     * @param \Spatie\SchemaOrg\QuantitativeValue|float|int $annualPercentageRate
      *
      * @return static
      *
@@ -47,7 +47,7 @@ class FinancialProduct extends Service
      * The interest rate, charged or paid, applicable to the financial product.
      * Note: This is different from the calculated annualPercentageRate.
      *
-     * @param float|int $interestRate
+     * @param \Spatie\SchemaOrg\QuantitativeValue|float|int $interestRate
      *
      * @return static
      *

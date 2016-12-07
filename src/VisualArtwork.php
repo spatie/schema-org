@@ -75,7 +75,7 @@ class VisualArtwork extends CreativeWork
      * produced - e.g. for a limited edition of 20 prints, 'artEdition' refers
      * to the total number of copies (in this example "20").
      *
-     * @param int $artEdition
+     * @param string|int $artEdition
      *
      * @return static
      *

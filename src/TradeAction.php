@@ -30,7 +30,7 @@ class TradeAction extends Action
      * symbols.
       
      *
-     * @param string $price
+     * @param float|int|string $price
      *
      * @return static
      *

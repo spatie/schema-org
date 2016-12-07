@@ -12,7 +12,7 @@ class Ticket extends Intangible
     /**
      * The person or organization the reservation or ticket is for.
      *
-     * @param \Spatie\SchemaOrg\Organization $underName
+     * @param \Spatie\SchemaOrg\Person|\Spatie\SchemaOrg\Organization $underName
      *
      * @return static
      *
@@ -27,7 +27,7 @@ class Ticket extends Intangible
      * The total price for the reservation or ticket, including applicable
      * taxes, shipping, etc.
      *
-     * @param \Spatie\SchemaOrg\PriceSpecification $totalPrice
+     * @param float|int|string|\Spatie\SchemaOrg\PriceSpecification $totalPrice
      *
      * @return static
      *

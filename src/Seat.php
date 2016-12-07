@@ -54,7 +54,7 @@ class Seat extends Intangible
     /**
      * The type/class of the seat.
      *
-     * @param \Spatie\SchemaOrg\QualitativeValue $seatingType
+     * @param string|\Spatie\SchemaOrg\QualitativeValue $seatingType
      *
      * @return static
      *

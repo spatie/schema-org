@@ -27,7 +27,7 @@ class MusicComposition extends CreativeWork
      * The person or organization who wrote a composition, or who is the
      * composer of a work performed at some event.
      *
-     * @param \Spatie\SchemaOrg\Organization $composer
+     * @param \Spatie\SchemaOrg\Person|\Spatie\SchemaOrg\Organization $composer
      *
      * @return static
      *

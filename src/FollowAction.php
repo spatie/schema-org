@@ -24,7 +24,7 @@ class FollowAction extends InteractAction
     /**
      * A sub property of object. The person or organization being followed.
      *
-     * @param \Spatie\SchemaOrg\Person $followee
+     * @param \Spatie\SchemaOrg\Organization|\Spatie\SchemaOrg\Person $followee
      *
      * @return static
      *

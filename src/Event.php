@@ -59,7 +59,7 @@ class Event extends Thing
     /**
      * An organizer of an Event.
      *
-     * @param \Spatie\SchemaOrg\Organization $organizer
+     * @param \Spatie\SchemaOrg\Person|\Spatie\SchemaOrg\Organization $organizer
      *
      * @return static
      *
@@ -73,7 +73,7 @@ class Event extends Thing
     /**
      * A person or organization attending the event.
      *
-     * @param \Spatie\SchemaOrg\Person $attendee
+     * @param \Spatie\SchemaOrg\Organization|\Spatie\SchemaOrg\Person $attendee
      *
      * @return static
      *
@@ -87,7 +87,7 @@ class Event extends Thing
     /**
      * A person attending the event.
      *
-     * @param \Spatie\SchemaOrg\Person $attendees
+     * @param \Spatie\SchemaOrg\Organization|\Spatie\SchemaOrg\Person $attendees
      *
      * @return static
      *
@@ -101,7 +101,7 @@ class Event extends Thing
     /**
      * A secondary contributor to the CreativeWork or Event.
      *
-     * @param \Spatie\SchemaOrg\Person $contributor
+     * @param \Spatie\SchemaOrg\Organization|\Spatie\SchemaOrg\Person $contributor
      *
      * @return static
      *
@@ -207,7 +207,7 @@ class Event extends Thing
      * standard](http://tools.ietf.org/html/bcp47). See also
      * [[availableLanguage]].
      *
-     * @param \Spatie\SchemaOrg\Language $inLanguage
+     * @param string|\Spatie\SchemaOrg\Language $inLanguage
      *
      * @return static
      *
@@ -222,7 +222,7 @@ class Event extends Thing
      * The location of for example where the event is happening, an organization
      * is located, or where an action takes place.
      *
-     * @param string $location
+     * @param \Spatie\SchemaOrg\Place|\Spatie\SchemaOrg\PostalAddress|string $location
      *
      * @return static
      *
@@ -281,7 +281,7 @@ class Event extends Thing
      * A performer at the event&#x2014;for example, a presenter, musician,
      * musical group or actor.
      *
-     * @param \Spatie\SchemaOrg\Person $performer
+     * @param \Spatie\SchemaOrg\Organization|\Spatie\SchemaOrg\Person $performer
      *
      * @return static
      *
@@ -296,7 +296,7 @@ class Event extends Thing
      * The main performer or performers of the event&#x2014;for example, a
      * presenter, musician, or actor.
      *
-     * @param \Spatie\SchemaOrg\Person $performers
+     * @param \Spatie\SchemaOrg\Organization|\Spatie\SchemaOrg\Person $performers
      *
      * @return static
      *
@@ -358,7 +358,7 @@ class Event extends Thing
      * or financial contribution. e.g. a sponsor of a Medical Study or a
      * corporate sponsor of an event.
      *
-     * @param \Spatie\SchemaOrg\Person $sponsor
+     * @param \Spatie\SchemaOrg\Organization|\Spatie\SchemaOrg\Person $sponsor
      *
      * @return static
      *
@@ -373,7 +373,7 @@ class Event extends Thing
      * A person or organization that supports (sponsors) something through some
      * kind of financial contribution.
      *
-     * @param \Spatie\SchemaOrg\Person $funder
+     * @param \Spatie\SchemaOrg\Organization|\Spatie\SchemaOrg\Person $funder
      *
      * @return static
      *
@@ -497,7 +497,7 @@ class Event extends Thing
      * regional differences and technical requirements of a target market, or
      * that translates during some event.
      *
-     * @param \Spatie\SchemaOrg\Organization $translator
+     * @param \Spatie\SchemaOrg\Person|\Spatie\SchemaOrg\Organization $translator
      *
      * @return static
      *
@@ -512,7 +512,7 @@ class Event extends Thing
      * The person or organization who wrote a composition, or who is the
      * composer of a work performed at some event.
      *
-     * @param \Spatie\SchemaOrg\Organization $composer
+     * @param \Spatie\SchemaOrg\Person|\Spatie\SchemaOrg\Organization $composer
      *
      * @return static
      *

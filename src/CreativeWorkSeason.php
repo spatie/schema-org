@@ -130,7 +130,7 @@ class CreativeWorkSeason extends CreativeWork
     /**
      * Position of the season within an ordered group of seasons.
      *
-     * @param string $seasonNumber
+     * @param int|string $seasonNumber
      *
      * @return static
      *

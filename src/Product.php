@@ -72,7 +72,7 @@ class Product extends Thing
      * The brand(s) associated with a product or service, or the brand(s)
      * maintained by an organization or business person.
      *
-     * @param \Spatie\SchemaOrg\Organization $brand
+     * @param \Spatie\SchemaOrg\Brand|\Spatie\SchemaOrg\Organization $brand
      *
      * @return static
      *
@@ -87,7 +87,7 @@ class Product extends Thing
      * A category for the item. Greater signs or slashes can be used to
      * informally indicate a category hierarchy.
      *
-     * @param \Spatie\SchemaOrg\Thing $category
+     * @param string|\Spatie\SchemaOrg\Thing $category
      *
      * @return static
      *
@@ -115,7 +115,7 @@ class Product extends Thing
     /**
      * The depth of the item.
      *
-     * @param \Spatie\SchemaOrg\QuantitativeValue $depth
+     * @param \Spatie\SchemaOrg\Distance|\Spatie\SchemaOrg\QuantitativeValue $depth
      *
      * @return static
      *
@@ -203,7 +203,7 @@ class Product extends Thing
     /**
      * The height of the item.
      *
-     * @param \Spatie\SchemaOrg\QuantitativeValue $height
+     * @param \Spatie\SchemaOrg\Distance|\Spatie\SchemaOrg\QuantitativeValue $height
      *
      * @return static
      *
@@ -247,7 +247,7 @@ class Product extends Thing
     /**
      * A pointer to another, somehow related product (or multiple products).
      *
-     * @param \Spatie\SchemaOrg\Service $isRelatedTo
+     * @param \Spatie\SchemaOrg\Product|\Spatie\SchemaOrg\Service $isRelatedTo
      *
      * @return static
      *
@@ -262,7 +262,7 @@ class Product extends Thing
      * A pointer to another, functionally similar product (or multiple
      * products).
      *
-     * @param \Spatie\SchemaOrg\Service $isSimilarTo
+     * @param \Spatie\SchemaOrg\Product|\Spatie\SchemaOrg\Service $isSimilarTo
      *
      * @return static
      *
@@ -292,7 +292,7 @@ class Product extends Thing
     /**
      * An associated logo.
      *
-     * @param string $logo
+     * @param \Spatie\SchemaOrg\ImageObject|string $logo
      *
      * @return static
      *
@@ -310,7 +310,7 @@ class Product extends Thing
      * strong product identifiers via the gtin8/gtin13/gtin14 and mpn
      * properties.
      *
-     * @param string $model
+     * @param \Spatie\SchemaOrg\ProductModel|string $model
      *
      * @return static
      *
@@ -456,7 +456,7 @@ class Product extends Thing
     /**
      * The width of the item.
      *
-     * @param \Spatie\SchemaOrg\QuantitativeValue $width
+     * @param \Spatie\SchemaOrg\Distance|\Spatie\SchemaOrg\QuantitativeValue $width
      *
      * @return static
      *
@@ -471,7 +471,7 @@ class Product extends Thing
      * A material that something is made from, e.g. leather, wool, cotton,
      * paper.
      *
-     * @param \Spatie\SchemaOrg\Product $material
+     * @param string|\Spatie\SchemaOrg\Product $material
      *
      * @return static
      *

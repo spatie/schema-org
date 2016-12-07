@@ -15,7 +15,7 @@ class ServiceChannel extends Intangible
      * codes from the [IETF BCP 47 standard](http://tools.ietf.org/html/bcp47).
      * See also [[inLanguage]]
      *
-     * @param string $availableLanguage
+     * @param \Spatie\SchemaOrg\Language|string $availableLanguage
      *
      * @return static
      *

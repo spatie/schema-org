@@ -29,7 +29,7 @@ class GeoShape extends StructuredValue
     /**
      * Physical address of the item.
      *
-     * @param string $address
+     * @param \Spatie\SchemaOrg\PostalAddress|string $address
      *
      * @return static
      *
@@ -44,7 +44,7 @@ class GeoShape extends StructuredValue
      * The country. For example, USA. You can also provide the two-letter [ISO
      * 3166-1 alpha-2 country code](http://en.wikipedia.org/wiki/ISO_3166-1).
      *
-     * @param \Spatie\SchemaOrg\Country $addressCountry
+     * @param string|\Spatie\SchemaOrg\Country $addressCountry
      *
      * @return static
      *
@@ -91,7 +91,7 @@ class GeoShape extends StructuredValue
      * The elevation of a location ([WGS
      * 84](https://en.wikipedia.org/wiki/World_Geodetic_System)).
      *
-     * @param string $elevation
+     * @param float|int|string $elevation
      *
      * @return static
      *

@@ -26,7 +26,7 @@ class Suite extends Accommodation
      * bed, use an instance of BedDetails. For more detailed information, use
      * the amenityFeature property.
      *
-     * @param \Spatie\SchemaOrg\BedDetails $bed
+     * @param string|\Spatie\SchemaOrg\BedDetails $bed
      *
      * @return static
      *
@@ -44,7 +44,7 @@ Typical unit code(s): ROM for room or
      * C62 for no unit. The type of room can be put in the unitText property of
      * the QuantitativeValue.
      *
-     * @param \Spatie\SchemaOrg\QuantitativeValue $numberOfRooms
+     * @param float|int|\Spatie\SchemaOrg\QuantitativeValue $numberOfRooms
      *
      * @return static
      *

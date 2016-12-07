@@ -20,7 +20,7 @@ class GeoCircle extends GeoShape
      * Indicates the approximate radius of a GeoCircle (metres unless indicated
      * otherwise via Distance notation).
      *
-     * @param \Spatie\SchemaOrg\Distance $geoRadius
+     * @param string|float|int|\Spatie\SchemaOrg\Distance $geoRadius
      *
      * @return static
      *

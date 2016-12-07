@@ -14,7 +14,7 @@ class AggregateOffer extends Offer
     /**
      * The highest price of all offers available.
      *
-     * @param string $highPrice
+     * @param float|int|string $highPrice
      *
      * @return static
      *
@@ -28,7 +28,7 @@ class AggregateOffer extends Offer
     /**
      * The lowest price of all offers available.
      *
-     * @param string $lowPrice
+     * @param float|int|string $lowPrice
      *
      * @return static
      *

@@ -13,7 +13,7 @@ class DigitalDocumentPermission extends Intangible
      * The person, organization, contact point, or audience that has been
      * granted this permission.
      *
-     * @param \Spatie\SchemaOrg\ContactPoint $grantee
+     * @param \Spatie\SchemaOrg\Person|\Spatie\SchemaOrg\Organization|\Spatie\SchemaOrg\Audience|\Spatie\SchemaOrg\ContactPoint $grantee
      *
      * @return static
      *

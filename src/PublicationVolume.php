@@ -18,7 +18,7 @@ class PublicationVolume extends CreativeWork
     /**
      * The page on which the work ends; for example "138" or "xvi".
      *
-     * @param string $pageEnd
+     * @param int|string $pageEnd
      *
      * @return static
      *
@@ -32,7 +32,7 @@ class PublicationVolume extends CreativeWork
     /**
      * The page on which the work starts; for example "135" or "xiii".
      *
-     * @param string $pageStart
+     * @param int|string $pageStart
      *
      * @return static
      *
@@ -62,7 +62,7 @@ class PublicationVolume extends CreativeWork
      * Identifies the volume of publication or multi-part work; for example,
      * "iii" or "2".
      *
-     * @param string $volumeNumber
+     * @param int|string $volumeNumber
      *
      * @return static
      *

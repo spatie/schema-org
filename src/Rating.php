@@ -14,7 +14,7 @@ class Rating extends Intangible
      * in that HTML 5 provides a special mechanism for indicating authorship via
      * the rel tag. That is equivalent to this and may be used interchangeably.
      *
-     * @param \Spatie\SchemaOrg\Person $author
+     * @param \Spatie\SchemaOrg\Organization|\Spatie\SchemaOrg\Person $author
      *
      * @return static
      *
@@ -29,7 +29,7 @@ class Rating extends Intangible
      * The highest value allowed in this rating system. If bestRating is
      * omitted, 5 is assumed.
      *
-     * @param string $bestRating
+     * @param float|int|string $bestRating
      *
      * @return static
      *
@@ -43,7 +43,7 @@ class Rating extends Intangible
     /**
      * The rating for the content.
      *
-     * @param float|int $ratingValue
+     * @param string|float|int $ratingValue
      *
      * @return static
      *
@@ -58,7 +58,7 @@ class Rating extends Intangible
      * The lowest value allowed in this rating system. If worstRating is
      * omitted, 1 is assumed.
      *
-     * @param string $worstRating
+     * @param float|int|string $worstRating
      *
      * @return static
      *

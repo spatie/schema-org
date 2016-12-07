@@ -43,7 +43,7 @@ class TypeAndQuantityNode extends StructuredValue
     /**
      * The product that this structured value is referring to.
      *
-     * @param \Spatie\SchemaOrg\Service $typeOfGood
+     * @param \Spatie\SchemaOrg\Product|\Spatie\SchemaOrg\Service $typeOfGood
      *
      * @return static
      *

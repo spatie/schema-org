@@ -71,7 +71,7 @@ class Order extends Intangible
     /**
      * Party placing the order or paying the invoice.
      *
-     * @param \Spatie\SchemaOrg\Person $customer
+     * @param \Spatie\SchemaOrg\Organization|\Spatie\SchemaOrg\Person $customer
      *
      * @return static
      *
@@ -85,7 +85,7 @@ class Order extends Intangible
     /**
      * Any discount applied (to an Order).
      *
-     * @param string $discount
+     * @param float|int|string $discount
      *
      * @return static
      *
@@ -141,7 +141,7 @@ class Order extends Intangible
     /**
      * 'merchant' is an out-dated term for 'seller'.
      *
-     * @param \Spatie\SchemaOrg\Person $merchant
+     * @param \Spatie\SchemaOrg\Organization|\Spatie\SchemaOrg\Person $merchant
      *
      * @return static
      *
@@ -169,7 +169,7 @@ class Order extends Intangible
     /**
      * The item ordered.
      *
-     * @param \Spatie\SchemaOrg\OrderItem $orderedItem
+     * @param \Spatie\SchemaOrg\Product|\Spatie\SchemaOrg\OrderItem $orderedItem
      *
      * @return static
      *
@@ -283,7 +283,7 @@ class Order extends Intangible
      * An entity which offers (sells / leases / lends / loans) the services /
      * goods.  A seller may also be a provider.
      *
-     * @param \Spatie\SchemaOrg\Person $seller
+     * @param \Spatie\SchemaOrg\Organization|\Spatie\SchemaOrg\Person $seller
      *
      * @return static
      *
@@ -314,7 +314,7 @@ class Order extends Intangible
      * service involved in an exchange.  If it is not clear whether an entity is
      * a broker, seller, or buyer, the latter two terms are preferred.
      *
-     * @param \Spatie\SchemaOrg\Organization $broker
+     * @param \Spatie\SchemaOrg\Person|\Spatie\SchemaOrg\Organization $broker
      *
      * @return static
      *

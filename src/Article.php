@@ -58,7 +58,7 @@ class Article extends CreativeWork
     /**
      * The page on which the work ends; for example "138" or "xvi".
      *
-     * @param string $pageEnd
+     * @param int|string $pageEnd
      *
      * @return static
      *
@@ -72,7 +72,7 @@ class Article extends CreativeWork
     /**
      * The page on which the work starts; for example "135" or "xiii".
      *
-     * @param string $pageStart
+     * @param int|string $pageStart
      *
      * @return static
      *

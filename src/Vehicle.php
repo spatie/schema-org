@@ -13,7 +13,7 @@ class Vehicle extends Product
     /**
      * The number of doors.\n\nTypical unit code(s): C62
      *
-     * @param float|int $numberOfDoors
+     * @param \Spatie\SchemaOrg\QuantitativeValue|float|int $numberOfDoors
      *
      * @return static
      *
@@ -27,7 +27,7 @@ class Vehicle extends Product
     /**
      * The number or type of airbags in the vehicle.
      *
-     * @param string $numberOfAirbags
+     * @param float|int|string $numberOfAirbags
      *
      * @return static
      *
@@ -41,7 +41,7 @@ class Vehicle extends Product
     /**
      * The number of axles.\n\nTypical unit code(s): C62
      *
-     * @param float|int $numberOfAxles
+     * @param \Spatie\SchemaOrg\QuantitativeValue|float|int $numberOfAxles
      *
      * @return static
      *
@@ -117,7 +117,7 @@ class Vehicle extends Product
      * The total number of forward gears available for the transmission system
      * of the vehicle.\n\nTypical unit code(s): C62
      *
-     * @param float|int $numberOfForwardGears
+     * @param \Spatie\SchemaOrg\QuantitativeValue|float|int $numberOfForwardGears
      *
      * @return static
      *
@@ -208,7 +208,7 @@ class Vehicle extends Product
      * The drive wheel configuration, i.e. which roadwheels will receive torque
      * from the vehicle's engine via the drivetrain.
      *
-     * @param string $driveWheelConfiguration
+     * @param \Spatie\SchemaOrg\DriveWheelConfigurationValue|string $driveWheelConfiguration
      *
      * @return static
      *
@@ -224,7 +224,7 @@ class Vehicle extends Product
      * the vehicle has only one engine, this property can be attached directly
      * to the vehicle.
      *
-     * @param string $fuelType
+     * @param string|\Spatie\SchemaOrg\QualitativeValue $fuelType
      *
      * @return static
      *
@@ -301,7 +301,7 @@ class Vehicle extends Product
      * The number of owners of the vehicle, including the current
      * one.\n\nTypical unit code(s): C62
      *
-     * @param float|int $numberOfPreviousOwners
+     * @param \Spatie\SchemaOrg\QuantitativeValue|float|int $numberOfPreviousOwners
      *
      * @return static
      *
@@ -345,7 +345,7 @@ class Vehicle extends Product
      * of the physical space available, and in terms of limitations set by
      * law.\n\nTypical unit code(s): C62 for persons.
      *
-     * @param float|int $vehicleSeatingCapacity
+     * @param \Spatie\SchemaOrg\QuantitativeValue|float|int $vehicleSeatingCapacity
      *
      * @return static
      *
@@ -361,7 +361,7 @@ class Vehicle extends Product
      * power source to the wheels or other relevant component(s) ("gearbox" for
      * cars).
      *
-     * @param string $vehicleTransmission
+     * @param string|\Spatie\SchemaOrg\QualitativeValue $vehicleTransmission
      *
      * @return static
      *

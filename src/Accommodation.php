@@ -43,7 +43,7 @@ Typical unit code(s): ROM for room or
      * C62 for no unit. The type of room can be put in the unitText property of
      * the QuantitativeValue.
      *
-     * @param \Spatie\SchemaOrg\QuantitativeValue $numberOfRooms
+     * @param float|int|\Spatie\SchemaOrg\QuantitativeValue $numberOfRooms
      *
      * @return static
      *
@@ -89,7 +89,7 @@ Typical unit code(s): MTK for square meter, FTK for square
      * Indicates whether pets are allowed to enter the accommodation or lodging
      * business. More detailed information can be put in a text value.
      *
-     * @param string $petsAllowed
+     * @param bool|string $petsAllowed
      *
      * @return static
      *

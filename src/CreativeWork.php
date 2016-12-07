@@ -197,7 +197,7 @@ class CreativeWork extends Thing
      * in that HTML 5 provides a special mechanism for indicating authorship via
      * the rel tag. That is equivalent to this and may be used interchangeably.
      *
-     * @param \Spatie\SchemaOrg\Person $author
+     * @param \Spatie\SchemaOrg\Organization|\Spatie\SchemaOrg\Person $author
      *
      * @return static
      *
@@ -240,7 +240,7 @@ class CreativeWork extends Thing
      * A citation or reference to another creative work, such as another
      * publication, web page, scholarly article, etc.
      *
-     * @param string $citation
+     * @param \Spatie\SchemaOrg\CreativeWork|string $citation
      *
      * @return static
      *
@@ -312,7 +312,7 @@ class CreativeWork extends Thing
     /**
      * A secondary contributor to the CreativeWork or Event.
      *
-     * @param \Spatie\SchemaOrg\Person $contributor
+     * @param \Spatie\SchemaOrg\Organization|\Spatie\SchemaOrg\Person $contributor
      *
      * @return static
      *
@@ -326,7 +326,7 @@ class CreativeWork extends Thing
     /**
      * The party holding the legal copyright to the CreativeWork.
      *
-     * @param \Spatie\SchemaOrg\Person $copyrightHolder
+     * @param \Spatie\SchemaOrg\Organization|\Spatie\SchemaOrg\Person $copyrightHolder
      *
      * @return static
      *
@@ -356,7 +356,7 @@ class CreativeWork extends Thing
      * The creator/author of this CreativeWork. This is the same as the Author
      * property for CreativeWork.
      *
-     * @param \Spatie\SchemaOrg\Person $creator
+     * @param \Spatie\SchemaOrg\Organization|\Spatie\SchemaOrg\Person $creator
      *
      * @return static
      *
@@ -566,7 +566,7 @@ class CreativeWork extends Thing
      * standard](http://tools.ietf.org/html/bcp47). See also
      * [[availableLanguage]].
      *
-     * @param \Spatie\SchemaOrg\Language $inLanguage
+     * @param string|\Spatie\SchemaOrg\Language $inLanguage
      *
      * @return static
      *
@@ -597,7 +597,7 @@ class CreativeWork extends Thing
      * be repeated for multiple sources. For example,
      * http://example.com/great-multiplication-intro.html.
      *
-     * @param \Spatie\SchemaOrg\Product $isBasedOnUrl
+     * @param string|\Spatie\SchemaOrg\CreativeWork|\Spatie\SchemaOrg\Product $isBasedOnUrl
      *
      * @return static
      *
@@ -613,7 +613,7 @@ class CreativeWork extends Thing
      * be repeated for multiple sources. For example,
      * http://example.com/great-multiplication-intro.html.
      *
-     * @param \Spatie\SchemaOrg\Product $isBasedOn
+     * @param string|\Spatie\SchemaOrg\CreativeWork|\Spatie\SchemaOrg\Product $isBasedOn
      *
      * @return static
      *
@@ -672,7 +672,7 @@ class CreativeWork extends Thing
      * A license document that applies to this content, typically indicated by
      * URL.
      *
-     * @param string $license
+     * @param \Spatie\SchemaOrg\CreativeWork|string $license
      *
      * @return static
      *
@@ -747,7 +747,7 @@ class CreativeWork extends Thing
     /**
      * The position of an item in a series or sequence of items.
      *
-     * @param int $position
+     * @param string|int $position
      *
      * @return static
      *
@@ -762,7 +762,7 @@ class CreativeWork extends Thing
      * The person or organization who produced the work (e.g. music album,
      * movie, tv/radio series etc.).
      *
-     * @param \Spatie\SchemaOrg\Organization $producer
+     * @param \Spatie\SchemaOrg\Person|\Spatie\SchemaOrg\Organization $producer
      *
      * @return static
      *
@@ -790,7 +790,7 @@ class CreativeWork extends Thing
     /**
      * The publisher of the creative work.
      *
-     * @param \Spatie\SchemaOrg\Person $publisher
+     * @param \Spatie\SchemaOrg\Organization|\Spatie\SchemaOrg\Person $publisher
      *
      * @return static
      *
@@ -899,7 +899,7 @@ class CreativeWork extends Thing
      * or financial contribution. e.g. a sponsor of a Medical Study or a
      * corporate sponsor of an event.
      *
-     * @param \Spatie\SchemaOrg\Person $sponsor
+     * @param \Spatie\SchemaOrg\Organization|\Spatie\SchemaOrg\Person $sponsor
      *
      * @return static
      *
@@ -914,7 +914,7 @@ class CreativeWork extends Thing
      * A person or organization that supports (sponsors) something through some
      * kind of financial contribution.
      *
-     * @param \Spatie\SchemaOrg\Person $funder
+     * @param \Spatie\SchemaOrg\Organization|\Spatie\SchemaOrg\Person $funder
      *
      * @return static
      *
@@ -941,7 +941,7 @@ class CreativeWork extends Thing
      * too, e.g. a work set in 1939 - 1945 can be indicated in ISO 8601 interval
      * format format via "1939/1945".
      *
-     * @param string $temporalCoverage
+     * @param \DateTimeInterface|string $temporalCoverage
      *
      * @return static
      *
@@ -1013,7 +1013,7 @@ class CreativeWork extends Thing
     /**
      * The version of the CreativeWork embodied by a specified resource.
      *
-     * @param string $version
+     * @param float|int|string $version
      *
      * @return static
      *
@@ -1043,7 +1043,7 @@ class CreativeWork extends Thing
      * producer. Another party (a seller) may offer those services or goods on
      * behalf of the provider. A provider may also serve as the seller.
      *
-     * @param \Spatie\SchemaOrg\Organization $provider
+     * @param \Spatie\SchemaOrg\Person|\Spatie\SchemaOrg\Organization $provider
      *
      * @return static
      *
@@ -1134,7 +1134,7 @@ class CreativeWork extends Thing
      * regional differences and technical requirements of a target market, or
      * that translates during some event.
      *
-     * @param \Spatie\SchemaOrg\Organization $translator
+     * @param \Spatie\SchemaOrg\Person|\Spatie\SchemaOrg\Organization $translator
      *
      * @return static
      *
@@ -1164,7 +1164,7 @@ class CreativeWork extends Thing
      * A material that something is made from, e.g. leather, wool, cotton,
      * paper.
      *
-     * @param \Spatie\SchemaOrg\Product $material
+     * @param string|\Spatie\SchemaOrg\Product $material
      *
      * @return static
      *

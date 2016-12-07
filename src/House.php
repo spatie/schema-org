@@ -19,7 +19,7 @@ Typical unit code(s): ROM for room or
      * C62 for no unit. The type of room can be put in the unitText property of
      * the QuantitativeValue.
      *
-     * @param \Spatie\SchemaOrg\QuantitativeValue $numberOfRooms
+     * @param float|int|\Spatie\SchemaOrg\QuantitativeValue $numberOfRooms
      *
      * @return static
      *

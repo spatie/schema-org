@@ -28,7 +28,7 @@ class SoftwareSourceCode extends CreativeWork
     /**
      * The computer programming language.
      *
-     * @param string $programmingLanguage
+     * @param \Spatie\SchemaOrg\ComputerLanguage|string $programmingLanguage
      *
      * @return static
      *

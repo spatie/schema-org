@@ -147,7 +147,7 @@ class MediaObject extends CreativeWork
     /**
      * The height of the item.
      *
-     * @param \Spatie\SchemaOrg\QuantitativeValue $height
+     * @param \Spatie\SchemaOrg\Distance|\Spatie\SchemaOrg\QuantitativeValue $height
      *
      * @return static
      *
@@ -220,7 +220,7 @@ class MediaObject extends CreativeWork
     /**
      * The width of the item.
      *
-     * @param \Spatie\SchemaOrg\QuantitativeValue $width
+     * @param \Spatie\SchemaOrg\Distance|\Spatie\SchemaOrg\QuantitativeValue $width
      *
      * @return static
      *

@@ -14,7 +14,7 @@ class RentAction extends TradeAction
     /**
      * A sub property of participant. The owner of the real estate property.
      *
-     * @param \Spatie\SchemaOrg\Person $landlord
+     * @param \Spatie\SchemaOrg\Organization|\Spatie\SchemaOrg\Person $landlord
      *
      * @return static
      *

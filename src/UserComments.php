@@ -43,7 +43,7 @@ class UserComments extends UserInteraction
      * The creator/author of this CreativeWork. This is the same as the Author
      * property for CreativeWork.
      *
-     * @param \Spatie\SchemaOrg\Person $creator
+     * @param \Spatie\SchemaOrg\Organization|\Spatie\SchemaOrg\Person $creator
      *
      * @return static
      *

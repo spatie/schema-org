@@ -15,7 +15,7 @@ class Demand extends Intangible
     /**
      * The payment method(s) accepted by seller for this offer.
      *
-     * @param \Spatie\SchemaOrg\PaymentMethod $acceptedPaymentMethod
+     * @param \Spatie\SchemaOrg\LoanOrCredit|\Spatie\SchemaOrg\PaymentMethod $acceptedPaymentMethod
      *
      * @return static
      *
@@ -44,7 +44,7 @@ class Demand extends Intangible
     /**
      * The geographic area where a service or offered item is provided.
      *
-     * @param string $areaServed
+     * @param \Spatie\SchemaOrg\Place|\Spatie\SchemaOrg\AdministrativeArea|\Spatie\SchemaOrg\GeoShape|string $areaServed
      *
      * @return static
      *
@@ -210,7 +210,7 @@ class Demand extends Intangible
      * charge specification is valid.\n\nSee also [[ineligibleRegion]].
     
      *
-     * @param string $eligibleRegion
+     * @param \Spatie\SchemaOrg\GeoShape|\Spatie\SchemaOrg\Place|string $eligibleRegion
      *
      * @return static
      *
@@ -228,7 +228,7 @@ class Demand extends Intangible
      * not allowed.\n\nSee also [[eligibleRegion]].
       
      *
-     * @param string $ineligibleRegion
+     * @param \Spatie\SchemaOrg\GeoShape|\Spatie\SchemaOrg\Place|string $ineligibleRegion
      *
      * @return static
      *
@@ -378,7 +378,7 @@ class Demand extends Intangible
     /**
      * The item being offered.
      *
-     * @param \Spatie\SchemaOrg\Service $itemOffered
+     * @param \Spatie\SchemaOrg\Product|\Spatie\SchemaOrg\Service $itemOffered
      *
      * @return static
      *
@@ -423,7 +423,7 @@ class Demand extends Intangible
      * An entity which offers (sells / leases / lends / loans) the services /
      * goods.  A seller may also be a provider.
      *
-     * @param \Spatie\SchemaOrg\Person $seller
+     * @param \Spatie\SchemaOrg\Organization|\Spatie\SchemaOrg\Person $seller
      *
      * @return static
      *

@@ -22,7 +22,7 @@ class HotelRoom extends Room
      * bed, use an instance of BedDetails. For more detailed information, use
      * the amenityFeature property.
      *
-     * @param \Spatie\SchemaOrg\BedDetails $bed
+     * @param string|\Spatie\SchemaOrg\BedDetails $bed
      *
      * @return static
      *

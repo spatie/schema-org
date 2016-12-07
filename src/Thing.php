@@ -77,7 +77,7 @@ class Thing extends BaseType
      * An image of the item. This can be a [[URL]] or a fully described
      * [[ImageObject]].
      *
-     * @param \Spatie\SchemaOrg\ImageObject $image
+     * @param string|\Spatie\SchemaOrg\ImageObject $image
      *
      * @return static
      *
@@ -93,7 +93,7 @@ class Thing extends BaseType
      * entity being described. See [background
      * notes](/docs/datamodel.html#mainEntityBackground) for details.
      *
-     * @param string $mainEntityOfPage
+     * @param \Spatie\SchemaOrg\CreativeWork|string $mainEntityOfPage
      *
      * @return static
      *
@@ -171,7 +171,7 @@ class Thing extends BaseType
      * notes](/docs/datamodel.html#identifierBg) for more details.
         
      *
-     * @param \Spatie\SchemaOrg\PropertyValue $identifier
+     * @param string|\Spatie\SchemaOrg\PropertyValue $identifier
      *
      * @return static
      *

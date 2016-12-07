@@ -15,7 +15,7 @@ class DatedMoneySpecification extends StructuredValue
     /**
      * The amount of money.
      *
-     * @param float|int $amount
+     * @param \Spatie\SchemaOrg\MonetaryAmount|float|int $amount
      *
      * @return static
      *

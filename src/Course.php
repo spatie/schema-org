@@ -35,7 +35,7 @@ class Course extends CreativeWork
      * Requirements may be a pre-requisite competency, referenced using
      * [[AlignmentObject]].
      *
-     * @param \Spatie\SchemaOrg\AlignmentObject $coursePrerequisites
+     * @param string|\Spatie\SchemaOrg\Course|\Spatie\SchemaOrg\AlignmentObject $coursePrerequisites
      *
      * @return static
      *
