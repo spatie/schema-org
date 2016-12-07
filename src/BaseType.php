@@ -2,7 +2,6 @@
 
 namespace Spatie\SchemaOrg;
 
-use DateTimeInterface;
 use ReflectionClass;
 use Spatie\SchemaOrg\Exceptions\InvalidProperty;
 
@@ -40,7 +39,18 @@ abstract class BaseType implements Type
 
     public function toArray(): array
     {
-        $properties = $this->serialize($this->getProperties());
+        $properties = array_map(function ($property) {
+            if ($property instanceof Type) {
+                $property = $property->toArray();
+                unset($property['@context']);
+            }
+
+            if (is_object($property)) {
+                throw new InvalidProperty();
+            }
+
+            return $property;
+        }, $this->getProperties());
 
         return [
             '@context' => $this->getContext(),
@@ -48,35 +58,8 @@ abstract class BaseType implements Type
         ] + $properties;
     }
 
-    protected function serialize($property)
-    {
-        if (is_array($property)) {
-            return array_map(function ($property) {
-                return $this->serialize($property);
-            }, $property);
-        }
-
-        if ($property instanceof Type) {
-            $property = $property->toArray();
-            unset($property['@context']);
-            return $property;
-        }
-
-        if ($property instanceof DateTimeInterface) {
-            return $property->format('c');
-        }
-
-        if (is_object($property)) {
-            throw new InvalidProperty();
-        }
-
-        return $property;
-    }
-
     public function toScript(): string
     {
-        return '<script type="application/ld+json">'.
-            json_encode($this->toArray()).
-        '</script>';
+        return '<script type="application/ld+json">'.json_encode($this->toArray()).'</script>';
     }
 }

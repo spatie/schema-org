@@ -62,6 +62,11 @@ class RdfaParser
                 $property = new Property();
 
                 $property->name = $this->getText($node, '[property="rdfs:label"]');
+
+                if (empty($property->name)) {
+                    return;
+                }
+
                 $property->description = $this->getText($node, '[property="rdfs:comment"]');
                 $property->resource = $this->getAttribute($node, 'resource');
 

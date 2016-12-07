@@ -41,32 +41,4 @@ class DatedMoneySpecification extends StructuredValue
         return $this->setProperty('currency', $currency);
     }
 
-    /**
-     * 
-     *
-     * @param \DateTimeInterface $
-     *
-     * @return static
-     *
-     * @see http://schema.org/startDate
-     */
-    public function ($)
-    {
-        return $this->setProperty('', $);
-    }
-
-    /**
-     * 
-     *
-     * @param \DateTimeInterface $
-     *
-     * @return static
-     *
-     * @see http://schema.org/endDate
-     */
-    public function ($)
-    {
-        return $this->setProperty('', $);
-    }
-
 }

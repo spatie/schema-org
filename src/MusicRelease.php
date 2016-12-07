@@ -40,20 +40,6 @@ class MusicRelease extends MusicPlaylist
     }
 
     /**
-     * 
-     *
-     * @param  $
-     *
-     * @return static
-     *
-     * @see http://schema.org/duration
-     */
-    public function ($)
-    {
-        return $this->setProperty('', $);
-    }
-
-    /**
      * Format of this release (the type of recording media used, ie. compact
      * disc, digital media, LP, etc.).
      *
