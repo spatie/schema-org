@@ -65,12 +65,14 @@ $localBusiness = new LocalBusiness();
 $localBusiness->name('Spatie'); 
 ```
 
-Types can be rendered to a script, or converted to an array (which contains the same data as the json in the script).
+Types can be converted to an array or rendered to a script.
 
 ```php
+$localBusiness->toArray();
+
 $localBusiness->toScript();
 
-$localBusiness->toArray();
+echo $localBusiness; // Same output as `toScript()`
 ```
 
 There's no full API documentation for types and properties. You can refer to [the source](https://github.com/spatie/schema-org/tree/master/src) or to [the schema.org website](http://schema.org).
