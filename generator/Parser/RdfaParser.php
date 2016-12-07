@@ -2,10 +2,10 @@
 
 namespace Spatie\SchemaOrg\Generator\Parser;
 
-use Spatie\SchemaOrg\Generator\Property;
 use Spatie\SchemaOrg\Generator\Type;
-use Spatie\SchemaOrg\Generator\TypeCollection;
+use Spatie\SchemaOrg\Generator\Property;
 use Symfony\Component\DomCrawler\Crawler;
+use Spatie\SchemaOrg\Generator\TypeCollection;
 
 class RdfaParser
 {
@@ -110,7 +110,7 @@ class RdfaParser
 
     protected function getTypeFromRange(string $range)
     {
-        switch($range) {
+        switch ($range) {
             case 'Boolean':
                 return 'bool';
             case 'False':
