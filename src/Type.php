@@ -19,4 +19,12 @@ interface Type
      * @return string
      */
     public function toScript(): string;
+
+    /**
+     * Create a json-ld script tag for this type, built from the data that
+     * `toArray` returns.
+     *
+     * @return string
+     */
+    public function __toString(): string;
 }

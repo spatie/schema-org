@@ -62,4 +62,9 @@ abstract class BaseType implements Type
     {
         return '<script type="application/ld+json">'.json_encode($this->toArray()).'</script>';
     }
+
+    public function __toString(): string
+    {
+        return $this->toScript();
+    }
 }
