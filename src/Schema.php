@@ -782,11 +782,6 @@ class Schema
         return new InsuranceAgency();
     }
 
-    public static function integer(): Integer
-    {
-        return new Integer();
-    }
-
     public static function internetCafe(): InternetCafe
     {
         return new InternetCafe();
@@ -1425,11 +1420,6 @@ class Schema
     public static function travelAgency(): TravelAgency
     {
         return new TravelAgency();
-    }
-
-    public static function uRL(): URL
-    {
-        return new URL();
     }
 
     public static function userInteraction(): UserInteraction

@@ -38,7 +38,7 @@ class RdfaParser
 
                 $type->name = $this->getText($node, '[property="rdfs:label"]');
 
-                if (in_array($type->name, ['', 'DataType', 'Float'])) {
+                if (in_array($type->name, ['', 'DataType', 'Float', 'Integer', 'URL'])) {
                     return;
                 }
 
