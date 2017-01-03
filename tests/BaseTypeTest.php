@@ -38,6 +38,22 @@ class BaseTypeTest extends PHPUnit_Framework_TestCase
     }
 
     /** @test */
+    public function it_can_conditionally_set_and_retrieve_a_property()
+    {
+        $type = new DummyType();
+
+        $type->if(true, function (DummyType $type) {
+            $type->setProperty('foo', 'bar');
+        });
+
+        $type->if(false, function (DummyType $type) {
+            $type->setProperty('baz', 'qux');
+        });
+
+        $this->assertEquals(['foo' => 'bar'], $type->getProperties());
+    }
+
+    /** @test */
     public function it_can_create_an_array_that_conforms_to_the_ld_json_spec_with_primitive_properties()
     {
         $type = new DummyType();
