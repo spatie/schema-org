@@ -102,15 +102,6 @@ $localBusiness->setProperty('foo', 'bar');
 
 If you'd need to retrieve a property, you can use the `getProperty` method. You can optionally pass in a second parameter to provide a default value. 
 
-``` php
-$localBusiness = Schema::localBusiness()->name('Spatie');
-
-// Is equivalent to:
-
-$localBusiness = new LocalBusiness();
-$localBusiness->name('Spatie'); 
-```
-
 ```php
 $localBusiness->getProperty('name'); // 'Spatie'
 $localBusiness->getProperty('bar'); // null
