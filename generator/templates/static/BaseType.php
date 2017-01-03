@@ -52,7 +52,7 @@ abstract class BaseType implements Type
         if (is_array($property)) {
             return array_map([$this, 'serializeProperty'], $property);
         }
-        
+
         if ($property instanceof Type) {
             $property = $property->toArray();
             unset($property['@context']);
