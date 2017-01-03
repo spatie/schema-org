@@ -32,7 +32,7 @@ abstract class BaseType implements Type
         if ($condition) {
             $callback($this);
         }
-        
+
         return $this;
     }
 
