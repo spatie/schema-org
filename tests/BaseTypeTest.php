@@ -88,7 +88,7 @@ class BaseTypeTest extends PHPUnit_Framework_TestCase
 
         $child1 = new DummyType();
         $child1->setProperty('foo', 'bar');
-        
+
         $child2 = new DummyType();
         $child2->setProperty('foo', 'baz');
 
