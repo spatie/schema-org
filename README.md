@@ -77,6 +77,21 @@ echo $localBusiness; // Same output as `toScript()`
 
 There's no full API documentation for types and properties. You can refer to [the source](https://github.com/spatie/schema-org/tree/master/src) or to [the schema.org website](http://schema.org).
 
+If you don't want to break the chain of a large schema object, you can use the `if` method to conditionally modify the schema.
+
+```php
+use Spatie\SchemaOrg\LocalBusiness;
+use Spatie\SchemaOrg\Schema;
+
+$business = ['name' => 'Spatie'];
+
+$localBusiness = Schema::localBusiness()
+    ->name($business['name'])
+    ->if(isset($business['email']), function (LocalBusiness $schema) {
+        $schema->email($business['email']);
+    });
+```
+
 ### Advanced usage
 
 If you'd need to set a custom property, you can use the `setProperty` method.

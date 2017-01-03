@@ -27,6 +27,15 @@ abstract class BaseType implements Type
         return $this;
     }
 
+    public function if($condition, $callback)
+    {
+        if ($condition) {
+            $callback($this);
+        }
+        
+        return $this;
+    }
+
     public function getProperty(string $property, $default = null)
     {
         return $this->properties[$property] ?? $default;
