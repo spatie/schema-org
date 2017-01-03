@@ -39,23 +39,30 @@ abstract class BaseType implements Type
 
     public function toArray(): array
     {
-        $properties = array_map(function ($property) {
-            if ($property instanceof Type) {
-                $property = $property->toArray();
-                unset($property['@context']);
-            }
-
-            if (is_object($property)) {
-                throw new InvalidProperty();
-            }
-
-            return $property;
-        }, $this->getProperties());
+        $properties = $this->serializeProperty($this->getProperties());
 
         return [
             '@context' => $this->getContext(),
             '@type' => $this->getType(),
         ] + $properties;
+    }
+
+    protected function serializeProperty($property)
+    {
+        if (is_array($property)) {
+            return array_map([$this, 'serializeProperty'], $property);
+        }
+        
+        if ($property instanceof Type) {
+            $property = $property->toArray();
+            unset($property['@context']);
+        }
+
+        if (is_object($property)) {
+            throw new InvalidProperty();
+        }
+
+        return $property;
     }
 
     public function toScript(): string

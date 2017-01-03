@@ -82,6 +82,36 @@ class BaseTypeTest extends PHPUnit_Framework_TestCase
     }
 
     /** @test */
+    public function it_can_create_an_array_that_conforms_to_the_ld_json_spec_with_an_array_of_types()
+    {
+        $type = new DummyType();
+
+        $child1 = new DummyType();
+        $child1->setProperty('foo', 'bar');
+        
+        $child2 = new DummyType();
+        $child2->setProperty('foo', 'baz');
+
+        $type->setProperty('children', [$child1, $child2]);
+
+        $expected = [
+            '@context' => 'http://schema.org',
+            '@type' => 'DummyType',
+            'children' => [
+                [
+                    '@type' => 'DummyType',
+                    'foo' => 'bar',
+                ], [
+                    '@type' => 'DummyType',
+                    'foo' => 'baz',
+                ],
+            ],
+        ];
+
+        $this->assertEquals($expected, $type->toArray());
+    }
+
+    /** @test */
     public function it_can_create_an_ld_json_script_tag()
     {
         $type = new DummyType();
