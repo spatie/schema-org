@@ -62,7 +62,7 @@ $localBusiness = Schema::localBusiness()->name('Spatie');
 // Is equivalent to:
 
 $localBusiness = new LocalBusiness();
-$localBusiness->name('Spatie'); 
+$localBusiness->name('Spatie');
 ```
 
 Types can be converted to an array or rendered to a script.
@@ -92,6 +92,8 @@ $localBusiness = Schema::localBusiness()
     });
 ```
 
+> I recommended double checking your structured data with [Google's structured data testing tool](https://search.google.com/structured-data/testing-tool)
+
 ### Advanced usage
 
 If you'd need to set a custom property, you can use the `setProperty` method.
@@ -100,7 +102,7 @@ If you'd need to set a custom property, you can use the `setProperty` method.
 $localBusiness->setProperty('foo', 'bar');
 ```
 
-If you'd need to retrieve a property, you can use the `getProperty` method. You can optionally pass in a second parameter to provide a default value. 
+If you'd need to retrieve a property, you can use the `getProperty` method. You can optionally pass in a second parameter to provide a default value.
 
 ```php
 $localBusiness->getProperty('name'); // 'Spatie'
@@ -123,9 +125,25 @@ $localBusiness->getType(); // 'LocalBusiness'
 
 ## Known Issues
 
+### Type inheritance
+
+The spec rdfa document that's used to generate this code uses single inheritance for the types. However, the spec on http://schema.org uses multiple inheritance in some cases. Read the docs and use [Google's structured data testing tool](https://search.google.com/structured-data/testing-tool) to ensure you're on the right path!
+
+For example, according to the rdfa, a `LocalBusiness` inherits properties from `Organization`. However, if you visit the spec page on [Schema.org](https://schema.org/LocalBusiness), it inherits properties from `Organization` and `Place`. The current solution is by manually specifying properties on the item, as described in [advances usage](#advanced-usage).
+
+```php
+Schema::localBusiness()
+    // `address` is part of `Organization`, so the method exists
+    ->address(/* ... */)
+    // `openingHoursSpecification` is part of `Place`, so we need to manually add it
+    ->setProperty('openingHoursSpecification', /* ... */);
+```
+
+### Minor issues
+
 - The `Float` type isn't available since it's a reserved keyword in PHP
 - The `Physician` type isn't available since it extends a type from the `health` extension spec
-- Some docblocks have some formatting issues
+- Some docblocks have some formatting issues (PR's welcome!)
 
 ## Changelog
 
