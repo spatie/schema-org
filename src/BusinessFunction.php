@@ -15,9 +15,7 @@ namespace Spatie\SchemaOrg;
  * http://purl.org/goodrelations/v1#Maintain\n*
  * http://purl.org/goodrelations/v1#ProvideService\n*
  * http://purl.org/goodrelations/v1#Repair\n*
- * http://purl.org/goodrelations/v1#Sell\n*
- * http://purl.org/goodrelations/v1#Buy
-        
+ * http://purl.org/goodrelations/v1#Sell\n* http://purl.org/goodrelations/v1#Buy
  *
  * @see http://schema.org/BusinessFunction
  */

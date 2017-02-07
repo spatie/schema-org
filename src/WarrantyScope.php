@@ -8,7 +8,6 @@ namespace Spatie\SchemaOrg;
  * http://purl.org/goodrelations/v1#Labor-BringIn\n*
  * http://purl.org/goodrelations/v1#PartsAndLabor-BringIn\n*
  * http://purl.org/goodrelations/v1#PartsAndLabor-PickUp
-      
  *
  * @see http://schema.org/WarrantyScope
  */

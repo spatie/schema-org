@@ -28,7 +28,6 @@ class TradeAction extends Action
      * formatting.\n* Use values from 0123456789 (Unicode 'DIGIT ZERO' (U+0030)
      * to 'DIGIT NINE' (U+0039)) rather than superficially similiar Unicode
      * symbols.
-      
      *
      * @param float|int|string $price
      *

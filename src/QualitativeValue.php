@@ -124,7 +124,6 @@ class QualitativeValue extends Enumeration
      * http://schema.org/gtin13, ...) will typically expect such data to be
      * provided using those properties, rather than using the generic
      * property/value mechanism.
-
      *
      * @param \Spatie\SchemaOrg\PropertyValue $additionalProperty
      *

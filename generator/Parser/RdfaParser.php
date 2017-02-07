@@ -97,7 +97,7 @@ class RdfaParser
             return '';
         }
 
-        return $node->text();
+        return trim($node->text());
     }
 
     protected function getAttribute(Crawler $node, string $attribute): string

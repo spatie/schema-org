@@ -13,7 +13,6 @@ namespace Spatie\SchemaOrg;
  * section homepage. The specific values of 'position' are not assigned meaning
  * for a BreadcrumbList, but they should be integers, e.g. beginning with '1'
  * for the first item in the list.
-      
  *
  * @see http://schema.org/BreadcrumbList
  */

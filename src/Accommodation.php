@@ -13,7 +13,6 @@ For more specific
 See also the <a
  * href="/docs/hotels.html">dedicated document on the use of schema.org for
  * marking up hotels and other forms of accommodations</a>.
-
  *
  * @see http://schema.org/Accommodation
  */
@@ -58,7 +57,7 @@ Typical unit code(s): ROM for room or
      * The size of the accommodation, e.g. in square meter or
      * squarefoot.
 Typical unit code(s): MTK for square meter, FTK for square
-     * foot, or YDK for square yard 
+     * foot, or YDK for square yard
      *
      * @param \Spatie\SchemaOrg\QuantitativeValue $floorSize
      *

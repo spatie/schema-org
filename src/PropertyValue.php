@@ -10,7 +10,6 @@ namespace Spatie\SchemaOrg;
  * and b) you can populate them. Using PropertyValue as a substitute will
  * typically not trigger the same effect as using the original, specific
  * property.
-    
  *
  * @see http://schema.org/PropertyValue
  */

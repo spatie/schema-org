@@ -169,7 +169,6 @@ class Thing extends BaseType
      * dedicated properties for representing many of these, either as textual
      * strings or as URL (URI) links. See [background
      * notes](/docs/datamodel.html#identifierBg) for more details.
-        
      *
      * @param string|\Spatie\SchemaOrg\PropertyValue $identifier
      *

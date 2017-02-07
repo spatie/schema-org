@@ -10,7 +10,6 @@ namespace Spatie\SchemaOrg;
  * http://purl.org/goodrelations/v1#Enduser\n*
  * http://purl.org/goodrelations/v1#PublicInstitution\n*
  * http://purl.org/goodrelations/v1#Reseller
-	  
  *
  * @see http://schema.org/BusinessEntityType
  */

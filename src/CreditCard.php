@@ -12,7 +12,6 @@ namespace Spatie\SchemaOrg;
  * http://purl.org/goodrelations/v1#JCB\n*
  * http://purl.org/goodrelations/v1#MasterCard\n*
  * http://purl.org/goodrelations/v1#VISA
-       
  *
  * @see http://schema.org/CreditCard
  */

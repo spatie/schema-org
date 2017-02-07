@@ -3,7 +3,7 @@
 namespace Spatie\SchemaOrg;
 
 /**
- *  A point value or interval for product characteristics and other purposes.
+ * A point value or interval for product characteristics and other purposes.
  *
  * @see http://schema.org/QuantitativeValue
  */
@@ -94,7 +94,6 @@ class QuantitativeValue extends StructuredValue
      * http://schema.org/gtin13, ...) will typically expect such data to be
      * provided using those properties, rather than using the generic
      * property/value mechanism.
-
      *
      * @param \Spatie\SchemaOrg\PropertyValue $additionalProperty
      *

@@ -14,7 +14,7 @@ class CreativeWork extends Thing
      * Indicates (by URL or string) a particular version of a schema used in
      * some CreativeWork. For example, a document could declare a schemaVersion
      * using an URL such as http://schema.org/version/2.0/ if precise indication
-     * of schema version was required by some application. 
+     * of schema version was required by some application.
      *
      * @param string $schemaVersion
      *

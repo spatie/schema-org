@@ -10,7 +10,6 @@ namespace Spatie\SchemaOrg;
           The
  * center of the circle can be indicated via the 'geoMidpoint' property, or more
  * approximately using 'address', 'postalCode'.
-       
  *
  * @see http://schema.org/GeoCircle
  */
