@@ -2,10 +2,11 @@
 
 namespace Spatie\Skeleton\Test;
 
+use DateTime;
 use Spatie\SchemaOrg\BaseType;
-use PHPUnit_Framework_TestCase;
+use PHPUnit\Framework\TestCase;
 
-class BaseTypeTest extends PHPUnit_Framework_TestCase
+class BaseTypeTest extends TestCase
 {
     /** @test */
     public function it_has_a_default_context()
@@ -70,6 +71,22 @@ class BaseTypeTest extends PHPUnit_Framework_TestCase
             'array' => ['Yo'],
             'number' => 5,
             'boolean' => true,
+        ];
+
+        $this->assertEquals($expected, $type->toArray());
+    }
+
+    /** @test */
+    public function it_can_create_an_array_that_conforms_to_the_ld_json_spec_with_datetimes()
+    {
+        $type = new DummyType();
+
+        $type->setProperty('dateCreated', DateTime::createFromFormat('Y-m-d H:i:s', '2017-01-01 00:00:00'));
+
+        $expected = [
+            '@context' => 'http://schema.org',
+            '@type' => 'DummyType',
+            'dateCreated' => '2017-01-01T00:00:00+0000',
         ];
 
         $this->assertEquals($expected, $type->toArray());

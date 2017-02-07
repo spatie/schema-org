@@ -2,6 +2,8 @@
 
 namespace Spatie\SchemaOrg;
 
+use DateTime;
+use DateTimeInterface;
 use ReflectionClass;
 use Spatie\SchemaOrg\Exceptions\InvalidProperty;
 
@@ -65,6 +67,10 @@ abstract class BaseType implements Type
         if ($property instanceof Type) {
             $property = $property->toArray();
             unset($property['@context']);
+        }
+
+        if ($property instanceof DateTimeInterface) {
+            $property = $property->format(DateTime::ISO8601);
         }
 
         if (is_object($property)) {
