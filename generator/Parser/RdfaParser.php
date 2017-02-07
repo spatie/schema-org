@@ -74,7 +74,7 @@ class RdfaParser
                 $node
                     ->filter('[property="http://schema.org/domainIncludes"]')
                     ->each(function (Crawler $domain) use ($property) {
-                        $this->types->addPropertyToType($property, $domain->text());
+                        $this->types->addPropertyToType($property, $this->getText($domain));
                     });
 
                 $node
