@@ -3,8 +3,8 @@
 namespace Spatie\SchemaOrg;
 
 use DateTime;
-use DateTimeInterface;
 use ReflectionClass;
+use DateTimeInterface;
 use Spatie\SchemaOrg\Exceptions\InvalidProperty;
 
 abstract class BaseType implements Type
