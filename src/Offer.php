@@ -6,9 +6,10 @@ namespace Spatie\SchemaOrg;
  * An offer to transfer some rights to an item or to provide a service — for
  * example, an offer to sell tickets to an event, to rent the DVD of a movie, to
  * stream a TV show over the internet, to repair a motorcycle, or to loan a
- * book.\n\nFor
- * [GTIN](http://www.gs1.org/barcodes/technical/idkeys/gtin)-related fields, see
- * [Check Digit
+ * book.
+ * 
+ * For [GTIN](http://www.gs1.org/barcodes/technical/idkeys/gtin)-related fields,
+ * see [Check Digit
  * calculator](http://www.gs1.org/barcodes/support/check_digit_calculator) and
  * [validation
  * guide](http://www.gs1us.org/resources/standards/gtin-validation-guide) from
@@ -259,7 +260,9 @@ class Offer extends Intangible
     /**
      * The ISO 3166-1 (ISO 3166-1 alpha-2) or ISO 3166-2 code, the place, or the
      * GeoShape for the geo-political region(s) for which the offer or delivery
-     * charge specification is valid.\n\nSee also [[ineligibleRegion]].
+     * charge specification is valid.
+     * 
+     * See also [[ineligibleRegion]].
      *
      * @param \Spatie\SchemaOrg\GeoShape|\Spatie\SchemaOrg\Place|string $eligibleRegion
      *
@@ -276,7 +279,9 @@ class Offer extends Intangible
      * The ISO 3166-1 (ISO 3166-1 alpha-2) or ISO 3166-2 code, the place, or the
      * GeoShape for the geo-political region(s) for which the offer or delivery
      * charge specification is not valid, e.g. a region where the transaction is
-     * not allowed.\n\nSee also [[eligibleRegion]].
+     * not allowed.
+     * 
+     * See also [[eligibleRegion]].
      *
      * @param \Spatie\SchemaOrg\GeoShape|\Spatie\SchemaOrg\Place|string $ineligibleRegion
      *
@@ -456,21 +461,25 @@ class Offer extends Intangible
 
     /**
      * The offer price of a product, or of a price component when attached to
-     * PriceSpecification and its subtypes.\n\nUsage guidelines:\n\n* Use the
-     * [[priceCurrency]] property (with [ISO 4217
+     * PriceSpecification and its subtypes.
+     * 
+     * Usage guidelines:
+     * 
+     * * Use the [[priceCurrency]] property (with [ISO 4217
      * codes](http://en.wikipedia.org/wiki/ISO_4217#Active_codes) e.g. "USD")
      * instead of
-      including [ambiguous
+     *       including [ambiguous
      * symbols](http://en.wikipedia.org/wiki/Dollar_sign#Currencies_that_use_the_dollar_or_peso_sign)
-     * such as '$' in the value.\n* Use '.' (Unicode 'FULL STOP' (U+002E))
-     * rather than ',' to indicate a decimal point. Avoid using these symbols as
-     * a readability separator.\n* Note that both
+     * such as '$' in the value.
+     * * Use '.' (Unicode 'FULL STOP' (U+002E)) rather than ',' to indicate a
+     * decimal point. Avoid using these symbols as a readability separator.
+     * * Note that both
      * [RDFa](http://www.w3.org/TR/xhtml-rdfa-primer/#using-the-content-attribute)
      * and Microdata syntax allow the use of a "content=" attribute for
      * publishing simple machine-readable values alongside more human-friendly
-     * formatting.\n* Use values from 0123456789 (Unicode 'DIGIT ZERO' (U+0030)
-     * to 'DIGIT NINE' (U+0039)) rather than superficially similiar Unicode
-     * symbols.
+     * formatting.
+     * * Use values from 0123456789 (Unicode 'DIGIT ZERO' (U+0030) to 'DIGIT
+     * NINE' (U+0039)) rather than superficially similiar Unicode symbols.
      *
      * @param float|int|string $price
      *

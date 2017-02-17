@@ -3,8 +3,10 @@
 namespace Spatie\SchemaOrg;
 
 /**
- * Professional service: Attorney. \n\nThis type is deprecated -
- * [[LegalService]] is more inclusive and less ambiguous.
+ * Professional service: Attorney. 
+ * 
+ * This type is deprecated - [[LegalService]] is more inclusive and less
+ * ambiguous.
  *
  * @see http://schema.org/Attorney
  */

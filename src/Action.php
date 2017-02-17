@@ -6,8 +6,9 @@ namespace Spatie\SchemaOrg;
  * An action performed by a direct agent and indirect participants upon a direct
  * object. Optionally happens at a location with the help of an inanimate
  * instrument. The execution of the action may produce a result. Specific action
- * sub-type documentation specifies the exact expectation of each
- * argument/role.\n\nSee also [blog
+ * sub-type documentation specifies the exact expectation of each argument/role.
+ * 
+ * See also [blog
  * post](http://blog.schema.org/2014/04/announcing-schemaorg-actions.html) and
  * [Actions overview document](http://schema.org/docs/actions.html).
  *
@@ -34,9 +35,11 @@ class Action extends Thing
      * The endTime of something. For a reserved event or service (e.g.
      * FoodEstablishmentReservation), the time that it is expected to end. For
      * actions that span a period of time, when the action was performed. e.g.
-     * John wrote a book from January to *December*.\n\nNote that Event uses
-     * startDate/endDate instead of startTime/endTime, even when describing
-     * dates with times. This situation may be clarified in future revisions.
+     * John wrote a book from January to *December*.
+     * 
+     * Note that Event uses startDate/endDate instead of startTime/endTime, even
+     * when describing dates with times. This situation may be clarified in
+     * future revisions.
      *
      * @param \DateTimeInterface $endTime
      *
@@ -129,9 +132,11 @@ class Action extends Thing
      * The startTime of something. For a reserved event or service (e.g.
      * FoodEstablishmentReservation), the time that it is expected to start. For
      * actions that span a period of time, when the action was performed. e.g.
-     * John wrote a book from *January* to December.\n\nNote that Event uses
-     * startDate/endDate instead of startTime/endTime, even when describing
-     * dates with times. This situation may be clarified in future revisions.
+     * John wrote a book from *January* to December.
+     * 
+     * Note that Event uses startDate/endDate instead of startTime/endTime, even
+     * when describing dates with times. This situation may be clarified in
+     * future revisions.
      *
      * @param \DateTimeInterface $startTime
      *

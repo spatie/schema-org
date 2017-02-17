@@ -4,8 +4,11 @@ namespace Spatie\SchemaOrg;
 
 /**
  * The act of obtaining an object under an agreement to return it at a later
- * date. Reciprocal of LendAction.\n\nRelated actions:\n\n* [[LendAction]]:
- * Reciprocal of BorrowAction.
+ * date. Reciprocal of LendAction.
+ * 
+ * Related actions:
+ * 
+ * * [[LendAction]]: Reciprocal of BorrowAction.
  *
  * @see http://schema.org/BorrowAction
  */

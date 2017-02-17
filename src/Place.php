@@ -41,9 +41,11 @@ class Place extends Thing
     /**
      * A short textual code (also called "store code") that uniquely identifies
      * a place of business. The code is typically assigned by the
-     * parentOrganization and used in structured URLs.\n\nFor example, in the
-     * URL http://www.starbucks.co.uk/store-locator/etc/detail/3047 the code
-     * "3047" is a branchCode for a particular branch.
+     * parentOrganization and used in structured URLs.
+     * 
+     * For example, in the URL
+     * http://www.starbucks.co.uk/store-locator/etc/detail/3047 the code "3047"
+     * is a branchCode for a particular branch.
      *
      * @param string $branchCode
      *
@@ -274,8 +276,9 @@ class Place extends Thing
     }
 
     /**
-     * The special opening hours of a certain place.\n\nUse this to explicitly
-     * override general opening hours brought in scope by
+     * The special opening hours of a certain place.
+     * 
+     * Use this to explicitly override general opening hours brought in scope by
      * [[openingHoursSpecification]] or [[openingHours]].
      *
      * @param \Spatie\SchemaOrg\OpeningHoursSpecification $specialOpeningHoursSpecification
@@ -362,12 +365,13 @@ class Place extends Thing
     /**
      * A property-value pair representing an additional characteristics of the
      * entitity, e.g. a product feature or another characteristic for which
-     * there is no matching property in schema.org.\n\nNote: Publishers should
-     * be aware that applications designed to use specific schema.org properties
-     * (e.g. http://schema.org/width, http://schema.org/color,
-     * http://schema.org/gtin13, ...) will typically expect such data to be
-     * provided using those properties, rather than using the generic
-     * property/value mechanism.
+     * there is no matching property in schema.org.
+     * 
+     * Note: Publishers should be aware that applications designed to use
+     * specific schema.org properties (e.g. http://schema.org/width,
+     * http://schema.org/color, http://schema.org/gtin13, ...) will typically
+     * expect such data to be provided using those properties, rather than using
+     * the generic property/value mechanism.
      *
      * @param \Spatie\SchemaOrg\PropertyValue $additionalProperty
      *
