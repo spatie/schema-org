@@ -42,10 +42,12 @@ class MonetaryAmount extends StructuredValue
     }
 
     /**
-     * The value of the quantitative value or property value node.\n\n* For
-     * [[QuantitativeValue]] and [[MonetaryAmount]], the recommended type for
-     * values is 'Number'.\n* For [[PropertyValue]], it can be 'Text;',
-     * 'Number', 'Boolean', or 'StructuredValue'.
+     * The value of the quantitative value or property value node.
+     * 
+     * * For [[QuantitativeValue]] and [[MonetaryAmount]], the recommended type
+     * for values is 'Number'.
+     * * For [[PropertyValue]], it can be 'Text;', 'Number', 'Boolean', or
+     * 'StructuredValue'.
      *
      * @param float|int|string|bool|\Spatie\SchemaOrg\StructuredValue $value
      *

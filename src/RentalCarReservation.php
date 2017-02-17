@@ -3,9 +3,11 @@
 namespace Spatie\SchemaOrg;
 
 /**
- * A reservation for a rental car.\n\nNote: This type is for information about
- * actual reservations, e.g. in confirmation emails or HTML pages with
- * individual confirmations of reservations.
+ * A reservation for a rental car.
+ * 
+ * Note: This type is for information about actual reservations, e.g. in
+ * confirmation emails or HTML pages with individual confirmations of
+ * reservations.
  *
  * @see http://schema.org/RentalCarReservation
  */

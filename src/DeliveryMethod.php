@@ -7,15 +7,18 @@ namespace Spatie\SchemaOrg;
  * service to the destination of fulfillment chosen by the customer. Delivery
  * methods are characterized by the means of transportation used, and by the
  * organization or group that is the contracting party for the sending
- * organization or person.\n\nCommonly used values:\n\n*
- * http://purl.org/goodrelations/v1#DeliveryModeDirectDownload\n*
- * http://purl.org/goodrelations/v1#DeliveryModeFreight\n*
- * http://purl.org/goodrelations/v1#DeliveryModeMail\n*
- * http://purl.org/goodrelations/v1#DeliveryModeOwnFleet\n*
- * http://purl.org/goodrelations/v1#DeliveryModePickUp\n*
- * http://purl.org/goodrelations/v1#DHL\n*
- * http://purl.org/goodrelations/v1#FederalExpress\n*
- * http://purl.org/goodrelations/v1#UPS
+ * organization or person.
+ * 
+ * Commonly used values:
+ * 
+ * * http://purl.org/goodrelations/v1#DeliveryModeDirectDownload
+ * * http://purl.org/goodrelations/v1#DeliveryModeFreight
+ * * http://purl.org/goodrelations/v1#DeliveryModeMail
+ * * http://purl.org/goodrelations/v1#DeliveryModeOwnFleet
+ * * http://purl.org/goodrelations/v1#DeliveryModePickUp
+ * * http://purl.org/goodrelations/v1#DHL
+ * * http://purl.org/goodrelations/v1#FederalExpress
+ * * http://purl.org/goodrelations/v1#UPS
  *
  * @see http://schema.org/DeliveryMethod
  */

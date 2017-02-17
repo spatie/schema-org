@@ -3,8 +3,11 @@
 namespace Spatie\SchemaOrg;
 
 /**
- * The act of posing a question / favor to someone.\n\nRelated actions:\n\n*
- * [[ReplyAction]]: Appears generally as a response to AskAction.
+ * The act of posing a question / favor to someone.
+ * 
+ * Related actions:
+ * 
+ * * [[ReplyAction]]: Appears generally as a response to AskAction.
  *
  * @see http://schema.org/AskAction
  */

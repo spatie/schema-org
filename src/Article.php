@@ -5,7 +5,9 @@ namespace Spatie\SchemaOrg;
 /**
  * An article, such as a news article or piece of investigative report.
  * Newspapers and magazines have articles of many different types and this is
- * intended to cover them all.\n\nSee also [blog
+ * intended to cover them all.
+ * 
+ * See also [blog
  * post](http://blog.schema.org/2014/09/schemaorg-support-for-bibliographic_2.html).
  *
  * @see http://schema.org/Article

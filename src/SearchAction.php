@@ -3,8 +3,12 @@
 namespace Spatie\SchemaOrg;
 
 /**
- * The act of searching for an object.\n\nRelated actions:\n\n* [[FindAction]]:
- * SearchAction generally leads to a FindAction, but not necessarily.
+ * The act of searching for an object.
+ * 
+ * Related actions:
+ * 
+ * * [[FindAction]]: SearchAction generally leads to a FindAction, but not
+ * necessarily.
  *
  * @see http://schema.org/SearchAction
  */
