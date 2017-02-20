@@ -2,7 +2,7 @@
 
 All Notable changes to `schema-org` will be documented in this file
 
-# 1.2.1 - 2017-02-17
+# 1.2.1 - 2017-02-20
 - Fixed: New lines are considered and no longer break docs
 - Fixed: HTML line breaks are removed from the docs
 
