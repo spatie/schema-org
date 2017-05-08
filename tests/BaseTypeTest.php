@@ -157,6 +157,16 @@ class BaseTypeTest extends TestCase
 
         $this->assertEquals($expected, $type->toScript());
     }
+
+    /** @test */
+    public function it_can_set_a_property_via_a_magic_call_method()
+    {
+        $type = new DummyType();
+
+        $type->foo('bar');
+
+        $this->assertEquals(['foo' => 'bar'], $type->getProperties());
+    }
 }
 
 class DummyType extends BaseType
