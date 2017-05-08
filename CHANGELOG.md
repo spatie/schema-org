@@ -1,6 +1,6 @@
 # Changelog
 
-All Notable changes to `schema-org` will be documented in this file
+All Notable changes to `schema-org` will be documented in this file.
 
 # 1.3.0 - 2017-05-08
 - Added: `__call` catches unknown methods and calls `setProperty` under the hood, using the method name as the property name and the first argument as property value
