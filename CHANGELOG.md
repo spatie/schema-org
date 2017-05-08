@@ -2,6 +2,11 @@
 
 All Notable changes to `schema-org` will be documented in this file
 
+# 1.3.0 - 2017-05-08
+- Added: `__call` catches unknown methods and calls `setProperty` under the hood, using the method name as the property name and the first argument as property value
+- Added (by updated generated types): `CreativeWork::accessMode`, `CreativeWork::accessModeSufficient`, `CreativeWork::accessibilitySummary`, `Event::audience`, `FoodEstablishment::hasMenu`
+- Removed (by updated generated types, note that this isn't breaking because `__call` will catch your method calls): `Menu::menuAddOn`
+
 # 1.2.1 - 2017-02-20
 - Fixed: New lines are considered and no longer break docs
 - Fixed: HTML line breaks are removed from the docs
