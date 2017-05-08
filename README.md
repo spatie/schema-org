@@ -91,7 +91,7 @@ $localBusiness = Schema::localBusiness()
     });
 ```
 
-> I recommended double checking your structured data with [Google's structured data testing tool](https://search.google.com/structured-data/testing-tool)
+I recommended double checking your structured data with [Google's structured data testing tool](https://search.google.com/structured-data/testing-tool)
 
 ### Advanced usage
 
