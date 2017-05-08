@@ -29,6 +29,21 @@ class FoodEstablishment extends LocalBusiness
      * Either the actual menu as a structured representation, as text, or a URL
      * of the menu.
      *
+     * @param \Spatie\SchemaOrg\Menu|string $hasMenu
+     *
+     * @return static
+     *
+     * @see http://schema.org/hasMenu
+     */
+    public function hasMenu($hasMenu)
+    {
+        return $this->setProperty('hasMenu', $hasMenu);
+    }
+
+    /**
+     * Either the actual menu as a structured representation, as text, or a URL
+     * of the menu.
+     *
      * @param \Spatie\SchemaOrg\Menu|string $menu
      *
      * @return static

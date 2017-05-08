@@ -99,6 +99,20 @@ class Event extends Thing
     }
 
     /**
+     * An intended audience, i.e. a group for whom something was created.
+     *
+     * @param \Spatie\SchemaOrg\Audience $audience
+     *
+     * @return static
+     *
+     * @see http://schema.org/audience
+     */
+    public function audience($audience)
+    {
+        return $this->setProperty('audience', $audience);
+    }
+
+    /**
      * A secondary contributor to the CreativeWork or Event.
      *
      * @param \Spatie\SchemaOrg\Organization|\Spatie\SchemaOrg\Person $contributor

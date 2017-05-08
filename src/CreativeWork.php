@@ -1187,4 +1187,55 @@ class CreativeWork extends Thing
         return $this->setProperty('interactionStatistic', $interactionStatistic);
     }
 
+    /**
+     * The human sensory perceptual system or cognitive faculty through which a
+     * person may process or perceive information. Expected values include:
+     * auditory, tactile, textual, visual, colorDependent, chartOnVisual,
+     * chemOnVisual, diagramOnVisual, mathOnVisual, musicOnVisual, textOnVisual.
+     *
+     * @param string $accessMode
+     *
+     * @return static
+     *
+     * @see http://schema.org/accessMode
+     */
+    public function accessMode($accessMode)
+    {
+        return $this->setProperty('accessMode', $accessMode);
+    }
+
+    /**
+     * A list of single or combined accessModes that are sufficient to
+     * understand all the intellectual content of a resource. Expected values
+     * include:  auditory, tactile, textual, visual.
+     *
+     * @param string $accessModeSufficient
+     *
+     * @return static
+     *
+     * @see http://schema.org/accessModeSufficient
+     */
+    public function accessModeSufficient($accessModeSufficient)
+    {
+        return $this->setProperty('accessModeSufficient', $accessModeSufficient);
+    }
+
+    /**
+     * A human-readable summary of specific accessibility features or
+     * deficiencies, consistent with the other accessibility metadata but
+     * expressing subtleties such as "short descriptions are present but long
+     * descriptions will be needed for non-visual users" or "short descriptions
+     * are present and no long descriptions are needed."
+     *
+     * @param string $accessibilitySummary
+     *
+     * @return static
+     *
+     * @see http://schema.org/accessibilitySummary
+     */
+    public function accessibilitySummary($accessibilitySummary)
+    {
+        return $this->setProperty('accessibilitySummary', $accessibilitySummary);
+    }
+
 }
