@@ -198,6 +198,15 @@ class JobPosting extends Intangible
         return $this->setProperty('jobLocation', $jobLocation);
     }
 
+    /**
+     * An array of geographic locations associated with the job position
+     *
+     * @param array ...$jobLocations an array of Place objects
+     *
+     * @return static
+     *
+     * @throws InvalidProperty when other object types are passed in
+     */
     public function jobLocations(... $jobLocations)
     {
         foreach ($jobLocations as $jobLocation) {
