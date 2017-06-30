@@ -2,6 +2,8 @@
 
 namespace Spatie\SchemaOrg;
 
+use Spatie\SchemaOrg\Exceptions\InvalidProperty;
+
 /**
  * A listing that describes a job opening in a certain organization.
  *
@@ -95,6 +97,23 @@ class JobPosting extends Intangible
     }
 
     /**
+     * Types of employment
+     *
+     * Allowed Values: FULL_TIME, PART_TIME, CONTRACTOR, TEMPORARY,
+     * INTERN, VOLUNTEER, PER_DIEM, OTHER
+     *
+     * @param array ...$employmentTypes
+     *
+     * @return static
+     *
+     * @see https://developers.google.com/search/docs/data-types/job-postings
+     */
+    public function employmentTypes(... $employmentTypes)
+    {
+        return $this->setProperty('employmentType', $employmentTypes);
+    }
+
+    /**
      * Description of skills and experience needed for the position.
      *
      * @param string $experienceRequirements
@@ -177,6 +196,17 @@ class JobPosting extends Intangible
     public function jobLocation($jobLocation)
     {
         return $this->setProperty('jobLocation', $jobLocation);
+    }
+
+    public function jobLocations(... $jobLocations)
+    {
+        foreach ($jobLocations as $jobLocation) {
+            if (!$jobLocation instanceof Place) {
+                throw new InvalidProperty("A Job Location must be of type Place");
+            }
+        }
+
+        return $this->setProperty('jobLocation', $jobLocations);
     }
 
     /**
