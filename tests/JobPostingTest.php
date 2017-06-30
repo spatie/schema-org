@@ -2,10 +2,10 @@
 
 namespace Spatie\Skeleton\Test;
 
-use PHPUnit\Framework\TestCase;
-use Spatie\SchemaOrg\Exceptions\InvalidProperty;
-use Spatie\SchemaOrg\JobPosting;
 use Spatie\SchemaOrg\Schema;
+use PHPUnit\Framework\TestCase;
+use Spatie\SchemaOrg\JobPosting;
+use Spatie\SchemaOrg\Exceptions\InvalidProperty;
 
 class JobPostingTest extends TestCase
 {
