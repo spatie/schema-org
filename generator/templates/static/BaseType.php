@@ -82,7 +82,7 @@ abstract class BaseType implements Type
 
     public function toScript(): string
     {
-        return '<script type="application/ld+json">'.json_encode($this->toArray(),JSON_UNESCAPED_UNICODE).'</script>';
+        return '<script type="application/ld+json">'.json_encode($this->toArray(), JSON_UNESCAPED_UNICODE).'</script>';
     }
 
     public function __call(string $method, array $arguments)
