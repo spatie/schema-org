@@ -61,13 +61,13 @@ class BaseTypeTest extends TestCase
 
         $type->addProperties([
             'foo' => 'bar',
-            'baz' => 'qux'
+            'baz' => 'qux',
         ]);
 
         $this->assertEquals(
             [
                 'foo' => 'bar',
-                'baz' => 'qux'
+                'baz' => 'qux',
             ],
             $type->getProperties()
         );
