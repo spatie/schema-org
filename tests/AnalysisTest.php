@@ -2,8 +2,8 @@
 
 namespace Tests\Analysis;
 
-use GrahamCampbell\Analyzer\AnalysisTrait;
 use PHPUnit\Framework\TestCase;
+use GrahamCampbell\Analyzer\AnalysisTrait;
 
 class AnalysisTest extends TestCase
 {
