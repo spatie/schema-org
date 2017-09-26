@@ -2,7 +2,8 @@
 
 All Notable changes to `schema-org` will be documented in this file.
 
-# 1.3.1 - 2017-09-26
+# 1.4.0 - 2017-09-26
+- Added: `BaseType::addProperties` method to add multiple properties in one go
 - Fixed: `@param` hints now also have array versions of the accepted data types, like `string|string[]`
 
 # 1.3.0 - 2017-05-08
