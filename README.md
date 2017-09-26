@@ -1,4 +1,4 @@
-# A fluent builder Schema.org types and ld+json generator
+# A Fluent Builder For Schema.org Types And ld+json Generator
 
 [![Latest Version on Packagist](https://img.shields.io/packagist/v/spatie/schema-org.svg?style=flat-square)](https://packagist.org/packages/spatie/schema-org)
 [![Software License](https://img.shields.io/badge/license-MIT-brightgreen.svg?style=flat-square)](LICENSE.md)
@@ -64,6 +64,8 @@ $localBusiness = new LocalBusiness();
 $localBusiness->name('Spatie');
 ```
 
+> *All types also accept arrays of the expected data type, for example `sameAs` accepts a string or an array of strings*
+
 Types can be converted to an array or rendered to a script.
 
 ```php
@@ -93,7 +95,7 @@ $localBusiness = Schema::localBusiness()
 
 I recommended double checking your structured data with [Google's structured data testing tool](https://search.google.com/structured-data/testing-tool)
 
-### Advanced usage
+### Advanced Usage
 
 If you'd need to set a custom property, you can use the `setProperty` method.
 
@@ -124,7 +126,7 @@ $localBusiness->getType(); // 'LocalBusiness'
 
 ## Known Issues
 
-### Type inheritance
+### Type Inheritance
 
 The spec rdfa document that's used to generate this code uses single inheritance for the types. However, the spec on http://schema.org uses multiple inheritance in some cases. Read the docs and use [Google's structured data testing tool](https://search.google.com/structured-data/testing-tool) to ensure you're on the right track!
 
@@ -140,7 +142,7 @@ Schema::localBusiness()
     ->setProperty('openingHoursSpecification', /* ... */);
 ```
 
-### Other minor issues
+### Other Minor Issues
 
 - Some docblocks have some formatting issues (PR's welcome!)
 - The `Float` type isn't available since it's a reserved keyword in PHP
