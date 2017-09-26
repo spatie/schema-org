@@ -64,7 +64,7 @@ $localBusiness = new LocalBusiness();
 $localBusiness->name('Spatie');
 ```
 
-> *All types also accept arrays of the expected data type, for example `sameAs` accepts a string or an array of strings*
+> *All types also accept arrays of the expected data type, for example `sameAs` accepts a string or an array of strings.*
 
 Types can be converted to an array or rendered to a script.
 
