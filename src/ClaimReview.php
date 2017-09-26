@@ -13,7 +13,7 @@ class ClaimReview extends Review
     /**
      * A short summary of the specific claims reviewed in a ClaimReview.
      *
-     * @param string $claimReviewed
+     * @param string|string[] $claimReviewed
      *
      * @return static
      *

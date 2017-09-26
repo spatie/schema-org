@@ -15,7 +15,7 @@ class IndividualProduct extends Product
      * When attached to an offer, it is a shortcut for the serial number of the
      * product included in the offer.
      *
-     * @param string $serialNumber
+     * @param string|string[] $serialNumber
      *
      * @return static
      *

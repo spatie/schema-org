@@ -14,7 +14,7 @@ class RsvpAction extends InformAction
      * If responding yes, the number of guests who will attend in addition to
      * the invitee.
      *
-     * @param float|int $additionalNumberOfGuests
+     * @param float|int|float|int[] $additionalNumberOfGuests
      *
      * @return static
      *
@@ -28,7 +28,7 @@ class RsvpAction extends InformAction
     /**
      * The response (yes, no, maybe) to the RSVP.
      *
-     * @param \Spatie\SchemaOrg\RsvpResponseType $rsvpResponse
+     * @param RsvpResponseType|RsvpResponseType[] $rsvpResponse
      *
      * @return static
      *
@@ -42,7 +42,7 @@ class RsvpAction extends InformAction
     /**
      * Comments, typically from users.
      *
-     * @param \Spatie\SchemaOrg\Comment $comment
+     * @param Comment|Comment[] $comment
      *
      * @return static
      *

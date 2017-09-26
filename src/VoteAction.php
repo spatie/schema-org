@@ -13,7 +13,7 @@ class VoteAction extends ChooseAction
     /**
      * A sub property of object. The candidate subject of this action.
      *
-     * @param \Spatie\SchemaOrg\Person $candidate
+     * @param Person|Person[] $candidate
      *
      * @return static
      *

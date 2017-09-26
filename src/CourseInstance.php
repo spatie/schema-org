@@ -18,7 +18,7 @@ class CourseInstance extends Event
      * reference to a term from a controlled vocabulary (e.g.
      * https://ceds.ed.gov/element/001311#Asynchronous ).
      *
-     * @param string $courseMode
+     * @param string|string[] $courseMode
      *
      * @return static
      *
@@ -33,7 +33,7 @@ class CourseInstance extends Event
      * A person assigned to instruct or provide instructional assistance for the
      * [[CourseInstance]].
      *
-     * @param \Spatie\SchemaOrg\Person $instructor
+     * @param Person|Person[] $instructor
      *
      * @return static
      *

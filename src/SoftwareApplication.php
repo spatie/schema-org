@@ -12,7 +12,7 @@ class SoftwareApplication extends CreativeWork
     /**
      * Type of software application, e.g. 'Game, Multimedia'.
      *
-     * @param string $applicationCategory
+     * @param string|string[] $applicationCategory
      *
      * @return static
      *
@@ -26,7 +26,7 @@ class SoftwareApplication extends CreativeWork
     /**
      * Subcategory of the application, e.g. 'Arcade Game'.
      *
-     * @param string $applicationSubCategory
+     * @param string|string[] $applicationSubCategory
      *
      * @return static
      *
@@ -41,7 +41,7 @@ class SoftwareApplication extends CreativeWork
      * The name of the application suite to which the application belongs (e.g.
      * Excel belongs to Office).
      *
-     * @param string $applicationSuite
+     * @param string|string[] $applicationSuite
      *
      * @return static
      *
@@ -56,7 +56,7 @@ class SoftwareApplication extends CreativeWork
      * Countries for which the application is not supported. You can also
      * provide the two-letter ISO 3166-1 alpha-2 country code.
      *
-     * @param string $countriesNotSupported
+     * @param string|string[] $countriesNotSupported
      *
      * @return static
      *
@@ -71,7 +71,7 @@ class SoftwareApplication extends CreativeWork
      * Countries for which the application is supported. You can also provide
      * the two-letter ISO 3166-1 alpha-2 country code.
      *
-     * @param string $countriesSupported
+     * @param string|string[] $countriesSupported
      *
      * @return static
      *
@@ -86,7 +86,7 @@ class SoftwareApplication extends CreativeWork
      * Device required to run the application. Used in cases where a specific
      * make/model is required to run the application.
      *
-     * @param string $device
+     * @param string|string[] $device
      *
      * @return static
      *
@@ -101,7 +101,7 @@ class SoftwareApplication extends CreativeWork
      * Device required to run the application. Used in cases where a specific
      * make/model is required to run the application.
      *
-     * @param string $availableOnDevice
+     * @param string|string[] $availableOnDevice
      *
      * @return static
      *
@@ -115,7 +115,7 @@ class SoftwareApplication extends CreativeWork
     /**
      * If the file can be downloaded, URL to download the binary.
      *
-     * @param string $downloadUrl
+     * @param string|string[] $downloadUrl
      *
      * @return static
      *
@@ -130,7 +130,7 @@ class SoftwareApplication extends CreativeWork
      * Features or modules provided by this application (and possibly required
      * by other applications).
      *
-     * @param string $featureList
+     * @param string|string[] $featureList
      *
      * @return static
      *
@@ -145,7 +145,7 @@ class SoftwareApplication extends CreativeWork
      * Size of the application / package (e.g. 18MB). In the absence of a unit
      * (MB, KB etc.), KB will be assumed.
      *
-     * @param string $fileSize
+     * @param string|string[] $fileSize
      *
      * @return static
      *
@@ -160,7 +160,7 @@ class SoftwareApplication extends CreativeWork
      * URL at which the app may be installed, if different from the URL of the
      * item.
      *
-     * @param string $installUrl
+     * @param string|string[] $installUrl
      *
      * @return static
      *
@@ -174,7 +174,7 @@ class SoftwareApplication extends CreativeWork
     /**
      * Minimum memory requirements.
      *
-     * @param string $memoryRequirements
+     * @param string|string[] $memoryRequirements
      *
      * @return static
      *
@@ -188,7 +188,7 @@ class SoftwareApplication extends CreativeWork
     /**
      * Operating systems supported (Windows 7, OSX 10.6, Android 1.6).
      *
-     * @param string $operatingSystem
+     * @param string|string[] $operatingSystem
      *
      * @return static
      *
@@ -203,7 +203,7 @@ class SoftwareApplication extends CreativeWork
      * Permission(s) required to run the app (for example, a mobile app may
      * require full internet access or may run only on wifi).
      *
-     * @param string $permissions
+     * @param string|string[] $permissions
      *
      * @return static
      *
@@ -217,7 +217,7 @@ class SoftwareApplication extends CreativeWork
     /**
      * Processor architecture required to run the application (e.g. IA64).
      *
-     * @param string $processorRequirements
+     * @param string|string[] $processorRequirements
      *
      * @return static
      *
@@ -231,7 +231,7 @@ class SoftwareApplication extends CreativeWork
     /**
      * Description of what changed in this version.
      *
-     * @param string $releaseNotes
+     * @param string|string[] $releaseNotes
      *
      * @return static
      *
@@ -248,7 +248,7 @@ class SoftwareApplication extends CreativeWork
      * application distribution package, but required to run the application
      * (Examples: DirectX, Java or .NET runtime).
      *
-     * @param string $requirements
+     * @param string|string[] $requirements
      *
      * @return static
      *
@@ -265,7 +265,7 @@ class SoftwareApplication extends CreativeWork
      * application distribution package, but required to run the application
      * (Examples: DirectX, Java or .NET runtime).
      *
-     * @param string $softwareRequirements
+     * @param string|string[] $softwareRequirements
      *
      * @return static
      *
@@ -279,7 +279,7 @@ class SoftwareApplication extends CreativeWork
     /**
      * A link to a screenshot image of the app.
      *
-     * @param \Spatie\SchemaOrg\ImageObject|string $screenshot
+     * @param ImageObject|ImageObject[]|string|string[] $screenshot
      *
      * @return static
      *
@@ -293,7 +293,7 @@ class SoftwareApplication extends CreativeWork
     /**
      * Version of the software instance.
      *
-     * @param string $softwareVersion
+     * @param string|string[] $softwareVersion
      *
      * @return static
      *
@@ -307,7 +307,7 @@ class SoftwareApplication extends CreativeWork
     /**
      * Storage requirements (free space required).
      *
-     * @param string $storageRequirements
+     * @param string|string[] $storageRequirements
      *
      * @return static
      *
@@ -321,7 +321,7 @@ class SoftwareApplication extends CreativeWork
     /**
      * Supporting data for a SoftwareApplication.
      *
-     * @param \Spatie\SchemaOrg\DataFeed $supportingData
+     * @param DataFeed|DataFeed[] $supportingData
      *
      * @return static
      *
@@ -335,7 +335,7 @@ class SoftwareApplication extends CreativeWork
     /**
      * Additional content for a software application.
      *
-     * @param \Spatie\SchemaOrg\SoftwareApplication $softwareAddOn
+     * @param SoftwareApplication|SoftwareApplication[] $softwareAddOn
      *
      * @return static
      *
@@ -349,7 +349,7 @@ class SoftwareApplication extends CreativeWork
     /**
      * Software application help.
      *
-     * @param \Spatie\SchemaOrg\CreativeWork $softwareHelp
+     * @param CreativeWork|CreativeWork[] $softwareHelp
      *
      * @return static
      *

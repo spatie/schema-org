@@ -14,7 +14,7 @@ class VideoGameSeries extends CreativeWorkSeries
      * Actors can be associated with individual items or with a series, episode,
      * clip.
      *
-     * @param \Spatie\SchemaOrg\Person $actor
+     * @param Person|Person[] $actor
      *
      * @return static
      *
@@ -29,7 +29,7 @@ class VideoGameSeries extends CreativeWorkSeries
      * An actor, e.g. in tv, radio, movie, video games etc. Actors can be
      * associated with individual items or with a series, episode, clip.
      *
-     * @param \Spatie\SchemaOrg\Person $actors
+     * @param Person|Person[] $actors
      *
      * @return static
      *
@@ -45,7 +45,7 @@ class VideoGameSeries extends CreativeWorkSeries
      * event. Directors can be associated with individual items or with a
      * series, episode, clip.
      *
-     * @param \Spatie\SchemaOrg\Person $director
+     * @param Person|Person[] $director
      *
      * @return static
      *
@@ -60,7 +60,7 @@ class VideoGameSeries extends CreativeWorkSeries
      * A director of e.g. tv, radio, movie, video games etc. content. Directors
      * can be associated with individual items or with a series, episode, clip.
      *
-     * @param \Spatie\SchemaOrg\Person $directors
+     * @param Person|Person[] $directors
      *
      * @return static
      *
@@ -74,7 +74,7 @@ class VideoGameSeries extends CreativeWorkSeries
     /**
      * An episode of a tv, radio or game media within a series or season.
      *
-     * @param \Spatie\SchemaOrg\Episode $episode
+     * @param Episode|Episode[] $episode
      *
      * @return static
      *
@@ -88,7 +88,7 @@ class VideoGameSeries extends CreativeWorkSeries
     /**
      * An episode of a TV/radio series or season.
      *
-     * @param \Spatie\SchemaOrg\Episode $episodes
+     * @param Episode|Episode[] $episodes
      *
      * @return static
      *
@@ -102,7 +102,7 @@ class VideoGameSeries extends CreativeWorkSeries
     /**
      * The composer of the soundtrack.
      *
-     * @param \Spatie\SchemaOrg\MusicGroup|\Spatie\SchemaOrg\Person $musicBy
+     * @param MusicGroup|MusicGroup[]|Person|Person[] $musicBy
      *
      * @return static
      *
@@ -116,7 +116,7 @@ class VideoGameSeries extends CreativeWorkSeries
     /**
      * The number of episodes in this season or series.
      *
-     * @param int $numberOfEpisodes
+     * @param int|int[] $numberOfEpisodes
      *
      * @return static
      *
@@ -130,7 +130,7 @@ class VideoGameSeries extends CreativeWorkSeries
     /**
      * The number of seasons in this series.
      *
-     * @param int $numberOfSeasons
+     * @param int|int[] $numberOfSeasons
      *
      * @return static
      *
@@ -145,7 +145,7 @@ class VideoGameSeries extends CreativeWorkSeries
      * The production company or studio responsible for the item e.g. series,
      * video game, episode etc.
      *
-     * @param \Spatie\SchemaOrg\Organization $productionCompany
+     * @param Organization|Organization[] $productionCompany
      *
      * @return static
      *
@@ -159,7 +159,7 @@ class VideoGameSeries extends CreativeWorkSeries
     /**
      * A season in a media series.
      *
-     * @param \Spatie\SchemaOrg\CreativeWorkSeason $season
+     * @param CreativeWorkSeason|CreativeWorkSeason[] $season
      *
      * @return static
      *
@@ -173,7 +173,7 @@ class VideoGameSeries extends CreativeWorkSeries
     /**
      * A season that is part of the media series.
      *
-     * @param \Spatie\SchemaOrg\CreativeWorkSeason $containsSeason
+     * @param CreativeWorkSeason|CreativeWorkSeason[] $containsSeason
      *
      * @return static
      *
@@ -187,7 +187,7 @@ class VideoGameSeries extends CreativeWorkSeries
     /**
      * A season in a media series.
      *
-     * @param \Spatie\SchemaOrg\CreativeWorkSeason $seasons
+     * @param CreativeWorkSeason|CreativeWorkSeason[] $seasons
      *
      * @return static
      *
@@ -201,7 +201,7 @@ class VideoGameSeries extends CreativeWorkSeries
     /**
      * The trailer of a movie or tv/radio series, season, episode, etc.
      *
-     * @param \Spatie\SchemaOrg\VideoObject $trailer
+     * @param VideoObject|VideoObject[] $trailer
      *
      * @return static
      *
@@ -215,7 +215,7 @@ class VideoGameSeries extends CreativeWorkSeries
     /**
      * Indicate how many people can play this game (minimum, maximum, or range).
      *
-     * @param \Spatie\SchemaOrg\QuantitativeValue $numberOfPlayers
+     * @param QuantitativeValue|QuantitativeValue[] $numberOfPlayers
      *
      * @return static
      *
@@ -230,7 +230,7 @@ class VideoGameSeries extends CreativeWorkSeries
      * The task that a player-controlled character, or group of characters may
      * complete in order to gain a reward.
      *
-     * @param \Spatie\SchemaOrg\Thing $quest
+     * @param Thing|Thing[] $quest
      *
      * @return static
      *
@@ -245,7 +245,7 @@ class VideoGameSeries extends CreativeWorkSeries
      * An item is an object within the game world that can be collected by a
      * player or, occasionally, a non-player character.
      *
-     * @param \Spatie\SchemaOrg\Thing $gameItem
+     * @param Thing|Thing[] $gameItem
      *
      * @return static
      *
@@ -260,7 +260,7 @@ class VideoGameSeries extends CreativeWorkSeries
      * A piece of data that represents a particular aspect of a fictional
      * character (skill, power, character points, advantage, disadvantage).
      *
-     * @param \Spatie\SchemaOrg\Thing $characterAttribute
+     * @param Thing|Thing[] $characterAttribute
      *
      * @return static
      *
@@ -276,7 +276,7 @@ class VideoGameSeries extends CreativeWorkSeries
      * game can be marked as multi-player, co-op and single-player at the same
      * time.
      *
-     * @param \Spatie\SchemaOrg\GamePlayMode $playMode
+     * @param GamePlayMode|GamePlayMode[] $playMode
      *
      * @return static
      *
@@ -290,7 +290,7 @@ class VideoGameSeries extends CreativeWorkSeries
     /**
      * Cheat codes to the game.
      *
-     * @param \Spatie\SchemaOrg\CreativeWork $cheatCode
+     * @param CreativeWork|CreativeWork[] $cheatCode
      *
      * @return static
      *
@@ -306,7 +306,7 @@ class VideoGameSeries extends CreativeWorkSeries
      * href="http://en.wikipedia.org/wiki/Category:Video_game_platforms">video
      * games</a>.
      *
-     * @param string|\Spatie\SchemaOrg\Thing $gamePlatform
+     * @param string|string[]|Thing|Thing[] $gamePlatform
      *
      * @return static
      *
@@ -320,7 +320,7 @@ class VideoGameSeries extends CreativeWorkSeries
     /**
      * Real or fictional location of the game (or part of game).
      *
-     * @param string|\Spatie\SchemaOrg\Place|\Spatie\SchemaOrg\PostalAddress $gameLocation
+     * @param string|string[]|Place|Place[]|PostalAddress|PostalAddress[] $gameLocation
      *
      * @return static
      *

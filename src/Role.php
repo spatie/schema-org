@@ -20,7 +20,7 @@ class Role extends Intangible
      * The end date and time of the item (in [ISO 8601 date
      * format](http://en.wikipedia.org/wiki/ISO_8601)).
      *
-     * @param \DateTimeInterface $endDate
+     * @param \DateTimeInterface|\DateTimeInterface[] $endDate
      *
      * @return static
      *
@@ -35,7 +35,7 @@ class Role extends Intangible
      * The start date and time of the item (in [ISO 8601 date
      * format](http://en.wikipedia.org/wiki/ISO_8601)).
      *
-     * @param \DateTimeInterface $startDate
+     * @param \DateTimeInterface|\DateTimeInterface[] $startDate
      *
      * @return static
      *
@@ -51,7 +51,7 @@ class Role extends Intangible
      * part of an organization. For example, an athlete in a SportsTeam might
      * play in the position named 'Quarterback'.
      *
-     * @param string $namedPosition
+     * @param string|string[] $namedPosition
      *
      * @return static
      *
@@ -68,7 +68,7 @@ class Role extends Intangible
      * 'inker', 'penciller', and 'letterer'; or an athlete in a SportsTeam might
      * play in the position named 'Quarterback'.
      *
-     * @param string $roleName
+     * @param string|string[] $roleName
      *
      * @return static
      *

@@ -15,7 +15,7 @@ class Recipe extends CreativeWork
      * Indicates a dietary restriction or guideline for which this recipe or
      * menu item is suitable, e.g. diabetic, halal etc.
      *
-     * @param \Spatie\SchemaOrg\RestrictedDiet $suitableForDiet
+     * @param RestrictedDiet|RestrictedDiet[] $suitableForDiet
      *
      * @return static
      *
@@ -30,7 +30,7 @@ class Recipe extends CreativeWork
      * The total time it takes to prepare and cook the recipe, in [ISO 8601
      * duration format](http://en.wikipedia.org/wiki/ISO_8601).
      *
-     * @param \Spatie\SchemaOrg\Duration $totalTime
+     * @param Duration|Duration[] $totalTime
      *
      * @return static
      *
@@ -45,7 +45,7 @@ class Recipe extends CreativeWork
      * The time it takes to actually cook the dish, in [ISO 8601 duration
      * format](http://en.wikipedia.org/wiki/ISO_8601).
      *
-     * @param \Spatie\SchemaOrg\Duration $cookTime
+     * @param Duration|Duration[] $cookTime
      *
      * @return static
      *
@@ -59,7 +59,7 @@ class Recipe extends CreativeWork
     /**
      * The method of cooking, such as Frying, Steaming, ...
      *
-     * @param string $cookingMethod
+     * @param string|string[] $cookingMethod
      *
      * @return static
      *
@@ -73,7 +73,7 @@ class Recipe extends CreativeWork
     /**
      * Nutrition information about the recipe or menu item.
      *
-     * @param \Spatie\SchemaOrg\NutritionInformation $nutrition
+     * @param NutritionInformation|NutritionInformation[] $nutrition
      *
      * @return static
      *
@@ -88,7 +88,7 @@ class Recipe extends CreativeWork
      * The length of time it takes to prepare the recipe, in [ISO 8601 duration
      * format](http://en.wikipedia.org/wiki/ISO_8601).
      *
-     * @param \Spatie\SchemaOrg\Duration $prepTime
+     * @param Duration|Duration[] $prepTime
      *
      * @return static
      *
@@ -102,7 +102,7 @@ class Recipe extends CreativeWork
     /**
      * The category of the recipe—for example, appetizer, entree, etc.
      *
-     * @param string $recipeCategory
+     * @param string|string[] $recipeCategory
      *
      * @return static
      *
@@ -116,7 +116,7 @@ class Recipe extends CreativeWork
     /**
      * The cuisine of the recipe (for example, French or Ethiopian).
      *
-     * @param string $recipeCuisine
+     * @param string|string[] $recipeCuisine
      *
      * @return static
      *
@@ -130,7 +130,7 @@ class Recipe extends CreativeWork
     /**
      * A single ingredient used in the recipe, e.g. sugar, flour or garlic.
      *
-     * @param string $ingredients
+     * @param string|string[] $ingredients
      *
      * @return static
      *
@@ -144,7 +144,7 @@ class Recipe extends CreativeWork
     /**
      * A single ingredient used in the recipe, e.g. sugar, flour or garlic.
      *
-     * @param string $recipeIngredient
+     * @param string|string[] $recipeIngredient
      *
      * @return static
      *
@@ -158,7 +158,7 @@ class Recipe extends CreativeWork
     /**
      * A step or instruction involved in making the recipe.
      *
-     * @param \Spatie\SchemaOrg\schema:ItemList|string $recipeInstructions
+     * @param schema:ItemList|schema:ItemList[]|string|string[] $recipeInstructions
      *
      * @return static
      *
@@ -173,7 +173,7 @@ class Recipe extends CreativeWork
      * The quantity produced by the recipe (for example, number of people
      * served, number of servings, etc).
      *
-     * @param string $recipeYield
+     * @param string|string[] $recipeYield
      *
      * @return static
      *

@@ -15,7 +15,7 @@ class Episode extends CreativeWork
      * Actors can be associated with individual items or with a series, episode,
      * clip.
      *
-     * @param \Spatie\SchemaOrg\Person $actor
+     * @param Person|Person[] $actor
      *
      * @return static
      *
@@ -30,7 +30,7 @@ class Episode extends CreativeWork
      * An actor, e.g. in tv, radio, movie, video games etc. Actors can be
      * associated with individual items or with a series, episode, clip.
      *
-     * @param \Spatie\SchemaOrg\Person $actors
+     * @param Person|Person[] $actors
      *
      * @return static
      *
@@ -46,7 +46,7 @@ class Episode extends CreativeWork
      * event. Directors can be associated with individual items or with a
      * series, episode, clip.
      *
-     * @param \Spatie\SchemaOrg\Person $director
+     * @param Person|Person[] $director
      *
      * @return static
      *
@@ -61,7 +61,7 @@ class Episode extends CreativeWork
      * A director of e.g. tv, radio, movie, video games etc. content. Directors
      * can be associated with individual items or with a series, episode, clip.
      *
-     * @param \Spatie\SchemaOrg\Person $directors
+     * @param Person|Person[] $directors
      *
      * @return static
      *
@@ -75,7 +75,7 @@ class Episode extends CreativeWork
     /**
      * Position of the episode within an ordered group of episodes.
      *
-     * @param int|string $episodeNumber
+     * @param int|int[]|string|string[] $episodeNumber
      *
      * @return static
      *
@@ -89,7 +89,7 @@ class Episode extends CreativeWork
     /**
      * The composer of the soundtrack.
      *
-     * @param \Spatie\SchemaOrg\MusicGroup|\Spatie\SchemaOrg\Person $musicBy
+     * @param MusicGroup|MusicGroup[]|Person|Person[] $musicBy
      *
      * @return static
      *
@@ -103,7 +103,7 @@ class Episode extends CreativeWork
     /**
      * The season to which this episode belongs.
      *
-     * @param \Spatie\SchemaOrg\CreativeWorkSeason $partOfSeason
+     * @param CreativeWorkSeason|CreativeWorkSeason[] $partOfSeason
      *
      * @return static
      *
@@ -117,7 +117,7 @@ class Episode extends CreativeWork
     /**
      * The series to which this episode or season belongs.
      *
-     * @param \Spatie\SchemaOrg\CreativeWorkSeries $partOfSeries
+     * @param CreativeWorkSeries|CreativeWorkSeries[] $partOfSeries
      *
      * @return static
      *
@@ -132,7 +132,7 @@ class Episode extends CreativeWork
      * The production company or studio responsible for the item e.g. series,
      * video game, episode etc.
      *
-     * @param \Spatie\SchemaOrg\Organization $productionCompany
+     * @param Organization|Organization[] $productionCompany
      *
      * @return static
      *
@@ -146,7 +146,7 @@ class Episode extends CreativeWork
     /**
      * The trailer of a movie or tv/radio series, season, episode, etc.
      *
-     * @param \Spatie\SchemaOrg\VideoObject $trailer
+     * @param VideoObject|VideoObject[] $trailer
      *
      * @return static
      *

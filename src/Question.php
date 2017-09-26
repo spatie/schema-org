@@ -14,7 +14,7 @@ class Question extends CreativeWork
      * The number of upvotes this question, answer or comment has received from
      * the community.
      *
-     * @param int $upvoteCount
+     * @param int|int[] $upvoteCount
      *
      * @return static
      *
@@ -29,7 +29,7 @@ class Question extends CreativeWork
      * The number of downvotes this question, answer or comment has received
      * from the community.
      *
-     * @param int $downvoteCount
+     * @param int|int[] $downvoteCount
      *
      * @return static
      *
@@ -43,7 +43,7 @@ class Question extends CreativeWork
     /**
      * The number of answers this question has received.
      *
-     * @param int $answerCount
+     * @param int|int[] $answerCount
      *
      * @return static
      *
@@ -59,7 +59,7 @@ class Question extends CreativeWork
      * site. Sites vary in their selection mechanisms, e.g. drawing on community
      * opinion and/or the view of the Question author.
      *
-     * @param \Spatie\SchemaOrg\Answer $acceptedAnswer
+     * @param Answer|Answer[] $acceptedAnswer
      *
      * @return static
      *
@@ -74,7 +74,7 @@ class Question extends CreativeWork
      * An answer (possibly one of several, possibly incorrect) to a Question,
      * e.g. on a Question/Answer site.
      *
-     * @param \Spatie\SchemaOrg\Answer $suggestedAnswer
+     * @param Answer|Answer[] $suggestedAnswer
      *
      * @return static
      *

@@ -12,7 +12,7 @@ class Book extends CreativeWork
     /**
      * The edition of the book.
      *
-     * @param string $bookEdition
+     * @param string|string[] $bookEdition
      *
      * @return static
      *
@@ -26,7 +26,7 @@ class Book extends CreativeWork
     /**
      * The format of the book.
      *
-     * @param \Spatie\SchemaOrg\BookFormatType $bookFormat
+     * @param BookFormatType|BookFormatType[] $bookFormat
      *
      * @return static
      *
@@ -40,7 +40,7 @@ class Book extends CreativeWork
     /**
      * The illustrator of the book.
      *
-     * @param \Spatie\SchemaOrg\Person $illustrator
+     * @param Person|Person[] $illustrator
      *
      * @return static
      *
@@ -54,7 +54,7 @@ class Book extends CreativeWork
     /**
      * The ISBN of the book.
      *
-     * @param string $isbn
+     * @param string|string[] $isbn
      *
      * @return static
      *
@@ -68,7 +68,7 @@ class Book extends CreativeWork
     /**
      * The number of pages in the book.
      *
-     * @param int $numberOfPages
+     * @param int|int[] $numberOfPages
      *
      * @return static
      *

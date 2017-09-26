@@ -19,7 +19,7 @@ class HotelRoom extends Room
      * an instance of BedDetails. For more detailed information, use the
      * amenityFeature property.
      *
-     * @param string|\Spatie\SchemaOrg\BedDetails $bed
+     * @param string|string[]|BedDetails|BedDetails[] $bed
      *
      * @return static
      *
@@ -37,7 +37,7 @@ class HotelRoom extends Room
      * agreement (e.g. a double room used by a single person).
      * Typical unit code(s): C62 for person
      *
-     * @param \Spatie\SchemaOrg\QuantitativeValue $occupancy
+     * @param QuantitativeValue|QuantitativeValue[] $occupancy
      *
      * @return static
      *

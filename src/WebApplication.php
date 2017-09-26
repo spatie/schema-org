@@ -13,7 +13,7 @@ class WebApplication extends SoftwareApplication
      * Specifies browser requirements in human-readable text. For example,
      * 'requires HTML5 support'.
      *
-     * @param string $browserRequirements
+     * @param string|string[] $browserRequirements
      *
      * @return static
      *

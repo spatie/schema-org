@@ -13,7 +13,7 @@ class BusinessAudience extends Audience
     /**
      * The number of employees in an organization e.g. business.
      *
-     * @param \Spatie\SchemaOrg\QuantitativeValue $numberOfEmployees
+     * @param QuantitativeValue|QuantitativeValue[] $numberOfEmployees
      *
      * @return static
      *
@@ -27,7 +27,7 @@ class BusinessAudience extends Audience
     /**
      * The size of the business in annual revenue.
      *
-     * @param \Spatie\SchemaOrg\QuantitativeValue $yearlyRevenue
+     * @param QuantitativeValue|QuantitativeValue[] $yearlyRevenue
      *
      * @return static
      *
@@ -41,7 +41,7 @@ class BusinessAudience extends Audience
     /**
      * The age of the business.
      *
-     * @param \Spatie\SchemaOrg\QuantitativeValue $yearsInOperation
+     * @param QuantitativeValue|QuantitativeValue[] $yearsInOperation
      *
      * @return static
      *

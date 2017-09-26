@@ -12,7 +12,7 @@ class ReplaceAction extends UpdateAction
     /**
      * A sub property of object. The object that is being replaced.
      *
-     * @param \Spatie\SchemaOrg\Thing $replacee
+     * @param Thing|Thing[] $replacee
      *
      * @return static
      *
@@ -26,7 +26,7 @@ class ReplaceAction extends UpdateAction
     /**
      * A sub property of object. The object that replaces.
      *
-     * @param \Spatie\SchemaOrg\Thing $replacer
+     * @param Thing|Thing[] $replacer
      *
      * @return static
      *

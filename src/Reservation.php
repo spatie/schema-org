@@ -18,7 +18,7 @@ class Reservation extends Intangible
     /**
      * A unique identifier for the reservation.
      *
-     * @param string $reservationId
+     * @param string|string[] $reservationId
      *
      * @return static
      *
@@ -32,7 +32,7 @@ class Reservation extends Intangible
     /**
      * The current status of the reservation.
      *
-     * @param \Spatie\SchemaOrg\ReservationStatusType $reservationStatus
+     * @param ReservationStatusType|ReservationStatusType[] $reservationStatus
      *
      * @return static
      *
@@ -46,7 +46,7 @@ class Reservation extends Intangible
     /**
      * The thing -- flight, event, restaurant,etc. being reserved.
      *
-     * @param \Spatie\SchemaOrg\Thing $reservationFor
+     * @param Thing|Thing[] $reservationFor
      *
      * @return static
      *
@@ -60,7 +60,7 @@ class Reservation extends Intangible
     /**
      * The person or organization the reservation or ticket is for.
      *
-     * @param \Spatie\SchemaOrg\Person|\Spatie\SchemaOrg\Organization $underName
+     * @param Person|Person[]|Organization|Organization[] $underName
      *
      * @return static
      *
@@ -76,7 +76,7 @@ class Reservation extends Intangible
      * producer. Another party (a seller) may offer those services or goods on
      * behalf of the provider. A provider may also serve as the seller.
      *
-     * @param \Spatie\SchemaOrg\Person|\Spatie\SchemaOrg\Organization $provider
+     * @param Person|Person[]|Organization|Organization[] $provider
      *
      * @return static
      *
@@ -91,7 +91,7 @@ class Reservation extends Intangible
      * 'bookingAgent' is an out-dated term indicating a 'broker' that serves as
      * a booking agent.
      *
-     * @param \Spatie\SchemaOrg\Person|\Spatie\SchemaOrg\Organization $bookingAgent
+     * @param Person|Person[]|Organization|Organization[] $bookingAgent
      *
      * @return static
      *
@@ -105,7 +105,7 @@ class Reservation extends Intangible
     /**
      * The date and time the reservation was booked.
      *
-     * @param \DateTimeInterface $bookingTime
+     * @param \DateTimeInterface|\DateTimeInterface[] $bookingTime
      *
      * @return static
      *
@@ -119,7 +119,7 @@ class Reservation extends Intangible
     /**
      * The date and time the reservation was modified.
      *
-     * @param \DateTimeInterface $modifiedTime
+     * @param \DateTimeInterface|\DateTimeInterface[] $modifiedTime
      *
      * @return static
      *
@@ -134,7 +134,7 @@ class Reservation extends Intangible
      * Any membership in a frequent flyer, hotel loyalty program, etc. being
      * applied to the reservation.
      *
-     * @param \Spatie\SchemaOrg\ProgramMembership $programMembershipUsed
+     * @param ProgramMembership|ProgramMembership[] $programMembershipUsed
      *
      * @return static
      *
@@ -148,7 +148,7 @@ class Reservation extends Intangible
     /**
      * A ticket associated with the reservation.
      *
-     * @param \Spatie\SchemaOrg\Ticket $reservedTicket
+     * @param Ticket|Ticket[] $reservedTicket
      *
      * @return static
      *
@@ -163,7 +163,7 @@ class Reservation extends Intangible
      * The total price for the reservation or ticket, including applicable
      * taxes, shipping, etc.
      *
-     * @param float|int|string|\Spatie\SchemaOrg\PriceSpecification $totalPrice
+     * @param float|int|float|int[]|string|string[]|PriceSpecification|PriceSpecification[] $totalPrice
      *
      * @return static
      *
@@ -178,7 +178,7 @@ class Reservation extends Intangible
      * The currency (in 3-letter ISO 4217 format) of the price or a price
      * component, when attached to [[PriceSpecification]] and its subtypes.
      *
-     * @param string $priceCurrency
+     * @param string|string[] $priceCurrency
      *
      * @return static
      *
@@ -195,7 +195,7 @@ class Reservation extends Intangible
      * service involved in an exchange.  If it is not clear whether an entity is
      * a broker, seller, or buyer, the latter two terms are preferred.
      *
-     * @param \Spatie\SchemaOrg\Person|\Spatie\SchemaOrg\Organization $broker
+     * @param Person|Person[]|Organization|Organization[] $broker
      *
      * @return static
      *

@@ -14,7 +14,7 @@ class SocialMediaPosting extends Article
      * A CreativeWork such as an image, video, or audio clip shared as part of
      * this posting.
      *
-     * @param \Spatie\SchemaOrg\CreativeWork $sharedContent
+     * @param CreativeWork|CreativeWork[] $sharedContent
      *
      * @return static
      *

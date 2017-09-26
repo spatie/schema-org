@@ -13,7 +13,7 @@ class BroadcastEvent extends PublicationEvent
      * The type of screening or video broadcast used (e.g. IMAX, 3D, SD, HD,
      * etc.).
      *
-     * @param string $videoFormat
+     * @param string|string[] $videoFormat
      *
      * @return static
      *
@@ -27,7 +27,7 @@ class BroadcastEvent extends PublicationEvent
     /**
      * The event being broadcast such as a sporting event or awards ceremony.
      *
-     * @param \Spatie\SchemaOrg\Event $broadcastOfEvent
+     * @param Event|Event[] $broadcastOfEvent
      *
      * @return static
      *
@@ -41,7 +41,7 @@ class BroadcastEvent extends PublicationEvent
     /**
      * True is the broadcast is of a live event.
      *
-     * @param bool $isLiveBroadcast
+     * @param bool|bool[] $isLiveBroadcast
      *
      * @return static
      *

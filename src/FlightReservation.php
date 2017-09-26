@@ -16,7 +16,7 @@ class FlightReservation extends Reservation
     /**
      * The passenger's sequence number as assigned by the airline.
      *
-     * @param string $passengerSequenceNumber
+     * @param string|string[] $passengerSequenceNumber
      *
      * @return static
      *
@@ -30,7 +30,7 @@ class FlightReservation extends Reservation
     /**
      * The type of security screening the passenger is subject to.
      *
-     * @param string $securityScreening
+     * @param string|string[] $securityScreening
      *
      * @return static
      *
@@ -45,7 +45,7 @@ class FlightReservation extends Reservation
      * The priority status assigned to a passenger for security or boarding
      * (e.g. FastTrack or Priority).
      *
-     * @param string|\Spatie\SchemaOrg\QualitativeValue $passengerPriorityStatus
+     * @param string|string[]|QualitativeValue|QualitativeValue[] $passengerPriorityStatus
      *
      * @return static
      *

@@ -14,7 +14,7 @@ class PublicationEvent extends Event
     /**
      * A flag to signal that the publication or event is accessible for free.
      *
-     * @param bool $free
+     * @param bool|bool[] $free
      *
      * @return static
      *
@@ -28,7 +28,7 @@ class PublicationEvent extends Event
     /**
      * A flag to signal that the publication is accessible for free.
      *
-     * @param bool $isAccessibleForFree
+     * @param bool|bool[] $isAccessibleForFree
      *
      * @return static
      *
@@ -42,7 +42,7 @@ class PublicationEvent extends Event
     /**
      * A broadcast service associated with the publication event.
      *
-     * @param \Spatie\SchemaOrg\BroadcastService $publishedOn
+     * @param BroadcastService|BroadcastService[] $publishedOn
      *
      * @return static
      *

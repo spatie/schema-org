@@ -17,7 +17,7 @@ class SearchAction extends Action
     /**
      * A sub property of instrument. The query used on this action.
      *
-     * @param string $query
+     * @param string|string[] $query
      *
      * @return static
      *

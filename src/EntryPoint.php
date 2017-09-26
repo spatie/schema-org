@@ -14,7 +14,7 @@ class EntryPoint extends Intangible
      * given URL. To specify a specific application or operating system
      * instance, use actionApplication.
      *
-     * @param \Spatie\SchemaOrg\ $actionPlatform
+     * @param |[] $actionPlatform
      *
      * @return static
      *
@@ -29,7 +29,7 @@ class EntryPoint extends Intangible
      * An HTTP method that specifies the appropriate HTTP method for a request
      * to an HTTP EntryPoint. Values are capitalized strings as used in HTTP.
      *
-     * @param string $httpMethod
+     * @param string|string[] $httpMethod
      *
      * @return static
      *
@@ -43,7 +43,7 @@ class EntryPoint extends Intangible
     /**
      * The supported encoding type(s) for an EntryPoint request.
      *
-     * @param string $encodingType
+     * @param string|string[] $encodingType
      *
      * @return static
      *
@@ -57,7 +57,7 @@ class EntryPoint extends Intangible
     /**
      * The supported content type(s) for an EntryPoint response.
      *
-     * @param string $contentType
+     * @param string|string[] $contentType
      *
      * @return static
      *
@@ -71,7 +71,7 @@ class EntryPoint extends Intangible
     /**
      * An application that can complete the request.
      *
-     * @param \Spatie\SchemaOrg\SoftwareApplication $application
+     * @param SoftwareApplication|SoftwareApplication[] $application
      *
      * @return static
      *
@@ -85,7 +85,7 @@ class EntryPoint extends Intangible
     /**
      * An application that can complete the request.
      *
-     * @param \Spatie\SchemaOrg\SoftwareApplication $actionApplication
+     * @param SoftwareApplication|SoftwareApplication[] $actionApplication
      *
      * @return static
      *
@@ -100,7 +100,7 @@ class EntryPoint extends Intangible
      * An url template (RFC6570) that will be used to construct the target of
      * the execution of the action.
      *
-     * @param string $urlTemplate
+     * @param string|string[] $urlTemplate
      *
      * @return static
      *

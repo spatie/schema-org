@@ -13,7 +13,7 @@ class AudioObject extends MediaObject
      * If this MediaObject is an AudioObject or VideoObject, the transcript of
      * that object.
      *
-     * @param string $transcript
+     * @param string|string[] $transcript
      *
      * @return static
      *

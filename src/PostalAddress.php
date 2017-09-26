@@ -13,7 +13,7 @@ class PostalAddress extends ContactPoint
      * The country. For example, USA. You can also provide the two-letter [ISO
      * 3166-1 alpha-2 country code](http://en.wikipedia.org/wiki/ISO_3166-1).
      *
-     * @param string|\Spatie\SchemaOrg\Country $addressCountry
+     * @param string|string[]|Country|Country[] $addressCountry
      *
      * @return static
      *
@@ -27,7 +27,7 @@ class PostalAddress extends ContactPoint
     /**
      * The locality. For example, Mountain View.
      *
-     * @param string $addressLocality
+     * @param string|string[] $addressLocality
      *
      * @return static
      *
@@ -41,7 +41,7 @@ class PostalAddress extends ContactPoint
     /**
      * The region. For example, CA.
      *
-     * @param string $addressRegion
+     * @param string|string[] $addressRegion
      *
      * @return static
      *
@@ -55,7 +55,7 @@ class PostalAddress extends ContactPoint
     /**
      * The postal code. For example, 94043.
      *
-     * @param string $postalCode
+     * @param string|string[] $postalCode
      *
      * @return static
      *
@@ -69,7 +69,7 @@ class PostalAddress extends ContactPoint
     /**
      * The post office box number for PO box addresses.
      *
-     * @param string $postOfficeBoxNumber
+     * @param string|string[] $postOfficeBoxNumber
      *
      * @return static
      *
@@ -83,7 +83,7 @@ class PostalAddress extends ContactPoint
     /**
      * The street address. For example, 1600 Amphitheatre Pkwy.
      *
-     * @param string $streetAddress
+     * @param string|string[] $streetAddress
      *
      * @return static
      *

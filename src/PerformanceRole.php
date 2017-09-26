@@ -14,7 +14,7 @@ class PerformanceRole extends Role
      * The name of a character played in some acting or performing role, i.e. in
      * a PerformanceRole.
      *
-     * @param string $characterName
+     * @param string|string[] $characterName
      *
      * @return static
      *

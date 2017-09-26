@@ -12,7 +12,7 @@ class Seat extends Intangible
     /**
      * The location of the reserved seat (e.g., 27).
      *
-     * @param string $seatNumber
+     * @param string|string[] $seatNumber
      *
      * @return static
      *
@@ -26,7 +26,7 @@ class Seat extends Intangible
     /**
      * The row location of the reserved seat (e.g., B).
      *
-     * @param string $seatRow
+     * @param string|string[] $seatRow
      *
      * @return static
      *
@@ -40,7 +40,7 @@ class Seat extends Intangible
     /**
      * The section location of the reserved seat (e.g. Orchestra).
      *
-     * @param string $seatSection
+     * @param string|string[] $seatSection
      *
      * @return static
      *
@@ -54,7 +54,7 @@ class Seat extends Intangible
     /**
      * The type/class of the seat.
      *
-     * @param string|\Spatie\SchemaOrg\QualitativeValue $seatingType
+     * @param string|string[]|QualitativeValue|QualitativeValue[] $seatingType
      *
      * @return static
      *

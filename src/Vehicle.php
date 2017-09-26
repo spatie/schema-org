@@ -15,7 +15,7 @@ class Vehicle extends Product
      * 
      * Typical unit code(s): C62
      *
-     * @param \Spatie\SchemaOrg\QuantitativeValue|float|int $numberOfDoors
+     * @param QuantitativeValue|QuantitativeValue[]|float|int|float|int[] $numberOfDoors
      *
      * @return static
      *
@@ -29,7 +29,7 @@ class Vehicle extends Product
     /**
      * The number or type of airbags in the vehicle.
      *
-     * @param float|int|string $numberOfAirbags
+     * @param float|int|float|int[]|string|string[] $numberOfAirbags
      *
      * @return static
      *
@@ -45,7 +45,7 @@ class Vehicle extends Product
      * 
      * Typical unit code(s): C62
      *
-     * @param \Spatie\SchemaOrg\QuantitativeValue|float|int $numberOfAxles
+     * @param QuantitativeValue|QuantitativeValue[]|float|int|float|int[] $numberOfAxles
      *
      * @return static
      *
@@ -59,7 +59,7 @@ class Vehicle extends Product
     /**
      * Information about the engine or engines of the vehicle.
      *
-     * @param \Spatie\SchemaOrg\EngineSpecification $vehicleEngine
+     * @param EngineSpecification|EngineSpecification[] $vehicleEngine
      *
      * @return static
      *
@@ -85,7 +85,7 @@ class Vehicle extends Product
      * use [[valueReference]] to link the value for the fuel consumption to
      * another value.
      *
-     * @param \Spatie\SchemaOrg\QuantitativeValue $fuelConsumption
+     * @param QuantitativeValue|QuantitativeValue[] $fuelConsumption
      *
      * @return static
      *
@@ -111,7 +111,7 @@ class Vehicle extends Product
      * use [[valueReference]] to link the value for the fuel economy to another
      * value.
      *
-     * @param \Spatie\SchemaOrg\QuantitativeValue $fuelEfficiency
+     * @param QuantitativeValue|QuantitativeValue[] $fuelEfficiency
      *
      * @return static
      *
@@ -128,7 +128,7 @@ class Vehicle extends Product
      * 
      * Typical unit code(s): C62
      *
-     * @param \Spatie\SchemaOrg\QuantitativeValue|float|int $numberOfForwardGears
+     * @param QuantitativeValue|QuantitativeValue[]|float|int|float|int[] $numberOfForwardGears
      *
      * @return static
      *
@@ -143,7 +143,7 @@ class Vehicle extends Product
      * The Vehicle Identification Number (VIN) is a unique serial number used by
      * the automotive industry to identify individual motor vehicles.
      *
-     * @param string $vehicleIdentificationNumber
+     * @param string|string[] $vehicleIdentificationNumber
      *
      * @return static
      *
@@ -162,7 +162,7 @@ class Vehicle extends Product
      * 
      * Note: You can use [[minValue]] and [[maxValue]] to indicate ranges.
      *
-     * @param \Spatie\SchemaOrg\QuantitativeValue $cargoVolume
+     * @param QuantitativeValue|QuantitativeValue[] $cargoVolume
      *
      * @return static
      *
@@ -177,7 +177,7 @@ class Vehicle extends Product
      * A short text indicating the configuration of the vehicle, e.g. '5dr
      * hatchback ST 2.5 MT 225 hp' or 'limited edition'.
      *
-     * @param string $vehicleConfiguration
+     * @param string|string[] $vehicleConfiguration
      *
      * @return static
      *
@@ -191,7 +191,7 @@ class Vehicle extends Product
     /**
      * A textual description of known damages, both repaired and unrepaired.
      *
-     * @param string $knownVehicleDamages
+     * @param string|string[] $knownVehicleDamages
      *
      * @return static
      *
@@ -206,7 +206,7 @@ class Vehicle extends Product
      * The date of the first registration of the vehicle with the respective
      * public authorities.
      *
-     * @param \DateTimeInterface $dateVehicleFirstRegistered
+     * @param \DateTimeInterface|\DateTimeInterface[] $dateVehicleFirstRegistered
      *
      * @return static
      *
@@ -221,7 +221,7 @@ class Vehicle extends Product
      * The drive wheel configuration, i.e. which roadwheels will receive torque
      * from the vehicle's engine via the drivetrain.
      *
-     * @param \Spatie\SchemaOrg\DriveWheelConfigurationValue|string $driveWheelConfiguration
+     * @param DriveWheelConfigurationValue|DriveWheelConfigurationValue[]|string|string[] $driveWheelConfiguration
      *
      * @return static
      *
@@ -237,7 +237,7 @@ class Vehicle extends Product
      * the vehicle has only one engine, this property can be attached directly
      * to the vehicle.
      *
-     * @param string|\Spatie\SchemaOrg\QualitativeValue $fuelType
+     * @param string|string[]|QualitativeValue|QualitativeValue[] $fuelType
      *
      * @return static
      *
@@ -251,7 +251,7 @@ class Vehicle extends Product
     /**
      * The color or color combination of the interior of the vehicle.
      *
-     * @param string $vehicleInteriorColor
+     * @param string|string[] $vehicleInteriorColor
      *
      * @return static
      *
@@ -268,7 +268,7 @@ class Vehicle extends Product
      * by the material used, an interior type can also be based on vehicle usage
      * or target audience.
      *
-     * @param string $vehicleInteriorType
+     * @param string|string[] $vehicleInteriorType
      *
      * @return static
      *
@@ -285,7 +285,7 @@ class Vehicle extends Product
      * 
      * Typical unit code(s): KMT for kilometers, SMI for statute miles
      *
-     * @param \Spatie\SchemaOrg\QuantitativeValue $mileageFromOdometer
+     * @param QuantitativeValue|QuantitativeValue[] $mileageFromOdometer
      *
      * @return static
      *
@@ -300,7 +300,7 @@ class Vehicle extends Product
      * The release date of a vehicle model (often used to differentiate versions
      * of the same make and model).
      *
-     * @param \DateTimeInterface $vehicleModelDate
+     * @param \DateTimeInterface|\DateTimeInterface[] $vehicleModelDate
      *
      * @return static
      *
@@ -316,7 +316,7 @@ class Vehicle extends Product
      * 
      * Typical unit code(s): C62
      *
-     * @param \Spatie\SchemaOrg\QuantitativeValue|float|int $numberOfPreviousOwners
+     * @param QuantitativeValue|QuantitativeValue[]|float|int|float|int[] $numberOfPreviousOwners
      *
      * @return static
      *
@@ -330,7 +330,7 @@ class Vehicle extends Product
     /**
      * The date of production of the item, e.g. vehicle.
      *
-     * @param \DateTimeInterface $productionDate
+     * @param \DateTimeInterface|\DateTimeInterface[] $productionDate
      *
      * @return static
      *
@@ -344,7 +344,7 @@ class Vehicle extends Product
     /**
      * The date the item e.g. vehicle was purchased by the current owner.
      *
-     * @param \DateTimeInterface $purchaseDate
+     * @param \DateTimeInterface|\DateTimeInterface[] $purchaseDate
      *
      * @return static
      *
@@ -361,7 +361,7 @@ class Vehicle extends Product
      * 
      * Typical unit code(s): C62 for persons.
      *
-     * @param \Spatie\SchemaOrg\QuantitativeValue|float|int $vehicleSeatingCapacity
+     * @param QuantitativeValue|QuantitativeValue[]|float|int|float|int[] $vehicleSeatingCapacity
      *
      * @return static
      *
@@ -377,7 +377,7 @@ class Vehicle extends Product
      * power source to the wheels or other relevant component(s) ("gearbox" for
      * cars).
      *
-     * @param string|\Spatie\SchemaOrg\QualitativeValue $vehicleTransmission
+     * @param string|string[]|QualitativeValue|QualitativeValue[] $vehicleTransmission
      *
      * @return static
      *
@@ -391,7 +391,7 @@ class Vehicle extends Product
     /**
      * The position of the steering wheel or similar device (mostly for cars).
      *
-     * @param \Spatie\SchemaOrg\SteeringPositionValue $steeringPosition
+     * @param SteeringPositionValue|SteeringPositionValue[] $steeringPosition
      *
      * @return static
      *
@@ -408,7 +408,7 @@ class Vehicle extends Product
      * countries requires this information to be revealed when offering a car
      * for sale.
      *
-     * @param string $vehicleSpecialUsage
+     * @param string|string[] $vehicleSpecialUsage
      *
      * @return static
      *

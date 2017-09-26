@@ -14,7 +14,7 @@ class ReturnAction extends TransferAction
      * A sub property of participant. The participant who is at the receiving
      * end of the action.
      *
-     * @param \Spatie\SchemaOrg\Audience|\Spatie\SchemaOrg\Organization|\Spatie\SchemaOrg\Person $recipient
+     * @param Audience|Audience[]|Organization|Organization[]|Person|Person[] $recipient
      *
      * @return static
      *

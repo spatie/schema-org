@@ -13,7 +13,7 @@ class BroadcastService extends Service
     /**
      * The area within which users can expect to reach the broadcast service.
      *
-     * @param \Spatie\SchemaOrg\Place $area
+     * @param Place|Place[] $area
      *
      * @return static
      *
@@ -27,7 +27,7 @@ class BroadcastService extends Service
     /**
      * The organization owning or operating the broadcast service.
      *
-     * @param \Spatie\SchemaOrg\Organization $broadcaster
+     * @param Organization|Organization[] $broadcaster
      *
      * @return static
      *
@@ -42,7 +42,7 @@ class BroadcastService extends Service
      * A broadcast service to which the broadcast service may belong to such as
      * regional variations of a national channel.
      *
-     * @param \Spatie\SchemaOrg\BroadcastService $parentService
+     * @param BroadcastService|BroadcastService[] $parentService
      *
      * @return static
      *
@@ -57,7 +57,7 @@ class BroadcastService extends Service
      * The type of screening or video broadcast used (e.g. IMAX, 3D, SD, HD,
      * etc.).
      *
-     * @param string $videoFormat
+     * @param string|string[] $videoFormat
      *
      * @return static
      *
@@ -71,7 +71,7 @@ class BroadcastService extends Service
     /**
      * The media network(s) whose content is broadcast on this station.
      *
-     * @param \Spatie\SchemaOrg\Organization $broadcastAffiliateOf
+     * @param Organization|Organization[] $broadcastAffiliateOf
      *
      * @return static
      *
@@ -86,7 +86,7 @@ class BroadcastService extends Service
      * The name displayed in the channel guide. For many US affiliates, it is
      * the network name.
      *
-     * @param string $broadcastDisplayName
+     * @param string|string[] $broadcastDisplayName
      *
      * @return static
      *
@@ -101,7 +101,7 @@ class BroadcastService extends Service
      * The timezone in [ISO 8601 format](http://en.wikipedia.org/wiki/ISO_8601)
      * for which the service bases its broadcasts
      *
-     * @param string $broadcastTimezone
+     * @param string|string[] $broadcastTimezone
      *
      * @return static
      *

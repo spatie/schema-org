@@ -13,7 +13,7 @@ class DataFeed extends Dataset
     /**
      * An item within in a data feed. Data feeds may have many elements.
      *
-     * @param string|\Spatie\SchemaOrg\Thing|\Spatie\SchemaOrg\DataFeedItem $dataFeedElement
+     * @param string|string[]|Thing|Thing[]|DataFeedItem|DataFeedItem[] $dataFeedElement
      *
      * @return static
      *

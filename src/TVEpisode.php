@@ -13,7 +13,7 @@ class TVEpisode extends Episode
      * The country of the principal offices of the production company or
      * individual responsible for the movie or program.
      *
-     * @param \Spatie\SchemaOrg\Country $countryOfOrigin
+     * @param Country|Country[] $countryOfOrigin
      *
      * @return static
      *
@@ -27,7 +27,7 @@ class TVEpisode extends Episode
     /**
      * The TV series to which this episode or season belongs.
      *
-     * @param \Spatie\SchemaOrg\TVSeries $partOfTVSeries
+     * @param TVSeries|TVSeries[] $partOfTVSeries
      *
      * @return static
      *
@@ -42,7 +42,7 @@ class TVEpisode extends Episode
      * Languages in which subtitles/captions are available, in [IETF BCP 47
      * standard format](http://tools.ietf.org/html/bcp47).
      *
-     * @param string|\Spatie\SchemaOrg\Language $subtitleLanguage
+     * @param string|string[]|Language|Language[] $subtitleLanguage
      *
      * @return static
      *

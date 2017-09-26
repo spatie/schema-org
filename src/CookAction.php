@@ -13,7 +13,7 @@ class CookAction extends CreateAction
      * A sub property of location. The specific food establishment where the
      * action occurred.
      *
-     * @param \Spatie\SchemaOrg\FoodEstablishment|\Spatie\SchemaOrg\Place $foodEstablishment
+     * @param FoodEstablishment|FoodEstablishment[]|Place|Place[] $foodEstablishment
      *
      * @return static
      *
@@ -28,7 +28,7 @@ class CookAction extends CreateAction
      * A sub property of location. The specific food event where the action
      * occurred.
      *
-     * @param \Spatie\SchemaOrg\FoodEvent $foodEvent
+     * @param FoodEvent|FoodEvent[] $foodEvent
      *
      * @return static
      *
@@ -43,7 +43,7 @@ class CookAction extends CreateAction
      * A sub property of instrument. The recipe/instructions used to perform the
      * action.
      *
-     * @param \Spatie\SchemaOrg\Recipe $recipe
+     * @param Recipe|Recipe[] $recipe
      *
      * @return static
      *

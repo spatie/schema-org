@@ -16,7 +16,7 @@ class CompoundPriceSpecification extends PriceSpecification
      * This property links to all [[UnitPriceSpecification]] nodes that apply in
      * parallel for the [[CompoundPriceSpecification]] node.
      *
-     * @param \Spatie\SchemaOrg\UnitPriceSpecification $priceComponent
+     * @param UnitPriceSpecification|UnitPriceSpecification[] $priceComponent
      *
      * @return static
      *

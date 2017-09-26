@@ -14,7 +14,7 @@ class ReviewAction extends AssessAction
      * A sub property of result. The review that resulted in the performing of
      * the action.
      *
-     * @param \Spatie\SchemaOrg\Review $resultReview
+     * @param Review|Review[] $resultReview
      *
      * @return static
      *

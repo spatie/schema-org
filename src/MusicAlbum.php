@@ -12,7 +12,7 @@ class MusicAlbum extends MusicPlaylist
     /**
      * The artist that performed this album or recording.
      *
-     * @param \Spatie\SchemaOrg\MusicGroup $byArtist
+     * @param MusicGroup|MusicGroup[] $byArtist
      *
      * @return static
      *
@@ -27,7 +27,7 @@ class MusicAlbum extends MusicPlaylist
      * Classification of the album by it's type of content: soundtrack, live
      * album, studio album, etc.
      *
-     * @param \Spatie\SchemaOrg\MusicAlbumProductionType $albumProductionType
+     * @param MusicAlbumProductionType|MusicAlbumProductionType[] $albumProductionType
      *
      * @return static
      *
@@ -41,7 +41,7 @@ class MusicAlbum extends MusicPlaylist
     /**
      * The kind of release which this album is: single, EP or album.
      *
-     * @param \Spatie\SchemaOrg\MusicAlbumReleaseType $albumReleaseType
+     * @param MusicAlbumReleaseType|MusicAlbumReleaseType[] $albumReleaseType
      *
      * @return static
      *
@@ -55,7 +55,7 @@ class MusicAlbum extends MusicPlaylist
     /**
      * A release of this album.
      *
-     * @param \Spatie\SchemaOrg\MusicRelease $albumRelease
+     * @param MusicRelease|MusicRelease[] $albumRelease
      *
      * @return static
      *

@@ -17,7 +17,7 @@ class PublicationIssue extends CreativeWork
     /**
      * Identifies the issue of publication; for example, "iii" or "2".
      *
-     * @param int|string $issueNumber
+     * @param int|int[]|string|string[] $issueNumber
      *
      * @return static
      *
@@ -31,7 +31,7 @@ class PublicationIssue extends CreativeWork
     /**
      * The page on which the work ends; for example "138" or "xvi".
      *
-     * @param int|string $pageEnd
+     * @param int|int[]|string|string[] $pageEnd
      *
      * @return static
      *
@@ -45,7 +45,7 @@ class PublicationIssue extends CreativeWork
     /**
      * The page on which the work starts; for example "135" or "xiii".
      *
-     * @param int|string $pageStart
+     * @param int|int[]|string|string[] $pageStart
      *
      * @return static
      *
@@ -60,7 +60,7 @@ class PublicationIssue extends CreativeWork
      * Any description of pages that is not separated into pageStart and
      * pageEnd; for example, "1-6, 9, 55" or "10-12, 46-49".
      *
-     * @param string $pagination
+     * @param string|string[] $pagination
      *
      * @return static
      *

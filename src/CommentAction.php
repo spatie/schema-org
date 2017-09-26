@@ -13,7 +13,7 @@ class CommentAction extends CommunicateAction
      * A sub property of result. The Comment created or sent as a result of this
      * action.
      *
-     * @param \Spatie\SchemaOrg\Comment $resultComment
+     * @param Comment|Comment[] $resultComment
      *
      * @return static
      *

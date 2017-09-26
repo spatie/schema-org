@@ -14,7 +14,7 @@ class OrderItem extends Intangible
      * The number of the item ordered. If the property is not set, assume the
      * quantity is one.
      *
-     * @param float|int $orderQuantity
+     * @param float|int|float|int[] $orderQuantity
      *
      * @return static
      *
@@ -28,7 +28,7 @@ class OrderItem extends Intangible
     /**
      * The current status of the order item.
      *
-     * @param \Spatie\SchemaOrg\OrderStatus $orderItemStatus
+     * @param OrderStatus|OrderStatus[] $orderItemStatus
      *
      * @return static
      *
@@ -42,7 +42,7 @@ class OrderItem extends Intangible
     /**
      * The identifier of the order item.
      *
-     * @param string $orderItemNumber
+     * @param string|string[] $orderItemNumber
      *
      * @return static
      *
@@ -56,7 +56,7 @@ class OrderItem extends Intangible
     /**
      * The delivery of the parcel related to this order or order item.
      *
-     * @param \Spatie\SchemaOrg\ParcelDelivery $orderDelivery
+     * @param ParcelDelivery|ParcelDelivery[] $orderDelivery
      *
      * @return static
      *
@@ -70,7 +70,7 @@ class OrderItem extends Intangible
     /**
      * The item ordered.
      *
-     * @param \Spatie\SchemaOrg\Product|\Spatie\SchemaOrg\OrderItem $orderedItem
+     * @param Product|Product[]|OrderItem|OrderItem[] $orderedItem
      *
      * @return static
      *

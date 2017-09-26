@@ -13,7 +13,7 @@ class SportsOrganization extends Organization
     /**
      * A type of sport (e.g. Baseball).
      *
-     * @param string $sport
+     * @param string|string[] $sport
      *
      * @return static
      *

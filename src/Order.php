@@ -14,7 +14,7 @@ class Order extends Intangible
     /**
      * The delivery of the parcel related to this order or order item.
      *
-     * @param \Spatie\SchemaOrg\ParcelDelivery $orderDelivery
+     * @param ParcelDelivery|ParcelDelivery[] $orderDelivery
      *
      * @return static
      *
@@ -29,7 +29,7 @@ class Order extends Intangible
      * The offer(s) -- e.g., product, quantity and price combinations --
      * included in the order.
      *
-     * @param \Spatie\SchemaOrg\Offer $acceptedOffer
+     * @param Offer|Offer[] $acceptedOffer
      *
      * @return static
      *
@@ -43,7 +43,7 @@ class Order extends Intangible
     /**
      * The billing address for the order.
      *
-     * @param \Spatie\SchemaOrg\PostalAddress $billingAddress
+     * @param PostalAddress|PostalAddress[] $billingAddress
      *
      * @return static
      *
@@ -57,7 +57,7 @@ class Order extends Intangible
     /**
      * A number that confirms the given order or payment has been received.
      *
-     * @param string $confirmationNumber
+     * @param string|string[] $confirmationNumber
      *
      * @return static
      *
@@ -71,7 +71,7 @@ class Order extends Intangible
     /**
      * Party placing the order or paying the invoice.
      *
-     * @param \Spatie\SchemaOrg\Organization|\Spatie\SchemaOrg\Person $customer
+     * @param Organization|Organization[]|Person|Person[] $customer
      *
      * @return static
      *
@@ -85,7 +85,7 @@ class Order extends Intangible
     /**
      * Any discount applied (to an Order).
      *
-     * @param float|int|string $discount
+     * @param float|int|float|int[]|string|string[] $discount
      *
      * @return static
      *
@@ -99,7 +99,7 @@ class Order extends Intangible
     /**
      * Code used to redeem a discount.
      *
-     * @param string $discountCode
+     * @param string|string[] $discountCode
      *
      * @return static
      *
@@ -113,7 +113,7 @@ class Order extends Intangible
     /**
      * The currency (in 3-letter ISO 4217 format) of the discount.
      *
-     * @param string $discountCurrency
+     * @param string|string[] $discountCurrency
      *
      * @return static
      *
@@ -127,7 +127,7 @@ class Order extends Intangible
     /**
      * Was the offer accepted as a gift for someone other than the buyer.
      *
-     * @param bool $isGift
+     * @param bool|bool[] $isGift
      *
      * @return static
      *
@@ -141,7 +141,7 @@ class Order extends Intangible
     /**
      * 'merchant' is an out-dated term for 'seller'.
      *
-     * @param \Spatie\SchemaOrg\Organization|\Spatie\SchemaOrg\Person $merchant
+     * @param Organization|Organization[]|Person|Person[] $merchant
      *
      * @return static
      *
@@ -155,7 +155,7 @@ class Order extends Intangible
     /**
      * Date order was placed.
      *
-     * @param \DateTimeInterface $orderDate
+     * @param \DateTimeInterface|\DateTimeInterface[] $orderDate
      *
      * @return static
      *
@@ -169,7 +169,7 @@ class Order extends Intangible
     /**
      * The item ordered.
      *
-     * @param \Spatie\SchemaOrg\Product|\Spatie\SchemaOrg\OrderItem $orderedItem
+     * @param Product|Product[]|OrderItem|OrderItem[] $orderedItem
      *
      * @return static
      *
@@ -183,7 +183,7 @@ class Order extends Intangible
     /**
      * The identifier of the transaction.
      *
-     * @param string $orderNumber
+     * @param string|string[] $orderNumber
      *
      * @return static
      *
@@ -197,7 +197,7 @@ class Order extends Intangible
     /**
      * The current status of the order.
      *
-     * @param \Spatie\SchemaOrg\OrderStatus $orderStatus
+     * @param OrderStatus|OrderStatus[] $orderStatus
      *
      * @return static
      *
@@ -211,7 +211,7 @@ class Order extends Intangible
     /**
      * The order is being paid as part of the referenced Invoice.
      *
-     * @param \Spatie\SchemaOrg\Invoice $partOfInvoice
+     * @param Invoice|Invoice[] $partOfInvoice
      *
      * @return static
      *
@@ -225,7 +225,7 @@ class Order extends Intangible
     /**
      * The date that payment is due.
      *
-     * @param \DateTimeInterface $paymentDue
+     * @param \DateTimeInterface|\DateTimeInterface[] $paymentDue
      *
      * @return static
      *
@@ -239,7 +239,7 @@ class Order extends Intangible
     /**
      * The name of the credit card or other method of payment for the order.
      *
-     * @param \Spatie\SchemaOrg\PaymentMethod $paymentMethod
+     * @param PaymentMethod|PaymentMethod[] $paymentMethod
      *
      * @return static
      *
@@ -254,7 +254,7 @@ class Order extends Intangible
      * An identifier for the method of payment used (e.g. the last 4 digits of
      * the credit card).
      *
-     * @param string $paymentMethodId
+     * @param string|string[] $paymentMethodId
      *
      * @return static
      *
@@ -268,7 +268,7 @@ class Order extends Intangible
     /**
      * The URL for sending a payment.
      *
-     * @param string $paymentUrl
+     * @param string|string[] $paymentUrl
      *
      * @return static
      *
@@ -283,7 +283,7 @@ class Order extends Intangible
      * An entity which offers (sells / leases / lends / loans) the services /
      * goods.  A seller may also be a provider.
      *
-     * @param \Spatie\SchemaOrg\Organization|\Spatie\SchemaOrg\Person $seller
+     * @param Organization|Organization[]|Person|Person[] $seller
      *
      * @return static
      *
@@ -297,7 +297,7 @@ class Order extends Intangible
     /**
      * The date that payment is due.
      *
-     * @param \DateTimeInterface $paymentDueDate
+     * @param \DateTimeInterface|\DateTimeInterface[] $paymentDueDate
      *
      * @return static
      *
@@ -314,7 +314,7 @@ class Order extends Intangible
      * service involved in an exchange.  If it is not clear whether an entity is
      * a broker, seller, or buyer, the latter two terms are preferred.
      *
-     * @param \Spatie\SchemaOrg\Person|\Spatie\SchemaOrg\Organization $broker
+     * @param Person|Person[]|Organization|Organization[] $broker
      *
      * @return static
      *

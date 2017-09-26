@@ -18,7 +18,7 @@ class Apartment extends Accommodation
      * Typical unit code(s): ROM for room or C62 for no unit. The type of room
      * can be put in the unitText property of the QuantitativeValue.
      *
-     * @param float|int|\Spatie\SchemaOrg\QuantitativeValue $numberOfRooms
+     * @param float|int|float|int[]|QuantitativeValue|QuantitativeValue[] $numberOfRooms
      *
      * @return static
      *
@@ -36,7 +36,7 @@ class Apartment extends Accommodation
      * agreement (e.g. a double room used by a single person).
      * Typical unit code(s): C62 for person
      *
-     * @param \Spatie\SchemaOrg\QuantitativeValue $occupancy
+     * @param QuantitativeValue|QuantitativeValue[] $occupancy
      *
      * @return static
      *

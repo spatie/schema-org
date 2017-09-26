@@ -21,7 +21,7 @@ class FoodEstablishmentReservation extends Reservation
      * when describing dates with times. This situation may be clarified in
      * future revisions.
      *
-     * @param \DateTimeInterface $endTime
+     * @param \DateTimeInterface|\DateTimeInterface[] $endTime
      *
      * @return static
      *
@@ -42,7 +42,7 @@ class FoodEstablishmentReservation extends Reservation
      * when describing dates with times. This situation may be clarified in
      * future revisions.
      *
-     * @param \DateTimeInterface $startTime
+     * @param \DateTimeInterface|\DateTimeInterface[] $startTime
      *
      * @return static
      *
@@ -56,7 +56,7 @@ class FoodEstablishmentReservation extends Reservation
     /**
      * Number of people the reservation should accommodate.
      *
-     * @param int|\Spatie\SchemaOrg\QuantitativeValue $partySize
+     * @param int|int[]|QuantitativeValue|QuantitativeValue[] $partySize
      *
      * @return static
      *

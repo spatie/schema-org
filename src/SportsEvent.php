@@ -12,7 +12,7 @@ class SportsEvent extends Event
     /**
      * The home team in a sports event.
      *
-     * @param \Spatie\SchemaOrg\Person|\Spatie\SchemaOrg\SportsTeam $homeTeam
+     * @param Person|Person[]|SportsTeam|SportsTeam[] $homeTeam
      *
      * @return static
      *
@@ -26,7 +26,7 @@ class SportsEvent extends Event
     /**
      * The away team in a sports event.
      *
-     * @param \Spatie\SchemaOrg\Person|\Spatie\SchemaOrg\SportsTeam $awayTeam
+     * @param Person|Person[]|SportsTeam|SportsTeam[] $awayTeam
      *
      * @return static
      *
@@ -40,7 +40,7 @@ class SportsEvent extends Event
     /**
      * A competitor in a sports event.
      *
-     * @param \Spatie\SchemaOrg\Person|\Spatie\SchemaOrg\SportsTeam $competitor
+     * @param Person|Person[]|SportsTeam|SportsTeam[] $competitor
      *
      * @return static
      *

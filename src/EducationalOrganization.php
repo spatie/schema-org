@@ -12,7 +12,7 @@ class EducationalOrganization extends Organization
     /**
      * Alumni of an organization.
      *
-     * @param \Spatie\SchemaOrg\Person $alumni
+     * @param Person|Person[] $alumni
      *
      * @return static
      *

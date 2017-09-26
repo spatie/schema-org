@@ -13,7 +13,7 @@ class PlanAction extends OrganizeAction
     /**
      * The time the object is scheduled to.
      *
-     * @param \DateTimeInterface $scheduledTime
+     * @param \DateTimeInterface|\DateTimeInterface[] $scheduledTime
      *
      * @return static
      *

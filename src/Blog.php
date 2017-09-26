@@ -12,7 +12,7 @@ class Blog extends CreativeWork
     /**
      * A posting that is part of this blog.
      *
-     * @param \Spatie\SchemaOrg\BlogPosting $blogPost
+     * @param BlogPosting|BlogPosting[] $blogPost
      *
      * @return static
      *
@@ -26,7 +26,7 @@ class Blog extends CreativeWork
     /**
      * The postings that are part of this blog.
      *
-     * @param \Spatie\SchemaOrg\BlogPosting $blogPosts
+     * @param BlogPosting|BlogPosting[] $blogPosts
      *
      * @return static
      *

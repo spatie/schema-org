@@ -13,7 +13,7 @@ class Audience extends Intangible
      * The target group associated with a given audience (e.g. veterans, car
      * owners, musicians, etc.).
      *
-     * @param string $audienceType
+     * @param string|string[] $audienceType
      *
      * @return static
      *
@@ -27,7 +27,7 @@ class Audience extends Intangible
     /**
      * The geographic area associated with the audience.
      *
-     * @param \Spatie\SchemaOrg\AdministrativeArea $geographicArea
+     * @param AdministrativeArea|AdministrativeArea[] $geographicArea
      *
      * @return static
      *

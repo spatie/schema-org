@@ -14,7 +14,7 @@ class Brand extends Intangible
      * The overall rating, based on a collection of reviews or ratings, of the
      * item.
      *
-     * @param \Spatie\SchemaOrg\AggregateRating $aggregateRating
+     * @param AggregateRating|AggregateRating[] $aggregateRating
      *
      * @return static
      *
@@ -28,7 +28,7 @@ class Brand extends Intangible
     /**
      * An associated logo.
      *
-     * @param \Spatie\SchemaOrg\ImageObject|string $logo
+     * @param ImageObject|ImageObject[]|string|string[] $logo
      *
      * @return static
      *
@@ -42,7 +42,7 @@ class Brand extends Intangible
     /**
      * A review of the item.
      *
-     * @param \Spatie\SchemaOrg\Review $review
+     * @param Review|Review[] $review
      *
      * @return static
      *

@@ -12,7 +12,7 @@ class Map extends CreativeWork
     /**
      * Indicates the kind of Map, from the MapCategoryType Enumeration.
      *
-     * @param \Spatie\SchemaOrg\MapCategoryType $mapType
+     * @param MapCategoryType|MapCategoryType[] $mapType
      *
      * @return static
      *

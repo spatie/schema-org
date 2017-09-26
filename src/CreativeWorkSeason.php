@@ -14,7 +14,7 @@ class CreativeWorkSeason extends CreativeWork
      * Actors can be associated with individual items or with a series, episode,
      * clip.
      *
-     * @param \Spatie\SchemaOrg\Person $actor
+     * @param Person|Person[] $actor
      *
      * @return static
      *
@@ -30,7 +30,7 @@ class CreativeWorkSeason extends CreativeWork
      * event. Directors can be associated with individual items or with a
      * series, episode, clip.
      *
-     * @param \Spatie\SchemaOrg\Person $director
+     * @param Person|Person[] $director
      *
      * @return static
      *
@@ -45,7 +45,7 @@ class CreativeWorkSeason extends CreativeWork
      * The end date and time of the item (in [ISO 8601 date
      * format](http://en.wikipedia.org/wiki/ISO_8601)).
      *
-     * @param \DateTimeInterface $endDate
+     * @param \DateTimeInterface|\DateTimeInterface[] $endDate
      *
      * @return static
      *
@@ -59,7 +59,7 @@ class CreativeWorkSeason extends CreativeWork
     /**
      * An episode of a tv, radio or game media within a series or season.
      *
-     * @param \Spatie\SchemaOrg\Episode $episode
+     * @param Episode|Episode[] $episode
      *
      * @return static
      *
@@ -73,7 +73,7 @@ class CreativeWorkSeason extends CreativeWork
     /**
      * An episode of a TV/radio series or season.
      *
-     * @param \Spatie\SchemaOrg\Episode $episodes
+     * @param Episode|Episode[] $episodes
      *
      * @return static
      *
@@ -87,7 +87,7 @@ class CreativeWorkSeason extends CreativeWork
     /**
      * The number of episodes in this season or series.
      *
-     * @param int $numberOfEpisodes
+     * @param int|int[] $numberOfEpisodes
      *
      * @return static
      *
@@ -101,7 +101,7 @@ class CreativeWorkSeason extends CreativeWork
     /**
      * The series to which this episode or season belongs.
      *
-     * @param \Spatie\SchemaOrg\CreativeWorkSeries $partOfSeries
+     * @param CreativeWorkSeries|CreativeWorkSeries[] $partOfSeries
      *
      * @return static
      *
@@ -116,7 +116,7 @@ class CreativeWorkSeason extends CreativeWork
      * The production company or studio responsible for the item e.g. series,
      * video game, episode etc.
      *
-     * @param \Spatie\SchemaOrg\Organization $productionCompany
+     * @param Organization|Organization[] $productionCompany
      *
      * @return static
      *
@@ -130,7 +130,7 @@ class CreativeWorkSeason extends CreativeWork
     /**
      * Position of the season within an ordered group of seasons.
      *
-     * @param int|string $seasonNumber
+     * @param int|int[]|string|string[] $seasonNumber
      *
      * @return static
      *
@@ -145,7 +145,7 @@ class CreativeWorkSeason extends CreativeWork
      * The start date and time of the item (in [ISO 8601 date
      * format](http://en.wikipedia.org/wiki/ISO_8601)).
      *
-     * @param \DateTimeInterface $startDate
+     * @param \DateTimeInterface|\DateTimeInterface[] $startDate
      *
      * @return static
      *
@@ -159,7 +159,7 @@ class CreativeWorkSeason extends CreativeWork
     /**
      * The trailer of a movie or tv/radio series, season, episode, etc.
      *
-     * @param \Spatie\SchemaOrg\VideoObject $trailer
+     * @param VideoObject|VideoObject[] $trailer
      *
      * @return static
      *

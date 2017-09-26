@@ -20,7 +20,7 @@ class Action extends Thing
      * The direct performer or driver of the action (animate or inanimate). e.g.
      * *John* wrote a book.
      *
-     * @param \Spatie\SchemaOrg\Organization|\Spatie\SchemaOrg\Person $agent
+     * @param Organization|Organization[]|Person|Person[] $agent
      *
      * @return static
      *
@@ -41,7 +41,7 @@ class Action extends Thing
      * when describing dates with times. This situation may be clarified in
      * future revisions.
      *
-     * @param \DateTimeInterface $endTime
+     * @param \DateTimeInterface|\DateTimeInterface[] $endTime
      *
      * @return static
      *
@@ -56,7 +56,7 @@ class Action extends Thing
      * The object that helped the agent perform the action. e.g. John wrote a
      * book with *a pen*.
      *
-     * @param \Spatie\SchemaOrg\Thing $instrument
+     * @param Thing|Thing[] $instrument
      *
      * @return static
      *
@@ -71,7 +71,7 @@ class Action extends Thing
      * The location of for example where the event is happening, an organization
      * is located, or where an action takes place.
      *
-     * @param \Spatie\SchemaOrg\Place|\Spatie\SchemaOrg\PostalAddress|string $location
+     * @param Place|Place[]|PostalAddress|PostalAddress[]|string|string[] $location
      *
      * @return static
      *
@@ -88,7 +88,7 @@ class Action extends Thing
      * undergoer (which change their state) or theme (which doesn't). e.g. John
      * read *a book*.
      *
-     * @param \Spatie\SchemaOrg\Thing $object
+     * @param Thing|Thing[] $object
      *
      * @return static
      *
@@ -103,7 +103,7 @@ class Action extends Thing
      * Other co-agents that participated in the action indirectly. e.g. John
      * wrote a book with *Steve*.
      *
-     * @param \Spatie\SchemaOrg\Organization|\Spatie\SchemaOrg\Person $participant
+     * @param Organization|Organization[]|Person|Person[] $participant
      *
      * @return static
      *
@@ -117,7 +117,7 @@ class Action extends Thing
     /**
      * The result produced in the action. e.g. John wrote *a book*.
      *
-     * @param \Spatie\SchemaOrg\Thing $result
+     * @param Thing|Thing[] $result
      *
      * @return static
      *
@@ -138,7 +138,7 @@ class Action extends Thing
      * when describing dates with times. This situation may be clarified in
      * future revisions.
      *
-     * @param \DateTimeInterface $startTime
+     * @param \DateTimeInterface|\DateTimeInterface[] $startTime
      *
      * @return static
      *
@@ -152,7 +152,7 @@ class Action extends Thing
     /**
      * Indicates the current disposition of the Action.
      *
-     * @param \Spatie\SchemaOrg\ActionStatusType $actionStatus
+     * @param ActionStatusType|ActionStatusType[] $actionStatus
      *
      * @return static
      *
@@ -166,7 +166,7 @@ class Action extends Thing
     /**
      * For failed actions, more information on the cause of the failure.
      *
-     * @param \Spatie\SchemaOrg\Thing $error
+     * @param Thing|Thing[] $error
      *
      * @return static
      *
@@ -180,7 +180,7 @@ class Action extends Thing
     /**
      * Indicates a target EntryPoint for an Action.
      *
-     * @param \Spatie\SchemaOrg\EntryPoint $target
+     * @param EntryPoint|EntryPoint[] $target
      *
      * @return static
      *

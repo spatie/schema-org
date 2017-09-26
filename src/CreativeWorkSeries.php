@@ -29,7 +29,7 @@ class CreativeWorkSeries extends CreativeWork
      * The end date and time of the item (in [ISO 8601 date
      * format](http://en.wikipedia.org/wiki/ISO_8601)).
      *
-     * @param \DateTimeInterface $endDate
+     * @param \DateTimeInterface|\DateTimeInterface[] $endDate
      *
      * @return static
      *
@@ -44,7 +44,7 @@ class CreativeWorkSeries extends CreativeWork
      * The start date and time of the item (in [ISO 8601 date
      * format](http://en.wikipedia.org/wiki/ISO_8601)).
      *
-     * @param \DateTimeInterface $startDate
+     * @param \DateTimeInterface|\DateTimeInterface[] $startDate
      *
      * @return static
      *

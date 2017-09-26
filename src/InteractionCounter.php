@@ -15,7 +15,7 @@ class InteractionCounter extends StructuredValue
      * use [[LikeAction]]. For down votes use [[DislikeAction]]. Otherwise, use
      * the most specific Action.
      *
-     * @param \Spatie\SchemaOrg\Action $interactionType
+     * @param Action|Action[] $interactionType
      *
      * @return static
      *

@@ -12,7 +12,7 @@ class MusicComposition extends CreativeWork
     /**
      * An arrangement derived from the composition.
      *
-     * @param \Spatie\SchemaOrg\MusicComposition $musicArrangement
+     * @param MusicComposition|MusicComposition[] $musicArrangement
      *
      * @return static
      *
@@ -27,7 +27,7 @@ class MusicComposition extends CreativeWork
      * The person or organization who wrote a composition, or who is the
      * composer of a work performed at some event.
      *
-     * @param \Spatie\SchemaOrg\Person|\Spatie\SchemaOrg\Organization $composer
+     * @param Person|Person[]|Organization|Organization[] $composer
      *
      * @return static
      *
@@ -41,7 +41,7 @@ class MusicComposition extends CreativeWork
     /**
      * The date and place the work was first performed.
      *
-     * @param \Spatie\SchemaOrg\Event $firstPerformance
+     * @param Event|Event[] $firstPerformance
      *
      * @return static
      *
@@ -56,7 +56,7 @@ class MusicComposition extends CreativeWork
      * Smaller compositions included in this work (e.g. a movement in a
      * symphony).
      *
-     * @param \Spatie\SchemaOrg\MusicComposition $includedComposition
+     * @param MusicComposition|MusicComposition[] $includedComposition
      *
      * @return static
      *
@@ -70,7 +70,7 @@ class MusicComposition extends CreativeWork
     /**
      * The International Standard Musical Work Code for the composition.
      *
-     * @param string $iswcCode
+     * @param string|string[] $iswcCode
      *
      * @return static
      *
@@ -84,7 +84,7 @@ class MusicComposition extends CreativeWork
     /**
      * The person who wrote the words.
      *
-     * @param \Spatie\SchemaOrg\Person $lyricist
+     * @param Person|Person[] $lyricist
      *
      * @return static
      *
@@ -98,7 +98,7 @@ class MusicComposition extends CreativeWork
     /**
      * The type of composition (e.g. overture, sonata, symphony, etc.).
      *
-     * @param string $musicCompositionForm
+     * @param string|string[] $musicCompositionForm
      *
      * @return static
      *
@@ -112,7 +112,7 @@ class MusicComposition extends CreativeWork
     /**
      * The key, mode, or scale this composition uses.
      *
-     * @param string $musicalKey
+     * @param string|string[] $musicalKey
      *
      * @return static
      *
@@ -126,7 +126,7 @@ class MusicComposition extends CreativeWork
     /**
      * An audio recording of the work.
      *
-     * @param \Spatie\SchemaOrg\MusicRecording $recordedAs
+     * @param MusicRecording|MusicRecording[] $recordedAs
      *
      * @return static
      *
@@ -140,7 +140,7 @@ class MusicComposition extends CreativeWork
     /**
      * The words in the song.
      *
-     * @param \Spatie\SchemaOrg\CreativeWork $lyrics
+     * @param CreativeWork|CreativeWork[] $lyrics
      *
      * @return static
      *

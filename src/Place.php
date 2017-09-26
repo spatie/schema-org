@@ -12,7 +12,7 @@ class Place extends Thing
     /**
      * Physical address of the item.
      *
-     * @param \Spatie\SchemaOrg\PostalAddress|string $address
+     * @param PostalAddress|PostalAddress[]|string|string[] $address
      *
      * @return static
      *
@@ -27,7 +27,7 @@ class Place extends Thing
      * The overall rating, based on a collection of reviews or ratings, of the
      * item.
      *
-     * @param \Spatie\SchemaOrg\AggregateRating $aggregateRating
+     * @param AggregateRating|AggregateRating[] $aggregateRating
      *
      * @return static
      *
@@ -47,7 +47,7 @@ class Place extends Thing
      * http://www.starbucks.co.uk/store-locator/etc/detail/3047 the code "3047"
      * is a branchCode for a particular branch.
      *
-     * @param string $branchCode
+     * @param string|string[] $branchCode
      *
      * @return static
      *
@@ -61,7 +61,7 @@ class Place extends Thing
     /**
      * The basic containment relation between a place and one that contains it.
      *
-     * @param \Spatie\SchemaOrg\Place $containedInPlace
+     * @param Place|Place[] $containedInPlace
      *
      * @return static
      *
@@ -76,7 +76,7 @@ class Place extends Thing
      * The basic containment relation between a place and another that it
      * contains.
      *
-     * @param \Spatie\SchemaOrg\Place $containsPlace
+     * @param Place|Place[] $containsPlace
      *
      * @return static
      *
@@ -90,7 +90,7 @@ class Place extends Thing
     /**
      * The basic containment relation between a place and one that contains it.
      *
-     * @param \Spatie\SchemaOrg\Place $containedIn
+     * @param Place|Place[] $containedIn
      *
      * @return static
      *
@@ -105,7 +105,7 @@ class Place extends Thing
      * Upcoming or past event associated with this place, organization, or
      * action.
      *
-     * @param \Spatie\SchemaOrg\Event $event
+     * @param Event|Event[] $event
      *
      * @return static
      *
@@ -119,7 +119,7 @@ class Place extends Thing
     /**
      * Upcoming or past events associated with this place or organization.
      *
-     * @param \Spatie\SchemaOrg\Event $events
+     * @param Event|Event[] $events
      *
      * @return static
      *
@@ -133,7 +133,7 @@ class Place extends Thing
     /**
      * The fax number.
      *
-     * @param string $faxNumber
+     * @param string|string[] $faxNumber
      *
      * @return static
      *
@@ -147,7 +147,7 @@ class Place extends Thing
     /**
      * The geo coordinates of the place.
      *
-     * @param \Spatie\SchemaOrg\GeoCoordinates|\Spatie\SchemaOrg\GeoShape $geo
+     * @param GeoCoordinates|GeoCoordinates[]|GeoShape|GeoShape[] $geo
      *
      * @return static
      *
@@ -164,7 +164,7 @@ class Place extends Thing
      * organization, person, or place. The GLN is a 13-digit number used to
      * identify parties and physical locations.
      *
-     * @param string $globalLocationNumber
+     * @param string|string[] $globalLocationNumber
      *
      * @return static
      *
@@ -180,7 +180,7 @@ class Place extends Thing
      * Activities (ISIC), Revision 4 code for a particular organization,
      * business person, or place.
      *
-     * @param string $isicV4
+     * @param string|string[] $isicV4
      *
      * @return static
      *
@@ -194,7 +194,7 @@ class Place extends Thing
     /**
      * An associated logo.
      *
-     * @param \Spatie\SchemaOrg\ImageObject|string $logo
+     * @param ImageObject|ImageObject[]|string|string[] $logo
      *
      * @return static
      *
@@ -208,7 +208,7 @@ class Place extends Thing
     /**
      * A URL to a map of the place.
      *
-     * @param string|\Spatie\SchemaOrg\Map $hasMap
+     * @param string|string[]|Map|Map[] $hasMap
      *
      * @return static
      *
@@ -222,7 +222,7 @@ class Place extends Thing
     /**
      * A URL to a map of the place.
      *
-     * @param string $map
+     * @param string|string[] $map
      *
      * @return static
      *
@@ -236,7 +236,7 @@ class Place extends Thing
     /**
      * A URL to a map of the place.
      *
-     * @param string $maps
+     * @param string|string[] $maps
      *
      * @return static
      *
@@ -250,7 +250,7 @@ class Place extends Thing
     /**
      * The total number of individuals that may attend an event or venue.
      *
-     * @param int $maximumAttendeeCapacity
+     * @param int|int[] $maximumAttendeeCapacity
      *
      * @return static
      *
@@ -264,7 +264,7 @@ class Place extends Thing
     /**
      * The opening hours of a certain place.
      *
-     * @param \Spatie\SchemaOrg\OpeningHoursSpecification $openingHoursSpecification
+     * @param OpeningHoursSpecification|OpeningHoursSpecification[] $openingHoursSpecification
      *
      * @return static
      *
@@ -281,7 +281,7 @@ class Place extends Thing
      * Use this to explicitly override general opening hours brought in scope by
      * [[openingHoursSpecification]] or [[openingHours]].
      *
-     * @param \Spatie\SchemaOrg\OpeningHoursSpecification $specialOpeningHoursSpecification
+     * @param OpeningHoursSpecification|OpeningHoursSpecification[] $specialOpeningHoursSpecification
      *
      * @return static
      *
@@ -295,7 +295,7 @@ class Place extends Thing
     /**
      * A photograph of this place.
      *
-     * @param \Spatie\SchemaOrg\ImageObject|\Spatie\SchemaOrg\Photograph $photo
+     * @param ImageObject|ImageObject[]|Photograph|Photograph[] $photo
      *
      * @return static
      *
@@ -309,7 +309,7 @@ class Place extends Thing
     /**
      * Photographs of this place.
      *
-     * @param \Spatie\SchemaOrg\ImageObject|\Spatie\SchemaOrg\Photograph $photos
+     * @param ImageObject|ImageObject[]|Photograph|Photograph[] $photos
      *
      * @return static
      *
@@ -323,7 +323,7 @@ class Place extends Thing
     /**
      * A review of the item.
      *
-     * @param \Spatie\SchemaOrg\Review $review
+     * @param Review|Review[] $review
      *
      * @return static
      *
@@ -337,7 +337,7 @@ class Place extends Thing
     /**
      * Review of the item.
      *
-     * @param \Spatie\SchemaOrg\Review $reviews
+     * @param Review|Review[] $reviews
      *
      * @return static
      *
@@ -351,7 +351,7 @@ class Place extends Thing
     /**
      * The telephone number.
      *
-     * @param string $telephone
+     * @param string|string[] $telephone
      *
      * @return static
      *
@@ -373,7 +373,7 @@ class Place extends Thing
      * expect such data to be provided using those properties, rather than using
      * the generic property/value mechanism.
      *
-     * @param \Spatie\SchemaOrg\PropertyValue $additionalProperty
+     * @param PropertyValue|PropertyValue[] $additionalProperty
      *
      * @return static
      *
@@ -390,7 +390,7 @@ class Place extends Thing
      * whether the feature is included in an offer for the main accommodation or
      * available at extra costs.
      *
-     * @param \Spatie\SchemaOrg\LocationFeatureSpecification $amenityFeature
+     * @param LocationFeatureSpecification|LocationFeatureSpecification[] $amenityFeature
      *
      * @return static
      *
@@ -405,7 +405,7 @@ class Place extends Thing
      * Indicates whether it is allowed to smoke in the place, e.g. in the
      * restaurant, hotel or hotel room.
      *
-     * @param bool $smokingAllowed
+     * @param bool|bool[] $smokingAllowed
      *
      * @return static
      *

@@ -12,7 +12,7 @@ class SomeProducts extends Product
     /**
      * The current approximate inventory level for the item or items.
      *
-     * @param \Spatie\SchemaOrg\QuantitativeValue $inventoryLevel
+     * @param QuantitativeValue|QuantitativeValue[] $inventoryLevel
      *
      * @return static
      *

@@ -15,7 +15,7 @@ class SellAction extends TradeAction
      * A sub property of participant. The participant/person/organization that
      * bought the object.
      *
-     * @param \Spatie\SchemaOrg\Person $buyer
+     * @param Person|Person[] $buyer
      *
      * @return static
      *
@@ -29,7 +29,7 @@ class SellAction extends TradeAction
     /**
      * The warranty promise(s) included in the offer.
      *
-     * @param \Spatie\SchemaOrg\WarrantyPromise $warrantyPromise
+     * @param WarrantyPromise|WarrantyPromise[] $warrantyPromise
      *
      * @return static
      *

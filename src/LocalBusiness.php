@@ -15,7 +15,7 @@ class LocalBusiness extends Organization
      * The larger organization that this local business is a branch of, if any.
      * Not to be confused with (anatomical)[[branch]].
      *
-     * @param \Spatie\SchemaOrg\Organization $branchOf
+     * @param Organization|Organization[] $branchOf
      *
      * @return static
      *
@@ -30,7 +30,7 @@ class LocalBusiness extends Organization
      * The currency accepted (in [ISO 4217 currency
      * format](http://en.wikipedia.org/wiki/ISO_4217)).
      *
-     * @param string $currenciesAccepted
+     * @param string|string[] $currenciesAccepted
      *
      * @return static
      *
@@ -59,7 +59,7 @@ class LocalBusiness extends Organization
      * datetime=&quot;Mo-Su&quot;&gt;Monday through Sunday, all
      * day&lt;/time&gt;</code>.
      *
-     * @param string $openingHours
+     * @param string|string[] $openingHours
      *
      * @return static
      *
@@ -73,7 +73,7 @@ class LocalBusiness extends Organization
     /**
      * Cash, credit card, etc.
      *
-     * @param string $paymentAccepted
+     * @param string|string[] $paymentAccepted
      *
      * @return static
      *
@@ -87,7 +87,7 @@ class LocalBusiness extends Organization
     /**
      * The price range of the business, for example ```$$$```.
      *
-     * @param string $priceRange
+     * @param string|string[] $priceRange
      *
      * @return static
      *

@@ -12,7 +12,7 @@ class APIReference extends TechArticle
     /**
      * Library file name e.g., mscorlib.dll, system.web.dll.
      *
-     * @param string $assembly
+     * @param string|string[] $assembly
      *
      * @return static
      *
@@ -26,7 +26,7 @@ class APIReference extends TechArticle
     /**
      * Library file name e.g., mscorlib.dll, system.web.dll.
      *
-     * @param string $executableLibraryName
+     * @param string|string[] $executableLibraryName
      *
      * @return static
      *
@@ -40,7 +40,7 @@ class APIReference extends TechArticle
     /**
      * Associated product/technology version. e.g., .NET Framework 4.5.
      *
-     * @param string $assemblyVersion
+     * @param string|string[] $assemblyVersion
      *
      * @return static
      *
@@ -54,7 +54,7 @@ class APIReference extends TechArticle
     /**
      * Indicates whether API is managed or unmanaged.
      *
-     * @param string $programmingModel
+     * @param string|string[] $programmingModel
      *
      * @return static
      *
@@ -68,7 +68,7 @@ class APIReference extends TechArticle
     /**
      * Type of app development: phone, Metro style, desktop, XBox, etc.
      *
-     * @param string $targetPlatform
+     * @param string|string[] $targetPlatform
      *
      * @return static
      *

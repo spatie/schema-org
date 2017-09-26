@@ -13,7 +13,7 @@ class TravelAction extends MoveAction
     /**
      * The distance travelled, e.g. exercising or travelling.
      *
-     * @param \Spatie\SchemaOrg\Distance $distance
+     * @param Distance|Distance[] $distance
      *
      * @return static
      *

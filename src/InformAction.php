@@ -14,7 +14,7 @@ class InformAction extends CommunicateAction
      * Upcoming or past event associated with this place, organization, or
      * action.
      *
-     * @param \Spatie\SchemaOrg\Event $event
+     * @param Event|Event[] $event
      *
      * @return static
      *

@@ -15,7 +15,7 @@ class Comment extends CreativeWork
      * The number of upvotes this question, answer or comment has received from
      * the community.
      *
-     * @param int $upvoteCount
+     * @param int|int[] $upvoteCount
      *
      * @return static
      *
@@ -30,7 +30,7 @@ class Comment extends CreativeWork
      * The number of downvotes this question, answer or comment has received
      * from the community.
      *
-     * @param int $downvoteCount
+     * @param int|int[] $downvoteCount
      *
      * @return static
      *
@@ -44,7 +44,7 @@ class Comment extends CreativeWork
     /**
      * The parent of a question, answer or item in general.
      *
-     * @param \Spatie\SchemaOrg\Question $parentItem
+     * @param Question|Question[] $parentItem
      *
      * @return static
      *

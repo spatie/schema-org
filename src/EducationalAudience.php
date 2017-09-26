@@ -12,7 +12,7 @@ class EducationalAudience extends Audience
     /**
      * An educationalRole of an EducationalAudience.
      *
-     * @param string $educationalRole
+     * @param string|string[] $educationalRole
      *
      * @return static
      *

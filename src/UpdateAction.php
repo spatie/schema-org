@@ -12,7 +12,7 @@ class UpdateAction extends Action
     /**
      * A sub property of object. The collection target of the action.
      *
-     * @param \Spatie\SchemaOrg\Thing $collection
+     * @param Thing|Thing[] $collection
      *
      * @return static
      *
@@ -26,7 +26,7 @@ class UpdateAction extends Action
     /**
      * A sub property of object. The collection target of the action.
      *
-     * @param \Spatie\SchemaOrg\Thing $targetCollection
+     * @param Thing|Thing[] $targetCollection
      *
      * @return static
      *

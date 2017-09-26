@@ -13,7 +13,7 @@ class LoanOrCredit extends FinancialProduct
     /**
      * The amount of money.
      *
-     * @param \Spatie\SchemaOrg\MonetaryAmount|float|int $amount
+     * @param MonetaryAmount|MonetaryAmount[]|float|int|float|int[] $amount
      *
      * @return static
      *
@@ -27,7 +27,7 @@ class LoanOrCredit extends FinancialProduct
     /**
      * The duration of the loan or credit agreement.
      *
-     * @param \Spatie\SchemaOrg\QuantitativeValue $loanTerm
+     * @param QuantitativeValue|QuantitativeValue[] $loanTerm
      *
      * @return static
      *
@@ -42,7 +42,7 @@ class LoanOrCredit extends FinancialProduct
      * Assets required to secure loan or credit repayments. It may take form of
      * third party pledge, goods, financial instruments (cash, securities, etc.)
      *
-     * @param \Spatie\SchemaOrg\Thing|string $requiredCollateral
+     * @param Thing|Thing[]|string|string[] $requiredCollateral
      *
      * @return static
      *

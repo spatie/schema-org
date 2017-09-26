@@ -13,7 +13,7 @@ class TechArticle extends Article
     /**
      * Prerequisites needed to fulfill steps in article.
      *
-     * @param string $dependencies
+     * @param string|string[] $dependencies
      *
      * @return static
      *
@@ -28,7 +28,7 @@ class TechArticle extends Article
      * Proficiency needed for this content; expected values: 'Beginner',
      * 'Expert'.
      *
-     * @param string $proficiencyLevel
+     * @param string|string[] $proficiencyLevel
      *
      * @return static
      *

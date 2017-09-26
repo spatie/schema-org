@@ -12,7 +12,7 @@ class ListItem extends Intangible
     /**
      * The position of an item in a series or sequence of items.
      *
-     * @param string|int $position
+     * @param string|string[]|int|int[] $position
      *
      * @return static
      *
@@ -27,7 +27,7 @@ class ListItem extends Intangible
      * An entity represented by an entry in a list or data feed (e.g. an
      * 'artist' in a list of 'artists')’.
      *
-     * @param \Spatie\SchemaOrg\Thing $item
+     * @param Thing|Thing[] $item
      *
      * @return static
      *
@@ -41,7 +41,7 @@ class ListItem extends Intangible
     /**
      * A link to the ListItem that preceeds the current one.
      *
-     * @param \Spatie\SchemaOrg\ListItem $previousItem
+     * @param ListItem|ListItem[] $previousItem
      *
      * @return static
      *
@@ -55,7 +55,7 @@ class ListItem extends Intangible
     /**
      * A link to the ListItem that follows the current one.
      *
-     * @param \Spatie\SchemaOrg\ListItem $nextItem
+     * @param ListItem|ListItem[] $nextItem
      *
      * @return static
      *

@@ -13,7 +13,7 @@ class DeliveryChargeSpecification extends PriceSpecification
      * The delivery method(s) to which the delivery charge or payment charge
      * specification applies.
      *
-     * @param \Spatie\SchemaOrg\DeliveryMethod $appliesToDeliveryMethod
+     * @param DeliveryMethod|DeliveryMethod[] $appliesToDeliveryMethod
      *
      * @return static
      *
@@ -27,7 +27,7 @@ class DeliveryChargeSpecification extends PriceSpecification
     /**
      * The geographic area where a service or offered item is provided.
      *
-     * @param \Spatie\SchemaOrg\Place|\Spatie\SchemaOrg\AdministrativeArea|\Spatie\SchemaOrg\GeoShape|string $areaServed
+     * @param Place|Place[]|AdministrativeArea|AdministrativeArea[]|GeoShape|GeoShape[]|string|string[] $areaServed
      *
      * @return static
      *
@@ -45,7 +45,7 @@ class DeliveryChargeSpecification extends PriceSpecification
      * 
      * See also [[ineligibleRegion]].
      *
-     * @param \Spatie\SchemaOrg\GeoShape|\Spatie\SchemaOrg\Place|string $eligibleRegion
+     * @param GeoShape|GeoShape[]|Place|Place[]|string|string[] $eligibleRegion
      *
      * @return static
      *
@@ -64,7 +64,7 @@ class DeliveryChargeSpecification extends PriceSpecification
      * 
      * See also [[eligibleRegion]].
      *
-     * @param \Spatie\SchemaOrg\GeoShape|\Spatie\SchemaOrg\Place|string $ineligibleRegion
+     * @param GeoShape|GeoShape[]|Place|Place[]|string|string[] $ineligibleRegion
      *
      * @return static
      *

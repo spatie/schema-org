@@ -13,7 +13,7 @@ class TypeAndQuantityNode extends StructuredValue
     /**
      * The quantity of the goods included in the offer.
      *
-     * @param float|int $amountOfThisGood
+     * @param float|int|float|int[] $amountOfThisGood
      *
      * @return static
      *
@@ -29,7 +29,7 @@ class TypeAndQuantityNode extends StructuredValue
      * component of a bundle (TypeAndQuantityNode). The default is
      * http://purl.org/goodrelations/v1#Sell.
      *
-     * @param \Spatie\SchemaOrg\BusinessFunction $businessFunction
+     * @param BusinessFunction|BusinessFunction[] $businessFunction
      *
      * @return static
      *
@@ -43,7 +43,7 @@ class TypeAndQuantityNode extends StructuredValue
     /**
      * The product that this structured value is referring to.
      *
-     * @param \Spatie\SchemaOrg\Product|\Spatie\SchemaOrg\Service $typeOfGood
+     * @param Product|Product[]|Service|Service[] $typeOfGood
      *
      * @return static
      *
@@ -59,7 +59,7 @@ class TypeAndQuantityNode extends StructuredValue
      * characters) or a URL. Other codes than the UN/CEFACT Common Code may be
      * used with a prefix followed by a colon.
      *
-     * @param string $unitCode
+     * @param string|string[] $unitCode
      *
      * @return static
      *
@@ -75,7 +75,7 @@ class TypeAndQuantityNode extends StructuredValue
      * provide a standard unit code for
      * <a href='unitCode'>unitCode</a>.
      *
-     * @param string $unitText
+     * @param string|string[] $unitText
      *
      * @return static
      *

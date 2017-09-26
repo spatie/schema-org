@@ -13,7 +13,7 @@ class ScreeningEvent extends Event
      * The type of screening or video broadcast used (e.g. IMAX, 3D, SD, HD,
      * etc.).
      *
-     * @param string $videoFormat
+     * @param string|string[] $videoFormat
      *
      * @return static
      *
@@ -28,7 +28,7 @@ class ScreeningEvent extends Event
      * Languages in which subtitles/captions are available, in [IETF BCP 47
      * standard format](http://tools.ietf.org/html/bcp47).
      *
-     * @param string|\Spatie\SchemaOrg\Language $subtitleLanguage
+     * @param string|string[]|Language|Language[] $subtitleLanguage
      *
      * @return static
      *
@@ -42,7 +42,7 @@ class ScreeningEvent extends Event
     /**
      * The movie presented during this event.
      *
-     * @param \Spatie\SchemaOrg\Movie $workPresented
+     * @param Movie|Movie[] $workPresented
      *
      * @return static
      *

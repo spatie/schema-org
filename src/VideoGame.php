@@ -15,7 +15,7 @@ class VideoGame extends SoftwareApplication
      * Actors can be associated with individual items or with a series, episode,
      * clip.
      *
-     * @param \Spatie\SchemaOrg\Person $actor
+     * @param Person|Person[] $actor
      *
      * @return static
      *
@@ -30,7 +30,7 @@ class VideoGame extends SoftwareApplication
      * An actor, e.g. in tv, radio, movie, video games etc. Actors can be
      * associated with individual items or with a series, episode, clip.
      *
-     * @param \Spatie\SchemaOrg\Person $actors
+     * @param Person|Person[] $actors
      *
      * @return static
      *
@@ -46,7 +46,7 @@ class VideoGame extends SoftwareApplication
      * event. Directors can be associated with individual items or with a
      * series, episode, clip.
      *
-     * @param \Spatie\SchemaOrg\Person $director
+     * @param Person|Person[] $director
      *
      * @return static
      *
@@ -61,7 +61,7 @@ class VideoGame extends SoftwareApplication
      * A director of e.g. tv, radio, movie, video games etc. content. Directors
      * can be associated with individual items or with a series, episode, clip.
      *
-     * @param \Spatie\SchemaOrg\Person $directors
+     * @param Person|Person[] $directors
      *
      * @return static
      *
@@ -75,7 +75,7 @@ class VideoGame extends SoftwareApplication
     /**
      * The composer of the soundtrack.
      *
-     * @param \Spatie\SchemaOrg\MusicGroup|\Spatie\SchemaOrg\Person $musicBy
+     * @param MusicGroup|MusicGroup[]|Person|Person[] $musicBy
      *
      * @return static
      *
@@ -89,7 +89,7 @@ class VideoGame extends SoftwareApplication
     /**
      * The trailer of a movie or tv/radio series, season, episode, etc.
      *
-     * @param \Spatie\SchemaOrg\VideoObject $trailer
+     * @param VideoObject|VideoObject[] $trailer
      *
      * @return static
      *
@@ -105,7 +105,7 @@ class VideoGame extends SoftwareApplication
      * game can be marked as multi-player, co-op and single-player at the same
      * time.
      *
-     * @param \Spatie\SchemaOrg\GamePlayMode $playMode
+     * @param GamePlayMode|GamePlayMode[] $playMode
      *
      * @return static
      *
@@ -119,7 +119,7 @@ class VideoGame extends SoftwareApplication
     /**
      * Cheat codes to the game.
      *
-     * @param \Spatie\SchemaOrg\CreativeWork $cheatCode
+     * @param CreativeWork|CreativeWork[] $cheatCode
      *
      * @return static
      *
@@ -133,7 +133,7 @@ class VideoGame extends SoftwareApplication
     /**
      * Links to tips, tactics, etc.
      *
-     * @param \Spatie\SchemaOrg\CreativeWork $gameTip
+     * @param CreativeWork|CreativeWork[] $gameTip
      *
      * @return static
      *
@@ -149,7 +149,7 @@ class VideoGame extends SoftwareApplication
      * href="http://en.wikipedia.org/wiki/Category:Video_game_platforms">video
      * games</a>.
      *
-     * @param string|\Spatie\SchemaOrg\Thing $gamePlatform
+     * @param string|string[]|Thing|Thing[] $gamePlatform
      *
      * @return static
      *
@@ -163,7 +163,7 @@ class VideoGame extends SoftwareApplication
     /**
      * The server on which  it is possible to play the game.
      *
-     * @param \Spatie\SchemaOrg\GameServer $gameServer
+     * @param GameServer|GameServer[] $gameServer
      *
      * @return static
      *

@@ -22,7 +22,7 @@ class Accommodation extends Place
      * whether the feature is included in an offer for the main accommodation or
      * available at extra costs.
      *
-     * @param \Spatie\SchemaOrg\LocationFeatureSpecification $amenityFeature
+     * @param LocationFeatureSpecification|LocationFeatureSpecification[] $amenityFeature
      *
      * @return static
      *
@@ -39,7 +39,7 @@ class Accommodation extends Place
      * Typical unit code(s): ROM for room or C62 for no unit. The type of room
      * can be put in the unitText property of the QuantitativeValue.
      *
-     * @param float|int|\Spatie\SchemaOrg\QuantitativeValue $numberOfRooms
+     * @param float|int|float|int[]|QuantitativeValue|QuantitativeValue[] $numberOfRooms
      *
      * @return static
      *
@@ -55,7 +55,7 @@ class Accommodation extends Place
      * Typical unit code(s): MTK for square meter, FTK for square foot, or YDK
      * for square yard
      *
-     * @param \Spatie\SchemaOrg\QuantitativeValue $floorSize
+     * @param QuantitativeValue|QuantitativeValue[] $floorSize
      *
      * @return static
      *
@@ -69,7 +69,7 @@ class Accommodation extends Place
     /**
      * Indications regarding the permitted usage of the accommodation.
      *
-     * @param string $permittedUsage
+     * @param string|string[] $permittedUsage
      *
      * @return static
      *
@@ -84,7 +84,7 @@ class Accommodation extends Place
      * Indicates whether pets are allowed to enter the accommodation or lodging
      * business. More detailed information can be put in a text value.
      *
-     * @param bool|string $petsAllowed
+     * @param bool|bool[]|string|string[] $petsAllowed
      *
      * @return static
      *

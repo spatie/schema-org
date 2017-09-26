@@ -12,7 +12,7 @@ class DeliveryEvent extends Event
     /**
      * Password, PIN, or access code needed for delivery (e.g. from a locker).
      *
-     * @param string $accessCode
+     * @param string|string[] $accessCode
      *
      * @return static
      *
@@ -26,7 +26,7 @@ class DeliveryEvent extends Event
     /**
      * When the item is available for pickup from the store, locker, etc.
      *
-     * @param \DateTimeInterface $availableFrom
+     * @param \DateTimeInterface|\DateTimeInterface[] $availableFrom
      *
      * @return static
      *
@@ -40,7 +40,7 @@ class DeliveryEvent extends Event
     /**
      * After this date, the item will no longer be available for pickup.
      *
-     * @param \DateTimeInterface $availableThrough
+     * @param \DateTimeInterface|\DateTimeInterface[] $availableThrough
      *
      * @return static
      *
@@ -54,7 +54,7 @@ class DeliveryEvent extends Event
     /**
      * Method used for delivery or shipping.
      *
-     * @param \Spatie\SchemaOrg\DeliveryMethod $hasDeliveryMethod
+     * @param DeliveryMethod|DeliveryMethod[] $hasDeliveryMethod
      *
      * @return static
      *

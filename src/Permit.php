@@ -12,7 +12,7 @@ class Permit extends Intangible
     /**
      * The service through with the permit was granted.
      *
-     * @param \Spatie\SchemaOrg\Service $issuedThrough
+     * @param Service|Service[] $issuedThrough
      *
      * @return static
      *
@@ -26,7 +26,7 @@ class Permit extends Intangible
     /**
      * The target audience for this permit.
      *
-     * @param \Spatie\SchemaOrg\Audience $permitAudience
+     * @param Audience|Audience[] $permitAudience
      *
      * @return static
      *
@@ -40,7 +40,7 @@ class Permit extends Intangible
     /**
      * The time validity of the permit.
      *
-     * @param \Spatie\SchemaOrg\Duration $validFor
+     * @param Duration|Duration[] $validFor
      *
      * @return static
      *
@@ -54,7 +54,7 @@ class Permit extends Intangible
     /**
      * The date when the item becomes valid.
      *
-     * @param \DateTimeInterface $validFrom
+     * @param \DateTimeInterface|\DateTimeInterface[] $validFrom
      *
      * @return static
      *
@@ -68,7 +68,7 @@ class Permit extends Intangible
     /**
      * The geographic area where the permit is valid.
      *
-     * @param \Spatie\SchemaOrg\AdministrativeArea $validIn
+     * @param AdministrativeArea|AdministrativeArea[] $validIn
      *
      * @return static
      *
@@ -82,7 +82,7 @@ class Permit extends Intangible
     /**
      * The date when the item is no longer valid.
      *
-     * @param \DateTimeInterface $validUntil
+     * @param \DateTimeInterface|\DateTimeInterface[] $validUntil
      *
      * @return static
      *
@@ -96,7 +96,7 @@ class Permit extends Intangible
     /**
      * The organization issuing the ticket or permit.
      *
-     * @param \Spatie\SchemaOrg\Organization $issuedBy
+     * @param Organization|Organization[] $issuedBy
      *
      * @return static
      *

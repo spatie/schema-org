@@ -12,7 +12,7 @@ class ImageObject extends MediaObject
     /**
      * The caption for this object.
      *
-     * @param string $caption
+     * @param string|string[] $caption
      *
      * @return static
      *
@@ -26,7 +26,7 @@ class ImageObject extends MediaObject
     /**
      * exif data for this object.
      *
-     * @param string|\Spatie\SchemaOrg\PropertyValue $exifData
+     * @param string|string[]|PropertyValue|PropertyValue[] $exifData
      *
      * @return static
      *
@@ -41,7 +41,7 @@ class ImageObject extends MediaObject
      * Indicates whether this image is representative of the content of the
      * page.
      *
-     * @param bool $representativeOfPage
+     * @param bool|bool[] $representativeOfPage
      *
      * @return static
      *
@@ -55,7 +55,7 @@ class ImageObject extends MediaObject
     /**
      * Thumbnail image for an image or video.
      *
-     * @param \Spatie\SchemaOrg\ImageObject $thumbnail
+     * @param ImageObject|ImageObject[] $thumbnail
      *
      * @return static
      *

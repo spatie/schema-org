@@ -14,7 +14,7 @@ class Event extends Thing
     /**
      * The subject matter of the content.
      *
-     * @param \Spatie\SchemaOrg\Thing $about
+     * @param Thing|Thing[] $about
      *
      * @return static
      *
@@ -30,7 +30,7 @@ class Event extends Thing
      * Actors can be associated with individual items or with a series, episode,
      * clip.
      *
-     * @param \Spatie\SchemaOrg\Person $actor
+     * @param Person|Person[] $actor
      *
      * @return static
      *
@@ -45,7 +45,7 @@ class Event extends Thing
      * The overall rating, based on a collection of reviews or ratings, of the
      * item.
      *
-     * @param \Spatie\SchemaOrg\AggregateRating $aggregateRating
+     * @param AggregateRating|AggregateRating[] $aggregateRating
      *
      * @return static
      *
@@ -59,7 +59,7 @@ class Event extends Thing
     /**
      * An organizer of an Event.
      *
-     * @param \Spatie\SchemaOrg\Person|\Spatie\SchemaOrg\Organization $organizer
+     * @param Person|Person[]|Organization|Organization[] $organizer
      *
      * @return static
      *
@@ -73,7 +73,7 @@ class Event extends Thing
     /**
      * A person or organization attending the event.
      *
-     * @param \Spatie\SchemaOrg\Organization|\Spatie\SchemaOrg\Person $attendee
+     * @param Organization|Organization[]|Person|Person[] $attendee
      *
      * @return static
      *
@@ -87,7 +87,7 @@ class Event extends Thing
     /**
      * A person attending the event.
      *
-     * @param \Spatie\SchemaOrg\Organization|\Spatie\SchemaOrg\Person $attendees
+     * @param Organization|Organization[]|Person|Person[] $attendees
      *
      * @return static
      *
@@ -101,7 +101,7 @@ class Event extends Thing
     /**
      * An intended audience, i.e. a group for whom something was created.
      *
-     * @param \Spatie\SchemaOrg\Audience $audience
+     * @param Audience|Audience[] $audience
      *
      * @return static
      *
@@ -115,7 +115,7 @@ class Event extends Thing
     /**
      * A secondary contributor to the CreativeWork or Event.
      *
-     * @param \Spatie\SchemaOrg\Organization|\Spatie\SchemaOrg\Person $contributor
+     * @param Organization|Organization[]|Person|Person[] $contributor
      *
      * @return static
      *
@@ -131,7 +131,7 @@ class Event extends Thing
      * event. Directors can be associated with individual items or with a
      * series, episode, clip.
      *
-     * @param \Spatie\SchemaOrg\Person $director
+     * @param Person|Person[] $director
      *
      * @return static
      *
@@ -145,7 +145,7 @@ class Event extends Thing
     /**
      * The time admission will commence.
      *
-     * @param \DateTimeInterface $doorTime
+     * @param \DateTimeInterface|\DateTimeInterface[] $doorTime
      *
      * @return static
      *
@@ -160,7 +160,7 @@ class Event extends Thing
      * The duration of the item (movie, audio recording, event, etc.) in [ISO
      * 8601 date format](http://en.wikipedia.org/wiki/ISO_8601).
      *
-     * @param \Spatie\SchemaOrg\Duration $duration
+     * @param Duration|Duration[] $duration
      *
      * @return static
      *
@@ -175,7 +175,7 @@ class Event extends Thing
      * The end date and time of the item (in [ISO 8601 date
      * format](http://en.wikipedia.org/wiki/ISO_8601)).
      *
-     * @param \DateTimeInterface $endDate
+     * @param \DateTimeInterface|\DateTimeInterface[] $endDate
      *
      * @return static
      *
@@ -190,7 +190,7 @@ class Event extends Thing
      * An eventStatus of an event represents its status; particularly useful
      * when an event is cancelled or rescheduled.
      *
-     * @param \Spatie\SchemaOrg\EventStatusType $eventStatus
+     * @param EventStatusType|EventStatusType[] $eventStatus
      *
      * @return static
      *
@@ -204,7 +204,7 @@ class Event extends Thing
     /**
      * A flag to signal that the publication is accessible for free.
      *
-     * @param bool $isAccessibleForFree
+     * @param bool|bool[] $isAccessibleForFree
      *
      * @return static
      *
@@ -221,7 +221,7 @@ class Event extends Thing
      * standard](http://tools.ietf.org/html/bcp47). See also
      * [[availableLanguage]].
      *
-     * @param string|\Spatie\SchemaOrg\Language $inLanguage
+     * @param string|string[]|Language|Language[] $inLanguage
      *
      * @return static
      *
@@ -236,7 +236,7 @@ class Event extends Thing
      * The location of for example where the event is happening, an organization
      * is located, or where an action takes place.
      *
-     * @param \Spatie\SchemaOrg\Place|\Spatie\SchemaOrg\PostalAddress|string $location
+     * @param Place|Place[]|PostalAddress|PostalAddress[]|string|string[] $location
      *
      * @return static
      *
@@ -250,7 +250,7 @@ class Event extends Thing
     /**
      * The total number of individuals that may attend an event or venue.
      *
-     * @param int $maximumAttendeeCapacity
+     * @param int|int[] $maximumAttendeeCapacity
      *
      * @return static
      *
@@ -264,7 +264,7 @@ class Event extends Thing
     /**
      * The number of attendee places for an event that remain unallocated.
      *
-     * @param int $remainingAttendeeCapacity
+     * @param int|int[] $remainingAttendeeCapacity
      *
      * @return static
      *
@@ -280,7 +280,7 @@ class Event extends Thing
      * product, rent the DVD of a movie, perform a service, or give away tickets
      * to an event.
      *
-     * @param \Spatie\SchemaOrg\Offer $offers
+     * @param Offer|Offer[] $offers
      *
      * @return static
      *
@@ -295,7 +295,7 @@ class Event extends Thing
      * A performer at the event&#x2014;for example, a presenter, musician,
      * musical group or actor.
      *
-     * @param \Spatie\SchemaOrg\Organization|\Spatie\SchemaOrg\Person $performer
+     * @param Organization|Organization[]|Person|Person[] $performer
      *
      * @return static
      *
@@ -310,7 +310,7 @@ class Event extends Thing
      * The main performer or performers of the event&#x2014;for example, a
      * presenter, musician, or actor.
      *
-     * @param \Spatie\SchemaOrg\Organization|\Spatie\SchemaOrg\Person $performers
+     * @param Organization|Organization[]|Person|Person[] $performers
      *
      * @return static
      *
@@ -328,7 +328,7 @@ class Event extends Thing
      * scheduled start date. In the (rare) case of an event that has been
      * postponed and rescheduled multiple times, this field may be repeated.
      *
-     * @param \DateTimeInterface $previousStartDate
+     * @param \DateTimeInterface|\DateTimeInterface[] $previousStartDate
      *
      * @return static
      *
@@ -342,7 +342,7 @@ class Event extends Thing
     /**
      * The CreativeWork that captured all or part of this Event.
      *
-     * @param \Spatie\SchemaOrg\CreativeWork $recordedIn
+     * @param CreativeWork|CreativeWork[] $recordedIn
      *
      * @return static
      *
@@ -356,7 +356,7 @@ class Event extends Thing
     /**
      * A review of the item.
      *
-     * @param \Spatie\SchemaOrg\Review $review
+     * @param Review|Review[] $review
      *
      * @return static
      *
@@ -372,7 +372,7 @@ class Event extends Thing
      * or financial contribution. e.g. a sponsor of a Medical Study or a
      * corporate sponsor of an event.
      *
-     * @param \Spatie\SchemaOrg\Organization|\Spatie\SchemaOrg\Person $sponsor
+     * @param Organization|Organization[]|Person|Person[] $sponsor
      *
      * @return static
      *
@@ -387,7 +387,7 @@ class Event extends Thing
      * A person or organization that supports (sponsors) something through some
      * kind of financial contribution.
      *
-     * @param \Spatie\SchemaOrg\Organization|\Spatie\SchemaOrg\Person $funder
+     * @param Organization|Organization[]|Person|Person[] $funder
      *
      * @return static
      *
@@ -402,7 +402,7 @@ class Event extends Thing
      * The start date and time of the item (in [ISO 8601 date
      * format](http://en.wikipedia.org/wiki/ISO_8601)).
      *
-     * @param \DateTimeInterface $startDate
+     * @param \DateTimeInterface|\DateTimeInterface[] $startDate
      *
      * @return static
      *
@@ -418,7 +418,7 @@ class Event extends Thing
      * includes many presentations, each of which is a subEvent of the
      * conference.
      *
-     * @param \Spatie\SchemaOrg\Event $subEvent
+     * @param Event|Event[] $subEvent
      *
      * @return static
      *
@@ -433,7 +433,7 @@ class Event extends Thing
      * Events that are a part of this event. For example, a conference event
      * includes many presentations, each subEvents of the conference.
      *
-     * @param \Spatie\SchemaOrg\Event $subEvents
+     * @param Event|Event[] $subEvents
      *
      * @return static
      *
@@ -449,7 +449,7 @@ class Event extends Thing
      * individual music performances might each have a music festival as their
      * superEvent.
      *
-     * @param \Spatie\SchemaOrg\Event $superEvent
+     * @param Event|Event[] $superEvent
      *
      * @return static
      *
@@ -463,7 +463,7 @@ class Event extends Thing
     /**
      * The typical expected age range, e.g. '7-9', '11-'.
      *
-     * @param string $typicalAgeRange
+     * @param string|string[] $typicalAgeRange
      *
      * @return static
      *
@@ -478,7 +478,7 @@ class Event extends Thing
      * A work performed in some event, for example a play performed in a
      * TheaterEvent.
      *
-     * @param \Spatie\SchemaOrg\CreativeWork $workPerformed
+     * @param CreativeWork|CreativeWork[] $workPerformed
      *
      * @return static
      *
@@ -494,7 +494,7 @@ class Event extends Thing
      *        Specific subproperties are available for workPerformed (e.g. a
      * play), or a workPresented (a Movie at a ScreeningEvent).
      *
-     * @param \Spatie\SchemaOrg\CreativeWork $workFeatured
+     * @param CreativeWork|CreativeWork[] $workFeatured
      *
      * @return static
      *
@@ -510,7 +510,7 @@ class Event extends Thing
      * regional differences and technical requirements of a target market, or
      * that translates during some event.
      *
-     * @param \Spatie\SchemaOrg\Person|\Spatie\SchemaOrg\Organization $translator
+     * @param Person|Person[]|Organization|Organization[] $translator
      *
      * @return static
      *
@@ -525,7 +525,7 @@ class Event extends Thing
      * The person or organization who wrote a composition, or who is the
      * composer of a work performed at some event.
      *
-     * @param \Spatie\SchemaOrg\Person|\Spatie\SchemaOrg\Organization $composer
+     * @param Person|Person[]|Organization|Organization[] $composer
      *
      * @return static
      *

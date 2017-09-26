@@ -14,7 +14,7 @@ class FoodEstablishment extends LocalBusiness
      * Boolean, an URL at which reservations can be made or (for backwards
      * compatibility) the strings ```Yes``` or ```No```.
      *
-     * @param string|bool $acceptsReservations
+     * @param string|string[]|bool|bool[] $acceptsReservations
      *
      * @return static
      *
@@ -29,7 +29,7 @@ class FoodEstablishment extends LocalBusiness
      * Either the actual menu as a structured representation, as text, or a URL
      * of the menu.
      *
-     * @param \Spatie\SchemaOrg\Menu|string $hasMenu
+     * @param Menu|Menu[]|string|string[] $hasMenu
      *
      * @return static
      *
@@ -44,7 +44,7 @@ class FoodEstablishment extends LocalBusiness
      * Either the actual menu as a structured representation, as text, or a URL
      * of the menu.
      *
-     * @param \Spatie\SchemaOrg\Menu|string $menu
+     * @param Menu|Menu[]|string|string[] $menu
      *
      * @return static
      *
@@ -58,7 +58,7 @@ class FoodEstablishment extends LocalBusiness
     /**
      * The cuisine of the restaurant.
      *
-     * @param string $servesCuisine
+     * @param string|string[] $servesCuisine
      *
      * @return static
      *
@@ -75,7 +75,7 @@ class FoodEstablishment extends LocalBusiness
      * to indicate the rating organization, e.g. as an Organization with name
      * such as (e.g. HOTREC, DEHOGA, WHR, or Hotelstars).
      *
-     * @param \Spatie\SchemaOrg\Rating $starRating
+     * @param Rating|Rating[] $starRating
      *
      * @return static
      *

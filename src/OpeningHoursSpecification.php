@@ -20,7 +20,7 @@ class OpeningHoursSpecification extends StructuredValue
     /**
      * The closing hour of the place or service on the given day(s) of the week.
      *
-     * @param \DateTimeInterface $closes
+     * @param \DateTimeInterface|\DateTimeInterface[] $closes
      *
      * @return static
      *
@@ -34,7 +34,7 @@ class OpeningHoursSpecification extends StructuredValue
     /**
      * The day of the week for which these opening hours are valid.
      *
-     * @param \Spatie\SchemaOrg\DayOfWeek $dayOfWeek
+     * @param DayOfWeek|DayOfWeek[] $dayOfWeek
      *
      * @return static
      *
@@ -48,7 +48,7 @@ class OpeningHoursSpecification extends StructuredValue
     /**
      * The opening hour of the place or service on the given day(s) of the week.
      *
-     * @param \DateTimeInterface $opens
+     * @param \DateTimeInterface|\DateTimeInterface[] $opens
      *
      * @return static
      *
@@ -62,7 +62,7 @@ class OpeningHoursSpecification extends StructuredValue
     /**
      * The date when the item becomes valid.
      *
-     * @param \DateTimeInterface $validFrom
+     * @param \DateTimeInterface|\DateTimeInterface[] $validFrom
      *
      * @return static
      *
@@ -77,7 +77,7 @@ class OpeningHoursSpecification extends StructuredValue
      * The date after when the item is not valid. For example the end of an
      * offer, salary period, or a period of opening hours.
      *
-     * @param \DateTimeInterface $validThrough
+     * @param \DateTimeInterface|\DateTimeInterface[] $validThrough
      *
      * @return static
      *

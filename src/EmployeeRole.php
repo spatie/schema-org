@@ -12,7 +12,7 @@ class EmployeeRole extends OrganizationRole
     /**
      * The base salary of the job or of an employee in an EmployeeRole.
      *
-     * @param float|int|\Spatie\SchemaOrg\PriceSpecification|\Spatie\SchemaOrg\MonetaryAmount $baseSalary
+     * @param float|int|float|int[]|PriceSpecification|PriceSpecification[]|MonetaryAmount|MonetaryAmount[] $baseSalary
      *
      * @return static
      *
@@ -28,7 +28,7 @@ class EmployeeRole extends OrganizationRole
      * 4217](http://en.wikipedia.org/wiki/ISO_4217) ) used for the main salary
      * information in this job posting or for this employee.
      *
-     * @param string $salaryCurrency
+     * @param string|string[] $salaryCurrency
      *
      * @return static
      *

@@ -15,7 +15,7 @@ class MovieSeries extends CreativeWorkSeries
      * Actors can be associated with individual items or with a series, episode,
      * clip.
      *
-     * @param \Spatie\SchemaOrg\Person $actor
+     * @param Person|Person[] $actor
      *
      * @return static
      *
@@ -30,7 +30,7 @@ class MovieSeries extends CreativeWorkSeries
      * An actor, e.g. in tv, radio, movie, video games etc. Actors can be
      * associated with individual items or with a series, episode, clip.
      *
-     * @param \Spatie\SchemaOrg\Person $actors
+     * @param Person|Person[] $actors
      *
      * @return static
      *
@@ -45,7 +45,7 @@ class MovieSeries extends CreativeWorkSeries
      * A director of e.g. tv, radio, movie, video games etc. content. Directors
      * can be associated with individual items or with a series, episode, clip.
      *
-     * @param \Spatie\SchemaOrg\Person $directors
+     * @param Person|Person[] $directors
      *
      * @return static
      *
@@ -59,7 +59,7 @@ class MovieSeries extends CreativeWorkSeries
     /**
      * The composer of the soundtrack.
      *
-     * @param \Spatie\SchemaOrg\MusicGroup|\Spatie\SchemaOrg\Person $musicBy
+     * @param MusicGroup|MusicGroup[]|Person|Person[] $musicBy
      *
      * @return static
      *
@@ -74,7 +74,7 @@ class MovieSeries extends CreativeWorkSeries
      * The production company or studio responsible for the item e.g. series,
      * video game, episode etc.
      *
-     * @param \Spatie\SchemaOrg\Organization $productionCompany
+     * @param Organization|Organization[] $productionCompany
      *
      * @return static
      *
@@ -88,7 +88,7 @@ class MovieSeries extends CreativeWorkSeries
     /**
      * The trailer of a movie or tv/radio series, season, episode, etc.
      *
-     * @param \Spatie\SchemaOrg\VideoObject $trailer
+     * @param VideoObject|VideoObject[] $trailer
      *
      * @return static
      *

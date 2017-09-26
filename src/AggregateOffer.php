@@ -14,7 +14,7 @@ class AggregateOffer extends Offer
     /**
      * The highest price of all offers available.
      *
-     * @param float|int|string $highPrice
+     * @param float|int|float|int[]|string|string[] $highPrice
      *
      * @return static
      *
@@ -28,7 +28,7 @@ class AggregateOffer extends Offer
     /**
      * The lowest price of all offers available.
      *
-     * @param float|int|string $lowPrice
+     * @param float|int|float|int[]|string|string[] $lowPrice
      *
      * @return static
      *
@@ -42,7 +42,7 @@ class AggregateOffer extends Offer
     /**
      * The number of offers for the product.
      *
-     * @param int $offerCount
+     * @param int|int[] $offerCount
      *
      * @return static
      *
@@ -58,7 +58,7 @@ class AggregateOffer extends Offer
      * product, rent the DVD of a movie, perform a service, or give away tickets
      * to an event.
      *
-     * @param \Spatie\SchemaOrg\Offer $offers
+     * @param Offer|Offer[] $offers
      *
      * @return static
      *

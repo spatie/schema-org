@@ -15,7 +15,7 @@ class LiveBlogPosting extends BlogPosting
      * coverage may begin before the Event's start time. The LiveBlogPosting may
      * also be created before coverage begins.
      *
-     * @param \DateTimeInterface $coverageStartTime
+     * @param \DateTimeInterface|\DateTimeInterface[] $coverageStartTime
      *
      * @return static
      *
@@ -30,7 +30,7 @@ class LiveBlogPosting extends BlogPosting
      * The time when the live blog will stop covering the Event. Note that
      * coverage may continue after the Event concludes.
      *
-     * @param \DateTimeInterface $coverageEndTime
+     * @param \DateTimeInterface|\DateTimeInterface[] $coverageEndTime
      *
      * @return static
      *
@@ -44,7 +44,7 @@ class LiveBlogPosting extends BlogPosting
     /**
      * An update to the LiveBlog.
      *
-     * @param \Spatie\SchemaOrg\BlogPosting $liveBlogUpdate
+     * @param BlogPosting|BlogPosting[] $liveBlogUpdate
      *
      * @return static
      *

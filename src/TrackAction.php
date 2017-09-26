@@ -19,7 +19,7 @@ class TrackAction extends FindAction
     /**
      * A sub property of instrument. The method of delivery.
      *
-     * @param \Spatie\SchemaOrg\DeliveryMethod $deliveryMethod
+     * @param DeliveryMethod|DeliveryMethod[] $deliveryMethod
      *
      * @return static
      *

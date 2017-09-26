@@ -14,7 +14,7 @@ class VideoObject extends MediaObject
      * Actors can be associated with individual items or with a series, episode,
      * clip.
      *
-     * @param \Spatie\SchemaOrg\Person $actor
+     * @param Person|Person[] $actor
      *
      * @return static
      *
@@ -29,7 +29,7 @@ class VideoObject extends MediaObject
      * An actor, e.g. in tv, radio, movie, video games etc. Actors can be
      * associated with individual items or with a series, episode, clip.
      *
-     * @param \Spatie\SchemaOrg\Person $actors
+     * @param Person|Person[] $actors
      *
      * @return static
      *
@@ -43,7 +43,7 @@ class VideoObject extends MediaObject
     /**
      * The caption for this object.
      *
-     * @param string $caption
+     * @param string|string[] $caption
      *
      * @return static
      *
@@ -59,7 +59,7 @@ class VideoObject extends MediaObject
      * event. Directors can be associated with individual items or with a
      * series, episode, clip.
      *
-     * @param \Spatie\SchemaOrg\Person $director
+     * @param Person|Person[] $director
      *
      * @return static
      *
@@ -74,7 +74,7 @@ class VideoObject extends MediaObject
      * A director of e.g. tv, radio, movie, video games etc. content. Directors
      * can be associated with individual items or with a series, episode, clip.
      *
-     * @param \Spatie\SchemaOrg\Person $directors
+     * @param Person|Person[] $directors
      *
      * @return static
      *
@@ -88,7 +88,7 @@ class VideoObject extends MediaObject
     /**
      * The composer of the soundtrack.
      *
-     * @param \Spatie\SchemaOrg\MusicGroup|\Spatie\SchemaOrg\Person $musicBy
+     * @param MusicGroup|MusicGroup[]|Person|Person[] $musicBy
      *
      * @return static
      *
@@ -102,7 +102,7 @@ class VideoObject extends MediaObject
     /**
      * Thumbnail image for an image or video.
      *
-     * @param \Spatie\SchemaOrg\ImageObject $thumbnail
+     * @param ImageObject|ImageObject[] $thumbnail
      *
      * @return static
      *
@@ -117,7 +117,7 @@ class VideoObject extends MediaObject
      * If this MediaObject is an AudioObject or VideoObject, the transcript of
      * that object.
      *
-     * @param string $transcript
+     * @param string|string[] $transcript
      *
      * @return static
      *
@@ -131,7 +131,7 @@ class VideoObject extends MediaObject
     /**
      * The frame size of the video.
      *
-     * @param string $videoFrameSize
+     * @param string|string[] $videoFrameSize
      *
      * @return static
      *
@@ -145,7 +145,7 @@ class VideoObject extends MediaObject
     /**
      * The quality of the video.
      *
-     * @param string $videoQuality
+     * @param string|string[] $videoQuality
      *
      * @return static
      *

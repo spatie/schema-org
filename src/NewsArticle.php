@@ -12,7 +12,7 @@ class NewsArticle extends Article
     /**
      * The location where the NewsArticle was produced.
      *
-     * @param string $dateline
+     * @param string|string[] $dateline
      *
      * @return static
      *
@@ -27,7 +27,7 @@ class NewsArticle extends Article
      * The number of the column in which the NewsArticle appears in the print
      * edition.
      *
-     * @param string $printColumn
+     * @param string|string[] $printColumn
      *
      * @return static
      *
@@ -41,7 +41,7 @@ class NewsArticle extends Article
     /**
      * The edition of the print product in which the NewsArticle appears.
      *
-     * @param string $printEdition
+     * @param string|string[] $printEdition
      *
      * @return static
      *
@@ -57,7 +57,7 @@ class NewsArticle extends Article
      * the page on which the article is found. Please note that this field is
      * intended for the exact page name (e.g. A5, B18).
      *
-     * @param string $printPage
+     * @param string|string[] $printPage
      *
      * @return static
      *
@@ -72,7 +72,7 @@ class NewsArticle extends Article
      * If this NewsArticle appears in print, this field indicates the print
      * section in which the article appeared.
      *
-     * @param string $printSection
+     * @param string|string[] $printSection
      *
      * @return static
      *

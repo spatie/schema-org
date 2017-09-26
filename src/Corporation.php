@@ -16,7 +16,7 @@ class Corporation extends Organization
      * attribute, we reccommend using the controlled vocaulary of Market
      * Identifier Codes (MIC) specified in ISO15022.
      *
-     * @param string $tickerSymbol
+     * @param string|string[] $tickerSymbol
      *
      * @return static
      *

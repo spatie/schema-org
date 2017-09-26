@@ -17,7 +17,7 @@ class WebPage extends CreativeWork
      * A set of links that can help a user understand and navigate a website
      * hierarchy.
      *
-     * @param string|\Spatie\SchemaOrg\BreadcrumbList $breadcrumb
+     * @param string|string[]|BreadcrumbList|BreadcrumbList[] $breadcrumb
      *
      * @return static
      *
@@ -32,7 +32,7 @@ class WebPage extends CreativeWork
      * Date on which the content on this web page was last reviewed for accuracy
      * and/or completeness.
      *
-     * @param \DateTimeInterface $lastReviewed
+     * @param \DateTimeInterface|\DateTimeInterface[] $lastReviewed
      *
      * @return static
      *
@@ -46,7 +46,7 @@ class WebPage extends CreativeWork
     /**
      * Indicates if this web page element is the main subject of the page.
      *
-     * @param \Spatie\SchemaOrg\WebPageElement $mainContentOfPage
+     * @param WebPageElement|WebPageElement[] $mainContentOfPage
      *
      * @return static
      *
@@ -60,7 +60,7 @@ class WebPage extends CreativeWork
     /**
      * Indicates the main image on the page.
      *
-     * @param \Spatie\SchemaOrg\ImageObject $primaryImageOfPage
+     * @param ImageObject|ImageObject[] $primaryImageOfPage
      *
      * @return static
      *
@@ -74,7 +74,7 @@ class WebPage extends CreativeWork
     /**
      * A link related to this web page, for example to other related web pages.
      *
-     * @param string $relatedLink
+     * @param string|string[] $relatedLink
      *
      * @return static
      *
@@ -89,7 +89,7 @@ class WebPage extends CreativeWork
      * People or organizations that have reviewed the content on this web page
      * for accuracy and/or completeness.
      *
-     * @param \Spatie\SchemaOrg\Organization|\Spatie\SchemaOrg\Person $reviewedBy
+     * @param Organization|Organization[]|Person|Person[] $reviewedBy
      *
      * @return static
      *
@@ -104,7 +104,7 @@ class WebPage extends CreativeWork
      * One of the more significant URLs on the page. Typically, these are the
      * non-navigation links that are clicked on the most.
      *
-     * @param string $significantLink
+     * @param string|string[] $significantLink
      *
      * @return static
      *
@@ -119,7 +119,7 @@ class WebPage extends CreativeWork
      * The most significant URLs on the page. Typically, these are the
      * non-navigation links that are clicked on the most.
      *
-     * @param string $significantLinks
+     * @param string|string[] $significantLinks
      *
      * @return static
      *
@@ -133,7 +133,7 @@ class WebPage extends CreativeWork
     /**
      * One of the domain specialities to which this web page's content applies.
      *
-     * @param \Spatie\SchemaOrg\Specialty $specialty
+     * @param Specialty|Specialty[] $specialty
      *
      * @return static
      *

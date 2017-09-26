@@ -13,7 +13,7 @@ class ExerciseAction extends PlayAction
     /**
      * A sub property of location. The course where this action was taken.
      *
-     * @param \Spatie\SchemaOrg\Place $course
+     * @param Place|Place[] $course
      *
      * @return static
      *
@@ -27,7 +27,7 @@ class ExerciseAction extends PlayAction
     /**
      * A sub property of location. The course where this action was taken.
      *
-     * @param \Spatie\SchemaOrg\Place $exerciseCourse
+     * @param Place|Place[] $exerciseCourse
      *
      * @return static
      *
@@ -41,7 +41,7 @@ class ExerciseAction extends PlayAction
     /**
      * The distance travelled, e.g. exercising or travelling.
      *
-     * @param \Spatie\SchemaOrg\Distance $distance
+     * @param Distance|Distance[] $distance
      *
      * @return static
      *
@@ -56,7 +56,7 @@ class ExerciseAction extends PlayAction
      * A sub property of location. The original location of the object or the
      * agent before the action.
      *
-     * @param \Spatie\SchemaOrg\Place $fromLocation
+     * @param Place|Place[] $fromLocation
      *
      * @return static
      *
@@ -70,7 +70,7 @@ class ExerciseAction extends PlayAction
     /**
      * A sub property of participant. The opponent on this action.
      *
-     * @param \Spatie\SchemaOrg\Person $opponent
+     * @param Person|Person[] $opponent
      *
      * @return static
      *
@@ -85,7 +85,7 @@ class ExerciseAction extends PlayAction
      * A sub property of location. The sports activity location where this
      * action occurred.
      *
-     * @param \Spatie\SchemaOrg\SportsActivityLocation $sportsActivityLocation
+     * @param SportsActivityLocation|SportsActivityLocation[] $sportsActivityLocation
      *
      * @return static
      *
@@ -99,7 +99,7 @@ class ExerciseAction extends PlayAction
     /**
      * A sub property of location. The sports event where this action occurred.
      *
-     * @param \Spatie\SchemaOrg\SportsEvent $sportsEvent
+     * @param SportsEvent|SportsEvent[] $sportsEvent
      *
      * @return static
      *
@@ -114,7 +114,7 @@ class ExerciseAction extends PlayAction
      * A sub property of participant. The sports team that participated on this
      * action.
      *
-     * @param \Spatie\SchemaOrg\SportsTeam $sportsTeam
+     * @param SportsTeam|SportsTeam[] $sportsTeam
      *
      * @return static
      *
@@ -129,7 +129,7 @@ class ExerciseAction extends PlayAction
      * A sub property of location. The final location of the object or the agent
      * after the action.
      *
-     * @param \Spatie\SchemaOrg\Place $toLocation
+     * @param Place|Place[] $toLocation
      *
      * @return static
      *

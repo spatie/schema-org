@@ -12,7 +12,7 @@ class LoseAction extends AchieveAction
     /**
      * A sub property of participant. The winner of the action.
      *
-     * @param \Spatie\SchemaOrg\Person $winner
+     * @param Person|Person[] $winner
      *
      * @return static
      *

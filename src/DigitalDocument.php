@@ -14,7 +14,7 @@ class DigitalDocument extends CreativeWork
      * read or write an electronic document). For a public document, specify a
      * grantee with an Audience with audienceType equal to "public".
      *
-     * @param \Spatie\SchemaOrg\DigitalDocumentPermission $hasDigitalDocumentPermission
+     * @param DigitalDocumentPermission|DigitalDocumentPermission[] $hasDigitalDocumentPermission
      *
      * @return static
      *

@@ -18,7 +18,8 @@ class Property
 
     public function addRange(string $range)
     {
-        $this->ranges[$range] = $range;
+        $this->ranges[] = $range;
+        $this->ranges[] = "{$range}[]";
 
         $this->ranges = array_unique($this->ranges);
     }

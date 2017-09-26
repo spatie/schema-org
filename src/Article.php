@@ -17,7 +17,7 @@ class Article extends CreativeWork
     /**
      * The actual body of the article.
      *
-     * @param string $articleBody
+     * @param string|string[] $articleBody
      *
      * @return static
      *
@@ -32,7 +32,7 @@ class Article extends CreativeWork
      * Articles may belong to one or more 'sections' in a magazine or newspaper,
      * such as Sports, Lifestyle, etc.
      *
-     * @param string $articleSection
+     * @param string|string[] $articleSection
      *
      * @return static
      *
@@ -46,7 +46,7 @@ class Article extends CreativeWork
     /**
      * The number of words in the text of the Article.
      *
-     * @param int $wordCount
+     * @param int|int[] $wordCount
      *
      * @return static
      *
@@ -60,7 +60,7 @@ class Article extends CreativeWork
     /**
      * The page on which the work ends; for example "138" or "xvi".
      *
-     * @param int|string $pageEnd
+     * @param int|int[]|string|string[] $pageEnd
      *
      * @return static
      *
@@ -74,7 +74,7 @@ class Article extends CreativeWork
     /**
      * The page on which the work starts; for example "135" or "xiii".
      *
-     * @param int|string $pageStart
+     * @param int|int[]|string|string[] $pageStart
      *
      * @return static
      *
@@ -89,7 +89,7 @@ class Article extends CreativeWork
      * Any description of pages that is not separated into pageStart and
      * pageEnd; for example, "1-6, 9, 55" or "10-12, 46-49".
      *
-     * @param string $pagination
+     * @param string|string[] $pagination
      *
      * @return static
      *

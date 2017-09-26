@@ -18,7 +18,7 @@ class Course extends CreativeWork
      * The identifier for the [[Course]] used by the course [[provider]] (e.g.
      * CS101 or 6.001).
      *
-     * @param string $courseCode
+     * @param string|string[] $courseCode
      *
      * @return static
      *
@@ -35,7 +35,7 @@ class Course extends CreativeWork
      * Requirements may be a pre-requisite competency, referenced using
      * [[AlignmentObject]].
      *
-     * @param string|\Spatie\SchemaOrg\Course|\Spatie\SchemaOrg\AlignmentObject $coursePrerequisites
+     * @param string|string[]|Course|Course[]|AlignmentObject|AlignmentObject[] $coursePrerequisites
      *
      * @return static
      *
@@ -50,7 +50,7 @@ class Course extends CreativeWork
      * An offering of the course at a specific time and place or through
      * specific media or mode of study or to a specific section of students.
      *
-     * @param \Spatie\SchemaOrg\CourseInstance $hasCourseInstance
+     * @param CourseInstance|CourseInstance[] $hasCourseInstance
      *
      * @return static
      *

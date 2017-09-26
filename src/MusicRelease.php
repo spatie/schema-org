@@ -12,7 +12,7 @@ class MusicRelease extends MusicPlaylist
     /**
      * The catalog number for the release.
      *
-     * @param string $catalogNumber
+     * @param string|string[] $catalogNumber
      *
      * @return static
      *
@@ -28,7 +28,7 @@ class MusicRelease extends MusicPlaylist
      * example, Red and Blue is credited to "Stefani Germanotta Band", but by
      * Lady Gaga.
      *
-     * @param \Spatie\SchemaOrg\Person|\Spatie\SchemaOrg\Organization $creditedTo
+     * @param Person|Person[]|Organization|Organization[] $creditedTo
      *
      * @return static
      *
@@ -43,7 +43,7 @@ class MusicRelease extends MusicPlaylist
      * Format of this release (the type of recording media used, ie. compact
      * disc, digital media, LP, etc.).
      *
-     * @param \Spatie\SchemaOrg\MusicReleaseFormatType $musicReleaseFormat
+     * @param MusicReleaseFormatType|MusicReleaseFormatType[] $musicReleaseFormat
      *
      * @return static
      *
@@ -57,7 +57,7 @@ class MusicRelease extends MusicPlaylist
     /**
      * The label that issued the release.
      *
-     * @param \Spatie\SchemaOrg\Organization $recordLabel
+     * @param Organization|Organization[] $recordLabel
      *
      * @return static
      *
@@ -71,7 +71,7 @@ class MusicRelease extends MusicPlaylist
     /**
      * The album this is a release of.
      *
-     * @param \Spatie\SchemaOrg\MusicAlbum $releaseOf
+     * @param MusicAlbum|MusicAlbum[] $releaseOf
      *
      * @return static
      *

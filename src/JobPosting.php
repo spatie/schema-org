@@ -12,7 +12,7 @@ class JobPosting extends Intangible
     /**
      * The base salary of the job or of an employee in an EmployeeRole.
      *
-     * @param float|int|\Spatie\SchemaOrg\PriceSpecification|\Spatie\SchemaOrg\MonetaryAmount $baseSalary
+     * @param float|int|float|int[]|PriceSpecification|PriceSpecification[]|MonetaryAmount|MonetaryAmount[] $baseSalary
      *
      * @return static
      *
@@ -26,7 +26,7 @@ class JobPosting extends Intangible
     /**
      * Description of benefits associated with the job.
      *
-     * @param string $benefits
+     * @param string|string[] $benefits
      *
      * @return static
      *
@@ -40,7 +40,7 @@ class JobPosting extends Intangible
     /**
      * Description of benefits associated with the job.
      *
-     * @param string $jobBenefits
+     * @param string|string[] $jobBenefits
      *
      * @return static
      *
@@ -54,7 +54,7 @@ class JobPosting extends Intangible
     /**
      * Publication date for the job posting.
      *
-     * @param \DateTimeInterface $datePosted
+     * @param \DateTimeInterface|\DateTimeInterface[] $datePosted
      *
      * @return static
      *
@@ -68,7 +68,7 @@ class JobPosting extends Intangible
     /**
      * Educational background needed for the position.
      *
-     * @param string $educationRequirements
+     * @param string|string[] $educationRequirements
      *
      * @return static
      *
@@ -83,7 +83,7 @@ class JobPosting extends Intangible
      * Type of employment (e.g. full-time, part-time, contract, temporary,
      * seasonal, internship).
      *
-     * @param string $employmentType
+     * @param string|string[] $employmentType
      *
      * @return static
      *
@@ -97,7 +97,7 @@ class JobPosting extends Intangible
     /**
      * Description of skills and experience needed for the position.
      *
-     * @param string $experienceRequirements
+     * @param string|string[] $experienceRequirements
      *
      * @return static
      *
@@ -111,7 +111,7 @@ class JobPosting extends Intangible
     /**
      * Organization offering the job position.
      *
-     * @param \Spatie\SchemaOrg\Organization $hiringOrganization
+     * @param Organization|Organization[] $hiringOrganization
      *
      * @return static
      *
@@ -125,7 +125,7 @@ class JobPosting extends Intangible
     /**
      * Description of bonus and commission compensation aspects of the job.
      *
-     * @param string $incentives
+     * @param string|string[] $incentives
      *
      * @return static
      *
@@ -139,7 +139,7 @@ class JobPosting extends Intangible
     /**
      * Description of bonus and commission compensation aspects of the job.
      *
-     * @param string $incentiveCompensation
+     * @param string|string[] $incentiveCompensation
      *
      * @return static
      *
@@ -153,7 +153,7 @@ class JobPosting extends Intangible
     /**
      * The industry associated with the job position.
      *
-     * @param string $industry
+     * @param string|string[] $industry
      *
      * @return static
      *
@@ -168,7 +168,7 @@ class JobPosting extends Intangible
      * A (typically single) geographic location associated with the job
      * position.
      *
-     * @param \Spatie\SchemaOrg\Place $jobLocation
+     * @param Place|Place[] $jobLocation
      *
      * @return static
      *
@@ -184,7 +184,7 @@ class JobPosting extends Intangible
      * http://www.onetcenter.org/taxonomy.html. Ideally includes textual label
      * and formal code, with the property repeated for each applicable value.
      *
-     * @param string $occupationalCategory
+     * @param string|string[] $occupationalCategory
      *
      * @return static
      *
@@ -198,7 +198,7 @@ class JobPosting extends Intangible
     /**
      * Specific qualifications required for this role.
      *
-     * @param string $qualifications
+     * @param string|string[] $qualifications
      *
      * @return static
      *
@@ -212,7 +212,7 @@ class JobPosting extends Intangible
     /**
      * Responsibilities associated with this role.
      *
-     * @param string $responsibilities
+     * @param string|string[] $responsibilities
      *
      * @return static
      *
@@ -228,7 +228,7 @@ class JobPosting extends Intangible
      * 4217](http://en.wikipedia.org/wiki/ISO_4217) ) used for the main salary
      * information in this job posting or for this employee.
      *
-     * @param string $salaryCurrency
+     * @param string|string[] $salaryCurrency
      *
      * @return static
      *
@@ -242,7 +242,7 @@ class JobPosting extends Intangible
     /**
      * Skills required to fulfill this role.
      *
-     * @param string $skills
+     * @param string|string[] $skills
      *
      * @return static
      *
@@ -257,7 +257,7 @@ class JobPosting extends Intangible
      * Any special commitments associated with this job posting. Valid entries
      * include VeteranCommit, MilitarySpouseCommit, etc.
      *
-     * @param string $specialCommitments
+     * @param string|string[] $specialCommitments
      *
      * @return static
      *
@@ -271,7 +271,7 @@ class JobPosting extends Intangible
     /**
      * The title of the job.
      *
-     * @param string $title
+     * @param string|string[] $title
      *
      * @return static
      *
@@ -286,7 +286,7 @@ class JobPosting extends Intangible
      * The date after when the item is not valid. For example the end of an
      * offer, salary period, or a period of opening hours.
      *
-     * @param \DateTimeInterface $validThrough
+     * @param \DateTimeInterface|\DateTimeInterface[] $validThrough
      *
      * @return static
      *
@@ -301,7 +301,7 @@ class JobPosting extends Intangible
      * The typical working hours for this job (e.g. 1st shift, night shift,
      * 8am-5pm).
      *
-     * @param string $workHours
+     * @param string|string[] $workHours
      *
      * @return static
      *

@@ -15,7 +15,7 @@ class ProductModel extends Product
      * safe to infer that the variant inherits all product features from the
      * base model, unless defined locally. This is not transitive.
      *
-     * @param \Spatie\SchemaOrg\ProductModel $isVariantOf
+     * @param ProductModel|ProductModel[] $isVariantOf
      *
      * @return static
      *
@@ -30,7 +30,7 @@ class ProductModel extends Product
      * A pointer from a previous, often discontinued variant of the product to
      * its newer variant.
      *
-     * @param \Spatie\SchemaOrg\ProductModel $predecessorOf
+     * @param ProductModel|ProductModel[] $predecessorOf
      *
      * @return static
      *
@@ -45,7 +45,7 @@ class ProductModel extends Product
      * A pointer from a newer variant of a product  to its previous, often
      * discontinued predecessor.
      *
-     * @param \Spatie\SchemaOrg\ProductModel $successorOf
+     * @param ProductModel|ProductModel[] $successorOf
      *
      * @return static
      *

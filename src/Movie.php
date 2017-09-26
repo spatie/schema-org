@@ -14,7 +14,7 @@ class Movie extends CreativeWork
      * Actors can be associated with individual items or with a series, episode,
      * clip.
      *
-     * @param \Spatie\SchemaOrg\Person $actor
+     * @param Person|Person[] $actor
      *
      * @return static
      *
@@ -29,7 +29,7 @@ class Movie extends CreativeWork
      * An actor, e.g. in tv, radio, movie, video games etc. Actors can be
      * associated with individual items or with a series, episode, clip.
      *
-     * @param \Spatie\SchemaOrg\Person $actors
+     * @param Person|Person[] $actors
      *
      * @return static
      *
@@ -44,7 +44,7 @@ class Movie extends CreativeWork
      * The country of the principal offices of the production company or
      * individual responsible for the movie or program.
      *
-     * @param \Spatie\SchemaOrg\Country $countryOfOrigin
+     * @param Country|Country[] $countryOfOrigin
      *
      * @return static
      *
@@ -60,7 +60,7 @@ class Movie extends CreativeWork
      * event. Directors can be associated with individual items or with a
      * series, episode, clip.
      *
-     * @param \Spatie\SchemaOrg\Person $director
+     * @param Person|Person[] $director
      *
      * @return static
      *
@@ -75,7 +75,7 @@ class Movie extends CreativeWork
      * A director of e.g. tv, radio, movie, video games etc. content. Directors
      * can be associated with individual items or with a series, episode, clip.
      *
-     * @param \Spatie\SchemaOrg\Person $directors
+     * @param Person|Person[] $directors
      *
      * @return static
      *
@@ -90,7 +90,7 @@ class Movie extends CreativeWork
      * The duration of the item (movie, audio recording, event, etc.) in [ISO
      * 8601 date format](http://en.wikipedia.org/wiki/ISO_8601).
      *
-     * @param \Spatie\SchemaOrg\Duration $duration
+     * @param Duration|Duration[] $duration
      *
      * @return static
      *
@@ -104,7 +104,7 @@ class Movie extends CreativeWork
     /**
      * The composer of the soundtrack.
      *
-     * @param \Spatie\SchemaOrg\MusicGroup|\Spatie\SchemaOrg\Person $musicBy
+     * @param MusicGroup|MusicGroup[]|Person|Person[] $musicBy
      *
      * @return static
      *
@@ -119,7 +119,7 @@ class Movie extends CreativeWork
      * The production company or studio responsible for the item e.g. series,
      * video game, episode etc.
      *
-     * @param \Spatie\SchemaOrg\Organization $productionCompany
+     * @param Organization|Organization[] $productionCompany
      *
      * @return static
      *
@@ -134,7 +134,7 @@ class Movie extends CreativeWork
      * Languages in which subtitles/captions are available, in [IETF BCP 47
      * standard format](http://tools.ietf.org/html/bcp47).
      *
-     * @param string|\Spatie\SchemaOrg\Language $subtitleLanguage
+     * @param string|string[]|Language|Language[] $subtitleLanguage
      *
      * @return static
      *
@@ -148,7 +148,7 @@ class Movie extends CreativeWork
     /**
      * The trailer of a movie or tv/radio series, season, episode, etc.
      *
-     * @param \Spatie\SchemaOrg\VideoObject $trailer
+     * @param VideoObject|VideoObject[] $trailer
      *
      * @return static
      *

@@ -12,7 +12,7 @@ class PropertyValueSpecification extends Intangible
     /**
      * The upper value of some characteristic or property.
      *
-     * @param float|int $maxValue
+     * @param float|int|float|int[] $maxValue
      *
      * @return static
      *
@@ -26,7 +26,7 @@ class PropertyValueSpecification extends Intangible
     /**
      * The lower value of some characteristic or property.
      *
-     * @param float|int $minValue
+     * @param float|int|float|int[] $minValue
      *
      * @return static
      *
@@ -41,7 +41,7 @@ class PropertyValueSpecification extends Intangible
      * Indicates the name of the PropertyValueSpecification to be used in URL
      * templates and form encoding in a manner analogous to HTML's input@name.
      *
-     * @param string $valueName
+     * @param string|string[] $valueName
      *
      * @return static
      *
@@ -56,7 +56,7 @@ class PropertyValueSpecification extends Intangible
      * Whether the property must be filled in to complete the action.  Default
      * is false.
      *
-     * @param bool $valueRequired
+     * @param bool|bool[] $valueRequired
      *
      * @return static
      *
@@ -72,7 +72,7 @@ class PropertyValueSpecification extends Intangible
      * the default is a literal value, for properties that expect an object,
      * it's an ID reference to one of the current values.
      *
-     * @param \Spatie\SchemaOrg\Thing|string $defaultValue
+     * @param Thing|Thing[]|string|string[] $defaultValue
      *
      * @return static
      *
@@ -88,7 +88,7 @@ class PropertyValueSpecification extends Intangible
      * for a property that also has a value makes it act similar to a "hidden"
      * input in an HTML form.
      *
-     * @param bool $readonlyValue
+     * @param bool|bool[] $readonlyValue
      *
      * @return static
      *
@@ -102,7 +102,7 @@ class PropertyValueSpecification extends Intangible
     /**
      * Whether multiple values are allowed for the property.  Default is false.
      *
-     * @param bool $multipleValues
+     * @param bool|bool[] $multipleValues
      *
      * @return static
      *
@@ -117,7 +117,7 @@ class PropertyValueSpecification extends Intangible
      * Specifies the minimum allowed range for number of characters in a literal
      * value.
      *
-     * @param float|int $valueMinLength
+     * @param float|int|float|int[] $valueMinLength
      *
      * @return static
      *
@@ -131,7 +131,7 @@ class PropertyValueSpecification extends Intangible
     /**
      * Specifies the allowed range for number of characters in a literal value.
      *
-     * @param float|int $valueMaxLength
+     * @param float|int|float|int[] $valueMaxLength
      *
      * @return static
      *
@@ -146,7 +146,7 @@ class PropertyValueSpecification extends Intangible
      * Specifies a regular expression for testing literal values according to
      * the HTML spec.
      *
-     * @param string $valuePattern
+     * @param string|string[] $valuePattern
      *
      * @return static
      *
@@ -161,7 +161,7 @@ class PropertyValueSpecification extends Intangible
      * The stepValue attribute indicates the granularity that is expected (and
      * required) of the value in a PropertyValueSpecification.
      *
-     * @param float|int $stepValue
+     * @param float|int|float|int[] $stepValue
      *
      * @return static
      *

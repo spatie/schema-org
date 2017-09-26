@@ -17,7 +17,7 @@ class Thing extends BaseType
      * attribute - for multiple types. Schema.org tools may have only weaker
      * understanding of extra types, in particular those defined externally.
      *
-     * @param string $additionalType
+     * @param string|string[] $additionalType
      *
      * @return static
      *
@@ -31,7 +31,7 @@ class Thing extends BaseType
     /**
      * An alias for the item.
      *
-     * @param string $alternateName
+     * @param string|string[] $alternateName
      *
      * @return static
      *
@@ -45,7 +45,7 @@ class Thing extends BaseType
     /**
      * A description of the item.
      *
-     * @param string $description
+     * @param string|string[] $description
      *
      * @return static
      *
@@ -62,7 +62,7 @@ class Thing extends BaseType
      * (in particular, name) may be necessary for the description to be useful
      * for disambiguation.
      *
-     * @param string $disambiguatingDescription
+     * @param string|string[] $disambiguatingDescription
      *
      * @return static
      *
@@ -77,7 +77,7 @@ class Thing extends BaseType
      * An image of the item. This can be a [[URL]] or a fully described
      * [[ImageObject]].
      *
-     * @param string|\Spatie\SchemaOrg\ImageObject $image
+     * @param string|string[]|ImageObject|ImageObject[] $image
      *
      * @return static
      *
@@ -93,7 +93,7 @@ class Thing extends BaseType
      * entity being described. See [background
      * notes](/docs/datamodel.html#mainEntityBackground) for details.
      *
-     * @param \Spatie\SchemaOrg\CreativeWork|string $mainEntityOfPage
+     * @param CreativeWork|CreativeWork[]|string|string[] $mainEntityOfPage
      *
      * @return static
      *
@@ -107,7 +107,7 @@ class Thing extends BaseType
     /**
      * The name of the item.
      *
-     * @param string $name
+     * @param string|string[] $name
      *
      * @return static
      *
@@ -123,7 +123,7 @@ class Thing extends BaseType
      * identity. E.g. the URL of the item's Wikipedia page, Wikidata entry, or
      * official website.
      *
-     * @param string $sameAs
+     * @param string|string[] $sameAs
      *
      * @return static
      *
@@ -137,7 +137,7 @@ class Thing extends BaseType
     /**
      * URL of the item.
      *
-     * @param string $url
+     * @param string|string[] $url
      *
      * @return static
      *
@@ -152,7 +152,7 @@ class Thing extends BaseType
      * Indicates a potential Action, which describes an idealized action in
      * which this thing would play an 'object' role.
      *
-     * @param \Spatie\SchemaOrg\Action $potentialAction
+     * @param Action|Action[] $potentialAction
      *
      * @return static
      *
@@ -170,7 +170,7 @@ class Thing extends BaseType
      * strings or as URL (URI) links. See [background
      * notes](/docs/datamodel.html#identifierBg) for more details.
      *
-     * @param string|\Spatie\SchemaOrg\PropertyValue $identifier
+     * @param string|string[]|PropertyValue|PropertyValue[] $identifier
      *
      * @return static
      *

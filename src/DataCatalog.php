@@ -12,7 +12,7 @@ class DataCatalog extends CreativeWork
     /**
      * A dataset contained in this catalog.
      *
-     * @param \Spatie\SchemaOrg\Dataset $dataset
+     * @param Dataset|Dataset[] $dataset
      *
      * @return static
      *

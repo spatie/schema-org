@@ -13,7 +13,7 @@ class Message extends CreativeWork
      * A sub property of participant. The participant who is at the receiving
      * end of the action.
      *
-     * @param \Spatie\SchemaOrg\Audience|\Spatie\SchemaOrg\Organization|\Spatie\SchemaOrg\Person $recipient
+     * @param Audience|Audience[]|Organization|Organization[]|Person|Person[] $recipient
      *
      * @return static
      *
@@ -28,7 +28,7 @@ class Message extends CreativeWork
      * A sub property of participant. The participant who is at the sending end
      * of the action.
      *
-     * @param \Spatie\SchemaOrg\Audience|\Spatie\SchemaOrg\Organization|\Spatie\SchemaOrg\Person $sender
+     * @param Audience|Audience[]|Organization|Organization[]|Person|Person[] $sender
      *
      * @return static
      *
@@ -43,7 +43,7 @@ class Message extends CreativeWork
      * The date/time at which the message has been read by the recipient if a
      * single recipient exists.
      *
-     * @param \DateTimeInterface $dateRead
+     * @param \DateTimeInterface|\DateTimeInterface[] $dateRead
      *
      * @return static
      *
@@ -57,7 +57,7 @@ class Message extends CreativeWork
     /**
      * The date/time the message was received if a single recipient exists.
      *
-     * @param \DateTimeInterface $dateReceived
+     * @param \DateTimeInterface|\DateTimeInterface[] $dateReceived
      *
      * @return static
      *
@@ -71,7 +71,7 @@ class Message extends CreativeWork
     /**
      * The date/time at which the message was sent.
      *
-     * @param \DateTimeInterface $dateSent
+     * @param \DateTimeInterface|\DateTimeInterface[] $dateSent
      *
      * @return static
      *
@@ -85,7 +85,7 @@ class Message extends CreativeWork
     /**
      * A CreativeWork attached to the message.
      *
-     * @param \Spatie\SchemaOrg\CreativeWork $messageAttachment
+     * @param CreativeWork|CreativeWork[] $messageAttachment
      *
      * @return static
      *

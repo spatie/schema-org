@@ -18,7 +18,7 @@ class LendAction extends TransferAction
      * A sub property of participant. The person that borrows the object being
      * lent.
      *
-     * @param \Spatie\SchemaOrg\Person $borrower
+     * @param Person|Person[] $borrower
      *
      * @return static
      *

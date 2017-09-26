@@ -33,7 +33,7 @@ class TradeAction extends Action
      * * Use values from 0123456789 (Unicode 'DIGIT ZERO' (U+0030) to 'DIGIT
      * NINE' (U+0039)) rather than superficially similiar Unicode symbols.
      *
-     * @param float|int|string $price
+     * @param float|int|float|int[]|string|string[] $price
      *
      * @return static
      *
@@ -48,7 +48,7 @@ class TradeAction extends Action
      * One or more detailed price specifications, indicating the unit price and
      * delivery or payment charges.
      *
-     * @param \Spatie\SchemaOrg\PriceSpecification $priceSpecification
+     * @param PriceSpecification|PriceSpecification[] $priceSpecification
      *
      * @return static
      *

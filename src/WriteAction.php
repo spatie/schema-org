@@ -15,7 +15,7 @@ class WriteAction extends CreateAction
      * standard](http://tools.ietf.org/html/bcp47). See also
      * [[availableLanguage]].
      *
-     * @param string|\Spatie\SchemaOrg\Language $inLanguage
+     * @param string|string[]|Language|Language[] $inLanguage
      *
      * @return static
      *
@@ -29,7 +29,7 @@ class WriteAction extends CreateAction
     /**
      * A sub property of instrument. The language used on this action.
      *
-     * @param \Spatie\SchemaOrg\Language $language
+     * @param Language|Language[] $language
      *
      * @return static
      *

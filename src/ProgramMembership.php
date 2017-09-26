@@ -14,7 +14,7 @@ class ProgramMembership extends Intangible
      * A member of an Organization or a ProgramMembership. Organizations can be
      * members of organizations; ProgramMembership is typically for individuals.
      *
-     * @param \Spatie\SchemaOrg\Organization|\Spatie\SchemaOrg\Person $member
+     * @param Organization|Organization[]|Person|Person[] $member
      *
      * @return static
      *
@@ -28,7 +28,7 @@ class ProgramMembership extends Intangible
     /**
      * A member of this organization.
      *
-     * @param \Spatie\SchemaOrg\Organization|\Spatie\SchemaOrg\Person $members
+     * @param Organization|Organization[]|Person|Person[] $members
      *
      * @return static
      *
@@ -42,7 +42,7 @@ class ProgramMembership extends Intangible
     /**
      * A unique identifier for the membership.
      *
-     * @param string $membershipNumber
+     * @param string|string[] $membershipNumber
      *
      * @return static
      *
@@ -56,7 +56,7 @@ class ProgramMembership extends Intangible
     /**
      * The program providing the membership.
      *
-     * @param string $programName
+     * @param string|string[] $programName
      *
      * @return static
      *
@@ -71,7 +71,7 @@ class ProgramMembership extends Intangible
      * The organization (airline, travelers' club, etc.) the membership is made
      * with.
      *
-     * @param \Spatie\SchemaOrg\Organization $hostingOrganization
+     * @param Organization|Organization[] $hostingOrganization
      *
      * @return static
      *

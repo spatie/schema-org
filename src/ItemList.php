@@ -16,7 +16,7 @@ class ItemList extends Intangible
      * fully describe all items in a list (e.g., multi-page pagination); in such
      * cases, the numberOfItems would be for the entire list.
      *
-     * @param int $numberOfItems
+     * @param int|int[] $numberOfItems
      *
      * @return static
      *
@@ -30,7 +30,7 @@ class ItemList extends Intangible
     /**
      * Type of ordering (e.g. Ascending, Descending, Unordered).
      *
-     * @param \Spatie\SchemaOrg\ItemListOrderType|string $itemListOrder
+     * @param ItemListOrderType|ItemListOrderType[]|string|string[] $itemListOrder
      *
      * @return static
      *
@@ -55,7 +55,7 @@ class ItemList extends Intangible
      * indicating the order or elements.  Use ListItem with a 'position'
      * property in such cases.
      *
-     * @param string|\Spatie\SchemaOrg\ListItem|\Spatie\SchemaOrg\Thing $itemListElement
+     * @param string|string[]|ListItem|ListItem[]|Thing|Thing[] $itemListElement
      *
      * @return static
      *

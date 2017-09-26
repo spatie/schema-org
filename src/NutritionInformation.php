@@ -12,7 +12,7 @@ class NutritionInformation extends StructuredValue
     /**
      * The number of calories.
      *
-     * @param \Spatie\SchemaOrg\Energy $calories
+     * @param Energy|Energy[] $calories
      *
      * @return static
      *
@@ -26,7 +26,7 @@ class NutritionInformation extends StructuredValue
     /**
      * The number of grams of carbohydrates.
      *
-     * @param \Spatie\SchemaOrg\Mass $carbohydrateContent
+     * @param Mass|Mass[] $carbohydrateContent
      *
      * @return static
      *
@@ -40,7 +40,7 @@ class NutritionInformation extends StructuredValue
     /**
      * The number of milligrams of cholesterol.
      *
-     * @param \Spatie\SchemaOrg\Mass $cholesterolContent
+     * @param Mass|Mass[] $cholesterolContent
      *
      * @return static
      *
@@ -54,7 +54,7 @@ class NutritionInformation extends StructuredValue
     /**
      * The number of grams of fiber.
      *
-     * @param \Spatie\SchemaOrg\Mass $fiberContent
+     * @param Mass|Mass[] $fiberContent
      *
      * @return static
      *
@@ -68,7 +68,7 @@ class NutritionInformation extends StructuredValue
     /**
      * The number of grams of protein.
      *
-     * @param \Spatie\SchemaOrg\Mass $proteinContent
+     * @param Mass|Mass[] $proteinContent
      *
      * @return static
      *
@@ -82,7 +82,7 @@ class NutritionInformation extends StructuredValue
     /**
      * The number of grams of saturated fat.
      *
-     * @param \Spatie\SchemaOrg\Mass $saturatedFatContent
+     * @param Mass|Mass[] $saturatedFatContent
      *
      * @return static
      *
@@ -96,7 +96,7 @@ class NutritionInformation extends StructuredValue
     /**
      * The serving size, in terms of the number of volume or mass.
      *
-     * @param string $servingSize
+     * @param string|string[] $servingSize
      *
      * @return static
      *
@@ -110,7 +110,7 @@ class NutritionInformation extends StructuredValue
     /**
      * The number of milligrams of sodium.
      *
-     * @param \Spatie\SchemaOrg\Mass $sodiumContent
+     * @param Mass|Mass[] $sodiumContent
      *
      * @return static
      *
@@ -124,7 +124,7 @@ class NutritionInformation extends StructuredValue
     /**
      * The number of grams of sugar.
      *
-     * @param \Spatie\SchemaOrg\Mass $sugarContent
+     * @param Mass|Mass[] $sugarContent
      *
      * @return static
      *
@@ -138,7 +138,7 @@ class NutritionInformation extends StructuredValue
     /**
      * The number of grams of fat.
      *
-     * @param \Spatie\SchemaOrg\Mass $fatContent
+     * @param Mass|Mass[] $fatContent
      *
      * @return static
      *
@@ -152,7 +152,7 @@ class NutritionInformation extends StructuredValue
     /**
      * The number of grams of trans fat.
      *
-     * @param \Spatie\SchemaOrg\Mass $transFatContent
+     * @param Mass|Mass[] $transFatContent
      *
      * @return static
      *
@@ -166,7 +166,7 @@ class NutritionInformation extends StructuredValue
     /**
      * The number of grams of unsaturated fat.
      *
-     * @param \Spatie\SchemaOrg\Mass $unsaturatedFatContent
+     * @param Mass|Mass[] $unsaturatedFatContent
      *
      * @return static
      *

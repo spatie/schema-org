@@ -19,7 +19,7 @@ class Periodical extends CreativeWorkSeries
      * periodical. You can repeat this property to (for example) identify
      * different formats of this periodical.
      *
-     * @param string $issn
+     * @param string|string[] $issn
      *
      * @return static
      *

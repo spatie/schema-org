@@ -12,7 +12,7 @@ class WinAction extends AchieveAction
     /**
      * A sub property of participant. The loser of the action.
      *
-     * @param \Spatie\SchemaOrg\Person $loser
+     * @param Person|Person[] $loser
      *
      * @return static
      *

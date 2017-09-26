@@ -16,7 +16,7 @@ class AskAction extends CommunicateAction
     /**
      * A sub property of object. A question.
      *
-     * @param \Spatie\SchemaOrg\Question $question
+     * @param Question|Question[] $question
      *
      * @return static
      *

@@ -14,7 +14,7 @@ class InvestmentOrDeposit extends FinancialProduct
     /**
      * The amount of money.
      *
-     * @param \Spatie\SchemaOrg\MonetaryAmount|float|int $amount
+     * @param MonetaryAmount|MonetaryAmount[]|float|int|float|int[] $amount
      *
      * @return static
      *

@@ -13,7 +13,7 @@ class FinancialService extends LocalBusiness
      * Description of fees, commissions, and other terms applied either to a
      * class of financial product, or by a financial service organization.
      *
-     * @param string $feesAndCommissionsSpecification
+     * @param string|string[] $feesAndCommissionsSpecification
      *
      * @return static
      *

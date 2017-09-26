@@ -12,7 +12,7 @@ class Airport extends CivicStructure
     /**
      * IATA identifier for an airline or airport.
      *
-     * @param string $iataCode
+     * @param string|string[] $iataCode
      *
      * @return static
      *
@@ -26,7 +26,7 @@ class Airport extends CivicStructure
     /**
      * ICAO identifier for an airport.
      *
-     * @param string $icaoCode
+     * @param string|string[] $icaoCode
      *
      * @return static
      *

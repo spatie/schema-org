@@ -16,7 +16,7 @@ class AlignmentObject extends Intangible
      * 'textComplexity', 'readingLevel', 'educationalSubject', and
      * 'educationalLevel'.
      *
-     * @param string $alignmentType
+     * @param string|string[] $alignmentType
      *
      * @return static
      *
@@ -30,7 +30,7 @@ class AlignmentObject extends Intangible
     /**
      * The framework to which the resource being described is aligned.
      *
-     * @param string $educationalFramework
+     * @param string|string[] $educationalFramework
      *
      * @return static
      *
@@ -44,7 +44,7 @@ class AlignmentObject extends Intangible
     /**
      * The description of a node in an established educational framework.
      *
-     * @param string $targetDescription
+     * @param string|string[] $targetDescription
      *
      * @return static
      *
@@ -58,7 +58,7 @@ class AlignmentObject extends Intangible
     /**
      * The name of a node in an established educational framework.
      *
-     * @param string $targetName
+     * @param string|string[] $targetName
      *
      * @return static
      *
@@ -72,7 +72,7 @@ class AlignmentObject extends Intangible
     /**
      * The URL of a node in an established educational framework.
      *
-     * @param string $targetUrl
+     * @param string|string[] $targetUrl
      *
      * @return static
      *

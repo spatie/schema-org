@@ -13,7 +13,7 @@ class Menu extends CreativeWork
     /**
      * A food or drink item contained in a menu or menu section.
      *
-     * @param \Spatie\SchemaOrg\MenuSection $hasMenuItem
+     * @param MenuSection|MenuSection[] $hasMenuItem
      *
      * @return static
      *
@@ -27,7 +27,7 @@ class Menu extends CreativeWork
     /**
      * A subgrouping of the menu (by dishes, course, serving time period, etc.).
      *
-     * @param \Spatie\SchemaOrg\MenuSection $hasMenuSection
+     * @param MenuSection|MenuSection[] $hasMenuSection
      *
      * @return static
      *

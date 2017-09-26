@@ -15,7 +15,7 @@ class ServiceChannel extends Intangible
      * codes from the [IETF BCP 47 standard](http://tools.ietf.org/html/bcp47).
      * See also [[inLanguage]]
      *
-     * @param \Spatie\SchemaOrg\Language|string $availableLanguage
+     * @param Language|Language[]|string|string[] $availableLanguage
      *
      * @return static
      *
@@ -29,7 +29,7 @@ class ServiceChannel extends Intangible
     /**
      * Estimated processing time for the service using this channel.
      *
-     * @param \Spatie\SchemaOrg\Duration $processingTime
+     * @param Duration|Duration[] $processingTime
      *
      * @return static
      *
@@ -43,7 +43,7 @@ class ServiceChannel extends Intangible
     /**
      * The service provided by this channel.
      *
-     * @param \Spatie\SchemaOrg\Service $providesService
+     * @param Service|Service[] $providesService
      *
      * @return static
      *
@@ -58,7 +58,7 @@ class ServiceChannel extends Intangible
      * The location (e.g. civic structure, local business, etc.) where a person
      * can go to access the service.
      *
-     * @param \Spatie\SchemaOrg\Place $serviceLocation
+     * @param Place|Place[] $serviceLocation
      *
      * @return static
      *
@@ -72,7 +72,7 @@ class ServiceChannel extends Intangible
     /**
      * The phone number to use to access the service.
      *
-     * @param \Spatie\SchemaOrg\ContactPoint $servicePhone
+     * @param ContactPoint|ContactPoint[] $servicePhone
      *
      * @return static
      *
@@ -86,7 +86,7 @@ class ServiceChannel extends Intangible
     /**
      * The address for accessing the service by mail.
      *
-     * @param \Spatie\SchemaOrg\PostalAddress $servicePostalAddress
+     * @param PostalAddress|PostalAddress[] $servicePostalAddress
      *
      * @return static
      *
@@ -100,7 +100,7 @@ class ServiceChannel extends Intangible
     /**
      * The number to access the service by text message.
      *
-     * @param \Spatie\SchemaOrg\ContactPoint $serviceSmsNumber
+     * @param ContactPoint|ContactPoint[] $serviceSmsNumber
      *
      * @return static
      *
@@ -114,7 +114,7 @@ class ServiceChannel extends Intangible
     /**
      * The website to access the service.
      *
-     * @param string $serviceUrl
+     * @param string|string[] $serviceUrl
      *
      * @return static
      *

@@ -14,7 +14,7 @@ class MenuItem extends CreativeWork
      * product, rent the DVD of a movie, perform a service, or give away tickets
      * to an event.
      *
-     * @param \Spatie\SchemaOrg\Offer $offers
+     * @param Offer|Offer[] $offers
      *
      * @return static
      *
@@ -29,7 +29,7 @@ class MenuItem extends CreativeWork
      * Indicates a dietary restriction or guideline for which this recipe or
      * menu item is suitable, e.g. diabetic, halal etc.
      *
-     * @param \Spatie\SchemaOrg\RestrictedDiet $suitableForDiet
+     * @param RestrictedDiet|RestrictedDiet[] $suitableForDiet
      *
      * @return static
      *
@@ -43,7 +43,7 @@ class MenuItem extends CreativeWork
     /**
      * Nutrition information about the recipe or menu item.
      *
-     * @param \Spatie\SchemaOrg\NutritionInformation $nutrition
+     * @param NutritionInformation|NutritionInformation[] $nutrition
      *
      * @return static
      *

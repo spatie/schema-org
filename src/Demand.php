@@ -15,7 +15,7 @@ class Demand extends Intangible
     /**
      * The payment method(s) accepted by seller for this offer.
      *
-     * @param \Spatie\SchemaOrg\LoanOrCredit|\Spatie\SchemaOrg\PaymentMethod $acceptedPaymentMethod
+     * @param LoanOrCredit|LoanOrCredit[]|PaymentMethod|PaymentMethod[] $acceptedPaymentMethod
      *
      * @return static
      *
@@ -30,7 +30,7 @@ class Demand extends Intangible
      * The amount of time that is required between accepting the offer and the
      * actual usage of the resource or service.
      *
-     * @param \Spatie\SchemaOrg\QuantitativeValue $advanceBookingRequirement
+     * @param QuantitativeValue|QuantitativeValue[] $advanceBookingRequirement
      *
      * @return static
      *
@@ -44,7 +44,7 @@ class Demand extends Intangible
     /**
      * The geographic area where a service or offered item is provided.
      *
-     * @param \Spatie\SchemaOrg\Place|\Spatie\SchemaOrg\AdministrativeArea|\Spatie\SchemaOrg\GeoShape|string $areaServed
+     * @param Place|Place[]|AdministrativeArea|AdministrativeArea[]|GeoShape|GeoShape[]|string|string[] $areaServed
      *
      * @return static
      *
@@ -59,7 +59,7 @@ class Demand extends Intangible
      * The availability of this item&#x2014;for example In stock, Out of stock,
      * Pre-order, etc.
      *
-     * @param \Spatie\SchemaOrg\ItemAvailability $availability
+     * @param ItemAvailability|ItemAvailability[] $availability
      *
      * @return static
      *
@@ -74,7 +74,7 @@ class Demand extends Intangible
      * The end of the availability of the product or service included in the
      * offer.
      *
-     * @param \DateTimeInterface $availabilityEnds
+     * @param \DateTimeInterface|\DateTimeInterface[] $availabilityEnds
      *
      * @return static
      *
@@ -89,7 +89,7 @@ class Demand extends Intangible
      * The beginning of the availability of the product or service included in
      * the offer.
      *
-     * @param \DateTimeInterface $availabilityStarts
+     * @param \DateTimeInterface|\DateTimeInterface[] $availabilityStarts
      *
      * @return static
      *
@@ -103,7 +103,7 @@ class Demand extends Intangible
     /**
      * The place(s) from which the offer can be obtained (e.g. store locations).
      *
-     * @param \Spatie\SchemaOrg\Place $availableAtOrFrom
+     * @param Place|Place[] $availableAtOrFrom
      *
      * @return static
      *
@@ -117,7 +117,7 @@ class Demand extends Intangible
     /**
      * The delivery method(s) available for this offer.
      *
-     * @param \Spatie\SchemaOrg\DeliveryMethod $availableDeliveryMethod
+     * @param DeliveryMethod|DeliveryMethod[] $availableDeliveryMethod
      *
      * @return static
      *
@@ -133,7 +133,7 @@ class Demand extends Intangible
      * component of a bundle (TypeAndQuantityNode). The default is
      * http://purl.org/goodrelations/v1#Sell.
      *
-     * @param \Spatie\SchemaOrg\BusinessFunction $businessFunction
+     * @param BusinessFunction|BusinessFunction[] $businessFunction
      *
      * @return static
      *
@@ -149,7 +149,7 @@ class Demand extends Intangible
      * leaving the warehouse or being prepared for pickup, in case the delivery
      * method is on site pickup.
      *
-     * @param \Spatie\SchemaOrg\QuantitativeValue $deliveryLeadTime
+     * @param QuantitativeValue|QuantitativeValue[] $deliveryLeadTime
      *
      * @return static
      *
@@ -163,7 +163,7 @@ class Demand extends Intangible
     /**
      * The type(s) of customers for which the given offer is valid.
      *
-     * @param \Spatie\SchemaOrg\BusinessEntityType $eligibleCustomerType
+     * @param BusinessEntityType|BusinessEntityType[] $eligibleCustomerType
      *
      * @return static
      *
@@ -177,7 +177,7 @@ class Demand extends Intangible
     /**
      * The duration for which the given offer is valid.
      *
-     * @param \Spatie\SchemaOrg\QuantitativeValue $eligibleDuration
+     * @param QuantitativeValue|QuantitativeValue[] $eligibleDuration
      *
      * @return static
      *
@@ -193,7 +193,7 @@ class Demand extends Intangible
      * offer or price specification is valid. This allows e.g. specifying that a
      * certain freight charge is valid only for a certain quantity.
      *
-     * @param \Spatie\SchemaOrg\QuantitativeValue $eligibleQuantity
+     * @param QuantitativeValue|QuantitativeValue[] $eligibleQuantity
      *
      * @return static
      *
@@ -211,7 +211,7 @@ class Demand extends Intangible
      * 
      * See also [[ineligibleRegion]].
      *
-     * @param \Spatie\SchemaOrg\GeoShape|\Spatie\SchemaOrg\Place|string $eligibleRegion
+     * @param GeoShape|GeoShape[]|Place|Place[]|string|string[] $eligibleRegion
      *
      * @return static
      *
@@ -230,7 +230,7 @@ class Demand extends Intangible
      * 
      * See also [[eligibleRegion]].
      *
-     * @param \Spatie\SchemaOrg\GeoShape|\Spatie\SchemaOrg\Place|string $ineligibleRegion
+     * @param GeoShape|GeoShape[]|Place|Place[]|string|string[] $ineligibleRegion
      *
      * @return static
      *
@@ -247,7 +247,7 @@ class Demand extends Intangible
      * to express free shipping above a certain order volume, or to limit the
      * acceptance of credit cards to purchases to a certain minimal amount.
      *
-     * @param \Spatie\SchemaOrg\PriceSpecification $eligibleTransactionVolume
+     * @param PriceSpecification|PriceSpecification[] $eligibleTransactionVolume
      *
      * @return static
      *
@@ -266,7 +266,7 @@ class Demand extends Intangible
      * GTIN Summary](http://www.gs1.org/barcodes/technical/idkeys/gtin) for more
      * details.
      *
-     * @param string $gtin12
+     * @param string|string[] $gtin12
      *
      * @return static
      *
@@ -286,7 +286,7 @@ class Demand extends Intangible
      * Summary](http://www.gs1.org/barcodes/technical/idkeys/gtin) for more
      * details.
      *
-     * @param string $gtin13
+     * @param string|string[] $gtin13
      *
      * @return static
      *
@@ -303,7 +303,7 @@ class Demand extends Intangible
      * Summary](http://www.gs1.org/barcodes/technical/idkeys/gtin) for more
      * details.
      *
-     * @param string $gtin14
+     * @param string|string[] $gtin14
      *
      * @return static
      *
@@ -321,7 +321,7 @@ class Demand extends Intangible
      * Summary](http://www.gs1.org/barcodes/technical/idkeys/gtin) for more
      * details.
      *
-     * @param string $gtin8
+     * @param string|string[] $gtin8
      *
      * @return static
      *
@@ -336,7 +336,7 @@ class Demand extends Intangible
      * This links to a node or nodes indicating the exact quantity of the
      * products included in the offer.
      *
-     * @param \Spatie\SchemaOrg\TypeAndQuantityNode $includesObject
+     * @param TypeAndQuantityNode|TypeAndQuantityNode[] $includesObject
      *
      * @return static
      *
@@ -350,7 +350,7 @@ class Demand extends Intangible
     /**
      * The current approximate inventory level for the item or items.
      *
-     * @param \Spatie\SchemaOrg\QuantitativeValue $inventoryLevel
+     * @param QuantitativeValue|QuantitativeValue[] $inventoryLevel
      *
      * @return static
      *
@@ -366,7 +366,7 @@ class Demand extends Intangible
      * the condition of the product or service, or the products or services
      * included in the offer.
      *
-     * @param \Spatie\SchemaOrg\OfferItemCondition $itemCondition
+     * @param OfferItemCondition|OfferItemCondition[] $itemCondition
      *
      * @return static
      *
@@ -380,7 +380,7 @@ class Demand extends Intangible
     /**
      * The item being offered.
      *
-     * @param \Spatie\SchemaOrg\Product|\Spatie\SchemaOrg\Service $itemOffered
+     * @param Product|Product[]|Service|Service[] $itemOffered
      *
      * @return static
      *
@@ -395,7 +395,7 @@ class Demand extends Intangible
      * The Manufacturer Part Number (MPN) of the product, or the product to
      * which the offer refers.
      *
-     * @param string $mpn
+     * @param string|string[] $mpn
      *
      * @return static
      *
@@ -410,7 +410,7 @@ class Demand extends Intangible
      * One or more detailed price specifications, indicating the unit price and
      * delivery or payment charges.
      *
-     * @param \Spatie\SchemaOrg\PriceSpecification $priceSpecification
+     * @param PriceSpecification|PriceSpecification[] $priceSpecification
      *
      * @return static
      *
@@ -425,7 +425,7 @@ class Demand extends Intangible
      * An entity which offers (sells / leases / lends / loans) the services /
      * goods.  A seller may also be a provider.
      *
-     * @param \Spatie\SchemaOrg\Organization|\Spatie\SchemaOrg\Person $seller
+     * @param Organization|Organization[]|Person|Person[] $seller
      *
      * @return static
      *
@@ -441,7 +441,7 @@ class Demand extends Intangible
      * When attached to an offer, it is a shortcut for the serial number of the
      * product included in the offer.
      *
-     * @param string $serialNumber
+     * @param string|string[] $serialNumber
      *
      * @return static
      *
@@ -456,7 +456,7 @@ class Demand extends Intangible
      * The Stock Keeping Unit (SKU), i.e. a merchant-specific identifier for a
      * product or service, or the product to which the offer refers.
      *
-     * @param string $sku
+     * @param string|string[] $sku
      *
      * @return static
      *
@@ -470,7 +470,7 @@ class Demand extends Intangible
     /**
      * The date when the item becomes valid.
      *
-     * @param \DateTimeInterface $validFrom
+     * @param \DateTimeInterface|\DateTimeInterface[] $validFrom
      *
      * @return static
      *
@@ -485,7 +485,7 @@ class Demand extends Intangible
      * The date after when the item is not valid. For example the end of an
      * offer, salary period, or a period of opening hours.
      *
-     * @param \DateTimeInterface $validThrough
+     * @param \DateTimeInterface|\DateTimeInterface[] $validThrough
      *
      * @return static
      *
@@ -499,7 +499,7 @@ class Demand extends Intangible
     /**
      * The warranty promise(s) included in the offer.
      *
-     * @param \Spatie\SchemaOrg\WarrantyPromise $warranty
+     * @param WarrantyPromise|WarrantyPromise[] $warranty
      *
      * @return static
      *

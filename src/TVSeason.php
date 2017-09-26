@@ -13,7 +13,7 @@ class TVSeason extends CreativeWork
      * The country of the principal offices of the production company or
      * individual responsible for the movie or program.
      *
-     * @param \Spatie\SchemaOrg\Country $countryOfOrigin
+     * @param Country|Country[] $countryOfOrigin
      *
      * @return static
      *
@@ -27,7 +27,7 @@ class TVSeason extends CreativeWork
     /**
      * The TV series to which this episode or season belongs.
      *
-     * @param \Spatie\SchemaOrg\TVSeries $partOfTVSeries
+     * @param TVSeries|TVSeries[] $partOfTVSeries
      *
      * @return static
      *

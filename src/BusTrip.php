@@ -14,7 +14,7 @@ class BusTrip extends Intangible
      * producer. Another party (a seller) may offer those services or goods on
      * behalf of the provider. A provider may also serve as the seller.
      *
-     * @param \Spatie\SchemaOrg\Person|\Spatie\SchemaOrg\Organization $provider
+     * @param Person|Person[]|Organization|Organization[] $provider
      *
      * @return static
      *
@@ -28,7 +28,7 @@ class BusTrip extends Intangible
     /**
      * The expected departure time.
      *
-     * @param \DateTimeInterface $departureTime
+     * @param \DateTimeInterface|\DateTimeInterface[] $departureTime
      *
      * @return static
      *
@@ -42,7 +42,7 @@ class BusTrip extends Intangible
     /**
      * The expected arrival time.
      *
-     * @param \DateTimeInterface $arrivalTime
+     * @param \DateTimeInterface|\DateTimeInterface[] $arrivalTime
      *
      * @return static
      *
@@ -56,7 +56,7 @@ class BusTrip extends Intangible
     /**
      * The unique identifier for the bus.
      *
-     * @param string $busNumber
+     * @param string|string[] $busNumber
      *
      * @return static
      *
@@ -70,7 +70,7 @@ class BusTrip extends Intangible
     /**
      * The name of the bus (e.g. Bolt Express).
      *
-     * @param string $busName
+     * @param string|string[] $busName
      *
      * @return static
      *
@@ -84,7 +84,7 @@ class BusTrip extends Intangible
     /**
      * The stop or station from which the bus departs.
      *
-     * @param \Spatie\SchemaOrg\BusStation|\Spatie\SchemaOrg\BusStop $departureBusStop
+     * @param BusStation|BusStation[]|BusStop|BusStop[] $departureBusStop
      *
      * @return static
      *
@@ -98,7 +98,7 @@ class BusTrip extends Intangible
     /**
      * The stop or station from which the bus arrives.
      *
-     * @param \Spatie\SchemaOrg\BusStation|\Spatie\SchemaOrg\BusStop $arrivalBusStop
+     * @param BusStation|BusStation[]|BusStop|BusStop[] $arrivalBusStop
      *
      * @return static
      *

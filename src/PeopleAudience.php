@@ -13,7 +13,7 @@ class PeopleAudience extends Audience
     /**
      * Audiences defined by a person's gender.
      *
-     * @param string $requiredGender
+     * @param string|string[] $requiredGender
      *
      * @return static
      *
@@ -27,7 +27,7 @@ class PeopleAudience extends Audience
     /**
      * Audiences defined by a person's maximum age.
      *
-     * @param int $requiredMaxAge
+     * @param int|int[] $requiredMaxAge
      *
      * @return static
      *
@@ -41,7 +41,7 @@ class PeopleAudience extends Audience
     /**
      * Audiences defined by a person's minimum age.
      *
-     * @param int $requiredMinAge
+     * @param int|int[] $requiredMinAge
      *
      * @return static
      *
@@ -55,7 +55,7 @@ class PeopleAudience extends Audience
     /**
      * The gender of the person or audience.
      *
-     * @param string $suggestedGender
+     * @param string|string[] $suggestedGender
      *
      * @return static
      *
@@ -69,7 +69,7 @@ class PeopleAudience extends Audience
     /**
      * Maximal age recommended for viewing content.
      *
-     * @param float|int $suggestedMaxAge
+     * @param float|int|float|int[] $suggestedMaxAge
      *
      * @return static
      *
@@ -83,7 +83,7 @@ class PeopleAudience extends Audience
     /**
      * Minimal age recommended for viewing content.
      *
-     * @param float|int $suggestedMinAge
+     * @param float|int|float|int[] $suggestedMinAge
      *
      * @return static
      *

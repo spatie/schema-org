@@ -15,7 +15,7 @@ class WarrantyPromise extends StructuredValue
      * The duration of the warranty promise. Common unitCode values are ANN for
      * year, MON for months, or DAY for days.
      *
-     * @param \Spatie\SchemaOrg\QuantitativeValue $durationOfWarranty
+     * @param QuantitativeValue|QuantitativeValue[] $durationOfWarranty
      *
      * @return static
      *
@@ -29,7 +29,7 @@ class WarrantyPromise extends StructuredValue
     /**
      * The scope of the warranty promise.
      *
-     * @param \Spatie\SchemaOrg\WarrantyScope $warrantyScope
+     * @param WarrantyScope|WarrantyScope[] $warrantyScope
      *
      * @return static
      *

@@ -13,7 +13,7 @@ class PerformAction extends PlayAction
      * A sub property of location. The entertainment business where the action
      * occurred.
      *
-     * @param \Spatie\SchemaOrg\EntertainmentBusiness $entertainmentBusiness
+     * @param EntertainmentBusiness|EntertainmentBusiness[] $entertainmentBusiness
      *
      * @return static
      *

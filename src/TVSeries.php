@@ -14,7 +14,7 @@ class TVSeries extends CreativeWork
      * Actors can be associated with individual items or with a series, episode,
      * clip.
      *
-     * @param \Spatie\SchemaOrg\Person $actor
+     * @param Person|Person[] $actor
      *
      * @return static
      *
@@ -29,7 +29,7 @@ class TVSeries extends CreativeWork
      * An actor, e.g. in tv, radio, movie, video games etc. Actors can be
      * associated with individual items or with a series, episode, clip.
      *
-     * @param \Spatie\SchemaOrg\Person $actors
+     * @param Person|Person[] $actors
      *
      * @return static
      *
@@ -44,7 +44,7 @@ class TVSeries extends CreativeWork
      * The country of the principal offices of the production company or
      * individual responsible for the movie or program.
      *
-     * @param \Spatie\SchemaOrg\Country $countryOfOrigin
+     * @param Country|Country[] $countryOfOrigin
      *
      * @return static
      *
@@ -60,7 +60,7 @@ class TVSeries extends CreativeWork
      * event. Directors can be associated with individual items or with a
      * series, episode, clip.
      *
-     * @param \Spatie\SchemaOrg\Person $director
+     * @param Person|Person[] $director
      *
      * @return static
      *
@@ -75,7 +75,7 @@ class TVSeries extends CreativeWork
      * A director of e.g. tv, radio, movie, video games etc. content. Directors
      * can be associated with individual items or with a series, episode, clip.
      *
-     * @param \Spatie\SchemaOrg\Person $directors
+     * @param Person|Person[] $directors
      *
      * @return static
      *
@@ -89,7 +89,7 @@ class TVSeries extends CreativeWork
     /**
      * An episode of a tv, radio or game media within a series or season.
      *
-     * @param \Spatie\SchemaOrg\Episode $episode
+     * @param Episode|Episode[] $episode
      *
      * @return static
      *
@@ -103,7 +103,7 @@ class TVSeries extends CreativeWork
     /**
      * An episode of a TV/radio series or season.
      *
-     * @param \Spatie\SchemaOrg\Episode $episodes
+     * @param Episode|Episode[] $episodes
      *
      * @return static
      *
@@ -117,7 +117,7 @@ class TVSeries extends CreativeWork
     /**
      * The composer of the soundtrack.
      *
-     * @param \Spatie\SchemaOrg\MusicGroup|\Spatie\SchemaOrg\Person $musicBy
+     * @param MusicGroup|MusicGroup[]|Person|Person[] $musicBy
      *
      * @return static
      *
@@ -131,7 +131,7 @@ class TVSeries extends CreativeWork
     /**
      * The number of episodes in this season or series.
      *
-     * @param int $numberOfEpisodes
+     * @param int|int[] $numberOfEpisodes
      *
      * @return static
      *
@@ -145,7 +145,7 @@ class TVSeries extends CreativeWork
     /**
      * The number of seasons in this series.
      *
-     * @param int $numberOfSeasons
+     * @param int|int[] $numberOfSeasons
      *
      * @return static
      *
@@ -160,7 +160,7 @@ class TVSeries extends CreativeWork
      * The production company or studio responsible for the item e.g. series,
      * video game, episode etc.
      *
-     * @param \Spatie\SchemaOrg\Organization $productionCompany
+     * @param Organization|Organization[] $productionCompany
      *
      * @return static
      *
@@ -174,7 +174,7 @@ class TVSeries extends CreativeWork
     /**
      * A season in a media series.
      *
-     * @param \Spatie\SchemaOrg\CreativeWorkSeason $season
+     * @param CreativeWorkSeason|CreativeWorkSeason[] $season
      *
      * @return static
      *
@@ -188,7 +188,7 @@ class TVSeries extends CreativeWork
     /**
      * A season that is part of the media series.
      *
-     * @param \Spatie\SchemaOrg\CreativeWorkSeason $containsSeason
+     * @param CreativeWorkSeason|CreativeWorkSeason[] $containsSeason
      *
      * @return static
      *
@@ -202,7 +202,7 @@ class TVSeries extends CreativeWork
     /**
      * A season in a media series.
      *
-     * @param \Spatie\SchemaOrg\CreativeWorkSeason $seasons
+     * @param CreativeWorkSeason|CreativeWorkSeason[] $seasons
      *
      * @return static
      *
@@ -216,7 +216,7 @@ class TVSeries extends CreativeWork
     /**
      * The trailer of a movie or tv/radio series, season, episode, etc.
      *
-     * @param \Spatie\SchemaOrg\VideoObject $trailer
+     * @param VideoObject|VideoObject[] $trailer
      *
      * @return static
      *

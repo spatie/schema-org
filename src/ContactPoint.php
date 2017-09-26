@@ -12,7 +12,7 @@ class ContactPoint extends StructuredValue
     /**
      * The geographic area where a service or offered item is provided.
      *
-     * @param \Spatie\SchemaOrg\Place|\Spatie\SchemaOrg\AdministrativeArea|\Spatie\SchemaOrg\GeoShape|string $areaServed
+     * @param Place|Place[]|AdministrativeArea|AdministrativeArea[]|GeoShape|GeoShape[]|string|string[] $areaServed
      *
      * @return static
      *
@@ -28,7 +28,7 @@ class ContactPoint extends StructuredValue
      * codes from the [IETF BCP 47 standard](http://tools.ietf.org/html/bcp47).
      * See also [[inLanguage]]
      *
-     * @param \Spatie\SchemaOrg\Language|string $availableLanguage
+     * @param Language|Language[]|string|string[] $availableLanguage
      *
      * @return static
      *
@@ -43,7 +43,7 @@ class ContactPoint extends StructuredValue
      * An option available on this contact point (e.g. a toll-free number or
      * support for hearing-impaired callers).
      *
-     * @param \Spatie\SchemaOrg\ContactPointOption $contactOption
+     * @param ContactPointOption|ContactPointOption[] $contactOption
      *
      * @return static
      *
@@ -59,7 +59,7 @@ class ContactPoint extends StructuredValue
      * purposes. For example, a sales contact point, a PR contact point and so
      * on. This property is used to specify the kind of contact point.
      *
-     * @param string $contactType
+     * @param string|string[] $contactType
      *
      * @return static
      *
@@ -73,7 +73,7 @@ class ContactPoint extends StructuredValue
     /**
      * Email address.
      *
-     * @param string $email
+     * @param string|string[] $email
      *
      * @return static
      *
@@ -87,7 +87,7 @@ class ContactPoint extends StructuredValue
     /**
      * The fax number.
      *
-     * @param string $faxNumber
+     * @param string|string[] $faxNumber
      *
      * @return static
      *
@@ -101,7 +101,7 @@ class ContactPoint extends StructuredValue
     /**
      * The hours during which this service or contact is available.
      *
-     * @param \Spatie\SchemaOrg\OpeningHoursSpecification $hoursAvailable
+     * @param OpeningHoursSpecification|OpeningHoursSpecification[] $hoursAvailable
      *
      * @return static
      *
@@ -118,7 +118,7 @@ class ContactPoint extends StructuredValue
      * product or product line (e.g. "iPhone") or a general category of products
      * or services (e.g. "smartphones").
      *
-     * @param \Spatie\SchemaOrg\Product|string $productSupported
+     * @param Product|Product[]|string|string[] $productSupported
      *
      * @return static
      *
@@ -132,7 +132,7 @@ class ContactPoint extends StructuredValue
     /**
      * The geographic area where the service is provided.
      *
-     * @param \Spatie\SchemaOrg\Place|\Spatie\SchemaOrg\AdministrativeArea|\Spatie\SchemaOrg\GeoShape $serviceArea
+     * @param Place|Place[]|AdministrativeArea|AdministrativeArea[]|GeoShape|GeoShape[] $serviceArea
      *
      * @return static
      *
@@ -146,7 +146,7 @@ class ContactPoint extends StructuredValue
     /**
      * The telephone number.
      *
-     * @param string $telephone
+     * @param string|string[] $telephone
      *
      * @return static
      *

@@ -16,7 +16,7 @@ class MediaObject extends CreativeWork
     /**
      * A NewsArticle associated with the Media Object.
      *
-     * @param \Spatie\SchemaOrg\NewsArticle $associatedArticle
+     * @param NewsArticle|NewsArticle[] $associatedArticle
      *
      * @return static
      *
@@ -30,7 +30,7 @@ class MediaObject extends CreativeWork
     /**
      * The bitrate of the media object.
      *
-     * @param string $bitrate
+     * @param string|string[] $bitrate
      *
      * @return static
      *
@@ -44,7 +44,7 @@ class MediaObject extends CreativeWork
     /**
      * File size in (mega/kilo) bytes.
      *
-     * @param string $contentSize
+     * @param string|string[] $contentSize
      *
      * @return static
      *
@@ -59,7 +59,7 @@ class MediaObject extends CreativeWork
      * Actual bytes of the media object, for example the image file or video
      * file.
      *
-     * @param string $contentUrl
+     * @param string|string[] $contentUrl
      *
      * @return static
      *
@@ -74,7 +74,7 @@ class MediaObject extends CreativeWork
      * The duration of the item (movie, audio recording, event, etc.) in [ISO
      * 8601 date format](http://en.wikipedia.org/wiki/ISO_8601).
      *
-     * @param \Spatie\SchemaOrg\Duration $duration
+     * @param Duration|Duration[] $duration
      *
      * @return static
      *
@@ -90,7 +90,7 @@ class MediaObject extends CreativeWork
      * information in the ```src``` element of an ```embed``` tag and should not
      * be the same as the content of the ```loc``` tag.
      *
-     * @param string $embedUrl
+     * @param string|string[] $embedUrl
      *
      * @return static
      *
@@ -104,7 +104,7 @@ class MediaObject extends CreativeWork
     /**
      * The CreativeWork encoded by this media object.
      *
-     * @param \Spatie\SchemaOrg\CreativeWork $encodesCreativeWork
+     * @param CreativeWork|CreativeWork[] $encodesCreativeWork
      *
      * @return static
      *
@@ -118,7 +118,7 @@ class MediaObject extends CreativeWork
     /**
      * mp3, mpeg4, etc.
      *
-     * @param string $encodingFormat
+     * @param string|string[] $encodingFormat
      *
      * @return static
      *
@@ -133,7 +133,7 @@ class MediaObject extends CreativeWork
      * Date the content expires and is no longer useful or available. Useful for
      * videos.
      *
-     * @param \DateTimeInterface $expires
+     * @param \DateTimeInterface|\DateTimeInterface[] $expires
      *
      * @return static
      *
@@ -147,7 +147,7 @@ class MediaObject extends CreativeWork
     /**
      * The height of the item.
      *
-     * @param \Spatie\SchemaOrg\Distance|\Spatie\SchemaOrg\QuantitativeValue $height
+     * @param Distance|Distance[]|QuantitativeValue|QuantitativeValue[] $height
      *
      * @return static
      *
@@ -161,7 +161,7 @@ class MediaObject extends CreativeWork
     /**
      * Player type required&#x2014;for example, Flash or Silverlight.
      *
-     * @param string $playerType
+     * @param string|string[] $playerType
      *
      * @return static
      *
@@ -176,7 +176,7 @@ class MediaObject extends CreativeWork
      * The production company or studio responsible for the item e.g. series,
      * video game, episode etc.
      *
-     * @param \Spatie\SchemaOrg\Organization $productionCompany
+     * @param Organization|Organization[] $productionCompany
      *
      * @return static
      *
@@ -192,7 +192,7 @@ class MediaObject extends CreativeWork
      * free). Allowed values are ```true``` or ```false``` (note that an earlier
      * version had 'yes', 'no').
      *
-     * @param bool $requiresSubscription
+     * @param bool|bool[] $requiresSubscription
      *
      * @return static
      *
@@ -206,7 +206,7 @@ class MediaObject extends CreativeWork
     /**
      * Date when this media object was uploaded to this site.
      *
-     * @param \DateTimeInterface $uploadDate
+     * @param \DateTimeInterface|\DateTimeInterface[] $uploadDate
      *
      * @return static
      *
@@ -220,7 +220,7 @@ class MediaObject extends CreativeWork
     /**
      * The width of the item.
      *
-     * @param \Spatie\SchemaOrg\Distance|\Spatie\SchemaOrg\QuantitativeValue $width
+     * @param Distance|Distance[]|QuantitativeValue|QuantitativeValue[] $width
      *
      * @return static
      *
@@ -236,7 +236,7 @@ class MediaObject extends CreativeWork
      * assumed to be allowed everywhere. Specify the countries in [ISO 3166
      * format](http://en.wikipedia.org/wiki/ISO_3166).
      *
-     * @param \Spatie\SchemaOrg\Place $regionsAllowed
+     * @param Place|Place[] $regionsAllowed
      *
      * @return static
      *

@@ -12,7 +12,7 @@ class BroadcastChannel extends Intangible
     /**
      * Genre of the creative work, broadcast channel or group.
      *
-     * @param string $genre
+     * @param string|string[] $genre
      *
      * @return static
      *
@@ -27,7 +27,7 @@ class BroadcastChannel extends Intangible
      * The unique address by which the BroadcastService can be identified in a
      * provider lineup. In US, this is typically a number.
      *
-     * @param string $broadcastChannelId
+     * @param string|string[] $broadcastChannelId
      *
      * @return static
      *
@@ -41,7 +41,7 @@ class BroadcastChannel extends Intangible
     /**
      * The CableOrSatelliteService offering the channel.
      *
-     * @param \Spatie\SchemaOrg\CableOrSatelliteService $inBroadcastLineup
+     * @param CableOrSatelliteService|CableOrSatelliteService[] $inBroadcastLineup
      *
      * @return static
      *
@@ -56,7 +56,7 @@ class BroadcastChannel extends Intangible
      * The type of service required to have access to the channel (e.g. Standard
      * or Premium).
      *
-     * @param string $broadcastServiceTier
+     * @param string|string[] $broadcastServiceTier
      *
      * @return static
      *
@@ -70,7 +70,7 @@ class BroadcastChannel extends Intangible
     /**
      * The BroadcastService offered on this channel.
      *
-     * @param \Spatie\SchemaOrg\BroadcastService $providesBroadcastService
+     * @param BroadcastService|BroadcastService[] $providesBroadcastService
      *
      * @return static
      *

@@ -19,7 +19,7 @@ class PropertyValue extends StructuredValue
     /**
      * The upper value of some characteristic or property.
      *
-     * @param float|int $maxValue
+     * @param float|int|float|int[] $maxValue
      *
      * @return static
      *
@@ -33,7 +33,7 @@ class PropertyValue extends StructuredValue
     /**
      * The lower value of some characteristic or property.
      *
-     * @param float|int $minValue
+     * @param float|int|float|int[] $minValue
      *
      * @return static
      *
@@ -49,7 +49,7 @@ class PropertyValue extends StructuredValue
      * characters) or a URL. Other codes than the UN/CEFACT Common Code may be
      * used with a prefix followed by a colon.
      *
-     * @param string $unitCode
+     * @param string|string[] $unitCode
      *
      * @return static
      *
@@ -68,7 +68,7 @@ class PropertyValue extends StructuredValue
      * * For [[PropertyValue]], it can be 'Text;', 'Number', 'Boolean', or
      * 'StructuredValue'.
      *
-     * @param float|int|string|bool|\Spatie\SchemaOrg\StructuredValue $value
+     * @param float|int|float|int[]|string|string[]|bool|bool[]|StructuredValue|StructuredValue[] $value
      *
      * @return static
      *
@@ -83,7 +83,7 @@ class PropertyValue extends StructuredValue
      * A pointer to a secondary value that provides additional information on
      * the original value, e.g. a reference temperature.
      *
-     * @param \Spatie\SchemaOrg\Enumeration|\Spatie\SchemaOrg\StructuredValue|\Spatie\SchemaOrg\PropertyValue|\Spatie\SchemaOrg\QualitativeValue|\Spatie\SchemaOrg\QuantitativeValue $valueReference
+     * @param Enumeration|Enumeration[]|StructuredValue|StructuredValue[]|PropertyValue|PropertyValue[]|QualitativeValue|QualitativeValue[]|QuantitativeValue|QuantitativeValue[] $valueReference
      *
      * @return static
      *
@@ -99,7 +99,7 @@ class PropertyValue extends StructuredValue
      * provide a standard unit code for
      * <a href='unitCode'>unitCode</a>.
      *
-     * @param string $unitText
+     * @param string|string[] $unitText
      *
      * @return static
      *
@@ -123,7 +123,7 @@ class PropertyValue extends StructuredValue
      * Standards bodies should promote a standard prefix for the identifiers of
      * properties from their standards.
      *
-     * @param string $propertyID
+     * @param string|string[] $propertyID
      *
      * @return static
      *

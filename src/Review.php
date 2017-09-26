@@ -12,7 +12,7 @@ class Review extends CreativeWork
     /**
      * The item that is being reviewed/rated.
      *
-     * @param \Spatie\SchemaOrg\Thing $itemReviewed
+     * @param Thing|Thing[] $itemReviewed
      *
      * @return static
      *
@@ -26,7 +26,7 @@ class Review extends CreativeWork
     /**
      * The actual body of the review.
      *
-     * @param string $reviewBody
+     * @param string|string[] $reviewBody
      *
      * @return static
      *
@@ -43,7 +43,7 @@ class Review extends CreativeWork
      * [[aggregateRating]] property applies to the review itself, as a creative
      * work.
      *
-     * @param \Spatie\SchemaOrg\Rating $reviewRating
+     * @param Rating|Rating[] $reviewRating
      *
      * @return static
      *

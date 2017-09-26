@@ -12,7 +12,7 @@ class GameServer extends Intangible
     /**
      * Status of a game server.
      *
-     * @param \Spatie\SchemaOrg\GameServerStatus $serverStatus
+     * @param GameServerStatus|GameServerStatus[] $serverStatus
      *
      * @return static
      *
@@ -26,7 +26,7 @@ class GameServer extends Intangible
     /**
      * Number of players on the server.
      *
-     * @param int $playersOnline
+     * @param int|int[] $playersOnline
      *
      * @return static
      *
@@ -40,7 +40,7 @@ class GameServer extends Intangible
     /**
      * Video game which is played on this server.
      *
-     * @param \Spatie\SchemaOrg\VideoGame $game
+     * @param VideoGame|VideoGame[] $game
      *
      * @return static
      *

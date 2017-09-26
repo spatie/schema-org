@@ -132,7 +132,7 @@ class RdfaParser
             case 'Integer':
                 return 'int';
             default:
-                return "\\Spatie\\SchemaOrg\\{$range}";
+                return $range;
         }
     }
 }

@@ -13,7 +13,7 @@ class Airline extends Organization
      * The type of boarding policy used by the airline (e.g. zone-based or
      * group-based).
      *
-     * @param \Spatie\SchemaOrg\BoardingPolicyType $boardingPolicy
+     * @param BoardingPolicyType|BoardingPolicyType[] $boardingPolicy
      *
      * @return static
      *
@@ -27,7 +27,7 @@ class Airline extends Organization
     /**
      * IATA identifier for an airline or airport.
      *
-     * @param string $iataCode
+     * @param string|string[] $iataCode
      *
      * @return static
      *

@@ -13,7 +13,7 @@ class Invoice extends Intangible
      * A category for the item. Greater signs or slashes can be used to
      * informally indicate a category hierarchy.
      *
-     * @param string|\Spatie\SchemaOrg\Thing $category
+     * @param string|string[]|Thing|Thing[] $category
      *
      * @return static
      *
@@ -27,7 +27,7 @@ class Invoice extends Intangible
     /**
      * A number that confirms the given order or payment has been received.
      *
-     * @param string $confirmationNumber
+     * @param string|string[] $confirmationNumber
      *
      * @return static
      *
@@ -41,7 +41,7 @@ class Invoice extends Intangible
     /**
      * Party placing the order or paying the invoice.
      *
-     * @param \Spatie\SchemaOrg\Organization|\Spatie\SchemaOrg\Person $customer
+     * @param Organization|Organization[]|Person|Person[] $customer
      *
      * @return static
      *
@@ -55,7 +55,7 @@ class Invoice extends Intangible
     /**
      * The date that payment is due.
      *
-     * @param \DateTimeInterface $paymentDue
+     * @param \DateTimeInterface|\DateTimeInterface[] $paymentDue
      *
      * @return static
      *
@@ -69,7 +69,7 @@ class Invoice extends Intangible
     /**
      * The name of the credit card or other method of payment for the order.
      *
-     * @param \Spatie\SchemaOrg\PaymentMethod $paymentMethod
+     * @param PaymentMethod|PaymentMethod[] $paymentMethod
      *
      * @return static
      *
@@ -84,7 +84,7 @@ class Invoice extends Intangible
      * An identifier for the method of payment used (e.g. the last 4 digits of
      * the credit card).
      *
-     * @param string $paymentMethodId
+     * @param string|string[] $paymentMethodId
      *
      * @return static
      *
@@ -98,7 +98,7 @@ class Invoice extends Intangible
     /**
      * The date that payment is due.
      *
-     * @param \DateTimeInterface $paymentDueDate
+     * @param \DateTimeInterface|\DateTimeInterface[] $paymentDueDate
      *
      * @return static
      *
@@ -114,7 +114,7 @@ class Invoice extends Intangible
      * producer. Another party (a seller) may offer those services or goods on
      * behalf of the provider. A provider may also serve as the seller.
      *
-     * @param \Spatie\SchemaOrg\Person|\Spatie\SchemaOrg\Organization $provider
+     * @param Person|Person[]|Organization|Organization[] $provider
      *
      * @return static
      *
@@ -131,7 +131,7 @@ class Invoice extends Intangible
      * service involved in an exchange.  If it is not clear whether an entity is
      * a broker, seller, or buyer, the latter two terms are preferred.
      *
-     * @param \Spatie\SchemaOrg\Person|\Spatie\SchemaOrg\Organization $broker
+     * @param Person|Person[]|Organization|Organization[] $broker
      *
      * @return static
      *
@@ -145,7 +145,7 @@ class Invoice extends Intangible
     /**
      * The total amount due.
      *
-     * @param \Spatie\SchemaOrg\PriceSpecification|\Spatie\SchemaOrg\MonetaryAmount $totalPaymentDue
+     * @param PriceSpecification|PriceSpecification[]|MonetaryAmount|MonetaryAmount[] $totalPaymentDue
      *
      * @return static
      *
@@ -159,7 +159,7 @@ class Invoice extends Intangible
     /**
      * The minimum payment required at this time.
      *
-     * @param \Spatie\SchemaOrg\PriceSpecification|\Spatie\SchemaOrg\MonetaryAmount $minimumPaymentDue
+     * @param PriceSpecification|PriceSpecification[]|MonetaryAmount|MonetaryAmount[] $minimumPaymentDue
      *
      * @return static
      *
@@ -173,7 +173,7 @@ class Invoice extends Intangible
     /**
      * The identifier for the account the payment will be applied to.
      *
-     * @param string $accountId
+     * @param string|string[] $accountId
      *
      * @return static
      *
@@ -187,7 +187,7 @@ class Invoice extends Intangible
     /**
      * The date the invoice is scheduled to be paid.
      *
-     * @param \DateTimeInterface $scheduledPaymentDate
+     * @param \DateTimeInterface|\DateTimeInterface[] $scheduledPaymentDate
      *
      * @return static
      *
@@ -201,7 +201,7 @@ class Invoice extends Intangible
     /**
      * The time interval used to compute the invoice.
      *
-     * @param \Spatie\SchemaOrg\Duration $billingPeriod
+     * @param Duration|Duration[] $billingPeriod
      *
      * @return static
      *
@@ -215,7 +215,7 @@ class Invoice extends Intangible
     /**
      * The status of payment; whether the invoice has been paid or not.
      *
-     * @param \Spatie\SchemaOrg\PaymentStatusType|string $paymentStatus
+     * @param PaymentStatusType|PaymentStatusType[]|string|string[] $paymentStatus
      *
      * @return static
      *
@@ -230,7 +230,7 @@ class Invoice extends Intangible
      * The Order(s) related to this Invoice. One or more Orders may be combined
      * into a single Invoice.
      *
-     * @param \Spatie\SchemaOrg\Order $referencesOrder
+     * @param Order|Order[] $referencesOrder
      *
      * @return static
      *

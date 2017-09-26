@@ -15,7 +15,7 @@ class GeoShape extends StructuredValue
     /**
      * Indicates the GeoCoordinates at the centre of a GeoShape e.g. GeoCircle.
      *
-     * @param \Spatie\SchemaOrg\GeoCoordinates $geoMidpoint
+     * @param GeoCoordinates|GeoCoordinates[] $geoMidpoint
      *
      * @return static
      *
@@ -29,7 +29,7 @@ class GeoShape extends StructuredValue
     /**
      * Physical address of the item.
      *
-     * @param \Spatie\SchemaOrg\PostalAddress|string $address
+     * @param PostalAddress|PostalAddress[]|string|string[] $address
      *
      * @return static
      *
@@ -44,7 +44,7 @@ class GeoShape extends StructuredValue
      * The country. For example, USA. You can also provide the two-letter [ISO
      * 3166-1 alpha-2 country code](http://en.wikipedia.org/wiki/ISO_3166-1).
      *
-     * @param string|\Spatie\SchemaOrg\Country $addressCountry
+     * @param string|string[]|Country|Country[] $addressCountry
      *
      * @return static
      *
@@ -60,7 +60,7 @@ class GeoShape extends StructuredValue
      * first point is the lower corner, the second point is the upper corner. A
      * box is expressed as two points separated by a space character.
      *
-     * @param string $box
+     * @param string|string[] $box
      *
      * @return static
      *
@@ -76,7 +76,7 @@ class GeoShape extends StructuredValue
      * specified latitude and longitude. A circle is expressed as a pair
      * followed by a radius in meters.
      *
-     * @param string $circle
+     * @param string|string[] $circle
      *
      * @return static
      *
@@ -91,7 +91,7 @@ class GeoShape extends StructuredValue
      * The elevation of a location ([WGS
      * 84](https://en.wikipedia.org/wiki/World_Geodetic_System)).
      *
-     * @param float|int|string $elevation
+     * @param float|int|float|int[]|string|string[] $elevation
      *
      * @return static
      *
@@ -106,7 +106,7 @@ class GeoShape extends StructuredValue
      * A line is a point-to-point path consisting of two or more points. A line
      * is expressed as a series of two or more point objects separated by space.
      *
-     * @param string $line
+     * @param string|string[] $line
      *
      * @return static
      *
@@ -123,7 +123,7 @@ class GeoShape extends StructuredValue
      * series of four or more space delimited points where the first and final
      * points are identical.
      *
-     * @param string $polygon
+     * @param string|string[] $polygon
      *
      * @return static
      *
@@ -137,7 +137,7 @@ class GeoShape extends StructuredValue
     /**
      * The postal code. For example, 94043.
      *
-     * @param string $postalCode
+     * @param string|string[] $postalCode
      *
      * @return static
      *

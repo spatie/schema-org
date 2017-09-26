@@ -14,7 +14,7 @@ class Game extends CreativeWork
     /**
      * Indicate how many people can play this game (minimum, maximum, or range).
      *
-     * @param \Spatie\SchemaOrg\QuantitativeValue $numberOfPlayers
+     * @param QuantitativeValue|QuantitativeValue[] $numberOfPlayers
      *
      * @return static
      *
@@ -29,7 +29,7 @@ class Game extends CreativeWork
      * The task that a player-controlled character, or group of characters may
      * complete in order to gain a reward.
      *
-     * @param \Spatie\SchemaOrg\Thing $quest
+     * @param Thing|Thing[] $quest
      *
      * @return static
      *
@@ -44,7 +44,7 @@ class Game extends CreativeWork
      * An item is an object within the game world that can be collected by a
      * player or, occasionally, a non-player character.
      *
-     * @param \Spatie\SchemaOrg\Thing $gameItem
+     * @param Thing|Thing[] $gameItem
      *
      * @return static
      *
@@ -59,7 +59,7 @@ class Game extends CreativeWork
      * A piece of data that represents a particular aspect of a fictional
      * character (skill, power, character points, advantage, disadvantage).
      *
-     * @param \Spatie\SchemaOrg\Thing $characterAttribute
+     * @param Thing|Thing[] $characterAttribute
      *
      * @return static
      *
@@ -73,7 +73,7 @@ class Game extends CreativeWork
     /**
      * Real or fictional location of the game (or part of game).
      *
-     * @param string|\Spatie\SchemaOrg\Place|\Spatie\SchemaOrg\PostalAddress $gameLocation
+     * @param string|string[]|Place|Place[]|PostalAddress|PostalAddress[] $gameLocation
      *
      * @return static
      *

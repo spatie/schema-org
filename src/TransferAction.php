@@ -14,7 +14,7 @@ class TransferAction extends Action
      * A sub property of location. The original location of the object or the
      * agent before the action.
      *
-     * @param \Spatie\SchemaOrg\Place $fromLocation
+     * @param Place|Place[] $fromLocation
      *
      * @return static
      *
@@ -29,7 +29,7 @@ class TransferAction extends Action
      * A sub property of location. The final location of the object or the agent
      * after the action.
      *
-     * @param \Spatie\SchemaOrg\Place $toLocation
+     * @param Place|Place[] $toLocation
      *
      * @return static
      *

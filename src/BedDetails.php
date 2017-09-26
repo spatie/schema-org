@@ -16,7 +16,7 @@ class BedDetails extends Intangible
      * The type of bed to which the BedDetail refers, i.e. the type of bed
      * available in the quantity indicated by quantity.
      *
-     * @param string $typeOfBed
+     * @param string|string[] $typeOfBed
      *
      * @return static
      *
@@ -31,7 +31,7 @@ class BedDetails extends Intangible
      * The quantity of the given bed type available in the HotelRoom, Suite,
      * House, or Apartment.
      *
-     * @param float|int $numberOfBeds
+     * @param float|int|float|int[] $numberOfBeds
      *
      * @return static
      *

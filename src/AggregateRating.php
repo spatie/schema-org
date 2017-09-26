@@ -12,7 +12,7 @@ class AggregateRating extends Rating
     /**
      * The item that is being reviewed/rated.
      *
-     * @param \Spatie\SchemaOrg\Thing $itemReviewed
+     * @param Thing|Thing[] $itemReviewed
      *
      * @return static
      *
@@ -26,7 +26,7 @@ class AggregateRating extends Rating
     /**
      * The count of total number of ratings.
      *
-     * @param int $ratingCount
+     * @param int|int[] $ratingCount
      *
      * @return static
      *
@@ -40,7 +40,7 @@ class AggregateRating extends Rating
     /**
      * The count of total number of reviews.
      *
-     * @param int $reviewCount
+     * @param int|int[] $reviewCount
      *
      * @return static
      *

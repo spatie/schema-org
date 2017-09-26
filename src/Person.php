@@ -13,7 +13,7 @@ class Person extends Thing
      * Indicates an OfferCatalog listing for this Organization, Person, or
      * Service.
      *
-     * @param \Spatie\SchemaOrg\OfferCatalog $hasOfferCatalog
+     * @param OfferCatalog|OfferCatalog[] $hasOfferCatalog
      *
      * @return static
      *
@@ -27,7 +27,7 @@ class Person extends Thing
     /**
      * An additional name for a Person, can be used for a middle name.
      *
-     * @param string $additionalName
+     * @param string|string[] $additionalName
      *
      * @return static
      *
@@ -41,7 +41,7 @@ class Person extends Thing
     /**
      * Physical address of the item.
      *
-     * @param \Spatie\SchemaOrg\PostalAddress|string $address
+     * @param PostalAddress|PostalAddress[]|string|string[] $address
      *
      * @return static
      *
@@ -56,7 +56,7 @@ class Person extends Thing
      * An organization that this person is affiliated with. For example, a
      * school/university, a club, or a team.
      *
-     * @param \Spatie\SchemaOrg\Organization $affiliation
+     * @param Organization|Organization[] $affiliation
      *
      * @return static
      *
@@ -70,7 +70,7 @@ class Person extends Thing
     /**
      * An organization that the person is an alumni of.
      *
-     * @param \Spatie\SchemaOrg\EducationalOrganization $alumniOf
+     * @param EducationalOrganization|EducationalOrganization[] $alumniOf
      *
      * @return static
      *
@@ -84,7 +84,7 @@ class Person extends Thing
     /**
      * An award won by or for this item.
      *
-     * @param string $award
+     * @param string|string[] $award
      *
      * @return static
      *
@@ -98,7 +98,7 @@ class Person extends Thing
     /**
      * Awards won by or for this item.
      *
-     * @param string $awards
+     * @param string|string[] $awards
      *
      * @return static
      *
@@ -112,7 +112,7 @@ class Person extends Thing
     /**
      * Date of birth.
      *
-     * @param \DateTimeInterface $birthDate
+     * @param \DateTimeInterface|\DateTimeInterface[] $birthDate
      *
      * @return static
      *
@@ -127,7 +127,7 @@ class Person extends Thing
      * The brand(s) associated with a product or service, or the brand(s)
      * maintained by an organization or business person.
      *
-     * @param \Spatie\SchemaOrg\Brand|\Spatie\SchemaOrg\Organization $brand
+     * @param Brand|Brand[]|Organization|Organization[] $brand
      *
      * @return static
      *
@@ -141,7 +141,7 @@ class Person extends Thing
     /**
      * A child of the person.
      *
-     * @param \Spatie\SchemaOrg\Person $children
+     * @param Person|Person[] $children
      *
      * @return static
      *
@@ -155,7 +155,7 @@ class Person extends Thing
     /**
      * A colleague of the person.
      *
-     * @param \Spatie\SchemaOrg\Person|string $colleague
+     * @param Person|Person[]|string|string[] $colleague
      *
      * @return static
      *
@@ -169,7 +169,7 @@ class Person extends Thing
     /**
      * A colleague of the person.
      *
-     * @param \Spatie\SchemaOrg\Person $colleagues
+     * @param Person|Person[] $colleagues
      *
      * @return static
      *
@@ -183,7 +183,7 @@ class Person extends Thing
     /**
      * A contact point for a person or organization.
      *
-     * @param \Spatie\SchemaOrg\ContactPoint $contactPoint
+     * @param ContactPoint|ContactPoint[] $contactPoint
      *
      * @return static
      *
@@ -197,7 +197,7 @@ class Person extends Thing
     /**
      * A contact point for a person or organization.
      *
-     * @param \Spatie\SchemaOrg\ContactPoint $contactPoints
+     * @param ContactPoint|ContactPoint[] $contactPoints
      *
      * @return static
      *
@@ -211,7 +211,7 @@ class Person extends Thing
     /**
      * Date of death.
      *
-     * @param \DateTimeInterface $deathDate
+     * @param \DateTimeInterface|\DateTimeInterface[] $deathDate
      *
      * @return static
      *
@@ -226,7 +226,7 @@ class Person extends Thing
      * The Dun & Bradstreet DUNS number for identifying an organization or
      * business person.
      *
-     * @param string $duns
+     * @param string|string[] $duns
      *
      * @return static
      *
@@ -240,7 +240,7 @@ class Person extends Thing
     /**
      * Email address.
      *
-     * @param string $email
+     * @param string|string[] $email
      *
      * @return static
      *
@@ -255,7 +255,7 @@ class Person extends Thing
      * Family name. In the U.S., the last name of an Person. This can be used
      * along with givenName instead of the name property.
      *
-     * @param string $familyName
+     * @param string|string[] $familyName
      *
      * @return static
      *
@@ -269,7 +269,7 @@ class Person extends Thing
     /**
      * The fax number.
      *
-     * @param string $faxNumber
+     * @param string|string[] $faxNumber
      *
      * @return static
      *
@@ -283,7 +283,7 @@ class Person extends Thing
     /**
      * The most generic uni-directional social relation.
      *
-     * @param \Spatie\SchemaOrg\Person $follows
+     * @param Person|Person[] $follows
      *
      * @return static
      *
@@ -299,7 +299,7 @@ class Person extends Thing
      * http://schema.org/Female may be used, text strings are also acceptable
      * for people who do not identify as a binary gender.
      *
-     * @param string|\Spatie\SchemaOrg\GenderType $gender
+     * @param string|string[]|GenderType|GenderType[] $gender
      *
      * @return static
      *
@@ -314,7 +314,7 @@ class Person extends Thing
      * Given name. In the U.S., the first name of a Person. This can be used
      * along with familyName instead of the name property.
      *
-     * @param string $givenName
+     * @param string|string[] $givenName
      *
      * @return static
      *
@@ -331,7 +331,7 @@ class Person extends Thing
      * organization, person, or place. The GLN is a 13-digit number used to
      * identify parties and physical locations.
      *
-     * @param string $globalLocationNumber
+     * @param string|string[] $globalLocationNumber
      *
      * @return static
      *
@@ -345,7 +345,7 @@ class Person extends Thing
     /**
      * Points-of-Sales operated by the organization or person.
      *
-     * @param \Spatie\SchemaOrg\Place $hasPOS
+     * @param Place|Place[] $hasPOS
      *
      * @return static
      *
@@ -359,7 +359,7 @@ class Person extends Thing
     /**
      * The height of the item.
      *
-     * @param \Spatie\SchemaOrg\Distance|\Spatie\SchemaOrg\QuantitativeValue $height
+     * @param Distance|Distance[]|QuantitativeValue|QuantitativeValue[] $height
      *
      * @return static
      *
@@ -373,7 +373,7 @@ class Person extends Thing
     /**
      * A contact location for a person's residence.
      *
-     * @param \Spatie\SchemaOrg\ContactPoint|\Spatie\SchemaOrg\Place $homeLocation
+     * @param ContactPoint|ContactPoint[]|Place|Place[] $homeLocation
      *
      * @return static
      *
@@ -387,7 +387,7 @@ class Person extends Thing
     /**
      * An honorific prefix preceding a Person's name such as Dr/Mrs/Mr.
      *
-     * @param string $honorificPrefix
+     * @param string|string[] $honorificPrefix
      *
      * @return static
      *
@@ -401,7 +401,7 @@ class Person extends Thing
     /**
      * An honorific suffix preceding a Person's name such as M.D. /PhD/MSCSW.
      *
-     * @param string $honorificSuffix
+     * @param string|string[] $honorificSuffix
      *
      * @return static
      *
@@ -417,7 +417,7 @@ class Person extends Thing
      * Activities (ISIC), Revision 4 code for a particular organization,
      * business person, or place.
      *
-     * @param string $isicV4
+     * @param string|string[] $isicV4
      *
      * @return static
      *
@@ -431,7 +431,7 @@ class Person extends Thing
     /**
      * The job title of the person (for example, Financial Manager).
      *
-     * @param string $jobTitle
+     * @param string|string[] $jobTitle
      *
      * @return static
      *
@@ -445,7 +445,7 @@ class Person extends Thing
     /**
      * The most generic bi-directional social/work relation.
      *
-     * @param \Spatie\SchemaOrg\Person $knows
+     * @param Person|Person[] $knows
      *
      * @return static
      *
@@ -459,7 +459,7 @@ class Person extends Thing
     /**
      * A pointer to products or services offered by the organization or person.
      *
-     * @param \Spatie\SchemaOrg\Offer $makesOffer
+     * @param Offer|Offer[] $makesOffer
      *
      * @return static
      *
@@ -474,7 +474,7 @@ class Person extends Thing
      * An Organization (or ProgramMembership) to which this Person or
      * Organization belongs.
      *
-     * @param \Spatie\SchemaOrg\Organization|\Spatie\SchemaOrg\ProgramMembership $memberOf
+     * @param Organization|Organization[]|ProgramMembership|ProgramMembership[] $memberOf
      *
      * @return static
      *
@@ -489,7 +489,7 @@ class Person extends Thing
      * The North American Industry Classification System (NAICS) code for a
      * particular organization or business person.
      *
-     * @param string $naics
+     * @param string|string[] $naics
      *
      * @return static
      *
@@ -503,7 +503,7 @@ class Person extends Thing
     /**
      * Nationality of the person.
      *
-     * @param \Spatie\SchemaOrg\Country $nationality
+     * @param Country|Country[] $nationality
      *
      * @return static
      *
@@ -518,7 +518,7 @@ class Person extends Thing
      * The total financial value of the person as calculated by subtracting
      * assets from liabilities.
      *
-     * @param \Spatie\SchemaOrg\PriceSpecification|\Spatie\SchemaOrg\MonetaryAmount $netWorth
+     * @param PriceSpecification|PriceSpecification[]|MonetaryAmount|MonetaryAmount[] $netWorth
      *
      * @return static
      *
@@ -532,7 +532,7 @@ class Person extends Thing
     /**
      * Products owned by the organization or person.
      *
-     * @param \Spatie\SchemaOrg\OwnershipInfo|\Spatie\SchemaOrg\Product $owns
+     * @param OwnershipInfo|OwnershipInfo[]|Product|Product[] $owns
      *
      * @return static
      *
@@ -546,7 +546,7 @@ class Person extends Thing
     /**
      * A parent of this person.
      *
-     * @param \Spatie\SchemaOrg\Person $parent
+     * @param Person|Person[] $parent
      *
      * @return static
      *
@@ -560,7 +560,7 @@ class Person extends Thing
     /**
      * A parents of the person.
      *
-     * @param \Spatie\SchemaOrg\Person $parents
+     * @param Person|Person[] $parents
      *
      * @return static
      *
@@ -574,7 +574,7 @@ class Person extends Thing
     /**
      * Event that this person is a performer or participant in.
      *
-     * @param \Spatie\SchemaOrg\Event $performerIn
+     * @param Event|Event[] $performerIn
      *
      * @return static
      *
@@ -588,7 +588,7 @@ class Person extends Thing
     /**
      * The most generic familial relation.
      *
-     * @param \Spatie\SchemaOrg\Person $relatedTo
+     * @param Person|Person[] $relatedTo
      *
      * @return static
      *
@@ -603,7 +603,7 @@ class Person extends Thing
      * A pointer to products or services sought by the organization or person
      * (demand).
      *
-     * @param \Spatie\SchemaOrg\Demand $seeks
+     * @param Demand|Demand[] $seeks
      *
      * @return static
      *
@@ -617,7 +617,7 @@ class Person extends Thing
     /**
      * A sibling of the person.
      *
-     * @param \Spatie\SchemaOrg\Person $sibling
+     * @param Person|Person[] $sibling
      *
      * @return static
      *
@@ -631,7 +631,7 @@ class Person extends Thing
     /**
      * A sibling of the person.
      *
-     * @param \Spatie\SchemaOrg\Person $siblings
+     * @param Person|Person[] $siblings
      *
      * @return static
      *
@@ -647,7 +647,7 @@ class Person extends Thing
      * or financial contribution. e.g. a sponsor of a Medical Study or a
      * corporate sponsor of an event.
      *
-     * @param \Spatie\SchemaOrg\Organization|\Spatie\SchemaOrg\Person $sponsor
+     * @param Organization|Organization[]|Person|Person[] $sponsor
      *
      * @return static
      *
@@ -662,7 +662,7 @@ class Person extends Thing
      * A person or organization that supports (sponsors) something through some
      * kind of financial contribution.
      *
-     * @param \Spatie\SchemaOrg\Organization|\Spatie\SchemaOrg\Person $funder
+     * @param Organization|Organization[]|Person|Person[] $funder
      *
      * @return static
      *
@@ -676,7 +676,7 @@ class Person extends Thing
     /**
      * The person's spouse.
      *
-     * @param \Spatie\SchemaOrg\Person $spouse
+     * @param Person|Person[] $spouse
      *
      * @return static
      *
@@ -691,7 +691,7 @@ class Person extends Thing
      * The Tax / Fiscal ID of the organization or person, e.g. the TIN in the US
      * or the CIF/NIF in Spain.
      *
-     * @param string $taxID
+     * @param string|string[] $taxID
      *
      * @return static
      *
@@ -705,7 +705,7 @@ class Person extends Thing
     /**
      * The telephone number.
      *
-     * @param string $telephone
+     * @param string|string[] $telephone
      *
      * @return static
      *
@@ -719,7 +719,7 @@ class Person extends Thing
     /**
      * The Value-added Tax ID of the organization or person.
      *
-     * @param string $vatID
+     * @param string|string[] $vatID
      *
      * @return static
      *
@@ -733,7 +733,7 @@ class Person extends Thing
     /**
      * The weight of the product or person.
      *
-     * @param \Spatie\SchemaOrg\QuantitativeValue $weight
+     * @param QuantitativeValue|QuantitativeValue[] $weight
      *
      * @return static
      *
@@ -747,7 +747,7 @@ class Person extends Thing
     /**
      * A contact location for a person's place of work.
      *
-     * @param \Spatie\SchemaOrg\ContactPoint|\Spatie\SchemaOrg\Place $workLocation
+     * @param ContactPoint|ContactPoint[]|Place|Place[] $workLocation
      *
      * @return static
      *
@@ -761,7 +761,7 @@ class Person extends Thing
     /**
      * Organizations that the person works for.
      *
-     * @param \Spatie\SchemaOrg\Organization $worksFor
+     * @param Organization|Organization[] $worksFor
      *
      * @return static
      *
@@ -775,7 +775,7 @@ class Person extends Thing
     /**
      * The place where the person was born.
      *
-     * @param \Spatie\SchemaOrg\Place $birthPlace
+     * @param Place|Place[] $birthPlace
      *
      * @return static
      *
@@ -789,7 +789,7 @@ class Person extends Thing
     /**
      * The place where the person died.
      *
-     * @param \Spatie\SchemaOrg\Place $deathPlace
+     * @param Place|Place[] $deathPlace
      *
      * @return static
      *

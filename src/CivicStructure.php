@@ -27,7 +27,7 @@ class CivicStructure extends Place
      * datetime=&quot;Mo-Su&quot;&gt;Monday through Sunday, all
      * day&lt;/time&gt;</code>.
      *
-     * @param string $openingHours
+     * @param string|string[] $openingHours
      *
      * @return static
      *

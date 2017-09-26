@@ -12,7 +12,7 @@ class MusicRecording extends CreativeWork
     /**
      * The artist that performed this album or recording.
      *
-     * @param \Spatie\SchemaOrg\MusicGroup $byArtist
+     * @param MusicGroup|MusicGroup[] $byArtist
      *
      * @return static
      *
@@ -27,7 +27,7 @@ class MusicRecording extends CreativeWork
      * The duration of the item (movie, audio recording, event, etc.) in [ISO
      * 8601 date format](http://en.wikipedia.org/wiki/ISO_8601).
      *
-     * @param \Spatie\SchemaOrg\Duration $duration
+     * @param Duration|Duration[] $duration
      *
      * @return static
      *
@@ -41,7 +41,7 @@ class MusicRecording extends CreativeWork
     /**
      * The album to which this recording belongs.
      *
-     * @param \Spatie\SchemaOrg\MusicAlbum $inAlbum
+     * @param MusicAlbum|MusicAlbum[] $inAlbum
      *
      * @return static
      *
@@ -55,7 +55,7 @@ class MusicRecording extends CreativeWork
     /**
      * The playlist to which this recording belongs.
      *
-     * @param \Spatie\SchemaOrg\MusicPlaylist $inPlaylist
+     * @param MusicPlaylist|MusicPlaylist[] $inPlaylist
      *
      * @return static
      *
@@ -69,7 +69,7 @@ class MusicRecording extends CreativeWork
     /**
      * The International Standard Recording Code for the recording.
      *
-     * @param string $isrcCode
+     * @param string|string[] $isrcCode
      *
      * @return static
      *
@@ -83,7 +83,7 @@ class MusicRecording extends CreativeWork
     /**
      * The composition this track is a recording of.
      *
-     * @param \Spatie\SchemaOrg\MusicComposition $recordingOf
+     * @param MusicComposition|MusicComposition[] $recordingOf
      *
      * @return static
      *

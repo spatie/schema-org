@@ -13,7 +13,7 @@ class InsertAction extends AddAction
      * A sub property of location. The final location of the object or the agent
      * after the action.
      *
-     * @param \Spatie\SchemaOrg\Place $toLocation
+     * @param Place|Place[] $toLocation
      *
      * @return static
      *

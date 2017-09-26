@@ -14,7 +14,7 @@ class ParcelDelivery extends Intangible
      * 'carrier' is an out-dated term indicating the 'provider' for parcel
      * delivery and flights.
      *
-     * @param \Spatie\SchemaOrg\Organization $carrier
+     * @param Organization|Organization[] $carrier
      *
      * @return static
      *
@@ -28,7 +28,7 @@ class ParcelDelivery extends Intangible
     /**
      * Destination address.
      *
-     * @param \Spatie\SchemaOrg\PostalAddress $deliveryAddress
+     * @param PostalAddress|PostalAddress[] $deliveryAddress
      *
      * @return static
      *
@@ -43,7 +43,7 @@ class ParcelDelivery extends Intangible
      * New entry added as the package passes through each leg of its journey
      * (from shipment to final delivery).
      *
-     * @param \Spatie\SchemaOrg\DeliveryEvent $deliveryStatus
+     * @param DeliveryEvent|DeliveryEvent[] $deliveryStatus
      *
      * @return static
      *
@@ -57,7 +57,7 @@ class ParcelDelivery extends Intangible
     /**
      * The earliest date the package may arrive.
      *
-     * @param \DateTimeInterface $expectedArrivalFrom
+     * @param \DateTimeInterface|\DateTimeInterface[] $expectedArrivalFrom
      *
      * @return static
      *
@@ -71,7 +71,7 @@ class ParcelDelivery extends Intangible
     /**
      * The latest date the package may arrive.
      *
-     * @param \DateTimeInterface $expectedArrivalUntil
+     * @param \DateTimeInterface|\DateTimeInterface[] $expectedArrivalUntil
      *
      * @return static
      *
@@ -85,7 +85,7 @@ class ParcelDelivery extends Intangible
     /**
      * Method used for delivery or shipping.
      *
-     * @param \Spatie\SchemaOrg\DeliveryMethod $hasDeliveryMethod
+     * @param DeliveryMethod|DeliveryMethod[] $hasDeliveryMethod
      *
      * @return static
      *
@@ -99,7 +99,7 @@ class ParcelDelivery extends Intangible
     /**
      * Item(s) being shipped.
      *
-     * @param \Spatie\SchemaOrg\Product $itemShipped
+     * @param Product|Product[] $itemShipped
      *
      * @return static
      *
@@ -113,7 +113,7 @@ class ParcelDelivery extends Intangible
     /**
      * Shipper's address.
      *
-     * @param \Spatie\SchemaOrg\PostalAddress $originAddress
+     * @param PostalAddress|PostalAddress[] $originAddress
      *
      * @return static
      *
@@ -127,7 +127,7 @@ class ParcelDelivery extends Intangible
     /**
      * The overall order the items in this delivery were included in.
      *
-     * @param \Spatie\SchemaOrg\Order $partOfOrder
+     * @param Order|Order[] $partOfOrder
      *
      * @return static
      *
@@ -141,7 +141,7 @@ class ParcelDelivery extends Intangible
     /**
      * Shipper tracking number.
      *
-     * @param string $trackingNumber
+     * @param string|string[] $trackingNumber
      *
      * @return static
      *
@@ -155,7 +155,7 @@ class ParcelDelivery extends Intangible
     /**
      * Tracking url for the parcel delivery.
      *
-     * @param string $trackingUrl
+     * @param string|string[] $trackingUrl
      *
      * @return static
      *
@@ -171,7 +171,7 @@ class ParcelDelivery extends Intangible
      * producer. Another party (a seller) may offer those services or goods on
      * behalf of the provider. A provider may also serve as the seller.
      *
-     * @param \Spatie\SchemaOrg\Person|\Spatie\SchemaOrg\Organization $provider
+     * @param Person|Person[]|Organization|Organization[] $provider
      *
      * @return static
      *

@@ -12,7 +12,7 @@ class LodgingBusiness extends LocalBusiness
     /**
      * An intended audience, i.e. a group for whom something was created.
      *
-     * @param \Spatie\SchemaOrg\Audience $audience
+     * @param Audience|Audience[] $audience
      *
      * @return static
      *
@@ -28,7 +28,7 @@ class LodgingBusiness extends LocalBusiness
      * codes from the [IETF BCP 47 standard](http://tools.ietf.org/html/bcp47).
      * See also [[inLanguage]]
      *
-     * @param \Spatie\SchemaOrg\Language|string $availableLanguage
+     * @param Language|Language[]|string|string[] $availableLanguage
      *
      * @return static
      *
@@ -42,7 +42,7 @@ class LodgingBusiness extends LocalBusiness
     /**
      * The earliest someone may check into a lodging establishment.
      *
-     * @param \DateTimeInterface $checkinTime
+     * @param \DateTimeInterface|\DateTimeInterface[] $checkinTime
      *
      * @return static
      *
@@ -56,7 +56,7 @@ class LodgingBusiness extends LocalBusiness
     /**
      * The latest someone may check out of a lodging establishment.
      *
-     * @param \DateTimeInterface $checkoutTime
+     * @param \DateTimeInterface|\DateTimeInterface[] $checkoutTime
      *
      * @return static
      *
@@ -73,7 +73,7 @@ class LodgingBusiness extends LocalBusiness
      * whether the feature is included in an offer for the main accommodation or
      * available at extra costs.
      *
-     * @param \Spatie\SchemaOrg\LocationFeatureSpecification $amenityFeature
+     * @param LocationFeatureSpecification|LocationFeatureSpecification[] $amenityFeature
      *
      * @return static
      *
@@ -88,7 +88,7 @@ class LodgingBusiness extends LocalBusiness
      * Indicates whether pets are allowed to enter the accommodation or lodging
      * business. More detailed information can be put in a text value.
      *
-     * @param bool|string $petsAllowed
+     * @param bool|bool[]|string|string[] $petsAllowed
      *
      * @return static
      *
@@ -105,7 +105,7 @@ class LodgingBusiness extends LocalBusiness
      * to indicate the rating organization, e.g. as an Organization with name
      * such as (e.g. HOTREC, DEHOGA, WHR, or Hotelstars).
      *
-     * @param \Spatie\SchemaOrg\Rating $starRating
+     * @param Rating|Rating[] $starRating
      *
      * @return static
      *

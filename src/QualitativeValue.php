@@ -14,7 +14,7 @@ class QualitativeValue extends Enumeration
      * This ordering relation for qualitative values indicates that the subject
      * is equal to the object.
      *
-     * @param \Spatie\SchemaOrg\QualitativeValue $equal
+     * @param QualitativeValue|QualitativeValue[] $equal
      *
      * @return static
      *
@@ -29,7 +29,7 @@ class QualitativeValue extends Enumeration
      * This ordering relation for qualitative values indicates that the subject
      * is greater than the object.
      *
-     * @param \Spatie\SchemaOrg\QualitativeValue $greater
+     * @param QualitativeValue|QualitativeValue[] $greater
      *
      * @return static
      *
@@ -44,7 +44,7 @@ class QualitativeValue extends Enumeration
      * This ordering relation for qualitative values indicates that the subject
      * is greater than or equal to the object.
      *
-     * @param \Spatie\SchemaOrg\QualitativeValue $greaterOrEqual
+     * @param QualitativeValue|QualitativeValue[] $greaterOrEqual
      *
      * @return static
      *
@@ -59,7 +59,7 @@ class QualitativeValue extends Enumeration
      * This ordering relation for qualitative values indicates that the subject
      * is lesser than the object.
      *
-     * @param \Spatie\SchemaOrg\QualitativeValue $lesser
+     * @param QualitativeValue|QualitativeValue[] $lesser
      *
      * @return static
      *
@@ -74,7 +74,7 @@ class QualitativeValue extends Enumeration
      * This ordering relation for qualitative values indicates that the subject
      * is lesser than or equal to the object.
      *
-     * @param \Spatie\SchemaOrg\QualitativeValue $lesserOrEqual
+     * @param QualitativeValue|QualitativeValue[] $lesserOrEqual
      *
      * @return static
      *
@@ -89,7 +89,7 @@ class QualitativeValue extends Enumeration
      * This ordering relation for qualitative values indicates that the subject
      * is not equal to the object.
      *
-     * @param \Spatie\SchemaOrg\QualitativeValue $nonEqual
+     * @param QualitativeValue|QualitativeValue[] $nonEqual
      *
      * @return static
      *
@@ -104,7 +104,7 @@ class QualitativeValue extends Enumeration
      * A pointer to a secondary value that provides additional information on
      * the original value, e.g. a reference temperature.
      *
-     * @param \Spatie\SchemaOrg\Enumeration|\Spatie\SchemaOrg\StructuredValue|\Spatie\SchemaOrg\PropertyValue|\Spatie\SchemaOrg\QualitativeValue|\Spatie\SchemaOrg\QuantitativeValue $valueReference
+     * @param Enumeration|Enumeration[]|StructuredValue|StructuredValue[]|PropertyValue|PropertyValue[]|QualitativeValue|QualitativeValue[]|QuantitativeValue|QuantitativeValue[] $valueReference
      *
      * @return static
      *
@@ -126,7 +126,7 @@ class QualitativeValue extends Enumeration
      * expect such data to be provided using those properties, rather than using
      * the generic property/value mechanism.
      *
-     * @param \Spatie\SchemaOrg\PropertyValue $additionalProperty
+     * @param PropertyValue|PropertyValue[] $additionalProperty
      *
      * @return static
      *

@@ -16,7 +16,7 @@ class LodgingReservation extends Reservation
     /**
      * The earliest someone may check into a lodging establishment.
      *
-     * @param \DateTimeInterface $checkinTime
+     * @param \DateTimeInterface|\DateTimeInterface[] $checkinTime
      *
      * @return static
      *
@@ -30,7 +30,7 @@ class LodgingReservation extends Reservation
     /**
      * The latest someone may check out of a lodging establishment.
      *
-     * @param \DateTimeInterface $checkoutTime
+     * @param \DateTimeInterface|\DateTimeInterface[] $checkoutTime
      *
      * @return static
      *
@@ -45,7 +45,7 @@ class LodgingReservation extends Reservation
      * Textual description of the unit type (including suite vs. room, size of
      * bed, etc.).
      *
-     * @param string|\Spatie\SchemaOrg\QualitativeValue $lodgingUnitType
+     * @param string|string[]|QualitativeValue|QualitativeValue[] $lodgingUnitType
      *
      * @return static
      *
@@ -59,7 +59,7 @@ class LodgingReservation extends Reservation
     /**
      * A full description of the lodging unit.
      *
-     * @param string $lodgingUnitDescription
+     * @param string|string[] $lodgingUnitDescription
      *
      * @return static
      *
@@ -73,7 +73,7 @@ class LodgingReservation extends Reservation
     /**
      * The number of adults staying in the unit.
      *
-     * @param int|\Spatie\SchemaOrg\QuantitativeValue $numAdults
+     * @param int|int[]|QuantitativeValue|QuantitativeValue[] $numAdults
      *
      * @return static
      *
@@ -87,7 +87,7 @@ class LodgingReservation extends Reservation
     /**
      * The number of children staying in the unit.
      *
-     * @param int|\Spatie\SchemaOrg\QuantitativeValue $numChildren
+     * @param int|int[]|QuantitativeValue|QuantitativeValue[] $numChildren
      *
      * @return static
      *

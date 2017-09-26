@@ -16,7 +16,7 @@ class TaxiReservation extends Reservation
     /**
      * Number of people the reservation should accommodate.
      *
-     * @param int|\Spatie\SchemaOrg\QuantitativeValue $partySize
+     * @param int|int[]|QuantitativeValue|QuantitativeValue[] $partySize
      *
      * @return static
      *
@@ -30,7 +30,7 @@ class TaxiReservation extends Reservation
     /**
      * Where a taxi will pick up a passenger or a rental car can be picked up.
      *
-     * @param \Spatie\SchemaOrg\Place $pickupLocation
+     * @param Place|Place[] $pickupLocation
      *
      * @return static
      *
@@ -44,7 +44,7 @@ class TaxiReservation extends Reservation
     /**
      * When a taxi will pickup a passenger or a rental car can be picked up.
      *
-     * @param \DateTimeInterface $pickupTime
+     * @param \DateTimeInterface|\DateTimeInterface[] $pickupTime
      *
      * @return static
      *

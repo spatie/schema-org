@@ -13,7 +13,7 @@ class Flight extends Intangible
      * 'carrier' is an out-dated term indicating the 'provider' for parcel
      * delivery and flights.
      *
-     * @param \Spatie\SchemaOrg\Organization $carrier
+     * @param Organization|Organization[] $carrier
      *
      * @return static
      *
@@ -28,7 +28,7 @@ class Flight extends Intangible
      * An entity which offers (sells / leases / lends / loans) the services /
      * goods.  A seller may also be a provider.
      *
-     * @param \Spatie\SchemaOrg\Organization|\Spatie\SchemaOrg\Person $seller
+     * @param Organization|Organization[]|Person|Person[] $seller
      *
      * @return static
      *
@@ -44,7 +44,7 @@ class Flight extends Intangible
      * producer. Another party (a seller) may offer those services or goods on
      * behalf of the provider. A provider may also serve as the seller.
      *
-     * @param \Spatie\SchemaOrg\Person|\Spatie\SchemaOrg\Organization $provider
+     * @param Person|Person[]|Organization|Organization[] $provider
      *
      * @return static
      *
@@ -60,7 +60,7 @@ class Flight extends Intangible
      * example, if describing United flight 110, where the IATA code for United
      * is 'UA', the flightNumber is 'UA110'.
      *
-     * @param string $flightNumber
+     * @param string|string[] $flightNumber
      *
      * @return static
      *
@@ -74,7 +74,7 @@ class Flight extends Intangible
     /**
      * The expected departure time.
      *
-     * @param \DateTimeInterface $departureTime
+     * @param \DateTimeInterface|\DateTimeInterface[] $departureTime
      *
      * @return static
      *
@@ -88,7 +88,7 @@ class Flight extends Intangible
     /**
      * The expected arrival time.
      *
-     * @param \DateTimeInterface $arrivalTime
+     * @param \DateTimeInterface|\DateTimeInterface[] $arrivalTime
      *
      * @return static
      *
@@ -102,7 +102,7 @@ class Flight extends Intangible
     /**
      * The airport where the flight originates.
      *
-     * @param \Spatie\SchemaOrg\Airport $departureAirport
+     * @param Airport|Airport[] $departureAirport
      *
      * @return static
      *
@@ -116,7 +116,7 @@ class Flight extends Intangible
     /**
      * The airport where the flight terminates.
      *
-     * @param \Spatie\SchemaOrg\Airport $arrivalAirport
+     * @param Airport|Airport[] $arrivalAirport
      *
      * @return static
      *
@@ -130,7 +130,7 @@ class Flight extends Intangible
     /**
      * Identifier of the flight's departure gate.
      *
-     * @param string $departureGate
+     * @param string|string[] $departureGate
      *
      * @return static
      *
@@ -144,7 +144,7 @@ class Flight extends Intangible
     /**
      * Identifier of the flight's arrival gate.
      *
-     * @param string $arrivalGate
+     * @param string|string[] $arrivalGate
      *
      * @return static
      *
@@ -159,7 +159,7 @@ class Flight extends Intangible
      * The type of boarding policy used by the airline (e.g. zone-based or
      * group-based).
      *
-     * @param \Spatie\SchemaOrg\BoardingPolicyType $boardingPolicy
+     * @param BoardingPolicyType|BoardingPolicyType[] $boardingPolicy
      *
      * @return static
      *
@@ -173,7 +173,7 @@ class Flight extends Intangible
     /**
      * Identifier of the flight's departure terminal.
      *
-     * @param string $departureTerminal
+     * @param string|string[] $departureTerminal
      *
      * @return static
      *
@@ -187,7 +187,7 @@ class Flight extends Intangible
     /**
      * Identifier of the flight's arrival terminal.
      *
-     * @param string $arrivalTerminal
+     * @param string|string[] $arrivalTerminal
      *
      * @return static
      *
@@ -201,7 +201,7 @@ class Flight extends Intangible
     /**
      * The kind of aircraft (e.g., "Boeing 747").
      *
-     * @param string|\Spatie\SchemaOrg\Vehicle $aircraft
+     * @param string|string[]|Vehicle|Vehicle[] $aircraft
      *
      * @return static
      *
@@ -215,7 +215,7 @@ class Flight extends Intangible
     /**
      * Description of the meals that will be provided or available for purchase.
      *
-     * @param string $mealService
+     * @param string|string[] $mealService
      *
      * @return static
      *
@@ -229,7 +229,7 @@ class Flight extends Intangible
     /**
      * The estimated time the flight will take.
      *
-     * @param string|\Spatie\SchemaOrg\Duration $estimatedFlightDuration
+     * @param string|string[]|Duration|Duration[] $estimatedFlightDuration
      *
      * @return static
      *
@@ -243,7 +243,7 @@ class Flight extends Intangible
     /**
      * The distance of the flight.
      *
-     * @param string|\Spatie\SchemaOrg\Distance $flightDistance
+     * @param string|string[]|Distance|Distance[] $flightDistance
      *
      * @return static
      *
@@ -257,7 +257,7 @@ class Flight extends Intangible
     /**
      * The time when a passenger can check into the flight online.
      *
-     * @param \DateTimeInterface $webCheckinTime
+     * @param \DateTimeInterface|\DateTimeInterface[] $webCheckinTime
      *
      * @return static
      *

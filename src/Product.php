@@ -15,7 +15,7 @@ class Product extends Thing
      * The overall rating, based on a collection of reviews or ratings, of the
      * item.
      *
-     * @param \Spatie\SchemaOrg\AggregateRating $aggregateRating
+     * @param AggregateRating|AggregateRating[] $aggregateRating
      *
      * @return static
      *
@@ -29,7 +29,7 @@ class Product extends Thing
     /**
      * An intended audience, i.e. a group for whom something was created.
      *
-     * @param \Spatie\SchemaOrg\Audience $audience
+     * @param Audience|Audience[] $audience
      *
      * @return static
      *
@@ -43,7 +43,7 @@ class Product extends Thing
     /**
      * An award won by or for this item.
      *
-     * @param string $award
+     * @param string|string[] $award
      *
      * @return static
      *
@@ -57,7 +57,7 @@ class Product extends Thing
     /**
      * Awards won by or for this item.
      *
-     * @param string $awards
+     * @param string|string[] $awards
      *
      * @return static
      *
@@ -72,7 +72,7 @@ class Product extends Thing
      * The brand(s) associated with a product or service, or the brand(s)
      * maintained by an organization or business person.
      *
-     * @param \Spatie\SchemaOrg\Brand|\Spatie\SchemaOrg\Organization $brand
+     * @param Brand|Brand[]|Organization|Organization[] $brand
      *
      * @return static
      *
@@ -87,7 +87,7 @@ class Product extends Thing
      * A category for the item. Greater signs or slashes can be used to
      * informally indicate a category hierarchy.
      *
-     * @param string|\Spatie\SchemaOrg\Thing $category
+     * @param string|string[]|Thing|Thing[] $category
      *
      * @return static
      *
@@ -101,7 +101,7 @@ class Product extends Thing
     /**
      * The color of the product.
      *
-     * @param string $color
+     * @param string|string[] $color
      *
      * @return static
      *
@@ -115,7 +115,7 @@ class Product extends Thing
     /**
      * The depth of the item.
      *
-     * @param \Spatie\SchemaOrg\Distance|\Spatie\SchemaOrg\QuantitativeValue $depth
+     * @param Distance|Distance[]|QuantitativeValue|QuantitativeValue[] $depth
      *
      * @return static
      *
@@ -134,7 +134,7 @@ class Product extends Thing
      * GTIN Summary](http://www.gs1.org/barcodes/technical/idkeys/gtin) for more
      * details.
      *
-     * @param string $gtin12
+     * @param string|string[] $gtin12
      *
      * @return static
      *
@@ -154,7 +154,7 @@ class Product extends Thing
      * Summary](http://www.gs1.org/barcodes/technical/idkeys/gtin) for more
      * details.
      *
-     * @param string $gtin13
+     * @param string|string[] $gtin13
      *
      * @return static
      *
@@ -171,7 +171,7 @@ class Product extends Thing
      * Summary](http://www.gs1.org/barcodes/technical/idkeys/gtin) for more
      * details.
      *
-     * @param string $gtin14
+     * @param string|string[] $gtin14
      *
      * @return static
      *
@@ -189,7 +189,7 @@ class Product extends Thing
      * Summary](http://www.gs1.org/barcodes/technical/idkeys/gtin) for more
      * details.
      *
-     * @param string $gtin8
+     * @param string|string[] $gtin8
      *
      * @return static
      *
@@ -203,7 +203,7 @@ class Product extends Thing
     /**
      * The height of the item.
      *
-     * @param \Spatie\SchemaOrg\Distance|\Spatie\SchemaOrg\QuantitativeValue $height
+     * @param Distance|Distance[]|QuantitativeValue|QuantitativeValue[] $height
      *
      * @return static
      *
@@ -218,7 +218,7 @@ class Product extends Thing
      * A pointer to another product (or multiple products) for which this
      * product is an accessory or spare part.
      *
-     * @param \Spatie\SchemaOrg\Product $isAccessoryOrSparePartFor
+     * @param Product|Product[] $isAccessoryOrSparePartFor
      *
      * @return static
      *
@@ -233,7 +233,7 @@ class Product extends Thing
      * A pointer to another product (or multiple products) for which this
      * product is a consumable.
      *
-     * @param \Spatie\SchemaOrg\Product $isConsumableFor
+     * @param Product|Product[] $isConsumableFor
      *
      * @return static
      *
@@ -247,7 +247,7 @@ class Product extends Thing
     /**
      * A pointer to another, somehow related product (or multiple products).
      *
-     * @param \Spatie\SchemaOrg\Product|\Spatie\SchemaOrg\Service $isRelatedTo
+     * @param Product|Product[]|Service|Service[] $isRelatedTo
      *
      * @return static
      *
@@ -262,7 +262,7 @@ class Product extends Thing
      * A pointer to another, functionally similar product (or multiple
      * products).
      *
-     * @param \Spatie\SchemaOrg\Product|\Spatie\SchemaOrg\Service $isSimilarTo
+     * @param Product|Product[]|Service|Service[] $isSimilarTo
      *
      * @return static
      *
@@ -278,7 +278,7 @@ class Product extends Thing
      * the condition of the product or service, or the products or services
      * included in the offer.
      *
-     * @param \Spatie\SchemaOrg\OfferItemCondition $itemCondition
+     * @param OfferItemCondition|OfferItemCondition[] $itemCondition
      *
      * @return static
      *
@@ -292,7 +292,7 @@ class Product extends Thing
     /**
      * An associated logo.
      *
-     * @param \Spatie\SchemaOrg\ImageObject|string $logo
+     * @param ImageObject|ImageObject[]|string|string[] $logo
      *
      * @return static
      *
@@ -310,7 +310,7 @@ class Product extends Thing
      * strong product identifiers via the gtin8/gtin13/gtin14 and mpn
      * properties.
      *
-     * @param \Spatie\SchemaOrg\ProductModel|string $model
+     * @param ProductModel|ProductModel[]|string|string[] $model
      *
      * @return static
      *
@@ -325,7 +325,7 @@ class Product extends Thing
      * The Manufacturer Part Number (MPN) of the product, or the product to
      * which the offer refers.
      *
-     * @param string $mpn
+     * @param string|string[] $mpn
      *
      * @return static
      *
@@ -339,7 +339,7 @@ class Product extends Thing
     /**
      * The manufacturer of the product.
      *
-     * @param \Spatie\SchemaOrg\Organization $manufacturer
+     * @param Organization|Organization[] $manufacturer
      *
      * @return static
      *
@@ -355,7 +355,7 @@ class Product extends Thing
      * product, rent the DVD of a movie, perform a service, or give away tickets
      * to an event.
      *
-     * @param \Spatie\SchemaOrg\Offer $offers
+     * @param Offer|Offer[] $offers
      *
      * @return static
      *
@@ -370,7 +370,7 @@ class Product extends Thing
      * The product identifier, such as ISBN. For example: ``` meta
      * itemprop="productID" content="isbn:123-456-789" ```.
      *
-     * @param string $productID
+     * @param string|string[] $productID
      *
      * @return static
      *
@@ -385,7 +385,7 @@ class Product extends Thing
      * The release date of a product or product model. This can be used to
      * distinguish the exact variant of a product.
      *
-     * @param \DateTimeInterface $releaseDate
+     * @param \DateTimeInterface|\DateTimeInterface[] $releaseDate
      *
      * @return static
      *
@@ -399,7 +399,7 @@ class Product extends Thing
     /**
      * A review of the item.
      *
-     * @param \Spatie\SchemaOrg\Review $review
+     * @param Review|Review[] $review
      *
      * @return static
      *
@@ -413,7 +413,7 @@ class Product extends Thing
     /**
      * Review of the item.
      *
-     * @param \Spatie\SchemaOrg\Review $reviews
+     * @param Review|Review[] $reviews
      *
      * @return static
      *
@@ -428,7 +428,7 @@ class Product extends Thing
      * The Stock Keeping Unit (SKU), i.e. a merchant-specific identifier for a
      * product or service, or the product to which the offer refers.
      *
-     * @param string $sku
+     * @param string|string[] $sku
      *
      * @return static
      *
@@ -442,7 +442,7 @@ class Product extends Thing
     /**
      * The weight of the product or person.
      *
-     * @param \Spatie\SchemaOrg\QuantitativeValue $weight
+     * @param QuantitativeValue|QuantitativeValue[] $weight
      *
      * @return static
      *
@@ -456,7 +456,7 @@ class Product extends Thing
     /**
      * The width of the item.
      *
-     * @param \Spatie\SchemaOrg\Distance|\Spatie\SchemaOrg\QuantitativeValue $width
+     * @param Distance|Distance[]|QuantitativeValue|QuantitativeValue[] $width
      *
      * @return static
      *
@@ -471,7 +471,7 @@ class Product extends Thing
      * A material that something is made from, e.g. leather, wool, cotton,
      * paper.
      *
-     * @param string|\Spatie\SchemaOrg\Product $material
+     * @param string|string[]|Product|Product[] $material
      *
      * @return static
      *
@@ -493,7 +493,7 @@ class Product extends Thing
      * expect such data to be provided using those properties, rather than using
      * the generic property/value mechanism.
      *
-     * @param \Spatie\SchemaOrg\PropertyValue $additionalProperty
+     * @param PropertyValue|PropertyValue[] $additionalProperty
      *
      * @return static
      *
@@ -507,7 +507,7 @@ class Product extends Thing
     /**
      * The date of production of the item, e.g. vehicle.
      *
-     * @param \DateTimeInterface $productionDate
+     * @param \DateTimeInterface|\DateTimeInterface[] $productionDate
      *
      * @return static
      *
@@ -521,7 +521,7 @@ class Product extends Thing
     /**
      * The date the item e.g. vehicle was purchased by the current owner.
      *
-     * @param \DateTimeInterface $purchaseDate
+     * @param \DateTimeInterface|\DateTimeInterface[] $purchaseDate
      *
      * @return static
      *

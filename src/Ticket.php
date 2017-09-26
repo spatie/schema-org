@@ -12,7 +12,7 @@ class Ticket extends Intangible
     /**
      * The person or organization the reservation or ticket is for.
      *
-     * @param \Spatie\SchemaOrg\Person|\Spatie\SchemaOrg\Organization $underName
+     * @param Person|Person[]|Organization|Organization[] $underName
      *
      * @return static
      *
@@ -27,7 +27,7 @@ class Ticket extends Intangible
      * The total price for the reservation or ticket, including applicable
      * taxes, shipping, etc.
      *
-     * @param float|int|string|\Spatie\SchemaOrg\PriceSpecification $totalPrice
+     * @param float|int|float|int[]|string|string[]|PriceSpecification|PriceSpecification[] $totalPrice
      *
      * @return static
      *
@@ -42,7 +42,7 @@ class Ticket extends Intangible
      * The currency (in 3-letter ISO 4217 format) of the price or a price
      * component, when attached to [[PriceSpecification]] and its subtypes.
      *
-     * @param string $priceCurrency
+     * @param string|string[] $priceCurrency
      *
      * @return static
      *
@@ -56,7 +56,7 @@ class Ticket extends Intangible
     /**
      * The organization issuing the ticket or permit.
      *
-     * @param \Spatie\SchemaOrg\Organization $issuedBy
+     * @param Organization|Organization[] $issuedBy
      *
      * @return static
      *
@@ -70,7 +70,7 @@ class Ticket extends Intangible
     /**
      * The date the ticket was issued.
      *
-     * @param \DateTimeInterface $dateIssued
+     * @param \DateTimeInterface|\DateTimeInterface[] $dateIssued
      *
      * @return static
      *
@@ -84,7 +84,7 @@ class Ticket extends Intangible
     /**
      * The seat associated with the ticket.
      *
-     * @param \Spatie\SchemaOrg\Seat $ticketedSeat
+     * @param Seat|Seat[] $ticketedSeat
      *
      * @return static
      *
@@ -98,7 +98,7 @@ class Ticket extends Intangible
     /**
      * The unique identifier for the ticket.
      *
-     * @param string $ticketNumber
+     * @param string|string[] $ticketNumber
      *
      * @return static
      *
@@ -113,7 +113,7 @@ class Ticket extends Intangible
      * Reference to an asset (e.g., Barcode, QR code image or PDF) usable for
      * entrance.
      *
-     * @param string $ticketToken
+     * @param string|string[] $ticketToken
      *
      * @return static
      *

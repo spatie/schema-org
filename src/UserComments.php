@@ -14,7 +14,7 @@ class UserComments extends UserInteraction
     /**
      * The text of the UserComment.
      *
-     * @param string $commentText
+     * @param string|string[] $commentText
      *
      * @return static
      *
@@ -28,7 +28,7 @@ class UserComments extends UserInteraction
     /**
      * The time at which the UserComment was made.
      *
-     * @param \DateTimeInterface $commentTime
+     * @param \DateTimeInterface|\DateTimeInterface[] $commentTime
      *
      * @return static
      *
@@ -43,7 +43,7 @@ class UserComments extends UserInteraction
      * The creator/author of this CreativeWork. This is the same as the Author
      * property for CreativeWork.
      *
-     * @param \Spatie\SchemaOrg\Organization|\Spatie\SchemaOrg\Person $creator
+     * @param Organization|Organization[]|Person|Person[] $creator
      *
      * @return static
      *
@@ -57,7 +57,7 @@ class UserComments extends UserInteraction
     /**
      * Specifies the CreativeWork associated with the UserComment.
      *
-     * @param \Spatie\SchemaOrg\CreativeWork $discusses
+     * @param CreativeWork|CreativeWork[] $discusses
      *
      * @return static
      *
@@ -71,7 +71,7 @@ class UserComments extends UserInteraction
     /**
      * The URL at which a reply may be posted to the specified UserComment.
      *
-     * @param string $replyToUrl
+     * @param string|string[] $replyToUrl
      *
      * @return static
      *

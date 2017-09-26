@@ -16,7 +16,7 @@ class CreativeWork extends Thing
      * using an URL such as http://schema.org/version/2.0/ if precise indication
      * of schema version was required by some application.
      *
-     * @param string $schemaVersion
+     * @param string|string[] $schemaVersion
      *
      * @return static
      *
@@ -30,7 +30,7 @@ class CreativeWork extends Thing
     /**
      * The subject matter of the content.
      *
-     * @param \Spatie\SchemaOrg\Thing $about
+     * @param Thing|Thing[] $about
      *
      * @return static
      *
@@ -46,7 +46,7 @@ class CreativeWork extends Thing
      * accessibility API ([WebSchemas wiki lists possible
      * values](http://www.w3.org/wiki/WebSchemas/Accessibility)).
      *
-     * @param string $accessibilityAPI
+     * @param string|string[] $accessibilityAPI
      *
      * @return static
      *
@@ -62,7 +62,7 @@ class CreativeWork extends Thing
      * described resource ([WebSchemas wiki lists possible
      * values](http://www.w3.org/wiki/WebSchemas/Accessibility)).
      *
-     * @param string $accessibilityControl
+     * @param string|string[] $accessibilityControl
      *
      * @return static
      *
@@ -78,7 +78,7 @@ class CreativeWork extends Thing
      * and supported enhancements for accessibility ([WebSchemas wiki lists
      * possible values](http://www.w3.org/wiki/WebSchemas/Accessibility)).
      *
-     * @param string $accessibilityFeature
+     * @param string|string[] $accessibilityFeature
      *
      * @return static
      *
@@ -95,7 +95,7 @@ class CreativeWork extends Thing
      * wiki lists possible
      * values](http://www.w3.org/wiki/WebSchemas/Accessibility)).
      *
-     * @param string $accessibilityHazard
+     * @param string|string[] $accessibilityHazard
      *
      * @return static
      *
@@ -109,7 +109,7 @@ class CreativeWork extends Thing
     /**
      * Specifies the Person that is legally accountable for the CreativeWork.
      *
-     * @param \Spatie\SchemaOrg\Person $accountablePerson
+     * @param Person|Person[] $accountablePerson
      *
      * @return static
      *
@@ -124,7 +124,7 @@ class CreativeWork extends Thing
      * The overall rating, based on a collection of reviews or ratings, of the
      * item.
      *
-     * @param \Spatie\SchemaOrg\AggregateRating $aggregateRating
+     * @param AggregateRating|AggregateRating[] $aggregateRating
      *
      * @return static
      *
@@ -138,7 +138,7 @@ class CreativeWork extends Thing
     /**
      * A secondary title of the CreativeWork.
      *
-     * @param string $alternativeHeadline
+     * @param string|string[] $alternativeHeadline
      *
      * @return static
      *
@@ -153,7 +153,7 @@ class CreativeWork extends Thing
      * A media object that encodes this CreativeWork. This property is a synonym
      * for encoding.
      *
-     * @param \Spatie\SchemaOrg\MediaObject $associatedMedia
+     * @param MediaObject|MediaObject[] $associatedMedia
      *
      * @return static
      *
@@ -167,7 +167,7 @@ class CreativeWork extends Thing
     /**
      * An intended audience, i.e. a group for whom something was created.
      *
-     * @param \Spatie\SchemaOrg\Audience $audience
+     * @param Audience|Audience[] $audience
      *
      * @return static
      *
@@ -181,7 +181,7 @@ class CreativeWork extends Thing
     /**
      * An embedded audio object.
      *
-     * @param \Spatie\SchemaOrg\AudioObject $audio
+     * @param AudioObject|AudioObject[] $audio
      *
      * @return static
      *
@@ -197,7 +197,7 @@ class CreativeWork extends Thing
      * in that HTML 5 provides a special mechanism for indicating authorship via
      * the rel tag. That is equivalent to this and may be used interchangeably.
      *
-     * @param \Spatie\SchemaOrg\Organization|\Spatie\SchemaOrg\Person $author
+     * @param Organization|Organization[]|Person|Person[] $author
      *
      * @return static
      *
@@ -211,7 +211,7 @@ class CreativeWork extends Thing
     /**
      * An award won by or for this item.
      *
-     * @param string $award
+     * @param string|string[] $award
      *
      * @return static
      *
@@ -225,7 +225,7 @@ class CreativeWork extends Thing
     /**
      * Awards won by or for this item.
      *
-     * @param string $awards
+     * @param string|string[] $awards
      *
      * @return static
      *
@@ -240,7 +240,7 @@ class CreativeWork extends Thing
      * A citation or reference to another creative work, such as another
      * publication, web page, scholarly article, etc.
      *
-     * @param \Spatie\SchemaOrg\CreativeWork|string $citation
+     * @param CreativeWork|CreativeWork[]|string|string[] $citation
      *
      * @return static
      *
@@ -254,7 +254,7 @@ class CreativeWork extends Thing
     /**
      * Comments, typically from users.
      *
-     * @param \Spatie\SchemaOrg\Comment $comment
+     * @param Comment|Comment[] $comment
      *
      * @return static
      *
@@ -269,7 +269,7 @@ class CreativeWork extends Thing
      * The location depicted or described in the content. For example, the
      * location in a photograph or painting.
      *
-     * @param \Spatie\SchemaOrg\Place $contentLocation
+     * @param Place|Place[] $contentLocation
      *
      * @return static
      *
@@ -284,7 +284,7 @@ class CreativeWork extends Thing
      * The location where the CreativeWork was created, which may not be the
      * same as the location depicted in the CreativeWork.
      *
-     * @param \Spatie\SchemaOrg\Place $locationCreated
+     * @param Place|Place[] $locationCreated
      *
      * @return static
      *
@@ -298,7 +298,7 @@ class CreativeWork extends Thing
     /**
      * Official rating of a piece of content&#x2014;for example,'MPAA PG-13'.
      *
-     * @param string $contentRating
+     * @param string|string[] $contentRating
      *
      * @return static
      *
@@ -312,7 +312,7 @@ class CreativeWork extends Thing
     /**
      * A secondary contributor to the CreativeWork or Event.
      *
-     * @param \Spatie\SchemaOrg\Organization|\Spatie\SchemaOrg\Person $contributor
+     * @param Organization|Organization[]|Person|Person[] $contributor
      *
      * @return static
      *
@@ -326,7 +326,7 @@ class CreativeWork extends Thing
     /**
      * The party holding the legal copyright to the CreativeWork.
      *
-     * @param \Spatie\SchemaOrg\Organization|\Spatie\SchemaOrg\Person $copyrightHolder
+     * @param Organization|Organization[]|Person|Person[] $copyrightHolder
      *
      * @return static
      *
@@ -341,7 +341,7 @@ class CreativeWork extends Thing
      * The year during which the claimed copyright for the CreativeWork was
      * first asserted.
      *
-     * @param float|int $copyrightYear
+     * @param float|int|float|int[] $copyrightYear
      *
      * @return static
      *
@@ -356,7 +356,7 @@ class CreativeWork extends Thing
      * The creator/author of this CreativeWork. This is the same as the Author
      * property for CreativeWork.
      *
-     * @param \Spatie\SchemaOrg\Organization|\Spatie\SchemaOrg\Person $creator
+     * @param Organization|Organization[]|Person|Person[] $creator
      *
      * @return static
      *
@@ -371,7 +371,7 @@ class CreativeWork extends Thing
      * The date on which the CreativeWork was created or the item was added to a
      * DataFeed.
      *
-     * @param \DateTimeInterface $dateCreated
+     * @param \DateTimeInterface|\DateTimeInterface[] $dateCreated
      *
      * @return static
      *
@@ -386,7 +386,7 @@ class CreativeWork extends Thing
      * The date on which the CreativeWork was most recently modified or when the
      * item's entry was modified within a DataFeed.
      *
-     * @param \DateTimeInterface $dateModified
+     * @param \DateTimeInterface|\DateTimeInterface[] $dateModified
      *
      * @return static
      *
@@ -400,7 +400,7 @@ class CreativeWork extends Thing
     /**
      * Date of first broadcast/publication.
      *
-     * @param \DateTimeInterface $datePublished
+     * @param \DateTimeInterface|\DateTimeInterface[] $datePublished
      *
      * @return static
      *
@@ -414,7 +414,7 @@ class CreativeWork extends Thing
     /**
      * A link to the page containing the comments of the CreativeWork.
      *
-     * @param string $discussionUrl
+     * @param string|string[] $discussionUrl
      *
      * @return static
      *
@@ -428,7 +428,7 @@ class CreativeWork extends Thing
     /**
      * Specifies the Person who edited the CreativeWork.
      *
-     * @param \Spatie\SchemaOrg\Person $editor
+     * @param Person|Person[] $editor
      *
      * @return static
      *
@@ -442,7 +442,7 @@ class CreativeWork extends Thing
     /**
      * An alignment to an established educational framework.
      *
-     * @param \Spatie\SchemaOrg\AlignmentObject $educationalAlignment
+     * @param AlignmentObject|AlignmentObject[] $educationalAlignment
      *
      * @return static
      *
@@ -457,7 +457,7 @@ class CreativeWork extends Thing
      * The purpose of a work in the context of education; for example,
      * 'assignment', 'group work'.
      *
-     * @param string $educationalUse
+     * @param string|string[] $educationalUse
      *
      * @return static
      *
@@ -472,7 +472,7 @@ class CreativeWork extends Thing
      * A media object that encodes this CreativeWork. This property is a synonym
      * for associatedMedia.
      *
-     * @param \Spatie\SchemaOrg\MediaObject $encoding
+     * @param MediaObject|MediaObject[] $encoding
      *
      * @return static
      *
@@ -486,7 +486,7 @@ class CreativeWork extends Thing
     /**
      * A media object that encodes this CreativeWork.
      *
-     * @param \Spatie\SchemaOrg\MediaObject $encodings
+     * @param MediaObject|MediaObject[] $encodings
      *
      * @return static
      *
@@ -507,7 +507,7 @@ class CreativeWork extends Thing
      * indicated instead via the most appropriate URL, e.g. defining Web page or
      * a Wikipedia entry.
      *
-     * @param string $fileFormat
+     * @param string|string[] $fileFormat
      *
      * @return static
      *
@@ -521,7 +521,7 @@ class CreativeWork extends Thing
     /**
      * A flag to signal that the publication is accessible for free.
      *
-     * @param bool $isAccessibleForFree
+     * @param bool|bool[] $isAccessibleForFree
      *
      * @return static
      *
@@ -535,7 +535,7 @@ class CreativeWork extends Thing
     /**
      * Genre of the creative work, broadcast channel or group.
      *
-     * @param string $genre
+     * @param string|string[] $genre
      *
      * @return static
      *
@@ -549,7 +549,7 @@ class CreativeWork extends Thing
     /**
      * Headline of the article.
      *
-     * @param string $headline
+     * @param string|string[] $headline
      *
      * @return static
      *
@@ -566,7 +566,7 @@ class CreativeWork extends Thing
      * standard](http://tools.ietf.org/html/bcp47). See also
      * [[availableLanguage]].
      *
-     * @param string|\Spatie\SchemaOrg\Language $inLanguage
+     * @param string|string[]|Language|Language[] $inLanguage
      *
      * @return static
      *
@@ -581,7 +581,7 @@ class CreativeWork extends Thing
      * The predominant mode of learning supported by the learning resource.
      * Acceptable values are 'active', 'expositive', or 'mixed'.
      *
-     * @param string $interactivityType
+     * @param string|string[] $interactivityType
      *
      * @return static
      *
@@ -597,7 +597,7 @@ class CreativeWork extends Thing
      * be repeated for multiple sources. For example,
      * http://example.com/great-multiplication-intro.html.
      *
-     * @param string|\Spatie\SchemaOrg\CreativeWork|\Spatie\SchemaOrg\Product $isBasedOnUrl
+     * @param string|string[]|CreativeWork|CreativeWork[]|Product|Product[] $isBasedOnUrl
      *
      * @return static
      *
@@ -613,7 +613,7 @@ class CreativeWork extends Thing
      * be repeated for multiple sources. For example,
      * http://example.com/great-multiplication-intro.html.
      *
-     * @param string|\Spatie\SchemaOrg\CreativeWork|\Spatie\SchemaOrg\Product $isBasedOn
+     * @param string|string[]|CreativeWork|CreativeWork[]|Product|Product[] $isBasedOn
      *
      * @return static
      *
@@ -627,7 +627,7 @@ class CreativeWork extends Thing
     /**
      * Indicates whether this content is family friendly.
      *
-     * @param bool $isFamilyFriendly
+     * @param bool|bool[] $isFamilyFriendly
      *
      * @return static
      *
@@ -642,7 +642,7 @@ class CreativeWork extends Thing
      * Indicates a CreativeWork that this CreativeWork is (in some sense) part
      * of.
      *
-     * @param \Spatie\SchemaOrg\CreativeWork $isPartOf
+     * @param CreativeWork|CreativeWork[] $isPartOf
      *
      * @return static
      *
@@ -657,7 +657,7 @@ class CreativeWork extends Thing
      * Keywords or tags used to describe this content. Multiple entries in a
      * keywords list are typically delimited by commas.
      *
-     * @param string $keywords
+     * @param string|string[] $keywords
      *
      * @return static
      *
@@ -672,7 +672,7 @@ class CreativeWork extends Thing
      * A license document that applies to this content, typically indicated by
      * URL.
      *
-     * @param \Spatie\SchemaOrg\CreativeWork|string $license
+     * @param CreativeWork|CreativeWork[]|string|string[] $license
      *
      * @return static
      *
@@ -687,7 +687,7 @@ class CreativeWork extends Thing
      * The predominant type or kind characterizing the learning resource. For
      * example, 'presentation', 'handout'.
      *
-     * @param string $learningResourceType
+     * @param string|string[] $learningResourceType
      *
      * @return static
      *
@@ -702,7 +702,7 @@ class CreativeWork extends Thing
      * Indicates the primary entity described in some page or other
      * CreativeWork.
      *
-     * @param \Spatie\SchemaOrg\Thing $mainEntity
+     * @param Thing|Thing[] $mainEntity
      *
      * @return static
      *
@@ -717,7 +717,7 @@ class CreativeWork extends Thing
      * Indicates that the CreativeWork contains a reference to, but is not
      * necessarily about a concept.
      *
-     * @param \Spatie\SchemaOrg\Thing $mentions
+     * @param Thing|Thing[] $mentions
      *
      * @return static
      *
@@ -733,7 +733,7 @@ class CreativeWork extends Thing
      * product, rent the DVD of a movie, perform a service, or give away tickets
      * to an event.
      *
-     * @param \Spatie\SchemaOrg\Offer $offers
+     * @param Offer|Offer[] $offers
      *
      * @return static
      *
@@ -747,7 +747,7 @@ class CreativeWork extends Thing
     /**
      * The position of an item in a series or sequence of items.
      *
-     * @param string|int $position
+     * @param string|string[]|int|int[] $position
      *
      * @return static
      *
@@ -762,7 +762,7 @@ class CreativeWork extends Thing
      * The person or organization who produced the work (e.g. music album,
      * movie, tv/radio series etc.).
      *
-     * @param \Spatie\SchemaOrg\Person|\Spatie\SchemaOrg\Organization $producer
+     * @param Person|Person[]|Organization|Organization[] $producer
      *
      * @return static
      *
@@ -776,7 +776,7 @@ class CreativeWork extends Thing
     /**
      * A publication event associated with the item.
      *
-     * @param \Spatie\SchemaOrg\PublicationEvent $publication
+     * @param PublicationEvent|PublicationEvent[] $publication
      *
      * @return static
      *
@@ -790,7 +790,7 @@ class CreativeWork extends Thing
     /**
      * The publisher of the creative work.
      *
-     * @param \Spatie\SchemaOrg\Organization|\Spatie\SchemaOrg\Person $publisher
+     * @param Organization|Organization[]|Person|Person[] $publisher
      *
      * @return static
      *
@@ -805,7 +805,7 @@ class CreativeWork extends Thing
      * Link to page describing the editorial principles of the organization
      * primarily responsible for the creation of the CreativeWork.
      *
-     * @param string $publishingPrinciples
+     * @param string|string[] $publishingPrinciples
      *
      * @return static
      *
@@ -820,7 +820,7 @@ class CreativeWork extends Thing
      * The Event where the CreativeWork was recorded. The CreativeWork may
      * capture all or part of the event.
      *
-     * @param \Spatie\SchemaOrg\Event $recordedAt
+     * @param Event|Event[] $recordedAt
      *
      * @return static
      *
@@ -834,7 +834,7 @@ class CreativeWork extends Thing
     /**
      * A review of the item.
      *
-     * @param \Spatie\SchemaOrg\Review $review
+     * @param Review|Review[] $review
      *
      * @return static
      *
@@ -848,7 +848,7 @@ class CreativeWork extends Thing
     /**
      * Review of the item.
      *
-     * @param \Spatie\SchemaOrg\Review $reviews
+     * @param Review|Review[] $reviews
      *
      * @return static
      *
@@ -862,7 +862,7 @@ class CreativeWork extends Thing
     /**
      * The Organization on whose behalf the creator was working.
      *
-     * @param \Spatie\SchemaOrg\Organization $sourceOrganization
+     * @param Organization|Organization[] $sourceOrganization
      *
      * @return static
      *
@@ -881,7 +881,7 @@ class CreativeWork extends Thing
      *       areas that the dataset describes: a dataset of New York weather
      * would have spatialCoverage which was the place: the state of New York.
      *
-     * @param \Spatie\SchemaOrg\Place $spatialCoverage
+     * @param Place|Place[] $spatialCoverage
      *
      * @return static
      *
@@ -897,7 +897,7 @@ class CreativeWork extends Thing
      * or financial contribution. e.g. a sponsor of a Medical Study or a
      * corporate sponsor of an event.
      *
-     * @param \Spatie\SchemaOrg\Organization|\Spatie\SchemaOrg\Person $sponsor
+     * @param Organization|Organization[]|Person|Person[] $sponsor
      *
      * @return static
      *
@@ -912,7 +912,7 @@ class CreativeWork extends Thing
      * A person or organization that supports (sponsors) something through some
      * kind of financial contribution.
      *
-     * @param \Spatie\SchemaOrg\Organization|\Spatie\SchemaOrg\Person $funder
+     * @param Organization|Organization[]|Person|Person[] $funder
      *
      * @return static
      *
@@ -937,7 +937,7 @@ class CreativeWork extends Thing
      * coverage too, e.g. a work set in 1939 - 1945 can be indicated in ISO 8601
      * interval format format via "1939/1945".
      *
-     * @param \DateTimeInterface|string $temporalCoverage
+     * @param \DateTimeInterface|\DateTimeInterface[]|string|string[] $temporalCoverage
      *
      * @return static
      *
@@ -951,7 +951,7 @@ class CreativeWork extends Thing
     /**
      * The textual content of this CreativeWork.
      *
-     * @param string $text
+     * @param string|string[] $text
      *
      * @return static
      *
@@ -965,7 +965,7 @@ class CreativeWork extends Thing
     /**
      * A thumbnail image relevant to the Thing.
      *
-     * @param string $thumbnailUrl
+     * @param string|string[] $thumbnailUrl
      *
      * @return static
      *
@@ -981,7 +981,7 @@ class CreativeWork extends Thing
      * learning resource for the typical intended target audience, e.g. 'P30M',
      * 'P1H25M'.
      *
-     * @param \Spatie\SchemaOrg\Duration $timeRequired
+     * @param Duration|Duration[] $timeRequired
      *
      * @return static
      *
@@ -995,7 +995,7 @@ class CreativeWork extends Thing
     /**
      * The typical expected age range, e.g. '7-9', '11-'.
      *
-     * @param string $typicalAgeRange
+     * @param string|string[] $typicalAgeRange
      *
      * @return static
      *
@@ -1009,7 +1009,7 @@ class CreativeWork extends Thing
     /**
      * The version of the CreativeWork embodied by a specified resource.
      *
-     * @param float|int|string $version
+     * @param float|int|float|int[]|string|string[] $version
      *
      * @return static
      *
@@ -1023,7 +1023,7 @@ class CreativeWork extends Thing
     /**
      * An embedded video object.
      *
-     * @param \Spatie\SchemaOrg\VideoObject $video
+     * @param VideoObject|VideoObject[] $video
      *
      * @return static
      *
@@ -1039,7 +1039,7 @@ class CreativeWork extends Thing
      * producer. Another party (a seller) may offer those services or goods on
      * behalf of the provider. A provider may also serve as the seller.
      *
-     * @param \Spatie\SchemaOrg\Person|\Spatie\SchemaOrg\Organization $provider
+     * @param Person|Person[]|Organization|Organization[] $provider
      *
      * @return static
      *
@@ -1055,7 +1055,7 @@ class CreativeWork extends Thing
      * Answer) has received. This is most applicable to works published in Web
      * sites with commenting system; additional comments may exist elsewhere.
      *
-     * @param int $commentCount
+     * @param int|int[] $commentCount
      *
      * @return static
      *
@@ -1070,7 +1070,7 @@ class CreativeWork extends Thing
      * Indicates a CreativeWork that is (in some sense) a part of this
      * CreativeWork.
      *
-     * @param \Spatie\SchemaOrg\CreativeWork $hasPart
+     * @param CreativeWork|CreativeWork[] $hasPart
      *
      * @return static
      *
@@ -1085,7 +1085,7 @@ class CreativeWork extends Thing
      * Example/instance/realization/derivation of the concept of this creative
      * work. eg. The paperback edition, first edition, or eBook.
      *
-     * @param \Spatie\SchemaOrg\CreativeWork $workExample
+     * @param CreativeWork|CreativeWork[] $workExample
      *
      * @return static
      *
@@ -1100,7 +1100,7 @@ class CreativeWork extends Thing
      * A creative work that this work is an
      * example/instance/realization/derivation of.
      *
-     * @param \Spatie\SchemaOrg\CreativeWork $exampleOfWork
+     * @param CreativeWork|CreativeWork[] $exampleOfWork
      *
      * @return static
      *
@@ -1114,7 +1114,7 @@ class CreativeWork extends Thing
     /**
      * Fictional person connected with a creative work.
      *
-     * @param \Spatie\SchemaOrg\Person $character
+     * @param Person|Person[] $character
      *
      * @return static
      *
@@ -1130,7 +1130,7 @@ class CreativeWork extends Thing
      * regional differences and technical requirements of a target market, or
      * that translates during some event.
      *
-     * @param \Spatie\SchemaOrg\Person|\Spatie\SchemaOrg\Organization $translator
+     * @param Person|Person[]|Organization|Organization[] $translator
      *
      * @return static
      *
@@ -1145,7 +1145,7 @@ class CreativeWork extends Thing
      * The place and time the release was issued, expressed as a
      * PublicationEvent.
      *
-     * @param \Spatie\SchemaOrg\PublicationEvent $releasedEvent
+     * @param PublicationEvent|PublicationEvent[] $releasedEvent
      *
      * @return static
      *
@@ -1160,7 +1160,7 @@ class CreativeWork extends Thing
      * A material that something is made from, e.g. leather, wool, cotton,
      * paper.
      *
-     * @param string|\Spatie\SchemaOrg\Product $material
+     * @param string|string[]|Product|Product[] $material
      *
      * @return static
      *
@@ -1176,7 +1176,7 @@ class CreativeWork extends Thing
      * SoftwareApplication. The most specific child type of InteractionCounter
      * should be used.
      *
-     * @param \Spatie\SchemaOrg\InteractionCounter $interactionStatistic
+     * @param InteractionCounter|InteractionCounter[] $interactionStatistic
      *
      * @return static
      *
@@ -1193,7 +1193,7 @@ class CreativeWork extends Thing
      * auditory, tactile, textual, visual, colorDependent, chartOnVisual,
      * chemOnVisual, diagramOnVisual, mathOnVisual, musicOnVisual, textOnVisual.
      *
-     * @param string $accessMode
+     * @param string|string[] $accessMode
      *
      * @return static
      *
@@ -1209,7 +1209,7 @@ class CreativeWork extends Thing
      * understand all the intellectual content of a resource. Expected values
      * include:  auditory, tactile, textual, visual.
      *
-     * @param string $accessModeSufficient
+     * @param string|string[] $accessModeSufficient
      *
      * @return static
      *
@@ -1227,7 +1227,7 @@ class CreativeWork extends Thing
      * descriptions will be needed for non-visual users" or "short descriptions
      * are present and no long descriptions are needed."
      *
-     * @param string $accessibilitySummary
+     * @param string|string[] $accessibilitySummary
      *
      * @return static
      *

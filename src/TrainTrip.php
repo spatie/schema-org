@@ -14,7 +14,7 @@ class TrainTrip extends Intangible
      * producer. Another party (a seller) may offer those services or goods on
      * behalf of the provider. A provider may also serve as the seller.
      *
-     * @param \Spatie\SchemaOrg\Person|\Spatie\SchemaOrg\Organization $provider
+     * @param Person|Person[]|Organization|Organization[] $provider
      *
      * @return static
      *
@@ -28,7 +28,7 @@ class TrainTrip extends Intangible
     /**
      * The expected departure time.
      *
-     * @param \DateTimeInterface $departureTime
+     * @param \DateTimeInterface|\DateTimeInterface[] $departureTime
      *
      * @return static
      *
@@ -42,7 +42,7 @@ class TrainTrip extends Intangible
     /**
      * The expected arrival time.
      *
-     * @param \DateTimeInterface $arrivalTime
+     * @param \DateTimeInterface|\DateTimeInterface[] $arrivalTime
      *
      * @return static
      *
@@ -56,7 +56,7 @@ class TrainTrip extends Intangible
     /**
      * The unique identifier for the train.
      *
-     * @param string $trainNumber
+     * @param string|string[] $trainNumber
      *
      * @return static
      *
@@ -70,7 +70,7 @@ class TrainTrip extends Intangible
     /**
      * The name of the train (e.g. The Orient Express).
      *
-     * @param string $trainName
+     * @param string|string[] $trainName
      *
      * @return static
      *
@@ -84,7 +84,7 @@ class TrainTrip extends Intangible
     /**
      * The station from which the train departs.
      *
-     * @param \Spatie\SchemaOrg\TrainStation $departureStation
+     * @param TrainStation|TrainStation[] $departureStation
      *
      * @return static
      *
@@ -98,7 +98,7 @@ class TrainTrip extends Intangible
     /**
      * The station where the train trip ends.
      *
-     * @param \Spatie\SchemaOrg\TrainStation $arrivalStation
+     * @param TrainStation|TrainStation[] $arrivalStation
      *
      * @return static
      *
@@ -112,7 +112,7 @@ class TrainTrip extends Intangible
     /**
      * The platform from which the train departs.
      *
-     * @param string $departurePlatform
+     * @param string|string[] $departurePlatform
      *
      * @return static
      *
@@ -126,7 +126,7 @@ class TrainTrip extends Intangible
     /**
      * The platform where the train arrives.
      *
-     * @param string $arrivalPlatform
+     * @param string|string[] $arrivalPlatform
      *
      * @return static
      *

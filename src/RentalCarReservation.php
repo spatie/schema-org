@@ -16,7 +16,7 @@ class RentalCarReservation extends Reservation
     /**
      * Where a taxi will pick up a passenger or a rental car can be picked up.
      *
-     * @param \Spatie\SchemaOrg\Place $pickupLocation
+     * @param Place|Place[] $pickupLocation
      *
      * @return static
      *
@@ -30,7 +30,7 @@ class RentalCarReservation extends Reservation
     /**
      * Where a rental car can be dropped off.
      *
-     * @param \Spatie\SchemaOrg\Place $dropoffLocation
+     * @param Place|Place[] $dropoffLocation
      *
      * @return static
      *
@@ -44,7 +44,7 @@ class RentalCarReservation extends Reservation
     /**
      * When a taxi will pickup a passenger or a rental car can be picked up.
      *
-     * @param \DateTimeInterface $pickupTime
+     * @param \DateTimeInterface|\DateTimeInterface[] $pickupTime
      *
      * @return static
      *
@@ -58,7 +58,7 @@ class RentalCarReservation extends Reservation
     /**
      * When a rental car can be dropped off.
      *
-     * @param \DateTimeInterface $dropoffTime
+     * @param \DateTimeInterface|\DateTimeInterface[] $dropoffTime
      *
      * @return static
      *

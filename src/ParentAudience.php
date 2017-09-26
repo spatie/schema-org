@@ -13,7 +13,7 @@ class ParentAudience extends PeopleAudience
     /**
      * Maximal age of the child.
      *
-     * @param float|int $childMaxAge
+     * @param float|int|float|int[] $childMaxAge
      *
      * @return static
      *
@@ -27,7 +27,7 @@ class ParentAudience extends PeopleAudience
     /**
      * Minimal age of the child.
      *
-     * @param float|int $childMinAge
+     * @param float|int|float|int[] $childMinAge
      *
      * @return static
      *

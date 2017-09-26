@@ -13,7 +13,7 @@ class ReservationPackage extends Reservation
      * The individual reservations included in the package. Typically a repeated
      * property.
      *
-     * @param \Spatie\SchemaOrg\Reservation $subReservation
+     * @param Reservation|Reservation[] $subReservation
      *
      * @return static
      *
@@ -27,7 +27,7 @@ class ReservationPackage extends Reservation
     /**
      * The airline-specific indicator of boarding order / preference.
      *
-     * @param string $boardingGroup
+     * @param string|string[] $boardingGroup
      *
      * @return static
      *

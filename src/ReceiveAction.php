@@ -20,7 +20,7 @@ class ReceiveAction extends TransferAction
     /**
      * A sub property of instrument. The method of delivery.
      *
-     * @param \Spatie\SchemaOrg\DeliveryMethod $deliveryMethod
+     * @param DeliveryMethod|DeliveryMethod[] $deliveryMethod
      *
      * @return static
      *
@@ -35,7 +35,7 @@ class ReceiveAction extends TransferAction
      * A sub property of participant. The participant who is at the sending end
      * of the action.
      *
-     * @param \Spatie\SchemaOrg\Audience|\Spatie\SchemaOrg\Organization|\Spatie\SchemaOrg\Person $sender
+     * @param Audience|Audience[]|Organization|Organization[]|Person|Person[] $sender
      *
      * @return static
      *

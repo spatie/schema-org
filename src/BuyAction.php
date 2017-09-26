@@ -15,7 +15,7 @@ class BuyAction extends TradeAction
      * An entity which offers (sells / leases / lends / loans) the services /
      * goods.  A seller may also be a provider.
      *
-     * @param \Spatie\SchemaOrg\Organization|\Spatie\SchemaOrg\Person $seller
+     * @param Organization|Organization[]|Person|Person[] $seller
      *
      * @return static
      *
@@ -29,7 +29,7 @@ class BuyAction extends TradeAction
     /**
      * 'vendor' is an earlier term for 'seller'.
      *
-     * @param \Spatie\SchemaOrg\Organization|\Spatie\SchemaOrg\Person $vendor
+     * @param Organization|Organization[]|Person|Person[] $vendor
      *
      * @return static
      *
@@ -43,7 +43,7 @@ class BuyAction extends TradeAction
     /**
      * The warranty promise(s) included in the offer.
      *
-     * @param \Spatie\SchemaOrg\WarrantyPromise $warrantyPromise
+     * @param WarrantyPromise|WarrantyPromise[] $warrantyPromise
      *
      * @return static
      *

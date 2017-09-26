@@ -14,7 +14,7 @@ class SoftwareSourceCode extends CreativeWork
      * Link to the repository where the un-compiled, human readable code and
      * related code is located (SVN, github, CodePlex).
      *
-     * @param string $codeRepository
+     * @param string|string[] $codeRepository
      *
      * @return static
      *
@@ -28,7 +28,7 @@ class SoftwareSourceCode extends CreativeWork
     /**
      * The computer programming language.
      *
-     * @param \Spatie\SchemaOrg\ComputerLanguage|string $programmingLanguage
+     * @param ComputerLanguage|ComputerLanguage[]|string|string[] $programmingLanguage
      *
      * @return static
      *
@@ -43,7 +43,7 @@ class SoftwareSourceCode extends CreativeWork
      * Runtime platform or script interpreter dependencies (Example - Java v1,
      * Python2.3, .Net Framework 3.0).
      *
-     * @param string $runtime
+     * @param string|string[] $runtime
      *
      * @return static
      *
@@ -58,7 +58,7 @@ class SoftwareSourceCode extends CreativeWork
      * Runtime platform or script interpreter dependencies (Example - Java v1,
      * Python2.3, .Net Framework 3.0).
      *
-     * @param string $runtimePlatform
+     * @param string|string[] $runtimePlatform
      *
      * @return static
      *
@@ -73,7 +73,7 @@ class SoftwareSourceCode extends CreativeWork
      * What type of code sample: full (compile ready) solution, code snippet,
      * inline code, scripts, template.
      *
-     * @param string $sampleType
+     * @param string|string[] $sampleType
      *
      * @return static
      *
@@ -88,7 +88,7 @@ class SoftwareSourceCode extends CreativeWork
      * What type of code sample: full (compile ready) solution, code snippet,
      * inline code, scripts, template.
      *
-     * @param string $codeSampleType
+     * @param string|string[] $codeSampleType
      *
      * @return static
      *
@@ -103,7 +103,7 @@ class SoftwareSourceCode extends CreativeWork
      * Target Operating System / Product to which the code applies.  If applies
      * to several versions, just the product name can be used.
      *
-     * @param \Spatie\SchemaOrg\SoftwareApplication $targetProduct
+     * @param SoftwareApplication|SoftwareApplication[] $targetProduct
      *
      * @return static
      *

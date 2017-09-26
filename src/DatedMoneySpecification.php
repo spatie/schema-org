@@ -15,7 +15,7 @@ class DatedMoneySpecification extends StructuredValue
     /**
      * The amount of money.
      *
-     * @param \Spatie\SchemaOrg\MonetaryAmount|float|int $amount
+     * @param MonetaryAmount|MonetaryAmount[]|float|int|float|int[] $amount
      *
      * @return static
      *
@@ -30,7 +30,7 @@ class DatedMoneySpecification extends StructuredValue
      * The currency in which the monetary amount is expressed (in 3-letter [ISO
      * 4217](http://en.wikipedia.org/wiki/ISO_4217) format).
      *
-     * @param string $currency
+     * @param string|string[] $currency
      *
      * @return static
      *

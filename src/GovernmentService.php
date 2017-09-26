@@ -15,7 +15,7 @@ class GovernmentService extends Service
      * the representation of services that are provided by an organization, but
      * operated by another organization like a subcontractor.
      *
-     * @param \Spatie\SchemaOrg\Organization $serviceOperator
+     * @param Organization|Organization[] $serviceOperator
      *
      * @return static
      *

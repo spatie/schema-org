@@ -12,7 +12,7 @@ class TVClip extends Clip
     /**
      * The TV series to which this episode or season belongs.
      *
-     * @param \Spatie\SchemaOrg\TVSeries $partOfTVSeries
+     * @param TVSeries|TVSeries[] $partOfTVSeries
      *
      * @return static
      *

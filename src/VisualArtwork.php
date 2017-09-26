@@ -13,7 +13,7 @@ class VisualArtwork extends CreativeWork
      * e.g. Painting, Drawing, Sculpture, Print, Photograph, Assemblage,
      * Collage, etc.
      *
-     * @param string $artform
+     * @param string|string[] $artform
      *
      * @return static
      *
@@ -29,7 +29,7 @@ class VisualArtwork extends CreativeWork
      * Cyanotype, Digital, Lithograph, DryPoint, Intaglio, Pastel, Woodcut,
      * Pencil, Mixed Media, etc.)
      *
-     * @param string $artMedium
+     * @param string|string[] $artMedium
      *
      * @return static
      *
@@ -44,7 +44,7 @@ class VisualArtwork extends CreativeWork
      * A material used as a surface in some artwork, e.g. Canvas, Paper, Wood,
      * Board, etc.
      *
-     * @param string $surface
+     * @param string|string[] $surface
      *
      * @return static
      *
@@ -59,7 +59,7 @@ class VisualArtwork extends CreativeWork
      * The supporting materials for the artwork, e.g. Canvas, Paper, Wood,
      * Board, etc.
      *
-     * @param string $artworkSurface
+     * @param string|string[] $artworkSurface
      *
      * @return static
      *
@@ -75,7 +75,7 @@ class VisualArtwork extends CreativeWork
      * produced - e.g. for a limited edition of 20 prints, 'artEdition' refers
      * to the total number of copies (in this example "20").
      *
-     * @param string|int $artEdition
+     * @param string|string[]|int|int[] $artEdition
      *
      * @return static
      *

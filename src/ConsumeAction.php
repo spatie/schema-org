@@ -14,7 +14,7 @@ class ConsumeAction extends Action
      * For example, the user may need to buy a movie before being able to watch
      * it.
      *
-     * @param \Spatie\SchemaOrg\Offer $expectsAcceptanceOf
+     * @param Offer|Offer[] $expectsAcceptanceOf
      *
      * @return static
      *

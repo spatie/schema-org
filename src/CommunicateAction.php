@@ -13,7 +13,7 @@ class CommunicateAction extends InteractAction
     /**
      * The subject matter of the content.
      *
-     * @param \Spatie\SchemaOrg\Thing $about
+     * @param Thing|Thing[] $about
      *
      * @return static
      *
@@ -30,7 +30,7 @@ class CommunicateAction extends InteractAction
      * standard](http://tools.ietf.org/html/bcp47). See also
      * [[availableLanguage]].
      *
-     * @param string|\Spatie\SchemaOrg\Language $inLanguage
+     * @param string|string[]|Language|Language[] $inLanguage
      *
      * @return static
      *
@@ -44,7 +44,7 @@ class CommunicateAction extends InteractAction
     /**
      * A sub property of instrument. The language used on this action.
      *
-     * @param \Spatie\SchemaOrg\Language $language
+     * @param Language|Language[] $language
      *
      * @return static
      *
@@ -59,7 +59,7 @@ class CommunicateAction extends InteractAction
      * A sub property of participant. The participant who is at the receiving
      * end of the action.
      *
-     * @param \Spatie\SchemaOrg\Audience|\Spatie\SchemaOrg\Organization|\Spatie\SchemaOrg\Person $recipient
+     * @param Audience|Audience[]|Organization|Organization[]|Person|Person[] $recipient
      *
      * @return static
      *

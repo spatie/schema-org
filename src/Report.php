@@ -13,7 +13,7 @@ class Report extends Article
      * The number or other unique designator assigned to a Report by the
      * publishing organization.
      *
-     * @param string $reportNumber
+     * @param string|string[] $reportNumber
      *
      * @return static
      *

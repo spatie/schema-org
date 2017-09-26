@@ -22,7 +22,7 @@ class PlayAction extends Action
     /**
      * An intended audience, i.e. a group for whom something was created.
      *
-     * @param \Spatie\SchemaOrg\Audience $audience
+     * @param Audience|Audience[] $audience
      *
      * @return static
      *
@@ -37,7 +37,7 @@ class PlayAction extends Action
      * Upcoming or past event associated with this place, organization, or
      * action.
      *
-     * @param \Spatie\SchemaOrg\Event $event
+     * @param Event|Event[] $event
      *
      * @return static
      *

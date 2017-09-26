@@ -14,7 +14,7 @@ class UnitPriceSpecification extends PriceSpecification
      * will be the basis for the billing. The unit of measurement is specified
      * by the unitCode property.
      *
-     * @param float|int $billingIncrement
+     * @param float|int|float|int[] $billingIncrement
      *
      * @return static
      *
@@ -30,7 +30,7 @@ class UnitPriceSpecification extends PriceSpecification
      * same offer, e.g. SRP for the suggested retail price or INVOICE for the
      * invoice price, mostly used in the car industry.
      *
-     * @param string $priceType
+     * @param string|string[] $priceType
      *
      * @return static
      *
@@ -46,7 +46,7 @@ class UnitPriceSpecification extends PriceSpecification
      * characters) or a URL. Other codes than the UN/CEFACT Common Code may be
      * used with a prefix followed by a colon.
      *
-     * @param string $unitCode
+     * @param string|string[] $unitCode
      *
      * @return static
      *
@@ -62,7 +62,7 @@ class UnitPriceSpecification extends PriceSpecification
      * provide a standard unit code for
      * <a href='unitCode'>unitCode</a>.
      *
-     * @param string $unitText
+     * @param string|string[] $unitText
      *
      * @return static
      *
@@ -79,7 +79,7 @@ class UnitPriceSpecification extends PriceSpecification
      * unitOfMeasurement for the advanced cases where the price does not relate
      * to a standard unit.
      *
-     * @param \Spatie\SchemaOrg\QuantitativeValue $referenceQuantity
+     * @param QuantitativeValue|QuantitativeValue[] $referenceQuantity
      *
      * @return static
      *

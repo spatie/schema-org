@@ -13,7 +13,7 @@ class DataFeedItem extends Intangible
      * The date on which the CreativeWork was created or the item was added to a
      * DataFeed.
      *
-     * @param \DateTimeInterface $dateCreated
+     * @param \DateTimeInterface|\DateTimeInterface[] $dateCreated
      *
      * @return static
      *
@@ -27,7 +27,7 @@ class DataFeedItem extends Intangible
     /**
      * The datetime the item was removed from the DataFeed.
      *
-     * @param \DateTimeInterface $dateDeleted
+     * @param \DateTimeInterface|\DateTimeInterface[] $dateDeleted
      *
      * @return static
      *
@@ -42,7 +42,7 @@ class DataFeedItem extends Intangible
      * The date on which the CreativeWork was most recently modified or when the
      * item's entry was modified within a DataFeed.
      *
-     * @param \DateTimeInterface $dateModified
+     * @param \DateTimeInterface|\DateTimeInterface[] $dateModified
      *
      * @return static
      *
@@ -57,7 +57,7 @@ class DataFeedItem extends Intangible
      * An entity represented by an entry in a list or data feed (e.g. an
      * 'artist' in a list of 'artists')’.
      *
-     * @param \Spatie\SchemaOrg\Thing $item
+     * @param Thing|Thing[] $item
      *
      * @return static
      *

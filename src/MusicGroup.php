@@ -13,7 +13,7 @@ class MusicGroup extends PerformingGroup
     /**
      * A music album.
      *
-     * @param \Spatie\SchemaOrg\MusicAlbum $album
+     * @param MusicAlbum|MusicAlbum[] $album
      *
      * @return static
      *
@@ -27,7 +27,7 @@ class MusicGroup extends PerformingGroup
     /**
      * A collection of music albums.
      *
-     * @param \Spatie\SchemaOrg\MusicAlbum $albums
+     * @param MusicAlbum|MusicAlbum[] $albums
      *
      * @return static
      *
@@ -41,7 +41,7 @@ class MusicGroup extends PerformingGroup
     /**
      * Genre of the creative work, broadcast channel or group.
      *
-     * @param string $genre
+     * @param string|string[] $genre
      *
      * @return static
      *
@@ -56,7 +56,7 @@ class MusicGroup extends PerformingGroup
      * A member of a music group&#x2014;for example, John, Paul, George, or
      * Ringo.
      *
-     * @param \Spatie\SchemaOrg\Person $musicGroupMember
+     * @param Person|Person[] $musicGroupMember
      *
      * @return static
      *
@@ -70,7 +70,7 @@ class MusicGroup extends PerformingGroup
     /**
      * A music recording (track)&#x2014;usually a single song.
      *
-     * @param \Spatie\SchemaOrg\MusicRecording $tracks
+     * @param MusicRecording|MusicRecording[] $tracks
      *
      * @return static
      *
@@ -85,7 +85,7 @@ class MusicGroup extends PerformingGroup
      * A music recording (track)&#x2014;usually a single song. If an ItemList is
      * given, the list should contain items of type MusicRecording.
      *
-     * @param \Spatie\SchemaOrg\ItemList|\Spatie\SchemaOrg\MusicRecording $track
+     * @param ItemList|ItemList[]|MusicRecording|MusicRecording[] $track
      *
      * @return static
      *

@@ -16,7 +16,7 @@ class MonetaryAmount extends StructuredValue
     /**
      * The upper value of some characteristic or property.
      *
-     * @param float|int $maxValue
+     * @param float|int|float|int[] $maxValue
      *
      * @return static
      *
@@ -30,7 +30,7 @@ class MonetaryAmount extends StructuredValue
     /**
      * The lower value of some characteristic or property.
      *
-     * @param float|int $minValue
+     * @param float|int|float|int[] $minValue
      *
      * @return static
      *
@@ -49,7 +49,7 @@ class MonetaryAmount extends StructuredValue
      * * For [[PropertyValue]], it can be 'Text;', 'Number', 'Boolean', or
      * 'StructuredValue'.
      *
-     * @param float|int|string|bool|\Spatie\SchemaOrg\StructuredValue $value
+     * @param float|int|float|int[]|string|string[]|bool|bool[]|StructuredValue|StructuredValue[] $value
      *
      * @return static
      *
@@ -64,7 +64,7 @@ class MonetaryAmount extends StructuredValue
      * The currency in which the monetary amount is expressed (in 3-letter [ISO
      * 4217](http://en.wikipedia.org/wiki/ISO_4217) format).
      *
-     * @param string $currency
+     * @param string|string[] $currency
      *
      * @return static
      *

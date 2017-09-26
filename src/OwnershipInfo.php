@@ -13,7 +13,7 @@ class OwnershipInfo extends StructuredValue
     /**
      * The organization or person from which the product was acquired.
      *
-     * @param \Spatie\SchemaOrg\Organization|\Spatie\SchemaOrg\Person $acquiredFrom
+     * @param Organization|Organization[]|Person|Person[] $acquiredFrom
      *
      * @return static
      *
@@ -27,7 +27,7 @@ class OwnershipInfo extends StructuredValue
     /**
      * The date and time of obtaining the product.
      *
-     * @param \DateTimeInterface $ownedFrom
+     * @param \DateTimeInterface|\DateTimeInterface[] $ownedFrom
      *
      * @return static
      *
@@ -41,7 +41,7 @@ class OwnershipInfo extends StructuredValue
     /**
      * The date and time of giving up ownership on the product.
      *
-     * @param \DateTimeInterface $ownedThrough
+     * @param \DateTimeInterface|\DateTimeInterface[] $ownedThrough
      *
      * @return static
      *
@@ -55,7 +55,7 @@ class OwnershipInfo extends StructuredValue
     /**
      * The product that this structured value is referring to.
      *
-     * @param \Spatie\SchemaOrg\Product|\Spatie\SchemaOrg\Service $typeOfGood
+     * @param Product|Product[]|Service|Service[] $typeOfGood
      *
      * @return static
      *
