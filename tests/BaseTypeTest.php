@@ -55,6 +55,25 @@ class BaseTypeTest extends TestCase
     }
 
     /** @test */
+    public function it_can_add_multiple_properties_at_once()
+    {
+        $type = new DummyType();
+
+        $type->addProperties([
+            'foo' => 'bar',
+            'baz' => 'qux',
+        ]);
+
+        $this->assertEquals(
+            [
+                'foo' => 'bar',
+                'baz' => 'qux',
+            ],
+            $type->getProperties()
+        );
+    }
+
+    /** @test */
     public function it_can_create_an_array_that_conforms_to_the_ld_json_spec_with_primitive_properties()
     {
         $type = new DummyType();

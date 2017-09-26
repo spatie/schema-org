@@ -117,6 +117,12 @@ All properties can be retrieved as an array with the `getProperties` method.
 $localBusiness->getProperties(); // ['name' => 'Spatie', ...]
 ```
 
+Multiple properties can be set at once using the `addProperties` method.
+
+```php
+$localBusiness->addProperties(['name' => 'value', 'foo' => 'bar']);
+```
+
 Context and type can be retrieved with the `getContext` and `getType` methods.
 
 ```php
@@ -172,6 +178,7 @@ If you discover any security related issues, please email freek@spatie.be instea
 - [All Contributors](../../contributors)
 
 ## About Spatie
+
 Spatie is a webdesign agency based in Antwerp, Belgium. You'll find an overview of all our open source projects [on our website](https://spatie.be/opensource).
 
 ## License
