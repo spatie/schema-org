@@ -32,7 +32,7 @@ abstract class BaseType implements Type
     public function addProperties(array $properties)
     {
         foreach ($properties as $property => $value) {
-            $this->properties[$property] = $value;
+            $this->setProperty($property, $value);
         }
 
         return $this;

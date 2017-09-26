@@ -29,6 +29,15 @@ abstract class BaseType implements Type
         return $this;
     }
 
+    public function addProperties(array $properties)
+    {
+        foreach ($properties as $property => $value) {
+            $this->setProperty($property, $value);
+        }
+
+        return $this;
+    }
+
     public function if($condition, $callback)
     {
         if ($condition) {
