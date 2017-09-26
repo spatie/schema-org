@@ -81,7 +81,7 @@ class BaseTypeTest extends TestCase
     {
         $type = new DummyType();
 
-        $type->setProperty('dateCreated', DateTime::createFromFormat('Y-m-d H:i:s', '2017-01-01 00:00:00'));
+        $type->setProperty('dateCreated', DateTime::createFromFormat(DateTime::ISO8601, '2017-01-01T00:00:00+0000'));
 
         $expected = [
             '@context' => 'http://schema.org',
