@@ -16,7 +16,8 @@
         }
     ],
     "require": {
-        "php": "^7.0"
+        "php": "^7.0",
+        "amphp/parallel": "^0.1.8"
     },
     "require-dev": {
         "graham-campbell/analyzer": "^1.1",

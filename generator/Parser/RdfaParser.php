@@ -2,10 +2,12 @@
 
 namespace Spatie\SchemaOrg\Generator\Parser;
 
-use Spatie\SchemaOrg\Generator\Type;
+use Amp\Parallel\Forking\Fork;
 use Spatie\SchemaOrg\Generator\Property;
-use Symfony\Component\DomCrawler\Crawler;
+use Spatie\SchemaOrg\Generator\Parser\Tasks\ParseTypes;
+use Spatie\SchemaOrg\Generator\Type;
 use Spatie\SchemaOrg\Generator\TypeCollection;
+use Symfony\Component\DomCrawler\Crawler;
 
 class RdfaParser
 {
@@ -31,28 +33,15 @@ class RdfaParser
 
     protected function parseTypes()
     {
-        $this->crawler
+        $tasks = $this->crawler
             ->filter('[typeof="rdfs:Class"]')
             ->each(function (Crawler $node) {
-                $type = new Type();
-
-                $type->name = $this->getText($node, '[property="rdfs:label"]');
-
-                if (in_array($type->name, ['', 'DataType', 'Float', 'Integer', 'URL'])) {
-                    return;
-                }
-
-                $type->description = $this->getText($node, '[property="rdfs:comment"]');
-                $type->parent = $this->getText($node, '[property="rdfs:subClassOf"]') ?: 'BaseType';
-
-                if (strpos($type->parent, ':') !== false) {
-                    return;
-                }
-
-                $type->resource = $this->getAttribute($node, 'resource');
-
-                $this->types->push($type);
+                return Fork::spawn(new ParseTypes($node))->join();
             });
+
+        \Amp\all($tasks)->when(function () {
+            die('Finished parsing types');
+        });
     }
 
     protected function parseProperties()
@@ -87,28 +76,6 @@ class RdfaParser
             });
     }
 
-    protected function getText(Crawler $node, string $selector = null): string
-    {
-        if ($selector) {
-            $node = $node->filter($selector)->first();
-        }
-
-        if ($node->count() === 0) {
-            return '';
-        }
-
-        return trim($node->text());
-    }
-
-    protected function getAttribute(Crawler $node, string $attribute): string
-    {
-        if ($node->count() === 0) {
-            return '';
-        }
-
-        return $node->attr($attribute);
-    }
-
     protected function castRangesToTypes(string $range)
     {
         switch ($range) {
@@ -134,5 +101,27 @@ class RdfaParser
             default:
                 return [$range];
         }
+    }
+
+    protected function getText(Crawler $node, string $selector = null) : string
+    {
+        if ($selector) {
+            $node = $this->node->filter($selector)->first();
+        }
+
+        if ($node->count() === 0) {
+            return '';
+        }
+
+        return trim($node->text());
+    }
+
+    protected function getAttribute(Crawler $node, string $attribute) : string
+    {
+        if ($node->count() === 0) {
+            return '';
+        }
+
+        return $node->attr($attribute);
     }
 }
