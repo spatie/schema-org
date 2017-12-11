@@ -91,7 +91,7 @@ class GeoShape extends StructuredValue
      * The elevation of a location ([WGS
      * 84](https://en.wikipedia.org/wiki/World_Geodetic_System)).
      *
-     * @param float|int|float|int[]|string|string[] $elevation
+     * @param float|float[]|int|int[]|string|string[] $elevation
      *
      * @return static
      *

@@ -15,7 +15,7 @@ class SingleFamilyResidence extends House
      * Typical unit code(s): ROM for room or C62 for no unit. The type of room
      * can be put in the unitText property of the QuantitativeValue.
      *
-     * @param float|int|float|int[]|QuantitativeValue|QuantitativeValue[] $numberOfRooms
+     * @param float|float[]|int|int[]|QuantitativeValue|QuantitativeValue[] $numberOfRooms
      *
      * @return static
      *

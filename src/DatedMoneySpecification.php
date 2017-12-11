@@ -15,7 +15,7 @@ class DatedMoneySpecification extends StructuredValue
     /**
      * The amount of money.
      *
-     * @param MonetaryAmount|MonetaryAmount[]|float|int|float|int[] $amount
+     * @param MonetaryAmount|MonetaryAmount[]|float|float[]|int|int[] $amount
      *
      * @return static
      *

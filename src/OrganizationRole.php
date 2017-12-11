@@ -13,7 +13,7 @@ class OrganizationRole extends Role
      * A number associated with a role in an organization, for example, the
      * number on an athlete's jersey.
      *
-     * @param float|int|float|int[] $numberedPosition
+     * @param float|float[]|int|int[] $numberedPosition
      *
      * @return static
      *

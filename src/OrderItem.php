@@ -14,7 +14,7 @@ class OrderItem extends Intangible
      * The number of the item ordered. If the property is not set, assume the
      * quantity is one.
      *
-     * @param float|int|float|int[] $orderQuantity
+     * @param float|float[]|int|int[] $orderQuantity
      *
      * @return static
      *

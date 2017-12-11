@@ -29,7 +29,7 @@ class Rating extends Intangible
      * The highest value allowed in this rating system. If bestRating is
      * omitted, 5 is assumed.
      *
-     * @param float|int|float|int[]|string|string[] $bestRating
+     * @param float|float[]|int|int[]|string|string[] $bestRating
      *
      * @return static
      *
@@ -43,7 +43,7 @@ class Rating extends Intangible
     /**
      * The rating for the content.
      *
-     * @param string|string[]|float|int|float|int[] $ratingValue
+     * @param string|string[]|float|float[]|int|int[] $ratingValue
      *
      * @return static
      *
@@ -58,7 +58,7 @@ class Rating extends Intangible
      * The lowest value allowed in this rating system. If worstRating is
      * omitted, 1 is assumed.
      *
-     * @param float|int|float|int[]|string|string[] $worstRating
+     * @param float|float[]|int|int[]|string|string[] $worstRating
      *
      * @return static
      *

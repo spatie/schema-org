@@ -163,7 +163,7 @@ class Reservation extends Intangible
      * The total price for the reservation or ticket, including applicable
      * taxes, shipping, etc.
      *
-     * @param float|int|float|int[]|string|string[]|PriceSpecification|PriceSpecification[] $totalPrice
+     * @param float|float[]|int|int[]|string|string[]|PriceSpecification|PriceSpecification[] $totalPrice
      *
      * @return static
      *

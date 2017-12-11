@@ -14,7 +14,7 @@ class RsvpAction extends InformAction
      * If responding yes, the number of guests who will attend in addition to
      * the invitee.
      *
-     * @param float|int|float|int[] $additionalNumberOfGuests
+     * @param float|float[]|int|int[] $additionalNumberOfGuests
      *
      * @return static
      *

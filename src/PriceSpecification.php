@@ -48,7 +48,7 @@ class PriceSpecification extends StructuredValue
     /**
      * The highest price if the price is a range.
      *
-     * @param float|int|float|int[] $maxPrice
+     * @param float|float[]|int|int[] $maxPrice
      *
      * @return static
      *
@@ -62,7 +62,7 @@ class PriceSpecification extends StructuredValue
     /**
      * The lowest price if the price is a range.
      *
-     * @param float|int|float|int[] $minPrice
+     * @param float|float[]|int|int[] $minPrice
      *
      * @return static
      *
@@ -95,7 +95,7 @@ class PriceSpecification extends StructuredValue
      * * Use values from 0123456789 (Unicode 'DIGIT ZERO' (U+0030) to 'DIGIT
      * NINE' (U+0039)) rather than superficially similiar Unicode symbols.
      *
-     * @param float|int|float|int[]|string|string[] $price
+     * @param float|float[]|int|int[]|string|string[] $price
      *
      * @return static
      *

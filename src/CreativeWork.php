@@ -341,7 +341,7 @@ class CreativeWork extends Thing
      * The year during which the claimed copyright for the CreativeWork was
      * first asserted.
      *
-     * @param float|int|float|int[] $copyrightYear
+     * @param float|float[]|int|int[] $copyrightYear
      *
      * @return static
      *
@@ -1009,7 +1009,7 @@ class CreativeWork extends Thing
     /**
      * The version of the CreativeWork embodied by a specified resource.
      *
-     * @param float|int|float|int[]|string|string[] $version
+     * @param float|float[]|int|int[]|string|string[] $version
      *
      * @return static
      *

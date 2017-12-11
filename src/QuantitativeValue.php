@@ -12,7 +12,7 @@ class QuantitativeValue extends StructuredValue
     /**
      * The upper value of some characteristic or property.
      *
-     * @param float|int|float|int[] $maxValue
+     * @param float|float[]|int|int[] $maxValue
      *
      * @return static
      *
@@ -26,7 +26,7 @@ class QuantitativeValue extends StructuredValue
     /**
      * The lower value of some characteristic or property.
      *
-     * @param float|int|float|int[] $minValue
+     * @param float|float[]|int|int[] $minValue
      *
      * @return static
      *
@@ -61,7 +61,7 @@ class QuantitativeValue extends StructuredValue
      * * For [[PropertyValue]], it can be 'Text;', 'Number', 'Boolean', or
      * 'StructuredValue'.
      *
-     * @param float|int|float|int[]|string|string[]|bool|bool[]|StructuredValue|StructuredValue[] $value
+     * @param float|float[]|int|int[]|string|string[]|bool|bool[]|StructuredValue|StructuredValue[] $value
      *
      * @return static
      *

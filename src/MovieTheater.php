@@ -12,7 +12,7 @@ class MovieTheater extends CivicStructure
     /**
      * The number of screens in the movie theater.
      *
-     * @param float|int|float|int[] $screenCount
+     * @param float|float[]|int|int[] $screenCount
      *
      * @return static
      *

@@ -85,7 +85,7 @@ class Order extends Intangible
     /**
      * Any discount applied (to an Order).
      *
-     * @param float|int|float|int[]|string|string[] $discount
+     * @param float|float[]|int|int[]|string|string[] $discount
      *
      * @return static
      *

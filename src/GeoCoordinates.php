@@ -42,7 +42,7 @@ class GeoCoordinates extends StructuredValue
      * The elevation of a location ([WGS
      * 84](https://en.wikipedia.org/wiki/World_Geodetic_System)).
      *
-     * @param float|int|float|int[]|string|string[] $elevation
+     * @param float|float[]|int|int[]|string|string[] $elevation
      *
      * @return static
      *
@@ -57,7 +57,7 @@ class GeoCoordinates extends StructuredValue
      * The latitude of a location. For example ```37.42242``` ([WGS
      * 84](https://en.wikipedia.org/wiki/World_Geodetic_System)).
      *
-     * @param float|int|float|int[]|string|string[] $latitude
+     * @param float|float[]|int|int[]|string|string[] $latitude
      *
      * @return static
      *
@@ -72,7 +72,7 @@ class GeoCoordinates extends StructuredValue
      * The longitude of a location. For example ```-122.08585``` ([WGS
      * 84](https://en.wikipedia.org/wiki/World_Geodetic_System)).
      *
-     * @param float|int|float|int[]|string|string[] $longitude
+     * @param float|float[]|int|int[]|string|string[] $longitude
      *
      * @return static
      *

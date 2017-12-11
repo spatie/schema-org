@@ -14,7 +14,7 @@ class UnitPriceSpecification extends PriceSpecification
      * will be the basis for the billing. The unit of measurement is specified
      * by the unitCode property.
      *
-     * @param float|int|float|int[] $billingIncrement
+     * @param float|float[]|int|int[] $billingIncrement
      *
      * @return static
      *

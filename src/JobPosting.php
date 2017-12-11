@@ -12,7 +12,7 @@ class JobPosting extends Intangible
     /**
      * The base salary of the job or of an employee in an EmployeeRole.
      *
-     * @param float|int|float|int[]|PriceSpecification|PriceSpecification[]|MonetaryAmount|MonetaryAmount[] $baseSalary
+     * @param float|float[]|int|int[]|PriceSpecification|PriceSpecification[]|MonetaryAmount|MonetaryAmount[] $baseSalary
      *
      * @return static
      *

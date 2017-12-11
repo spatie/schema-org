@@ -15,7 +15,7 @@ class Vehicle extends Product
      * 
      * Typical unit code(s): C62
      *
-     * @param QuantitativeValue|QuantitativeValue[]|float|int|float|int[] $numberOfDoors
+     * @param QuantitativeValue|QuantitativeValue[]|float|float[]|int|int[] $numberOfDoors
      *
      * @return static
      *
@@ -29,7 +29,7 @@ class Vehicle extends Product
     /**
      * The number or type of airbags in the vehicle.
      *
-     * @param float|int|float|int[]|string|string[] $numberOfAirbags
+     * @param float|float[]|int|int[]|string|string[] $numberOfAirbags
      *
      * @return static
      *
@@ -45,7 +45,7 @@ class Vehicle extends Product
      * 
      * Typical unit code(s): C62
      *
-     * @param QuantitativeValue|QuantitativeValue[]|float|int|float|int[] $numberOfAxles
+     * @param QuantitativeValue|QuantitativeValue[]|float|float[]|int|int[] $numberOfAxles
      *
      * @return static
      *
@@ -128,7 +128,7 @@ class Vehicle extends Product
      * 
      * Typical unit code(s): C62
      *
-     * @param QuantitativeValue|QuantitativeValue[]|float|int|float|int[] $numberOfForwardGears
+     * @param QuantitativeValue|QuantitativeValue[]|float|float[]|int|int[] $numberOfForwardGears
      *
      * @return static
      *
@@ -316,7 +316,7 @@ class Vehicle extends Product
      * 
      * Typical unit code(s): C62
      *
-     * @param QuantitativeValue|QuantitativeValue[]|float|int|float|int[] $numberOfPreviousOwners
+     * @param QuantitativeValue|QuantitativeValue[]|float|float[]|int|int[] $numberOfPreviousOwners
      *
      * @return static
      *
@@ -361,7 +361,7 @@ class Vehicle extends Product
      * 
      * Typical unit code(s): C62 for persons.
      *
-     * @param QuantitativeValue|QuantitativeValue[]|float|int|float|int[] $vehicleSeatingCapacity
+     * @param QuantitativeValue|QuantitativeValue[]|float|float[]|int|int[] $vehicleSeatingCapacity
      *
      * @return static
      *

@@ -12,7 +12,7 @@ class PropertyValueSpecification extends Intangible
     /**
      * The upper value of some characteristic or property.
      *
-     * @param float|int|float|int[] $maxValue
+     * @param float|float[]|int|int[] $maxValue
      *
      * @return static
      *
@@ -26,7 +26,7 @@ class PropertyValueSpecification extends Intangible
     /**
      * The lower value of some characteristic or property.
      *
-     * @param float|int|float|int[] $minValue
+     * @param float|float[]|int|int[] $minValue
      *
      * @return static
      *
@@ -117,7 +117,7 @@ class PropertyValueSpecification extends Intangible
      * Specifies the minimum allowed range for number of characters in a literal
      * value.
      *
-     * @param float|int|float|int[] $valueMinLength
+     * @param float|float[]|int|int[] $valueMinLength
      *
      * @return static
      *
@@ -131,7 +131,7 @@ class PropertyValueSpecification extends Intangible
     /**
      * Specifies the allowed range for number of characters in a literal value.
      *
-     * @param float|int|float|int[] $valueMaxLength
+     * @param float|float[]|int|int[] $valueMaxLength
      *
      * @return static
      *
@@ -161,7 +161,7 @@ class PropertyValueSpecification extends Intangible
      * The stepValue attribute indicates the granularity that is expected (and
      * required) of the value in a PropertyValueSpecification.
      *
-     * @param float|int|float|int[] $stepValue
+     * @param float|float[]|int|int[] $stepValue
      *
      * @return static
      *

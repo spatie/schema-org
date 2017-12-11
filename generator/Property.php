@@ -16,7 +16,14 @@ class Property
     /** @var array */
     public $ranges = [];
 
-    public function addRange(string $range)
+    public function addRanges(array $ranges)
+    {
+        foreach ($ranges as $range) {
+            $this->addRange($range);
+        }
+    }
+
+    private function addRange(string $range)
     {
         $this->ranges[] = $range;
         $this->ranges[] = "{$range}[]";

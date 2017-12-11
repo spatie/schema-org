@@ -80,8 +80,8 @@ class RdfaParser
                 $node
                     ->filter('[property="http://schema.org/rangeIncludes"]')
                     ->each(function (Crawler $range) use ($property) {
-                        $property->addRange(
-                            $this->getTypeFromRange($this->getText($range))
+                        $property->addRanges(
+                            $this->castRangesToTypes($this->getText($range))
                         );
                     });
             });
@@ -109,30 +109,30 @@ class RdfaParser
         return $node->attr($attribute);
     }
 
-    protected function getTypeFromRange(string $range)
+    protected function castRangesToTypes(string $range)
     {
         switch ($range) {
             case 'Boolean':
-                return 'bool';
+                return ['bool'];
             case 'False':
-                return 'false';
+                return ['false'];
             case 'True':
-                return 'true';
+                return ['true'];
             case 'Date':
             case 'Time':
             case 'DateTime':
-                return '\DateTimeInterface';
+                return ['\DateTimeInterface'];
             case 'Text':
             case 'URL':
-                return 'string';
+                return ['string'];
             case 'Number':
-                return 'float|int';
+                return ['float', 'int'];
             case 'Float':
-                return 'float';
+                return ['float'];
             case 'Integer':
-                return 'int';
+                return ['int'];
             default:
-                return $range;
+                return [$range];
         }
     }
 }

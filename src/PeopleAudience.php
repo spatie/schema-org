@@ -69,7 +69,7 @@ class PeopleAudience extends Audience
     /**
      * Maximal age recommended for viewing content.
      *
-     * @param float|int|float|int[] $suggestedMaxAge
+     * @param float|float[]|int|int[] $suggestedMaxAge
      *
      * @return static
      *
@@ -83,7 +83,7 @@ class PeopleAudience extends Audience
     /**
      * Minimal age recommended for viewing content.
      *
-     * @param float|int|float|int[] $suggestedMinAge
+     * @param float|float[]|int|int[] $suggestedMinAge
      *
      * @return static
      *

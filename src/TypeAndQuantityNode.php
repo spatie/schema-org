@@ -13,7 +13,7 @@ class TypeAndQuantityNode extends StructuredValue
     /**
      * The quantity of the goods included in the offer.
      *
-     * @param float|int|float|int[] $amountOfThisGood
+     * @param float|float[]|int|int[] $amountOfThisGood
      *
      * @return static
      *
