@@ -9,7 +9,7 @@ abstract class Task
     /** @var Symfony\Component\DomCrawler\Crawler */
     protected $node;
 
-    abstract function __invoke();
+    abstract public function __invoke();
 
     public function __construct(Crawler $node)
     {

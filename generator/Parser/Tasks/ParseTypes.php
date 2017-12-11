@@ -16,14 +16,14 @@ class ParseTypes extends Task
         $type->name = $this->getText('[property="rdfs:label"]');
 
         if (in_array($type->name, ['', 'DataType', 'Float', 'Integer', 'URL'])) {
-            return null;
+            return;
         }
 
         $type->description = $this->getText('[property="rdfs:comment"]');
-        $type->parent = $this->getText('[property="rdfs:subClassOf"]') ? : 'BaseType';
+        $type->parent = $this->getText('[property="rdfs:subClassOf"]') ?: 'BaseType';
 
         if (strpos($type->parent, ':') !== false) {
-            return null;
+            return;
         }
 
         $type->resource = $this->getAttribute('resource');
