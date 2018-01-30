@@ -7,7 +7,7 @@ namespace Spatie\SchemaOrg;
  * same pair of shoes is offered by different merchants), then AggregateOffer
  * can be used.
  *
- * @see 
+ * @see http://schema.org/AggregateOffer
  */
 class AggregateOffer extends Offer
 {
@@ -18,7 +18,7 @@ class AggregateOffer extends Offer
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/highPrice
      */
     public function highPrice($highPrice)
     {
@@ -32,7 +32,7 @@ class AggregateOffer extends Offer
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/lowPrice
      */
     public function lowPrice($lowPrice)
     {
@@ -46,7 +46,7 @@ class AggregateOffer extends Offer
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/offerCount
      */
     public function offerCount($offerCount)
     {
@@ -62,7 +62,7 @@ class AggregateOffer extends Offer
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/offers
      */
     public function offers($offers)
     {

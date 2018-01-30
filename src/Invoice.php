@@ -5,7 +5,7 @@ namespace Spatie\SchemaOrg;
 /**
  * A statement of the money due for goods or services; a bill.
  *
- * @see 
+ * @see http://schema.org/Invoice
  */
 class Invoice extends Intangible
 {
@@ -16,7 +16,7 @@ class Invoice extends Intangible
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/accountId
      */
     public function accountId($accountId)
     {
@@ -30,7 +30,7 @@ class Invoice extends Intangible
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/billingPeriod
      */
     public function billingPeriod($billingPeriod)
     {
@@ -47,7 +47,7 @@ class Invoice extends Intangible
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/broker
      */
     public function broker($broker)
     {
@@ -62,7 +62,7 @@ class Invoice extends Intangible
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/category
      */
     public function category($category)
     {
@@ -76,7 +76,7 @@ class Invoice extends Intangible
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/confirmationNumber
      */
     public function confirmationNumber($confirmationNumber)
     {
@@ -90,7 +90,7 @@ class Invoice extends Intangible
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/customer
      */
     public function customer($customer)
     {
@@ -104,7 +104,7 @@ class Invoice extends Intangible
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/minimumPaymentDue
      */
     public function minimumPaymentDue($minimumPaymentDue)
     {
@@ -118,7 +118,7 @@ class Invoice extends Intangible
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/paymentDue
      */
     public function paymentDue($paymentDue)
     {
@@ -132,7 +132,7 @@ class Invoice extends Intangible
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/paymentDue
      */
     public function paymentDue($paymentDue)
     {
@@ -146,7 +146,7 @@ class Invoice extends Intangible
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/paymentDueDate
      */
     public function paymentDueDate($paymentDueDate)
     {
@@ -160,7 +160,7 @@ class Invoice extends Intangible
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/paymentMethod
      */
     public function paymentMethod($paymentMethod)
     {
@@ -174,7 +174,7 @@ class Invoice extends Intangible
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/paymentMethod
      */
     public function paymentMethod($paymentMethod)
     {
@@ -189,7 +189,7 @@ class Invoice extends Intangible
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/paymentMethodId
      */
     public function paymentMethodId($paymentMethodId)
     {
@@ -204,7 +204,7 @@ class Invoice extends Intangible
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/paymentMethodId
      */
     public function paymentMethodId($paymentMethodId)
     {
@@ -218,7 +218,7 @@ class Invoice extends Intangible
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/paymentStatus
      */
     public function paymentStatus($paymentStatus)
     {
@@ -234,7 +234,7 @@ class Invoice extends Intangible
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/provider
      */
     public function provider($provider)
     {
@@ -249,7 +249,7 @@ class Invoice extends Intangible
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/referencesOrder
      */
     public function referencesOrder($referencesOrder)
     {
@@ -263,7 +263,7 @@ class Invoice extends Intangible
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/scheduledPaymentDate
      */
     public function scheduledPaymentDate($scheduledPaymentDate)
     {
@@ -277,7 +277,7 @@ class Invoice extends Intangible
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/totalPaymentDue
      */
     public function totalPaymentDue($totalPaymentDue)
     {

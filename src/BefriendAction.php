@@ -11,7 +11,7 @@ namespace Spatie\SchemaOrg;
  * * [[FollowAction]]: Unlike FollowAction, BefriendAction implies that the
  * connection is reciprocal.
  *
- * @see 
+ * @see http://schema.org/BefriendAction
  */
 class BefriendAction extends InteractAction
 {

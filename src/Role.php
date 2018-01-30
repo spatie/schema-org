@@ -12,7 +12,7 @@ namespace Spatie\SchemaOrg;
  * 
  * See also [blog post](http://blog.schema.org/2014/06/introducing-role.html).
  *
- * @see 
+ * @see http://schema.org/Role
  */
 class Role extends Intangible
 {
@@ -24,7 +24,7 @@ class Role extends Intangible
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/endDate
      */
     public function endDate($endDate)
     {
@@ -40,7 +40,7 @@ class Role extends Intangible
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/namedPosition
      */
     public function namedPosition($namedPosition)
     {
@@ -57,7 +57,7 @@ class Role extends Intangible
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/roleName
      */
     public function roleName($roleName)
     {
@@ -72,7 +72,7 @@ class Role extends Intangible
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/startDate
      */
     public function startDate($startDate)
     {

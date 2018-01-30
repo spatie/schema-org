@@ -13,7 +13,7 @@ namespace Spatie\SchemaOrg;
  * ownership has been transfered (e.g. I can receive a package, but it does not
  * mean the package is now mine).
  *
- * @see 
+ * @see http://schema.org/ReceiveAction
  */
 class ReceiveAction extends TransferAction
 {
@@ -24,7 +24,7 @@ class ReceiveAction extends TransferAction
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/deliveryMethod
      */
     public function deliveryMethod($deliveryMethod)
     {
@@ -39,7 +39,7 @@ class ReceiveAction extends TransferAction
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/sender
      */
     public function sender($sender)
     {

@@ -5,7 +5,7 @@ namespace Spatie\SchemaOrg;
 /**
  * A list of possible conditions for the item.
  *
- * @see 
+ * @see http://schema.org/OfferItemCondition
  */
 class OfferItemCondition extends Enumeration
 {

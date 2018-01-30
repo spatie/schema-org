@@ -5,7 +5,7 @@ namespace Spatie\SchemaOrg;
 /**
  * The act of marrying a person.
  *
- * @see 
+ * @see http://schema.org/MarryAction
  */
 class MarryAction extends InteractAction
 {

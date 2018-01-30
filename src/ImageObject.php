@@ -5,7 +5,7 @@ namespace Spatie\SchemaOrg;
 /**
  * An image file.
  *
- * @see 
+ * @see http://schema.org/ImageObject
  */
 class ImageObject extends MediaObject
 {
@@ -16,7 +16,7 @@ class ImageObject extends MediaObject
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/caption
      */
     public function caption($caption)
     {
@@ -30,7 +30,7 @@ class ImageObject extends MediaObject
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/exifData
      */
     public function exifData($exifData)
     {
@@ -45,7 +45,7 @@ class ImageObject extends MediaObject
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/representativeOfPage
      */
     public function representativeOfPage($representativeOfPage)
     {
@@ -59,7 +59,7 @@ class ImageObject extends MediaObject
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/thumbnail
      */
     public function thumbnail($thumbnail)
     {

@@ -6,7 +6,7 @@ namespace Spatie\SchemaOrg;
  * A predefined value for a product characteristic, e.g. the power cord plug
  * type 'US' or the garment sizes 'S', 'M', 'L', and 'XL'.
  *
- * @see 
+ * @see http://schema.org/QualitativeValue
  */
 class QualitativeValue extends Enumeration
 {
@@ -25,7 +25,7 @@ class QualitativeValue extends Enumeration
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/additionalProperty
      */
     public function additionalProperty($additionalProperty)
     {
@@ -40,7 +40,7 @@ class QualitativeValue extends Enumeration
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/equal
      */
     public function equal($equal)
     {
@@ -55,7 +55,7 @@ class QualitativeValue extends Enumeration
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/greater
      */
     public function greater($greater)
     {
@@ -70,7 +70,7 @@ class QualitativeValue extends Enumeration
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/greaterOrEqual
      */
     public function greaterOrEqual($greaterOrEqual)
     {
@@ -85,7 +85,7 @@ class QualitativeValue extends Enumeration
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/lesser
      */
     public function lesser($lesser)
     {
@@ -100,7 +100,7 @@ class QualitativeValue extends Enumeration
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/lesserOrEqual
      */
     public function lesserOrEqual($lesserOrEqual)
     {
@@ -115,7 +115,7 @@ class QualitativeValue extends Enumeration
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/nonEqual
      */
     public function nonEqual($nonEqual)
     {
@@ -130,7 +130,7 @@ class QualitativeValue extends Enumeration
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/valueReference
      */
     public function valueReference($valueReference)
     {

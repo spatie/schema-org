@@ -6,7 +6,7 @@ namespace Spatie\SchemaOrg;
  * A media episode (e.g. TV, radio, video game) which can be part of a series or
  * season.
  *
- * @see 
+ * @see http://schema.org/Episode
  */
 class Episode extends CreativeWork
 {
@@ -19,7 +19,7 @@ class Episode extends CreativeWork
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/actor
      */
     public function actor($actor)
     {
@@ -34,7 +34,7 @@ class Episode extends CreativeWork
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/actors
      */
     public function actors($actors)
     {
@@ -50,7 +50,7 @@ class Episode extends CreativeWork
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/director
      */
     public function director($director)
     {
@@ -65,7 +65,7 @@ class Episode extends CreativeWork
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/directors
      */
     public function directors($directors)
     {
@@ -79,7 +79,7 @@ class Episode extends CreativeWork
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/episodeNumber
      */
     public function episodeNumber($episodeNumber)
     {
@@ -93,7 +93,7 @@ class Episode extends CreativeWork
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/musicBy
      */
     public function musicBy($musicBy)
     {
@@ -107,7 +107,7 @@ class Episode extends CreativeWork
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/partOfSeason
      */
     public function partOfSeason($partOfSeason)
     {
@@ -121,7 +121,7 @@ class Episode extends CreativeWork
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/partOfSeries
      */
     public function partOfSeries($partOfSeries)
     {
@@ -136,7 +136,7 @@ class Episode extends CreativeWork
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/productionCompany
      */
     public function productionCompany($productionCompany)
     {
@@ -150,7 +150,7 @@ class Episode extends CreativeWork
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/trailer
      */
     public function trailer($trailer)
     {

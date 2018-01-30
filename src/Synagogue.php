@@ -5,7 +5,7 @@ namespace Spatie\SchemaOrg;
 /**
  * A synagogue.
  *
- * @see 
+ * @see http://schema.org/Synagogue
  */
 class Synagogue extends PlaceOfWorship
 {

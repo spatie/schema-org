@@ -5,7 +5,7 @@ namespace Spatie\SchemaOrg;
 /**
  * The act of capturing still images of objects using a camera.
  *
- * @see 
+ * @see http://schema.org/PhotographAction
  */
 class PhotographAction extends CreateAction
 {

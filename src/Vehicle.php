@@ -6,7 +6,7 @@ namespace Spatie\SchemaOrg;
  * A vehicle is a device that is designed or used to transport people or cargo
  * over land, water, air, or through space.
  *
- * @see 
+ * @see http://schema.org/Vehicle
  */
 class Vehicle extends Product
 {
@@ -22,7 +22,7 @@ class Vehicle extends Product
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/cargoVolume
      */
     public function cargoVolume($cargoVolume)
     {
@@ -37,7 +37,7 @@ class Vehicle extends Product
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/dateVehicleFirstRegistered
      */
     public function dateVehicleFirstRegistered($dateVehicleFirstRegistered)
     {
@@ -52,7 +52,7 @@ class Vehicle extends Product
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/driveWheelConfiguration
      */
     public function driveWheelConfiguration($driveWheelConfiguration)
     {
@@ -78,7 +78,7 @@ class Vehicle extends Product
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/fuelConsumption
      */
     public function fuelConsumption($fuelConsumption)
     {
@@ -104,7 +104,7 @@ class Vehicle extends Product
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/fuelEfficiency
      */
     public function fuelEfficiency($fuelEfficiency)
     {
@@ -120,7 +120,7 @@ class Vehicle extends Product
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/fuelType
      */
     public function fuelType($fuelType)
     {
@@ -134,7 +134,7 @@ class Vehicle extends Product
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/knownVehicleDamages
      */
     public function knownVehicleDamages($knownVehicleDamages)
     {
@@ -151,7 +151,7 @@ class Vehicle extends Product
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/mileageFromOdometer
      */
     public function mileageFromOdometer($mileageFromOdometer)
     {
@@ -165,7 +165,7 @@ class Vehicle extends Product
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/numberOfAirbags
      */
     public function numberOfAirbags($numberOfAirbags)
     {
@@ -181,7 +181,7 @@ class Vehicle extends Product
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/numberOfAxles
      */
     public function numberOfAxles($numberOfAxles)
     {
@@ -197,7 +197,7 @@ class Vehicle extends Product
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/numberOfDoors
      */
     public function numberOfDoors($numberOfDoors)
     {
@@ -214,7 +214,7 @@ class Vehicle extends Product
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/numberOfForwardGears
      */
     public function numberOfForwardGears($numberOfForwardGears)
     {
@@ -230,7 +230,7 @@ class Vehicle extends Product
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/numberOfPreviousOwners
      */
     public function numberOfPreviousOwners($numberOfPreviousOwners)
     {
@@ -244,7 +244,7 @@ class Vehicle extends Product
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/productionDate
      */
     public function productionDate($productionDate)
     {
@@ -258,7 +258,7 @@ class Vehicle extends Product
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/purchaseDate
      */
     public function purchaseDate($purchaseDate)
     {
@@ -272,7 +272,7 @@ class Vehicle extends Product
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/steeringPosition
      */
     public function steeringPosition($steeringPosition)
     {
@@ -287,7 +287,7 @@ class Vehicle extends Product
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/vehicleConfiguration
      */
     public function vehicleConfiguration($vehicleConfiguration)
     {
@@ -301,7 +301,7 @@ class Vehicle extends Product
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/vehicleEngine
      */
     public function vehicleEngine($vehicleEngine)
     {
@@ -316,7 +316,7 @@ class Vehicle extends Product
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/vehicleIdentificationNumber
      */
     public function vehicleIdentificationNumber($vehicleIdentificationNumber)
     {
@@ -330,7 +330,7 @@ class Vehicle extends Product
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/vehicleInteriorColor
      */
     public function vehicleInteriorColor($vehicleInteriorColor)
     {
@@ -347,7 +347,7 @@ class Vehicle extends Product
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/vehicleInteriorType
      */
     public function vehicleInteriorType($vehicleInteriorType)
     {
@@ -362,7 +362,7 @@ class Vehicle extends Product
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/vehicleModelDate
      */
     public function vehicleModelDate($vehicleModelDate)
     {
@@ -379,7 +379,7 @@ class Vehicle extends Product
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/vehicleSeatingCapacity
      */
     public function vehicleSeatingCapacity($vehicleSeatingCapacity)
     {
@@ -396,7 +396,7 @@ class Vehicle extends Product
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/vehicleSpecialUsage
      */
     public function vehicleSpecialUsage($vehicleSpecialUsage)
     {
@@ -412,7 +412,7 @@ class Vehicle extends Product
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/vehicleTransmission
      */
     public function vehicleTransmission($vehicleTransmission)
     {

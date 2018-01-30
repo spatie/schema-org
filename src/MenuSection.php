@@ -8,7 +8,7 @@ namespace Spatie\SchemaOrg;
  * 'Vegan', 'Drinks', etc.), or some other classification made by the menu
  * provider.
  *
- * @see 
+ * @see http://schema.org/MenuSection
  */
 class MenuSection extends CreativeWork
 {
@@ -19,7 +19,7 @@ class MenuSection extends CreativeWork
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/hasMenuItem
      */
     public function hasMenuItem($hasMenuItem)
     {
@@ -33,7 +33,7 @@ class MenuSection extends CreativeWork
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/hasMenuSection
      */
     public function hasMenuSection($hasMenuSection)
     {

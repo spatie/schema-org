@@ -5,7 +5,7 @@ namespace Spatie\SchemaOrg;
 /**
  * A home goods store.
  *
- * @see 
+ * @see http://schema.org/HomeGoodsStore
  */
 class HomeGoodsStore extends Store
 {

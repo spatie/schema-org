@@ -11,7 +11,7 @@ namespace Spatie\SchemaOrg;
  * * http://purl.org/goodrelations/v1#FederalExpress
  * * http://purl.org/goodrelations/v1#UPS
  *
- * @see 
+ * @see http://schema.org/ParcelService
  */
 class ParcelService extends DeliveryMethod
 {

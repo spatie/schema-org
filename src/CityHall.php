@@ -5,7 +5,7 @@ namespace Spatie\SchemaOrg;
 /**
  * A city hall.
  *
- * @see 
+ * @see http://schema.org/CityHall
  */
 class CityHall extends GovernmentBuilding
 {

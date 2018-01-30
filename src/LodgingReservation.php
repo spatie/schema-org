@@ -9,7 +9,7 @@ namespace Spatie\SchemaOrg;
  * confirmation emails or HTML pages with individual confirmations of
  * reservations.
  *
- * @see 
+ * @see http://schema.org/LodgingReservation
  */
 class LodgingReservation extends Reservation
 {
@@ -20,7 +20,7 @@ class LodgingReservation extends Reservation
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/checkinTime
      */
     public function checkinTime($checkinTime)
     {
@@ -34,7 +34,7 @@ class LodgingReservation extends Reservation
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/checkoutTime
      */
     public function checkoutTime($checkoutTime)
     {
@@ -48,7 +48,7 @@ class LodgingReservation extends Reservation
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/lodgingUnitDescription
      */
     public function lodgingUnitDescription($lodgingUnitDescription)
     {
@@ -63,7 +63,7 @@ class LodgingReservation extends Reservation
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/lodgingUnitType
      */
     public function lodgingUnitType($lodgingUnitType)
     {
@@ -77,7 +77,7 @@ class LodgingReservation extends Reservation
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/numAdults
      */
     public function numAdults($numAdults)
     {
@@ -91,7 +91,7 @@ class LodgingReservation extends Reservation
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/numChildren
      */
     public function numChildren($numChildren)
     {

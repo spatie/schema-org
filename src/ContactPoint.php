@@ -5,7 +5,7 @@ namespace Spatie\SchemaOrg;
 /**
  * A contact point&#x2014;for example, a Customer Complaints department.
  *
- * @see 
+ * @see http://schema.org/ContactPoint
  */
 class ContactPoint extends StructuredValue
 {
@@ -16,7 +16,7 @@ class ContactPoint extends StructuredValue
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/areaServed
      */
     public function areaServed($areaServed)
     {
@@ -32,7 +32,7 @@ class ContactPoint extends StructuredValue
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/availableLanguage
      */
     public function availableLanguage($availableLanguage)
     {
@@ -47,7 +47,7 @@ class ContactPoint extends StructuredValue
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/contactOption
      */
     public function contactOption($contactOption)
     {
@@ -63,7 +63,7 @@ class ContactPoint extends StructuredValue
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/contactType
      */
     public function contactType($contactType)
     {
@@ -77,7 +77,7 @@ class ContactPoint extends StructuredValue
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/email
      */
     public function email($email)
     {
@@ -91,7 +91,7 @@ class ContactPoint extends StructuredValue
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/faxNumber
      */
     public function faxNumber($faxNumber)
     {
@@ -105,7 +105,7 @@ class ContactPoint extends StructuredValue
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/hoursAvailable
      */
     public function hoursAvailable($hoursAvailable)
     {
@@ -122,7 +122,7 @@ class ContactPoint extends StructuredValue
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/productSupported
      */
     public function productSupported($productSupported)
     {
@@ -136,7 +136,7 @@ class ContactPoint extends StructuredValue
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/serviceArea
      */
     public function serviceArea($serviceArea)
     {
@@ -150,7 +150,7 @@ class ContactPoint extends StructuredValue
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/telephone
      */
     public function telephone($telephone)
     {

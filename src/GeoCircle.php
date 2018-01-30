@@ -10,7 +10,7 @@ namespace Spatie\SchemaOrg;
  *           The center of the circle can be indicated via the 'geoMidpoint'
  * property, or more approximately using 'address', 'postalCode'.
  *
- * @see 
+ * @see http://schema.org/GeoCircle
  */
 class GeoCircle extends GeoShape
 {
@@ -22,7 +22,7 @@ class GeoCircle extends GeoShape
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/geoRadius
      */
     public function geoRadius($geoRadius)
     {

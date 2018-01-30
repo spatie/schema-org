@@ -5,7 +5,7 @@ namespace Spatie\SchemaOrg;
 /**
  * A musical composition.
  *
- * @see 
+ * @see http://schema.org/MusicComposition
  */
 class MusicComposition extends CreativeWork
 {
@@ -17,7 +17,7 @@ class MusicComposition extends CreativeWork
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/composer
      */
     public function composer($composer)
     {
@@ -31,7 +31,7 @@ class MusicComposition extends CreativeWork
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/firstPerformance
      */
     public function firstPerformance($firstPerformance)
     {
@@ -46,7 +46,7 @@ class MusicComposition extends CreativeWork
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/includedComposition
      */
     public function includedComposition($includedComposition)
     {
@@ -60,7 +60,7 @@ class MusicComposition extends CreativeWork
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/iswcCode
      */
     public function iswcCode($iswcCode)
     {
@@ -74,7 +74,7 @@ class MusicComposition extends CreativeWork
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/lyricist
      */
     public function lyricist($lyricist)
     {
@@ -88,7 +88,7 @@ class MusicComposition extends CreativeWork
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/lyrics
      */
     public function lyrics($lyrics)
     {
@@ -102,7 +102,7 @@ class MusicComposition extends CreativeWork
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/musicArrangement
      */
     public function musicArrangement($musicArrangement)
     {
@@ -116,7 +116,7 @@ class MusicComposition extends CreativeWork
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/musicCompositionForm
      */
     public function musicCompositionForm($musicCompositionForm)
     {
@@ -130,7 +130,7 @@ class MusicComposition extends CreativeWork
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/musicalKey
      */
     public function musicalKey($musicalKey)
     {
@@ -144,7 +144,7 @@ class MusicComposition extends CreativeWork
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/recordedAs
      */
     public function recordedAs($recordedAs)
     {

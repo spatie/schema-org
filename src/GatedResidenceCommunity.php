@@ -5,7 +5,7 @@ namespace Spatie\SchemaOrg;
 /**
  * Residence type: Gated community.
  *
- * @see 
+ * @see http://schema.org/GatedResidenceCommunity
  */
 class GatedResidenceCommunity extends Residence
 {

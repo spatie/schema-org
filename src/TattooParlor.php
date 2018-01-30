@@ -5,7 +5,7 @@ namespace Spatie\SchemaOrg;
 /**
  * A tattoo parlor.
  *
- * @see 
+ * @see http://schema.org/TattooParlor
  */
 class TattooParlor extends HealthAndBeautyBusiness
 {

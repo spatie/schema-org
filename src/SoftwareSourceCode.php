@@ -6,7 +6,7 @@ namespace Spatie\SchemaOrg;
  * Computer programming source code. Example: Full (compile ready) solutions,
  * code snippet samples, scripts, templates.
  *
- * @see 
+ * @see http://schema.org/SoftwareSourceCode
  */
 class SoftwareSourceCode extends CreativeWork
 {
@@ -18,7 +18,7 @@ class SoftwareSourceCode extends CreativeWork
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/codeRepository
      */
     public function codeRepository($codeRepository)
     {
@@ -33,7 +33,7 @@ class SoftwareSourceCode extends CreativeWork
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/codeSampleType
      */
     public function codeSampleType($codeSampleType)
     {
@@ -47,7 +47,7 @@ class SoftwareSourceCode extends CreativeWork
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/programmingLanguage
      */
     public function programmingLanguage($programmingLanguage)
     {
@@ -62,7 +62,7 @@ class SoftwareSourceCode extends CreativeWork
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/runtime
      */
     public function runtime($runtime)
     {
@@ -77,7 +77,7 @@ class SoftwareSourceCode extends CreativeWork
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/runtimePlatform
      */
     public function runtimePlatform($runtimePlatform)
     {
@@ -92,7 +92,7 @@ class SoftwareSourceCode extends CreativeWork
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/sampleType
      */
     public function sampleType($sampleType)
     {
@@ -107,7 +107,7 @@ class SoftwareSourceCode extends CreativeWork
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/targetProduct
      */
     public function targetProduct($targetProduct)
     {

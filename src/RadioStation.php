@@ -5,7 +5,7 @@ namespace Spatie\SchemaOrg;
 /**
  * A radio station.
  *
- * @see 
+ * @see http://schema.org/RadioStation
  */
 class RadioStation extends LocalBusiness
 {

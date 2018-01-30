@@ -6,7 +6,7 @@ namespace Spatie\SchemaOrg;
  * A fact-checking review of claims made (or reported) in some creative work
  * (referenced via itemReviewed).
  *
- * @see 
+ * @see http://schema.org/ClaimReview
  */
 class ClaimReview extends Review
 {
@@ -17,7 +17,7 @@ class ClaimReview extends Review
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/claimReviewed
      */
     public function claimReviewed($claimReviewed)
     {

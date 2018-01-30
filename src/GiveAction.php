@@ -13,7 +13,7 @@ namespace Spatie\SchemaOrg;
  * being transferred (e.g. I may send my laptop to you, but that doesn't mean
  * I'm giving it to you).
  *
- * @see 
+ * @see http://schema.org/GiveAction
  */
 class GiveAction extends TransferAction
 {
@@ -25,7 +25,7 @@ class GiveAction extends TransferAction
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/recipient
      */
     public function recipient($recipient)
     {

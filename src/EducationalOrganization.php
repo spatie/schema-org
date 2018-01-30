@@ -5,7 +5,7 @@ namespace Spatie\SchemaOrg;
 /**
  * An educational organization.
  *
- * @see 
+ * @see http://schema.org/EducationalOrganization
  */
 class EducationalOrganization extends Organization
 {
@@ -16,7 +16,7 @@ class EducationalOrganization extends Organization
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/alumni
      */
     public function alumni($alumni)
     {
@@ -30,7 +30,7 @@ class EducationalOrganization extends Organization
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/alumni
      */
     public function alumni($alumni)
     {

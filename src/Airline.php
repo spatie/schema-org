@@ -5,7 +5,7 @@ namespace Spatie\SchemaOrg;
 /**
  * An organization that provides flights for passengers.
  *
- * @see 
+ * @see http://schema.org/Airline
  */
 class Airline extends Organization
 {
@@ -17,7 +17,7 @@ class Airline extends Organization
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/boardingPolicy
      */
     public function boardingPolicy($boardingPolicy)
     {
@@ -31,7 +31,7 @@ class Airline extends Organization
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/iataCode
      */
     public function iataCode($iataCode)
     {

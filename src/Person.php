@@ -5,7 +5,7 @@ namespace Spatie\SchemaOrg;
 /**
  * A person (alive, dead, undead, or fictional).
  *
- * @see 
+ * @see http://schema.org/Person
  */
 class Person extends Thing
 {
@@ -16,7 +16,7 @@ class Person extends Thing
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/additionalName
      */
     public function additionalName($additionalName)
     {
@@ -30,7 +30,7 @@ class Person extends Thing
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/address
      */
     public function address($address)
     {
@@ -45,7 +45,7 @@ class Person extends Thing
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/affiliation
      */
     public function affiliation($affiliation)
     {
@@ -59,7 +59,7 @@ class Person extends Thing
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/alumniOf
      */
     public function alumniOf($alumniOf)
     {
@@ -73,7 +73,7 @@ class Person extends Thing
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/award
      */
     public function award($award)
     {
@@ -87,7 +87,7 @@ class Person extends Thing
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/awards
      */
     public function awards($awards)
     {
@@ -101,7 +101,7 @@ class Person extends Thing
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/birthDate
      */
     public function birthDate($birthDate)
     {
@@ -115,7 +115,7 @@ class Person extends Thing
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/birthPlace
      */
     public function birthPlace($birthPlace)
     {
@@ -130,7 +130,7 @@ class Person extends Thing
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/brand
      */
     public function brand($brand)
     {
@@ -144,7 +144,7 @@ class Person extends Thing
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/children
      */
     public function children($children)
     {
@@ -158,7 +158,7 @@ class Person extends Thing
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/colleague
      */
     public function colleague($colleague)
     {
@@ -172,7 +172,7 @@ class Person extends Thing
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/colleagues
      */
     public function colleagues($colleagues)
     {
@@ -186,7 +186,7 @@ class Person extends Thing
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/contactPoint
      */
     public function contactPoint($contactPoint)
     {
@@ -200,7 +200,7 @@ class Person extends Thing
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/contactPoints
      */
     public function contactPoints($contactPoints)
     {
@@ -214,7 +214,7 @@ class Person extends Thing
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/deathDate
      */
     public function deathDate($deathDate)
     {
@@ -228,7 +228,7 @@ class Person extends Thing
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/deathPlace
      */
     public function deathPlace($deathPlace)
     {
@@ -243,7 +243,7 @@ class Person extends Thing
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/duns
      */
     public function duns($duns)
     {
@@ -257,7 +257,7 @@ class Person extends Thing
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/email
      */
     public function email($email)
     {
@@ -272,7 +272,7 @@ class Person extends Thing
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/familyName
      */
     public function familyName($familyName)
     {
@@ -286,7 +286,7 @@ class Person extends Thing
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/faxNumber
      */
     public function faxNumber($faxNumber)
     {
@@ -300,7 +300,7 @@ class Person extends Thing
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/follows
      */
     public function follows($follows)
     {
@@ -315,7 +315,7 @@ class Person extends Thing
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/funder
      */
     public function funder($funder)
     {
@@ -331,7 +331,7 @@ class Person extends Thing
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/gender
      */
     public function gender($gender)
     {
@@ -346,7 +346,7 @@ class Person extends Thing
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/givenName
      */
     public function givenName($givenName)
     {
@@ -363,7 +363,7 @@ class Person extends Thing
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/globalLocationNumber
      */
     public function globalLocationNumber($globalLocationNumber)
     {
@@ -378,7 +378,7 @@ class Person extends Thing
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/hasOfferCatalog
      */
     public function hasOfferCatalog($hasOfferCatalog)
     {
@@ -392,7 +392,7 @@ class Person extends Thing
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/hasPOS
      */
     public function hasPOS($hasPOS)
     {
@@ -406,7 +406,7 @@ class Person extends Thing
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/height
      */
     public function height($height)
     {
@@ -420,7 +420,7 @@ class Person extends Thing
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/homeLocation
      */
     public function homeLocation($homeLocation)
     {
@@ -434,7 +434,7 @@ class Person extends Thing
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/honorificPrefix
      */
     public function honorificPrefix($honorificPrefix)
     {
@@ -448,7 +448,7 @@ class Person extends Thing
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/honorificSuffix
      */
     public function honorificSuffix($honorificSuffix)
     {
@@ -464,7 +464,7 @@ class Person extends Thing
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/isicV4
      */
     public function isicV4($isicV4)
     {
@@ -478,7 +478,7 @@ class Person extends Thing
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/jobTitle
      */
     public function jobTitle($jobTitle)
     {
@@ -492,7 +492,7 @@ class Person extends Thing
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/knows
      */
     public function knows($knows)
     {
@@ -506,7 +506,7 @@ class Person extends Thing
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/makesOffer
      */
     public function makesOffer($makesOffer)
     {
@@ -521,7 +521,7 @@ class Person extends Thing
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/memberOf
      */
     public function memberOf($memberOf)
     {
@@ -536,7 +536,7 @@ class Person extends Thing
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/naics
      */
     public function naics($naics)
     {
@@ -550,7 +550,7 @@ class Person extends Thing
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/nationality
      */
     public function nationality($nationality)
     {
@@ -565,7 +565,7 @@ class Person extends Thing
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/netWorth
      */
     public function netWorth($netWorth)
     {
@@ -579,7 +579,7 @@ class Person extends Thing
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/owns
      */
     public function owns($owns)
     {
@@ -593,7 +593,7 @@ class Person extends Thing
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/parent
      */
     public function parent($parent)
     {
@@ -607,7 +607,7 @@ class Person extends Thing
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/parents
      */
     public function parents($parents)
     {
@@ -621,7 +621,7 @@ class Person extends Thing
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/performerIn
      */
     public function performerIn($performerIn)
     {
@@ -635,7 +635,7 @@ class Person extends Thing
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/relatedTo
      */
     public function relatedTo($relatedTo)
     {
@@ -650,7 +650,7 @@ class Person extends Thing
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/seeks
      */
     public function seeks($seeks)
     {
@@ -664,7 +664,7 @@ class Person extends Thing
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/sibling
      */
     public function sibling($sibling)
     {
@@ -678,7 +678,7 @@ class Person extends Thing
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/siblings
      */
     public function siblings($siblings)
     {
@@ -694,7 +694,7 @@ class Person extends Thing
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/sponsor
      */
     public function sponsor($sponsor)
     {
@@ -708,7 +708,7 @@ class Person extends Thing
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/spouse
      */
     public function spouse($spouse)
     {
@@ -723,7 +723,7 @@ class Person extends Thing
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/taxID
      */
     public function taxID($taxID)
     {
@@ -737,7 +737,7 @@ class Person extends Thing
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/telephone
      */
     public function telephone($telephone)
     {
@@ -751,7 +751,7 @@ class Person extends Thing
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/vatID
      */
     public function vatID($vatID)
     {
@@ -765,7 +765,7 @@ class Person extends Thing
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/weight
      */
     public function weight($weight)
     {
@@ -779,7 +779,7 @@ class Person extends Thing
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/workLocation
      */
     public function workLocation($workLocation)
     {
@@ -793,7 +793,7 @@ class Person extends Thing
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/worksFor
      */
     public function worksFor($worksFor)
     {

@@ -5,7 +5,7 @@ namespace Spatie\SchemaOrg;
 /**
  * Web page type: Video gallery page.
  *
- * @see 
+ * @see http://schema.org/VideoGallery
  */
 class VideoGallery extends CollectionPage
 {

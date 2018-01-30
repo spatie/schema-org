@@ -9,7 +9,7 @@ namespace Spatie\SchemaOrg;
  * confirmation emails or HTML pages with individual confirmations of
  * reservations. For offers of tickets, use [[Offer]].
  *
- * @see 
+ * @see http://schema.org/TaxiReservation
  */
 class TaxiReservation extends Reservation
 {
@@ -20,7 +20,7 @@ class TaxiReservation extends Reservation
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/partySize
      */
     public function partySize($partySize)
     {
@@ -34,7 +34,7 @@ class TaxiReservation extends Reservation
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/pickupLocation
      */
     public function pickupLocation($pickupLocation)
     {
@@ -48,7 +48,7 @@ class TaxiReservation extends Reservation
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/pickupTime
      */
     public function pickupTime($pickupTime)
     {

@@ -5,7 +5,7 @@ namespace Spatie\SchemaOrg;
 /**
  * Organization: A business corporation.
  *
- * @see 
+ * @see http://schema.org/Corporation
  */
 class Corporation extends Organization
 {
@@ -20,7 +20,7 @@ class Corporation extends Organization
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/tickerSymbol
      */
     public function tickerSymbol($tickerSymbol)
     {

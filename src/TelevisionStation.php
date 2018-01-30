@@ -5,7 +5,7 @@ namespace Spatie\SchemaOrg;
 /**
  * A television station.
  *
- * @see 
+ * @see http://schema.org/TelevisionStation
  */
 class TelevisionStation extends LocalBusiness
 {

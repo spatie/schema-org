@@ -6,7 +6,7 @@ namespace Spatie\SchemaOrg;
  * The act of providing goods, services, or money without compensation, often
  * for philanthropic reasons.
  *
- * @see 
+ * @see http://schema.org/DonateAction
  */
 class DonateAction extends TradeAction
 {
@@ -18,7 +18,7 @@ class DonateAction extends TradeAction
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/recipient
      */
     public function recipient($recipient)
     {

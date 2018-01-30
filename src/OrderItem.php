@@ -6,7 +6,7 @@ namespace Spatie\SchemaOrg;
  * An order item is a line of an order. It includes the quantity and shipping
  * details of a bought offer.
  *
- * @see 
+ * @see http://schema.org/OrderItem
  */
 class OrderItem extends Intangible
 {
@@ -17,7 +17,7 @@ class OrderItem extends Intangible
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/orderDelivery
      */
     public function orderDelivery($orderDelivery)
     {
@@ -31,7 +31,7 @@ class OrderItem extends Intangible
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/orderItemNumber
      */
     public function orderItemNumber($orderItemNumber)
     {
@@ -45,7 +45,7 @@ class OrderItem extends Intangible
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/orderItemStatus
      */
     public function orderItemStatus($orderItemStatus)
     {
@@ -60,7 +60,7 @@ class OrderItem extends Intangible
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/orderQuantity
      */
     public function orderQuantity($orderQuantity)
     {
@@ -74,7 +74,7 @@ class OrderItem extends Intangible
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/orderedItem
      */
     public function orderedItem($orderedItem)
     {

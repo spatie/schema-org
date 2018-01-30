@@ -6,7 +6,7 @@ namespace Spatie\SchemaOrg;
  * The most generic kind of creative work, including books, movies, photographs,
  * software programs, etc.
  *
- * @see 
+ * @see http://schema.org/CreativeWork
  */
 class CreativeWork extends Thing
 {
@@ -17,7 +17,7 @@ class CreativeWork extends Thing
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/about
      */
     public function about($about)
     {
@@ -34,7 +34,7 @@ class CreativeWork extends Thing
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/accessMode
      */
     public function accessMode($accessMode)
     {
@@ -50,7 +50,7 @@ class CreativeWork extends Thing
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/accessModeSufficient
      */
     public function accessModeSufficient($accessModeSufficient)
     {
@@ -66,7 +66,7 @@ class CreativeWork extends Thing
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/accessibilityAPI
      */
     public function accessibilityAPI($accessibilityAPI)
     {
@@ -82,7 +82,7 @@ class CreativeWork extends Thing
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/accessibilityControl
      */
     public function accessibilityControl($accessibilityControl)
     {
@@ -98,7 +98,7 @@ class CreativeWork extends Thing
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/accessibilityFeature
      */
     public function accessibilityFeature($accessibilityFeature)
     {
@@ -115,7 +115,7 @@ class CreativeWork extends Thing
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/accessibilityHazard
      */
     public function accessibilityHazard($accessibilityHazard)
     {
@@ -133,7 +133,7 @@ class CreativeWork extends Thing
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/accessibilitySummary
      */
     public function accessibilitySummary($accessibilitySummary)
     {
@@ -147,7 +147,7 @@ class CreativeWork extends Thing
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/accountablePerson
      */
     public function accountablePerson($accountablePerson)
     {
@@ -162,7 +162,7 @@ class CreativeWork extends Thing
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/aggregateRating
      */
     public function aggregateRating($aggregateRating)
     {
@@ -176,7 +176,7 @@ class CreativeWork extends Thing
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/alternativeHeadline
      */
     public function alternativeHeadline($alternativeHeadline)
     {
@@ -191,7 +191,7 @@ class CreativeWork extends Thing
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/associatedMedia
      */
     public function associatedMedia($associatedMedia)
     {
@@ -205,7 +205,7 @@ class CreativeWork extends Thing
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/audience
      */
     public function audience($audience)
     {
@@ -219,7 +219,7 @@ class CreativeWork extends Thing
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/audio
      */
     public function audio($audio)
     {
@@ -235,7 +235,7 @@ class CreativeWork extends Thing
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/author
      */
     public function author($author)
     {
@@ -249,7 +249,7 @@ class CreativeWork extends Thing
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/award
      */
     public function award($award)
     {
@@ -263,7 +263,7 @@ class CreativeWork extends Thing
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/awards
      */
     public function awards($awards)
     {
@@ -277,7 +277,7 @@ class CreativeWork extends Thing
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/character
      */
     public function character($character)
     {
@@ -292,7 +292,7 @@ class CreativeWork extends Thing
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/citation
      */
     public function citation($citation)
     {
@@ -306,7 +306,7 @@ class CreativeWork extends Thing
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/comment
      */
     public function comment($comment)
     {
@@ -322,7 +322,7 @@ class CreativeWork extends Thing
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/commentCount
      */
     public function commentCount($commentCount)
     {
@@ -337,7 +337,7 @@ class CreativeWork extends Thing
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/contentLocation
      */
     public function contentLocation($contentLocation)
     {
@@ -351,7 +351,7 @@ class CreativeWork extends Thing
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/contentRating
      */
     public function contentRating($contentRating)
     {
@@ -365,7 +365,7 @@ class CreativeWork extends Thing
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/contributor
      */
     public function contributor($contributor)
     {
@@ -379,7 +379,7 @@ class CreativeWork extends Thing
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/copyrightHolder
      */
     public function copyrightHolder($copyrightHolder)
     {
@@ -394,7 +394,7 @@ class CreativeWork extends Thing
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/copyrightYear
      */
     public function copyrightYear($copyrightYear)
     {
@@ -409,7 +409,7 @@ class CreativeWork extends Thing
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/creator
      */
     public function creator($creator)
     {
@@ -424,7 +424,7 @@ class CreativeWork extends Thing
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/dateCreated
      */
     public function dateCreated($dateCreated)
     {
@@ -439,7 +439,7 @@ class CreativeWork extends Thing
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/dateModified
      */
     public function dateModified($dateModified)
     {
@@ -453,7 +453,7 @@ class CreativeWork extends Thing
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/datePublished
      */
     public function datePublished($datePublished)
     {
@@ -467,7 +467,7 @@ class CreativeWork extends Thing
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/discussionUrl
      */
     public function discussionUrl($discussionUrl)
     {
@@ -481,7 +481,7 @@ class CreativeWork extends Thing
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/editor
      */
     public function editor($editor)
     {
@@ -495,7 +495,7 @@ class CreativeWork extends Thing
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/educationalAlignment
      */
     public function educationalAlignment($educationalAlignment)
     {
@@ -510,7 +510,7 @@ class CreativeWork extends Thing
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/educationalUse
      */
     public function educationalUse($educationalUse)
     {
@@ -525,7 +525,7 @@ class CreativeWork extends Thing
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/encoding
      */
     public function encoding($encoding)
     {
@@ -539,7 +539,7 @@ class CreativeWork extends Thing
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/encodings
      */
     public function encodings($encodings)
     {
@@ -554,7 +554,7 @@ class CreativeWork extends Thing
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/exampleOfWork
      */
     public function exampleOfWork($exampleOfWork)
     {
@@ -575,7 +575,7 @@ class CreativeWork extends Thing
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/fileFormat
      */
     public function fileFormat($fileFormat)
     {
@@ -590,7 +590,7 @@ class CreativeWork extends Thing
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/funder
      */
     public function funder($funder)
     {
@@ -604,7 +604,7 @@ class CreativeWork extends Thing
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/genre
      */
     public function genre($genre)
     {
@@ -619,7 +619,7 @@ class CreativeWork extends Thing
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/hasPart
      */
     public function hasPart($hasPart)
     {
@@ -633,7 +633,7 @@ class CreativeWork extends Thing
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/headline
      */
     public function headline($headline)
     {
@@ -650,7 +650,7 @@ class CreativeWork extends Thing
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/inLanguage
      */
     public function inLanguage($inLanguage)
     {
@@ -666,7 +666,7 @@ class CreativeWork extends Thing
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/interactionStatistic
      */
     public function interactionStatistic($interactionStatistic)
     {
@@ -681,7 +681,7 @@ class CreativeWork extends Thing
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/interactivityType
      */
     public function interactivityType($interactivityType)
     {
@@ -695,7 +695,7 @@ class CreativeWork extends Thing
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/isAccessibleForFree
      */
     public function isAccessibleForFree($isAccessibleForFree)
     {
@@ -711,7 +711,7 @@ class CreativeWork extends Thing
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/isBasedOn
      */
     public function isBasedOn($isBasedOn)
     {
@@ -727,7 +727,7 @@ class CreativeWork extends Thing
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/isBasedOnUrl
      */
     public function isBasedOnUrl($isBasedOnUrl)
     {
@@ -741,7 +741,7 @@ class CreativeWork extends Thing
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/isFamilyFriendly
      */
     public function isFamilyFriendly($isFamilyFriendly)
     {
@@ -756,7 +756,7 @@ class CreativeWork extends Thing
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/isPartOf
      */
     public function isPartOf($isPartOf)
     {
@@ -771,7 +771,7 @@ class CreativeWork extends Thing
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/keywords
      */
     public function keywords($keywords)
     {
@@ -786,7 +786,7 @@ class CreativeWork extends Thing
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/learningResourceType
      */
     public function learningResourceType($learningResourceType)
     {
@@ -801,7 +801,7 @@ class CreativeWork extends Thing
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/license
      */
     public function license($license)
     {
@@ -816,7 +816,7 @@ class CreativeWork extends Thing
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/locationCreated
      */
     public function locationCreated($locationCreated)
     {
@@ -831,7 +831,7 @@ class CreativeWork extends Thing
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/mainEntity
      */
     public function mainEntity($mainEntity)
     {
@@ -846,7 +846,7 @@ class CreativeWork extends Thing
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/material
      */
     public function material($material)
     {
@@ -861,7 +861,7 @@ class CreativeWork extends Thing
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/mentions
      */
     public function mentions($mentions)
     {
@@ -877,7 +877,7 @@ class CreativeWork extends Thing
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/offers
      */
     public function offers($offers)
     {
@@ -891,7 +891,7 @@ class CreativeWork extends Thing
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/position
      */
     public function position($position)
     {
@@ -906,7 +906,7 @@ class CreativeWork extends Thing
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/producer
      */
     public function producer($producer)
     {
@@ -922,7 +922,7 @@ class CreativeWork extends Thing
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/provider
      */
     public function provider($provider)
     {
@@ -936,7 +936,7 @@ class CreativeWork extends Thing
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/publication
      */
     public function publication($publication)
     {
@@ -950,7 +950,7 @@ class CreativeWork extends Thing
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/publisher
      */
     public function publisher($publisher)
     {
@@ -965,7 +965,7 @@ class CreativeWork extends Thing
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/publishingPrinciples
      */
     public function publishingPrinciples($publishingPrinciples)
     {
@@ -980,7 +980,7 @@ class CreativeWork extends Thing
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/recordedAt
      */
     public function recordedAt($recordedAt)
     {
@@ -995,7 +995,7 @@ class CreativeWork extends Thing
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/releasedEvent
      */
     public function releasedEvent($releasedEvent)
     {
@@ -1009,7 +1009,7 @@ class CreativeWork extends Thing
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/review
      */
     public function review($review)
     {
@@ -1023,7 +1023,7 @@ class CreativeWork extends Thing
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/reviews
      */
     public function reviews($reviews)
     {
@@ -1040,7 +1040,7 @@ class CreativeWork extends Thing
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/schemaVersion
      */
     public function schemaVersion($schemaVersion)
     {
@@ -1054,7 +1054,7 @@ class CreativeWork extends Thing
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/sourceOrganization
      */
     public function sourceOrganization($sourceOrganization)
     {
@@ -1073,7 +1073,7 @@ class CreativeWork extends Thing
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/spatialCoverage
      */
     public function spatialCoverage($spatialCoverage)
     {
@@ -1089,7 +1089,7 @@ class CreativeWork extends Thing
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/sponsor
      */
     public function sponsor($sponsor)
     {
@@ -1114,7 +1114,7 @@ class CreativeWork extends Thing
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/temporalCoverage
      */
     public function temporalCoverage($temporalCoverage)
     {
@@ -1128,7 +1128,7 @@ class CreativeWork extends Thing
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/text
      */
     public function text($text)
     {
@@ -1142,7 +1142,7 @@ class CreativeWork extends Thing
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/thumbnailUrl
      */
     public function thumbnailUrl($thumbnailUrl)
     {
@@ -1158,7 +1158,7 @@ class CreativeWork extends Thing
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/timeRequired
      */
     public function timeRequired($timeRequired)
     {
@@ -1174,7 +1174,7 @@ class CreativeWork extends Thing
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/translator
      */
     public function translator($translator)
     {
@@ -1188,7 +1188,7 @@ class CreativeWork extends Thing
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/typicalAgeRange
      */
     public function typicalAgeRange($typicalAgeRange)
     {
@@ -1202,7 +1202,7 @@ class CreativeWork extends Thing
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/version
      */
     public function version($version)
     {
@@ -1216,7 +1216,7 @@ class CreativeWork extends Thing
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/video
      */
     public function video($video)
     {
@@ -1231,7 +1231,7 @@ class CreativeWork extends Thing
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/workExample
      */
     public function workExample($workExample)
     {

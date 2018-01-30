@@ -5,7 +5,7 @@ namespace Spatie\SchemaOrg;
 /**
  * A placeholder for multiple similar products of the same kind.
  *
- * @see 
+ * @see http://schema.org/SomeProducts
  */
 class SomeProducts extends Product
 {
@@ -16,7 +16,7 @@ class SomeProducts extends Product
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/inventoryLevel
      */
     public function inventoryLevel($inventoryLevel)
     {

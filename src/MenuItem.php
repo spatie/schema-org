@@ -5,7 +5,7 @@ namespace Spatie\SchemaOrg;
 /**
  * A food or drink item listed in a menu or menu section.
  *
- * @see 
+ * @see http://schema.org/MenuItem
  */
 class MenuItem extends CreativeWork
 {
@@ -16,7 +16,7 @@ class MenuItem extends CreativeWork
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/nutrition
      */
     public function nutrition($nutrition)
     {
@@ -32,7 +32,7 @@ class MenuItem extends CreativeWork
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/offers
      */
     public function offers($offers)
     {
@@ -47,7 +47,7 @@ class MenuItem extends CreativeWork
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/suitableForDiet
      */
     public function suitableForDiet($suitableForDiet)
     {

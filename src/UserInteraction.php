@@ -7,7 +7,7 @@ namespace Spatie\SchemaOrg;
  * interacting with pages. It is generally better to use [[Action]]-based
  * vocabulary, alongside types such as [[Comment]].
  *
- * @see 
+ * @see http://schema.org/UserInteraction
  */
 class UserInteraction extends Event
 {

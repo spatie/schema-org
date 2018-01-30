@@ -5,7 +5,7 @@ namespace Spatie\SchemaOrg;
 /**
  * Reference documentation for application programming interfaces (APIs).
  *
- * @see 
+ * @see http://schema.org/APIReference
  */
 class APIReference extends TechArticle
 {
@@ -16,7 +16,7 @@ class APIReference extends TechArticle
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/assembly
      */
     public function assembly($assembly)
     {
@@ -30,7 +30,7 @@ class APIReference extends TechArticle
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/assemblyVersion
      */
     public function assemblyVersion($assemblyVersion)
     {
@@ -44,7 +44,7 @@ class APIReference extends TechArticle
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/executableLibraryName
      */
     public function executableLibraryName($executableLibraryName)
     {
@@ -58,7 +58,7 @@ class APIReference extends TechArticle
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/programmingModel
      */
     public function programmingModel($programmingModel)
     {
@@ -72,7 +72,7 @@ class APIReference extends TechArticle
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/targetPlatform
      */
     public function targetPlatform($targetPlatform)
     {

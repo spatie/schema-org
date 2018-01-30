@@ -7,7 +7,7 @@ namespace Spatie\SchemaOrg;
  * feature of an accommodation as a property-value pair of varying degrees of
  * formality.
  *
- * @see 
+ * @see http://schema.org/LocationFeatureSpecification
  */
 class LocationFeatureSpecification extends PropertyValue
 {
@@ -18,7 +18,7 @@ class LocationFeatureSpecification extends PropertyValue
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/hoursAvailable
      */
     public function hoursAvailable($hoursAvailable)
     {
@@ -32,7 +32,7 @@ class LocationFeatureSpecification extends PropertyValue
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/validFrom
      */
     public function validFrom($validFrom)
     {
@@ -47,7 +47,7 @@ class LocationFeatureSpecification extends PropertyValue
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/validThrough
      */
     public function validThrough($validThrough)
     {

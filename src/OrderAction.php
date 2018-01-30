@@ -5,7 +5,7 @@ namespace Spatie\SchemaOrg;
 /**
  * An agent orders an object/product/service to be delivered/sent.
  *
- * @see 
+ * @see http://schema.org/OrderAction
  */
 class OrderAction extends TradeAction
 {
@@ -16,7 +16,7 @@ class OrderAction extends TradeAction
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/deliveryMethod
      */
     public function deliveryMethod($deliveryMethod)
     {

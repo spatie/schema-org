@@ -5,7 +5,7 @@ namespace Spatie\SchemaOrg;
 /**
  * A permission for a particular person or group to access a particular file.
  *
- * @see 
+ * @see http://schema.org/DigitalDocumentPermission
  */
 class DigitalDocumentPermission extends Intangible
 {
@@ -17,7 +17,7 @@ class DigitalDocumentPermission extends Intangible
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/grantee
      */
     public function grantee($grantee)
     {
@@ -31,7 +31,7 @@ class DigitalDocumentPermission extends Intangible
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/permissionType
      */
     public function permissionType($permissionType)
     {

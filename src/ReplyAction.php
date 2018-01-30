@@ -10,7 +10,7 @@ namespace Spatie\SchemaOrg;
  * 
  * * [[AskAction]]: Appears generally as an origin of a ReplyAction.
  *
- * @see 
+ * @see http://schema.org/ReplyAction
  */
 class ReplyAction extends CommunicateAction
 {
@@ -22,7 +22,7 @@ class ReplyAction extends CommunicateAction
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/resultComment
      */
     public function resultComment($resultComment)
     {

@@ -5,7 +5,7 @@ namespace Spatie\SchemaOrg;
 /**
  * A movie.
  *
- * @see 
+ * @see http://schema.org/Movie
  */
 class Movie extends CreativeWork
 {
@@ -18,7 +18,7 @@ class Movie extends CreativeWork
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/actor
      */
     public function actor($actor)
     {
@@ -33,7 +33,7 @@ class Movie extends CreativeWork
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/actors
      */
     public function actors($actors)
     {
@@ -48,7 +48,7 @@ class Movie extends CreativeWork
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/countryOfOrigin
      */
     public function countryOfOrigin($countryOfOrigin)
     {
@@ -64,7 +64,7 @@ class Movie extends CreativeWork
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/director
      */
     public function director($director)
     {
@@ -79,7 +79,7 @@ class Movie extends CreativeWork
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/directors
      */
     public function directors($directors)
     {
@@ -94,7 +94,7 @@ class Movie extends CreativeWork
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/duration
      */
     public function duration($duration)
     {
@@ -108,7 +108,7 @@ class Movie extends CreativeWork
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/musicBy
      */
     public function musicBy($musicBy)
     {
@@ -123,7 +123,7 @@ class Movie extends CreativeWork
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/productionCompany
      */
     public function productionCompany($productionCompany)
     {
@@ -138,7 +138,7 @@ class Movie extends CreativeWork
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/subtitleLanguage
      */
     public function subtitleLanguage($subtitleLanguage)
     {
@@ -152,7 +152,7 @@ class Movie extends CreativeWork
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/trailer
      */
     public function trailer($trailer)
     {

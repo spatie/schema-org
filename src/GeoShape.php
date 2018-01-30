@@ -8,7 +8,7 @@ namespace Spatie\SchemaOrg;
  * whitespace or commas can be used to separate latitude and longitude;
  * whitespace should be used when writing a list of several such points.
  *
- * @see 
+ * @see http://schema.org/GeoShape
  */
 class GeoShape extends StructuredValue
 {
@@ -19,7 +19,7 @@ class GeoShape extends StructuredValue
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/address
      */
     public function address($address)
     {
@@ -34,7 +34,7 @@ class GeoShape extends StructuredValue
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/addressCountry
      */
     public function addressCountry($addressCountry)
     {
@@ -50,7 +50,7 @@ class GeoShape extends StructuredValue
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/box
      */
     public function box($box)
     {
@@ -66,7 +66,7 @@ class GeoShape extends StructuredValue
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/circle
      */
     public function circle($circle)
     {
@@ -81,7 +81,7 @@ class GeoShape extends StructuredValue
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/elevation
      */
     public function elevation($elevation)
     {
@@ -95,7 +95,7 @@ class GeoShape extends StructuredValue
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/geoMidpoint
      */
     public function geoMidpoint($geoMidpoint)
     {
@@ -110,7 +110,7 @@ class GeoShape extends StructuredValue
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/line
      */
     public function line($line)
     {
@@ -127,7 +127,7 @@ class GeoShape extends StructuredValue
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/polygon
      */
     public function polygon($polygon)
     {
@@ -141,7 +141,7 @@ class GeoShape extends StructuredValue
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/postalCode
      */
     public function postalCode($postalCode)
     {

@@ -5,7 +5,7 @@ namespace Spatie\SchemaOrg;
 /**
  * A Property value specification.
  *
- * @see 
+ * @see http://schema.org/PropertyValueSpecification
  */
 class PropertyValueSpecification extends Intangible
 {
@@ -18,7 +18,7 @@ class PropertyValueSpecification extends Intangible
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/defaultValue
      */
     public function defaultValue($defaultValue)
     {
@@ -32,7 +32,7 @@ class PropertyValueSpecification extends Intangible
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/maxValue
      */
     public function maxValue($maxValue)
     {
@@ -46,7 +46,7 @@ class PropertyValueSpecification extends Intangible
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/minValue
      */
     public function minValue($minValue)
     {
@@ -60,7 +60,7 @@ class PropertyValueSpecification extends Intangible
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/multipleValues
      */
     public function multipleValues($multipleValues)
     {
@@ -76,7 +76,7 @@ class PropertyValueSpecification extends Intangible
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/readonlyValue
      */
     public function readonlyValue($readonlyValue)
     {
@@ -91,7 +91,7 @@ class PropertyValueSpecification extends Intangible
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/stepValue
      */
     public function stepValue($stepValue)
     {
@@ -105,7 +105,7 @@ class PropertyValueSpecification extends Intangible
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/valueMaxLength
      */
     public function valueMaxLength($valueMaxLength)
     {
@@ -120,7 +120,7 @@ class PropertyValueSpecification extends Intangible
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/valueMinLength
      */
     public function valueMinLength($valueMinLength)
     {
@@ -135,7 +135,7 @@ class PropertyValueSpecification extends Intangible
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/valueName
      */
     public function valueName($valueName)
     {
@@ -150,7 +150,7 @@ class PropertyValueSpecification extends Intangible
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/valuePattern
      */
     public function valuePattern($valuePattern)
     {
@@ -165,7 +165,7 @@ class PropertyValueSpecification extends Intangible
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/valueRequired
      */
     public function valueRequired($valueRequired)
     {

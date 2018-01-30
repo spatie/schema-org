@@ -5,7 +5,7 @@ namespace Spatie\SchemaOrg;
 /**
  * A taxi stand.
  *
- * @see 
+ * @see http://schema.org/TaxiStand
  */
 class TaxiStand extends CivicStructure
 {

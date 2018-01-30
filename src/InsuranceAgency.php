@@ -5,7 +5,7 @@ namespace Spatie\SchemaOrg;
 /**
  * An Insurance agency.
  *
- * @see 
+ * @see http://schema.org/InsuranceAgency
  */
 class InsuranceAgency extends FinancialService
 {

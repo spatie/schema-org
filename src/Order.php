@@ -7,7 +7,7 @@ namespace Spatie\SchemaOrg;
  * multiple line items, each represented by an Offer that has been accepted by
  * the customer.
  *
- * @see 
+ * @see http://schema.org/Order
  */
 class Order extends Intangible
 {
@@ -19,7 +19,7 @@ class Order extends Intangible
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/acceptedOffer
      */
     public function acceptedOffer($acceptedOffer)
     {
@@ -33,7 +33,7 @@ class Order extends Intangible
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/billingAddress
      */
     public function billingAddress($billingAddress)
     {
@@ -50,7 +50,7 @@ class Order extends Intangible
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/broker
      */
     public function broker($broker)
     {
@@ -64,7 +64,7 @@ class Order extends Intangible
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/confirmationNumber
      */
     public function confirmationNumber($confirmationNumber)
     {
@@ -78,7 +78,7 @@ class Order extends Intangible
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/customer
      */
     public function customer($customer)
     {
@@ -92,7 +92,7 @@ class Order extends Intangible
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/discount
      */
     public function discount($discount)
     {
@@ -106,7 +106,7 @@ class Order extends Intangible
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/discountCode
      */
     public function discountCode($discountCode)
     {
@@ -120,7 +120,7 @@ class Order extends Intangible
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/discountCurrency
      */
     public function discountCurrency($discountCurrency)
     {
@@ -134,7 +134,7 @@ class Order extends Intangible
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/isGift
      */
     public function isGift($isGift)
     {
@@ -148,7 +148,7 @@ class Order extends Intangible
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/merchant
      */
     public function merchant($merchant)
     {
@@ -162,7 +162,7 @@ class Order extends Intangible
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/orderDate
      */
     public function orderDate($orderDate)
     {
@@ -176,7 +176,7 @@ class Order extends Intangible
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/orderDelivery
      */
     public function orderDelivery($orderDelivery)
     {
@@ -190,7 +190,7 @@ class Order extends Intangible
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/orderNumber
      */
     public function orderNumber($orderNumber)
     {
@@ -204,7 +204,7 @@ class Order extends Intangible
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/orderStatus
      */
     public function orderStatus($orderStatus)
     {
@@ -218,7 +218,7 @@ class Order extends Intangible
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/orderedItem
      */
     public function orderedItem($orderedItem)
     {
@@ -232,7 +232,7 @@ class Order extends Intangible
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/partOfInvoice
      */
     public function partOfInvoice($partOfInvoice)
     {
@@ -246,7 +246,7 @@ class Order extends Intangible
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/paymentDue
      */
     public function paymentDue($paymentDue)
     {
@@ -260,7 +260,7 @@ class Order extends Intangible
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/paymentDue
      */
     public function paymentDue($paymentDue)
     {
@@ -274,7 +274,7 @@ class Order extends Intangible
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/paymentDueDate
      */
     public function paymentDueDate($paymentDueDate)
     {
@@ -288,7 +288,7 @@ class Order extends Intangible
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/paymentMethod
      */
     public function paymentMethod($paymentMethod)
     {
@@ -302,7 +302,7 @@ class Order extends Intangible
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/paymentMethod
      */
     public function paymentMethod($paymentMethod)
     {
@@ -317,7 +317,7 @@ class Order extends Intangible
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/paymentMethodId
      */
     public function paymentMethodId($paymentMethodId)
     {
@@ -332,7 +332,7 @@ class Order extends Intangible
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/paymentMethodId
      */
     public function paymentMethodId($paymentMethodId)
     {
@@ -346,7 +346,7 @@ class Order extends Intangible
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/paymentUrl
      */
     public function paymentUrl($paymentUrl)
     {
@@ -361,7 +361,7 @@ class Order extends Intangible
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/seller
      */
     public function seller($seller)
     {

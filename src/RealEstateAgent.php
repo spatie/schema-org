@@ -5,7 +5,7 @@ namespace Spatie\SchemaOrg;
 /**
  * A real-estate agent.
  *
- * @see 
+ * @see http://schema.org/RealEstateAgent
  */
 class RealEstateAgent extends LocalBusiness
 {

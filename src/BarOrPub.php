@@ -5,7 +5,7 @@ namespace Spatie\SchemaOrg;
 /**
  * A bar or pub.
  *
- * @see 
+ * @see http://schema.org/BarOrPub
  */
 class BarOrPub extends FoodEstablishment
 {

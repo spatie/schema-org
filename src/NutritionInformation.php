@@ -5,7 +5,7 @@ namespace Spatie\SchemaOrg;
 /**
  * Nutritional information about the recipe.
  *
- * @see 
+ * @see http://schema.org/NutritionInformation
  */
 class NutritionInformation extends StructuredValue
 {
@@ -16,7 +16,7 @@ class NutritionInformation extends StructuredValue
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/calories
      */
     public function calories($calories)
     {
@@ -30,7 +30,7 @@ class NutritionInformation extends StructuredValue
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/carbohydrateContent
      */
     public function carbohydrateContent($carbohydrateContent)
     {
@@ -44,7 +44,7 @@ class NutritionInformation extends StructuredValue
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/cholesterolContent
      */
     public function cholesterolContent($cholesterolContent)
     {
@@ -58,7 +58,7 @@ class NutritionInformation extends StructuredValue
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/fatContent
      */
     public function fatContent($fatContent)
     {
@@ -72,7 +72,7 @@ class NutritionInformation extends StructuredValue
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/fiberContent
      */
     public function fiberContent($fiberContent)
     {
@@ -86,7 +86,7 @@ class NutritionInformation extends StructuredValue
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/proteinContent
      */
     public function proteinContent($proteinContent)
     {
@@ -100,7 +100,7 @@ class NutritionInformation extends StructuredValue
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/saturatedFatContent
      */
     public function saturatedFatContent($saturatedFatContent)
     {
@@ -114,7 +114,7 @@ class NutritionInformation extends StructuredValue
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/servingSize
      */
     public function servingSize($servingSize)
     {
@@ -128,7 +128,7 @@ class NutritionInformation extends StructuredValue
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/sodiumContent
      */
     public function sodiumContent($sodiumContent)
     {
@@ -142,7 +142,7 @@ class NutritionInformation extends StructuredValue
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/sugarContent
      */
     public function sugarContent($sugarContent)
     {
@@ -156,7 +156,7 @@ class NutritionInformation extends StructuredValue
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/transFatContent
      */
     public function transFatContent($transFatContent)
     {
@@ -170,7 +170,7 @@ class NutritionInformation extends StructuredValue
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/unsaturatedFatContent
      */
     public function unsaturatedFatContent($unsaturatedFatContent)
     {

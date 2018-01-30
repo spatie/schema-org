@@ -10,7 +10,7 @@ namespace Spatie\SchemaOrg;
  * See also [blog
  * post](http://blog.schema.org/2014/09/schemaorg-support-for-bibliographic_2.html).
  *
- * @see 
+ * @see http://schema.org/Article
  */
 class Article extends CreativeWork
 {
@@ -21,7 +21,7 @@ class Article extends CreativeWork
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/articleBody
      */
     public function articleBody($articleBody)
     {
@@ -36,7 +36,7 @@ class Article extends CreativeWork
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/articleSection
      */
     public function articleSection($articleSection)
     {
@@ -50,7 +50,7 @@ class Article extends CreativeWork
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/pageEnd
      */
     public function pageEnd($pageEnd)
     {
@@ -64,7 +64,7 @@ class Article extends CreativeWork
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/pageStart
      */
     public function pageStart($pageStart)
     {
@@ -79,7 +79,7 @@ class Article extends CreativeWork
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/pagination
      */
     public function pagination($pagination)
     {
@@ -93,7 +93,7 @@ class Article extends CreativeWork
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/wordCount
      */
     public function wordCount($wordCount)
     {

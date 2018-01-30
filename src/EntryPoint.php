@@ -5,7 +5,7 @@ namespace Spatie\SchemaOrg;
 /**
  * An entry point, within some Web-based protocol.
  *
- * @see 
+ * @see http://schema.org/EntryPoint
  */
 class EntryPoint extends Intangible
 {
@@ -16,7 +16,7 @@ class EntryPoint extends Intangible
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/actionApplication
      */
     public function actionApplication($actionApplication)
     {
@@ -32,7 +32,7 @@ class EntryPoint extends Intangible
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/actionPlatform
      */
     public function actionPlatform($actionPlatform)
     {
@@ -46,7 +46,7 @@ class EntryPoint extends Intangible
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/application
      */
     public function application($application)
     {
@@ -60,7 +60,7 @@ class EntryPoint extends Intangible
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/contentType
      */
     public function contentType($contentType)
     {
@@ -74,7 +74,7 @@ class EntryPoint extends Intangible
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/encodingType
      */
     public function encodingType($encodingType)
     {
@@ -89,7 +89,7 @@ class EntryPoint extends Intangible
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/httpMethod
      */
     public function httpMethod($httpMethod)
     {
@@ -104,7 +104,7 @@ class EntryPoint extends Intangible
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/urlTemplate
      */
     public function urlTemplate($urlTemplate)
     {

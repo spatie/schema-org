@@ -5,7 +5,7 @@ namespace Spatie\SchemaOrg;
 /**
  * Residence type: Apartment complex.
  *
- * @see 
+ * @see http://schema.org/ApartmentComplex
  */
 class ApartmentComplex extends Residence
 {

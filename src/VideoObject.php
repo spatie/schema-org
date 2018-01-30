@@ -5,7 +5,7 @@ namespace Spatie\SchemaOrg;
 /**
  * A video file.
  *
- * @see 
+ * @see http://schema.org/VideoObject
  */
 class VideoObject extends MediaObject
 {
@@ -18,7 +18,7 @@ class VideoObject extends MediaObject
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/actor
      */
     public function actor($actor)
     {
@@ -33,7 +33,7 @@ class VideoObject extends MediaObject
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/actors
      */
     public function actors($actors)
     {
@@ -47,7 +47,7 @@ class VideoObject extends MediaObject
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/caption
      */
     public function caption($caption)
     {
@@ -63,7 +63,7 @@ class VideoObject extends MediaObject
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/director
      */
     public function director($director)
     {
@@ -78,7 +78,7 @@ class VideoObject extends MediaObject
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/directors
      */
     public function directors($directors)
     {
@@ -92,7 +92,7 @@ class VideoObject extends MediaObject
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/musicBy
      */
     public function musicBy($musicBy)
     {
@@ -106,7 +106,7 @@ class VideoObject extends MediaObject
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/thumbnail
      */
     public function thumbnail($thumbnail)
     {
@@ -121,7 +121,7 @@ class VideoObject extends MediaObject
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/transcript
      */
     public function transcript($transcript)
     {
@@ -135,7 +135,7 @@ class VideoObject extends MediaObject
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/videoFrameSize
      */
     public function videoFrameSize($videoFrameSize)
     {
@@ -149,7 +149,7 @@ class VideoObject extends MediaObject
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/videoQuality
      */
     public function videoQuality($videoQuality)
     {

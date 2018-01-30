@@ -5,7 +5,7 @@ namespace Spatie\SchemaOrg;
 /**
  * A subclass of Role used to describe roles within organizations.
  *
- * @see 
+ * @see http://schema.org/OrganizationRole
  */
 class OrganizationRole extends Role
 {
@@ -17,7 +17,7 @@ class OrganizationRole extends Role
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/numberedPosition
      */
     public function numberedPosition($numberedPosition)
     {

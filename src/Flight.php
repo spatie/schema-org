@@ -5,7 +5,7 @@ namespace Spatie\SchemaOrg;
 /**
  * An airline flight.
  *
- * @see 
+ * @see http://schema.org/Flight
  */
 class Flight extends Intangible
 {
@@ -16,7 +16,7 @@ class Flight extends Intangible
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/aircraft
      */
     public function aircraft($aircraft)
     {
@@ -30,7 +30,7 @@ class Flight extends Intangible
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/arrivalAirport
      */
     public function arrivalAirport($arrivalAirport)
     {
@@ -44,7 +44,7 @@ class Flight extends Intangible
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/arrivalGate
      */
     public function arrivalGate($arrivalGate)
     {
@@ -58,7 +58,7 @@ class Flight extends Intangible
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/arrivalTerminal
      */
     public function arrivalTerminal($arrivalTerminal)
     {
@@ -72,7 +72,7 @@ class Flight extends Intangible
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/arrivalTime
      */
     public function arrivalTime($arrivalTime)
     {
@@ -87,7 +87,7 @@ class Flight extends Intangible
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/boardingPolicy
      */
     public function boardingPolicy($boardingPolicy)
     {
@@ -102,7 +102,7 @@ class Flight extends Intangible
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/carrier
      */
     public function carrier($carrier)
     {
@@ -116,7 +116,7 @@ class Flight extends Intangible
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/departureAirport
      */
     public function departureAirport($departureAirport)
     {
@@ -130,7 +130,7 @@ class Flight extends Intangible
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/departureGate
      */
     public function departureGate($departureGate)
     {
@@ -144,7 +144,7 @@ class Flight extends Intangible
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/departureTerminal
      */
     public function departureTerminal($departureTerminal)
     {
@@ -158,7 +158,7 @@ class Flight extends Intangible
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/departureTime
      */
     public function departureTime($departureTime)
     {
@@ -172,7 +172,7 @@ class Flight extends Intangible
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/estimatedFlightDuration
      */
     public function estimatedFlightDuration($estimatedFlightDuration)
     {
@@ -186,7 +186,7 @@ class Flight extends Intangible
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/flightDistance
      */
     public function flightDistance($flightDistance)
     {
@@ -202,7 +202,7 @@ class Flight extends Intangible
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/flightNumber
      */
     public function flightNumber($flightNumber)
     {
@@ -216,7 +216,7 @@ class Flight extends Intangible
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/mealService
      */
     public function mealService($mealService)
     {
@@ -232,7 +232,7 @@ class Flight extends Intangible
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/provider
      */
     public function provider($provider)
     {
@@ -247,7 +247,7 @@ class Flight extends Intangible
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/seller
      */
     public function seller($seller)
     {
@@ -261,7 +261,7 @@ class Flight extends Intangible
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/webCheckinTime
      */
     public function webCheckinTime($webCheckinTime)
     {

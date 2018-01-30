@@ -5,7 +5,7 @@ namespace Spatie\SchemaOrg;
 /**
  * Web applications.
  *
- * @see 
+ * @see http://schema.org/WebApplication
  */
 class WebApplication extends SoftwareApplication
 {
@@ -17,7 +17,7 @@ class WebApplication extends SoftwareApplication
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/browserRequirements
      */
     public function browserRequirements($browserRequirements)
     {

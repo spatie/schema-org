@@ -5,7 +5,7 @@ namespace Spatie\SchemaOrg;
 /**
  * A collection of music tracks.
  *
- * @see 
+ * @see http://schema.org/MusicAlbum
  */
 class MusicAlbum extends MusicPlaylist
 {
@@ -17,7 +17,7 @@ class MusicAlbum extends MusicPlaylist
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/albumProductionType
      */
     public function albumProductionType($albumProductionType)
     {
@@ -31,7 +31,7 @@ class MusicAlbum extends MusicPlaylist
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/albumRelease
      */
     public function albumRelease($albumRelease)
     {
@@ -45,7 +45,7 @@ class MusicAlbum extends MusicPlaylist
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/albumReleaseType
      */
     public function albumReleaseType($albumReleaseType)
     {
@@ -59,7 +59,7 @@ class MusicAlbum extends MusicPlaylist
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/byArtist
      */
     public function byArtist($byArtist)
     {

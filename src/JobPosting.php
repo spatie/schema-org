@@ -5,7 +5,7 @@ namespace Spatie\SchemaOrg;
 /**
  * A listing that describes a job opening in a certain organization.
  *
- * @see 
+ * @see http://schema.org/JobPosting
  */
 class JobPosting extends Intangible
 {
@@ -16,7 +16,7 @@ class JobPosting extends Intangible
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/baseSalary
      */
     public function baseSalary($baseSalary)
     {
@@ -30,7 +30,7 @@ class JobPosting extends Intangible
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/benefits
      */
     public function benefits($benefits)
     {
@@ -44,7 +44,7 @@ class JobPosting extends Intangible
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/datePosted
      */
     public function datePosted($datePosted)
     {
@@ -58,7 +58,7 @@ class JobPosting extends Intangible
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/educationRequirements
      */
     public function educationRequirements($educationRequirements)
     {
@@ -73,7 +73,7 @@ class JobPosting extends Intangible
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/employmentType
      */
     public function employmentType($employmentType)
     {
@@ -87,7 +87,7 @@ class JobPosting extends Intangible
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/experienceRequirements
      */
     public function experienceRequirements($experienceRequirements)
     {
@@ -101,7 +101,7 @@ class JobPosting extends Intangible
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/hiringOrganization
      */
     public function hiringOrganization($hiringOrganization)
     {
@@ -115,7 +115,7 @@ class JobPosting extends Intangible
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/incentiveCompensation
      */
     public function incentiveCompensation($incentiveCompensation)
     {
@@ -129,7 +129,7 @@ class JobPosting extends Intangible
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/incentives
      */
     public function incentives($incentives)
     {
@@ -143,7 +143,7 @@ class JobPosting extends Intangible
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/industry
      */
     public function industry($industry)
     {
@@ -157,7 +157,7 @@ class JobPosting extends Intangible
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/jobBenefits
      */
     public function jobBenefits($jobBenefits)
     {
@@ -172,7 +172,7 @@ class JobPosting extends Intangible
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/jobLocation
      */
     public function jobLocation($jobLocation)
     {
@@ -188,7 +188,7 @@ class JobPosting extends Intangible
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/occupationalCategory
      */
     public function occupationalCategory($occupationalCategory)
     {
@@ -202,7 +202,7 @@ class JobPosting extends Intangible
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/qualifications
      */
     public function qualifications($qualifications)
     {
@@ -216,7 +216,7 @@ class JobPosting extends Intangible
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/responsibilities
      */
     public function responsibilities($responsibilities)
     {
@@ -232,7 +232,7 @@ class JobPosting extends Intangible
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/salaryCurrency
      */
     public function salaryCurrency($salaryCurrency)
     {
@@ -246,7 +246,7 @@ class JobPosting extends Intangible
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/skills
      */
     public function skills($skills)
     {
@@ -261,7 +261,7 @@ class JobPosting extends Intangible
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/specialCommitments
      */
     public function specialCommitments($specialCommitments)
     {
@@ -275,7 +275,7 @@ class JobPosting extends Intangible
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/title
      */
     public function title($title)
     {
@@ -290,7 +290,7 @@ class JobPosting extends Intangible
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/validThrough
      */
     public function validThrough($validThrough)
     {
@@ -305,7 +305,7 @@ class JobPosting extends Intangible
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/workHours
      */
     public function workHours($workHours)
     {

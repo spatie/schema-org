@@ -20,7 +20,7 @@ namespace Spatie\SchemaOrg;
  * * http://purl.org/goodrelations/v1#PayPal
  * * http://purl.org/goodrelations/v1#PaySwarm
  *
- * @see 
+ * @see http://schema.org/PaymentMethod
  */
 class PaymentMethod extends Enumeration
 {

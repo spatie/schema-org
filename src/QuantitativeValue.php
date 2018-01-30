@@ -5,7 +5,7 @@ namespace Spatie\SchemaOrg;
 /**
  * A point value or interval for product characteristics and other purposes.
  *
- * @see 
+ * @see http://schema.org/QuantitativeValue
  */
 class QuantitativeValue extends StructuredValue
 {
@@ -24,7 +24,7 @@ class QuantitativeValue extends StructuredValue
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/additionalProperty
      */
     public function additionalProperty($additionalProperty)
     {
@@ -38,7 +38,7 @@ class QuantitativeValue extends StructuredValue
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/maxValue
      */
     public function maxValue($maxValue)
     {
@@ -52,7 +52,7 @@ class QuantitativeValue extends StructuredValue
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/minValue
      */
     public function minValue($minValue)
     {
@@ -68,7 +68,7 @@ class QuantitativeValue extends StructuredValue
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/unitCode
      */
     public function unitCode($unitCode)
     {
@@ -84,7 +84,7 @@ class QuantitativeValue extends StructuredValue
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/unitText
      */
     public function unitText($unitText)
     {
@@ -103,7 +103,7 @@ class QuantitativeValue extends StructuredValue
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/value
      */
     public function value($value)
     {
@@ -118,7 +118,7 @@ class QuantitativeValue extends StructuredValue
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/valueReference
      */
     public function valueReference($valueReference)
     {

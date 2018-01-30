@@ -5,7 +5,7 @@ namespace Spatie\SchemaOrg;
 /**
  * An historical landmark or building.
  *
- * @see 
+ * @see http://schema.org/LandmarksOrHistoricalBuildings
  */
 class LandmarksOrHistoricalBuildings extends Place
 {

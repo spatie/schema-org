@@ -6,7 +6,7 @@ namespace Spatie\SchemaOrg;
  * A blog post intended to provide a rolling textual coverage of an ongoing
  * event through continuous updates.
  *
- * @see 
+ * @see http://schema.org/LiveBlogPosting
  */
 class LiveBlogPosting extends BlogPosting
 {
@@ -18,7 +18,7 @@ class LiveBlogPosting extends BlogPosting
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/coverageEndTime
      */
     public function coverageEndTime($coverageEndTime)
     {
@@ -34,7 +34,7 @@ class LiveBlogPosting extends BlogPosting
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/coverageStartTime
      */
     public function coverageStartTime($coverageStartTime)
     {
@@ -48,7 +48,7 @@ class LiveBlogPosting extends BlogPosting
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/liveBlogUpdate
      */
     public function liveBlogUpdate($liveBlogUpdate)
     {

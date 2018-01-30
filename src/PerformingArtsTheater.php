@@ -5,7 +5,7 @@ namespace Spatie\SchemaOrg;
 /**
  * A theater or other performing art center.
  *
- * @see 
+ * @see http://schema.org/PerformingArtsTheater
  */
 class PerformingArtsTheater extends CivicStructure
 {

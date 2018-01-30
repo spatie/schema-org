@@ -7,7 +7,7 @@ namespace Spatie\SchemaOrg;
  * lecture, or festival. Ticketing information may be added via the [[offers]]
  * property. Repeated events may be structured as separate Event objects.
  *
- * @see 
+ * @see http://schema.org/Event
  */
 class Event extends Thing
 {
@@ -18,7 +18,7 @@ class Event extends Thing
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/about
      */
     public function about($about)
     {
@@ -34,7 +34,7 @@ class Event extends Thing
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/actor
      */
     public function actor($actor)
     {
@@ -49,7 +49,7 @@ class Event extends Thing
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/aggregateRating
      */
     public function aggregateRating($aggregateRating)
     {
@@ -63,7 +63,7 @@ class Event extends Thing
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/attendee
      */
     public function attendee($attendee)
     {
@@ -77,7 +77,7 @@ class Event extends Thing
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/attendees
      */
     public function attendees($attendees)
     {
@@ -91,7 +91,7 @@ class Event extends Thing
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/audience
      */
     public function audience($audience)
     {
@@ -106,7 +106,7 @@ class Event extends Thing
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/composer
      */
     public function composer($composer)
     {
@@ -120,7 +120,7 @@ class Event extends Thing
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/contributor
      */
     public function contributor($contributor)
     {
@@ -136,7 +136,7 @@ class Event extends Thing
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/director
      */
     public function director($director)
     {
@@ -150,7 +150,7 @@ class Event extends Thing
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/doorTime
      */
     public function doorTime($doorTime)
     {
@@ -165,7 +165,7 @@ class Event extends Thing
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/duration
      */
     public function duration($duration)
     {
@@ -180,7 +180,7 @@ class Event extends Thing
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/endDate
      */
     public function endDate($endDate)
     {
@@ -195,7 +195,7 @@ class Event extends Thing
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/eventStatus
      */
     public function eventStatus($eventStatus)
     {
@@ -210,7 +210,7 @@ class Event extends Thing
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/funder
      */
     public function funder($funder)
     {
@@ -227,7 +227,7 @@ class Event extends Thing
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/inLanguage
      */
     public function inLanguage($inLanguage)
     {
@@ -241,7 +241,7 @@ class Event extends Thing
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/isAccessibleForFree
      */
     public function isAccessibleForFree($isAccessibleForFree)
     {
@@ -256,7 +256,7 @@ class Event extends Thing
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/location
      */
     public function location($location)
     {
@@ -270,7 +270,7 @@ class Event extends Thing
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/maximumAttendeeCapacity
      */
     public function maximumAttendeeCapacity($maximumAttendeeCapacity)
     {
@@ -286,7 +286,7 @@ class Event extends Thing
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/offers
      */
     public function offers($offers)
     {
@@ -300,7 +300,7 @@ class Event extends Thing
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/organizer
      */
     public function organizer($organizer)
     {
@@ -315,7 +315,7 @@ class Event extends Thing
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/performer
      */
     public function performer($performer)
     {
@@ -330,7 +330,7 @@ class Event extends Thing
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/performers
      */
     public function performers($performers)
     {
@@ -348,7 +348,7 @@ class Event extends Thing
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/previousStartDate
      */
     public function previousStartDate($previousStartDate)
     {
@@ -362,7 +362,7 @@ class Event extends Thing
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/recordedIn
      */
     public function recordedIn($recordedIn)
     {
@@ -376,7 +376,7 @@ class Event extends Thing
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/remainingAttendeeCapacity
      */
     public function remainingAttendeeCapacity($remainingAttendeeCapacity)
     {
@@ -390,7 +390,7 @@ class Event extends Thing
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/review
      */
     public function review($review)
     {
@@ -406,7 +406,7 @@ class Event extends Thing
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/sponsor
      */
     public function sponsor($sponsor)
     {
@@ -421,7 +421,7 @@ class Event extends Thing
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/startDate
      */
     public function startDate($startDate)
     {
@@ -437,7 +437,7 @@ class Event extends Thing
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/subEvent
      */
     public function subEvent($subEvent)
     {
@@ -452,7 +452,7 @@ class Event extends Thing
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/subEvents
      */
     public function subEvents($subEvents)
     {
@@ -468,7 +468,7 @@ class Event extends Thing
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/superEvent
      */
     public function superEvent($superEvent)
     {
@@ -484,7 +484,7 @@ class Event extends Thing
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/translator
      */
     public function translator($translator)
     {
@@ -498,7 +498,7 @@ class Event extends Thing
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/typicalAgeRange
      */
     public function typicalAgeRange($typicalAgeRange)
     {
@@ -514,7 +514,7 @@ class Event extends Thing
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/workFeatured
      */
     public function workFeatured($workFeatured)
     {
@@ -529,7 +529,7 @@ class Event extends Thing
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/workPerformed
      */
     public function workPerformed($workPerformed)
     {

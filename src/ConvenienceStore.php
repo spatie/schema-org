@@ -5,7 +5,7 @@ namespace Spatie\SchemaOrg;
 /**
  * A convenience store.
  *
- * @see 
+ * @see http://schema.org/ConvenienceStore
  */
 class ConvenienceStore extends Store
 {

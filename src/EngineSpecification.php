@@ -6,7 +6,7 @@ namespace Spatie\SchemaOrg;
  * Information about the engine of the vehicle. A vehicle can have multiple
  * engines represented by multiple engine specification entities.
  *
- * @see 
+ * @see http://schema.org/EngineSpecification
  */
 class EngineSpecification extends StructuredValue
 {
@@ -19,7 +19,7 @@ class EngineSpecification extends StructuredValue
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/fuelType
      */
     public function fuelType($fuelType)
     {

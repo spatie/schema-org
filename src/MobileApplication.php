@@ -6,7 +6,7 @@ namespace Spatie\SchemaOrg;
  * A software application designed specifically to work well on a mobile device
  * such as a telephone.
  *
- * @see 
+ * @see http://schema.org/MobileApplication
  */
 class MobileApplication extends SoftwareApplication
 {
@@ -18,7 +18,7 @@ class MobileApplication extends SoftwareApplication
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/carrierRequirements
      */
     public function carrierRequirements($carrierRequirements)
     {

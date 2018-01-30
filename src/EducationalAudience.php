@@ -5,7 +5,7 @@ namespace Spatie\SchemaOrg;
 /**
  * An EducationalAudience.
  *
- * @see 
+ * @see http://schema.org/EducationalAudience
  */
 class EducationalAudience extends Audience
 {
@@ -16,7 +16,7 @@ class EducationalAudience extends Audience
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/educationalRole
      */
     public function educationalRole($educationalRole)
     {

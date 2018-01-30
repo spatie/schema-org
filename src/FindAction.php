@@ -10,7 +10,7 @@ namespace Spatie\SchemaOrg;
  * * [[SearchAction]]: FindAction is generally lead by a SearchAction, but not
  * necessarily.
  *
- * @see 
+ * @see http://schema.org/FindAction
  */
 class FindAction extends Action
 {

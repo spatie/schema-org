@@ -5,7 +5,7 @@ namespace Spatie\SchemaOrg;
 /**
  * The act of editing a recipient by replacing an old object with a new object.
  *
- * @see 
+ * @see http://schema.org/ReplaceAction
  */
 class ReplaceAction extends UpdateAction
 {
@@ -16,7 +16,7 @@ class ReplaceAction extends UpdateAction
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/replacee
      */
     public function replacee($replacee)
     {
@@ -30,7 +30,7 @@ class ReplaceAction extends UpdateAction
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/replacer
      */
     public function replacer($replacer)
     {

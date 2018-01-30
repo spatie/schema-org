@@ -5,7 +5,7 @@ namespace Spatie\SchemaOrg;
 /**
  * A review of an item - for example, of a restaurant, movie, or store.
  *
- * @see 
+ * @see http://schema.org/Review
  */
 class Review extends CreativeWork
 {
@@ -16,7 +16,7 @@ class Review extends CreativeWork
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/itemReviewed
      */
     public function itemReviewed($itemReviewed)
     {
@@ -30,7 +30,7 @@ class Review extends CreativeWork
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/reviewBody
      */
     public function reviewBody($reviewBody)
     {
@@ -47,7 +47,7 @@ class Review extends CreativeWork
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/reviewRating
      */
     public function reviewRating($reviewRating)
     {

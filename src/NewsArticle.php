@@ -5,7 +5,7 @@ namespace Spatie\SchemaOrg;
 /**
  * A news article.
  *
- * @see 
+ * @see http://schema.org/NewsArticle
  */
 class NewsArticle extends Article
 {
@@ -16,7 +16,7 @@ class NewsArticle extends Article
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/dateline
      */
     public function dateline($dateline)
     {
@@ -31,7 +31,7 @@ class NewsArticle extends Article
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/printColumn
      */
     public function printColumn($printColumn)
     {
@@ -45,7 +45,7 @@ class NewsArticle extends Article
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/printEdition
      */
     public function printEdition($printEdition)
     {
@@ -61,7 +61,7 @@ class NewsArticle extends Article
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/printPage
      */
     public function printPage($printPage)
     {
@@ -76,7 +76,7 @@ class NewsArticle extends Article
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/printSection
      */
     public function printSection($printSection)
     {

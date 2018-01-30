@@ -5,7 +5,7 @@ namespace Spatie\SchemaOrg;
 /**
  * The act of installing an application.
  *
- * @see 
+ * @see http://schema.org/InstallAction
  */
 class InstallAction extends ConsumeAction
 {

@@ -7,7 +7,7 @@ namespace Spatie\SchemaOrg;
  * funds to a financial service in return for potential beneficial financial
  * return.
  *
- * @see 
+ * @see http://schema.org/InvestmentOrDeposit
  */
 class InvestmentOrDeposit extends FinancialProduct
 {
@@ -18,7 +18,7 @@ class InvestmentOrDeposit extends FinancialProduct
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/amount
      */
     public function amount($amount)
     {

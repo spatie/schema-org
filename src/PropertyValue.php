@@ -12,7 +12,7 @@ namespace Spatie\SchemaOrg;
  * populate them. Using PropertyValue as a substitute will typically not trigger
  * the same effect as using the original, specific property.
  *
- * @see 
+ * @see http://schema.org/PropertyValue
  */
 class PropertyValue extends StructuredValue
 {
@@ -23,7 +23,7 @@ class PropertyValue extends StructuredValue
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/maxValue
      */
     public function maxValue($maxValue)
     {
@@ -37,7 +37,7 @@ class PropertyValue extends StructuredValue
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/minValue
      */
     public function minValue($minValue)
     {
@@ -61,7 +61,7 @@ class PropertyValue extends StructuredValue
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/propertyID
      */
     public function propertyID($propertyID)
     {
@@ -77,7 +77,7 @@ class PropertyValue extends StructuredValue
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/unitCode
      */
     public function unitCode($unitCode)
     {
@@ -93,7 +93,7 @@ class PropertyValue extends StructuredValue
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/unitText
      */
     public function unitText($unitText)
     {
@@ -112,7 +112,7 @@ class PropertyValue extends StructuredValue
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/value
      */
     public function value($value)
     {
@@ -127,7 +127,7 @@ class PropertyValue extends StructuredValue
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/valueReference
      */
     public function valueReference($valueReference)
     {

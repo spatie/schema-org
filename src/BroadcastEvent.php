@@ -5,7 +5,7 @@ namespace Spatie\SchemaOrg;
 /**
  * An over the air or online broadcast event.
  *
- * @see 
+ * @see http://schema.org/BroadcastEvent
  */
 class BroadcastEvent extends PublicationEvent
 {
@@ -16,7 +16,7 @@ class BroadcastEvent extends PublicationEvent
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/broadcastOfEvent
      */
     public function broadcastOfEvent($broadcastOfEvent)
     {
@@ -30,7 +30,7 @@ class BroadcastEvent extends PublicationEvent
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/isLiveBroadcast
      */
     public function isLiveBroadcast($isLiveBroadcast)
     {
@@ -45,7 +45,7 @@ class BroadcastEvent extends PublicationEvent
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/videoFormat
      */
     public function videoFormat($videoFormat)
     {

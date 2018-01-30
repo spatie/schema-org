@@ -7,7 +7,7 @@ namespace Spatie\SchemaOrg;
  * disagrees to/about an object (a proposition, topic or theme) with
  * participants.
  *
- * @see 
+ * @see http://schema.org/DisagreeAction
  */
 class DisagreeAction extends ReactAction
 {

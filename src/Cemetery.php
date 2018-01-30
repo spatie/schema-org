@@ -5,7 +5,7 @@ namespace Spatie\SchemaOrg;
 /**
  * A graveyard.
  *
- * @see 
+ * @see http://schema.org/Cemetery
  */
 class Cemetery extends CivicStructure
 {

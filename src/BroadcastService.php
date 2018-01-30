@@ -6,7 +6,7 @@ namespace Spatie\SchemaOrg;
  * A delivery service through which content is provided via broadcast over the
  * air or online.
  *
- * @see 
+ * @see http://schema.org/BroadcastService
  */
 class BroadcastService extends Service
 {
@@ -17,7 +17,7 @@ class BroadcastService extends Service
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/area
      */
     public function area($area)
     {
@@ -31,7 +31,7 @@ class BroadcastService extends Service
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/broadcastAffiliateOf
      */
     public function broadcastAffiliateOf($broadcastAffiliateOf)
     {
@@ -46,7 +46,7 @@ class BroadcastService extends Service
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/broadcastDisplayName
      */
     public function broadcastDisplayName($broadcastDisplayName)
     {
@@ -61,7 +61,7 @@ class BroadcastService extends Service
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/broadcastTimezone
      */
     public function broadcastTimezone($broadcastTimezone)
     {
@@ -75,7 +75,7 @@ class BroadcastService extends Service
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/broadcaster
      */
     public function broadcaster($broadcaster)
     {
@@ -90,7 +90,7 @@ class BroadcastService extends Service
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/parentService
      */
     public function parentService($parentService)
     {
@@ -105,7 +105,7 @@ class BroadcastService extends Service
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/videoFormat
      */
     public function videoFormat($videoFormat)
     {

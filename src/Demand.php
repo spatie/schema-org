@@ -8,7 +8,7 @@ namespace Spatie\SchemaOrg;
  * certain type of goods or services. For describing demand using this type, the
  * very same properties used for Offer apply.
  *
- * @see 
+ * @see http://schema.org/Demand
  */
 class Demand extends Intangible
 {
@@ -19,7 +19,7 @@ class Demand extends Intangible
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/acceptedPaymentMethod
      */
     public function acceptedPaymentMethod($acceptedPaymentMethod)
     {
@@ -34,7 +34,7 @@ class Demand extends Intangible
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/advanceBookingRequirement
      */
     public function advanceBookingRequirement($advanceBookingRequirement)
     {
@@ -48,7 +48,7 @@ class Demand extends Intangible
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/areaServed
      */
     public function areaServed($areaServed)
     {
@@ -63,7 +63,7 @@ class Demand extends Intangible
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/availability
      */
     public function availability($availability)
     {
@@ -78,7 +78,7 @@ class Demand extends Intangible
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/availabilityEnds
      */
     public function availabilityEnds($availabilityEnds)
     {
@@ -93,7 +93,7 @@ class Demand extends Intangible
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/availabilityStarts
      */
     public function availabilityStarts($availabilityStarts)
     {
@@ -107,7 +107,7 @@ class Demand extends Intangible
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/availableAtOrFrom
      */
     public function availableAtOrFrom($availableAtOrFrom)
     {
@@ -121,7 +121,7 @@ class Demand extends Intangible
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/availableDeliveryMethod
      */
     public function availableDeliveryMethod($availableDeliveryMethod)
     {
@@ -137,7 +137,7 @@ class Demand extends Intangible
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/businessFunction
      */
     public function businessFunction($businessFunction)
     {
@@ -153,7 +153,7 @@ class Demand extends Intangible
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/deliveryLeadTime
      */
     public function deliveryLeadTime($deliveryLeadTime)
     {
@@ -167,7 +167,7 @@ class Demand extends Intangible
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/eligibleCustomerType
      */
     public function eligibleCustomerType($eligibleCustomerType)
     {
@@ -181,7 +181,7 @@ class Demand extends Intangible
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/eligibleDuration
      */
     public function eligibleDuration($eligibleDuration)
     {
@@ -197,7 +197,7 @@ class Demand extends Intangible
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/eligibleQuantity
      */
     public function eligibleQuantity($eligibleQuantity)
     {
@@ -215,7 +215,7 @@ class Demand extends Intangible
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/eligibleRegion
      */
     public function eligibleRegion($eligibleRegion)
     {
@@ -232,7 +232,7 @@ class Demand extends Intangible
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/eligibleTransactionVolume
      */
     public function eligibleTransactionVolume($eligibleTransactionVolume)
     {
@@ -251,7 +251,7 @@ class Demand extends Intangible
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/gtin12
      */
     public function gtin12($gtin12)
     {
@@ -271,7 +271,7 @@ class Demand extends Intangible
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/gtin13
      */
     public function gtin13($gtin13)
     {
@@ -288,7 +288,7 @@ class Demand extends Intangible
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/gtin14
      */
     public function gtin14($gtin14)
     {
@@ -306,7 +306,7 @@ class Demand extends Intangible
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/gtin8
      */
     public function gtin8($gtin8)
     {
@@ -321,7 +321,7 @@ class Demand extends Intangible
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/includesObject
      */
     public function includesObject($includesObject)
     {
@@ -340,7 +340,7 @@ class Demand extends Intangible
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/ineligibleRegion
      */
     public function ineligibleRegion($ineligibleRegion)
     {
@@ -354,7 +354,7 @@ class Demand extends Intangible
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/inventoryLevel
      */
     public function inventoryLevel($inventoryLevel)
     {
@@ -370,7 +370,7 @@ class Demand extends Intangible
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/itemCondition
      */
     public function itemCondition($itemCondition)
     {
@@ -384,7 +384,7 @@ class Demand extends Intangible
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/itemOffered
      */
     public function itemOffered($itemOffered)
     {
@@ -399,7 +399,7 @@ class Demand extends Intangible
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/mpn
      */
     public function mpn($mpn)
     {
@@ -414,7 +414,7 @@ class Demand extends Intangible
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/priceSpecification
      */
     public function priceSpecification($priceSpecification)
     {
@@ -429,7 +429,7 @@ class Demand extends Intangible
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/seller
      */
     public function seller($seller)
     {
@@ -445,7 +445,7 @@ class Demand extends Intangible
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/serialNumber
      */
     public function serialNumber($serialNumber)
     {
@@ -460,7 +460,7 @@ class Demand extends Intangible
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/sku
      */
     public function sku($sku)
     {
@@ -474,7 +474,7 @@ class Demand extends Intangible
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/validFrom
      */
     public function validFrom($validFrom)
     {
@@ -489,7 +489,7 @@ class Demand extends Intangible
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/validThrough
      */
     public function validThrough($validThrough)
     {
@@ -503,7 +503,7 @@ class Demand extends Intangible
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/warranty
      */
     public function warranty($warranty)
     {

@@ -5,7 +5,7 @@ namespace Spatie\SchemaOrg;
 /**
  * Animal shelter.
  *
- * @see 
+ * @see http://schema.org/AnimalShelter
  */
 class AnimalShelter extends LocalBusiness
 {

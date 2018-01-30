@@ -5,7 +5,7 @@ namespace Spatie\SchemaOrg;
 /**
  * An list item, e.g. a step in a checklist or how-to description.
  *
- * @see 
+ * @see http://schema.org/ListItem
  */
 class ListItem extends Intangible
 {
@@ -17,7 +17,7 @@ class ListItem extends Intangible
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/item
      */
     public function item($item)
     {
@@ -31,7 +31,7 @@ class ListItem extends Intangible
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/nextItem
      */
     public function nextItem($nextItem)
     {
@@ -45,7 +45,7 @@ class ListItem extends Intangible
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/position
      */
     public function position($position)
     {
@@ -59,7 +59,7 @@ class ListItem extends Intangible
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/previousItem
      */
     public function previousItem($previousItem)
     {

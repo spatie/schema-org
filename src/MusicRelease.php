@@ -5,7 +5,7 @@ namespace Spatie\SchemaOrg;
 /**
  * A MusicRelease is a specific release of a music album.
  *
- * @see 
+ * @see http://schema.org/MusicRelease
  */
 class MusicRelease extends MusicPlaylist
 {
@@ -16,7 +16,7 @@ class MusicRelease extends MusicPlaylist
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/catalogNumber
      */
     public function catalogNumber($catalogNumber)
     {
@@ -32,7 +32,7 @@ class MusicRelease extends MusicPlaylist
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/creditedTo
      */
     public function creditedTo($creditedTo)
     {
@@ -47,7 +47,7 @@ class MusicRelease extends MusicPlaylist
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/musicReleaseFormat
      */
     public function musicReleaseFormat($musicReleaseFormat)
     {
@@ -61,7 +61,7 @@ class MusicRelease extends MusicPlaylist
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/recordLabel
      */
     public function recordLabel($recordLabel)
     {
@@ -75,7 +75,7 @@ class MusicRelease extends MusicPlaylist
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/releaseOf
      */
     public function releaseOf($releaseOf)
     {

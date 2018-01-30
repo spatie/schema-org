@@ -5,7 +5,7 @@ namespace Spatie\SchemaOrg;
 /**
  * A short segment/part of a video game.
  *
- * @see 
+ * @see http://schema.org/VideoGameClip
  */
 class VideoGameClip extends Clip
 {

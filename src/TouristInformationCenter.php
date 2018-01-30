@@ -5,7 +5,7 @@ namespace Spatie\SchemaOrg;
 /**
  * A tourist information center.
  *
- * @see 
+ * @see http://schema.org/TouristInformationCenter
  */
 class TouristInformationCenter extends LocalBusiness
 {

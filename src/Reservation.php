@@ -11,7 +11,7 @@ namespace Spatie\SchemaOrg;
  * reservations. For offers of tickets, restaurant reservations, flights, or
  * rental cars, use [[Offer]].
  *
- * @see 
+ * @see http://schema.org/Reservation
  */
 class Reservation extends Intangible
 {
@@ -23,7 +23,7 @@ class Reservation extends Intangible
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/bookingAgent
      */
     public function bookingAgent($bookingAgent)
     {
@@ -37,7 +37,7 @@ class Reservation extends Intangible
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/bookingTime
      */
     public function bookingTime($bookingTime)
     {
@@ -54,7 +54,7 @@ class Reservation extends Intangible
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/broker
      */
     public function broker($broker)
     {
@@ -68,7 +68,7 @@ class Reservation extends Intangible
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/modifiedTime
      */
     public function modifiedTime($modifiedTime)
     {
@@ -83,7 +83,7 @@ class Reservation extends Intangible
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/priceCurrency
      */
     public function priceCurrency($priceCurrency)
     {
@@ -98,7 +98,7 @@ class Reservation extends Intangible
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/programMembershipUsed
      */
     public function programMembershipUsed($programMembershipUsed)
     {
@@ -114,7 +114,7 @@ class Reservation extends Intangible
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/provider
      */
     public function provider($provider)
     {
@@ -128,7 +128,7 @@ class Reservation extends Intangible
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/reservationFor
      */
     public function reservationFor($reservationFor)
     {
@@ -142,7 +142,7 @@ class Reservation extends Intangible
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/reservationId
      */
     public function reservationId($reservationId)
     {
@@ -156,7 +156,7 @@ class Reservation extends Intangible
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/reservationStatus
      */
     public function reservationStatus($reservationStatus)
     {
@@ -170,7 +170,7 @@ class Reservation extends Intangible
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/reservedTicket
      */
     public function reservedTicket($reservedTicket)
     {
@@ -185,7 +185,7 @@ class Reservation extends Intangible
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/totalPrice
      */
     public function totalPrice($totalPrice)
     {
@@ -199,7 +199,7 @@ class Reservation extends Intangible
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/underName
      */
     public function underName($underName)
     {

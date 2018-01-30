@@ -5,7 +5,7 @@ namespace Spatie\SchemaOrg;
 /**
  * A house painting service.
  *
- * @see 
+ * @see http://schema.org/HousePainter
  */
 class HousePainter extends HomeAndConstructionBusiness
 {

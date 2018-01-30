@@ -12,7 +12,7 @@ namespace Spatie\SchemaOrg;
  * See also the <a href="/docs/hotels.html">dedicated document on the use of
  * schema.org for marking up hotels and other forms of accommodations</a>.
  *
- * @see 
+ * @see http://schema.org/Accommodation
  */
 class Accommodation extends Place
 {
@@ -26,7 +26,7 @@ class Accommodation extends Place
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/amenityFeature
      */
     public function amenityFeature($amenityFeature)
     {
@@ -42,7 +42,7 @@ class Accommodation extends Place
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/floorSize
      */
     public function floorSize($floorSize)
     {
@@ -59,7 +59,7 @@ class Accommodation extends Place
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/numberOfRooms
      */
     public function numberOfRooms($numberOfRooms)
     {
@@ -73,7 +73,7 @@ class Accommodation extends Place
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/permittedUsage
      */
     public function permittedUsage($permittedUsage)
     {
@@ -88,7 +88,7 @@ class Accommodation extends Place
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/petsAllowed
      */
     public function petsAllowed($petsAllowed)
     {

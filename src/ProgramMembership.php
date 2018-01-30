@@ -6,7 +6,7 @@ namespace Spatie\SchemaOrg;
  * Used to describe membership in a loyalty programs (e.g. "StarAliance"),
  * traveler clubs (e.g. "AAA"), purchase clubs ("Safeway Club"), etc.
  *
- * @see 
+ * @see http://schema.org/ProgramMembership
  */
 class ProgramMembership extends Intangible
 {
@@ -18,7 +18,7 @@ class ProgramMembership extends Intangible
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/hostingOrganization
      */
     public function hostingOrganization($hostingOrganization)
     {
@@ -33,7 +33,7 @@ class ProgramMembership extends Intangible
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/member
      */
     public function member($member)
     {
@@ -47,7 +47,7 @@ class ProgramMembership extends Intangible
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/members
      */
     public function members($members)
     {
@@ -61,7 +61,7 @@ class ProgramMembership extends Intangible
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/membershipNumber
      */
     public function membershipNumber($membershipNumber)
     {
@@ -75,7 +75,7 @@ class ProgramMembership extends Intangible
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/programName
      */
     public function programName($programName)
     {

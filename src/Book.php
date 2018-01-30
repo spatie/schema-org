@@ -5,7 +5,7 @@ namespace Spatie\SchemaOrg;
 /**
  * A book.
  *
- * @see 
+ * @see http://schema.org/Book
  */
 class Book extends CreativeWork
 {
@@ -16,7 +16,7 @@ class Book extends CreativeWork
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/bookEdition
      */
     public function bookEdition($bookEdition)
     {
@@ -30,7 +30,7 @@ class Book extends CreativeWork
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/bookFormat
      */
     public function bookFormat($bookFormat)
     {
@@ -44,7 +44,7 @@ class Book extends CreativeWork
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/illustrator
      */
     public function illustrator($illustrator)
     {
@@ -58,7 +58,7 @@ class Book extends CreativeWork
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/isbn
      */
     public function isbn($isbn)
     {
@@ -72,7 +72,7 @@ class Book extends CreativeWork
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/numberOfPages
      */
     public function numberOfPages($numberOfPages)
     {

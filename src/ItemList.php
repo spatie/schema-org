@@ -7,7 +7,7 @@ namespace Spatie\SchemaOrg;
  * Weathermen, or Top 100 Party Songs. Not to be confused with HTML lists, which
  * are often used only for formatting.
  *
- * @see 
+ * @see http://schema.org/ItemList
  */
 class ItemList extends Intangible
 {
@@ -29,7 +29,7 @@ class ItemList extends Intangible
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/itemListElement
      */
     public function itemListElement($itemListElement)
     {
@@ -43,7 +43,7 @@ class ItemList extends Intangible
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/itemListOrder
      */
     public function itemListOrder($itemListOrder)
     {
@@ -59,7 +59,7 @@ class ItemList extends Intangible
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/numberOfItems
      */
     public function numberOfItems($numberOfItems)
     {

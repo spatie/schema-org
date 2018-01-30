@@ -11,7 +11,7 @@ namespace Spatie\SchemaOrg;
  * See also the <a href="/docs/hotels.html">dedicated document on the use of
  * schema.org for marking up hotels and other forms of accommodations</a>.
  *
- * @see 
+ * @see http://schema.org/Suite
  */
 class Suite extends Accommodation
 {
@@ -26,7 +26,7 @@ class Suite extends Accommodation
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/bed
      */
     public function bed($bed)
     {
@@ -43,7 +43,7 @@ class Suite extends Accommodation
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/numberOfRooms
      */
     public function numberOfRooms($numberOfRooms)
     {
@@ -61,7 +61,7 @@ class Suite extends Accommodation
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/occupancy
      */
     public function occupancy($occupancy)
     {

@@ -9,7 +9,7 @@ namespace Spatie\SchemaOrg;
  * confirmation emails or HTML pages with individual confirmations of
  * reservations. For offers of tickets, use [[Offer]].
  *
- * @see 
+ * @see http://schema.org/EventReservation
  */
 class EventReservation extends Reservation
 {

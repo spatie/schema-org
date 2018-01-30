@@ -9,7 +9,7 @@ namespace Spatie\SchemaOrg;
  * these properties are specified, but if they are found outside of an
  * itemscope, they will be assumed to be about the page.
  *
- * @see 
+ * @see http://schema.org/WebPage
  */
 class WebPage extends CreativeWork
 {
@@ -21,7 +21,7 @@ class WebPage extends CreativeWork
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/breadcrumb
      */
     public function breadcrumb($breadcrumb)
     {
@@ -36,7 +36,7 @@ class WebPage extends CreativeWork
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/lastReviewed
      */
     public function lastReviewed($lastReviewed)
     {
@@ -50,7 +50,7 @@ class WebPage extends CreativeWork
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/mainContentOfPage
      */
     public function mainContentOfPage($mainContentOfPage)
     {
@@ -64,7 +64,7 @@ class WebPage extends CreativeWork
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/primaryImageOfPage
      */
     public function primaryImageOfPage($primaryImageOfPage)
     {
@@ -78,7 +78,7 @@ class WebPage extends CreativeWork
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/relatedLink
      */
     public function relatedLink($relatedLink)
     {
@@ -93,7 +93,7 @@ class WebPage extends CreativeWork
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/reviewedBy
      */
     public function reviewedBy($reviewedBy)
     {
@@ -108,7 +108,7 @@ class WebPage extends CreativeWork
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/significantLink
      */
     public function significantLink($significantLink)
     {
@@ -123,7 +123,7 @@ class WebPage extends CreativeWork
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/significantLinks
      */
     public function significantLinks($significantLinks)
     {
@@ -137,7 +137,7 @@ class WebPage extends CreativeWork
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/specialty
      */
     public function specialty($specialty)
     {

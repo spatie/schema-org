@@ -6,7 +6,7 @@ namespace Spatie\SchemaOrg;
  * A set of characteristics belonging to businesses, e.g. who compose an item's
  * target audience.
  *
- * @see 
+ * @see http://schema.org/BusinessAudience
  */
 class BusinessAudience extends Audience
 {
@@ -17,7 +17,7 @@ class BusinessAudience extends Audience
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/numberOfEmployees
      */
     public function numberOfEmployees($numberOfEmployees)
     {
@@ -31,7 +31,7 @@ class BusinessAudience extends Audience
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/yearlyRevenue
      */
     public function yearlyRevenue($yearlyRevenue)
     {
@@ -45,7 +45,7 @@ class BusinessAudience extends Audience
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/yearsInOperation
      */
     public function yearsInOperation($yearsInOperation)
     {

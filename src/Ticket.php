@@ -5,7 +5,7 @@ namespace Spatie\SchemaOrg;
 /**
  * Used to describe a ticket to an event, a flight, a bus ride, etc.
  *
- * @see 
+ * @see http://schema.org/Ticket
  */
 class Ticket extends Intangible
 {
@@ -16,7 +16,7 @@ class Ticket extends Intangible
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/dateIssued
      */
     public function dateIssued($dateIssued)
     {
@@ -30,7 +30,7 @@ class Ticket extends Intangible
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/issuedBy
      */
     public function issuedBy($issuedBy)
     {
@@ -45,7 +45,7 @@ class Ticket extends Intangible
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/priceCurrency
      */
     public function priceCurrency($priceCurrency)
     {
@@ -59,7 +59,7 @@ class Ticket extends Intangible
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/ticketNumber
      */
     public function ticketNumber($ticketNumber)
     {
@@ -74,7 +74,7 @@ class Ticket extends Intangible
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/ticketToken
      */
     public function ticketToken($ticketToken)
     {
@@ -88,7 +88,7 @@ class Ticket extends Intangible
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/ticketedSeat
      */
     public function ticketedSeat($ticketedSeat)
     {
@@ -103,7 +103,7 @@ class Ticket extends Intangible
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/totalPrice
      */
     public function totalPrice($totalPrice)
     {
@@ -117,7 +117,7 @@ class Ticket extends Intangible
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/underName
      */
     public function underName($underName)
     {

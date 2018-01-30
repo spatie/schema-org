@@ -4,23 +4,12 @@ namespace Spatie\SchemaOrg\Generator\Parser\Tasks;
 
 use Spatie\SchemaOrg\Generator\Property;
 use Symfony\Component\DomCrawler\Crawler;
-use Spatie\SchemaOrg\Generator\Parser\CrawlsDefinitions;
 
-class ParseProperty
+class ParseProperty extends Task
 {
-    use CrawlsDefinitions;
-
-    /** @string */
-    protected $definition;
-
-    public function __construct(string $definition)
-    {
-        $this->definition = $definition;
-    }
-
     public function __invoke(): ?Property
     {
-        $node = new Crawler('<div>'.$this->definition.'</div>');
+        $node = new Crawler($this->definition);
 
         $property = new Property();
 

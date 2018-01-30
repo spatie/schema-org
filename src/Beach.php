@@ -5,7 +5,7 @@ namespace Spatie\SchemaOrg;
 /**
  * Beach.
  *
- * @see 
+ * @see http://schema.org/Beach
  */
 class Beach extends CivicStructure
 {

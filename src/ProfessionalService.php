@@ -15,7 +15,7 @@ namespace Spatie\SchemaOrg;
  * [[LegalService]] was introduced as a more inclusive supertype of
  * [[Attorney]].
  *
- * @see 
+ * @see http://schema.org/ProfessionalService
  */
 class ProfessionalService extends LocalBusiness
 {

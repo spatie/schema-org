@@ -5,7 +5,7 @@ namespace Spatie\SchemaOrg;
 /**
  * A tire shop.
  *
- * @see 
+ * @see http://schema.org/TireShop
  */
 class TireShop extends Store
 {

@@ -5,7 +5,7 @@ namespace Spatie\SchemaOrg;
 /**
  * The act of swallowing liquids.
  *
- * @see 
+ * @see http://schema.org/DrinkAction
  */
 class DrinkAction extends ConsumeAction
 {

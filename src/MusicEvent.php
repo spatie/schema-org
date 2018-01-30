@@ -5,7 +5,7 @@ namespace Spatie\SchemaOrg;
 /**
  * Event type: Music event.
  *
- * @see 
+ * @see http://schema.org/MusicEvent
  */
 class MusicEvent extends Event
 {

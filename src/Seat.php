@@ -5,7 +5,7 @@ namespace Spatie\SchemaOrg;
 /**
  * Used to describe a seat, such as a reserved seat in an event reservation.
  *
- * @see 
+ * @see http://schema.org/Seat
  */
 class Seat extends Intangible
 {
@@ -16,7 +16,7 @@ class Seat extends Intangible
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/seatNumber
      */
     public function seatNumber($seatNumber)
     {
@@ -30,7 +30,7 @@ class Seat extends Intangible
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/seatRow
      */
     public function seatRow($seatRow)
     {
@@ -44,7 +44,7 @@ class Seat extends Intangible
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/seatSection
      */
     public function seatSection($seatSection)
     {
@@ -58,7 +58,7 @@ class Seat extends Intangible
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/seatingType
      */
     public function seatingType($seatingType)
     {

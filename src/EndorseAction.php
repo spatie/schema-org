@@ -5,7 +5,7 @@ namespace Spatie\SchemaOrg;
 /**
  * An agent approves/certifies/likes/supports/sanction an object.
  *
- * @see 
+ * @see http://schema.org/EndorseAction
  */
 class EndorseAction extends ReactAction
 {
@@ -16,7 +16,7 @@ class EndorseAction extends ReactAction
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/endorsee
      */
     public function endorsee($endorsee)
     {

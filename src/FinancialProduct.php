@@ -7,7 +7,7 @@ namespace Spatie\SchemaOrg;
  * as banks, insurance companies, brokerage firms, consumer finance companies,
  * and investment companies which comprise the financial services industry.
  *
- * @see 
+ * @see http://schema.org/FinancialProduct
  */
 class FinancialProduct extends Service
 {
@@ -21,7 +21,7 @@ class FinancialProduct extends Service
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/annualPercentageRate
      */
     public function annualPercentageRate($annualPercentageRate)
     {
@@ -36,7 +36,7 @@ class FinancialProduct extends Service
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/feesAndCommissionsSpecification
      */
     public function feesAndCommissionsSpecification($feesAndCommissionsSpecification)
     {
@@ -51,7 +51,7 @@ class FinancialProduct extends Service
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/interestRate
      */
     public function interestRate($interestRate)
     {

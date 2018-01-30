@@ -7,7 +7,7 @@ namespace Spatie\SchemaOrg;
  * Individual messages can be linked to the conversation with isPartOf or
  * hasPart properties.
  *
- * @see 
+ * @see http://schema.org/Conversation
  */
 class Conversation extends CreativeWork
 {

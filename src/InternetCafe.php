@@ -5,7 +5,7 @@ namespace Spatie\SchemaOrg;
 /**
  * An internet cafe.
  *
- * @see 
+ * @see http://schema.org/InternetCafe
  */
 class InternetCafe extends LocalBusiness
 {

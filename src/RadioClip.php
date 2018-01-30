@@ -5,7 +5,7 @@ namespace Spatie\SchemaOrg;
 /**
  * A short radio program or a segment/part of a radio program.
  *
- * @see 
+ * @see http://schema.org/RadioClip
  */
 class RadioClip extends Clip
 {

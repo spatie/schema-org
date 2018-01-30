@@ -5,7 +5,7 @@ namespace Spatie\SchemaOrg;
 /**
  * Residence type: Single-family home.
  *
- * @see 
+ * @see http://schema.org/SingleFamilyResidence
  */
 class SingleFamilyResidence extends House
 {
@@ -19,7 +19,7 @@ class SingleFamilyResidence extends House
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/numberOfRooms
      */
     public function numberOfRooms($numberOfRooms)
     {
@@ -37,7 +37,7 @@ class SingleFamilyResidence extends House
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/occupancy
      */
     public function occupancy($occupancy)
     {

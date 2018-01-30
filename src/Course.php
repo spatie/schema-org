@@ -10,7 +10,7 @@ namespace Spatie\SchemaOrg;
  * creative works which aims to build knowledge, competence or ability of
  * learners.
  *
- * @see 
+ * @see http://schema.org/Course
  */
 class Course extends CreativeWork
 {
@@ -22,7 +22,7 @@ class Course extends CreativeWork
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/courseCode
      */
     public function courseCode($courseCode)
     {
@@ -39,7 +39,7 @@ class Course extends CreativeWork
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/coursePrerequisites
      */
     public function coursePrerequisites($coursePrerequisites)
     {
@@ -54,7 +54,7 @@ class Course extends CreativeWork
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/hasCourseInstance
      */
     public function hasCourseInstance($hasCourseInstance)
     {

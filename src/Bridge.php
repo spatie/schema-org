@@ -5,7 +5,7 @@ namespace Spatie\SchemaOrg;
 /**
  * A bridge.
  *
- * @see 
+ * @see http://schema.org/Bridge
  */
 class Bridge extends CivicStructure
 {

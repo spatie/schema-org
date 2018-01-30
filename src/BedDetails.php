@@ -8,7 +8,7 @@ namespace Spatie\SchemaOrg;
  * bed of a certain type, you can use bed directly with a text. See also
  * [[BedType]] (under development).
  *
- * @see 
+ * @see http://schema.org/BedDetails
  */
 class BedDetails extends Intangible
 {
@@ -20,7 +20,7 @@ class BedDetails extends Intangible
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/numberOfBeds
      */
     public function numberOfBeds($numberOfBeds)
     {
@@ -35,7 +35,7 @@ class BedDetails extends Intangible
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/typeOfBed
      */
     public function typeOfBed($typeOfBed)
     {

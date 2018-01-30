@@ -5,7 +5,7 @@ namespace Spatie\SchemaOrg;
 /**
  * Web page type: About page.
  *
- * @see 
+ * @see http://schema.org/AboutPage
  */
 class AboutPage extends WebPage
 {

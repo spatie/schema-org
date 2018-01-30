@@ -11,7 +11,7 @@ namespace Spatie\SchemaOrg;
  * href="http://blog.schema.org/2014/09/schemaorg-support-for-bibliographic_2.html">blog
  * post</a>.
  *
- * @see 
+ * @see http://schema.org/PublicationVolume
  */
 class PublicationVolume extends CreativeWork
 {
@@ -22,7 +22,7 @@ class PublicationVolume extends CreativeWork
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/pageEnd
      */
     public function pageEnd($pageEnd)
     {
@@ -36,7 +36,7 @@ class PublicationVolume extends CreativeWork
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/pageStart
      */
     public function pageStart($pageStart)
     {
@@ -51,7 +51,7 @@ class PublicationVolume extends CreativeWork
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/pagination
      */
     public function pagination($pagination)
     {
@@ -66,7 +66,7 @@ class PublicationVolume extends CreativeWork
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/volumeNumber
      */
     public function volumeNumber($volumeNumber)
     {

@@ -5,7 +5,7 @@ namespace Spatie\SchemaOrg;
 /**
  * An airport.
  *
- * @see 
+ * @see http://schema.org/Airport
  */
 class Airport extends CivicStructure
 {
@@ -16,7 +16,7 @@ class Airport extends CivicStructure
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/iataCode
      */
     public function iataCode($iataCode)
     {
@@ -30,7 +30,7 @@ class Airport extends CivicStructure
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/icaoCode
      */
     public function icaoCode($icaoCode)
     {

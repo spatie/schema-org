@@ -6,7 +6,7 @@ namespace Spatie\SchemaOrg;
  * A structured representation of food or drink items available from a
  * FoodEstablishment.
  *
- * @see 
+ * @see http://schema.org/Menu
  */
 class Menu extends CreativeWork
 {
@@ -17,7 +17,7 @@ class Menu extends CreativeWork
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/hasMenuItem
      */
     public function hasMenuItem($hasMenuItem)
     {
@@ -31,7 +31,7 @@ class Menu extends CreativeWork
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/hasMenuSection
      */
     public function hasMenuSection($hasMenuSection)
     {

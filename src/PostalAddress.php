@@ -5,7 +5,7 @@ namespace Spatie\SchemaOrg;
 /**
  * The mailing address.
  *
- * @see 
+ * @see http://schema.org/PostalAddress
  */
 class PostalAddress extends ContactPoint
 {
@@ -17,7 +17,7 @@ class PostalAddress extends ContactPoint
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/addressCountry
      */
     public function addressCountry($addressCountry)
     {
@@ -31,7 +31,7 @@ class PostalAddress extends ContactPoint
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/addressLocality
      */
     public function addressLocality($addressLocality)
     {
@@ -45,7 +45,7 @@ class PostalAddress extends ContactPoint
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/addressRegion
      */
     public function addressRegion($addressRegion)
     {
@@ -59,7 +59,7 @@ class PostalAddress extends ContactPoint
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/postOfficeBoxNumber
      */
     public function postOfficeBoxNumber($postOfficeBoxNumber)
     {
@@ -73,7 +73,7 @@ class PostalAddress extends ContactPoint
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/postalCode
      */
     public function postalCode($postalCode)
     {
@@ -87,7 +87,7 @@ class PostalAddress extends ContactPoint
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/streetAddress
      */
     public function streetAddress($streetAddress)
     {

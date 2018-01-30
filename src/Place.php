@@ -5,7 +5,7 @@ namespace Spatie\SchemaOrg;
 /**
  * Entities that have a somewhat fixed, physical extension.
  *
- * @see 
+ * @see http://schema.org/Place
  */
 class Place extends Thing
 {
@@ -24,7 +24,7 @@ class Place extends Thing
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/additionalProperty
      */
     public function additionalProperty($additionalProperty)
     {
@@ -38,7 +38,7 @@ class Place extends Thing
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/address
      */
     public function address($address)
     {
@@ -53,7 +53,7 @@ class Place extends Thing
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/aggregateRating
      */
     public function aggregateRating($aggregateRating)
     {
@@ -70,7 +70,7 @@ class Place extends Thing
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/amenityFeature
      */
     public function amenityFeature($amenityFeature)
     {
@@ -90,7 +90,7 @@ class Place extends Thing
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/branchCode
      */
     public function branchCode($branchCode)
     {
@@ -104,7 +104,7 @@ class Place extends Thing
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/containedIn
      */
     public function containedIn($containedIn)
     {
@@ -118,7 +118,7 @@ class Place extends Thing
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/containedInPlace
      */
     public function containedInPlace($containedInPlace)
     {
@@ -133,7 +133,7 @@ class Place extends Thing
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/containsPlace
      */
     public function containsPlace($containsPlace)
     {
@@ -148,7 +148,7 @@ class Place extends Thing
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/event
      */
     public function event($event)
     {
@@ -162,7 +162,7 @@ class Place extends Thing
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/events
      */
     public function events($events)
     {
@@ -176,7 +176,7 @@ class Place extends Thing
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/faxNumber
      */
     public function faxNumber($faxNumber)
     {
@@ -190,7 +190,7 @@ class Place extends Thing
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/geo
      */
     public function geo($geo)
     {
@@ -207,7 +207,7 @@ class Place extends Thing
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/globalLocationNumber
      */
     public function globalLocationNumber($globalLocationNumber)
     {
@@ -221,7 +221,7 @@ class Place extends Thing
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/hasMap
      */
     public function hasMap($hasMap)
     {
@@ -237,7 +237,7 @@ class Place extends Thing
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/isicV4
      */
     public function isicV4($isicV4)
     {
@@ -251,7 +251,7 @@ class Place extends Thing
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/logo
      */
     public function logo($logo)
     {
@@ -265,7 +265,7 @@ class Place extends Thing
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/map
      */
     public function map($map)
     {
@@ -279,7 +279,7 @@ class Place extends Thing
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/maps
      */
     public function maps($maps)
     {
@@ -293,7 +293,7 @@ class Place extends Thing
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/maximumAttendeeCapacity
      */
     public function maximumAttendeeCapacity($maximumAttendeeCapacity)
     {
@@ -307,7 +307,7 @@ class Place extends Thing
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/openingHoursSpecification
      */
     public function openingHoursSpecification($openingHoursSpecification)
     {
@@ -321,7 +321,7 @@ class Place extends Thing
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/photo
      */
     public function photo($photo)
     {
@@ -335,7 +335,7 @@ class Place extends Thing
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/photos
      */
     public function photos($photos)
     {
@@ -349,7 +349,7 @@ class Place extends Thing
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/review
      */
     public function review($review)
     {
@@ -363,7 +363,7 @@ class Place extends Thing
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/reviews
      */
     public function reviews($reviews)
     {
@@ -378,7 +378,7 @@ class Place extends Thing
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/smokingAllowed
      */
     public function smokingAllowed($smokingAllowed)
     {
@@ -395,7 +395,7 @@ class Place extends Thing
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/specialOpeningHoursSpecification
      */
     public function specialOpeningHoursSpecification($specialOpeningHoursSpecification)
     {
@@ -409,7 +409,7 @@ class Place extends Thing
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/telephone
      */
     public function telephone($telephone)
     {

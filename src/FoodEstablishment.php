@@ -5,7 +5,7 @@ namespace Spatie\SchemaOrg;
 /**
  * A food-related business.
  *
- * @see 
+ * @see http://schema.org/FoodEstablishment
  */
 class FoodEstablishment extends LocalBusiness
 {
@@ -18,7 +18,7 @@ class FoodEstablishment extends LocalBusiness
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/acceptsReservations
      */
     public function acceptsReservations($acceptsReservations)
     {
@@ -33,7 +33,7 @@ class FoodEstablishment extends LocalBusiness
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/hasMenu
      */
     public function hasMenu($hasMenu)
     {
@@ -48,7 +48,7 @@ class FoodEstablishment extends LocalBusiness
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/menu
      */
     public function menu($menu)
     {
@@ -62,7 +62,7 @@ class FoodEstablishment extends LocalBusiness
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/servesCuisine
      */
     public function servesCuisine($servesCuisine)
     {
@@ -79,7 +79,7 @@ class FoodEstablishment extends LocalBusiness
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/starRating
      */
     public function starRating($starRating)
     {

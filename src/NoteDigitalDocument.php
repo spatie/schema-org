@@ -5,7 +5,7 @@ namespace Spatie\SchemaOrg;
 /**
  * A file containing a note, primarily for the author.
  *
- * @see 
+ * @see http://schema.org/NoteDigitalDocument
  */
 class NoteDigitalDocument extends DigitalDocument
 {

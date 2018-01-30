@@ -5,7 +5,7 @@ namespace Spatie\SchemaOrg;
 /**
  * Web page type: Checkout page.
  *
- * @see 
+ * @see http://schema.org/CheckoutPage
  */
 class CheckoutPage extends WebPage
 {

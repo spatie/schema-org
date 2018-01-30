@@ -6,7 +6,7 @@ namespace Spatie\SchemaOrg;
  * A set of characteristics belonging to people, e.g. who compose an item's
  * target audience.
  *
- * @see 
+ * @see http://schema.org/PeopleAudience
  */
 class PeopleAudience extends Audience
 {
@@ -17,7 +17,7 @@ class PeopleAudience extends Audience
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/requiredGender
      */
     public function requiredGender($requiredGender)
     {
@@ -31,7 +31,7 @@ class PeopleAudience extends Audience
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/requiredMaxAge
      */
     public function requiredMaxAge($requiredMaxAge)
     {
@@ -45,7 +45,7 @@ class PeopleAudience extends Audience
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/requiredMinAge
      */
     public function requiredMinAge($requiredMinAge)
     {
@@ -59,7 +59,7 @@ class PeopleAudience extends Audience
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/suggestedGender
      */
     public function suggestedGender($suggestedGender)
     {
@@ -73,7 +73,7 @@ class PeopleAudience extends Audience
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/suggestedMaxAge
      */
     public function suggestedMaxAge($suggestedMaxAge)
     {
@@ -87,7 +87,7 @@ class PeopleAudience extends Audience
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/suggestedMinAge
      */
     public function suggestedMinAge($suggestedMinAge)
     {

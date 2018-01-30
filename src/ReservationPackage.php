@@ -5,7 +5,7 @@ namespace Spatie\SchemaOrg;
 /**
  * A group of multiple reservations with common values for all sub-reservations.
  *
- * @see 
+ * @see http://schema.org/ReservationPackage
  */
 class ReservationPackage extends Reservation
 {
@@ -16,7 +16,7 @@ class ReservationPackage extends Reservation
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/boardingGroup
      */
     public function boardingGroup($boardingGroup)
     {
@@ -31,7 +31,7 @@ class ReservationPackage extends Reservation
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/subReservation
      */
     public function subReservation($subReservation)
     {

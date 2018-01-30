@@ -5,7 +5,7 @@ namespace Spatie\SchemaOrg;
 /**
  * An organization such as a school, NGO, corporation, club, etc.
  *
- * @see 
+ * @see http://schema.org/Organization
  */
 class Organization extends Thing
 {
@@ -16,7 +16,7 @@ class Organization extends Thing
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/address
      */
     public function address($address)
     {
@@ -31,7 +31,7 @@ class Organization extends Thing
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/aggregateRating
      */
     public function aggregateRating($aggregateRating)
     {
@@ -45,7 +45,7 @@ class Organization extends Thing
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/areaServed
      */
     public function areaServed($areaServed)
     {
@@ -59,7 +59,7 @@ class Organization extends Thing
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/award
      */
     public function award($award)
     {
@@ -73,7 +73,7 @@ class Organization extends Thing
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/awards
      */
     public function awards($awards)
     {
@@ -88,7 +88,7 @@ class Organization extends Thing
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/brand
      */
     public function brand($brand)
     {
@@ -102,7 +102,7 @@ class Organization extends Thing
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/contactPoint
      */
     public function contactPoint($contactPoint)
     {
@@ -116,7 +116,7 @@ class Organization extends Thing
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/contactPoints
      */
     public function contactPoints($contactPoints)
     {
@@ -133,7 +133,7 @@ class Organization extends Thing
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/department
      */
     public function department($department)
     {
@@ -147,7 +147,7 @@ class Organization extends Thing
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/dissolutionDate
      */
     public function dissolutionDate($dissolutionDate)
     {
@@ -162,7 +162,7 @@ class Organization extends Thing
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/duns
      */
     public function duns($duns)
     {
@@ -176,7 +176,7 @@ class Organization extends Thing
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/email
      */
     public function email($email)
     {
@@ -190,7 +190,7 @@ class Organization extends Thing
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/employee
      */
     public function employee($employee)
     {
@@ -204,7 +204,7 @@ class Organization extends Thing
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/employees
      */
     public function employees($employees)
     {
@@ -219,7 +219,7 @@ class Organization extends Thing
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/event
      */
     public function event($event)
     {
@@ -233,7 +233,7 @@ class Organization extends Thing
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/events
      */
     public function events($events)
     {
@@ -247,7 +247,7 @@ class Organization extends Thing
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/faxNumber
      */
     public function faxNumber($faxNumber)
     {
@@ -261,7 +261,7 @@ class Organization extends Thing
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/founder
      */
     public function founder($founder)
     {
@@ -275,7 +275,7 @@ class Organization extends Thing
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/founders
      */
     public function founders($founders)
     {
@@ -289,7 +289,7 @@ class Organization extends Thing
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/foundingDate
      */
     public function foundingDate($foundingDate)
     {
@@ -303,7 +303,7 @@ class Organization extends Thing
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/foundingLocation
      */
     public function foundingLocation($foundingLocation)
     {
@@ -318,7 +318,7 @@ class Organization extends Thing
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/funder
      */
     public function funder($funder)
     {
@@ -335,7 +335,7 @@ class Organization extends Thing
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/globalLocationNumber
      */
     public function globalLocationNumber($globalLocationNumber)
     {
@@ -350,7 +350,7 @@ class Organization extends Thing
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/hasOfferCatalog
      */
     public function hasOfferCatalog($hasOfferCatalog)
     {
@@ -364,7 +364,7 @@ class Organization extends Thing
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/hasPOS
      */
     public function hasPOS($hasPOS)
     {
@@ -380,7 +380,7 @@ class Organization extends Thing
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/isicV4
      */
     public function isicV4($isicV4)
     {
@@ -394,7 +394,7 @@ class Organization extends Thing
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/legalName
      */
     public function legalName($legalName)
     {
@@ -409,7 +409,7 @@ class Organization extends Thing
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/leiCode
      */
     public function leiCode($leiCode)
     {
@@ -424,7 +424,7 @@ class Organization extends Thing
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/location
      */
     public function location($location)
     {
@@ -438,7 +438,7 @@ class Organization extends Thing
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/logo
      */
     public function logo($logo)
     {
@@ -452,7 +452,7 @@ class Organization extends Thing
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/makesOffer
      */
     public function makesOffer($makesOffer)
     {
@@ -467,7 +467,7 @@ class Organization extends Thing
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/member
      */
     public function member($member)
     {
@@ -482,7 +482,7 @@ class Organization extends Thing
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/memberOf
      */
     public function memberOf($memberOf)
     {
@@ -496,7 +496,7 @@ class Organization extends Thing
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/members
      */
     public function members($members)
     {
@@ -511,7 +511,7 @@ class Organization extends Thing
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/naics
      */
     public function naics($naics)
     {
@@ -525,7 +525,7 @@ class Organization extends Thing
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/numberOfEmployees
      */
     public function numberOfEmployees($numberOfEmployees)
     {
@@ -539,7 +539,7 @@ class Organization extends Thing
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/offeredBy
      */
     public function offeredBy($offeredBy)
     {
@@ -553,7 +553,7 @@ class Organization extends Thing
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/owns
      */
     public function owns($owns)
     {
@@ -568,7 +568,7 @@ class Organization extends Thing
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/parentOrganization
      */
     public function parentOrganization($parentOrganization)
     {
@@ -582,7 +582,7 @@ class Organization extends Thing
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/review
      */
     public function review($review)
     {
@@ -596,7 +596,7 @@ class Organization extends Thing
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/reviews
      */
     public function reviews($reviews)
     {
@@ -611,7 +611,7 @@ class Organization extends Thing
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/seeks
      */
     public function seeks($seeks)
     {
@@ -625,7 +625,7 @@ class Organization extends Thing
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/serviceArea
      */
     public function serviceArea($serviceArea)
     {
@@ -641,7 +641,7 @@ class Organization extends Thing
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/sponsor
      */
     public function sponsor($sponsor)
     {
@@ -657,7 +657,7 @@ class Organization extends Thing
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/subOrganization
      */
     public function subOrganization($subOrganization)
     {
@@ -672,7 +672,7 @@ class Organization extends Thing
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/taxID
      */
     public function taxID($taxID)
     {
@@ -686,7 +686,7 @@ class Organization extends Thing
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/telephone
      */
     public function telephone($telephone)
     {
@@ -700,7 +700,7 @@ class Organization extends Thing
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/vatID
      */
     public function vatID($vatID)
     {

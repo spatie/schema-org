@@ -10,7 +10,7 @@ namespace Spatie\SchemaOrg;
  * * [[TransferAction]]: Unlike TransferAction, the subject of the move is a
  * living Person or Organization rather than an inanimate object.
  *
- * @see 
+ * @see http://schema.org/MoveAction
  */
 class MoveAction extends Action
 {
@@ -22,7 +22,7 @@ class MoveAction extends Action
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/fromLocation
      */
     public function fromLocation($fromLocation)
     {
@@ -37,7 +37,7 @@ class MoveAction extends Action
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/toLocation
      */
     public function toLocation($toLocation)
     {

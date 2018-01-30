@@ -5,7 +5,7 @@ namespace Spatie\SchemaOrg;
 /**
  * An ice cream shop.
  *
- * @see 
+ * @see http://schema.org/IceCreamShop
  */
 class IceCreamShop extends FoodEstablishment
 {

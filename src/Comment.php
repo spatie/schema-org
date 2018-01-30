@@ -7,7 +7,7 @@ namespace Spatie\SchemaOrg;
  * content is expressed via the [[text]] property, and its topic via [[about]],
  * properties shared with all CreativeWorks.
  *
- * @see 
+ * @see http://schema.org/Comment
  */
 class Comment extends CreativeWork
 {
@@ -19,7 +19,7 @@ class Comment extends CreativeWork
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/downvoteCount
      */
     public function downvoteCount($downvoteCount)
     {
@@ -33,7 +33,7 @@ class Comment extends CreativeWork
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/parentItem
      */
     public function parentItem($parentItem)
     {
@@ -48,7 +48,7 @@ class Comment extends CreativeWork
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/upvoteCount
      */
     public function upvoteCount($upvoteCount)
     {

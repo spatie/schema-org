@@ -5,7 +5,7 @@ namespace Spatie\SchemaOrg;
 /**
  * A movie rental store.
  *
- * @see 
+ * @see http://schema.org/MovieRentalStore
  */
 class MovieRentalStore extends Store
 {

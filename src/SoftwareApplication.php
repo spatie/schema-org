@@ -5,7 +5,7 @@ namespace Spatie\SchemaOrg;
 /**
  * A software application.
  *
- * @see 
+ * @see http://schema.org/SoftwareApplication
  */
 class SoftwareApplication extends CreativeWork
 {
@@ -16,7 +16,7 @@ class SoftwareApplication extends CreativeWork
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/applicationCategory
      */
     public function applicationCategory($applicationCategory)
     {
@@ -30,7 +30,7 @@ class SoftwareApplication extends CreativeWork
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/applicationSubCategory
      */
     public function applicationSubCategory($applicationSubCategory)
     {
@@ -45,7 +45,7 @@ class SoftwareApplication extends CreativeWork
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/applicationSuite
      */
     public function applicationSuite($applicationSuite)
     {
@@ -60,7 +60,7 @@ class SoftwareApplication extends CreativeWork
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/availableOnDevice
      */
     public function availableOnDevice($availableOnDevice)
     {
@@ -75,7 +75,7 @@ class SoftwareApplication extends CreativeWork
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/countriesNotSupported
      */
     public function countriesNotSupported($countriesNotSupported)
     {
@@ -90,7 +90,7 @@ class SoftwareApplication extends CreativeWork
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/countriesSupported
      */
     public function countriesSupported($countriesSupported)
     {
@@ -105,7 +105,7 @@ class SoftwareApplication extends CreativeWork
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/device
      */
     public function device($device)
     {
@@ -119,7 +119,7 @@ class SoftwareApplication extends CreativeWork
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/downloadUrl
      */
     public function downloadUrl($downloadUrl)
     {
@@ -134,7 +134,7 @@ class SoftwareApplication extends CreativeWork
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/featureList
      */
     public function featureList($featureList)
     {
@@ -149,7 +149,7 @@ class SoftwareApplication extends CreativeWork
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/fileSize
      */
     public function fileSize($fileSize)
     {
@@ -164,7 +164,7 @@ class SoftwareApplication extends CreativeWork
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/installUrl
      */
     public function installUrl($installUrl)
     {
@@ -178,7 +178,7 @@ class SoftwareApplication extends CreativeWork
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/memoryRequirements
      */
     public function memoryRequirements($memoryRequirements)
     {
@@ -192,7 +192,7 @@ class SoftwareApplication extends CreativeWork
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/operatingSystem
      */
     public function operatingSystem($operatingSystem)
     {
@@ -207,7 +207,7 @@ class SoftwareApplication extends CreativeWork
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/permissions
      */
     public function permissions($permissions)
     {
@@ -221,7 +221,7 @@ class SoftwareApplication extends CreativeWork
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/processorRequirements
      */
     public function processorRequirements($processorRequirements)
     {
@@ -235,7 +235,7 @@ class SoftwareApplication extends CreativeWork
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/releaseNotes
      */
     public function releaseNotes($releaseNotes)
     {
@@ -252,7 +252,7 @@ class SoftwareApplication extends CreativeWork
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/requirements
      */
     public function requirements($requirements)
     {
@@ -266,7 +266,7 @@ class SoftwareApplication extends CreativeWork
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/screenshot
      */
     public function screenshot($screenshot)
     {
@@ -280,7 +280,7 @@ class SoftwareApplication extends CreativeWork
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/softwareAddOn
      */
     public function softwareAddOn($softwareAddOn)
     {
@@ -294,7 +294,7 @@ class SoftwareApplication extends CreativeWork
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/softwareHelp
      */
     public function softwareHelp($softwareHelp)
     {
@@ -311,7 +311,7 @@ class SoftwareApplication extends CreativeWork
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/softwareRequirements
      */
     public function softwareRequirements($softwareRequirements)
     {
@@ -325,7 +325,7 @@ class SoftwareApplication extends CreativeWork
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/softwareVersion
      */
     public function softwareVersion($softwareVersion)
     {
@@ -339,7 +339,7 @@ class SoftwareApplication extends CreativeWork
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/storageRequirements
      */
     public function storageRequirements($storageRequirements)
     {
@@ -353,7 +353,7 @@ class SoftwareApplication extends CreativeWork
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/supportingData
      */
     public function supportingData($supportingData)
     {

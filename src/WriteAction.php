@@ -5,7 +5,7 @@ namespace Spatie\SchemaOrg;
 /**
  * The act of authoring written creative content.
  *
- * @see 
+ * @see http://schema.org/WriteAction
  */
 class WriteAction extends CreateAction
 {
@@ -19,7 +19,7 @@ class WriteAction extends CreateAction
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/inLanguage
      */
     public function inLanguage($inLanguage)
     {
@@ -33,7 +33,7 @@ class WriteAction extends CreateAction
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/language
      */
     public function language($language)
     {

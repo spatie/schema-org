@@ -7,7 +7,7 @@ namespace Spatie\SchemaOrg;
  * restrictions are enumerated via [[suitableForDiet]]. The [[keywords]]
  * property can also be used to add more detail.
  *
- * @see 
+ * @see http://schema.org/Recipe
  */
 class Recipe extends CreativeWork
 {
@@ -19,7 +19,7 @@ class Recipe extends CreativeWork
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/cookTime
      */
     public function cookTime($cookTime)
     {
@@ -33,7 +33,7 @@ class Recipe extends CreativeWork
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/cookingMethod
      */
     public function cookingMethod($cookingMethod)
     {
@@ -47,7 +47,7 @@ class Recipe extends CreativeWork
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/ingredients
      */
     public function ingredients($ingredients)
     {
@@ -61,7 +61,7 @@ class Recipe extends CreativeWork
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/nutrition
      */
     public function nutrition($nutrition)
     {
@@ -76,7 +76,7 @@ class Recipe extends CreativeWork
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/prepTime
      */
     public function prepTime($prepTime)
     {
@@ -90,7 +90,7 @@ class Recipe extends CreativeWork
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/recipeCategory
      */
     public function recipeCategory($recipeCategory)
     {
@@ -104,7 +104,7 @@ class Recipe extends CreativeWork
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/recipeCuisine
      */
     public function recipeCuisine($recipeCuisine)
     {
@@ -118,7 +118,7 @@ class Recipe extends CreativeWork
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/recipeIngredient
      */
     public function recipeIngredient($recipeIngredient)
     {
@@ -132,7 +132,7 @@ class Recipe extends CreativeWork
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/recipeInstructions
      */
     public function recipeInstructions($recipeInstructions)
     {
@@ -147,7 +147,7 @@ class Recipe extends CreativeWork
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/recipeYield
      */
     public function recipeYield($recipeYield)
     {
@@ -162,7 +162,7 @@ class Recipe extends CreativeWork
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/suitableForDiet
      */
     public function suitableForDiet($suitableForDiet)
     {
@@ -177,7 +177,7 @@ class Recipe extends CreativeWork
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/totalTime
      */
     public function totalTime($totalTime)
     {

@@ -15,7 +15,7 @@ namespace Spatie\SchemaOrg;
  * values of 'position' are not assigned meaning for a BreadcrumbList, but they
  * should be integers, e.g. beginning with '1' for the first item in the list.
  *
- * @see 
+ * @see http://schema.org/BreadcrumbList
  */
 class BreadcrumbList extends ItemList
 {

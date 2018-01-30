@@ -5,7 +5,7 @@ namespace Spatie\SchemaOrg;
 /**
  * A radio episode which can be part of a series or season.
  *
- * @see 
+ * @see http://schema.org/RadioEpisode
  */
 class RadioEpisode extends Episode
 {

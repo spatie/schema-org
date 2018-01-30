@@ -7,7 +7,7 @@ namespace Spatie\SchemaOrg;
  * LocalBusiness include a restaurant, a particular branch of a restaurant
  * chain, a branch of a bank, a medical practice, a club, a bowling alley, etc.
  *
- * @see 
+ * @see http://schema.org/LocalBusiness
  */
 class LocalBusiness extends Organization
 {
@@ -19,7 +19,7 @@ class LocalBusiness extends Organization
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/branchOf
      */
     public function branchOf($branchOf)
     {
@@ -34,7 +34,7 @@ class LocalBusiness extends Organization
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/currenciesAccepted
      */
     public function currenciesAccepted($currenciesAccepted)
     {
@@ -63,7 +63,7 @@ class LocalBusiness extends Organization
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/openingHours
      */
     public function openingHours($openingHours)
     {
@@ -77,7 +77,7 @@ class LocalBusiness extends Organization
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/paymentAccepted
      */
     public function paymentAccepted($paymentAccepted)
     {
@@ -91,7 +91,7 @@ class LocalBusiness extends Organization
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/priceRange
      */
     public function priceRange($priceRange)
     {

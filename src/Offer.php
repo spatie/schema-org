@@ -15,7 +15,7 @@ namespace Spatie\SchemaOrg;
  * guide](http://www.gs1us.org/resources/standards/gtin-validation-guide) from
  * [GS1](http://www.gs1.org/).
  *
- * @see 
+ * @see http://schema.org/Offer
  */
 class Offer extends Intangible
 {
@@ -26,7 +26,7 @@ class Offer extends Intangible
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/acceptedPaymentMethod
      */
     public function acceptedPaymentMethod($acceptedPaymentMethod)
     {
@@ -42,7 +42,7 @@ class Offer extends Intangible
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/addOn
      */
     public function addOn($addOn)
     {
@@ -57,7 +57,7 @@ class Offer extends Intangible
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/advanceBookingRequirement
      */
     public function advanceBookingRequirement($advanceBookingRequirement)
     {
@@ -72,7 +72,7 @@ class Offer extends Intangible
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/aggregateRating
      */
     public function aggregateRating($aggregateRating)
     {
@@ -86,7 +86,7 @@ class Offer extends Intangible
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/areaServed
      */
     public function areaServed($areaServed)
     {
@@ -101,7 +101,7 @@ class Offer extends Intangible
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/availability
      */
     public function availability($availability)
     {
@@ -116,7 +116,7 @@ class Offer extends Intangible
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/availabilityEnds
      */
     public function availabilityEnds($availabilityEnds)
     {
@@ -131,7 +131,7 @@ class Offer extends Intangible
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/availabilityStarts
      */
     public function availabilityStarts($availabilityStarts)
     {
@@ -145,7 +145,7 @@ class Offer extends Intangible
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/availableAtOrFrom
      */
     public function availableAtOrFrom($availableAtOrFrom)
     {
@@ -159,7 +159,7 @@ class Offer extends Intangible
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/availableDeliveryMethod
      */
     public function availableDeliveryMethod($availableDeliveryMethod)
     {
@@ -175,7 +175,7 @@ class Offer extends Intangible
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/businessFunction
      */
     public function businessFunction($businessFunction)
     {
@@ -190,7 +190,7 @@ class Offer extends Intangible
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/category
      */
     public function category($category)
     {
@@ -206,7 +206,7 @@ class Offer extends Intangible
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/deliveryLeadTime
      */
     public function deliveryLeadTime($deliveryLeadTime)
     {
@@ -220,7 +220,7 @@ class Offer extends Intangible
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/eligibleCustomerType
      */
     public function eligibleCustomerType($eligibleCustomerType)
     {
@@ -234,7 +234,7 @@ class Offer extends Intangible
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/eligibleDuration
      */
     public function eligibleDuration($eligibleDuration)
     {
@@ -250,7 +250,7 @@ class Offer extends Intangible
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/eligibleQuantity
      */
     public function eligibleQuantity($eligibleQuantity)
     {
@@ -268,7 +268,7 @@ class Offer extends Intangible
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/eligibleRegion
      */
     public function eligibleRegion($eligibleRegion)
     {
@@ -285,7 +285,7 @@ class Offer extends Intangible
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/eligibleTransactionVolume
      */
     public function eligibleTransactionVolume($eligibleTransactionVolume)
     {
@@ -304,7 +304,7 @@ class Offer extends Intangible
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/gtin12
      */
     public function gtin12($gtin12)
     {
@@ -324,7 +324,7 @@ class Offer extends Intangible
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/gtin13
      */
     public function gtin13($gtin13)
     {
@@ -341,7 +341,7 @@ class Offer extends Intangible
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/gtin14
      */
     public function gtin14($gtin14)
     {
@@ -359,7 +359,7 @@ class Offer extends Intangible
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/gtin8
      */
     public function gtin8($gtin8)
     {
@@ -374,7 +374,7 @@ class Offer extends Intangible
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/includesObject
      */
     public function includesObject($includesObject)
     {
@@ -393,7 +393,7 @@ class Offer extends Intangible
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/ineligibleRegion
      */
     public function ineligibleRegion($ineligibleRegion)
     {
@@ -407,7 +407,7 @@ class Offer extends Intangible
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/inventoryLevel
      */
     public function inventoryLevel($inventoryLevel)
     {
@@ -423,7 +423,7 @@ class Offer extends Intangible
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/itemCondition
      */
     public function itemCondition($itemCondition)
     {
@@ -437,7 +437,7 @@ class Offer extends Intangible
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/itemOffered
      */
     public function itemOffered($itemOffered)
     {
@@ -452,7 +452,7 @@ class Offer extends Intangible
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/mpn
      */
     public function mpn($mpn)
     {
@@ -485,7 +485,7 @@ class Offer extends Intangible
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/price
      */
     public function price($price)
     {
@@ -500,7 +500,7 @@ class Offer extends Intangible
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/priceCurrency
      */
     public function priceCurrency($priceCurrency)
     {
@@ -515,7 +515,7 @@ class Offer extends Intangible
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/priceSpecification
      */
     public function priceSpecification($priceSpecification)
     {
@@ -529,7 +529,7 @@ class Offer extends Intangible
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/priceValidUntil
      */
     public function priceValidUntil($priceValidUntil)
     {
@@ -543,7 +543,7 @@ class Offer extends Intangible
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/review
      */
     public function review($review)
     {
@@ -557,7 +557,7 @@ class Offer extends Intangible
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/reviews
      */
     public function reviews($reviews)
     {
@@ -572,7 +572,7 @@ class Offer extends Intangible
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/seller
      */
     public function seller($seller)
     {
@@ -588,7 +588,7 @@ class Offer extends Intangible
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/serialNumber
      */
     public function serialNumber($serialNumber)
     {
@@ -603,7 +603,7 @@ class Offer extends Intangible
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/sku
      */
     public function sku($sku)
     {
@@ -617,7 +617,7 @@ class Offer extends Intangible
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/validFrom
      */
     public function validFrom($validFrom)
     {
@@ -632,7 +632,7 @@ class Offer extends Intangible
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/validThrough
      */
     public function validThrough($validThrough)
     {
@@ -646,7 +646,7 @@ class Offer extends Intangible
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/warranty
      */
     public function warranty($warranty)
     {

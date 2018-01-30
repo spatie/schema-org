@@ -5,7 +5,7 @@ namespace Spatie\SchemaOrg;
 /**
  * Enumerated status values for Reservation.
  *
- * @see 
+ * @see http://schema.org/ReservationStatusType
  */
 class ReservationStatusType extends Enumeration
 {

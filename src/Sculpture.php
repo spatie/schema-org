@@ -5,7 +5,7 @@ namespace Spatie\SchemaOrg;
 /**
  * A piece of sculpture.
  *
- * @see 
+ * @see http://schema.org/Sculpture
  */
 class Sculpture extends CreativeWork
 {

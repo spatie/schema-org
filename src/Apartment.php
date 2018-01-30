@@ -8,7 +8,7 @@ namespace Spatie\SchemaOrg;
  * only part of a building (Source: Wikipedia, the free encyclopedia, see <a
  * href="http://en.wikipedia.org/wiki/Apartment">http://en.wikipedia.org/wiki/Apartment</a>).
  *
- * @see 
+ * @see http://schema.org/Apartment
  */
 class Apartment extends Accommodation
 {
@@ -22,7 +22,7 @@ class Apartment extends Accommodation
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/numberOfRooms
      */
     public function numberOfRooms($numberOfRooms)
     {
@@ -40,7 +40,7 @@ class Apartment extends Accommodation
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/occupancy
      */
     public function occupancy($occupancy)
     {

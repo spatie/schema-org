@@ -5,7 +5,7 @@ namespace Spatie\SchemaOrg;
 /**
  * The geographic coordinates of a place or event.
  *
- * @see 
+ * @see http://schema.org/GeoCoordinates
  */
 class GeoCoordinates extends StructuredValue
 {
@@ -16,7 +16,7 @@ class GeoCoordinates extends StructuredValue
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/address
      */
     public function address($address)
     {
@@ -31,7 +31,7 @@ class GeoCoordinates extends StructuredValue
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/addressCountry
      */
     public function addressCountry($addressCountry)
     {
@@ -46,7 +46,7 @@ class GeoCoordinates extends StructuredValue
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/elevation
      */
     public function elevation($elevation)
     {
@@ -61,7 +61,7 @@ class GeoCoordinates extends StructuredValue
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/latitude
      */
     public function latitude($latitude)
     {
@@ -76,7 +76,7 @@ class GeoCoordinates extends StructuredValue
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/longitude
      */
     public function longitude($longitude)
     {
@@ -90,7 +90,7 @@ class GeoCoordinates extends StructuredValue
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/postalCode
      */
     public function postalCode($postalCode)
     {

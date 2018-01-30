@@ -5,7 +5,7 @@ namespace Spatie\SchemaOrg;
 /**
  * Season dedicated to TV broadcast and associated online delivery.
  *
- * @see 
+ * @see http://schema.org/TVSeason
  */
 class TVSeason extends CreativeWork
 {
@@ -17,7 +17,7 @@ class TVSeason extends CreativeWork
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/countryOfOrigin
      */
     public function countryOfOrigin($countryOfOrigin)
     {
@@ -31,7 +31,7 @@ class TVSeason extends CreativeWork
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/partOfTVSeries
      */
     public function partOfTVSeries($partOfTVSeries)
     {

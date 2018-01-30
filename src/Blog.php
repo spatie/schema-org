@@ -5,7 +5,7 @@ namespace Spatie\SchemaOrg;
 /**
  * A blog.
  *
- * @see 
+ * @see http://schema.org/Blog
  */
 class Blog extends CreativeWork
 {
@@ -16,7 +16,7 @@ class Blog extends CreativeWork
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/blogPost
      */
     public function blogPost($blogPost)
     {
@@ -30,7 +30,7 @@ class Blog extends CreativeWork
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/blogPosts
      */
     public function blogPosts($blogPosts)
     {

@@ -5,7 +5,7 @@ namespace Spatie\SchemaOrg;
 /**
  * A music recording (track), usually a single song.
  *
- * @see 
+ * @see http://schema.org/MusicRecording
  */
 class MusicRecording extends CreativeWork
 {
@@ -16,7 +16,7 @@ class MusicRecording extends CreativeWork
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/byArtist
      */
     public function byArtist($byArtist)
     {
@@ -31,7 +31,7 @@ class MusicRecording extends CreativeWork
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/duration
      */
     public function duration($duration)
     {
@@ -45,7 +45,7 @@ class MusicRecording extends CreativeWork
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/inAlbum
      */
     public function inAlbum($inAlbum)
     {
@@ -59,7 +59,7 @@ class MusicRecording extends CreativeWork
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/inPlaylist
      */
     public function inPlaylist($inPlaylist)
     {
@@ -73,7 +73,7 @@ class MusicRecording extends CreativeWork
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/isrcCode
      */
     public function isrcCode($isrcCode)
     {
@@ -87,7 +87,7 @@ class MusicRecording extends CreativeWork
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/recordingOf
      */
     public function recordingOf($recordingOf)
     {

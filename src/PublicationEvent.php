@@ -7,7 +7,7 @@ namespace Spatie\SchemaOrg;
  * a CreativeWork of any type e.g. a broadcast event, an on-demand event, a
  * book/journal publication via a variety of delivery media.
  *
- * @see 
+ * @see http://schema.org/PublicationEvent
  */
 class PublicationEvent extends Event
 {
@@ -18,7 +18,7 @@ class PublicationEvent extends Event
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/free
      */
     public function free($free)
     {
@@ -32,7 +32,7 @@ class PublicationEvent extends Event
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/isAccessibleForFree
      */
     public function isAccessibleForFree($isAccessibleForFree)
     {
@@ -46,7 +46,7 @@ class PublicationEvent extends Event
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/publishedOn
      */
     public function publishedOn($publishedOn)
     {

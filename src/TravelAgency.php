@@ -5,7 +5,7 @@ namespace Spatie\SchemaOrg;
 /**
  * A travel agency.
  *
- * @see 
+ * @see http://schema.org/TravelAgency
  */
 class TravelAgency extends LocalBusiness
 {

@@ -5,7 +5,7 @@ namespace Spatie\SchemaOrg;
 /**
  * A locksmith.
  *
- * @see 
+ * @see http://schema.org/Locksmith
  */
 class Locksmith extends HomeAndConstructionBusiness
 {

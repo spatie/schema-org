@@ -5,7 +5,7 @@ namespace Spatie\SchemaOrg;
 /**
  * A spreadsheet file.
  *
- * @see 
+ * @see http://schema.org/SpreadsheetDigitalDocument
  */
 class SpreadsheetDigitalDocument extends DigitalDocument
 {

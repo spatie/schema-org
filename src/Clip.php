@@ -5,7 +5,7 @@ namespace Spatie\SchemaOrg;
 /**
  * A short TV or radio program or a segment/part of a program.
  *
- * @see 
+ * @see http://schema.org/Clip
  */
 class Clip extends CreativeWork
 {
@@ -18,7 +18,7 @@ class Clip extends CreativeWork
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/actor
      */
     public function actor($actor)
     {
@@ -33,7 +33,7 @@ class Clip extends CreativeWork
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/actors
      */
     public function actors($actors)
     {
@@ -47,7 +47,7 @@ class Clip extends CreativeWork
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/clipNumber
      */
     public function clipNumber($clipNumber)
     {
@@ -63,7 +63,7 @@ class Clip extends CreativeWork
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/director
      */
     public function director($director)
     {
@@ -78,7 +78,7 @@ class Clip extends CreativeWork
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/directors
      */
     public function directors($directors)
     {
@@ -92,7 +92,7 @@ class Clip extends CreativeWork
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/musicBy
      */
     public function musicBy($musicBy)
     {
@@ -106,7 +106,7 @@ class Clip extends CreativeWork
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/partOfEpisode
      */
     public function partOfEpisode($partOfEpisode)
     {
@@ -120,7 +120,7 @@ class Clip extends CreativeWork
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/partOfSeason
      */
     public function partOfSeason($partOfSeason)
     {
@@ -134,7 +134,7 @@ class Clip extends CreativeWork
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/partOfSeries
      */
     public function partOfSeries($partOfSeries)
     {

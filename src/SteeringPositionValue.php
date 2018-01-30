@@ -5,7 +5,7 @@ namespace Spatie\SchemaOrg;
 /**
  * A value indicating a steering position.
  *
- * @see 
+ * @see http://schema.org/SteeringPositionValue
  */
 class SteeringPositionValue extends QualitativeValue
 {

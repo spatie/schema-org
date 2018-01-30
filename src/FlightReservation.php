@@ -9,7 +9,7 @@ namespace Spatie\SchemaOrg;
  * confirmation emails or HTML pages with individual confirmations of
  * reservations. For offers of tickets, use [[Offer]].
  *
- * @see 
+ * @see http://schema.org/FlightReservation
  */
 class FlightReservation extends Reservation
 {
@@ -21,7 +21,7 @@ class FlightReservation extends Reservation
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/passengerPriorityStatus
      */
     public function passengerPriorityStatus($passengerPriorityStatus)
     {
@@ -35,7 +35,7 @@ class FlightReservation extends Reservation
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/passengerSequenceNumber
      */
     public function passengerSequenceNumber($passengerSequenceNumber)
     {
@@ -49,7 +49,7 @@ class FlightReservation extends Reservation
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/securityScreening
      */
     public function securityScreening($securityScreening)
     {

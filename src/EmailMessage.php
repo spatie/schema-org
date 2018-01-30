@@ -5,7 +5,7 @@ namespace Spatie\SchemaOrg;
 /**
  * An email message.
  *
- * @see 
+ * @see http://schema.org/EmailMessage
  */
 class EmailMessage extends Message
 {

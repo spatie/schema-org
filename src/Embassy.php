@@ -5,7 +5,7 @@ namespace Spatie\SchemaOrg;
 /**
  * An embassy.
  *
- * @see 
+ * @see http://schema.org/Embassy
  */
 class Embassy extends GovernmentBuilding
 {

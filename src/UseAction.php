@@ -5,7 +5,7 @@ namespace Spatie\SchemaOrg;
 /**
  * The act of applying an object to its intended purpose.
  *
- * @see 
+ * @see http://schema.org/UseAction
  */
 class UseAction extends ConsumeAction
 {

@@ -5,7 +5,7 @@ namespace Spatie\SchemaOrg;
 /**
  * A bus stop.
  *
- * @see 
+ * @see http://schema.org/BusStop
  */
 class BusStop extends CivicStructure
 {

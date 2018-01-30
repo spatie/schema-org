@@ -5,7 +5,7 @@ namespace Spatie\SchemaOrg;
 /**
  * A trip on a commercial bus line.
  *
- * @see 
+ * @see http://schema.org/BusTrip
  */
 class BusTrip extends Intangible
 {
@@ -16,7 +16,7 @@ class BusTrip extends Intangible
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/arrivalBusStop
      */
     public function arrivalBusStop($arrivalBusStop)
     {
@@ -30,7 +30,7 @@ class BusTrip extends Intangible
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/arrivalTime
      */
     public function arrivalTime($arrivalTime)
     {
@@ -44,7 +44,7 @@ class BusTrip extends Intangible
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/busName
      */
     public function busName($busName)
     {
@@ -58,7 +58,7 @@ class BusTrip extends Intangible
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/busNumber
      */
     public function busNumber($busNumber)
     {
@@ -72,7 +72,7 @@ class BusTrip extends Intangible
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/departureBusStop
      */
     public function departureBusStop($departureBusStop)
     {
@@ -86,7 +86,7 @@ class BusTrip extends Intangible
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/departureTime
      */
     public function departureTime($departureTime)
     {
@@ -102,7 +102,7 @@ class BusTrip extends Intangible
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/provider
      */
     public function provider($provider)
     {

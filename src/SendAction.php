@@ -11,7 +11,7 @@ namespace Spatie\SchemaOrg;
  * of ownership (e.g. I can send you my laptop, but I'm not necessarily giving
  * it to you).
  *
- * @see 
+ * @see http://schema.org/SendAction
  */
 class SendAction extends TransferAction
 {
@@ -22,7 +22,7 @@ class SendAction extends TransferAction
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/deliveryMethod
      */
     public function deliveryMethod($deliveryMethod)
     {
@@ -37,7 +37,7 @@ class SendAction extends TransferAction
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/recipient
      */
     public function recipient($recipient)
     {

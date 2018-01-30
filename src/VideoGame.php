@@ -6,7 +6,7 @@ namespace Spatie\SchemaOrg;
  * A video game is an electronic game that involves human interaction with a
  * user interface to generate visual feedback on a video device.
  *
- * @see 
+ * @see http://schema.org/VideoGame
  */
 class VideoGame extends SoftwareApplication
 {
@@ -19,7 +19,7 @@ class VideoGame extends SoftwareApplication
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/actor
      */
     public function actor($actor)
     {
@@ -34,7 +34,7 @@ class VideoGame extends SoftwareApplication
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/actors
      */
     public function actors($actors)
     {
@@ -48,7 +48,7 @@ class VideoGame extends SoftwareApplication
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/cheatCode
      */
     public function cheatCode($cheatCode)
     {
@@ -64,7 +64,7 @@ class VideoGame extends SoftwareApplication
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/director
      */
     public function director($director)
     {
@@ -79,7 +79,7 @@ class VideoGame extends SoftwareApplication
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/directors
      */
     public function directors($directors)
     {
@@ -95,7 +95,7 @@ class VideoGame extends SoftwareApplication
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/gamePlatform
      */
     public function gamePlatform($gamePlatform)
     {
@@ -109,7 +109,7 @@ class VideoGame extends SoftwareApplication
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/gameServer
      */
     public function gameServer($gameServer)
     {
@@ -123,7 +123,7 @@ class VideoGame extends SoftwareApplication
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/gameTip
      */
     public function gameTip($gameTip)
     {
@@ -137,7 +137,7 @@ class VideoGame extends SoftwareApplication
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/musicBy
      */
     public function musicBy($musicBy)
     {
@@ -153,7 +153,7 @@ class VideoGame extends SoftwareApplication
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/playMode
      */
     public function playMode($playMode)
     {
@@ -167,7 +167,7 @@ class VideoGame extends SoftwareApplication
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/trailer
      */
     public function trailer($trailer)
     {

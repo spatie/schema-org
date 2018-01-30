@@ -5,7 +5,7 @@ namespace Spatie\SchemaOrg;
 /**
  * A single item within a larger data feed.
  *
- * @see 
+ * @see http://schema.org/DataFeedItem
  */
 class DataFeedItem extends Intangible
 {
@@ -17,7 +17,7 @@ class DataFeedItem extends Intangible
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/dateCreated
      */
     public function dateCreated($dateCreated)
     {
@@ -31,7 +31,7 @@ class DataFeedItem extends Intangible
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/dateDeleted
      */
     public function dateDeleted($dateDeleted)
     {
@@ -46,7 +46,7 @@ class DataFeedItem extends Intangible
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/dateModified
      */
     public function dateModified($dateModified)
     {
@@ -61,7 +61,7 @@ class DataFeedItem extends Intangible
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/item
      */
     public function item($item)
     {

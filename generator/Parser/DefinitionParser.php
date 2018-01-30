@@ -17,19 +17,13 @@ class DefinitionParser
         $types = $definitions
             ->query('[typeof="rdfs:Class"]')
             ->each(function (Crawler $crawler) {
-                $node = $crawler->getNode(0);
-                $html = $node->ownerDocument->saveHTML($node);
-
-                return call_user_func(new ParseType($html));
+                return call_user_func(ParseType::fromCrawler($crawler));
             });
 
         $properties = $definitions
             ->query('[typeof="rdf:Property"]')
-            ->each(function (Crawler $crawler) use (&$properties) {
-                $node = $crawler->getNode(0);
-                $html = $node->ownerDocument->saveHTML($node);
-
-                return call_user_func(new ParseProperty($html));
+            ->each(function (Crawler $crawler) {
+                return call_user_func(ParseProperty::fromCrawler($crawler));
             });
 
         return new TypeCollection(

@@ -5,7 +5,7 @@ namespace Spatie\SchemaOrg;
 /**
  * A business that provide Heating, Ventilation and Air Conditioning services.
  *
- * @see 
+ * @see http://schema.org/HVACBusiness
  */
 class HVACBusiness extends HomeAndConstructionBusiness
 {

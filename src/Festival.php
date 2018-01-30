@@ -5,7 +5,7 @@ namespace Spatie\SchemaOrg;
 /**
  * Event type: Festival.
  *
- * @see 
+ * @see http://schema.org/Festival
  */
 class Festival extends Event
 {

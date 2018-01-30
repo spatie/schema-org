@@ -5,7 +5,7 @@ namespace Spatie\SchemaOrg;
 /**
  * Aquarium.
  *
- * @see 
+ * @see http://schema.org/Aquarium
  */
 class Aquarium extends CivicStructure
 {

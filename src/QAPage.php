@@ -7,7 +7,7 @@ namespace Spatie\SchemaOrg;
  * in a question answering site or documenting Frequently Asked Questions
  * (FAQs).
  *
- * @see 
+ * @see http://schema.org/QAPage
  */
 class QAPage extends WebPage
 {

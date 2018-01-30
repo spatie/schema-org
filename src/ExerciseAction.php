@@ -6,7 +6,7 @@ namespace Spatie\SchemaOrg;
  * The act of participating in exertive activity for the purposes of improving
  * health and fitness.
  *
- * @see 
+ * @see http://schema.org/ExerciseAction
  */
 class ExerciseAction extends PlayAction
 {
@@ -17,7 +17,7 @@ class ExerciseAction extends PlayAction
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/course
      */
     public function course($course)
     {
@@ -31,7 +31,7 @@ class ExerciseAction extends PlayAction
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/distance
      */
     public function distance($distance)
     {
@@ -45,7 +45,7 @@ class ExerciseAction extends PlayAction
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/exerciseCourse
      */
     public function exerciseCourse($exerciseCourse)
     {
@@ -60,7 +60,7 @@ class ExerciseAction extends PlayAction
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/fromLocation
      */
     public function fromLocation($fromLocation)
     {
@@ -74,7 +74,7 @@ class ExerciseAction extends PlayAction
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/opponent
      */
     public function opponent($opponent)
     {
@@ -89,7 +89,7 @@ class ExerciseAction extends PlayAction
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/sportsActivityLocation
      */
     public function sportsActivityLocation($sportsActivityLocation)
     {
@@ -103,7 +103,7 @@ class ExerciseAction extends PlayAction
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/sportsEvent
      */
     public function sportsEvent($sportsEvent)
     {
@@ -118,7 +118,7 @@ class ExerciseAction extends PlayAction
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/sportsTeam
      */
     public function sportsTeam($sportsTeam)
     {
@@ -133,7 +133,7 @@ class ExerciseAction extends PlayAction
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/toLocation
      */
     public function toLocation($toLocation)
     {

@@ -15,7 +15,7 @@ namespace Spatie\SchemaOrg;
  * * [[CancelAction]]: Unlike CancelAction, CheckOutAction implies that the
  * agent is informing/confirming the end of a previously reserved service.
  *
- * @see 
+ * @see http://schema.org/CheckOutAction
  */
 class CheckOutAction extends CommunicateAction
 {

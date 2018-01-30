@@ -5,7 +5,7 @@ namespace Spatie\SchemaOrg;
 /**
  * A tennis complex.
  *
- * @see 
+ * @see http://schema.org/TennisComplex
  */
 class TennisComplex extends SportsActivityLocation
 {

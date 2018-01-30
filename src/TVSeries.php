@@ -5,7 +5,7 @@ namespace Spatie\SchemaOrg;
 /**
  * CreativeWorkSeries dedicated to TV broadcast and associated online delivery.
  *
- * @see 
+ * @see http://schema.org/TVSeries
  */
 class TVSeries extends CreativeWork
 {
@@ -18,7 +18,7 @@ class TVSeries extends CreativeWork
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/actor
      */
     public function actor($actor)
     {
@@ -33,7 +33,7 @@ class TVSeries extends CreativeWork
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/actors
      */
     public function actors($actors)
     {
@@ -47,7 +47,7 @@ class TVSeries extends CreativeWork
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/containsSeason
      */
     public function containsSeason($containsSeason)
     {
@@ -62,7 +62,7 @@ class TVSeries extends CreativeWork
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/countryOfOrigin
      */
     public function countryOfOrigin($countryOfOrigin)
     {
@@ -78,7 +78,7 @@ class TVSeries extends CreativeWork
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/director
      */
     public function director($director)
     {
@@ -93,7 +93,7 @@ class TVSeries extends CreativeWork
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/directors
      */
     public function directors($directors)
     {
@@ -107,7 +107,7 @@ class TVSeries extends CreativeWork
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/episode
      */
     public function episode($episode)
     {
@@ -121,7 +121,7 @@ class TVSeries extends CreativeWork
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/episodes
      */
     public function episodes($episodes)
     {
@@ -135,7 +135,7 @@ class TVSeries extends CreativeWork
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/musicBy
      */
     public function musicBy($musicBy)
     {
@@ -149,7 +149,7 @@ class TVSeries extends CreativeWork
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/numberOfEpisodes
      */
     public function numberOfEpisodes($numberOfEpisodes)
     {
@@ -163,7 +163,7 @@ class TVSeries extends CreativeWork
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/numberOfSeasons
      */
     public function numberOfSeasons($numberOfSeasons)
     {
@@ -178,7 +178,7 @@ class TVSeries extends CreativeWork
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/productionCompany
      */
     public function productionCompany($productionCompany)
     {
@@ -192,7 +192,7 @@ class TVSeries extends CreativeWork
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/season
      */
     public function season($season)
     {
@@ -206,7 +206,7 @@ class TVSeries extends CreativeWork
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/seasons
      */
     public function seasons($seasons)
     {
@@ -220,7 +220,7 @@ class TVSeries extends CreativeWork
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/trailer
      */
     public function trailer($trailer)
     {

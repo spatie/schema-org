@@ -5,7 +5,7 @@ namespace Spatie\SchemaOrg;
 /**
  * A post office.
  *
- * @see 
+ * @see http://schema.org/PostOffice
  */
 class PostOffice extends GovernmentOffice
 {

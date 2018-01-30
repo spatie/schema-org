@@ -11,7 +11,7 @@ namespace Spatie\SchemaOrg;
  * actions (e.g. an event, a task, etc) towards a time slot / spatial
  * allocation.
  *
- * @see 
+ * @see http://schema.org/ScheduleAction
  */
 class ScheduleAction extends PlanAction
 {

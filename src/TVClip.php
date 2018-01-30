@@ -5,7 +5,7 @@ namespace Spatie\SchemaOrg;
 /**
  * A short TV program or a segment/part of a TV program.
  *
- * @see 
+ * @see http://schema.org/TVClip
  */
 class TVClip extends Clip
 {
@@ -16,7 +16,7 @@ class TVClip extends Clip
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/partOfTVSeries
      */
     public function partOfTVSeries($partOfTVSeries)
     {

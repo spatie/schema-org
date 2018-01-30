@@ -5,7 +5,7 @@ namespace Spatie\SchemaOrg;
 /**
  * A music venue.
  *
- * @see 
+ * @see http://schema.org/MusicVenue
  */
 class MusicVenue extends CivicStructure
 {

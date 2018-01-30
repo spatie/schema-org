@@ -6,7 +6,7 @@ namespace Spatie\SchemaOrg;
  * A series of movies. Included movies can be indicated with the hasPart
  * property.
  *
- * @see 
+ * @see http://schema.org/MovieSeries
  */
 class MovieSeries extends CreativeWorkSeries
 {
@@ -19,7 +19,7 @@ class MovieSeries extends CreativeWorkSeries
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/actor
      */
     public function actor($actor)
     {
@@ -34,7 +34,7 @@ class MovieSeries extends CreativeWorkSeries
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/actors
      */
     public function actors($actors)
     {
@@ -49,7 +49,7 @@ class MovieSeries extends CreativeWorkSeries
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/directors
      */
     public function directors($directors)
     {
@@ -63,7 +63,7 @@ class MovieSeries extends CreativeWorkSeries
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/musicBy
      */
     public function musicBy($musicBy)
     {
@@ -78,7 +78,7 @@ class MovieSeries extends CreativeWorkSeries
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/productionCompany
      */
     public function productionCompany($productionCompany)
     {
@@ -92,7 +92,7 @@ class MovieSeries extends CreativeWorkSeries
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/trailer
      */
     public function trailer($trailer)
     {

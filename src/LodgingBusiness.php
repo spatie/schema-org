@@ -5,7 +5,7 @@ namespace Spatie\SchemaOrg;
 /**
  * A lodging business, such as a motel, hotel, or inn.
  *
- * @see 
+ * @see http://schema.org/LodgingBusiness
  */
 class LodgingBusiness extends LocalBusiness
 {
@@ -19,7 +19,7 @@ class LodgingBusiness extends LocalBusiness
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/amenityFeature
      */
     public function amenityFeature($amenityFeature)
     {
@@ -33,7 +33,7 @@ class LodgingBusiness extends LocalBusiness
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/audience
      */
     public function audience($audience)
     {
@@ -49,7 +49,7 @@ class LodgingBusiness extends LocalBusiness
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/availableLanguage
      */
     public function availableLanguage($availableLanguage)
     {
@@ -63,7 +63,7 @@ class LodgingBusiness extends LocalBusiness
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/checkinTime
      */
     public function checkinTime($checkinTime)
     {
@@ -77,7 +77,7 @@ class LodgingBusiness extends LocalBusiness
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/checkoutTime
      */
     public function checkoutTime($checkoutTime)
     {
@@ -92,7 +92,7 @@ class LodgingBusiness extends LocalBusiness
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/petsAllowed
      */
     public function petsAllowed($petsAllowed)
     {
@@ -109,7 +109,7 @@ class LodgingBusiness extends LocalBusiness
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/starRating
      */
     public function starRating($starRating)
     {

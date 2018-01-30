@@ -5,7 +5,7 @@ namespace Spatie\SchemaOrg;
 /**
  * A plumbing service.
  *
- * @see 
+ * @see http://schema.org/Plumber
  */
 class Plumber extends HomeAndConstructionBusiness
 {

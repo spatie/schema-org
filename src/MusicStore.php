@@ -5,7 +5,7 @@ namespace Spatie\SchemaOrg;
 /**
  * A music store.
  *
- * @see 
+ * @see http://schema.org/MusicStore
  */
 class MusicStore extends Store
 {

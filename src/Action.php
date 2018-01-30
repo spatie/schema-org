@@ -12,7 +12,7 @@ namespace Spatie\SchemaOrg;
  * post](http://blog.schema.org/2014/04/announcing-schemaorg-actions.html) and
  * [Actions overview document](http://schema.org/docs/actions.html).
  *
- * @see 
+ * @see http://schema.org/Action
  */
 class Action extends Thing
 {
@@ -23,7 +23,7 @@ class Action extends Thing
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/actionStatus
      */
     public function actionStatus($actionStatus)
     {
@@ -38,7 +38,7 @@ class Action extends Thing
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/agent
      */
     public function agent($agent)
     {
@@ -59,7 +59,7 @@ class Action extends Thing
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/endTime
      */
     public function endTime($endTime)
     {
@@ -73,7 +73,7 @@ class Action extends Thing
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/error
      */
     public function error($error)
     {
@@ -88,7 +88,7 @@ class Action extends Thing
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/instrument
      */
     public function instrument($instrument)
     {
@@ -103,7 +103,7 @@ class Action extends Thing
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/location
      */
     public function location($location)
     {
@@ -120,7 +120,7 @@ class Action extends Thing
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/object
      */
     public function object($object)
     {
@@ -135,7 +135,7 @@ class Action extends Thing
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/participant
      */
     public function participant($participant)
     {
@@ -149,7 +149,7 @@ class Action extends Thing
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/result
      */
     public function result($result)
     {
@@ -170,7 +170,7 @@ class Action extends Thing
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/startTime
      */
     public function startTime($startTime)
     {
@@ -184,7 +184,7 @@ class Action extends Thing
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/target
      */
     public function target($target)
     {

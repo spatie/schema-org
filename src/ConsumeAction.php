@@ -5,7 +5,7 @@ namespace Spatie\SchemaOrg;
 /**
  * The act of ingesting information/resources/food.
  *
- * @see 
+ * @see http://schema.org/ConsumeAction
  */
 class ConsumeAction extends Action
 {
@@ -18,7 +18,7 @@ class ConsumeAction extends Action
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/expectsAcceptanceOf
      */
     public function expectsAcceptanceOf($expectsAcceptanceOf)
     {

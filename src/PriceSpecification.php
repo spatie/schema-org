@@ -8,7 +8,7 @@ namespace Spatie\SchemaOrg;
  * [[MonetaryAmount]] to describe independent amounts of money such as a salary,
  * credit card limits, etc.
  *
- * @see 
+ * @see http://schema.org/PriceSpecification
  */
 class PriceSpecification extends StructuredValue
 {
@@ -21,7 +21,7 @@ class PriceSpecification extends StructuredValue
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/eligibleQuantity
      */
     public function eligibleQuantity($eligibleQuantity)
     {
@@ -38,7 +38,7 @@ class PriceSpecification extends StructuredValue
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/eligibleTransactionVolume
      */
     public function eligibleTransactionVolume($eligibleTransactionVolume)
     {
@@ -52,7 +52,7 @@ class PriceSpecification extends StructuredValue
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/maxPrice
      */
     public function maxPrice($maxPrice)
     {
@@ -66,7 +66,7 @@ class PriceSpecification extends StructuredValue
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/minPrice
      */
     public function minPrice($minPrice)
     {
@@ -99,7 +99,7 @@ class PriceSpecification extends StructuredValue
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/price
      */
     public function price($price)
     {
@@ -114,7 +114,7 @@ class PriceSpecification extends StructuredValue
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/priceCurrency
      */
     public function priceCurrency($priceCurrency)
     {
@@ -128,7 +128,7 @@ class PriceSpecification extends StructuredValue
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/validFrom
      */
     public function validFrom($validFrom)
     {
@@ -142,7 +142,7 @@ class PriceSpecification extends StructuredValue
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/validFrom
      */
     public function validFrom($validFrom)
     {
@@ -157,7 +157,7 @@ class PriceSpecification extends StructuredValue
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/validThrough
      */
     public function validThrough($validThrough)
     {
@@ -172,7 +172,7 @@ class PriceSpecification extends StructuredValue
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/validThrough
      */
     public function validThrough($validThrough)
     {
@@ -187,7 +187,7 @@ class PriceSpecification extends StructuredValue
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/valueAddedTaxIncluded
      */
     public function valueAddedTaxIncluded($valueAddedTaxIncluded)
     {

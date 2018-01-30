@@ -5,7 +5,7 @@ namespace Spatie\SchemaOrg;
 /**
  * A store that sells materials useful or necessary for various hobbies.
  *
- * @see 
+ * @see http://schema.org/HobbyShop
  */
 class HobbyShop extends Store
 {

@@ -5,7 +5,7 @@ namespace Spatie\SchemaOrg;
 /**
  * A unique instance of a BroadcastService on a CableOrSatelliteService lineup.
  *
- * @see 
+ * @see http://schema.org/BroadcastChannel
  */
 class BroadcastChannel extends Intangible
 {
@@ -17,7 +17,7 @@ class BroadcastChannel extends Intangible
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/broadcastChannelId
      */
     public function broadcastChannelId($broadcastChannelId)
     {
@@ -32,7 +32,7 @@ class BroadcastChannel extends Intangible
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/broadcastServiceTier
      */
     public function broadcastServiceTier($broadcastServiceTier)
     {
@@ -46,7 +46,7 @@ class BroadcastChannel extends Intangible
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/genre
      */
     public function genre($genre)
     {
@@ -60,7 +60,7 @@ class BroadcastChannel extends Intangible
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/inBroadcastLineup
      */
     public function inBroadcastLineup($inBroadcastLineup)
     {
@@ -74,7 +74,7 @@ class BroadcastChannel extends Intangible
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/providesBroadcastService
      */
     public function providesBroadcastService($providesBroadcastService)
     {

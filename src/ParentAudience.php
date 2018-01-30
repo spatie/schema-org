@@ -6,7 +6,7 @@ namespace Spatie\SchemaOrg;
  * A set of characteristics describing parents, who can be interested in viewing
  * some content.
  *
- * @see 
+ * @see http://schema.org/ParentAudience
  */
 class ParentAudience extends PeopleAudience
 {
@@ -17,7 +17,7 @@ class ParentAudience extends PeopleAudience
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/childMaxAge
      */
     public function childMaxAge($childMaxAge)
     {
@@ -31,7 +31,7 @@ class ParentAudience extends PeopleAudience
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/childMinAge
      */
     public function childMinAge($childMinAge)
     {

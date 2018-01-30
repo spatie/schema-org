@@ -5,7 +5,7 @@ namespace Spatie\SchemaOrg;
 /**
  * Event type: Sports event.
  *
- * @see 
+ * @see http://schema.org/SportsEvent
  */
 class SportsEvent extends Event
 {
@@ -16,7 +16,7 @@ class SportsEvent extends Event
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/awayTeam
      */
     public function awayTeam($awayTeam)
     {
@@ -30,7 +30,7 @@ class SportsEvent extends Event
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/competitor
      */
     public function competitor($competitor)
     {
@@ -44,7 +44,7 @@ class SportsEvent extends Event
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/homeTeam
      */
     public function homeTeam($homeTeam)
     {

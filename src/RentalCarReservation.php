@@ -9,7 +9,7 @@ namespace Spatie\SchemaOrg;
  * confirmation emails or HTML pages with individual confirmations of
  * reservations.
  *
- * @see 
+ * @see http://schema.org/RentalCarReservation
  */
 class RentalCarReservation extends Reservation
 {
@@ -20,7 +20,7 @@ class RentalCarReservation extends Reservation
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/dropoffLocation
      */
     public function dropoffLocation($dropoffLocation)
     {
@@ -34,7 +34,7 @@ class RentalCarReservation extends Reservation
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/dropoffTime
      */
     public function dropoffTime($dropoffTime)
     {
@@ -48,7 +48,7 @@ class RentalCarReservation extends Reservation
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/pickupLocation
      */
     public function pickupLocation($pickupLocation)
     {
@@ -62,7 +62,7 @@ class RentalCarReservation extends Reservation
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/pickupTime
      */
     public function pickupTime($pickupTime)
     {

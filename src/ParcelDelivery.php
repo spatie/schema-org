@@ -6,7 +6,7 @@ namespace Spatie\SchemaOrg;
  * The delivery of a parcel either via the postal service or a commercial
  * service.
  *
- * @see 
+ * @see http://schema.org/ParcelDelivery
  */
 class ParcelDelivery extends Intangible
 {
@@ -18,7 +18,7 @@ class ParcelDelivery extends Intangible
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/carrier
      */
     public function carrier($carrier)
     {
@@ -32,7 +32,7 @@ class ParcelDelivery extends Intangible
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/deliveryAddress
      */
     public function deliveryAddress($deliveryAddress)
     {
@@ -47,7 +47,7 @@ class ParcelDelivery extends Intangible
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/deliveryStatus
      */
     public function deliveryStatus($deliveryStatus)
     {
@@ -61,7 +61,7 @@ class ParcelDelivery extends Intangible
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/expectedArrivalFrom
      */
     public function expectedArrivalFrom($expectedArrivalFrom)
     {
@@ -75,7 +75,7 @@ class ParcelDelivery extends Intangible
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/expectedArrivalUntil
      */
     public function expectedArrivalUntil($expectedArrivalUntil)
     {
@@ -89,7 +89,7 @@ class ParcelDelivery extends Intangible
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/hasDeliveryMethod
      */
     public function hasDeliveryMethod($hasDeliveryMethod)
     {
@@ -103,7 +103,7 @@ class ParcelDelivery extends Intangible
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/itemShipped
      */
     public function itemShipped($itemShipped)
     {
@@ -117,7 +117,7 @@ class ParcelDelivery extends Intangible
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/originAddress
      */
     public function originAddress($originAddress)
     {
@@ -131,7 +131,7 @@ class ParcelDelivery extends Intangible
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/partOfOrder
      */
     public function partOfOrder($partOfOrder)
     {
@@ -147,7 +147,7 @@ class ParcelDelivery extends Intangible
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/provider
      */
     public function provider($provider)
     {
@@ -161,7 +161,7 @@ class ParcelDelivery extends Intangible
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/trackingNumber
      */
     public function trackingNumber($trackingNumber)
     {
@@ -175,7 +175,7 @@ class ParcelDelivery extends Intangible
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/trackingUrl
      */
     public function trackingUrl($trackingUrl)
     {

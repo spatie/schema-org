@@ -5,7 +5,7 @@ namespace Spatie\SchemaOrg;
 /**
  * The price for the delivery of an offer using a particular delivery method.
  *
- * @see 
+ * @see http://schema.org/DeliveryChargeSpecification
  */
 class DeliveryChargeSpecification extends PriceSpecification
 {
@@ -17,7 +17,7 @@ class DeliveryChargeSpecification extends PriceSpecification
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/appliesToDeliveryMethod
      */
     public function appliesToDeliveryMethod($appliesToDeliveryMethod)
     {
@@ -31,7 +31,7 @@ class DeliveryChargeSpecification extends PriceSpecification
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/areaServed
      */
     public function areaServed($areaServed)
     {
@@ -49,7 +49,7 @@ class DeliveryChargeSpecification extends PriceSpecification
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/eligibleRegion
      */
     public function eligibleRegion($eligibleRegion)
     {
@@ -68,7 +68,7 @@ class DeliveryChargeSpecification extends PriceSpecification
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/ineligibleRegion
      */
     public function ineligibleRegion($ineligibleRegion)
     {

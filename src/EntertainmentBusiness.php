@@ -5,7 +5,7 @@ namespace Spatie\SchemaOrg;
 /**
  * A business providing entertainment.
  *
- * @see 
+ * @see http://schema.org/EntertainmentBusiness
  */
 class EntertainmentBusiness extends LocalBusiness
 {

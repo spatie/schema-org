@@ -9,7 +9,7 @@ namespace Spatie\SchemaOrg;
  * example, a page about a single song (MusicRecording) may have a music video
  * (VideoObject), and a high and low bandwidth audio stream (2 AudioObject's).
  *
- * @see 
+ * @see http://schema.org/MediaObject
  */
 class MediaObject extends CreativeWork
 {
@@ -20,7 +20,7 @@ class MediaObject extends CreativeWork
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/associatedArticle
      */
     public function associatedArticle($associatedArticle)
     {
@@ -34,7 +34,7 @@ class MediaObject extends CreativeWork
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/bitrate
      */
     public function bitrate($bitrate)
     {
@@ -48,7 +48,7 @@ class MediaObject extends CreativeWork
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/contentSize
      */
     public function contentSize($contentSize)
     {
@@ -63,7 +63,7 @@ class MediaObject extends CreativeWork
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/contentUrl
      */
     public function contentUrl($contentUrl)
     {
@@ -78,7 +78,7 @@ class MediaObject extends CreativeWork
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/duration
      */
     public function duration($duration)
     {
@@ -94,7 +94,7 @@ class MediaObject extends CreativeWork
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/embedUrl
      */
     public function embedUrl($embedUrl)
     {
@@ -108,7 +108,7 @@ class MediaObject extends CreativeWork
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/encodesCreativeWork
      */
     public function encodesCreativeWork($encodesCreativeWork)
     {
@@ -122,7 +122,7 @@ class MediaObject extends CreativeWork
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/encodingFormat
      */
     public function encodingFormat($encodingFormat)
     {
@@ -137,7 +137,7 @@ class MediaObject extends CreativeWork
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/expires
      */
     public function expires($expires)
     {
@@ -151,7 +151,7 @@ class MediaObject extends CreativeWork
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/height
      */
     public function height($height)
     {
@@ -165,7 +165,7 @@ class MediaObject extends CreativeWork
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/playerType
      */
     public function playerType($playerType)
     {
@@ -180,7 +180,7 @@ class MediaObject extends CreativeWork
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/productionCompany
      */
     public function productionCompany($productionCompany)
     {
@@ -196,7 +196,7 @@ class MediaObject extends CreativeWork
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/regionsAllowed
      */
     public function regionsAllowed($regionsAllowed)
     {
@@ -212,7 +212,7 @@ class MediaObject extends CreativeWork
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/requiresSubscription
      */
     public function requiresSubscription($requiresSubscription)
     {
@@ -226,7 +226,7 @@ class MediaObject extends CreativeWork
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/uploadDate
      */
     public function uploadDate($uploadDate)
     {
@@ -240,7 +240,7 @@ class MediaObject extends CreativeWork
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/width
      */
     public function width($width)
     {

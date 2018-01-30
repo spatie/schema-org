@@ -6,7 +6,7 @@ namespace Spatie\SchemaOrg;
  * A brand is a name used by an organization or business person for labeling a
  * product, product group, or similar.
  *
- * @see 
+ * @see http://schema.org/Brand
  */
 class Brand extends Intangible
 {
@@ -18,7 +18,7 @@ class Brand extends Intangible
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/aggregateRating
      */
     public function aggregateRating($aggregateRating)
     {
@@ -32,7 +32,7 @@ class Brand extends Intangible
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/logo
      */
     public function logo($logo)
     {
@@ -46,7 +46,7 @@ class Brand extends Intangible
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/review
      */
     public function review($review)
     {

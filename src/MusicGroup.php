@@ -6,7 +6,7 @@ namespace Spatie\SchemaOrg;
  * A musical group, such as a band, an orchestra, or a choir. Can also be a solo
  * musician.
  *
- * @see 
+ * @see http://schema.org/MusicGroup
  */
 class MusicGroup extends PerformingGroup
 {
@@ -17,7 +17,7 @@ class MusicGroup extends PerformingGroup
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/album
      */
     public function album($album)
     {
@@ -31,7 +31,7 @@ class MusicGroup extends PerformingGroup
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/albums
      */
     public function albums($albums)
     {
@@ -45,7 +45,7 @@ class MusicGroup extends PerformingGroup
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/genre
      */
     public function genre($genre)
     {
@@ -60,7 +60,7 @@ class MusicGroup extends PerformingGroup
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/musicGroupMember
      */
     public function musicGroupMember($musicGroupMember)
     {
@@ -75,7 +75,7 @@ class MusicGroup extends PerformingGroup
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/track
      */
     public function track($track)
     {
@@ -89,7 +89,7 @@ class MusicGroup extends PerformingGroup
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/tracks
      */
     public function tracks($tracks)
     {

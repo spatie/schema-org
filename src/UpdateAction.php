@@ -5,7 +5,7 @@ namespace Spatie\SchemaOrg;
 /**
  * The act of managing by changing/editing the state of the object.
  *
- * @see 
+ * @see http://schema.org/UpdateAction
  */
 class UpdateAction extends Action
 {
@@ -16,7 +16,7 @@ class UpdateAction extends Action
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/collection
      */
     public function collection($collection)
     {
@@ -30,7 +30,7 @@ class UpdateAction extends Action
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/targetCollection
      */
     public function targetCollection($targetCollection)
     {

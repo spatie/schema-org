@@ -5,7 +5,7 @@ namespace Spatie\SchemaOrg;
 /**
  * Organization: Sports team.
  *
- * @see 
+ * @see http://schema.org/SportsTeam
  */
 class SportsTeam extends SportsOrganization
 {
@@ -17,7 +17,7 @@ class SportsTeam extends SportsOrganization
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/athlete
      */
     public function athlete($athlete)
     {
@@ -31,7 +31,7 @@ class SportsTeam extends SportsOrganization
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/coach
      */
     public function coach($coach)
     {

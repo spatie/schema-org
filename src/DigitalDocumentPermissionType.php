@@ -5,7 +5,7 @@ namespace Spatie\SchemaOrg;
 /**
  * A type of permission which can be granted for accessing a digital document.
  *
- * @see 
+ * @see http://schema.org/DigitalDocumentPermissionType
  */
 class DigitalDocumentPermissionType extends Enumeration
 {

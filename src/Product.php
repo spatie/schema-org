@@ -7,7 +7,7 @@ namespace Spatie\SchemaOrg;
  * ticket; the rental of a car; a haircut; or an episode of a TV show streamed
  * online.
  *
- * @see 
+ * @see http://schema.org/Product
  */
 class Product extends Thing
 {
@@ -26,7 +26,7 @@ class Product extends Thing
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/additionalProperty
      */
     public function additionalProperty($additionalProperty)
     {
@@ -41,7 +41,7 @@ class Product extends Thing
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/aggregateRating
      */
     public function aggregateRating($aggregateRating)
     {
@@ -55,7 +55,7 @@ class Product extends Thing
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/audience
      */
     public function audience($audience)
     {
@@ -69,7 +69,7 @@ class Product extends Thing
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/award
      */
     public function award($award)
     {
@@ -83,7 +83,7 @@ class Product extends Thing
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/awards
      */
     public function awards($awards)
     {
@@ -98,7 +98,7 @@ class Product extends Thing
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/brand
      */
     public function brand($brand)
     {
@@ -113,7 +113,7 @@ class Product extends Thing
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/category
      */
     public function category($category)
     {
@@ -127,7 +127,7 @@ class Product extends Thing
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/color
      */
     public function color($color)
     {
@@ -141,7 +141,7 @@ class Product extends Thing
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/depth
      */
     public function depth($depth)
     {
@@ -160,7 +160,7 @@ class Product extends Thing
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/gtin12
      */
     public function gtin12($gtin12)
     {
@@ -180,7 +180,7 @@ class Product extends Thing
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/gtin13
      */
     public function gtin13($gtin13)
     {
@@ -197,7 +197,7 @@ class Product extends Thing
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/gtin14
      */
     public function gtin14($gtin14)
     {
@@ -215,7 +215,7 @@ class Product extends Thing
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/gtin8
      */
     public function gtin8($gtin8)
     {
@@ -229,7 +229,7 @@ class Product extends Thing
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/height
      */
     public function height($height)
     {
@@ -244,7 +244,7 @@ class Product extends Thing
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/isAccessoryOrSparePartFor
      */
     public function isAccessoryOrSparePartFor($isAccessoryOrSparePartFor)
     {
@@ -259,7 +259,7 @@ class Product extends Thing
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/isConsumableFor
      */
     public function isConsumableFor($isConsumableFor)
     {
@@ -273,7 +273,7 @@ class Product extends Thing
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/isRelatedTo
      */
     public function isRelatedTo($isRelatedTo)
     {
@@ -288,7 +288,7 @@ class Product extends Thing
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/isSimilarTo
      */
     public function isSimilarTo($isSimilarTo)
     {
@@ -304,7 +304,7 @@ class Product extends Thing
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/itemCondition
      */
     public function itemCondition($itemCondition)
     {
@@ -318,7 +318,7 @@ class Product extends Thing
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/logo
      */
     public function logo($logo)
     {
@@ -332,7 +332,7 @@ class Product extends Thing
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/manufacturer
      */
     public function manufacturer($manufacturer)
     {
@@ -347,7 +347,7 @@ class Product extends Thing
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/material
      */
     public function material($material)
     {
@@ -365,7 +365,7 @@ class Product extends Thing
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/model
      */
     public function model($model)
     {
@@ -380,7 +380,7 @@ class Product extends Thing
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/mpn
      */
     public function mpn($mpn)
     {
@@ -396,7 +396,7 @@ class Product extends Thing
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/offers
      */
     public function offers($offers)
     {
@@ -411,7 +411,7 @@ class Product extends Thing
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/productID
      */
     public function productID($productID)
     {
@@ -425,7 +425,7 @@ class Product extends Thing
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/productionDate
      */
     public function productionDate($productionDate)
     {
@@ -439,7 +439,7 @@ class Product extends Thing
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/purchaseDate
      */
     public function purchaseDate($purchaseDate)
     {
@@ -454,7 +454,7 @@ class Product extends Thing
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/releaseDate
      */
     public function releaseDate($releaseDate)
     {
@@ -468,7 +468,7 @@ class Product extends Thing
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/review
      */
     public function review($review)
     {
@@ -482,7 +482,7 @@ class Product extends Thing
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/reviews
      */
     public function reviews($reviews)
     {
@@ -497,7 +497,7 @@ class Product extends Thing
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/sku
      */
     public function sku($sku)
     {
@@ -511,7 +511,7 @@ class Product extends Thing
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/weight
      */
     public function weight($weight)
     {
@@ -525,7 +525,7 @@ class Product extends Thing
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/width
      */
     public function width($width)
     {

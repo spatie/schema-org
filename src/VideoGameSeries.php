@@ -5,7 +5,7 @@ namespace Spatie\SchemaOrg;
 /**
  * A video game series.
  *
- * @see 
+ * @see http://schema.org/VideoGameSeries
  */
 class VideoGameSeries extends CreativeWorkSeries
 {
@@ -18,7 +18,7 @@ class VideoGameSeries extends CreativeWorkSeries
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/actor
      */
     public function actor($actor)
     {
@@ -33,7 +33,7 @@ class VideoGameSeries extends CreativeWorkSeries
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/actors
      */
     public function actors($actors)
     {
@@ -48,7 +48,7 @@ class VideoGameSeries extends CreativeWorkSeries
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/characterAttribute
      */
     public function characterAttribute($characterAttribute)
     {
@@ -62,7 +62,7 @@ class VideoGameSeries extends CreativeWorkSeries
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/cheatCode
      */
     public function cheatCode($cheatCode)
     {
@@ -76,7 +76,7 @@ class VideoGameSeries extends CreativeWorkSeries
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/containsSeason
      */
     public function containsSeason($containsSeason)
     {
@@ -92,7 +92,7 @@ class VideoGameSeries extends CreativeWorkSeries
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/director
      */
     public function director($director)
     {
@@ -107,7 +107,7 @@ class VideoGameSeries extends CreativeWorkSeries
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/directors
      */
     public function directors($directors)
     {
@@ -121,7 +121,7 @@ class VideoGameSeries extends CreativeWorkSeries
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/episode
      */
     public function episode($episode)
     {
@@ -135,7 +135,7 @@ class VideoGameSeries extends CreativeWorkSeries
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/episodes
      */
     public function episodes($episodes)
     {
@@ -150,7 +150,7 @@ class VideoGameSeries extends CreativeWorkSeries
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/gameItem
      */
     public function gameItem($gameItem)
     {
@@ -164,7 +164,7 @@ class VideoGameSeries extends CreativeWorkSeries
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/gameLocation
      */
     public function gameLocation($gameLocation)
     {
@@ -180,7 +180,7 @@ class VideoGameSeries extends CreativeWorkSeries
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/gamePlatform
      */
     public function gamePlatform($gamePlatform)
     {
@@ -194,7 +194,7 @@ class VideoGameSeries extends CreativeWorkSeries
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/musicBy
      */
     public function musicBy($musicBy)
     {
@@ -208,7 +208,7 @@ class VideoGameSeries extends CreativeWorkSeries
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/numberOfEpisodes
      */
     public function numberOfEpisodes($numberOfEpisodes)
     {
@@ -222,7 +222,7 @@ class VideoGameSeries extends CreativeWorkSeries
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/numberOfPlayers
      */
     public function numberOfPlayers($numberOfPlayers)
     {
@@ -236,7 +236,7 @@ class VideoGameSeries extends CreativeWorkSeries
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/numberOfSeasons
      */
     public function numberOfSeasons($numberOfSeasons)
     {
@@ -252,7 +252,7 @@ class VideoGameSeries extends CreativeWorkSeries
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/playMode
      */
     public function playMode($playMode)
     {
@@ -267,7 +267,7 @@ class VideoGameSeries extends CreativeWorkSeries
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/productionCompany
      */
     public function productionCompany($productionCompany)
     {
@@ -282,7 +282,7 @@ class VideoGameSeries extends CreativeWorkSeries
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/quest
      */
     public function quest($quest)
     {
@@ -296,7 +296,7 @@ class VideoGameSeries extends CreativeWorkSeries
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/season
      */
     public function season($season)
     {
@@ -310,7 +310,7 @@ class VideoGameSeries extends CreativeWorkSeries
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/seasons
      */
     public function seasons($seasons)
     {
@@ -324,7 +324,7 @@ class VideoGameSeries extends CreativeWorkSeries
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/trailer
      */
     public function trailer($trailer)
     {

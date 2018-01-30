@@ -5,7 +5,7 @@ namespace Spatie\SchemaOrg;
 /**
  * A body of structured information describing some topic(s) of interest.
  *
- * @see 
+ * @see http://schema.org/Dataset
  */
 class Dataset extends CreativeWork
 {
@@ -16,7 +16,7 @@ class Dataset extends CreativeWork
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/catalog
      */
     public function catalog($catalog)
     {
@@ -31,7 +31,7 @@ class Dataset extends CreativeWork
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/datasetTimeInterval
      */
     public function datasetTimeInterval($datasetTimeInterval)
     {
@@ -46,7 +46,7 @@ class Dataset extends CreativeWork
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/distribution
      */
     public function distribution($distribution)
     {
@@ -61,7 +61,7 @@ class Dataset extends CreativeWork
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/includedDataCatalog
      */
     public function includedDataCatalog($includedDataCatalog)
     {
@@ -75,7 +75,7 @@ class Dataset extends CreativeWork
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/includedInDataCatalog
      */
     public function includedInDataCatalog($includedInDataCatalog)
     {
@@ -90,7 +90,7 @@ class Dataset extends CreativeWork
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/spatial
      */
     public function spatial($spatial)
     {
@@ -105,7 +105,7 @@ class Dataset extends CreativeWork
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/temporal
      */
     public function temporal($temporal)
     {

@@ -5,7 +5,7 @@ namespace Spatie\SchemaOrg;
 /**
  * A work of art that is primarily visual in character.
  *
- * @see 
+ * @see http://schema.org/VisualArtwork
  */
 class VisualArtwork extends CreativeWork
 {
@@ -18,7 +18,7 @@ class VisualArtwork extends CreativeWork
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/artEdition
      */
     public function artEdition($artEdition)
     {
@@ -34,7 +34,7 @@ class VisualArtwork extends CreativeWork
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/artMedium
      */
     public function artMedium($artMedium)
     {
@@ -49,7 +49,7 @@ class VisualArtwork extends CreativeWork
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/artform
      */
     public function artform($artform)
     {
@@ -64,7 +64,7 @@ class VisualArtwork extends CreativeWork
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/artworkSurface
      */
     public function artworkSurface($artworkSurface)
     {
@@ -79,7 +79,7 @@ class VisualArtwork extends CreativeWork
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/surface
      */
     public function surface($surface)
     {

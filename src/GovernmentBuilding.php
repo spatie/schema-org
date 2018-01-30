@@ -5,7 +5,7 @@ namespace Spatie\SchemaOrg;
 /**
  * A government building.
  *
- * @see 
+ * @see http://schema.org/GovernmentBuilding
  */
 class GovernmentBuilding extends CivicStructure
 {

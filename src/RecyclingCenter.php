@@ -5,7 +5,7 @@ namespace Spatie\SchemaOrg;
 /**
  * A recycling center.
  *
- * @see 
+ * @see http://schema.org/RecyclingCenter
  */
 class RecyclingCenter extends LocalBusiness
 {

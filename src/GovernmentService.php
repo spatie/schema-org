@@ -6,7 +6,7 @@ namespace Spatie\SchemaOrg;
  * A service provided by a government organization, e.g. food stamps, veterans
  * benefits, etc.
  *
- * @see 
+ * @see http://schema.org/GovernmentService
  */
 class GovernmentService extends Service
 {
@@ -19,7 +19,7 @@ class GovernmentService extends Service
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/serviceOperator
      */
     public function serviceOperator($serviceOperator)
     {

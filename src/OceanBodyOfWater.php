@@ -5,7 +5,7 @@ namespace Spatie\SchemaOrg;
 /**
  * An ocean (for example, the Pacific).
  *
- * @see 
+ * @see http://schema.org/OceanBodyOfWater
  */
 class OceanBodyOfWater extends BodyOfWater
 {

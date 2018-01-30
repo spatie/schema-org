@@ -7,7 +7,7 @@ namespace Spatie\SchemaOrg;
  * interacting with pages. It is generally better to use [[Action]]-based
  * vocabulary, alongside types such as [[Comment]].
  *
- * @see 
+ * @see http://schema.org/UserComments
  */
 class UserComments extends UserInteraction
 {
@@ -18,7 +18,7 @@ class UserComments extends UserInteraction
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/commentText
      */
     public function commentText($commentText)
     {
@@ -32,7 +32,7 @@ class UserComments extends UserInteraction
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/commentTime
      */
     public function commentTime($commentTime)
     {
@@ -47,7 +47,7 @@ class UserComments extends UserInteraction
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/creator
      */
     public function creator($creator)
     {
@@ -61,7 +61,7 @@ class UserComments extends UserInteraction
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/discusses
      */
     public function discusses($discusses)
     {
@@ -75,7 +75,7 @@ class UserComments extends UserInteraction
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/replyToUrl
      */
     public function replyToUrl($replyToUrl)
     {

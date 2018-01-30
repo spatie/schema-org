@@ -5,7 +5,7 @@ namespace Spatie\SchemaOrg;
 /**
  * Server that provides game interaction in a multiplayer game.
  *
- * @see 
+ * @see http://schema.org/GameServer
  */
 class GameServer extends Intangible
 {
@@ -16,7 +16,7 @@ class GameServer extends Intangible
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/game
      */
     public function game($game)
     {
@@ -30,7 +30,7 @@ class GameServer extends Intangible
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/playersOnline
      */
     public function playersOnline($playersOnline)
     {
@@ -44,7 +44,7 @@ class GameServer extends Intangible
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/serverStatus
      */
     public function serverStatus($serverStatus)
     {

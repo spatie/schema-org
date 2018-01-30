@@ -9,7 +9,7 @@ namespace Spatie\SchemaOrg;
  * As a [[LocalBusiness]] it can be described as a [[provider]] of one or more
  * [[Service]]\(s).
  *
- * @see 
+ * @see http://schema.org/LegalService
  */
 class LegalService extends LocalBusiness
 {

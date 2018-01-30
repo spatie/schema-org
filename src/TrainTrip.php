@@ -5,7 +5,7 @@ namespace Spatie\SchemaOrg;
 /**
  * A trip on a commercial train line.
  *
- * @see 
+ * @see http://schema.org/TrainTrip
  */
 class TrainTrip extends Intangible
 {
@@ -16,7 +16,7 @@ class TrainTrip extends Intangible
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/arrivalPlatform
      */
     public function arrivalPlatform($arrivalPlatform)
     {
@@ -30,7 +30,7 @@ class TrainTrip extends Intangible
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/arrivalStation
      */
     public function arrivalStation($arrivalStation)
     {
@@ -44,7 +44,7 @@ class TrainTrip extends Intangible
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/arrivalTime
      */
     public function arrivalTime($arrivalTime)
     {
@@ -58,7 +58,7 @@ class TrainTrip extends Intangible
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/departurePlatform
      */
     public function departurePlatform($departurePlatform)
     {
@@ -72,7 +72,7 @@ class TrainTrip extends Intangible
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/departureStation
      */
     public function departureStation($departureStation)
     {
@@ -86,7 +86,7 @@ class TrainTrip extends Intangible
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/departureTime
      */
     public function departureTime($departureTime)
     {
@@ -102,7 +102,7 @@ class TrainTrip extends Intangible
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/provider
      */
     public function provider($provider)
     {
@@ -116,7 +116,7 @@ class TrainTrip extends Intangible
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/trainName
      */
     public function trainName($trainName)
     {
@@ -130,7 +130,7 @@ class TrainTrip extends Intangible
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/trainNumber
      */
     public function trainNumber($trainNumber)
     {

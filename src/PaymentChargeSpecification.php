@@ -5,7 +5,7 @@ namespace Spatie\SchemaOrg;
 /**
  * The costs of settling the payment using a particular payment method.
  *
- * @see 
+ * @see http://schema.org/PaymentChargeSpecification
  */
 class PaymentChargeSpecification extends PriceSpecification
 {
@@ -17,7 +17,7 @@ class PaymentChargeSpecification extends PriceSpecification
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/appliesToDeliveryMethod
      */
     public function appliesToDeliveryMethod($appliesToDeliveryMethod)
     {
@@ -31,7 +31,7 @@ class PaymentChargeSpecification extends PriceSpecification
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/appliesToPaymentMethod
      */
     public function appliesToPaymentMethod($appliesToPaymentMethod)
     {

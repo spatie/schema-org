@@ -5,7 +5,7 @@ namespace Spatie\SchemaOrg;
 /**
  * The act of producing/preparing food.
  *
- * @see 
+ * @see http://schema.org/CookAction
  */
 class CookAction extends CreateAction
 {
@@ -17,7 +17,7 @@ class CookAction extends CreateAction
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/foodEstablishment
      */
     public function foodEstablishment($foodEstablishment)
     {
@@ -32,7 +32,7 @@ class CookAction extends CreateAction
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/foodEvent
      */
     public function foodEvent($foodEvent)
     {
@@ -47,7 +47,7 @@ class CookAction extends CreateAction
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/recipe
      */
     public function recipe($recipe)
     {

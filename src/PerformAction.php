@@ -5,7 +5,7 @@ namespace Spatie\SchemaOrg;
 /**
  * The act of participating in performance arts.
  *
- * @see 
+ * @see http://schema.org/PerformAction
  */
 class PerformAction extends PlayAction
 {
@@ -17,7 +17,7 @@ class PerformAction extends PlayAction
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/entertainmentBusiness
      */
     public function entertainmentBusiness($entertainmentBusiness)
     {

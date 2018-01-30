@@ -5,7 +5,7 @@ namespace Spatie\SchemaOrg;
 /**
  * Web page type: Profile page.
  *
- * @see 
+ * @see http://schema.org/ProfilePage
  */
 class ProfilePage extends WebPage
 {

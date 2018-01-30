@@ -5,7 +5,7 @@ namespace Spatie\SchemaOrg;
 /**
  * A TV episode which can be part of a series or season.
  *
- * @see 
+ * @see http://schema.org/TVEpisode
  */
 class TVEpisode extends Episode
 {
@@ -17,7 +17,7 @@ class TVEpisode extends Episode
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/countryOfOrigin
      */
     public function countryOfOrigin($countryOfOrigin)
     {
@@ -31,7 +31,7 @@ class TVEpisode extends Episode
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/partOfTVSeries
      */
     public function partOfTVSeries($partOfTVSeries)
     {
@@ -46,7 +46,7 @@ class TVEpisode extends Episode
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/subtitleLanguage
      */
     public function subtitleLanguage($subtitleLanguage)
     {

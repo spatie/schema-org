@@ -9,7 +9,7 @@ namespace Spatie\SchemaOrg;
  * 
  * * [[RejectAction]]: The antonym of AcceptAction.
  *
- * @see 
+ * @see http://schema.org/AcceptAction
  */
 class AcceptAction extends AllocateAction
 {

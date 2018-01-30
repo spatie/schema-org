@@ -5,7 +5,7 @@ namespace Spatie\SchemaOrg;
 /**
  * Event type: Theater performance.
  *
- * @see 
+ * @see http://schema.org/TheaterEvent
  */
 class TheaterEvent extends Event
 {

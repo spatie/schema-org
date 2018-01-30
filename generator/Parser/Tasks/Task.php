@@ -1,11 +1,27 @@
 <?php
 
-namespace Spatie\SchemaOrg\Generator\Parser;
+namespace Spatie\SchemaOrg\Generator\Parser\Tasks;
 
 use Symfony\Component\DomCrawler\Crawler;
 
-trait CrawlsDefinitions
+abstract class Task
 {
+    /** @string */
+    protected $definition;
+
+    public function __construct(string $definition)
+    {
+        $this->definition = $definition;
+    }
+
+    public static function fromCrawler(Crawler $crawler): self
+    {
+        $node = $crawler->getNode(0);
+        $html = $node->ownerDocument->saveHTML($node);
+
+        return new static($html);
+    }
+
     protected function getText(Crawler $node, string $selector = null): string
     {
         if ($selector) {
@@ -25,6 +41,6 @@ trait CrawlsDefinitions
             return '';
         }
 
-        return $node->attr($attribute) ?? '';
+        return $node->filter("[{$attribute}]")->attr($attribute) ?? '';
     }
 }

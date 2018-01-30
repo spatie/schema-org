@@ -17,7 +17,7 @@ namespace Spatie\SchemaOrg;
  * agent is informing/confirming the *start* of a previously reserved service
  * rather than its validity/existence.
  *
- * @see 
+ * @see http://schema.org/CheckInAction
  */
 class CheckInAction extends CommunicateAction
 {

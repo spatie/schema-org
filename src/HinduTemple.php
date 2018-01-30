@@ -5,7 +5,7 @@ namespace Spatie\SchemaOrg;
 /**
  * A Hindu temple.
  *
- * @see 
+ * @see http://schema.org/HinduTemple
  */
 class HinduTemple extends PlaceOfWorship
 {

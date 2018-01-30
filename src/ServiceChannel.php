@@ -6,7 +6,7 @@ namespace Spatie\SchemaOrg;
  * A means for accessing a service, e.g. a government office location, web site,
  * or phone number.
  *
- * @see 
+ * @see http://schema.org/ServiceChannel
  */
 class ServiceChannel extends Intangible
 {
@@ -19,7 +19,7 @@ class ServiceChannel extends Intangible
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/availableLanguage
      */
     public function availableLanguage($availableLanguage)
     {
@@ -33,7 +33,7 @@ class ServiceChannel extends Intangible
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/processingTime
      */
     public function processingTime($processingTime)
     {
@@ -47,7 +47,7 @@ class ServiceChannel extends Intangible
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/providesService
      */
     public function providesService($providesService)
     {
@@ -62,7 +62,7 @@ class ServiceChannel extends Intangible
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/serviceLocation
      */
     public function serviceLocation($serviceLocation)
     {
@@ -76,7 +76,7 @@ class ServiceChannel extends Intangible
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/servicePhone
      */
     public function servicePhone($servicePhone)
     {
@@ -90,7 +90,7 @@ class ServiceChannel extends Intangible
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/servicePostalAddress
      */
     public function servicePostalAddress($servicePostalAddress)
     {
@@ -104,7 +104,7 @@ class ServiceChannel extends Intangible
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/serviceSmsNumber
      */
     public function serviceSmsNumber($serviceSmsNumber)
     {
@@ -118,7 +118,7 @@ class ServiceChannel extends Intangible
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/serviceUrl
      */
     public function serviceUrl($serviceUrl)
     {

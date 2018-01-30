@@ -6,7 +6,7 @@ namespace Spatie\SchemaOrg;
  * A service provided by an organization, e.g. delivery service, print services,
  * etc.
  *
- * @see 
+ * @see http://schema.org/Service
  */
 class Service extends Intangible
 {
@@ -18,7 +18,7 @@ class Service extends Intangible
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/aggregateRating
      */
     public function aggregateRating($aggregateRating)
     {
@@ -32,7 +32,7 @@ class Service extends Intangible
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/areaServed
      */
     public function areaServed($areaServed)
     {
@@ -46,7 +46,7 @@ class Service extends Intangible
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/audience
      */
     public function audience($audience)
     {
@@ -61,7 +61,7 @@ class Service extends Intangible
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/availableChannel
      */
     public function availableChannel($availableChannel)
     {
@@ -75,7 +75,7 @@ class Service extends Intangible
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/award
      */
     public function award($award)
     {
@@ -90,7 +90,7 @@ class Service extends Intangible
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/brand
      */
     public function brand($brand)
     {
@@ -107,7 +107,7 @@ class Service extends Intangible
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/broker
      */
     public function broker($broker)
     {
@@ -122,7 +122,7 @@ class Service extends Intangible
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/category
      */
     public function category($category)
     {
@@ -137,7 +137,7 @@ class Service extends Intangible
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/hasOfferCatalog
      */
     public function hasOfferCatalog($hasOfferCatalog)
     {
@@ -151,7 +151,7 @@ class Service extends Intangible
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/hoursAvailable
      */
     public function hoursAvailable($hoursAvailable)
     {
@@ -165,7 +165,7 @@ class Service extends Intangible
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/isRelatedTo
      */
     public function isRelatedTo($isRelatedTo)
     {
@@ -180,7 +180,7 @@ class Service extends Intangible
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/isSimilarTo
      */
     public function isSimilarTo($isSimilarTo)
     {
@@ -194,7 +194,7 @@ class Service extends Intangible
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/logo
      */
     public function logo($logo)
     {
@@ -210,7 +210,7 @@ class Service extends Intangible
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/offers
      */
     public function offers($offers)
     {
@@ -225,7 +225,7 @@ class Service extends Intangible
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/produces
      */
     public function produces($produces)
     {
@@ -241,7 +241,7 @@ class Service extends Intangible
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/provider
      */
     public function provider($provider)
     {
@@ -255,7 +255,7 @@ class Service extends Intangible
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/providerMobility
      */
     public function providerMobility($providerMobility)
     {
@@ -269,7 +269,7 @@ class Service extends Intangible
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/review
      */
     public function review($review)
     {
@@ -283,7 +283,7 @@ class Service extends Intangible
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/serviceArea
      */
     public function serviceArea($serviceArea)
     {
@@ -297,7 +297,7 @@ class Service extends Intangible
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/serviceAudience
      */
     public function serviceAudience($serviceAudience)
     {
@@ -312,7 +312,7 @@ class Service extends Intangible
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/serviceOutput
      */
     public function serviceOutput($serviceOutput)
     {
@@ -327,7 +327,7 @@ class Service extends Intangible
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/serviceType
      */
     public function serviceType($serviceType)
     {

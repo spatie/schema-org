@@ -5,7 +5,7 @@ namespace Spatie\SchemaOrg;
 /**
  * An amusement park.
  *
- * @see 
+ * @see http://schema.org/AmusementPark
  */
 class AmusementPark extends EntertainmentBusiness
 {

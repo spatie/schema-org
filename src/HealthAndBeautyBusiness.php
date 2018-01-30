@@ -5,7 +5,7 @@ namespace Spatie\SchemaOrg;
 /**
  * Health and beauty.
  *
- * @see 
+ * @see http://schema.org/HealthAndBeautyBusiness
  */
 class HealthAndBeautyBusiness extends LocalBusiness
 {

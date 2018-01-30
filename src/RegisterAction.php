@@ -14,7 +14,7 @@ namespace Spatie\SchemaOrg;
  * * [[SubscribeAction]]: Unlike SubscribeAction, RegisterAction doesn't imply
  * that the agent is expecting updates from the object.
  *
- * @see 
+ * @see http://schema.org/RegisterAction
  */
 class RegisterAction extends InteractAction
 {

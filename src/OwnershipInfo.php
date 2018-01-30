@@ -6,7 +6,7 @@ namespace Spatie\SchemaOrg;
  * A structured value providing information about when a certain organization or
  * person owned a certain product.
  *
- * @see 
+ * @see http://schema.org/OwnershipInfo
  */
 class OwnershipInfo extends StructuredValue
 {
@@ -17,7 +17,7 @@ class OwnershipInfo extends StructuredValue
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/acquiredFrom
      */
     public function acquiredFrom($acquiredFrom)
     {
@@ -31,7 +31,7 @@ class OwnershipInfo extends StructuredValue
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/ownedFrom
      */
     public function ownedFrom($ownedFrom)
     {
@@ -45,7 +45,7 @@ class OwnershipInfo extends StructuredValue
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/ownedThrough
      */
     public function ownedThrough($ownedThrough)
     {
@@ -59,7 +59,7 @@ class OwnershipInfo extends StructuredValue
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/typeOfGood
      */
     public function typeOfGood($typeOfGood)
     {

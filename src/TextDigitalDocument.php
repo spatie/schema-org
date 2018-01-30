@@ -5,7 +5,7 @@ namespace Spatie\SchemaOrg;
 /**
  * A file composed primarily of text.
  *
- * @see 
+ * @see http://schema.org/TextDigitalDocument
  */
 class TextDigitalDocument extends DigitalDocument
 {

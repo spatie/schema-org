@@ -5,7 +5,7 @@ namespace Spatie\SchemaOrg;
 /**
  * An audio file.
  *
- * @see 
+ * @see http://schema.org/AudioObject
  */
 class AudioObject extends MediaObject
 {
@@ -17,7 +17,7 @@ class AudioObject extends MediaObject
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/transcript
      */
     public function transcript($transcript)
     {

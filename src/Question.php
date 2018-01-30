@@ -6,7 +6,7 @@ namespace Spatie\SchemaOrg;
  * A specific question - e.g. from a user seeking answers online, or collected
  * in a Frequently Asked Questions (FAQ) document.
  *
- * @see 
+ * @see http://schema.org/Question
  */
 class Question extends CreativeWork
 {
@@ -19,7 +19,7 @@ class Question extends CreativeWork
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/acceptedAnswer
      */
     public function acceptedAnswer($acceptedAnswer)
     {
@@ -33,7 +33,7 @@ class Question extends CreativeWork
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/answerCount
      */
     public function answerCount($answerCount)
     {
@@ -48,7 +48,7 @@ class Question extends CreativeWork
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/downvoteCount
      */
     public function downvoteCount($downvoteCount)
     {
@@ -63,7 +63,7 @@ class Question extends CreativeWork
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/suggestedAnswer
      */
     public function suggestedAnswer($suggestedAnswer)
     {
@@ -78,7 +78,7 @@ class Question extends CreativeWork
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/upvoteCount
      */
     public function upvoteCount($upvoteCount)
     {

@@ -11,7 +11,7 @@ namespace Spatie\SchemaOrg;
  * concrete objects (e.g. a table, a hotel) towards a time slot / spatial
  * allocation.
  *
- * @see 
+ * @see http://schema.org/ReserveAction
  */
 class ReserveAction extends PlanAction
 {

@@ -7,7 +7,7 @@ namespace Spatie\SchemaOrg;
  * is offered at a different time or location or through different media or
  * modes of study or to a specific section of students.
  *
- * @see 
+ * @see http://schema.org/CourseInstance
  */
 class CourseInstance extends Event
 {
@@ -22,7 +22,7 @@ class CourseInstance extends Event
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/courseMode
      */
     public function courseMode($courseMode)
     {
@@ -37,7 +37,7 @@ class CourseInstance extends Event
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/instructor
      */
     public function instructor($instructor)
     {

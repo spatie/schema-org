@@ -5,7 +5,7 @@ namespace Spatie\SchemaOrg;
 /**
  * A photograph.
  *
- * @see 
+ * @see http://schema.org/Photograph
  */
 class Photograph extends CreativeWork
 {

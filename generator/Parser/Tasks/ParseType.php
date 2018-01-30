@@ -4,20 +4,9 @@ namespace Spatie\SchemaOrg\Generator\Parser\Tasks;
 
 use Spatie\SchemaOrg\Generator\Type;
 use Symfony\Component\DomCrawler\Crawler;
-use Spatie\SchemaOrg\Generator\Parser\CrawlsDefinitions;
 
-class ParseType
+class ParseType extends Task
 {
-    use CrawlsDefinitions;
-
-    /** @string */
-    protected $definition;
-
-    public function __construct(string $definition)
-    {
-        $this->definition = $definition;
-    }
-
     public function __invoke(): ?Type
     {
         $node = new Crawler($this->definition);

@@ -5,7 +5,7 @@ namespace Spatie\SchemaOrg;
 /**
  * The act of generating a comment about a subject.
  *
- * @see 
+ * @see http://schema.org/CommentAction
  */
 class CommentAction extends CommunicateAction
 {
@@ -17,7 +17,7 @@ class CommentAction extends CommunicateAction
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/resultComment
      */
     public function resultComment($resultComment)
     {

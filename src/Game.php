@@ -7,7 +7,7 @@ namespace Spatie\SchemaOrg;
  * rule-governed recreational activities, e.g. role-playing games in which
  * players assume the role of characters in a fictional setting.
  *
- * @see 
+ * @see http://schema.org/Game
  */
 class Game extends CreativeWork
 {
@@ -19,7 +19,7 @@ class Game extends CreativeWork
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/characterAttribute
      */
     public function characterAttribute($characterAttribute)
     {
@@ -34,7 +34,7 @@ class Game extends CreativeWork
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/gameItem
      */
     public function gameItem($gameItem)
     {
@@ -48,7 +48,7 @@ class Game extends CreativeWork
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/gameLocation
      */
     public function gameLocation($gameLocation)
     {
@@ -62,7 +62,7 @@ class Game extends CreativeWork
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/numberOfPlayers
      */
     public function numberOfPlayers($numberOfPlayers)
     {
@@ -77,7 +77,7 @@ class Game extends CreativeWork
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/quest
      */
     public function quest($quest)
     {

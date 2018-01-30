@@ -5,7 +5,7 @@ namespace Spatie\SchemaOrg;
 /**
  * An event involving the delivery of an item.
  *
- * @see 
+ * @see http://schema.org/DeliveryEvent
  */
 class DeliveryEvent extends Event
 {
@@ -16,7 +16,7 @@ class DeliveryEvent extends Event
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/accessCode
      */
     public function accessCode($accessCode)
     {
@@ -30,7 +30,7 @@ class DeliveryEvent extends Event
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/availableFrom
      */
     public function availableFrom($availableFrom)
     {
@@ -44,7 +44,7 @@ class DeliveryEvent extends Event
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/availableThrough
      */
     public function availableThrough($availableThrough)
     {
@@ -58,7 +58,7 @@ class DeliveryEvent extends Event
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/hasDeliveryMethod
      */
     public function hasDeliveryMethod($hasDeliveryMethod)
     {

@@ -6,7 +6,7 @@ namespace Spatie\SchemaOrg;
  * CreativeWorkSeries dedicated to radio broadcast and associated online
  * delivery.
  *
- * @see 
+ * @see http://schema.org/RadioSeries
  */
 class RadioSeries extends CreativeWorkSeries
 {
@@ -19,7 +19,7 @@ class RadioSeries extends CreativeWorkSeries
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/actor
      */
     public function actor($actor)
     {
@@ -34,7 +34,7 @@ class RadioSeries extends CreativeWorkSeries
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/actors
      */
     public function actors($actors)
     {
@@ -48,7 +48,7 @@ class RadioSeries extends CreativeWorkSeries
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/containsSeason
      */
     public function containsSeason($containsSeason)
     {
@@ -64,7 +64,7 @@ class RadioSeries extends CreativeWorkSeries
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/director
      */
     public function director($director)
     {
@@ -79,7 +79,7 @@ class RadioSeries extends CreativeWorkSeries
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/directors
      */
     public function directors($directors)
     {
@@ -93,7 +93,7 @@ class RadioSeries extends CreativeWorkSeries
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/episode
      */
     public function episode($episode)
     {
@@ -107,7 +107,7 @@ class RadioSeries extends CreativeWorkSeries
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/episodes
      */
     public function episodes($episodes)
     {
@@ -121,7 +121,7 @@ class RadioSeries extends CreativeWorkSeries
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/musicBy
      */
     public function musicBy($musicBy)
     {
@@ -135,7 +135,7 @@ class RadioSeries extends CreativeWorkSeries
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/numberOfEpisodes
      */
     public function numberOfEpisodes($numberOfEpisodes)
     {
@@ -149,7 +149,7 @@ class RadioSeries extends CreativeWorkSeries
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/numberOfSeasons
      */
     public function numberOfSeasons($numberOfSeasons)
     {
@@ -164,7 +164,7 @@ class RadioSeries extends CreativeWorkSeries
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/productionCompany
      */
     public function productionCompany($productionCompany)
     {
@@ -179,7 +179,7 @@ class RadioSeries extends CreativeWorkSeries
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/productionCompany
      */
     public function productionCompany($productionCompany)
     {
@@ -193,7 +193,7 @@ class RadioSeries extends CreativeWorkSeries
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/season
      */
     public function season($season)
     {
@@ -207,7 +207,7 @@ class RadioSeries extends CreativeWorkSeries
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/seasons
      */
     public function seasons($seasons)
     {
@@ -221,7 +221,7 @@ class RadioSeries extends CreativeWorkSeries
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/trailer
      */
     public function trailer($trailer)
     {

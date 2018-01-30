@@ -5,7 +5,7 @@ namespace Spatie\SchemaOrg;
 /**
  * The act of dressing oneself in clothing.
  *
- * @see 
+ * @see http://schema.org/WearAction
  */
 class WearAction extends UseAction
 {

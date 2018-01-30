@@ -9,7 +9,7 @@ namespace Spatie\SchemaOrg;
  * 
  * * [[ConfirmAction]]: The antonym of CancelAction.
  *
- * @see 
+ * @see http://schema.org/CancelAction
  */
 class CancelAction extends PlanAction
 {

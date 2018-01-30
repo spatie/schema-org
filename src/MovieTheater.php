@@ -5,7 +5,7 @@ namespace Spatie\SchemaOrg;
 /**
  * A movie theater.
  *
- * @see 
+ * @see http://schema.org/MovieTheater
  */
 class MovieTheater extends CivicStructure
 {
@@ -16,7 +16,7 @@ class MovieTheater extends CivicStructure
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/screenCount
      */
     public function screenCount($screenCount)
     {

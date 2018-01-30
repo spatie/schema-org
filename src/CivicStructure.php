@@ -5,7 +5,7 @@ namespace Spatie\SchemaOrg;
 /**
  * A public structure, such as a town hall or concert hall.
  *
- * @see 
+ * @see http://schema.org/CivicStructure
  */
 class CivicStructure extends Place
 {
@@ -31,7 +31,7 @@ class CivicStructure extends Place
      *
      * @return static
      *
-     * @see 
+     * @see http://schema.org/openingHours
      */
     public function openingHours($openingHours)
     {

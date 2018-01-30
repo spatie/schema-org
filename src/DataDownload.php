@@ -5,7 +5,7 @@ namespace Spatie\SchemaOrg;
 /**
  * A dataset in downloadable form.
  *
- * @see 
+ * @see http://schema.org/DataDownload
  */
 class DataDownload extends MediaObject
 {

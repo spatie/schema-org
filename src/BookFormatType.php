@@ -5,7 +5,7 @@ namespace Spatie\SchemaOrg;
 /**
  * The publication format of the book.
  *
- * @see 
+ * @see http://schema.org/BookFormatType
  */
 class BookFormatType extends Enumeration
 {
