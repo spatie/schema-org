@@ -2,36 +2,36 @@
 
 namespace Spatie\SchemaOrg\Generator\Parser;
 
-use Spatie\SchemaOrg\Generator\Type;
+use Spatie\Async\Pool;
+use Spatie\SchemaOrg\Generator\Parser\Tasks\ParseTypes;
 use Spatie\SchemaOrg\Generator\Property;
-use Symfony\Component\DomCrawler\Crawler;
+use Spatie\SchemaOrg\Generator\Type;
 use Spatie\SchemaOrg\Generator\TypeCollection;
+use Symfony\Component\DomCrawler\Crawler;
 
 class RdfaParser
 {
-    /** @var \Symfony\Component\DomCrawler\Crawler */
-    protected $crawler;
-
-    /** @var \Spatie\SchemaOrg\Generator\TypeCollection */
-    protected $types;
-
-    public function __construct($rdfa)
+    public function parse(string $rdfa): TypeCollection
     {
-        $this->crawler = new Crawler($rdfa);
-        $this->types = new TypeCollection();
-    }
+        $pool = Pool::create();
 
-    public function parse(): TypeCollection
-    {
-        $this->parseTypes();
-        $this->parseProperties();
+        $pool
+            ->add(new ParseTypes($rdfa))
+            ->then(function ($types) {
+                dd($types);
+            });
 
-        return $this->types;
+        dd($pool->status());
+        // $pool->add(function () {
+        //     $this->parseProperties();
+        // });
+
+        $pool->wait();
     }
 
     protected function parseTypes()
     {
-        $this->crawler
+        $crawler
             ->filter('[typeof="rdfs:Class"]')
             ->each(function (Crawler $node) {
                 $type = new Type();

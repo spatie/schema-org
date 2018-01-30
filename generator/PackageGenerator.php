@@ -9,7 +9,7 @@ class PackageGenerator
 {
     public function generate(string $rdfa)
     {
-        $types = (new RdfaParser($rdfa))->parse();
+        $types = (new RdfaParser())->parse($rdfa);
 
         $filesystem = new Filesystem(__DIR__.'/..');
 
