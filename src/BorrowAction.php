@@ -18,7 +18,7 @@ class BorrowAction extends TransferAction
      * A sub property of participant. The person that lends the object being
      * borrowed.
      *
-     * @param Person|Person[]|Organization|Organization[] $lender
+     * @param Organization|Organization[]|Person|Person[] $lender
      *
      * @return static
      *

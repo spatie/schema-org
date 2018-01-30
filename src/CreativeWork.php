@@ -646,7 +646,7 @@ class CreativeWork extends Thing
      * standard](http://tools.ietf.org/html/bcp47). See also
      * [[availableLanguage]].
      *
-     * @param string|string[]|Language|Language[] $inLanguage
+     * @param Language|Language[]|string|string[] $inLanguage
      *
      * @return static
      *
@@ -707,7 +707,7 @@ class CreativeWork extends Thing
      * be repeated for multiple sources. For example,
      * http://example.com/great-multiplication-intro.html.
      *
-     * @param string|string[]|CreativeWork|CreativeWork[]|Product|Product[] $isBasedOn
+     * @param CreativeWork|CreativeWork[]|Product|Product[]|string|string[] $isBasedOn
      *
      * @return static
      *
@@ -723,7 +723,7 @@ class CreativeWork extends Thing
      * be repeated for multiple sources. For example,
      * http://example.com/great-multiplication-intro.html.
      *
-     * @param string|string[]|CreativeWork|CreativeWork[]|Product|Product[] $isBasedOnUrl
+     * @param CreativeWork|CreativeWork[]|Product|Product[]|string|string[] $isBasedOnUrl
      *
      * @return static
      *
@@ -842,7 +842,7 @@ class CreativeWork extends Thing
      * A material that something is made from, e.g. leather, wool, cotton,
      * paper.
      *
-     * @param string|string[]|Product|Product[] $material
+     * @param Product|Product[]|string|string[] $material
      *
      * @return static
      *
@@ -887,7 +887,7 @@ class CreativeWork extends Thing
     /**
      * The position of an item in a series or sequence of items.
      *
-     * @param string|string[]|int|int[] $position
+     * @param int|int[]|string|string[] $position
      *
      * @return static
      *
@@ -902,7 +902,7 @@ class CreativeWork extends Thing
      * The person or organization who produced the work (e.g. music album,
      * movie, tv/radio series etc.).
      *
-     * @param Person|Person[]|Organization|Organization[] $producer
+     * @param Organization|Organization[]|Person|Person[] $producer
      *
      * @return static
      *
@@ -918,7 +918,7 @@ class CreativeWork extends Thing
      * producer. Another party (a seller) may offer those services or goods on
      * behalf of the provider. A provider may also serve as the seller.
      *
-     * @param Person|Person[]|Organization|Organization[] $provider
+     * @param Organization|Organization[]|Person|Person[] $provider
      *
      * @return static
      *
@@ -1170,7 +1170,7 @@ class CreativeWork extends Thing
      * regional differences and technical requirements of a target market, or
      * that translates during some event.
      *
-     * @param Person|Person[]|Organization|Organization[] $translator
+     * @param Organization|Organization[]|Person|Person[] $translator
      *
      * @return static
      *

@@ -59,7 +59,7 @@ class LodgingReservation extends Reservation
      * Textual description of the unit type (including suite vs. room, size of
      * bed, etc.).
      *
-     * @param string|string[]|QualitativeValue|QualitativeValue[] $lodgingUnitType
+     * @param QualitativeValue|QualitativeValue[]|string|string[] $lodgingUnitType
      *
      * @return static
      *
@@ -73,7 +73,7 @@ class LodgingReservation extends Reservation
     /**
      * The number of adults staying in the unit.
      *
-     * @param int|int[]|QuantitativeValue|QuantitativeValue[] $numAdults
+     * @param QuantitativeValue|QuantitativeValue[]|int|int[] $numAdults
      *
      * @return static
      *
@@ -87,7 +87,7 @@ class LodgingReservation extends Reservation
     /**
      * The number of children staying in the unit.
      *
-     * @param int|int[]|QuantitativeValue|QuantitativeValue[] $numChildren
+     * @param QuantitativeValue|QuantitativeValue[]|int|int[] $numChildren
      *
      * @return static
      *

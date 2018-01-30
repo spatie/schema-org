@@ -30,7 +30,7 @@ class Property
             $this->addRange($range);
         }
 
-        sort($ranges);
+        sort($this->ranges);
     }
 
     private function addRange(string $range)

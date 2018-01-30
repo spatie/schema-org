@@ -44,7 +44,7 @@ class Demand extends Intangible
     /**
      * The geographic area where a service or offered item is provided.
      *
-     * @param Place|Place[]|AdministrativeArea|AdministrativeArea[]|GeoShape|GeoShape[]|string|string[] $areaServed
+     * @param AdministrativeArea|AdministrativeArea[]|GeoShape|GeoShape[]|Place|Place[]|string|string[] $areaServed
      *
      * @return static
      *

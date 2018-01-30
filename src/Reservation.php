@@ -19,7 +19,7 @@ class Reservation extends Intangible
      * 'bookingAgent' is an out-dated term indicating a 'broker' that serves as
      * a booking agent.
      *
-     * @param Person|Person[]|Organization|Organization[] $bookingAgent
+     * @param Organization|Organization[]|Person|Person[] $bookingAgent
      *
      * @return static
      *
@@ -50,7 +50,7 @@ class Reservation extends Intangible
      * service involved in an exchange.  If it is not clear whether an entity is
      * a broker, seller, or buyer, the latter two terms are preferred.
      *
-     * @param Person|Person[]|Organization|Organization[] $broker
+     * @param Organization|Organization[]|Person|Person[] $broker
      *
      * @return static
      *
@@ -110,7 +110,7 @@ class Reservation extends Intangible
      * producer. Another party (a seller) may offer those services or goods on
      * behalf of the provider. A provider may also serve as the seller.
      *
-     * @param Person|Person[]|Organization|Organization[] $provider
+     * @param Organization|Organization[]|Person|Person[] $provider
      *
      * @return static
      *
@@ -181,7 +181,7 @@ class Reservation extends Intangible
      * The total price for the reservation or ticket, including applicable
      * taxes, shipping, etc.
      *
-     * @param float|float[]|int|int[]|string|string[]|PriceSpecification|PriceSpecification[] $totalPrice
+     * @param PriceSpecification|PriceSpecification[]|float|float[]|int|int[]|string|string[] $totalPrice
      *
      * @return static
      *
@@ -195,7 +195,7 @@ class Reservation extends Intangible
     /**
      * The person or organization the reservation or ticket is for.
      *
-     * @param Person|Person[]|Organization|Organization[] $underName
+     * @param Organization|Organization[]|Person|Person[] $underName
      *
      * @return static
      *

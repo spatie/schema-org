@@ -41,7 +41,7 @@ class Organization extends Thing
     /**
      * The geographic area where a service or offered item is provided.
      *
-     * @param Place|Place[]|AdministrativeArea|AdministrativeArea[]|GeoShape|GeoShape[]|string|string[] $areaServed
+     * @param AdministrativeArea|AdministrativeArea[]|GeoShape|GeoShape[]|Place|Place[]|string|string[] $areaServed
      *
      * @return static
      *
@@ -535,7 +535,7 @@ class Organization extends Thing
     /**
      * A pointer to the organization or person making the offer.
      *
-     * @param Person|Person[]|Offer|Offer[] $offeredBy
+     * @param Offer|Offer[]|Person|Person[] $offeredBy
      *
      * @return static
      *
@@ -621,7 +621,7 @@ class Organization extends Thing
     /**
      * The geographic area where the service is provided.
      *
-     * @param Place|Place[]|AdministrativeArea|AdministrativeArea[]|GeoShape|GeoShape[] $serviceArea
+     * @param AdministrativeArea|AdministrativeArea[]|GeoShape|GeoShape[]|Place|Place[] $serviceArea
      *
      * @return static
      *

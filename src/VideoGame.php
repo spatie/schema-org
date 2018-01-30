@@ -91,7 +91,7 @@ class VideoGame extends SoftwareApplication
      * href="http://en.wikipedia.org/wiki/Category:Video_game_platforms">video
      * games</a>.
      *
-     * @param string|string[]|Thing|Thing[] $gamePlatform
+     * @param Thing|Thing[]|string|string[] $gamePlatform
      *
      * @return static
      *

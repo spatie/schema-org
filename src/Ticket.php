@@ -99,7 +99,7 @@ class Ticket extends Intangible
      * The total price for the reservation or ticket, including applicable
      * taxes, shipping, etc.
      *
-     * @param float|float[]|int|int[]|string|string[]|PriceSpecification|PriceSpecification[] $totalPrice
+     * @param PriceSpecification|PriceSpecification[]|float|float[]|int|int[]|string|string[] $totalPrice
      *
      * @return static
      *
@@ -113,7 +113,7 @@ class Ticket extends Intangible
     /**
      * The person or organization the reservation or ticket is for.
      *
-     * @param Person|Person[]|Organization|Organization[] $underName
+     * @param Organization|Organization[]|Person|Person[] $underName
      *
      * @return static
      *

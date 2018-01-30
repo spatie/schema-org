@@ -44,7 +44,7 @@ class Game extends CreativeWork
     /**
      * Real or fictional location of the game (or part of game).
      *
-     * @param string|string[]|Place|Place[]|PostalAddress|PostalAddress[] $gameLocation
+     * @param Place|Place[]|PostalAddress|PostalAddress[]|string|string[] $gameLocation
      *
      * @return static
      *

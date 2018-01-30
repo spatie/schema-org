@@ -13,7 +13,7 @@ class ChooseAction extends AssessAction
     /**
      * A sub property of object. The options subject to this action.
      *
-     * @param string|string[]|Thing|Thing[] $actionOption
+     * @param Thing|Thing[]|string|string[] $actionOption
      *
      * @return static
      *
@@ -27,7 +27,7 @@ class ChooseAction extends AssessAction
     /**
      * A sub property of object. The options subject to this action.
      *
-     * @param string|string[]|Thing|Thing[] $option
+     * @param Thing|Thing[]|string|string[] $option
      *
      * @return static
      *

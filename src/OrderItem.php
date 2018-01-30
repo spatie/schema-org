@@ -70,7 +70,7 @@ class OrderItem extends Intangible
     /**
      * The item ordered.
      *
-     * @param Product|Product[]|OrderItem|OrderItem[] $orderedItem
+     * @param OrderItem|OrderItem[]|Product|Product[] $orderedItem
      *
      * @return static
      *

@@ -109,7 +109,7 @@ class Product extends Thing
      * A category for the item. Greater signs or slashes can be used to
      * informally indicate a category hierarchy.
      *
-     * @param string|string[]|Thing|Thing[] $category
+     * @param Thing|Thing[]|string|string[] $category
      *
      * @return static
      *
@@ -343,7 +343,7 @@ class Product extends Thing
      * A material that something is made from, e.g. leather, wool, cotton,
      * paper.
      *
-     * @param string|string[]|Product|Product[] $material
+     * @param Product|Product[]|string|string[] $material
      *
      * @return static
      *

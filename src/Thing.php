@@ -80,7 +80,7 @@ class Thing extends BaseType
      * strings or as URL (URI) links. See [background
      * notes](/docs/datamodel.html#identifierBg) for more details.
      *
-     * @param string|string[]|PropertyValue|PropertyValue[] $identifier
+     * @param PropertyValue|PropertyValue[]|string|string[] $identifier
      *
      * @return static
      *
@@ -95,7 +95,7 @@ class Thing extends BaseType
      * An image of the item. This can be a [[URL]] or a fully described
      * [[ImageObject]].
      *
-     * @param string|string[]|ImageObject|ImageObject[] $image
+     * @param ImageObject|ImageObject[]|string|string[] $image
      *
      * @return static
      *

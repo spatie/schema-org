@@ -160,7 +160,7 @@ class VideoGameSeries extends CreativeWorkSeries
     /**
      * Real or fictional location of the game (or part of game).
      *
-     * @param string|string[]|Place|Place[]|PostalAddress|PostalAddress[] $gameLocation
+     * @param Place|Place[]|PostalAddress|PostalAddress[]|string|string[] $gameLocation
      *
      * @return static
      *
@@ -176,7 +176,7 @@ class VideoGameSeries extends CreativeWorkSeries
      * href="http://en.wikipedia.org/wiki/Category:Video_game_platforms">video
      * games</a>.
      *
-     * @param string|string[]|Thing|Thing[] $gamePlatform
+     * @param Thing|Thing[]|string|string[] $gamePlatform
      *
      * @return static
      *

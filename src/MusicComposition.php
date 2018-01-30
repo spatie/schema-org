@@ -13,7 +13,7 @@ class MusicComposition extends CreativeWork
      * The person or organization who wrote a composition, or who is the
      * composer of a work performed at some event.
      *
-     * @param Person|Person[]|Organization|Organization[] $composer
+     * @param Organization|Organization[]|Person|Person[] $composer
      *
      * @return static
      *

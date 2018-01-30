@@ -116,7 +116,7 @@ class Vehicle extends Product
      * the vehicle has only one engine, this property can be attached directly
      * to the vehicle.
      *
-     * @param string|string[]|QualitativeValue|QualitativeValue[] $fuelType
+     * @param QualitativeValue|QualitativeValue[]|string|string[] $fuelType
      *
      * @return static
      *
@@ -408,7 +408,7 @@ class Vehicle extends Product
      * power source to the wheels or other relevant component(s) ("gearbox" for
      * cars).
      *
-     * @param string|string[]|QualitativeValue|QualitativeValue[] $vehicleTransmission
+     * @param QualitativeValue|QualitativeValue[]|string|string[] $vehicleTransmission
      *
      * @return static
      *

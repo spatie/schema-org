@@ -98,7 +98,7 @@ class BusTrip extends Intangible
      * producer. Another party (a seller) may offer those services or goods on
      * behalf of the provider. A provider may also serve as the seller.
      *
-     * @param Person|Person[]|Organization|Organization[] $provider
+     * @param Organization|Organization[]|Person|Person[] $provider
      *
      * @return static
      *

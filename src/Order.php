@@ -46,7 +46,7 @@ class Order extends Intangible
      * service involved in an exchange.  If it is not clear whether an entity is
      * a broker, seller, or buyer, the latter two terms are preferred.
      *
-     * @param Person|Person[]|Organization|Organization[] $broker
+     * @param Organization|Organization[]|Person|Person[] $broker
      *
      * @return static
      *
@@ -214,7 +214,7 @@ class Order extends Intangible
     /**
      * The item ordered.
      *
-     * @param Product|Product[]|OrderItem|OrderItem[] $orderedItem
+     * @param OrderItem|OrderItem[]|Product|Product[] $orderedItem
      *
      * @return static
      *

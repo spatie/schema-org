@@ -25,7 +25,7 @@ class ItemList extends Intangible
      * indicating the order or elements.  Use ListItem with a 'position'
      * property in such cases.
      *
-     * @param string|string[]|ListItem|ListItem[]|Thing|Thing[] $itemListElement
+     * @param ListItem|ListItem[]|Thing|Thing[]|string|string[] $itemListElement
      *
      * @return static
      *

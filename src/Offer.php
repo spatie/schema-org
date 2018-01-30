@@ -82,7 +82,7 @@ class Offer extends Intangible
     /**
      * The geographic area where a service or offered item is provided.
      *
-     * @param Place|Place[]|AdministrativeArea|AdministrativeArea[]|GeoShape|GeoShape[]|string|string[] $areaServed
+     * @param AdministrativeArea|AdministrativeArea[]|GeoShape|GeoShape[]|Place|Place[]|string|string[] $areaServed
      *
      * @return static
      *
@@ -186,7 +186,7 @@ class Offer extends Intangible
      * A category for the item. Greater signs or slashes can be used to
      * informally indicate a category hierarchy.
      *
-     * @param string|string[]|Thing|Thing[] $category
+     * @param Thing|Thing[]|string|string[] $category
      *
      * @return static
      *

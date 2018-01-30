@@ -327,7 +327,7 @@ class Person extends Thing
      * http://schema.org/Female may be used, text strings are also acceptable
      * for people who do not identify as a binary gender.
      *
-     * @param string|string[]|GenderType|GenderType[] $gender
+     * @param GenderType|GenderType[]|string|string[] $gender
      *
      * @return static
      *
@@ -561,7 +561,7 @@ class Person extends Thing
      * The total financial value of the person as calculated by subtracting
      * assets from liabilities.
      *
-     * @param PriceSpecification|PriceSpecification[]|MonetaryAmount|MonetaryAmount[] $netWorth
+     * @param MonetaryAmount|MonetaryAmount[]|PriceSpecification|PriceSpecification[] $netWorth
      *
      * @return static
      *

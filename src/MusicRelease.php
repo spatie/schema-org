@@ -28,7 +28,7 @@ class MusicRelease extends MusicPlaylist
      * example, Red and Blue is credited to "Stefani Germanotta Band", but by
      * Lady Gaga.
      *
-     * @param Person|Person[]|Organization|Organization[] $creditedTo
+     * @param Organization|Organization[]|Person|Person[] $creditedTo
      *
      * @return static
      *

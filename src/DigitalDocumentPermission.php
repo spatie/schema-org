@@ -13,7 +13,7 @@ class DigitalDocumentPermission extends Intangible
      * The person, organization, contact point, or audience that has been
      * granted this permission.
      *
-     * @param Person|Person[]|Organization|Organization[]|Audience|Audience[]|ContactPoint|ContactPoint[] $grantee
+     * @param Audience|Audience[]|ContactPoint|ContactPoint[]|Organization|Organization[]|Person|Person[] $grantee
      *
      * @return static
      *

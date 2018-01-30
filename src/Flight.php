@@ -12,7 +12,7 @@ class Flight extends Intangible
     /**
      * The kind of aircraft (e.g., "Boeing 747").
      *
-     * @param string|string[]|Vehicle|Vehicle[] $aircraft
+     * @param Vehicle|Vehicle[]|string|string[] $aircraft
      *
      * @return static
      *
@@ -168,7 +168,7 @@ class Flight extends Intangible
     /**
      * The estimated time the flight will take.
      *
-     * @param string|string[]|Duration|Duration[] $estimatedFlightDuration
+     * @param Duration|Duration[]|string|string[] $estimatedFlightDuration
      *
      * @return static
      *
@@ -182,7 +182,7 @@ class Flight extends Intangible
     /**
      * The distance of the flight.
      *
-     * @param string|string[]|Distance|Distance[] $flightDistance
+     * @param Distance|Distance[]|string|string[] $flightDistance
      *
      * @return static
      *
@@ -228,7 +228,7 @@ class Flight extends Intangible
      * producer. Another party (a seller) may offer those services or goods on
      * behalf of the provider. A provider may also serve as the seller.
      *
-     * @param Person|Person[]|Organization|Organization[] $provider
+     * @param Organization|Organization[]|Person|Person[] $provider
      *
      * @return static
      *

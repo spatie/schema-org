@@ -18,7 +18,7 @@ class GeoCircle extends GeoShape
      * Indicates the approximate radius of a GeoCircle (metres unless indicated
      * otherwise via Distance notation).
      *
-     * @param string|string[]|float|float[]|int|int[]|Distance|Distance[] $geoRadius
+     * @param Distance|Distance[]|float|float[]|int|int[]|string|string[] $geoRadius
      *
      * @return static
      *

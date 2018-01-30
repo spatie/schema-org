@@ -102,7 +102,7 @@ class Event extends Thing
      * The person or organization who wrote a composition, or who is the
      * composer of a work performed at some event.
      *
-     * @param Person|Person[]|Organization|Organization[] $composer
+     * @param Organization|Organization[]|Person|Person[] $composer
      *
      * @return static
      *
@@ -223,7 +223,7 @@ class Event extends Thing
      * standard](http://tools.ietf.org/html/bcp47). See also
      * [[availableLanguage]].
      *
-     * @param string|string[]|Language|Language[] $inLanguage
+     * @param Language|Language[]|string|string[] $inLanguage
      *
      * @return static
      *
@@ -296,7 +296,7 @@ class Event extends Thing
     /**
      * An organizer of an Event.
      *
-     * @param Person|Person[]|Organization|Organization[] $organizer
+     * @param Organization|Organization[]|Person|Person[] $organizer
      *
      * @return static
      *
@@ -480,7 +480,7 @@ class Event extends Thing
      * regional differences and technical requirements of a target market, or
      * that translates during some event.
      *
-     * @param Person|Person[]|Organization|Organization[] $translator
+     * @param Organization|Organization[]|Person|Person[] $translator
      *
      * @return static
      *

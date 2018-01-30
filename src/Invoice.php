@@ -43,7 +43,7 @@ class Invoice extends Intangible
      * service involved in an exchange.  If it is not clear whether an entity is
      * a broker, seller, or buyer, the latter two terms are preferred.
      *
-     * @param Person|Person[]|Organization|Organization[] $broker
+     * @param Organization|Organization[]|Person|Person[] $broker
      *
      * @return static
      *
@@ -58,7 +58,7 @@ class Invoice extends Intangible
      * A category for the item. Greater signs or slashes can be used to
      * informally indicate a category hierarchy.
      *
-     * @param string|string[]|Thing|Thing[] $category
+     * @param Thing|Thing[]|string|string[] $category
      *
      * @return static
      *
@@ -100,7 +100,7 @@ class Invoice extends Intangible
     /**
      * The minimum payment required at this time.
      *
-     * @param PriceSpecification|PriceSpecification[]|MonetaryAmount|MonetaryAmount[] $minimumPaymentDue
+     * @param MonetaryAmount|MonetaryAmount[]|PriceSpecification|PriceSpecification[] $minimumPaymentDue
      *
      * @return static
      *
@@ -230,7 +230,7 @@ class Invoice extends Intangible
      * producer. Another party (a seller) may offer those services or goods on
      * behalf of the provider. A provider may also serve as the seller.
      *
-     * @param Person|Person[]|Organization|Organization[] $provider
+     * @param Organization|Organization[]|Person|Person[] $provider
      *
      * @return static
      *
@@ -273,7 +273,7 @@ class Invoice extends Intangible
     /**
      * The total amount due.
      *
-     * @param PriceSpecification|PriceSpecification[]|MonetaryAmount|MonetaryAmount[] $totalPaymentDue
+     * @param MonetaryAmount|MonetaryAmount[]|PriceSpecification|PriceSpecification[] $totalPaymentDue
      *
      * @return static
      *

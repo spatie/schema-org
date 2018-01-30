@@ -14,7 +14,7 @@ class FoodEstablishment extends LocalBusiness
      * Boolean, an URL at which reservations can be made or (for backwards
      * compatibility) the strings ```Yes``` or ```No```.
      *
-     * @param string|string[]|bool|bool[] $acceptsReservations
+     * @param bool|bool[]|string|string[] $acceptsReservations
      *
      * @return static
      *

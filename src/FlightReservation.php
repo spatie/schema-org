@@ -17,7 +17,7 @@ class FlightReservation extends Reservation
      * The priority status assigned to a passenger for security or boarding
      * (e.g. FastTrack or Priority).
      *
-     * @param string|string[]|QualitativeValue|QualitativeValue[] $passengerPriorityStatus
+     * @param QualitativeValue|QualitativeValue[]|string|string[] $passengerPriorityStatus
      *
      * @return static
      *

@@ -217,7 +217,7 @@ class Place extends Thing
     /**
      * A URL to a map of the place.
      *
-     * @param string|string[]|Map|Map[] $hasMap
+     * @param Map|Map[]|string|string[] $hasMap
      *
      * @return static
      *

@@ -43,7 +43,7 @@ class Rating extends Intangible
     /**
      * The rating for the content.
      *
-     * @param string|string[]|float|float[]|int|int[] $ratingValue
+     * @param float|float[]|int|int[]|string|string[] $ratingValue
      *
      * @return static
      *
