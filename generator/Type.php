@@ -23,8 +23,6 @@ class Type
     {
         $this->properties[$property->name] = $property;
 
-        usort($this->properties, function (Property $a, Property $b) {
-            return $a->name <=> $b->name;
-        });
+        ksort($this->properties);
     }
 }
