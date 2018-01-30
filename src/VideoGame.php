@@ -11,6 +11,22 @@ namespace Spatie\SchemaOrg;
 class VideoGame extends SoftwareApplication
 {
     /**
+     * An actor, e.g. in tv, radio, movie, video games etc., or in an event.
+     * Actors can be associated with individual items or with a series, episode,
+     * clip.
+     *
+     * @param Person|Person[] $actor
+     *
+     * @return static
+     *
+     * @see 
+     */
+    public function actor($actor)
+    {
+        return $this->setProperty('actor', $actor);
+    }
+
+    /**
      * An actor, e.g. in tv, radio, movie, video games etc. Actors can be
      * associated with individual items or with a series, episode, clip.
      *
@@ -26,19 +42,17 @@ class VideoGame extends SoftwareApplication
     }
 
     /**
-     * An actor, e.g. in tv, radio, movie, video games etc., or in an event.
-     * Actors can be associated with individual items or with a series, episode,
-     * clip.
+     * Cheat codes to the game.
      *
-     * @param Person|Person[] $actor
+     * @param CreativeWork|CreativeWork[] $cheatCode
      *
      * @return static
      *
      * @see 
      */
-    public function actor($actor)
+    public function cheatCode($cheatCode)
     {
-        return $this->setProperty('actor', $actor);
+        return $this->setProperty('cheatCode', $cheatCode);
     }
 
     /**
@@ -73,6 +87,50 @@ class VideoGame extends SoftwareApplication
     }
 
     /**
+     * The electronic systems used to play <a
+     * href="http://en.wikipedia.org/wiki/Category:Video_game_platforms">video
+     * games</a>.
+     *
+     * @param string|string[]|Thing|Thing[] $gamePlatform
+     *
+     * @return static
+     *
+     * @see 
+     */
+    public function gamePlatform($gamePlatform)
+    {
+        return $this->setProperty('gamePlatform', $gamePlatform);
+    }
+
+    /**
+     * The server on which  it is possible to play the game.
+     *
+     * @param GameServer|GameServer[] $gameServer
+     *
+     * @return static
+     *
+     * @see 
+     */
+    public function gameServer($gameServer)
+    {
+        return $this->setProperty('gameServer', $gameServer);
+    }
+
+    /**
+     * Links to tips, tactics, etc.
+     *
+     * @param CreativeWork|CreativeWork[] $gameTip
+     *
+     * @return static
+     *
+     * @see 
+     */
+    public function gameTip($gameTip)
+    {
+        return $this->setProperty('gameTip', $gameTip);
+    }
+
+    /**
      * The composer of the soundtrack.
      *
      * @param MusicGroup|MusicGroup[]|Person|Person[] $musicBy
@@ -84,20 +142,6 @@ class VideoGame extends SoftwareApplication
     public function musicBy($musicBy)
     {
         return $this->setProperty('musicBy', $musicBy);
-    }
-
-    /**
-     * The trailer of a movie or tv/radio series, season, episode, etc.
-     *
-     * @param VideoObject|VideoObject[] $trailer
-     *
-     * @return static
-     *
-     * @see 
-     */
-    public function trailer($trailer)
-    {
-        return $this->setProperty('trailer', $trailer);
     }
 
     /**
@@ -117,61 +161,17 @@ class VideoGame extends SoftwareApplication
     }
 
     /**
-     * Cheat codes to the game.
+     * The trailer of a movie or tv/radio series, season, episode, etc.
      *
-     * @param CreativeWork|CreativeWork[] $cheatCode
-     *
-     * @return static
-     *
-     * @see 
-     */
-    public function cheatCode($cheatCode)
-    {
-        return $this->setProperty('cheatCode', $cheatCode);
-    }
-
-    /**
-     * The electronic systems used to play <a
-     * href="http://en.wikipedia.org/wiki/Category:Video_game_platforms">video
-     * games</a>.
-     *
-     * @param string|string[]|Thing|Thing[] $gamePlatform
+     * @param VideoObject|VideoObject[] $trailer
      *
      * @return static
      *
      * @see 
      */
-    public function gamePlatform($gamePlatform)
+    public function trailer($trailer)
     {
-        return $this->setProperty('gamePlatform', $gamePlatform);
-    }
-
-    /**
-     * Links to tips, tactics, etc.
-     *
-     * @param CreativeWork|CreativeWork[] $gameTip
-     *
-     * @return static
-     *
-     * @see 
-     */
-    public function gameTip($gameTip)
-    {
-        return $this->setProperty('gameTip', $gameTip);
-    }
-
-    /**
-     * The server on which  it is possible to play the game.
-     *
-     * @param GameServer|GameServer[] $gameServer
-     *
-     * @return static
-     *
-     * @see 
-     */
-    public function gameServer($gameServer)
-    {
-        return $this->setProperty('gameServer', $gameServer);
+        return $this->setProperty('trailer', $trailer);
     }
 
 }

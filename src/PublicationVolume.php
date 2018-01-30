@@ -16,18 +16,31 @@ namespace Spatie\SchemaOrg;
 class PublicationVolume extends CreativeWork
 {
     /**
-     * Identifies the volume of publication or multi-part work; for example,
-     * "iii" or "2".
+     * The page on which the work ends; for example "138" or "xvi".
      *
-     * @param int|int[]|string|string[] $volumeNumber
+     * @param int|int[]|string|string[] $pageEnd
      *
      * @return static
      *
      * @see 
      */
-    public function volumeNumber($volumeNumber)
+    public function pageEnd($pageEnd)
     {
-        return $this->setProperty('volumeNumber', $volumeNumber);
+        return $this->setProperty('pageEnd', $pageEnd);
+    }
+
+    /**
+     * The page on which the work starts; for example "135" or "xiii".
+     *
+     * @param int|int[]|string|string[] $pageStart
+     *
+     * @return static
+     *
+     * @see 
+     */
+    public function pageStart($pageStart)
+    {
+        return $this->setProperty('pageStart', $pageStart);
     }
 
     /**
@@ -46,31 +59,18 @@ class PublicationVolume extends CreativeWork
     }
 
     /**
-     * The page on which the work starts; for example "135" or "xiii".
+     * Identifies the volume of publication or multi-part work; for example,
+     * "iii" or "2".
      *
-     * @param int|int[]|string|string[] $pageStart
-     *
-     * @return static
-     *
-     * @see 
-     */
-    public function pageStart($pageStart)
-    {
-        return $this->setProperty('pageStart', $pageStart);
-    }
-
-    /**
-     * The page on which the work ends; for example "138" or "xvi".
-     *
-     * @param int|int[]|string|string[] $pageEnd
+     * @param int|int[]|string|string[] $volumeNumber
      *
      * @return static
      *
      * @see 
      */
-    public function pageEnd($pageEnd)
+    public function volumeNumber($volumeNumber)
     {
-        return $this->setProperty('pageEnd', $pageEnd);
+        return $this->setProperty('volumeNumber', $volumeNumber);
     }
 
 }

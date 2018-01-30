@@ -12,6 +12,28 @@ namespace Spatie\SchemaOrg;
 class Product extends Thing
 {
     /**
+     * A property-value pair representing an additional characteristics of the
+     * entitity, e.g. a product feature or another characteristic for which
+     * there is no matching property in schema.org.
+     * 
+     * Note: Publishers should be aware that applications designed to use
+     * specific schema.org properties (e.g. http://schema.org/width,
+     * http://schema.org/color, http://schema.org/gtin13, ...) will typically
+     * expect such data to be provided using those properties, rather than using
+     * the generic property/value mechanism.
+     *
+     * @param PropertyValue|PropertyValue[] $additionalProperty
+     *
+     * @return static
+     *
+     * @see 
+     */
+    public function additionalProperty($additionalProperty)
+    {
+        return $this->setProperty('additionalProperty', $additionalProperty);
+    }
+
+    /**
      * The overall rating, based on a collection of reviews or ratings, of the
      * item.
      *
@@ -146,6 +168,26 @@ class Product extends Thing
     }
 
     /**
+     * The [GTIN-13](http://apps.gs1.org/GDD/glossary/Pages/GTIN-13.aspx) code
+     * of the product, or the product to which the offer refers. This is
+     * equivalent to 13-digit ISBN codes and EAN UCC-13. Former 12-digit UPC
+     * codes can be converted into a GTIN-13 code by simply adding a preceeding
+     * zero. See [GS1 GTIN
+     * Summary](http://www.gs1.org/barcodes/technical/idkeys/gtin) for more
+     * details.
+     *
+     * @param string|string[] $gtin13
+     *
+     * @return static
+     *
+     * @see 
+     */
+    public function gtin13($gtin13)
+    {
+        return $this->setProperty('gtin13', $gtin13);
+    }
+
+    /**
      * The [GTIN-14](http://apps.gs1.org/GDD/glossary/Pages/GTIN-14.aspx) code
      * of the product, or the product to which the offer refers. See [GS1 GTIN
      * Summary](http://www.gs1.org/barcodes/technical/idkeys/gtin) for more
@@ -181,26 +223,6 @@ class Product extends Thing
     }
 
     /**
-     * The [GTIN-13](http://apps.gs1.org/GDD/glossary/Pages/GTIN-13.aspx) code
-     * of the product, or the product to which the offer refers. This is
-     * equivalent to 13-digit ISBN codes and EAN UCC-13. Former 12-digit UPC
-     * codes can be converted into a GTIN-13 code by simply adding a preceeding
-     * zero. See [GS1 GTIN
-     * Summary](http://www.gs1.org/barcodes/technical/idkeys/gtin) for more
-     * details.
-     *
-     * @param string|string[] $gtin13
-     *
-     * @return static
-     *
-     * @see 
-     */
-    public function gtin13($gtin13)
-    {
-        return $this->setProperty('gtin13', $gtin13);
-    }
-
-    /**
      * The height of the item.
      *
      * @param Distance|Distance[]|QuantitativeValue|QuantitativeValue[] $height
@@ -230,19 +252,32 @@ class Product extends Thing
     }
 
     /**
-     * A predefined value from OfferItemCondition or a textual description of
-     * the condition of the product or service, or the products or services
-     * included in the offer.
+     * A pointer to another product (or multiple products) for which this
+     * product is a consumable.
      *
-     * @param OfferItemCondition|OfferItemCondition[] $itemCondition
+     * @param Product|Product[] $isConsumableFor
      *
      * @return static
      *
      * @see 
      */
-    public function itemCondition($itemCondition)
+    public function isConsumableFor($isConsumableFor)
     {
-        return $this->setProperty('itemCondition', $itemCondition);
+        return $this->setProperty('isConsumableFor', $isConsumableFor);
+    }
+
+    /**
+     * A pointer to another, somehow related product (or multiple products).
+     *
+     * @param Product|Product[]|Service|Service[] $isRelatedTo
+     *
+     * @return static
+     *
+     * @see 
+     */
+    public function isRelatedTo($isRelatedTo)
+    {
+        return $this->setProperty('isRelatedTo', $isRelatedTo);
     }
 
     /**
@@ -261,32 +296,19 @@ class Product extends Thing
     }
 
     /**
-     * A pointer to another, somehow related product (or multiple products).
+     * A predefined value from OfferItemCondition or a textual description of
+     * the condition of the product or service, or the products or services
+     * included in the offer.
      *
-     * @param Product|Product[]|Service|Service[] $isRelatedTo
-     *
-     * @return static
-     *
-     * @see 
-     */
-    public function isRelatedTo($isRelatedTo)
-    {
-        return $this->setProperty('isRelatedTo', $isRelatedTo);
-    }
-
-    /**
-     * A pointer to another product (or multiple products) for which this
-     * product is a consumable.
-     *
-     * @param Product|Product[] $isConsumableFor
+     * @param OfferItemCondition|OfferItemCondition[] $itemCondition
      *
      * @return static
      *
      * @see 
      */
-    public function isConsumableFor($isConsumableFor)
+    public function itemCondition($itemCondition)
     {
-        return $this->setProperty('isConsumableFor', $isConsumableFor);
+        return $this->setProperty('itemCondition', $itemCondition);
     }
 
     /**
@@ -301,6 +323,35 @@ class Product extends Thing
     public function logo($logo)
     {
         return $this->setProperty('logo', $logo);
+    }
+
+    /**
+     * The manufacturer of the product.
+     *
+     * @param Organization|Organization[] $manufacturer
+     *
+     * @return static
+     *
+     * @see 
+     */
+    public function manufacturer($manufacturer)
+    {
+        return $this->setProperty('manufacturer', $manufacturer);
+    }
+
+    /**
+     * A material that something is made from, e.g. leather, wool, cotton,
+     * paper.
+     *
+     * @param string|string[]|Product|Product[] $material
+     *
+     * @return static
+     *
+     * @see 
+     */
+    public function material($material)
+    {
+        return $this->setProperty('material', $material);
     }
 
     /**
@@ -319,20 +370,6 @@ class Product extends Thing
     public function model($model)
     {
         return $this->setProperty('model', $model);
-    }
-
-    /**
-     * The manufacturer of the product.
-     *
-     * @param Organization|Organization[] $manufacturer
-     *
-     * @return static
-     *
-     * @see 
-     */
-    public function manufacturer($manufacturer)
-    {
-        return $this->setProperty('manufacturer', $manufacturer);
     }
 
     /**
@@ -379,6 +416,34 @@ class Product extends Thing
     public function productID($productID)
     {
         return $this->setProperty('productID', $productID);
+    }
+
+    /**
+     * The date of production of the item, e.g. vehicle.
+     *
+     * @param \DateTimeInterface|\DateTimeInterface[] $productionDate
+     *
+     * @return static
+     *
+     * @see 
+     */
+    public function productionDate($productionDate)
+    {
+        return $this->setProperty('productionDate', $productionDate);
+    }
+
+    /**
+     * The date the item e.g. vehicle was purchased by the current owner.
+     *
+     * @param \DateTimeInterface|\DateTimeInterface[] $purchaseDate
+     *
+     * @return static
+     *
+     * @see 
+     */
+    public function purchaseDate($purchaseDate)
+    {
+        return $this->setProperty('purchaseDate', $purchaseDate);
     }
 
     /**
@@ -465,71 +530,6 @@ class Product extends Thing
     public function width($width)
     {
         return $this->setProperty('width', $width);
-    }
-
-    /**
-     * A material that something is made from, e.g. leather, wool, cotton,
-     * paper.
-     *
-     * @param string|string[]|Product|Product[] $material
-     *
-     * @return static
-     *
-     * @see 
-     */
-    public function material($material)
-    {
-        return $this->setProperty('material', $material);
-    }
-
-    /**
-     * A property-value pair representing an additional characteristics of the
-     * entitity, e.g. a product feature or another characteristic for which
-     * there is no matching property in schema.org.
-     * 
-     * Note: Publishers should be aware that applications designed to use
-     * specific schema.org properties (e.g. http://schema.org/width,
-     * http://schema.org/color, http://schema.org/gtin13, ...) will typically
-     * expect such data to be provided using those properties, rather than using
-     * the generic property/value mechanism.
-     *
-     * @param PropertyValue|PropertyValue[] $additionalProperty
-     *
-     * @return static
-     *
-     * @see 
-     */
-    public function additionalProperty($additionalProperty)
-    {
-        return $this->setProperty('additionalProperty', $additionalProperty);
-    }
-
-    /**
-     * The date of production of the item, e.g. vehicle.
-     *
-     * @param \DateTimeInterface|\DateTimeInterface[] $productionDate
-     *
-     * @return static
-     *
-     * @see 
-     */
-    public function productionDate($productionDate)
-    {
-        return $this->setProperty('productionDate', $productionDate);
-    }
-
-    /**
-     * The date the item e.g. vehicle was purchased by the current owner.
-     *
-     * @param \DateTimeInterface|\DateTimeInterface[] $purchaseDate
-     *
-     * @return static
-     *
-     * @see 
-     */
-    public function purchaseDate($purchaseDate)
-    {
-        return $this->setProperty('purchaseDate', $purchaseDate);
     }
 
 }

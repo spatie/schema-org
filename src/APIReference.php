@@ -12,20 +12,6 @@ class APIReference extends TechArticle
     /**
      * Library file name e.g., mscorlib.dll, system.web.dll.
      *
-     * @param string|string[] $executableLibraryName
-     *
-     * @return static
-     *
-     * @see 
-     */
-    public function executableLibraryName($executableLibraryName)
-    {
-        return $this->setProperty('executableLibraryName', $executableLibraryName);
-    }
-
-    /**
-     * Library file name e.g., mscorlib.dll, system.web.dll.
-     *
      * @param string|string[] $assembly
      *
      * @return static
@@ -49,6 +35,20 @@ class APIReference extends TechArticle
     public function assemblyVersion($assemblyVersion)
     {
         return $this->setProperty('assemblyVersion', $assemblyVersion);
+    }
+
+    /**
+     * Library file name e.g., mscorlib.dll, system.web.dll.
+     *
+     * @param string|string[] $executableLibraryName
+     *
+     * @return static
+     *
+     * @see 
+     */
+    public function executableLibraryName($executableLibraryName)
+    {
+        return $this->setProperty('executableLibraryName', $executableLibraryName);
     }
 
     /**

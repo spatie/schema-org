@@ -10,20 +10,6 @@ namespace Spatie\SchemaOrg;
 class DigitalDocumentPermission extends Intangible
 {
     /**
-     * The type of permission granted the person, organization, or audience.
-     *
-     * @param DocumentPermissionType|DocumentPermissionType[] $permissionType
-     *
-     * @return static
-     *
-     * @see 
-     */
-    public function permissionType($permissionType)
-    {
-        return $this->setProperty('permissionType', $permissionType);
-    }
-
-    /**
      * The person, organization, contact point, or audience that has been
      * granted this permission.
      *
@@ -36,6 +22,20 @@ class DigitalDocumentPermission extends Intangible
     public function grantee($grantee)
     {
         return $this->setProperty('grantee', $grantee);
+    }
+
+    /**
+     * The type of permission granted the person, organization, or audience.
+     *
+     * @param DocumentPermissionType|DocumentPermissionType[] $permissionType
+     *
+     * @return static
+     *
+     * @see 
+     */
+    public function permissionType($permissionType)
+    {
+        return $this->setProperty('permissionType', $permissionType);
     }
 
 }

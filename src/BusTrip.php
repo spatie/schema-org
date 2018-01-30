@@ -10,19 +10,17 @@ namespace Spatie\SchemaOrg;
 class BusTrip extends Intangible
 {
     /**
-     * The service provider, service operator, or service performer; the goods
-     * producer. Another party (a seller) may offer those services or goods on
-     * behalf of the provider. A provider may also serve as the seller.
+     * The stop or station from which the bus arrives.
      *
-     * @param Person|Person[]|Organization|Organization[] $provider
+     * @param BusStation|BusStation[]|BusStop|BusStop[] $arrivalBusStop
      *
      * @return static
      *
      * @see 
      */
-    public function provider($provider)
+    public function arrivalBusStop($arrivalBusStop)
     {
-        return $this->setProperty('provider', $provider);
+        return $this->setProperty('arrivalBusStop', $arrivalBusStop);
     }
 
     /**
@@ -40,17 +38,17 @@ class BusTrip extends Intangible
     }
 
     /**
-     * The expected departure time.
+     * The name of the bus (e.g. Bolt Express).
      *
-     * @param \DateTimeInterface|\DateTimeInterface[] $departureTime
+     * @param string|string[] $busName
      *
      * @return static
      *
      * @see 
      */
-    public function departureTime($departureTime)
+    public function busName($busName)
     {
-        return $this->setProperty('departureTime', $departureTime);
+        return $this->setProperty('busName', $busName);
     }
 
     /**
@@ -68,34 +66,6 @@ class BusTrip extends Intangible
     }
 
     /**
-     * The name of the bus (e.g. Bolt Express).
-     *
-     * @param string|string[] $busName
-     *
-     * @return static
-     *
-     * @see 
-     */
-    public function busName($busName)
-    {
-        return $this->setProperty('busName', $busName);
-    }
-
-    /**
-     * The stop or station from which the bus arrives.
-     *
-     * @param BusStation|BusStation[]|BusStop|BusStop[] $arrivalBusStop
-     *
-     * @return static
-     *
-     * @see 
-     */
-    public function arrivalBusStop($arrivalBusStop)
-    {
-        return $this->setProperty('arrivalBusStop', $arrivalBusStop);
-    }
-
-    /**
      * The stop or station from which the bus departs.
      *
      * @param BusStation|BusStation[]|BusStop|BusStop[] $departureBusStop
@@ -107,6 +77,36 @@ class BusTrip extends Intangible
     public function departureBusStop($departureBusStop)
     {
         return $this->setProperty('departureBusStop', $departureBusStop);
+    }
+
+    /**
+     * The expected departure time.
+     *
+     * @param \DateTimeInterface|\DateTimeInterface[] $departureTime
+     *
+     * @return static
+     *
+     * @see 
+     */
+    public function departureTime($departureTime)
+    {
+        return $this->setProperty('departureTime', $departureTime);
+    }
+
+    /**
+     * The service provider, service operator, or service performer; the goods
+     * producer. Another party (a seller) may offer those services or goods on
+     * behalf of the provider. A provider may also serve as the seller.
+     *
+     * @param Person|Person[]|Organization|Organization[] $provider
+     *
+     * @return static
+     *
+     * @see 
+     */
+    public function provider($provider)
+    {
+        return $this->setProperty('provider', $provider);
     }
 
 }

@@ -25,21 +25,6 @@ class OrderItem extends Intangible
     }
 
     /**
-     * The number of the item ordered. If the property is not set, assume the
-     * quantity is one.
-     *
-     * @param float|float[]|int|int[] $orderQuantity
-     *
-     * @return static
-     *
-     * @see 
-     */
-    public function orderQuantity($orderQuantity)
-    {
-        return $this->setProperty('orderQuantity', $orderQuantity);
-    }
-
-    /**
      * The identifier of the order item.
      *
      * @param string|string[] $orderItemNumber
@@ -65,6 +50,21 @@ class OrderItem extends Intangible
     public function orderItemStatus($orderItemStatus)
     {
         return $this->setProperty('orderItemStatus', $orderItemStatus);
+    }
+
+    /**
+     * The number of the item ordered. If the property is not set, assume the
+     * quantity is one.
+     *
+     * @param float|float[]|int|int[] $orderQuantity
+     *
+     * @return static
+     *
+     * @see 
+     */
+    public function orderQuantity($orderQuantity)
+    {
+        return $this->setProperty('orderQuantity', $orderQuantity);
     }
 
     /**

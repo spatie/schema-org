@@ -10,21 +10,6 @@ namespace Spatie\SchemaOrg;
 class Person extends Thing
 {
     /**
-     * Indicates an OfferCatalog listing for this Organization, Person, or
-     * Service.
-     *
-     * @param OfferCatalog|OfferCatalog[] $hasOfferCatalog
-     *
-     * @return static
-     *
-     * @see 
-     */
-    public function hasOfferCatalog($hasOfferCatalog)
-    {
-        return $this->setProperty('hasOfferCatalog', $hasOfferCatalog);
-    }
-
-    /**
      * An additional name for a Person, can be used for a middle name.
      *
      * @param string|string[] $additionalName
@@ -36,6 +21,20 @@ class Person extends Thing
     public function additionalName($additionalName)
     {
         return $this->setProperty('additionalName', $additionalName);
+    }
+
+    /**
+     * Physical address of the item.
+     *
+     * @param PostalAddress|PostalAddress[]|string|string[] $address
+     *
+     * @return static
+     *
+     * @see 
+     */
+    public function address($address)
+    {
+        return $this->setProperty('address', $address);
     }
 
     /**
@@ -51,20 +50,6 @@ class Person extends Thing
     public function affiliation($affiliation)
     {
         return $this->setProperty('affiliation', $affiliation);
-    }
-
-    /**
-     * Physical address of the item.
-     *
-     * @param PostalAddress|PostalAddress[]|string|string[] $address
-     *
-     * @return static
-     *
-     * @see 
-     */
-    public function address($address)
-    {
-        return $this->setProperty('address', $address);
     }
 
     /**
@@ -124,6 +109,20 @@ class Person extends Thing
     }
 
     /**
+     * The place where the person was born.
+     *
+     * @param Place|Place[] $birthPlace
+     *
+     * @return static
+     *
+     * @see 
+     */
+    public function birthPlace($birthPlace)
+    {
+        return $this->setProperty('birthPlace', $birthPlace);
+    }
+
+    /**
      * The brand(s) associated with a product or service, or the brand(s)
      * maintained by an organization or business person.
      *
@@ -167,20 +166,6 @@ class Person extends Thing
     }
 
     /**
-     * A contact point for a person or organization.
-     *
-     * @param ContactPoint|ContactPoint[] $contactPoints
-     *
-     * @return static
-     *
-     * @see 
-     */
-    public function contactPoints($contactPoints)
-    {
-        return $this->setProperty('contactPoints', $contactPoints);
-    }
-
-    /**
      * A colleague of the person.
      *
      * @param Person|Person[] $colleagues
@@ -209,6 +194,20 @@ class Person extends Thing
     }
 
     /**
+     * A contact point for a person or organization.
+     *
+     * @param ContactPoint|ContactPoint[] $contactPoints
+     *
+     * @return static
+     *
+     * @see 
+     */
+    public function contactPoints($contactPoints)
+    {
+        return $this->setProperty('contactPoints', $contactPoints);
+    }
+
+    /**
      * Date of death.
      *
      * @param \DateTimeInterface|\DateTimeInterface[] $deathDate
@@ -220,6 +219,20 @@ class Person extends Thing
     public function deathDate($deathDate)
     {
         return $this->setProperty('deathDate', $deathDate);
+    }
+
+    /**
+     * The place where the person died.
+     *
+     * @param Place|Place[] $deathPlace
+     *
+     * @return static
+     *
+     * @see 
+     */
+    public function deathPlace($deathPlace)
+    {
+        return $this->setProperty('deathPlace', $deathPlace);
     }
 
     /**
@@ -295,6 +308,21 @@ class Person extends Thing
     }
 
     /**
+     * A person or organization that supports (sponsors) something through some
+     * kind of financial contribution.
+     *
+     * @param Organization|Organization[]|Person|Person[] $funder
+     *
+     * @return static
+     *
+     * @see 
+     */
+    public function funder($funder)
+    {
+        return $this->setProperty('funder', $funder);
+    }
+
+    /**
      * Gender of the person. While http://schema.org/Male and
      * http://schema.org/Female may be used, text strings are also acceptable
      * for people who do not identify as a binary gender.
@@ -308,6 +336,21 @@ class Person extends Thing
     public function gender($gender)
     {
         return $this->setProperty('gender', $gender);
+    }
+
+    /**
+     * Given name. In the U.S., the first name of a Person. This can be used
+     * along with familyName instead of the name property.
+     *
+     * @param string|string[] $givenName
+     *
+     * @return static
+     *
+     * @see 
+     */
+    public function givenName($givenName)
+    {
+        return $this->setProperty('givenName', $givenName);
     }
 
     /**
@@ -328,18 +371,18 @@ class Person extends Thing
     }
 
     /**
-     * Given name. In the U.S., the first name of a Person. This can be used
-     * along with familyName instead of the name property.
+     * Indicates an OfferCatalog listing for this Organization, Person, or
+     * Service.
      *
-     * @param string|string[] $givenName
+     * @param OfferCatalog|OfferCatalog[] $hasOfferCatalog
      *
      * @return static
      *
      * @see 
      */
-    public function givenName($givenName)
+    public function hasOfferCatalog($hasOfferCatalog)
     {
-        return $this->setProperty('givenName', $givenName);
+        return $this->setProperty('hasOfferCatalog', $hasOfferCatalog);
     }
 
     /**
@@ -357,20 +400,6 @@ class Person extends Thing
     }
 
     /**
-     * A contact location for a person's residence.
-     *
-     * @param ContactPoint|ContactPoint[]|Place|Place[] $homeLocation
-     *
-     * @return static
-     *
-     * @see 
-     */
-    public function homeLocation($homeLocation)
-    {
-        return $this->setProperty('homeLocation', $homeLocation);
-    }
-
-    /**
      * The height of the item.
      *
      * @param Distance|Distance[]|QuantitativeValue|QuantitativeValue[] $height
@@ -382,6 +411,20 @@ class Person extends Thing
     public function height($height)
     {
         return $this->setProperty('height', $height);
+    }
+
+    /**
+     * A contact location for a person's residence.
+     *
+     * @param ContactPoint|ContactPoint[]|Place|Place[] $homeLocation
+     *
+     * @return static
+     *
+     * @see 
+     */
+    public function homeLocation($homeLocation)
+    {
+        return $this->setProperty('homeLocation', $homeLocation);
     }
 
     /**
@@ -544,20 +587,6 @@ class Person extends Thing
     }
 
     /**
-     * A parents of the person.
-     *
-     * @param Person|Person[] $parents
-     *
-     * @return static
-     *
-     * @see 
-     */
-    public function parents($parents)
-    {
-        return $this->setProperty('parents', $parents);
-    }
-
-    /**
      * A parent of this person.
      *
      * @param Person|Person[] $parent
@@ -569,6 +598,20 @@ class Person extends Thing
     public function parent($parent)
     {
         return $this->setProperty('parent', $parent);
+    }
+
+    /**
+     * A parents of the person.
+     *
+     * @param Person|Person[] $parents
+     *
+     * @return static
+     *
+     * @see 
+     */
+    public function parents($parents)
+    {
+        return $this->setProperty('parents', $parents);
     }
 
     /**
@@ -617,20 +660,6 @@ class Person extends Thing
     /**
      * A sibling of the person.
      *
-     * @param Person|Person[] $siblings
-     *
-     * @return static
-     *
-     * @see 
-     */
-    public function siblings($siblings)
-    {
-        return $this->setProperty('siblings', $siblings);
-    }
-
-    /**
-     * A sibling of the person.
-     *
      * @param Person|Person[] $sibling
      *
      * @return static
@@ -640,6 +669,20 @@ class Person extends Thing
     public function sibling($sibling)
     {
         return $this->setProperty('sibling', $sibling);
+    }
+
+    /**
+     * A sibling of the person.
+     *
+     * @param Person|Person[] $siblings
+     *
+     * @return static
+     *
+     * @see 
+     */
+    public function siblings($siblings)
+    {
+        return $this->setProperty('siblings', $siblings);
     }
 
     /**
@@ -670,21 +713,6 @@ class Person extends Thing
     public function spouse($spouse)
     {
         return $this->setProperty('spouse', $spouse);
-    }
-
-    /**
-     * A person or organization that supports (sponsors) something through some
-     * kind of financial contribution.
-     *
-     * @param Organization|Organization[]|Person|Person[] $funder
-     *
-     * @return static
-     *
-     * @see 
-     */
-    public function funder($funder)
-    {
-        return $this->setProperty('funder', $funder);
     }
 
     /**
@@ -745,20 +773,6 @@ class Person extends Thing
     }
 
     /**
-     * Organizations that the person works for.
-     *
-     * @param Organization|Organization[] $worksFor
-     *
-     * @return static
-     *
-     * @see 
-     */
-    public function worksFor($worksFor)
-    {
-        return $this->setProperty('worksFor', $worksFor);
-    }
-
-    /**
      * A contact location for a person's place of work.
      *
      * @param ContactPoint|ContactPoint[]|Place|Place[] $workLocation
@@ -773,31 +787,17 @@ class Person extends Thing
     }
 
     /**
-     * The place where the person was born.
+     * Organizations that the person works for.
      *
-     * @param Place|Place[] $birthPlace
-     *
-     * @return static
-     *
-     * @see 
-     */
-    public function birthPlace($birthPlace)
-    {
-        return $this->setProperty('birthPlace', $birthPlace);
-    }
-
-    /**
-     * The place where the person died.
-     *
-     * @param Place|Place[] $deathPlace
+     * @param Organization|Organization[] $worksFor
      *
      * @return static
      *
      * @see 
      */
-    public function deathPlace($deathPlace)
+    public function worksFor($worksFor)
     {
-        return $this->setProperty('deathPlace', $deathPlace);
+        return $this->setProperty('worksFor', $worksFor);
     }
 
 }

@@ -26,20 +26,6 @@ class LiveBlogPosting extends BlogPosting
     }
 
     /**
-     * An update to the LiveBlog.
-     *
-     * @param BlogPosting|BlogPosting[] $liveBlogUpdate
-     *
-     * @return static
-     *
-     * @see 
-     */
-    public function liveBlogUpdate($liveBlogUpdate)
-    {
-        return $this->setProperty('liveBlogUpdate', $liveBlogUpdate);
-    }
-
-    /**
      * The time when the live blog will begin covering the Event. Note that
      * coverage may begin before the Event's start time. The LiveBlogPosting may
      * also be created before coverage begins.
@@ -53,6 +39,20 @@ class LiveBlogPosting extends BlogPosting
     public function coverageStartTime($coverageStartTime)
     {
         return $this->setProperty('coverageStartTime', $coverageStartTime);
+    }
+
+    /**
+     * An update to the LiveBlog.
+     *
+     * @param BlogPosting|BlogPosting[] $liveBlogUpdate
+     *
+     * @return static
+     *
+     * @see 
+     */
+    public function liveBlogUpdate($liveBlogUpdate)
+    {
+        return $this->setProperty('liveBlogUpdate', $liveBlogUpdate);
     }
 
 }

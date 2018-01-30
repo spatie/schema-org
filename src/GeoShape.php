@@ -13,17 +13,17 @@ namespace Spatie\SchemaOrg;
 class GeoShape extends StructuredValue
 {
     /**
-     * Indicates the GeoCoordinates at the centre of a GeoShape e.g. GeoCircle.
+     * Physical address of the item.
      *
-     * @param GeoCoordinates|GeoCoordinates[] $geoMidpoint
+     * @param PostalAddress|PostalAddress[]|string|string[] $address
      *
      * @return static
      *
      * @see 
      */
-    public function geoMidpoint($geoMidpoint)
+    public function address($address)
     {
-        return $this->setProperty('geoMidpoint', $geoMidpoint);
+        return $this->setProperty('address', $address);
     }
 
     /**
@@ -39,20 +39,6 @@ class GeoShape extends StructuredValue
     public function addressCountry($addressCountry)
     {
         return $this->setProperty('addressCountry', $addressCountry);
-    }
-
-    /**
-     * Physical address of the item.
-     *
-     * @param PostalAddress|PostalAddress[]|string|string[] $address
-     *
-     * @return static
-     *
-     * @see 
-     */
-    public function address($address)
-    {
-        return $this->setProperty('address', $address);
     }
 
     /**
@@ -103,6 +89,20 @@ class GeoShape extends StructuredValue
     }
 
     /**
+     * Indicates the GeoCoordinates at the centre of a GeoShape e.g. GeoCircle.
+     *
+     * @param GeoCoordinates|GeoCoordinates[] $geoMidpoint
+     *
+     * @return static
+     *
+     * @see 
+     */
+    public function geoMidpoint($geoMidpoint)
+    {
+        return $this->setProperty('geoMidpoint', $geoMidpoint);
+    }
+
+    /**
      * A line is a point-to-point path consisting of two or more points. A line
      * is expressed as a series of two or more point objects separated by space.
      *
@@ -115,20 +115,6 @@ class GeoShape extends StructuredValue
     public function line($line)
     {
         return $this->setProperty('line', $line);
-    }
-
-    /**
-     * The postal code. For example, 94043.
-     *
-     * @param string|string[] $postalCode
-     *
-     * @return static
-     *
-     * @see 
-     */
-    public function postalCode($postalCode)
-    {
-        return $this->setProperty('postalCode', $postalCode);
     }
 
     /**
@@ -146,6 +132,20 @@ class GeoShape extends StructuredValue
     public function polygon($polygon)
     {
         return $this->setProperty('polygon', $polygon);
+    }
+
+    /**
+     * The postal code. For example, 94043.
+     *
+     * @param string|string[] $postalCode
+     *
+     * @return static
+     *
+     * @see 
+     */
+    public function postalCode($postalCode)
+    {
+        return $this->setProperty('postalCode', $postalCode);
     }
 
 }

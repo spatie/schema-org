@@ -10,21 +10,6 @@ namespace Spatie\SchemaOrg;
 class Clip extends CreativeWork
 {
     /**
-     * An actor, e.g. in tv, radio, movie, video games etc. Actors can be
-     * associated with individual items or with a series, episode, clip.
-     *
-     * @param Person|Person[] $actors
-     *
-     * @return static
-     *
-     * @see 
-     */
-    public function actors($actors)
-    {
-        return $this->setProperty('actors', $actors);
-    }
-
-    /**
      * An actor, e.g. in tv, radio, movie, video games etc., or in an event.
      * Actors can be associated with individual items or with a series, episode,
      * clip.
@@ -38,6 +23,21 @@ class Clip extends CreativeWork
     public function actor($actor)
     {
         return $this->setProperty('actor', $actor);
+    }
+
+    /**
+     * An actor, e.g. in tv, radio, movie, video games etc. Actors can be
+     * associated with individual items or with a series, episode, clip.
+     *
+     * @param Person|Person[] $actors
+     *
+     * @return static
+     *
+     * @see 
+     */
+    public function actors($actors)
+    {
+        return $this->setProperty('actors', $actors);
     }
 
     /**
@@ -86,6 +86,20 @@ class Clip extends CreativeWork
     }
 
     /**
+     * The composer of the soundtrack.
+     *
+     * @param MusicGroup|MusicGroup[]|Person|Person[] $musicBy
+     *
+     * @return static
+     *
+     * @see 
+     */
+    public function musicBy($musicBy)
+    {
+        return $this->setProperty('musicBy', $musicBy);
+    }
+
+    /**
      * The episode to which this clip belongs.
      *
      * @param Episode|Episode[] $partOfEpisode
@@ -125,20 +139,6 @@ class Clip extends CreativeWork
     public function partOfSeries($partOfSeries)
     {
         return $this->setProperty('partOfSeries', $partOfSeries);
-    }
-
-    /**
-     * The composer of the soundtrack.
-     *
-     * @param MusicGroup|MusicGroup[]|Person|Person[] $musicBy
-     *
-     * @return static
-     *
-     * @see 
-     */
-    public function musicBy($musicBy)
-    {
-        return $this->setProperty('musicBy', $musicBy);
     }
 
 }

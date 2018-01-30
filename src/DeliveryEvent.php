@@ -24,20 +24,6 @@ class DeliveryEvent extends Event
     }
 
     /**
-     * After this date, the item will no longer be available for pickup.
-     *
-     * @param \DateTimeInterface|\DateTimeInterface[] $availableThrough
-     *
-     * @return static
-     *
-     * @see 
-     */
-    public function availableThrough($availableThrough)
-    {
-        return $this->setProperty('availableThrough', $availableThrough);
-    }
-
-    /**
      * When the item is available for pickup from the store, locker, etc.
      *
      * @param \DateTimeInterface|\DateTimeInterface[] $availableFrom
@@ -49,6 +35,20 @@ class DeliveryEvent extends Event
     public function availableFrom($availableFrom)
     {
         return $this->setProperty('availableFrom', $availableFrom);
+    }
+
+    /**
+     * After this date, the item will no longer be available for pickup.
+     *
+     * @param \DateTimeInterface|\DateTimeInterface[] $availableThrough
+     *
+     * @return static
+     *
+     * @see 
+     */
+    public function availableThrough($availableThrough)
+    {
+        return $this->setProperty('availableThrough', $availableThrough);
     }
 
     /**

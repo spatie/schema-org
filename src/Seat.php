@@ -10,20 +10,6 @@ namespace Spatie\SchemaOrg;
 class Seat extends Intangible
 {
     /**
-     * The section location of the reserved seat (e.g. Orchestra).
-     *
-     * @param string|string[] $seatSection
-     *
-     * @return static
-     *
-     * @see 
-     */
-    public function seatSection($seatSection)
-    {
-        return $this->setProperty('seatSection', $seatSection);
-    }
-
-    /**
      * The location of the reserved seat (e.g., 27).
      *
      * @param string|string[] $seatNumber
@@ -38,20 +24,6 @@ class Seat extends Intangible
     }
 
     /**
-     * The type/class of the seat.
-     *
-     * @param string|string[]|QualitativeValue|QualitativeValue[] $seatingType
-     *
-     * @return static
-     *
-     * @see 
-     */
-    public function seatingType($seatingType)
-    {
-        return $this->setProperty('seatingType', $seatingType);
-    }
-
-    /**
      * The row location of the reserved seat (e.g., B).
      *
      * @param string|string[] $seatRow
@@ -63,6 +35,34 @@ class Seat extends Intangible
     public function seatRow($seatRow)
     {
         return $this->setProperty('seatRow', $seatRow);
+    }
+
+    /**
+     * The section location of the reserved seat (e.g. Orchestra).
+     *
+     * @param string|string[] $seatSection
+     *
+     * @return static
+     *
+     * @see 
+     */
+    public function seatSection($seatSection)
+    {
+        return $this->setProperty('seatSection', $seatSection);
+    }
+
+    /**
+     * The type/class of the seat.
+     *
+     * @param string|string[]|QualitativeValue|QualitativeValue[] $seatingType
+     *
+     * @return static
+     *
+     * @see 
+     */
+    public function seatingType($seatingType)
+    {
+        return $this->setProperty('seatingType', $seatingType);
     }
 
 }

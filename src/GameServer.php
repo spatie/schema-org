@@ -10,20 +10,6 @@ namespace Spatie\SchemaOrg;
 class GameServer extends Intangible
 {
     /**
-     * Number of players on the server.
-     *
-     * @param int|int[] $playersOnline
-     *
-     * @return static
-     *
-     * @see 
-     */
-    public function playersOnline($playersOnline)
-    {
-        return $this->setProperty('playersOnline', $playersOnline);
-    }
-
-    /**
      * Video game which is played on this server.
      *
      * @param VideoGame|VideoGame[] $game
@@ -35,6 +21,20 @@ class GameServer extends Intangible
     public function game($game)
     {
         return $this->setProperty('game', $game);
+    }
+
+    /**
+     * Number of players on the server.
+     *
+     * @param int|int[] $playersOnline
+     *
+     * @return static
+     *
+     * @see 
+     */
+    public function playersOnline($playersOnline)
+    {
+        return $this->setProperty('playersOnline', $playersOnline);
     }
 
     /**

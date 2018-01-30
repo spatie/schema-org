@@ -10,19 +10,20 @@ namespace Spatie\SchemaOrg;
 class LodgingBusiness extends LocalBusiness
 {
     /**
-     * A language someone may use with the item. Please use one of the language
-     * codes from the [IETF BCP 47 standard](http://tools.ietf.org/html/bcp47).
-     * See also [[inLanguage]]
+     * An amenity feature (e.g. a characteristic or service) of the
+     * Accommodation. This generic property does not make a statement about
+     * whether the feature is included in an offer for the main accommodation or
+     * available at extra costs.
      *
-     * @param Language|Language[]|string|string[] $availableLanguage
+     * @param LocationFeatureSpecification|LocationFeatureSpecification[] $amenityFeature
      *
      * @return static
      *
      * @see 
      */
-    public function availableLanguage($availableLanguage)
+    public function amenityFeature($amenityFeature)
     {
-        return $this->setProperty('availableLanguage', $availableLanguage);
+        return $this->setProperty('amenityFeature', $amenityFeature);
     }
 
     /**
@@ -40,17 +41,19 @@ class LodgingBusiness extends LocalBusiness
     }
 
     /**
-     * The latest someone may check out of a lodging establishment.
+     * A language someone may use with the item. Please use one of the language
+     * codes from the [IETF BCP 47 standard](http://tools.ietf.org/html/bcp47).
+     * See also [[inLanguage]]
      *
-     * @param \DateTimeInterface|\DateTimeInterface[] $checkoutTime
+     * @param Language|Language[]|string|string[] $availableLanguage
      *
      * @return static
      *
      * @see 
      */
-    public function checkoutTime($checkoutTime)
+    public function availableLanguage($availableLanguage)
     {
-        return $this->setProperty('checkoutTime', $checkoutTime);
+        return $this->setProperty('availableLanguage', $availableLanguage);
     }
 
     /**
@@ -68,6 +71,20 @@ class LodgingBusiness extends LocalBusiness
     }
 
     /**
+     * The latest someone may check out of a lodging establishment.
+     *
+     * @param \DateTimeInterface|\DateTimeInterface[] $checkoutTime
+     *
+     * @return static
+     *
+     * @see 
+     */
+    public function checkoutTime($checkoutTime)
+    {
+        return $this->setProperty('checkoutTime', $checkoutTime);
+    }
+
+    /**
      * Indicates whether pets are allowed to enter the accommodation or lodging
      * business. More detailed information can be put in a text value.
      *
@@ -80,23 +97,6 @@ class LodgingBusiness extends LocalBusiness
     public function petsAllowed($petsAllowed)
     {
         return $this->setProperty('petsAllowed', $petsAllowed);
-    }
-
-    /**
-     * An amenity feature (e.g. a characteristic or service) of the
-     * Accommodation. This generic property does not make a statement about
-     * whether the feature is included in an offer for the main accommodation or
-     * available at extra costs.
-     *
-     * @param LocationFeatureSpecification|LocationFeatureSpecification[] $amenityFeature
-     *
-     * @return static
-     *
-     * @see 
-     */
-    public function amenityFeature($amenityFeature)
-    {
-        return $this->setProperty('amenityFeature', $amenityFeature);
     }
 
     /**

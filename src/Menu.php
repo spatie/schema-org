@@ -11,20 +11,6 @@ namespace Spatie\SchemaOrg;
 class Menu extends CreativeWork
 {
     /**
-     * A subgrouping of the menu (by dishes, course, serving time period, etc.).
-     *
-     * @param MenuSection|MenuSection[] $hasMenuSection
-     *
-     * @return static
-     *
-     * @see 
-     */
-    public function hasMenuSection($hasMenuSection)
-    {
-        return $this->setProperty('hasMenuSection', $hasMenuSection);
-    }
-
-    /**
      * A food or drink item contained in a menu or menu section.
      *
      * @param MenuSection|MenuSection[] $hasMenuItem
@@ -36,6 +22,20 @@ class Menu extends CreativeWork
     public function hasMenuItem($hasMenuItem)
     {
         return $this->setProperty('hasMenuItem', $hasMenuItem);
+    }
+
+    /**
+     * A subgrouping of the menu (by dishes, course, serving time period, etc.).
+     *
+     * @param MenuSection|MenuSection[] $hasMenuSection
+     *
+     * @return static
+     *
+     * @see 
+     */
+    public function hasMenuSection($hasMenuSection)
+    {
+        return $this->setProperty('hasMenuSection', $hasMenuSection);
     }
 
 }

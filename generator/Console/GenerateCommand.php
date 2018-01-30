@@ -42,10 +42,6 @@ class GenerateCommand extends Command
 
         $generator->generate($definitions);
 
-        $output->writeln('Fresh package generated! Linting...');
-
-        exec('find src -exec php -l {} \; | grep "!(No syntax)"');
-
         $output->writeln('Done!');
 
         return 0;

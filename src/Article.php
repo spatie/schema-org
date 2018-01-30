@@ -15,6 +15,20 @@ namespace Spatie\SchemaOrg;
 class Article extends CreativeWork
 {
     /**
+     * The actual body of the article.
+     *
+     * @param string|string[] $articleBody
+     *
+     * @return static
+     *
+     * @see 
+     */
+    public function articleBody($articleBody)
+    {
+        return $this->setProperty('articleBody', $articleBody);
+    }
+
+    /**
      * Articles may belong to one or more 'sections' in a magazine or newspaper,
      * such as Sports, Lifestyle, etc.
      *
@@ -30,31 +44,31 @@ class Article extends CreativeWork
     }
 
     /**
-     * The actual body of the article.
+     * The page on which the work ends; for example "138" or "xvi".
      *
-     * @param string|string[] $articleBody
+     * @param int|int[]|string|string[] $pageEnd
      *
      * @return static
      *
      * @see 
      */
-    public function articleBody($articleBody)
+    public function pageEnd($pageEnd)
     {
-        return $this->setProperty('articleBody', $articleBody);
+        return $this->setProperty('pageEnd', $pageEnd);
     }
 
     /**
-     * The number of words in the text of the Article.
+     * The page on which the work starts; for example "135" or "xiii".
      *
-     * @param int|int[] $wordCount
+     * @param int|int[]|string|string[] $pageStart
      *
      * @return static
      *
      * @see 
      */
-    public function wordCount($wordCount)
+    public function pageStart($pageStart)
     {
-        return $this->setProperty('wordCount', $wordCount);
+        return $this->setProperty('pageStart', $pageStart);
     }
 
     /**
@@ -73,31 +87,17 @@ class Article extends CreativeWork
     }
 
     /**
-     * The page on which the work starts; for example "135" or "xiii".
+     * The number of words in the text of the Article.
      *
-     * @param int|int[]|string|string[] $pageStart
-     *
-     * @return static
-     *
-     * @see 
-     */
-    public function pageStart($pageStart)
-    {
-        return $this->setProperty('pageStart', $pageStart);
-    }
-
-    /**
-     * The page on which the work ends; for example "138" or "xvi".
-     *
-     * @param int|int[]|string|string[] $pageEnd
+     * @param int|int[] $wordCount
      *
      * @return static
      *
      * @see 
      */
-    public function pageEnd($pageEnd)
+    public function wordCount($wordCount)
     {
-        return $this->setProperty('pageEnd', $pageEnd);
+        return $this->setProperty('wordCount', $wordCount);
     }
 
 }

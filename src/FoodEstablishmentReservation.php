@@ -33,6 +33,20 @@ class FoodEstablishmentReservation extends Reservation
     }
 
     /**
+     * Number of people the reservation should accommodate.
+     *
+     * @param int|int[]|QuantitativeValue|QuantitativeValue[] $partySize
+     *
+     * @return static
+     *
+     * @see 
+     */
+    public function partySize($partySize)
+    {
+        return $this->setProperty('partySize', $partySize);
+    }
+
+    /**
      * The startTime of something. For a reserved event or service (e.g.
      * FoodEstablishmentReservation), the time that it is expected to start. For
      * actions that span a period of time, when the action was performed. e.g.
@@ -51,20 +65,6 @@ class FoodEstablishmentReservation extends Reservation
     public function startTime($startTime)
     {
         return $this->setProperty('startTime', $startTime);
-    }
-
-    /**
-     * Number of people the reservation should accommodate.
-     *
-     * @param int|int[]|QuantitativeValue|QuantitativeValue[] $partySize
-     *
-     * @return static
-     *
-     * @see 
-     */
-    public function partySize($partySize)
-    {
-        return $this->setProperty('partySize', $partySize);
     }
 
 }

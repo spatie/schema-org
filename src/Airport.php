@@ -10,20 +10,6 @@ namespace Spatie\SchemaOrg;
 class Airport extends CivicStructure
 {
     /**
-     * ICAO identifier for an airport.
-     *
-     * @param string|string[] $icaoCode
-     *
-     * @return static
-     *
-     * @see 
-     */
-    public function icaoCode($icaoCode)
-    {
-        return $this->setProperty('icaoCode', $icaoCode);
-    }
-
-    /**
      * IATA identifier for an airline or airport.
      *
      * @param string|string[] $iataCode
@@ -35,6 +21,20 @@ class Airport extends CivicStructure
     public function iataCode($iataCode)
     {
         return $this->setProperty('iataCode', $iataCode);
+    }
+
+    /**
+     * ICAO identifier for an airport.
+     *
+     * @param string|string[] $icaoCode
+     *
+     * @return static
+     *
+     * @see 
+     */
+    public function icaoCode($icaoCode)
+    {
+        return $this->setProperty('icaoCode', $icaoCode);
     }
 
 }

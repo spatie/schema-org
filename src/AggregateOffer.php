@@ -26,6 +26,20 @@ class AggregateOffer extends Offer
     }
 
     /**
+     * The lowest price of all offers available.
+     *
+     * @param float|float[]|int|int[]|string|string[] $lowPrice
+     *
+     * @return static
+     *
+     * @see 
+     */
+    public function lowPrice($lowPrice)
+    {
+        return $this->setProperty('lowPrice', $lowPrice);
+    }
+
+    /**
      * The number of offers for the product.
      *
      * @param int|int[] $offerCount
@@ -53,20 +67,6 @@ class AggregateOffer extends Offer
     public function offers($offers)
     {
         return $this->setProperty('offers', $offers);
-    }
-
-    /**
-     * The lowest price of all offers available.
-     *
-     * @param float|float[]|int|int[]|string|string[] $lowPrice
-     *
-     * @return static
-     *
-     * @see 
-     */
-    public function lowPrice($lowPrice)
-    {
-        return $this->setProperty('lowPrice', $lowPrice);
     }
 
 }

@@ -10,6 +10,20 @@ namespace Spatie\SchemaOrg;
 class NutritionInformation extends StructuredValue
 {
     /**
+     * The number of calories.
+     *
+     * @param Energy|Energy[] $calories
+     *
+     * @return static
+     *
+     * @see 
+     */
+    public function calories($calories)
+    {
+        return $this->setProperty('calories', $calories);
+    }
+
+    /**
      * The number of grams of carbohydrates.
      *
      * @param Mass|Mass[] $carbohydrateContent
@@ -38,45 +52,17 @@ class NutritionInformation extends StructuredValue
     }
 
     /**
-     * The number of calories.
+     * The number of grams of fat.
      *
-     * @param Energy|Energy[] $calories
-     *
-     * @return static
-     *
-     * @see 
-     */
-    public function calories($calories)
-    {
-        return $this->setProperty('calories', $calories);
-    }
-
-    /**
-     * The number of grams of saturated fat.
-     *
-     * @param Mass|Mass[] $saturatedFatContent
+     * @param Mass|Mass[] $fatContent
      *
      * @return static
      *
      * @see 
      */
-    public function saturatedFatContent($saturatedFatContent)
+    public function fatContent($fatContent)
     {
-        return $this->setProperty('saturatedFatContent', $saturatedFatContent);
-    }
-
-    /**
-     * The number of grams of protein.
-     *
-     * @param Mass|Mass[] $proteinContent
-     *
-     * @return static
-     *
-     * @see 
-     */
-    public function proteinContent($proteinContent)
-    {
-        return $this->setProperty('proteinContent', $proteinContent);
+        return $this->setProperty('fatContent', $fatContent);
     }
 
     /**
@@ -94,17 +80,31 @@ class NutritionInformation extends StructuredValue
     }
 
     /**
-     * The number of grams of sugar.
+     * The number of grams of protein.
      *
-     * @param Mass|Mass[] $sugarContent
+     * @param Mass|Mass[] $proteinContent
      *
      * @return static
      *
      * @see 
      */
-    public function sugarContent($sugarContent)
+    public function proteinContent($proteinContent)
     {
-        return $this->setProperty('sugarContent', $sugarContent);
+        return $this->setProperty('proteinContent', $proteinContent);
+    }
+
+    /**
+     * The number of grams of saturated fat.
+     *
+     * @param Mass|Mass[] $saturatedFatContent
+     *
+     * @return static
+     *
+     * @see 
+     */
+    public function saturatedFatContent($saturatedFatContent)
+    {
+        return $this->setProperty('saturatedFatContent', $saturatedFatContent);
     }
 
     /**
@@ -122,20 +122,6 @@ class NutritionInformation extends StructuredValue
     }
 
     /**
-     * The number of grams of fat.
-     *
-     * @param Mass|Mass[] $fatContent
-     *
-     * @return static
-     *
-     * @see 
-     */
-    public function fatContent($fatContent)
-    {
-        return $this->setProperty('fatContent', $fatContent);
-    }
-
-    /**
      * The number of milligrams of sodium.
      *
      * @param Mass|Mass[] $sodiumContent
@@ -150,17 +136,17 @@ class NutritionInformation extends StructuredValue
     }
 
     /**
-     * The number of grams of unsaturated fat.
+     * The number of grams of sugar.
      *
-     * @param Mass|Mass[] $unsaturatedFatContent
+     * @param Mass|Mass[] $sugarContent
      *
      * @return static
      *
      * @see 
      */
-    public function unsaturatedFatContent($unsaturatedFatContent)
+    public function sugarContent($sugarContent)
     {
-        return $this->setProperty('unsaturatedFatContent', $unsaturatedFatContent);
+        return $this->setProperty('sugarContent', $sugarContent);
     }
 
     /**
@@ -175,6 +161,20 @@ class NutritionInformation extends StructuredValue
     public function transFatContent($transFatContent)
     {
         return $this->setProperty('transFatContent', $transFatContent);
+    }
+
+    /**
+     * The number of grams of unsaturated fat.
+     *
+     * @param Mass|Mass[] $unsaturatedFatContent
+     *
+     * @return static
+     *
+     * @see 
+     */
+    public function unsaturatedFatContent($unsaturatedFatContent)
+    {
+        return $this->setProperty('unsaturatedFatContent', $unsaturatedFatContent);
     }
 
 }

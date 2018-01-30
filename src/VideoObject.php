@@ -10,21 +10,6 @@ namespace Spatie\SchemaOrg;
 class VideoObject extends MediaObject
 {
     /**
-     * An actor, e.g. in tv, radio, movie, video games etc. Actors can be
-     * associated with individual items or with a series, episode, clip.
-     *
-     * @param Person|Person[] $actors
-     *
-     * @return static
-     *
-     * @see 
-     */
-    public function actors($actors)
-    {
-        return $this->setProperty('actors', $actors);
-    }
-
-    /**
      * An actor, e.g. in tv, radio, movie, video games etc., or in an event.
      * Actors can be associated with individual items or with a series, episode,
      * clip.
@@ -38,6 +23,21 @@ class VideoObject extends MediaObject
     public function actor($actor)
     {
         return $this->setProperty('actor', $actor);
+    }
+
+    /**
+     * An actor, e.g. in tv, radio, movie, video games etc. Actors can be
+     * associated with individual items or with a series, episode, clip.
+     *
+     * @param Person|Person[] $actors
+     *
+     * @return static
+     *
+     * @see 
+     */
+    public function actors($actors)
+    {
+        return $this->setProperty('actors', $actors);
     }
 
     /**
@@ -129,20 +129,6 @@ class VideoObject extends MediaObject
     }
 
     /**
-     * The quality of the video.
-     *
-     * @param string|string[] $videoQuality
-     *
-     * @return static
-     *
-     * @see 
-     */
-    public function videoQuality($videoQuality)
-    {
-        return $this->setProperty('videoQuality', $videoQuality);
-    }
-
-    /**
      * The frame size of the video.
      *
      * @param string|string[] $videoFrameSize
@@ -154,6 +140,20 @@ class VideoObject extends MediaObject
     public function videoFrameSize($videoFrameSize)
     {
         return $this->setProperty('videoFrameSize', $videoFrameSize);
+    }
+
+    /**
+     * The quality of the video.
+     *
+     * @param string|string[] $videoQuality
+     *
+     * @return static
+     *
+     * @see 
+     */
+    public function videoQuality($videoQuality)
+    {
+        return $this->setProperty('videoQuality', $videoQuality);
     }
 
 }

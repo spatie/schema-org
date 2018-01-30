@@ -25,6 +25,50 @@ class BroadcastService extends Service
     }
 
     /**
+     * The media network(s) whose content is broadcast on this station.
+     *
+     * @param Organization|Organization[] $broadcastAffiliateOf
+     *
+     * @return static
+     *
+     * @see 
+     */
+    public function broadcastAffiliateOf($broadcastAffiliateOf)
+    {
+        return $this->setProperty('broadcastAffiliateOf', $broadcastAffiliateOf);
+    }
+
+    /**
+     * The name displayed in the channel guide. For many US affiliates, it is
+     * the network name.
+     *
+     * @param string|string[] $broadcastDisplayName
+     *
+     * @return static
+     *
+     * @see 
+     */
+    public function broadcastDisplayName($broadcastDisplayName)
+    {
+        return $this->setProperty('broadcastDisplayName', $broadcastDisplayName);
+    }
+
+    /**
+     * The timezone in [ISO 8601 format](http://en.wikipedia.org/wiki/ISO_8601)
+     * for which the service bases its broadcasts
+     *
+     * @param string|string[] $broadcastTimezone
+     *
+     * @return static
+     *
+     * @see 
+     */
+    public function broadcastTimezone($broadcastTimezone)
+    {
+        return $this->setProperty('broadcastTimezone', $broadcastTimezone);
+    }
+
+    /**
      * The organization owning or operating the broadcast service.
      *
      * @param Organization|Organization[] $broadcaster
@@ -66,50 +110,6 @@ class BroadcastService extends Service
     public function videoFormat($videoFormat)
     {
         return $this->setProperty('videoFormat', $videoFormat);
-    }
-
-    /**
-     * The name displayed in the channel guide. For many US affiliates, it is
-     * the network name.
-     *
-     * @param string|string[] $broadcastDisplayName
-     *
-     * @return static
-     *
-     * @see 
-     */
-    public function broadcastDisplayName($broadcastDisplayName)
-    {
-        return $this->setProperty('broadcastDisplayName', $broadcastDisplayName);
-    }
-
-    /**
-     * The media network(s) whose content is broadcast on this station.
-     *
-     * @param Organization|Organization[] $broadcastAffiliateOf
-     *
-     * @return static
-     *
-     * @see 
-     */
-    public function broadcastAffiliateOf($broadcastAffiliateOf)
-    {
-        return $this->setProperty('broadcastAffiliateOf', $broadcastAffiliateOf);
-    }
-
-    /**
-     * The timezone in [ISO 8601 format](http://en.wikipedia.org/wiki/ISO_8601)
-     * for which the service bases its broadcasts
-     *
-     * @param string|string[] $broadcastTimezone
-     *
-     * @return static
-     *
-     * @see 
-     */
-    public function broadcastTimezone($broadcastTimezone)
-    {
-        return $this->setProperty('broadcastTimezone', $broadcastTimezone);
     }
 
 }

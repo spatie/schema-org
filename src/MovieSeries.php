@@ -11,21 +11,6 @@ namespace Spatie\SchemaOrg;
 class MovieSeries extends CreativeWorkSeries
 {
     /**
-     * An actor, e.g. in tv, radio, movie, video games etc. Actors can be
-     * associated with individual items or with a series, episode, clip.
-     *
-     * @param Person|Person[] $actors
-     *
-     * @return static
-     *
-     * @see 
-     */
-    public function actors($actors)
-    {
-        return $this->setProperty('actors', $actors);
-    }
-
-    /**
      * An actor, e.g. in tv, radio, movie, video games etc., or in an event.
      * Actors can be associated with individual items or with a series, episode,
      * clip.
@@ -39,6 +24,21 @@ class MovieSeries extends CreativeWorkSeries
     public function actor($actor)
     {
         return $this->setProperty('actor', $actor);
+    }
+
+    /**
+     * An actor, e.g. in tv, radio, movie, video games etc. Actors can be
+     * associated with individual items or with a series, episode, clip.
+     *
+     * @param Person|Person[] $actors
+     *
+     * @return static
+     *
+     * @see 
+     */
+    public function actors($actors)
+    {
+        return $this->setProperty('actors', $actors);
     }
 
     /**

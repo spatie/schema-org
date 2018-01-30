@@ -70,6 +70,20 @@ class ServiceChannel extends Intangible
     }
 
     /**
+     * The phone number to use to access the service.
+     *
+     * @param ContactPoint|ContactPoint[] $servicePhone
+     *
+     * @return static
+     *
+     * @see 
+     */
+    public function servicePhone($servicePhone)
+    {
+        return $this->setProperty('servicePhone', $servicePhone);
+    }
+
+    /**
      * The address for accessing the service by mail.
      *
      * @param PostalAddress|PostalAddress[] $servicePostalAddress
@@ -109,20 +123,6 @@ class ServiceChannel extends Intangible
     public function serviceUrl($serviceUrl)
     {
         return $this->setProperty('serviceUrl', $serviceUrl);
-    }
-
-    /**
-     * The phone number to use to access the service.
-     *
-     * @param ContactPoint|ContactPoint[] $servicePhone
-     *
-     * @return static
-     *
-     * @see 
-     */
-    public function servicePhone($servicePhone)
-    {
-        return $this->setProperty('servicePhone', $servicePhone);
     }
 
 }

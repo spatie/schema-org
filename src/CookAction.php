@@ -10,21 +10,6 @@ namespace Spatie\SchemaOrg;
 class CookAction extends CreateAction
 {
     /**
-     * A sub property of location. The specific food event where the action
-     * occurred.
-     *
-     * @param FoodEvent|FoodEvent[] $foodEvent
-     *
-     * @return static
-     *
-     * @see 
-     */
-    public function foodEvent($foodEvent)
-    {
-        return $this->setProperty('foodEvent', $foodEvent);
-    }
-
-    /**
      * A sub property of location. The specific food establishment where the
      * action occurred.
      *
@@ -37,6 +22,21 @@ class CookAction extends CreateAction
     public function foodEstablishment($foodEstablishment)
     {
         return $this->setProperty('foodEstablishment', $foodEstablishment);
+    }
+
+    /**
+     * A sub property of location. The specific food event where the action
+     * occurred.
+     *
+     * @param FoodEvent|FoodEvent[] $foodEvent
+     *
+     * @return static
+     *
+     * @see 
+     */
+    public function foodEvent($foodEvent)
+    {
+        return $this->setProperty('foodEvent', $foodEvent);
     }
 
     /**

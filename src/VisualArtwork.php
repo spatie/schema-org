@@ -10,6 +10,38 @@ namespace Spatie\SchemaOrg;
 class VisualArtwork extends CreativeWork
 {
     /**
+     * The number of copies when multiple copies of a piece of artwork are
+     * produced - e.g. for a limited edition of 20 prints, 'artEdition' refers
+     * to the total number of copies (in this example "20").
+     *
+     * @param string|string[]|int|int[] $artEdition
+     *
+     * @return static
+     *
+     * @see 
+     */
+    public function artEdition($artEdition)
+    {
+        return $this->setProperty('artEdition', $artEdition);
+    }
+
+    /**
+     * The material used. (e.g. Oil, Watercolour, Acrylic, Linoprint, Marble,
+     * Cyanotype, Digital, Lithograph, DryPoint, Intaglio, Pastel, Woodcut,
+     * Pencil, Mixed Media, etc.)
+     *
+     * @param string|string[] $artMedium
+     *
+     * @return static
+     *
+     * @see 
+     */
+    public function artMedium($artMedium)
+    {
+        return $this->setProperty('artMedium', $artMedium);
+    }
+
+    /**
      * e.g. Painting, Drawing, Sculpture, Print, Photograph, Assemblage,
      * Collage, etc.
      *
@@ -52,38 +84,6 @@ class VisualArtwork extends CreativeWork
     public function surface($surface)
     {
         return $this->setProperty('surface', $surface);
-    }
-
-    /**
-     * The material used. (e.g. Oil, Watercolour, Acrylic, Linoprint, Marble,
-     * Cyanotype, Digital, Lithograph, DryPoint, Intaglio, Pastel, Woodcut,
-     * Pencil, Mixed Media, etc.)
-     *
-     * @param string|string[] $artMedium
-     *
-     * @return static
-     *
-     * @see 
-     */
-    public function artMedium($artMedium)
-    {
-        return $this->setProperty('artMedium', $artMedium);
-    }
-
-    /**
-     * The number of copies when multiple copies of a piece of artwork are
-     * produced - e.g. for a limited edition of 20 prints, 'artEdition' refers
-     * to the total number of copies (in this example "20").
-     *
-     * @param string|string[]|int|int[] $artEdition
-     *
-     * @return static
-     *
-     * @see 
-     */
-    public function artEdition($artEdition)
-    {
-        return $this->setProperty('artEdition', $artEdition);
     }
 
 }

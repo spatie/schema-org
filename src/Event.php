@@ -57,20 +57,6 @@ class Event extends Thing
     }
 
     /**
-     * An organizer of an Event.
-     *
-     * @param Person|Person[]|Organization|Organization[] $organizer
-     *
-     * @return static
-     *
-     * @see 
-     */
-    public function organizer($organizer)
-    {
-        return $this->setProperty('organizer', $organizer);
-    }
-
-    /**
      * A person or organization attending the event.
      *
      * @param Organization|Organization[]|Person|Person[] $attendee
@@ -110,6 +96,21 @@ class Event extends Thing
     public function audience($audience)
     {
         return $this->setProperty('audience', $audience);
+    }
+
+    /**
+     * The person or organization who wrote a composition, or who is the
+     * composer of a work performed at some event.
+     *
+     * @param Person|Person[]|Organization|Organization[] $composer
+     *
+     * @return static
+     *
+     * @see 
+     */
+    public function composer($composer)
+    {
+        return $this->setProperty('composer', $composer);
     }
 
     /**
@@ -202,17 +203,18 @@ class Event extends Thing
     }
 
     /**
-     * A flag to signal that the publication is accessible for free.
+     * A person or organization that supports (sponsors) something through some
+     * kind of financial contribution.
      *
-     * @param bool|bool[] $isAccessibleForFree
+     * @param Organization|Organization[]|Person|Person[] $funder
      *
      * @return static
      *
      * @see 
      */
-    public function isAccessibleForFree($isAccessibleForFree)
+    public function funder($funder)
     {
-        return $this->setProperty('isAccessibleForFree', $isAccessibleForFree);
+        return $this->setProperty('funder', $funder);
     }
 
     /**
@@ -233,6 +235,20 @@ class Event extends Thing
     }
 
     /**
+     * A flag to signal that the publication is accessible for free.
+     *
+     * @param bool|bool[] $isAccessibleForFree
+     *
+     * @return static
+     *
+     * @see 
+     */
+    public function isAccessibleForFree($isAccessibleForFree)
+    {
+        return $this->setProperty('isAccessibleForFree', $isAccessibleForFree);
+    }
+
+    /**
      * The location of for example where the event is happening, an organization
      * is located, or where an action takes place.
      *
@@ -245,20 +261,6 @@ class Event extends Thing
     public function location($location)
     {
         return $this->setProperty('location', $location);
-    }
-
-    /**
-     * The number of attendee places for an event that remain unallocated.
-     *
-     * @param int|int[] $remainingAttendeeCapacity
-     *
-     * @return static
-     *
-     * @see 
-     */
-    public function remainingAttendeeCapacity($remainingAttendeeCapacity)
-    {
-        return $this->setProperty('remainingAttendeeCapacity', $remainingAttendeeCapacity);
     }
 
     /**
@@ -289,6 +291,20 @@ class Event extends Thing
     public function offers($offers)
     {
         return $this->setProperty('offers', $offers);
+    }
+
+    /**
+     * An organizer of an Event.
+     *
+     * @param Person|Person[]|Organization|Organization[] $organizer
+     *
+     * @return static
+     *
+     * @see 
+     */
+    public function organizer($organizer)
+    {
+        return $this->setProperty('organizer', $organizer);
     }
 
     /**
@@ -354,6 +370,20 @@ class Event extends Thing
     }
 
     /**
+     * The number of attendee places for an event that remain unallocated.
+     *
+     * @param int|int[] $remainingAttendeeCapacity
+     *
+     * @return static
+     *
+     * @see 
+     */
+    public function remainingAttendeeCapacity($remainingAttendeeCapacity)
+    {
+        return $this->setProperty('remainingAttendeeCapacity', $remainingAttendeeCapacity);
+    }
+
+    /**
      * A review of the item.
      *
      * @param Review|Review[] $review
@@ -384,21 +414,6 @@ class Event extends Thing
     }
 
     /**
-     * A person or organization that supports (sponsors) something through some
-     * kind of financial contribution.
-     *
-     * @param Organization|Organization[]|Person|Person[] $funder
-     *
-     * @return static
-     *
-     * @see 
-     */
-    public function funder($funder)
-    {
-        return $this->setProperty('funder', $funder);
-    }
-
-    /**
      * The start date and time of the item (in [ISO 8601 date
      * format](http://en.wikipedia.org/wiki/ISO_8601)).
      *
@@ -411,21 +426,6 @@ class Event extends Thing
     public function startDate($startDate)
     {
         return $this->setProperty('startDate', $startDate);
-    }
-
-    /**
-     * Events that are a part of this event. For example, a conference event
-     * includes many presentations, each subEvents of the conference.
-     *
-     * @param Event|Event[] $subEvents
-     *
-     * @return static
-     *
-     * @see 
-     */
-    public function subEvents($subEvents)
-    {
-        return $this->setProperty('subEvents', $subEvents);
     }
 
     /**
@@ -445,6 +445,21 @@ class Event extends Thing
     }
 
     /**
+     * Events that are a part of this event. For example, a conference event
+     * includes many presentations, each subEvents of the conference.
+     *
+     * @param Event|Event[] $subEvents
+     *
+     * @return static
+     *
+     * @see 
+     */
+    public function subEvents($subEvents)
+    {
+        return $this->setProperty('subEvents', $subEvents);
+    }
+
+    /**
      * An event that this event is a part of. For example, a collection of
      * individual music performances might each have a music festival as their
      * superEvent.
@@ -458,6 +473,22 @@ class Event extends Thing
     public function superEvent($superEvent)
     {
         return $this->setProperty('superEvent', $superEvent);
+    }
+
+    /**
+     * Organization or person who adapts a creative work to different languages,
+     * regional differences and technical requirements of a target market, or
+     * that translates during some event.
+     *
+     * @param Person|Person[]|Organization|Organization[] $translator
+     *
+     * @return static
+     *
+     * @see 
+     */
+    public function translator($translator)
+    {
+        return $this->setProperty('translator', $translator);
     }
 
     /**
@@ -503,37 +534,6 @@ class Event extends Thing
     public function workPerformed($workPerformed)
     {
         return $this->setProperty('workPerformed', $workPerformed);
-    }
-
-    /**
-     * Organization or person who adapts a creative work to different languages,
-     * regional differences and technical requirements of a target market, or
-     * that translates during some event.
-     *
-     * @param Person|Person[]|Organization|Organization[] $translator
-     *
-     * @return static
-     *
-     * @see 
-     */
-    public function translator($translator)
-    {
-        return $this->setProperty('translator', $translator);
-    }
-
-    /**
-     * The person or organization who wrote a composition, or who is the
-     * composer of a work performed at some event.
-     *
-     * @param Person|Person[]|Organization|Organization[] $composer
-     *
-     * @return static
-     *
-     * @see 
-     */
-    public function composer($composer)
-    {
-        return $this->setProperty('composer', $composer);
     }
 
 }

@@ -15,18 +15,18 @@ namespace Spatie\SchemaOrg;
 class Course extends CreativeWork
 {
     /**
-     * An offering of the course at a specific time and place or through
-     * specific media or mode of study or to a specific section of students.
+     * The identifier for the [[Course]] used by the course [[provider]] (e.g.
+     * CS101 or 6.001).
      *
-     * @param CourseInstance|CourseInstance[] $hasCourseInstance
+     * @param string|string[] $courseCode
      *
      * @return static
      *
      * @see 
      */
-    public function hasCourseInstance($hasCourseInstance)
+    public function courseCode($courseCode)
     {
-        return $this->setProperty('hasCourseInstance', $hasCourseInstance);
+        return $this->setProperty('courseCode', $courseCode);
     }
 
     /**
@@ -47,18 +47,18 @@ class Course extends CreativeWork
     }
 
     /**
-     * The identifier for the [[Course]] used by the course [[provider]] (e.g.
-     * CS101 or 6.001).
+     * An offering of the course at a specific time and place or through
+     * specific media or mode of study or to a specific section of students.
      *
-     * @param string|string[] $courseCode
+     * @param CourseInstance|CourseInstance[] $hasCourseInstance
      *
      * @return static
      *
      * @see 
      */
-    public function courseCode($courseCode)
+    public function hasCourseInstance($hasCourseInstance)
     {
-        return $this->setProperty('courseCode', $courseCode);
+        return $this->setProperty('hasCourseInstance', $hasCourseInstance);
     }
 
 }

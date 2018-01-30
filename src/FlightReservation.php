@@ -14,20 +14,6 @@ namespace Spatie\SchemaOrg;
 class FlightReservation extends Reservation
 {
     /**
-     * The passenger's sequence number as assigned by the airline.
-     *
-     * @param string|string[] $passengerSequenceNumber
-     *
-     * @return static
-     *
-     * @see 
-     */
-    public function passengerSequenceNumber($passengerSequenceNumber)
-    {
-        return $this->setProperty('passengerSequenceNumber', $passengerSequenceNumber);
-    }
-
-    /**
      * The priority status assigned to a passenger for security or boarding
      * (e.g. FastTrack or Priority).
      *
@@ -40,6 +26,20 @@ class FlightReservation extends Reservation
     public function passengerPriorityStatus($passengerPriorityStatus)
     {
         return $this->setProperty('passengerPriorityStatus', $passengerPriorityStatus);
+    }
+
+    /**
+     * The passenger's sequence number as assigned by the airline.
+     *
+     * @param string|string[] $passengerSequenceNumber
+     *
+     * @return static
+     *
+     * @see 
+     */
+    public function passengerSequenceNumber($passengerSequenceNumber)
+    {
+        return $this->setProperty('passengerSequenceNumber', $passengerSequenceNumber);
     }
 
     /**

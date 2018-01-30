@@ -27,20 +27,6 @@ class Order extends Intangible
     }
 
     /**
-     * The delivery of the parcel related to this order or order item.
-     *
-     * @param ParcelDelivery|ParcelDelivery[] $orderDelivery
-     *
-     * @return static
-     *
-     * @see 
-     */
-    public function orderDelivery($orderDelivery)
-    {
-        return $this->setProperty('orderDelivery', $orderDelivery);
-    }
-
-    /**
      * The billing address for the order.
      *
      * @param PostalAddress|PostalAddress[] $billingAddress
@@ -52,6 +38,23 @@ class Order extends Intangible
     public function billingAddress($billingAddress)
     {
         return $this->setProperty('billingAddress', $billingAddress);
+    }
+
+    /**
+     * An entity that arranges for an exchange between a buyer and a seller.  In
+     * most cases a broker never acquires or releases ownership of a product or
+     * service involved in an exchange.  If it is not clear whether an entity is
+     * a broker, seller, or buyer, the latter two terms are preferred.
+     *
+     * @param Person|Person[]|Organization|Organization[] $broker
+     *
+     * @return static
+     *
+     * @see 
+     */
+    public function broker($broker)
+    {
+        return $this->setProperty('broker', $broker);
     }
 
     /**
@@ -83,20 +86,6 @@ class Order extends Intangible
     }
 
     /**
-     * Code used to redeem a discount.
-     *
-     * @param string|string[] $discountCode
-     *
-     * @return static
-     *
-     * @see 
-     */
-    public function discountCode($discountCode)
-    {
-        return $this->setProperty('discountCode', $discountCode);
-    }
-
-    /**
      * Any discount applied (to an Order).
      *
      * @param float|float[]|int|int[]|string|string[] $discount
@@ -108,6 +97,20 @@ class Order extends Intangible
     public function discount($discount)
     {
         return $this->setProperty('discount', $discount);
+    }
+
+    /**
+     * Code used to redeem a discount.
+     *
+     * @param string|string[] $discountCode
+     *
+     * @return static
+     *
+     * @see 
+     */
+    public function discountCode($discountCode)
+    {
+        return $this->setProperty('discountCode', $discountCode);
     }
 
     /**
@@ -167,31 +170,17 @@ class Order extends Intangible
     }
 
     /**
-     * The item ordered.
+     * The delivery of the parcel related to this order or order item.
      *
-     * @param Product|Product[]|OrderItem|OrderItem[] $orderedItem
-     *
-     * @return static
-     *
-     * @see 
-     */
-    public function orderedItem($orderedItem)
-    {
-        return $this->setProperty('orderedItem', $orderedItem);
-    }
-
-    /**
-     * The current status of the order.
-     *
-     * @param OrderStatus|OrderStatus[] $orderStatus
+     * @param ParcelDelivery|ParcelDelivery[] $orderDelivery
      *
      * @return static
      *
      * @see 
      */
-    public function orderStatus($orderStatus)
+    public function orderDelivery($orderDelivery)
     {
-        return $this->setProperty('orderStatus', $orderStatus);
+        return $this->setProperty('orderDelivery', $orderDelivery);
     }
 
     /**
@@ -209,6 +198,34 @@ class Order extends Intangible
     }
 
     /**
+     * The current status of the order.
+     *
+     * @param OrderStatus|OrderStatus[] $orderStatus
+     *
+     * @return static
+     *
+     * @see 
+     */
+    public function orderStatus($orderStatus)
+    {
+        return $this->setProperty('orderStatus', $orderStatus);
+    }
+
+    /**
+     * The item ordered.
+     *
+     * @param Product|Product[]|OrderItem|OrderItem[] $orderedItem
+     *
+     * @return static
+     *
+     * @see 
+     */
+    public function orderedItem($orderedItem)
+    {
+        return $this->setProperty('orderedItem', $orderedItem);
+    }
+
+    /**
      * The order is being paid as part of the referenced Invoice.
      *
      * @param Invoice|Invoice[] $partOfInvoice
@@ -220,6 +237,48 @@ class Order extends Intangible
     public function partOfInvoice($partOfInvoice)
     {
         return $this->setProperty('partOfInvoice', $partOfInvoice);
+    }
+
+    /**
+     * The date that payment is due.
+     *
+     * @param \DateTimeInterface|\DateTimeInterface[] $paymentDue
+     *
+     * @return static
+     *
+     * @see 
+     */
+    public function paymentDue($paymentDue)
+    {
+        return $this->setProperty('paymentDue', $paymentDue);
+    }
+
+    /**
+     * The date that payment is due.
+     *
+     * @param \DateTimeInterface|\DateTimeInterface[] $paymentDueDate
+     *
+     * @return static
+     *
+     * @see 
+     */
+    public function paymentDueDate($paymentDueDate)
+    {
+        return $this->setProperty('paymentDueDate', $paymentDueDate);
+    }
+
+    /**
+     * The name of the credit card or other method of payment for the order.
+     *
+     * @param PaymentMethod|PaymentMethod[] $paymentMethod
+     *
+     * @return static
+     *
+     * @see 
+     */
+    public function paymentMethod($paymentMethod)
+    {
+        return $this->setProperty('paymentMethod', $paymentMethod);
     }
 
     /**
@@ -238,20 +297,6 @@ class Order extends Intangible
     }
 
     /**
-     * The name of the credit card or other method of payment for the order.
-     *
-     * @param PaymentMethod|PaymentMethod[] $paymentMethod
-     *
-     * @return static
-     *
-     * @see 
-     */
-    public function paymentMethod($paymentMethod)
-    {
-        return $this->setProperty('paymentMethod', $paymentMethod);
-    }
-
-    /**
      * The URL for sending a payment.
      *
      * @param string|string[] $paymentUrl
@@ -263,20 +308,6 @@ class Order extends Intangible
     public function paymentUrl($paymentUrl)
     {
         return $this->setProperty('paymentUrl', $paymentUrl);
-    }
-
-    /**
-     * The date that payment is due.
-     *
-     * @param \DateTimeInterface|\DateTimeInterface[] $paymentDue
-     *
-     * @return static
-     *
-     * @see 
-     */
-    public function paymentDue($paymentDue)
-    {
-        return $this->setProperty('paymentDue', $paymentDue);
     }
 
     /**
@@ -292,37 +323,6 @@ class Order extends Intangible
     public function seller($seller)
     {
         return $this->setProperty('seller', $seller);
-    }
-
-    /**
-     * The date that payment is due.
-     *
-     * @param \DateTimeInterface|\DateTimeInterface[] $paymentDueDate
-     *
-     * @return static
-     *
-     * @see 
-     */
-    public function paymentDueDate($paymentDueDate)
-    {
-        return $this->setProperty('paymentDueDate', $paymentDueDate);
-    }
-
-    /**
-     * An entity that arranges for an exchange between a buyer and a seller.  In
-     * most cases a broker never acquires or releases ownership of a product or
-     * service involved in an exchange.  If it is not clear whether an entity is
-     * a broker, seller, or buyer, the latter two terms are preferred.
-     *
-     * @param Person|Person[]|Organization|Organization[] $broker
-     *
-     * @return static
-     *
-     * @see 
-     */
-    public function broker($broker)
-    {
-        return $this->setProperty('broker', $broker);
     }
 
 }

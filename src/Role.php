@@ -32,18 +32,19 @@ class Role extends Intangible
     }
 
     /**
-     * The start date and time of the item (in [ISO 8601 date
-     * format](http://en.wikipedia.org/wiki/ISO_8601)).
+     * A position played, performed or filled by a person or organization, as
+     * part of an organization. For example, an athlete in a SportsTeam might
+     * play in the position named 'Quarterback'.
      *
-     * @param \DateTimeInterface|\DateTimeInterface[] $startDate
+     * @param string|string[] $namedPosition
      *
      * @return static
      *
      * @see 
      */
-    public function startDate($startDate)
+    public function namedPosition($namedPosition)
     {
-        return $this->setProperty('startDate', $startDate);
+        return $this->setProperty('namedPosition', $namedPosition);
     }
 
     /**
@@ -64,19 +65,18 @@ class Role extends Intangible
     }
 
     /**
-     * A position played, performed or filled by a person or organization, as
-     * part of an organization. For example, an athlete in a SportsTeam might
-     * play in the position named 'Quarterback'.
+     * The start date and time of the item (in [ISO 8601 date
+     * format](http://en.wikipedia.org/wiki/ISO_8601)).
      *
-     * @param string|string[] $namedPosition
+     * @param \DateTimeInterface|\DateTimeInterface[] $startDate
      *
      * @return static
      *
      * @see 
      */
-    public function namedPosition($namedPosition)
+    public function startDate($startDate)
     {
-        return $this->setProperty('namedPosition', $namedPosition);
+        return $this->setProperty('startDate', $startDate);
     }
 
 }

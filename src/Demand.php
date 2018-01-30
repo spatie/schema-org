@@ -56,6 +56,21 @@ class Demand extends Intangible
     }
 
     /**
+     * The availability of this item&#x2014;for example In stock, Out of stock,
+     * Pre-order, etc.
+     *
+     * @param ItemAvailability|ItemAvailability[] $availability
+     *
+     * @return static
+     *
+     * @see 
+     */
+    public function availability($availability)
+    {
+        return $this->setProperty('availability', $availability);
+    }
+
+    /**
      * The end of the availability of the product or service included in the
      * offer.
      *
@@ -68,20 +83,6 @@ class Demand extends Intangible
     public function availabilityEnds($availabilityEnds)
     {
         return $this->setProperty('availabilityEnds', $availabilityEnds);
-    }
-
-    /**
-     * The place(s) from which the offer can be obtained (e.g. store locations).
-     *
-     * @param Place|Place[] $availableAtOrFrom
-     *
-     * @return static
-     *
-     * @see 
-     */
-    public function availableAtOrFrom($availableAtOrFrom)
-    {
-        return $this->setProperty('availableAtOrFrom', $availableAtOrFrom);
     }
 
     /**
@@ -100,18 +101,17 @@ class Demand extends Intangible
     }
 
     /**
-     * The availability of this item&#x2014;for example In stock, Out of stock,
-     * Pre-order, etc.
+     * The place(s) from which the offer can be obtained (e.g. store locations).
      *
-     * @param ItemAvailability|ItemAvailability[] $availability
+     * @param Place|Place[] $availableAtOrFrom
      *
      * @return static
      *
      * @see 
      */
-    public function availability($availability)
+    public function availableAtOrFrom($availableAtOrFrom)
     {
-        return $this->setProperty('availability', $availability);
+        return $this->setProperty('availableAtOrFrom', $availableAtOrFrom);
     }
 
     /**
@@ -161,59 +161,6 @@ class Demand extends Intangible
     }
 
     /**
-     * The interval and unit of measurement of ordering quantities for which the
-     * offer or price specification is valid. This allows e.g. specifying that a
-     * certain freight charge is valid only for a certain quantity.
-     *
-     * @param QuantitativeValue|QuantitativeValue[] $eligibleQuantity
-     *
-     * @return static
-     *
-     * @see 
-     */
-    public function eligibleQuantity($eligibleQuantity)
-    {
-        return $this->setProperty('eligibleQuantity', $eligibleQuantity);
-    }
-
-    /**
-     * The ISO 3166-1 (ISO 3166-1 alpha-2) or ISO 3166-2 code, the place, or the
-     * GeoShape for the geo-political region(s) for which the offer or delivery
-     * charge specification is not valid, e.g. a region where the transaction is
-     * not allowed.
-     * 
-     * See also [[eligibleRegion]].
-     *
-     * @param GeoShape|GeoShape[]|Place|Place[]|string|string[] $ineligibleRegion
-     *
-     * @return static
-     *
-     * @see 
-     */
-    public function ineligibleRegion($ineligibleRegion)
-    {
-        return $this->setProperty('ineligibleRegion', $ineligibleRegion);
-    }
-
-    /**
-     * The ISO 3166-1 (ISO 3166-1 alpha-2) or ISO 3166-2 code, the place, or the
-     * GeoShape for the geo-political region(s) for which the offer or delivery
-     * charge specification is valid.
-     * 
-     * See also [[ineligibleRegion]].
-     *
-     * @param GeoShape|GeoShape[]|Place|Place[]|string|string[] $eligibleRegion
-     *
-     * @return static
-     *
-     * @see 
-     */
-    public function eligibleRegion($eligibleRegion)
-    {
-        return $this->setProperty('eligibleRegion', $eligibleRegion);
-    }
-
-    /**
      * The type(s) of customers for which the given offer is valid.
      *
      * @param BusinessEntityType|BusinessEntityType[] $eligibleCustomerType
@@ -239,6 +186,40 @@ class Demand extends Intangible
     public function eligibleDuration($eligibleDuration)
     {
         return $this->setProperty('eligibleDuration', $eligibleDuration);
+    }
+
+    /**
+     * The interval and unit of measurement of ordering quantities for which the
+     * offer or price specification is valid. This allows e.g. specifying that a
+     * certain freight charge is valid only for a certain quantity.
+     *
+     * @param QuantitativeValue|QuantitativeValue[] $eligibleQuantity
+     *
+     * @return static
+     *
+     * @see 
+     */
+    public function eligibleQuantity($eligibleQuantity)
+    {
+        return $this->setProperty('eligibleQuantity', $eligibleQuantity);
+    }
+
+    /**
+     * The ISO 3166-1 (ISO 3166-1 alpha-2) or ISO 3166-2 code, the place, or the
+     * GeoShape for the geo-political region(s) for which the offer or delivery
+     * charge specification is valid.
+     * 
+     * See also [[ineligibleRegion]].
+     *
+     * @param GeoShape|GeoShape[]|Place|Place[]|string|string[] $eligibleRegion
+     *
+     * @return static
+     *
+     * @see 
+     */
+    public function eligibleRegion($eligibleRegion)
+    {
+        return $this->setProperty('eligibleRegion', $eligibleRegion);
     }
 
     /**
@@ -278,6 +259,26 @@ class Demand extends Intangible
     }
 
     /**
+     * The [GTIN-13](http://apps.gs1.org/GDD/glossary/Pages/GTIN-13.aspx) code
+     * of the product, or the product to which the offer refers. This is
+     * equivalent to 13-digit ISBN codes and EAN UCC-13. Former 12-digit UPC
+     * codes can be converted into a GTIN-13 code by simply adding a preceeding
+     * zero. See [GS1 GTIN
+     * Summary](http://www.gs1.org/barcodes/technical/idkeys/gtin) for more
+     * details.
+     *
+     * @param string|string[] $gtin13
+     *
+     * @return static
+     *
+     * @see 
+     */
+    public function gtin13($gtin13)
+    {
+        return $this->setProperty('gtin13', $gtin13);
+    }
+
+    /**
      * The [GTIN-14](http://apps.gs1.org/GDD/glossary/Pages/GTIN-14.aspx) code
      * of the product, or the product to which the offer refers. See [GS1 GTIN
      * Summary](http://www.gs1.org/barcodes/technical/idkeys/gtin) for more
@@ -313,26 +314,6 @@ class Demand extends Intangible
     }
 
     /**
-     * The [GTIN-13](http://apps.gs1.org/GDD/glossary/Pages/GTIN-13.aspx) code
-     * of the product, or the product to which the offer refers. This is
-     * equivalent to 13-digit ISBN codes and EAN UCC-13. Former 12-digit UPC
-     * codes can be converted into a GTIN-13 code by simply adding a preceeding
-     * zero. See [GS1 GTIN
-     * Summary](http://www.gs1.org/barcodes/technical/idkeys/gtin) for more
-     * details.
-     *
-     * @param string|string[] $gtin13
-     *
-     * @return static
-     *
-     * @see 
-     */
-    public function gtin13($gtin13)
-    {
-        return $this->setProperty('gtin13', $gtin13);
-    }
-
-    /**
      * This links to a node or nodes indicating the exact quantity of the
      * products included in the offer.
      *
@@ -345,6 +326,25 @@ class Demand extends Intangible
     public function includesObject($includesObject)
     {
         return $this->setProperty('includesObject', $includesObject);
+    }
+
+    /**
+     * The ISO 3166-1 (ISO 3166-1 alpha-2) or ISO 3166-2 code, the place, or the
+     * GeoShape for the geo-political region(s) for which the offer or delivery
+     * charge specification is not valid, e.g. a region where the transaction is
+     * not allowed.
+     * 
+     * See also [[eligibleRegion]].
+     *
+     * @param GeoShape|GeoShape[]|Place|Place[]|string|string[] $ineligibleRegion
+     *
+     * @return static
+     *
+     * @see 
+     */
+    public function ineligibleRegion($ineligibleRegion)
+    {
+        return $this->setProperty('ineligibleRegion', $ineligibleRegion);
     }
 
     /**
@@ -422,6 +422,21 @@ class Demand extends Intangible
     }
 
     /**
+     * An entity which offers (sells / leases / lends / loans) the services /
+     * goods.  A seller may also be a provider.
+     *
+     * @param Organization|Organization[]|Person|Person[] $seller
+     *
+     * @return static
+     *
+     * @see 
+     */
+    public function seller($seller)
+    {
+        return $this->setProperty('seller', $seller);
+    }
+
+    /**
      * The serial number or any alphanumeric identifier of a particular product.
      * When attached to an offer, it is a shortcut for the serial number of the
      * product included in the offer.
@@ -435,21 +450,6 @@ class Demand extends Intangible
     public function serialNumber($serialNumber)
     {
         return $this->setProperty('serialNumber', $serialNumber);
-    }
-
-    /**
-     * An entity which offers (sells / leases / lends / loans) the services /
-     * goods.  A seller may also be a provider.
-     *
-     * @param Organization|Organization[]|Person|Person[] $seller
-     *
-     * @return static
-     *
-     * @see 
-     */
-    public function seller($seller)
-    {
-        return $this->setProperty('seller', $seller);
     }
 
     /**

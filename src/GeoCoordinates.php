@@ -10,6 +10,20 @@ namespace Spatie\SchemaOrg;
 class GeoCoordinates extends StructuredValue
 {
     /**
+     * Physical address of the item.
+     *
+     * @param PostalAddress|PostalAddress[]|string|string[] $address
+     *
+     * @return static
+     *
+     * @see 
+     */
+    public function address($address)
+    {
+        return $this->setProperty('address', $address);
+    }
+
+    /**
      * The country. For example, USA. You can also provide the two-letter [ISO
      * 3166-1 alpha-2 country code](http://en.wikipedia.org/wiki/ISO_3166-1).
      *
@@ -22,20 +36,6 @@ class GeoCoordinates extends StructuredValue
     public function addressCountry($addressCountry)
     {
         return $this->setProperty('addressCountry', $addressCountry);
-    }
-
-    /**
-     * Physical address of the item.
-     *
-     * @param PostalAddress|PostalAddress[]|string|string[] $address
-     *
-     * @return static
-     *
-     * @see 
-     */
-    public function address($address)
-    {
-        return $this->setProperty('address', $address);
     }
 
     /**

@@ -107,6 +107,21 @@ class PriceSpecification extends StructuredValue
     }
 
     /**
+     * The currency (in 3-letter ISO 4217 format) of the price or a price
+     * component, when attached to [[PriceSpecification]] and its subtypes.
+     *
+     * @param string|string[] $priceCurrency
+     *
+     * @return static
+     *
+     * @see 
+     */
+    public function priceCurrency($priceCurrency)
+    {
+        return $this->setProperty('priceCurrency', $priceCurrency);
+    }
+
+    /**
      * The date when the item becomes valid.
      *
      * @param \DateTimeInterface|\DateTimeInterface[] $validFrom
@@ -118,21 +133,6 @@ class PriceSpecification extends StructuredValue
     public function validFrom($validFrom)
     {
         return $this->setProperty('validFrom', $validFrom);
-    }
-
-    /**
-     * Specifies whether the applicable value-added tax (VAT) is included in the
-     * price specification or not.
-     *
-     * @param bool|bool[] $valueAddedTaxIncluded
-     *
-     * @return static
-     *
-     * @see 
-     */
-    public function valueAddedTaxIncluded($valueAddedTaxIncluded)
-    {
-        return $this->setProperty('valueAddedTaxIncluded', $valueAddedTaxIncluded);
     }
 
     /**
@@ -151,18 +151,18 @@ class PriceSpecification extends StructuredValue
     }
 
     /**
-     * The currency (in 3-letter ISO 4217 format) of the price or a price
-     * component, when attached to [[PriceSpecification]] and its subtypes.
+     * Specifies whether the applicable value-added tax (VAT) is included in the
+     * price specification or not.
      *
-     * @param string|string[] $priceCurrency
+     * @param bool|bool[] $valueAddedTaxIncluded
      *
      * @return static
      *
      * @see 
      */
-    public function priceCurrency($priceCurrency)
+    public function valueAddedTaxIncluded($valueAddedTaxIncluded)
     {
-        return $this->setProperty('priceCurrency', $priceCurrency);
+        return $this->setProperty('valueAddedTaxIncluded', $valueAddedTaxIncluded);
     }
 
 }

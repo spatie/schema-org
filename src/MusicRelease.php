@@ -10,6 +10,20 @@ namespace Spatie\SchemaOrg;
 class MusicRelease extends MusicPlaylist
 {
     /**
+     * The catalog number for the release.
+     *
+     * @param string|string[] $catalogNumber
+     *
+     * @return static
+     *
+     * @see 
+     */
+    public function catalogNumber($catalogNumber)
+    {
+        return $this->setProperty('catalogNumber', $catalogNumber);
+    }
+
+    /**
      * The group the release is credited to if different than the byArtist. For
      * example, Red and Blue is credited to "Stefani Germanotta Band", but by
      * Lady Gaga.
@@ -26,34 +40,6 @@ class MusicRelease extends MusicPlaylist
     }
 
     /**
-     * The label that issued the release.
-     *
-     * @param Organization|Organization[] $recordLabel
-     *
-     * @return static
-     *
-     * @see 
-     */
-    public function recordLabel($recordLabel)
-    {
-        return $this->setProperty('recordLabel', $recordLabel);
-    }
-
-    /**
-     * The catalog number for the release.
-     *
-     * @param string|string[] $catalogNumber
-     *
-     * @return static
-     *
-     * @see 
-     */
-    public function catalogNumber($catalogNumber)
-    {
-        return $this->setProperty('catalogNumber', $catalogNumber);
-    }
-
-    /**
      * Format of this release (the type of recording media used, ie. compact
      * disc, digital media, LP, etc.).
      *
@@ -66,6 +52,20 @@ class MusicRelease extends MusicPlaylist
     public function musicReleaseFormat($musicReleaseFormat)
     {
         return $this->setProperty('musicReleaseFormat', $musicReleaseFormat);
+    }
+
+    /**
+     * The label that issued the release.
+     *
+     * @param Organization|Organization[] $recordLabel
+     *
+     * @return static
+     *
+     * @see 
+     */
+    public function recordLabel($recordLabel)
+    {
+        return $this->setProperty('recordLabel', $recordLabel);
     }
 
     /**

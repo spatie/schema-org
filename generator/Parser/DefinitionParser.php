@@ -17,34 +17,44 @@ class DefinitionParser
     {
         $pool = Pool::create();
 
+        $tasks = [];
+
         $definitions
             ->query('[typeof="rdfs:Class"]')
-            ->each(function (Crawler $crawler) use ($pool) {
-                $pool->add(new ParseType($crawler->html()));
+            ->each(function (Crawler $crawler) use (&$tasks) {
+                $tasks[] = new ParseType($crawler->html());
             });
 
         $definitions
             ->query('[typeof="rdf:Property"]')
-            ->each(function (Crawler $crawler) use ($pool) {
-                $pool->add(new ParseProperty($crawler->html()));
+            ->each(function (Crawler $crawler) use (&$tasks) {
+                $tasks[] = new ParseProperty($crawler->html());
             });
+
+        foreach (array_chunk($tasks, 20) as $chunk) {
+            $pool->add(function () use ($chunk) {
+                return array_map(function ($task) {
+                    return call_user_func($task);
+                }, $chunk);
+            });
+        }
 
         $types = new TypeCollection();
         $properties = [];
 
-        foreach ($pool->wait() as $result) {
-            if ($result instanceof Type) {
-                $types->push($result);
-            }
+        foreach ($pool->wait() as $results) {
+            foreach ($results as $result) {
+                if ($result instanceof Type) {
+                    $types->push($result);
+                }
 
-            if ($result instanceof Property) {
-                $properties[] = $result;
+                if ($result instanceof Property) {
+                    $properties[] = $result;
+                }
             }
         }
 
-        foreach ($properties as $property) {
-            $types->addProperty($property);
-        }
+        $types->addProperties($properties);
 
         return $types;
     }

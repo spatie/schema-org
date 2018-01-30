@@ -24,20 +24,6 @@ class MusicPlaylist extends CreativeWork
     }
 
     /**
-     * A music recording (track)&#x2014;usually a single song.
-     *
-     * @param MusicRecording|MusicRecording[] $tracks
-     *
-     * @return static
-     *
-     * @see 
-     */
-    public function tracks($tracks)
-    {
-        return $this->setProperty('tracks', $tracks);
-    }
-
-    /**
      * A music recording (track)&#x2014;usually a single song. If an ItemList is
      * given, the list should contain items of type MusicRecording.
      *
@@ -50,6 +36,20 @@ class MusicPlaylist extends CreativeWork
     public function track($track)
     {
         return $this->setProperty('track', $track);
+    }
+
+    /**
+     * A music recording (track)&#x2014;usually a single song.
+     *
+     * @param MusicRecording|MusicRecording[] $tracks
+     *
+     * @return static
+     *
+     * @see 
+     */
+    public function tracks($tracks)
+    {
+        return $this->setProperty('tracks', $tracks);
     }
 
 }

@@ -10,6 +10,63 @@ namespace Spatie\SchemaOrg;
 class Message extends CreativeWork
 {
     /**
+     * The date/time at which the message has been read by the recipient if a
+     * single recipient exists.
+     *
+     * @param \DateTimeInterface|\DateTimeInterface[] $dateRead
+     *
+     * @return static
+     *
+     * @see 
+     */
+    public function dateRead($dateRead)
+    {
+        return $this->setProperty('dateRead', $dateRead);
+    }
+
+    /**
+     * The date/time the message was received if a single recipient exists.
+     *
+     * @param \DateTimeInterface|\DateTimeInterface[] $dateReceived
+     *
+     * @return static
+     *
+     * @see 
+     */
+    public function dateReceived($dateReceived)
+    {
+        return $this->setProperty('dateReceived', $dateReceived);
+    }
+
+    /**
+     * The date/time at which the message was sent.
+     *
+     * @param \DateTimeInterface|\DateTimeInterface[] $dateSent
+     *
+     * @return static
+     *
+     * @see 
+     */
+    public function dateSent($dateSent)
+    {
+        return $this->setProperty('dateSent', $dateSent);
+    }
+
+    /**
+     * A CreativeWork attached to the message.
+     *
+     * @param CreativeWork|CreativeWork[] $messageAttachment
+     *
+     * @return static
+     *
+     * @see 
+     */
+    public function messageAttachment($messageAttachment)
+    {
+        return $this->setProperty('messageAttachment', $messageAttachment);
+    }
+
+    /**
      * A sub property of participant. The participant who is at the receiving
      * end of the action.
      *
@@ -37,63 +94,6 @@ class Message extends CreativeWork
     public function sender($sender)
     {
         return $this->setProperty('sender', $sender);
-    }
-
-    /**
-     * The date/time at which the message has been read by the recipient if a
-     * single recipient exists.
-     *
-     * @param \DateTimeInterface|\DateTimeInterface[] $dateRead
-     *
-     * @return static
-     *
-     * @see 
-     */
-    public function dateRead($dateRead)
-    {
-        return $this->setProperty('dateRead', $dateRead);
-    }
-
-    /**
-     * A CreativeWork attached to the message.
-     *
-     * @param CreativeWork|CreativeWork[] $messageAttachment
-     *
-     * @return static
-     *
-     * @see 
-     */
-    public function messageAttachment($messageAttachment)
-    {
-        return $this->setProperty('messageAttachment', $messageAttachment);
-    }
-
-    /**
-     * The date/time at which the message was sent.
-     *
-     * @param \DateTimeInterface|\DateTimeInterface[] $dateSent
-     *
-     * @return static
-     *
-     * @see 
-     */
-    public function dateSent($dateSent)
-    {
-        return $this->setProperty('dateSent', $dateSent);
-    }
-
-    /**
-     * The date/time the message was received if a single recipient exists.
-     *
-     * @param \DateTimeInterface|\DateTimeInterface[] $dateReceived
-     *
-     * @return static
-     *
-     * @see 
-     */
-    public function dateReceived($dateReceived)
-    {
-        return $this->setProperty('dateReceived', $dateReceived);
     }
 
 }

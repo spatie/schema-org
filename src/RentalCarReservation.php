@@ -28,20 +28,6 @@ class RentalCarReservation extends Reservation
     }
 
     /**
-     * When a taxi will pickup a passenger or a rental car can be picked up.
-     *
-     * @param \DateTimeInterface|\DateTimeInterface[] $pickupTime
-     *
-     * @return static
-     *
-     * @see 
-     */
-    public function pickupTime($pickupTime)
-    {
-        return $this->setProperty('pickupTime', $pickupTime);
-    }
-
-    /**
      * When a rental car can be dropped off.
      *
      * @param \DateTimeInterface|\DateTimeInterface[] $dropoffTime
@@ -67,6 +53,20 @@ class RentalCarReservation extends Reservation
     public function pickupLocation($pickupLocation)
     {
         return $this->setProperty('pickupLocation', $pickupLocation);
+    }
+
+    /**
+     * When a taxi will pickup a passenger or a rental car can be picked up.
+     *
+     * @param \DateTimeInterface|\DateTimeInterface[] $pickupTime
+     *
+     * @return static
+     *
+     * @see 
+     */
+    public function pickupTime($pickupTime)
+    {
+        return $this->setProperty('pickupTime', $pickupTime);
     }
 
 }

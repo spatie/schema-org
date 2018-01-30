@@ -17,6 +17,20 @@ namespace Spatie\SchemaOrg;
 class Action extends Thing
 {
     /**
+     * Indicates the current disposition of the Action.
+     *
+     * @param ActionStatusType|ActionStatusType[] $actionStatus
+     *
+     * @return static
+     *
+     * @see 
+     */
+    public function actionStatus($actionStatus)
+    {
+        return $this->setProperty('actionStatus', $actionStatus);
+    }
+
+    /**
      * The direct performer or driver of the action (animate or inanimate). e.g.
      * *John* wrote a book.
      *
@@ -50,6 +64,20 @@ class Action extends Thing
     public function endTime($endTime)
     {
         return $this->setProperty('endTime', $endTime);
+    }
+
+    /**
+     * For failed actions, more information on the cause of the failure.
+     *
+     * @param Thing|Thing[] $error
+     *
+     * @return static
+     *
+     * @see 
+     */
+    public function error($error)
+    {
+        return $this->setProperty('error', $error);
     }
 
     /**
@@ -147,34 +175,6 @@ class Action extends Thing
     public function startTime($startTime)
     {
         return $this->setProperty('startTime', $startTime);
-    }
-
-    /**
-     * For failed actions, more information on the cause of the failure.
-     *
-     * @param Thing|Thing[] $error
-     *
-     * @return static
-     *
-     * @see 
-     */
-    public function error($error)
-    {
-        return $this->setProperty('error', $error);
-    }
-
-    /**
-     * Indicates the current disposition of the Action.
-     *
-     * @param ActionStatusType|ActionStatusType[] $actionStatus
-     *
-     * @return static
-     *
-     * @see 
-     */
-    public function actionStatus($actionStatus)
-    {
-        return $this->setProperty('actionStatus', $actionStatus);
     }
 
     /**

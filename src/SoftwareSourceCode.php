@@ -26,6 +26,21 @@ class SoftwareSourceCode extends CreativeWork
     }
 
     /**
+     * What type of code sample: full (compile ready) solution, code snippet,
+     * inline code, scripts, template.
+     *
+     * @param string|string[] $codeSampleType
+     *
+     * @return static
+     *
+     * @see 
+     */
+    public function codeSampleType($codeSampleType)
+    {
+        return $this->setProperty('codeSampleType', $codeSampleType);
+    }
+
+    /**
      * The computer programming language.
      *
      * @param ComputerLanguage|ComputerLanguage[]|string|string[] $programmingLanguage
@@ -37,6 +52,21 @@ class SoftwareSourceCode extends CreativeWork
     public function programmingLanguage($programmingLanguage)
     {
         return $this->setProperty('programmingLanguage', $programmingLanguage);
+    }
+
+    /**
+     * Runtime platform or script interpreter dependencies (Example - Java v1,
+     * Python2.3, .Net Framework 3.0).
+     *
+     * @param string|string[] $runtime
+     *
+     * @return static
+     *
+     * @see 
+     */
+    public function runtime($runtime)
+    {
+        return $this->setProperty('runtime', $runtime);
     }
 
     /**
@@ -58,21 +88,6 @@ class SoftwareSourceCode extends CreativeWork
      * What type of code sample: full (compile ready) solution, code snippet,
      * inline code, scripts, template.
      *
-     * @param string|string[] $codeSampleType
-     *
-     * @return static
-     *
-     * @see 
-     */
-    public function codeSampleType($codeSampleType)
-    {
-        return $this->setProperty('codeSampleType', $codeSampleType);
-    }
-
-    /**
-     * What type of code sample: full (compile ready) solution, code snippet,
-     * inline code, scripts, template.
-     *
      * @param string|string[] $sampleType
      *
      * @return static
@@ -82,21 +97,6 @@ class SoftwareSourceCode extends CreativeWork
     public function sampleType($sampleType)
     {
         return $this->setProperty('sampleType', $sampleType);
-    }
-
-    /**
-     * Runtime platform or script interpreter dependencies (Example - Java v1,
-     * Python2.3, .Net Framework 3.0).
-     *
-     * @param string|string[] $runtime
-     *
-     * @return static
-     *
-     * @see 
-     */
-    public function runtime($runtime)
-    {
-        return $this->setProperty('runtime', $runtime);
     }
 
     /**

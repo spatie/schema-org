@@ -10,17 +10,18 @@ namespace Spatie\SchemaOrg;
 class BroadcastChannel extends Intangible
 {
     /**
-     * Genre of the creative work, broadcast channel or group.
+     * The unique address by which the BroadcastService can be identified in a
+     * provider lineup. In US, this is typically a number.
      *
-     * @param string|string[] $genre
+     * @param string|string[] $broadcastChannelId
      *
      * @return static
      *
      * @see 
      */
-    public function genre($genre)
+    public function broadcastChannelId($broadcastChannelId)
     {
-        return $this->setProperty('genre', $genre);
+        return $this->setProperty('broadcastChannelId', $broadcastChannelId);
     }
 
     /**
@@ -39,18 +40,17 @@ class BroadcastChannel extends Intangible
     }
 
     /**
-     * The unique address by which the BroadcastService can be identified in a
-     * provider lineup. In US, this is typically a number.
+     * Genre of the creative work, broadcast channel or group.
      *
-     * @param string|string[] $broadcastChannelId
+     * @param string|string[] $genre
      *
      * @return static
      *
      * @see 
      */
-    public function broadcastChannelId($broadcastChannelId)
+    public function genre($genre)
     {
-        return $this->setProperty('broadcastChannelId', $broadcastChannelId);
+        return $this->setProperty('genre', $genre);
     }
 
     /**

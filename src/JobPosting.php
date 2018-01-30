@@ -26,20 +26,6 @@ class JobPosting extends Intangible
     /**
      * Description of benefits associated with the job.
      *
-     * @param string|string[] $jobBenefits
-     *
-     * @return static
-     *
-     * @see 
-     */
-    public function jobBenefits($jobBenefits)
-    {
-        return $this->setProperty('jobBenefits', $jobBenefits);
-    }
-
-    /**
-     * Description of benefits associated with the job.
-     *
      * @param string|string[] $benefits
      *
      * @return static
@@ -137,6 +123,20 @@ class JobPosting extends Intangible
     }
 
     /**
+     * Description of bonus and commission compensation aspects of the job.
+     *
+     * @param string|string[] $incentives
+     *
+     * @return static
+     *
+     * @see 
+     */
+    public function incentives($incentives)
+    {
+        return $this->setProperty('incentives', $incentives);
+    }
+
+    /**
      * The industry associated with the job position.
      *
      * @param string|string[] $industry
@@ -151,17 +151,17 @@ class JobPosting extends Intangible
     }
 
     /**
-     * Description of bonus and commission compensation aspects of the job.
+     * Description of benefits associated with the job.
      *
-     * @param string|string[] $incentives
+     * @param string|string[] $jobBenefits
      *
      * @return static
      *
      * @see 
      */
-    public function incentives($incentives)
+    public function jobBenefits($jobBenefits)
     {
-        return $this->setProperty('incentives', $incentives);
+        return $this->setProperty('jobBenefits', $jobBenefits);
     }
 
     /**
@@ -240,6 +240,20 @@ class JobPosting extends Intangible
     }
 
     /**
+     * Skills required to fulfill this role.
+     *
+     * @param string|string[] $skills
+     *
+     * @return static
+     *
+     * @see 
+     */
+    public function skills($skills)
+    {
+        return $this->setProperty('skills', $skills);
+    }
+
+    /**
      * Any special commitments associated with this job posting. Valid entries
      * include VeteranCommit, MilitarySpouseCommit, etc.
      *
@@ -281,20 +295,6 @@ class JobPosting extends Intangible
     public function validThrough($validThrough)
     {
         return $this->setProperty('validThrough', $validThrough);
-    }
-
-    /**
-     * Skills required to fulfill this role.
-     *
-     * @param string|string[] $skills
-     *
-     * @return static
-     *
-     * @see 
-     */
-    public function skills($skills)
-    {
-        return $this->setProperty('skills', $skills);
     }
 
     /**

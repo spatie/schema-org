@@ -24,6 +24,20 @@ class Review extends CreativeWork
     }
 
     /**
+     * The actual body of the review.
+     *
+     * @param string|string[] $reviewBody
+     *
+     * @return static
+     *
+     * @see 
+     */
+    public function reviewBody($reviewBody)
+    {
+        return $this->setProperty('reviewBody', $reviewBody);
+    }
+
+    /**
      * The rating given in this review. Note that reviews can themselves be
      * rated. The ```reviewRating``` applies to rating given by the review. The
      * [[aggregateRating]] property applies to the review itself, as a creative
@@ -38,20 +52,6 @@ class Review extends CreativeWork
     public function reviewRating($reviewRating)
     {
         return $this->setProperty('reviewRating', $reviewRating);
-    }
-
-    /**
-     * The actual body of the review.
-     *
-     * @param string|string[] $reviewBody
-     *
-     * @return static
-     *
-     * @see 
-     */
-    public function reviewBody($reviewBody)
-    {
-        return $this->setProperty('reviewBody', $reviewBody);
     }
 
 }

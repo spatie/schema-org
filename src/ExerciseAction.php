@@ -13,20 +13,6 @@ class ExerciseAction extends PlayAction
     /**
      * A sub property of location. The course where this action was taken.
      *
-     * @param Place|Place[] $exerciseCourse
-     *
-     * @return static
-     *
-     * @see 
-     */
-    public function exerciseCourse($exerciseCourse)
-    {
-        return $this->setProperty('exerciseCourse', $exerciseCourse);
-    }
-
-    /**
-     * A sub property of location. The course where this action was taken.
-     *
      * @param Place|Place[] $course
      *
      * @return static
@@ -50,6 +36,20 @@ class ExerciseAction extends PlayAction
     public function distance($distance)
     {
         return $this->setProperty('distance', $distance);
+    }
+
+    /**
+     * A sub property of location. The course where this action was taken.
+     *
+     * @param Place|Place[] $exerciseCourse
+     *
+     * @return static
+     *
+     * @see 
+     */
+    public function exerciseCourse($exerciseCourse)
+    {
+        return $this->setProperty('exerciseCourse', $exerciseCourse);
     }
 
     /**
@@ -82,20 +82,6 @@ class ExerciseAction extends PlayAction
     }
 
     /**
-     * A sub property of location. The sports event where this action occurred.
-     *
-     * @param SportsEvent|SportsEvent[] $sportsEvent
-     *
-     * @return static
-     *
-     * @see 
-     */
-    public function sportsEvent($sportsEvent)
-    {
-        return $this->setProperty('sportsEvent', $sportsEvent);
-    }
-
-    /**
      * A sub property of location. The sports activity location where this
      * action occurred.
      *
@@ -108,6 +94,20 @@ class ExerciseAction extends PlayAction
     public function sportsActivityLocation($sportsActivityLocation)
     {
         return $this->setProperty('sportsActivityLocation', $sportsActivityLocation);
+    }
+
+    /**
+     * A sub property of location. The sports event where this action occurred.
+     *
+     * @param SportsEvent|SportsEvent[] $sportsEvent
+     *
+     * @return static
+     *
+     * @see 
+     */
+    public function sportsEvent($sportsEvent)
+    {
+        return $this->setProperty('sportsEvent', $sportsEvent);
     }
 
     /**

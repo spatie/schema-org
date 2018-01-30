@@ -10,6 +10,28 @@ namespace Spatie\SchemaOrg;
 class Place extends Thing
 {
     /**
+     * A property-value pair representing an additional characteristics of the
+     * entitity, e.g. a product feature or another characteristic for which
+     * there is no matching property in schema.org.
+     * 
+     * Note: Publishers should be aware that applications designed to use
+     * specific schema.org properties (e.g. http://schema.org/width,
+     * http://schema.org/color, http://schema.org/gtin13, ...) will typically
+     * expect such data to be provided using those properties, rather than using
+     * the generic property/value mechanism.
+     *
+     * @param PropertyValue|PropertyValue[] $additionalProperty
+     *
+     * @return static
+     *
+     * @see 
+     */
+    public function additionalProperty($additionalProperty)
+    {
+        return $this->setProperty('additionalProperty', $additionalProperty);
+    }
+
+    /**
      * Physical address of the item.
      *
      * @param PostalAddress|PostalAddress[]|string|string[] $address
@@ -39,6 +61,23 @@ class Place extends Thing
     }
 
     /**
+     * An amenity feature (e.g. a characteristic or service) of the
+     * Accommodation. This generic property does not make a statement about
+     * whether the feature is included in an offer for the main accommodation or
+     * available at extra costs.
+     *
+     * @param LocationFeatureSpecification|LocationFeatureSpecification[] $amenityFeature
+     *
+     * @return static
+     *
+     * @see 
+     */
+    public function amenityFeature($amenityFeature)
+    {
+        return $this->setProperty('amenityFeature', $amenityFeature);
+    }
+
+    /**
      * A short textual code (also called "store code") that uniquely identifies
      * a place of business. The code is typically assigned by the
      * parentOrganization and used in structured URLs.
@@ -56,21 +95,6 @@ class Place extends Thing
     public function branchCode($branchCode)
     {
         return $this->setProperty('branchCode', $branchCode);
-    }
-
-    /**
-     * The basic containment relation between a place and another that it
-     * contains.
-     *
-     * @param Place|Place[] $containsPlace
-     *
-     * @return static
-     *
-     * @see 
-     */
-    public function containsPlace($containsPlace)
-    {
-        return $this->setProperty('containsPlace', $containsPlace);
     }
 
     /**
@@ -99,6 +123,21 @@ class Place extends Thing
     public function containedInPlace($containedInPlace)
     {
         return $this->setProperty('containedInPlace', $containedInPlace);
+    }
+
+    /**
+     * The basic containment relation between a place and another that it
+     * contains.
+     *
+     * @param Place|Place[] $containsPlace
+     *
+     * @return static
+     *
+     * @see 
+     */
+    public function containsPlace($containsPlace)
+    {
+        return $this->setProperty('containsPlace', $containsPlace);
     }
 
     /**
@@ -176,6 +215,20 @@ class Place extends Thing
     }
 
     /**
+     * A URL to a map of the place.
+     *
+     * @param string|string[]|Map|Map[] $hasMap
+     *
+     * @return static
+     *
+     * @see 
+     */
+    public function hasMap($hasMap)
+    {
+        return $this->setProperty('hasMap', $hasMap);
+    }
+
+    /**
      * The International Standard of Industrial Classification of All Economic
      * Activities (ISIC), Revision 4 code for a particular organization,
      * business person, or place.
@@ -222,20 +275,6 @@ class Place extends Thing
     /**
      * A URL to a map of the place.
      *
-     * @param string|string[]|Map|Map[] $hasMap
-     *
-     * @return static
-     *
-     * @see 
-     */
-    public function hasMap($hasMap)
-    {
-        return $this->setProperty('hasMap', $hasMap);
-    }
-
-    /**
-     * A URL to a map of the place.
-     *
      * @param string|string[] $maps
      *
      * @return static
@@ -259,23 +298,6 @@ class Place extends Thing
     public function maximumAttendeeCapacity($maximumAttendeeCapacity)
     {
         return $this->setProperty('maximumAttendeeCapacity', $maximumAttendeeCapacity);
-    }
-
-    /**
-     * The special opening hours of a certain place.
-     * 
-     * Use this to explicitly override general opening hours brought in scope by
-     * [[openingHoursSpecification]] or [[openingHours]].
-     *
-     * @param OpeningHoursSpecification|OpeningHoursSpecification[] $specialOpeningHoursSpecification
-     *
-     * @return static
-     *
-     * @see 
-     */
-    public function specialOpeningHoursSpecification($specialOpeningHoursSpecification)
-    {
-        return $this->setProperty('specialOpeningHoursSpecification', $specialOpeningHoursSpecification);
     }
 
     /**
@@ -349,59 +371,6 @@ class Place extends Thing
     }
 
     /**
-     * The telephone number.
-     *
-     * @param string|string[] $telephone
-     *
-     * @return static
-     *
-     * @see 
-     */
-    public function telephone($telephone)
-    {
-        return $this->setProperty('telephone', $telephone);
-    }
-
-    /**
-     * A property-value pair representing an additional characteristics of the
-     * entitity, e.g. a product feature or another characteristic for which
-     * there is no matching property in schema.org.
-     * 
-     * Note: Publishers should be aware that applications designed to use
-     * specific schema.org properties (e.g. http://schema.org/width,
-     * http://schema.org/color, http://schema.org/gtin13, ...) will typically
-     * expect such data to be provided using those properties, rather than using
-     * the generic property/value mechanism.
-     *
-     * @param PropertyValue|PropertyValue[] $additionalProperty
-     *
-     * @return static
-     *
-     * @see 
-     */
-    public function additionalProperty($additionalProperty)
-    {
-        return $this->setProperty('additionalProperty', $additionalProperty);
-    }
-
-    /**
-     * An amenity feature (e.g. a characteristic or service) of the
-     * Accommodation. This generic property does not make a statement about
-     * whether the feature is included in an offer for the main accommodation or
-     * available at extra costs.
-     *
-     * @param LocationFeatureSpecification|LocationFeatureSpecification[] $amenityFeature
-     *
-     * @return static
-     *
-     * @see 
-     */
-    public function amenityFeature($amenityFeature)
-    {
-        return $this->setProperty('amenityFeature', $amenityFeature);
-    }
-
-    /**
      * Indicates whether it is allowed to smoke in the place, e.g. in the
      * restaurant, hotel or hotel room.
      *
@@ -414,6 +383,37 @@ class Place extends Thing
     public function smokingAllowed($smokingAllowed)
     {
         return $this->setProperty('smokingAllowed', $smokingAllowed);
+    }
+
+    /**
+     * The special opening hours of a certain place.
+     * 
+     * Use this to explicitly override general opening hours brought in scope by
+     * [[openingHoursSpecification]] or [[openingHours]].
+     *
+     * @param OpeningHoursSpecification|OpeningHoursSpecification[] $specialOpeningHoursSpecification
+     *
+     * @return static
+     *
+     * @see 
+     */
+    public function specialOpeningHoursSpecification($specialOpeningHoursSpecification)
+    {
+        return $this->setProperty('specialOpeningHoursSpecification', $specialOpeningHoursSpecification);
+    }
+
+    /**
+     * The telephone number.
+     *
+     * @param string|string[] $telephone
+     *
+     * @return static
+     *
+     * @see 
+     */
+    public function telephone($telephone)
+    {
+        return $this->setProperty('telephone', $telephone);
     }
 
 }

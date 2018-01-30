@@ -12,20 +12,6 @@ namespace Spatie\SchemaOrg;
 class UserComments extends UserInteraction
 {
     /**
-     * The time at which the UserComment was made.
-     *
-     * @param \DateTimeInterface|\DateTimeInterface[] $commentTime
-     *
-     * @return static
-     *
-     * @see 
-     */
-    public function commentTime($commentTime)
-    {
-        return $this->setProperty('commentTime', $commentTime);
-    }
-
-    /**
      * The text of the UserComment.
      *
      * @param string|string[] $commentText
@@ -37,6 +23,20 @@ class UserComments extends UserInteraction
     public function commentText($commentText)
     {
         return $this->setProperty('commentText', $commentText);
+    }
+
+    /**
+     * The time at which the UserComment was made.
+     *
+     * @param \DateTimeInterface|\DateTimeInterface[] $commentTime
+     *
+     * @return static
+     *
+     * @see 
+     */
+    public function commentTime($commentTime)
+    {
+        return $this->setProperty('commentTime', $commentTime);
     }
 
     /**

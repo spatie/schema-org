@@ -10,21 +10,6 @@ namespace Spatie\SchemaOrg;
 class ScreeningEvent extends Event
 {
     /**
-     * The type of screening or video broadcast used (e.g. IMAX, 3D, SD, HD,
-     * etc.).
-     *
-     * @param string|string[] $videoFormat
-     *
-     * @return static
-     *
-     * @see 
-     */
-    public function videoFormat($videoFormat)
-    {
-        return $this->setProperty('videoFormat', $videoFormat);
-    }
-
-    /**
      * Languages in which subtitles/captions are available, in [IETF BCP 47
      * standard format](http://tools.ietf.org/html/bcp47).
      *
@@ -37,6 +22,21 @@ class ScreeningEvent extends Event
     public function subtitleLanguage($subtitleLanguage)
     {
         return $this->setProperty('subtitleLanguage', $subtitleLanguage);
+    }
+
+    /**
+     * The type of screening or video broadcast used (e.g. IMAX, 3D, SD, HD,
+     * etc.).
+     *
+     * @param string|string[] $videoFormat
+     *
+     * @return static
+     *
+     * @see 
+     */
+    public function videoFormat($videoFormat)
+    {
+        return $this->setProperty('videoFormat', $videoFormat);
     }
 
     /**

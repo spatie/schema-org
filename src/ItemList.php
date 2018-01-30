@@ -12,36 +12,6 @@ namespace Spatie\SchemaOrg;
 class ItemList extends Intangible
 {
     /**
-     * The number of items in an ItemList. Note that some descriptions might not
-     * fully describe all items in a list (e.g., multi-page pagination); in such
-     * cases, the numberOfItems would be for the entire list.
-     *
-     * @param int|int[] $numberOfItems
-     *
-     * @return static
-     *
-     * @see 
-     */
-    public function numberOfItems($numberOfItems)
-    {
-        return $this->setProperty('numberOfItems', $numberOfItems);
-    }
-
-    /**
-     * Type of ordering (e.g. Ascending, Descending, Unordered).
-     *
-     * @param ItemListOrderType|ItemListOrderType[]|string|string[] $itemListOrder
-     *
-     * @return static
-     *
-     * @see 
-     */
-    public function itemListOrder($itemListOrder)
-    {
-        return $this->setProperty('itemListOrder', $itemListOrder);
-    }
-
-    /**
      * For itemListElement values, you can use simple strings (e.g. "Peter",
      * "Paul", "Mary"), existing entities, or use ListItem.
      * 
@@ -64,6 +34,36 @@ class ItemList extends Intangible
     public function itemListElement($itemListElement)
     {
         return $this->setProperty('itemListElement', $itemListElement);
+    }
+
+    /**
+     * Type of ordering (e.g. Ascending, Descending, Unordered).
+     *
+     * @param ItemListOrderType|ItemListOrderType[]|string|string[] $itemListOrder
+     *
+     * @return static
+     *
+     * @see 
+     */
+    public function itemListOrder($itemListOrder)
+    {
+        return $this->setProperty('itemListOrder', $itemListOrder);
+    }
+
+    /**
+     * The number of items in an ItemList. Note that some descriptions might not
+     * fully describe all items in a list (e.g., multi-page pagination); in such
+     * cases, the numberOfItems would be for the entire list.
+     *
+     * @param int|int[] $numberOfItems
+     *
+     * @return static
+     *
+     * @see 
+     */
+    public function numberOfItems($numberOfItems)
+    {
+        return $this->setProperty('numberOfItems', $numberOfItems);
     }
 
 }

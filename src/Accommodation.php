@@ -17,38 +17,6 @@ namespace Spatie\SchemaOrg;
 class Accommodation extends Place
 {
     /**
-     * The number of rooms (excluding bathrooms and closets) of the
-     * acccommodation or lodging business.
-     * Typical unit code(s): ROM for room or C62 for no unit. The type of room
-     * can be put in the unitText property of the QuantitativeValue.
-     *
-     * @param float|float[]|int|int[]|QuantitativeValue|QuantitativeValue[] $numberOfRooms
-     *
-     * @return static
-     *
-     * @see 
-     */
-    public function numberOfRooms($numberOfRooms)
-    {
-        return $this->setProperty('numberOfRooms', $numberOfRooms);
-    }
-
-    /**
-     * Indicates whether pets are allowed to enter the accommodation or lodging
-     * business. More detailed information can be put in a text value.
-     *
-     * @param bool|bool[]|string|string[] $petsAllowed
-     *
-     * @return static
-     *
-     * @see 
-     */
-    public function petsAllowed($petsAllowed)
-    {
-        return $this->setProperty('petsAllowed', $petsAllowed);
-    }
-
-    /**
      * An amenity feature (e.g. a characteristic or service) of the
      * Accommodation. This generic property does not make a statement about
      * whether the feature is included in an offer for the main accommodation or
@@ -82,6 +50,23 @@ class Accommodation extends Place
     }
 
     /**
+     * The number of rooms (excluding bathrooms and closets) of the
+     * acccommodation or lodging business.
+     * Typical unit code(s): ROM for room or C62 for no unit. The type of room
+     * can be put in the unitText property of the QuantitativeValue.
+     *
+     * @param float|float[]|int|int[]|QuantitativeValue|QuantitativeValue[] $numberOfRooms
+     *
+     * @return static
+     *
+     * @see 
+     */
+    public function numberOfRooms($numberOfRooms)
+    {
+        return $this->setProperty('numberOfRooms', $numberOfRooms);
+    }
+
+    /**
      * Indications regarding the permitted usage of the accommodation.
      *
      * @param string|string[] $permittedUsage
@@ -93,6 +78,21 @@ class Accommodation extends Place
     public function permittedUsage($permittedUsage)
     {
         return $this->setProperty('permittedUsage', $permittedUsage);
+    }
+
+    /**
+     * Indicates whether pets are allowed to enter the accommodation or lodging
+     * business. More detailed information can be put in a text value.
+     *
+     * @param bool|bool[]|string|string[] $petsAllowed
+     *
+     * @return static
+     *
+     * @see 
+     */
+    public function petsAllowed($petsAllowed)
+    {
+        return $this->setProperty('petsAllowed', $petsAllowed);
     }
 
 }

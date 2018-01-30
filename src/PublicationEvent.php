@@ -12,20 +12,6 @@ namespace Spatie\SchemaOrg;
 class PublicationEvent extends Event
 {
     /**
-     * A flag to signal that the publication is accessible for free.
-     *
-     * @param bool|bool[] $isAccessibleForFree
-     *
-     * @return static
-     *
-     * @see 
-     */
-    public function isAccessibleForFree($isAccessibleForFree)
-    {
-        return $this->setProperty('isAccessibleForFree', $isAccessibleForFree);
-    }
-
-    /**
      * A flag to signal that the publication or event is accessible for free.
      *
      * @param bool|bool[] $free
@@ -37,6 +23,20 @@ class PublicationEvent extends Event
     public function free($free)
     {
         return $this->setProperty('free', $free);
+    }
+
+    /**
+     * A flag to signal that the publication is accessible for free.
+     *
+     * @param bool|bool[] $isAccessibleForFree
+     *
+     * @return static
+     *
+     * @see 
+     */
+    public function isAccessibleForFree($isAccessibleForFree)
+    {
+        return $this->setProperty('isAccessibleForFree', $isAccessibleForFree);
     }
 
     /**

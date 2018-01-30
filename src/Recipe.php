@@ -12,65 +12,6 @@ namespace Spatie\SchemaOrg;
 class Recipe extends CreativeWork
 {
     /**
-     * Indicates a dietary restriction or guideline for which this recipe or
-     * menu item is suitable, e.g. diabetic, halal etc.
-     *
-     * @param RestrictedDiet|RestrictedDiet[] $suitableForDiet
-     *
-     * @return static
-     *
-     * @see 
-     */
-    public function suitableForDiet($suitableForDiet)
-    {
-        return $this->setProperty('suitableForDiet', $suitableForDiet);
-    }
-
-    /**
-     * The total time it takes to prepare and cook the recipe, in [ISO 8601
-     * duration format](http://en.wikipedia.org/wiki/ISO_8601).
-     *
-     * @param Duration|Duration[] $totalTime
-     *
-     * @return static
-     *
-     * @see 
-     */
-    public function totalTime($totalTime)
-    {
-        return $this->setProperty('totalTime', $totalTime);
-    }
-
-    /**
-     * The length of time it takes to prepare the recipe, in [ISO 8601 duration
-     * format](http://en.wikipedia.org/wiki/ISO_8601).
-     *
-     * @param Duration|Duration[] $prepTime
-     *
-     * @return static
-     *
-     * @see 
-     */
-    public function prepTime($prepTime)
-    {
-        return $this->setProperty('prepTime', $prepTime);
-    }
-
-    /**
-     * The method of cooking, such as Frying, Steaming, ...
-     *
-     * @param string|string[] $cookingMethod
-     *
-     * @return static
-     *
-     * @see 
-     */
-    public function cookingMethod($cookingMethod)
-    {
-        return $this->setProperty('cookingMethod', $cookingMethod);
-    }
-
-    /**
      * The time it takes to actually cook the dish, in [ISO 8601 duration
      * format](http://en.wikipedia.org/wiki/ISO_8601).
      *
@@ -86,74 +27,17 @@ class Recipe extends CreativeWork
     }
 
     /**
-     * The cuisine of the recipe (for example, French or Ethiopian).
+     * The method of cooking, such as Frying, Steaming, ...
      *
-     * @param string|string[] $recipeCuisine
-     *
-     * @return static
-     *
-     * @see 
-     */
-    public function recipeCuisine($recipeCuisine)
-    {
-        return $this->setProperty('recipeCuisine', $recipeCuisine);
-    }
-
-    /**
-     * The quantity produced by the recipe (for example, number of people
-     * served, number of servings, etc).
-     *
-     * @param string|string[] $recipeYield
+     * @param string|string[] $cookingMethod
      *
      * @return static
      *
      * @see 
      */
-    public function recipeYield($recipeYield)
+    public function cookingMethod($cookingMethod)
     {
-        return $this->setProperty('recipeYield', $recipeYield);
-    }
-
-    /**
-     * A step or instruction involved in making the recipe.
-     *
-     * @param schema:ItemList|schema:ItemList[]|string|string[] $recipeInstructions
-     *
-     * @return static
-     *
-     * @see 
-     */
-    public function recipeInstructions($recipeInstructions)
-    {
-        return $this->setProperty('recipeInstructions', $recipeInstructions);
-    }
-
-    /**
-     * The category of the recipe—for example, appetizer, entree, etc.
-     *
-     * @param string|string[] $recipeCategory
-     *
-     * @return static
-     *
-     * @see 
-     */
-    public function recipeCategory($recipeCategory)
-    {
-        return $this->setProperty('recipeCategory', $recipeCategory);
-    }
-
-    /**
-     * A single ingredient used in the recipe, e.g. sugar, flour or garlic.
-     *
-     * @param string|string[] $recipeIngredient
-     *
-     * @return static
-     *
-     * @see 
-     */
-    public function recipeIngredient($recipeIngredient)
-    {
-        return $this->setProperty('recipeIngredient', $recipeIngredient);
+        return $this->setProperty('cookingMethod', $cookingMethod);
     }
 
     /**
@@ -182,6 +66,122 @@ class Recipe extends CreativeWork
     public function nutrition($nutrition)
     {
         return $this->setProperty('nutrition', $nutrition);
+    }
+
+    /**
+     * The length of time it takes to prepare the recipe, in [ISO 8601 duration
+     * format](http://en.wikipedia.org/wiki/ISO_8601).
+     *
+     * @param Duration|Duration[] $prepTime
+     *
+     * @return static
+     *
+     * @see 
+     */
+    public function prepTime($prepTime)
+    {
+        return $this->setProperty('prepTime', $prepTime);
+    }
+
+    /**
+     * The category of the recipe—for example, appetizer, entree, etc.
+     *
+     * @param string|string[] $recipeCategory
+     *
+     * @return static
+     *
+     * @see 
+     */
+    public function recipeCategory($recipeCategory)
+    {
+        return $this->setProperty('recipeCategory', $recipeCategory);
+    }
+
+    /**
+     * The cuisine of the recipe (for example, French or Ethiopian).
+     *
+     * @param string|string[] $recipeCuisine
+     *
+     * @return static
+     *
+     * @see 
+     */
+    public function recipeCuisine($recipeCuisine)
+    {
+        return $this->setProperty('recipeCuisine', $recipeCuisine);
+    }
+
+    /**
+     * A single ingredient used in the recipe, e.g. sugar, flour or garlic.
+     *
+     * @param string|string[] $recipeIngredient
+     *
+     * @return static
+     *
+     * @see 
+     */
+    public function recipeIngredient($recipeIngredient)
+    {
+        return $this->setProperty('recipeIngredient', $recipeIngredient);
+    }
+
+    /**
+     * A step or instruction involved in making the recipe.
+     *
+     * @param schema:ItemList|schema:ItemList[]|string|string[] $recipeInstructions
+     *
+     * @return static
+     *
+     * @see 
+     */
+    public function recipeInstructions($recipeInstructions)
+    {
+        return $this->setProperty('recipeInstructions', $recipeInstructions);
+    }
+
+    /**
+     * The quantity produced by the recipe (for example, number of people
+     * served, number of servings, etc).
+     *
+     * @param string|string[] $recipeYield
+     *
+     * @return static
+     *
+     * @see 
+     */
+    public function recipeYield($recipeYield)
+    {
+        return $this->setProperty('recipeYield', $recipeYield);
+    }
+
+    /**
+     * Indicates a dietary restriction or guideline for which this recipe or
+     * menu item is suitable, e.g. diabetic, halal etc.
+     *
+     * @param RestrictedDiet|RestrictedDiet[] $suitableForDiet
+     *
+     * @return static
+     *
+     * @see 
+     */
+    public function suitableForDiet($suitableForDiet)
+    {
+        return $this->setProperty('suitableForDiet', $suitableForDiet);
+    }
+
+    /**
+     * The total time it takes to prepare and cook the recipe, in [ISO 8601
+     * duration format](http://en.wikipedia.org/wiki/ISO_8601).
+     *
+     * @param Duration|Duration[] $totalTime
+     *
+     * @return static
+     *
+     * @see 
+     */
+    public function totalTime($totalTime)
+    {
+        return $this->setProperty('totalTime', $totalTime);
     }
 
 }

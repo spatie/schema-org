@@ -10,18 +10,17 @@ namespace Spatie\SchemaOrg;
 class EntryPoint extends Intangible
 {
     /**
-     * An HTTP method that specifies the appropriate HTTP method for a request
-     * to an HTTP EntryPoint. Values are capitalized strings as used in HTTP.
+     * An application that can complete the request.
      *
-     * @param string|string[] $httpMethod
+     * @param SoftwareApplication|SoftwareApplication[] $actionApplication
      *
      * @return static
      *
      * @see 
      */
-    public function httpMethod($httpMethod)
+    public function actionApplication($actionApplication)
     {
-        return $this->setProperty('httpMethod', $httpMethod);
+        return $this->setProperty('actionApplication', $actionApplication);
     }
 
     /**
@@ -38,35 +37,6 @@ class EntryPoint extends Intangible
     public function actionPlatform($actionPlatform)
     {
         return $this->setProperty('actionPlatform', $actionPlatform);
-    }
-
-    /**
-     * An url template (RFC6570) that will be used to construct the target of
-     * the execution of the action.
-     *
-     * @param string|string[] $urlTemplate
-     *
-     * @return static
-     *
-     * @see 
-     */
-    public function urlTemplate($urlTemplate)
-    {
-        return $this->setProperty('urlTemplate', $urlTemplate);
-    }
-
-    /**
-     * An application that can complete the request.
-     *
-     * @param SoftwareApplication|SoftwareApplication[] $actionApplication
-     *
-     * @return static
-     *
-     * @see 
-     */
-    public function actionApplication($actionApplication)
-    {
-        return $this->setProperty('actionApplication', $actionApplication);
     }
 
     /**
@@ -109,6 +79,36 @@ class EntryPoint extends Intangible
     public function encodingType($encodingType)
     {
         return $this->setProperty('encodingType', $encodingType);
+    }
+
+    /**
+     * An HTTP method that specifies the appropriate HTTP method for a request
+     * to an HTTP EntryPoint. Values are capitalized strings as used in HTTP.
+     *
+     * @param string|string[] $httpMethod
+     *
+     * @return static
+     *
+     * @see 
+     */
+    public function httpMethod($httpMethod)
+    {
+        return $this->setProperty('httpMethod', $httpMethod);
+    }
+
+    /**
+     * An url template (RFC6570) that will be used to construct the target of
+     * the execution of the action.
+     *
+     * @param string|string[] $urlTemplate
+     *
+     * @return static
+     *
+     * @see 
+     */
+    public function urlTemplate($urlTemplate)
+    {
+        return $this->setProperty('urlTemplate', $urlTemplate);
     }
 
 }

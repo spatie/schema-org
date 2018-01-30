@@ -71,20 +71,6 @@ class LocalBusiness extends Organization
     }
 
     /**
-     * The price range of the business, for example ```$$$```.
-     *
-     * @param string|string[] $priceRange
-     *
-     * @return static
-     *
-     * @see 
-     */
-    public function priceRange($priceRange)
-    {
-        return $this->setProperty('priceRange', $priceRange);
-    }
-
-    /**
      * Cash, credit card, etc.
      *
      * @param string|string[] $paymentAccepted
@@ -96,6 +82,20 @@ class LocalBusiness extends Organization
     public function paymentAccepted($paymentAccepted)
     {
         return $this->setProperty('paymentAccepted', $paymentAccepted);
+    }
+
+    /**
+     * The price range of the business, for example ```$$$```.
+     *
+     * @param string|string[] $priceRange
+     *
+     * @return static
+     *
+     * @see 
+     */
+    public function priceRange($priceRange)
+    {
+        return $this->setProperty('priceRange', $priceRange);
     }
 
 }

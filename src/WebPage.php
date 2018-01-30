@@ -101,21 +101,6 @@ class WebPage extends CreativeWork
     }
 
     /**
-     * The most significant URLs on the page. Typically, these are the
-     * non-navigation links that are clicked on the most.
-     *
-     * @param string|string[] $significantLinks
-     *
-     * @return static
-     *
-     * @see 
-     */
-    public function significantLinks($significantLinks)
-    {
-        return $this->setProperty('significantLinks', $significantLinks);
-    }
-
-    /**
      * One of the more significant URLs on the page. Typically, these are the
      * non-navigation links that are clicked on the most.
      *
@@ -128,6 +113,21 @@ class WebPage extends CreativeWork
     public function significantLink($significantLink)
     {
         return $this->setProperty('significantLink', $significantLink);
+    }
+
+    /**
+     * The most significant URLs on the page. Typically, these are the
+     * non-navigation links that are clicked on the most.
+     *
+     * @param string|string[] $significantLinks
+     *
+     * @return static
+     *
+     * @see 
+     */
+    public function significantLinks($significantLinks)
+    {
+        return $this->setProperty('significantLinks', $significantLinks);
     }
 
     /**

@@ -29,21 +29,6 @@ class FoodEstablishment extends LocalBusiness
      * Either the actual menu as a structured representation, as text, or a URL
      * of the menu.
      *
-     * @param Menu|Menu[]|string|string[] $menu
-     *
-     * @return static
-     *
-     * @see 
-     */
-    public function menu($menu)
-    {
-        return $this->setProperty('menu', $menu);
-    }
-
-    /**
-     * Either the actual menu as a structured representation, as text, or a URL
-     * of the menu.
-     *
      * @param Menu|Menu[]|string|string[] $hasMenu
      *
      * @return static
@@ -53,6 +38,21 @@ class FoodEstablishment extends LocalBusiness
     public function hasMenu($hasMenu)
     {
         return $this->setProperty('hasMenu', $hasMenu);
+    }
+
+    /**
+     * Either the actual menu as a structured representation, as text, or a URL
+     * of the menu.
+     *
+     * @param Menu|Menu[]|string|string[] $menu
+     *
+     * @return static
+     *
+     * @see 
+     */
+    public function menu($menu)
+    {
+        return $this->setProperty('menu', $menu);
     }
 
     /**

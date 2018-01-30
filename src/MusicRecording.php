@@ -67,20 +67,6 @@ class MusicRecording extends CreativeWork
     }
 
     /**
-     * The composition this track is a recording of.
-     *
-     * @param MusicComposition|MusicComposition[] $recordingOf
-     *
-     * @return static
-     *
-     * @see 
-     */
-    public function recordingOf($recordingOf)
-    {
-        return $this->setProperty('recordingOf', $recordingOf);
-    }
-
-    /**
      * The International Standard Recording Code for the recording.
      *
      * @param string|string[] $isrcCode
@@ -92,6 +78,20 @@ class MusicRecording extends CreativeWork
     public function isrcCode($isrcCode)
     {
         return $this->setProperty('isrcCode', $isrcCode);
+    }
+
+    /**
+     * The composition this track is a recording of.
+     *
+     * @param MusicComposition|MusicComposition[] $recordingOf
+     *
+     * @return static
+     *
+     * @see 
+     */
+    public function recordingOf($recordingOf)
+    {
+        return $this->setProperty('recordingOf', $recordingOf);
     }
 
 }

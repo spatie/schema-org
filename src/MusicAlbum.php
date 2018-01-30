@@ -10,31 +10,18 @@ namespace Spatie\SchemaOrg;
 class MusicAlbum extends MusicPlaylist
 {
     /**
-     * The artist that performed this album or recording.
+     * Classification of the album by it's type of content: soundtrack, live
+     * album, studio album, etc.
      *
-     * @param MusicGroup|MusicGroup[] $byArtist
-     *
-     * @return static
-     *
-     * @see 
-     */
-    public function byArtist($byArtist)
-    {
-        return $this->setProperty('byArtist', $byArtist);
-    }
-
-    /**
-     * The kind of release which this album is: single, EP or album.
-     *
-     * @param MusicAlbumReleaseType|MusicAlbumReleaseType[] $albumReleaseType
+     * @param MusicAlbumProductionType|MusicAlbumProductionType[] $albumProductionType
      *
      * @return static
      *
      * @see 
      */
-    public function albumReleaseType($albumReleaseType)
+    public function albumProductionType($albumProductionType)
     {
-        return $this->setProperty('albumReleaseType', $albumReleaseType);
+        return $this->setProperty('albumProductionType', $albumProductionType);
     }
 
     /**
@@ -52,18 +39,31 @@ class MusicAlbum extends MusicPlaylist
     }
 
     /**
-     * Classification of the album by it's type of content: soundtrack, live
-     * album, studio album, etc.
+     * The kind of release which this album is: single, EP or album.
      *
-     * @param MusicAlbumProductionType|MusicAlbumProductionType[] $albumProductionType
+     * @param MusicAlbumReleaseType|MusicAlbumReleaseType[] $albumReleaseType
      *
      * @return static
      *
      * @see 
      */
-    public function albumProductionType($albumProductionType)
+    public function albumReleaseType($albumReleaseType)
     {
-        return $this->setProperty('albumProductionType', $albumProductionType);
+        return $this->setProperty('albumReleaseType', $albumReleaseType);
+    }
+
+    /**
+     * The artist that performed this album or recording.
+     *
+     * @param MusicGroup|MusicGroup[] $byArtist
+     *
+     * @return static
+     *
+     * @see 
+     */
+    public function byArtist($byArtist)
+    {
+        return $this->setProperty('byArtist', $byArtist);
     }
 
 }

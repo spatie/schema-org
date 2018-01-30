@@ -39,6 +39,20 @@ class NewsArticle extends Article
     }
 
     /**
+     * The edition of the print product in which the NewsArticle appears.
+     *
+     * @param string|string[] $printEdition
+     *
+     * @return static
+     *
+     * @see 
+     */
+    public function printEdition($printEdition)
+    {
+        return $this->setProperty('printEdition', $printEdition);
+    }
+
+    /**
      * If this NewsArticle appears in print, this field indicates the name of
      * the page on which the article is found. Please note that this field is
      * intended for the exact page name (e.g. A5, B18).
@@ -67,20 +81,6 @@ class NewsArticle extends Article
     public function printSection($printSection)
     {
         return $this->setProperty('printSection', $printSection);
-    }
-
-    /**
-     * The edition of the print product in which the NewsArticle appears.
-     *
-     * @param string|string[] $printEdition
-     *
-     * @return static
-     *
-     * @see 
-     */
-    public function printEdition($printEdition)
-    {
-        return $this->setProperty('printEdition', $printEdition);
     }
 
 }

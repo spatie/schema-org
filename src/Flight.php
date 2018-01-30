@@ -10,65 +10,59 @@ namespace Spatie\SchemaOrg;
 class Flight extends Intangible
 {
     /**
-     * 'carrier' is an out-dated term indicating the 'provider' for parcel
-     * delivery and flights.
+     * The kind of aircraft (e.g., "Boeing 747").
      *
-     * @param Organization|Organization[] $carrier
+     * @param string|string[]|Vehicle|Vehicle[] $aircraft
      *
      * @return static
      *
      * @see 
      */
-    public function carrier($carrier)
+    public function aircraft($aircraft)
     {
-        return $this->setProperty('carrier', $carrier);
+        return $this->setProperty('aircraft', $aircraft);
     }
 
     /**
-     * An entity which offers (sells / leases / lends / loans) the services /
-     * goods.  A seller may also be a provider.
+     * The airport where the flight terminates.
      *
-     * @param Organization|Organization[]|Person|Person[] $seller
+     * @param Airport|Airport[] $arrivalAirport
      *
      * @return static
      *
      * @see 
      */
-    public function seller($seller)
+    public function arrivalAirport($arrivalAirport)
     {
-        return $this->setProperty('seller', $seller);
+        return $this->setProperty('arrivalAirport', $arrivalAirport);
     }
 
     /**
-     * The service provider, service operator, or service performer; the goods
-     * producer. Another party (a seller) may offer those services or goods on
-     * behalf of the provider. A provider may also serve as the seller.
+     * Identifier of the flight's arrival gate.
      *
-     * @param Person|Person[]|Organization|Organization[] $provider
+     * @param string|string[] $arrivalGate
      *
      * @return static
      *
      * @see 
      */
-    public function provider($provider)
+    public function arrivalGate($arrivalGate)
     {
-        return $this->setProperty('provider', $provider);
+        return $this->setProperty('arrivalGate', $arrivalGate);
     }
 
     /**
-     * The unique identifier for a flight including the airline IATA code. For
-     * example, if describing United flight 110, where the IATA code for United
-     * is 'UA', the flightNumber is 'UA110'.
+     * Identifier of the flight's arrival terminal.
      *
-     * @param string|string[] $flightNumber
+     * @param string|string[] $arrivalTerminal
      *
      * @return static
      *
      * @see 
      */
-    public function flightNumber($flightNumber)
+    public function arrivalTerminal($arrivalTerminal)
     {
-        return $this->setProperty('flightNumber', $flightNumber);
+        return $this->setProperty('arrivalTerminal', $arrivalTerminal);
     }
 
     /**
@@ -86,17 +80,47 @@ class Flight extends Intangible
     }
 
     /**
-     * Identifier of the flight's departure terminal.
+     * The type of boarding policy used by the airline (e.g. zone-based or
+     * group-based).
      *
-     * @param string|string[] $departureTerminal
+     * @param BoardingPolicyType|BoardingPolicyType[] $boardingPolicy
      *
      * @return static
      *
      * @see 
      */
-    public function departureTerminal($departureTerminal)
+    public function boardingPolicy($boardingPolicy)
     {
-        return $this->setProperty('departureTerminal', $departureTerminal);
+        return $this->setProperty('boardingPolicy', $boardingPolicy);
+    }
+
+    /**
+     * 'carrier' is an out-dated term indicating the 'provider' for parcel
+     * delivery and flights.
+     *
+     * @param Organization|Organization[] $carrier
+     *
+     * @return static
+     *
+     * @see 
+     */
+    public function carrier($carrier)
+    {
+        return $this->setProperty('carrier', $carrier);
+    }
+
+    /**
+     * The airport where the flight originates.
+     *
+     * @param Airport|Airport[] $departureAirport
+     *
+     * @return static
+     *
+     * @see 
+     */
+    public function departureAirport($departureAirport)
+    {
+        return $this->setProperty('departureAirport', $departureAirport);
     }
 
     /**
@@ -114,17 +138,17 @@ class Flight extends Intangible
     }
 
     /**
-     * The airport where the flight originates.
+     * Identifier of the flight's departure terminal.
      *
-     * @param Airport|Airport[] $departureAirport
+     * @param string|string[] $departureTerminal
      *
      * @return static
      *
      * @see 
      */
-    public function departureAirport($departureAirport)
+    public function departureTerminal($departureTerminal)
     {
-        return $this->setProperty('departureAirport', $departureAirport);
+        return $this->setProperty('departureTerminal', $departureTerminal);
     }
 
     /**
@@ -156,77 +180,6 @@ class Flight extends Intangible
     }
 
     /**
-     * Identifier of the flight's arrival terminal.
-     *
-     * @param string|string[] $arrivalTerminal
-     *
-     * @return static
-     *
-     * @see 
-     */
-    public function arrivalTerminal($arrivalTerminal)
-    {
-        return $this->setProperty('arrivalTerminal', $arrivalTerminal);
-    }
-
-    /**
-     * The time when a passenger can check into the flight online.
-     *
-     * @param \DateTimeInterface|\DateTimeInterface[] $webCheckinTime
-     *
-     * @return static
-     *
-     * @see 
-     */
-    public function webCheckinTime($webCheckinTime)
-    {
-        return $this->setProperty('webCheckinTime', $webCheckinTime);
-    }
-
-    /**
-     * The type of boarding policy used by the airline (e.g. zone-based or
-     * group-based).
-     *
-     * @param BoardingPolicyType|BoardingPolicyType[] $boardingPolicy
-     *
-     * @return static
-     *
-     * @see 
-     */
-    public function boardingPolicy($boardingPolicy)
-    {
-        return $this->setProperty('boardingPolicy', $boardingPolicy);
-    }
-
-    /**
-     * Identifier of the flight's arrival gate.
-     *
-     * @param string|string[] $arrivalGate
-     *
-     * @return static
-     *
-     * @see 
-     */
-    public function arrivalGate($arrivalGate)
-    {
-        return $this->setProperty('arrivalGate', $arrivalGate);
-    }
-
-    /**
-     * The airport where the flight terminates.
-     *
-     * @param Airport|Airport[] $arrivalAirport
-     *
-     * @return static
-     *
-     * @see 
-     */
-    public function arrivalAirport($arrivalAirport)
-    {
-        return $this->setProperty('arrivalAirport', $arrivalAirport);
-    }
-
-    /**
      * The distance of the flight.
      *
      * @param string|string[]|Distance|Distance[] $flightDistance
@@ -238,6 +191,22 @@ class Flight extends Intangible
     public function flightDistance($flightDistance)
     {
         return $this->setProperty('flightDistance', $flightDistance);
+    }
+
+    /**
+     * The unique identifier for a flight including the airline IATA code. For
+     * example, if describing United flight 110, where the IATA code for United
+     * is 'UA', the flightNumber is 'UA110'.
+     *
+     * @param string|string[] $flightNumber
+     *
+     * @return static
+     *
+     * @see 
+     */
+    public function flightNumber($flightNumber)
+    {
+        return $this->setProperty('flightNumber', $flightNumber);
     }
 
     /**
@@ -255,17 +224,48 @@ class Flight extends Intangible
     }
 
     /**
-     * The kind of aircraft (e.g., "Boeing 747").
+     * The service provider, service operator, or service performer; the goods
+     * producer. Another party (a seller) may offer those services or goods on
+     * behalf of the provider. A provider may also serve as the seller.
      *
-     * @param string|string[]|Vehicle|Vehicle[] $aircraft
+     * @param Person|Person[]|Organization|Organization[] $provider
      *
      * @return static
      *
      * @see 
      */
-    public function aircraft($aircraft)
+    public function provider($provider)
     {
-        return $this->setProperty('aircraft', $aircraft);
+        return $this->setProperty('provider', $provider);
+    }
+
+    /**
+     * An entity which offers (sells / leases / lends / loans) the services /
+     * goods.  A seller may also be a provider.
+     *
+     * @param Organization|Organization[]|Person|Person[] $seller
+     *
+     * @return static
+     *
+     * @see 
+     */
+    public function seller($seller)
+    {
+        return $this->setProperty('seller', $seller);
+    }
+
+    /**
+     * The time when a passenger can check into the flight online.
+     *
+     * @param \DateTimeInterface|\DateTimeInterface[] $webCheckinTime
+     *
+     * @return static
+     *
+     * @see 
+     */
+    public function webCheckinTime($webCheckinTime)
+    {
+        return $this->setProperty('webCheckinTime', $webCheckinTime);
     }
 
 }

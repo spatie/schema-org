@@ -25,20 +25,6 @@ class PeopleAudience extends Audience
     }
 
     /**
-     * Audiences defined by a person's minimum age.
-     *
-     * @param int|int[] $requiredMinAge
-     *
-     * @return static
-     *
-     * @see 
-     */
-    public function requiredMinAge($requiredMinAge)
-    {
-        return $this->setProperty('requiredMinAge', $requiredMinAge);
-    }
-
-    /**
      * Audiences defined by a person's maximum age.
      *
      * @param int|int[] $requiredMaxAge
@@ -50,6 +36,20 @@ class PeopleAudience extends Audience
     public function requiredMaxAge($requiredMaxAge)
     {
         return $this->setProperty('requiredMaxAge', $requiredMaxAge);
+    }
+
+    /**
+     * Audiences defined by a person's minimum age.
+     *
+     * @param int|int[] $requiredMinAge
+     *
+     * @return static
+     *
+     * @see 
+     */
+    public function requiredMinAge($requiredMinAge)
+    {
+        return $this->setProperty('requiredMinAge', $requiredMinAge);
     }
 
     /**
@@ -67,20 +67,6 @@ class PeopleAudience extends Audience
     }
 
     /**
-     * Minimal age recommended for viewing content.
-     *
-     * @param float|float[]|int|int[] $suggestedMinAge
-     *
-     * @return static
-     *
-     * @see 
-     */
-    public function suggestedMinAge($suggestedMinAge)
-    {
-        return $this->setProperty('suggestedMinAge', $suggestedMinAge);
-    }
-
-    /**
      * Maximal age recommended for viewing content.
      *
      * @param float|float[]|int|int[] $suggestedMaxAge
@@ -92,6 +78,20 @@ class PeopleAudience extends Audience
     public function suggestedMaxAge($suggestedMaxAge)
     {
         return $this->setProperty('suggestedMaxAge', $suggestedMaxAge);
+    }
+
+    /**
+     * Minimal age recommended for viewing content.
+     *
+     * @param float|float[]|int|int[] $suggestedMinAge
+     *
+     * @return static
+     *
+     * @see 
+     */
+    public function suggestedMinAge($suggestedMinAge)
+    {
+        return $this->setProperty('suggestedMinAge', $suggestedMinAge);
     }
 
 }

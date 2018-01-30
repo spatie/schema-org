@@ -10,20 +10,6 @@ namespace Spatie\SchemaOrg;
 class SportsEvent extends Event
 {
     /**
-     * The home team in a sports event.
-     *
-     * @param Person|Person[]|SportsTeam|SportsTeam[] $homeTeam
-     *
-     * @return static
-     *
-     * @see 
-     */
-    public function homeTeam($homeTeam)
-    {
-        return $this->setProperty('homeTeam', $homeTeam);
-    }
-
-    /**
      * The away team in a sports event.
      *
      * @param Person|Person[]|SportsTeam|SportsTeam[] $awayTeam
@@ -49,6 +35,20 @@ class SportsEvent extends Event
     public function competitor($competitor)
     {
         return $this->setProperty('competitor', $competitor);
+    }
+
+    /**
+     * The home team in a sports event.
+     *
+     * @param Person|Person[]|SportsTeam|SportsTeam[] $homeTeam
+     *
+     * @return static
+     *
+     * @see 
+     */
+    public function homeTeam($homeTeam)
+    {
+        return $this->setProperty('homeTeam', $homeTeam);
     }
 
 }

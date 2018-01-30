@@ -25,20 +25,6 @@ class BusinessAudience extends Audience
     }
 
     /**
-     * The age of the business.
-     *
-     * @param QuantitativeValue|QuantitativeValue[] $yearsInOperation
-     *
-     * @return static
-     *
-     * @see 
-     */
-    public function yearsInOperation($yearsInOperation)
-    {
-        return $this->setProperty('yearsInOperation', $yearsInOperation);
-    }
-
-    /**
      * The size of the business in annual revenue.
      *
      * @param QuantitativeValue|QuantitativeValue[] $yearlyRevenue
@@ -50,6 +36,20 @@ class BusinessAudience extends Audience
     public function yearlyRevenue($yearlyRevenue)
     {
         return $this->setProperty('yearlyRevenue', $yearlyRevenue);
+    }
+
+    /**
+     * The age of the business.
+     *
+     * @param QuantitativeValue|QuantitativeValue[] $yearsInOperation
+     *
+     * @return static
+     *
+     * @see 
+     */
+    public function yearsInOperation($yearsInOperation)
+    {
+        return $this->setProperty('yearsInOperation', $yearsInOperation);
     }
 
 }

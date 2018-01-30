@@ -25,34 +25,6 @@ class MusicComposition extends CreativeWork
     }
 
     /**
-     * An arrangement derived from the composition.
-     *
-     * @param MusicComposition|MusicComposition[] $musicArrangement
-     *
-     * @return static
-     *
-     * @see 
-     */
-    public function musicArrangement($musicArrangement)
-    {
-        return $this->setProperty('musicArrangement', $musicArrangement);
-    }
-
-    /**
-     * The person who wrote the words.
-     *
-     * @param Person|Person[] $lyricist
-     *
-     * @return static
-     *
-     * @see 
-     */
-    public function lyricist($lyricist)
-    {
-        return $this->setProperty('lyricist', $lyricist);
-    }
-
-    /**
      * The date and place the work was first performed.
      *
      * @param Event|Event[] $firstPerformance
@@ -96,17 +68,45 @@ class MusicComposition extends CreativeWork
     }
 
     /**
-     * The key, mode, or scale this composition uses.
+     * The person who wrote the words.
      *
-     * @param string|string[] $musicalKey
+     * @param Person|Person[] $lyricist
      *
      * @return static
      *
      * @see 
      */
-    public function musicalKey($musicalKey)
+    public function lyricist($lyricist)
     {
-        return $this->setProperty('musicalKey', $musicalKey);
+        return $this->setProperty('lyricist', $lyricist);
+    }
+
+    /**
+     * The words in the song.
+     *
+     * @param CreativeWork|CreativeWork[] $lyrics
+     *
+     * @return static
+     *
+     * @see 
+     */
+    public function lyrics($lyrics)
+    {
+        return $this->setProperty('lyrics', $lyrics);
+    }
+
+    /**
+     * An arrangement derived from the composition.
+     *
+     * @param MusicComposition|MusicComposition[] $musicArrangement
+     *
+     * @return static
+     *
+     * @see 
+     */
+    public function musicArrangement($musicArrangement)
+    {
+        return $this->setProperty('musicArrangement', $musicArrangement);
     }
 
     /**
@@ -124,6 +124,20 @@ class MusicComposition extends CreativeWork
     }
 
     /**
+     * The key, mode, or scale this composition uses.
+     *
+     * @param string|string[] $musicalKey
+     *
+     * @return static
+     *
+     * @see 
+     */
+    public function musicalKey($musicalKey)
+    {
+        return $this->setProperty('musicalKey', $musicalKey);
+    }
+
+    /**
      * An audio recording of the work.
      *
      * @param MusicRecording|MusicRecording[] $recordedAs
@@ -135,20 +149,6 @@ class MusicComposition extends CreativeWork
     public function recordedAs($recordedAs)
     {
         return $this->setProperty('recordedAs', $recordedAs);
-    }
-
-    /**
-     * The words in the song.
-     *
-     * @param CreativeWork|CreativeWork[] $lyrics
-     *
-     * @return static
-     *
-     * @see 
-     */
-    public function lyrics($lyrics)
-    {
-        return $this->setProperty('lyrics', $lyrics);
     }
 
 }

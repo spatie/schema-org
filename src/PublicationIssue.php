@@ -29,18 +29,17 @@ class PublicationIssue extends CreativeWork
     }
 
     /**
-     * Any description of pages that is not separated into pageStart and
-     * pageEnd; for example, "1-6, 9, 55" or "10-12, 46-49".
+     * The page on which the work ends; for example "138" or "xvi".
      *
-     * @param string|string[] $pagination
+     * @param int|int[]|string|string[] $pageEnd
      *
      * @return static
      *
      * @see 
      */
-    public function pagination($pagination)
+    public function pageEnd($pageEnd)
     {
-        return $this->setProperty('pagination', $pagination);
+        return $this->setProperty('pageEnd', $pageEnd);
     }
 
     /**
@@ -58,17 +57,18 @@ class PublicationIssue extends CreativeWork
     }
 
     /**
-     * The page on which the work ends; for example "138" or "xvi".
+     * Any description of pages that is not separated into pageStart and
+     * pageEnd; for example, "1-6, 9, 55" or "10-12, 46-49".
      *
-     * @param int|int[]|string|string[] $pageEnd
+     * @param string|string[] $pagination
      *
      * @return static
      *
      * @see 
      */
-    public function pageEnd($pageEnd)
+    public function pagination($pagination)
     {
-        return $this->setProperty('pageEnd', $pageEnd);
+        return $this->setProperty('pagination', $pagination);
     }
 
 }

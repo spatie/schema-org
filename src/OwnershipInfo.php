@@ -25,20 +25,6 @@ class OwnershipInfo extends StructuredValue
     }
 
     /**
-     * The date and time of giving up ownership on the product.
-     *
-     * @param \DateTimeInterface|\DateTimeInterface[] $ownedThrough
-     *
-     * @return static
-     *
-     * @see 
-     */
-    public function ownedThrough($ownedThrough)
-    {
-        return $this->setProperty('ownedThrough', $ownedThrough);
-    }
-
-    /**
      * The date and time of obtaining the product.
      *
      * @param \DateTimeInterface|\DateTimeInterface[] $ownedFrom
@@ -50,6 +36,20 @@ class OwnershipInfo extends StructuredValue
     public function ownedFrom($ownedFrom)
     {
         return $this->setProperty('ownedFrom', $ownedFrom);
+    }
+
+    /**
+     * The date and time of giving up ownership on the product.
+     *
+     * @param \DateTimeInterface|\DateTimeInterface[] $ownedThrough
+     *
+     * @return static
+     *
+     * @see 
+     */
+    public function ownedThrough($ownedThrough)
+    {
+        return $this->setProperty('ownedThrough', $ownedThrough);
     }
 
     /**

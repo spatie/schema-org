@@ -10,6 +10,22 @@ namespace Spatie\SchemaOrg;
 class VideoGameSeries extends CreativeWorkSeries
 {
     /**
+     * An actor, e.g. in tv, radio, movie, video games etc., or in an event.
+     * Actors can be associated with individual items or with a series, episode,
+     * clip.
+     *
+     * @param Person|Person[] $actor
+     *
+     * @return static
+     *
+     * @see 
+     */
+    public function actor($actor)
+    {
+        return $this->setProperty('actor', $actor);
+    }
+
+    /**
      * An actor, e.g. in tv, radio, movie, video games etc. Actors can be
      * associated with individual items or with a series, episode, clip.
      *
@@ -25,19 +41,46 @@ class VideoGameSeries extends CreativeWorkSeries
     }
 
     /**
-     * An actor, e.g. in tv, radio, movie, video games etc., or in an event.
-     * Actors can be associated with individual items or with a series, episode,
-     * clip.
+     * A piece of data that represents a particular aspect of a fictional
+     * character (skill, power, character points, advantage, disadvantage).
      *
-     * @param Person|Person[] $actor
+     * @param Thing|Thing[] $characterAttribute
      *
      * @return static
      *
      * @see 
      */
-    public function actor($actor)
+    public function characterAttribute($characterAttribute)
     {
-        return $this->setProperty('actor', $actor);
+        return $this->setProperty('characterAttribute', $characterAttribute);
+    }
+
+    /**
+     * Cheat codes to the game.
+     *
+     * @param CreativeWork|CreativeWork[] $cheatCode
+     *
+     * @return static
+     *
+     * @see 
+     */
+    public function cheatCode($cheatCode)
+    {
+        return $this->setProperty('cheatCode', $cheatCode);
+    }
+
+    /**
+     * A season that is part of the media series.
+     *
+     * @param CreativeWorkSeason|CreativeWorkSeason[] $containsSeason
+     *
+     * @return static
+     *
+     * @see 
+     */
+    public function containsSeason($containsSeason)
+    {
+        return $this->setProperty('containsSeason', $containsSeason);
     }
 
     /**
@@ -100,119 +143,6 @@ class VideoGameSeries extends CreativeWorkSeries
     }
 
     /**
-     * The number of seasons in this series.
-     *
-     * @param int|int[] $numberOfSeasons
-     *
-     * @return static
-     *
-     * @see 
-     */
-    public function numberOfSeasons($numberOfSeasons)
-    {
-        return $this->setProperty('numberOfSeasons', $numberOfSeasons);
-    }
-
-    /**
-     * The number of episodes in this season or series.
-     *
-     * @param int|int[] $numberOfEpisodes
-     *
-     * @return static
-     *
-     * @see 
-     */
-    public function numberOfEpisodes($numberOfEpisodes)
-    {
-        return $this->setProperty('numberOfEpisodes', $numberOfEpisodes);
-    }
-
-    /**
-     * The composer of the soundtrack.
-     *
-     * @param MusicGroup|MusicGroup[]|Person|Person[] $musicBy
-     *
-     * @return static
-     *
-     * @see 
-     */
-    public function musicBy($musicBy)
-    {
-        return $this->setProperty('musicBy', $musicBy);
-    }
-
-    /**
-     * The production company or studio responsible for the item e.g. series,
-     * video game, episode etc.
-     *
-     * @param Organization|Organization[] $productionCompany
-     *
-     * @return static
-     *
-     * @see 
-     */
-    public function productionCompany($productionCompany)
-    {
-        return $this->setProperty('productionCompany', $productionCompany);
-    }
-
-    /**
-     * A season in a media series.
-     *
-     * @param CreativeWorkSeason|CreativeWorkSeason[] $seasons
-     *
-     * @return static
-     *
-     * @see 
-     */
-    public function seasons($seasons)
-    {
-        return $this->setProperty('seasons', $seasons);
-    }
-
-    /**
-     * A season that is part of the media series.
-     *
-     * @param CreativeWorkSeason|CreativeWorkSeason[] $containsSeason
-     *
-     * @return static
-     *
-     * @see 
-     */
-    public function containsSeason($containsSeason)
-    {
-        return $this->setProperty('containsSeason', $containsSeason);
-    }
-
-    /**
-     * A season in a media series.
-     *
-     * @param CreativeWorkSeason|CreativeWorkSeason[] $season
-     *
-     * @return static
-     *
-     * @see 
-     */
-    public function season($season)
-    {
-        return $this->setProperty('season', $season);
-    }
-
-    /**
-     * The trailer of a movie or tv/radio series, season, episode, etc.
-     *
-     * @param VideoObject|VideoObject[] $trailer
-     *
-     * @return static
-     *
-     * @see 
-     */
-    public function trailer($trailer)
-    {
-        return $this->setProperty('trailer', $trailer);
-    }
-
-    /**
      * An item is an object within the game world that can be collected by a
      * player or, occasionally, a non-player character.
      *
@@ -228,77 +158,17 @@ class VideoGameSeries extends CreativeWorkSeries
     }
 
     /**
-     * Indicate how many people can play this game (minimum, maximum, or range).
+     * Real or fictional location of the game (or part of game).
      *
-     * @param QuantitativeValue|QuantitativeValue[] $numberOfPlayers
-     *
-     * @return static
-     *
-     * @see 
-     */
-    public function numberOfPlayers($numberOfPlayers)
-    {
-        return $this->setProperty('numberOfPlayers', $numberOfPlayers);
-    }
-
-    /**
-     * The task that a player-controlled character, or group of characters may
-     * complete in order to gain a reward.
-     *
-     * @param Thing|Thing[] $quest
+     * @param string|string[]|Place|Place[]|PostalAddress|PostalAddress[] $gameLocation
      *
      * @return static
      *
      * @see 
      */
-    public function quest($quest)
+    public function gameLocation($gameLocation)
     {
-        return $this->setProperty('quest', $quest);
-    }
-
-    /**
-     * Indicates whether this game is multi-player, co-op or single-player.  The
-     * game can be marked as multi-player, co-op and single-player at the same
-     * time.
-     *
-     * @param GamePlayMode|GamePlayMode[] $playMode
-     *
-     * @return static
-     *
-     * @see 
-     */
-    public function playMode($playMode)
-    {
-        return $this->setProperty('playMode', $playMode);
-    }
-
-    /**
-     * A piece of data that represents a particular aspect of a fictional
-     * character (skill, power, character points, advantage, disadvantage).
-     *
-     * @param Thing|Thing[] $characterAttribute
-     *
-     * @return static
-     *
-     * @see 
-     */
-    public function characterAttribute($characterAttribute)
-    {
-        return $this->setProperty('characterAttribute', $characterAttribute);
-    }
-
-    /**
-     * Cheat codes to the game.
-     *
-     * @param CreativeWork|CreativeWork[] $cheatCode
-     *
-     * @return static
-     *
-     * @see 
-     */
-    public function cheatCode($cheatCode)
-    {
-        return $this->setProperty('cheatCode', $cheatCode);
+        return $this->setProperty('gameLocation', $gameLocation);
     }
 
     /**
@@ -318,17 +188,147 @@ class VideoGameSeries extends CreativeWorkSeries
     }
 
     /**
-     * Real or fictional location of the game (or part of game).
+     * The composer of the soundtrack.
      *
-     * @param string|string[]|Place|Place[]|PostalAddress|PostalAddress[] $gameLocation
+     * @param MusicGroup|MusicGroup[]|Person|Person[] $musicBy
      *
      * @return static
      *
      * @see 
      */
-    public function gameLocation($gameLocation)
+    public function musicBy($musicBy)
     {
-        return $this->setProperty('gameLocation', $gameLocation);
+        return $this->setProperty('musicBy', $musicBy);
+    }
+
+    /**
+     * The number of episodes in this season or series.
+     *
+     * @param int|int[] $numberOfEpisodes
+     *
+     * @return static
+     *
+     * @see 
+     */
+    public function numberOfEpisodes($numberOfEpisodes)
+    {
+        return $this->setProperty('numberOfEpisodes', $numberOfEpisodes);
+    }
+
+    /**
+     * Indicate how many people can play this game (minimum, maximum, or range).
+     *
+     * @param QuantitativeValue|QuantitativeValue[] $numberOfPlayers
+     *
+     * @return static
+     *
+     * @see 
+     */
+    public function numberOfPlayers($numberOfPlayers)
+    {
+        return $this->setProperty('numberOfPlayers', $numberOfPlayers);
+    }
+
+    /**
+     * The number of seasons in this series.
+     *
+     * @param int|int[] $numberOfSeasons
+     *
+     * @return static
+     *
+     * @see 
+     */
+    public function numberOfSeasons($numberOfSeasons)
+    {
+        return $this->setProperty('numberOfSeasons', $numberOfSeasons);
+    }
+
+    /**
+     * Indicates whether this game is multi-player, co-op or single-player.  The
+     * game can be marked as multi-player, co-op and single-player at the same
+     * time.
+     *
+     * @param GamePlayMode|GamePlayMode[] $playMode
+     *
+     * @return static
+     *
+     * @see 
+     */
+    public function playMode($playMode)
+    {
+        return $this->setProperty('playMode', $playMode);
+    }
+
+    /**
+     * The production company or studio responsible for the item e.g. series,
+     * video game, episode etc.
+     *
+     * @param Organization|Organization[] $productionCompany
+     *
+     * @return static
+     *
+     * @see 
+     */
+    public function productionCompany($productionCompany)
+    {
+        return $this->setProperty('productionCompany', $productionCompany);
+    }
+
+    /**
+     * The task that a player-controlled character, or group of characters may
+     * complete in order to gain a reward.
+     *
+     * @param Thing|Thing[] $quest
+     *
+     * @return static
+     *
+     * @see 
+     */
+    public function quest($quest)
+    {
+        return $this->setProperty('quest', $quest);
+    }
+
+    /**
+     * A season in a media series.
+     *
+     * @param CreativeWorkSeason|CreativeWorkSeason[] $season
+     *
+     * @return static
+     *
+     * @see 
+     */
+    public function season($season)
+    {
+        return $this->setProperty('season', $season);
+    }
+
+    /**
+     * A season in a media series.
+     *
+     * @param CreativeWorkSeason|CreativeWorkSeason[] $seasons
+     *
+     * @return static
+     *
+     * @see 
+     */
+    public function seasons($seasons)
+    {
+        return $this->setProperty('seasons', $seasons);
+    }
+
+    /**
+     * The trailer of a movie or tv/radio series, season, episode, etc.
+     *
+     * @param VideoObject|VideoObject[] $trailer
+     *
+     * @return static
+     *
+     * @see 
+     */
+    public function trailer($trailer)
+    {
+        return $this->setProperty('trailer', $trailer);
     }
 
 }

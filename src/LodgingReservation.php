@@ -14,6 +14,20 @@ namespace Spatie\SchemaOrg;
 class LodgingReservation extends Reservation
 {
     /**
+     * The earliest someone may check into a lodging establishment.
+     *
+     * @param \DateTimeInterface|\DateTimeInterface[] $checkinTime
+     *
+     * @return static
+     *
+     * @see 
+     */
+    public function checkinTime($checkinTime)
+    {
+        return $this->setProperty('checkinTime', $checkinTime);
+    }
+
+    /**
      * The latest someone may check out of a lodging establishment.
      *
      * @param \DateTimeInterface|\DateTimeInterface[] $checkoutTime
@@ -25,6 +39,20 @@ class LodgingReservation extends Reservation
     public function checkoutTime($checkoutTime)
     {
         return $this->setProperty('checkoutTime', $checkoutTime);
+    }
+
+    /**
+     * A full description of the lodging unit.
+     *
+     * @param string|string[] $lodgingUnitDescription
+     *
+     * @return static
+     *
+     * @see 
+     */
+    public function lodgingUnitDescription($lodgingUnitDescription)
+    {
+        return $this->setProperty('lodgingUnitDescription', $lodgingUnitDescription);
     }
 
     /**
@@ -40,20 +68,6 @@ class LodgingReservation extends Reservation
     public function lodgingUnitType($lodgingUnitType)
     {
         return $this->setProperty('lodgingUnitType', $lodgingUnitType);
-    }
-
-    /**
-     * The earliest someone may check into a lodging establishment.
-     *
-     * @param \DateTimeInterface|\DateTimeInterface[] $checkinTime
-     *
-     * @return static
-     *
-     * @see 
-     */
-    public function checkinTime($checkinTime)
-    {
-        return $this->setProperty('checkinTime', $checkinTime);
     }
 
     /**
@@ -82,20 +96,6 @@ class LodgingReservation extends Reservation
     public function numChildren($numChildren)
     {
         return $this->setProperty('numChildren', $numChildren);
-    }
-
-    /**
-     * A full description of the lodging unit.
-     *
-     * @param string|string[] $lodgingUnitDescription
-     *
-     * @return static
-     *
-     * @see 
-     */
-    public function lodgingUnitDescription($lodgingUnitDescription)
-    {
-        return $this->setProperty('lodgingUnitDescription', $lodgingUnitDescription);
     }
 
 }

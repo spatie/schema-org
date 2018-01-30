@@ -69,20 +69,6 @@ class ParcelDelivery extends Intangible
     }
 
     /**
-     * Method used for delivery or shipping.
-     *
-     * @param DeliveryMethod|DeliveryMethod[] $hasDeliveryMethod
-     *
-     * @return static
-     *
-     * @see 
-     */
-    public function hasDeliveryMethod($hasDeliveryMethod)
-    {
-        return $this->setProperty('hasDeliveryMethod', $hasDeliveryMethod);
-    }
-
-    /**
      * The latest date the package may arrive.
      *
      * @param \DateTimeInterface|\DateTimeInterface[] $expectedArrivalUntil
@@ -94,6 +80,20 @@ class ParcelDelivery extends Intangible
     public function expectedArrivalUntil($expectedArrivalUntil)
     {
         return $this->setProperty('expectedArrivalUntil', $expectedArrivalUntil);
+    }
+
+    /**
+     * Method used for delivery or shipping.
+     *
+     * @param DeliveryMethod|DeliveryMethod[] $hasDeliveryMethod
+     *
+     * @return static
+     *
+     * @see 
+     */
+    public function hasDeliveryMethod($hasDeliveryMethod)
+    {
+        return $this->setProperty('hasDeliveryMethod', $hasDeliveryMethod);
     }
 
     /**
@@ -139,6 +139,22 @@ class ParcelDelivery extends Intangible
     }
 
     /**
+     * The service provider, service operator, or service performer; the goods
+     * producer. Another party (a seller) may offer those services or goods on
+     * behalf of the provider. A provider may also serve as the seller.
+     *
+     * @param Person|Person[]|Organization|Organization[] $provider
+     *
+     * @return static
+     *
+     * @see 
+     */
+    public function provider($provider)
+    {
+        return $this->setProperty('provider', $provider);
+    }
+
+    /**
      * Shipper tracking number.
      *
      * @param string|string[] $trackingNumber
@@ -164,22 +180,6 @@ class ParcelDelivery extends Intangible
     public function trackingUrl($trackingUrl)
     {
         return $this->setProperty('trackingUrl', $trackingUrl);
-    }
-
-    /**
-     * The service provider, service operator, or service performer; the goods
-     * producer. Another party (a seller) may offer those services or goods on
-     * behalf of the provider. A provider may also serve as the seller.
-     *
-     * @param Person|Person[]|Organization|Organization[] $provider
-     *
-     * @return static
-     *
-     * @see 
-     */
-    public function provider($provider)
-    {
-        return $this->setProperty('provider', $provider);
     }
 
 }

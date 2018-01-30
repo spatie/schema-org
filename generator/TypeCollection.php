@@ -12,7 +12,18 @@ class TypeCollection
         $this->types[$type->name] = $type;
     }
 
-    public function addProperty(Property $property)
+    public function addProperties(array $properties)
+    {
+        foreach ($properties as $property) {
+            $this->addProperty($property);
+        }
+
+        foreach ($this->types as $type) {
+            $type->sortProperties();
+        }
+    }
+
+    private function addProperty(Property $property)
     {
         foreach ($property->types as $type) {
             if (! isset($this->types[$type])) {

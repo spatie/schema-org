@@ -11,6 +11,22 @@ namespace Spatie\SchemaOrg;
 class RadioSeries extends CreativeWorkSeries
 {
     /**
+     * An actor, e.g. in tv, radio, movie, video games etc., or in an event.
+     * Actors can be associated with individual items or with a series, episode,
+     * clip.
+     *
+     * @param Person|Person[] $actor
+     *
+     * @return static
+     *
+     * @see 
+     */
+    public function actor($actor)
+    {
+        return $this->setProperty('actor', $actor);
+    }
+
+    /**
      * An actor, e.g. in tv, radio, movie, video games etc. Actors can be
      * associated with individual items or with a series, episode, clip.
      *
@@ -26,19 +42,17 @@ class RadioSeries extends CreativeWorkSeries
     }
 
     /**
-     * An actor, e.g. in tv, radio, movie, video games etc., or in an event.
-     * Actors can be associated with individual items or with a series, episode,
-     * clip.
+     * A season that is part of the media series.
      *
-     * @param Person|Person[] $actor
+     * @param CreativeWorkSeason|CreativeWorkSeason[] $containsSeason
      *
      * @return static
      *
      * @see 
      */
-    public function actor($actor)
+    public function containsSeason($containsSeason)
     {
-        return $this->setProperty('actor', $actor);
+        return $this->setProperty('containsSeason', $containsSeason);
     }
 
     /**
@@ -101,17 +115,17 @@ class RadioSeries extends CreativeWorkSeries
     }
 
     /**
-     * The number of seasons in this series.
+     * The composer of the soundtrack.
      *
-     * @param int|int[] $numberOfSeasons
+     * @param MusicGroup|MusicGroup[]|Person|Person[] $musicBy
      *
      * @return static
      *
      * @see 
      */
-    public function numberOfSeasons($numberOfSeasons)
+    public function musicBy($musicBy)
     {
-        return $this->setProperty('numberOfSeasons', $numberOfSeasons);
+        return $this->setProperty('musicBy', $musicBy);
     }
 
     /**
@@ -129,17 +143,17 @@ class RadioSeries extends CreativeWorkSeries
     }
 
     /**
-     * The composer of the soundtrack.
+     * The number of seasons in this series.
      *
-     * @param MusicGroup|MusicGroup[]|Person|Person[] $musicBy
+     * @param int|int[] $numberOfSeasons
      *
      * @return static
      *
      * @see 
      */
-    public function musicBy($musicBy)
+    public function numberOfSeasons($numberOfSeasons)
     {
-        return $this->setProperty('musicBy', $musicBy);
+        return $this->setProperty('numberOfSeasons', $numberOfSeasons);
     }
 
     /**
@@ -160,34 +174,6 @@ class RadioSeries extends CreativeWorkSeries
     /**
      * A season in a media series.
      *
-     * @param CreativeWorkSeason|CreativeWorkSeason[] $seasons
-     *
-     * @return static
-     *
-     * @see 
-     */
-    public function seasons($seasons)
-    {
-        return $this->setProperty('seasons', $seasons);
-    }
-
-    /**
-     * A season that is part of the media series.
-     *
-     * @param CreativeWorkSeason|CreativeWorkSeason[] $containsSeason
-     *
-     * @return static
-     *
-     * @see 
-     */
-    public function containsSeason($containsSeason)
-    {
-        return $this->setProperty('containsSeason', $containsSeason);
-    }
-
-    /**
-     * A season in a media series.
-     *
      * @param CreativeWorkSeason|CreativeWorkSeason[] $season
      *
      * @return static
@@ -197,6 +183,20 @@ class RadioSeries extends CreativeWorkSeries
     public function season($season)
     {
         return $this->setProperty('season', $season);
+    }
+
+    /**
+     * A season in a media series.
+     *
+     * @param CreativeWorkSeason|CreativeWorkSeason[] $seasons
+     *
+     * @return static
+     *
+     * @see 
+     */
+    public function seasons($seasons)
+    {
+        return $this->setProperty('seasons', $seasons);
     }
 
     /**

@@ -27,6 +27,20 @@ class Comment extends CreativeWork
     }
 
     /**
+     * The parent of a question, answer or item in general.
+     *
+     * @param Question|Question[] $parentItem
+     *
+     * @return static
+     *
+     * @see 
+     */
+    public function parentItem($parentItem)
+    {
+        return $this->setProperty('parentItem', $parentItem);
+    }
+
+    /**
      * The number of upvotes this question, answer or comment has received from
      * the community.
      *
@@ -39,20 +53,6 @@ class Comment extends CreativeWork
     public function upvoteCount($upvoteCount)
     {
         return $this->setProperty('upvoteCount', $upvoteCount);
-    }
-
-    /**
-     * The parent of a question, answer or item in general.
-     *
-     * @param Question|Question[] $parentItem
-     *
-     * @return static
-     *
-     * @see 
-     */
-    public function parentItem($parentItem)
-    {
-        return $this->setProperty('parentItem', $parentItem);
     }
 
 }

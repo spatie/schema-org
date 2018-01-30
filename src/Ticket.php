@@ -10,17 +10,31 @@ namespace Spatie\SchemaOrg;
 class Ticket extends Intangible
 {
     /**
-     * The person or organization the reservation or ticket is for.
+     * The date the ticket was issued.
      *
-     * @param Person|Person[]|Organization|Organization[] $underName
+     * @param \DateTimeInterface|\DateTimeInterface[] $dateIssued
      *
      * @return static
      *
      * @see 
      */
-    public function underName($underName)
+    public function dateIssued($dateIssued)
     {
-        return $this->setProperty('underName', $underName);
+        return $this->setProperty('dateIssued', $dateIssued);
+    }
+
+    /**
+     * The organization issuing the ticket or permit.
+     *
+     * @param Organization|Organization[] $issuedBy
+     *
+     * @return static
+     *
+     * @see 
+     */
+    public function issuedBy($issuedBy)
+    {
+        return $this->setProperty('issuedBy', $issuedBy);
     }
 
     /**
@@ -39,35 +53,6 @@ class Ticket extends Intangible
     }
 
     /**
-     * The total price for the reservation or ticket, including applicable
-     * taxes, shipping, etc.
-     *
-     * @param float|float[]|int|int[]|string|string[]|PriceSpecification|PriceSpecification[] $totalPrice
-     *
-     * @return static
-     *
-     * @see 
-     */
-    public function totalPrice($totalPrice)
-    {
-        return $this->setProperty('totalPrice', $totalPrice);
-    }
-
-    /**
-     * The date the ticket was issued.
-     *
-     * @param \DateTimeInterface|\DateTimeInterface[] $dateIssued
-     *
-     * @return static
-     *
-     * @see 
-     */
-    public function dateIssued($dateIssued)
-    {
-        return $this->setProperty('dateIssued', $dateIssued);
-    }
-
-    /**
      * The unique identifier for the ticket.
      *
      * @param string|string[] $ticketNumber
@@ -79,6 +64,21 @@ class Ticket extends Intangible
     public function ticketNumber($ticketNumber)
     {
         return $this->setProperty('ticketNumber', $ticketNumber);
+    }
+
+    /**
+     * Reference to an asset (e.g., Barcode, QR code image or PDF) usable for
+     * entrance.
+     *
+     * @param string|string[] $ticketToken
+     *
+     * @return static
+     *
+     * @see 
+     */
+    public function ticketToken($ticketToken)
+    {
+        return $this->setProperty('ticketToken', $ticketToken);
     }
 
     /**
@@ -96,32 +96,32 @@ class Ticket extends Intangible
     }
 
     /**
-     * The organization issuing the ticket or permit.
+     * The total price for the reservation or ticket, including applicable
+     * taxes, shipping, etc.
      *
-     * @param Organization|Organization[] $issuedBy
+     * @param float|float[]|int|int[]|string|string[]|PriceSpecification|PriceSpecification[] $totalPrice
      *
      * @return static
      *
      * @see 
      */
-    public function issuedBy($issuedBy)
+    public function totalPrice($totalPrice)
     {
-        return $this->setProperty('issuedBy', $issuedBy);
+        return $this->setProperty('totalPrice', $totalPrice);
     }
 
     /**
-     * Reference to an asset (e.g., Barcode, QR code image or PDF) usable for
-     * entrance.
+     * The person or organization the reservation or ticket is for.
      *
-     * @param string|string[] $ticketToken
+     * @param Person|Person[]|Organization|Organization[] $underName
      *
      * @return static
      *
      * @see 
      */
-    public function ticketToken($ticketToken)
+    public function underName($underName)
     {
-        return $this->setProperty('ticketToken', $ticketToken);
+        return $this->setProperty('underName', $underName);
     }
 
 }
