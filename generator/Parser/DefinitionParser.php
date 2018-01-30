@@ -2,7 +2,6 @@
 
 namespace Spatie\SchemaOrg\Generator\Parser;
 
-use Spatie\SchemaOrg\Generator\Type;
 use Spatie\SchemaOrg\Generator\Property;
 use Symfony\Component\DomCrawler\Crawler;
 use Spatie\SchemaOrg\Generator\Definitions;
