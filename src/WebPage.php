@@ -17,7 +17,7 @@ class WebPage extends CreativeWork
      * A set of links that can help a user understand and navigate a website
      * hierarchy.
      *
-     * @param string|string[]|BreadcrumbList|BreadcrumbList[] $breadcrumb
+     * @param BreadcrumbList|BreadcrumbList[]|string|string[] $breadcrumb
      *
      * @return static
      *

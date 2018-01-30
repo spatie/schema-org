@@ -45,72 +45,6 @@ class PropertyValue extends StructuredValue
     }
 
     /**
-     * The unit of measurement given using the UN/CEFACT Common Code (3
-     * characters) or a URL. Other codes than the UN/CEFACT Common Code may be
-     * used with a prefix followed by a colon.
-     *
-     * @param string|string[] $unitCode
-     *
-     * @return static
-     *
-     * @see http://schema.org/unitCode
-     */
-    public function unitCode($unitCode)
-    {
-        return $this->setProperty('unitCode', $unitCode);
-    }
-
-    /**
-     * The value of the quantitative value or property value node.
-     * 
-     * * For [[QuantitativeValue]] and [[MonetaryAmount]], the recommended type
-     * for values is 'Number'.
-     * * For [[PropertyValue]], it can be 'Text;', 'Number', 'Boolean', or
-     * 'StructuredValue'.
-     *
-     * @param float|float[]|int|int[]|string|string[]|bool|bool[]|StructuredValue|StructuredValue[] $value
-     *
-     * @return static
-     *
-     * @see http://schema.org/value
-     */
-    public function value($value)
-    {
-        return $this->setProperty('value', $value);
-    }
-
-    /**
-     * A pointer to a secondary value that provides additional information on
-     * the original value, e.g. a reference temperature.
-     *
-     * @param Enumeration|Enumeration[]|StructuredValue|StructuredValue[]|PropertyValue|PropertyValue[]|QualitativeValue|QualitativeValue[]|QuantitativeValue|QuantitativeValue[] $valueReference
-     *
-     * @return static
-     *
-     * @see http://schema.org/valueReference
-     */
-    public function valueReference($valueReference)
-    {
-        return $this->setProperty('valueReference', $valueReference);
-    }
-
-    /**
-     * A string or text indicating the unit of measurement. Useful if you cannot
-     * provide a standard unit code for
-     * <a href='unitCode'>unitCode</a>.
-     *
-     * @param string|string[] $unitText
-     *
-     * @return static
-     *
-     * @see http://schema.org/unitText
-     */
-    public function unitText($unitText)
-    {
-        return $this->setProperty('unitText', $unitText);
-    }
-
-    /**
      * A commonly used identifier for the characteristic represented by the
      * property, e.g. a manufacturer or a standard code for a property.
      * propertyID can be
@@ -132,6 +66,72 @@ class PropertyValue extends StructuredValue
     public function propertyID($propertyID)
     {
         return $this->setProperty('propertyID', $propertyID);
+    }
+
+    /**
+     * The unit of measurement given using the UN/CEFACT Common Code (3
+     * characters) or a URL. Other codes than the UN/CEFACT Common Code may be
+     * used with a prefix followed by a colon.
+     *
+     * @param string|string[] $unitCode
+     *
+     * @return static
+     *
+     * @see http://schema.org/unitCode
+     */
+    public function unitCode($unitCode)
+    {
+        return $this->setProperty('unitCode', $unitCode);
+    }
+
+    /**
+     * A string or text indicating the unit of measurement. Useful if you cannot
+     * provide a standard unit code for
+     * <a href='unitCode'>unitCode</a>.
+     *
+     * @param string|string[] $unitText
+     *
+     * @return static
+     *
+     * @see http://schema.org/unitText
+     */
+    public function unitText($unitText)
+    {
+        return $this->setProperty('unitText', $unitText);
+    }
+
+    /**
+     * The value of the quantitative value or property value node.
+     * 
+     * * For [[QuantitativeValue]] and [[MonetaryAmount]], the recommended type
+     * for values is 'Number'.
+     * * For [[PropertyValue]], it can be 'Text;', 'Number', 'Boolean', or
+     * 'StructuredValue'.
+     *
+     * @param StructuredValue|StructuredValue[]|bool|bool[]|float|float[]|int|int[]|string|string[] $value
+     *
+     * @return static
+     *
+     * @see http://schema.org/value
+     */
+    public function value($value)
+    {
+        return $this->setProperty('value', $value);
+    }
+
+    /**
+     * A pointer to a secondary value that provides additional information on
+     * the original value, e.g. a reference temperature.
+     *
+     * @param Enumeration|Enumeration[]|PropertyValue|PropertyValue[]|QualitativeValue|QualitativeValue[]|QuantitativeValue|QuantitativeValue[]|StructuredValue|StructuredValue[] $valueReference
+     *
+     * @return static
+     *
+     * @see http://schema.org/valueReference
+     */
+    public function valueReference($valueReference)
+    {
+        return $this->setProperty('valueReference', $valueReference);
     }
 
 }

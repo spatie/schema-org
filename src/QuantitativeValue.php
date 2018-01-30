@@ -10,6 +10,28 @@ namespace Spatie\SchemaOrg;
 class QuantitativeValue extends StructuredValue
 {
     /**
+     * A property-value pair representing an additional characteristics of the
+     * entitity, e.g. a product feature or another characteristic for which
+     * there is no matching property in schema.org.
+     * 
+     * Note: Publishers should be aware that applications designed to use
+     * specific schema.org properties (e.g. http://schema.org/width,
+     * http://schema.org/color, http://schema.org/gtin13, ...) will typically
+     * expect such data to be provided using those properties, rather than using
+     * the generic property/value mechanism.
+     *
+     * @param PropertyValue|PropertyValue[] $additionalProperty
+     *
+     * @return static
+     *
+     * @see http://schema.org/additionalProperty
+     */
+    public function additionalProperty($additionalProperty)
+    {
+        return $this->setProperty('additionalProperty', $additionalProperty);
+    }
+
+    /**
      * The upper value of some characteristic or property.
      *
      * @param float|float[]|int|int[] $maxValue
@@ -54,6 +76,22 @@ class QuantitativeValue extends StructuredValue
     }
 
     /**
+     * A string or text indicating the unit of measurement. Useful if you cannot
+     * provide a standard unit code for
+     * <a href='unitCode'>unitCode</a>.
+     *
+     * @param string|string[] $unitText
+     *
+     * @return static
+     *
+     * @see http://schema.org/unitText
+     */
+    public function unitText($unitText)
+    {
+        return $this->setProperty('unitText', $unitText);
+    }
+
+    /**
      * The value of the quantitative value or property value node.
      * 
      * * For [[QuantitativeValue]] and [[MonetaryAmount]], the recommended type
@@ -61,7 +99,7 @@ class QuantitativeValue extends StructuredValue
      * * For [[PropertyValue]], it can be 'Text;', 'Number', 'Boolean', or
      * 'StructuredValue'.
      *
-     * @param float|float[]|int|int[]|string|string[]|bool|bool[]|StructuredValue|StructuredValue[] $value
+     * @param StructuredValue|StructuredValue[]|bool|bool[]|float|float[]|int|int[]|string|string[] $value
      *
      * @return static
      *
@@ -76,7 +114,7 @@ class QuantitativeValue extends StructuredValue
      * A pointer to a secondary value that provides additional information on
      * the original value, e.g. a reference temperature.
      *
-     * @param Enumeration|Enumeration[]|StructuredValue|StructuredValue[]|PropertyValue|PropertyValue[]|QualitativeValue|QualitativeValue[]|QuantitativeValue|QuantitativeValue[] $valueReference
+     * @param Enumeration|Enumeration[]|PropertyValue|PropertyValue[]|QualitativeValue|QualitativeValue[]|QuantitativeValue|QuantitativeValue[]|StructuredValue|StructuredValue[] $valueReference
      *
      * @return static
      *
@@ -85,44 +123,6 @@ class QuantitativeValue extends StructuredValue
     public function valueReference($valueReference)
     {
         return $this->setProperty('valueReference', $valueReference);
-    }
-
-    /**
-     * A property-value pair representing an additional characteristics of the
-     * entitity, e.g. a product feature or another characteristic for which
-     * there is no matching property in schema.org.
-     * 
-     * Note: Publishers should be aware that applications designed to use
-     * specific schema.org properties (e.g. http://schema.org/width,
-     * http://schema.org/color, http://schema.org/gtin13, ...) will typically
-     * expect such data to be provided using those properties, rather than using
-     * the generic property/value mechanism.
-     *
-     * @param PropertyValue|PropertyValue[] $additionalProperty
-     *
-     * @return static
-     *
-     * @see http://schema.org/additionalProperty
-     */
-    public function additionalProperty($additionalProperty)
-    {
-        return $this->setProperty('additionalProperty', $additionalProperty);
-    }
-
-    /**
-     * A string or text indicating the unit of measurement. Useful if you cannot
-     * provide a standard unit code for
-     * <a href='unitCode'>unitCode</a>.
-     *
-     * @param string|string[] $unitText
-     *
-     * @return static
-     *
-     * @see http://schema.org/unitText
-     */
-    public function unitText($unitText)
-    {
-        return $this->setProperty('unitText', $unitText);
     }
 
 }

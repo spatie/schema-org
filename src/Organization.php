@@ -10,21 +10,6 @@ namespace Spatie\SchemaOrg;
 class Organization extends Thing
 {
     /**
-     * Indicates an OfferCatalog listing for this Organization, Person, or
-     * Service.
-     *
-     * @param OfferCatalog|OfferCatalog[] $hasOfferCatalog
-     *
-     * @return static
-     *
-     * @see http://schema.org/hasOfferCatalog
-     */
-    public function hasOfferCatalog($hasOfferCatalog)
-    {
-        return $this->setProperty('hasOfferCatalog', $hasOfferCatalog);
-    }
-
-    /**
      * Physical address of the item.
      *
      * @param PostalAddress|PostalAddress[]|string|string[] $address
@@ -56,7 +41,7 @@ class Organization extends Thing
     /**
      * The geographic area where a service or offered item is provided.
      *
-     * @param Place|Place[]|AdministrativeArea|AdministrativeArea[]|GeoShape|GeoShape[]|string|string[] $areaServed
+     * @param AdministrativeArea|AdministrativeArea[]|GeoShape|GeoShape[]|Place|Place[]|string|string[] $areaServed
      *
      * @return static
      *
@@ -93,21 +78,6 @@ class Organization extends Thing
     public function awards($awards)
     {
         return $this->setProperty('awards', $awards);
-    }
-
-    /**
-     * The larger organization that this organization is a [[subOrganization]]
-     * of, if any.
-     *
-     * @param Organization|Organization[] $parentOrganization
-     *
-     * @return static
-     *
-     * @see http://schema.org/parentOrganization
-     */
-    public function parentOrganization($parentOrganization)
-    {
-        return $this->setProperty('parentOrganization', $parentOrganization);
     }
 
     /**
@@ -168,6 +138,20 @@ class Organization extends Thing
     public function department($department)
     {
         return $this->setProperty('department', $department);
+    }
+
+    /**
+     * The date that this organization was dissolved.
+     *
+     * @param \DateTimeInterface|\DateTimeInterface[] $dissolutionDate
+     *
+     * @return static
+     *
+     * @see http://schema.org/dissolutionDate
+     */
+    public function dissolutionDate($dissolutionDate)
+    {
+        return $this->setProperty('dissolutionDate', $dissolutionDate);
     }
 
     /**
@@ -299,20 +283,6 @@ class Organization extends Thing
     }
 
     /**
-     * The date that this organization was dissolved.
-     *
-     * @param \DateTimeInterface|\DateTimeInterface[] $dissolutionDate
-     *
-     * @return static
-     *
-     * @see http://schema.org/dissolutionDate
-     */
-    public function dissolutionDate($dissolutionDate)
-    {
-        return $this->setProperty('dissolutionDate', $dissolutionDate);
-    }
-
-    /**
      * The date that this organization was founded.
      *
      * @param \DateTimeInterface|\DateTimeInterface[] $foundingDate
@@ -324,6 +294,35 @@ class Organization extends Thing
     public function foundingDate($foundingDate)
     {
         return $this->setProperty('foundingDate', $foundingDate);
+    }
+
+    /**
+     * The place where the Organization was founded.
+     *
+     * @param Place|Place[] $foundingLocation
+     *
+     * @return static
+     *
+     * @see http://schema.org/foundingLocation
+     */
+    public function foundingLocation($foundingLocation)
+    {
+        return $this->setProperty('foundingLocation', $foundingLocation);
+    }
+
+    /**
+     * A person or organization that supports (sponsors) something through some
+     * kind of financial contribution.
+     *
+     * @param Organization|Organization[]|Person|Person[] $funder
+     *
+     * @return static
+     *
+     * @see http://schema.org/funder
+     */
+    public function funder($funder)
+    {
+        return $this->setProperty('funder', $funder);
     }
 
     /**
@@ -341,6 +340,21 @@ class Organization extends Thing
     public function globalLocationNumber($globalLocationNumber)
     {
         return $this->setProperty('globalLocationNumber', $globalLocationNumber);
+    }
+
+    /**
+     * Indicates an OfferCatalog listing for this Organization, Person, or
+     * Service.
+     *
+     * @param OfferCatalog|OfferCatalog[] $hasOfferCatalog
+     *
+     * @return static
+     *
+     * @see http://schema.org/hasOfferCatalog
+     */
+    public function hasOfferCatalog($hasOfferCatalog)
+    {
+        return $this->setProperty('hasOfferCatalog', $hasOfferCatalog);
     }
 
     /**
@@ -388,6 +402,21 @@ class Organization extends Thing
     }
 
     /**
+     * An organization identifier that uniquely identifies a legal entity as
+     * defined in ISO 17442.
+     *
+     * @param string|string[] $leiCode
+     *
+     * @return static
+     *
+     * @see http://schema.org/leiCode
+     */
+    public function leiCode($leiCode)
+    {
+        return $this->setProperty('leiCode', $leiCode);
+    }
+
+    /**
      * The location of for example where the event is happening, an organization
      * is located, or where an action takes place.
      *
@@ -428,20 +457,6 @@ class Organization extends Thing
     public function makesOffer($makesOffer)
     {
         return $this->setProperty('makesOffer', $makesOffer);
-    }
-
-    /**
-     * A pointer to the organization or person making the offer.
-     *
-     * @param Person|Person[]|Offer|Offer[] $offeredBy
-     *
-     * @return static
-     *
-     * @see http://schema.org/offeredBy
-     */
-    public function offeredBy($offeredBy)
-    {
-        return $this->setProperty('offeredBy', $offeredBy);
     }
 
     /**
@@ -518,6 +533,20 @@ class Organization extends Thing
     }
 
     /**
+     * A pointer to the organization or person making the offer.
+     *
+     * @param Offer|Offer[]|Person|Person[] $offeredBy
+     *
+     * @return static
+     *
+     * @see http://schema.org/offeredBy
+     */
+    public function offeredBy($offeredBy)
+    {
+        return $this->setProperty('offeredBy', $offeredBy);
+    }
+
+    /**
      * Products owned by the organization or person.
      *
      * @param OwnershipInfo|OwnershipInfo[]|Product|Product[] $owns
@@ -529,6 +558,21 @@ class Organization extends Thing
     public function owns($owns)
     {
         return $this->setProperty('owns', $owns);
+    }
+
+    /**
+     * The larger organization that this organization is a [[subOrganization]]
+     * of, if any.
+     *
+     * @param Organization|Organization[] $parentOrganization
+     *
+     * @return static
+     *
+     * @see http://schema.org/parentOrganization
+     */
+    public function parentOrganization($parentOrganization)
+    {
+        return $this->setProperty('parentOrganization', $parentOrganization);
     }
 
     /**
@@ -577,7 +621,7 @@ class Organization extends Thing
     /**
      * The geographic area where the service is provided.
      *
-     * @param Place|Place[]|AdministrativeArea|AdministrativeArea[]|GeoShape|GeoShape[] $serviceArea
+     * @param AdministrativeArea|AdministrativeArea[]|GeoShape|GeoShape[]|Place|Place[] $serviceArea
      *
      * @return static
      *
@@ -602,21 +646,6 @@ class Organization extends Thing
     public function sponsor($sponsor)
     {
         return $this->setProperty('sponsor', $sponsor);
-    }
-
-    /**
-     * A person or organization that supports (sponsors) something through some
-     * kind of financial contribution.
-     *
-     * @param Organization|Organization[]|Person|Person[] $funder
-     *
-     * @return static
-     *
-     * @see http://schema.org/funder
-     */
-    public function funder($funder)
-    {
-        return $this->setProperty('funder', $funder);
     }
 
     /**
@@ -676,35 +705,6 @@ class Organization extends Thing
     public function vatID($vatID)
     {
         return $this->setProperty('vatID', $vatID);
-    }
-
-    /**
-     * The place where the Organization was founded.
-     *
-     * @param Place|Place[] $foundingLocation
-     *
-     * @return static
-     *
-     * @see http://schema.org/foundingLocation
-     */
-    public function foundingLocation($foundingLocation)
-    {
-        return $this->setProperty('foundingLocation', $foundingLocation);
-    }
-
-    /**
-     * An organization identifier that uniquely identifies a legal entity as
-     * defined in ISO 17442.
-     *
-     * @param string|string[] $leiCode
-     *
-     * @return static
-     *
-     * @see http://schema.org/leiCode
-     */
-    public function leiCode($leiCode)
-    {
-        return $this->setProperty('leiCode', $leiCode);
     }
 
 }

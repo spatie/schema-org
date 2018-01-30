@@ -30,7 +30,7 @@ class CommunicateAction extends InteractAction
      * standard](http://tools.ietf.org/html/bcp47). See also
      * [[availableLanguage]].
      *
-     * @param string|string[]|Language|Language[] $inLanguage
+     * @param Language|Language[]|string|string[] $inLanguage
      *
      * @return static
      *

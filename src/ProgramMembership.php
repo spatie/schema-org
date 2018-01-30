@@ -11,6 +11,21 @@ namespace Spatie\SchemaOrg;
 class ProgramMembership extends Intangible
 {
     /**
+     * The organization (airline, travelers' club, etc.) the membership is made
+     * with.
+     *
+     * @param Organization|Organization[] $hostingOrganization
+     *
+     * @return static
+     *
+     * @see http://schema.org/hostingOrganization
+     */
+    public function hostingOrganization($hostingOrganization)
+    {
+        return $this->setProperty('hostingOrganization', $hostingOrganization);
+    }
+
+    /**
      * A member of an Organization or a ProgramMembership. Organizations can be
      * members of organizations; ProgramMembership is typically for individuals.
      *
@@ -65,21 +80,6 @@ class ProgramMembership extends Intangible
     public function programName($programName)
     {
         return $this->setProperty('programName', $programName);
-    }
-
-    /**
-     * The organization (airline, travelers' club, etc.) the membership is made
-     * with.
-     *
-     * @param Organization|Organization[] $hostingOrganization
-     *
-     * @return static
-     *
-     * @see http://schema.org/hostingOrganization
-     */
-    public function hostingOrganization($hostingOrganization)
-    {
-        return $this->setProperty('hostingOrganization', $hostingOrganization);
     }
 
 }

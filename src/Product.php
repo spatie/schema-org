@@ -12,6 +12,28 @@ namespace Spatie\SchemaOrg;
 class Product extends Thing
 {
     /**
+     * A property-value pair representing an additional characteristics of the
+     * entitity, e.g. a product feature or another characteristic for which
+     * there is no matching property in schema.org.
+     * 
+     * Note: Publishers should be aware that applications designed to use
+     * specific schema.org properties (e.g. http://schema.org/width,
+     * http://schema.org/color, http://schema.org/gtin13, ...) will typically
+     * expect such data to be provided using those properties, rather than using
+     * the generic property/value mechanism.
+     *
+     * @param PropertyValue|PropertyValue[] $additionalProperty
+     *
+     * @return static
+     *
+     * @see http://schema.org/additionalProperty
+     */
+    public function additionalProperty($additionalProperty)
+    {
+        return $this->setProperty('additionalProperty', $additionalProperty);
+    }
+
+    /**
      * The overall rating, based on a collection of reviews or ratings, of the
      * item.
      *
@@ -87,7 +109,7 @@ class Product extends Thing
      * A category for the item. Greater signs or slashes can be used to
      * informally indicate a category hierarchy.
      *
-     * @param string|string[]|Thing|Thing[] $category
+     * @param Thing|Thing[]|string|string[] $category
      *
      * @return static
      *
@@ -304,6 +326,35 @@ class Product extends Thing
     }
 
     /**
+     * The manufacturer of the product.
+     *
+     * @param Organization|Organization[] $manufacturer
+     *
+     * @return static
+     *
+     * @see http://schema.org/manufacturer
+     */
+    public function manufacturer($manufacturer)
+    {
+        return $this->setProperty('manufacturer', $manufacturer);
+    }
+
+    /**
+     * A material that something is made from, e.g. leather, wool, cotton,
+     * paper.
+     *
+     * @param Product|Product[]|string|string[] $material
+     *
+     * @return static
+     *
+     * @see http://schema.org/material
+     */
+    public function material($material)
+    {
+        return $this->setProperty('material', $material);
+    }
+
+    /**
      * The model of the product. Use with the URL of a ProductModel or a textual
      * representation of the model identifier. The URL of the ProductModel can
      * be from an external source. It is recommended to additionally provide
@@ -337,20 +388,6 @@ class Product extends Thing
     }
 
     /**
-     * The manufacturer of the product.
-     *
-     * @param Organization|Organization[] $manufacturer
-     *
-     * @return static
-     *
-     * @see http://schema.org/manufacturer
-     */
-    public function manufacturer($manufacturer)
-    {
-        return $this->setProperty('manufacturer', $manufacturer);
-    }
-
-    /**
      * An offer to provide this item&#x2014;for example, an offer to sell a
      * product, rent the DVD of a movie, perform a service, or give away tickets
      * to an event.
@@ -379,6 +416,34 @@ class Product extends Thing
     public function productID($productID)
     {
         return $this->setProperty('productID', $productID);
+    }
+
+    /**
+     * The date of production of the item, e.g. vehicle.
+     *
+     * @param \DateTimeInterface|\DateTimeInterface[] $productionDate
+     *
+     * @return static
+     *
+     * @see http://schema.org/productionDate
+     */
+    public function productionDate($productionDate)
+    {
+        return $this->setProperty('productionDate', $productionDate);
+    }
+
+    /**
+     * The date the item e.g. vehicle was purchased by the current owner.
+     *
+     * @param \DateTimeInterface|\DateTimeInterface[] $purchaseDate
+     *
+     * @return static
+     *
+     * @see http://schema.org/purchaseDate
+     */
+    public function purchaseDate($purchaseDate)
+    {
+        return $this->setProperty('purchaseDate', $purchaseDate);
     }
 
     /**
@@ -465,71 +530,6 @@ class Product extends Thing
     public function width($width)
     {
         return $this->setProperty('width', $width);
-    }
-
-    /**
-     * A material that something is made from, e.g. leather, wool, cotton,
-     * paper.
-     *
-     * @param string|string[]|Product|Product[] $material
-     *
-     * @return static
-     *
-     * @see http://schema.org/material
-     */
-    public function material($material)
-    {
-        return $this->setProperty('material', $material);
-    }
-
-    /**
-     * A property-value pair representing an additional characteristics of the
-     * entitity, e.g. a product feature or another characteristic for which
-     * there is no matching property in schema.org.
-     * 
-     * Note: Publishers should be aware that applications designed to use
-     * specific schema.org properties (e.g. http://schema.org/width,
-     * http://schema.org/color, http://schema.org/gtin13, ...) will typically
-     * expect such data to be provided using those properties, rather than using
-     * the generic property/value mechanism.
-     *
-     * @param PropertyValue|PropertyValue[] $additionalProperty
-     *
-     * @return static
-     *
-     * @see http://schema.org/additionalProperty
-     */
-    public function additionalProperty($additionalProperty)
-    {
-        return $this->setProperty('additionalProperty', $additionalProperty);
-    }
-
-    /**
-     * The date of production of the item, e.g. vehicle.
-     *
-     * @param \DateTimeInterface|\DateTimeInterface[] $productionDate
-     *
-     * @return static
-     *
-     * @see http://schema.org/productionDate
-     */
-    public function productionDate($productionDate)
-    {
-        return $this->setProperty('productionDate', $productionDate);
-    }
-
-    /**
-     * The date the item e.g. vehicle was purchased by the current owner.
-     *
-     * @param \DateTimeInterface|\DateTimeInterface[] $purchaseDate
-     *
-     * @return static
-     *
-     * @see http://schema.org/purchaseDate
-     */
-    public function purchaseDate($purchaseDate)
-    {
-        return $this->setProperty('purchaseDate', $purchaseDate);
     }
 
 }

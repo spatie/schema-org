@@ -41,6 +41,20 @@ class TVSeries extends CreativeWork
     }
 
     /**
+     * A season that is part of the media series.
+     *
+     * @param CreativeWorkSeason|CreativeWorkSeason[] $containsSeason
+     *
+     * @return static
+     *
+     * @see http://schema.org/containsSeason
+     */
+    public function containsSeason($containsSeason)
+    {
+        return $this->setProperty('containsSeason', $containsSeason);
+    }
+
+    /**
      * The country of the principal offices of the production company or
      * individual responsible for the movie or program.
      *
@@ -183,20 +197,6 @@ class TVSeries extends CreativeWork
     public function season($season)
     {
         return $this->setProperty('season', $season);
-    }
-
-    /**
-     * A season that is part of the media series.
-     *
-     * @param CreativeWorkSeason|CreativeWorkSeason[] $containsSeason
-     *
-     * @return static
-     *
-     * @see http://schema.org/containsSeason
-     */
-    public function containsSeason($containsSeason)
-    {
-        return $this->setProperty('containsSeason', $containsSeason);
     }
 
     /**

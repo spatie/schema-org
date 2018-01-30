@@ -11,6 +11,28 @@ namespace Spatie\SchemaOrg;
 class QualitativeValue extends Enumeration
 {
     /**
+     * A property-value pair representing an additional characteristics of the
+     * entitity, e.g. a product feature or another characteristic for which
+     * there is no matching property in schema.org.
+     * 
+     * Note: Publishers should be aware that applications designed to use
+     * specific schema.org properties (e.g. http://schema.org/width,
+     * http://schema.org/color, http://schema.org/gtin13, ...) will typically
+     * expect such data to be provided using those properties, rather than using
+     * the generic property/value mechanism.
+     *
+     * @param PropertyValue|PropertyValue[] $additionalProperty
+     *
+     * @return static
+     *
+     * @see http://schema.org/additionalProperty
+     */
+    public function additionalProperty($additionalProperty)
+    {
+        return $this->setProperty('additionalProperty', $additionalProperty);
+    }
+
+    /**
      * This ordering relation for qualitative values indicates that the subject
      * is equal to the object.
      *
@@ -104,7 +126,7 @@ class QualitativeValue extends Enumeration
      * A pointer to a secondary value that provides additional information on
      * the original value, e.g. a reference temperature.
      *
-     * @param Enumeration|Enumeration[]|StructuredValue|StructuredValue[]|PropertyValue|PropertyValue[]|QualitativeValue|QualitativeValue[]|QuantitativeValue|QuantitativeValue[] $valueReference
+     * @param Enumeration|Enumeration[]|PropertyValue|PropertyValue[]|QualitativeValue|QualitativeValue[]|QuantitativeValue|QuantitativeValue[]|StructuredValue|StructuredValue[] $valueReference
      *
      * @return static
      *
@@ -113,28 +135,6 @@ class QualitativeValue extends Enumeration
     public function valueReference($valueReference)
     {
         return $this->setProperty('valueReference', $valueReference);
-    }
-
-    /**
-     * A property-value pair representing an additional characteristics of the
-     * entitity, e.g. a product feature or another characteristic for which
-     * there is no matching property in schema.org.
-     * 
-     * Note: Publishers should be aware that applications designed to use
-     * specific schema.org properties (e.g. http://schema.org/width,
-     * http://schema.org/color, http://schema.org/gtin13, ...) will typically
-     * expect such data to be provided using those properties, rather than using
-     * the generic property/value mechanism.
-     *
-     * @param PropertyValue|PropertyValue[] $additionalProperty
-     *
-     * @return static
-     *
-     * @see http://schema.org/additionalProperty
-     */
-    public function additionalProperty($additionalProperty)
-    {
-        return $this->setProperty('additionalProperty', $additionalProperty);
     }
 
 }

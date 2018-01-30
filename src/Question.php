@@ -11,18 +11,33 @@ namespace Spatie\SchemaOrg;
 class Question extends CreativeWork
 {
     /**
-     * The number of upvotes this question, answer or comment has received from
-     * the community.
+     * The answer that has been accepted as best, typically on a Question/Answer
+     * site. Sites vary in their selection mechanisms, e.g. drawing on community
+     * opinion and/or the view of the Question author.
      *
-     * @param int|int[] $upvoteCount
+     * @param Answer|Answer[] $acceptedAnswer
      *
      * @return static
      *
-     * @see http://schema.org/upvoteCount
+     * @see http://schema.org/acceptedAnswer
      */
-    public function upvoteCount($upvoteCount)
+    public function acceptedAnswer($acceptedAnswer)
     {
-        return $this->setProperty('upvoteCount', $upvoteCount);
+        return $this->setProperty('acceptedAnswer', $acceptedAnswer);
+    }
+
+    /**
+     * The number of answers this question has received.
+     *
+     * @param int|int[] $answerCount
+     *
+     * @return static
+     *
+     * @see http://schema.org/answerCount
+     */
+    public function answerCount($answerCount)
+    {
+        return $this->setProperty('answerCount', $answerCount);
     }
 
     /**
@@ -41,36 +56,6 @@ class Question extends CreativeWork
     }
 
     /**
-     * The number of answers this question has received.
-     *
-     * @param int|int[] $answerCount
-     *
-     * @return static
-     *
-     * @see http://schema.org/answerCount
-     */
-    public function answerCount($answerCount)
-    {
-        return $this->setProperty('answerCount', $answerCount);
-    }
-
-    /**
-     * The answer that has been accepted as best, typically on a Question/Answer
-     * site. Sites vary in their selection mechanisms, e.g. drawing on community
-     * opinion and/or the view of the Question author.
-     *
-     * @param Answer|Answer[] $acceptedAnswer
-     *
-     * @return static
-     *
-     * @see http://schema.org/acceptedAnswer
-     */
-    public function acceptedAnswer($acceptedAnswer)
-    {
-        return $this->setProperty('acceptedAnswer', $acceptedAnswer);
-    }
-
-    /**
      * An answer (possibly one of several, possibly incorrect) to a Question,
      * e.g. on a Question/Answer site.
      *
@@ -83,6 +68,21 @@ class Question extends CreativeWork
     public function suggestedAnswer($suggestedAnswer)
     {
         return $this->setProperty('suggestedAnswer', $suggestedAnswer);
+    }
+
+    /**
+     * The number of upvotes this question, answer or comment has received from
+     * the community.
+     *
+     * @param int|int[] $upvoteCount
+     *
+     * @return static
+     *
+     * @see http://schema.org/upvoteCount
+     */
+    public function upvoteCount($upvoteCount)
+    {
+        return $this->setProperty('upvoteCount', $upvoteCount);
     }
 
 }

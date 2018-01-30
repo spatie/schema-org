@@ -57,20 +57,6 @@ class Event extends Thing
     }
 
     /**
-     * An organizer of an Event.
-     *
-     * @param Person|Person[]|Organization|Organization[] $organizer
-     *
-     * @return static
-     *
-     * @see http://schema.org/organizer
-     */
-    public function organizer($organizer)
-    {
-        return $this->setProperty('organizer', $organizer);
-    }
-
-    /**
      * A person or organization attending the event.
      *
      * @param Organization|Organization[]|Person|Person[] $attendee
@@ -110,6 +96,21 @@ class Event extends Thing
     public function audience($audience)
     {
         return $this->setProperty('audience', $audience);
+    }
+
+    /**
+     * The person or organization who wrote a composition, or who is the
+     * composer of a work performed at some event.
+     *
+     * @param Organization|Organization[]|Person|Person[] $composer
+     *
+     * @return static
+     *
+     * @see http://schema.org/composer
+     */
+    public function composer($composer)
+    {
+        return $this->setProperty('composer', $composer);
     }
 
     /**
@@ -202,6 +203,38 @@ class Event extends Thing
     }
 
     /**
+     * A person or organization that supports (sponsors) something through some
+     * kind of financial contribution.
+     *
+     * @param Organization|Organization[]|Person|Person[] $funder
+     *
+     * @return static
+     *
+     * @see http://schema.org/funder
+     */
+    public function funder($funder)
+    {
+        return $this->setProperty('funder', $funder);
+    }
+
+    /**
+     * The language of the content or performance or used in an action. Please
+     * use one of the language codes from the [IETF BCP 47
+     * standard](http://tools.ietf.org/html/bcp47). See also
+     * [[availableLanguage]].
+     *
+     * @param Language|Language[]|string|string[] $inLanguage
+     *
+     * @return static
+     *
+     * @see http://schema.org/inLanguage
+     */
+    public function inLanguage($inLanguage)
+    {
+        return $this->setProperty('inLanguage', $inLanguage);
+    }
+
+    /**
      * A flag to signal that the publication is accessible for free.
      *
      * @param bool|bool[] $isAccessibleForFree
@@ -213,23 +246,6 @@ class Event extends Thing
     public function isAccessibleForFree($isAccessibleForFree)
     {
         return $this->setProperty('isAccessibleForFree', $isAccessibleForFree);
-    }
-
-    /**
-     * The language of the content or performance or used in an action. Please
-     * use one of the language codes from the [IETF BCP 47
-     * standard](http://tools.ietf.org/html/bcp47). See also
-     * [[availableLanguage]].
-     *
-     * @param string|string[]|Language|Language[] $inLanguage
-     *
-     * @return static
-     *
-     * @see http://schema.org/inLanguage
-     */
-    public function inLanguage($inLanguage)
-    {
-        return $this->setProperty('inLanguage', $inLanguage);
     }
 
     /**
@@ -262,20 +278,6 @@ class Event extends Thing
     }
 
     /**
-     * The number of attendee places for an event that remain unallocated.
-     *
-     * @param int|int[] $remainingAttendeeCapacity
-     *
-     * @return static
-     *
-     * @see http://schema.org/remainingAttendeeCapacity
-     */
-    public function remainingAttendeeCapacity($remainingAttendeeCapacity)
-    {
-        return $this->setProperty('remainingAttendeeCapacity', $remainingAttendeeCapacity);
-    }
-
-    /**
      * An offer to provide this item&#x2014;for example, an offer to sell a
      * product, rent the DVD of a movie, perform a service, or give away tickets
      * to an event.
@@ -289,6 +291,20 @@ class Event extends Thing
     public function offers($offers)
     {
         return $this->setProperty('offers', $offers);
+    }
+
+    /**
+     * An organizer of an Event.
+     *
+     * @param Organization|Organization[]|Person|Person[] $organizer
+     *
+     * @return static
+     *
+     * @see http://schema.org/organizer
+     */
+    public function organizer($organizer)
+    {
+        return $this->setProperty('organizer', $organizer);
     }
 
     /**
@@ -354,6 +370,20 @@ class Event extends Thing
     }
 
     /**
+     * The number of attendee places for an event that remain unallocated.
+     *
+     * @param int|int[] $remainingAttendeeCapacity
+     *
+     * @return static
+     *
+     * @see http://schema.org/remainingAttendeeCapacity
+     */
+    public function remainingAttendeeCapacity($remainingAttendeeCapacity)
+    {
+        return $this->setProperty('remainingAttendeeCapacity', $remainingAttendeeCapacity);
+    }
+
+    /**
      * A review of the item.
      *
      * @param Review|Review[] $review
@@ -381,21 +411,6 @@ class Event extends Thing
     public function sponsor($sponsor)
     {
         return $this->setProperty('sponsor', $sponsor);
-    }
-
-    /**
-     * A person or organization that supports (sponsors) something through some
-     * kind of financial contribution.
-     *
-     * @param Organization|Organization[]|Person|Person[] $funder
-     *
-     * @return static
-     *
-     * @see http://schema.org/funder
-     */
-    public function funder($funder)
-    {
-        return $this->setProperty('funder', $funder);
     }
 
     /**
@@ -461,6 +476,22 @@ class Event extends Thing
     }
 
     /**
+     * Organization or person who adapts a creative work to different languages,
+     * regional differences and technical requirements of a target market, or
+     * that translates during some event.
+     *
+     * @param Organization|Organization[]|Person|Person[] $translator
+     *
+     * @return static
+     *
+     * @see http://schema.org/translator
+     */
+    public function translator($translator)
+    {
+        return $this->setProperty('translator', $translator);
+    }
+
+    /**
      * The typical expected age range, e.g. '7-9', '11-'.
      *
      * @param string|string[] $typicalAgeRange
@@ -472,21 +503,6 @@ class Event extends Thing
     public function typicalAgeRange($typicalAgeRange)
     {
         return $this->setProperty('typicalAgeRange', $typicalAgeRange);
-    }
-
-    /**
-     * A work performed in some event, for example a play performed in a
-     * TheaterEvent.
-     *
-     * @param CreativeWork|CreativeWork[] $workPerformed
-     *
-     * @return static
-     *
-     * @see http://schema.org/workPerformed
-     */
-    public function workPerformed($workPerformed)
-    {
-        return $this->setProperty('workPerformed', $workPerformed);
     }
 
     /**
@@ -506,34 +522,18 @@ class Event extends Thing
     }
 
     /**
-     * Organization or person who adapts a creative work to different languages,
-     * regional differences and technical requirements of a target market, or
-     * that translates during some event.
+     * A work performed in some event, for example a play performed in a
+     * TheaterEvent.
      *
-     * @param Person|Person[]|Organization|Organization[] $translator
-     *
-     * @return static
-     *
-     * @see http://schema.org/translator
-     */
-    public function translator($translator)
-    {
-        return $this->setProperty('translator', $translator);
-    }
-
-    /**
-     * The person or organization who wrote a composition, or who is the
-     * composer of a work performed at some event.
-     *
-     * @param Person|Person[]|Organization|Organization[] $composer
+     * @param CreativeWork|CreativeWork[] $workPerformed
      *
      * @return static
      *
-     * @see http://schema.org/composer
+     * @see http://schema.org/workPerformed
      */
-    public function composer($composer)
+    public function workPerformed($workPerformed)
     {
-        return $this->setProperty('composer', $composer);
+        return $this->setProperty('workPerformed', $workPerformed);
     }
 
 }

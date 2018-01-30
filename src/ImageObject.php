@@ -26,7 +26,7 @@ class ImageObject extends MediaObject
     /**
      * exif data for this object.
      *
-     * @param string|string[]|PropertyValue|PropertyValue[] $exifData
+     * @param PropertyValue|PropertyValue[]|string|string[] $exifData
      *
      * @return static
      *

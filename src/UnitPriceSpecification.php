@@ -42,6 +42,23 @@ class UnitPriceSpecification extends PriceSpecification
     }
 
     /**
+     * The reference quantity for which a certain price applies, e.g. 1 EUR per
+     * 4 kWh of electricity. This property is a replacement for
+     * unitOfMeasurement for the advanced cases where the price does not relate
+     * to a standard unit.
+     *
+     * @param QuantitativeValue|QuantitativeValue[] $referenceQuantity
+     *
+     * @return static
+     *
+     * @see http://schema.org/referenceQuantity
+     */
+    public function referenceQuantity($referenceQuantity)
+    {
+        return $this->setProperty('referenceQuantity', $referenceQuantity);
+    }
+
+    /**
      * The unit of measurement given using the UN/CEFACT Common Code (3
      * characters) or a URL. Other codes than the UN/CEFACT Common Code may be
      * used with a prefix followed by a colon.
@@ -71,23 +88,6 @@ class UnitPriceSpecification extends PriceSpecification
     public function unitText($unitText)
     {
         return $this->setProperty('unitText', $unitText);
-    }
-
-    /**
-     * The reference quantity for which a certain price applies, e.g. 1 EUR per
-     * 4 kWh of electricity. This property is a replacement for
-     * unitOfMeasurement for the advanced cases where the price does not relate
-     * to a standard unit.
-     *
-     * @param QuantitativeValue|QuantitativeValue[] $referenceQuantity
-     *
-     * @return static
-     *
-     * @see http://schema.org/referenceQuantity
-     */
-    public function referenceQuantity($referenceQuantity)
-    {
-        return $this->setProperty('referenceQuantity', $referenceQuantity);
     }
 
 }

@@ -41,6 +41,49 @@ class VideoGameSeries extends CreativeWorkSeries
     }
 
     /**
+     * A piece of data that represents a particular aspect of a fictional
+     * character (skill, power, character points, advantage, disadvantage).
+     *
+     * @param Thing|Thing[] $characterAttribute
+     *
+     * @return static
+     *
+     * @see http://schema.org/characterAttribute
+     */
+    public function characterAttribute($characterAttribute)
+    {
+        return $this->setProperty('characterAttribute', $characterAttribute);
+    }
+
+    /**
+     * Cheat codes to the game.
+     *
+     * @param CreativeWork|CreativeWork[] $cheatCode
+     *
+     * @return static
+     *
+     * @see http://schema.org/cheatCode
+     */
+    public function cheatCode($cheatCode)
+    {
+        return $this->setProperty('cheatCode', $cheatCode);
+    }
+
+    /**
+     * A season that is part of the media series.
+     *
+     * @param CreativeWorkSeason|CreativeWorkSeason[] $containsSeason
+     *
+     * @return static
+     *
+     * @see http://schema.org/containsSeason
+     */
+    public function containsSeason($containsSeason)
+    {
+        return $this->setProperty('containsSeason', $containsSeason);
+    }
+
+    /**
      * A director of e.g. tv, radio, movie, video gaming etc. content, or of an
      * event. Directors can be associated with individual items or with a
      * series, episode, clip.
@@ -100,6 +143,51 @@ class VideoGameSeries extends CreativeWorkSeries
     }
 
     /**
+     * An item is an object within the game world that can be collected by a
+     * player or, occasionally, a non-player character.
+     *
+     * @param Thing|Thing[] $gameItem
+     *
+     * @return static
+     *
+     * @see http://schema.org/gameItem
+     */
+    public function gameItem($gameItem)
+    {
+        return $this->setProperty('gameItem', $gameItem);
+    }
+
+    /**
+     * Real or fictional location of the game (or part of game).
+     *
+     * @param Place|Place[]|PostalAddress|PostalAddress[]|string|string[] $gameLocation
+     *
+     * @return static
+     *
+     * @see http://schema.org/gameLocation
+     */
+    public function gameLocation($gameLocation)
+    {
+        return $this->setProperty('gameLocation', $gameLocation);
+    }
+
+    /**
+     * The electronic systems used to play <a
+     * href="http://en.wikipedia.org/wiki/Category:Video_game_platforms">video
+     * games</a>.
+     *
+     * @param Thing|Thing[]|string|string[] $gamePlatform
+     *
+     * @return static
+     *
+     * @see http://schema.org/gamePlatform
+     */
+    public function gamePlatform($gamePlatform)
+    {
+        return $this->setProperty('gamePlatform', $gamePlatform);
+    }
+
+    /**
      * The composer of the soundtrack.
      *
      * @param MusicGroup|MusicGroup[]|Person|Person[] $musicBy
@@ -128,6 +216,20 @@ class VideoGameSeries extends CreativeWorkSeries
     }
 
     /**
+     * Indicate how many people can play this game (minimum, maximum, or range).
+     *
+     * @param QuantitativeValue|QuantitativeValue[] $numberOfPlayers
+     *
+     * @return static
+     *
+     * @see http://schema.org/numberOfPlayers
+     */
+    public function numberOfPlayers($numberOfPlayers)
+    {
+        return $this->setProperty('numberOfPlayers', $numberOfPlayers);
+    }
+
+    /**
      * The number of seasons in this series.
      *
      * @param int|int[] $numberOfSeasons
@@ -139,6 +241,22 @@ class VideoGameSeries extends CreativeWorkSeries
     public function numberOfSeasons($numberOfSeasons)
     {
         return $this->setProperty('numberOfSeasons', $numberOfSeasons);
+    }
+
+    /**
+     * Indicates whether this game is multi-player, co-op or single-player.  The
+     * game can be marked as multi-player, co-op and single-player at the same
+     * time.
+     *
+     * @param GamePlayMode|GamePlayMode[] $playMode
+     *
+     * @return static
+     *
+     * @see http://schema.org/playMode
+     */
+    public function playMode($playMode)
+    {
+        return $this->setProperty('playMode', $playMode);
     }
 
     /**
@@ -157,6 +275,21 @@ class VideoGameSeries extends CreativeWorkSeries
     }
 
     /**
+     * The task that a player-controlled character, or group of characters may
+     * complete in order to gain a reward.
+     *
+     * @param Thing|Thing[] $quest
+     *
+     * @return static
+     *
+     * @see http://schema.org/quest
+     */
+    public function quest($quest)
+    {
+        return $this->setProperty('quest', $quest);
+    }
+
+    /**
      * A season in a media series.
      *
      * @param CreativeWorkSeason|CreativeWorkSeason[] $season
@@ -168,20 +301,6 @@ class VideoGameSeries extends CreativeWorkSeries
     public function season($season)
     {
         return $this->setProperty('season', $season);
-    }
-
-    /**
-     * A season that is part of the media series.
-     *
-     * @param CreativeWorkSeason|CreativeWorkSeason[] $containsSeason
-     *
-     * @return static
-     *
-     * @see http://schema.org/containsSeason
-     */
-    public function containsSeason($containsSeason)
-    {
-        return $this->setProperty('containsSeason', $containsSeason);
     }
 
     /**
@@ -210,125 +329,6 @@ class VideoGameSeries extends CreativeWorkSeries
     public function trailer($trailer)
     {
         return $this->setProperty('trailer', $trailer);
-    }
-
-    /**
-     * Indicate how many people can play this game (minimum, maximum, or range).
-     *
-     * @param QuantitativeValue|QuantitativeValue[] $numberOfPlayers
-     *
-     * @return static
-     *
-     * @see http://schema.org/numberOfPlayers
-     */
-    public function numberOfPlayers($numberOfPlayers)
-    {
-        return $this->setProperty('numberOfPlayers', $numberOfPlayers);
-    }
-
-    /**
-     * The task that a player-controlled character, or group of characters may
-     * complete in order to gain a reward.
-     *
-     * @param Thing|Thing[] $quest
-     *
-     * @return static
-     *
-     * @see http://schema.org/quest
-     */
-    public function quest($quest)
-    {
-        return $this->setProperty('quest', $quest);
-    }
-
-    /**
-     * An item is an object within the game world that can be collected by a
-     * player or, occasionally, a non-player character.
-     *
-     * @param Thing|Thing[] $gameItem
-     *
-     * @return static
-     *
-     * @see http://schema.org/gameItem
-     */
-    public function gameItem($gameItem)
-    {
-        return $this->setProperty('gameItem', $gameItem);
-    }
-
-    /**
-     * A piece of data that represents a particular aspect of a fictional
-     * character (skill, power, character points, advantage, disadvantage).
-     *
-     * @param Thing|Thing[] $characterAttribute
-     *
-     * @return static
-     *
-     * @see http://schema.org/characterAttribute
-     */
-    public function characterAttribute($characterAttribute)
-    {
-        return $this->setProperty('characterAttribute', $characterAttribute);
-    }
-
-    /**
-     * Indicates whether this game is multi-player, co-op or single-player.  The
-     * game can be marked as multi-player, co-op and single-player at the same
-     * time.
-     *
-     * @param GamePlayMode|GamePlayMode[] $playMode
-     *
-     * @return static
-     *
-     * @see http://schema.org/playMode
-     */
-    public function playMode($playMode)
-    {
-        return $this->setProperty('playMode', $playMode);
-    }
-
-    /**
-     * Cheat codes to the game.
-     *
-     * @param CreativeWork|CreativeWork[] $cheatCode
-     *
-     * @return static
-     *
-     * @see http://schema.org/cheatCode
-     */
-    public function cheatCode($cheatCode)
-    {
-        return $this->setProperty('cheatCode', $cheatCode);
-    }
-
-    /**
-     * The electronic systems used to play <a
-     * href="http://en.wikipedia.org/wiki/Category:Video_game_platforms">video
-     * games</a>.
-     *
-     * @param string|string[]|Thing|Thing[] $gamePlatform
-     *
-     * @return static
-     *
-     * @see http://schema.org/gamePlatform
-     */
-    public function gamePlatform($gamePlatform)
-    {
-        return $this->setProperty('gamePlatform', $gamePlatform);
-    }
-
-    /**
-     * Real or fictional location of the game (or part of game).
-     *
-     * @param string|string[]|Place|Place[]|PostalAddress|PostalAddress[] $gameLocation
-     *
-     * @return static
-     *
-     * @see http://schema.org/gameLocation
-     */
-    public function gameLocation($gameLocation)
-    {
-        return $this->setProperty('gameLocation', $gameLocation);
     }
 
 }

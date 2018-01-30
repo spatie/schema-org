@@ -13,7 +13,7 @@ class PostalAddress extends ContactPoint
      * The country. For example, USA. You can also provide the two-letter [ISO
      * 3166-1 alpha-2 country code](http://en.wikipedia.org/wiki/ISO_3166-1).
      *
-     * @param string|string[]|Country|Country[] $addressCountry
+     * @param Country|Country[]|string|string[] $addressCountry
      *
      * @return static
      *
@@ -53,20 +53,6 @@ class PostalAddress extends ContactPoint
     }
 
     /**
-     * The postal code. For example, 94043.
-     *
-     * @param string|string[] $postalCode
-     *
-     * @return static
-     *
-     * @see http://schema.org/postalCode
-     */
-    public function postalCode($postalCode)
-    {
-        return $this->setProperty('postalCode', $postalCode);
-    }
-
-    /**
      * The post office box number for PO box addresses.
      *
      * @param string|string[] $postOfficeBoxNumber
@@ -78,6 +64,20 @@ class PostalAddress extends ContactPoint
     public function postOfficeBoxNumber($postOfficeBoxNumber)
     {
         return $this->setProperty('postOfficeBoxNumber', $postOfficeBoxNumber);
+    }
+
+    /**
+     * The postal code. For example, 94043.
+     *
+     * @param string|string[] $postalCode
+     *
+     * @return static
+     *
+     * @see http://schema.org/postalCode
+     */
+    public function postalCode($postalCode)
+    {
+        return $this->setProperty('postalCode', $postalCode);
     }
 
     /**

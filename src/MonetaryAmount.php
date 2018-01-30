@@ -14,6 +14,21 @@ namespace Spatie\SchemaOrg;
 class MonetaryAmount extends StructuredValue
 {
     /**
+     * The currency in which the monetary amount is expressed (in 3-letter [ISO
+     * 4217](http://en.wikipedia.org/wiki/ISO_4217) format).
+     *
+     * @param string|string[] $currency
+     *
+     * @return static
+     *
+     * @see http://schema.org/currency
+     */
+    public function currency($currency)
+    {
+        return $this->setProperty('currency', $currency);
+    }
+
+    /**
      * The upper value of some characteristic or property.
      *
      * @param float|float[]|int|int[] $maxValue
@@ -49,7 +64,7 @@ class MonetaryAmount extends StructuredValue
      * * For [[PropertyValue]], it can be 'Text;', 'Number', 'Boolean', or
      * 'StructuredValue'.
      *
-     * @param float|float[]|int|int[]|string|string[]|bool|bool[]|StructuredValue|StructuredValue[] $value
+     * @param StructuredValue|StructuredValue[]|bool|bool[]|float|float[]|int|int[]|string|string[] $value
      *
      * @return static
      *
@@ -58,21 +73,6 @@ class MonetaryAmount extends StructuredValue
     public function value($value)
     {
         return $this->setProperty('value', $value);
-    }
-
-    /**
-     * The currency in which the monetary amount is expressed (in 3-letter [ISO
-     * 4217](http://en.wikipedia.org/wiki/ISO_4217) format).
-     *
-     * @param string|string[] $currency
-     *
-     * @return static
-     *
-     * @see http://schema.org/currency
-     */
-    public function currency($currency)
-    {
-        return $this->setProperty('currency', $currency);
     }
 
 }

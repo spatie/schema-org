@@ -52,6 +52,20 @@ class NutritionInformation extends StructuredValue
     }
 
     /**
+     * The number of grams of fat.
+     *
+     * @param Mass|Mass[] $fatContent
+     *
+     * @return static
+     *
+     * @see http://schema.org/fatContent
+     */
+    public function fatContent($fatContent)
+    {
+        return $this->setProperty('fatContent', $fatContent);
+    }
+
+    /**
      * The number of grams of fiber.
      *
      * @param Mass|Mass[] $fiberContent
@@ -133,20 +147,6 @@ class NutritionInformation extends StructuredValue
     public function sugarContent($sugarContent)
     {
         return $this->setProperty('sugarContent', $sugarContent);
-    }
-
-    /**
-     * The number of grams of fat.
-     *
-     * @param Mass|Mass[] $fatContent
-     *
-     * @return static
-     *
-     * @see http://schema.org/fatContent
-     */
-    public function fatContent($fatContent)
-    {
-        return $this->setProperty('fatContent', $fatContent);
     }
 
     /**

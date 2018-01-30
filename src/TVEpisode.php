@@ -42,7 +42,7 @@ class TVEpisode extends Episode
      * Languages in which subtitles/captions are available, in [IETF BCP 47
      * standard format](http://tools.ietf.org/html/bcp47).
      *
-     * @param string|string[]|Language|Language[] $subtitleLanguage
+     * @param Language|Language[]|string|string[] $subtitleLanguage
      *
      * @return static
      *

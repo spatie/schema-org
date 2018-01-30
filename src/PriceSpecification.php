@@ -107,6 +107,21 @@ class PriceSpecification extends StructuredValue
     }
 
     /**
+     * The currency (in 3-letter ISO 4217 format) of the price or a price
+     * component, when attached to [[PriceSpecification]] and its subtypes.
+     *
+     * @param string|string[] $priceCurrency
+     *
+     * @return static
+     *
+     * @see http://schema.org/priceCurrency
+     */
+    public function priceCurrency($priceCurrency)
+    {
+        return $this->setProperty('priceCurrency', $priceCurrency);
+    }
+
+    /**
      * The date when the item becomes valid.
      *
      * @param \DateTimeInterface|\DateTimeInterface[] $validFrom
@@ -148,21 +163,6 @@ class PriceSpecification extends StructuredValue
     public function valueAddedTaxIncluded($valueAddedTaxIncluded)
     {
         return $this->setProperty('valueAddedTaxIncluded', $valueAddedTaxIncluded);
-    }
-
-    /**
-     * The currency (in 3-letter ISO 4217 format) of the price or a price
-     * component, when attached to [[PriceSpecification]] and its subtypes.
-     *
-     * @param string|string[] $priceCurrency
-     *
-     * @return static
-     *
-     * @see http://schema.org/priceCurrency
-     */
-    public function priceCurrency($priceCurrency)
-    {
-        return $this->setProperty('priceCurrency', $priceCurrency);
     }
 
 }

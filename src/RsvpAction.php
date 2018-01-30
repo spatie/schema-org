@@ -26,20 +26,6 @@ class RsvpAction extends InformAction
     }
 
     /**
-     * The response (yes, no, maybe) to the RSVP.
-     *
-     * @param RsvpResponseType|RsvpResponseType[] $rsvpResponse
-     *
-     * @return static
-     *
-     * @see http://schema.org/rsvpResponse
-     */
-    public function rsvpResponse($rsvpResponse)
-    {
-        return $this->setProperty('rsvpResponse', $rsvpResponse);
-    }
-
-    /**
      * Comments, typically from users.
      *
      * @param Comment|Comment[] $comment
@@ -51,6 +37,20 @@ class RsvpAction extends InformAction
     public function comment($comment)
     {
         return $this->setProperty('comment', $comment);
+    }
+
+    /**
+     * The response (yes, no, maybe) to the RSVP.
+     *
+     * @param RsvpResponseType|RsvpResponseType[] $rsvpResponse
+     *
+     * @return static
+     *
+     * @see http://schema.org/rsvpResponse
+     */
+    public function rsvpResponse($rsvpResponse)
+    {
+        return $this->setProperty('rsvpResponse', $rsvpResponse);
     }
 
 }

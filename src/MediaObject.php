@@ -188,6 +188,22 @@ class MediaObject extends CreativeWork
     }
 
     /**
+     * The regions where the media is allowed. If not specified, then it's
+     * assumed to be allowed everywhere. Specify the countries in [ISO 3166
+     * format](http://en.wikipedia.org/wiki/ISO_3166).
+     *
+     * @param Place|Place[] $regionsAllowed
+     *
+     * @return static
+     *
+     * @see http://schema.org/regionsAllowed
+     */
+    public function regionsAllowed($regionsAllowed)
+    {
+        return $this->setProperty('regionsAllowed', $regionsAllowed);
+    }
+
+    /**
      * Indicates if use of the media require a subscription  (either paid or
      * free). Allowed values are ```true``` or ```false``` (note that an earlier
      * version had 'yes', 'no').
@@ -229,22 +245,6 @@ class MediaObject extends CreativeWork
     public function width($width)
     {
         return $this->setProperty('width', $width);
-    }
-
-    /**
-     * The regions where the media is allowed. If not specified, then it's
-     * assumed to be allowed everywhere. Specify the countries in [ISO 3166
-     * format](http://en.wikipedia.org/wiki/ISO_3166).
-     *
-     * @param Place|Place[] $regionsAllowed
-     *
-     * @return static
-     *
-     * @see http://schema.org/regionsAllowed
-     */
-    public function regionsAllowed($regionsAllowed)
-    {
-        return $this->setProperty('regionsAllowed', $regionsAllowed);
     }
 
 }

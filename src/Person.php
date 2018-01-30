@@ -10,21 +10,6 @@ namespace Spatie\SchemaOrg;
 class Person extends Thing
 {
     /**
-     * Indicates an OfferCatalog listing for this Organization, Person, or
-     * Service.
-     *
-     * @param OfferCatalog|OfferCatalog[] $hasOfferCatalog
-     *
-     * @return static
-     *
-     * @see http://schema.org/hasOfferCatalog
-     */
-    public function hasOfferCatalog($hasOfferCatalog)
-    {
-        return $this->setProperty('hasOfferCatalog', $hasOfferCatalog);
-    }
-
-    /**
      * An additional name for a Person, can be used for a middle name.
      *
      * @param string|string[] $additionalName
@@ -121,6 +106,20 @@ class Person extends Thing
     public function birthDate($birthDate)
     {
         return $this->setProperty('birthDate', $birthDate);
+    }
+
+    /**
+     * The place where the person was born.
+     *
+     * @param Place|Place[] $birthPlace
+     *
+     * @return static
+     *
+     * @see http://schema.org/birthPlace
+     */
+    public function birthPlace($birthPlace)
+    {
+        return $this->setProperty('birthPlace', $birthPlace);
     }
 
     /**
@@ -223,6 +222,20 @@ class Person extends Thing
     }
 
     /**
+     * The place where the person died.
+     *
+     * @param Place|Place[] $deathPlace
+     *
+     * @return static
+     *
+     * @see http://schema.org/deathPlace
+     */
+    public function deathPlace($deathPlace)
+    {
+        return $this->setProperty('deathPlace', $deathPlace);
+    }
+
+    /**
      * The Dun & Bradstreet DUNS number for identifying an organization or
      * business person.
      *
@@ -295,11 +308,26 @@ class Person extends Thing
     }
 
     /**
+     * A person or organization that supports (sponsors) something through some
+     * kind of financial contribution.
+     *
+     * @param Organization|Organization[]|Person|Person[] $funder
+     *
+     * @return static
+     *
+     * @see http://schema.org/funder
+     */
+    public function funder($funder)
+    {
+        return $this->setProperty('funder', $funder);
+    }
+
+    /**
      * Gender of the person. While http://schema.org/Male and
      * http://schema.org/Female may be used, text strings are also acceptable
      * for people who do not identify as a binary gender.
      *
-     * @param string|string[]|GenderType|GenderType[] $gender
+     * @param GenderType|GenderType[]|string|string[] $gender
      *
      * @return static
      *
@@ -340,6 +368,21 @@ class Person extends Thing
     public function globalLocationNumber($globalLocationNumber)
     {
         return $this->setProperty('globalLocationNumber', $globalLocationNumber);
+    }
+
+    /**
+     * Indicates an OfferCatalog listing for this Organization, Person, or
+     * Service.
+     *
+     * @param OfferCatalog|OfferCatalog[] $hasOfferCatalog
+     *
+     * @return static
+     *
+     * @see http://schema.org/hasOfferCatalog
+     */
+    public function hasOfferCatalog($hasOfferCatalog)
+    {
+        return $this->setProperty('hasOfferCatalog', $hasOfferCatalog);
     }
 
     /**
@@ -518,7 +561,7 @@ class Person extends Thing
      * The total financial value of the person as calculated by subtracting
      * assets from liabilities.
      *
-     * @param PriceSpecification|PriceSpecification[]|MonetaryAmount|MonetaryAmount[] $netWorth
+     * @param MonetaryAmount|MonetaryAmount[]|PriceSpecification|PriceSpecification[] $netWorth
      *
      * @return static
      *
@@ -659,21 +702,6 @@ class Person extends Thing
     }
 
     /**
-     * A person or organization that supports (sponsors) something through some
-     * kind of financial contribution.
-     *
-     * @param Organization|Organization[]|Person|Person[] $funder
-     *
-     * @return static
-     *
-     * @see http://schema.org/funder
-     */
-    public function funder($funder)
-    {
-        return $this->setProperty('funder', $funder);
-    }
-
-    /**
      * The person's spouse.
      *
      * @param Person|Person[] $spouse
@@ -770,34 +798,6 @@ class Person extends Thing
     public function worksFor($worksFor)
     {
         return $this->setProperty('worksFor', $worksFor);
-    }
-
-    /**
-     * The place where the person was born.
-     *
-     * @param Place|Place[] $birthPlace
-     *
-     * @return static
-     *
-     * @see http://schema.org/birthPlace
-     */
-    public function birthPlace($birthPlace)
-    {
-        return $this->setProperty('birthPlace', $birthPlace);
-    }
-
-    /**
-     * The place where the person died.
-     *
-     * @param Place|Place[] $deathPlace
-     *
-     * @return static
-     *
-     * @see http://schema.org/deathPlace
-     */
-    public function deathPlace($deathPlace)
-    {
-        return $this->setProperty('deathPlace', $deathPlace);
     }
 
 }

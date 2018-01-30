@@ -35,7 +35,7 @@ class Course extends CreativeWork
      * Requirements may be a pre-requisite competency, referenced using
      * [[AlignmentObject]].
      *
-     * @param string|string[]|Course|Course[]|AlignmentObject|AlignmentObject[] $coursePrerequisites
+     * @param AlignmentObject|AlignmentObject[]|Course|Course[]|string|string[] $coursePrerequisites
      *
      * @return static
      *

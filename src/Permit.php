@@ -10,6 +10,20 @@ namespace Spatie\SchemaOrg;
 class Permit extends Intangible
 {
     /**
+     * The organization issuing the ticket or permit.
+     *
+     * @param Organization|Organization[] $issuedBy
+     *
+     * @return static
+     *
+     * @see http://schema.org/issuedBy
+     */
+    public function issuedBy($issuedBy)
+    {
+        return $this->setProperty('issuedBy', $issuedBy);
+    }
+
+    /**
      * The service through with the permit was granted.
      *
      * @param Service|Service[] $issuedThrough
@@ -91,20 +105,6 @@ class Permit extends Intangible
     public function validUntil($validUntil)
     {
         return $this->setProperty('validUntil', $validUntil);
-    }
-
-    /**
-     * The organization issuing the ticket or permit.
-     *
-     * @param Organization|Organization[] $issuedBy
-     *
-     * @return static
-     *
-     * @see http://schema.org/issuedBy
-     */
-    public function issuedBy($issuedBy)
-    {
-        return $this->setProperty('issuedBy', $issuedBy);
     }
 
 }

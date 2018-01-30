@@ -12,7 +12,7 @@ class JobPosting extends Intangible
     /**
      * The base salary of the job or of an employee in an EmployeeRole.
      *
-     * @param float|float[]|int|int[]|PriceSpecification|PriceSpecification[]|MonetaryAmount|MonetaryAmount[] $baseSalary
+     * @param MonetaryAmount|MonetaryAmount[]|PriceSpecification|PriceSpecification[]|float|float[]|int|int[] $baseSalary
      *
      * @return static
      *
@@ -35,20 +35,6 @@ class JobPosting extends Intangible
     public function benefits($benefits)
     {
         return $this->setProperty('benefits', $benefits);
-    }
-
-    /**
-     * Description of benefits associated with the job.
-     *
-     * @param string|string[] $jobBenefits
-     *
-     * @return static
-     *
-     * @see http://schema.org/jobBenefits
-     */
-    public function jobBenefits($jobBenefits)
-    {
-        return $this->setProperty('jobBenefits', $jobBenefits);
     }
 
     /**
@@ -125,20 +111,6 @@ class JobPosting extends Intangible
     /**
      * Description of bonus and commission compensation aspects of the job.
      *
-     * @param string|string[] $incentives
-     *
-     * @return static
-     *
-     * @see http://schema.org/incentives
-     */
-    public function incentives($incentives)
-    {
-        return $this->setProperty('incentives', $incentives);
-    }
-
-    /**
-     * Description of bonus and commission compensation aspects of the job.
-     *
      * @param string|string[] $incentiveCompensation
      *
      * @return static
@@ -148,6 +120,20 @@ class JobPosting extends Intangible
     public function incentiveCompensation($incentiveCompensation)
     {
         return $this->setProperty('incentiveCompensation', $incentiveCompensation);
+    }
+
+    /**
+     * Description of bonus and commission compensation aspects of the job.
+     *
+     * @param string|string[] $incentives
+     *
+     * @return static
+     *
+     * @see http://schema.org/incentives
+     */
+    public function incentives($incentives)
+    {
+        return $this->setProperty('incentives', $incentives);
     }
 
     /**
@@ -162,6 +148,20 @@ class JobPosting extends Intangible
     public function industry($industry)
     {
         return $this->setProperty('industry', $industry);
+    }
+
+    /**
+     * Description of benefits associated with the job.
+     *
+     * @param string|string[] $jobBenefits
+     *
+     * @return static
+     *
+     * @see http://schema.org/jobBenefits
+     */
+    public function jobBenefits($jobBenefits)
+    {
+        return $this->setProperty('jobBenefits', $jobBenefits);
     }
 
     /**

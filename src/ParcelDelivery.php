@@ -139,6 +139,22 @@ class ParcelDelivery extends Intangible
     }
 
     /**
+     * The service provider, service operator, or service performer; the goods
+     * producer. Another party (a seller) may offer those services or goods on
+     * behalf of the provider. A provider may also serve as the seller.
+     *
+     * @param Organization|Organization[]|Person|Person[] $provider
+     *
+     * @return static
+     *
+     * @see http://schema.org/provider
+     */
+    public function provider($provider)
+    {
+        return $this->setProperty('provider', $provider);
+    }
+
+    /**
      * Shipper tracking number.
      *
      * @param string|string[] $trackingNumber
@@ -164,22 +180,6 @@ class ParcelDelivery extends Intangible
     public function trackingUrl($trackingUrl)
     {
         return $this->setProperty('trackingUrl', $trackingUrl);
-    }
-
-    /**
-     * The service provider, service operator, or service performer; the goods
-     * producer. Another party (a seller) may offer those services or goods on
-     * behalf of the provider. A provider may also serve as the seller.
-     *
-     * @param Person|Person[]|Organization|Organization[] $provider
-     *
-     * @return static
-     *
-     * @see http://schema.org/provider
-     */
-    public function provider($provider)
-    {
-        return $this->setProperty('provider', $provider);
     }
 
 }

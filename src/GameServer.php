@@ -10,17 +10,17 @@ namespace Spatie\SchemaOrg;
 class GameServer extends Intangible
 {
     /**
-     * Status of a game server.
+     * Video game which is played on this server.
      *
-     * @param GameServerStatus|GameServerStatus[] $serverStatus
+     * @param VideoGame|VideoGame[] $game
      *
      * @return static
      *
-     * @see http://schema.org/serverStatus
+     * @see http://schema.org/game
      */
-    public function serverStatus($serverStatus)
+    public function game($game)
     {
-        return $this->setProperty('serverStatus', $serverStatus);
+        return $this->setProperty('game', $game);
     }
 
     /**
@@ -38,17 +38,17 @@ class GameServer extends Intangible
     }
 
     /**
-     * Video game which is played on this server.
+     * Status of a game server.
      *
-     * @param VideoGame|VideoGame[] $game
+     * @param GameServerStatus|GameServerStatus[] $serverStatus
      *
      * @return static
      *
-     * @see http://schema.org/game
+     * @see http://schema.org/serverStatus
      */
-    public function game($game)
+    public function serverStatus($serverStatus)
     {
-        return $this->setProperty('game', $game);
+        return $this->setProperty('serverStatus', $serverStatus);
     }
 
 }

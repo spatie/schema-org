@@ -54,7 +54,7 @@ class Seat extends Intangible
     /**
      * The type/class of the seat.
      *
-     * @param string|string[]|QualitativeValue|QualitativeValue[] $seatingType
+     * @param QualitativeValue|QualitativeValue[]|string|string[] $seatingType
      *
      * @return static
      *

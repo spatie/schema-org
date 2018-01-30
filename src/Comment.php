@@ -12,21 +12,6 @@ namespace Spatie\SchemaOrg;
 class Comment extends CreativeWork
 {
     /**
-     * The number of upvotes this question, answer or comment has received from
-     * the community.
-     *
-     * @param int|int[] $upvoteCount
-     *
-     * @return static
-     *
-     * @see http://schema.org/upvoteCount
-     */
-    public function upvoteCount($upvoteCount)
-    {
-        return $this->setProperty('upvoteCount', $upvoteCount);
-    }
-
-    /**
      * The number of downvotes this question, answer or comment has received
      * from the community.
      *
@@ -53,6 +38,21 @@ class Comment extends CreativeWork
     public function parentItem($parentItem)
     {
         return $this->setProperty('parentItem', $parentItem);
+    }
+
+    /**
+     * The number of upvotes this question, answer or comment has received from
+     * the community.
+     *
+     * @param int|int[] $upvoteCount
+     *
+     * @return static
+     *
+     * @see http://schema.org/upvoteCount
+     */
+    public function upvoteCount($upvoteCount)
+    {
+        return $this->setProperty('upvoteCount', $upvoteCount);
     }
 
 }

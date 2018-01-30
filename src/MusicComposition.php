@@ -10,24 +10,10 @@ namespace Spatie\SchemaOrg;
 class MusicComposition extends CreativeWork
 {
     /**
-     * An arrangement derived from the composition.
-     *
-     * @param MusicComposition|MusicComposition[] $musicArrangement
-     *
-     * @return static
-     *
-     * @see http://schema.org/musicArrangement
-     */
-    public function musicArrangement($musicArrangement)
-    {
-        return $this->setProperty('musicArrangement', $musicArrangement);
-    }
-
-    /**
      * The person or organization who wrote a composition, or who is the
      * composer of a work performed at some event.
      *
-     * @param Person|Person[]|Organization|Organization[] $composer
+     * @param Organization|Organization[]|Person|Person[] $composer
      *
      * @return static
      *
@@ -96,6 +82,34 @@ class MusicComposition extends CreativeWork
     }
 
     /**
+     * The words in the song.
+     *
+     * @param CreativeWork|CreativeWork[] $lyrics
+     *
+     * @return static
+     *
+     * @see http://schema.org/lyrics
+     */
+    public function lyrics($lyrics)
+    {
+        return $this->setProperty('lyrics', $lyrics);
+    }
+
+    /**
+     * An arrangement derived from the composition.
+     *
+     * @param MusicComposition|MusicComposition[] $musicArrangement
+     *
+     * @return static
+     *
+     * @see http://schema.org/musicArrangement
+     */
+    public function musicArrangement($musicArrangement)
+    {
+        return $this->setProperty('musicArrangement', $musicArrangement);
+    }
+
+    /**
      * The type of composition (e.g. overture, sonata, symphony, etc.).
      *
      * @param string|string[] $musicCompositionForm
@@ -135,20 +149,6 @@ class MusicComposition extends CreativeWork
     public function recordedAs($recordedAs)
     {
         return $this->setProperty('recordedAs', $recordedAs);
-    }
-
-    /**
-     * The words in the song.
-     *
-     * @param CreativeWork|CreativeWork[] $lyrics
-     *
-     * @return static
-     *
-     * @see http://schema.org/lyrics
-     */
-    public function lyrics($lyrics)
-    {
-        return $this->setProperty('lyrics', $lyrics);
     }
 
 }

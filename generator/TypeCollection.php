@@ -12,6 +12,11 @@ class TypeCollection
         $this->types[$type->name] = $type;
     }
 
+    public function sort()
+    {
+        ksort($this->types);
+    }
+
     public function addPropertyToType(Property $property, string $type)
     {
         if (! isset($this->types[$type])) {

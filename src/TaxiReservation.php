@@ -16,7 +16,7 @@ class TaxiReservation extends Reservation
     /**
      * Number of people the reservation should accommodate.
      *
-     * @param int|int[]|QuantitativeValue|QuantitativeValue[] $partySize
+     * @param QuantitativeValue|QuantitativeValue[]|int|int[] $partySize
      *
      * @return static
      *

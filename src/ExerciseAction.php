@@ -25,20 +25,6 @@ class ExerciseAction extends PlayAction
     }
 
     /**
-     * A sub property of location. The course where this action was taken.
-     *
-     * @param Place|Place[] $exerciseCourse
-     *
-     * @return static
-     *
-     * @see http://schema.org/exerciseCourse
-     */
-    public function exerciseCourse($exerciseCourse)
-    {
-        return $this->setProperty('exerciseCourse', $exerciseCourse);
-    }
-
-    /**
      * The distance travelled, e.g. exercising or travelling.
      *
      * @param Distance|Distance[] $distance
@@ -50,6 +36,20 @@ class ExerciseAction extends PlayAction
     public function distance($distance)
     {
         return $this->setProperty('distance', $distance);
+    }
+
+    /**
+     * A sub property of location. The course where this action was taken.
+     *
+     * @param Place|Place[] $exerciseCourse
+     *
+     * @return static
+     *
+     * @see http://schema.org/exerciseCourse
+     */
+    public function exerciseCourse($exerciseCourse)
+    {
+        return $this->setProperty('exerciseCourse', $exerciseCourse);
     }
 
     /**
