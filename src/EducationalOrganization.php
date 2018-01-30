@@ -23,4 +23,18 @@ class EducationalOrganization extends Organization
         return $this->setProperty('alumni', $alumni);
     }
 
+    /**
+     * Alumni of an organization.
+     *
+     * @param Person|Person[] $alumni
+     *
+     * @return static
+     *
+     * @see 
+     */
+    public function alumni($alumni)
+    {
+        return $this->setProperty('alumni', $alumni);
+    }
+
 }

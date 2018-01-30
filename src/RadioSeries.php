@@ -172,6 +172,21 @@ class RadioSeries extends CreativeWorkSeries
     }
 
     /**
+     * The production company or studio responsible for the item e.g. series,
+     * video game, episode etc.
+     *
+     * @param Organization|Organization[] $productionCompany
+     *
+     * @return static
+     *
+     * @see 
+     */
+    public function productionCompany($productionCompany)
+    {
+        return $this->setProperty('productionCompany', $productionCompany);
+    }
+
+    /**
      * A season in a media series.
      *
      * @param CreativeWorkSeason|CreativeWorkSeason[] $season

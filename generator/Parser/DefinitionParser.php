@@ -54,10 +54,6 @@ class DefinitionParser
             }
         }
 
-        $typeCollection = new TypeCollection($types);
-
-        $typeCollection->addProperties($properties);
-
-        return $typeCollection;
+        return new TypeCollection($types, $properties);
     }
 }

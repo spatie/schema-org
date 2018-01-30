@@ -21,6 +21,6 @@ class PackageGenerator
             $filesystem->createType($type);
         });
 
-        $filesystem->createFactory($types);
+        $filesystem->createBuilderClass($types);
     }
 }

@@ -21,7 +21,7 @@ class Filesystem
         $this->flysystem = new Flysystem($adapter);
 
         $this->typeTemplate = new Template('Type.php.twig');
-        $this->factoryTemplate = new Template('Schema.php.twig');
+        $this->builderClassTemplate = new Template('Schema.php.twig');
     }
 
     public function clear()
@@ -54,11 +54,11 @@ class Filesystem
         );
     }
 
-    public function createFactory(TypeCollection $types)
+    public function createBuilderClass(TypeCollection $types)
     {
         $this->flysystem->put(
             'src/Schema.php',
-            $this->factoryTemplate->render(['types' => $types->toArray()])
+            $this->builderClassTemplate->render(['types' => $types->toArray()])
         );
     }
 }

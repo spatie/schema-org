@@ -5,9 +5,9 @@ namespace Spatie\SchemaOrg\Generator;
 class TypeCollection
 {
     /** @var array */
-    protected $types = [];
+    private $types = [];
 
-    public function __construct(array $types)
+    public function __construct(array $types, array $properties)
     {
         $typeNames = array_map(function (Type $type) {
             return $type->name;
@@ -16,16 +16,9 @@ class TypeCollection
         $this->types = array_combine($typeNames, $types);
 
         ksort($this->types);
-    }
 
-    public function addProperties(array $properties)
-    {
         foreach ($properties as $property) {
             $this->addProperty($property);
-        }
-
-        foreach ($this->types as $type) {
-            $type->sortProperties();
         }
     }
 
