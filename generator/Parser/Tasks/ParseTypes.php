@@ -3,7 +3,6 @@
 namespace Spatie\SchemaOrg\Generator\Parser\Tasks;
 
 use Symfony\Component\DomCrawler\Crawler;
-use Spatie\Async\Task;
 
 class ParseTypes
 {
@@ -37,7 +36,7 @@ class ParseTypes
         }
 
         $type->description = $this->getText($node, '[property="rdfs:comment"]');
-        $type->parent = $this->getText($node, '[property="rdfs:subClassOf"]') ? : 'BaseType';
+        $type->parent = $this->getText($node, '[property="rdfs:subClassOf"]') ?: 'BaseType';
 
         if (strpos($type->parent, ':') !== false) {
             return;

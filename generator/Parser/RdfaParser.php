@@ -3,11 +3,11 @@
 namespace Spatie\SchemaOrg\Generator\Parser;
 
 use Spatie\Async\Pool;
-use Spatie\SchemaOrg\Generator\Parser\Tasks\ParseTypes;
-use Spatie\SchemaOrg\Generator\Property;
 use Spatie\SchemaOrg\Generator\Type;
-use Spatie\SchemaOrg\Generator\TypeCollection;
+use Spatie\SchemaOrg\Generator\Property;
 use Symfony\Component\DomCrawler\Crawler;
+use Spatie\SchemaOrg\Generator\TypeCollection;
+use Spatie\SchemaOrg\Generator\Parser\Tasks\ParseTypes;
 
 class RdfaParser
 {
