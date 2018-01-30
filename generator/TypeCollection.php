@@ -7,9 +7,15 @@ class TypeCollection
     /** @var array */
     protected $types = [];
 
-    public function push(Type $type)
+    public function __construct(array $types)
     {
-        $this->types[$type->name] = $type;
+        $typeNames = array_map(function (Type $type) {
+            return $type->name;
+        }, $types);
+
+        $this->types = array_combine($typeNames, $types);
+
+        ksort($this->types);
     }
 
     public function addProperties(array $properties)

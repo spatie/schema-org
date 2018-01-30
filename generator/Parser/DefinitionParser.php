@@ -39,13 +39,13 @@ class DefinitionParser
             });
         }
 
-        $types = new TypeCollection();
+        $types = [];
         $properties = [];
 
         foreach ($pool->wait() as $results) {
             foreach ($results as $result) {
                 if ($result instanceof Type) {
-                    $types->push($result);
+                    $types[] = $result;
                 }
 
                 if ($result instanceof Property) {
@@ -54,8 +54,10 @@ class DefinitionParser
             }
         }
 
-        $types->addProperties($properties);
+        $typeCollection = new TypeCollection($types);
 
-        return $types;
+        $typeCollection->addProperties($properties);
+
+        return $typeCollection;
     }
 }
