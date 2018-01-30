@@ -31,7 +31,7 @@ class ParseType
         }
 
         $type->description = $this->getText($node, '[property="rdfs:comment"]');
-        $type->parent = $this->getText($node, '[property="rdfs:subClassOf"]') ? : 'BaseType';
+        $type->parent = $this->getText($node, '[property="rdfs:subClassOf"]') ?: 'BaseType';
 
         if (strpos($type->parent, ':') !== false) {
             return null;
