@@ -10,20 +10,6 @@ namespace Spatie\SchemaOrg;
 class BroadcastChannel extends Intangible
 {
     /**
-     * Genre of the creative work, broadcast channel or group.
-     *
-     * @param string|string[] $genre
-     *
-     * @return static
-     *
-     * @see http://schema.org/genre
-     */
-    public function genre($genre)
-    {
-        return $this->setProperty('genre', $genre);
-    }
-
-    /**
      * The unique address by which the BroadcastService can be identified in a
      * provider lineup. In US, this is typically a number.
      *
@@ -39,20 +25,6 @@ class BroadcastChannel extends Intangible
     }
 
     /**
-     * The CableOrSatelliteService offering the channel.
-     *
-     * @param CableOrSatelliteService|CableOrSatelliteService[] $inBroadcastLineup
-     *
-     * @return static
-     *
-     * @see http://schema.org/inBroadcastLineup
-     */
-    public function inBroadcastLineup($inBroadcastLineup)
-    {
-        return $this->setProperty('inBroadcastLineup', $inBroadcastLineup);
-    }
-
-    /**
      * The type of service required to have access to the channel (e.g. Standard
      * or Premium).
      *
@@ -65,6 +37,34 @@ class BroadcastChannel extends Intangible
     public function broadcastServiceTier($broadcastServiceTier)
     {
         return $this->setProperty('broadcastServiceTier', $broadcastServiceTier);
+    }
+
+    /**
+     * Genre of the creative work, broadcast channel or group.
+     *
+     * @param string|string[] $genre
+     *
+     * @return static
+     *
+     * @see http://schema.org/genre
+     */
+    public function genre($genre)
+    {
+        return $this->setProperty('genre', $genre);
+    }
+
+    /**
+     * The CableOrSatelliteService offering the channel.
+     *
+     * @param CableOrSatelliteService|CableOrSatelliteService[] $inBroadcastLineup
+     *
+     * @return static
+     *
+     * @see http://schema.org/inBroadcastLineup
+     */
+    public function inBroadcastLineup($inBroadcastLineup)
+    {
+        return $this->setProperty('inBroadcastLineup', $inBroadcastLineup);
     }
 
     /**

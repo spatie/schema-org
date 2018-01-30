@@ -11,6 +11,21 @@ namespace Spatie\SchemaOrg;
 class LiveBlogPosting extends BlogPosting
 {
     /**
+     * The time when the live blog will stop covering the Event. Note that
+     * coverage may continue after the Event concludes.
+     *
+     * @param \DateTimeInterface|\DateTimeInterface[] $coverageEndTime
+     *
+     * @return static
+     *
+     * @see http://schema.org/coverageEndTime
+     */
+    public function coverageEndTime($coverageEndTime)
+    {
+        return $this->setProperty('coverageEndTime', $coverageEndTime);
+    }
+
+    /**
      * The time when the live blog will begin covering the Event. Note that
      * coverage may begin before the Event's start time. The LiveBlogPosting may
      * also be created before coverage begins.
@@ -24,21 +39,6 @@ class LiveBlogPosting extends BlogPosting
     public function coverageStartTime($coverageStartTime)
     {
         return $this->setProperty('coverageStartTime', $coverageStartTime);
-    }
-
-    /**
-     * The time when the live blog will stop covering the Event. Note that
-     * coverage may continue after the Event concludes.
-     *
-     * @param \DateTimeInterface|\DateTimeInterface[] $coverageEndTime
-     *
-     * @return static
-     *
-     * @see http://schema.org/coverageEndTime
-     */
-    public function coverageEndTime($coverageEndTime)
-    {
-        return $this->setProperty('coverageEndTime', $coverageEndTime);
     }
 
     /**

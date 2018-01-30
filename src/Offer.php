@@ -82,7 +82,7 @@ class Offer extends Intangible
     /**
      * The geographic area where a service or offered item is provided.
      *
-     * @param Place|Place[]|AdministrativeArea|AdministrativeArea[]|GeoShape|GeoShape[]|string|string[] $areaServed
+     * @param AdministrativeArea|AdministrativeArea[]|GeoShape|GeoShape[]|Place|Place[]|string|string[] $areaServed
      *
      * @return static
      *
@@ -186,7 +186,7 @@ class Offer extends Intangible
      * A category for the item. Greater signs or slashes can be used to
      * informally indicate a category hierarchy.
      *
-     * @param string|string[]|Thing|Thing[] $category
+     * @param Thing|Thing[]|string|string[] $category
      *
      * @return static
      *
@@ -273,25 +273,6 @@ class Offer extends Intangible
     public function eligibleRegion($eligibleRegion)
     {
         return $this->setProperty('eligibleRegion', $eligibleRegion);
-    }
-
-    /**
-     * The ISO 3166-1 (ISO 3166-1 alpha-2) or ISO 3166-2 code, the place, or the
-     * GeoShape for the geo-political region(s) for which the offer or delivery
-     * charge specification is not valid, e.g. a region where the transaction is
-     * not allowed.
-     * 
-     * See also [[eligibleRegion]].
-     *
-     * @param GeoShape|GeoShape[]|Place|Place[]|string|string[] $ineligibleRegion
-     *
-     * @return static
-     *
-     * @see http://schema.org/ineligibleRegion
-     */
-    public function ineligibleRegion($ineligibleRegion)
-    {
-        return $this->setProperty('ineligibleRegion', $ineligibleRegion);
     }
 
     /**
@@ -401,6 +382,25 @@ class Offer extends Intangible
     }
 
     /**
+     * The ISO 3166-1 (ISO 3166-1 alpha-2) or ISO 3166-2 code, the place, or the
+     * GeoShape for the geo-political region(s) for which the offer or delivery
+     * charge specification is not valid, e.g. a region where the transaction is
+     * not allowed.
+     * 
+     * See also [[eligibleRegion]].
+     *
+     * @param GeoShape|GeoShape[]|Place|Place[]|string|string[] $ineligibleRegion
+     *
+     * @return static
+     *
+     * @see http://schema.org/ineligibleRegion
+     */
+    public function ineligibleRegion($ineligibleRegion)
+    {
+        return $this->setProperty('ineligibleRegion', $ineligibleRegion);
+    }
+
+    /**
      * The current approximate inventory level for the item or items.
      *
      * @param QuantitativeValue|QuantitativeValue[] $inventoryLevel
@@ -490,6 +490,21 @@ class Offer extends Intangible
     public function price($price)
     {
         return $this->setProperty('price', $price);
+    }
+
+    /**
+     * The currency (in 3-letter ISO 4217 format) of the price or a price
+     * component, when attached to [[PriceSpecification]] and its subtypes.
+     *
+     * @param string|string[] $priceCurrency
+     *
+     * @return static
+     *
+     * @see http://schema.org/priceCurrency
+     */
+    public function priceCurrency($priceCurrency)
+    {
+        return $this->setProperty('priceCurrency', $priceCurrency);
     }
 
     /**
@@ -636,21 +651,6 @@ class Offer extends Intangible
     public function warranty($warranty)
     {
         return $this->setProperty('warranty', $warranty);
-    }
-
-    /**
-     * The currency (in 3-letter ISO 4217 format) of the price or a price
-     * component, when attached to [[PriceSpecification]] and its subtypes.
-     *
-     * @param string|string[] $priceCurrency
-     *
-     * @return static
-     *
-     * @see http://schema.org/priceCurrency
-     */
-    public function priceCurrency($priceCurrency)
-    {
-        return $this->setProperty('priceCurrency', $priceCurrency);
     }
 
 }

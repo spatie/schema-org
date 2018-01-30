@@ -25,50 +25,6 @@ class BroadcastService extends Service
     }
 
     /**
-     * The organization owning or operating the broadcast service.
-     *
-     * @param Organization|Organization[] $broadcaster
-     *
-     * @return static
-     *
-     * @see http://schema.org/broadcaster
-     */
-    public function broadcaster($broadcaster)
-    {
-        return $this->setProperty('broadcaster', $broadcaster);
-    }
-
-    /**
-     * A broadcast service to which the broadcast service may belong to such as
-     * regional variations of a national channel.
-     *
-     * @param BroadcastService|BroadcastService[] $parentService
-     *
-     * @return static
-     *
-     * @see http://schema.org/parentService
-     */
-    public function parentService($parentService)
-    {
-        return $this->setProperty('parentService', $parentService);
-    }
-
-    /**
-     * The type of screening or video broadcast used (e.g. IMAX, 3D, SD, HD,
-     * etc.).
-     *
-     * @param string|string[] $videoFormat
-     *
-     * @return static
-     *
-     * @see http://schema.org/videoFormat
-     */
-    public function videoFormat($videoFormat)
-    {
-        return $this->setProperty('videoFormat', $videoFormat);
-    }
-
-    /**
      * The media network(s) whose content is broadcast on this station.
      *
      * @param Organization|Organization[] $broadcastAffiliateOf
@@ -110,6 +66,50 @@ class BroadcastService extends Service
     public function broadcastTimezone($broadcastTimezone)
     {
         return $this->setProperty('broadcastTimezone', $broadcastTimezone);
+    }
+
+    /**
+     * The organization owning or operating the broadcast service.
+     *
+     * @param Organization|Organization[] $broadcaster
+     *
+     * @return static
+     *
+     * @see http://schema.org/broadcaster
+     */
+    public function broadcaster($broadcaster)
+    {
+        return $this->setProperty('broadcaster', $broadcaster);
+    }
+
+    /**
+     * A broadcast service to which the broadcast service may belong to such as
+     * regional variations of a national channel.
+     *
+     * @param BroadcastService|BroadcastService[] $parentService
+     *
+     * @return static
+     *
+     * @see http://schema.org/parentService
+     */
+    public function parentService($parentService)
+    {
+        return $this->setProperty('parentService', $parentService);
+    }
+
+    /**
+     * The type of screening or video broadcast used (e.g. IMAX, 3D, SD, HD,
+     * etc.).
+     *
+     * @param string|string[] $videoFormat
+     *
+     * @return static
+     *
+     * @see http://schema.org/videoFormat
+     */
+    public function videoFormat($videoFormat)
+    {
+        return $this->setProperty('videoFormat', $videoFormat);
     }
 
 }

@@ -42,6 +42,20 @@ class RadioSeries extends CreativeWorkSeries
     }
 
     /**
+     * A season that is part of the media series.
+     *
+     * @param CreativeWorkSeason|CreativeWorkSeason[] $containsSeason
+     *
+     * @return static
+     *
+     * @see http://schema.org/containsSeason
+     */
+    public function containsSeason($containsSeason)
+    {
+        return $this->setProperty('containsSeason', $containsSeason);
+    }
+
+    /**
      * A director of e.g. tv, radio, movie, video gaming etc. content, or of an
      * event. Directors can be associated with individual items or with a
      * series, episode, clip.
@@ -169,20 +183,6 @@ class RadioSeries extends CreativeWorkSeries
     public function season($season)
     {
         return $this->setProperty('season', $season);
-    }
-
-    /**
-     * A season that is part of the media series.
-     *
-     * @param CreativeWorkSeason|CreativeWorkSeason[] $containsSeason
-     *
-     * @return static
-     *
-     * @see http://schema.org/containsSeason
-     */
-    public function containsSeason($containsSeason)
-    {
-        return $this->setProperty('containsSeason', $containsSeason);
     }
 
     /**

@@ -53,6 +53,21 @@ class SoftwareApplication extends CreativeWork
     }
 
     /**
+     * Device required to run the application. Used in cases where a specific
+     * make/model is required to run the application.
+     *
+     * @param string|string[] $availableOnDevice
+     *
+     * @return static
+     *
+     * @see http://schema.org/availableOnDevice
+     */
+    public function availableOnDevice($availableOnDevice)
+    {
+        return $this->setProperty('availableOnDevice', $availableOnDevice);
+    }
+
+    /**
      * Countries for which the application is not supported. You can also
      * provide the two-letter ISO 3166-1 alpha-2 country code.
      *
@@ -95,21 +110,6 @@ class SoftwareApplication extends CreativeWork
     public function device($device)
     {
         return $this->setProperty('device', $device);
-    }
-
-    /**
-     * Device required to run the application. Used in cases where a specific
-     * make/model is required to run the application.
-     *
-     * @param string|string[] $availableOnDevice
-     *
-     * @return static
-     *
-     * @see http://schema.org/availableOnDevice
-     */
-    public function availableOnDevice($availableOnDevice)
-    {
-        return $this->setProperty('availableOnDevice', $availableOnDevice);
     }
 
     /**
@@ -260,6 +260,48 @@ class SoftwareApplication extends CreativeWork
     }
 
     /**
+     * A link to a screenshot image of the app.
+     *
+     * @param ImageObject|ImageObject[]|string|string[] $screenshot
+     *
+     * @return static
+     *
+     * @see http://schema.org/screenshot
+     */
+    public function screenshot($screenshot)
+    {
+        return $this->setProperty('screenshot', $screenshot);
+    }
+
+    /**
+     * Additional content for a software application.
+     *
+     * @param SoftwareApplication|SoftwareApplication[] $softwareAddOn
+     *
+     * @return static
+     *
+     * @see http://schema.org/softwareAddOn
+     */
+    public function softwareAddOn($softwareAddOn)
+    {
+        return $this->setProperty('softwareAddOn', $softwareAddOn);
+    }
+
+    /**
+     * Software application help.
+     *
+     * @param CreativeWork|CreativeWork[] $softwareHelp
+     *
+     * @return static
+     *
+     * @see http://schema.org/softwareHelp
+     */
+    public function softwareHelp($softwareHelp)
+    {
+        return $this->setProperty('softwareHelp', $softwareHelp);
+    }
+
+    /**
      * Component dependency requirements for application. This includes runtime
      * environments and shared libraries that are not included in the
      * application distribution package, but required to run the application
@@ -274,20 +316,6 @@ class SoftwareApplication extends CreativeWork
     public function softwareRequirements($softwareRequirements)
     {
         return $this->setProperty('softwareRequirements', $softwareRequirements);
-    }
-
-    /**
-     * A link to a screenshot image of the app.
-     *
-     * @param ImageObject|ImageObject[]|string|string[] $screenshot
-     *
-     * @return static
-     *
-     * @see http://schema.org/screenshot
-     */
-    public function screenshot($screenshot)
-    {
-        return $this->setProperty('screenshot', $screenshot);
     }
 
     /**
@@ -330,34 +358,6 @@ class SoftwareApplication extends CreativeWork
     public function supportingData($supportingData)
     {
         return $this->setProperty('supportingData', $supportingData);
-    }
-
-    /**
-     * Additional content for a software application.
-     *
-     * @param SoftwareApplication|SoftwareApplication[] $softwareAddOn
-     *
-     * @return static
-     *
-     * @see http://schema.org/softwareAddOn
-     */
-    public function softwareAddOn($softwareAddOn)
-    {
-        return $this->setProperty('softwareAddOn', $softwareAddOn);
-    }
-
-    /**
-     * Software application help.
-     *
-     * @param CreativeWork|CreativeWork[] $softwareHelp
-     *
-     * @return static
-     *
-     * @see http://schema.org/softwareHelp
-     */
-    public function softwareHelp($softwareHelp)
-    {
-        return $this->setProperty('softwareHelp', $softwareHelp);
     }
 
 }

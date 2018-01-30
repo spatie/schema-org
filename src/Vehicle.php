@@ -11,63 +11,52 @@ namespace Spatie\SchemaOrg;
 class Vehicle extends Product
 {
     /**
-     * The number of doors.
+     * The available volume for cargo or luggage. For automobiles, this is
+     * usually the trunk volume.
      * 
-     * Typical unit code(s): C62
-     *
-     * @param QuantitativeValue|QuantitativeValue[]|float|float[]|int|int[] $numberOfDoors
-     *
-     * @return static
-     *
-     * @see http://schema.org/numberOfDoors
-     */
-    public function numberOfDoors($numberOfDoors)
-    {
-        return $this->setProperty('numberOfDoors', $numberOfDoors);
-    }
-
-    /**
-     * The number or type of airbags in the vehicle.
-     *
-     * @param float|float[]|int|int[]|string|string[] $numberOfAirbags
-     *
-     * @return static
-     *
-     * @see http://schema.org/numberOfAirbags
-     */
-    public function numberOfAirbags($numberOfAirbags)
-    {
-        return $this->setProperty('numberOfAirbags', $numberOfAirbags);
-    }
-
-    /**
-     * The number of axles.
+     * Typical unit code(s): LTR for liters, FTQ for cubic foot/feet
      * 
-     * Typical unit code(s): C62
+     * Note: You can use [[minValue]] and [[maxValue]] to indicate ranges.
      *
-     * @param QuantitativeValue|QuantitativeValue[]|float|float[]|int|int[] $numberOfAxles
+     * @param QuantitativeValue|QuantitativeValue[] $cargoVolume
      *
      * @return static
      *
-     * @see http://schema.org/numberOfAxles
+     * @see http://schema.org/cargoVolume
      */
-    public function numberOfAxles($numberOfAxles)
+    public function cargoVolume($cargoVolume)
     {
-        return $this->setProperty('numberOfAxles', $numberOfAxles);
+        return $this->setProperty('cargoVolume', $cargoVolume);
     }
 
     /**
-     * Information about the engine or engines of the vehicle.
+     * The date of the first registration of the vehicle with the respective
+     * public authorities.
      *
-     * @param EngineSpecification|EngineSpecification[] $vehicleEngine
+     * @param \DateTimeInterface|\DateTimeInterface[] $dateVehicleFirstRegistered
      *
      * @return static
      *
-     * @see http://schema.org/vehicleEngine
+     * @see http://schema.org/dateVehicleFirstRegistered
      */
-    public function vehicleEngine($vehicleEngine)
+    public function dateVehicleFirstRegistered($dateVehicleFirstRegistered)
     {
-        return $this->setProperty('vehicleEngine', $vehicleEngine);
+        return $this->setProperty('dateVehicleFirstRegistered', $dateVehicleFirstRegistered);
+    }
+
+    /**
+     * The drive wheel configuration, i.e. which roadwheels will receive torque
+     * from the vehicle's engine via the drivetrain.
+     *
+     * @param DriveWheelConfigurationValue|DriveWheelConfigurationValue[]|string|string[] $driveWheelConfiguration
+     *
+     * @return static
+     *
+     * @see http://schema.org/driveWheelConfiguration
+     */
+    public function driveWheelConfiguration($driveWheelConfiguration)
+    {
+        return $this->setProperty('driveWheelConfiguration', $driveWheelConfiguration);
     }
 
     /**
@@ -123,69 +112,19 @@ class Vehicle extends Product
     }
 
     /**
-     * The total number of forward gears available for the transmission system
-     * of the vehicle.
-     * 
-     * Typical unit code(s): C62
+     * The type of fuel suitable for the engine or engines of the vehicle. If
+     * the vehicle has only one engine, this property can be attached directly
+     * to the vehicle.
      *
-     * @param QuantitativeValue|QuantitativeValue[]|float|float[]|int|int[] $numberOfForwardGears
-     *
-     * @return static
-     *
-     * @see http://schema.org/numberOfForwardGears
-     */
-    public function numberOfForwardGears($numberOfForwardGears)
-    {
-        return $this->setProperty('numberOfForwardGears', $numberOfForwardGears);
-    }
-
-    /**
-     * The Vehicle Identification Number (VIN) is a unique serial number used by
-     * the automotive industry to identify individual motor vehicles.
-     *
-     * @param string|string[] $vehicleIdentificationNumber
+     * @param QualitativeValue|QualitativeValue[]|string|string[] $fuelType
      *
      * @return static
      *
-     * @see http://schema.org/vehicleIdentificationNumber
+     * @see http://schema.org/fuelType
      */
-    public function vehicleIdentificationNumber($vehicleIdentificationNumber)
+    public function fuelType($fuelType)
     {
-        return $this->setProperty('vehicleIdentificationNumber', $vehicleIdentificationNumber);
-    }
-
-    /**
-     * The available volume for cargo or luggage. For automobiles, this is
-     * usually the trunk volume.
-     * 
-     * Typical unit code(s): LTR for liters, FTQ for cubic foot/feet
-     * 
-     * Note: You can use [[minValue]] and [[maxValue]] to indicate ranges.
-     *
-     * @param QuantitativeValue|QuantitativeValue[] $cargoVolume
-     *
-     * @return static
-     *
-     * @see http://schema.org/cargoVolume
-     */
-    public function cargoVolume($cargoVolume)
-    {
-        return $this->setProperty('cargoVolume', $cargoVolume);
-    }
-
-    /**
-     * A short text indicating the configuration of the vehicle, e.g. '5dr
-     * hatchback ST 2.5 MT 225 hp' or 'limited edition'.
-     *
-     * @param string|string[] $vehicleConfiguration
-     *
-     * @return static
-     *
-     * @see http://schema.org/vehicleConfiguration
-     */
-    public function vehicleConfiguration($vehicleConfiguration)
-    {
-        return $this->setProperty('vehicleConfiguration', $vehicleConfiguration);
+        return $this->setProperty('fuelType', $fuelType);
     }
 
     /**
@@ -200,83 +139,6 @@ class Vehicle extends Product
     public function knownVehicleDamages($knownVehicleDamages)
     {
         return $this->setProperty('knownVehicleDamages', $knownVehicleDamages);
-    }
-
-    /**
-     * The date of the first registration of the vehicle with the respective
-     * public authorities.
-     *
-     * @param \DateTimeInterface|\DateTimeInterface[] $dateVehicleFirstRegistered
-     *
-     * @return static
-     *
-     * @see http://schema.org/dateVehicleFirstRegistered
-     */
-    public function dateVehicleFirstRegistered($dateVehicleFirstRegistered)
-    {
-        return $this->setProperty('dateVehicleFirstRegistered', $dateVehicleFirstRegistered);
-    }
-
-    /**
-     * The drive wheel configuration, i.e. which roadwheels will receive torque
-     * from the vehicle's engine via the drivetrain.
-     *
-     * @param DriveWheelConfigurationValue|DriveWheelConfigurationValue[]|string|string[] $driveWheelConfiguration
-     *
-     * @return static
-     *
-     * @see http://schema.org/driveWheelConfiguration
-     */
-    public function driveWheelConfiguration($driveWheelConfiguration)
-    {
-        return $this->setProperty('driveWheelConfiguration', $driveWheelConfiguration);
-    }
-
-    /**
-     * The type of fuel suitable for the engine or engines of the vehicle. If
-     * the vehicle has only one engine, this property can be attached directly
-     * to the vehicle.
-     *
-     * @param string|string[]|QualitativeValue|QualitativeValue[] $fuelType
-     *
-     * @return static
-     *
-     * @see http://schema.org/fuelType
-     */
-    public function fuelType($fuelType)
-    {
-        return $this->setProperty('fuelType', $fuelType);
-    }
-
-    /**
-     * The color or color combination of the interior of the vehicle.
-     *
-     * @param string|string[] $vehicleInteriorColor
-     *
-     * @return static
-     *
-     * @see http://schema.org/vehicleInteriorColor
-     */
-    public function vehicleInteriorColor($vehicleInteriorColor)
-    {
-        return $this->setProperty('vehicleInteriorColor', $vehicleInteriorColor);
-    }
-
-    /**
-     * The type or material of the interior of the vehicle (e.g. synthetic
-     * fabric, leather, wood, etc.). While most interior types are characterized
-     * by the material used, an interior type can also be based on vehicle usage
-     * or target audience.
-     *
-     * @param string|string[] $vehicleInteriorType
-     *
-     * @return static
-     *
-     * @see http://schema.org/vehicleInteriorType
-     */
-    public function vehicleInteriorType($vehicleInteriorType)
-    {
-        return $this->setProperty('vehicleInteriorType', $vehicleInteriorType);
     }
 
     /**
@@ -297,18 +159,66 @@ class Vehicle extends Product
     }
 
     /**
-     * The release date of a vehicle model (often used to differentiate versions
-     * of the same make and model).
+     * The number or type of airbags in the vehicle.
      *
-     * @param \DateTimeInterface|\DateTimeInterface[] $vehicleModelDate
+     * @param float|float[]|int|int[]|string|string[] $numberOfAirbags
      *
      * @return static
      *
-     * @see http://schema.org/vehicleModelDate
+     * @see http://schema.org/numberOfAirbags
      */
-    public function vehicleModelDate($vehicleModelDate)
+    public function numberOfAirbags($numberOfAirbags)
     {
-        return $this->setProperty('vehicleModelDate', $vehicleModelDate);
+        return $this->setProperty('numberOfAirbags', $numberOfAirbags);
+    }
+
+    /**
+     * The number of axles.
+     * 
+     * Typical unit code(s): C62
+     *
+     * @param QuantitativeValue|QuantitativeValue[]|float|float[]|int|int[] $numberOfAxles
+     *
+     * @return static
+     *
+     * @see http://schema.org/numberOfAxles
+     */
+    public function numberOfAxles($numberOfAxles)
+    {
+        return $this->setProperty('numberOfAxles', $numberOfAxles);
+    }
+
+    /**
+     * The number of doors.
+     * 
+     * Typical unit code(s): C62
+     *
+     * @param QuantitativeValue|QuantitativeValue[]|float|float[]|int|int[] $numberOfDoors
+     *
+     * @return static
+     *
+     * @see http://schema.org/numberOfDoors
+     */
+    public function numberOfDoors($numberOfDoors)
+    {
+        return $this->setProperty('numberOfDoors', $numberOfDoors);
+    }
+
+    /**
+     * The total number of forward gears available for the transmission system
+     * of the vehicle.
+     * 
+     * Typical unit code(s): C62
+     *
+     * @param QuantitativeValue|QuantitativeValue[]|float|float[]|int|int[] $numberOfForwardGears
+     *
+     * @return static
+     *
+     * @see http://schema.org/numberOfForwardGears
+     */
+    public function numberOfForwardGears($numberOfForwardGears)
+    {
+        return $this->setProperty('numberOfForwardGears', $numberOfForwardGears);
     }
 
     /**
@@ -356,6 +266,110 @@ class Vehicle extends Product
     }
 
     /**
+     * The position of the steering wheel or similar device (mostly for cars).
+     *
+     * @param SteeringPositionValue|SteeringPositionValue[] $steeringPosition
+     *
+     * @return static
+     *
+     * @see http://schema.org/steeringPosition
+     */
+    public function steeringPosition($steeringPosition)
+    {
+        return $this->setProperty('steeringPosition', $steeringPosition);
+    }
+
+    /**
+     * A short text indicating the configuration of the vehicle, e.g. '5dr
+     * hatchback ST 2.5 MT 225 hp' or 'limited edition'.
+     *
+     * @param string|string[] $vehicleConfiguration
+     *
+     * @return static
+     *
+     * @see http://schema.org/vehicleConfiguration
+     */
+    public function vehicleConfiguration($vehicleConfiguration)
+    {
+        return $this->setProperty('vehicleConfiguration', $vehicleConfiguration);
+    }
+
+    /**
+     * Information about the engine or engines of the vehicle.
+     *
+     * @param EngineSpecification|EngineSpecification[] $vehicleEngine
+     *
+     * @return static
+     *
+     * @see http://schema.org/vehicleEngine
+     */
+    public function vehicleEngine($vehicleEngine)
+    {
+        return $this->setProperty('vehicleEngine', $vehicleEngine);
+    }
+
+    /**
+     * The Vehicle Identification Number (VIN) is a unique serial number used by
+     * the automotive industry to identify individual motor vehicles.
+     *
+     * @param string|string[] $vehicleIdentificationNumber
+     *
+     * @return static
+     *
+     * @see http://schema.org/vehicleIdentificationNumber
+     */
+    public function vehicleIdentificationNumber($vehicleIdentificationNumber)
+    {
+        return $this->setProperty('vehicleIdentificationNumber', $vehicleIdentificationNumber);
+    }
+
+    /**
+     * The color or color combination of the interior of the vehicle.
+     *
+     * @param string|string[] $vehicleInteriorColor
+     *
+     * @return static
+     *
+     * @see http://schema.org/vehicleInteriorColor
+     */
+    public function vehicleInteriorColor($vehicleInteriorColor)
+    {
+        return $this->setProperty('vehicleInteriorColor', $vehicleInteriorColor);
+    }
+
+    /**
+     * The type or material of the interior of the vehicle (e.g. synthetic
+     * fabric, leather, wood, etc.). While most interior types are characterized
+     * by the material used, an interior type can also be based on vehicle usage
+     * or target audience.
+     *
+     * @param string|string[] $vehicleInteriorType
+     *
+     * @return static
+     *
+     * @see http://schema.org/vehicleInteriorType
+     */
+    public function vehicleInteriorType($vehicleInteriorType)
+    {
+        return $this->setProperty('vehicleInteriorType', $vehicleInteriorType);
+    }
+
+    /**
+     * The release date of a vehicle model (often used to differentiate versions
+     * of the same make and model).
+     *
+     * @param \DateTimeInterface|\DateTimeInterface[] $vehicleModelDate
+     *
+     * @return static
+     *
+     * @see http://schema.org/vehicleModelDate
+     */
+    public function vehicleModelDate($vehicleModelDate)
+    {
+        return $this->setProperty('vehicleModelDate', $vehicleModelDate);
+    }
+
+    /**
      * The number of passengers that can be seated in the vehicle, both in terms
      * of the physical space available, and in terms of limitations set by law.
      * 
@@ -373,36 +387,6 @@ class Vehicle extends Product
     }
 
     /**
-     * The type of component used for transmitting the power from a rotating
-     * power source to the wheels or other relevant component(s) ("gearbox" for
-     * cars).
-     *
-     * @param string|string[]|QualitativeValue|QualitativeValue[] $vehicleTransmission
-     *
-     * @return static
-     *
-     * @see http://schema.org/vehicleTransmission
-     */
-    public function vehicleTransmission($vehicleTransmission)
-    {
-        return $this->setProperty('vehicleTransmission', $vehicleTransmission);
-    }
-
-    /**
-     * The position of the steering wheel or similar device (mostly for cars).
-     *
-     * @param SteeringPositionValue|SteeringPositionValue[] $steeringPosition
-     *
-     * @return static
-     *
-     * @see http://schema.org/steeringPosition
-     */
-    public function steeringPosition($steeringPosition)
-    {
-        return $this->setProperty('steeringPosition', $steeringPosition);
-    }
-
-    /**
      * Indicates whether the vehicle has been used for special purposes, like
      * commercial rental, driving school, or as a taxi. The legislation in many
      * countries requires this information to be revealed when offering a car
@@ -417,6 +401,22 @@ class Vehicle extends Product
     public function vehicleSpecialUsage($vehicleSpecialUsage)
     {
         return $this->setProperty('vehicleSpecialUsage', $vehicleSpecialUsage);
+    }
+
+    /**
+     * The type of component used for transmitting the power from a rotating
+     * power source to the wheels or other relevant component(s) ("gearbox" for
+     * cars).
+     *
+     * @param QualitativeValue|QualitativeValue[]|string|string[] $vehicleTransmission
+     *
+     * @return static
+     *
+     * @see http://schema.org/vehicleTransmission
+     */
+    public function vehicleTransmission($vehicleTransmission)
+    {
+        return $this->setProperty('vehicleTransmission', $vehicleTransmission);
     }
 
 }

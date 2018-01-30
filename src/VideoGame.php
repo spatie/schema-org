@@ -42,6 +42,20 @@ class VideoGame extends SoftwareApplication
     }
 
     /**
+     * Cheat codes to the game.
+     *
+     * @param CreativeWork|CreativeWork[] $cheatCode
+     *
+     * @return static
+     *
+     * @see http://schema.org/cheatCode
+     */
+    public function cheatCode($cheatCode)
+    {
+        return $this->setProperty('cheatCode', $cheatCode);
+    }
+
+    /**
      * A director of e.g. tv, radio, movie, video gaming etc. content, or of an
      * event. Directors can be associated with individual items or with a
      * series, episode, clip.
@@ -73,83 +87,11 @@ class VideoGame extends SoftwareApplication
     }
 
     /**
-     * The composer of the soundtrack.
-     *
-     * @param MusicGroup|MusicGroup[]|Person|Person[] $musicBy
-     *
-     * @return static
-     *
-     * @see http://schema.org/musicBy
-     */
-    public function musicBy($musicBy)
-    {
-        return $this->setProperty('musicBy', $musicBy);
-    }
-
-    /**
-     * The trailer of a movie or tv/radio series, season, episode, etc.
-     *
-     * @param VideoObject|VideoObject[] $trailer
-     *
-     * @return static
-     *
-     * @see http://schema.org/trailer
-     */
-    public function trailer($trailer)
-    {
-        return $this->setProperty('trailer', $trailer);
-    }
-
-    /**
-     * Indicates whether this game is multi-player, co-op or single-player.  The
-     * game can be marked as multi-player, co-op and single-player at the same
-     * time.
-     *
-     * @param GamePlayMode|GamePlayMode[] $playMode
-     *
-     * @return static
-     *
-     * @see http://schema.org/playMode
-     */
-    public function playMode($playMode)
-    {
-        return $this->setProperty('playMode', $playMode);
-    }
-
-    /**
-     * Cheat codes to the game.
-     *
-     * @param CreativeWork|CreativeWork[] $cheatCode
-     *
-     * @return static
-     *
-     * @see http://schema.org/cheatCode
-     */
-    public function cheatCode($cheatCode)
-    {
-        return $this->setProperty('cheatCode', $cheatCode);
-    }
-
-    /**
-     * Links to tips, tactics, etc.
-     *
-     * @param CreativeWork|CreativeWork[] $gameTip
-     *
-     * @return static
-     *
-     * @see http://schema.org/gameTip
-     */
-    public function gameTip($gameTip)
-    {
-        return $this->setProperty('gameTip', $gameTip);
-    }
-
-    /**
      * The electronic systems used to play <a
      * href="http://en.wikipedia.org/wiki/Category:Video_game_platforms">video
      * games</a>.
      *
-     * @param string|string[]|Thing|Thing[] $gamePlatform
+     * @param Thing|Thing[]|string|string[] $gamePlatform
      *
      * @return static
      *
@@ -172,6 +114,64 @@ class VideoGame extends SoftwareApplication
     public function gameServer($gameServer)
     {
         return $this->setProperty('gameServer', $gameServer);
+    }
+
+    /**
+     * Links to tips, tactics, etc.
+     *
+     * @param CreativeWork|CreativeWork[] $gameTip
+     *
+     * @return static
+     *
+     * @see http://schema.org/gameTip
+     */
+    public function gameTip($gameTip)
+    {
+        return $this->setProperty('gameTip', $gameTip);
+    }
+
+    /**
+     * The composer of the soundtrack.
+     *
+     * @param MusicGroup|MusicGroup[]|Person|Person[] $musicBy
+     *
+     * @return static
+     *
+     * @see http://schema.org/musicBy
+     */
+    public function musicBy($musicBy)
+    {
+        return $this->setProperty('musicBy', $musicBy);
+    }
+
+    /**
+     * Indicates whether this game is multi-player, co-op or single-player.  The
+     * game can be marked as multi-player, co-op and single-player at the same
+     * time.
+     *
+     * @param GamePlayMode|GamePlayMode[] $playMode
+     *
+     * @return static
+     *
+     * @see http://schema.org/playMode
+     */
+    public function playMode($playMode)
+    {
+        return $this->setProperty('playMode', $playMode);
+    }
+
+    /**
+     * The trailer of a movie or tv/radio series, season, episode, etc.
+     *
+     * @param VideoObject|VideoObject[] $trailer
+     *
+     * @return static
+     *
+     * @see http://schema.org/trailer
+     */
+    public function trailer($trailer)
+    {
+        return $this->setProperty('trailer', $trailer);
     }
 
 }

@@ -10,47 +10,17 @@ namespace Spatie\SchemaOrg;
 class Ticket extends Intangible
 {
     /**
-     * The person or organization the reservation or ticket is for.
+     * The date the ticket was issued.
      *
-     * @param Person|Person[]|Organization|Organization[] $underName
-     *
-     * @return static
-     *
-     * @see http://schema.org/underName
-     */
-    public function underName($underName)
-    {
-        return $this->setProperty('underName', $underName);
-    }
-
-    /**
-     * The total price for the reservation or ticket, including applicable
-     * taxes, shipping, etc.
-     *
-     * @param float|float[]|int|int[]|string|string[]|PriceSpecification|PriceSpecification[] $totalPrice
+     * @param \DateTimeInterface|\DateTimeInterface[] $dateIssued
      *
      * @return static
      *
-     * @see http://schema.org/totalPrice
+     * @see http://schema.org/dateIssued
      */
-    public function totalPrice($totalPrice)
+    public function dateIssued($dateIssued)
     {
-        return $this->setProperty('totalPrice', $totalPrice);
-    }
-
-    /**
-     * The currency (in 3-letter ISO 4217 format) of the price or a price
-     * component, when attached to [[PriceSpecification]] and its subtypes.
-     *
-     * @param string|string[] $priceCurrency
-     *
-     * @return static
-     *
-     * @see http://schema.org/priceCurrency
-     */
-    public function priceCurrency($priceCurrency)
-    {
-        return $this->setProperty('priceCurrency', $priceCurrency);
+        return $this->setProperty('dateIssued', $dateIssued);
     }
 
     /**
@@ -68,31 +38,18 @@ class Ticket extends Intangible
     }
 
     /**
-     * The date the ticket was issued.
+     * The currency (in 3-letter ISO 4217 format) of the price or a price
+     * component, when attached to [[PriceSpecification]] and its subtypes.
      *
-     * @param \DateTimeInterface|\DateTimeInterface[] $dateIssued
-     *
-     * @return static
-     *
-     * @see http://schema.org/dateIssued
-     */
-    public function dateIssued($dateIssued)
-    {
-        return $this->setProperty('dateIssued', $dateIssued);
-    }
-
-    /**
-     * The seat associated with the ticket.
-     *
-     * @param Seat|Seat[] $ticketedSeat
+     * @param string|string[] $priceCurrency
      *
      * @return static
      *
-     * @see http://schema.org/ticketedSeat
+     * @see http://schema.org/priceCurrency
      */
-    public function ticketedSeat($ticketedSeat)
+    public function priceCurrency($priceCurrency)
     {
-        return $this->setProperty('ticketedSeat', $ticketedSeat);
+        return $this->setProperty('priceCurrency', $priceCurrency);
     }
 
     /**
@@ -122,6 +79,49 @@ class Ticket extends Intangible
     public function ticketToken($ticketToken)
     {
         return $this->setProperty('ticketToken', $ticketToken);
+    }
+
+    /**
+     * The seat associated with the ticket.
+     *
+     * @param Seat|Seat[] $ticketedSeat
+     *
+     * @return static
+     *
+     * @see http://schema.org/ticketedSeat
+     */
+    public function ticketedSeat($ticketedSeat)
+    {
+        return $this->setProperty('ticketedSeat', $ticketedSeat);
+    }
+
+    /**
+     * The total price for the reservation or ticket, including applicable
+     * taxes, shipping, etc.
+     *
+     * @param PriceSpecification|PriceSpecification[]|float|float[]|int|int[]|string|string[] $totalPrice
+     *
+     * @return static
+     *
+     * @see http://schema.org/totalPrice
+     */
+    public function totalPrice($totalPrice)
+    {
+        return $this->setProperty('totalPrice', $totalPrice);
+    }
+
+    /**
+     * The person or organization the reservation or ticket is for.
+     *
+     * @param Organization|Organization[]|Person|Person[] $underName
+     *
+     * @return static
+     *
+     * @see http://schema.org/underName
+     */
+    public function underName($underName)
+    {
+        return $this->setProperty('underName', $underName);
     }
 
 }

@@ -10,20 +10,6 @@ namespace Spatie\SchemaOrg;
 class MusicAlbum extends MusicPlaylist
 {
     /**
-     * The artist that performed this album or recording.
-     *
-     * @param MusicGroup|MusicGroup[] $byArtist
-     *
-     * @return static
-     *
-     * @see http://schema.org/byArtist
-     */
-    public function byArtist($byArtist)
-    {
-        return $this->setProperty('byArtist', $byArtist);
-    }
-
-    /**
      * Classification of the album by it's type of content: soundtrack, live
      * album, studio album, etc.
      *
@@ -36,6 +22,20 @@ class MusicAlbum extends MusicPlaylist
     public function albumProductionType($albumProductionType)
     {
         return $this->setProperty('albumProductionType', $albumProductionType);
+    }
+
+    /**
+     * A release of this album.
+     *
+     * @param MusicRelease|MusicRelease[] $albumRelease
+     *
+     * @return static
+     *
+     * @see http://schema.org/albumRelease
+     */
+    public function albumRelease($albumRelease)
+    {
+        return $this->setProperty('albumRelease', $albumRelease);
     }
 
     /**
@@ -53,17 +53,17 @@ class MusicAlbum extends MusicPlaylist
     }
 
     /**
-     * A release of this album.
+     * The artist that performed this album or recording.
      *
-     * @param MusicRelease|MusicRelease[] $albumRelease
+     * @param MusicGroup|MusicGroup[] $byArtist
      *
      * @return static
      *
-     * @see http://schema.org/albumRelease
+     * @see http://schema.org/byArtist
      */
-    public function albumRelease($albumRelease)
+    public function byArtist($byArtist)
     {
-        return $this->setProperty('albumRelease', $albumRelease);
+        return $this->setProperty('byArtist', $byArtist);
     }
 
 }

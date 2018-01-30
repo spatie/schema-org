@@ -22,7 +22,7 @@ class Suite extends Accommodation
      * an instance of BedDetails. For more detailed information, use the
      * amenityFeature property.
      *
-     * @param string|string[]|BedDetails|BedDetails[] $bed
+     * @param BedDetails|BedDetails[]|string|string[] $bed
      *
      * @return static
      *
@@ -39,7 +39,7 @@ class Suite extends Accommodation
      * Typical unit code(s): ROM for room or C62 for no unit. The type of room
      * can be put in the unitText property of the QuantitativeValue.
      *
-     * @param float|float[]|int|int[]|QuantitativeValue|QuantitativeValue[] $numberOfRooms
+     * @param QuantitativeValue|QuantitativeValue[]|float|float[]|int|int[] $numberOfRooms
      *
      * @return static
      *

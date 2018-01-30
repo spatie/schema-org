@@ -10,18 +10,19 @@ namespace Spatie\SchemaOrg;
 class VisualArtwork extends CreativeWork
 {
     /**
-     * e.g. Painting, Drawing, Sculpture, Print, Photograph, Assemblage,
-     * Collage, etc.
+     * The number of copies when multiple copies of a piece of artwork are
+     * produced - e.g. for a limited edition of 20 prints, 'artEdition' refers
+     * to the total number of copies (in this example "20").
      *
-     * @param string|string[] $artform
+     * @param int|int[]|string|string[] $artEdition
      *
      * @return static
      *
-     * @see http://schema.org/artform
+     * @see http://schema.org/artEdition
      */
-    public function artform($artform)
+    public function artEdition($artEdition)
     {
-        return $this->setProperty('artform', $artform);
+        return $this->setProperty('artEdition', $artEdition);
     }
 
     /**
@@ -41,18 +42,18 @@ class VisualArtwork extends CreativeWork
     }
 
     /**
-     * A material used as a surface in some artwork, e.g. Canvas, Paper, Wood,
-     * Board, etc.
+     * e.g. Painting, Drawing, Sculpture, Print, Photograph, Assemblage,
+     * Collage, etc.
      *
-     * @param string|string[] $surface
+     * @param string|string[] $artform
      *
      * @return static
      *
-     * @see http://schema.org/surface
+     * @see http://schema.org/artform
      */
-    public function surface($surface)
+    public function artform($artform)
     {
-        return $this->setProperty('surface', $surface);
+        return $this->setProperty('artform', $artform);
     }
 
     /**
@@ -71,19 +72,18 @@ class VisualArtwork extends CreativeWork
     }
 
     /**
-     * The number of copies when multiple copies of a piece of artwork are
-     * produced - e.g. for a limited edition of 20 prints, 'artEdition' refers
-     * to the total number of copies (in this example "20").
+     * A material used as a surface in some artwork, e.g. Canvas, Paper, Wood,
+     * Board, etc.
      *
-     * @param string|string[]|int|int[] $artEdition
+     * @param string|string[] $surface
      *
      * @return static
      *
-     * @see http://schema.org/artEdition
+     * @see http://schema.org/surface
      */
-    public function artEdition($artEdition)
+    public function surface($surface)
     {
-        return $this->setProperty('artEdition', $artEdition);
+        return $this->setProperty('surface', $surface);
     }
 
 }

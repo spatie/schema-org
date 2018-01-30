@@ -11,32 +11,17 @@ namespace Spatie\SchemaOrg;
 class OrderItem extends Intangible
 {
     /**
-     * The number of the item ordered. If the property is not set, assume the
-     * quantity is one.
+     * The delivery of the parcel related to this order or order item.
      *
-     * @param float|float[]|int|int[] $orderQuantity
-     *
-     * @return static
-     *
-     * @see http://schema.org/orderQuantity
-     */
-    public function orderQuantity($orderQuantity)
-    {
-        return $this->setProperty('orderQuantity', $orderQuantity);
-    }
-
-    /**
-     * The current status of the order item.
-     *
-     * @param OrderStatus|OrderStatus[] $orderItemStatus
+     * @param ParcelDelivery|ParcelDelivery[] $orderDelivery
      *
      * @return static
      *
-     * @see http://schema.org/orderItemStatus
+     * @see http://schema.org/orderDelivery
      */
-    public function orderItemStatus($orderItemStatus)
+    public function orderDelivery($orderDelivery)
     {
-        return $this->setProperty('orderItemStatus', $orderItemStatus);
+        return $this->setProperty('orderDelivery', $orderDelivery);
     }
 
     /**
@@ -54,23 +39,38 @@ class OrderItem extends Intangible
     }
 
     /**
-     * The delivery of the parcel related to this order or order item.
+     * The current status of the order item.
      *
-     * @param ParcelDelivery|ParcelDelivery[] $orderDelivery
+     * @param OrderStatus|OrderStatus[] $orderItemStatus
      *
      * @return static
      *
-     * @see http://schema.org/orderDelivery
+     * @see http://schema.org/orderItemStatus
      */
-    public function orderDelivery($orderDelivery)
+    public function orderItemStatus($orderItemStatus)
     {
-        return $this->setProperty('orderDelivery', $orderDelivery);
+        return $this->setProperty('orderItemStatus', $orderItemStatus);
+    }
+
+    /**
+     * The number of the item ordered. If the property is not set, assume the
+     * quantity is one.
+     *
+     * @param float|float[]|int|int[] $orderQuantity
+     *
+     * @return static
+     *
+     * @see http://schema.org/orderQuantity
+     */
+    public function orderQuantity($orderQuantity)
+    {
+        return $this->setProperty('orderQuantity', $orderQuantity);
     }
 
     /**
      * The item ordered.
      *
-     * @param Product|Product[]|OrderItem|OrderItem[] $orderedItem
+     * @param OrderItem|OrderItem[]|Product|Product[] $orderedItem
      *
      * @return static
      *

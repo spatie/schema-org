@@ -12,7 +12,7 @@ class EmployeeRole extends OrganizationRole
     /**
      * The base salary of the job or of an employee in an EmployeeRole.
      *
-     * @param float|float[]|int|int[]|PriceSpecification|PriceSpecification[]|MonetaryAmount|MonetaryAmount[] $baseSalary
+     * @param MonetaryAmount|MonetaryAmount[]|PriceSpecification|PriceSpecification[]|float|float[]|int|int[] $baseSalary
      *
      * @return static
      *

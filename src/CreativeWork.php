@@ -11,23 +11,6 @@ namespace Spatie\SchemaOrg;
 class CreativeWork extends Thing
 {
     /**
-     * Indicates (by URL or string) a particular version of a schema used in
-     * some CreativeWork. For example, a document could declare a schemaVersion
-     * using an URL such as http://schema.org/version/2.0/ if precise indication
-     * of schema version was required by some application.
-     *
-     * @param string|string[] $schemaVersion
-     *
-     * @return static
-     *
-     * @see http://schema.org/schemaVersion
-     */
-    public function schemaVersion($schemaVersion)
-    {
-        return $this->setProperty('schemaVersion', $schemaVersion);
-    }
-
-    /**
      * The subject matter of the content.
      *
      * @param Thing|Thing[] $about
@@ -39,6 +22,39 @@ class CreativeWork extends Thing
     public function about($about)
     {
         return $this->setProperty('about', $about);
+    }
+
+    /**
+     * The human sensory perceptual system or cognitive faculty through which a
+     * person may process or perceive information. Expected values include:
+     * auditory, tactile, textual, visual, colorDependent, chartOnVisual,
+     * chemOnVisual, diagramOnVisual, mathOnVisual, musicOnVisual, textOnVisual.
+     *
+     * @param string|string[] $accessMode
+     *
+     * @return static
+     *
+     * @see http://schema.org/accessMode
+     */
+    public function accessMode($accessMode)
+    {
+        return $this->setProperty('accessMode', $accessMode);
+    }
+
+    /**
+     * A list of single or combined accessModes that are sufficient to
+     * understand all the intellectual content of a resource. Expected values
+     * include:  auditory, tactile, textual, visual.
+     *
+     * @param string|string[] $accessModeSufficient
+     *
+     * @return static
+     *
+     * @see http://schema.org/accessModeSufficient
+     */
+    public function accessModeSufficient($accessModeSufficient)
+    {
+        return $this->setProperty('accessModeSufficient', $accessModeSufficient);
     }
 
     /**
@@ -104,6 +120,24 @@ class CreativeWork extends Thing
     public function accessibilityHazard($accessibilityHazard)
     {
         return $this->setProperty('accessibilityHazard', $accessibilityHazard);
+    }
+
+    /**
+     * A human-readable summary of specific accessibility features or
+     * deficiencies, consistent with the other accessibility metadata but
+     * expressing subtleties such as "short descriptions are present but long
+     * descriptions will be needed for non-visual users" or "short descriptions
+     * are present and no long descriptions are needed."
+     *
+     * @param string|string[] $accessibilitySummary
+     *
+     * @return static
+     *
+     * @see http://schema.org/accessibilitySummary
+     */
+    public function accessibilitySummary($accessibilitySummary)
+    {
+        return $this->setProperty('accessibilitySummary', $accessibilitySummary);
     }
 
     /**
@@ -237,6 +271,20 @@ class CreativeWork extends Thing
     }
 
     /**
+     * Fictional person connected with a creative work.
+     *
+     * @param Person|Person[] $character
+     *
+     * @return static
+     *
+     * @see http://schema.org/character
+     */
+    public function character($character)
+    {
+        return $this->setProperty('character', $character);
+    }
+
+    /**
      * A citation or reference to another creative work, such as another
      * publication, web page, scholarly article, etc.
      *
@@ -266,6 +314,22 @@ class CreativeWork extends Thing
     }
 
     /**
+     * The number of comments this CreativeWork (e.g. Article, Question or
+     * Answer) has received. This is most applicable to works published in Web
+     * sites with commenting system; additional comments may exist elsewhere.
+     *
+     * @param int|int[] $commentCount
+     *
+     * @return static
+     *
+     * @see http://schema.org/commentCount
+     */
+    public function commentCount($commentCount)
+    {
+        return $this->setProperty('commentCount', $commentCount);
+    }
+
+    /**
      * The location depicted or described in the content. For example, the
      * location in a photograph or painting.
      *
@@ -278,21 +342,6 @@ class CreativeWork extends Thing
     public function contentLocation($contentLocation)
     {
         return $this->setProperty('contentLocation', $contentLocation);
-    }
-
-    /**
-     * The location where the CreativeWork was created, which may not be the
-     * same as the location depicted in the CreativeWork.
-     *
-     * @param Place|Place[] $locationCreated
-     *
-     * @return static
-     *
-     * @see http://schema.org/locationCreated
-     */
-    public function locationCreated($locationCreated)
-    {
-        return $this->setProperty('locationCreated', $locationCreated);
     }
 
     /**
@@ -498,6 +547,21 @@ class CreativeWork extends Thing
     }
 
     /**
+     * A creative work that this work is an
+     * example/instance/realization/derivation of.
+     *
+     * @param CreativeWork|CreativeWork[] $exampleOfWork
+     *
+     * @return static
+     *
+     * @see http://schema.org/exampleOfWork
+     */
+    public function exampleOfWork($exampleOfWork)
+    {
+        return $this->setProperty('exampleOfWork', $exampleOfWork);
+    }
+
+    /**
      * Media type, typically MIME format (see [IANA
      * site](http://www.iana.org/assignments/media-types/media-types.xhtml)) of
      * the content e.g. application/zip of a SoftwareApplication binary. In
@@ -519,17 +583,18 @@ class CreativeWork extends Thing
     }
 
     /**
-     * A flag to signal that the publication is accessible for free.
+     * A person or organization that supports (sponsors) something through some
+     * kind of financial contribution.
      *
-     * @param bool|bool[] $isAccessibleForFree
+     * @param Organization|Organization[]|Person|Person[] $funder
      *
      * @return static
      *
-     * @see http://schema.org/isAccessibleForFree
+     * @see http://schema.org/funder
      */
-    public function isAccessibleForFree($isAccessibleForFree)
+    public function funder($funder)
     {
-        return $this->setProperty('isAccessibleForFree', $isAccessibleForFree);
+        return $this->setProperty('funder', $funder);
     }
 
     /**
@@ -544,6 +609,21 @@ class CreativeWork extends Thing
     public function genre($genre)
     {
         return $this->setProperty('genre', $genre);
+    }
+
+    /**
+     * Indicates a CreativeWork that is (in some sense) a part of this
+     * CreativeWork.
+     *
+     * @param CreativeWork|CreativeWork[] $hasPart
+     *
+     * @return static
+     *
+     * @see http://schema.org/hasPart
+     */
+    public function hasPart($hasPart)
+    {
+        return $this->setProperty('hasPart', $hasPart);
     }
 
     /**
@@ -566,7 +646,7 @@ class CreativeWork extends Thing
      * standard](http://tools.ietf.org/html/bcp47). See also
      * [[availableLanguage]].
      *
-     * @param string|string[]|Language|Language[] $inLanguage
+     * @param Language|Language[]|string|string[] $inLanguage
      *
      * @return static
      *
@@ -575,6 +655,22 @@ class CreativeWork extends Thing
     public function inLanguage($inLanguage)
     {
         return $this->setProperty('inLanguage', $inLanguage);
+    }
+
+    /**
+     * The number of interactions for the CreativeWork using the WebSite or
+     * SoftwareApplication. The most specific child type of InteractionCounter
+     * should be used.
+     *
+     * @param InteractionCounter|InteractionCounter[] $interactionStatistic
+     *
+     * @return static
+     *
+     * @see http://schema.org/interactionStatistic
+     */
+    public function interactionStatistic($interactionStatistic)
+    {
+        return $this->setProperty('interactionStatistic', $interactionStatistic);
     }
 
     /**
@@ -593,19 +689,17 @@ class CreativeWork extends Thing
     }
 
     /**
-     * A resource that was used in the creation of this resource. This term can
-     * be repeated for multiple sources. For example,
-     * http://example.com/great-multiplication-intro.html.
+     * A flag to signal that the publication is accessible for free.
      *
-     * @param string|string[]|CreativeWork|CreativeWork[]|Product|Product[] $isBasedOnUrl
+     * @param bool|bool[] $isAccessibleForFree
      *
      * @return static
      *
-     * @see http://schema.org/isBasedOnUrl
+     * @see http://schema.org/isAccessibleForFree
      */
-    public function isBasedOnUrl($isBasedOnUrl)
+    public function isAccessibleForFree($isAccessibleForFree)
     {
-        return $this->setProperty('isBasedOnUrl', $isBasedOnUrl);
+        return $this->setProperty('isAccessibleForFree', $isAccessibleForFree);
     }
 
     /**
@@ -613,7 +707,7 @@ class CreativeWork extends Thing
      * be repeated for multiple sources. For example,
      * http://example.com/great-multiplication-intro.html.
      *
-     * @param string|string[]|CreativeWork|CreativeWork[]|Product|Product[] $isBasedOn
+     * @param CreativeWork|CreativeWork[]|Product|Product[]|string|string[] $isBasedOn
      *
      * @return static
      *
@@ -622,6 +716,22 @@ class CreativeWork extends Thing
     public function isBasedOn($isBasedOn)
     {
         return $this->setProperty('isBasedOn', $isBasedOn);
+    }
+
+    /**
+     * A resource that was used in the creation of this resource. This term can
+     * be repeated for multiple sources. For example,
+     * http://example.com/great-multiplication-intro.html.
+     *
+     * @param CreativeWork|CreativeWork[]|Product|Product[]|string|string[] $isBasedOnUrl
+     *
+     * @return static
+     *
+     * @see http://schema.org/isBasedOnUrl
+     */
+    public function isBasedOnUrl($isBasedOnUrl)
+    {
+        return $this->setProperty('isBasedOnUrl', $isBasedOnUrl);
     }
 
     /**
@@ -669,21 +779,6 @@ class CreativeWork extends Thing
     }
 
     /**
-     * A license document that applies to this content, typically indicated by
-     * URL.
-     *
-     * @param CreativeWork|CreativeWork[]|string|string[] $license
-     *
-     * @return static
-     *
-     * @see http://schema.org/license
-     */
-    public function license($license)
-    {
-        return $this->setProperty('license', $license);
-    }
-
-    /**
      * The predominant type or kind characterizing the learning resource. For
      * example, 'presentation', 'handout'.
      *
@@ -699,6 +794,36 @@ class CreativeWork extends Thing
     }
 
     /**
+     * A license document that applies to this content, typically indicated by
+     * URL.
+     *
+     * @param CreativeWork|CreativeWork[]|string|string[] $license
+     *
+     * @return static
+     *
+     * @see http://schema.org/license
+     */
+    public function license($license)
+    {
+        return $this->setProperty('license', $license);
+    }
+
+    /**
+     * The location where the CreativeWork was created, which may not be the
+     * same as the location depicted in the CreativeWork.
+     *
+     * @param Place|Place[] $locationCreated
+     *
+     * @return static
+     *
+     * @see http://schema.org/locationCreated
+     */
+    public function locationCreated($locationCreated)
+    {
+        return $this->setProperty('locationCreated', $locationCreated);
+    }
+
+    /**
      * Indicates the primary entity described in some page or other
      * CreativeWork.
      *
@@ -711,6 +836,21 @@ class CreativeWork extends Thing
     public function mainEntity($mainEntity)
     {
         return $this->setProperty('mainEntity', $mainEntity);
+    }
+
+    /**
+     * A material that something is made from, e.g. leather, wool, cotton,
+     * paper.
+     *
+     * @param Product|Product[]|string|string[] $material
+     *
+     * @return static
+     *
+     * @see http://schema.org/material
+     */
+    public function material($material)
+    {
+        return $this->setProperty('material', $material);
     }
 
     /**
@@ -747,7 +887,7 @@ class CreativeWork extends Thing
     /**
      * The position of an item in a series or sequence of items.
      *
-     * @param string|string[]|int|int[] $position
+     * @param int|int[]|string|string[] $position
      *
      * @return static
      *
@@ -762,7 +902,7 @@ class CreativeWork extends Thing
      * The person or organization who produced the work (e.g. music album,
      * movie, tv/radio series etc.).
      *
-     * @param Person|Person[]|Organization|Organization[] $producer
+     * @param Organization|Organization[]|Person|Person[] $producer
      *
      * @return static
      *
@@ -771,6 +911,22 @@ class CreativeWork extends Thing
     public function producer($producer)
     {
         return $this->setProperty('producer', $producer);
+    }
+
+    /**
+     * The service provider, service operator, or service performer; the goods
+     * producer. Another party (a seller) may offer those services or goods on
+     * behalf of the provider. A provider may also serve as the seller.
+     *
+     * @param Organization|Organization[]|Person|Person[] $provider
+     *
+     * @return static
+     *
+     * @see http://schema.org/provider
+     */
+    public function provider($provider)
+    {
+        return $this->setProperty('provider', $provider);
     }
 
     /**
@@ -832,6 +988,21 @@ class CreativeWork extends Thing
     }
 
     /**
+     * The place and time the release was issued, expressed as a
+     * PublicationEvent.
+     *
+     * @param PublicationEvent|PublicationEvent[] $releasedEvent
+     *
+     * @return static
+     *
+     * @see http://schema.org/releasedEvent
+     */
+    public function releasedEvent($releasedEvent)
+    {
+        return $this->setProperty('releasedEvent', $releasedEvent);
+    }
+
+    /**
      * A review of the item.
      *
      * @param Review|Review[] $review
@@ -857,6 +1028,23 @@ class CreativeWork extends Thing
     public function reviews($reviews)
     {
         return $this->setProperty('reviews', $reviews);
+    }
+
+    /**
+     * Indicates (by URL or string) a particular version of a schema used in
+     * some CreativeWork. For example, a document could declare a schemaVersion
+     * using an URL such as http://schema.org/version/2.0/ if precise indication
+     * of schema version was required by some application.
+     *
+     * @param string|string[] $schemaVersion
+     *
+     * @return static
+     *
+     * @see http://schema.org/schemaVersion
+     */
+    public function schemaVersion($schemaVersion)
+    {
+        return $this->setProperty('schemaVersion', $schemaVersion);
     }
 
     /**
@@ -906,21 +1094,6 @@ class CreativeWork extends Thing
     public function sponsor($sponsor)
     {
         return $this->setProperty('sponsor', $sponsor);
-    }
-
-    /**
-     * A person or organization that supports (sponsors) something through some
-     * kind of financial contribution.
-     *
-     * @param Organization|Organization[]|Person|Person[] $funder
-     *
-     * @return static
-     *
-     * @see http://schema.org/funder
-     */
-    public function funder($funder)
-    {
-        return $this->setProperty('funder', $funder);
     }
 
     /**
@@ -993,6 +1166,22 @@ class CreativeWork extends Thing
     }
 
     /**
+     * Organization or person who adapts a creative work to different languages,
+     * regional differences and technical requirements of a target market, or
+     * that translates during some event.
+     *
+     * @param Organization|Organization[]|Person|Person[] $translator
+     *
+     * @return static
+     *
+     * @see http://schema.org/translator
+     */
+    public function translator($translator)
+    {
+        return $this->setProperty('translator', $translator);
+    }
+
+    /**
      * The typical expected age range, e.g. '7-9', '11-'.
      *
      * @param string|string[] $typicalAgeRange
@@ -1035,53 +1224,6 @@ class CreativeWork extends Thing
     }
 
     /**
-     * The service provider, service operator, or service performer; the goods
-     * producer. Another party (a seller) may offer those services or goods on
-     * behalf of the provider. A provider may also serve as the seller.
-     *
-     * @param Person|Person[]|Organization|Organization[] $provider
-     *
-     * @return static
-     *
-     * @see http://schema.org/provider
-     */
-    public function provider($provider)
-    {
-        return $this->setProperty('provider', $provider);
-    }
-
-    /**
-     * The number of comments this CreativeWork (e.g. Article, Question or
-     * Answer) has received. This is most applicable to works published in Web
-     * sites with commenting system; additional comments may exist elsewhere.
-     *
-     * @param int|int[] $commentCount
-     *
-     * @return static
-     *
-     * @see http://schema.org/commentCount
-     */
-    public function commentCount($commentCount)
-    {
-        return $this->setProperty('commentCount', $commentCount);
-    }
-
-    /**
-     * Indicates a CreativeWork that is (in some sense) a part of this
-     * CreativeWork.
-     *
-     * @param CreativeWork|CreativeWork[] $hasPart
-     *
-     * @return static
-     *
-     * @see http://schema.org/hasPart
-     */
-    public function hasPart($hasPart)
-    {
-        return $this->setProperty('hasPart', $hasPart);
-    }
-
-    /**
      * Example/instance/realization/derivation of the concept of this creative
      * work. eg. The paperback edition, first edition, or eBook.
      *
@@ -1094,148 +1236,6 @@ class CreativeWork extends Thing
     public function workExample($workExample)
     {
         return $this->setProperty('workExample', $workExample);
-    }
-
-    /**
-     * A creative work that this work is an
-     * example/instance/realization/derivation of.
-     *
-     * @param CreativeWork|CreativeWork[] $exampleOfWork
-     *
-     * @return static
-     *
-     * @see http://schema.org/exampleOfWork
-     */
-    public function exampleOfWork($exampleOfWork)
-    {
-        return $this->setProperty('exampleOfWork', $exampleOfWork);
-    }
-
-    /**
-     * Fictional person connected with a creative work.
-     *
-     * @param Person|Person[] $character
-     *
-     * @return static
-     *
-     * @see http://schema.org/character
-     */
-    public function character($character)
-    {
-        return $this->setProperty('character', $character);
-    }
-
-    /**
-     * Organization or person who adapts a creative work to different languages,
-     * regional differences and technical requirements of a target market, or
-     * that translates during some event.
-     *
-     * @param Person|Person[]|Organization|Organization[] $translator
-     *
-     * @return static
-     *
-     * @see http://schema.org/translator
-     */
-    public function translator($translator)
-    {
-        return $this->setProperty('translator', $translator);
-    }
-
-    /**
-     * The place and time the release was issued, expressed as a
-     * PublicationEvent.
-     *
-     * @param PublicationEvent|PublicationEvent[] $releasedEvent
-     *
-     * @return static
-     *
-     * @see http://schema.org/releasedEvent
-     */
-    public function releasedEvent($releasedEvent)
-    {
-        return $this->setProperty('releasedEvent', $releasedEvent);
-    }
-
-    /**
-     * A material that something is made from, e.g. leather, wool, cotton,
-     * paper.
-     *
-     * @param string|string[]|Product|Product[] $material
-     *
-     * @return static
-     *
-     * @see http://schema.org/material
-     */
-    public function material($material)
-    {
-        return $this->setProperty('material', $material);
-    }
-
-    /**
-     * The number of interactions for the CreativeWork using the WebSite or
-     * SoftwareApplication. The most specific child type of InteractionCounter
-     * should be used.
-     *
-     * @param InteractionCounter|InteractionCounter[] $interactionStatistic
-     *
-     * @return static
-     *
-     * @see http://schema.org/interactionStatistic
-     */
-    public function interactionStatistic($interactionStatistic)
-    {
-        return $this->setProperty('interactionStatistic', $interactionStatistic);
-    }
-
-    /**
-     * The human sensory perceptual system or cognitive faculty through which a
-     * person may process or perceive information. Expected values include:
-     * auditory, tactile, textual, visual, colorDependent, chartOnVisual,
-     * chemOnVisual, diagramOnVisual, mathOnVisual, musicOnVisual, textOnVisual.
-     *
-     * @param string|string[] $accessMode
-     *
-     * @return static
-     *
-     * @see http://schema.org/accessMode
-     */
-    public function accessMode($accessMode)
-    {
-        return $this->setProperty('accessMode', $accessMode);
-    }
-
-    /**
-     * A list of single or combined accessModes that are sufficient to
-     * understand all the intellectual content of a resource. Expected values
-     * include:  auditory, tactile, textual, visual.
-     *
-     * @param string|string[] $accessModeSufficient
-     *
-     * @return static
-     *
-     * @see http://schema.org/accessModeSufficient
-     */
-    public function accessModeSufficient($accessModeSufficient)
-    {
-        return $this->setProperty('accessModeSufficient', $accessModeSufficient);
-    }
-
-    /**
-     * A human-readable summary of specific accessibility features or
-     * deficiencies, consistent with the other accessibility metadata but
-     * expressing subtleties such as "short descriptions are present but long
-     * descriptions will be needed for non-visual users" or "short descriptions
-     * are present and no long descriptions are needed."
-     *
-     * @param string|string[] $accessibilitySummary
-     *
-     * @return static
-     *
-     * @see http://schema.org/accessibilitySummary
-     */
-    public function accessibilitySummary($accessibilitySummary)
-    {
-        return $this->setProperty('accessibilitySummary', $accessibilitySummary);
     }
 
 }

@@ -13,7 +13,7 @@ class DataFeed extends Dataset
     /**
      * An item within in a data feed. Data feeds may have many elements.
      *
-     * @param string|string[]|Thing|Thing[]|DataFeedItem|DataFeedItem[] $dataFeedElement
+     * @param DataFeedItem|DataFeedItem[]|Thing|Thing[]|string|string[] $dataFeedElement
      *
      * @return static
      *

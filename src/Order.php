@@ -12,20 +12,6 @@ namespace Spatie\SchemaOrg;
 class Order extends Intangible
 {
     /**
-     * The delivery of the parcel related to this order or order item.
-     *
-     * @param ParcelDelivery|ParcelDelivery[] $orderDelivery
-     *
-     * @return static
-     *
-     * @see http://schema.org/orderDelivery
-     */
-    public function orderDelivery($orderDelivery)
-    {
-        return $this->setProperty('orderDelivery', $orderDelivery);
-    }
-
-    /**
      * The offer(s) -- e.g., product, quantity and price combinations --
      * included in the order.
      *
@@ -52,6 +38,23 @@ class Order extends Intangible
     public function billingAddress($billingAddress)
     {
         return $this->setProperty('billingAddress', $billingAddress);
+    }
+
+    /**
+     * An entity that arranges for an exchange between a buyer and a seller.  In
+     * most cases a broker never acquires or releases ownership of a product or
+     * service involved in an exchange.  If it is not clear whether an entity is
+     * a broker, seller, or buyer, the latter two terms are preferred.
+     *
+     * @param Organization|Organization[]|Person|Person[] $broker
+     *
+     * @return static
+     *
+     * @see http://schema.org/broker
+     */
+    public function broker($broker)
+    {
+        return $this->setProperty('broker', $broker);
     }
 
     /**
@@ -167,17 +170,17 @@ class Order extends Intangible
     }
 
     /**
-     * The item ordered.
+     * The delivery of the parcel related to this order or order item.
      *
-     * @param Product|Product[]|OrderItem|OrderItem[] $orderedItem
+     * @param ParcelDelivery|ParcelDelivery[] $orderDelivery
      *
      * @return static
      *
-     * @see http://schema.org/orderedItem
+     * @see http://schema.org/orderDelivery
      */
-    public function orderedItem($orderedItem)
+    public function orderDelivery($orderDelivery)
     {
-        return $this->setProperty('orderedItem', $orderedItem);
+        return $this->setProperty('orderDelivery', $orderDelivery);
     }
 
     /**
@@ -209,6 +212,20 @@ class Order extends Intangible
     }
 
     /**
+     * The item ordered.
+     *
+     * @param OrderItem|OrderItem[]|Product|Product[] $orderedItem
+     *
+     * @return static
+     *
+     * @see http://schema.org/orderedItem
+     */
+    public function orderedItem($orderedItem)
+    {
+        return $this->setProperty('orderedItem', $orderedItem);
+    }
+
+    /**
      * The order is being paid as part of the referenced Invoice.
      *
      * @param Invoice|Invoice[] $partOfInvoice
@@ -234,6 +251,20 @@ class Order extends Intangible
     public function paymentDue($paymentDue)
     {
         return $this->setProperty('paymentDue', $paymentDue);
+    }
+
+    /**
+     * The date that payment is due.
+     *
+     * @param \DateTimeInterface|\DateTimeInterface[] $paymentDueDate
+     *
+     * @return static
+     *
+     * @see http://schema.org/paymentDueDate
+     */
+    public function paymentDueDate($paymentDueDate)
+    {
+        return $this->setProperty('paymentDueDate', $paymentDueDate);
     }
 
     /**
@@ -292,37 +323,6 @@ class Order extends Intangible
     public function seller($seller)
     {
         return $this->setProperty('seller', $seller);
-    }
-
-    /**
-     * The date that payment is due.
-     *
-     * @param \DateTimeInterface|\DateTimeInterface[] $paymentDueDate
-     *
-     * @return static
-     *
-     * @see http://schema.org/paymentDueDate
-     */
-    public function paymentDueDate($paymentDueDate)
-    {
-        return $this->setProperty('paymentDueDate', $paymentDueDate);
-    }
-
-    /**
-     * An entity that arranges for an exchange between a buyer and a seller.  In
-     * most cases a broker never acquires or releases ownership of a product or
-     * service involved in an exchange.  If it is not clear whether an entity is
-     * a broker, seller, or buyer, the latter two terms are preferred.
-     *
-     * @param Person|Person[]|Organization|Organization[] $broker
-     *
-     * @return static
-     *
-     * @see http://schema.org/broker
-     */
-    public function broker($broker)
-    {
-        return $this->setProperty('broker', $broker);
     }
 
 }

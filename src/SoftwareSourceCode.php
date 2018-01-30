@@ -26,6 +26,21 @@ class SoftwareSourceCode extends CreativeWork
     }
 
     /**
+     * What type of code sample: full (compile ready) solution, code snippet,
+     * inline code, scripts, template.
+     *
+     * @param string|string[] $codeSampleType
+     *
+     * @return static
+     *
+     * @see http://schema.org/codeSampleType
+     */
+    public function codeSampleType($codeSampleType)
+    {
+        return $this->setProperty('codeSampleType', $codeSampleType);
+    }
+
+    /**
      * The computer programming language.
      *
      * @param ComputerLanguage|ComputerLanguage[]|string|string[] $programmingLanguage
@@ -82,21 +97,6 @@ class SoftwareSourceCode extends CreativeWork
     public function sampleType($sampleType)
     {
         return $this->setProperty('sampleType', $sampleType);
-    }
-
-    /**
-     * What type of code sample: full (compile ready) solution, code snippet,
-     * inline code, scripts, template.
-     *
-     * @param string|string[] $codeSampleType
-     *
-     * @return static
-     *
-     * @see http://schema.org/codeSampleType
-     */
-    public function codeSampleType($codeSampleType)
-    {
-        return $this->setProperty('codeSampleType', $codeSampleType);
     }
 
     /**

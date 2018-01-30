@@ -10,6 +10,23 @@ namespace Spatie\SchemaOrg;
 class LodgingBusiness extends LocalBusiness
 {
     /**
+     * An amenity feature (e.g. a characteristic or service) of the
+     * Accommodation. This generic property does not make a statement about
+     * whether the feature is included in an offer for the main accommodation or
+     * available at extra costs.
+     *
+     * @param LocationFeatureSpecification|LocationFeatureSpecification[] $amenityFeature
+     *
+     * @return static
+     *
+     * @see http://schema.org/amenityFeature
+     */
+    public function amenityFeature($amenityFeature)
+    {
+        return $this->setProperty('amenityFeature', $amenityFeature);
+    }
+
+    /**
      * An intended audience, i.e. a group for whom something was created.
      *
      * @param Audience|Audience[] $audience
@@ -65,23 +82,6 @@ class LodgingBusiness extends LocalBusiness
     public function checkoutTime($checkoutTime)
     {
         return $this->setProperty('checkoutTime', $checkoutTime);
-    }
-
-    /**
-     * An amenity feature (e.g. a characteristic or service) of the
-     * Accommodation. This generic property does not make a statement about
-     * whether the feature is included in an offer for the main accommodation or
-     * available at extra costs.
-     *
-     * @param LocationFeatureSpecification|LocationFeatureSpecification[] $amenityFeature
-     *
-     * @return static
-     *
-     * @see http://schema.org/amenityFeature
-     */
-    public function amenityFeature($amenityFeature)
-    {
-        return $this->setProperty('amenityFeature', $amenityFeature);
     }
 
     /**

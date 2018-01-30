@@ -11,6 +11,8 @@ class PackageGenerator
     {
         $types = (new RdfaParser($rdfa))->parse();
 
+        $types->sort();
+
         $filesystem = new Filesystem(__DIR__.'/..');
 
         $filesystem->clear();

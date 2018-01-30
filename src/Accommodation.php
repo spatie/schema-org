@@ -34,23 +34,6 @@ class Accommodation extends Place
     }
 
     /**
-     * The number of rooms (excluding bathrooms and closets) of the
-     * acccommodation or lodging business.
-     * Typical unit code(s): ROM for room or C62 for no unit. The type of room
-     * can be put in the unitText property of the QuantitativeValue.
-     *
-     * @param float|float[]|int|int[]|QuantitativeValue|QuantitativeValue[] $numberOfRooms
-     *
-     * @return static
-     *
-     * @see http://schema.org/numberOfRooms
-     */
-    public function numberOfRooms($numberOfRooms)
-    {
-        return $this->setProperty('numberOfRooms', $numberOfRooms);
-    }
-
-    /**
      * The size of the accommodation, e.g. in square meter or squarefoot.
      * Typical unit code(s): MTK for square meter, FTK for square foot, or YDK
      * for square yard
@@ -64,6 +47,23 @@ class Accommodation extends Place
     public function floorSize($floorSize)
     {
         return $this->setProperty('floorSize', $floorSize);
+    }
+
+    /**
+     * The number of rooms (excluding bathrooms and closets) of the
+     * acccommodation or lodging business.
+     * Typical unit code(s): ROM for room or C62 for no unit. The type of room
+     * can be put in the unitText property of the QuantitativeValue.
+     *
+     * @param QuantitativeValue|QuantitativeValue[]|float|float[]|int|int[] $numberOfRooms
+     *
+     * @return static
+     *
+     * @see http://schema.org/numberOfRooms
+     */
+    public function numberOfRooms($numberOfRooms)
+    {
+        return $this->setProperty('numberOfRooms', $numberOfRooms);
     }
 
     /**

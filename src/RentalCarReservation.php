@@ -14,20 +14,6 @@ namespace Spatie\SchemaOrg;
 class RentalCarReservation extends Reservation
 {
     /**
-     * Where a taxi will pick up a passenger or a rental car can be picked up.
-     *
-     * @param Place|Place[] $pickupLocation
-     *
-     * @return static
-     *
-     * @see http://schema.org/pickupLocation
-     */
-    public function pickupLocation($pickupLocation)
-    {
-        return $this->setProperty('pickupLocation', $pickupLocation);
-    }
-
-    /**
      * Where a rental car can be dropped off.
      *
      * @param Place|Place[] $dropoffLocation
@@ -42,20 +28,6 @@ class RentalCarReservation extends Reservation
     }
 
     /**
-     * When a taxi will pickup a passenger or a rental car can be picked up.
-     *
-     * @param \DateTimeInterface|\DateTimeInterface[] $pickupTime
-     *
-     * @return static
-     *
-     * @see http://schema.org/pickupTime
-     */
-    public function pickupTime($pickupTime)
-    {
-        return $this->setProperty('pickupTime', $pickupTime);
-    }
-
-    /**
      * When a rental car can be dropped off.
      *
      * @param \DateTimeInterface|\DateTimeInterface[] $dropoffTime
@@ -67,6 +39,34 @@ class RentalCarReservation extends Reservation
     public function dropoffTime($dropoffTime)
     {
         return $this->setProperty('dropoffTime', $dropoffTime);
+    }
+
+    /**
+     * Where a taxi will pick up a passenger or a rental car can be picked up.
+     *
+     * @param Place|Place[] $pickupLocation
+     *
+     * @return static
+     *
+     * @see http://schema.org/pickupLocation
+     */
+    public function pickupLocation($pickupLocation)
+    {
+        return $this->setProperty('pickupLocation', $pickupLocation);
+    }
+
+    /**
+     * When a taxi will pickup a passenger or a rental car can be picked up.
+     *
+     * @param \DateTimeInterface|\DateTimeInterface[] $pickupTime
+     *
+     * @return static
+     *
+     * @see http://schema.org/pickupTime
+     */
+    public function pickupTime($pickupTime)
+    {
+        return $this->setProperty('pickupTime', $pickupTime);
     }
 
 }

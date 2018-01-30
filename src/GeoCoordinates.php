@@ -27,7 +27,7 @@ class GeoCoordinates extends StructuredValue
      * The country. For example, USA. You can also provide the two-letter [ISO
      * 3166-1 alpha-2 country code](http://en.wikipedia.org/wiki/ISO_3166-1).
      *
-     * @param string|string[]|Country|Country[] $addressCountry
+     * @param Country|Country[]|string|string[] $addressCountry
      *
      * @return static
      *

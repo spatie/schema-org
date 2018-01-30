@@ -12,36 +12,6 @@ namespace Spatie\SchemaOrg;
 class Recipe extends CreativeWork
 {
     /**
-     * Indicates a dietary restriction or guideline for which this recipe or
-     * menu item is suitable, e.g. diabetic, halal etc.
-     *
-     * @param RestrictedDiet|RestrictedDiet[] $suitableForDiet
-     *
-     * @return static
-     *
-     * @see http://schema.org/suitableForDiet
-     */
-    public function suitableForDiet($suitableForDiet)
-    {
-        return $this->setProperty('suitableForDiet', $suitableForDiet);
-    }
-
-    /**
-     * The total time it takes to prepare and cook the recipe, in [ISO 8601
-     * duration format](http://en.wikipedia.org/wiki/ISO_8601).
-     *
-     * @param Duration|Duration[] $totalTime
-     *
-     * @return static
-     *
-     * @see http://schema.org/totalTime
-     */
-    public function totalTime($totalTime)
-    {
-        return $this->setProperty('totalTime', $totalTime);
-    }
-
-    /**
      * The time it takes to actually cook the dish, in [ISO 8601 duration
      * format](http://en.wikipedia.org/wiki/ISO_8601).
      *
@@ -68,6 +38,20 @@ class Recipe extends CreativeWork
     public function cookingMethod($cookingMethod)
     {
         return $this->setProperty('cookingMethod', $cookingMethod);
+    }
+
+    /**
+     * A single ingredient used in the recipe, e.g. sugar, flour or garlic.
+     *
+     * @param string|string[] $ingredients
+     *
+     * @return static
+     *
+     * @see http://schema.org/ingredients
+     */
+    public function ingredients($ingredients)
+    {
+        return $this->setProperty('ingredients', $ingredients);
     }
 
     /**
@@ -130,20 +114,6 @@ class Recipe extends CreativeWork
     /**
      * A single ingredient used in the recipe, e.g. sugar, flour or garlic.
      *
-     * @param string|string[] $ingredients
-     *
-     * @return static
-     *
-     * @see http://schema.org/ingredients
-     */
-    public function ingredients($ingredients)
-    {
-        return $this->setProperty('ingredients', $ingredients);
-    }
-
-    /**
-     * A single ingredient used in the recipe, e.g. sugar, flour or garlic.
-     *
      * @param string|string[] $recipeIngredient
      *
      * @return static
@@ -182,6 +152,36 @@ class Recipe extends CreativeWork
     public function recipeYield($recipeYield)
     {
         return $this->setProperty('recipeYield', $recipeYield);
+    }
+
+    /**
+     * Indicates a dietary restriction or guideline for which this recipe or
+     * menu item is suitable, e.g. diabetic, halal etc.
+     *
+     * @param RestrictedDiet|RestrictedDiet[] $suitableForDiet
+     *
+     * @return static
+     *
+     * @see http://schema.org/suitableForDiet
+     */
+    public function suitableForDiet($suitableForDiet)
+    {
+        return $this->setProperty('suitableForDiet', $suitableForDiet);
+    }
+
+    /**
+     * The total time it takes to prepare and cook the recipe, in [ISO 8601
+     * duration format](http://en.wikipedia.org/wiki/ISO_8601).
+     *
+     * @param Duration|Duration[] $totalTime
+     *
+     * @return static
+     *
+     * @see http://schema.org/totalTime
+     */
+    public function totalTime($totalTime)
+    {
+        return $this->setProperty('totalTime', $totalTime);
     }
 
 }

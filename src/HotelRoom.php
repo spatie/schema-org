@@ -19,7 +19,7 @@ class HotelRoom extends Room
      * an instance of BedDetails. For more detailed information, use the
      * amenityFeature property.
      *
-     * @param string|string[]|BedDetails|BedDetails[] $bed
+     * @param BedDetails|BedDetails[]|string|string[] $bed
      *
      * @return static
      *

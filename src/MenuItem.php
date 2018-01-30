@@ -10,6 +10,20 @@ namespace Spatie\SchemaOrg;
 class MenuItem extends CreativeWork
 {
     /**
+     * Nutrition information about the recipe or menu item.
+     *
+     * @param NutritionInformation|NutritionInformation[] $nutrition
+     *
+     * @return static
+     *
+     * @see http://schema.org/nutrition
+     */
+    public function nutrition($nutrition)
+    {
+        return $this->setProperty('nutrition', $nutrition);
+    }
+
+    /**
      * An offer to provide this item&#x2014;for example, an offer to sell a
      * product, rent the DVD of a movie, perform a service, or give away tickets
      * to an event.
@@ -38,20 +52,6 @@ class MenuItem extends CreativeWork
     public function suitableForDiet($suitableForDiet)
     {
         return $this->setProperty('suitableForDiet', $suitableForDiet);
-    }
-
-    /**
-     * Nutrition information about the recipe or menu item.
-     *
-     * @param NutritionInformation|NutritionInformation[] $nutrition
-     *
-     * @return static
-     *
-     * @see http://schema.org/nutrition
-     */
-    public function nutrition($nutrition)
-    {
-        return $this->setProperty('nutrition', $nutrition);
     }
 
 }

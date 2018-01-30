@@ -44,20 +44,6 @@ class Article extends CreativeWork
     }
 
     /**
-     * The number of words in the text of the Article.
-     *
-     * @param int|int[] $wordCount
-     *
-     * @return static
-     *
-     * @see http://schema.org/wordCount
-     */
-    public function wordCount($wordCount)
-    {
-        return $this->setProperty('wordCount', $wordCount);
-    }
-
-    /**
      * The page on which the work ends; for example "138" or "xvi".
      *
      * @param int|int[]|string|string[] $pageEnd
@@ -98,6 +84,20 @@ class Article extends CreativeWork
     public function pagination($pagination)
     {
         return $this->setProperty('pagination', $pagination);
+    }
+
+    /**
+     * The number of words in the text of the Article.
+     *
+     * @param int|int[] $wordCount
+     *
+     * @return static
+     *
+     * @see http://schema.org/wordCount
+     */
+    public function wordCount($wordCount)
+    {
+        return $this->setProperty('wordCount', $wordCount);
     }
 
 }

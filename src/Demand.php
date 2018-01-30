@@ -44,7 +44,7 @@ class Demand extends Intangible
     /**
      * The geographic area where a service or offered item is provided.
      *
-     * @param Place|Place[]|AdministrativeArea|AdministrativeArea[]|GeoShape|GeoShape[]|string|string[] $areaServed
+     * @param AdministrativeArea|AdministrativeArea[]|GeoShape|GeoShape[]|Place|Place[]|string|string[] $areaServed
      *
      * @return static
      *
@@ -223,25 +223,6 @@ class Demand extends Intangible
     }
 
     /**
-     * The ISO 3166-1 (ISO 3166-1 alpha-2) or ISO 3166-2 code, the place, or the
-     * GeoShape for the geo-political region(s) for which the offer or delivery
-     * charge specification is not valid, e.g. a region where the transaction is
-     * not allowed.
-     * 
-     * See also [[eligibleRegion]].
-     *
-     * @param GeoShape|GeoShape[]|Place|Place[]|string|string[] $ineligibleRegion
-     *
-     * @return static
-     *
-     * @see http://schema.org/ineligibleRegion
-     */
-    public function ineligibleRegion($ineligibleRegion)
-    {
-        return $this->setProperty('ineligibleRegion', $ineligibleRegion);
-    }
-
-    /**
      * The transaction volume, in a monetary unit, for which the offer or price
      * specification is valid, e.g. for indicating a minimal purchasing volume,
      * to express free shipping above a certain order volume, or to limit the
@@ -345,6 +326,25 @@ class Demand extends Intangible
     public function includesObject($includesObject)
     {
         return $this->setProperty('includesObject', $includesObject);
+    }
+
+    /**
+     * The ISO 3166-1 (ISO 3166-1 alpha-2) or ISO 3166-2 code, the place, or the
+     * GeoShape for the geo-political region(s) for which the offer or delivery
+     * charge specification is not valid, e.g. a region where the transaction is
+     * not allowed.
+     * 
+     * See also [[eligibleRegion]].
+     *
+     * @param GeoShape|GeoShape[]|Place|Place[]|string|string[] $ineligibleRegion
+     *
+     * @return static
+     *
+     * @see http://schema.org/ineligibleRegion
+     */
+    public function ineligibleRegion($ineligibleRegion)
+    {
+        return $this->setProperty('ineligibleRegion', $ineligibleRegion);
     }
 
     /**

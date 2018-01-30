@@ -21,6 +21,8 @@ class Property
         foreach ($ranges as $range) {
             $this->addRange($range);
         }
+
+        sort($this->ranges);
     }
 
     private function addRange(string $range)

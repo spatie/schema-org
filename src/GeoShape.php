@@ -13,20 +13,6 @@ namespace Spatie\SchemaOrg;
 class GeoShape extends StructuredValue
 {
     /**
-     * Indicates the GeoCoordinates at the centre of a GeoShape e.g. GeoCircle.
-     *
-     * @param GeoCoordinates|GeoCoordinates[] $geoMidpoint
-     *
-     * @return static
-     *
-     * @see http://schema.org/geoMidpoint
-     */
-    public function geoMidpoint($geoMidpoint)
-    {
-        return $this->setProperty('geoMidpoint', $geoMidpoint);
-    }
-
-    /**
      * Physical address of the item.
      *
      * @param PostalAddress|PostalAddress[]|string|string[] $address
@@ -44,7 +30,7 @@ class GeoShape extends StructuredValue
      * The country. For example, USA. You can also provide the two-letter [ISO
      * 3166-1 alpha-2 country code](http://en.wikipedia.org/wiki/ISO_3166-1).
      *
-     * @param string|string[]|Country|Country[] $addressCountry
+     * @param Country|Country[]|string|string[] $addressCountry
      *
      * @return static
      *
@@ -100,6 +86,20 @@ class GeoShape extends StructuredValue
     public function elevation($elevation)
     {
         return $this->setProperty('elevation', $elevation);
+    }
+
+    /**
+     * Indicates the GeoCoordinates at the centre of a GeoShape e.g. GeoCircle.
+     *
+     * @param GeoCoordinates|GeoCoordinates[] $geoMidpoint
+     *
+     * @return static
+     *
+     * @see http://schema.org/geoMidpoint
+     */
+    public function geoMidpoint($geoMidpoint)
+    {
+        return $this->setProperty('geoMidpoint', $geoMidpoint);
     }
 
     /**

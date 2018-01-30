@@ -10,6 +10,22 @@ namespace Spatie\SchemaOrg;
 class PropertyValueSpecification extends Intangible
 {
     /**
+     * The default value of the input.  For properties that expect a literal,
+     * the default is a literal value, for properties that expect an object,
+     * it's an ID reference to one of the current values.
+     *
+     * @param Thing|Thing[]|string|string[] $defaultValue
+     *
+     * @return static
+     *
+     * @see http://schema.org/defaultValue
+     */
+    public function defaultValue($defaultValue)
+    {
+        return $this->setProperty('defaultValue', $defaultValue);
+    }
+
+    /**
      * The upper value of some characteristic or property.
      *
      * @param float|float[]|int|int[] $maxValue
@@ -38,49 +54,17 @@ class PropertyValueSpecification extends Intangible
     }
 
     /**
-     * Indicates the name of the PropertyValueSpecification to be used in URL
-     * templates and form encoding in a manner analogous to HTML's input@name.
+     * Whether multiple values are allowed for the property.  Default is false.
      *
-     * @param string|string[] $valueName
-     *
-     * @return static
-     *
-     * @see http://schema.org/valueName
-     */
-    public function valueName($valueName)
-    {
-        return $this->setProperty('valueName', $valueName);
-    }
-
-    /**
-     * Whether the property must be filled in to complete the action.  Default
-     * is false.
-     *
-     * @param bool|bool[] $valueRequired
+     * @param bool|bool[] $multipleValues
      *
      * @return static
      *
-     * @see http://schema.org/valueRequired
+     * @see http://schema.org/multipleValues
      */
-    public function valueRequired($valueRequired)
+    public function multipleValues($multipleValues)
     {
-        return $this->setProperty('valueRequired', $valueRequired);
-    }
-
-    /**
-     * The default value of the input.  For properties that expect a literal,
-     * the default is a literal value, for properties that expect an object,
-     * it's an ID reference to one of the current values.
-     *
-     * @param Thing|Thing[]|string|string[] $defaultValue
-     *
-     * @return static
-     *
-     * @see http://schema.org/defaultValue
-     */
-    public function defaultValue($defaultValue)
-    {
-        return $this->setProperty('defaultValue', $defaultValue);
+        return $this->setProperty('multipleValues', $multipleValues);
     }
 
     /**
@@ -100,17 +84,32 @@ class PropertyValueSpecification extends Intangible
     }
 
     /**
-     * Whether multiple values are allowed for the property.  Default is false.
+     * The stepValue attribute indicates the granularity that is expected (and
+     * required) of the value in a PropertyValueSpecification.
      *
-     * @param bool|bool[] $multipleValues
+     * @param float|float[]|int|int[] $stepValue
      *
      * @return static
      *
-     * @see http://schema.org/multipleValues
+     * @see http://schema.org/stepValue
      */
-    public function multipleValues($multipleValues)
+    public function stepValue($stepValue)
     {
-        return $this->setProperty('multipleValues', $multipleValues);
+        return $this->setProperty('stepValue', $stepValue);
+    }
+
+    /**
+     * Specifies the allowed range for number of characters in a literal value.
+     *
+     * @param float|float[]|int|int[] $valueMaxLength
+     *
+     * @return static
+     *
+     * @see http://schema.org/valueMaxLength
+     */
+    public function valueMaxLength($valueMaxLength)
+    {
+        return $this->setProperty('valueMaxLength', $valueMaxLength);
     }
 
     /**
@@ -129,17 +128,18 @@ class PropertyValueSpecification extends Intangible
     }
 
     /**
-     * Specifies the allowed range for number of characters in a literal value.
+     * Indicates the name of the PropertyValueSpecification to be used in URL
+     * templates and form encoding in a manner analogous to HTML's input@name.
      *
-     * @param float|float[]|int|int[] $valueMaxLength
+     * @param string|string[] $valueName
      *
      * @return static
      *
-     * @see http://schema.org/valueMaxLength
+     * @see http://schema.org/valueName
      */
-    public function valueMaxLength($valueMaxLength)
+    public function valueName($valueName)
     {
-        return $this->setProperty('valueMaxLength', $valueMaxLength);
+        return $this->setProperty('valueName', $valueName);
     }
 
     /**
@@ -158,18 +158,18 @@ class PropertyValueSpecification extends Intangible
     }
 
     /**
-     * The stepValue attribute indicates the granularity that is expected (and
-     * required) of the value in a PropertyValueSpecification.
+     * Whether the property must be filled in to complete the action.  Default
+     * is false.
      *
-     * @param float|float[]|int|int[] $stepValue
+     * @param bool|bool[] $valueRequired
      *
      * @return static
      *
-     * @see http://schema.org/stepValue
+     * @see http://schema.org/valueRequired
      */
-    public function stepValue($stepValue)
+    public function valueRequired($valueRequired)
     {
-        return $this->setProperty('stepValue', $stepValue);
+        return $this->setProperty('valueRequired', $valueRequired);
     }
 
 }

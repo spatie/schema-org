@@ -10,89 +10,17 @@ namespace Spatie\SchemaOrg;
 class TrainTrip extends Intangible
 {
     /**
-     * The service provider, service operator, or service performer; the goods
-     * producer. Another party (a seller) may offer those services or goods on
-     * behalf of the provider. A provider may also serve as the seller.
+     * The platform where the train arrives.
      *
-     * @param Person|Person[]|Organization|Organization[] $provider
+     * @param string|string[] $arrivalPlatform
      *
      * @return static
      *
-     * @see http://schema.org/provider
+     * @see http://schema.org/arrivalPlatform
      */
-    public function provider($provider)
+    public function arrivalPlatform($arrivalPlatform)
     {
-        return $this->setProperty('provider', $provider);
-    }
-
-    /**
-     * The expected departure time.
-     *
-     * @param \DateTimeInterface|\DateTimeInterface[] $departureTime
-     *
-     * @return static
-     *
-     * @see http://schema.org/departureTime
-     */
-    public function departureTime($departureTime)
-    {
-        return $this->setProperty('departureTime', $departureTime);
-    }
-
-    /**
-     * The expected arrival time.
-     *
-     * @param \DateTimeInterface|\DateTimeInterface[] $arrivalTime
-     *
-     * @return static
-     *
-     * @see http://schema.org/arrivalTime
-     */
-    public function arrivalTime($arrivalTime)
-    {
-        return $this->setProperty('arrivalTime', $arrivalTime);
-    }
-
-    /**
-     * The unique identifier for the train.
-     *
-     * @param string|string[] $trainNumber
-     *
-     * @return static
-     *
-     * @see http://schema.org/trainNumber
-     */
-    public function trainNumber($trainNumber)
-    {
-        return $this->setProperty('trainNumber', $trainNumber);
-    }
-
-    /**
-     * The name of the train (e.g. The Orient Express).
-     *
-     * @param string|string[] $trainName
-     *
-     * @return static
-     *
-     * @see http://schema.org/trainName
-     */
-    public function trainName($trainName)
-    {
-        return $this->setProperty('trainName', $trainName);
-    }
-
-    /**
-     * The station from which the train departs.
-     *
-     * @param TrainStation|TrainStation[] $departureStation
-     *
-     * @return static
-     *
-     * @see http://schema.org/departureStation
-     */
-    public function departureStation($departureStation)
-    {
-        return $this->setProperty('departureStation', $departureStation);
+        return $this->setProperty('arrivalPlatform', $arrivalPlatform);
     }
 
     /**
@@ -110,6 +38,20 @@ class TrainTrip extends Intangible
     }
 
     /**
+     * The expected arrival time.
+     *
+     * @param \DateTimeInterface|\DateTimeInterface[] $arrivalTime
+     *
+     * @return static
+     *
+     * @see http://schema.org/arrivalTime
+     */
+    public function arrivalTime($arrivalTime)
+    {
+        return $this->setProperty('arrivalTime', $arrivalTime);
+    }
+
+    /**
      * The platform from which the train departs.
      *
      * @param string|string[] $departurePlatform
@@ -124,17 +66,75 @@ class TrainTrip extends Intangible
     }
 
     /**
-     * The platform where the train arrives.
+     * The station from which the train departs.
      *
-     * @param string|string[] $arrivalPlatform
+     * @param TrainStation|TrainStation[] $departureStation
      *
      * @return static
      *
-     * @see http://schema.org/arrivalPlatform
+     * @see http://schema.org/departureStation
      */
-    public function arrivalPlatform($arrivalPlatform)
+    public function departureStation($departureStation)
     {
-        return $this->setProperty('arrivalPlatform', $arrivalPlatform);
+        return $this->setProperty('departureStation', $departureStation);
+    }
+
+    /**
+     * The expected departure time.
+     *
+     * @param \DateTimeInterface|\DateTimeInterface[] $departureTime
+     *
+     * @return static
+     *
+     * @see http://schema.org/departureTime
+     */
+    public function departureTime($departureTime)
+    {
+        return $this->setProperty('departureTime', $departureTime);
+    }
+
+    /**
+     * The service provider, service operator, or service performer; the goods
+     * producer. Another party (a seller) may offer those services or goods on
+     * behalf of the provider. A provider may also serve as the seller.
+     *
+     * @param Organization|Organization[]|Person|Person[] $provider
+     *
+     * @return static
+     *
+     * @see http://schema.org/provider
+     */
+    public function provider($provider)
+    {
+        return $this->setProperty('provider', $provider);
+    }
+
+    /**
+     * The name of the train (e.g. The Orient Express).
+     *
+     * @param string|string[] $trainName
+     *
+     * @return static
+     *
+     * @see http://schema.org/trainName
+     */
+    public function trainName($trainName)
+    {
+        return $this->setProperty('trainName', $trainName);
+    }
+
+    /**
+     * The unique identifier for the train.
+     *
+     * @param string|string[] $trainNumber
+     *
+     * @return static
+     *
+     * @see http://schema.org/trainNumber
+     */
+    public function trainNumber($trainNumber)
+    {
+        return $this->setProperty('trainNumber', $trainNumber);
     }
 
 }

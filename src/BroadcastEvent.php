@@ -10,21 +10,6 @@ namespace Spatie\SchemaOrg;
 class BroadcastEvent extends PublicationEvent
 {
     /**
-     * The type of screening or video broadcast used (e.g. IMAX, 3D, SD, HD,
-     * etc.).
-     *
-     * @param string|string[] $videoFormat
-     *
-     * @return static
-     *
-     * @see http://schema.org/videoFormat
-     */
-    public function videoFormat($videoFormat)
-    {
-        return $this->setProperty('videoFormat', $videoFormat);
-    }
-
-    /**
      * The event being broadcast such as a sporting event or awards ceremony.
      *
      * @param Event|Event[] $broadcastOfEvent
@@ -50,6 +35,21 @@ class BroadcastEvent extends PublicationEvent
     public function isLiveBroadcast($isLiveBroadcast)
     {
         return $this->setProperty('isLiveBroadcast', $isLiveBroadcast);
+    }
+
+    /**
+     * The type of screening or video broadcast used (e.g. IMAX, 3D, SD, HD,
+     * etc.).
+     *
+     * @param string|string[] $videoFormat
+     *
+     * @return static
+     *
+     * @see http://schema.org/videoFormat
+     */
+    public function videoFormat($videoFormat)
+    {
+        return $this->setProperty('videoFormat', $videoFormat);
     }
 
 }

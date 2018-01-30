@@ -10,36 +10,6 @@ namespace Spatie\SchemaOrg;
 class Message extends CreativeWork
 {
     /**
-     * A sub property of participant. The participant who is at the receiving
-     * end of the action.
-     *
-     * @param Audience|Audience[]|Organization|Organization[]|Person|Person[] $recipient
-     *
-     * @return static
-     *
-     * @see http://schema.org/recipient
-     */
-    public function recipient($recipient)
-    {
-        return $this->setProperty('recipient', $recipient);
-    }
-
-    /**
-     * A sub property of participant. The participant who is at the sending end
-     * of the action.
-     *
-     * @param Audience|Audience[]|Organization|Organization[]|Person|Person[] $sender
-     *
-     * @return static
-     *
-     * @see http://schema.org/sender
-     */
-    public function sender($sender)
-    {
-        return $this->setProperty('sender', $sender);
-    }
-
-    /**
      * The date/time at which the message has been read by the recipient if a
      * single recipient exists.
      *
@@ -94,6 +64,36 @@ class Message extends CreativeWork
     public function messageAttachment($messageAttachment)
     {
         return $this->setProperty('messageAttachment', $messageAttachment);
+    }
+
+    /**
+     * A sub property of participant. The participant who is at the receiving
+     * end of the action.
+     *
+     * @param Audience|Audience[]|Organization|Organization[]|Person|Person[] $recipient
+     *
+     * @return static
+     *
+     * @see http://schema.org/recipient
+     */
+    public function recipient($recipient)
+    {
+        return $this->setProperty('recipient', $recipient);
+    }
+
+    /**
+     * A sub property of participant. The participant who is at the sending end
+     * of the action.
+     *
+     * @param Audience|Audience[]|Organization|Organization[]|Person|Person[] $sender
+     *
+     * @return static
+     *
+     * @see http://schema.org/sender
+     */
+    public function sender($sender)
+    {
+        return $this->setProperty('sender', $sender);
     }
 
 }

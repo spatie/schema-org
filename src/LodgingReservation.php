@@ -42,21 +42,6 @@ class LodgingReservation extends Reservation
     }
 
     /**
-     * Textual description of the unit type (including suite vs. room, size of
-     * bed, etc.).
-     *
-     * @param string|string[]|QualitativeValue|QualitativeValue[] $lodgingUnitType
-     *
-     * @return static
-     *
-     * @see http://schema.org/lodgingUnitType
-     */
-    public function lodgingUnitType($lodgingUnitType)
-    {
-        return $this->setProperty('lodgingUnitType', $lodgingUnitType);
-    }
-
-    /**
      * A full description of the lodging unit.
      *
      * @param string|string[] $lodgingUnitDescription
@@ -71,9 +56,24 @@ class LodgingReservation extends Reservation
     }
 
     /**
+     * Textual description of the unit type (including suite vs. room, size of
+     * bed, etc.).
+     *
+     * @param QualitativeValue|QualitativeValue[]|string|string[] $lodgingUnitType
+     *
+     * @return static
+     *
+     * @see http://schema.org/lodgingUnitType
+     */
+    public function lodgingUnitType($lodgingUnitType)
+    {
+        return $this->setProperty('lodgingUnitType', $lodgingUnitType);
+    }
+
+    /**
      * The number of adults staying in the unit.
      *
-     * @param int|int[]|QuantitativeValue|QuantitativeValue[] $numAdults
+     * @param QuantitativeValue|QuantitativeValue[]|int|int[] $numAdults
      *
      * @return static
      *
@@ -87,7 +87,7 @@ class LodgingReservation extends Reservation
     /**
      * The number of children staying in the unit.
      *
-     * @param int|int[]|QuantitativeValue|QuantitativeValue[] $numChildren
+     * @param QuantitativeValue|QuantitativeValue[]|int|int[] $numChildren
      *
      * @return static
      *
