@@ -31,7 +31,7 @@ class DefinitionParser
                 $tasks[] = new ParseProperty($crawler->html());
             });
 
-        foreach (array_chunk($tasks, 20) as $chunk) {
+        foreach (array_chunk($tasks, 100) as $chunk) {
             $pool->add(function () use ($chunk) {
                 return array_map(function ($task) {
                     return call_user_func($task);
