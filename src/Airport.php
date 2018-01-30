@@ -5,24 +5,10 @@ namespace Spatie\SchemaOrg;
 /**
  * An airport.
  *
- * @see http://schema.org/Airport
+ * @see 
  */
 class Airport extends CivicStructure
 {
-    /**
-     * IATA identifier for an airline or airport.
-     *
-     * @param string|string[] $iataCode
-     *
-     * @return static
-     *
-     * @see http://schema.org/iataCode
-     */
-    public function iataCode($iataCode)
-    {
-        return $this->setProperty('iataCode', $iataCode);
-    }
-
     /**
      * ICAO identifier for an airport.
      *
@@ -30,11 +16,25 @@ class Airport extends CivicStructure
      *
      * @return static
      *
-     * @see http://schema.org/icaoCode
+     * @see 
      */
     public function icaoCode($icaoCode)
     {
         return $this->setProperty('icaoCode', $icaoCode);
+    }
+
+    /**
+     * IATA identifier for an airline or airport.
+     *
+     * @param string|string[] $iataCode
+     *
+     * @return static
+     *
+     * @see 
+     */
+    public function iataCode($iataCode)
+    {
+        return $this->setProperty('iataCode', $iataCode);
     }
 
 }

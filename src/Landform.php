@@ -8,7 +8,7 @@ namespace Spatie\SchemaOrg;
  * bays, peninsulas, seas and so forth, including sub-aqueous terrain features
  * such as submersed mountain ranges, volcanoes, and the great ocean basins.
  *
- * @see http://schema.org/Landform
+ * @see 
  */
 class Landform extends Place
 {

@@ -5,7 +5,7 @@ namespace Spatie\SchemaOrg;
 /**
  * A park.
  *
- * @see http://schema.org/Park
+ * @see 
  */
 class Park extends CivicStructure
 {

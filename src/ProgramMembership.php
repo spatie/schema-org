@@ -6,7 +6,7 @@ namespace Spatie\SchemaOrg;
  * Used to describe membership in a loyalty programs (e.g. "StarAliance"),
  * traveler clubs (e.g. "AAA"), purchase clubs ("Safeway Club"), etc.
  *
- * @see http://schema.org/ProgramMembership
+ * @see 
  */
 class ProgramMembership extends Intangible
 {
@@ -18,7 +18,7 @@ class ProgramMembership extends Intangible
      *
      * @return static
      *
-     * @see http://schema.org/member
+     * @see 
      */
     public function member($member)
     {
@@ -32,25 +32,11 @@ class ProgramMembership extends Intangible
      *
      * @return static
      *
-     * @see http://schema.org/members
+     * @see 
      */
     public function members($members)
     {
         return $this->setProperty('members', $members);
-    }
-
-    /**
-     * A unique identifier for the membership.
-     *
-     * @param string|string[] $membershipNumber
-     *
-     * @return static
-     *
-     * @see http://schema.org/membershipNumber
-     */
-    public function membershipNumber($membershipNumber)
-    {
-        return $this->setProperty('membershipNumber', $membershipNumber);
     }
 
     /**
@@ -60,11 +46,25 @@ class ProgramMembership extends Intangible
      *
      * @return static
      *
-     * @see http://schema.org/programName
+     * @see 
      */
     public function programName($programName)
     {
         return $this->setProperty('programName', $programName);
+    }
+
+    /**
+     * A unique identifier for the membership.
+     *
+     * @param string|string[] $membershipNumber
+     *
+     * @return static
+     *
+     * @see 
+     */
+    public function membershipNumber($membershipNumber)
+    {
+        return $this->setProperty('membershipNumber', $membershipNumber);
     }
 
     /**
@@ -75,7 +75,7 @@ class ProgramMembership extends Intangible
      *
      * @return static
      *
-     * @see http://schema.org/hostingOrganization
+     * @see 
      */
     public function hostingOrganization($hostingOrganization)
     {

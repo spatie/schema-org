@@ -6,7 +6,7 @@ namespace Spatie\SchemaOrg;
  * A technical article - Example: How-to (task) topics, step-by-step, procedural
  * troubleshooting, specifications, etc.
  *
- * @see http://schema.org/TechArticle
+ * @see 
  */
 class TechArticle extends Article
 {
@@ -17,7 +17,7 @@ class TechArticle extends Article
      *
      * @return static
      *
-     * @see http://schema.org/dependencies
+     * @see 
      */
     public function dependencies($dependencies)
     {
@@ -32,7 +32,7 @@ class TechArticle extends Article
      *
      * @return static
      *
-     * @see http://schema.org/proficiencyLevel
+     * @see 
      */
     public function proficiencyLevel($proficiencyLevel)
     {

@@ -6,10 +6,24 @@ namespace Spatie\SchemaOrg;
  * The most generic kind of creative work, including books, movies, photographs,
  * software programs, etc.
  *
- * @see http://schema.org/CreativeWork
+ * @see 
  */
 class CreativeWork extends Thing
 {
+    /**
+     * The subject matter of the content.
+     *
+     * @param Thing|Thing[] $about
+     *
+     * @return static
+     *
+     * @see 
+     */
+    public function about($about)
+    {
+        return $this->setProperty('about', $about);
+    }
+
     /**
      * Indicates (by URL or string) a particular version of a schema used in
      * some CreativeWork. For example, a document could declare a schemaVersion
@@ -20,41 +34,11 @@ class CreativeWork extends Thing
      *
      * @return static
      *
-     * @see http://schema.org/schemaVersion
+     * @see 
      */
     public function schemaVersion($schemaVersion)
     {
         return $this->setProperty('schemaVersion', $schemaVersion);
-    }
-
-    /**
-     * The subject matter of the content.
-     *
-     * @param Thing|Thing[] $about
-     *
-     * @return static
-     *
-     * @see http://schema.org/about
-     */
-    public function about($about)
-    {
-        return $this->setProperty('about', $about);
-    }
-
-    /**
-     * Indicates that the resource is compatible with the referenced
-     * accessibility API ([WebSchemas wiki lists possible
-     * values](http://www.w3.org/wiki/WebSchemas/Accessibility)).
-     *
-     * @param string|string[] $accessibilityAPI
-     *
-     * @return static
-     *
-     * @see http://schema.org/accessibilityAPI
-     */
-    public function accessibilityAPI($accessibilityAPI)
-    {
-        return $this->setProperty('accessibilityAPI', $accessibilityAPI);
     }
 
     /**
@@ -66,7 +50,7 @@ class CreativeWork extends Thing
      *
      * @return static
      *
-     * @see http://schema.org/accessibilityControl
+     * @see 
      */
     public function accessibilityControl($accessibilityControl)
     {
@@ -74,19 +58,17 @@ class CreativeWork extends Thing
     }
 
     /**
-     * Content features of the resource, such as accessible media, alternatives
-     * and supported enhancements for accessibility ([WebSchemas wiki lists
-     * possible values](http://www.w3.org/wiki/WebSchemas/Accessibility)).
+     * Specifies the Person that is legally accountable for the CreativeWork.
      *
-     * @param string|string[] $accessibilityFeature
+     * @param Person|Person[] $accountablePerson
      *
      * @return static
      *
-     * @see http://schema.org/accessibilityFeature
+     * @see 
      */
-    public function accessibilityFeature($accessibilityFeature)
+    public function accountablePerson($accountablePerson)
     {
-        return $this->setProperty('accessibilityFeature', $accessibilityFeature);
+        return $this->setProperty('accountablePerson', $accountablePerson);
     }
 
     /**
@@ -99,7 +81,7 @@ class CreativeWork extends Thing
      *
      * @return static
      *
-     * @see http://schema.org/accessibilityHazard
+     * @see 
      */
     public function accessibilityHazard($accessibilityHazard)
     {
@@ -107,17 +89,49 @@ class CreativeWork extends Thing
     }
 
     /**
-     * Specifies the Person that is legally accountable for the CreativeWork.
+     * Content features of the resource, such as accessible media, alternatives
+     * and supported enhancements for accessibility ([WebSchemas wiki lists
+     * possible values](http://www.w3.org/wiki/WebSchemas/Accessibility)).
      *
-     * @param Person|Person[] $accountablePerson
+     * @param string|string[] $accessibilityFeature
      *
      * @return static
      *
-     * @see http://schema.org/accountablePerson
+     * @see 
      */
-    public function accountablePerson($accountablePerson)
+    public function accessibilityFeature($accessibilityFeature)
     {
-        return $this->setProperty('accountablePerson', $accountablePerson);
+        return $this->setProperty('accessibilityFeature', $accessibilityFeature);
+    }
+
+    /**
+     * Indicates that the resource is compatible with the referenced
+     * accessibility API ([WebSchemas wiki lists possible
+     * values](http://www.w3.org/wiki/WebSchemas/Accessibility)).
+     *
+     * @param string|string[] $accessibilityAPI
+     *
+     * @return static
+     *
+     * @see 
+     */
+    public function accessibilityAPI($accessibilityAPI)
+    {
+        return $this->setProperty('accessibilityAPI', $accessibilityAPI);
+    }
+
+    /**
+     * A secondary title of the CreativeWork.
+     *
+     * @param string|string[] $alternativeHeadline
+     *
+     * @return static
+     *
+     * @see 
+     */
+    public function alternativeHeadline($alternativeHeadline)
+    {
+        return $this->setProperty('alternativeHeadline', $alternativeHeadline);
     }
 
     /**
@@ -128,25 +142,11 @@ class CreativeWork extends Thing
      *
      * @return static
      *
-     * @see http://schema.org/aggregateRating
+     * @see 
      */
     public function aggregateRating($aggregateRating)
     {
         return $this->setProperty('aggregateRating', $aggregateRating);
-    }
-
-    /**
-     * A secondary title of the CreativeWork.
-     *
-     * @param string|string[] $alternativeHeadline
-     *
-     * @return static
-     *
-     * @see http://schema.org/alternativeHeadline
-     */
-    public function alternativeHeadline($alternativeHeadline)
-    {
-        return $this->setProperty('alternativeHeadline', $alternativeHeadline);
     }
 
     /**
@@ -157,39 +157,11 @@ class CreativeWork extends Thing
      *
      * @return static
      *
-     * @see http://schema.org/associatedMedia
+     * @see 
      */
     public function associatedMedia($associatedMedia)
     {
         return $this->setProperty('associatedMedia', $associatedMedia);
-    }
-
-    /**
-     * An intended audience, i.e. a group for whom something was created.
-     *
-     * @param Audience|Audience[] $audience
-     *
-     * @return static
-     *
-     * @see http://schema.org/audience
-     */
-    public function audience($audience)
-    {
-        return $this->setProperty('audience', $audience);
-    }
-
-    /**
-     * An embedded audio object.
-     *
-     * @param AudioObject|AudioObject[] $audio
-     *
-     * @return static
-     *
-     * @see http://schema.org/audio
-     */
-    public function audio($audio)
-    {
-        return $this->setProperty('audio', $audio);
     }
 
     /**
@@ -201,11 +173,39 @@ class CreativeWork extends Thing
      *
      * @return static
      *
-     * @see http://schema.org/author
+     * @see 
      */
     public function author($author)
     {
         return $this->setProperty('author', $author);
+    }
+
+    /**
+     * An embedded audio object.
+     *
+     * @param AudioObject|AudioObject[] $audio
+     *
+     * @return static
+     *
+     * @see 
+     */
+    public function audio($audio)
+    {
+        return $this->setProperty('audio', $audio);
+    }
+
+    /**
+     * An intended audience, i.e. a group for whom something was created.
+     *
+     * @param Audience|Audience[] $audience
+     *
+     * @return static
+     *
+     * @see 
+     */
+    public function audience($audience)
+    {
+        return $this->setProperty('audience', $audience);
     }
 
     /**
@@ -215,7 +215,7 @@ class CreativeWork extends Thing
      *
      * @return static
      *
-     * @see http://schema.org/award
+     * @see 
      */
     public function award($award)
     {
@@ -229,7 +229,7 @@ class CreativeWork extends Thing
      *
      * @return static
      *
-     * @see http://schema.org/awards
+     * @see 
      */
     public function awards($awards)
     {
@@ -244,7 +244,7 @@ class CreativeWork extends Thing
      *
      * @return static
      *
-     * @see http://schema.org/citation
+     * @see 
      */
     public function citation($citation)
     {
@@ -258,7 +258,7 @@ class CreativeWork extends Thing
      *
      * @return static
      *
-     * @see http://schema.org/comment
+     * @see 
      */
     public function comment($comment)
     {
@@ -273,7 +273,7 @@ class CreativeWork extends Thing
      *
      * @return static
      *
-     * @see http://schema.org/contentLocation
+     * @see 
      */
     public function contentLocation($contentLocation)
     {
@@ -288,25 +288,11 @@ class CreativeWork extends Thing
      *
      * @return static
      *
-     * @see http://schema.org/locationCreated
+     * @see 
      */
     public function locationCreated($locationCreated)
     {
         return $this->setProperty('locationCreated', $locationCreated);
-    }
-
-    /**
-     * Official rating of a piece of content&#x2014;for example,'MPAA PG-13'.
-     *
-     * @param string|string[] $contentRating
-     *
-     * @return static
-     *
-     * @see http://schema.org/contentRating
-     */
-    public function contentRating($contentRating)
-    {
-        return $this->setProperty('contentRating', $contentRating);
     }
 
     /**
@@ -316,7 +302,7 @@ class CreativeWork extends Thing
      *
      * @return static
      *
-     * @see http://schema.org/contributor
+     * @see 
      */
     public function contributor($contributor)
     {
@@ -324,17 +310,17 @@ class CreativeWork extends Thing
     }
 
     /**
-     * The party holding the legal copyright to the CreativeWork.
+     * Official rating of a piece of content&#x2014;for example,'MPAA PG-13'.
      *
-     * @param Organization|Organization[]|Person|Person[] $copyrightHolder
+     * @param string|string[] $contentRating
      *
      * @return static
      *
-     * @see http://schema.org/copyrightHolder
+     * @see 
      */
-    public function copyrightHolder($copyrightHolder)
+    public function contentRating($contentRating)
     {
-        return $this->setProperty('copyrightHolder', $copyrightHolder);
+        return $this->setProperty('contentRating', $contentRating);
     }
 
     /**
@@ -345,7 +331,7 @@ class CreativeWork extends Thing
      *
      * @return static
      *
-     * @see http://schema.org/copyrightYear
+     * @see 
      */
     public function copyrightYear($copyrightYear)
     {
@@ -353,18 +339,17 @@ class CreativeWork extends Thing
     }
 
     /**
-     * The creator/author of this CreativeWork. This is the same as the Author
-     * property for CreativeWork.
+     * The party holding the legal copyright to the CreativeWork.
      *
-     * @param Organization|Organization[]|Person|Person[] $creator
+     * @param Organization|Organization[]|Person|Person[] $copyrightHolder
      *
      * @return static
      *
-     * @see http://schema.org/creator
+     * @see 
      */
-    public function creator($creator)
+    public function copyrightHolder($copyrightHolder)
     {
-        return $this->setProperty('creator', $creator);
+        return $this->setProperty('copyrightHolder', $copyrightHolder);
     }
 
     /**
@@ -375,11 +360,26 @@ class CreativeWork extends Thing
      *
      * @return static
      *
-     * @see http://schema.org/dateCreated
+     * @see 
      */
     public function dateCreated($dateCreated)
     {
         return $this->setProperty('dateCreated', $dateCreated);
+    }
+
+    /**
+     * The creator/author of this CreativeWork. This is the same as the Author
+     * property for CreativeWork.
+     *
+     * @param Organization|Organization[]|Person|Person[] $creator
+     *
+     * @return static
+     *
+     * @see 
+     */
+    public function creator($creator)
+    {
+        return $this->setProperty('creator', $creator);
     }
 
     /**
@@ -390,7 +390,7 @@ class CreativeWork extends Thing
      *
      * @return static
      *
-     * @see http://schema.org/dateModified
+     * @see 
      */
     public function dateModified($dateModified)
     {
@@ -404,7 +404,7 @@ class CreativeWork extends Thing
      *
      * @return static
      *
-     * @see http://schema.org/datePublished
+     * @see 
      */
     public function datePublished($datePublished)
     {
@@ -418,7 +418,7 @@ class CreativeWork extends Thing
      *
      * @return static
      *
-     * @see http://schema.org/discussionUrl
+     * @see 
      */
     public function discussionUrl($discussionUrl)
     {
@@ -432,25 +432,11 @@ class CreativeWork extends Thing
      *
      * @return static
      *
-     * @see http://schema.org/editor
+     * @see 
      */
     public function editor($editor)
     {
         return $this->setProperty('editor', $editor);
-    }
-
-    /**
-     * An alignment to an established educational framework.
-     *
-     * @param AlignmentObject|AlignmentObject[] $educationalAlignment
-     *
-     * @return static
-     *
-     * @see http://schema.org/educationalAlignment
-     */
-    public function educationalAlignment($educationalAlignment)
-    {
-        return $this->setProperty('educationalAlignment', $educationalAlignment);
     }
 
     /**
@@ -461,11 +447,39 @@ class CreativeWork extends Thing
      *
      * @return static
      *
-     * @see http://schema.org/educationalUse
+     * @see 
      */
     public function educationalUse($educationalUse)
     {
         return $this->setProperty('educationalUse', $educationalUse);
+    }
+
+    /**
+     * An alignment to an established educational framework.
+     *
+     * @param AlignmentObject|AlignmentObject[] $educationalAlignment
+     *
+     * @return static
+     *
+     * @see 
+     */
+    public function educationalAlignment($educationalAlignment)
+    {
+        return $this->setProperty('educationalAlignment', $educationalAlignment);
+    }
+
+    /**
+     * A media object that encodes this CreativeWork.
+     *
+     * @param MediaObject|MediaObject[] $encodings
+     *
+     * @return static
+     *
+     * @see 
+     */
+    public function encodings($encodings)
+    {
+        return $this->setProperty('encodings', $encodings);
     }
 
     /**
@@ -476,25 +490,11 @@ class CreativeWork extends Thing
      *
      * @return static
      *
-     * @see http://schema.org/encoding
+     * @see 
      */
     public function encoding($encoding)
     {
         return $this->setProperty('encoding', $encoding);
-    }
-
-    /**
-     * A media object that encodes this CreativeWork.
-     *
-     * @param MediaObject|MediaObject[] $encodings
-     *
-     * @return static
-     *
-     * @see http://schema.org/encodings
-     */
-    public function encodings($encodings)
-    {
-        return $this->setProperty('encodings', $encodings);
     }
 
     /**
@@ -511,7 +511,7 @@ class CreativeWork extends Thing
      *
      * @return static
      *
-     * @see http://schema.org/fileFormat
+     * @see 
      */
     public function fileFormat($fileFormat)
     {
@@ -525,7 +525,7 @@ class CreativeWork extends Thing
      *
      * @return static
      *
-     * @see http://schema.org/isAccessibleForFree
+     * @see 
      */
     public function isAccessibleForFree($isAccessibleForFree)
     {
@@ -539,25 +539,11 @@ class CreativeWork extends Thing
      *
      * @return static
      *
-     * @see http://schema.org/genre
+     * @see 
      */
     public function genre($genre)
     {
         return $this->setProperty('genre', $genre);
-    }
-
-    /**
-     * Headline of the article.
-     *
-     * @param string|string[] $headline
-     *
-     * @return static
-     *
-     * @see http://schema.org/headline
-     */
-    public function headline($headline)
-    {
-        return $this->setProperty('headline', $headline);
     }
 
     /**
@@ -570,7 +556,7 @@ class CreativeWork extends Thing
      *
      * @return static
      *
-     * @see http://schema.org/inLanguage
+     * @see 
      */
     public function inLanguage($inLanguage)
     {
@@ -585,7 +571,7 @@ class CreativeWork extends Thing
      *
      * @return static
      *
-     * @see http://schema.org/interactivityType
+     * @see 
      */
     public function interactivityType($interactivityType)
     {
@@ -597,15 +583,15 @@ class CreativeWork extends Thing
      * be repeated for multiple sources. For example,
      * http://example.com/great-multiplication-intro.html.
      *
-     * @param string|string[]|CreativeWork|CreativeWork[]|Product|Product[] $isBasedOnUrl
+     * @param string|string[]|CreativeWork|CreativeWork[]|Product|Product[] $isBasedOn
      *
      * @return static
      *
-     * @see http://schema.org/isBasedOnUrl
+     * @see 
      */
-    public function isBasedOnUrl($isBasedOnUrl)
+    public function isBasedOn($isBasedOn)
     {
-        return $this->setProperty('isBasedOnUrl', $isBasedOnUrl);
+        return $this->setProperty('isBasedOn', $isBasedOn);
     }
 
     /**
@@ -613,15 +599,15 @@ class CreativeWork extends Thing
      * be repeated for multiple sources. For example,
      * http://example.com/great-multiplication-intro.html.
      *
-     * @param string|string[]|CreativeWork|CreativeWork[]|Product|Product[] $isBasedOn
+     * @param string|string[]|CreativeWork|CreativeWork[]|Product|Product[] $isBasedOnUrl
      *
      * @return static
      *
-     * @see http://schema.org/isBasedOn
+     * @see 
      */
-    public function isBasedOn($isBasedOn)
+    public function isBasedOnUrl($isBasedOnUrl)
     {
-        return $this->setProperty('isBasedOn', $isBasedOn);
+        return $this->setProperty('isBasedOnUrl', $isBasedOnUrl);
     }
 
     /**
@@ -631,7 +617,7 @@ class CreativeWork extends Thing
      *
      * @return static
      *
-     * @see http://schema.org/isFamilyFriendly
+     * @see 
      */
     public function isFamilyFriendly($isFamilyFriendly)
     {
@@ -646,7 +632,7 @@ class CreativeWork extends Thing
      *
      * @return static
      *
-     * @see http://schema.org/isPartOf
+     * @see 
      */
     public function isPartOf($isPartOf)
     {
@@ -661,26 +647,11 @@ class CreativeWork extends Thing
      *
      * @return static
      *
-     * @see http://schema.org/keywords
+     * @see 
      */
     public function keywords($keywords)
     {
         return $this->setProperty('keywords', $keywords);
-    }
-
-    /**
-     * A license document that applies to this content, typically indicated by
-     * URL.
-     *
-     * @param CreativeWork|CreativeWork[]|string|string[] $license
-     *
-     * @return static
-     *
-     * @see http://schema.org/license
-     */
-    public function license($license)
-    {
-        return $this->setProperty('license', $license);
     }
 
     /**
@@ -691,11 +662,40 @@ class CreativeWork extends Thing
      *
      * @return static
      *
-     * @see http://schema.org/learningResourceType
+     * @see 
      */
     public function learningResourceType($learningResourceType)
     {
         return $this->setProperty('learningResourceType', $learningResourceType);
+    }
+
+    /**
+     * A license document that applies to this content, typically indicated by
+     * URL.
+     *
+     * @param CreativeWork|CreativeWork[]|string|string[] $license
+     *
+     * @return static
+     *
+     * @see 
+     */
+    public function license($license)
+    {
+        return $this->setProperty('license', $license);
+    }
+
+    /**
+     * Headline of the article.
+     *
+     * @param string|string[] $headline
+     *
+     * @return static
+     *
+     * @see 
+     */
+    public function headline($headline)
+    {
+        return $this->setProperty('headline', $headline);
     }
 
     /**
@@ -706,7 +706,7 @@ class CreativeWork extends Thing
      *
      * @return static
      *
-     * @see http://schema.org/mainEntity
+     * @see 
      */
     public function mainEntity($mainEntity)
     {
@@ -721,7 +721,7 @@ class CreativeWork extends Thing
      *
      * @return static
      *
-     * @see http://schema.org/mentions
+     * @see 
      */
     public function mentions($mentions)
     {
@@ -737,7 +737,7 @@ class CreativeWork extends Thing
      *
      * @return static
      *
-     * @see http://schema.org/offers
+     * @see 
      */
     public function offers($offers)
     {
@@ -751,7 +751,7 @@ class CreativeWork extends Thing
      *
      * @return static
      *
-     * @see http://schema.org/position
+     * @see 
      */
     public function position($position)
     {
@@ -766,39 +766,11 @@ class CreativeWork extends Thing
      *
      * @return static
      *
-     * @see http://schema.org/producer
+     * @see 
      */
     public function producer($producer)
     {
         return $this->setProperty('producer', $producer);
-    }
-
-    /**
-     * A publication event associated with the item.
-     *
-     * @param PublicationEvent|PublicationEvent[] $publication
-     *
-     * @return static
-     *
-     * @see http://schema.org/publication
-     */
-    public function publication($publication)
-    {
-        return $this->setProperty('publication', $publication);
-    }
-
-    /**
-     * The publisher of the creative work.
-     *
-     * @param Organization|Organization[]|Person|Person[] $publisher
-     *
-     * @return static
-     *
-     * @see http://schema.org/publisher
-     */
-    public function publisher($publisher)
-    {
-        return $this->setProperty('publisher', $publisher);
     }
 
     /**
@@ -809,11 +781,39 @@ class CreativeWork extends Thing
      *
      * @return static
      *
-     * @see http://schema.org/publishingPrinciples
+     * @see 
      */
     public function publishingPrinciples($publishingPrinciples)
     {
         return $this->setProperty('publishingPrinciples', $publishingPrinciples);
+    }
+
+    /**
+     * The publisher of the creative work.
+     *
+     * @param Organization|Organization[]|Person|Person[] $publisher
+     *
+     * @return static
+     *
+     * @see 
+     */
+    public function publisher($publisher)
+    {
+        return $this->setProperty('publisher', $publisher);
+    }
+
+    /**
+     * A publication event associated with the item.
+     *
+     * @param PublicationEvent|PublicationEvent[] $publication
+     *
+     * @return static
+     *
+     * @see 
+     */
+    public function publication($publication)
+    {
+        return $this->setProperty('publication', $publication);
     }
 
     /**
@@ -824,7 +824,7 @@ class CreativeWork extends Thing
      *
      * @return static
      *
-     * @see http://schema.org/recordedAt
+     * @see 
      */
     public function recordedAt($recordedAt)
     {
@@ -838,7 +838,7 @@ class CreativeWork extends Thing
      *
      * @return static
      *
-     * @see http://schema.org/review
+     * @see 
      */
     public function review($review)
     {
@@ -852,25 +852,11 @@ class CreativeWork extends Thing
      *
      * @return static
      *
-     * @see http://schema.org/reviews
+     * @see 
      */
     public function reviews($reviews)
     {
         return $this->setProperty('reviews', $reviews);
-    }
-
-    /**
-     * The Organization on whose behalf the creator was working.
-     *
-     * @param Organization|Organization[] $sourceOrganization
-     *
-     * @return static
-     *
-     * @see http://schema.org/sourceOrganization
-     */
-    public function sourceOrganization($sourceOrganization)
-    {
-        return $this->setProperty('sourceOrganization', $sourceOrganization);
     }
 
     /**
@@ -885,11 +871,25 @@ class CreativeWork extends Thing
      *
      * @return static
      *
-     * @see http://schema.org/spatialCoverage
+     * @see 
      */
     public function spatialCoverage($spatialCoverage)
     {
         return $this->setProperty('spatialCoverage', $spatialCoverage);
+    }
+
+    /**
+     * The Organization on whose behalf the creator was working.
+     *
+     * @param Organization|Organization[] $sourceOrganization
+     *
+     * @return static
+     *
+     * @see 
+     */
+    public function sourceOrganization($sourceOrganization)
+    {
+        return $this->setProperty('sourceOrganization', $sourceOrganization);
     }
 
     /**
@@ -901,7 +901,7 @@ class CreativeWork extends Thing
      *
      * @return static
      *
-     * @see http://schema.org/sponsor
+     * @see 
      */
     public function sponsor($sponsor)
     {
@@ -916,11 +916,25 @@ class CreativeWork extends Thing
      *
      * @return static
      *
-     * @see http://schema.org/funder
+     * @see 
      */
     public function funder($funder)
     {
         return $this->setProperty('funder', $funder);
+    }
+
+    /**
+     * The textual content of this CreativeWork.
+     *
+     * @param string|string[] $text
+     *
+     * @return static
+     *
+     * @see 
+     */
+    public function text($text)
+    {
+        return $this->setProperty('text', $text);
     }
 
     /**
@@ -941,39 +955,11 @@ class CreativeWork extends Thing
      *
      * @return static
      *
-     * @see http://schema.org/temporalCoverage
+     * @see 
      */
     public function temporalCoverage($temporalCoverage)
     {
         return $this->setProperty('temporalCoverage', $temporalCoverage);
-    }
-
-    /**
-     * The textual content of this CreativeWork.
-     *
-     * @param string|string[] $text
-     *
-     * @return static
-     *
-     * @see http://schema.org/text
-     */
-    public function text($text)
-    {
-        return $this->setProperty('text', $text);
-    }
-
-    /**
-     * A thumbnail image relevant to the Thing.
-     *
-     * @param string|string[] $thumbnailUrl
-     *
-     * @return static
-     *
-     * @see http://schema.org/thumbnailUrl
-     */
-    public function thumbnailUrl($thumbnailUrl)
-    {
-        return $this->setProperty('thumbnailUrl', $thumbnailUrl);
     }
 
     /**
@@ -985,7 +971,7 @@ class CreativeWork extends Thing
      *
      * @return static
      *
-     * @see http://schema.org/timeRequired
+     * @see 
      */
     public function timeRequired($timeRequired)
     {
@@ -999,7 +985,7 @@ class CreativeWork extends Thing
      *
      * @return static
      *
-     * @see http://schema.org/typicalAgeRange
+     * @see 
      */
     public function typicalAgeRange($typicalAgeRange)
     {
@@ -1013,25 +999,11 @@ class CreativeWork extends Thing
      *
      * @return static
      *
-     * @see http://schema.org/version
+     * @see 
      */
     public function version($version)
     {
         return $this->setProperty('version', $version);
-    }
-
-    /**
-     * An embedded video object.
-     *
-     * @param VideoObject|VideoObject[] $video
-     *
-     * @return static
-     *
-     * @see http://schema.org/video
-     */
-    public function video($video)
-    {
-        return $this->setProperty('video', $video);
     }
 
     /**
@@ -1043,11 +1015,39 @@ class CreativeWork extends Thing
      *
      * @return static
      *
-     * @see http://schema.org/provider
+     * @see 
      */
     public function provider($provider)
     {
         return $this->setProperty('provider', $provider);
+    }
+
+    /**
+     * A thumbnail image relevant to the Thing.
+     *
+     * @param string|string[] $thumbnailUrl
+     *
+     * @return static
+     *
+     * @see 
+     */
+    public function thumbnailUrl($thumbnailUrl)
+    {
+        return $this->setProperty('thumbnailUrl', $thumbnailUrl);
+    }
+
+    /**
+     * An embedded video object.
+     *
+     * @param VideoObject|VideoObject[] $video
+     *
+     * @return static
+     *
+     * @see 
+     */
+    public function video($video)
+    {
+        return $this->setProperty('video', $video);
     }
 
     /**
@@ -1059,7 +1059,7 @@ class CreativeWork extends Thing
      *
      * @return static
      *
-     * @see http://schema.org/commentCount
+     * @see 
      */
     public function commentCount($commentCount)
     {
@@ -1074,7 +1074,7 @@ class CreativeWork extends Thing
      *
      * @return static
      *
-     * @see http://schema.org/hasPart
+     * @see 
      */
     public function hasPart($hasPart)
     {
@@ -1089,7 +1089,7 @@ class CreativeWork extends Thing
      *
      * @return static
      *
-     * @see http://schema.org/workExample
+     * @see 
      */
     public function workExample($workExample)
     {
@@ -1104,25 +1104,11 @@ class CreativeWork extends Thing
      *
      * @return static
      *
-     * @see http://schema.org/exampleOfWork
+     * @see 
      */
     public function exampleOfWork($exampleOfWork)
     {
         return $this->setProperty('exampleOfWork', $exampleOfWork);
-    }
-
-    /**
-     * Fictional person connected with a creative work.
-     *
-     * @param Person|Person[] $character
-     *
-     * @return static
-     *
-     * @see http://schema.org/character
-     */
-    public function character($character)
-    {
-        return $this->setProperty('character', $character);
     }
 
     /**
@@ -1134,7 +1120,7 @@ class CreativeWork extends Thing
      *
      * @return static
      *
-     * @see http://schema.org/translator
+     * @see 
      */
     public function translator($translator)
     {
@@ -1149,7 +1135,7 @@ class CreativeWork extends Thing
      *
      * @return static
      *
-     * @see http://schema.org/releasedEvent
+     * @see 
      */
     public function releasedEvent($releasedEvent)
     {
@@ -1164,11 +1150,25 @@ class CreativeWork extends Thing
      *
      * @return static
      *
-     * @see http://schema.org/material
+     * @see 
      */
     public function material($material)
     {
         return $this->setProperty('material', $material);
+    }
+
+    /**
+     * Fictional person connected with a creative work.
+     *
+     * @param Person|Person[] $character
+     *
+     * @return static
+     *
+     * @see 
+     */
+    public function character($character)
+    {
+        return $this->setProperty('character', $character);
     }
 
     /**
@@ -1180,7 +1180,7 @@ class CreativeWork extends Thing
      *
      * @return static
      *
-     * @see http://schema.org/interactionStatistic
+     * @see 
      */
     public function interactionStatistic($interactionStatistic)
     {
@@ -1197,27 +1197,11 @@ class CreativeWork extends Thing
      *
      * @return static
      *
-     * @see http://schema.org/accessMode
+     * @see 
      */
     public function accessMode($accessMode)
     {
         return $this->setProperty('accessMode', $accessMode);
-    }
-
-    /**
-     * A list of single or combined accessModes that are sufficient to
-     * understand all the intellectual content of a resource. Expected values
-     * include:  auditory, tactile, textual, visual.
-     *
-     * @param string|string[] $accessModeSufficient
-     *
-     * @return static
-     *
-     * @see http://schema.org/accessModeSufficient
-     */
-    public function accessModeSufficient($accessModeSufficient)
-    {
-        return $this->setProperty('accessModeSufficient', $accessModeSufficient);
     }
 
     /**
@@ -1231,11 +1215,27 @@ class CreativeWork extends Thing
      *
      * @return static
      *
-     * @see http://schema.org/accessibilitySummary
+     * @see 
      */
     public function accessibilitySummary($accessibilitySummary)
     {
         return $this->setProperty('accessibilitySummary', $accessibilitySummary);
+    }
+
+    /**
+     * A list of single or combined accessModes that are sufficient to
+     * understand all the intellectual content of a resource. Expected values
+     * include:  auditory, tactile, textual, visual.
+     *
+     * @param string|string[] $accessModeSufficient
+     *
+     * @return static
+     *
+     * @see 
+     */
+    public function accessModeSufficient($accessModeSufficient)
+    {
+        return $this->setProperty('accessModeSufficient', $accessModeSufficient);
     }
 
 }

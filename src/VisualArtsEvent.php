@@ -5,7 +5,7 @@ namespace Spatie\SchemaOrg;
 /**
  * Event type: Visual arts event.
  *
- * @see http://schema.org/VisualArtsEvent
+ * @see 
  */
 class VisualArtsEvent extends Event
 {

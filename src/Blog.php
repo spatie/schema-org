@@ -5,24 +5,10 @@ namespace Spatie\SchemaOrg;
 /**
  * A blog.
  *
- * @see http://schema.org/Blog
+ * @see 
  */
 class Blog extends CreativeWork
 {
-    /**
-     * A posting that is part of this blog.
-     *
-     * @param BlogPosting|BlogPosting[] $blogPost
-     *
-     * @return static
-     *
-     * @see http://schema.org/blogPost
-     */
-    public function blogPost($blogPost)
-    {
-        return $this->setProperty('blogPost', $blogPost);
-    }
-
     /**
      * The postings that are part of this blog.
      *
@@ -30,11 +16,25 @@ class Blog extends CreativeWork
      *
      * @return static
      *
-     * @see http://schema.org/blogPosts
+     * @see 
      */
     public function blogPosts($blogPosts)
     {
         return $this->setProperty('blogPosts', $blogPosts);
+    }
+
+    /**
+     * A posting that is part of this blog.
+     *
+     * @param BlogPosting|BlogPosting[] $blogPost
+     *
+     * @return static
+     *
+     * @see 
+     */
+    public function blogPost($blogPost)
+    {
+        return $this->setProperty('blogPost', $blogPost);
     }
 
 }

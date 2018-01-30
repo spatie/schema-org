@@ -8,24 +8,10 @@ namespace Spatie\SchemaOrg;
  * 'Vegan', 'Drinks', etc.), or some other classification made by the menu
  * provider.
  *
- * @see http://schema.org/MenuSection
+ * @see 
  */
 class MenuSection extends CreativeWork
 {
-    /**
-     * A food or drink item contained in a menu or menu section.
-     *
-     * @param MenuSection|MenuSection[] $hasMenuItem
-     *
-     * @return static
-     *
-     * @see http://schema.org/hasMenuItem
-     */
-    public function hasMenuItem($hasMenuItem)
-    {
-        return $this->setProperty('hasMenuItem', $hasMenuItem);
-    }
-
     /**
      * A subgrouping of the menu (by dishes, course, serving time period, etc.).
      *
@@ -33,11 +19,25 @@ class MenuSection extends CreativeWork
      *
      * @return static
      *
-     * @see http://schema.org/hasMenuSection
+     * @see 
      */
     public function hasMenuSection($hasMenuSection)
     {
         return $this->setProperty('hasMenuSection', $hasMenuSection);
+    }
+
+    /**
+     * A food or drink item contained in a menu or menu section.
+     *
+     * @param MenuSection|MenuSection[] $hasMenuItem
+     *
+     * @return static
+     *
+     * @see 
+     */
+    public function hasMenuItem($hasMenuItem)
+    {
+        return $this->setProperty('hasMenuItem', $hasMenuItem);
     }
 
 }

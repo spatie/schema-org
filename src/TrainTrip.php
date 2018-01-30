@@ -5,7 +5,7 @@ namespace Spatie\SchemaOrg;
 /**
  * A trip on a commercial train line.
  *
- * @see http://schema.org/TrainTrip
+ * @see 
  */
 class TrainTrip extends Intangible
 {
@@ -18,25 +18,11 @@ class TrainTrip extends Intangible
      *
      * @return static
      *
-     * @see http://schema.org/provider
+     * @see 
      */
     public function provider($provider)
     {
         return $this->setProperty('provider', $provider);
-    }
-
-    /**
-     * The expected departure time.
-     *
-     * @param \DateTimeInterface|\DateTimeInterface[] $departureTime
-     *
-     * @return static
-     *
-     * @see http://schema.org/departureTime
-     */
-    public function departureTime($departureTime)
-    {
-        return $this->setProperty('departureTime', $departureTime);
     }
 
     /**
@@ -46,7 +32,7 @@ class TrainTrip extends Intangible
      *
      * @return static
      *
-     * @see http://schema.org/arrivalTime
+     * @see 
      */
     public function arrivalTime($arrivalTime)
     {
@@ -54,31 +40,17 @@ class TrainTrip extends Intangible
     }
 
     /**
-     * The unique identifier for the train.
+     * The expected departure time.
      *
-     * @param string|string[] $trainNumber
-     *
-     * @return static
-     *
-     * @see http://schema.org/trainNumber
-     */
-    public function trainNumber($trainNumber)
-    {
-        return $this->setProperty('trainNumber', $trainNumber);
-    }
-
-    /**
-     * The name of the train (e.g. The Orient Express).
-     *
-     * @param string|string[] $trainName
+     * @param \DateTimeInterface|\DateTimeInterface[] $departureTime
      *
      * @return static
      *
-     * @see http://schema.org/trainName
+     * @see 
      */
-    public function trainName($trainName)
+    public function departureTime($departureTime)
     {
-        return $this->setProperty('trainName', $trainName);
+        return $this->setProperty('departureTime', $departureTime);
     }
 
     /**
@@ -88,7 +60,7 @@ class TrainTrip extends Intangible
      *
      * @return static
      *
-     * @see http://schema.org/departureStation
+     * @see 
      */
     public function departureStation($departureStation)
     {
@@ -96,31 +68,17 @@ class TrainTrip extends Intangible
     }
 
     /**
-     * The station where the train trip ends.
+     * The unique identifier for the train.
      *
-     * @param TrainStation|TrainStation[] $arrivalStation
-     *
-     * @return static
-     *
-     * @see http://schema.org/arrivalStation
-     */
-    public function arrivalStation($arrivalStation)
-    {
-        return $this->setProperty('arrivalStation', $arrivalStation);
-    }
-
-    /**
-     * The platform from which the train departs.
-     *
-     * @param string|string[] $departurePlatform
+     * @param string|string[] $trainNumber
      *
      * @return static
      *
-     * @see http://schema.org/departurePlatform
+     * @see 
      */
-    public function departurePlatform($departurePlatform)
+    public function trainNumber($trainNumber)
     {
-        return $this->setProperty('departurePlatform', $departurePlatform);
+        return $this->setProperty('trainNumber', $trainNumber);
     }
 
     /**
@@ -130,11 +88,53 @@ class TrainTrip extends Intangible
      *
      * @return static
      *
-     * @see http://schema.org/arrivalPlatform
+     * @see 
      */
     public function arrivalPlatform($arrivalPlatform)
     {
         return $this->setProperty('arrivalPlatform', $arrivalPlatform);
+    }
+
+    /**
+     * The platform from which the train departs.
+     *
+     * @param string|string[] $departurePlatform
+     *
+     * @return static
+     *
+     * @see 
+     */
+    public function departurePlatform($departurePlatform)
+    {
+        return $this->setProperty('departurePlatform', $departurePlatform);
+    }
+
+    /**
+     * The station where the train trip ends.
+     *
+     * @param TrainStation|TrainStation[] $arrivalStation
+     *
+     * @return static
+     *
+     * @see 
+     */
+    public function arrivalStation($arrivalStation)
+    {
+        return $this->setProperty('arrivalStation', $arrivalStation);
+    }
+
+    /**
+     * The name of the train (e.g. The Orient Express).
+     *
+     * @param string|string[] $trainName
+     *
+     * @return static
+     *
+     * @see 
+     */
+    public function trainName($trainName)
+    {
+        return $this->setProperty('trainName', $trainName);
     }
 
 }

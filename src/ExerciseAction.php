@@ -6,24 +6,10 @@ namespace Spatie\SchemaOrg;
  * The act of participating in exertive activity for the purposes of improving
  * health and fitness.
  *
- * @see http://schema.org/ExerciseAction
+ * @see 
  */
 class ExerciseAction extends PlayAction
 {
-    /**
-     * A sub property of location. The course where this action was taken.
-     *
-     * @param Place|Place[] $course
-     *
-     * @return static
-     *
-     * @see http://schema.org/course
-     */
-    public function course($course)
-    {
-        return $this->setProperty('course', $course);
-    }
-
     /**
      * A sub property of location. The course where this action was taken.
      *
@@ -31,11 +17,25 @@ class ExerciseAction extends PlayAction
      *
      * @return static
      *
-     * @see http://schema.org/exerciseCourse
+     * @see 
      */
     public function exerciseCourse($exerciseCourse)
     {
         return $this->setProperty('exerciseCourse', $exerciseCourse);
+    }
+
+    /**
+     * A sub property of location. The course where this action was taken.
+     *
+     * @param Place|Place[] $course
+     *
+     * @return static
+     *
+     * @see 
+     */
+    public function course($course)
+    {
+        return $this->setProperty('course', $course);
     }
 
     /**
@@ -45,7 +45,7 @@ class ExerciseAction extends PlayAction
      *
      * @return static
      *
-     * @see http://schema.org/distance
+     * @see 
      */
     public function distance($distance)
     {
@@ -60,7 +60,7 @@ class ExerciseAction extends PlayAction
      *
      * @return static
      *
-     * @see http://schema.org/fromLocation
+     * @see 
      */
     public function fromLocation($fromLocation)
     {
@@ -74,11 +74,25 @@ class ExerciseAction extends PlayAction
      *
      * @return static
      *
-     * @see http://schema.org/opponent
+     * @see 
      */
     public function opponent($opponent)
     {
         return $this->setProperty('opponent', $opponent);
+    }
+
+    /**
+     * A sub property of location. The sports event where this action occurred.
+     *
+     * @param SportsEvent|SportsEvent[] $sportsEvent
+     *
+     * @return static
+     *
+     * @see 
+     */
+    public function sportsEvent($sportsEvent)
+    {
+        return $this->setProperty('sportsEvent', $sportsEvent);
     }
 
     /**
@@ -89,25 +103,11 @@ class ExerciseAction extends PlayAction
      *
      * @return static
      *
-     * @see http://schema.org/sportsActivityLocation
+     * @see 
      */
     public function sportsActivityLocation($sportsActivityLocation)
     {
         return $this->setProperty('sportsActivityLocation', $sportsActivityLocation);
-    }
-
-    /**
-     * A sub property of location. The sports event where this action occurred.
-     *
-     * @param SportsEvent|SportsEvent[] $sportsEvent
-     *
-     * @return static
-     *
-     * @see http://schema.org/sportsEvent
-     */
-    public function sportsEvent($sportsEvent)
-    {
-        return $this->setProperty('sportsEvent', $sportsEvent);
     }
 
     /**
@@ -118,7 +118,7 @@ class ExerciseAction extends PlayAction
      *
      * @return static
      *
-     * @see http://schema.org/sportsTeam
+     * @see 
      */
     public function sportsTeam($sportsTeam)
     {
@@ -133,7 +133,7 @@ class ExerciseAction extends PlayAction
      *
      * @return static
      *
-     * @see http://schema.org/toLocation
+     * @see 
      */
     public function toLocation($toLocation)
     {

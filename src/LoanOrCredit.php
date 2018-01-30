@@ -6,7 +6,7 @@ namespace Spatie\SchemaOrg;
  * A financial product for the loaning of an amount of money under agreed terms
  * and charges.
  *
- * @see http://schema.org/LoanOrCredit
+ * @see 
  */
 class LoanOrCredit extends FinancialProduct
 {
@@ -17,7 +17,7 @@ class LoanOrCredit extends FinancialProduct
      *
      * @return static
      *
-     * @see http://schema.org/amount
+     * @see 
      */
     public function amount($amount)
     {
@@ -31,7 +31,7 @@ class LoanOrCredit extends FinancialProduct
      *
      * @return static
      *
-     * @see http://schema.org/loanTerm
+     * @see 
      */
     public function loanTerm($loanTerm)
     {
@@ -46,7 +46,7 @@ class LoanOrCredit extends FinancialProduct
      *
      * @return static
      *
-     * @see http://schema.org/requiredCollateral
+     * @see 
      */
     public function requiredCollateral($requiredCollateral)
     {

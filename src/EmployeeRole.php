@@ -5,7 +5,7 @@ namespace Spatie\SchemaOrg;
 /**
  * A subclass of OrganizationRole used to describe employee relationships.
  *
- * @see http://schema.org/EmployeeRole
+ * @see 
  */
 class EmployeeRole extends OrganizationRole
 {
@@ -16,7 +16,7 @@ class EmployeeRole extends OrganizationRole
      *
      * @return static
      *
-     * @see http://schema.org/baseSalary
+     * @see 
      */
     public function baseSalary($baseSalary)
     {
@@ -32,7 +32,7 @@ class EmployeeRole extends OrganizationRole
      *
      * @return static
      *
-     * @see http://schema.org/salaryCurrency
+     * @see 
      */
     public function salaryCurrency($salaryCurrency)
     {

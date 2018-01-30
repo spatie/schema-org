@@ -5,7 +5,7 @@ namespace Spatie\SchemaOrg;
 /**
  * A nail salon.
  *
- * @see http://schema.org/NailSalon
+ * @see 
  */
 class NailSalon extends HealthAndBeautyBusiness
 {

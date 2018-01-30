@@ -5,7 +5,7 @@ namespace Spatie\SchemaOrg;
 /**
  * An electrician.
  *
- * @see http://schema.org/Electrician
+ * @see 
  */
 class Electrician extends HomeAndConstructionBusiness
 {

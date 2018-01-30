@@ -6,7 +6,7 @@ namespace Spatie\SchemaOrg;
  * A datasheet or vendor specification of a product (in the sense of a
  * prototypical description).
  *
- * @see http://schema.org/ProductModel
+ * @see 
  */
 class ProductModel extends Product
 {
@@ -19,7 +19,7 @@ class ProductModel extends Product
      *
      * @return static
      *
-     * @see http://schema.org/isVariantOf
+     * @see 
      */
     public function isVariantOf($isVariantOf)
     {
@@ -34,7 +34,7 @@ class ProductModel extends Product
      *
      * @return static
      *
-     * @see http://schema.org/predecessorOf
+     * @see 
      */
     public function predecessorOf($predecessorOf)
     {
@@ -49,7 +49,7 @@ class ProductModel extends Product
      *
      * @return static
      *
-     * @see http://schema.org/successorOf
+     * @see 
      */
     public function successorOf($successorOf)
     {

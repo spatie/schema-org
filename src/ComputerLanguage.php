@@ -7,7 +7,7 @@ namespace Spatie\SchemaOrg;
  * well as other language-like computer representations. Natural languages are
  * best represented with the [[Language]] type.
  *
- * @see http://schema.org/ComputerLanguage
+ * @see 
  */
 class ComputerLanguage extends Intangible
 {

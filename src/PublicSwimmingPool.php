@@ -5,7 +5,7 @@ namespace Spatie\SchemaOrg;
 /**
  * A public swimming pool.
  *
- * @see http://schema.org/PublicSwimmingPool
+ * @see 
  */
 class PublicSwimmingPool extends SportsActivityLocation
 {

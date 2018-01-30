@@ -6,25 +6,10 @@ namespace Spatie\SchemaOrg;
  * A specific question - e.g. from a user seeking answers online, or collected
  * in a Frequently Asked Questions (FAQ) document.
  *
- * @see http://schema.org/Question
+ * @see 
  */
 class Question extends CreativeWork
 {
-    /**
-     * The number of upvotes this question, answer or comment has received from
-     * the community.
-     *
-     * @param int|int[] $upvoteCount
-     *
-     * @return static
-     *
-     * @see http://schema.org/upvoteCount
-     */
-    public function upvoteCount($upvoteCount)
-    {
-        return $this->setProperty('upvoteCount', $upvoteCount);
-    }
-
     /**
      * The number of downvotes this question, answer or comment has received
      * from the community.
@@ -33,7 +18,7 @@ class Question extends CreativeWork
      *
      * @return static
      *
-     * @see http://schema.org/downvoteCount
+     * @see 
      */
     public function downvoteCount($downvoteCount)
     {
@@ -41,17 +26,33 @@ class Question extends CreativeWork
     }
 
     /**
-     * The number of answers this question has received.
+     * The number of upvotes this question, answer or comment has received from
+     * the community.
      *
-     * @param int|int[] $answerCount
+     * @param int|int[] $upvoteCount
      *
      * @return static
      *
-     * @see http://schema.org/answerCount
+     * @see 
      */
-    public function answerCount($answerCount)
+    public function upvoteCount($upvoteCount)
     {
-        return $this->setProperty('answerCount', $answerCount);
+        return $this->setProperty('upvoteCount', $upvoteCount);
+    }
+
+    /**
+     * An answer (possibly one of several, possibly incorrect) to a Question,
+     * e.g. on a Question/Answer site.
+     *
+     * @param Answer|Answer[] $suggestedAnswer
+     *
+     * @return static
+     *
+     * @see 
+     */
+    public function suggestedAnswer($suggestedAnswer)
+    {
+        return $this->setProperty('suggestedAnswer', $suggestedAnswer);
     }
 
     /**
@@ -63,7 +64,7 @@ class Question extends CreativeWork
      *
      * @return static
      *
-     * @see http://schema.org/acceptedAnswer
+     * @see 
      */
     public function acceptedAnswer($acceptedAnswer)
     {
@@ -71,18 +72,17 @@ class Question extends CreativeWork
     }
 
     /**
-     * An answer (possibly one of several, possibly incorrect) to a Question,
-     * e.g. on a Question/Answer site.
+     * The number of answers this question has received.
      *
-     * @param Answer|Answer[] $suggestedAnswer
+     * @param int|int[] $answerCount
      *
      * @return static
      *
-     * @see http://schema.org/suggestedAnswer
+     * @see 
      */
-    public function suggestedAnswer($suggestedAnswer)
+    public function answerCount($answerCount)
     {
-        return $this->setProperty('suggestedAnswer', $suggestedAnswer);
+        return $this->setProperty('answerCount', $answerCount);
     }
 
 }

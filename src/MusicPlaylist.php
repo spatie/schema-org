@@ -5,7 +5,7 @@ namespace Spatie\SchemaOrg;
 /**
  * A collection of music tracks in playlist form.
  *
- * @see http://schema.org/MusicPlaylist
+ * @see 
  */
 class MusicPlaylist extends CreativeWork
 {
@@ -16,7 +16,7 @@ class MusicPlaylist extends CreativeWork
      *
      * @return static
      *
-     * @see http://schema.org/numTracks
+     * @see 
      */
     public function numTracks($numTracks)
     {
@@ -30,7 +30,7 @@ class MusicPlaylist extends CreativeWork
      *
      * @return static
      *
-     * @see http://schema.org/tracks
+     * @see 
      */
     public function tracks($tracks)
     {
@@ -45,7 +45,7 @@ class MusicPlaylist extends CreativeWork
      *
      * @return static
      *
-     * @see http://schema.org/track
+     * @see 
      */
     public function track($track)
     {

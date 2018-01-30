@@ -5,7 +5,7 @@ namespace Spatie\SchemaOrg;
 /**
  * An airline flight.
  *
- * @see http://schema.org/Flight
+ * @see 
  */
 class Flight extends Intangible
 {
@@ -17,7 +17,7 @@ class Flight extends Intangible
      *
      * @return static
      *
-     * @see http://schema.org/carrier
+     * @see 
      */
     public function carrier($carrier)
     {
@@ -32,7 +32,7 @@ class Flight extends Intangible
      *
      * @return static
      *
-     * @see http://schema.org/seller
+     * @see 
      */
     public function seller($seller)
     {
@@ -48,7 +48,7 @@ class Flight extends Intangible
      *
      * @return static
      *
-     * @see http://schema.org/provider
+     * @see 
      */
     public function provider($provider)
     {
@@ -64,25 +64,11 @@ class Flight extends Intangible
      *
      * @return static
      *
-     * @see http://schema.org/flightNumber
+     * @see 
      */
     public function flightNumber($flightNumber)
     {
         return $this->setProperty('flightNumber', $flightNumber);
-    }
-
-    /**
-     * The expected departure time.
-     *
-     * @param \DateTimeInterface|\DateTimeInterface[] $departureTime
-     *
-     * @return static
-     *
-     * @see http://schema.org/departureTime
-     */
-    public function departureTime($departureTime)
-    {
-        return $this->setProperty('departureTime', $departureTime);
     }
 
     /**
@@ -92,7 +78,7 @@ class Flight extends Intangible
      *
      * @return static
      *
-     * @see http://schema.org/arrivalTime
+     * @see 
      */
     public function arrivalTime($arrivalTime)
     {
@@ -100,31 +86,17 @@ class Flight extends Intangible
     }
 
     /**
-     * The airport where the flight originates.
+     * Identifier of the flight's departure terminal.
      *
-     * @param Airport|Airport[] $departureAirport
-     *
-     * @return static
-     *
-     * @see http://schema.org/departureAirport
-     */
-    public function departureAirport($departureAirport)
-    {
-        return $this->setProperty('departureAirport', $departureAirport);
-    }
-
-    /**
-     * The airport where the flight terminates.
-     *
-     * @param Airport|Airport[] $arrivalAirport
+     * @param string|string[] $departureTerminal
      *
      * @return static
      *
-     * @see http://schema.org/arrivalAirport
+     * @see 
      */
-    public function arrivalAirport($arrivalAirport)
+    public function departureTerminal($departureTerminal)
     {
-        return $this->setProperty('arrivalAirport', $arrivalAirport);
+        return $this->setProperty('departureTerminal', $departureTerminal);
     }
 
     /**
@@ -134,7 +106,7 @@ class Flight extends Intangible
      *
      * @return static
      *
-     * @see http://schema.org/departureGate
+     * @see 
      */
     public function departureGate($departureGate)
     {
@@ -142,17 +114,73 @@ class Flight extends Intangible
     }
 
     /**
-     * Identifier of the flight's arrival gate.
+     * The airport where the flight originates.
      *
-     * @param string|string[] $arrivalGate
+     * @param Airport|Airport[] $departureAirport
      *
      * @return static
      *
-     * @see http://schema.org/arrivalGate
+     * @see 
      */
-    public function arrivalGate($arrivalGate)
+    public function departureAirport($departureAirport)
     {
-        return $this->setProperty('arrivalGate', $arrivalGate);
+        return $this->setProperty('departureAirport', $departureAirport);
+    }
+
+    /**
+     * The expected departure time.
+     *
+     * @param \DateTimeInterface|\DateTimeInterface[] $departureTime
+     *
+     * @return static
+     *
+     * @see 
+     */
+    public function departureTime($departureTime)
+    {
+        return $this->setProperty('departureTime', $departureTime);
+    }
+
+    /**
+     * The estimated time the flight will take.
+     *
+     * @param string|string[]|Duration|Duration[] $estimatedFlightDuration
+     *
+     * @return static
+     *
+     * @see 
+     */
+    public function estimatedFlightDuration($estimatedFlightDuration)
+    {
+        return $this->setProperty('estimatedFlightDuration', $estimatedFlightDuration);
+    }
+
+    /**
+     * Identifier of the flight's arrival terminal.
+     *
+     * @param string|string[] $arrivalTerminal
+     *
+     * @return static
+     *
+     * @see 
+     */
+    public function arrivalTerminal($arrivalTerminal)
+    {
+        return $this->setProperty('arrivalTerminal', $arrivalTerminal);
+    }
+
+    /**
+     * The time when a passenger can check into the flight online.
+     *
+     * @param \DateTimeInterface|\DateTimeInterface[] $webCheckinTime
+     *
+     * @return static
+     *
+     * @see 
+     */
+    public function webCheckinTime($webCheckinTime)
+    {
+        return $this->setProperty('webCheckinTime', $webCheckinTime);
     }
 
     /**
@@ -163,7 +191,7 @@ class Flight extends Intangible
      *
      * @return static
      *
-     * @see http://schema.org/boardingPolicy
+     * @see 
      */
     public function boardingPolicy($boardingPolicy)
     {
@@ -171,73 +199,31 @@ class Flight extends Intangible
     }
 
     /**
-     * Identifier of the flight's departure terminal.
+     * Identifier of the flight's arrival gate.
      *
-     * @param string|string[] $departureTerminal
+     * @param string|string[] $arrivalGate
      *
      * @return static
      *
-     * @see http://schema.org/departureTerminal
+     * @see 
      */
-    public function departureTerminal($departureTerminal)
+    public function arrivalGate($arrivalGate)
     {
-        return $this->setProperty('departureTerminal', $departureTerminal);
+        return $this->setProperty('arrivalGate', $arrivalGate);
     }
 
     /**
-     * Identifier of the flight's arrival terminal.
+     * The airport where the flight terminates.
      *
-     * @param string|string[] $arrivalTerminal
-     *
-     * @return static
-     *
-     * @see http://schema.org/arrivalTerminal
-     */
-    public function arrivalTerminal($arrivalTerminal)
-    {
-        return $this->setProperty('arrivalTerminal', $arrivalTerminal);
-    }
-
-    /**
-     * The kind of aircraft (e.g., "Boeing 747").
-     *
-     * @param string|string[]|Vehicle|Vehicle[] $aircraft
+     * @param Airport|Airport[] $arrivalAirport
      *
      * @return static
      *
-     * @see http://schema.org/aircraft
+     * @see 
      */
-    public function aircraft($aircraft)
+    public function arrivalAirport($arrivalAirport)
     {
-        return $this->setProperty('aircraft', $aircraft);
-    }
-
-    /**
-     * Description of the meals that will be provided or available for purchase.
-     *
-     * @param string|string[] $mealService
-     *
-     * @return static
-     *
-     * @see http://schema.org/mealService
-     */
-    public function mealService($mealService)
-    {
-        return $this->setProperty('mealService', $mealService);
-    }
-
-    /**
-     * The estimated time the flight will take.
-     *
-     * @param string|string[]|Duration|Duration[] $estimatedFlightDuration
-     *
-     * @return static
-     *
-     * @see http://schema.org/estimatedFlightDuration
-     */
-    public function estimatedFlightDuration($estimatedFlightDuration)
-    {
-        return $this->setProperty('estimatedFlightDuration', $estimatedFlightDuration);
+        return $this->setProperty('arrivalAirport', $arrivalAirport);
     }
 
     /**
@@ -247,7 +233,7 @@ class Flight extends Intangible
      *
      * @return static
      *
-     * @see http://schema.org/flightDistance
+     * @see 
      */
     public function flightDistance($flightDistance)
     {
@@ -255,17 +241,31 @@ class Flight extends Intangible
     }
 
     /**
-     * The time when a passenger can check into the flight online.
+     * Description of the meals that will be provided or available for purchase.
      *
-     * @param \DateTimeInterface|\DateTimeInterface[] $webCheckinTime
+     * @param string|string[] $mealService
      *
      * @return static
      *
-     * @see http://schema.org/webCheckinTime
+     * @see 
      */
-    public function webCheckinTime($webCheckinTime)
+    public function mealService($mealService)
     {
-        return $this->setProperty('webCheckinTime', $webCheckinTime);
+        return $this->setProperty('mealService', $mealService);
+    }
+
+    /**
+     * The kind of aircraft (e.g., "Boeing 747").
+     *
+     * @param string|string[]|Vehicle|Vehicle[] $aircraft
+     *
+     * @return static
+     *
+     * @see 
+     */
+    public function aircraft($aircraft)
+    {
+        return $this->setProperty('aircraft', $aircraft);
     }
 
 }

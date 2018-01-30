@@ -5,7 +5,7 @@ namespace Spatie\SchemaOrg;
 /**
  * A map.
  *
- * @see http://schema.org/Map
+ * @see 
  */
 class Map extends CreativeWork
 {
@@ -16,7 +16,7 @@ class Map extends CreativeWork
      *
      * @return static
      *
-     * @see http://schema.org/mapType
+     * @see 
      */
     public function mapType($mapType)
     {

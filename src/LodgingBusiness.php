@@ -5,24 +5,10 @@ namespace Spatie\SchemaOrg;
 /**
  * A lodging business, such as a motel, hotel, or inn.
  *
- * @see http://schema.org/LodgingBusiness
+ * @see 
  */
 class LodgingBusiness extends LocalBusiness
 {
-    /**
-     * An intended audience, i.e. a group for whom something was created.
-     *
-     * @param Audience|Audience[] $audience
-     *
-     * @return static
-     *
-     * @see http://schema.org/audience
-     */
-    public function audience($audience)
-    {
-        return $this->setProperty('audience', $audience);
-    }
-
     /**
      * A language someone may use with the item. Please use one of the language
      * codes from the [IETF BCP 47 standard](http://tools.ietf.org/html/bcp47).
@@ -32,7 +18,7 @@ class LodgingBusiness extends LocalBusiness
      *
      * @return static
      *
-     * @see http://schema.org/availableLanguage
+     * @see 
      */
     public function availableLanguage($availableLanguage)
     {
@@ -40,17 +26,17 @@ class LodgingBusiness extends LocalBusiness
     }
 
     /**
-     * The earliest someone may check into a lodging establishment.
+     * An intended audience, i.e. a group for whom something was created.
      *
-     * @param \DateTimeInterface|\DateTimeInterface[] $checkinTime
+     * @param Audience|Audience[] $audience
      *
      * @return static
      *
-     * @see http://schema.org/checkinTime
+     * @see 
      */
-    public function checkinTime($checkinTime)
+    public function audience($audience)
     {
-        return $this->setProperty('checkinTime', $checkinTime);
+        return $this->setProperty('audience', $audience);
     }
 
     /**
@@ -60,11 +46,40 @@ class LodgingBusiness extends LocalBusiness
      *
      * @return static
      *
-     * @see http://schema.org/checkoutTime
+     * @see 
      */
     public function checkoutTime($checkoutTime)
     {
         return $this->setProperty('checkoutTime', $checkoutTime);
+    }
+
+    /**
+     * The earliest someone may check into a lodging establishment.
+     *
+     * @param \DateTimeInterface|\DateTimeInterface[] $checkinTime
+     *
+     * @return static
+     *
+     * @see 
+     */
+    public function checkinTime($checkinTime)
+    {
+        return $this->setProperty('checkinTime', $checkinTime);
+    }
+
+    /**
+     * Indicates whether pets are allowed to enter the accommodation or lodging
+     * business. More detailed information can be put in a text value.
+     *
+     * @param bool|bool[]|string|string[] $petsAllowed
+     *
+     * @return static
+     *
+     * @see 
+     */
+    public function petsAllowed($petsAllowed)
+    {
+        return $this->setProperty('petsAllowed', $petsAllowed);
     }
 
     /**
@@ -77,26 +92,11 @@ class LodgingBusiness extends LocalBusiness
      *
      * @return static
      *
-     * @see http://schema.org/amenityFeature
+     * @see 
      */
     public function amenityFeature($amenityFeature)
     {
         return $this->setProperty('amenityFeature', $amenityFeature);
-    }
-
-    /**
-     * Indicates whether pets are allowed to enter the accommodation or lodging
-     * business. More detailed information can be put in a text value.
-     *
-     * @param bool|bool[]|string|string[] $petsAllowed
-     *
-     * @return static
-     *
-     * @see http://schema.org/petsAllowed
-     */
-    public function petsAllowed($petsAllowed)
-    {
-        return $this->setProperty('petsAllowed', $petsAllowed);
     }
 
     /**
@@ -109,7 +109,7 @@ class LodgingBusiness extends LocalBusiness
      *
      * @return static
      *
-     * @see http://schema.org/starRating
+     * @see 
      */
     public function starRating($starRating)
     {

@@ -6,7 +6,7 @@ namespace Spatie\SchemaOrg;
  * The act of transferring/moving (abstract or concrete) animate or inanimate
  * objects from one place to another.
  *
- * @see http://schema.org/TransferAction
+ * @see 
  */
 class TransferAction extends Action
 {
@@ -18,7 +18,7 @@ class TransferAction extends Action
      *
      * @return static
      *
-     * @see http://schema.org/fromLocation
+     * @see 
      */
     public function fromLocation($fromLocation)
     {
@@ -33,7 +33,7 @@ class TransferAction extends Action
      *
      * @return static
      *
-     * @see http://schema.org/toLocation
+     * @see 
      */
     public function toLocation($toLocation)
     {

@@ -6,7 +6,7 @@ namespace Spatie\SchemaOrg;
  * The act of conveying information to another person via a communication medium
  * (instrument) such as speech, email, or telephone conversation.
  *
- * @see http://schema.org/CommunicateAction
+ * @see 
  */
 class CommunicateAction extends InteractAction
 {
@@ -17,7 +17,7 @@ class CommunicateAction extends InteractAction
      *
      * @return static
      *
-     * @see http://schema.org/about
+     * @see 
      */
     public function about($about)
     {
@@ -34,7 +34,7 @@ class CommunicateAction extends InteractAction
      *
      * @return static
      *
-     * @see http://schema.org/inLanguage
+     * @see 
      */
     public function inLanguage($inLanguage)
     {
@@ -48,7 +48,7 @@ class CommunicateAction extends InteractAction
      *
      * @return static
      *
-     * @see http://schema.org/language
+     * @see 
      */
     public function language($language)
     {
@@ -63,7 +63,7 @@ class CommunicateAction extends InteractAction
      *
      * @return static
      *
-     * @see http://schema.org/recipient
+     * @see 
      */
     public function recipient($recipient)
     {

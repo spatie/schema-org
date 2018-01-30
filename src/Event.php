@@ -7,7 +7,7 @@ namespace Spatie\SchemaOrg;
  * lecture, or festival. Ticketing information may be added via the [[offers]]
  * property. Repeated events may be structured as separate Event objects.
  *
- * @see http://schema.org/Event
+ * @see 
  */
 class Event extends Thing
 {
@@ -18,7 +18,7 @@ class Event extends Thing
      *
      * @return static
      *
-     * @see http://schema.org/about
+     * @see 
      */
     public function about($about)
     {
@@ -34,7 +34,7 @@ class Event extends Thing
      *
      * @return static
      *
-     * @see http://schema.org/actor
+     * @see 
      */
     public function actor($actor)
     {
@@ -49,7 +49,7 @@ class Event extends Thing
      *
      * @return static
      *
-     * @see http://schema.org/aggregateRating
+     * @see 
      */
     public function aggregateRating($aggregateRating)
     {
@@ -63,7 +63,7 @@ class Event extends Thing
      *
      * @return static
      *
-     * @see http://schema.org/organizer
+     * @see 
      */
     public function organizer($organizer)
     {
@@ -77,7 +77,7 @@ class Event extends Thing
      *
      * @return static
      *
-     * @see http://schema.org/attendee
+     * @see 
      */
     public function attendee($attendee)
     {
@@ -91,7 +91,7 @@ class Event extends Thing
      *
      * @return static
      *
-     * @see http://schema.org/attendees
+     * @see 
      */
     public function attendees($attendees)
     {
@@ -105,7 +105,7 @@ class Event extends Thing
      *
      * @return static
      *
-     * @see http://schema.org/audience
+     * @see 
      */
     public function audience($audience)
     {
@@ -119,7 +119,7 @@ class Event extends Thing
      *
      * @return static
      *
-     * @see http://schema.org/contributor
+     * @see 
      */
     public function contributor($contributor)
     {
@@ -135,7 +135,7 @@ class Event extends Thing
      *
      * @return static
      *
-     * @see http://schema.org/director
+     * @see 
      */
     public function director($director)
     {
@@ -149,7 +149,7 @@ class Event extends Thing
      *
      * @return static
      *
-     * @see http://schema.org/doorTime
+     * @see 
      */
     public function doorTime($doorTime)
     {
@@ -164,7 +164,7 @@ class Event extends Thing
      *
      * @return static
      *
-     * @see http://schema.org/duration
+     * @see 
      */
     public function duration($duration)
     {
@@ -179,7 +179,7 @@ class Event extends Thing
      *
      * @return static
      *
-     * @see http://schema.org/endDate
+     * @see 
      */
     public function endDate($endDate)
     {
@@ -194,7 +194,7 @@ class Event extends Thing
      *
      * @return static
      *
-     * @see http://schema.org/eventStatus
+     * @see 
      */
     public function eventStatus($eventStatus)
     {
@@ -208,7 +208,7 @@ class Event extends Thing
      *
      * @return static
      *
-     * @see http://schema.org/isAccessibleForFree
+     * @see 
      */
     public function isAccessibleForFree($isAccessibleForFree)
     {
@@ -225,7 +225,7 @@ class Event extends Thing
      *
      * @return static
      *
-     * @see http://schema.org/inLanguage
+     * @see 
      */
     public function inLanguage($inLanguage)
     {
@@ -240,25 +240,11 @@ class Event extends Thing
      *
      * @return static
      *
-     * @see http://schema.org/location
+     * @see 
      */
     public function location($location)
     {
         return $this->setProperty('location', $location);
-    }
-
-    /**
-     * The total number of individuals that may attend an event or venue.
-     *
-     * @param int|int[] $maximumAttendeeCapacity
-     *
-     * @return static
-     *
-     * @see http://schema.org/maximumAttendeeCapacity
-     */
-    public function maximumAttendeeCapacity($maximumAttendeeCapacity)
-    {
-        return $this->setProperty('maximumAttendeeCapacity', $maximumAttendeeCapacity);
     }
 
     /**
@@ -268,11 +254,25 @@ class Event extends Thing
      *
      * @return static
      *
-     * @see http://schema.org/remainingAttendeeCapacity
+     * @see 
      */
     public function remainingAttendeeCapacity($remainingAttendeeCapacity)
     {
         return $this->setProperty('remainingAttendeeCapacity', $remainingAttendeeCapacity);
+    }
+
+    /**
+     * The total number of individuals that may attend an event or venue.
+     *
+     * @param int|int[] $maximumAttendeeCapacity
+     *
+     * @return static
+     *
+     * @see 
+     */
+    public function maximumAttendeeCapacity($maximumAttendeeCapacity)
+    {
+        return $this->setProperty('maximumAttendeeCapacity', $maximumAttendeeCapacity);
     }
 
     /**
@@ -284,7 +284,7 @@ class Event extends Thing
      *
      * @return static
      *
-     * @see http://schema.org/offers
+     * @see 
      */
     public function offers($offers)
     {
@@ -299,7 +299,7 @@ class Event extends Thing
      *
      * @return static
      *
-     * @see http://schema.org/performer
+     * @see 
      */
     public function performer($performer)
     {
@@ -314,7 +314,7 @@ class Event extends Thing
      *
      * @return static
      *
-     * @see http://schema.org/performers
+     * @see 
      */
     public function performers($performers)
     {
@@ -332,7 +332,7 @@ class Event extends Thing
      *
      * @return static
      *
-     * @see http://schema.org/previousStartDate
+     * @see 
      */
     public function previousStartDate($previousStartDate)
     {
@@ -346,7 +346,7 @@ class Event extends Thing
      *
      * @return static
      *
-     * @see http://schema.org/recordedIn
+     * @see 
      */
     public function recordedIn($recordedIn)
     {
@@ -360,7 +360,7 @@ class Event extends Thing
      *
      * @return static
      *
-     * @see http://schema.org/review
+     * @see 
      */
     public function review($review)
     {
@@ -376,7 +376,7 @@ class Event extends Thing
      *
      * @return static
      *
-     * @see http://schema.org/sponsor
+     * @see 
      */
     public function sponsor($sponsor)
     {
@@ -391,7 +391,7 @@ class Event extends Thing
      *
      * @return static
      *
-     * @see http://schema.org/funder
+     * @see 
      */
     public function funder($funder)
     {
@@ -406,11 +406,26 @@ class Event extends Thing
      *
      * @return static
      *
-     * @see http://schema.org/startDate
+     * @see 
      */
     public function startDate($startDate)
     {
         return $this->setProperty('startDate', $startDate);
+    }
+
+    /**
+     * Events that are a part of this event. For example, a conference event
+     * includes many presentations, each subEvents of the conference.
+     *
+     * @param Event|Event[] $subEvents
+     *
+     * @return static
+     *
+     * @see 
+     */
+    public function subEvents($subEvents)
+    {
+        return $this->setProperty('subEvents', $subEvents);
     }
 
     /**
@@ -422,26 +437,11 @@ class Event extends Thing
      *
      * @return static
      *
-     * @see http://schema.org/subEvent
+     * @see 
      */
     public function subEvent($subEvent)
     {
         return $this->setProperty('subEvent', $subEvent);
-    }
-
-    /**
-     * Events that are a part of this event. For example, a conference event
-     * includes many presentations, each subEvents of the conference.
-     *
-     * @param Event|Event[] $subEvents
-     *
-     * @return static
-     *
-     * @see http://schema.org/subEvents
-     */
-    public function subEvents($subEvents)
-    {
-        return $this->setProperty('subEvents', $subEvents);
     }
 
     /**
@@ -453,7 +453,7 @@ class Event extends Thing
      *
      * @return static
      *
-     * @see http://schema.org/superEvent
+     * @see 
      */
     public function superEvent($superEvent)
     {
@@ -467,26 +467,11 @@ class Event extends Thing
      *
      * @return static
      *
-     * @see http://schema.org/typicalAgeRange
+     * @see 
      */
     public function typicalAgeRange($typicalAgeRange)
     {
         return $this->setProperty('typicalAgeRange', $typicalAgeRange);
-    }
-
-    /**
-     * A work performed in some event, for example a play performed in a
-     * TheaterEvent.
-     *
-     * @param CreativeWork|CreativeWork[] $workPerformed
-     *
-     * @return static
-     *
-     * @see http://schema.org/workPerformed
-     */
-    public function workPerformed($workPerformed)
-    {
-        return $this->setProperty('workPerformed', $workPerformed);
     }
 
     /**
@@ -498,11 +483,26 @@ class Event extends Thing
      *
      * @return static
      *
-     * @see http://schema.org/workFeatured
+     * @see 
      */
     public function workFeatured($workFeatured)
     {
         return $this->setProperty('workFeatured', $workFeatured);
+    }
+
+    /**
+     * A work performed in some event, for example a play performed in a
+     * TheaterEvent.
+     *
+     * @param CreativeWork|CreativeWork[] $workPerformed
+     *
+     * @return static
+     *
+     * @see 
+     */
+    public function workPerformed($workPerformed)
+    {
+        return $this->setProperty('workPerformed', $workPerformed);
     }
 
     /**
@@ -514,7 +514,7 @@ class Event extends Thing
      *
      * @return static
      *
-     * @see http://schema.org/translator
+     * @see 
      */
     public function translator($translator)
     {
@@ -529,7 +529,7 @@ class Event extends Thing
      *
      * @return static
      *
-     * @see http://schema.org/composer
+     * @see 
      */
     public function composer($composer)
     {

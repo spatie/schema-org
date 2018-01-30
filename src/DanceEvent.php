@@ -5,7 +5,7 @@ namespace Spatie\SchemaOrg;
 /**
  * Event type: A social dance.
  *
- * @see http://schema.org/DanceEvent
+ * @see 
  */
 class DanceEvent extends Event
 {

@@ -5,7 +5,7 @@ namespace Spatie\SchemaOrg;
 /**
  * The most generic type of item.
  *
- * @see http://schema.org/Thing
+ * @see 
  */
 class Thing extends BaseType
 {
@@ -21,7 +21,7 @@ class Thing extends BaseType
      *
      * @return static
      *
-     * @see http://schema.org/additionalType
+     * @see 
      */
     public function additionalType($additionalType)
     {
@@ -35,7 +35,7 @@ class Thing extends BaseType
      *
      * @return static
      *
-     * @see http://schema.org/alternateName
+     * @see 
      */
     public function alternateName($alternateName)
     {
@@ -49,7 +49,7 @@ class Thing extends BaseType
      *
      * @return static
      *
-     * @see http://schema.org/description
+     * @see 
      */
     public function description($description)
     {
@@ -66,7 +66,7 @@ class Thing extends BaseType
      *
      * @return static
      *
-     * @see http://schema.org/disambiguatingDescription
+     * @see 
      */
     public function disambiguatingDescription($disambiguatingDescription)
     {
@@ -81,7 +81,7 @@ class Thing extends BaseType
      *
      * @return static
      *
-     * @see http://schema.org/image
+     * @see 
      */
     public function image($image)
     {
@@ -97,7 +97,7 @@ class Thing extends BaseType
      *
      * @return static
      *
-     * @see http://schema.org/mainEntityOfPage
+     * @see 
      */
     public function mainEntityOfPage($mainEntityOfPage)
     {
@@ -111,7 +111,7 @@ class Thing extends BaseType
      *
      * @return static
      *
-     * @see http://schema.org/name
+     * @see 
      */
     public function name($name)
     {
@@ -127,7 +127,7 @@ class Thing extends BaseType
      *
      * @return static
      *
-     * @see http://schema.org/sameAs
+     * @see 
      */
     public function sameAs($sameAs)
     {
@@ -141,7 +141,7 @@ class Thing extends BaseType
      *
      * @return static
      *
-     * @see http://schema.org/url
+     * @see 
      */
     public function url($url)
     {
@@ -156,7 +156,7 @@ class Thing extends BaseType
      *
      * @return static
      *
-     * @see http://schema.org/potentialAction
+     * @see 
      */
     public function potentialAction($potentialAction)
     {
@@ -174,7 +174,7 @@ class Thing extends BaseType
      *
      * @return static
      *
-     * @see http://schema.org/identifier
+     * @see 
      */
     public function identifier($identifier)
     {

@@ -12,7 +12,7 @@ namespace Spatie\SchemaOrg;
  * * [[ReceiveAction]]: Unlike ReceiveAction, TakeAction implies that ownership
  * has been transfered.
  *
- * @see http://schema.org/TakeAction
+ * @see 
  */
 class TakeAction extends TransferAction
 {

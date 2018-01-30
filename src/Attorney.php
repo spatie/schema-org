@@ -8,7 +8,7 @@ namespace Spatie\SchemaOrg;
  * This type is deprecated - [[LegalService]] is more inclusive and less
  * ambiguous.
  *
- * @see http://schema.org/Attorney
+ * @see 
  */
 class Attorney extends LegalService
 {

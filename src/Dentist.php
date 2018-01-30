@@ -5,7 +5,7 @@ namespace Spatie\SchemaOrg;
 /**
  * A dentist.
  *
- * @see http://schema.org/Dentist
+ * @see 
  */
 class Dentist extends MedicalOrganization
 {

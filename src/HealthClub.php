@@ -5,7 +5,7 @@ namespace Spatie\SchemaOrg;
 /**
  * A health club.
  *
- * @see http://schema.org/HealthClub
+ * @see 
  */
 class HealthClub extends HealthAndBeautyBusiness
 {

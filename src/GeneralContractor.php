@@ -5,7 +5,7 @@ namespace Spatie\SchemaOrg;
 /**
  * A general contractor.
  *
- * @see http://schema.org/GeneralContractor
+ * @see 
  */
 class GeneralContractor extends HomeAndConstructionBusiness
 {

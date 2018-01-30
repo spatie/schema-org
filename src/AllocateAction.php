@@ -5,7 +5,7 @@ namespace Spatie\SchemaOrg;
 /**
  * The act of organizing tasks/objects/events by associating resources to it.
  *
- * @see http://schema.org/AllocateAction
+ * @see 
  */
 class AllocateAction extends OrganizeAction
 {

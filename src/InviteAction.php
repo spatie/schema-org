@@ -5,7 +5,7 @@ namespace Spatie\SchemaOrg;
 /**
  * The act of asking someone to attend an event. Reciprocal of RsvpAction.
  *
- * @see http://schema.org/InviteAction
+ * @see 
  */
 class InviteAction extends CommunicateAction
 {
@@ -17,7 +17,7 @@ class InviteAction extends CommunicateAction
      *
      * @return static
      *
-     * @see http://schema.org/event
+     * @see 
      */
     public function event($event)
     {

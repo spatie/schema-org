@@ -5,7 +5,7 @@ namespace Spatie\SchemaOrg;
 /**
  * A gas station.
  *
- * @see http://schema.org/GasStation
+ * @see 
  */
 class GasStation extends AutomotiveBusiness
 {

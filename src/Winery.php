@@ -5,7 +5,7 @@ namespace Spatie\SchemaOrg;
 /**
  * A winery.
  *
- * @see http://schema.org/Winery
+ * @see 
  */
 class Winery extends FoodEstablishment
 {

@@ -5,7 +5,7 @@ namespace Spatie\SchemaOrg;
 /**
  * A moving company.
  *
- * @see http://schema.org/MovingCompany
+ * @see 
  */
 class MovingCompany extends HomeAndConstructionBusiness
 {

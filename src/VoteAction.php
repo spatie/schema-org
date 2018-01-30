@@ -6,7 +6,7 @@ namespace Spatie\SchemaOrg;
  * The act of expressing a preference from a fixed/finite/structured set of
  * choices/options.
  *
- * @see http://schema.org/VoteAction
+ * @see 
  */
 class VoteAction extends ChooseAction
 {
@@ -17,7 +17,7 @@ class VoteAction extends ChooseAction
      *
      * @return static
      *
-     * @see http://schema.org/candidate
+     * @see 
      */
     public function candidate($candidate)
     {

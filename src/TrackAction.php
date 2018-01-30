@@ -12,7 +12,7 @@ namespace Spatie\SchemaOrg;
  * * [[SubscribeAction]]: Unlike SubscribeAction, TrackAction refers to  the
  * interest on the location of innanimate objects.
  *
- * @see http://schema.org/TrackAction
+ * @see 
  */
 class TrackAction extends FindAction
 {
@@ -23,7 +23,7 @@ class TrackAction extends FindAction
      *
      * @return static
      *
-     * @see http://schema.org/deliveryMethod
+     * @see 
      */
     public function deliveryMethod($deliveryMethod)
     {

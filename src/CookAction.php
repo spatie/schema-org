@@ -5,25 +5,10 @@ namespace Spatie\SchemaOrg;
 /**
  * The act of producing/preparing food.
  *
- * @see http://schema.org/CookAction
+ * @see 
  */
 class CookAction extends CreateAction
 {
-    /**
-     * A sub property of location. The specific food establishment where the
-     * action occurred.
-     *
-     * @param FoodEstablishment|FoodEstablishment[]|Place|Place[] $foodEstablishment
-     *
-     * @return static
-     *
-     * @see http://schema.org/foodEstablishment
-     */
-    public function foodEstablishment($foodEstablishment)
-    {
-        return $this->setProperty('foodEstablishment', $foodEstablishment);
-    }
-
     /**
      * A sub property of location. The specific food event where the action
      * occurred.
@@ -32,11 +17,26 @@ class CookAction extends CreateAction
      *
      * @return static
      *
-     * @see http://schema.org/foodEvent
+     * @see 
      */
     public function foodEvent($foodEvent)
     {
         return $this->setProperty('foodEvent', $foodEvent);
+    }
+
+    /**
+     * A sub property of location. The specific food establishment where the
+     * action occurred.
+     *
+     * @param FoodEstablishment|FoodEstablishment[]|Place|Place[] $foodEstablishment
+     *
+     * @return static
+     *
+     * @see 
+     */
+    public function foodEstablishment($foodEstablishment)
+    {
+        return $this->setProperty('foodEstablishment', $foodEstablishment);
     }
 
     /**
@@ -47,7 +47,7 @@ class CookAction extends CreateAction
      *
      * @return static
      *
-     * @see http://schema.org/recipe
+     * @see 
      */
     public function recipe($recipe)
     {

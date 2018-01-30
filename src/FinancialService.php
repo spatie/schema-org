@@ -5,7 +5,7 @@ namespace Spatie\SchemaOrg;
 /**
  * Financial services business.
  *
- * @see http://schema.org/FinancialService
+ * @see 
  */
 class FinancialService extends LocalBusiness
 {
@@ -17,7 +17,7 @@ class FinancialService extends LocalBusiness
      *
      * @return static
      *
-     * @see http://schema.org/feesAndCommissionsSpecification
+     * @see 
      */
     public function feesAndCommissionsSpecification($feesAndCommissionsSpecification)
     {

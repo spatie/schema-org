@@ -5,24 +5,10 @@ namespace Spatie\SchemaOrg;
 /**
  * Reference documentation for application programming interfaces (APIs).
  *
- * @see http://schema.org/APIReference
+ * @see 
  */
 class APIReference extends TechArticle
 {
-    /**
-     * Library file name e.g., mscorlib.dll, system.web.dll.
-     *
-     * @param string|string[] $assembly
-     *
-     * @return static
-     *
-     * @see http://schema.org/assembly
-     */
-    public function assembly($assembly)
-    {
-        return $this->setProperty('assembly', $assembly);
-    }
-
     /**
      * Library file name e.g., mscorlib.dll, system.web.dll.
      *
@@ -30,11 +16,25 @@ class APIReference extends TechArticle
      *
      * @return static
      *
-     * @see http://schema.org/executableLibraryName
+     * @see 
      */
     public function executableLibraryName($executableLibraryName)
     {
         return $this->setProperty('executableLibraryName', $executableLibraryName);
+    }
+
+    /**
+     * Library file name e.g., mscorlib.dll, system.web.dll.
+     *
+     * @param string|string[] $assembly
+     *
+     * @return static
+     *
+     * @see 
+     */
+    public function assembly($assembly)
+    {
+        return $this->setProperty('assembly', $assembly);
     }
 
     /**
@@ -44,7 +44,7 @@ class APIReference extends TechArticle
      *
      * @return static
      *
-     * @see http://schema.org/assemblyVersion
+     * @see 
      */
     public function assemblyVersion($assemblyVersion)
     {
@@ -58,7 +58,7 @@ class APIReference extends TechArticle
      *
      * @return static
      *
-     * @see http://schema.org/programmingModel
+     * @see 
      */
     public function programmingModel($programmingModel)
     {
@@ -72,7 +72,7 @@ class APIReference extends TechArticle
      *
      * @return static
      *
-     * @see http://schema.org/targetPlatform
+     * @see 
      */
     public function targetPlatform($targetPlatform)
     {

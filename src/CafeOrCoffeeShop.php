@@ -5,7 +5,7 @@ namespace Spatie\SchemaOrg;
 /**
  * A cafe or coffee shop.
  *
- * @see http://schema.org/CafeOrCoffeeShop
+ * @see 
  */
 class CafeOrCoffeeShop extends FoodEstablishment
 {

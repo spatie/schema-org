@@ -11,7 +11,7 @@ namespace Spatie\SchemaOrg;
  * reservations. For offers of tickets, restaurant reservations, flights, or
  * rental cars, use [[Offer]].
  *
- * @see http://schema.org/Reservation
+ * @see 
  */
 class Reservation extends Intangible
 {
@@ -22,7 +22,7 @@ class Reservation extends Intangible
      *
      * @return static
      *
-     * @see http://schema.org/reservationId
+     * @see 
      */
     public function reservationId($reservationId)
     {
@@ -36,7 +36,7 @@ class Reservation extends Intangible
      *
      * @return static
      *
-     * @see http://schema.org/reservationStatus
+     * @see 
      */
     public function reservationStatus($reservationStatus)
     {
@@ -50,25 +50,11 @@ class Reservation extends Intangible
      *
      * @return static
      *
-     * @see http://schema.org/reservationFor
+     * @see 
      */
     public function reservationFor($reservationFor)
     {
         return $this->setProperty('reservationFor', $reservationFor);
-    }
-
-    /**
-     * The person or organization the reservation or ticket is for.
-     *
-     * @param Person|Person[]|Organization|Organization[] $underName
-     *
-     * @return static
-     *
-     * @see http://schema.org/underName
-     */
-    public function underName($underName)
-    {
-        return $this->setProperty('underName', $underName);
     }
 
     /**
@@ -80,11 +66,25 @@ class Reservation extends Intangible
      *
      * @return static
      *
-     * @see http://schema.org/provider
+     * @see 
      */
     public function provider($provider)
     {
         return $this->setProperty('provider', $provider);
+    }
+
+    /**
+     * The person or organization the reservation or ticket is for.
+     *
+     * @param Person|Person[]|Organization|Organization[] $underName
+     *
+     * @return static
+     *
+     * @see 
+     */
+    public function underName($underName)
+    {
+        return $this->setProperty('underName', $underName);
     }
 
     /**
@@ -95,11 +95,40 @@ class Reservation extends Intangible
      *
      * @return static
      *
-     * @see http://schema.org/bookingAgent
+     * @see 
      */
     public function bookingAgent($bookingAgent)
     {
         return $this->setProperty('bookingAgent', $bookingAgent);
+    }
+
+    /**
+     * A ticket associated with the reservation.
+     *
+     * @param Ticket|Ticket[] $reservedTicket
+     *
+     * @return static
+     *
+     * @see 
+     */
+    public function reservedTicket($reservedTicket)
+    {
+        return $this->setProperty('reservedTicket', $reservedTicket);
+    }
+
+    /**
+     * Any membership in a frequent flyer, hotel loyalty program, etc. being
+     * applied to the reservation.
+     *
+     * @param ProgramMembership|ProgramMembership[] $programMembershipUsed
+     *
+     * @return static
+     *
+     * @see 
+     */
+    public function programMembershipUsed($programMembershipUsed)
+    {
+        return $this->setProperty('programMembershipUsed', $programMembershipUsed);
     }
 
     /**
@@ -109,7 +138,7 @@ class Reservation extends Intangible
      *
      * @return static
      *
-     * @see http://schema.org/bookingTime
+     * @see 
      */
     public function bookingTime($bookingTime)
     {
@@ -123,55 +152,11 @@ class Reservation extends Intangible
      *
      * @return static
      *
-     * @see http://schema.org/modifiedTime
+     * @see 
      */
     public function modifiedTime($modifiedTime)
     {
         return $this->setProperty('modifiedTime', $modifiedTime);
-    }
-
-    /**
-     * Any membership in a frequent flyer, hotel loyalty program, etc. being
-     * applied to the reservation.
-     *
-     * @param ProgramMembership|ProgramMembership[] $programMembershipUsed
-     *
-     * @return static
-     *
-     * @see http://schema.org/programMembershipUsed
-     */
-    public function programMembershipUsed($programMembershipUsed)
-    {
-        return $this->setProperty('programMembershipUsed', $programMembershipUsed);
-    }
-
-    /**
-     * A ticket associated with the reservation.
-     *
-     * @param Ticket|Ticket[] $reservedTicket
-     *
-     * @return static
-     *
-     * @see http://schema.org/reservedTicket
-     */
-    public function reservedTicket($reservedTicket)
-    {
-        return $this->setProperty('reservedTicket', $reservedTicket);
-    }
-
-    /**
-     * The total price for the reservation or ticket, including applicable
-     * taxes, shipping, etc.
-     *
-     * @param float|float[]|int|int[]|string|string[]|PriceSpecification|PriceSpecification[] $totalPrice
-     *
-     * @return static
-     *
-     * @see http://schema.org/totalPrice
-     */
-    public function totalPrice($totalPrice)
-    {
-        return $this->setProperty('totalPrice', $totalPrice);
     }
 
     /**
@@ -182,11 +167,26 @@ class Reservation extends Intangible
      *
      * @return static
      *
-     * @see http://schema.org/priceCurrency
+     * @see 
      */
     public function priceCurrency($priceCurrency)
     {
         return $this->setProperty('priceCurrency', $priceCurrency);
+    }
+
+    /**
+     * The total price for the reservation or ticket, including applicable
+     * taxes, shipping, etc.
+     *
+     * @param float|float[]|int|int[]|string|string[]|PriceSpecification|PriceSpecification[] $totalPrice
+     *
+     * @return static
+     *
+     * @see 
+     */
+    public function totalPrice($totalPrice)
+    {
+        return $this->setProperty('totalPrice', $totalPrice);
     }
 
     /**
@@ -199,7 +199,7 @@ class Reservation extends Intangible
      *
      * @return static
      *
-     * @see http://schema.org/broker
+     * @see 
      */
     public function broker($broker)
     {

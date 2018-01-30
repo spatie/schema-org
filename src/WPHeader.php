@@ -5,7 +5,7 @@ namespace Spatie\SchemaOrg;
 /**
  * The header section of the page.
  *
- * @see http://schema.org/WPHeader
+ * @see 
  */
 class WPHeader extends WebPageElement
 {

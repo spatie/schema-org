@@ -5,7 +5,7 @@ namespace Spatie\SchemaOrg;
 /**
  * An office equipment store.
  *
- * @see http://schema.org/OfficeEquipmentStore
+ * @see 
  */
 class OfficeEquipmentStore extends Store
 {

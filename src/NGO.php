@@ -5,7 +5,7 @@ namespace Spatie\SchemaOrg;
 /**
  * Organization: Non-governmental Organization.
  *
- * @see http://schema.org/NGO
+ * @see 
  */
 class NGO extends Organization
 {

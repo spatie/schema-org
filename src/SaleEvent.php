@@ -5,7 +5,7 @@ namespace Spatie\SchemaOrg;
 /**
  * Event type: Sales event.
  *
- * @see http://schema.org/SaleEvent
+ * @see 
  */
 class SaleEvent extends Event
 {

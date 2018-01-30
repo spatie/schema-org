@@ -5,7 +5,7 @@ namespace Spatie\SchemaOrg;
 /**
  * A Property value specification.
  *
- * @see http://schema.org/PropertyValueSpecification
+ * @see 
  */
 class PropertyValueSpecification extends Intangible
 {
@@ -16,7 +16,7 @@ class PropertyValueSpecification extends Intangible
      *
      * @return static
      *
-     * @see http://schema.org/maxValue
+     * @see 
      */
     public function maxValue($maxValue)
     {
@@ -30,26 +30,11 @@ class PropertyValueSpecification extends Intangible
      *
      * @return static
      *
-     * @see http://schema.org/minValue
+     * @see 
      */
     public function minValue($minValue)
     {
         return $this->setProperty('minValue', $minValue);
-    }
-
-    /**
-     * Indicates the name of the PropertyValueSpecification to be used in URL
-     * templates and form encoding in a manner analogous to HTML's input@name.
-     *
-     * @param string|string[] $valueName
-     *
-     * @return static
-     *
-     * @see http://schema.org/valueName
-     */
-    public function valueName($valueName)
-    {
-        return $this->setProperty('valueName', $valueName);
     }
 
     /**
@@ -60,7 +45,7 @@ class PropertyValueSpecification extends Intangible
      *
      * @return static
      *
-     * @see http://schema.org/valueRequired
+     * @see 
      */
     public function valueRequired($valueRequired)
     {
@@ -68,49 +53,33 @@ class PropertyValueSpecification extends Intangible
     }
 
     /**
-     * The default value of the input.  For properties that expect a literal,
-     * the default is a literal value, for properties that expect an object,
-     * it's an ID reference to one of the current values.
+     * Indicates the name of the PropertyValueSpecification to be used in URL
+     * templates and form encoding in a manner analogous to HTML's input@name.
      *
-     * @param Thing|Thing[]|string|string[] $defaultValue
+     * @param string|string[] $valueName
      *
      * @return static
      *
-     * @see http://schema.org/defaultValue
+     * @see 
      */
-    public function defaultValue($defaultValue)
+    public function valueName($valueName)
     {
-        return $this->setProperty('defaultValue', $defaultValue);
+        return $this->setProperty('valueName', $valueName);
     }
 
     /**
-     * Whether or not a property is mutable.  Default is false. Specifying this
-     * for a property that also has a value makes it act similar to a "hidden"
-     * input in an HTML form.
+     * Specifies a regular expression for testing literal values according to
+     * the HTML spec.
      *
-     * @param bool|bool[] $readonlyValue
-     *
-     * @return static
-     *
-     * @see http://schema.org/readonlyValue
-     */
-    public function readonlyValue($readonlyValue)
-    {
-        return $this->setProperty('readonlyValue', $readonlyValue);
-    }
-
-    /**
-     * Whether multiple values are allowed for the property.  Default is false.
-     *
-     * @param bool|bool[] $multipleValues
+     * @param string|string[] $valuePattern
      *
      * @return static
      *
-     * @see http://schema.org/multipleValues
+     * @see 
      */
-    public function multipleValues($multipleValues)
+    public function valuePattern($valuePattern)
     {
-        return $this->setProperty('multipleValues', $multipleValues);
+        return $this->setProperty('valuePattern', $valuePattern);
     }
 
     /**
@@ -121,7 +90,7 @@ class PropertyValueSpecification extends Intangible
      *
      * @return static
      *
-     * @see http://schema.org/valueMinLength
+     * @see 
      */
     public function valueMinLength($valueMinLength)
     {
@@ -135,26 +104,11 @@ class PropertyValueSpecification extends Intangible
      *
      * @return static
      *
-     * @see http://schema.org/valueMaxLength
+     * @see 
      */
     public function valueMaxLength($valueMaxLength)
     {
         return $this->setProperty('valueMaxLength', $valueMaxLength);
-    }
-
-    /**
-     * Specifies a regular expression for testing literal values according to
-     * the HTML spec.
-     *
-     * @param string|string[] $valuePattern
-     *
-     * @return static
-     *
-     * @see http://schema.org/valuePattern
-     */
-    public function valuePattern($valuePattern)
-    {
-        return $this->setProperty('valuePattern', $valuePattern);
     }
 
     /**
@@ -165,11 +119,57 @@ class PropertyValueSpecification extends Intangible
      *
      * @return static
      *
-     * @see http://schema.org/stepValue
+     * @see 
      */
     public function stepValue($stepValue)
     {
         return $this->setProperty('stepValue', $stepValue);
+    }
+
+    /**
+     * Whether multiple values are allowed for the property.  Default is false.
+     *
+     * @param bool|bool[] $multipleValues
+     *
+     * @return static
+     *
+     * @see 
+     */
+    public function multipleValues($multipleValues)
+    {
+        return $this->setProperty('multipleValues', $multipleValues);
+    }
+
+    /**
+     * Whether or not a property is mutable.  Default is false. Specifying this
+     * for a property that also has a value makes it act similar to a "hidden"
+     * input in an HTML form.
+     *
+     * @param bool|bool[] $readonlyValue
+     *
+     * @return static
+     *
+     * @see 
+     */
+    public function readonlyValue($readonlyValue)
+    {
+        return $this->setProperty('readonlyValue', $readonlyValue);
+    }
+
+    /**
+     * The default value of the input.  For properties that expect a literal,
+     * the default is a literal value, for properties that expect an object,
+     * it's an ID reference to one of the current values.
+     *
+     * @param Thing|Thing[]|string|string[] $defaultValue
+     *
+     * @return static
+     *
+     * @see 
+     */
+    public function defaultValue($defaultValue)
+    {
+        return $this->setProperty('defaultValue', $defaultValue);
     }
 
 }

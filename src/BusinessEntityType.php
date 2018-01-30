@@ -14,7 +14,7 @@ namespace Spatie\SchemaOrg;
  * * http://purl.org/goodrelations/v1#PublicInstitution
  * * http://purl.org/goodrelations/v1#Reseller
  *
- * @see http://schema.org/BusinessEntityType
+ * @see 
  */
 class BusinessEntityType extends Enumeration
 {

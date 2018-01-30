@@ -5,7 +5,7 @@ namespace Spatie\SchemaOrg;
 /**
  * Used to describe a ticket to an event, a flight, a bus ride, etc.
  *
- * @see http://schema.org/Ticket
+ * @see 
  */
 class Ticket extends Intangible
 {
@@ -16,26 +16,11 @@ class Ticket extends Intangible
      *
      * @return static
      *
-     * @see http://schema.org/underName
+     * @see 
      */
     public function underName($underName)
     {
         return $this->setProperty('underName', $underName);
-    }
-
-    /**
-     * The total price for the reservation or ticket, including applicable
-     * taxes, shipping, etc.
-     *
-     * @param float|float[]|int|int[]|string|string[]|PriceSpecification|PriceSpecification[] $totalPrice
-     *
-     * @return static
-     *
-     * @see http://schema.org/totalPrice
-     */
-    public function totalPrice($totalPrice)
-    {
-        return $this->setProperty('totalPrice', $totalPrice);
     }
 
     /**
@@ -46,7 +31,7 @@ class Ticket extends Intangible
      *
      * @return static
      *
-     * @see http://schema.org/priceCurrency
+     * @see 
      */
     public function priceCurrency($priceCurrency)
     {
@@ -54,17 +39,18 @@ class Ticket extends Intangible
     }
 
     /**
-     * The organization issuing the ticket or permit.
+     * The total price for the reservation or ticket, including applicable
+     * taxes, shipping, etc.
      *
-     * @param Organization|Organization[] $issuedBy
+     * @param float|float[]|int|int[]|string|string[]|PriceSpecification|PriceSpecification[] $totalPrice
      *
      * @return static
      *
-     * @see http://schema.org/issuedBy
+     * @see 
      */
-    public function issuedBy($issuedBy)
+    public function totalPrice($totalPrice)
     {
-        return $this->setProperty('issuedBy', $issuedBy);
+        return $this->setProperty('totalPrice', $totalPrice);
     }
 
     /**
@@ -74,25 +60,11 @@ class Ticket extends Intangible
      *
      * @return static
      *
-     * @see http://schema.org/dateIssued
+     * @see 
      */
     public function dateIssued($dateIssued)
     {
         return $this->setProperty('dateIssued', $dateIssued);
-    }
-
-    /**
-     * The seat associated with the ticket.
-     *
-     * @param Seat|Seat[] $ticketedSeat
-     *
-     * @return static
-     *
-     * @see http://schema.org/ticketedSeat
-     */
-    public function ticketedSeat($ticketedSeat)
-    {
-        return $this->setProperty('ticketedSeat', $ticketedSeat);
     }
 
     /**
@@ -102,11 +74,39 @@ class Ticket extends Intangible
      *
      * @return static
      *
-     * @see http://schema.org/ticketNumber
+     * @see 
      */
     public function ticketNumber($ticketNumber)
     {
         return $this->setProperty('ticketNumber', $ticketNumber);
+    }
+
+    /**
+     * The seat associated with the ticket.
+     *
+     * @param Seat|Seat[] $ticketedSeat
+     *
+     * @return static
+     *
+     * @see 
+     */
+    public function ticketedSeat($ticketedSeat)
+    {
+        return $this->setProperty('ticketedSeat', $ticketedSeat);
+    }
+
+    /**
+     * The organization issuing the ticket or permit.
+     *
+     * @param Organization|Organization[] $issuedBy
+     *
+     * @return static
+     *
+     * @see 
+     */
+    public function issuedBy($issuedBy)
+    {
+        return $this->setProperty('issuedBy', $issuedBy);
     }
 
     /**
@@ -117,7 +117,7 @@ class Ticket extends Intangible
      *
      * @return static
      *
-     * @see http://schema.org/ticketToken
+     * @see 
      */
     public function ticketToken($ticketToken)
     {

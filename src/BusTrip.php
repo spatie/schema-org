@@ -5,7 +5,7 @@ namespace Spatie\SchemaOrg;
 /**
  * A trip on a commercial bus line.
  *
- * @see http://schema.org/BusTrip
+ * @see 
  */
 class BusTrip extends Intangible
 {
@@ -18,25 +18,11 @@ class BusTrip extends Intangible
      *
      * @return static
      *
-     * @see http://schema.org/provider
+     * @see 
      */
     public function provider($provider)
     {
         return $this->setProperty('provider', $provider);
-    }
-
-    /**
-     * The expected departure time.
-     *
-     * @param \DateTimeInterface|\DateTimeInterface[] $departureTime
-     *
-     * @return static
-     *
-     * @see http://schema.org/departureTime
-     */
-    public function departureTime($departureTime)
-    {
-        return $this->setProperty('departureTime', $departureTime);
     }
 
     /**
@@ -46,11 +32,25 @@ class BusTrip extends Intangible
      *
      * @return static
      *
-     * @see http://schema.org/arrivalTime
+     * @see 
      */
     public function arrivalTime($arrivalTime)
     {
         return $this->setProperty('arrivalTime', $arrivalTime);
+    }
+
+    /**
+     * The expected departure time.
+     *
+     * @param \DateTimeInterface|\DateTimeInterface[] $departureTime
+     *
+     * @return static
+     *
+     * @see 
+     */
+    public function departureTime($departureTime)
+    {
+        return $this->setProperty('departureTime', $departureTime);
     }
 
     /**
@@ -60,7 +60,7 @@ class BusTrip extends Intangible
      *
      * @return static
      *
-     * @see http://schema.org/busNumber
+     * @see 
      */
     public function busNumber($busNumber)
     {
@@ -74,25 +74,11 @@ class BusTrip extends Intangible
      *
      * @return static
      *
-     * @see http://schema.org/busName
+     * @see 
      */
     public function busName($busName)
     {
         return $this->setProperty('busName', $busName);
-    }
-
-    /**
-     * The stop or station from which the bus departs.
-     *
-     * @param BusStation|BusStation[]|BusStop|BusStop[] $departureBusStop
-     *
-     * @return static
-     *
-     * @see http://schema.org/departureBusStop
-     */
-    public function departureBusStop($departureBusStop)
-    {
-        return $this->setProperty('departureBusStop', $departureBusStop);
     }
 
     /**
@@ -102,11 +88,25 @@ class BusTrip extends Intangible
      *
      * @return static
      *
-     * @see http://schema.org/arrivalBusStop
+     * @see 
      */
     public function arrivalBusStop($arrivalBusStop)
     {
         return $this->setProperty('arrivalBusStop', $arrivalBusStop);
+    }
+
+    /**
+     * The stop or station from which the bus departs.
+     *
+     * @param BusStation|BusStation[]|BusStop|BusStop[] $departureBusStop
+     *
+     * @return static
+     *
+     * @see 
+     */
+    public function departureBusStop($departureBusStop)
+    {
+        return $this->setProperty('departureBusStop', $departureBusStop);
     }
 
 }

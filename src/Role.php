@@ -12,7 +12,7 @@ namespace Spatie\SchemaOrg;
  * 
  * See also [blog post](http://blog.schema.org/2014/06/introducing-role.html).
  *
- * @see http://schema.org/Role
+ * @see 
  */
 class Role extends Intangible
 {
@@ -24,7 +24,7 @@ class Role extends Intangible
      *
      * @return static
      *
-     * @see http://schema.org/endDate
+     * @see 
      */
     public function endDate($endDate)
     {
@@ -39,27 +39,11 @@ class Role extends Intangible
      *
      * @return static
      *
-     * @see http://schema.org/startDate
+     * @see 
      */
     public function startDate($startDate)
     {
         return $this->setProperty('startDate', $startDate);
-    }
-
-    /**
-     * A position played, performed or filled by a person or organization, as
-     * part of an organization. For example, an athlete in a SportsTeam might
-     * play in the position named 'Quarterback'.
-     *
-     * @param string|string[] $namedPosition
-     *
-     * @return static
-     *
-     * @see http://schema.org/namedPosition
-     */
-    public function namedPosition($namedPosition)
-    {
-        return $this->setProperty('namedPosition', $namedPosition);
     }
 
     /**
@@ -72,11 +56,27 @@ class Role extends Intangible
      *
      * @return static
      *
-     * @see http://schema.org/roleName
+     * @see 
      */
     public function roleName($roleName)
     {
         return $this->setProperty('roleName', $roleName);
+    }
+
+    /**
+     * A position played, performed or filled by a person or organization, as
+     * part of an organization. For example, an athlete in a SportsTeam might
+     * play in the position named 'Quarterback'.
+     *
+     * @param string|string[] $namedPosition
+     *
+     * @return static
+     *
+     * @see 
+     */
+    public function namedPosition($namedPosition)
+    {
+        return $this->setProperty('namedPosition', $namedPosition);
     }
 
 }

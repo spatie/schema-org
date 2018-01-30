@@ -5,7 +5,7 @@ namespace Spatie\SchemaOrg;
 /**
  * A nightclub or discotheque.
  *
- * @see http://schema.org/NightClub
+ * @see 
  */
 class NightClub extends EntertainmentBusiness
 {

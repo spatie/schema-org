@@ -5,7 +5,7 @@ namespace Spatie\SchemaOrg;
 /**
  * A waterfall, like Niagara.
  *
- * @see http://schema.org/Waterfall
+ * @see 
  */
 class Waterfall extends BodyOfWater
 {

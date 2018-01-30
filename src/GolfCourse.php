@@ -5,7 +5,7 @@ namespace Spatie\SchemaOrg;
 /**
  * A golf course.
  *
- * @see http://schema.org/GolfCourse
+ * @see 
  */
 class GolfCourse extends SportsActivityLocation
 {

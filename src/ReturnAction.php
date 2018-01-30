@@ -6,7 +6,7 @@ namespace Spatie\SchemaOrg;
  * The act of returning to the origin that which was previously received
  * (concrete objects) or taken (ownership).
  *
- * @see http://schema.org/ReturnAction
+ * @see 
  */
 class ReturnAction extends TransferAction
 {
@@ -18,7 +18,7 @@ class ReturnAction extends TransferAction
      *
      * @return static
      *
-     * @see http://schema.org/recipient
+     * @see 
      */
     public function recipient($recipient)
     {

@@ -5,7 +5,7 @@ namespace Spatie\SchemaOrg;
 /**
  * A fast-food restaurant.
  *
- * @see http://schema.org/FastFoodRestaurant
+ * @see 
  */
 class FastFoodRestaurant extends FoodEstablishment
 {

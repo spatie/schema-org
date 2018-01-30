@@ -5,10 +5,25 @@ namespace Spatie\SchemaOrg;
 /**
  * A video file.
  *
- * @see http://schema.org/VideoObject
+ * @see 
  */
 class VideoObject extends MediaObject
 {
+    /**
+     * An actor, e.g. in tv, radio, movie, video games etc. Actors can be
+     * associated with individual items or with a series, episode, clip.
+     *
+     * @param Person|Person[] $actors
+     *
+     * @return static
+     *
+     * @see 
+     */
+    public function actors($actors)
+    {
+        return $this->setProperty('actors', $actors);
+    }
+
     /**
      * An actor, e.g. in tv, radio, movie, video games etc., or in an event.
      * Actors can be associated with individual items or with a series, episode,
@@ -18,26 +33,11 @@ class VideoObject extends MediaObject
      *
      * @return static
      *
-     * @see http://schema.org/actor
+     * @see 
      */
     public function actor($actor)
     {
         return $this->setProperty('actor', $actor);
-    }
-
-    /**
-     * An actor, e.g. in tv, radio, movie, video games etc. Actors can be
-     * associated with individual items or with a series, episode, clip.
-     *
-     * @param Person|Person[] $actors
-     *
-     * @return static
-     *
-     * @see http://schema.org/actors
-     */
-    public function actors($actors)
-    {
-        return $this->setProperty('actors', $actors);
     }
 
     /**
@@ -47,7 +47,7 @@ class VideoObject extends MediaObject
      *
      * @return static
      *
-     * @see http://schema.org/caption
+     * @see 
      */
     public function caption($caption)
     {
@@ -63,7 +63,7 @@ class VideoObject extends MediaObject
      *
      * @return static
      *
-     * @see http://schema.org/director
+     * @see 
      */
     public function director($director)
     {
@@ -78,7 +78,7 @@ class VideoObject extends MediaObject
      *
      * @return static
      *
-     * @see http://schema.org/directors
+     * @see 
      */
     public function directors($directors)
     {
@@ -92,7 +92,7 @@ class VideoObject extends MediaObject
      *
      * @return static
      *
-     * @see http://schema.org/musicBy
+     * @see 
      */
     public function musicBy($musicBy)
     {
@@ -106,7 +106,7 @@ class VideoObject extends MediaObject
      *
      * @return static
      *
-     * @see http://schema.org/thumbnail
+     * @see 
      */
     public function thumbnail($thumbnail)
     {
@@ -121,25 +121,11 @@ class VideoObject extends MediaObject
      *
      * @return static
      *
-     * @see http://schema.org/transcript
+     * @see 
      */
     public function transcript($transcript)
     {
         return $this->setProperty('transcript', $transcript);
-    }
-
-    /**
-     * The frame size of the video.
-     *
-     * @param string|string[] $videoFrameSize
-     *
-     * @return static
-     *
-     * @see http://schema.org/videoFrameSize
-     */
-    public function videoFrameSize($videoFrameSize)
-    {
-        return $this->setProperty('videoFrameSize', $videoFrameSize);
     }
 
     /**
@@ -149,11 +135,25 @@ class VideoObject extends MediaObject
      *
      * @return static
      *
-     * @see http://schema.org/videoQuality
+     * @see 
      */
     public function videoQuality($videoQuality)
     {
         return $this->setProperty('videoQuality', $videoQuality);
+    }
+
+    /**
+     * The frame size of the video.
+     *
+     * @param string|string[] $videoFrameSize
+     *
+     * @return static
+     *
+     * @see 
+     */
+    public function videoFrameSize($videoFrameSize)
+    {
+        return $this->setProperty('videoFrameSize', $videoFrameSize);
     }
 
 }

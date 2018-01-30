@@ -8,7 +8,7 @@ namespace Spatie\SchemaOrg;
  * encyclopedia, see <a
  * href="http://en.wikipedia.org/wiki/House">http://en.wikipedia.org/wiki/House</a>).
  *
- * @see http://schema.org/House
+ * @see 
  */
 class House extends Accommodation
 {
@@ -22,7 +22,7 @@ class House extends Accommodation
      *
      * @return static
      *
-     * @see http://schema.org/numberOfRooms
+     * @see 
      */
     public function numberOfRooms($numberOfRooms)
     {

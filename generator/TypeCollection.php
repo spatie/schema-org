@@ -12,13 +12,15 @@ class TypeCollection
         $this->types[$type->name] = $type;
     }
 
-    public function addPropertyToType(Property $property, string $type)
+    public function addProperty(Property $property)
     {
-        if (! isset($this->types[$type])) {
-            return;
-        }
+        foreach ($property->types as $type) {
+            if (! isset($this->types[$type])) {
+                continue;
+            }
 
-        $this->types[$type]->addProperty($property);
+            $this->types[$type]->addProperty($property);
+        }
     }
 
     public function each($callable)

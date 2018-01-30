@@ -5,7 +5,7 @@ namespace Spatie\SchemaOrg;
 /**
  * A library.
  *
- * @see http://schema.org/Library
+ * @see 
  */
 class Library extends LocalBusiness
 {

@@ -6,24 +6,10 @@ namespace Spatie\SchemaOrg;
  * A structured representation of food or drink items available from a
  * FoodEstablishment.
  *
- * @see http://schema.org/Menu
+ * @see 
  */
 class Menu extends CreativeWork
 {
-    /**
-     * A food or drink item contained in a menu or menu section.
-     *
-     * @param MenuSection|MenuSection[] $hasMenuItem
-     *
-     * @return static
-     *
-     * @see http://schema.org/hasMenuItem
-     */
-    public function hasMenuItem($hasMenuItem)
-    {
-        return $this->setProperty('hasMenuItem', $hasMenuItem);
-    }
-
     /**
      * A subgrouping of the menu (by dishes, course, serving time period, etc.).
      *
@@ -31,11 +17,25 @@ class Menu extends CreativeWork
      *
      * @return static
      *
-     * @see http://schema.org/hasMenuSection
+     * @see 
      */
     public function hasMenuSection($hasMenuSection)
     {
         return $this->setProperty('hasMenuSection', $hasMenuSection);
+    }
+
+    /**
+     * A food or drink item contained in a menu or menu section.
+     *
+     * @param MenuSection|MenuSection[] $hasMenuItem
+     *
+     * @return static
+     *
+     * @see 
+     */
+    public function hasMenuItem($hasMenuItem)
+    {
+        return $this->setProperty('hasMenuItem', $hasMenuItem);
     }
 
 }

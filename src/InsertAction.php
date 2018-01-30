@@ -5,7 +5,7 @@ namespace Spatie\SchemaOrg;
 /**
  * The act of adding at a specific location in an ordered collection.
  *
- * @see http://schema.org/InsertAction
+ * @see 
  */
 class InsertAction extends AddAction
 {
@@ -17,7 +17,7 @@ class InsertAction extends AddAction
      *
      * @return static
      *
-     * @see http://schema.org/toLocation
+     * @see 
      */
     public function toLocation($toLocation)
     {

@@ -5,7 +5,7 @@ namespace Spatie\SchemaOrg;
 /**
  * A canal, like the Panama Canal.
  *
- * @see http://schema.org/Canal
+ * @see 
  */
 class Canal extends BodyOfWater
 {

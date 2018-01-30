@@ -5,7 +5,7 @@ namespace Spatie\SchemaOrg;
 /**
  * A gym.
  *
- * @see http://schema.org/ExerciseGym
+ * @see 
  */
 class ExerciseGym extends SportsActivityLocation
 {

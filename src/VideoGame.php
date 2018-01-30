@@ -6,10 +6,25 @@ namespace Spatie\SchemaOrg;
  * A video game is an electronic game that involves human interaction with a
  * user interface to generate visual feedback on a video device.
  *
- * @see http://schema.org/VideoGame
+ * @see 
  */
 class VideoGame extends SoftwareApplication
 {
+    /**
+     * An actor, e.g. in tv, radio, movie, video games etc. Actors can be
+     * associated with individual items or with a series, episode, clip.
+     *
+     * @param Person|Person[] $actors
+     *
+     * @return static
+     *
+     * @see 
+     */
+    public function actors($actors)
+    {
+        return $this->setProperty('actors', $actors);
+    }
+
     /**
      * An actor, e.g. in tv, radio, movie, video games etc., or in an event.
      * Actors can be associated with individual items or with a series, episode,
@@ -19,26 +34,11 @@ class VideoGame extends SoftwareApplication
      *
      * @return static
      *
-     * @see http://schema.org/actor
+     * @see 
      */
     public function actor($actor)
     {
         return $this->setProperty('actor', $actor);
-    }
-
-    /**
-     * An actor, e.g. in tv, radio, movie, video games etc. Actors can be
-     * associated with individual items or with a series, episode, clip.
-     *
-     * @param Person|Person[] $actors
-     *
-     * @return static
-     *
-     * @see http://schema.org/actors
-     */
-    public function actors($actors)
-    {
-        return $this->setProperty('actors', $actors);
     }
 
     /**
@@ -50,7 +50,7 @@ class VideoGame extends SoftwareApplication
      *
      * @return static
      *
-     * @see http://schema.org/director
+     * @see 
      */
     public function director($director)
     {
@@ -65,7 +65,7 @@ class VideoGame extends SoftwareApplication
      *
      * @return static
      *
-     * @see http://schema.org/directors
+     * @see 
      */
     public function directors($directors)
     {
@@ -79,7 +79,7 @@ class VideoGame extends SoftwareApplication
      *
      * @return static
      *
-     * @see http://schema.org/musicBy
+     * @see 
      */
     public function musicBy($musicBy)
     {
@@ -93,7 +93,7 @@ class VideoGame extends SoftwareApplication
      *
      * @return static
      *
-     * @see http://schema.org/trailer
+     * @see 
      */
     public function trailer($trailer)
     {
@@ -109,7 +109,7 @@ class VideoGame extends SoftwareApplication
      *
      * @return static
      *
-     * @see http://schema.org/playMode
+     * @see 
      */
     public function playMode($playMode)
     {
@@ -123,25 +123,11 @@ class VideoGame extends SoftwareApplication
      *
      * @return static
      *
-     * @see http://schema.org/cheatCode
+     * @see 
      */
     public function cheatCode($cheatCode)
     {
         return $this->setProperty('cheatCode', $cheatCode);
-    }
-
-    /**
-     * Links to tips, tactics, etc.
-     *
-     * @param CreativeWork|CreativeWork[] $gameTip
-     *
-     * @return static
-     *
-     * @see http://schema.org/gameTip
-     */
-    public function gameTip($gameTip)
-    {
-        return $this->setProperty('gameTip', $gameTip);
     }
 
     /**
@@ -153,11 +139,25 @@ class VideoGame extends SoftwareApplication
      *
      * @return static
      *
-     * @see http://schema.org/gamePlatform
+     * @see 
      */
     public function gamePlatform($gamePlatform)
     {
         return $this->setProperty('gamePlatform', $gamePlatform);
+    }
+
+    /**
+     * Links to tips, tactics, etc.
+     *
+     * @param CreativeWork|CreativeWork[] $gameTip
+     *
+     * @return static
+     *
+     * @see 
+     */
+    public function gameTip($gameTip)
+    {
+        return $this->setProperty('gameTip', $gameTip);
     }
 
     /**
@@ -167,7 +167,7 @@ class VideoGame extends SoftwareApplication
      *
      * @return static
      *
-     * @see http://schema.org/gameServer
+     * @see 
      */
     public function gameServer($gameServer)
     {

@@ -5,7 +5,7 @@ namespace Spatie\SchemaOrg;
 /**
  * A tourist attraction.
  *
- * @see http://schema.org/TouristAttraction
+ * @see 
  */
 class TouristAttraction extends Place
 {

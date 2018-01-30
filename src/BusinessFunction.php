@@ -20,7 +20,7 @@ namespace Spatie\SchemaOrg;
  * * http://purl.org/goodrelations/v1#Sell
  * * http://purl.org/goodrelations/v1#Buy
  *
- * @see http://schema.org/BusinessFunction
+ * @see 
  */
 class BusinessFunction extends Enumeration
 {

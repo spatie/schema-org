@@ -5,7 +5,7 @@ namespace Spatie\SchemaOrg;
 /**
  * A scholarly article.
  *
- * @see http://schema.org/ScholarlyArticle
+ * @see 
  */
 class ScholarlyArticle extends Article
 {

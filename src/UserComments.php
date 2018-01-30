@@ -7,24 +7,10 @@ namespace Spatie\SchemaOrg;
  * interacting with pages. It is generally better to use [[Action]]-based
  * vocabulary, alongside types such as [[Comment]].
  *
- * @see http://schema.org/UserComments
+ * @see 
  */
 class UserComments extends UserInteraction
 {
-    /**
-     * The text of the UserComment.
-     *
-     * @param string|string[] $commentText
-     *
-     * @return static
-     *
-     * @see http://schema.org/commentText
-     */
-    public function commentText($commentText)
-    {
-        return $this->setProperty('commentText', $commentText);
-    }
-
     /**
      * The time at which the UserComment was made.
      *
@@ -32,11 +18,25 @@ class UserComments extends UserInteraction
      *
      * @return static
      *
-     * @see http://schema.org/commentTime
+     * @see 
      */
     public function commentTime($commentTime)
     {
         return $this->setProperty('commentTime', $commentTime);
+    }
+
+    /**
+     * The text of the UserComment.
+     *
+     * @param string|string[] $commentText
+     *
+     * @return static
+     *
+     * @see 
+     */
+    public function commentText($commentText)
+    {
+        return $this->setProperty('commentText', $commentText);
     }
 
     /**
@@ -47,7 +47,7 @@ class UserComments extends UserInteraction
      *
      * @return static
      *
-     * @see http://schema.org/creator
+     * @see 
      */
     public function creator($creator)
     {
@@ -61,7 +61,7 @@ class UserComments extends UserInteraction
      *
      * @return static
      *
-     * @see http://schema.org/discusses
+     * @see 
      */
     public function discusses($discusses)
     {
@@ -75,7 +75,7 @@ class UserComments extends UserInteraction
      *
      * @return static
      *
-     * @see http://schema.org/replyToUrl
+     * @see 
      */
     public function replyToUrl($replyToUrl)
     {

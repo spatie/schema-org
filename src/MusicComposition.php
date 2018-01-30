@@ -5,24 +5,10 @@ namespace Spatie\SchemaOrg;
 /**
  * A musical composition.
  *
- * @see http://schema.org/MusicComposition
+ * @see 
  */
 class MusicComposition extends CreativeWork
 {
-    /**
-     * An arrangement derived from the composition.
-     *
-     * @param MusicComposition|MusicComposition[] $musicArrangement
-     *
-     * @return static
-     *
-     * @see http://schema.org/musicArrangement
-     */
-    public function musicArrangement($musicArrangement)
-    {
-        return $this->setProperty('musicArrangement', $musicArrangement);
-    }
-
     /**
      * The person or organization who wrote a composition, or who is the
      * composer of a work performed at some event.
@@ -31,11 +17,39 @@ class MusicComposition extends CreativeWork
      *
      * @return static
      *
-     * @see http://schema.org/composer
+     * @see 
      */
     public function composer($composer)
     {
         return $this->setProperty('composer', $composer);
+    }
+
+    /**
+     * An arrangement derived from the composition.
+     *
+     * @param MusicComposition|MusicComposition[] $musicArrangement
+     *
+     * @return static
+     *
+     * @see 
+     */
+    public function musicArrangement($musicArrangement)
+    {
+        return $this->setProperty('musicArrangement', $musicArrangement);
+    }
+
+    /**
+     * The person who wrote the words.
+     *
+     * @param Person|Person[] $lyricist
+     *
+     * @return static
+     *
+     * @see 
+     */
+    public function lyricist($lyricist)
+    {
+        return $this->setProperty('lyricist', $lyricist);
     }
 
     /**
@@ -45,7 +59,7 @@ class MusicComposition extends CreativeWork
      *
      * @return static
      *
-     * @see http://schema.org/firstPerformance
+     * @see 
      */
     public function firstPerformance($firstPerformance)
     {
@@ -60,7 +74,7 @@ class MusicComposition extends CreativeWork
      *
      * @return static
      *
-     * @see http://schema.org/includedComposition
+     * @see 
      */
     public function includedComposition($includedComposition)
     {
@@ -74,39 +88,11 @@ class MusicComposition extends CreativeWork
      *
      * @return static
      *
-     * @see http://schema.org/iswcCode
+     * @see 
      */
     public function iswcCode($iswcCode)
     {
         return $this->setProperty('iswcCode', $iswcCode);
-    }
-
-    /**
-     * The person who wrote the words.
-     *
-     * @param Person|Person[] $lyricist
-     *
-     * @return static
-     *
-     * @see http://schema.org/lyricist
-     */
-    public function lyricist($lyricist)
-    {
-        return $this->setProperty('lyricist', $lyricist);
-    }
-
-    /**
-     * The type of composition (e.g. overture, sonata, symphony, etc.).
-     *
-     * @param string|string[] $musicCompositionForm
-     *
-     * @return static
-     *
-     * @see http://schema.org/musicCompositionForm
-     */
-    public function musicCompositionForm($musicCompositionForm)
-    {
-        return $this->setProperty('musicCompositionForm', $musicCompositionForm);
     }
 
     /**
@@ -116,11 +102,25 @@ class MusicComposition extends CreativeWork
      *
      * @return static
      *
-     * @see http://schema.org/musicalKey
+     * @see 
      */
     public function musicalKey($musicalKey)
     {
         return $this->setProperty('musicalKey', $musicalKey);
+    }
+
+    /**
+     * The type of composition (e.g. overture, sonata, symphony, etc.).
+     *
+     * @param string|string[] $musicCompositionForm
+     *
+     * @return static
+     *
+     * @see 
+     */
+    public function musicCompositionForm($musicCompositionForm)
+    {
+        return $this->setProperty('musicCompositionForm', $musicCompositionForm);
     }
 
     /**
@@ -130,7 +130,7 @@ class MusicComposition extends CreativeWork
      *
      * @return static
      *
-     * @see http://schema.org/recordedAs
+     * @see 
      */
     public function recordedAs($recordedAs)
     {
@@ -144,7 +144,7 @@ class MusicComposition extends CreativeWork
      *
      * @return static
      *
-     * @see http://schema.org/lyrics
+     * @see 
      */
     public function lyrics($lyrics)
     {

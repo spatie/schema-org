@@ -6,7 +6,7 @@ namespace Spatie\SchemaOrg;
  * A single feed providing structured information about one or more entities or
  * topics.
  *
- * @see http://schema.org/DataFeed
+ * @see 
  */
 class DataFeed extends Dataset
 {
@@ -17,7 +17,7 @@ class DataFeed extends Dataset
      *
      * @return static
      *
-     * @see http://schema.org/dataFeedElement
+     * @see 
      */
     public function dataFeedElement($dataFeedElement)
     {

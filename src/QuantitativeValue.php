@@ -5,7 +5,7 @@ namespace Spatie\SchemaOrg;
 /**
  * A point value or interval for product characteristics and other purposes.
  *
- * @see http://schema.org/QuantitativeValue
+ * @see 
  */
 class QuantitativeValue extends StructuredValue
 {
@@ -16,7 +16,7 @@ class QuantitativeValue extends StructuredValue
      *
      * @return static
      *
-     * @see http://schema.org/maxValue
+     * @see 
      */
     public function maxValue($maxValue)
     {
@@ -30,7 +30,7 @@ class QuantitativeValue extends StructuredValue
      *
      * @return static
      *
-     * @see http://schema.org/minValue
+     * @see 
      */
     public function minValue($minValue)
     {
@@ -46,11 +46,26 @@ class QuantitativeValue extends StructuredValue
      *
      * @return static
      *
-     * @see http://schema.org/unitCode
+     * @see 
      */
     public function unitCode($unitCode)
     {
         return $this->setProperty('unitCode', $unitCode);
+    }
+
+    /**
+     * A pointer to a secondary value that provides additional information on
+     * the original value, e.g. a reference temperature.
+     *
+     * @param Enumeration|Enumeration[]|StructuredValue|StructuredValue[]|PropertyValue|PropertyValue[]|QualitativeValue|QualitativeValue[]|QuantitativeValue|QuantitativeValue[] $valueReference
+     *
+     * @return static
+     *
+     * @see 
+     */
+    public function valueReference($valueReference)
+    {
+        return $this->setProperty('valueReference', $valueReference);
     }
 
     /**
@@ -65,26 +80,11 @@ class QuantitativeValue extends StructuredValue
      *
      * @return static
      *
-     * @see http://schema.org/value
+     * @see 
      */
     public function value($value)
     {
         return $this->setProperty('value', $value);
-    }
-
-    /**
-     * A pointer to a secondary value that provides additional information on
-     * the original value, e.g. a reference temperature.
-     *
-     * @param Enumeration|Enumeration[]|StructuredValue|StructuredValue[]|PropertyValue|PropertyValue[]|QualitativeValue|QualitativeValue[]|QuantitativeValue|QuantitativeValue[] $valueReference
-     *
-     * @return static
-     *
-     * @see http://schema.org/valueReference
-     */
-    public function valueReference($valueReference)
-    {
-        return $this->setProperty('valueReference', $valueReference);
     }
 
     /**
@@ -102,7 +102,7 @@ class QuantitativeValue extends StructuredValue
      *
      * @return static
      *
-     * @see http://schema.org/additionalProperty
+     * @see 
      */
     public function additionalProperty($additionalProperty)
     {
@@ -118,7 +118,7 @@ class QuantitativeValue extends StructuredValue
      *
      * @return static
      *
-     * @see http://schema.org/unitText
+     * @see 
      */
     public function unitText($unitText)
     {

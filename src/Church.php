@@ -5,7 +5,7 @@ namespace Spatie\SchemaOrg;
 /**
  * A church.
  *
- * @see http://schema.org/Church
+ * @see 
  */
 class Church extends PlaceOfWorship
 {

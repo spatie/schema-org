@@ -7,7 +7,7 @@ namespace Spatie\SchemaOrg;
  * rendered. An agent sells an object, product, or service to a buyer for a
  * price. Reciprocal of BuyAction.
  *
- * @see http://schema.org/SellAction
+ * @see 
  */
 class SellAction extends TradeAction
 {
@@ -19,7 +19,7 @@ class SellAction extends TradeAction
      *
      * @return static
      *
-     * @see http://schema.org/buyer
+     * @see 
      */
     public function buyer($buyer)
     {
@@ -33,7 +33,7 @@ class SellAction extends TradeAction
      *
      * @return static
      *
-     * @see http://schema.org/warrantyPromise
+     * @see 
      */
     public function warrantyPromise($warrantyPromise)
     {

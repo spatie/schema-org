@@ -5,7 +5,7 @@ namespace Spatie\SchemaOrg;
 /**
  * The act of granting permission to an object.
  *
- * @see http://schema.org/AuthorizeAction
+ * @see 
  */
 class AuthorizeAction extends AllocateAction
 {
@@ -17,7 +17,7 @@ class AuthorizeAction extends AllocateAction
      *
      * @return static
      *
-     * @see http://schema.org/recipient
+     * @see 
      */
     public function recipient($recipient)
     {

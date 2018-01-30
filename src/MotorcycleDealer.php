@@ -5,7 +5,7 @@ namespace Spatie\SchemaOrg;
 /**
  * A motorcycle dealer.
  *
- * @see http://schema.org/MotorcycleDealer
+ * @see 
  */
 class MotorcycleDealer extends AutomotiveBusiness
 {

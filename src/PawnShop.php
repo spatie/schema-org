@@ -6,7 +6,7 @@ namespace Spatie\SchemaOrg;
  * A shop that will buy, or lend money against the security of, personal
  * possessions.
  *
- * @see http://schema.org/PawnShop
+ * @see 
  */
 class PawnShop extends Store
 {

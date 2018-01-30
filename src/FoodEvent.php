@@ -5,7 +5,7 @@ namespace Spatie\SchemaOrg;
 /**
  * Event type: Food event.
  *
- * @see http://schema.org/FoodEvent
+ * @see 
  */
 class FoodEvent extends Event
 {

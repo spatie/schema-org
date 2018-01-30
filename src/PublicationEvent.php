@@ -7,24 +7,10 @@ namespace Spatie\SchemaOrg;
  * a CreativeWork of any type e.g. a broadcast event, an on-demand event, a
  * book/journal publication via a variety of delivery media.
  *
- * @see http://schema.org/PublicationEvent
+ * @see 
  */
 class PublicationEvent extends Event
 {
-    /**
-     * A flag to signal that the publication or event is accessible for free.
-     *
-     * @param bool|bool[] $free
-     *
-     * @return static
-     *
-     * @see http://schema.org/free
-     */
-    public function free($free)
-    {
-        return $this->setProperty('free', $free);
-    }
-
     /**
      * A flag to signal that the publication is accessible for free.
      *
@@ -32,11 +18,25 @@ class PublicationEvent extends Event
      *
      * @return static
      *
-     * @see http://schema.org/isAccessibleForFree
+     * @see 
      */
     public function isAccessibleForFree($isAccessibleForFree)
     {
         return $this->setProperty('isAccessibleForFree', $isAccessibleForFree);
+    }
+
+    /**
+     * A flag to signal that the publication or event is accessible for free.
+     *
+     * @param bool|bool[] $free
+     *
+     * @return static
+     *
+     * @see 
+     */
+    public function free($free)
+    {
+        return $this->setProperty('free', $free);
     }
 
     /**
@@ -46,7 +46,7 @@ class PublicationEvent extends Event
      *
      * @return static
      *
-     * @see http://schema.org/publishedOn
+     * @see 
      */
     public function publishedOn($publishedOn)
     {

@@ -5,7 +5,7 @@ namespace Spatie\SchemaOrg;
 /**
  * A specific payment status. For example, PaymentDue, PaymentComplete, etc.
  *
- * @see http://schema.org/PaymentStatusType
+ * @see 
  */
 class PaymentStatusType extends Enumeration
 {

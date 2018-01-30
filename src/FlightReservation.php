@@ -9,7 +9,7 @@ namespace Spatie\SchemaOrg;
  * confirmation emails or HTML pages with individual confirmations of
  * reservations. For offers of tickets, use [[Offer]].
  *
- * @see http://schema.org/FlightReservation
+ * @see 
  */
 class FlightReservation extends Reservation
 {
@@ -20,25 +20,11 @@ class FlightReservation extends Reservation
      *
      * @return static
      *
-     * @see http://schema.org/passengerSequenceNumber
+     * @see 
      */
     public function passengerSequenceNumber($passengerSequenceNumber)
     {
         return $this->setProperty('passengerSequenceNumber', $passengerSequenceNumber);
-    }
-
-    /**
-     * The type of security screening the passenger is subject to.
-     *
-     * @param string|string[] $securityScreening
-     *
-     * @return static
-     *
-     * @see http://schema.org/securityScreening
-     */
-    public function securityScreening($securityScreening)
-    {
-        return $this->setProperty('securityScreening', $securityScreening);
     }
 
     /**
@@ -49,11 +35,25 @@ class FlightReservation extends Reservation
      *
      * @return static
      *
-     * @see http://schema.org/passengerPriorityStatus
+     * @see 
      */
     public function passengerPriorityStatus($passengerPriorityStatus)
     {
         return $this->setProperty('passengerPriorityStatus', $passengerPriorityStatus);
+    }
+
+    /**
+     * The type of security screening the passenger is subject to.
+     *
+     * @param string|string[] $securityScreening
+     *
+     * @return static
+     *
+     * @see 
+     */
+    public function securityScreening($securityScreening)
+    {
+        return $this->setProperty('securityScreening', $securityScreening);
     }
 
 }

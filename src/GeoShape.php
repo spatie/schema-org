@@ -8,7 +8,7 @@ namespace Spatie\SchemaOrg;
  * whitespace or commas can be used to separate latitude and longitude;
  * whitespace should be used when writing a list of several such points.
  *
- * @see http://schema.org/GeoShape
+ * @see 
  */
 class GeoShape extends StructuredValue
 {
@@ -19,25 +19,11 @@ class GeoShape extends StructuredValue
      *
      * @return static
      *
-     * @see http://schema.org/geoMidpoint
+     * @see 
      */
     public function geoMidpoint($geoMidpoint)
     {
         return $this->setProperty('geoMidpoint', $geoMidpoint);
-    }
-
-    /**
-     * Physical address of the item.
-     *
-     * @param PostalAddress|PostalAddress[]|string|string[] $address
-     *
-     * @return static
-     *
-     * @see http://schema.org/address
-     */
-    public function address($address)
-    {
-        return $this->setProperty('address', $address);
     }
 
     /**
@@ -48,11 +34,25 @@ class GeoShape extends StructuredValue
      *
      * @return static
      *
-     * @see http://schema.org/addressCountry
+     * @see 
      */
     public function addressCountry($addressCountry)
     {
         return $this->setProperty('addressCountry', $addressCountry);
+    }
+
+    /**
+     * Physical address of the item.
+     *
+     * @param PostalAddress|PostalAddress[]|string|string[] $address
+     *
+     * @return static
+     *
+     * @see 
+     */
+    public function address($address)
+    {
+        return $this->setProperty('address', $address);
     }
 
     /**
@@ -64,7 +64,7 @@ class GeoShape extends StructuredValue
      *
      * @return static
      *
-     * @see http://schema.org/box
+     * @see 
      */
     public function box($box)
     {
@@ -80,7 +80,7 @@ class GeoShape extends StructuredValue
      *
      * @return static
      *
-     * @see http://schema.org/circle
+     * @see 
      */
     public function circle($circle)
     {
@@ -95,7 +95,7 @@ class GeoShape extends StructuredValue
      *
      * @return static
      *
-     * @see http://schema.org/elevation
+     * @see 
      */
     public function elevation($elevation)
     {
@@ -110,11 +110,25 @@ class GeoShape extends StructuredValue
      *
      * @return static
      *
-     * @see http://schema.org/line
+     * @see 
      */
     public function line($line)
     {
         return $this->setProperty('line', $line);
+    }
+
+    /**
+     * The postal code. For example, 94043.
+     *
+     * @param string|string[] $postalCode
+     *
+     * @return static
+     *
+     * @see 
+     */
+    public function postalCode($postalCode)
+    {
+        return $this->setProperty('postalCode', $postalCode);
     }
 
     /**
@@ -127,25 +141,11 @@ class GeoShape extends StructuredValue
      *
      * @return static
      *
-     * @see http://schema.org/polygon
+     * @see 
      */
     public function polygon($polygon)
     {
         return $this->setProperty('polygon', $polygon);
-    }
-
-    /**
-     * The postal code. For example, 94043.
-     *
-     * @param string|string[] $postalCode
-     *
-     * @return static
-     *
-     * @see http://schema.org/postalCode
-     */
-    public function postalCode($postalCode)
-    {
-        return $this->setProperty('postalCode', $postalCode);
     }
 
 }

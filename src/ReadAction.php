@@ -5,7 +5,7 @@ namespace Spatie\SchemaOrg;
 /**
  * The act of consuming written content.
  *
- * @see http://schema.org/ReadAction
+ * @see 
  */
 class ReadAction extends ConsumeAction
 {

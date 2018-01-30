@@ -5,7 +5,7 @@ namespace Spatie\SchemaOrg;
 /**
  * A car wash business.
  *
- * @see http://schema.org/AutoWash
+ * @see 
  */
 class AutoWash extends AutomotiveBusiness
 {

@@ -5,7 +5,7 @@ namespace Spatie\SchemaOrg;
 /**
  * ATM/cash machine.
  *
- * @see http://schema.org/AutomatedTeller
+ * @see 
  */
 class AutomatedTeller extends FinancialService
 {

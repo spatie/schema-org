@@ -5,7 +5,7 @@ namespace Spatie\SchemaOrg;
 /**
  * A day spa.
  *
- * @see http://schema.org/DaySpa
+ * @see 
  */
 class DaySpa extends HealthAndBeautyBusiness
 {

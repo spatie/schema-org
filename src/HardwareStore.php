@@ -5,7 +5,7 @@ namespace Spatie\SchemaOrg;
 /**
  * A hardware store.
  *
- * @see http://schema.org/HardwareStore
+ * @see 
  */
 class HardwareStore extends Store
 {

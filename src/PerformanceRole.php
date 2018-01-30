@@ -6,7 +6,7 @@ namespace Spatie\SchemaOrg;
  * A PerformanceRole is a Role that some entity places with regard to a
  * theatrical performance, e.g. in a Movie, TVSeries etc.
  *
- * @see http://schema.org/PerformanceRole
+ * @see 
  */
 class PerformanceRole extends Role
 {
@@ -18,7 +18,7 @@ class PerformanceRole extends Role
      *
      * @return static
      *
-     * @see http://schema.org/characterName
+     * @see 
      */
     public function characterName($characterName)
     {

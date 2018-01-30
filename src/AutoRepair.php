@@ -5,7 +5,7 @@ namespace Spatie\SchemaOrg;
 /**
  * Car repair business.
  *
- * @see http://schema.org/AutoRepair
+ * @see 
  */
 class AutoRepair extends AutomotiveBusiness
 {

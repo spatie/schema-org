@@ -5,7 +5,7 @@ namespace Spatie\SchemaOrg;
 /**
  * The status of an Action.
  *
- * @see http://schema.org/ActionStatusType
+ * @see 
  */
 class ActionStatusType extends Enumeration
 {

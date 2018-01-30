@@ -5,7 +5,7 @@ namespace Spatie\SchemaOrg;
 /**
  * A store that sells mobile phones and related accessories.
  *
- * @see http://schema.org/MobilePhoneStore
+ * @see 
  */
 class MobilePhoneStore extends Store
 {

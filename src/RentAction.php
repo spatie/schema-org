@@ -7,7 +7,7 @@ namespace Spatie\SchemaOrg;
  * object such as a vehicle or property. For example, an agent rents a property
  * from a landlord in exchange for a periodic payment.
  *
- * @see http://schema.org/RentAction
+ * @see 
  */
 class RentAction extends TradeAction
 {
@@ -18,7 +18,7 @@ class RentAction extends TradeAction
      *
      * @return static
      *
-     * @see http://schema.org/landlord
+     * @see 
      */
     public function landlord($landlord)
     {
@@ -33,7 +33,7 @@ class RentAction extends TradeAction
      *
      * @return static
      *
-     * @see http://schema.org/realEstateAgent
+     * @see 
      */
     public function realEstateAgent($realEstateAgent)
     {

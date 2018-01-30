@@ -5,7 +5,7 @@ namespace Spatie\SchemaOrg;
 /**
  * A country.
  *
- * @see http://schema.org/Country
+ * @see 
  */
 class Country extends AdministrativeArea
 {

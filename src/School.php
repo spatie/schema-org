@@ -5,7 +5,7 @@ namespace Spatie\SchemaOrg;
 /**
  * A school.
  *
- * @see http://schema.org/School
+ * @see 
  */
 class School extends EducationalOrganization
 {

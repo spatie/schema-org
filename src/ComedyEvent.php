@@ -5,7 +5,7 @@ namespace Spatie\SchemaOrg;
 /**
  * Event type: Comedy event.
  *
- * @see http://schema.org/ComedyEvent
+ * @see 
  */
 class ComedyEvent extends Event
 {

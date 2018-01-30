@@ -15,7 +15,7 @@ namespace Spatie\SchemaOrg;
  * guide](http://www.gs1us.org/resources/standards/gtin-validation-guide) from
  * [GS1](http://www.gs1.org/).
  *
- * @see http://schema.org/Offer
+ * @see 
  */
 class Offer extends Intangible
 {
@@ -26,27 +26,11 @@ class Offer extends Intangible
      *
      * @return static
      *
-     * @see http://schema.org/acceptedPaymentMethod
+     * @see 
      */
     public function acceptedPaymentMethod($acceptedPaymentMethod)
     {
         return $this->setProperty('acceptedPaymentMethod', $acceptedPaymentMethod);
-    }
-
-    /**
-     * An additional offer that can only be obtained in combination with the
-     * first base offer (e.g. supplements and extensions that are available for
-     * a surcharge).
-     *
-     * @param Offer|Offer[] $addOn
-     *
-     * @return static
-     *
-     * @see http://schema.org/addOn
-     */
-    public function addOn($addOn)
-    {
-        return $this->setProperty('addOn', $addOn);
     }
 
     /**
@@ -57,7 +41,7 @@ class Offer extends Intangible
      *
      * @return static
      *
-     * @see http://schema.org/advanceBookingRequirement
+     * @see 
      */
     public function advanceBookingRequirement($advanceBookingRequirement)
     {
@@ -72,7 +56,7 @@ class Offer extends Intangible
      *
      * @return static
      *
-     * @see http://schema.org/aggregateRating
+     * @see 
      */
     public function aggregateRating($aggregateRating)
     {
@@ -86,26 +70,11 @@ class Offer extends Intangible
      *
      * @return static
      *
-     * @see http://schema.org/areaServed
+     * @see 
      */
     public function areaServed($areaServed)
     {
         return $this->setProperty('areaServed', $areaServed);
-    }
-
-    /**
-     * The availability of this item&#x2014;for example In stock, Out of stock,
-     * Pre-order, etc.
-     *
-     * @param ItemAvailability|ItemAvailability[] $availability
-     *
-     * @return static
-     *
-     * @see http://schema.org/availability
-     */
-    public function availability($availability)
-    {
-        return $this->setProperty('availability', $availability);
     }
 
     /**
@@ -116,11 +85,25 @@ class Offer extends Intangible
      *
      * @return static
      *
-     * @see http://schema.org/availabilityEnds
+     * @see 
      */
     public function availabilityEnds($availabilityEnds)
     {
         return $this->setProperty('availabilityEnds', $availabilityEnds);
+    }
+
+    /**
+     * The place(s) from which the offer can be obtained (e.g. store locations).
+     *
+     * @param Place|Place[] $availableAtOrFrom
+     *
+     * @return static
+     *
+     * @see 
+     */
+    public function availableAtOrFrom($availableAtOrFrom)
+    {
+        return $this->setProperty('availableAtOrFrom', $availableAtOrFrom);
     }
 
     /**
@@ -131,7 +114,7 @@ class Offer extends Intangible
      *
      * @return static
      *
-     * @see http://schema.org/availabilityStarts
+     * @see 
      */
     public function availabilityStarts($availabilityStarts)
     {
@@ -139,17 +122,18 @@ class Offer extends Intangible
     }
 
     /**
-     * The place(s) from which the offer can be obtained (e.g. store locations).
+     * The availability of this item&#x2014;for example In stock, Out of stock,
+     * Pre-order, etc.
      *
-     * @param Place|Place[] $availableAtOrFrom
+     * @param ItemAvailability|ItemAvailability[] $availability
      *
      * @return static
      *
-     * @see http://schema.org/availableAtOrFrom
+     * @see 
      */
-    public function availableAtOrFrom($availableAtOrFrom)
+    public function availability($availability)
     {
-        return $this->setProperty('availableAtOrFrom', $availableAtOrFrom);
+        return $this->setProperty('availability', $availability);
     }
 
     /**
@@ -159,11 +143,27 @@ class Offer extends Intangible
      *
      * @return static
      *
-     * @see http://schema.org/availableDeliveryMethod
+     * @see 
      */
     public function availableDeliveryMethod($availableDeliveryMethod)
     {
         return $this->setProperty('availableDeliveryMethod', $availableDeliveryMethod);
+    }
+
+    /**
+     * An additional offer that can only be obtained in combination with the
+     * first base offer (e.g. supplements and extensions that are available for
+     * a surcharge).
+     *
+     * @param Offer|Offer[] $addOn
+     *
+     * @return static
+     *
+     * @see 
+     */
+    public function addOn($addOn)
+    {
+        return $this->setProperty('addOn', $addOn);
     }
 
     /**
@@ -175,7 +175,7 @@ class Offer extends Intangible
      *
      * @return static
      *
-     * @see http://schema.org/businessFunction
+     * @see 
      */
     public function businessFunction($businessFunction)
     {
@@ -190,7 +190,7 @@ class Offer extends Intangible
      *
      * @return static
      *
-     * @see http://schema.org/category
+     * @see 
      */
     public function category($category)
     {
@@ -206,39 +206,11 @@ class Offer extends Intangible
      *
      * @return static
      *
-     * @see http://schema.org/deliveryLeadTime
+     * @see 
      */
     public function deliveryLeadTime($deliveryLeadTime)
     {
         return $this->setProperty('deliveryLeadTime', $deliveryLeadTime);
-    }
-
-    /**
-     * The type(s) of customers for which the given offer is valid.
-     *
-     * @param BusinessEntityType|BusinessEntityType[] $eligibleCustomerType
-     *
-     * @return static
-     *
-     * @see http://schema.org/eligibleCustomerType
-     */
-    public function eligibleCustomerType($eligibleCustomerType)
-    {
-        return $this->setProperty('eligibleCustomerType', $eligibleCustomerType);
-    }
-
-    /**
-     * The duration for which the given offer is valid.
-     *
-     * @param QuantitativeValue|QuantitativeValue[] $eligibleDuration
-     *
-     * @return static
-     *
-     * @see http://schema.org/eligibleDuration
-     */
-    public function eligibleDuration($eligibleDuration)
-    {
-        return $this->setProperty('eligibleDuration', $eligibleDuration);
     }
 
     /**
@@ -250,29 +222,11 @@ class Offer extends Intangible
      *
      * @return static
      *
-     * @see http://schema.org/eligibleQuantity
+     * @see 
      */
     public function eligibleQuantity($eligibleQuantity)
     {
         return $this->setProperty('eligibleQuantity', $eligibleQuantity);
-    }
-
-    /**
-     * The ISO 3166-1 (ISO 3166-1 alpha-2) or ISO 3166-2 code, the place, or the
-     * GeoShape for the geo-political region(s) for which the offer or delivery
-     * charge specification is valid.
-     * 
-     * See also [[ineligibleRegion]].
-     *
-     * @param GeoShape|GeoShape[]|Place|Place[]|string|string[] $eligibleRegion
-     *
-     * @return static
-     *
-     * @see http://schema.org/eligibleRegion
-     */
-    public function eligibleRegion($eligibleRegion)
-    {
-        return $this->setProperty('eligibleRegion', $eligibleRegion);
     }
 
     /**
@@ -287,11 +241,57 @@ class Offer extends Intangible
      *
      * @return static
      *
-     * @see http://schema.org/ineligibleRegion
+     * @see 
      */
     public function ineligibleRegion($ineligibleRegion)
     {
         return $this->setProperty('ineligibleRegion', $ineligibleRegion);
+    }
+
+    /**
+     * The ISO 3166-1 (ISO 3166-1 alpha-2) or ISO 3166-2 code, the place, or the
+     * GeoShape for the geo-political region(s) for which the offer or delivery
+     * charge specification is valid.
+     * 
+     * See also [[ineligibleRegion]].
+     *
+     * @param GeoShape|GeoShape[]|Place|Place[]|string|string[] $eligibleRegion
+     *
+     * @return static
+     *
+     * @see 
+     */
+    public function eligibleRegion($eligibleRegion)
+    {
+        return $this->setProperty('eligibleRegion', $eligibleRegion);
+    }
+
+    /**
+     * The type(s) of customers for which the given offer is valid.
+     *
+     * @param BusinessEntityType|BusinessEntityType[] $eligibleCustomerType
+     *
+     * @return static
+     *
+     * @see 
+     */
+    public function eligibleCustomerType($eligibleCustomerType)
+    {
+        return $this->setProperty('eligibleCustomerType', $eligibleCustomerType);
+    }
+
+    /**
+     * The duration for which the given offer is valid.
+     *
+     * @param QuantitativeValue|QuantitativeValue[] $eligibleDuration
+     *
+     * @return static
+     *
+     * @see 
+     */
+    public function eligibleDuration($eligibleDuration)
+    {
+        return $this->setProperty('eligibleDuration', $eligibleDuration);
     }
 
     /**
@@ -304,7 +304,7 @@ class Offer extends Intangible
      *
      * @return static
      *
-     * @see http://schema.org/eligibleTransactionVolume
+     * @see 
      */
     public function eligibleTransactionVolume($eligibleTransactionVolume)
     {
@@ -323,31 +323,11 @@ class Offer extends Intangible
      *
      * @return static
      *
-     * @see http://schema.org/gtin12
+     * @see 
      */
     public function gtin12($gtin12)
     {
         return $this->setProperty('gtin12', $gtin12);
-    }
-
-    /**
-     * The [GTIN-13](http://apps.gs1.org/GDD/glossary/Pages/GTIN-13.aspx) code
-     * of the product, or the product to which the offer refers. This is
-     * equivalent to 13-digit ISBN codes and EAN UCC-13. Former 12-digit UPC
-     * codes can be converted into a GTIN-13 code by simply adding a preceeding
-     * zero. See [GS1 GTIN
-     * Summary](http://www.gs1.org/barcodes/technical/idkeys/gtin) for more
-     * details.
-     *
-     * @param string|string[] $gtin13
-     *
-     * @return static
-     *
-     * @see http://schema.org/gtin13
-     */
-    public function gtin13($gtin13)
-    {
-        return $this->setProperty('gtin13', $gtin13);
     }
 
     /**
@@ -360,7 +340,7 @@ class Offer extends Intangible
      *
      * @return static
      *
-     * @see http://schema.org/gtin14
+     * @see 
      */
     public function gtin14($gtin14)
     {
@@ -378,11 +358,31 @@ class Offer extends Intangible
      *
      * @return static
      *
-     * @see http://schema.org/gtin8
+     * @see 
      */
     public function gtin8($gtin8)
     {
         return $this->setProperty('gtin8', $gtin8);
+    }
+
+    /**
+     * The [GTIN-13](http://apps.gs1.org/GDD/glossary/Pages/GTIN-13.aspx) code
+     * of the product, or the product to which the offer refers. This is
+     * equivalent to 13-digit ISBN codes and EAN UCC-13. Former 12-digit UPC
+     * codes can be converted into a GTIN-13 code by simply adding a preceeding
+     * zero. See [GS1 GTIN
+     * Summary](http://www.gs1.org/barcodes/technical/idkeys/gtin) for more
+     * details.
+     *
+     * @param string|string[] $gtin13
+     *
+     * @return static
+     *
+     * @see 
+     */
+    public function gtin13($gtin13)
+    {
+        return $this->setProperty('gtin13', $gtin13);
     }
 
     /**
@@ -393,7 +393,7 @@ class Offer extends Intangible
      *
      * @return static
      *
-     * @see http://schema.org/includesObject
+     * @see 
      */
     public function includesObject($includesObject)
     {
@@ -407,7 +407,7 @@ class Offer extends Intangible
      *
      * @return static
      *
-     * @see http://schema.org/inventoryLevel
+     * @see 
      */
     public function inventoryLevel($inventoryLevel)
     {
@@ -423,7 +423,7 @@ class Offer extends Intangible
      *
      * @return static
      *
-     * @see http://schema.org/itemCondition
+     * @see 
      */
     public function itemCondition($itemCondition)
     {
@@ -437,7 +437,7 @@ class Offer extends Intangible
      *
      * @return static
      *
-     * @see http://schema.org/itemOffered
+     * @see 
      */
     public function itemOffered($itemOffered)
     {
@@ -452,7 +452,7 @@ class Offer extends Intangible
      *
      * @return static
      *
-     * @see http://schema.org/mpn
+     * @see 
      */
     public function mpn($mpn)
     {
@@ -485,11 +485,25 @@ class Offer extends Intangible
      *
      * @return static
      *
-     * @see http://schema.org/price
+     * @see 
      */
     public function price($price)
     {
         return $this->setProperty('price', $price);
+    }
+
+    /**
+     * The date after which the price is no longer available.
+     *
+     * @param \DateTimeInterface|\DateTimeInterface[] $priceValidUntil
+     *
+     * @return static
+     *
+     * @see 
+     */
+    public function priceValidUntil($priceValidUntil)
+    {
+        return $this->setProperty('priceValidUntil', $priceValidUntil);
     }
 
     /**
@@ -500,25 +514,11 @@ class Offer extends Intangible
      *
      * @return static
      *
-     * @see http://schema.org/priceSpecification
+     * @see 
      */
     public function priceSpecification($priceSpecification)
     {
         return $this->setProperty('priceSpecification', $priceSpecification);
-    }
-
-    /**
-     * The date after which the price is no longer available.
-     *
-     * @param \DateTimeInterface|\DateTimeInterface[] $priceValidUntil
-     *
-     * @return static
-     *
-     * @see http://schema.org/priceValidUntil
-     */
-    public function priceValidUntil($priceValidUntil)
-    {
-        return $this->setProperty('priceValidUntil', $priceValidUntil);
     }
 
     /**
@@ -528,7 +528,7 @@ class Offer extends Intangible
      *
      * @return static
      *
-     * @see http://schema.org/review
+     * @see 
      */
     public function review($review)
     {
@@ -542,26 +542,11 @@ class Offer extends Intangible
      *
      * @return static
      *
-     * @see http://schema.org/reviews
+     * @see 
      */
     public function reviews($reviews)
     {
         return $this->setProperty('reviews', $reviews);
-    }
-
-    /**
-     * An entity which offers (sells / leases / lends / loans) the services /
-     * goods.  A seller may also be a provider.
-     *
-     * @param Organization|Organization[]|Person|Person[] $seller
-     *
-     * @return static
-     *
-     * @see http://schema.org/seller
-     */
-    public function seller($seller)
-    {
-        return $this->setProperty('seller', $seller);
     }
 
     /**
@@ -573,11 +558,26 @@ class Offer extends Intangible
      *
      * @return static
      *
-     * @see http://schema.org/serialNumber
+     * @see 
      */
     public function serialNumber($serialNumber)
     {
         return $this->setProperty('serialNumber', $serialNumber);
+    }
+
+    /**
+     * An entity which offers (sells / leases / lends / loans) the services /
+     * goods.  A seller may also be a provider.
+     *
+     * @param Organization|Organization[]|Person|Person[] $seller
+     *
+     * @return static
+     *
+     * @see 
+     */
+    public function seller($seller)
+    {
+        return $this->setProperty('seller', $seller);
     }
 
     /**
@@ -588,7 +588,7 @@ class Offer extends Intangible
      *
      * @return static
      *
-     * @see http://schema.org/sku
+     * @see 
      */
     public function sku($sku)
     {
@@ -602,7 +602,7 @@ class Offer extends Intangible
      *
      * @return static
      *
-     * @see http://schema.org/validFrom
+     * @see 
      */
     public function validFrom($validFrom)
     {
@@ -617,7 +617,7 @@ class Offer extends Intangible
      *
      * @return static
      *
-     * @see http://schema.org/validThrough
+     * @see 
      */
     public function validThrough($validThrough)
     {
@@ -631,7 +631,7 @@ class Offer extends Intangible
      *
      * @return static
      *
-     * @see http://schema.org/warranty
+     * @see 
      */
     public function warranty($warranty)
     {
@@ -646,7 +646,7 @@ class Offer extends Intangible
      *
      * @return static
      *
-     * @see http://schema.org/priceCurrency
+     * @see 
      */
     public function priceCurrency($priceCurrency)
     {

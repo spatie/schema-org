@@ -5,7 +5,7 @@ namespace Spatie\SchemaOrg;
 /**
  * The act of forming one's opinion, reaction or sentiment.
  *
- * @see http://schema.org/AssessAction
+ * @see 
  */
 class AssessAction extends Action
 {

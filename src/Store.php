@@ -5,7 +5,7 @@ namespace Spatie\SchemaOrg;
 /**
  * A retail good store.
  *
- * @see http://schema.org/Store
+ * @see 
  */
 class Store extends LocalBusiness
 {

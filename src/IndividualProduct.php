@@ -6,7 +6,7 @@ namespace Spatie\SchemaOrg;
  * A single, identifiable product instance (e.g. a laptop with a particular
  * serial number).
  *
- * @see http://schema.org/IndividualProduct
+ * @see 
  */
 class IndividualProduct extends Product
 {
@@ -19,7 +19,7 @@ class IndividualProduct extends Product
      *
      * @return static
      *
-     * @see http://schema.org/serialNumber
+     * @see 
      */
     public function serialNumber($serialNumber)
     {

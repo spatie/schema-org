@@ -15,7 +15,7 @@ namespace Spatie\SchemaOrg;
  * PlayAction refers to showing/displaying for an audience or at an event,
  * rather than consuming visual content.
  *
- * @see http://schema.org/PlayAction
+ * @see 
  */
 class PlayAction extends Action
 {
@@ -26,7 +26,7 @@ class PlayAction extends Action
      *
      * @return static
      *
-     * @see http://schema.org/audience
+     * @see 
      */
     public function audience($audience)
     {
@@ -41,7 +41,7 @@ class PlayAction extends Action
      *
      * @return static
      *
-     * @see http://schema.org/event
+     * @see 
      */
     public function event($event)
     {

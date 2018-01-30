@@ -5,7 +5,7 @@ namespace Spatie\SchemaOrg;
 /**
  * A casino.
  *
- * @see http://schema.org/Casino
+ * @see 
  */
 class Casino extends EntertainmentBusiness
 {

@@ -20,7 +20,7 @@ namespace Spatie\SchemaOrg;
  * updates of all aspects of animate objects rather than the location of
  * inanimate objects (e.g. you track a package, but you don't follow it).
  *
- * @see http://schema.org/FollowAction
+ * @see 
  */
 class FollowAction extends InteractAction
 {
@@ -31,7 +31,7 @@ class FollowAction extends InteractAction
      *
      * @return static
      *
-     * @see http://schema.org/followee
+     * @see 
      */
     public function followee($followee)
     {

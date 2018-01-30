@@ -5,23 +5,22 @@ namespace Spatie\SchemaOrg;
 /**
  * The mailing address.
  *
- * @see http://schema.org/PostalAddress
+ * @see 
  */
 class PostalAddress extends ContactPoint
 {
     /**
-     * The country. For example, USA. You can also provide the two-letter [ISO
-     * 3166-1 alpha-2 country code](http://en.wikipedia.org/wiki/ISO_3166-1).
+     * The region. For example, CA.
      *
-     * @param string|string[]|Country|Country[] $addressCountry
+     * @param string|string[] $addressRegion
      *
      * @return static
      *
-     * @see http://schema.org/addressCountry
+     * @see 
      */
-    public function addressCountry($addressCountry)
+    public function addressRegion($addressRegion)
     {
-        return $this->setProperty('addressCountry', $addressCountry);
+        return $this->setProperty('addressRegion', $addressRegion);
     }
 
     /**
@@ -31,7 +30,7 @@ class PostalAddress extends ContactPoint
      *
      * @return static
      *
-     * @see http://schema.org/addressLocality
+     * @see 
      */
     public function addressLocality($addressLocality)
     {
@@ -39,17 +38,18 @@ class PostalAddress extends ContactPoint
     }
 
     /**
-     * The region. For example, CA.
+     * The country. For example, USA. You can also provide the two-letter [ISO
+     * 3166-1 alpha-2 country code](http://en.wikipedia.org/wiki/ISO_3166-1).
      *
-     * @param string|string[] $addressRegion
+     * @param string|string[]|Country|Country[] $addressCountry
      *
      * @return static
      *
-     * @see http://schema.org/addressRegion
+     * @see 
      */
-    public function addressRegion($addressRegion)
+    public function addressCountry($addressCountry)
     {
-        return $this->setProperty('addressRegion', $addressRegion);
+        return $this->setProperty('addressCountry', $addressCountry);
     }
 
     /**
@@ -59,7 +59,7 @@ class PostalAddress extends ContactPoint
      *
      * @return static
      *
-     * @see http://schema.org/postalCode
+     * @see 
      */
     public function postalCode($postalCode)
     {
@@ -73,7 +73,7 @@ class PostalAddress extends ContactPoint
      *
      * @return static
      *
-     * @see http://schema.org/postOfficeBoxNumber
+     * @see 
      */
     public function postOfficeBoxNumber($postOfficeBoxNumber)
     {
@@ -87,7 +87,7 @@ class PostalAddress extends ContactPoint
      *
      * @return static
      *
-     * @see http://schema.org/streetAddress
+     * @see 
      */
     public function streetAddress($streetAddress)
     {

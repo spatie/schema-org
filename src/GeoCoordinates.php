@@ -5,24 +5,10 @@ namespace Spatie\SchemaOrg;
 /**
  * The geographic coordinates of a place or event.
  *
- * @see http://schema.org/GeoCoordinates
+ * @see 
  */
 class GeoCoordinates extends StructuredValue
 {
-    /**
-     * Physical address of the item.
-     *
-     * @param PostalAddress|PostalAddress[]|string|string[] $address
-     *
-     * @return static
-     *
-     * @see http://schema.org/address
-     */
-    public function address($address)
-    {
-        return $this->setProperty('address', $address);
-    }
-
     /**
      * The country. For example, USA. You can also provide the two-letter [ISO
      * 3166-1 alpha-2 country code](http://en.wikipedia.org/wiki/ISO_3166-1).
@@ -31,11 +17,25 @@ class GeoCoordinates extends StructuredValue
      *
      * @return static
      *
-     * @see http://schema.org/addressCountry
+     * @see 
      */
     public function addressCountry($addressCountry)
     {
         return $this->setProperty('addressCountry', $addressCountry);
+    }
+
+    /**
+     * Physical address of the item.
+     *
+     * @param PostalAddress|PostalAddress[]|string|string[] $address
+     *
+     * @return static
+     *
+     * @see 
+     */
+    public function address($address)
+    {
+        return $this->setProperty('address', $address);
     }
 
     /**
@@ -46,7 +46,7 @@ class GeoCoordinates extends StructuredValue
      *
      * @return static
      *
-     * @see http://schema.org/elevation
+     * @see 
      */
     public function elevation($elevation)
     {
@@ -61,7 +61,7 @@ class GeoCoordinates extends StructuredValue
      *
      * @return static
      *
-     * @see http://schema.org/latitude
+     * @see 
      */
     public function latitude($latitude)
     {
@@ -76,7 +76,7 @@ class GeoCoordinates extends StructuredValue
      *
      * @return static
      *
-     * @see http://schema.org/longitude
+     * @see 
      */
     public function longitude($longitude)
     {
@@ -90,7 +90,7 @@ class GeoCoordinates extends StructuredValue
      *
      * @return static
      *
-     * @see http://schema.org/postalCode
+     * @see 
      */
     public function postalCode($postalCode)
     {

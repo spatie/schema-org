@@ -5,7 +5,7 @@ namespace Spatie\SchemaOrg;
 /**
  * Brewery.
  *
- * @see http://schema.org/Brewery
+ * @see 
  */
 class Brewery extends FoodEstablishment
 {

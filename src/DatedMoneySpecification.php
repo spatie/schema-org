@@ -8,7 +8,7 @@ namespace Spatie\SchemaOrg;
  * specific period of time. __Note:__ This type has been superseded by
  * [[MonetaryAmount]] use of that type is recommended
  *
- * @see http://schema.org/DatedMoneySpecification
+ * @see 
  */
 class DatedMoneySpecification extends StructuredValue
 {
@@ -19,7 +19,7 @@ class DatedMoneySpecification extends StructuredValue
      *
      * @return static
      *
-     * @see http://schema.org/amount
+     * @see 
      */
     public function amount($amount)
     {
@@ -34,7 +34,7 @@ class DatedMoneySpecification extends StructuredValue
      *
      * @return static
      *
-     * @see http://schema.org/currency
+     * @see 
      */
     public function currency($currency)
     {

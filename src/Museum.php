@@ -5,7 +5,7 @@ namespace Spatie\SchemaOrg;
 /**
  * A museum.
  *
- * @see http://schema.org/Museum
+ * @see 
  */
 class Museum extends CivicStructure
 {

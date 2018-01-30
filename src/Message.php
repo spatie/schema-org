@@ -5,7 +5,7 @@ namespace Spatie\SchemaOrg;
 /**
  * A single message from a sender to one or more organizations or people.
  *
- * @see http://schema.org/Message
+ * @see 
  */
 class Message extends CreativeWork
 {
@@ -17,7 +17,7 @@ class Message extends CreativeWork
      *
      * @return static
      *
-     * @see http://schema.org/recipient
+     * @see 
      */
     public function recipient($recipient)
     {
@@ -32,7 +32,7 @@ class Message extends CreativeWork
      *
      * @return static
      *
-     * @see http://schema.org/sender
+     * @see 
      */
     public function sender($sender)
     {
@@ -47,39 +47,11 @@ class Message extends CreativeWork
      *
      * @return static
      *
-     * @see http://schema.org/dateRead
+     * @see 
      */
     public function dateRead($dateRead)
     {
         return $this->setProperty('dateRead', $dateRead);
-    }
-
-    /**
-     * The date/time the message was received if a single recipient exists.
-     *
-     * @param \DateTimeInterface|\DateTimeInterface[] $dateReceived
-     *
-     * @return static
-     *
-     * @see http://schema.org/dateReceived
-     */
-    public function dateReceived($dateReceived)
-    {
-        return $this->setProperty('dateReceived', $dateReceived);
-    }
-
-    /**
-     * The date/time at which the message was sent.
-     *
-     * @param \DateTimeInterface|\DateTimeInterface[] $dateSent
-     *
-     * @return static
-     *
-     * @see http://schema.org/dateSent
-     */
-    public function dateSent($dateSent)
-    {
-        return $this->setProperty('dateSent', $dateSent);
     }
 
     /**
@@ -89,11 +61,39 @@ class Message extends CreativeWork
      *
      * @return static
      *
-     * @see http://schema.org/messageAttachment
+     * @see 
      */
     public function messageAttachment($messageAttachment)
     {
         return $this->setProperty('messageAttachment', $messageAttachment);
+    }
+
+    /**
+     * The date/time at which the message was sent.
+     *
+     * @param \DateTimeInterface|\DateTimeInterface[] $dateSent
+     *
+     * @return static
+     *
+     * @see 
+     */
+    public function dateSent($dateSent)
+    {
+        return $this->setProperty('dateSent', $dateSent);
+    }
+
+    /**
+     * The date/time the message was received if a single recipient exists.
+     *
+     * @param \DateTimeInterface|\DateTimeInterface[] $dateReceived
+     *
+     * @return static
+     *
+     * @see 
+     */
+    public function dateReceived($dateReceived)
+    {
+        return $this->setProperty('dateReceived', $dateReceived);
     }
 
 }

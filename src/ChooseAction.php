@@ -6,7 +6,7 @@ namespace Spatie\SchemaOrg;
  * The act of expressing a preference from a set of options or a large or
  * unbounded set of choices/options.
  *
- * @see http://schema.org/ChooseAction
+ * @see 
  */
 class ChooseAction extends AssessAction
 {
@@ -17,7 +17,7 @@ class ChooseAction extends AssessAction
      *
      * @return static
      *
-     * @see http://schema.org/option
+     * @see 
      */
     public function option($option)
     {
@@ -31,7 +31,7 @@ class ChooseAction extends AssessAction
      *
      * @return static
      *
-     * @see http://schema.org/actionOption
+     * @see 
      */
     public function actionOption($actionOption)
     {

@@ -5,7 +5,7 @@ namespace Spatie\SchemaOrg;
 /**
  * A work of art that is primarily visual in character.
  *
- * @see http://schema.org/VisualArtwork
+ * @see 
  */
 class VisualArtwork extends CreativeWork
 {
@@ -17,11 +17,41 @@ class VisualArtwork extends CreativeWork
      *
      * @return static
      *
-     * @see http://schema.org/artform
+     * @see 
      */
     public function artform($artform)
     {
         return $this->setProperty('artform', $artform);
+    }
+
+    /**
+     * The supporting materials for the artwork, e.g. Canvas, Paper, Wood,
+     * Board, etc.
+     *
+     * @param string|string[] $artworkSurface
+     *
+     * @return static
+     *
+     * @see 
+     */
+    public function artworkSurface($artworkSurface)
+    {
+        return $this->setProperty('artworkSurface', $artworkSurface);
+    }
+
+    /**
+     * A material used as a surface in some artwork, e.g. Canvas, Paper, Wood,
+     * Board, etc.
+     *
+     * @param string|string[] $surface
+     *
+     * @return static
+     *
+     * @see 
+     */
+    public function surface($surface)
+    {
+        return $this->setProperty('surface', $surface);
     }
 
     /**
@@ -33,41 +63,11 @@ class VisualArtwork extends CreativeWork
      *
      * @return static
      *
-     * @see http://schema.org/artMedium
+     * @see 
      */
     public function artMedium($artMedium)
     {
         return $this->setProperty('artMedium', $artMedium);
-    }
-
-    /**
-     * A material used as a surface in some artwork, e.g. Canvas, Paper, Wood,
-     * Board, etc.
-     *
-     * @param string|string[] $surface
-     *
-     * @return static
-     *
-     * @see http://schema.org/surface
-     */
-    public function surface($surface)
-    {
-        return $this->setProperty('surface', $surface);
-    }
-
-    /**
-     * The supporting materials for the artwork, e.g. Canvas, Paper, Wood,
-     * Board, etc.
-     *
-     * @param string|string[] $artworkSurface
-     *
-     * @return static
-     *
-     * @see http://schema.org/artworkSurface
-     */
-    public function artworkSurface($artworkSurface)
-    {
-        return $this->setProperty('artworkSurface', $artworkSurface);
     }
 
     /**
@@ -79,7 +79,7 @@ class VisualArtwork extends CreativeWork
      *
      * @return static
      *
-     * @see http://schema.org/artEdition
+     * @see 
      */
     public function artEdition($artEdition)
     {

@@ -5,7 +5,7 @@ namespace Spatie\SchemaOrg;
 /**
  * A zoo.
  *
- * @see http://schema.org/Zoo
+ * @see 
  */
 class Zoo extends CivicStructure
 {

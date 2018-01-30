@@ -5,7 +5,7 @@ namespace Spatie\SchemaOrg;
 /**
  * A police station.
  *
- * @see http://schema.org/PoliceStation
+ * @see 
  */
 class PoliceStation extends CivicStructure
 {

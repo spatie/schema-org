@@ -5,7 +5,7 @@ namespace Spatie\SchemaOrg;
 /**
  * An list item, e.g. a step in a checklist or how-to description.
  *
- * @see http://schema.org/ListItem
+ * @see 
  */
 class ListItem extends Intangible
 {
@@ -16,11 +16,39 @@ class ListItem extends Intangible
      *
      * @return static
      *
-     * @see http://schema.org/position
+     * @see 
      */
     public function position($position)
     {
         return $this->setProperty('position', $position);
+    }
+
+    /**
+     * A link to the ListItem that follows the current one.
+     *
+     * @param ListItem|ListItem[] $nextItem
+     *
+     * @return static
+     *
+     * @see 
+     */
+    public function nextItem($nextItem)
+    {
+        return $this->setProperty('nextItem', $nextItem);
+    }
+
+    /**
+     * A link to the ListItem that preceeds the current one.
+     *
+     * @param ListItem|ListItem[] $previousItem
+     *
+     * @return static
+     *
+     * @see 
+     */
+    public function previousItem($previousItem)
+    {
+        return $this->setProperty('previousItem', $previousItem);
     }
 
     /**
@@ -31,39 +59,11 @@ class ListItem extends Intangible
      *
      * @return static
      *
-     * @see http://schema.org/item
+     * @see 
      */
     public function item($item)
     {
         return $this->setProperty('item', $item);
-    }
-
-    /**
-     * A link to the ListItem that preceeds the current one.
-     *
-     * @param ListItem|ListItem[] $previousItem
-     *
-     * @return static
-     *
-     * @see http://schema.org/previousItem
-     */
-    public function previousItem($previousItem)
-    {
-        return $this->setProperty('previousItem', $previousItem);
-    }
-
-    /**
-     * A link to the ListItem that follows the current one.
-     *
-     * @param ListItem|ListItem[] $nextItem
-     *
-     * @return static
-     *
-     * @see http://schema.org/nextItem
-     */
-    public function nextItem($nextItem)
-    {
-        return $this->setProperty('nextItem', $nextItem);
     }
 
 }

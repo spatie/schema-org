@@ -6,7 +6,7 @@ namespace Spatie\SchemaOrg;
  * A set of characteristics belonging to businesses, e.g. who compose an item's
  * target audience.
  *
- * @see http://schema.org/BusinessAudience
+ * @see 
  */
 class BusinessAudience extends Audience
 {
@@ -17,25 +17,11 @@ class BusinessAudience extends Audience
      *
      * @return static
      *
-     * @see http://schema.org/numberOfEmployees
+     * @see 
      */
     public function numberOfEmployees($numberOfEmployees)
     {
         return $this->setProperty('numberOfEmployees', $numberOfEmployees);
-    }
-
-    /**
-     * The size of the business in annual revenue.
-     *
-     * @param QuantitativeValue|QuantitativeValue[] $yearlyRevenue
-     *
-     * @return static
-     *
-     * @see http://schema.org/yearlyRevenue
-     */
-    public function yearlyRevenue($yearlyRevenue)
-    {
-        return $this->setProperty('yearlyRevenue', $yearlyRevenue);
     }
 
     /**
@@ -45,11 +31,25 @@ class BusinessAudience extends Audience
      *
      * @return static
      *
-     * @see http://schema.org/yearsInOperation
+     * @see 
      */
     public function yearsInOperation($yearsInOperation)
     {
         return $this->setProperty('yearsInOperation', $yearsInOperation);
+    }
+
+    /**
+     * The size of the business in annual revenue.
+     *
+     * @param QuantitativeValue|QuantitativeValue[] $yearlyRevenue
+     *
+     * @return static
+     *
+     * @see 
+     */
+    public function yearlyRevenue($yearlyRevenue)
+    {
+        return $this->setProperty('yearlyRevenue', $yearlyRevenue);
     }
 
 }

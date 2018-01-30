@@ -5,7 +5,7 @@ namespace Spatie\SchemaOrg;
 /**
  * A preschool.
  *
- * @see http://schema.org/Preschool
+ * @see 
  */
 class Preschool extends EducationalOrganization
 {

@@ -5,7 +5,7 @@ namespace Spatie\SchemaOrg;
 /**
  * A permit issued by a government agency.
  *
- * @see http://schema.org/GovernmentPermit
+ * @see 
  */
 class GovernmentPermit extends Permit
 {

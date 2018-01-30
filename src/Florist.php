@@ -5,7 +5,7 @@ namespace Spatie\SchemaOrg;
 /**
  * A florist.
  *
- * @see http://schema.org/Florist
+ * @see 
  */
 class Florist extends Store
 {

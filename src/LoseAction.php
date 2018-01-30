@@ -5,7 +5,7 @@ namespace Spatie\SchemaOrg;
 /**
  * The act of being defeated in a competitive activity.
  *
- * @see http://schema.org/LoseAction
+ * @see 
  */
 class LoseAction extends AchieveAction
 {
@@ -16,7 +16,7 @@ class LoseAction extends AchieveAction
      *
      * @return static
      *
-     * @see http://schema.org/winner
+     * @see 
      */
     public function winner($winner)
     {

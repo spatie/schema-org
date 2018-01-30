@@ -9,7 +9,7 @@ namespace Spatie\SchemaOrg;
  * these properties are specified, but if they are found outside of an
  * itemscope, they will be assumed to be about the page.
  *
- * @see http://schema.org/WebPage
+ * @see 
  */
 class WebPage extends CreativeWork
 {
@@ -21,7 +21,7 @@ class WebPage extends CreativeWork
      *
      * @return static
      *
-     * @see http://schema.org/breadcrumb
+     * @see 
      */
     public function breadcrumb($breadcrumb)
     {
@@ -36,7 +36,7 @@ class WebPage extends CreativeWork
      *
      * @return static
      *
-     * @see http://schema.org/lastReviewed
+     * @see 
      */
     public function lastReviewed($lastReviewed)
     {
@@ -50,7 +50,7 @@ class WebPage extends CreativeWork
      *
      * @return static
      *
-     * @see http://schema.org/mainContentOfPage
+     * @see 
      */
     public function mainContentOfPage($mainContentOfPage)
     {
@@ -64,7 +64,7 @@ class WebPage extends CreativeWork
      *
      * @return static
      *
-     * @see http://schema.org/primaryImageOfPage
+     * @see 
      */
     public function primaryImageOfPage($primaryImageOfPage)
     {
@@ -78,7 +78,7 @@ class WebPage extends CreativeWork
      *
      * @return static
      *
-     * @see http://schema.org/relatedLink
+     * @see 
      */
     public function relatedLink($relatedLink)
     {
@@ -93,26 +93,11 @@ class WebPage extends CreativeWork
      *
      * @return static
      *
-     * @see http://schema.org/reviewedBy
+     * @see 
      */
     public function reviewedBy($reviewedBy)
     {
         return $this->setProperty('reviewedBy', $reviewedBy);
-    }
-
-    /**
-     * One of the more significant URLs on the page. Typically, these are the
-     * non-navigation links that are clicked on the most.
-     *
-     * @param string|string[] $significantLink
-     *
-     * @return static
-     *
-     * @see http://schema.org/significantLink
-     */
-    public function significantLink($significantLink)
-    {
-        return $this->setProperty('significantLink', $significantLink);
     }
 
     /**
@@ -123,11 +108,26 @@ class WebPage extends CreativeWork
      *
      * @return static
      *
-     * @see http://schema.org/significantLinks
+     * @see 
      */
     public function significantLinks($significantLinks)
     {
         return $this->setProperty('significantLinks', $significantLinks);
+    }
+
+    /**
+     * One of the more significant URLs on the page. Typically, these are the
+     * non-navigation links that are clicked on the most.
+     *
+     * @param string|string[] $significantLink
+     *
+     * @return static
+     *
+     * @see 
+     */
+    public function significantLink($significantLink)
+    {
+        return $this->setProperty('significantLink', $significantLink);
     }
 
     /**
@@ -137,7 +137,7 @@ class WebPage extends CreativeWork
      *
      * @return static
      *
-     * @see http://schema.org/specialty
+     * @see 
      */
     public function specialty($specialty)
     {

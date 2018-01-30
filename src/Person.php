@@ -5,7 +5,7 @@ namespace Spatie\SchemaOrg;
 /**
  * A person (alive, dead, undead, or fictional).
  *
- * @see http://schema.org/Person
+ * @see 
  */
 class Person extends Thing
 {
@@ -17,7 +17,7 @@ class Person extends Thing
      *
      * @return static
      *
-     * @see http://schema.org/hasOfferCatalog
+     * @see 
      */
     public function hasOfferCatalog($hasOfferCatalog)
     {
@@ -31,25 +31,11 @@ class Person extends Thing
      *
      * @return static
      *
-     * @see http://schema.org/additionalName
+     * @see 
      */
     public function additionalName($additionalName)
     {
         return $this->setProperty('additionalName', $additionalName);
-    }
-
-    /**
-     * Physical address of the item.
-     *
-     * @param PostalAddress|PostalAddress[]|string|string[] $address
-     *
-     * @return static
-     *
-     * @see http://schema.org/address
-     */
-    public function address($address)
-    {
-        return $this->setProperty('address', $address);
     }
 
     /**
@@ -60,11 +46,25 @@ class Person extends Thing
      *
      * @return static
      *
-     * @see http://schema.org/affiliation
+     * @see 
      */
     public function affiliation($affiliation)
     {
         return $this->setProperty('affiliation', $affiliation);
+    }
+
+    /**
+     * Physical address of the item.
+     *
+     * @param PostalAddress|PostalAddress[]|string|string[] $address
+     *
+     * @return static
+     *
+     * @see 
+     */
+    public function address($address)
+    {
+        return $this->setProperty('address', $address);
     }
 
     /**
@@ -74,7 +74,7 @@ class Person extends Thing
      *
      * @return static
      *
-     * @see http://schema.org/alumniOf
+     * @see 
      */
     public function alumniOf($alumniOf)
     {
@@ -88,7 +88,7 @@ class Person extends Thing
      *
      * @return static
      *
-     * @see http://schema.org/award
+     * @see 
      */
     public function award($award)
     {
@@ -102,7 +102,7 @@ class Person extends Thing
      *
      * @return static
      *
-     * @see http://schema.org/awards
+     * @see 
      */
     public function awards($awards)
     {
@@ -116,7 +116,7 @@ class Person extends Thing
      *
      * @return static
      *
-     * @see http://schema.org/birthDate
+     * @see 
      */
     public function birthDate($birthDate)
     {
@@ -131,7 +131,7 @@ class Person extends Thing
      *
      * @return static
      *
-     * @see http://schema.org/brand
+     * @see 
      */
     public function brand($brand)
     {
@@ -145,7 +145,7 @@ class Person extends Thing
      *
      * @return static
      *
-     * @see http://schema.org/children
+     * @see 
      */
     public function children($children)
     {
@@ -159,11 +159,25 @@ class Person extends Thing
      *
      * @return static
      *
-     * @see http://schema.org/colleague
+     * @see 
      */
     public function colleague($colleague)
     {
         return $this->setProperty('colleague', $colleague);
+    }
+
+    /**
+     * A contact point for a person or organization.
+     *
+     * @param ContactPoint|ContactPoint[] $contactPoints
+     *
+     * @return static
+     *
+     * @see 
+     */
+    public function contactPoints($contactPoints)
+    {
+        return $this->setProperty('contactPoints', $contactPoints);
     }
 
     /**
@@ -173,7 +187,7 @@ class Person extends Thing
      *
      * @return static
      *
-     * @see http://schema.org/colleagues
+     * @see 
      */
     public function colleagues($colleagues)
     {
@@ -187,25 +201,11 @@ class Person extends Thing
      *
      * @return static
      *
-     * @see http://schema.org/contactPoint
+     * @see 
      */
     public function contactPoint($contactPoint)
     {
         return $this->setProperty('contactPoint', $contactPoint);
-    }
-
-    /**
-     * A contact point for a person or organization.
-     *
-     * @param ContactPoint|ContactPoint[] $contactPoints
-     *
-     * @return static
-     *
-     * @see http://schema.org/contactPoints
-     */
-    public function contactPoints($contactPoints)
-    {
-        return $this->setProperty('contactPoints', $contactPoints);
     }
 
     /**
@@ -215,7 +215,7 @@ class Person extends Thing
      *
      * @return static
      *
-     * @see http://schema.org/deathDate
+     * @see 
      */
     public function deathDate($deathDate)
     {
@@ -230,7 +230,7 @@ class Person extends Thing
      *
      * @return static
      *
-     * @see http://schema.org/duns
+     * @see 
      */
     public function duns($duns)
     {
@@ -244,7 +244,7 @@ class Person extends Thing
      *
      * @return static
      *
-     * @see http://schema.org/email
+     * @see 
      */
     public function email($email)
     {
@@ -259,7 +259,7 @@ class Person extends Thing
      *
      * @return static
      *
-     * @see http://schema.org/familyName
+     * @see 
      */
     public function familyName($familyName)
     {
@@ -273,7 +273,7 @@ class Person extends Thing
      *
      * @return static
      *
-     * @see http://schema.org/faxNumber
+     * @see 
      */
     public function faxNumber($faxNumber)
     {
@@ -287,7 +287,7 @@ class Person extends Thing
      *
      * @return static
      *
-     * @see http://schema.org/follows
+     * @see 
      */
     public function follows($follows)
     {
@@ -303,26 +303,11 @@ class Person extends Thing
      *
      * @return static
      *
-     * @see http://schema.org/gender
+     * @see 
      */
     public function gender($gender)
     {
         return $this->setProperty('gender', $gender);
-    }
-
-    /**
-     * Given name. In the U.S., the first name of a Person. This can be used
-     * along with familyName instead of the name property.
-     *
-     * @param string|string[] $givenName
-     *
-     * @return static
-     *
-     * @see http://schema.org/givenName
-     */
-    public function givenName($givenName)
-    {
-        return $this->setProperty('givenName', $givenName);
     }
 
     /**
@@ -335,11 +320,26 @@ class Person extends Thing
      *
      * @return static
      *
-     * @see http://schema.org/globalLocationNumber
+     * @see 
      */
     public function globalLocationNumber($globalLocationNumber)
     {
         return $this->setProperty('globalLocationNumber', $globalLocationNumber);
+    }
+
+    /**
+     * Given name. In the U.S., the first name of a Person. This can be used
+     * along with familyName instead of the name property.
+     *
+     * @param string|string[] $givenName
+     *
+     * @return static
+     *
+     * @see 
+     */
+    public function givenName($givenName)
+    {
+        return $this->setProperty('givenName', $givenName);
     }
 
     /**
@@ -349,25 +349,11 @@ class Person extends Thing
      *
      * @return static
      *
-     * @see http://schema.org/hasPOS
+     * @see 
      */
     public function hasPOS($hasPOS)
     {
         return $this->setProperty('hasPOS', $hasPOS);
-    }
-
-    /**
-     * The height of the item.
-     *
-     * @param Distance|Distance[]|QuantitativeValue|QuantitativeValue[] $height
-     *
-     * @return static
-     *
-     * @see http://schema.org/height
-     */
-    public function height($height)
-    {
-        return $this->setProperty('height', $height);
     }
 
     /**
@@ -377,11 +363,25 @@ class Person extends Thing
      *
      * @return static
      *
-     * @see http://schema.org/homeLocation
+     * @see 
      */
     public function homeLocation($homeLocation)
     {
         return $this->setProperty('homeLocation', $homeLocation);
+    }
+
+    /**
+     * The height of the item.
+     *
+     * @param Distance|Distance[]|QuantitativeValue|QuantitativeValue[] $height
+     *
+     * @return static
+     *
+     * @see 
+     */
+    public function height($height)
+    {
+        return $this->setProperty('height', $height);
     }
 
     /**
@@ -391,7 +391,7 @@ class Person extends Thing
      *
      * @return static
      *
-     * @see http://schema.org/honorificPrefix
+     * @see 
      */
     public function honorificPrefix($honorificPrefix)
     {
@@ -405,7 +405,7 @@ class Person extends Thing
      *
      * @return static
      *
-     * @see http://schema.org/honorificSuffix
+     * @see 
      */
     public function honorificSuffix($honorificSuffix)
     {
@@ -421,7 +421,7 @@ class Person extends Thing
      *
      * @return static
      *
-     * @see http://schema.org/isicV4
+     * @see 
      */
     public function isicV4($isicV4)
     {
@@ -435,7 +435,7 @@ class Person extends Thing
      *
      * @return static
      *
-     * @see http://schema.org/jobTitle
+     * @see 
      */
     public function jobTitle($jobTitle)
     {
@@ -449,7 +449,7 @@ class Person extends Thing
      *
      * @return static
      *
-     * @see http://schema.org/knows
+     * @see 
      */
     public function knows($knows)
     {
@@ -463,7 +463,7 @@ class Person extends Thing
      *
      * @return static
      *
-     * @see http://schema.org/makesOffer
+     * @see 
      */
     public function makesOffer($makesOffer)
     {
@@ -478,7 +478,7 @@ class Person extends Thing
      *
      * @return static
      *
-     * @see http://schema.org/memberOf
+     * @see 
      */
     public function memberOf($memberOf)
     {
@@ -493,7 +493,7 @@ class Person extends Thing
      *
      * @return static
      *
-     * @see http://schema.org/naics
+     * @see 
      */
     public function naics($naics)
     {
@@ -507,7 +507,7 @@ class Person extends Thing
      *
      * @return static
      *
-     * @see http://schema.org/nationality
+     * @see 
      */
     public function nationality($nationality)
     {
@@ -522,7 +522,7 @@ class Person extends Thing
      *
      * @return static
      *
-     * @see http://schema.org/netWorth
+     * @see 
      */
     public function netWorth($netWorth)
     {
@@ -536,25 +536,11 @@ class Person extends Thing
      *
      * @return static
      *
-     * @see http://schema.org/owns
+     * @see 
      */
     public function owns($owns)
     {
         return $this->setProperty('owns', $owns);
-    }
-
-    /**
-     * A parent of this person.
-     *
-     * @param Person|Person[] $parent
-     *
-     * @return static
-     *
-     * @see http://schema.org/parent
-     */
-    public function parent($parent)
-    {
-        return $this->setProperty('parent', $parent);
     }
 
     /**
@@ -564,11 +550,25 @@ class Person extends Thing
      *
      * @return static
      *
-     * @see http://schema.org/parents
+     * @see 
      */
     public function parents($parents)
     {
         return $this->setProperty('parents', $parents);
+    }
+
+    /**
+     * A parent of this person.
+     *
+     * @param Person|Person[] $parent
+     *
+     * @return static
+     *
+     * @see 
+     */
+    public function parent($parent)
+    {
+        return $this->setProperty('parent', $parent);
     }
 
     /**
@@ -578,7 +578,7 @@ class Person extends Thing
      *
      * @return static
      *
-     * @see http://schema.org/performerIn
+     * @see 
      */
     public function performerIn($performerIn)
     {
@@ -592,7 +592,7 @@ class Person extends Thing
      *
      * @return static
      *
-     * @see http://schema.org/relatedTo
+     * @see 
      */
     public function relatedTo($relatedTo)
     {
@@ -607,7 +607,7 @@ class Person extends Thing
      *
      * @return static
      *
-     * @see http://schema.org/seeks
+     * @see 
      */
     public function seeks($seeks)
     {
@@ -617,29 +617,29 @@ class Person extends Thing
     /**
      * A sibling of the person.
      *
-     * @param Person|Person[] $sibling
+     * @param Person|Person[] $siblings
      *
      * @return static
      *
-     * @see http://schema.org/sibling
+     * @see 
      */
-    public function sibling($sibling)
+    public function siblings($siblings)
     {
-        return $this->setProperty('sibling', $sibling);
+        return $this->setProperty('siblings', $siblings);
     }
 
     /**
      * A sibling of the person.
      *
-     * @param Person|Person[] $siblings
+     * @param Person|Person[] $sibling
      *
      * @return static
      *
-     * @see http://schema.org/siblings
+     * @see 
      */
-    public function siblings($siblings)
+    public function sibling($sibling)
     {
-        return $this->setProperty('siblings', $siblings);
+        return $this->setProperty('sibling', $sibling);
     }
 
     /**
@@ -651,11 +651,25 @@ class Person extends Thing
      *
      * @return static
      *
-     * @see http://schema.org/sponsor
+     * @see 
      */
     public function sponsor($sponsor)
     {
         return $this->setProperty('sponsor', $sponsor);
+    }
+
+    /**
+     * The person's spouse.
+     *
+     * @param Person|Person[] $spouse
+     *
+     * @return static
+     *
+     * @see 
+     */
+    public function spouse($spouse)
+    {
+        return $this->setProperty('spouse', $spouse);
     }
 
     /**
@@ -666,25 +680,11 @@ class Person extends Thing
      *
      * @return static
      *
-     * @see http://schema.org/funder
+     * @see 
      */
     public function funder($funder)
     {
         return $this->setProperty('funder', $funder);
-    }
-
-    /**
-     * The person's spouse.
-     *
-     * @param Person|Person[] $spouse
-     *
-     * @return static
-     *
-     * @see http://schema.org/spouse
-     */
-    public function spouse($spouse)
-    {
-        return $this->setProperty('spouse', $spouse);
     }
 
     /**
@@ -695,7 +695,7 @@ class Person extends Thing
      *
      * @return static
      *
-     * @see http://schema.org/taxID
+     * @see 
      */
     public function taxID($taxID)
     {
@@ -709,7 +709,7 @@ class Person extends Thing
      *
      * @return static
      *
-     * @see http://schema.org/telephone
+     * @see 
      */
     public function telephone($telephone)
     {
@@ -723,7 +723,7 @@ class Person extends Thing
      *
      * @return static
      *
-     * @see http://schema.org/vatID
+     * @see 
      */
     public function vatID($vatID)
     {
@@ -737,25 +737,11 @@ class Person extends Thing
      *
      * @return static
      *
-     * @see http://schema.org/weight
+     * @see 
      */
     public function weight($weight)
     {
         return $this->setProperty('weight', $weight);
-    }
-
-    /**
-     * A contact location for a person's place of work.
-     *
-     * @param ContactPoint|ContactPoint[]|Place|Place[] $workLocation
-     *
-     * @return static
-     *
-     * @see http://schema.org/workLocation
-     */
-    public function workLocation($workLocation)
-    {
-        return $this->setProperty('workLocation', $workLocation);
     }
 
     /**
@@ -765,11 +751,25 @@ class Person extends Thing
      *
      * @return static
      *
-     * @see http://schema.org/worksFor
+     * @see 
      */
     public function worksFor($worksFor)
     {
         return $this->setProperty('worksFor', $worksFor);
+    }
+
+    /**
+     * A contact location for a person's place of work.
+     *
+     * @param ContactPoint|ContactPoint[]|Place|Place[] $workLocation
+     *
+     * @return static
+     *
+     * @see 
+     */
+    public function workLocation($workLocation)
+    {
+        return $this->setProperty('workLocation', $workLocation);
     }
 
     /**
@@ -779,7 +779,7 @@ class Person extends Thing
      *
      * @return static
      *
-     * @see http://schema.org/birthPlace
+     * @see 
      */
     public function birthPlace($birthPlace)
     {
@@ -793,7 +793,7 @@ class Person extends Thing
      *
      * @return static
      *
-     * @see http://schema.org/deathPlace
+     * @see 
      */
     public function deathPlace($deathPlace)
     {

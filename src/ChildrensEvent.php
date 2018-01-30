@@ -5,7 +5,7 @@ namespace Spatie\SchemaOrg;
 /**
  * Event type: Children's event.
  *
- * @see http://schema.org/ChildrensEvent
+ * @see 
  */
 class ChildrensEvent extends Event
 {

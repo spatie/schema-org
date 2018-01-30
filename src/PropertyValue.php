@@ -12,7 +12,7 @@ namespace Spatie\SchemaOrg;
  * populate them. Using PropertyValue as a substitute will typically not trigger
  * the same effect as using the original, specific property.
  *
- * @see http://schema.org/PropertyValue
+ * @see 
  */
 class PropertyValue extends StructuredValue
 {
@@ -23,7 +23,7 @@ class PropertyValue extends StructuredValue
      *
      * @return static
      *
-     * @see http://schema.org/maxValue
+     * @see 
      */
     public function maxValue($maxValue)
     {
@@ -37,7 +37,7 @@ class PropertyValue extends StructuredValue
      *
      * @return static
      *
-     * @see http://schema.org/minValue
+     * @see 
      */
     public function minValue($minValue)
     {
@@ -53,11 +53,26 @@ class PropertyValue extends StructuredValue
      *
      * @return static
      *
-     * @see http://schema.org/unitCode
+     * @see 
      */
     public function unitCode($unitCode)
     {
         return $this->setProperty('unitCode', $unitCode);
+    }
+
+    /**
+     * A pointer to a secondary value that provides additional information on
+     * the original value, e.g. a reference temperature.
+     *
+     * @param Enumeration|Enumeration[]|StructuredValue|StructuredValue[]|PropertyValue|PropertyValue[]|QualitativeValue|QualitativeValue[]|QuantitativeValue|QuantitativeValue[] $valueReference
+     *
+     * @return static
+     *
+     * @see 
+     */
+    public function valueReference($valueReference)
+    {
+        return $this->setProperty('valueReference', $valueReference);
     }
 
     /**
@@ -72,42 +87,11 @@ class PropertyValue extends StructuredValue
      *
      * @return static
      *
-     * @see http://schema.org/value
+     * @see 
      */
     public function value($value)
     {
         return $this->setProperty('value', $value);
-    }
-
-    /**
-     * A pointer to a secondary value that provides additional information on
-     * the original value, e.g. a reference temperature.
-     *
-     * @param Enumeration|Enumeration[]|StructuredValue|StructuredValue[]|PropertyValue|PropertyValue[]|QualitativeValue|QualitativeValue[]|QuantitativeValue|QuantitativeValue[] $valueReference
-     *
-     * @return static
-     *
-     * @see http://schema.org/valueReference
-     */
-    public function valueReference($valueReference)
-    {
-        return $this->setProperty('valueReference', $valueReference);
-    }
-
-    /**
-     * A string or text indicating the unit of measurement. Useful if you cannot
-     * provide a standard unit code for
-     * <a href='unitCode'>unitCode</a>.
-     *
-     * @param string|string[] $unitText
-     *
-     * @return static
-     *
-     * @see http://schema.org/unitText
-     */
-    public function unitText($unitText)
-    {
-        return $this->setProperty('unitText', $unitText);
     }
 
     /**
@@ -127,11 +111,27 @@ class PropertyValue extends StructuredValue
      *
      * @return static
      *
-     * @see http://schema.org/propertyID
+     * @see 
      */
     public function propertyID($propertyID)
     {
         return $this->setProperty('propertyID', $propertyID);
+    }
+
+    /**
+     * A string or text indicating the unit of measurement. Useful if you cannot
+     * provide a standard unit code for
+     * <a href='unitCode'>unitCode</a>.
+     *
+     * @param string|string[] $unitText
+     *
+     * @return static
+     *
+     * @see 
+     */
+    public function unitText($unitText)
+    {
+        return $this->setProperty('unitText', $unitText);
     }
 
 }

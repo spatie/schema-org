@@ -5,7 +5,7 @@ namespace Spatie\SchemaOrg;
 /**
  * A rating is an evaluation on a numeric scale, such as 1 to 5 stars.
  *
- * @see http://schema.org/Rating
+ * @see 
  */
 class Rating extends Intangible
 {
@@ -18,7 +18,7 @@ class Rating extends Intangible
      *
      * @return static
      *
-     * @see http://schema.org/author
+     * @see 
      */
     public function author($author)
     {
@@ -33,7 +33,7 @@ class Rating extends Intangible
      *
      * @return static
      *
-     * @see http://schema.org/bestRating
+     * @see 
      */
     public function bestRating($bestRating)
     {
@@ -47,7 +47,7 @@ class Rating extends Intangible
      *
      * @return static
      *
-     * @see http://schema.org/ratingValue
+     * @see 
      */
     public function ratingValue($ratingValue)
     {
@@ -62,7 +62,7 @@ class Rating extends Intangible
      *
      * @return static
      *
-     * @see http://schema.org/worstRating
+     * @see 
      */
     public function worstRating($worstRating)
     {

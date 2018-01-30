@@ -7,24 +7,10 @@ namespace Spatie\SchemaOrg;
  * multiple line items, each represented by an Offer that has been accepted by
  * the customer.
  *
- * @see http://schema.org/Order
+ * @see 
  */
 class Order extends Intangible
 {
-    /**
-     * The delivery of the parcel related to this order or order item.
-     *
-     * @param ParcelDelivery|ParcelDelivery[] $orderDelivery
-     *
-     * @return static
-     *
-     * @see http://schema.org/orderDelivery
-     */
-    public function orderDelivery($orderDelivery)
-    {
-        return $this->setProperty('orderDelivery', $orderDelivery);
-    }
-
     /**
      * The offer(s) -- e.g., product, quantity and price combinations --
      * included in the order.
@@ -33,11 +19,25 @@ class Order extends Intangible
      *
      * @return static
      *
-     * @see http://schema.org/acceptedOffer
+     * @see 
      */
     public function acceptedOffer($acceptedOffer)
     {
         return $this->setProperty('acceptedOffer', $acceptedOffer);
+    }
+
+    /**
+     * The delivery of the parcel related to this order or order item.
+     *
+     * @param ParcelDelivery|ParcelDelivery[] $orderDelivery
+     *
+     * @return static
+     *
+     * @see 
+     */
+    public function orderDelivery($orderDelivery)
+    {
+        return $this->setProperty('orderDelivery', $orderDelivery);
     }
 
     /**
@@ -47,7 +47,7 @@ class Order extends Intangible
      *
      * @return static
      *
-     * @see http://schema.org/billingAddress
+     * @see 
      */
     public function billingAddress($billingAddress)
     {
@@ -61,7 +61,7 @@ class Order extends Intangible
      *
      * @return static
      *
-     * @see http://schema.org/confirmationNumber
+     * @see 
      */
     public function confirmationNumber($confirmationNumber)
     {
@@ -75,25 +75,11 @@ class Order extends Intangible
      *
      * @return static
      *
-     * @see http://schema.org/customer
+     * @see 
      */
     public function customer($customer)
     {
         return $this->setProperty('customer', $customer);
-    }
-
-    /**
-     * Any discount applied (to an Order).
-     *
-     * @param float|float[]|int|int[]|string|string[] $discount
-     *
-     * @return static
-     *
-     * @see http://schema.org/discount
-     */
-    public function discount($discount)
-    {
-        return $this->setProperty('discount', $discount);
     }
 
     /**
@@ -103,11 +89,25 @@ class Order extends Intangible
      *
      * @return static
      *
-     * @see http://schema.org/discountCode
+     * @see 
      */
     public function discountCode($discountCode)
     {
         return $this->setProperty('discountCode', $discountCode);
+    }
+
+    /**
+     * Any discount applied (to an Order).
+     *
+     * @param float|float[]|int|int[]|string|string[] $discount
+     *
+     * @return static
+     *
+     * @see 
+     */
+    public function discount($discount)
+    {
+        return $this->setProperty('discount', $discount);
     }
 
     /**
@@ -117,7 +117,7 @@ class Order extends Intangible
      *
      * @return static
      *
-     * @see http://schema.org/discountCurrency
+     * @see 
      */
     public function discountCurrency($discountCurrency)
     {
@@ -131,7 +131,7 @@ class Order extends Intangible
      *
      * @return static
      *
-     * @see http://schema.org/isGift
+     * @see 
      */
     public function isGift($isGift)
     {
@@ -145,7 +145,7 @@ class Order extends Intangible
      *
      * @return static
      *
-     * @see http://schema.org/merchant
+     * @see 
      */
     public function merchant($merchant)
     {
@@ -159,7 +159,7 @@ class Order extends Intangible
      *
      * @return static
      *
-     * @see http://schema.org/orderDate
+     * @see 
      */
     public function orderDate($orderDate)
     {
@@ -173,25 +173,11 @@ class Order extends Intangible
      *
      * @return static
      *
-     * @see http://schema.org/orderedItem
+     * @see 
      */
     public function orderedItem($orderedItem)
     {
         return $this->setProperty('orderedItem', $orderedItem);
-    }
-
-    /**
-     * The identifier of the transaction.
-     *
-     * @param string|string[] $orderNumber
-     *
-     * @return static
-     *
-     * @see http://schema.org/orderNumber
-     */
-    public function orderNumber($orderNumber)
-    {
-        return $this->setProperty('orderNumber', $orderNumber);
     }
 
     /**
@@ -201,11 +187,25 @@ class Order extends Intangible
      *
      * @return static
      *
-     * @see http://schema.org/orderStatus
+     * @see 
      */
     public function orderStatus($orderStatus)
     {
         return $this->setProperty('orderStatus', $orderStatus);
+    }
+
+    /**
+     * The identifier of the transaction.
+     *
+     * @param string|string[] $orderNumber
+     *
+     * @return static
+     *
+     * @see 
+     */
+    public function orderNumber($orderNumber)
+    {
+        return $this->setProperty('orderNumber', $orderNumber);
     }
 
     /**
@@ -215,39 +215,11 @@ class Order extends Intangible
      *
      * @return static
      *
-     * @see http://schema.org/partOfInvoice
+     * @see 
      */
     public function partOfInvoice($partOfInvoice)
     {
         return $this->setProperty('partOfInvoice', $partOfInvoice);
-    }
-
-    /**
-     * The date that payment is due.
-     *
-     * @param \DateTimeInterface|\DateTimeInterface[] $paymentDue
-     *
-     * @return static
-     *
-     * @see http://schema.org/paymentDue
-     */
-    public function paymentDue($paymentDue)
-    {
-        return $this->setProperty('paymentDue', $paymentDue);
-    }
-
-    /**
-     * The name of the credit card or other method of payment for the order.
-     *
-     * @param PaymentMethod|PaymentMethod[] $paymentMethod
-     *
-     * @return static
-     *
-     * @see http://schema.org/paymentMethod
-     */
-    public function paymentMethod($paymentMethod)
-    {
-        return $this->setProperty('paymentMethod', $paymentMethod);
     }
 
     /**
@@ -258,11 +230,25 @@ class Order extends Intangible
      *
      * @return static
      *
-     * @see http://schema.org/paymentMethodId
+     * @see 
      */
     public function paymentMethodId($paymentMethodId)
     {
         return $this->setProperty('paymentMethodId', $paymentMethodId);
+    }
+
+    /**
+     * The name of the credit card or other method of payment for the order.
+     *
+     * @param PaymentMethod|PaymentMethod[] $paymentMethod
+     *
+     * @return static
+     *
+     * @see 
+     */
+    public function paymentMethod($paymentMethod)
+    {
+        return $this->setProperty('paymentMethod', $paymentMethod);
     }
 
     /**
@@ -272,11 +258,25 @@ class Order extends Intangible
      *
      * @return static
      *
-     * @see http://schema.org/paymentUrl
+     * @see 
      */
     public function paymentUrl($paymentUrl)
     {
         return $this->setProperty('paymentUrl', $paymentUrl);
+    }
+
+    /**
+     * The date that payment is due.
+     *
+     * @param \DateTimeInterface|\DateTimeInterface[] $paymentDue
+     *
+     * @return static
+     *
+     * @see 
+     */
+    public function paymentDue($paymentDue)
+    {
+        return $this->setProperty('paymentDue', $paymentDue);
     }
 
     /**
@@ -287,7 +287,7 @@ class Order extends Intangible
      *
      * @return static
      *
-     * @see http://schema.org/seller
+     * @see 
      */
     public function seller($seller)
     {
@@ -301,7 +301,7 @@ class Order extends Intangible
      *
      * @return static
      *
-     * @see http://schema.org/paymentDueDate
+     * @see 
      */
     public function paymentDueDate($paymentDueDate)
     {
@@ -318,7 +318,7 @@ class Order extends Intangible
      *
      * @return static
      *
-     * @see http://schema.org/broker
+     * @see 
      */
     public function broker($broker)
     {

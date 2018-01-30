@@ -5,7 +5,7 @@ namespace Spatie\SchemaOrg;
 /**
  * Entities that have a somewhat fixed, physical extension.
  *
- * @see http://schema.org/Place
+ * @see 
  */
 class Place extends Thing
 {
@@ -16,7 +16,7 @@ class Place extends Thing
      *
      * @return static
      *
-     * @see http://schema.org/address
+     * @see 
      */
     public function address($address)
     {
@@ -31,7 +31,7 @@ class Place extends Thing
      *
      * @return static
      *
-     * @see http://schema.org/aggregateRating
+     * @see 
      */
     public function aggregateRating($aggregateRating)
     {
@@ -51,25 +51,11 @@ class Place extends Thing
      *
      * @return static
      *
-     * @see http://schema.org/branchCode
+     * @see 
      */
     public function branchCode($branchCode)
     {
         return $this->setProperty('branchCode', $branchCode);
-    }
-
-    /**
-     * The basic containment relation between a place and one that contains it.
-     *
-     * @param Place|Place[] $containedInPlace
-     *
-     * @return static
-     *
-     * @see http://schema.org/containedInPlace
-     */
-    public function containedInPlace($containedInPlace)
-    {
-        return $this->setProperty('containedInPlace', $containedInPlace);
     }
 
     /**
@@ -80,7 +66,7 @@ class Place extends Thing
      *
      * @return static
      *
-     * @see http://schema.org/containsPlace
+     * @see 
      */
     public function containsPlace($containsPlace)
     {
@@ -94,11 +80,25 @@ class Place extends Thing
      *
      * @return static
      *
-     * @see http://schema.org/containedIn
+     * @see 
      */
     public function containedIn($containedIn)
     {
         return $this->setProperty('containedIn', $containedIn);
+    }
+
+    /**
+     * The basic containment relation between a place and one that contains it.
+     *
+     * @param Place|Place[] $containedInPlace
+     *
+     * @return static
+     *
+     * @see 
+     */
+    public function containedInPlace($containedInPlace)
+    {
+        return $this->setProperty('containedInPlace', $containedInPlace);
     }
 
     /**
@@ -109,7 +109,7 @@ class Place extends Thing
      *
      * @return static
      *
-     * @see http://schema.org/event
+     * @see 
      */
     public function event($event)
     {
@@ -123,7 +123,7 @@ class Place extends Thing
      *
      * @return static
      *
-     * @see http://schema.org/events
+     * @see 
      */
     public function events($events)
     {
@@ -137,7 +137,7 @@ class Place extends Thing
      *
      * @return static
      *
-     * @see http://schema.org/faxNumber
+     * @see 
      */
     public function faxNumber($faxNumber)
     {
@@ -151,7 +151,7 @@ class Place extends Thing
      *
      * @return static
      *
-     * @see http://schema.org/geo
+     * @see 
      */
     public function geo($geo)
     {
@@ -168,7 +168,7 @@ class Place extends Thing
      *
      * @return static
      *
-     * @see http://schema.org/globalLocationNumber
+     * @see 
      */
     public function globalLocationNumber($globalLocationNumber)
     {
@@ -184,7 +184,7 @@ class Place extends Thing
      *
      * @return static
      *
-     * @see http://schema.org/isicV4
+     * @see 
      */
     public function isicV4($isicV4)
     {
@@ -198,7 +198,7 @@ class Place extends Thing
      *
      * @return static
      *
-     * @see http://schema.org/logo
+     * @see 
      */
     public function logo($logo)
     {
@@ -208,25 +208,11 @@ class Place extends Thing
     /**
      * A URL to a map of the place.
      *
-     * @param string|string[]|Map|Map[] $hasMap
-     *
-     * @return static
-     *
-     * @see http://schema.org/hasMap
-     */
-    public function hasMap($hasMap)
-    {
-        return $this->setProperty('hasMap', $hasMap);
-    }
-
-    /**
-     * A URL to a map of the place.
-     *
      * @param string|string[] $map
      *
      * @return static
      *
-     * @see http://schema.org/map
+     * @see 
      */
     public function map($map)
     {
@@ -236,11 +222,25 @@ class Place extends Thing
     /**
      * A URL to a map of the place.
      *
+     * @param string|string[]|Map|Map[] $hasMap
+     *
+     * @return static
+     *
+     * @see 
+     */
+    public function hasMap($hasMap)
+    {
+        return $this->setProperty('hasMap', $hasMap);
+    }
+
+    /**
+     * A URL to a map of the place.
+     *
      * @param string|string[] $maps
      *
      * @return static
      *
-     * @see http://schema.org/maps
+     * @see 
      */
     public function maps($maps)
     {
@@ -254,25 +254,11 @@ class Place extends Thing
      *
      * @return static
      *
-     * @see http://schema.org/maximumAttendeeCapacity
+     * @see 
      */
     public function maximumAttendeeCapacity($maximumAttendeeCapacity)
     {
         return $this->setProperty('maximumAttendeeCapacity', $maximumAttendeeCapacity);
-    }
-
-    /**
-     * The opening hours of a certain place.
-     *
-     * @param OpeningHoursSpecification|OpeningHoursSpecification[] $openingHoursSpecification
-     *
-     * @return static
-     *
-     * @see http://schema.org/openingHoursSpecification
-     */
-    public function openingHoursSpecification($openingHoursSpecification)
-    {
-        return $this->setProperty('openingHoursSpecification', $openingHoursSpecification);
     }
 
     /**
@@ -285,11 +271,25 @@ class Place extends Thing
      *
      * @return static
      *
-     * @see http://schema.org/specialOpeningHoursSpecification
+     * @see 
      */
     public function specialOpeningHoursSpecification($specialOpeningHoursSpecification)
     {
         return $this->setProperty('specialOpeningHoursSpecification', $specialOpeningHoursSpecification);
+    }
+
+    /**
+     * The opening hours of a certain place.
+     *
+     * @param OpeningHoursSpecification|OpeningHoursSpecification[] $openingHoursSpecification
+     *
+     * @return static
+     *
+     * @see 
+     */
+    public function openingHoursSpecification($openingHoursSpecification)
+    {
+        return $this->setProperty('openingHoursSpecification', $openingHoursSpecification);
     }
 
     /**
@@ -299,7 +299,7 @@ class Place extends Thing
      *
      * @return static
      *
-     * @see http://schema.org/photo
+     * @see 
      */
     public function photo($photo)
     {
@@ -313,7 +313,7 @@ class Place extends Thing
      *
      * @return static
      *
-     * @see http://schema.org/photos
+     * @see 
      */
     public function photos($photos)
     {
@@ -327,7 +327,7 @@ class Place extends Thing
      *
      * @return static
      *
-     * @see http://schema.org/review
+     * @see 
      */
     public function review($review)
     {
@@ -341,7 +341,7 @@ class Place extends Thing
      *
      * @return static
      *
-     * @see http://schema.org/reviews
+     * @see 
      */
     public function reviews($reviews)
     {
@@ -355,7 +355,7 @@ class Place extends Thing
      *
      * @return static
      *
-     * @see http://schema.org/telephone
+     * @see 
      */
     public function telephone($telephone)
     {
@@ -377,7 +377,7 @@ class Place extends Thing
      *
      * @return static
      *
-     * @see http://schema.org/additionalProperty
+     * @see 
      */
     public function additionalProperty($additionalProperty)
     {
@@ -394,7 +394,7 @@ class Place extends Thing
      *
      * @return static
      *
-     * @see http://schema.org/amenityFeature
+     * @see 
      */
     public function amenityFeature($amenityFeature)
     {
@@ -409,7 +409,7 @@ class Place extends Thing
      *
      * @return static
      *
-     * @see http://schema.org/smokingAllowed
+     * @see 
      */
     public function smokingAllowed($smokingAllowed)
     {

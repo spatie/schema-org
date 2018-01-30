@@ -5,7 +5,7 @@ namespace Spatie\SchemaOrg;
 /**
  * A train station.
  *
- * @see http://schema.org/TrainStation
+ * @see 
  */
 class TrainStation extends CivicStructure
 {

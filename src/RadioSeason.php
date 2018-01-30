@@ -5,7 +5,7 @@ namespace Spatie\SchemaOrg;
 /**
  * Season dedicated to radio broadcast and associated online delivery.
  *
- * @see http://schema.org/RadioSeason
+ * @see 
  */
 class RadioSeason extends CreativeWorkSeason
 {

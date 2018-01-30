@@ -5,7 +5,7 @@ namespace Spatie\SchemaOrg;
 /**
  * A mosque.
  *
- * @see http://schema.org/Mosque
+ * @see 
  */
 class Mosque extends PlaceOfWorship
 {

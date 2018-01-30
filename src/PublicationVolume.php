@@ -11,36 +11,23 @@ namespace Spatie\SchemaOrg;
  * href="http://blog.schema.org/2014/09/schemaorg-support-for-bibliographic_2.html">blog
  * post</a>.
  *
- * @see http://schema.org/PublicationVolume
+ * @see 
  */
 class PublicationVolume extends CreativeWork
 {
     /**
-     * The page on which the work ends; for example "138" or "xvi".
+     * Identifies the volume of publication or multi-part work; for example,
+     * "iii" or "2".
      *
-     * @param int|int[]|string|string[] $pageEnd
-     *
-     * @return static
-     *
-     * @see http://schema.org/pageEnd
-     */
-    public function pageEnd($pageEnd)
-    {
-        return $this->setProperty('pageEnd', $pageEnd);
-    }
-
-    /**
-     * The page on which the work starts; for example "135" or "xiii".
-     *
-     * @param int|int[]|string|string[] $pageStart
+     * @param int|int[]|string|string[] $volumeNumber
      *
      * @return static
      *
-     * @see http://schema.org/pageStart
+     * @see 
      */
-    public function pageStart($pageStart)
+    public function volumeNumber($volumeNumber)
     {
-        return $this->setProperty('pageStart', $pageStart);
+        return $this->setProperty('volumeNumber', $volumeNumber);
     }
 
     /**
@@ -51,7 +38,7 @@ class PublicationVolume extends CreativeWork
      *
      * @return static
      *
-     * @see http://schema.org/pagination
+     * @see 
      */
     public function pagination($pagination)
     {
@@ -59,18 +46,31 @@ class PublicationVolume extends CreativeWork
     }
 
     /**
-     * Identifies the volume of publication or multi-part work; for example,
-     * "iii" or "2".
+     * The page on which the work starts; for example "135" or "xiii".
      *
-     * @param int|int[]|string|string[] $volumeNumber
+     * @param int|int[]|string|string[] $pageStart
      *
      * @return static
      *
-     * @see http://schema.org/volumeNumber
+     * @see 
      */
-    public function volumeNumber($volumeNumber)
+    public function pageStart($pageStart)
     {
-        return $this->setProperty('volumeNumber', $volumeNumber);
+        return $this->setProperty('pageStart', $pageStart);
+    }
+
+    /**
+     * The page on which the work ends; for example "138" or "xvi".
+     *
+     * @param int|int[]|string|string[] $pageEnd
+     *
+     * @return static
+     *
+     * @see 
+     */
+    public function pageEnd($pageEnd)
+    {
+        return $this->setProperty('pageEnd', $pageEnd);
     }
 
 }

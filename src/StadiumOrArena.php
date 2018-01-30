@@ -5,7 +5,7 @@ namespace Spatie\SchemaOrg;
 /**
  * A stadium.
  *
- * @see http://schema.org/StadiumOrArena
+ * @see 
  */
 class StadiumOrArena extends CivicStructure
 {

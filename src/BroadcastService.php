@@ -6,7 +6,7 @@ namespace Spatie\SchemaOrg;
  * A delivery service through which content is provided via broadcast over the
  * air or online.
  *
- * @see http://schema.org/BroadcastService
+ * @see 
  */
 class BroadcastService extends Service
 {
@@ -17,7 +17,7 @@ class BroadcastService extends Service
      *
      * @return static
      *
-     * @see http://schema.org/area
+     * @see 
      */
     public function area($area)
     {
@@ -31,7 +31,7 @@ class BroadcastService extends Service
      *
      * @return static
      *
-     * @see http://schema.org/broadcaster
+     * @see 
      */
     public function broadcaster($broadcaster)
     {
@@ -46,7 +46,7 @@ class BroadcastService extends Service
      *
      * @return static
      *
-     * @see http://schema.org/parentService
+     * @see 
      */
     public function parentService($parentService)
     {
@@ -61,25 +61,11 @@ class BroadcastService extends Service
      *
      * @return static
      *
-     * @see http://schema.org/videoFormat
+     * @see 
      */
     public function videoFormat($videoFormat)
     {
         return $this->setProperty('videoFormat', $videoFormat);
-    }
-
-    /**
-     * The media network(s) whose content is broadcast on this station.
-     *
-     * @param Organization|Organization[] $broadcastAffiliateOf
-     *
-     * @return static
-     *
-     * @see http://schema.org/broadcastAffiliateOf
-     */
-    public function broadcastAffiliateOf($broadcastAffiliateOf)
-    {
-        return $this->setProperty('broadcastAffiliateOf', $broadcastAffiliateOf);
     }
 
     /**
@@ -90,11 +76,25 @@ class BroadcastService extends Service
      *
      * @return static
      *
-     * @see http://schema.org/broadcastDisplayName
+     * @see 
      */
     public function broadcastDisplayName($broadcastDisplayName)
     {
         return $this->setProperty('broadcastDisplayName', $broadcastDisplayName);
+    }
+
+    /**
+     * The media network(s) whose content is broadcast on this station.
+     *
+     * @param Organization|Organization[] $broadcastAffiliateOf
+     *
+     * @return static
+     *
+     * @see 
+     */
+    public function broadcastAffiliateOf($broadcastAffiliateOf)
+    {
+        return $this->setProperty('broadcastAffiliateOf', $broadcastAffiliateOf);
     }
 
     /**
@@ -105,7 +105,7 @@ class BroadcastService extends Service
      *
      * @return static
      *
-     * @see http://schema.org/broadcastTimezone
+     * @see 
      */
     public function broadcastTimezone($broadcastTimezone)
     {

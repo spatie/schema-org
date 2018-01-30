@@ -9,7 +9,7 @@ namespace Spatie\SchemaOrg;
  * confirmation emails or HTML pages with individual confirmations of
  * reservations. For offers of tickets, use [[Offer]].
  *
- * @see http://schema.org/TaxiReservation
+ * @see 
  */
 class TaxiReservation extends Reservation
 {
@@ -20,25 +20,11 @@ class TaxiReservation extends Reservation
      *
      * @return static
      *
-     * @see http://schema.org/partySize
+     * @see 
      */
     public function partySize($partySize)
     {
         return $this->setProperty('partySize', $partySize);
-    }
-
-    /**
-     * Where a taxi will pick up a passenger or a rental car can be picked up.
-     *
-     * @param Place|Place[] $pickupLocation
-     *
-     * @return static
-     *
-     * @see http://schema.org/pickupLocation
-     */
-    public function pickupLocation($pickupLocation)
-    {
-        return $this->setProperty('pickupLocation', $pickupLocation);
     }
 
     /**
@@ -48,11 +34,25 @@ class TaxiReservation extends Reservation
      *
      * @return static
      *
-     * @see http://schema.org/pickupTime
+     * @see 
      */
     public function pickupTime($pickupTime)
     {
         return $this->setProperty('pickupTime', $pickupTime);
+    }
+
+    /**
+     * Where a taxi will pick up a passenger or a rental car can be picked up.
+     *
+     * @param Place|Place[] $pickupLocation
+     *
+     * @return static
+     *
+     * @see 
+     */
+    public function pickupLocation($pickupLocation)
+    {
+        return $this->setProperty('pickupLocation', $pickupLocation);
     }
 
 }

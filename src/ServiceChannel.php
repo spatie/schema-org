@@ -6,7 +6,7 @@ namespace Spatie\SchemaOrg;
  * A means for accessing a service, e.g. a government office location, web site,
  * or phone number.
  *
- * @see http://schema.org/ServiceChannel
+ * @see 
  */
 class ServiceChannel extends Intangible
 {
@@ -19,7 +19,7 @@ class ServiceChannel extends Intangible
      *
      * @return static
      *
-     * @see http://schema.org/availableLanguage
+     * @see 
      */
     public function availableLanguage($availableLanguage)
     {
@@ -33,7 +33,7 @@ class ServiceChannel extends Intangible
      *
      * @return static
      *
-     * @see http://schema.org/processingTime
+     * @see 
      */
     public function processingTime($processingTime)
     {
@@ -47,7 +47,7 @@ class ServiceChannel extends Intangible
      *
      * @return static
      *
-     * @see http://schema.org/providesService
+     * @see 
      */
     public function providesService($providesService)
     {
@@ -62,25 +62,11 @@ class ServiceChannel extends Intangible
      *
      * @return static
      *
-     * @see http://schema.org/serviceLocation
+     * @see 
      */
     public function serviceLocation($serviceLocation)
     {
         return $this->setProperty('serviceLocation', $serviceLocation);
-    }
-
-    /**
-     * The phone number to use to access the service.
-     *
-     * @param ContactPoint|ContactPoint[] $servicePhone
-     *
-     * @return static
-     *
-     * @see http://schema.org/servicePhone
-     */
-    public function servicePhone($servicePhone)
-    {
-        return $this->setProperty('servicePhone', $servicePhone);
     }
 
     /**
@@ -90,7 +76,7 @@ class ServiceChannel extends Intangible
      *
      * @return static
      *
-     * @see http://schema.org/servicePostalAddress
+     * @see 
      */
     public function servicePostalAddress($servicePostalAddress)
     {
@@ -104,7 +90,7 @@ class ServiceChannel extends Intangible
      *
      * @return static
      *
-     * @see http://schema.org/serviceSmsNumber
+     * @see 
      */
     public function serviceSmsNumber($serviceSmsNumber)
     {
@@ -118,11 +104,25 @@ class ServiceChannel extends Intangible
      *
      * @return static
      *
-     * @see http://schema.org/serviceUrl
+     * @see 
      */
     public function serviceUrl($serviceUrl)
     {
         return $this->setProperty('serviceUrl', $serviceUrl);
+    }
+
+    /**
+     * The phone number to use to access the service.
+     *
+     * @param ContactPoint|ContactPoint[] $servicePhone
+     *
+     * @return static
+     *
+     * @see 
+     */
+    public function servicePhone($servicePhone)
+    {
+        return $this->setProperty('servicePhone', $servicePhone);
     }
 
 }

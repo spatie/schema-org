@@ -5,7 +5,7 @@ namespace Spatie\SchemaOrg;
 /**
  * The act of interacting with another person or organization.
  *
- * @see http://schema.org/InteractAction
+ * @see 
  */
 class InteractAction extends Action
 {

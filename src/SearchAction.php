@@ -10,7 +10,7 @@ namespace Spatie\SchemaOrg;
  * * [[FindAction]]: SearchAction generally leads to a FindAction, but not
  * necessarily.
  *
- * @see http://schema.org/SearchAction
+ * @see 
  */
 class SearchAction extends Action
 {
@@ -21,7 +21,7 @@ class SearchAction extends Action
      *
      * @return static
      *
-     * @see http://schema.org/query
+     * @see 
      */
     public function query($query)
     {

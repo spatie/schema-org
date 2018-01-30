@@ -5,7 +5,7 @@ namespace Spatie\SchemaOrg;
 /**
  * Event type: Education event.
  *
- * @see http://schema.org/EducationEvent
+ * @see 
  */
 class EducationEvent extends Event
 {

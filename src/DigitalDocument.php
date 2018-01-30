@@ -5,7 +5,7 @@ namespace Spatie\SchemaOrg;
 /**
  * An electronic file or document.
  *
- * @see http://schema.org/DigitalDocument
+ * @see 
  */
 class DigitalDocument extends CreativeWork
 {
@@ -18,7 +18,7 @@ class DigitalDocument extends CreativeWork
      *
      * @return static
      *
-     * @see http://schema.org/hasDigitalDocumentPermission
+     * @see 
      */
     public function hasDigitalDocumentPermission($hasDigitalDocumentPermission)
     {

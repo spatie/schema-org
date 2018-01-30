@@ -6,10 +6,24 @@ namespace Spatie\SchemaOrg;
  * An order item is a line of an order. It includes the quantity and shipping
  * details of a bought offer.
  *
- * @see http://schema.org/OrderItem
+ * @see 
  */
 class OrderItem extends Intangible
 {
+    /**
+     * The delivery of the parcel related to this order or order item.
+     *
+     * @param ParcelDelivery|ParcelDelivery[] $orderDelivery
+     *
+     * @return static
+     *
+     * @see 
+     */
+    public function orderDelivery($orderDelivery)
+    {
+        return $this->setProperty('orderDelivery', $orderDelivery);
+    }
+
     /**
      * The number of the item ordered. If the property is not set, assume the
      * quantity is one.
@@ -18,25 +32,11 @@ class OrderItem extends Intangible
      *
      * @return static
      *
-     * @see http://schema.org/orderQuantity
+     * @see 
      */
     public function orderQuantity($orderQuantity)
     {
         return $this->setProperty('orderQuantity', $orderQuantity);
-    }
-
-    /**
-     * The current status of the order item.
-     *
-     * @param OrderStatus|OrderStatus[] $orderItemStatus
-     *
-     * @return static
-     *
-     * @see http://schema.org/orderItemStatus
-     */
-    public function orderItemStatus($orderItemStatus)
-    {
-        return $this->setProperty('orderItemStatus', $orderItemStatus);
     }
 
     /**
@@ -46,7 +46,7 @@ class OrderItem extends Intangible
      *
      * @return static
      *
-     * @see http://schema.org/orderItemNumber
+     * @see 
      */
     public function orderItemNumber($orderItemNumber)
     {
@@ -54,17 +54,17 @@ class OrderItem extends Intangible
     }
 
     /**
-     * The delivery of the parcel related to this order or order item.
+     * The current status of the order item.
      *
-     * @param ParcelDelivery|ParcelDelivery[] $orderDelivery
+     * @param OrderStatus|OrderStatus[] $orderItemStatus
      *
      * @return static
      *
-     * @see http://schema.org/orderDelivery
+     * @see 
      */
-    public function orderDelivery($orderDelivery)
+    public function orderItemStatus($orderItemStatus)
     {
-        return $this->setProperty('orderDelivery', $orderDelivery);
+        return $this->setProperty('orderItemStatus', $orderItemStatus);
     }
 
     /**
@@ -74,7 +74,7 @@ class OrderItem extends Intangible
      *
      * @return static
      *
-     * @see http://schema.org/orderedItem
+     * @see 
      */
     public function orderedItem($orderedItem)
     {

@@ -9,7 +9,7 @@ namespace Spatie\SchemaOrg;
  * 
  * * [[ReplyAction]]: Appears generally as a response to AskAction.
  *
- * @see http://schema.org/AskAction
+ * @see 
  */
 class AskAction extends CommunicateAction
 {
@@ -20,7 +20,7 @@ class AskAction extends CommunicateAction
      *
      * @return static
      *
-     * @see http://schema.org/question
+     * @see 
      */
     public function question($question)
     {

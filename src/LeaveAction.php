@@ -11,7 +11,7 @@ namespace Spatie\SchemaOrg;
  * * [[UnRegisterAction]]: Unlike UnRegisterAction, LeaveAction implies leaving
  * a group/team of people rather than a service.
  *
- * @see http://schema.org/LeaveAction
+ * @see 
  */
 class LeaveAction extends InteractAction
 {
@@ -23,7 +23,7 @@ class LeaveAction extends InteractAction
      *
      * @return static
      *
-     * @see http://schema.org/event
+     * @see 
      */
     public function event($event)
     {

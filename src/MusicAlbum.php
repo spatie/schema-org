@@ -5,7 +5,7 @@ namespace Spatie\SchemaOrg;
 /**
  * A collection of music tracks.
  *
- * @see http://schema.org/MusicAlbum
+ * @see 
  */
 class MusicAlbum extends MusicPlaylist
 {
@@ -16,26 +16,11 @@ class MusicAlbum extends MusicPlaylist
      *
      * @return static
      *
-     * @see http://schema.org/byArtist
+     * @see 
      */
     public function byArtist($byArtist)
     {
         return $this->setProperty('byArtist', $byArtist);
-    }
-
-    /**
-     * Classification of the album by it's type of content: soundtrack, live
-     * album, studio album, etc.
-     *
-     * @param MusicAlbumProductionType|MusicAlbumProductionType[] $albumProductionType
-     *
-     * @return static
-     *
-     * @see http://schema.org/albumProductionType
-     */
-    public function albumProductionType($albumProductionType)
-    {
-        return $this->setProperty('albumProductionType', $albumProductionType);
     }
 
     /**
@@ -45,7 +30,7 @@ class MusicAlbum extends MusicPlaylist
      *
      * @return static
      *
-     * @see http://schema.org/albumReleaseType
+     * @see 
      */
     public function albumReleaseType($albumReleaseType)
     {
@@ -59,11 +44,26 @@ class MusicAlbum extends MusicPlaylist
      *
      * @return static
      *
-     * @see http://schema.org/albumRelease
+     * @see 
      */
     public function albumRelease($albumRelease)
     {
         return $this->setProperty('albumRelease', $albumRelease);
+    }
+
+    /**
+     * Classification of the album by it's type of content: soundtrack, live
+     * album, studio album, etc.
+     *
+     * @param MusicAlbumProductionType|MusicAlbumProductionType[] $albumProductionType
+     *
+     * @return static
+     *
+     * @see 
+     */
+    public function albumProductionType($albumProductionType)
+    {
+        return $this->setProperty('albumProductionType', $albumProductionType);
     }
 
 }

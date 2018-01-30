@@ -5,24 +5,10 @@ namespace Spatie\SchemaOrg;
 /**
  * Server that provides game interaction in a multiplayer game.
  *
- * @see http://schema.org/GameServer
+ * @see 
  */
 class GameServer extends Intangible
 {
-    /**
-     * Status of a game server.
-     *
-     * @param GameServerStatus|GameServerStatus[] $serverStatus
-     *
-     * @return static
-     *
-     * @see http://schema.org/serverStatus
-     */
-    public function serverStatus($serverStatus)
-    {
-        return $this->setProperty('serverStatus', $serverStatus);
-    }
-
     /**
      * Number of players on the server.
      *
@@ -30,7 +16,7 @@ class GameServer extends Intangible
      *
      * @return static
      *
-     * @see http://schema.org/playersOnline
+     * @see 
      */
     public function playersOnline($playersOnline)
     {
@@ -44,11 +30,25 @@ class GameServer extends Intangible
      *
      * @return static
      *
-     * @see http://schema.org/game
+     * @see 
      */
     public function game($game)
     {
         return $this->setProperty('game', $game);
+    }
+
+    /**
+     * Status of a game server.
+     *
+     * @param GameServerStatus|GameServerStatus[] $serverStatus
+     *
+     * @return static
+     *
+     * @see 
+     */
+    public function serverStatus($serverStatus)
+    {
+        return $this->setProperty('serverStatus', $serverStatus);
     }
 
 }

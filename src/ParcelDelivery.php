@@ -6,7 +6,7 @@ namespace Spatie\SchemaOrg;
  * The delivery of a parcel either via the postal service or a commercial
  * service.
  *
- * @see http://schema.org/ParcelDelivery
+ * @see 
  */
 class ParcelDelivery extends Intangible
 {
@@ -18,7 +18,7 @@ class ParcelDelivery extends Intangible
      *
      * @return static
      *
-     * @see http://schema.org/carrier
+     * @see 
      */
     public function carrier($carrier)
     {
@@ -32,7 +32,7 @@ class ParcelDelivery extends Intangible
      *
      * @return static
      *
-     * @see http://schema.org/deliveryAddress
+     * @see 
      */
     public function deliveryAddress($deliveryAddress)
     {
@@ -47,7 +47,7 @@ class ParcelDelivery extends Intangible
      *
      * @return static
      *
-     * @see http://schema.org/deliveryStatus
+     * @see 
      */
     public function deliveryStatus($deliveryStatus)
     {
@@ -61,25 +61,11 @@ class ParcelDelivery extends Intangible
      *
      * @return static
      *
-     * @see http://schema.org/expectedArrivalFrom
+     * @see 
      */
     public function expectedArrivalFrom($expectedArrivalFrom)
     {
         return $this->setProperty('expectedArrivalFrom', $expectedArrivalFrom);
-    }
-
-    /**
-     * The latest date the package may arrive.
-     *
-     * @param \DateTimeInterface|\DateTimeInterface[] $expectedArrivalUntil
-     *
-     * @return static
-     *
-     * @see http://schema.org/expectedArrivalUntil
-     */
-    public function expectedArrivalUntil($expectedArrivalUntil)
-    {
-        return $this->setProperty('expectedArrivalUntil', $expectedArrivalUntil);
     }
 
     /**
@@ -89,11 +75,25 @@ class ParcelDelivery extends Intangible
      *
      * @return static
      *
-     * @see http://schema.org/hasDeliveryMethod
+     * @see 
      */
     public function hasDeliveryMethod($hasDeliveryMethod)
     {
         return $this->setProperty('hasDeliveryMethod', $hasDeliveryMethod);
+    }
+
+    /**
+     * The latest date the package may arrive.
+     *
+     * @param \DateTimeInterface|\DateTimeInterface[] $expectedArrivalUntil
+     *
+     * @return static
+     *
+     * @see 
+     */
+    public function expectedArrivalUntil($expectedArrivalUntil)
+    {
+        return $this->setProperty('expectedArrivalUntil', $expectedArrivalUntil);
     }
 
     /**
@@ -103,7 +103,7 @@ class ParcelDelivery extends Intangible
      *
      * @return static
      *
-     * @see http://schema.org/itemShipped
+     * @see 
      */
     public function itemShipped($itemShipped)
     {
@@ -117,7 +117,7 @@ class ParcelDelivery extends Intangible
      *
      * @return static
      *
-     * @see http://schema.org/originAddress
+     * @see 
      */
     public function originAddress($originAddress)
     {
@@ -131,7 +131,7 @@ class ParcelDelivery extends Intangible
      *
      * @return static
      *
-     * @see http://schema.org/partOfOrder
+     * @see 
      */
     public function partOfOrder($partOfOrder)
     {
@@ -145,7 +145,7 @@ class ParcelDelivery extends Intangible
      *
      * @return static
      *
-     * @see http://schema.org/trackingNumber
+     * @see 
      */
     public function trackingNumber($trackingNumber)
     {
@@ -159,7 +159,7 @@ class ParcelDelivery extends Intangible
      *
      * @return static
      *
-     * @see http://schema.org/trackingUrl
+     * @see 
      */
     public function trackingUrl($trackingUrl)
     {
@@ -175,7 +175,7 @@ class ParcelDelivery extends Intangible
      *
      * @return static
      *
-     * @see http://schema.org/provider
+     * @see 
      */
     public function provider($provider)
     {

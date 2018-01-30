@@ -6,7 +6,7 @@ namespace Spatie\SchemaOrg;
  * A structured value indicating the quantity, unit of measurement, and business
  * function of goods included in a bundle offer.
  *
- * @see http://schema.org/TypeAndQuantityNode
+ * @see 
  */
 class TypeAndQuantityNode extends StructuredValue
 {
@@ -17,7 +17,7 @@ class TypeAndQuantityNode extends StructuredValue
      *
      * @return static
      *
-     * @see http://schema.org/amountOfThisGood
+     * @see 
      */
     public function amountOfThisGood($amountOfThisGood)
     {
@@ -33,7 +33,7 @@ class TypeAndQuantityNode extends StructuredValue
      *
      * @return static
      *
-     * @see http://schema.org/businessFunction
+     * @see 
      */
     public function businessFunction($businessFunction)
     {
@@ -47,7 +47,7 @@ class TypeAndQuantityNode extends StructuredValue
      *
      * @return static
      *
-     * @see http://schema.org/typeOfGood
+     * @see 
      */
     public function typeOfGood($typeOfGood)
     {
@@ -63,7 +63,7 @@ class TypeAndQuantityNode extends StructuredValue
      *
      * @return static
      *
-     * @see http://schema.org/unitCode
+     * @see 
      */
     public function unitCode($unitCode)
     {
@@ -79,7 +79,7 @@ class TypeAndQuantityNode extends StructuredValue
      *
      * @return static
      *
-     * @see http://schema.org/unitText
+     * @see 
      */
     public function unitText($unitText)
     {

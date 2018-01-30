@@ -5,7 +5,7 @@ namespace Spatie\SchemaOrg;
 /**
  * A body of structured information describing some topic(s) of interest.
  *
- * @see http://schema.org/Dataset
+ * @see 
  */
 class Dataset extends CreativeWork
 {
@@ -16,11 +16,25 @@ class Dataset extends CreativeWork
      *
      * @return static
      *
-     * @see http://schema.org/catalog
+     * @see 
      */
     public function catalog($catalog)
     {
         return $this->setProperty('catalog', $catalog);
+    }
+
+    /**
+     * A data catalog which contains this dataset.
+     *
+     * @param DataCatalog|DataCatalog[] $includedInDataCatalog
+     *
+     * @return static
+     *
+     * @see 
+     */
+    public function includedInDataCatalog($includedInDataCatalog)
+    {
+        return $this->setProperty('includedInDataCatalog', $includedInDataCatalog);
     }
 
     /**
@@ -31,25 +45,11 @@ class Dataset extends CreativeWork
      *
      * @return static
      *
-     * @see http://schema.org/includedDataCatalog
+     * @see 
      */
     public function includedDataCatalog($includedDataCatalog)
     {
         return $this->setProperty('includedDataCatalog', $includedDataCatalog);
-    }
-
-    /**
-     * A data catalog which contains this dataset.
-     *
-     * @param DataCatalog|DataCatalog[] $includedInDataCatalog
-     *
-     * @return static
-     *
-     * @see http://schema.org/includedInDataCatalog
-     */
-    public function includedInDataCatalog($includedInDataCatalog)
-    {
-        return $this->setProperty('includedInDataCatalog', $includedInDataCatalog);
     }
 
     /**
@@ -60,7 +60,7 @@ class Dataset extends CreativeWork
      *
      * @return static
      *
-     * @see http://schema.org/distribution
+     * @see 
      */
     public function distribution($distribution)
     {
@@ -75,7 +75,7 @@ class Dataset extends CreativeWork
      *
      * @return static
      *
-     * @see http://schema.org/spatial
+     * @see 
      */
     public function spatial($spatial)
     {
@@ -86,30 +86,30 @@ class Dataset extends CreativeWork
      * The range of temporal applicability of a dataset, e.g. for a 2011 census
      * dataset, the year 2011 (in ISO 8601 time interval format).
      *
-     * @param \DateTimeInterface|\DateTimeInterface[] $temporal
+     * @param \DateTimeInterface|\DateTimeInterface[] $datasetTimeInterval
      *
      * @return static
      *
-     * @see http://schema.org/temporal
+     * @see 
      */
-    public function temporal($temporal)
+    public function datasetTimeInterval($datasetTimeInterval)
     {
-        return $this->setProperty('temporal', $temporal);
+        return $this->setProperty('datasetTimeInterval', $datasetTimeInterval);
     }
 
     /**
      * The range of temporal applicability of a dataset, e.g. for a 2011 census
      * dataset, the year 2011 (in ISO 8601 time interval format).
      *
-     * @param \DateTimeInterface|\DateTimeInterface[] $datasetTimeInterval
+     * @param \DateTimeInterface|\DateTimeInterface[] $temporal
      *
      * @return static
      *
-     * @see http://schema.org/datasetTimeInterval
+     * @see 
      */
-    public function datasetTimeInterval($datasetTimeInterval)
+    public function temporal($temporal)
     {
-        return $this->setProperty('datasetTimeInterval', $datasetTimeInterval);
+        return $this->setProperty('temporal', $temporal);
     }
 
 }

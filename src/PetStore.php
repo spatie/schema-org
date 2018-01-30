@@ -5,7 +5,7 @@ namespace Spatie\SchemaOrg;
 /**
  * A pet store.
  *
- * @see http://schema.org/PetStore
+ * @see 
  */
 class PetStore extends Store
 {

@@ -5,7 +5,7 @@ namespace Spatie\SchemaOrg;
 /**
  * A collection of datasets.
  *
- * @see http://schema.org/DataCatalog
+ * @see 
  */
 class DataCatalog extends CreativeWork
 {
@@ -16,7 +16,7 @@ class DataCatalog extends CreativeWork
      *
      * @return static
      *
-     * @see http://schema.org/dataset
+     * @see 
      */
     public function dataset($dataset)
     {

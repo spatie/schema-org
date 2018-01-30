@@ -6,7 +6,7 @@ namespace Spatie\SchemaOrg;
  * A service provided by an organization, e.g. delivery service, print services,
  * etc.
  *
- * @see http://schema.org/Service
+ * @see 
  */
 class Service extends Intangible
 {
@@ -18,7 +18,7 @@ class Service extends Intangible
      *
      * @return static
      *
-     * @see http://schema.org/hasOfferCatalog
+     * @see 
      */
     public function hasOfferCatalog($hasOfferCatalog)
     {
@@ -33,7 +33,7 @@ class Service extends Intangible
      *
      * @return static
      *
-     * @see http://schema.org/aggregateRating
+     * @see 
      */
     public function aggregateRating($aggregateRating)
     {
@@ -47,25 +47,11 @@ class Service extends Intangible
      *
      * @return static
      *
-     * @see http://schema.org/areaServed
+     * @see 
      */
     public function areaServed($areaServed)
     {
         return $this->setProperty('areaServed', $areaServed);
-    }
-
-    /**
-     * An intended audience, i.e. a group for whom something was created.
-     *
-     * @param Audience|Audience[] $audience
-     *
-     * @return static
-     *
-     * @see http://schema.org/audience
-     */
-    public function audience($audience)
-    {
-        return $this->setProperty('audience', $audience);
     }
 
     /**
@@ -76,11 +62,25 @@ class Service extends Intangible
      *
      * @return static
      *
-     * @see http://schema.org/availableChannel
+     * @see 
      */
     public function availableChannel($availableChannel)
     {
         return $this->setProperty('availableChannel', $availableChannel);
+    }
+
+    /**
+     * An intended audience, i.e. a group for whom something was created.
+     *
+     * @param Audience|Audience[] $audience
+     *
+     * @return static
+     *
+     * @see 
+     */
+    public function audience($audience)
+    {
+        return $this->setProperty('audience', $audience);
     }
 
     /**
@@ -90,7 +90,7 @@ class Service extends Intangible
      *
      * @return static
      *
-     * @see http://schema.org/award
+     * @see 
      */
     public function award($award)
     {
@@ -105,7 +105,7 @@ class Service extends Intangible
      *
      * @return static
      *
-     * @see http://schema.org/brand
+     * @see 
      */
     public function brand($brand)
     {
@@ -120,7 +120,7 @@ class Service extends Intangible
      *
      * @return static
      *
-     * @see http://schema.org/category
+     * @see 
      */
     public function category($category)
     {
@@ -134,25 +134,11 @@ class Service extends Intangible
      *
      * @return static
      *
-     * @see http://schema.org/hoursAvailable
+     * @see 
      */
     public function hoursAvailable($hoursAvailable)
     {
         return $this->setProperty('hoursAvailable', $hoursAvailable);
-    }
-
-    /**
-     * A pointer to another, somehow related product (or multiple products).
-     *
-     * @param Product|Product[]|Service|Service[] $isRelatedTo
-     *
-     * @return static
-     *
-     * @see http://schema.org/isRelatedTo
-     */
-    public function isRelatedTo($isRelatedTo)
-    {
-        return $this->setProperty('isRelatedTo', $isRelatedTo);
     }
 
     /**
@@ -163,11 +149,25 @@ class Service extends Intangible
      *
      * @return static
      *
-     * @see http://schema.org/isSimilarTo
+     * @see 
      */
     public function isSimilarTo($isSimilarTo)
     {
         return $this->setProperty('isSimilarTo', $isSimilarTo);
+    }
+
+    /**
+     * A pointer to another, somehow related product (or multiple products).
+     *
+     * @param Product|Product[]|Service|Service[] $isRelatedTo
+     *
+     * @return static
+     *
+     * @see 
+     */
+    public function isRelatedTo($isRelatedTo)
+    {
+        return $this->setProperty('isRelatedTo', $isRelatedTo);
     }
 
     /**
@@ -177,7 +177,7 @@ class Service extends Intangible
      *
      * @return static
      *
-     * @see http://schema.org/logo
+     * @see 
      */
     public function logo($logo)
     {
@@ -193,7 +193,7 @@ class Service extends Intangible
      *
      * @return static
      *
-     * @see http://schema.org/offers
+     * @see 
      */
     public function offers($offers)
     {
@@ -208,7 +208,7 @@ class Service extends Intangible
      *
      * @return static
      *
-     * @see http://schema.org/produces
+     * @see 
      */
     public function produces($produces)
     {
@@ -223,7 +223,7 @@ class Service extends Intangible
      *
      * @return static
      *
-     * @see http://schema.org/serviceOutput
+     * @see 
      */
     public function serviceOutput($serviceOutput)
     {
@@ -237,25 +237,11 @@ class Service extends Intangible
      *
      * @return static
      *
-     * @see http://schema.org/review
+     * @see 
      */
     public function review($review)
     {
         return $this->setProperty('review', $review);
-    }
-
-    /**
-     * The geographic area where the service is provided.
-     *
-     * @param Place|Place[]|AdministrativeArea|AdministrativeArea[]|GeoShape|GeoShape[] $serviceArea
-     *
-     * @return static
-     *
-     * @see http://schema.org/serviceArea
-     */
-    public function serviceArea($serviceArea)
-    {
-        return $this->setProperty('serviceArea', $serviceArea);
     }
 
     /**
@@ -265,11 +251,25 @@ class Service extends Intangible
      *
      * @return static
      *
-     * @see http://schema.org/serviceAudience
+     * @see 
      */
     public function serviceAudience($serviceAudience)
     {
         return $this->setProperty('serviceAudience', $serviceAudience);
+    }
+
+    /**
+     * The geographic area where the service is provided.
+     *
+     * @param Place|Place[]|AdministrativeArea|AdministrativeArea[]|GeoShape|GeoShape[] $serviceArea
+     *
+     * @return static
+     *
+     * @see 
+     */
+    public function serviceArea($serviceArea)
+    {
+        return $this->setProperty('serviceArea', $serviceArea);
     }
 
     /**
@@ -280,7 +280,7 @@ class Service extends Intangible
      *
      * @return static
      *
-     * @see http://schema.org/serviceType
+     * @see 
      */
     public function serviceType($serviceType)
     {
@@ -296,7 +296,7 @@ class Service extends Intangible
      *
      * @return static
      *
-     * @see http://schema.org/provider
+     * @see 
      */
     public function provider($provider)
     {
@@ -310,7 +310,7 @@ class Service extends Intangible
      *
      * @return static
      *
-     * @see http://schema.org/providerMobility
+     * @see 
      */
     public function providerMobility($providerMobility)
     {
@@ -327,7 +327,7 @@ class Service extends Intangible
      *
      * @return static
      *
-     * @see http://schema.org/broker
+     * @see 
      */
     public function broker($broker)
     {

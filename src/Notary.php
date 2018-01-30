@@ -5,7 +5,7 @@ namespace Spatie\SchemaOrg;
 /**
  * A notary.
  *
- * @see http://schema.org/Notary
+ * @see 
  */
 class Notary extends LegalService
 {

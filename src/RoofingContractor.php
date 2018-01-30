@@ -5,7 +5,7 @@ namespace Spatie\SchemaOrg;
 /**
  * A roofing contractor.
  *
- * @see http://schema.org/RoofingContractor
+ * @see 
  */
 class RoofingContractor extends HomeAndConstructionBusiness
 {

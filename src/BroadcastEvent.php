@@ -5,7 +5,7 @@ namespace Spatie\SchemaOrg;
 /**
  * An over the air or online broadcast event.
  *
- * @see http://schema.org/BroadcastEvent
+ * @see 
  */
 class BroadcastEvent extends PublicationEvent
 {
@@ -17,25 +17,11 @@ class BroadcastEvent extends PublicationEvent
      *
      * @return static
      *
-     * @see http://schema.org/videoFormat
+     * @see 
      */
     public function videoFormat($videoFormat)
     {
         return $this->setProperty('videoFormat', $videoFormat);
-    }
-
-    /**
-     * The event being broadcast such as a sporting event or awards ceremony.
-     *
-     * @param Event|Event[] $broadcastOfEvent
-     *
-     * @return static
-     *
-     * @see http://schema.org/broadcastOfEvent
-     */
-    public function broadcastOfEvent($broadcastOfEvent)
-    {
-        return $this->setProperty('broadcastOfEvent', $broadcastOfEvent);
     }
 
     /**
@@ -45,11 +31,25 @@ class BroadcastEvent extends PublicationEvent
      *
      * @return static
      *
-     * @see http://schema.org/isLiveBroadcast
+     * @see 
      */
     public function isLiveBroadcast($isLiveBroadcast)
     {
         return $this->setProperty('isLiveBroadcast', $isLiveBroadcast);
+    }
+
+    /**
+     * The event being broadcast such as a sporting event or awards ceremony.
+     *
+     * @param Event|Event[] $broadcastOfEvent
+     *
+     * @return static
+     *
+     * @see 
+     */
+    public function broadcastOfEvent($broadcastOfEvent)
+    {
+        return $this->setProperty('broadcastOfEvent', $broadcastOfEvent);
     }
 
 }

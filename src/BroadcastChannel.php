@@ -5,7 +5,7 @@ namespace Spatie\SchemaOrg;
 /**
  * A unique instance of a BroadcastService on a CableOrSatelliteService lineup.
  *
- * @see http://schema.org/BroadcastChannel
+ * @see 
  */
 class BroadcastChannel extends Intangible
 {
@@ -16,11 +16,26 @@ class BroadcastChannel extends Intangible
      *
      * @return static
      *
-     * @see http://schema.org/genre
+     * @see 
      */
     public function genre($genre)
     {
         return $this->setProperty('genre', $genre);
+    }
+
+    /**
+     * The type of service required to have access to the channel (e.g. Standard
+     * or Premium).
+     *
+     * @param string|string[] $broadcastServiceTier
+     *
+     * @return static
+     *
+     * @see 
+     */
+    public function broadcastServiceTier($broadcastServiceTier)
+    {
+        return $this->setProperty('broadcastServiceTier', $broadcastServiceTier);
     }
 
     /**
@@ -31,7 +46,7 @@ class BroadcastChannel extends Intangible
      *
      * @return static
      *
-     * @see http://schema.org/broadcastChannelId
+     * @see 
      */
     public function broadcastChannelId($broadcastChannelId)
     {
@@ -45,26 +60,11 @@ class BroadcastChannel extends Intangible
      *
      * @return static
      *
-     * @see http://schema.org/inBroadcastLineup
+     * @see 
      */
     public function inBroadcastLineup($inBroadcastLineup)
     {
         return $this->setProperty('inBroadcastLineup', $inBroadcastLineup);
-    }
-
-    /**
-     * The type of service required to have access to the channel (e.g. Standard
-     * or Premium).
-     *
-     * @param string|string[] $broadcastServiceTier
-     *
-     * @return static
-     *
-     * @see http://schema.org/broadcastServiceTier
-     */
-    public function broadcastServiceTier($broadcastServiceTier)
-    {
-        return $this->setProperty('broadcastServiceTier', $broadcastServiceTier);
     }
 
     /**
@@ -74,7 +74,7 @@ class BroadcastChannel extends Intangible
      *
      * @return static
      *
-     * @see http://schema.org/providesBroadcastService
+     * @see 
      */
     public function providesBroadcastService($providesBroadcastService)
     {

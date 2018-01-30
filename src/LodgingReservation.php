@@ -9,24 +9,10 @@ namespace Spatie\SchemaOrg;
  * confirmation emails or HTML pages with individual confirmations of
  * reservations.
  *
- * @see http://schema.org/LodgingReservation
+ * @see 
  */
 class LodgingReservation extends Reservation
 {
-    /**
-     * The earliest someone may check into a lodging establishment.
-     *
-     * @param \DateTimeInterface|\DateTimeInterface[] $checkinTime
-     *
-     * @return static
-     *
-     * @see http://schema.org/checkinTime
-     */
-    public function checkinTime($checkinTime)
-    {
-        return $this->setProperty('checkinTime', $checkinTime);
-    }
-
     /**
      * The latest someone may check out of a lodging establishment.
      *
@@ -34,7 +20,7 @@ class LodgingReservation extends Reservation
      *
      * @return static
      *
-     * @see http://schema.org/checkoutTime
+     * @see 
      */
     public function checkoutTime($checkoutTime)
     {
@@ -49,7 +35,7 @@ class LodgingReservation extends Reservation
      *
      * @return static
      *
-     * @see http://schema.org/lodgingUnitType
+     * @see 
      */
     public function lodgingUnitType($lodgingUnitType)
     {
@@ -57,17 +43,17 @@ class LodgingReservation extends Reservation
     }
 
     /**
-     * A full description of the lodging unit.
+     * The earliest someone may check into a lodging establishment.
      *
-     * @param string|string[] $lodgingUnitDescription
+     * @param \DateTimeInterface|\DateTimeInterface[] $checkinTime
      *
      * @return static
      *
-     * @see http://schema.org/lodgingUnitDescription
+     * @see 
      */
-    public function lodgingUnitDescription($lodgingUnitDescription)
+    public function checkinTime($checkinTime)
     {
-        return $this->setProperty('lodgingUnitDescription', $lodgingUnitDescription);
+        return $this->setProperty('checkinTime', $checkinTime);
     }
 
     /**
@@ -77,7 +63,7 @@ class LodgingReservation extends Reservation
      *
      * @return static
      *
-     * @see http://schema.org/numAdults
+     * @see 
      */
     public function numAdults($numAdults)
     {
@@ -91,11 +77,25 @@ class LodgingReservation extends Reservation
      *
      * @return static
      *
-     * @see http://schema.org/numChildren
+     * @see 
      */
     public function numChildren($numChildren)
     {
         return $this->setProperty('numChildren', $numChildren);
+    }
+
+    /**
+     * A full description of the lodging unit.
+     *
+     * @param string|string[] $lodgingUnitDescription
+     *
+     * @return static
+     *
+     * @see 
+     */
+    public function lodgingUnitDescription($lodgingUnitDescription)
+    {
+        return $this->setProperty('lodgingUnitDescription', $lodgingUnitDescription);
     }
 
 }

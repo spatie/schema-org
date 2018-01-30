@@ -5,7 +5,7 @@ namespace Spatie\SchemaOrg;
 /**
  * The place where a person lives.
  *
- * @see http://schema.org/Residence
+ * @see 
  */
 class Residence extends Place
 {

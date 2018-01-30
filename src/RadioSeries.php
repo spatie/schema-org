@@ -6,10 +6,25 @@ namespace Spatie\SchemaOrg;
  * CreativeWorkSeries dedicated to radio broadcast and associated online
  * delivery.
  *
- * @see http://schema.org/RadioSeries
+ * @see 
  */
 class RadioSeries extends CreativeWorkSeries
 {
+    /**
+     * An actor, e.g. in tv, radio, movie, video games etc. Actors can be
+     * associated with individual items or with a series, episode, clip.
+     *
+     * @param Person|Person[] $actors
+     *
+     * @return static
+     *
+     * @see 
+     */
+    public function actors($actors)
+    {
+        return $this->setProperty('actors', $actors);
+    }
+
     /**
      * An actor, e.g. in tv, radio, movie, video games etc., or in an event.
      * Actors can be associated with individual items or with a series, episode,
@@ -19,26 +34,11 @@ class RadioSeries extends CreativeWorkSeries
      *
      * @return static
      *
-     * @see http://schema.org/actor
+     * @see 
      */
     public function actor($actor)
     {
         return $this->setProperty('actor', $actor);
-    }
-
-    /**
-     * An actor, e.g. in tv, radio, movie, video games etc. Actors can be
-     * associated with individual items or with a series, episode, clip.
-     *
-     * @param Person|Person[] $actors
-     *
-     * @return static
-     *
-     * @see http://schema.org/actors
-     */
-    public function actors($actors)
-    {
-        return $this->setProperty('actors', $actors);
     }
 
     /**
@@ -50,7 +50,7 @@ class RadioSeries extends CreativeWorkSeries
      *
      * @return static
      *
-     * @see http://schema.org/director
+     * @see 
      */
     public function director($director)
     {
@@ -65,7 +65,7 @@ class RadioSeries extends CreativeWorkSeries
      *
      * @return static
      *
-     * @see http://schema.org/directors
+     * @see 
      */
     public function directors($directors)
     {
@@ -79,7 +79,7 @@ class RadioSeries extends CreativeWorkSeries
      *
      * @return static
      *
-     * @see http://schema.org/episode
+     * @see 
      */
     public function episode($episode)
     {
@@ -93,39 +93,11 @@ class RadioSeries extends CreativeWorkSeries
      *
      * @return static
      *
-     * @see http://schema.org/episodes
+     * @see 
      */
     public function episodes($episodes)
     {
         return $this->setProperty('episodes', $episodes);
-    }
-
-    /**
-     * The composer of the soundtrack.
-     *
-     * @param MusicGroup|MusicGroup[]|Person|Person[] $musicBy
-     *
-     * @return static
-     *
-     * @see http://schema.org/musicBy
-     */
-    public function musicBy($musicBy)
-    {
-        return $this->setProperty('musicBy', $musicBy);
-    }
-
-    /**
-     * The number of episodes in this season or series.
-     *
-     * @param int|int[] $numberOfEpisodes
-     *
-     * @return static
-     *
-     * @see http://schema.org/numberOfEpisodes
-     */
-    public function numberOfEpisodes($numberOfEpisodes)
-    {
-        return $this->setProperty('numberOfEpisodes', $numberOfEpisodes);
     }
 
     /**
@@ -135,11 +107,39 @@ class RadioSeries extends CreativeWorkSeries
      *
      * @return static
      *
-     * @see http://schema.org/numberOfSeasons
+     * @see 
      */
     public function numberOfSeasons($numberOfSeasons)
     {
         return $this->setProperty('numberOfSeasons', $numberOfSeasons);
+    }
+
+    /**
+     * The number of episodes in this season or series.
+     *
+     * @param int|int[] $numberOfEpisodes
+     *
+     * @return static
+     *
+     * @see 
+     */
+    public function numberOfEpisodes($numberOfEpisodes)
+    {
+        return $this->setProperty('numberOfEpisodes', $numberOfEpisodes);
+    }
+
+    /**
+     * The composer of the soundtrack.
+     *
+     * @param MusicGroup|MusicGroup[]|Person|Person[] $musicBy
+     *
+     * @return static
+     *
+     * @see 
+     */
+    public function musicBy($musicBy)
+    {
+        return $this->setProperty('musicBy', $musicBy);
     }
 
     /**
@@ -150,7 +150,7 @@ class RadioSeries extends CreativeWorkSeries
      *
      * @return static
      *
-     * @see http://schema.org/productionCompany
+     * @see 
      */
     public function productionCompany($productionCompany)
     {
@@ -160,15 +160,15 @@ class RadioSeries extends CreativeWorkSeries
     /**
      * A season in a media series.
      *
-     * @param CreativeWorkSeason|CreativeWorkSeason[] $season
+     * @param CreativeWorkSeason|CreativeWorkSeason[] $seasons
      *
      * @return static
      *
-     * @see http://schema.org/season
+     * @see 
      */
-    public function season($season)
+    public function seasons($seasons)
     {
-        return $this->setProperty('season', $season);
+        return $this->setProperty('seasons', $seasons);
     }
 
     /**
@@ -178,7 +178,7 @@ class RadioSeries extends CreativeWorkSeries
      *
      * @return static
      *
-     * @see http://schema.org/containsSeason
+     * @see 
      */
     public function containsSeason($containsSeason)
     {
@@ -188,15 +188,15 @@ class RadioSeries extends CreativeWorkSeries
     /**
      * A season in a media series.
      *
-     * @param CreativeWorkSeason|CreativeWorkSeason[] $seasons
+     * @param CreativeWorkSeason|CreativeWorkSeason[] $season
      *
      * @return static
      *
-     * @see http://schema.org/seasons
+     * @see 
      */
-    public function seasons($seasons)
+    public function season($season)
     {
-        return $this->setProperty('seasons', $seasons);
+        return $this->setProperty('season', $season);
     }
 
     /**
@@ -206,7 +206,7 @@ class RadioSeries extends CreativeWorkSeries
      *
      * @return static
      *
-     * @see http://schema.org/trailer
+     * @see 
      */
     public function trailer($trailer)
     {

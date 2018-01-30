@@ -5,7 +5,7 @@ namespace Spatie\SchemaOrg;
 /**
  * A comedy club.
  *
- * @see http://schema.org/ComedyClub
+ * @see 
  */
 class ComedyClub extends EntertainmentBusiness
 {

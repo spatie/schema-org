@@ -14,7 +14,7 @@ namespace Spatie\SchemaOrg;
  * * [[FollowAction]]: Unlike FollowAction, JoinAction does not imply that
  * you'll be polling for updates.
  *
- * @see http://schema.org/JoinAction
+ * @see 
  */
 class JoinAction extends InteractAction
 {
@@ -26,7 +26,7 @@ class JoinAction extends InteractAction
      *
      * @return static
      *
-     * @see http://schema.org/event
+     * @see 
      */
     public function event($event)
     {

@@ -5,7 +5,7 @@ namespace Spatie\SchemaOrg;
 /**
  * A volcano, like Fuji san.
  *
- * @see http://schema.org/Volcano
+ * @see 
  */
 class Volcano extends Landform
 {

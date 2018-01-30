@@ -7,7 +7,7 @@ namespace Spatie\SchemaOrg;
  * LocalBusiness include a restaurant, a particular branch of a restaurant
  * chain, a branch of a bank, a medical practice, a club, a bowling alley, etc.
  *
- * @see http://schema.org/LocalBusiness
+ * @see 
  */
 class LocalBusiness extends Organization
 {
@@ -19,7 +19,7 @@ class LocalBusiness extends Organization
      *
      * @return static
      *
-     * @see http://schema.org/branchOf
+     * @see 
      */
     public function branchOf($branchOf)
     {
@@ -34,7 +34,7 @@ class LocalBusiness extends Organization
      *
      * @return static
      *
-     * @see http://schema.org/currenciesAccepted
+     * @see 
      */
     public function currenciesAccepted($currenciesAccepted)
     {
@@ -63,25 +63,11 @@ class LocalBusiness extends Organization
      *
      * @return static
      *
-     * @see http://schema.org/openingHours
+     * @see 
      */
     public function openingHours($openingHours)
     {
         return $this->setProperty('openingHours', $openingHours);
-    }
-
-    /**
-     * Cash, credit card, etc.
-     *
-     * @param string|string[] $paymentAccepted
-     *
-     * @return static
-     *
-     * @see http://schema.org/paymentAccepted
-     */
-    public function paymentAccepted($paymentAccepted)
-    {
-        return $this->setProperty('paymentAccepted', $paymentAccepted);
     }
 
     /**
@@ -91,11 +77,25 @@ class LocalBusiness extends Organization
      *
      * @return static
      *
-     * @see http://schema.org/priceRange
+     * @see 
      */
     public function priceRange($priceRange)
     {
         return $this->setProperty('priceRange', $priceRange);
+    }
+
+    /**
+     * Cash, credit card, etc.
+     *
+     * @param string|string[] $paymentAccepted
+     *
+     * @return static
+     *
+     * @see 
+     */
+    public function paymentAccepted($paymentAccepted)
+    {
+        return $this->setProperty('paymentAccepted', $paymentAccepted);
     }
 
 }

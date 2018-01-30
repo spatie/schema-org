@@ -5,7 +5,7 @@ namespace Spatie\SchemaOrg;
 /**
  * An agent pays a price to a participant.
  *
- * @see http://schema.org/PayAction
+ * @see 
  */
 class PayAction extends TradeAction
 {
@@ -17,7 +17,7 @@ class PayAction extends TradeAction
      *
      * @return static
      *
-     * @see http://schema.org/recipient
+     * @see 
      */
     public function recipient($recipient)
     {

@@ -6,7 +6,7 @@ namespace Spatie\SchemaOrg;
  * A structured value providing information about when a certain organization or
  * person owned a certain product.
  *
- * @see http://schema.org/OwnershipInfo
+ * @see 
  */
 class OwnershipInfo extends StructuredValue
 {
@@ -17,25 +17,11 @@ class OwnershipInfo extends StructuredValue
      *
      * @return static
      *
-     * @see http://schema.org/acquiredFrom
+     * @see 
      */
     public function acquiredFrom($acquiredFrom)
     {
         return $this->setProperty('acquiredFrom', $acquiredFrom);
-    }
-
-    /**
-     * The date and time of obtaining the product.
-     *
-     * @param \DateTimeInterface|\DateTimeInterface[] $ownedFrom
-     *
-     * @return static
-     *
-     * @see http://schema.org/ownedFrom
-     */
-    public function ownedFrom($ownedFrom)
-    {
-        return $this->setProperty('ownedFrom', $ownedFrom);
     }
 
     /**
@@ -45,11 +31,25 @@ class OwnershipInfo extends StructuredValue
      *
      * @return static
      *
-     * @see http://schema.org/ownedThrough
+     * @see 
      */
     public function ownedThrough($ownedThrough)
     {
         return $this->setProperty('ownedThrough', $ownedThrough);
+    }
+
+    /**
+     * The date and time of obtaining the product.
+     *
+     * @param \DateTimeInterface|\DateTimeInterface[] $ownedFrom
+     *
+     * @return static
+     *
+     * @see 
+     */
+    public function ownedFrom($ownedFrom)
+    {
+        return $this->setProperty('ownedFrom', $ownedFrom);
     }
 
     /**
@@ -59,7 +59,7 @@ class OwnershipInfo extends StructuredValue
      *
      * @return static
      *
-     * @see http://schema.org/typeOfGood
+     * @see 
      */
     public function typeOfGood($typeOfGood)
     {

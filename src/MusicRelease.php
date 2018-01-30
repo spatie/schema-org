@@ -5,24 +5,10 @@ namespace Spatie\SchemaOrg;
 /**
  * A MusicRelease is a specific release of a music album.
  *
- * @see http://schema.org/MusicRelease
+ * @see 
  */
 class MusicRelease extends MusicPlaylist
 {
-    /**
-     * The catalog number for the release.
-     *
-     * @param string|string[] $catalogNumber
-     *
-     * @return static
-     *
-     * @see http://schema.org/catalogNumber
-     */
-    public function catalogNumber($catalogNumber)
-    {
-        return $this->setProperty('catalogNumber', $catalogNumber);
-    }
-
     /**
      * The group the release is credited to if different than the byArtist. For
      * example, Red and Blue is credited to "Stefani Germanotta Band", but by
@@ -32,11 +18,39 @@ class MusicRelease extends MusicPlaylist
      *
      * @return static
      *
-     * @see http://schema.org/creditedTo
+     * @see 
      */
     public function creditedTo($creditedTo)
     {
         return $this->setProperty('creditedTo', $creditedTo);
+    }
+
+    /**
+     * The label that issued the release.
+     *
+     * @param Organization|Organization[] $recordLabel
+     *
+     * @return static
+     *
+     * @see 
+     */
+    public function recordLabel($recordLabel)
+    {
+        return $this->setProperty('recordLabel', $recordLabel);
+    }
+
+    /**
+     * The catalog number for the release.
+     *
+     * @param string|string[] $catalogNumber
+     *
+     * @return static
+     *
+     * @see 
+     */
+    public function catalogNumber($catalogNumber)
+    {
+        return $this->setProperty('catalogNumber', $catalogNumber);
     }
 
     /**
@@ -47,25 +61,11 @@ class MusicRelease extends MusicPlaylist
      *
      * @return static
      *
-     * @see http://schema.org/musicReleaseFormat
+     * @see 
      */
     public function musicReleaseFormat($musicReleaseFormat)
     {
         return $this->setProperty('musicReleaseFormat', $musicReleaseFormat);
-    }
-
-    /**
-     * The label that issued the release.
-     *
-     * @param Organization|Organization[] $recordLabel
-     *
-     * @return static
-     *
-     * @see http://schema.org/recordLabel
-     */
-    public function recordLabel($recordLabel)
-    {
-        return $this->setProperty('recordLabel', $recordLabel);
     }
 
     /**
@@ -75,7 +75,7 @@ class MusicRelease extends MusicPlaylist
      *
      * @return static
      *
-     * @see http://schema.org/releaseOf
+     * @see 
      */
     public function releaseOf($releaseOf)
     {

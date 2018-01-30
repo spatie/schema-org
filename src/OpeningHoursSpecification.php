@@ -13,7 +13,7 @@ namespace Spatie\SchemaOrg;
  * If the value for the [[closes]] property is less than the value for the
  * [[opens]] property then the hour range is assumed to span over the next day.
  *
- * @see http://schema.org/OpeningHoursSpecification
+ * @see 
  */
 class OpeningHoursSpecification extends StructuredValue
 {
@@ -24,7 +24,7 @@ class OpeningHoursSpecification extends StructuredValue
      *
      * @return static
      *
-     * @see http://schema.org/closes
+     * @see 
      */
     public function closes($closes)
     {
@@ -38,7 +38,7 @@ class OpeningHoursSpecification extends StructuredValue
      *
      * @return static
      *
-     * @see http://schema.org/dayOfWeek
+     * @see 
      */
     public function dayOfWeek($dayOfWeek)
     {
@@ -52,7 +52,7 @@ class OpeningHoursSpecification extends StructuredValue
      *
      * @return static
      *
-     * @see http://schema.org/opens
+     * @see 
      */
     public function opens($opens)
     {
@@ -66,7 +66,7 @@ class OpeningHoursSpecification extends StructuredValue
      *
      * @return static
      *
-     * @see http://schema.org/validFrom
+     * @see 
      */
     public function validFrom($validFrom)
     {
@@ -81,7 +81,7 @@ class OpeningHoursSpecification extends StructuredValue
      *
      * @return static
      *
-     * @see http://schema.org/validThrough
+     * @see 
      */
     public function validThrough($validThrough)
     {

@@ -7,7 +7,7 @@ namespace Spatie\SchemaOrg;
  * same pair of shoes is offered by different merchants), then AggregateOffer
  * can be used.
  *
- * @see http://schema.org/AggregateOffer
+ * @see 
  */
 class AggregateOffer extends Offer
 {
@@ -18,25 +18,11 @@ class AggregateOffer extends Offer
      *
      * @return static
      *
-     * @see http://schema.org/highPrice
+     * @see 
      */
     public function highPrice($highPrice)
     {
         return $this->setProperty('highPrice', $highPrice);
-    }
-
-    /**
-     * The lowest price of all offers available.
-     *
-     * @param float|float[]|int|int[]|string|string[] $lowPrice
-     *
-     * @return static
-     *
-     * @see http://schema.org/lowPrice
-     */
-    public function lowPrice($lowPrice)
-    {
-        return $this->setProperty('lowPrice', $lowPrice);
     }
 
     /**
@@ -46,7 +32,7 @@ class AggregateOffer extends Offer
      *
      * @return static
      *
-     * @see http://schema.org/offerCount
+     * @see 
      */
     public function offerCount($offerCount)
     {
@@ -62,11 +48,25 @@ class AggregateOffer extends Offer
      *
      * @return static
      *
-     * @see http://schema.org/offers
+     * @see 
      */
     public function offers($offers)
     {
         return $this->setProperty('offers', $offers);
+    }
+
+    /**
+     * The lowest price of all offers available.
+     *
+     * @param float|float[]|int|int[]|string|string[] $lowPrice
+     *
+     * @return static
+     *
+     * @see 
+     */
+    public function lowPrice($lowPrice)
+    {
+        return $this->setProperty('lowPrice', $lowPrice);
     }
 
 }

@@ -5,7 +5,7 @@ namespace Spatie\SchemaOrg;
 /**
  * An agent controls a device or application.
  *
- * @see http://schema.org/ControlAction
+ * @see 
  */
 class ControlAction extends Action
 {

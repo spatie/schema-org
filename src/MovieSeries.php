@@ -6,10 +6,25 @@ namespace Spatie\SchemaOrg;
  * A series of movies. Included movies can be indicated with the hasPart
  * property.
  *
- * @see http://schema.org/MovieSeries
+ * @see 
  */
 class MovieSeries extends CreativeWorkSeries
 {
+    /**
+     * An actor, e.g. in tv, radio, movie, video games etc. Actors can be
+     * associated with individual items or with a series, episode, clip.
+     *
+     * @param Person|Person[] $actors
+     *
+     * @return static
+     *
+     * @see 
+     */
+    public function actors($actors)
+    {
+        return $this->setProperty('actors', $actors);
+    }
+
     /**
      * An actor, e.g. in tv, radio, movie, video games etc., or in an event.
      * Actors can be associated with individual items or with a series, episode,
@@ -19,26 +34,11 @@ class MovieSeries extends CreativeWorkSeries
      *
      * @return static
      *
-     * @see http://schema.org/actor
+     * @see 
      */
     public function actor($actor)
     {
         return $this->setProperty('actor', $actor);
-    }
-
-    /**
-     * An actor, e.g. in tv, radio, movie, video games etc. Actors can be
-     * associated with individual items or with a series, episode, clip.
-     *
-     * @param Person|Person[] $actors
-     *
-     * @return static
-     *
-     * @see http://schema.org/actors
-     */
-    public function actors($actors)
-    {
-        return $this->setProperty('actors', $actors);
     }
 
     /**
@@ -49,7 +49,7 @@ class MovieSeries extends CreativeWorkSeries
      *
      * @return static
      *
-     * @see http://schema.org/directors
+     * @see 
      */
     public function directors($directors)
     {
@@ -63,7 +63,7 @@ class MovieSeries extends CreativeWorkSeries
      *
      * @return static
      *
-     * @see http://schema.org/musicBy
+     * @see 
      */
     public function musicBy($musicBy)
     {
@@ -78,7 +78,7 @@ class MovieSeries extends CreativeWorkSeries
      *
      * @return static
      *
-     * @see http://schema.org/productionCompany
+     * @see 
      */
     public function productionCompany($productionCompany)
     {
@@ -92,7 +92,7 @@ class MovieSeries extends CreativeWorkSeries
      *
      * @return static
      *
-     * @see http://schema.org/trailer
+     * @see 
      */
     public function trailer($trailer)
     {

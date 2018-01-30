@@ -5,7 +5,7 @@ namespace Spatie\SchemaOrg;
 /**
  * An emergency service, such as a fire station or ER.
  *
- * @see http://schema.org/EmergencyService
+ * @see 
  */
 class EmergencyService extends LocalBusiness
 {

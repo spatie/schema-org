@@ -5,7 +5,7 @@ namespace Spatie\SchemaOrg;
 /**
  * A crematorium.
  *
- * @see http://schema.org/Crematorium
+ * @see 
  */
 class Crematorium extends CivicStructure
 {

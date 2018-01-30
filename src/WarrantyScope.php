@@ -12,7 +12,7 @@ namespace Spatie\SchemaOrg;
  * * http://purl.org/goodrelations/v1#PartsAndLabor-BringIn
  * * http://purl.org/goodrelations/v1#PartsAndLabor-PickUp
  *
- * @see http://schema.org/WarrantyScope
+ * @see 
  */
 class WarrantyScope extends Enumeration
 {

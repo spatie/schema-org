@@ -5,7 +5,7 @@ namespace Spatie\SchemaOrg;
 /**
  * A parking lot or other parking facility.
  *
- * @see http://schema.org/ParkingFacility
+ * @see 
  */
 class ParkingFacility extends CivicStructure
 {

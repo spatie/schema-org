@@ -5,7 +5,7 @@ namespace Spatie\SchemaOrg;
 /**
  * A permit issued by an organization, e.g. a parking pass.
  *
- * @see http://schema.org/Permit
+ * @see 
  */
 class Permit extends Intangible
 {
@@ -16,7 +16,7 @@ class Permit extends Intangible
      *
      * @return static
      *
-     * @see http://schema.org/issuedThrough
+     * @see 
      */
     public function issuedThrough($issuedThrough)
     {
@@ -30,7 +30,7 @@ class Permit extends Intangible
      *
      * @return static
      *
-     * @see http://schema.org/permitAudience
+     * @see 
      */
     public function permitAudience($permitAudience)
     {
@@ -44,7 +44,7 @@ class Permit extends Intangible
      *
      * @return static
      *
-     * @see http://schema.org/validFor
+     * @see 
      */
     public function validFor($validFor)
     {
@@ -58,7 +58,7 @@ class Permit extends Intangible
      *
      * @return static
      *
-     * @see http://schema.org/validFrom
+     * @see 
      */
     public function validFrom($validFrom)
     {
@@ -72,7 +72,7 @@ class Permit extends Intangible
      *
      * @return static
      *
-     * @see http://schema.org/validIn
+     * @see 
      */
     public function validIn($validIn)
     {
@@ -86,7 +86,7 @@ class Permit extends Intangible
      *
      * @return static
      *
-     * @see http://schema.org/validUntil
+     * @see 
      */
     public function validUntil($validUntil)
     {
@@ -100,7 +100,7 @@ class Permit extends Intangible
      *
      * @return static
      *
-     * @see http://schema.org/issuedBy
+     * @see 
      */
     public function issuedBy($issuedBy)
     {

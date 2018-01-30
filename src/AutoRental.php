@@ -5,7 +5,7 @@ namespace Spatie\SchemaOrg;
 /**
  * A car rental business.
  *
- * @see http://schema.org/AutoRental
+ * @see 
  */
 class AutoRental extends AutomotiveBusiness
 {

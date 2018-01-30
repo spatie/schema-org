@@ -5,7 +5,7 @@ namespace Spatie\SchemaOrg;
 /**
  * A lake (for example, Lake Pontrachain).
  *
- * @see http://schema.org/LakeBodyOfWater
+ * @see 
  */
 class LakeBodyOfWater extends BodyOfWater
 {

@@ -5,7 +5,7 @@ namespace Spatie\SchemaOrg;
 /**
  * The price asked for a given offer by the respective organization or person.
  *
- * @see http://schema.org/UnitPriceSpecification
+ * @see 
  */
 class UnitPriceSpecification extends PriceSpecification
 {
@@ -18,7 +18,7 @@ class UnitPriceSpecification extends PriceSpecification
      *
      * @return static
      *
-     * @see http://schema.org/billingIncrement
+     * @see 
      */
     public function billingIncrement($billingIncrement)
     {
@@ -34,7 +34,7 @@ class UnitPriceSpecification extends PriceSpecification
      *
      * @return static
      *
-     * @see http://schema.org/priceType
+     * @see 
      */
     public function priceType($priceType)
     {
@@ -50,7 +50,7 @@ class UnitPriceSpecification extends PriceSpecification
      *
      * @return static
      *
-     * @see http://schema.org/unitCode
+     * @see 
      */
     public function unitCode($unitCode)
     {
@@ -66,7 +66,7 @@ class UnitPriceSpecification extends PriceSpecification
      *
      * @return static
      *
-     * @see http://schema.org/unitText
+     * @see 
      */
     public function unitText($unitText)
     {
@@ -83,7 +83,7 @@ class UnitPriceSpecification extends PriceSpecification
      *
      * @return static
      *
-     * @see http://schema.org/referenceQuantity
+     * @see 
      */
     public function referenceQuantity($referenceQuantity)
     {

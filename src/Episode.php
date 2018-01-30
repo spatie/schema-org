@@ -6,10 +6,25 @@ namespace Spatie\SchemaOrg;
  * A media episode (e.g. TV, radio, video game) which can be part of a series or
  * season.
  *
- * @see http://schema.org/Episode
+ * @see 
  */
 class Episode extends CreativeWork
 {
+    /**
+     * An actor, e.g. in tv, radio, movie, video games etc. Actors can be
+     * associated with individual items or with a series, episode, clip.
+     *
+     * @param Person|Person[] $actors
+     *
+     * @return static
+     *
+     * @see 
+     */
+    public function actors($actors)
+    {
+        return $this->setProperty('actors', $actors);
+    }
+
     /**
      * An actor, e.g. in tv, radio, movie, video games etc., or in an event.
      * Actors can be associated with individual items or with a series, episode,
@@ -19,26 +34,11 @@ class Episode extends CreativeWork
      *
      * @return static
      *
-     * @see http://schema.org/actor
+     * @see 
      */
     public function actor($actor)
     {
         return $this->setProperty('actor', $actor);
-    }
-
-    /**
-     * An actor, e.g. in tv, radio, movie, video games etc. Actors can be
-     * associated with individual items or with a series, episode, clip.
-     *
-     * @param Person|Person[] $actors
-     *
-     * @return static
-     *
-     * @see http://schema.org/actors
-     */
-    public function actors($actors)
-    {
-        return $this->setProperty('actors', $actors);
     }
 
     /**
@@ -50,7 +50,7 @@ class Episode extends CreativeWork
      *
      * @return static
      *
-     * @see http://schema.org/director
+     * @see 
      */
     public function director($director)
     {
@@ -65,7 +65,7 @@ class Episode extends CreativeWork
      *
      * @return static
      *
-     * @see http://schema.org/directors
+     * @see 
      */
     public function directors($directors)
     {
@@ -79,25 +79,11 @@ class Episode extends CreativeWork
      *
      * @return static
      *
-     * @see http://schema.org/episodeNumber
+     * @see 
      */
     public function episodeNumber($episodeNumber)
     {
         return $this->setProperty('episodeNumber', $episodeNumber);
-    }
-
-    /**
-     * The composer of the soundtrack.
-     *
-     * @param MusicGroup|MusicGroup[]|Person|Person[] $musicBy
-     *
-     * @return static
-     *
-     * @see http://schema.org/musicBy
-     */
-    public function musicBy($musicBy)
-    {
-        return $this->setProperty('musicBy', $musicBy);
     }
 
     /**
@@ -107,7 +93,7 @@ class Episode extends CreativeWork
      *
      * @return static
      *
-     * @see http://schema.org/partOfSeason
+     * @see 
      */
     public function partOfSeason($partOfSeason)
     {
@@ -121,11 +107,25 @@ class Episode extends CreativeWork
      *
      * @return static
      *
-     * @see http://schema.org/partOfSeries
+     * @see 
      */
     public function partOfSeries($partOfSeries)
     {
         return $this->setProperty('partOfSeries', $partOfSeries);
+    }
+
+    /**
+     * The composer of the soundtrack.
+     *
+     * @param MusicGroup|MusicGroup[]|Person|Person[] $musicBy
+     *
+     * @return static
+     *
+     * @see 
+     */
+    public function musicBy($musicBy)
+    {
+        return $this->setProperty('musicBy', $musicBy);
     }
 
     /**
@@ -136,7 +136,7 @@ class Episode extends CreativeWork
      *
      * @return static
      *
-     * @see http://schema.org/productionCompany
+     * @see 
      */
     public function productionCompany($productionCompany)
     {
@@ -150,7 +150,7 @@ class Episode extends CreativeWork
      *
      * @return static
      *
-     * @see http://schema.org/trailer
+     * @see 
      */
     public function trailer($trailer)
     {

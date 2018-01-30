@@ -5,7 +5,7 @@ namespace Spatie\SchemaOrg;
 /**
  * Web page type: Contact page.
  *
- * @see http://schema.org/ContactPage
+ * @see 
  */
 class ContactPage extends WebPage
 {

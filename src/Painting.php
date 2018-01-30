@@ -5,7 +5,7 @@ namespace Spatie\SchemaOrg;
 /**
  * A painting.
  *
- * @see http://schema.org/Painting
+ * @see 
  */
 class Painting extends CreativeWork
 {

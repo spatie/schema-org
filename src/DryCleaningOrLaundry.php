@@ -5,7 +5,7 @@ namespace Spatie\SchemaOrg;
 /**
  * A dry-cleaning business.
  *
- * @see http://schema.org/DryCleaningOrLaundry
+ * @see 
  */
 class DryCleaningOrLaundry extends LocalBusiness
 {

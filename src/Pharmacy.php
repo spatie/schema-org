@@ -5,7 +5,7 @@ namespace Spatie\SchemaOrg;
 /**
  * A pharmacy or drugstore.
  *
- * @see http://schema.org/Pharmacy
+ * @see 
  */
 class Pharmacy extends MedicalOrganization
 {

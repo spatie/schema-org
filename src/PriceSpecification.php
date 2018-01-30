@@ -8,7 +8,7 @@ namespace Spatie\SchemaOrg;
  * [[MonetaryAmount]] to describe independent amounts of money such as a salary,
  * credit card limits, etc.
  *
- * @see http://schema.org/PriceSpecification
+ * @see 
  */
 class PriceSpecification extends StructuredValue
 {
@@ -21,7 +21,7 @@ class PriceSpecification extends StructuredValue
      *
      * @return static
      *
-     * @see http://schema.org/eligibleQuantity
+     * @see 
      */
     public function eligibleQuantity($eligibleQuantity)
     {
@@ -38,7 +38,7 @@ class PriceSpecification extends StructuredValue
      *
      * @return static
      *
-     * @see http://schema.org/eligibleTransactionVolume
+     * @see 
      */
     public function eligibleTransactionVolume($eligibleTransactionVolume)
     {
@@ -52,7 +52,7 @@ class PriceSpecification extends StructuredValue
      *
      * @return static
      *
-     * @see http://schema.org/maxPrice
+     * @see 
      */
     public function maxPrice($maxPrice)
     {
@@ -66,7 +66,7 @@ class PriceSpecification extends StructuredValue
      *
      * @return static
      *
-     * @see http://schema.org/minPrice
+     * @see 
      */
     public function minPrice($minPrice)
     {
@@ -99,7 +99,7 @@ class PriceSpecification extends StructuredValue
      *
      * @return static
      *
-     * @see http://schema.org/price
+     * @see 
      */
     public function price($price)
     {
@@ -113,26 +113,11 @@ class PriceSpecification extends StructuredValue
      *
      * @return static
      *
-     * @see http://schema.org/validFrom
+     * @see 
      */
     public function validFrom($validFrom)
     {
         return $this->setProperty('validFrom', $validFrom);
-    }
-
-    /**
-     * The date after when the item is not valid. For example the end of an
-     * offer, salary period, or a period of opening hours.
-     *
-     * @param \DateTimeInterface|\DateTimeInterface[] $validThrough
-     *
-     * @return static
-     *
-     * @see http://schema.org/validThrough
-     */
-    public function validThrough($validThrough)
-    {
-        return $this->setProperty('validThrough', $validThrough);
     }
 
     /**
@@ -143,11 +128,26 @@ class PriceSpecification extends StructuredValue
      *
      * @return static
      *
-     * @see http://schema.org/valueAddedTaxIncluded
+     * @see 
      */
     public function valueAddedTaxIncluded($valueAddedTaxIncluded)
     {
         return $this->setProperty('valueAddedTaxIncluded', $valueAddedTaxIncluded);
+    }
+
+    /**
+     * The date after when the item is not valid. For example the end of an
+     * offer, salary period, or a period of opening hours.
+     *
+     * @param \DateTimeInterface|\DateTimeInterface[] $validThrough
+     *
+     * @return static
+     *
+     * @see 
+     */
+    public function validThrough($validThrough)
+    {
+        return $this->setProperty('validThrough', $validThrough);
     }
 
     /**
@@ -158,7 +158,7 @@ class PriceSpecification extends StructuredValue
      *
      * @return static
      *
-     * @see http://schema.org/priceCurrency
+     * @see 
      */
     public function priceCurrency($priceCurrency)
     {

@@ -16,7 +16,7 @@ namespace Spatie\SchemaOrg;
  * * http://purl.org/goodrelations/v1#MasterCard
  * * http://purl.org/goodrelations/v1#VISA
  *
- * @see http://schema.org/CreditCard
+ * @see 
  */
 class CreditCard extends PaymentCard
 {

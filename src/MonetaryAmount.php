@@ -9,7 +9,7 @@ namespace Spatie\SchemaOrg;
  * salary, etc. It is recommended to use [[PriceSpecification]] Types to
  * describe the price of an Offer, Invoice, etc.
  *
- * @see http://schema.org/MonetaryAmount
+ * @see 
  */
 class MonetaryAmount extends StructuredValue
 {
@@ -20,7 +20,7 @@ class MonetaryAmount extends StructuredValue
      *
      * @return static
      *
-     * @see http://schema.org/maxValue
+     * @see 
      */
     public function maxValue($maxValue)
     {
@@ -34,7 +34,7 @@ class MonetaryAmount extends StructuredValue
      *
      * @return static
      *
-     * @see http://schema.org/minValue
+     * @see 
      */
     public function minValue($minValue)
     {
@@ -53,7 +53,7 @@ class MonetaryAmount extends StructuredValue
      *
      * @return static
      *
-     * @see http://schema.org/value
+     * @see 
      */
     public function value($value)
     {
@@ -68,7 +68,7 @@ class MonetaryAmount extends StructuredValue
      *
      * @return static
      *
-     * @see http://schema.org/currency
+     * @see 
      */
     public function currency($currency)
     {

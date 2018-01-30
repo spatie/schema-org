@@ -5,7 +5,7 @@ namespace Spatie\SchemaOrg;
 /**
  * A sports club.
  *
- * @see http://schema.org/SportsClub
+ * @see 
  */
 class SportsClub extends SportsActivityLocation
 {

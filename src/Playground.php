@@ -5,7 +5,7 @@ namespace Spatie\SchemaOrg;
 /**
  * A playground.
  *
- * @see http://schema.org/Playground
+ * @see 
  */
 class Playground extends CivicStructure
 {

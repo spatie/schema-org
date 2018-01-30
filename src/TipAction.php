@@ -6,7 +6,7 @@ namespace Spatie\SchemaOrg;
  * The act of giving money voluntarily to a beneficiary in recognition of
  * services rendered.
  *
- * @see http://schema.org/TipAction
+ * @see 
  */
 class TipAction extends TradeAction
 {
@@ -18,7 +18,7 @@ class TipAction extends TradeAction
      *
      * @return static
      *
-     * @see http://schema.org/recipient
+     * @see 
      */
     public function recipient($recipient)
     {

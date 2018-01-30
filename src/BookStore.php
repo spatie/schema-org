@@ -5,7 +5,7 @@ namespace Spatie\SchemaOrg;
 /**
  * A bookstore.
  *
- * @see http://schema.org/BookStore
+ * @see 
  */
 class BookStore extends Store
 {

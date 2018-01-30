@@ -8,7 +8,7 @@ namespace Spatie\SchemaOrg;
  * property of the attached unit price specification for indicating the
  * dimension of a price component (e.g. "electricity" or "final cleaning").
  *
- * @see http://schema.org/CompoundPriceSpecification
+ * @see 
  */
 class CompoundPriceSpecification extends PriceSpecification
 {
@@ -20,7 +20,7 @@ class CompoundPriceSpecification extends PriceSpecification
      *
      * @return static
      *
-     * @see http://schema.org/priceComponent
+     * @see 
      */
     public function priceComponent($priceComponent)
     {

@@ -5,7 +5,7 @@ namespace Spatie\SchemaOrg;
 /**
  * A ski resort.
  *
- * @see http://schema.org/SkiResort
+ * @see 
  */
 class SkiResort extends SportsActivityLocation
 {

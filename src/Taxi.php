@@ -5,7 +5,7 @@ namespace Spatie\SchemaOrg;
 /**
  * A taxi.
  *
- * @see http://schema.org/Taxi
+ * @see 
  */
 class Taxi extends Service
 {

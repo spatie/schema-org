@@ -5,7 +5,7 @@ namespace Spatie\SchemaOrg;
 /**
  * The act of downloading an object.
  *
- * @see http://schema.org/DownloadAction
+ * @see 
  */
 class DownloadAction extends TransferAction
 {

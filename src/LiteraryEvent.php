@@ -5,7 +5,7 @@ namespace Spatie\SchemaOrg;
 /**
  * Event type: Literary event.
  *
- * @see http://schema.org/LiteraryEvent
+ * @see 
  */
 class LiteraryEvent extends Event
 {

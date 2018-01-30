@@ -5,7 +5,7 @@ namespace Spatie\SchemaOrg;
 /**
  * An event involving the delivery of an item.
  *
- * @see http://schema.org/DeliveryEvent
+ * @see 
  */
 class DeliveryEvent extends Event
 {
@@ -16,25 +16,11 @@ class DeliveryEvent extends Event
      *
      * @return static
      *
-     * @see http://schema.org/accessCode
+     * @see 
      */
     public function accessCode($accessCode)
     {
         return $this->setProperty('accessCode', $accessCode);
-    }
-
-    /**
-     * When the item is available for pickup from the store, locker, etc.
-     *
-     * @param \DateTimeInterface|\DateTimeInterface[] $availableFrom
-     *
-     * @return static
-     *
-     * @see http://schema.org/availableFrom
-     */
-    public function availableFrom($availableFrom)
-    {
-        return $this->setProperty('availableFrom', $availableFrom);
     }
 
     /**
@@ -44,11 +30,25 @@ class DeliveryEvent extends Event
      *
      * @return static
      *
-     * @see http://schema.org/availableThrough
+     * @see 
      */
     public function availableThrough($availableThrough)
     {
         return $this->setProperty('availableThrough', $availableThrough);
+    }
+
+    /**
+     * When the item is available for pickup from the store, locker, etc.
+     *
+     * @param \DateTimeInterface|\DateTimeInterface[] $availableFrom
+     *
+     * @return static
+     *
+     * @see 
+     */
+    public function availableFrom($availableFrom)
+    {
+        return $this->setProperty('availableFrom', $availableFrom);
     }
 
     /**
@@ -58,7 +58,7 @@ class DeliveryEvent extends Event
      *
      * @return static
      *
-     * @see http://schema.org/hasDeliveryMethod
+     * @see 
      */
     public function hasDeliveryMethod($hasDeliveryMethod)
     {

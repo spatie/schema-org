@@ -5,7 +5,7 @@ namespace Spatie\SchemaOrg;
 /**
  * A bakery.
  *
- * @see http://schema.org/Bakery
+ * @see 
  */
 class Bakery extends FoodEstablishment
 {

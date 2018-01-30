@@ -5,7 +5,7 @@ namespace Spatie\SchemaOrg;
 /**
  * A blog post.
  *
- * @see http://schema.org/BlogPosting
+ * @see 
  */
 class BlogPosting extends SocialMediaPosting
 {

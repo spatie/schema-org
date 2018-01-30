@@ -10,7 +10,7 @@ namespace Spatie\SchemaOrg;
  * See also [blog
  * post](http://blog.schema.org/2014/09/schemaorg-support-for-bibliographic_2.html).
  *
- * @see http://schema.org/Periodical
+ * @see 
  */
 class Periodical extends CreativeWorkSeries
 {
@@ -23,7 +23,7 @@ class Periodical extends CreativeWorkSeries
      *
      * @return static
      *
-     * @see http://schema.org/issn
+     * @see 
      */
     public function issn($issn)
     {

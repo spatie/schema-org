@@ -7,7 +7,7 @@ namespace Spatie\SchemaOrg;
  * compensation. An agent trades an object, product or service with a
  * participant in exchange for a one time or periodic payment.
  *
- * @see http://schema.org/TradeAction
+ * @see 
  */
 class TradeAction extends Action
 {
@@ -37,7 +37,7 @@ class TradeAction extends Action
      *
      * @return static
      *
-     * @see http://schema.org/price
+     * @see 
      */
     public function price($price)
     {
@@ -52,7 +52,7 @@ class TradeAction extends Action
      *
      * @return static
      *
-     * @see http://schema.org/priceSpecification
+     * @see 
      */
     public function priceSpecification($priceSpecification)
     {

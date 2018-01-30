@@ -6,7 +6,7 @@ namespace Spatie\SchemaOrg;
  * A Series in schema.org is a group of related items, typically but not
  * necessarily of the same kind.
  *
- * @see http://schema.org/Series
+ * @see 
  */
 class Series extends CreativeWork
 {
@@ -19,7 +19,7 @@ class Series extends CreativeWork
      *
      * @return static
      *
-     * @see http://schema.org/director
+     * @see 
      */
     public function director($director)
     {

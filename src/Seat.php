@@ -5,38 +5,10 @@ namespace Spatie\SchemaOrg;
 /**
  * Used to describe a seat, such as a reserved seat in an event reservation.
  *
- * @see http://schema.org/Seat
+ * @see 
  */
 class Seat extends Intangible
 {
-    /**
-     * The location of the reserved seat (e.g., 27).
-     *
-     * @param string|string[] $seatNumber
-     *
-     * @return static
-     *
-     * @see http://schema.org/seatNumber
-     */
-    public function seatNumber($seatNumber)
-    {
-        return $this->setProperty('seatNumber', $seatNumber);
-    }
-
-    /**
-     * The row location of the reserved seat (e.g., B).
-     *
-     * @param string|string[] $seatRow
-     *
-     * @return static
-     *
-     * @see http://schema.org/seatRow
-     */
-    public function seatRow($seatRow)
-    {
-        return $this->setProperty('seatRow', $seatRow);
-    }
-
     /**
      * The section location of the reserved seat (e.g. Orchestra).
      *
@@ -44,11 +16,25 @@ class Seat extends Intangible
      *
      * @return static
      *
-     * @see http://schema.org/seatSection
+     * @see 
      */
     public function seatSection($seatSection)
     {
         return $this->setProperty('seatSection', $seatSection);
+    }
+
+    /**
+     * The location of the reserved seat (e.g., 27).
+     *
+     * @param string|string[] $seatNumber
+     *
+     * @return static
+     *
+     * @see 
+     */
+    public function seatNumber($seatNumber)
+    {
+        return $this->setProperty('seatNumber', $seatNumber);
     }
 
     /**
@@ -58,11 +44,25 @@ class Seat extends Intangible
      *
      * @return static
      *
-     * @see http://schema.org/seatingType
+     * @see 
      */
     public function seatingType($seatingType)
     {
         return $this->setProperty('seatingType', $seatingType);
+    }
+
+    /**
+     * The row location of the reserved seat (e.g., B).
+     *
+     * @param string|string[] $seatRow
+     *
+     * @return static
+     *
+     * @see 
+     */
+    public function seatRow($seatRow)
+    {
+        return $this->setProperty('seatRow', $seatRow);
     }
 
 }

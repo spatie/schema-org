@@ -5,7 +5,7 @@ namespace Spatie\SchemaOrg;
 /**
  * A music recording (track), usually a single song.
  *
- * @see http://schema.org/MusicRecording
+ * @see 
  */
 class MusicRecording extends CreativeWork
 {
@@ -16,7 +16,7 @@ class MusicRecording extends CreativeWork
      *
      * @return static
      *
-     * @see http://schema.org/byArtist
+     * @see 
      */
     public function byArtist($byArtist)
     {
@@ -31,7 +31,7 @@ class MusicRecording extends CreativeWork
      *
      * @return static
      *
-     * @see http://schema.org/duration
+     * @see 
      */
     public function duration($duration)
     {
@@ -45,7 +45,7 @@ class MusicRecording extends CreativeWork
      *
      * @return static
      *
-     * @see http://schema.org/inAlbum
+     * @see 
      */
     public function inAlbum($inAlbum)
     {
@@ -59,25 +59,11 @@ class MusicRecording extends CreativeWork
      *
      * @return static
      *
-     * @see http://schema.org/inPlaylist
+     * @see 
      */
     public function inPlaylist($inPlaylist)
     {
         return $this->setProperty('inPlaylist', $inPlaylist);
-    }
-
-    /**
-     * The International Standard Recording Code for the recording.
-     *
-     * @param string|string[] $isrcCode
-     *
-     * @return static
-     *
-     * @see http://schema.org/isrcCode
-     */
-    public function isrcCode($isrcCode)
-    {
-        return $this->setProperty('isrcCode', $isrcCode);
     }
 
     /**
@@ -87,11 +73,25 @@ class MusicRecording extends CreativeWork
      *
      * @return static
      *
-     * @see http://schema.org/recordingOf
+     * @see 
      */
     public function recordingOf($recordingOf)
     {
         return $this->setProperty('recordingOf', $recordingOf);
+    }
+
+    /**
+     * The International Standard Recording Code for the recording.
+     *
+     * @param string|string[] $isrcCode
+     *
+     * @return static
+     *
+     * @see 
+     */
+    public function isrcCode($isrcCode)
+    {
+        return $this->setProperty('isrcCode', $isrcCode);
     }
 
 }

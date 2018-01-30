@@ -5,7 +5,7 @@ namespace Spatie\SchemaOrg;
 /**
  * A media season e.g. tv, radio, video game etc.
  *
- * @see http://schema.org/CreativeWorkSeason
+ * @see 
  */
 class CreativeWorkSeason extends CreativeWork
 {
@@ -18,7 +18,7 @@ class CreativeWorkSeason extends CreativeWork
      *
      * @return static
      *
-     * @see http://schema.org/actor
+     * @see 
      */
     public function actor($actor)
     {
@@ -34,7 +34,7 @@ class CreativeWorkSeason extends CreativeWork
      *
      * @return static
      *
-     * @see http://schema.org/director
+     * @see 
      */
     public function director($director)
     {
@@ -49,7 +49,7 @@ class CreativeWorkSeason extends CreativeWork
      *
      * @return static
      *
-     * @see http://schema.org/endDate
+     * @see 
      */
     public function endDate($endDate)
     {
@@ -63,7 +63,7 @@ class CreativeWorkSeason extends CreativeWork
      *
      * @return static
      *
-     * @see http://schema.org/episode
+     * @see 
      */
     public function episode($episode)
     {
@@ -77,7 +77,7 @@ class CreativeWorkSeason extends CreativeWork
      *
      * @return static
      *
-     * @see http://schema.org/episodes
+     * @see 
      */
     public function episodes($episodes)
     {
@@ -91,7 +91,7 @@ class CreativeWorkSeason extends CreativeWork
      *
      * @return static
      *
-     * @see http://schema.org/numberOfEpisodes
+     * @see 
      */
     public function numberOfEpisodes($numberOfEpisodes)
     {
@@ -105,7 +105,7 @@ class CreativeWorkSeason extends CreativeWork
      *
      * @return static
      *
-     * @see http://schema.org/partOfSeries
+     * @see 
      */
     public function partOfSeries($partOfSeries)
     {
@@ -120,7 +120,7 @@ class CreativeWorkSeason extends CreativeWork
      *
      * @return static
      *
-     * @see http://schema.org/productionCompany
+     * @see 
      */
     public function productionCompany($productionCompany)
     {
@@ -134,7 +134,7 @@ class CreativeWorkSeason extends CreativeWork
      *
      * @return static
      *
-     * @see http://schema.org/seasonNumber
+     * @see 
      */
     public function seasonNumber($seasonNumber)
     {
@@ -149,7 +149,7 @@ class CreativeWorkSeason extends CreativeWork
      *
      * @return static
      *
-     * @see http://schema.org/startDate
+     * @see 
      */
     public function startDate($startDate)
     {
@@ -163,7 +163,7 @@ class CreativeWorkSeason extends CreativeWork
      *
      * @return static
      *
-     * @see http://schema.org/trailer
+     * @see 
      */
     public function trailer($trailer)
     {

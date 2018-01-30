@@ -6,7 +6,7 @@ namespace Spatie\SchemaOrg;
  * The act of traveling from an fromLocation to a destination by a specified
  * mode of transport, optionally with participants.
  *
- * @see http://schema.org/TravelAction
+ * @see 
  */
 class TravelAction extends MoveAction
 {
@@ -17,7 +17,7 @@ class TravelAction extends MoveAction
      *
      * @return static
      *
-     * @see http://schema.org/distance
+     * @see 
      */
     public function distance($distance)
     {

@@ -5,7 +5,7 @@ namespace Spatie\SchemaOrg;
 /**
  * Bank or credit union.
  *
- * @see http://schema.org/BankOrCreditUnion
+ * @see 
  */
 class BankOrCreditUnion extends FinancialService
 {

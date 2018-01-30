@@ -21,7 +21,7 @@ namespace Spatie\SchemaOrg;
  * some of these cases, but publishers should be free to apply properties of the
  * series parts to the series as a whole wherever they seem appropriate.
  *
- * @see http://schema.org/CreativeWorkSeries
+ * @see 
  */
 class CreativeWorkSeries extends CreativeWork
 {
@@ -33,7 +33,7 @@ class CreativeWorkSeries extends CreativeWork
      *
      * @return static
      *
-     * @see http://schema.org/endDate
+     * @see 
      */
     public function endDate($endDate)
     {
@@ -48,7 +48,7 @@ class CreativeWorkSeries extends CreativeWork
      *
      * @return static
      *
-     * @see http://schema.org/startDate
+     * @see 
      */
     public function startDate($startDate)
     {

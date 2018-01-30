@@ -5,7 +5,7 @@ namespace Spatie\SchemaOrg;
 /**
  * A shopping center or mall.
  *
- * @see http://schema.org/ShoppingCenter
+ * @see 
  */
 class ShoppingCenter extends LocalBusiness
 {

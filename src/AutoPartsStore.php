@@ -5,7 +5,7 @@ namespace Spatie\SchemaOrg;
 /**
  * An auto parts store.
  *
- * @see http://schema.org/AutoPartsStore
+ * @see 
  */
 class AutoPartsStore extends AutomotiveBusiness
 {

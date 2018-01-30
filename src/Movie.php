@@ -5,10 +5,25 @@ namespace Spatie\SchemaOrg;
 /**
  * A movie.
  *
- * @see http://schema.org/Movie
+ * @see 
  */
 class Movie extends CreativeWork
 {
+    /**
+     * An actor, e.g. in tv, radio, movie, video games etc. Actors can be
+     * associated with individual items or with a series, episode, clip.
+     *
+     * @param Person|Person[] $actors
+     *
+     * @return static
+     *
+     * @see 
+     */
+    public function actors($actors)
+    {
+        return $this->setProperty('actors', $actors);
+    }
+
     /**
      * An actor, e.g. in tv, radio, movie, video games etc., or in an event.
      * Actors can be associated with individual items or with a series, episode,
@@ -18,26 +33,11 @@ class Movie extends CreativeWork
      *
      * @return static
      *
-     * @see http://schema.org/actor
+     * @see 
      */
     public function actor($actor)
     {
         return $this->setProperty('actor', $actor);
-    }
-
-    /**
-     * An actor, e.g. in tv, radio, movie, video games etc. Actors can be
-     * associated with individual items or with a series, episode, clip.
-     *
-     * @param Person|Person[] $actors
-     *
-     * @return static
-     *
-     * @see http://schema.org/actors
-     */
-    public function actors($actors)
-    {
-        return $this->setProperty('actors', $actors);
     }
 
     /**
@@ -48,7 +48,7 @@ class Movie extends CreativeWork
      *
      * @return static
      *
-     * @see http://schema.org/countryOfOrigin
+     * @see 
      */
     public function countryOfOrigin($countryOfOrigin)
     {
@@ -64,7 +64,7 @@ class Movie extends CreativeWork
      *
      * @return static
      *
-     * @see http://schema.org/director
+     * @see 
      */
     public function director($director)
     {
@@ -79,7 +79,7 @@ class Movie extends CreativeWork
      *
      * @return static
      *
-     * @see http://schema.org/directors
+     * @see 
      */
     public function directors($directors)
     {
@@ -94,7 +94,7 @@ class Movie extends CreativeWork
      *
      * @return static
      *
-     * @see http://schema.org/duration
+     * @see 
      */
     public function duration($duration)
     {
@@ -108,7 +108,7 @@ class Movie extends CreativeWork
      *
      * @return static
      *
-     * @see http://schema.org/musicBy
+     * @see 
      */
     public function musicBy($musicBy)
     {
@@ -123,7 +123,7 @@ class Movie extends CreativeWork
      *
      * @return static
      *
-     * @see http://schema.org/productionCompany
+     * @see 
      */
     public function productionCompany($productionCompany)
     {
@@ -138,7 +138,7 @@ class Movie extends CreativeWork
      *
      * @return static
      *
-     * @see http://schema.org/subtitleLanguage
+     * @see 
      */
     public function subtitleLanguage($subtitleLanguage)
     {
@@ -152,7 +152,7 @@ class Movie extends CreativeWork
      *
      * @return static
      *
-     * @see http://schema.org/trailer
+     * @see 
      */
     public function trailer($trailer)
     {

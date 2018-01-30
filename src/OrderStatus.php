@@ -5,7 +5,7 @@ namespace Spatie\SchemaOrg;
 /**
  * Enumerated status values for Order.
  *
- * @see http://schema.org/OrderStatus
+ * @see 
  */
 class OrderStatus extends Enumeration
 {

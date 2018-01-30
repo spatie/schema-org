@@ -16,7 +16,7 @@ namespace Spatie\SchemaOrg;
  * * [[JoinAction]]: Unlike JoinAction, SubscribeAction implies that the agent
  * is interested in continuing receiving updates from the object.
  *
- * @see http://schema.org/SubscribeAction
+ * @see 
  */
 class SubscribeAction extends InteractAction
 {

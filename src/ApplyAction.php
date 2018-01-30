@@ -11,7 +11,7 @@ namespace Spatie\SchemaOrg;
  * * [[RegisterAction]]: Unlike RegisterAction, ApplyAction has no guarantees
  * that the application will be accepted.
  *
- * @see http://schema.org/ApplyAction
+ * @see 
  */
 class ApplyAction extends OrganizeAction
 {

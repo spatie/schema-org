@@ -5,7 +5,7 @@ namespace Spatie\SchemaOrg;
 /**
  * An enumeration of genders.
  *
- * @see http://schema.org/GenderType
+ * @see 
  */
 class GenderType extends Enumeration
 {

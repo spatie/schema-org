@@ -6,7 +6,7 @@ namespace Spatie\SchemaOrg;
  * Computer programming source code. Example: Full (compile ready) solutions,
  * code snippet samples, scripts, templates.
  *
- * @see http://schema.org/SoftwareSourceCode
+ * @see 
  */
 class SoftwareSourceCode extends CreativeWork
 {
@@ -18,7 +18,7 @@ class SoftwareSourceCode extends CreativeWork
      *
      * @return static
      *
-     * @see http://schema.org/codeRepository
+     * @see 
      */
     public function codeRepository($codeRepository)
     {
@@ -32,7 +32,7 @@ class SoftwareSourceCode extends CreativeWork
      *
      * @return static
      *
-     * @see http://schema.org/programmingLanguage
+     * @see 
      */
     public function programmingLanguage($programmingLanguage)
     {
@@ -43,26 +43,11 @@ class SoftwareSourceCode extends CreativeWork
      * Runtime platform or script interpreter dependencies (Example - Java v1,
      * Python2.3, .Net Framework 3.0).
      *
-     * @param string|string[] $runtime
-     *
-     * @return static
-     *
-     * @see http://schema.org/runtime
-     */
-    public function runtime($runtime)
-    {
-        return $this->setProperty('runtime', $runtime);
-    }
-
-    /**
-     * Runtime platform or script interpreter dependencies (Example - Java v1,
-     * Python2.3, .Net Framework 3.0).
-     *
      * @param string|string[] $runtimePlatform
      *
      * @return static
      *
-     * @see http://schema.org/runtimePlatform
+     * @see 
      */
     public function runtimePlatform($runtimePlatform)
     {
@@ -73,11 +58,26 @@ class SoftwareSourceCode extends CreativeWork
      * What type of code sample: full (compile ready) solution, code snippet,
      * inline code, scripts, template.
      *
+     * @param string|string[] $codeSampleType
+     *
+     * @return static
+     *
+     * @see 
+     */
+    public function codeSampleType($codeSampleType)
+    {
+        return $this->setProperty('codeSampleType', $codeSampleType);
+    }
+
+    /**
+     * What type of code sample: full (compile ready) solution, code snippet,
+     * inline code, scripts, template.
+     *
      * @param string|string[] $sampleType
      *
      * @return static
      *
-     * @see http://schema.org/sampleType
+     * @see 
      */
     public function sampleType($sampleType)
     {
@@ -85,18 +85,18 @@ class SoftwareSourceCode extends CreativeWork
     }
 
     /**
-     * What type of code sample: full (compile ready) solution, code snippet,
-     * inline code, scripts, template.
+     * Runtime platform or script interpreter dependencies (Example - Java v1,
+     * Python2.3, .Net Framework 3.0).
      *
-     * @param string|string[] $codeSampleType
+     * @param string|string[] $runtime
      *
      * @return static
      *
-     * @see http://schema.org/codeSampleType
+     * @see 
      */
-    public function codeSampleType($codeSampleType)
+    public function runtime($runtime)
     {
-        return $this->setProperty('codeSampleType', $codeSampleType);
+        return $this->setProperty('runtime', $runtime);
     }
 
     /**
@@ -107,7 +107,7 @@ class SoftwareSourceCode extends CreativeWork
      *
      * @return static
      *
-     * @see http://schema.org/targetProduct
+     * @see 
      */
     public function targetProduct($targetProduct)
     {

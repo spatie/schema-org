@@ -6,7 +6,7 @@ namespace Spatie\SchemaOrg;
  * A set of characteristics belonging to people, e.g. who compose an item's
  * target audience.
  *
- * @see http://schema.org/PeopleAudience
+ * @see 
  */
 class PeopleAudience extends Audience
 {
@@ -17,25 +17,11 @@ class PeopleAudience extends Audience
      *
      * @return static
      *
-     * @see http://schema.org/requiredGender
+     * @see 
      */
     public function requiredGender($requiredGender)
     {
         return $this->setProperty('requiredGender', $requiredGender);
-    }
-
-    /**
-     * Audiences defined by a person's maximum age.
-     *
-     * @param int|int[] $requiredMaxAge
-     *
-     * @return static
-     *
-     * @see http://schema.org/requiredMaxAge
-     */
-    public function requiredMaxAge($requiredMaxAge)
-    {
-        return $this->setProperty('requiredMaxAge', $requiredMaxAge);
     }
 
     /**
@@ -45,11 +31,25 @@ class PeopleAudience extends Audience
      *
      * @return static
      *
-     * @see http://schema.org/requiredMinAge
+     * @see 
      */
     public function requiredMinAge($requiredMinAge)
     {
         return $this->setProperty('requiredMinAge', $requiredMinAge);
+    }
+
+    /**
+     * Audiences defined by a person's maximum age.
+     *
+     * @param int|int[] $requiredMaxAge
+     *
+     * @return static
+     *
+     * @see 
+     */
+    public function requiredMaxAge($requiredMaxAge)
+    {
+        return $this->setProperty('requiredMaxAge', $requiredMaxAge);
     }
 
     /**
@@ -59,25 +59,11 @@ class PeopleAudience extends Audience
      *
      * @return static
      *
-     * @see http://schema.org/suggestedGender
+     * @see 
      */
     public function suggestedGender($suggestedGender)
     {
         return $this->setProperty('suggestedGender', $suggestedGender);
-    }
-
-    /**
-     * Maximal age recommended for viewing content.
-     *
-     * @param float|float[]|int|int[] $suggestedMaxAge
-     *
-     * @return static
-     *
-     * @see http://schema.org/suggestedMaxAge
-     */
-    public function suggestedMaxAge($suggestedMaxAge)
-    {
-        return $this->setProperty('suggestedMaxAge', $suggestedMaxAge);
     }
 
     /**
@@ -87,11 +73,25 @@ class PeopleAudience extends Audience
      *
      * @return static
      *
-     * @see http://schema.org/suggestedMinAge
+     * @see 
      */
     public function suggestedMinAge($suggestedMinAge)
     {
         return $this->setProperty('suggestedMinAge', $suggestedMinAge);
+    }
+
+    /**
+     * Maximal age recommended for viewing content.
+     *
+     * @param float|float[]|int|int[] $suggestedMaxAge
+     *
+     * @return static
+     *
+     * @see 
+     */
+    public function suggestedMaxAge($suggestedMaxAge)
+    {
+        return $this->setProperty('suggestedMaxAge', $suggestedMaxAge);
     }
 
 }

@@ -6,7 +6,7 @@ namespace Spatie\SchemaOrg;
  * An intangible item that describes an alignment between a learning resource
  * and a node in an educational framework.
  *
- * @see http://schema.org/AlignmentObject
+ * @see 
  */
 class AlignmentObject extends Intangible
 {
@@ -20,7 +20,7 @@ class AlignmentObject extends Intangible
      *
      * @return static
      *
-     * @see http://schema.org/alignmentType
+     * @see 
      */
     public function alignmentType($alignmentType)
     {
@@ -34,7 +34,7 @@ class AlignmentObject extends Intangible
      *
      * @return static
      *
-     * @see http://schema.org/educationalFramework
+     * @see 
      */
     public function educationalFramework($educationalFramework)
     {
@@ -48,7 +48,7 @@ class AlignmentObject extends Intangible
      *
      * @return static
      *
-     * @see http://schema.org/targetDescription
+     * @see 
      */
     public function targetDescription($targetDescription)
     {
@@ -62,7 +62,7 @@ class AlignmentObject extends Intangible
      *
      * @return static
      *
-     * @see http://schema.org/targetName
+     * @see 
      */
     public function targetName($targetName)
     {
@@ -76,7 +76,7 @@ class AlignmentObject extends Intangible
      *
      * @return static
      *
-     * @see http://schema.org/targetUrl
+     * @see 
      */
     public function targetUrl($targetUrl)
     {

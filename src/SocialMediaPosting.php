@@ -6,7 +6,7 @@ namespace Spatie\SchemaOrg;
  * A post to a social media platform, including blog posts, tweets, Facebook
  * posts, etc.
  *
- * @see http://schema.org/SocialMediaPosting
+ * @see 
  */
 class SocialMediaPosting extends Article
 {
@@ -18,7 +18,7 @@ class SocialMediaPosting extends Article
      *
      * @return static
      *
-     * @see http://schema.org/sharedContent
+     * @see 
      */
     public function sharedContent($sharedContent)
     {

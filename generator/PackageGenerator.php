@@ -2,14 +2,14 @@
 
 namespace Spatie\SchemaOrg\Generator;
 
-use Spatie\SchemaOrg\Generator\Parser\RdfaParser;
 use Spatie\SchemaOrg\Generator\Writer\Filesystem;
+use Spatie\SchemaOrg\Generator\Parser\DefinitionParser;
 
 class PackageGenerator
 {
-    public function generate(string $rdfa)
+    public function generate(Definitions $definitions)
     {
-        $types = (new RdfaParser())->parse($rdfa);
+        $types = (new DefinitionParser())->parse($definitions);
 
         $filesystem = new Filesystem(__DIR__.'/..');
 

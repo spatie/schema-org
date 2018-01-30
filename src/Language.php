@@ -10,7 +10,7 @@ namespace Spatie\SchemaOrg;
  * programming languages such as Scheme and Lisp, which are now best represented
  * using [[ComputerLanguage]].
  *
- * @see http://schema.org/Language
+ * @see 
  */
 class Language extends Intangible
 {

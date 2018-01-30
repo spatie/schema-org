@@ -5,7 +5,7 @@ namespace Spatie\SchemaOrg;
 /**
  * An event venue.
  *
- * @see http://schema.org/EventVenue
+ * @see 
  */
 class EventVenue extends CivicStructure
 {

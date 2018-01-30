@@ -7,7 +7,7 @@ namespace Spatie\SchemaOrg;
  * information about actual reservations, e.g. in confirmation emails or HTML
  * pages with individual confirmations of reservations.
  *
- * @see http://schema.org/FoodEstablishmentReservation
+ * @see 
  */
 class FoodEstablishmentReservation extends Reservation
 {
@@ -25,7 +25,7 @@ class FoodEstablishmentReservation extends Reservation
      *
      * @return static
      *
-     * @see http://schema.org/endTime
+     * @see 
      */
     public function endTime($endTime)
     {
@@ -46,7 +46,7 @@ class FoodEstablishmentReservation extends Reservation
      *
      * @return static
      *
-     * @see http://schema.org/startTime
+     * @see 
      */
     public function startTime($startTime)
     {
@@ -60,7 +60,7 @@ class FoodEstablishmentReservation extends Reservation
      *
      * @return static
      *
-     * @see http://schema.org/partySize
+     * @see 
      */
     public function partySize($partySize)
     {

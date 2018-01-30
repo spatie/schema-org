@@ -5,7 +5,7 @@ namespace Spatie\SchemaOrg;
 /**
  * A short segment/part of a movie.
  *
- * @see http://schema.org/MovieClip
+ * @see 
  */
 class MovieClip extends Clip
 {

@@ -5,7 +5,7 @@ namespace Spatie\SchemaOrg;
 /**
  * The average rating based on multiple ratings or reviews.
  *
- * @see http://schema.org/AggregateRating
+ * @see 
  */
 class AggregateRating extends Rating
 {
@@ -16,7 +16,7 @@ class AggregateRating extends Rating
      *
      * @return static
      *
-     * @see http://schema.org/itemReviewed
+     * @see 
      */
     public function itemReviewed($itemReviewed)
     {
@@ -30,7 +30,7 @@ class AggregateRating extends Rating
      *
      * @return static
      *
-     * @see http://schema.org/ratingCount
+     * @see 
      */
     public function ratingCount($ratingCount)
     {
@@ -44,7 +44,7 @@ class AggregateRating extends Rating
      *
      * @return static
      *
-     * @see http://schema.org/reviewCount
+     * @see 
      */
     public function reviewCount($reviewCount)
     {

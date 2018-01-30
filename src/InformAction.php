@@ -6,7 +6,7 @@ namespace Spatie\SchemaOrg;
  * The act of notifying someone of information pertinent to them, with no
  * expectation of a response.
  *
- * @see http://schema.org/InformAction
+ * @see 
  */
 class InformAction extends CommunicateAction
 {
@@ -18,7 +18,7 @@ class InformAction extends CommunicateAction
      *
      * @return static
      *
-     * @see http://schema.org/event
+     * @see 
      */
     public function event($event)
     {

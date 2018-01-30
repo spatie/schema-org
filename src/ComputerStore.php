@@ -5,7 +5,7 @@ namespace Spatie\SchemaOrg;
 /**
  * A computer store.
  *
- * @see http://schema.org/ComputerStore
+ * @see 
  */
 class ComputerStore extends Store
 {

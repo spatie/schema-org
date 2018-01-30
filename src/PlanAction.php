@@ -6,7 +6,7 @@ namespace Spatie\SchemaOrg;
  * The act of planning the execution of an event/task/action/reservation/plan to
  * a future date.
  *
- * @see http://schema.org/PlanAction
+ * @see 
  */
 class PlanAction extends OrganizeAction
 {
@@ -17,7 +17,7 @@ class PlanAction extends OrganizeAction
      *
      * @return static
      *
-     * @see http://schema.org/scheduledTime
+     * @see 
      */
     public function scheduledTime($scheduledTime)
     {

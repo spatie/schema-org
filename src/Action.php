@@ -12,7 +12,7 @@ namespace Spatie\SchemaOrg;
  * post](http://blog.schema.org/2014/04/announcing-schemaorg-actions.html) and
  * [Actions overview document](http://schema.org/docs/actions.html).
  *
- * @see http://schema.org/Action
+ * @see 
  */
 class Action extends Thing
 {
@@ -24,7 +24,7 @@ class Action extends Thing
      *
      * @return static
      *
-     * @see http://schema.org/agent
+     * @see 
      */
     public function agent($agent)
     {
@@ -45,7 +45,7 @@ class Action extends Thing
      *
      * @return static
      *
-     * @see http://schema.org/endTime
+     * @see 
      */
     public function endTime($endTime)
     {
@@ -60,7 +60,7 @@ class Action extends Thing
      *
      * @return static
      *
-     * @see http://schema.org/instrument
+     * @see 
      */
     public function instrument($instrument)
     {
@@ -75,7 +75,7 @@ class Action extends Thing
      *
      * @return static
      *
-     * @see http://schema.org/location
+     * @see 
      */
     public function location($location)
     {
@@ -92,7 +92,7 @@ class Action extends Thing
      *
      * @return static
      *
-     * @see http://schema.org/object
+     * @see 
      */
     public function object($object)
     {
@@ -107,7 +107,7 @@ class Action extends Thing
      *
      * @return static
      *
-     * @see http://schema.org/participant
+     * @see 
      */
     public function participant($participant)
     {
@@ -121,7 +121,7 @@ class Action extends Thing
      *
      * @return static
      *
-     * @see http://schema.org/result
+     * @see 
      */
     public function result($result)
     {
@@ -142,25 +142,11 @@ class Action extends Thing
      *
      * @return static
      *
-     * @see http://schema.org/startTime
+     * @see 
      */
     public function startTime($startTime)
     {
         return $this->setProperty('startTime', $startTime);
-    }
-
-    /**
-     * Indicates the current disposition of the Action.
-     *
-     * @param ActionStatusType|ActionStatusType[] $actionStatus
-     *
-     * @return static
-     *
-     * @see http://schema.org/actionStatus
-     */
-    public function actionStatus($actionStatus)
-    {
-        return $this->setProperty('actionStatus', $actionStatus);
     }
 
     /**
@@ -170,11 +156,25 @@ class Action extends Thing
      *
      * @return static
      *
-     * @see http://schema.org/error
+     * @see 
      */
     public function error($error)
     {
         return $this->setProperty('error', $error);
+    }
+
+    /**
+     * Indicates the current disposition of the Action.
+     *
+     * @param ActionStatusType|ActionStatusType[] $actionStatus
+     *
+     * @return static
+     *
+     * @see 
+     */
+    public function actionStatus($actionStatus)
+    {
+        return $this->setProperty('actionStatus', $actionStatus);
     }
 
     /**
@@ -184,7 +184,7 @@ class Action extends Thing
      *
      * @return static
      *
-     * @see http://schema.org/target
+     * @see 
      */
     public function target($target)
     {

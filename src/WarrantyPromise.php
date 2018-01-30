@@ -7,7 +7,7 @@ namespace Spatie\SchemaOrg;
  * be provided to a customer free of charge in case of a defect or malfunction
  * of a product.
  *
- * @see http://schema.org/WarrantyPromise
+ * @see 
  */
 class WarrantyPromise extends StructuredValue
 {
@@ -19,7 +19,7 @@ class WarrantyPromise extends StructuredValue
      *
      * @return static
      *
-     * @see http://schema.org/durationOfWarranty
+     * @see 
      */
     public function durationOfWarranty($durationOfWarranty)
     {
@@ -33,7 +33,7 @@ class WarrantyPromise extends StructuredValue
      *
      * @return static
      *
-     * @see http://schema.org/warrantyScope
+     * @see 
      */
     public function warrantyScope($warrantyScope)
     {

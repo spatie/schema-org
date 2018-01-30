@@ -5,7 +5,7 @@ namespace Spatie\SchemaOrg;
 /**
  * Beauty salon.
  *
- * @see http://schema.org/BeautySalon
+ * @see 
  */
 class BeautySalon extends HealthAndBeautyBusiness
 {

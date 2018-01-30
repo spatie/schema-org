@@ -6,7 +6,7 @@ namespace Spatie\SchemaOrg;
  * Represents the collection of all sports organizations, including sports
  * teams, governing bodies, and sports associations.
  *
- * @see http://schema.org/SportsOrganization
+ * @see 
  */
 class SportsOrganization extends Organization
 {
@@ -17,7 +17,7 @@ class SportsOrganization extends Organization
      *
      * @return static
      *
-     * @see http://schema.org/sport
+     * @see 
      */
     public function sport($sport)
     {

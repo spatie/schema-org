@@ -5,7 +5,7 @@ namespace Spatie\SchemaOrg;
 /**
  * The act of intentionally disregarding the object. An agent ignores an object.
  *
- * @see http://schema.org/IgnoreAction
+ * @see 
  */
 class IgnoreAction extends AssessAction
 {

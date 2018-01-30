@@ -5,7 +5,7 @@ namespace Spatie\SchemaOrg;
 /**
  * An organization such as a school, NGO, corporation, club, etc.
  *
- * @see http://schema.org/Organization
+ * @see 
  */
 class Organization extends Thing
 {
@@ -17,7 +17,7 @@ class Organization extends Thing
      *
      * @return static
      *
-     * @see http://schema.org/hasOfferCatalog
+     * @see 
      */
     public function hasOfferCatalog($hasOfferCatalog)
     {
@@ -31,7 +31,7 @@ class Organization extends Thing
      *
      * @return static
      *
-     * @see http://schema.org/address
+     * @see 
      */
     public function address($address)
     {
@@ -46,7 +46,7 @@ class Organization extends Thing
      *
      * @return static
      *
-     * @see http://schema.org/aggregateRating
+     * @see 
      */
     public function aggregateRating($aggregateRating)
     {
@@ -60,7 +60,7 @@ class Organization extends Thing
      *
      * @return static
      *
-     * @see http://schema.org/areaServed
+     * @see 
      */
     public function areaServed($areaServed)
     {
@@ -74,7 +74,7 @@ class Organization extends Thing
      *
      * @return static
      *
-     * @see http://schema.org/award
+     * @see 
      */
     public function award($award)
     {
@@ -88,7 +88,7 @@ class Organization extends Thing
      *
      * @return static
      *
-     * @see http://schema.org/awards
+     * @see 
      */
     public function awards($awards)
     {
@@ -103,7 +103,7 @@ class Organization extends Thing
      *
      * @return static
      *
-     * @see http://schema.org/parentOrganization
+     * @see 
      */
     public function parentOrganization($parentOrganization)
     {
@@ -118,7 +118,7 @@ class Organization extends Thing
      *
      * @return static
      *
-     * @see http://schema.org/brand
+     * @see 
      */
     public function brand($brand)
     {
@@ -128,29 +128,29 @@ class Organization extends Thing
     /**
      * A contact point for a person or organization.
      *
-     * @param ContactPoint|ContactPoint[] $contactPoint
+     * @param ContactPoint|ContactPoint[] $contactPoints
      *
      * @return static
      *
-     * @see http://schema.org/contactPoint
+     * @see 
      */
-    public function contactPoint($contactPoint)
+    public function contactPoints($contactPoints)
     {
-        return $this->setProperty('contactPoint', $contactPoint);
+        return $this->setProperty('contactPoints', $contactPoints);
     }
 
     /**
      * A contact point for a person or organization.
      *
-     * @param ContactPoint|ContactPoint[] $contactPoints
+     * @param ContactPoint|ContactPoint[] $contactPoint
      *
      * @return static
      *
-     * @see http://schema.org/contactPoints
+     * @see 
      */
-    public function contactPoints($contactPoints)
+    public function contactPoint($contactPoint)
     {
-        return $this->setProperty('contactPoints', $contactPoints);
+        return $this->setProperty('contactPoint', $contactPoint);
     }
 
     /**
@@ -163,7 +163,7 @@ class Organization extends Thing
      *
      * @return static
      *
-     * @see http://schema.org/department
+     * @see 
      */
     public function department($department)
     {
@@ -178,7 +178,7 @@ class Organization extends Thing
      *
      * @return static
      *
-     * @see http://schema.org/duns
+     * @see 
      */
     public function duns($duns)
     {
@@ -192,25 +192,11 @@ class Organization extends Thing
      *
      * @return static
      *
-     * @see http://schema.org/email
+     * @see 
      */
     public function email($email)
     {
         return $this->setProperty('email', $email);
-    }
-
-    /**
-     * Someone working for this organization.
-     *
-     * @param Person|Person[] $employee
-     *
-     * @return static
-     *
-     * @see http://schema.org/employee
-     */
-    public function employee($employee)
-    {
-        return $this->setProperty('employee', $employee);
     }
 
     /**
@@ -220,11 +206,25 @@ class Organization extends Thing
      *
      * @return static
      *
-     * @see http://schema.org/employees
+     * @see 
      */
     public function employees($employees)
     {
         return $this->setProperty('employees', $employees);
+    }
+
+    /**
+     * Someone working for this organization.
+     *
+     * @param Person|Person[] $employee
+     *
+     * @return static
+     *
+     * @see 
+     */
+    public function employee($employee)
+    {
+        return $this->setProperty('employee', $employee);
     }
 
     /**
@@ -235,7 +235,7 @@ class Organization extends Thing
      *
      * @return static
      *
-     * @see http://schema.org/event
+     * @see 
      */
     public function event($event)
     {
@@ -249,7 +249,7 @@ class Organization extends Thing
      *
      * @return static
      *
-     * @see http://schema.org/events
+     * @see 
      */
     public function events($events)
     {
@@ -263,7 +263,7 @@ class Organization extends Thing
      *
      * @return static
      *
-     * @see http://schema.org/faxNumber
+     * @see 
      */
     public function faxNumber($faxNumber)
     {
@@ -277,39 +277,11 @@ class Organization extends Thing
      *
      * @return static
      *
-     * @see http://schema.org/founder
+     * @see 
      */
     public function founder($founder)
     {
         return $this->setProperty('founder', $founder);
-    }
-
-    /**
-     * A person who founded this organization.
-     *
-     * @param Person|Person[] $founders
-     *
-     * @return static
-     *
-     * @see http://schema.org/founders
-     */
-    public function founders($founders)
-    {
-        return $this->setProperty('founders', $founders);
-    }
-
-    /**
-     * The date that this organization was dissolved.
-     *
-     * @param \DateTimeInterface|\DateTimeInterface[] $dissolutionDate
-     *
-     * @return static
-     *
-     * @see http://schema.org/dissolutionDate
-     */
-    public function dissolutionDate($dissolutionDate)
-    {
-        return $this->setProperty('dissolutionDate', $dissolutionDate);
     }
 
     /**
@@ -319,11 +291,25 @@ class Organization extends Thing
      *
      * @return static
      *
-     * @see http://schema.org/foundingDate
+     * @see 
      */
     public function foundingDate($foundingDate)
     {
         return $this->setProperty('foundingDate', $foundingDate);
+    }
+
+    /**
+     * The date that this organization was dissolved.
+     *
+     * @param \DateTimeInterface|\DateTimeInterface[] $dissolutionDate
+     *
+     * @return static
+     *
+     * @see 
+     */
+    public function dissolutionDate($dissolutionDate)
+    {
+        return $this->setProperty('dissolutionDate', $dissolutionDate);
     }
 
     /**
@@ -336,7 +322,7 @@ class Organization extends Thing
      *
      * @return static
      *
-     * @see http://schema.org/globalLocationNumber
+     * @see 
      */
     public function globalLocationNumber($globalLocationNumber)
     {
@@ -350,7 +336,7 @@ class Organization extends Thing
      *
      * @return static
      *
-     * @see http://schema.org/hasPOS
+     * @see 
      */
     public function hasPOS($hasPOS)
     {
@@ -366,7 +352,7 @@ class Organization extends Thing
      *
      * @return static
      *
-     * @see http://schema.org/isicV4
+     * @see 
      */
     public function isicV4($isicV4)
     {
@@ -374,17 +360,17 @@ class Organization extends Thing
     }
 
     /**
-     * The official name of the organization, e.g. the registered company name.
+     * A person who founded this organization.
      *
-     * @param string|string[] $legalName
+     * @param Person|Person[] $founders
      *
      * @return static
      *
-     * @see http://schema.org/legalName
+     * @see 
      */
-    public function legalName($legalName)
+    public function founders($founders)
     {
-        return $this->setProperty('legalName', $legalName);
+        return $this->setProperty('founders', $founders);
     }
 
     /**
@@ -395,7 +381,7 @@ class Organization extends Thing
      *
      * @return static
      *
-     * @see http://schema.org/location
+     * @see 
      */
     public function location($location)
     {
@@ -409,7 +395,7 @@ class Organization extends Thing
      *
      * @return static
      *
-     * @see http://schema.org/logo
+     * @see 
      */
     public function logo($logo)
     {
@@ -423,7 +409,7 @@ class Organization extends Thing
      *
      * @return static
      *
-     * @see http://schema.org/makesOffer
+     * @see 
      */
     public function makesOffer($makesOffer)
     {
@@ -437,26 +423,11 @@ class Organization extends Thing
      *
      * @return static
      *
-     * @see http://schema.org/offeredBy
+     * @see 
      */
     public function offeredBy($offeredBy)
     {
         return $this->setProperty('offeredBy', $offeredBy);
-    }
-
-    /**
-     * A member of an Organization or a ProgramMembership. Organizations can be
-     * members of organizations; ProgramMembership is typically for individuals.
-     *
-     * @param Organization|Organization[]|Person|Person[] $member
-     *
-     * @return static
-     *
-     * @see http://schema.org/member
-     */
-    public function member($member)
-    {
-        return $this->setProperty('member', $member);
     }
 
     /**
@@ -467,11 +438,26 @@ class Organization extends Thing
      *
      * @return static
      *
-     * @see http://schema.org/memberOf
+     * @see 
      */
     public function memberOf($memberOf)
     {
         return $this->setProperty('memberOf', $memberOf);
+    }
+
+    /**
+     * A member of an Organization or a ProgramMembership. Organizations can be
+     * members of organizations; ProgramMembership is typically for individuals.
+     *
+     * @param Organization|Organization[]|Person|Person[] $member
+     *
+     * @return static
+     *
+     * @see 
+     */
+    public function member($member)
+    {
+        return $this->setProperty('member', $member);
     }
 
     /**
@@ -481,7 +467,7 @@ class Organization extends Thing
      *
      * @return static
      *
-     * @see http://schema.org/members
+     * @see 
      */
     public function members($members)
     {
@@ -496,7 +482,7 @@ class Organization extends Thing
      *
      * @return static
      *
-     * @see http://schema.org/naics
+     * @see 
      */
     public function naics($naics)
     {
@@ -510,7 +496,7 @@ class Organization extends Thing
      *
      * @return static
      *
-     * @see http://schema.org/numberOfEmployees
+     * @see 
      */
     public function numberOfEmployees($numberOfEmployees)
     {
@@ -524,11 +510,25 @@ class Organization extends Thing
      *
      * @return static
      *
-     * @see http://schema.org/owns
+     * @see 
      */
     public function owns($owns)
     {
         return $this->setProperty('owns', $owns);
+    }
+
+    /**
+     * The official name of the organization, e.g. the registered company name.
+     *
+     * @param string|string[] $legalName
+     *
+     * @return static
+     *
+     * @see 
+     */
+    public function legalName($legalName)
+    {
+        return $this->setProperty('legalName', $legalName);
     }
 
     /**
@@ -538,7 +538,7 @@ class Organization extends Thing
      *
      * @return static
      *
-     * @see http://schema.org/review
+     * @see 
      */
     public function review($review)
     {
@@ -552,7 +552,7 @@ class Organization extends Thing
      *
      * @return static
      *
-     * @see http://schema.org/reviews
+     * @see 
      */
     public function reviews($reviews)
     {
@@ -567,7 +567,7 @@ class Organization extends Thing
      *
      * @return static
      *
-     * @see http://schema.org/seeks
+     * @see 
      */
     public function seeks($seeks)
     {
@@ -581,7 +581,7 @@ class Organization extends Thing
      *
      * @return static
      *
-     * @see http://schema.org/serviceArea
+     * @see 
      */
     public function serviceArea($serviceArea)
     {
@@ -597,7 +597,7 @@ class Organization extends Thing
      *
      * @return static
      *
-     * @see http://schema.org/sponsor
+     * @see 
      */
     public function sponsor($sponsor)
     {
@@ -612,7 +612,7 @@ class Organization extends Thing
      *
      * @return static
      *
-     * @see http://schema.org/funder
+     * @see 
      */
     public function funder($funder)
     {
@@ -628,7 +628,7 @@ class Organization extends Thing
      *
      * @return static
      *
-     * @see http://schema.org/subOrganization
+     * @see 
      */
     public function subOrganization($subOrganization)
     {
@@ -643,7 +643,7 @@ class Organization extends Thing
      *
      * @return static
      *
-     * @see http://schema.org/taxID
+     * @see 
      */
     public function taxID($taxID)
     {
@@ -657,7 +657,7 @@ class Organization extends Thing
      *
      * @return static
      *
-     * @see http://schema.org/telephone
+     * @see 
      */
     public function telephone($telephone)
     {
@@ -671,7 +671,7 @@ class Organization extends Thing
      *
      * @return static
      *
-     * @see http://schema.org/vatID
+     * @see 
      */
     public function vatID($vatID)
     {
@@ -685,7 +685,7 @@ class Organization extends Thing
      *
      * @return static
      *
-     * @see http://schema.org/foundingLocation
+     * @see 
      */
     public function foundingLocation($foundingLocation)
     {
@@ -700,7 +700,7 @@ class Organization extends Thing
      *
      * @return static
      *
-     * @see http://schema.org/leiCode
+     * @see 
      */
     public function leiCode($leiCode)
     {

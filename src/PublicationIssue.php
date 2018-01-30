@@ -10,7 +10,7 @@ namespace Spatie\SchemaOrg;
  * [blog
  * post](http://blog.schema.org/2014/09/schemaorg-support-for-bibliographic_2.html).
  *
- * @see http://schema.org/PublicationIssue
+ * @see 
  */
 class PublicationIssue extends CreativeWork
 {
@@ -21,39 +21,11 @@ class PublicationIssue extends CreativeWork
      *
      * @return static
      *
-     * @see http://schema.org/issueNumber
+     * @see 
      */
     public function issueNumber($issueNumber)
     {
         return $this->setProperty('issueNumber', $issueNumber);
-    }
-
-    /**
-     * The page on which the work ends; for example "138" or "xvi".
-     *
-     * @param int|int[]|string|string[] $pageEnd
-     *
-     * @return static
-     *
-     * @see http://schema.org/pageEnd
-     */
-    public function pageEnd($pageEnd)
-    {
-        return $this->setProperty('pageEnd', $pageEnd);
-    }
-
-    /**
-     * The page on which the work starts; for example "135" or "xiii".
-     *
-     * @param int|int[]|string|string[] $pageStart
-     *
-     * @return static
-     *
-     * @see http://schema.org/pageStart
-     */
-    public function pageStart($pageStart)
-    {
-        return $this->setProperty('pageStart', $pageStart);
     }
 
     /**
@@ -64,11 +36,39 @@ class PublicationIssue extends CreativeWork
      *
      * @return static
      *
-     * @see http://schema.org/pagination
+     * @see 
      */
     public function pagination($pagination)
     {
         return $this->setProperty('pagination', $pagination);
+    }
+
+    /**
+     * The page on which the work starts; for example "135" or "xiii".
+     *
+     * @param int|int[]|string|string[] $pageStart
+     *
+     * @return static
+     *
+     * @see 
+     */
+    public function pageStart($pageStart)
+    {
+        return $this->setProperty('pageStart', $pageStart);
+    }
+
+    /**
+     * The page on which the work ends; for example "138" or "xvi".
+     *
+     * @param int|int[]|string|string[] $pageEnd
+     *
+     * @return static
+     *
+     * @see 
+     */
+    public function pageEnd($pageEnd)
+    {
+        return $this->setProperty('pageEnd', $pageEnd);
     }
 
 }

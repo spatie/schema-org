@@ -5,7 +5,7 @@ namespace Spatie\SchemaOrg;
 /**
  * A pond.
  *
- * @see http://schema.org/Pond
+ * @see 
  */
 class Pond extends BodyOfWater
 {

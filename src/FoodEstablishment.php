@@ -5,7 +5,7 @@ namespace Spatie\SchemaOrg;
 /**
  * A food-related business.
  *
- * @see http://schema.org/FoodEstablishment
+ * @see 
  */
 class FoodEstablishment extends LocalBusiness
 {
@@ -18,7 +18,7 @@ class FoodEstablishment extends LocalBusiness
      *
      * @return static
      *
-     * @see http://schema.org/acceptsReservations
+     * @see 
      */
     public function acceptsReservations($acceptsReservations)
     {
@@ -29,30 +29,30 @@ class FoodEstablishment extends LocalBusiness
      * Either the actual menu as a structured representation, as text, or a URL
      * of the menu.
      *
-     * @param Menu|Menu[]|string|string[] $hasMenu
+     * @param Menu|Menu[]|string|string[] $menu
      *
      * @return static
      *
-     * @see http://schema.org/hasMenu
+     * @see 
      */
-    public function hasMenu($hasMenu)
+    public function menu($menu)
     {
-        return $this->setProperty('hasMenu', $hasMenu);
+        return $this->setProperty('menu', $menu);
     }
 
     /**
      * Either the actual menu as a structured representation, as text, or a URL
      * of the menu.
      *
-     * @param Menu|Menu[]|string|string[] $menu
+     * @param Menu|Menu[]|string|string[] $hasMenu
      *
      * @return static
      *
-     * @see http://schema.org/menu
+     * @see 
      */
-    public function menu($menu)
+    public function hasMenu($hasMenu)
     {
-        return $this->setProperty('menu', $menu);
+        return $this->setProperty('hasMenu', $hasMenu);
     }
 
     /**
@@ -62,7 +62,7 @@ class FoodEstablishment extends LocalBusiness
      *
      * @return static
      *
-     * @see http://schema.org/servesCuisine
+     * @see 
      */
     public function servesCuisine($servesCuisine)
     {
@@ -79,7 +79,7 @@ class FoodEstablishment extends LocalBusiness
      *
      * @return static
      *
-     * @see http://schema.org/starRating
+     * @see 
      */
     public function starRating($starRating)
     {

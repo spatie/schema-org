@@ -5,7 +5,7 @@ namespace Spatie\SchemaOrg;
 /**
  * A bowling alley.
  *
- * @see http://schema.org/BowlingAlley
+ * @see 
  */
 class BowlingAlley extends SportsActivityLocation
 {

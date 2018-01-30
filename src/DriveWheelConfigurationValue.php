@@ -5,7 +5,7 @@ namespace Spatie\SchemaOrg;
 /**
  * A value indicating which roadwheels will receive torque.
  *
- * @see http://schema.org/DriveWheelConfigurationValue
+ * @see 
  */
 class DriveWheelConfigurationValue extends QualitativeValue
 {

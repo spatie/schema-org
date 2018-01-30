@@ -5,7 +5,7 @@ namespace Spatie\SchemaOrg;
 /**
  * A screening of a movie or other video.
  *
- * @see http://schema.org/ScreeningEvent
+ * @see 
  */
 class ScreeningEvent extends Event
 {
@@ -17,7 +17,7 @@ class ScreeningEvent extends Event
      *
      * @return static
      *
-     * @see http://schema.org/videoFormat
+     * @see 
      */
     public function videoFormat($videoFormat)
     {
@@ -32,7 +32,7 @@ class ScreeningEvent extends Event
      *
      * @return static
      *
-     * @see http://schema.org/subtitleLanguage
+     * @see 
      */
     public function subtitleLanguage($subtitleLanguage)
     {
@@ -46,7 +46,7 @@ class ScreeningEvent extends Event
      *
      * @return static
      *
-     * @see http://schema.org/workPresented
+     * @see 
      */
     public function workPresented($workPresented)
     {

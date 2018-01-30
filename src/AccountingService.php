@@ -8,7 +8,7 @@ namespace Spatie\SchemaOrg;
  * As a [[LocalBusiness]] it can be described as a [[provider]] of one or more
  * [[Service]]\(s).
  *
- * @see http://schema.org/AccountingService
+ * @see 
  */
 class AccountingService extends FinancialService
 {

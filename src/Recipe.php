@@ -7,7 +7,7 @@ namespace Spatie\SchemaOrg;
  * restrictions are enumerated via [[suitableForDiet]]. The [[keywords]]
  * property can also be used to add more detail.
  *
- * @see http://schema.org/Recipe
+ * @see 
  */
 class Recipe extends CreativeWork
 {
@@ -19,7 +19,7 @@ class Recipe extends CreativeWork
      *
      * @return static
      *
-     * @see http://schema.org/suitableForDiet
+     * @see 
      */
     public function suitableForDiet($suitableForDiet)
     {
@@ -34,54 +34,11 @@ class Recipe extends CreativeWork
      *
      * @return static
      *
-     * @see http://schema.org/totalTime
+     * @see 
      */
     public function totalTime($totalTime)
     {
         return $this->setProperty('totalTime', $totalTime);
-    }
-
-    /**
-     * The time it takes to actually cook the dish, in [ISO 8601 duration
-     * format](http://en.wikipedia.org/wiki/ISO_8601).
-     *
-     * @param Duration|Duration[] $cookTime
-     *
-     * @return static
-     *
-     * @see http://schema.org/cookTime
-     */
-    public function cookTime($cookTime)
-    {
-        return $this->setProperty('cookTime', $cookTime);
-    }
-
-    /**
-     * The method of cooking, such as Frying, Steaming, ...
-     *
-     * @param string|string[] $cookingMethod
-     *
-     * @return static
-     *
-     * @see http://schema.org/cookingMethod
-     */
-    public function cookingMethod($cookingMethod)
-    {
-        return $this->setProperty('cookingMethod', $cookingMethod);
-    }
-
-    /**
-     * Nutrition information about the recipe or menu item.
-     *
-     * @param NutritionInformation|NutritionInformation[] $nutrition
-     *
-     * @return static
-     *
-     * @see http://schema.org/nutrition
-     */
-    public function nutrition($nutrition)
-    {
-        return $this->setProperty('nutrition', $nutrition);
     }
 
     /**
@@ -92,7 +49,7 @@ class Recipe extends CreativeWork
      *
      * @return static
      *
-     * @see http://schema.org/prepTime
+     * @see 
      */
     public function prepTime($prepTime)
     {
@@ -100,17 +57,32 @@ class Recipe extends CreativeWork
     }
 
     /**
-     * The category of the recipe—for example, appetizer, entree, etc.
+     * The method of cooking, such as Frying, Steaming, ...
      *
-     * @param string|string[] $recipeCategory
+     * @param string|string[] $cookingMethod
      *
      * @return static
      *
-     * @see http://schema.org/recipeCategory
+     * @see 
      */
-    public function recipeCategory($recipeCategory)
+    public function cookingMethod($cookingMethod)
     {
-        return $this->setProperty('recipeCategory', $recipeCategory);
+        return $this->setProperty('cookingMethod', $cookingMethod);
+    }
+
+    /**
+     * The time it takes to actually cook the dish, in [ISO 8601 duration
+     * format](http://en.wikipedia.org/wiki/ISO_8601).
+     *
+     * @param Duration|Duration[] $cookTime
+     *
+     * @return static
+     *
+     * @see 
+     */
+    public function cookTime($cookTime)
+    {
+        return $this->setProperty('cookTime', $cookTime);
     }
 
     /**
@@ -120,53 +92,11 @@ class Recipe extends CreativeWork
      *
      * @return static
      *
-     * @see http://schema.org/recipeCuisine
+     * @see 
      */
     public function recipeCuisine($recipeCuisine)
     {
         return $this->setProperty('recipeCuisine', $recipeCuisine);
-    }
-
-    /**
-     * A single ingredient used in the recipe, e.g. sugar, flour or garlic.
-     *
-     * @param string|string[] $ingredients
-     *
-     * @return static
-     *
-     * @see http://schema.org/ingredients
-     */
-    public function ingredients($ingredients)
-    {
-        return $this->setProperty('ingredients', $ingredients);
-    }
-
-    /**
-     * A single ingredient used in the recipe, e.g. sugar, flour or garlic.
-     *
-     * @param string|string[] $recipeIngredient
-     *
-     * @return static
-     *
-     * @see http://schema.org/recipeIngredient
-     */
-    public function recipeIngredient($recipeIngredient)
-    {
-        return $this->setProperty('recipeIngredient', $recipeIngredient);
-    }
-
-    /**
-     * A step or instruction involved in making the recipe.
-     *
-     * @param schema:ItemList|schema:ItemList[]|string|string[] $recipeInstructions
-     *
-     * @return static
-     *
-     * @see http://schema.org/recipeInstructions
-     */
-    public function recipeInstructions($recipeInstructions)
-    {
-        return $this->setProperty('recipeInstructions', $recipeInstructions);
     }
 
     /**
@@ -177,11 +107,81 @@ class Recipe extends CreativeWork
      *
      * @return static
      *
-     * @see http://schema.org/recipeYield
+     * @see 
      */
     public function recipeYield($recipeYield)
     {
         return $this->setProperty('recipeYield', $recipeYield);
+    }
+
+    /**
+     * A step or instruction involved in making the recipe.
+     *
+     * @param schema:ItemList|schema:ItemList[]|string|string[] $recipeInstructions
+     *
+     * @return static
+     *
+     * @see 
+     */
+    public function recipeInstructions($recipeInstructions)
+    {
+        return $this->setProperty('recipeInstructions', $recipeInstructions);
+    }
+
+    /**
+     * The category of the recipe—for example, appetizer, entree, etc.
+     *
+     * @param string|string[] $recipeCategory
+     *
+     * @return static
+     *
+     * @see 
+     */
+    public function recipeCategory($recipeCategory)
+    {
+        return $this->setProperty('recipeCategory', $recipeCategory);
+    }
+
+    /**
+     * A single ingredient used in the recipe, e.g. sugar, flour or garlic.
+     *
+     * @param string|string[] $recipeIngredient
+     *
+     * @return static
+     *
+     * @see 
+     */
+    public function recipeIngredient($recipeIngredient)
+    {
+        return $this->setProperty('recipeIngredient', $recipeIngredient);
+    }
+
+    /**
+     * A single ingredient used in the recipe, e.g. sugar, flour or garlic.
+     *
+     * @param string|string[] $ingredients
+     *
+     * @return static
+     *
+     * @see 
+     */
+    public function ingredients($ingredients)
+    {
+        return $this->setProperty('ingredients', $ingredients);
+    }
+
+    /**
+     * Nutrition information about the recipe or menu item.
+     *
+     * @param NutritionInformation|NutritionInformation[] $nutrition
+     *
+     * @return static
+     *
+     * @see 
+     */
+    public function nutrition($nutrition)
+    {
+        return $this->setProperty('nutrition', $nutrition);
     }
 
 }

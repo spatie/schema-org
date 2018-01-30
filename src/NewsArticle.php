@@ -5,7 +5,7 @@ namespace Spatie\SchemaOrg;
 /**
  * A news article.
  *
- * @see http://schema.org/NewsArticle
+ * @see 
  */
 class NewsArticle extends Article
 {
@@ -16,7 +16,7 @@ class NewsArticle extends Article
      *
      * @return static
      *
-     * @see http://schema.org/dateline
+     * @see 
      */
     public function dateline($dateline)
     {
@@ -31,25 +31,11 @@ class NewsArticle extends Article
      *
      * @return static
      *
-     * @see http://schema.org/printColumn
+     * @see 
      */
     public function printColumn($printColumn)
     {
         return $this->setProperty('printColumn', $printColumn);
-    }
-
-    /**
-     * The edition of the print product in which the NewsArticle appears.
-     *
-     * @param string|string[] $printEdition
-     *
-     * @return static
-     *
-     * @see http://schema.org/printEdition
-     */
-    public function printEdition($printEdition)
-    {
-        return $this->setProperty('printEdition', $printEdition);
     }
 
     /**
@@ -61,7 +47,7 @@ class NewsArticle extends Article
      *
      * @return static
      *
-     * @see http://schema.org/printPage
+     * @see 
      */
     public function printPage($printPage)
     {
@@ -76,11 +62,25 @@ class NewsArticle extends Article
      *
      * @return static
      *
-     * @see http://schema.org/printSection
+     * @see 
      */
     public function printSection($printSection)
     {
         return $this->setProperty('printSection', $printSection);
+    }
+
+    /**
+     * The edition of the print product in which the NewsArticle appears.
+     *
+     * @param string|string[] $printEdition
+     *
+     * @return static
+     *
+     * @see 
+     */
+    public function printEdition($printEdition)
+    {
+        return $this->setProperty('printEdition', $printEdition);
     }
 
 }

@@ -5,7 +5,7 @@ namespace Spatie\SchemaOrg;
 /**
  * A city or town.
  *
- * @see http://schema.org/City
+ * @see 
  */
 class City extends AdministrativeArea
 {

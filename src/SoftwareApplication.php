@@ -5,7 +5,7 @@ namespace Spatie\SchemaOrg;
 /**
  * A software application.
  *
- * @see http://schema.org/SoftwareApplication
+ * @see 
  */
 class SoftwareApplication extends CreativeWork
 {
@@ -16,7 +16,7 @@ class SoftwareApplication extends CreativeWork
      *
      * @return static
      *
-     * @see http://schema.org/applicationCategory
+     * @see 
      */
     public function applicationCategory($applicationCategory)
     {
@@ -30,7 +30,7 @@ class SoftwareApplication extends CreativeWork
      *
      * @return static
      *
-     * @see http://schema.org/applicationSubCategory
+     * @see 
      */
     public function applicationSubCategory($applicationSubCategory)
     {
@@ -45,26 +45,11 @@ class SoftwareApplication extends CreativeWork
      *
      * @return static
      *
-     * @see http://schema.org/applicationSuite
+     * @see 
      */
     public function applicationSuite($applicationSuite)
     {
         return $this->setProperty('applicationSuite', $applicationSuite);
-    }
-
-    /**
-     * Countries for which the application is not supported. You can also
-     * provide the two-letter ISO 3166-1 alpha-2 country code.
-     *
-     * @param string|string[] $countriesNotSupported
-     *
-     * @return static
-     *
-     * @see http://schema.org/countriesNotSupported
-     */
-    public function countriesNotSupported($countriesNotSupported)
-    {
-        return $this->setProperty('countriesNotSupported', $countriesNotSupported);
     }
 
     /**
@@ -75,7 +60,7 @@ class SoftwareApplication extends CreativeWork
      *
      * @return static
      *
-     * @see http://schema.org/countriesSupported
+     * @see 
      */
     public function countriesSupported($countriesSupported)
     {
@@ -83,18 +68,18 @@ class SoftwareApplication extends CreativeWork
     }
 
     /**
-     * Device required to run the application. Used in cases where a specific
-     * make/model is required to run the application.
+     * Countries for which the application is not supported. You can also
+     * provide the two-letter ISO 3166-1 alpha-2 country code.
      *
-     * @param string|string[] $device
+     * @param string|string[] $countriesNotSupported
      *
      * @return static
      *
-     * @see http://schema.org/device
+     * @see 
      */
-    public function device($device)
+    public function countriesNotSupported($countriesNotSupported)
     {
-        return $this->setProperty('device', $device);
+        return $this->setProperty('countriesNotSupported', $countriesNotSupported);
     }
 
     /**
@@ -105,11 +90,26 @@ class SoftwareApplication extends CreativeWork
      *
      * @return static
      *
-     * @see http://schema.org/availableOnDevice
+     * @see 
      */
     public function availableOnDevice($availableOnDevice)
     {
         return $this->setProperty('availableOnDevice', $availableOnDevice);
+    }
+
+    /**
+     * Device required to run the application. Used in cases where a specific
+     * make/model is required to run the application.
+     *
+     * @param string|string[] $device
+     *
+     * @return static
+     *
+     * @see 
+     */
+    public function device($device)
+    {
+        return $this->setProperty('device', $device);
     }
 
     /**
@@ -119,7 +119,7 @@ class SoftwareApplication extends CreativeWork
      *
      * @return static
      *
-     * @see http://schema.org/downloadUrl
+     * @see 
      */
     public function downloadUrl($downloadUrl)
     {
@@ -134,7 +134,7 @@ class SoftwareApplication extends CreativeWork
      *
      * @return static
      *
-     * @see http://schema.org/featureList
+     * @see 
      */
     public function featureList($featureList)
     {
@@ -149,7 +149,7 @@ class SoftwareApplication extends CreativeWork
      *
      * @return static
      *
-     * @see http://schema.org/fileSize
+     * @see 
      */
     public function fileSize($fileSize)
     {
@@ -164,7 +164,7 @@ class SoftwareApplication extends CreativeWork
      *
      * @return static
      *
-     * @see http://schema.org/installUrl
+     * @see 
      */
     public function installUrl($installUrl)
     {
@@ -178,7 +178,7 @@ class SoftwareApplication extends CreativeWork
      *
      * @return static
      *
-     * @see http://schema.org/memoryRequirements
+     * @see 
      */
     public function memoryRequirements($memoryRequirements)
     {
@@ -192,7 +192,7 @@ class SoftwareApplication extends CreativeWork
      *
      * @return static
      *
-     * @see http://schema.org/operatingSystem
+     * @see 
      */
     public function operatingSystem($operatingSystem)
     {
@@ -207,7 +207,7 @@ class SoftwareApplication extends CreativeWork
      *
      * @return static
      *
-     * @see http://schema.org/permissions
+     * @see 
      */
     public function permissions($permissions)
     {
@@ -221,7 +221,7 @@ class SoftwareApplication extends CreativeWork
      *
      * @return static
      *
-     * @see http://schema.org/processorRequirements
+     * @see 
      */
     public function processorRequirements($processorRequirements)
     {
@@ -235,7 +235,7 @@ class SoftwareApplication extends CreativeWork
      *
      * @return static
      *
-     * @see http://schema.org/releaseNotes
+     * @see 
      */
     public function releaseNotes($releaseNotes)
     {
@@ -248,15 +248,15 @@ class SoftwareApplication extends CreativeWork
      * application distribution package, but required to run the application
      * (Examples: DirectX, Java or .NET runtime).
      *
-     * @param string|string[] $requirements
+     * @param string|string[] $softwareRequirements
      *
      * @return static
      *
-     * @see http://schema.org/requirements
+     * @see 
      */
-    public function requirements($requirements)
+    public function softwareRequirements($softwareRequirements)
     {
-        return $this->setProperty('requirements', $requirements);
+        return $this->setProperty('softwareRequirements', $softwareRequirements);
     }
 
     /**
@@ -265,15 +265,15 @@ class SoftwareApplication extends CreativeWork
      * application distribution package, but required to run the application
      * (Examples: DirectX, Java or .NET runtime).
      *
-     * @param string|string[] $softwareRequirements
+     * @param string|string[] $requirements
      *
      * @return static
      *
-     * @see http://schema.org/softwareRequirements
+     * @see 
      */
-    public function softwareRequirements($softwareRequirements)
+    public function requirements($requirements)
     {
-        return $this->setProperty('softwareRequirements', $softwareRequirements);
+        return $this->setProperty('requirements', $requirements);
     }
 
     /**
@@ -283,7 +283,7 @@ class SoftwareApplication extends CreativeWork
      *
      * @return static
      *
-     * @see http://schema.org/screenshot
+     * @see 
      */
     public function screenshot($screenshot)
     {
@@ -297,7 +297,7 @@ class SoftwareApplication extends CreativeWork
      *
      * @return static
      *
-     * @see http://schema.org/softwareVersion
+     * @see 
      */
     public function softwareVersion($softwareVersion)
     {
@@ -311,7 +311,7 @@ class SoftwareApplication extends CreativeWork
      *
      * @return static
      *
-     * @see http://schema.org/storageRequirements
+     * @see 
      */
     public function storageRequirements($storageRequirements)
     {
@@ -325,7 +325,7 @@ class SoftwareApplication extends CreativeWork
      *
      * @return static
      *
-     * @see http://schema.org/supportingData
+     * @see 
      */
     public function supportingData($supportingData)
     {
@@ -339,7 +339,7 @@ class SoftwareApplication extends CreativeWork
      *
      * @return static
      *
-     * @see http://schema.org/softwareAddOn
+     * @see 
      */
     public function softwareAddOn($softwareAddOn)
     {
@@ -353,7 +353,7 @@ class SoftwareApplication extends CreativeWork
      *
      * @return static
      *
-     * @see http://schema.org/softwareHelp
+     * @see 
      */
     public function softwareHelp($softwareHelp)
     {

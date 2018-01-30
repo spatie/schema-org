@@ -8,25 +8,10 @@ namespace Spatie\SchemaOrg;
  * bed of a certain type, you can use bed directly with a text. See also
  * [[BedType]] (under development).
  *
- * @see http://schema.org/BedDetails
+ * @see 
  */
 class BedDetails extends Intangible
 {
-    /**
-     * The type of bed to which the BedDetail refers, i.e. the type of bed
-     * available in the quantity indicated by quantity.
-     *
-     * @param string|string[] $typeOfBed
-     *
-     * @return static
-     *
-     * @see http://schema.org/typeOfBed
-     */
-    public function typeOfBed($typeOfBed)
-    {
-        return $this->setProperty('typeOfBed', $typeOfBed);
-    }
-
     /**
      * The quantity of the given bed type available in the HotelRoom, Suite,
      * House, or Apartment.
@@ -35,11 +20,26 @@ class BedDetails extends Intangible
      *
      * @return static
      *
-     * @see http://schema.org/numberOfBeds
+     * @see 
      */
     public function numberOfBeds($numberOfBeds)
     {
         return $this->setProperty('numberOfBeds', $numberOfBeds);
+    }
+
+    /**
+     * The type of bed to which the BedDetail refers, i.e. the type of bed
+     * available in the quantity indicated by quantity.
+     *
+     * @param string|string[] $typeOfBed
+     *
+     * @return static
+     *
+     * @see 
+     */
+    public function typeOfBed($typeOfBed)
+    {
+        return $this->setProperty('typeOfBed', $typeOfBed);
     }
 
 }

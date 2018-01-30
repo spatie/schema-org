@@ -2,49 +2,43 @@
 
 namespace Spatie\SchemaOrg\Generator\Parser\Tasks;
 
+use Spatie\SchemaOrg\Generator\Type;
 use Symfony\Component\DomCrawler\Crawler;
-use Spatie\Async\Task;
+use Spatie\SchemaOrg\Generator\Parser\CrawlsDefinitions;
 
-class ParseTypes
+class ParseType
 {
-    /** @var string */
-    protected $rdfa;
+    use CrawlsDefinitions;
 
-    public function __construct(string $rdfa)
+    /** @string */
+    protected $definition;
+
+    public function __construct(string $definition)
     {
-        $this->rdfa = $rdfa;
+        $this->definition = $definition;
     }
 
-    public function __invoke(): array
+    public function __invoke(): ?Type
     {
-        // $crawler = new Crawler($this->rdfa);
+        $node = new Crawler($this->definition);
 
-        // $types = $crawler->filter('[typeof="rdfs:Class"]');
-
-        return 'foo';
-        // return $types->each(function (Crawler $node) {
-        // });
-    }
-
-    private function parseNode()
-    {
         $type = new Type();
 
         $type->name = $this->getText($node, '[property="rdfs:label"]');
 
         if (in_array($type->name, ['', 'DataType', 'Float', 'Integer', 'URL'])) {
-            return;
+            return null;
         }
 
         $type->description = $this->getText($node, '[property="rdfs:comment"]');
         $type->parent = $this->getText($node, '[property="rdfs:subClassOf"]') ? : 'BaseType';
 
         if (strpos($type->parent, ':') !== false) {
-            return;
+            return null;
         }
 
         $type->resource = $this->getAttribute($node, 'resource');
 
-        $this->types->push($type);
+        return $type;
     }
 }

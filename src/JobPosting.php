@@ -5,7 +5,7 @@ namespace Spatie\SchemaOrg;
 /**
  * A listing that describes a job opening in a certain organization.
  *
- * @see http://schema.org/JobPosting
+ * @see 
  */
 class JobPosting extends Intangible
 {
@@ -16,7 +16,7 @@ class JobPosting extends Intangible
      *
      * @return static
      *
-     * @see http://schema.org/baseSalary
+     * @see 
      */
     public function baseSalary($baseSalary)
     {
@@ -26,29 +26,29 @@ class JobPosting extends Intangible
     /**
      * Description of benefits associated with the job.
      *
-     * @param string|string[] $benefits
+     * @param string|string[] $jobBenefits
      *
      * @return static
      *
-     * @see http://schema.org/benefits
+     * @see 
      */
-    public function benefits($benefits)
+    public function jobBenefits($jobBenefits)
     {
-        return $this->setProperty('benefits', $benefits);
+        return $this->setProperty('jobBenefits', $jobBenefits);
     }
 
     /**
      * Description of benefits associated with the job.
      *
-     * @param string|string[] $jobBenefits
+     * @param string|string[] $benefits
      *
      * @return static
      *
-     * @see http://schema.org/jobBenefits
+     * @see 
      */
-    public function jobBenefits($jobBenefits)
+    public function benefits($benefits)
     {
-        return $this->setProperty('jobBenefits', $jobBenefits);
+        return $this->setProperty('benefits', $benefits);
     }
 
     /**
@@ -58,7 +58,7 @@ class JobPosting extends Intangible
      *
      * @return static
      *
-     * @see http://schema.org/datePosted
+     * @see 
      */
     public function datePosted($datePosted)
     {
@@ -72,7 +72,7 @@ class JobPosting extends Intangible
      *
      * @return static
      *
-     * @see http://schema.org/educationRequirements
+     * @see 
      */
     public function educationRequirements($educationRequirements)
     {
@@ -87,7 +87,7 @@ class JobPosting extends Intangible
      *
      * @return static
      *
-     * @see http://schema.org/employmentType
+     * @see 
      */
     public function employmentType($employmentType)
     {
@@ -101,7 +101,7 @@ class JobPosting extends Intangible
      *
      * @return static
      *
-     * @see http://schema.org/experienceRequirements
+     * @see 
      */
     public function experienceRequirements($experienceRequirements)
     {
@@ -115,7 +115,7 @@ class JobPosting extends Intangible
      *
      * @return static
      *
-     * @see http://schema.org/hiringOrganization
+     * @see 
      */
     public function hiringOrganization($hiringOrganization)
     {
@@ -125,25 +125,11 @@ class JobPosting extends Intangible
     /**
      * Description of bonus and commission compensation aspects of the job.
      *
-     * @param string|string[] $incentives
-     *
-     * @return static
-     *
-     * @see http://schema.org/incentives
-     */
-    public function incentives($incentives)
-    {
-        return $this->setProperty('incentives', $incentives);
-    }
-
-    /**
-     * Description of bonus and commission compensation aspects of the job.
-     *
      * @param string|string[] $incentiveCompensation
      *
      * @return static
      *
-     * @see http://schema.org/incentiveCompensation
+     * @see 
      */
     public function incentiveCompensation($incentiveCompensation)
     {
@@ -157,11 +143,25 @@ class JobPosting extends Intangible
      *
      * @return static
      *
-     * @see http://schema.org/industry
+     * @see 
      */
     public function industry($industry)
     {
         return $this->setProperty('industry', $industry);
+    }
+
+    /**
+     * Description of bonus and commission compensation aspects of the job.
+     *
+     * @param string|string[] $incentives
+     *
+     * @return static
+     *
+     * @see 
+     */
+    public function incentives($incentives)
+    {
+        return $this->setProperty('incentives', $incentives);
     }
 
     /**
@@ -172,7 +172,7 @@ class JobPosting extends Intangible
      *
      * @return static
      *
-     * @see http://schema.org/jobLocation
+     * @see 
      */
     public function jobLocation($jobLocation)
     {
@@ -188,7 +188,7 @@ class JobPosting extends Intangible
      *
      * @return static
      *
-     * @see http://schema.org/occupationalCategory
+     * @see 
      */
     public function occupationalCategory($occupationalCategory)
     {
@@ -202,7 +202,7 @@ class JobPosting extends Intangible
      *
      * @return static
      *
-     * @see http://schema.org/qualifications
+     * @see 
      */
     public function qualifications($qualifications)
     {
@@ -216,7 +216,7 @@ class JobPosting extends Intangible
      *
      * @return static
      *
-     * @see http://schema.org/responsibilities
+     * @see 
      */
     public function responsibilities($responsibilities)
     {
@@ -232,25 +232,11 @@ class JobPosting extends Intangible
      *
      * @return static
      *
-     * @see http://schema.org/salaryCurrency
+     * @see 
      */
     public function salaryCurrency($salaryCurrency)
     {
         return $this->setProperty('salaryCurrency', $salaryCurrency);
-    }
-
-    /**
-     * Skills required to fulfill this role.
-     *
-     * @param string|string[] $skills
-     *
-     * @return static
-     *
-     * @see http://schema.org/skills
-     */
-    public function skills($skills)
-    {
-        return $this->setProperty('skills', $skills);
     }
 
     /**
@@ -261,7 +247,7 @@ class JobPosting extends Intangible
      *
      * @return static
      *
-     * @see http://schema.org/specialCommitments
+     * @see 
      */
     public function specialCommitments($specialCommitments)
     {
@@ -275,7 +261,7 @@ class JobPosting extends Intangible
      *
      * @return static
      *
-     * @see http://schema.org/title
+     * @see 
      */
     public function title($title)
     {
@@ -290,11 +276,25 @@ class JobPosting extends Intangible
      *
      * @return static
      *
-     * @see http://schema.org/validThrough
+     * @see 
      */
     public function validThrough($validThrough)
     {
         return $this->setProperty('validThrough', $validThrough);
+    }
+
+    /**
+     * Skills required to fulfill this role.
+     *
+     * @param string|string[] $skills
+     *
+     * @return static
+     *
+     * @see 
+     */
+    public function skills($skills)
+    {
+        return $this->setProperty('skills', $skills);
     }
 
     /**
@@ -305,7 +305,7 @@ class JobPosting extends Intangible
      *
      * @return static
      *
-     * @see http://schema.org/workHours
+     * @see 
      */
     public function workHours($workHours)
     {

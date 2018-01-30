@@ -7,7 +7,7 @@ namespace Spatie\SchemaOrg;
  * interacting with pages. It is generally better to use [[Action]]-based
  * vocabulary, alongside types such as [[Comment]].
  *
- * @see http://schema.org/UserBlocks
+ * @see 
  */
 class UserBlocks extends UserInteraction
 {

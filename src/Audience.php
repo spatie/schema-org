@@ -5,7 +5,7 @@ namespace Spatie\SchemaOrg;
 /**
  * Intended audience for an item, i.e. the group for whom the item was created.
  *
- * @see http://schema.org/Audience
+ * @see 
  */
 class Audience extends Intangible
 {
@@ -17,7 +17,7 @@ class Audience extends Intangible
      *
      * @return static
      *
-     * @see http://schema.org/audienceType
+     * @see 
      */
     public function audienceType($audienceType)
     {
@@ -31,7 +31,7 @@ class Audience extends Intangible
      *
      * @return static
      *
-     * @see http://schema.org/geographicArea
+     * @see 
      */
     public function geographicArea($geographicArea)
     {

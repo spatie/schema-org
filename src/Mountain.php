@@ -5,7 +5,7 @@ namespace Spatie\SchemaOrg;
 /**
  * A mountain, like Mount Whitney or Mount Everest.
  *
- * @see http://schema.org/Mountain
+ * @see 
  */
 class Mountain extends Landform
 {

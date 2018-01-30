@@ -5,7 +5,7 @@ namespace Spatie\SchemaOrg;
 /**
  * A courthouse.
  *
- * @see http://schema.org/Courthouse
+ * @see 
  */
 class Courthouse extends GovernmentBuilding
 {

@@ -5,7 +5,7 @@ namespace Spatie\SchemaOrg;
 /**
  * Web page type: Image gallery page.
  *
- * @see http://schema.org/ImageGallery
+ * @see 
  */
 class ImageGallery extends CollectionPage
 {

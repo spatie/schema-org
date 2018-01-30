@@ -5,7 +5,7 @@ namespace Spatie\SchemaOrg;
 /**
  * An outlet store.
  *
- * @see http://schema.org/OutletStore
+ * @see 
  */
 class OutletStore extends Store
 {

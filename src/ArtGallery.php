@@ -5,7 +5,7 @@ namespace Spatie\SchemaOrg;
 /**
  * An art gallery.
  *
- * @see http://schema.org/ArtGallery
+ * @see 
  */
 class ArtGallery extends EntertainmentBusiness
 {

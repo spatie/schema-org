@@ -12,7 +12,7 @@ namespace Spatie\SchemaOrg;
  * unregistering from a service you werer previously registered, rather than
  * leaving a team/group of people.
  *
- * @see http://schema.org/UnRegisterAction
+ * @see 
  */
 class UnRegisterAction extends InteractAction
 {

@@ -5,7 +5,7 @@ namespace Spatie\SchemaOrg;
 /**
  * A review of an item - for example, of a restaurant, movie, or store.
  *
- * @see http://schema.org/Review
+ * @see 
  */
 class Review extends CreativeWork
 {
@@ -16,25 +16,11 @@ class Review extends CreativeWork
      *
      * @return static
      *
-     * @see http://schema.org/itemReviewed
+     * @see 
      */
     public function itemReviewed($itemReviewed)
     {
         return $this->setProperty('itemReviewed', $itemReviewed);
-    }
-
-    /**
-     * The actual body of the review.
-     *
-     * @param string|string[] $reviewBody
-     *
-     * @return static
-     *
-     * @see http://schema.org/reviewBody
-     */
-    public function reviewBody($reviewBody)
-    {
-        return $this->setProperty('reviewBody', $reviewBody);
     }
 
     /**
@@ -47,11 +33,25 @@ class Review extends CreativeWork
      *
      * @return static
      *
-     * @see http://schema.org/reviewRating
+     * @see 
      */
     public function reviewRating($reviewRating)
     {
         return $this->setProperty('reviewRating', $reviewRating);
+    }
+
+    /**
+     * The actual body of the review.
+     *
+     * @param string|string[] $reviewBody
+     *
+     * @return static
+     *
+     * @see 
+     */
+    public function reviewBody($reviewBody)
+    {
+        return $this->setProperty('reviewBody', $reviewBody);
     }
 
 }

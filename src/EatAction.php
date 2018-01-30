@@ -5,7 +5,7 @@ namespace Spatie\SchemaOrg;
 /**
  * The act of swallowing solid objects.
  *
- * @see http://schema.org/EatAction
+ * @see 
  */
 class EatAction extends ConsumeAction
 {

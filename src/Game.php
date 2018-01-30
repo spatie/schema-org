@@ -7,10 +7,25 @@ namespace Spatie\SchemaOrg;
  * rule-governed recreational activities, e.g. role-playing games in which
  * players assume the role of characters in a fictional setting.
  *
- * @see http://schema.org/Game
+ * @see 
  */
 class Game extends CreativeWork
 {
+    /**
+     * An item is an object within the game world that can be collected by a
+     * player or, occasionally, a non-player character.
+     *
+     * @param Thing|Thing[] $gameItem
+     *
+     * @return static
+     *
+     * @see 
+     */
+    public function gameItem($gameItem)
+    {
+        return $this->setProperty('gameItem', $gameItem);
+    }
+
     /**
      * Indicate how many people can play this game (minimum, maximum, or range).
      *
@@ -18,7 +33,7 @@ class Game extends CreativeWork
      *
      * @return static
      *
-     * @see http://schema.org/numberOfPlayers
+     * @see 
      */
     public function numberOfPlayers($numberOfPlayers)
     {
@@ -33,26 +48,11 @@ class Game extends CreativeWork
      *
      * @return static
      *
-     * @see http://schema.org/quest
+     * @see 
      */
     public function quest($quest)
     {
         return $this->setProperty('quest', $quest);
-    }
-
-    /**
-     * An item is an object within the game world that can be collected by a
-     * player or, occasionally, a non-player character.
-     *
-     * @param Thing|Thing[] $gameItem
-     *
-     * @return static
-     *
-     * @see http://schema.org/gameItem
-     */
-    public function gameItem($gameItem)
-    {
-        return $this->setProperty('gameItem', $gameItem);
     }
 
     /**
@@ -63,7 +63,7 @@ class Game extends CreativeWork
      *
      * @return static
      *
-     * @see http://schema.org/characterAttribute
+     * @see 
      */
     public function characterAttribute($characterAttribute)
     {
@@ -77,7 +77,7 @@ class Game extends CreativeWork
      *
      * @return static
      *
-     * @see http://schema.org/gameLocation
+     * @see 
      */
     public function gameLocation($gameLocation)
     {

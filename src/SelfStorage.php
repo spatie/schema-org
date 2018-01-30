@@ -5,7 +5,7 @@ namespace Spatie\SchemaOrg;
 /**
  * A self-storage facility.
  *
- * @see http://schema.org/SelfStorage
+ * @see 
  */
 class SelfStorage extends LocalBusiness
 {

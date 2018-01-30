@@ -5,7 +5,7 @@ namespace Spatie\SchemaOrg;
 /**
  * The act of inserting at the end if an ordered collection.
  *
- * @see http://schema.org/AppendAction
+ * @see 
  */
 class AppendAction extends InsertAction
 {

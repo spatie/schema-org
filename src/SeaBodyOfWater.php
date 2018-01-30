@@ -5,7 +5,7 @@ namespace Spatie\SchemaOrg;
 /**
  * A sea (for example, the Caspian sea).
  *
- * @see http://schema.org/SeaBodyOfWater
+ * @see 
  */
 class SeaBodyOfWater extends BodyOfWater
 {

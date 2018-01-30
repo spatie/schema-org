@@ -5,7 +5,7 @@ namespace Spatie\SchemaOrg;
 /**
  * Enumerated options related to a ContactPoint.
  *
- * @see http://schema.org/ContactPointOption
+ * @see 
  */
 class ContactPointOption extends Enumeration
 {

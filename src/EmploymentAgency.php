@@ -5,7 +5,7 @@ namespace Spatie\SchemaOrg;
 /**
  * An employment agency.
  *
- * @see http://schema.org/EmploymentAgency
+ * @see 
  */
 class EmploymentAgency extends LocalBusiness
 {

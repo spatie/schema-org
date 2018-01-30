@@ -6,7 +6,7 @@ namespace Spatie\SchemaOrg;
  * A summary of how users have interacted with this CreativeWork. In most cases,
  * authors will use a subtype to specify the specific type of interaction.
  *
- * @see http://schema.org/InteractionCounter
+ * @see 
  */
 class InteractionCounter extends StructuredValue
 {
@@ -19,7 +19,7 @@ class InteractionCounter extends StructuredValue
      *
      * @return static
      *
-     * @see http://schema.org/interactionType
+     * @see 
      */
     public function interactionType($interactionType)
     {

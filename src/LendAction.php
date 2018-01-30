@@ -10,7 +10,7 @@ namespace Spatie\SchemaOrg;
  * 
  * * [[BorrowAction]]: Reciprocal of LendAction.
  *
- * @see http://schema.org/LendAction
+ * @see 
  */
 class LendAction extends TransferAction
 {
@@ -22,7 +22,7 @@ class LendAction extends TransferAction
      *
      * @return static
      *
-     * @see http://schema.org/borrower
+     * @see 
      */
     public function borrower($borrower)
     {

@@ -12,27 +12,10 @@ namespace Spatie\SchemaOrg;
  * See also the <a href="/docs/hotels.html">dedicated document on the use of
  * schema.org for marking up hotels and other forms of accommodations</a>.
  *
- * @see http://schema.org/Accommodation
+ * @see 
  */
 class Accommodation extends Place
 {
-    /**
-     * An amenity feature (e.g. a characteristic or service) of the
-     * Accommodation. This generic property does not make a statement about
-     * whether the feature is included in an offer for the main accommodation or
-     * available at extra costs.
-     *
-     * @param LocationFeatureSpecification|LocationFeatureSpecification[] $amenityFeature
-     *
-     * @return static
-     *
-     * @see http://schema.org/amenityFeature
-     */
-    public function amenityFeature($amenityFeature)
-    {
-        return $this->setProperty('amenityFeature', $amenityFeature);
-    }
-
     /**
      * The number of rooms (excluding bathrooms and closets) of the
      * acccommodation or lodging business.
@@ -43,11 +26,43 @@ class Accommodation extends Place
      *
      * @return static
      *
-     * @see http://schema.org/numberOfRooms
+     * @see 
      */
     public function numberOfRooms($numberOfRooms)
     {
         return $this->setProperty('numberOfRooms', $numberOfRooms);
+    }
+
+    /**
+     * Indicates whether pets are allowed to enter the accommodation or lodging
+     * business. More detailed information can be put in a text value.
+     *
+     * @param bool|bool[]|string|string[] $petsAllowed
+     *
+     * @return static
+     *
+     * @see 
+     */
+    public function petsAllowed($petsAllowed)
+    {
+        return $this->setProperty('petsAllowed', $petsAllowed);
+    }
+
+    /**
+     * An amenity feature (e.g. a characteristic or service) of the
+     * Accommodation. This generic property does not make a statement about
+     * whether the feature is included in an offer for the main accommodation or
+     * available at extra costs.
+     *
+     * @param LocationFeatureSpecification|LocationFeatureSpecification[] $amenityFeature
+     *
+     * @return static
+     *
+     * @see 
+     */
+    public function amenityFeature($amenityFeature)
+    {
+        return $this->setProperty('amenityFeature', $amenityFeature);
     }
 
     /**
@@ -59,7 +74,7 @@ class Accommodation extends Place
      *
      * @return static
      *
-     * @see http://schema.org/floorSize
+     * @see 
      */
     public function floorSize($floorSize)
     {
@@ -73,26 +88,11 @@ class Accommodation extends Place
      *
      * @return static
      *
-     * @see http://schema.org/permittedUsage
+     * @see 
      */
     public function permittedUsage($permittedUsage)
     {
         return $this->setProperty('permittedUsage', $permittedUsage);
-    }
-
-    /**
-     * Indicates whether pets are allowed to enter the accommodation or lodging
-     * business. More detailed information can be put in a text value.
-     *
-     * @param bool|bool[]|string|string[] $petsAllowed
-     *
-     * @return static
-     *
-     * @see http://schema.org/petsAllowed
-     */
-    public function petsAllowed($petsAllowed)
-    {
-        return $this->setProperty('petsAllowed', $petsAllowed);
     }
 
 }

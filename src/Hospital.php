@@ -5,7 +5,7 @@ namespace Spatie\SchemaOrg;
 /**
  * A hospital.
  *
- * @see http://schema.org/Hospital
+ * @see 
  */
 class Hospital extends CivicStructure
 {

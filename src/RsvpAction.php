@@ -6,7 +6,7 @@ namespace Spatie\SchemaOrg;
  * The act of notifying an event organizer as to whether you expect to attend
  * the event.
  *
- * @see http://schema.org/RsvpAction
+ * @see 
  */
 class RsvpAction extends InformAction
 {
@@ -18,7 +18,7 @@ class RsvpAction extends InformAction
      *
      * @return static
      *
-     * @see http://schema.org/additionalNumberOfGuests
+     * @see 
      */
     public function additionalNumberOfGuests($additionalNumberOfGuests)
     {
@@ -32,7 +32,7 @@ class RsvpAction extends InformAction
      *
      * @return static
      *
-     * @see http://schema.org/rsvpResponse
+     * @see 
      */
     public function rsvpResponse($rsvpResponse)
     {
@@ -46,7 +46,7 @@ class RsvpAction extends InformAction
      *
      * @return static
      *
-     * @see http://schema.org/comment
+     * @see 
      */
     public function comment($comment)
     {

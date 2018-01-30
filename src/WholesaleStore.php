@@ -5,7 +5,7 @@ namespace Spatie\SchemaOrg;
 /**
  * A wholesale store.
  *
- * @see http://schema.org/WholesaleStore
+ * @see 
  */
 class WholesaleStore extends Store
 {

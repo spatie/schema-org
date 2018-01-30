@@ -6,25 +6,10 @@ namespace Spatie\SchemaOrg;
  * A predefined value for a product characteristic, e.g. the power cord plug
  * type 'US' or the garment sizes 'S', 'M', 'L', and 'XL'.
  *
- * @see http://schema.org/QualitativeValue
+ * @see 
  */
 class QualitativeValue extends Enumeration
 {
-    /**
-     * This ordering relation for qualitative values indicates that the subject
-     * is equal to the object.
-     *
-     * @param QualitativeValue|QualitativeValue[] $equal
-     *
-     * @return static
-     *
-     * @see http://schema.org/equal
-     */
-    public function equal($equal)
-    {
-        return $this->setProperty('equal', $equal);
-    }
-
     /**
      * This ordering relation for qualitative values indicates that the subject
      * is greater than the object.
@@ -33,7 +18,7 @@ class QualitativeValue extends Enumeration
      *
      * @return static
      *
-     * @see http://schema.org/greater
+     * @see 
      */
     public function greater($greater)
     {
@@ -48,7 +33,7 @@ class QualitativeValue extends Enumeration
      *
      * @return static
      *
-     * @see http://schema.org/greaterOrEqual
+     * @see 
      */
     public function greaterOrEqual($greaterOrEqual)
     {
@@ -57,17 +42,17 @@ class QualitativeValue extends Enumeration
 
     /**
      * This ordering relation for qualitative values indicates that the subject
-     * is lesser than the object.
+     * is equal to the object.
      *
-     * @param QualitativeValue|QualitativeValue[] $lesser
+     * @param QualitativeValue|QualitativeValue[] $equal
      *
      * @return static
      *
-     * @see http://schema.org/lesser
+     * @see 
      */
-    public function lesser($lesser)
+    public function equal($equal)
     {
-        return $this->setProperty('lesser', $lesser);
+        return $this->setProperty('equal', $equal);
     }
 
     /**
@@ -78,11 +63,26 @@ class QualitativeValue extends Enumeration
      *
      * @return static
      *
-     * @see http://schema.org/lesserOrEqual
+     * @see 
      */
     public function lesserOrEqual($lesserOrEqual)
     {
         return $this->setProperty('lesserOrEqual', $lesserOrEqual);
+    }
+
+    /**
+     * This ordering relation for qualitative values indicates that the subject
+     * is lesser than the object.
+     *
+     * @param QualitativeValue|QualitativeValue[] $lesser
+     *
+     * @return static
+     *
+     * @see 
+     */
+    public function lesser($lesser)
+    {
+        return $this->setProperty('lesser', $lesser);
     }
 
     /**
@@ -93,7 +93,7 @@ class QualitativeValue extends Enumeration
      *
      * @return static
      *
-     * @see http://schema.org/nonEqual
+     * @see 
      */
     public function nonEqual($nonEqual)
     {
@@ -108,7 +108,7 @@ class QualitativeValue extends Enumeration
      *
      * @return static
      *
-     * @see http://schema.org/valueReference
+     * @see 
      */
     public function valueReference($valueReference)
     {
@@ -130,7 +130,7 @@ class QualitativeValue extends Enumeration
      *
      * @return static
      *
-     * @see http://schema.org/additionalProperty
+     * @see 
      */
     public function additionalProperty($additionalProperty)
     {

@@ -5,7 +5,7 @@ namespace Spatie\SchemaOrg;
 /**
  * A statement of the money due for goods or services; a bill.
  *
- * @see http://schema.org/Invoice
+ * @see 
  */
 class Invoice extends Intangible
 {
@@ -17,7 +17,7 @@ class Invoice extends Intangible
      *
      * @return static
      *
-     * @see http://schema.org/category
+     * @see 
      */
     public function category($category)
     {
@@ -31,7 +31,7 @@ class Invoice extends Intangible
      *
      * @return static
      *
-     * @see http://schema.org/confirmationNumber
+     * @see 
      */
     public function confirmationNumber($confirmationNumber)
     {
@@ -45,39 +45,11 @@ class Invoice extends Intangible
      *
      * @return static
      *
-     * @see http://schema.org/customer
+     * @see 
      */
     public function customer($customer)
     {
         return $this->setProperty('customer', $customer);
-    }
-
-    /**
-     * The date that payment is due.
-     *
-     * @param \DateTimeInterface|\DateTimeInterface[] $paymentDue
-     *
-     * @return static
-     *
-     * @see http://schema.org/paymentDue
-     */
-    public function paymentDue($paymentDue)
-    {
-        return $this->setProperty('paymentDue', $paymentDue);
-    }
-
-    /**
-     * The name of the credit card or other method of payment for the order.
-     *
-     * @param PaymentMethod|PaymentMethod[] $paymentMethod
-     *
-     * @return static
-     *
-     * @see http://schema.org/paymentMethod
-     */
-    public function paymentMethod($paymentMethod)
-    {
-        return $this->setProperty('paymentMethod', $paymentMethod);
     }
 
     /**
@@ -88,11 +60,39 @@ class Invoice extends Intangible
      *
      * @return static
      *
-     * @see http://schema.org/paymentMethodId
+     * @see 
      */
     public function paymentMethodId($paymentMethodId)
     {
         return $this->setProperty('paymentMethodId', $paymentMethodId);
+    }
+
+    /**
+     * The name of the credit card or other method of payment for the order.
+     *
+     * @param PaymentMethod|PaymentMethod[] $paymentMethod
+     *
+     * @return static
+     *
+     * @see 
+     */
+    public function paymentMethod($paymentMethod)
+    {
+        return $this->setProperty('paymentMethod', $paymentMethod);
+    }
+
+    /**
+     * The date that payment is due.
+     *
+     * @param \DateTimeInterface|\DateTimeInterface[] $paymentDue
+     *
+     * @return static
+     *
+     * @see 
+     */
+    public function paymentDue($paymentDue)
+    {
+        return $this->setProperty('paymentDue', $paymentDue);
     }
 
     /**
@@ -102,7 +102,7 @@ class Invoice extends Intangible
      *
      * @return static
      *
-     * @see http://schema.org/paymentDueDate
+     * @see 
      */
     public function paymentDueDate($paymentDueDate)
     {
@@ -118,7 +118,7 @@ class Invoice extends Intangible
      *
      * @return static
      *
-     * @see http://schema.org/provider
+     * @see 
      */
     public function provider($provider)
     {
@@ -135,7 +135,7 @@ class Invoice extends Intangible
      *
      * @return static
      *
-     * @see http://schema.org/broker
+     * @see 
      */
     public function broker($broker)
     {
@@ -149,7 +149,7 @@ class Invoice extends Intangible
      *
      * @return static
      *
-     * @see http://schema.org/totalPaymentDue
+     * @see 
      */
     public function totalPaymentDue($totalPaymentDue)
     {
@@ -163,39 +163,11 @@ class Invoice extends Intangible
      *
      * @return static
      *
-     * @see http://schema.org/minimumPaymentDue
+     * @see 
      */
     public function minimumPaymentDue($minimumPaymentDue)
     {
         return $this->setProperty('minimumPaymentDue', $minimumPaymentDue);
-    }
-
-    /**
-     * The identifier for the account the payment will be applied to.
-     *
-     * @param string|string[] $accountId
-     *
-     * @return static
-     *
-     * @see http://schema.org/accountId
-     */
-    public function accountId($accountId)
-    {
-        return $this->setProperty('accountId', $accountId);
-    }
-
-    /**
-     * The date the invoice is scheduled to be paid.
-     *
-     * @param \DateTimeInterface|\DateTimeInterface[] $scheduledPaymentDate
-     *
-     * @return static
-     *
-     * @see http://schema.org/scheduledPaymentDate
-     */
-    public function scheduledPaymentDate($scheduledPaymentDate)
-    {
-        return $this->setProperty('scheduledPaymentDate', $scheduledPaymentDate);
     }
 
     /**
@@ -205,7 +177,7 @@ class Invoice extends Intangible
      *
      * @return static
      *
-     * @see http://schema.org/billingPeriod
+     * @see 
      */
     public function billingPeriod($billingPeriod)
     {
@@ -219,11 +191,25 @@ class Invoice extends Intangible
      *
      * @return static
      *
-     * @see http://schema.org/paymentStatus
+     * @see 
      */
     public function paymentStatus($paymentStatus)
     {
         return $this->setProperty('paymentStatus', $paymentStatus);
+    }
+
+    /**
+     * The date the invoice is scheduled to be paid.
+     *
+     * @param \DateTimeInterface|\DateTimeInterface[] $scheduledPaymentDate
+     *
+     * @return static
+     *
+     * @see 
+     */
+    public function scheduledPaymentDate($scheduledPaymentDate)
+    {
+        return $this->setProperty('scheduledPaymentDate', $scheduledPaymentDate);
     }
 
     /**
@@ -234,11 +220,25 @@ class Invoice extends Intangible
      *
      * @return static
      *
-     * @see http://schema.org/referencesOrder
+     * @see 
      */
     public function referencesOrder($referencesOrder)
     {
         return $this->setProperty('referencesOrder', $referencesOrder);
+    }
+
+    /**
+     * The identifier for the account the payment will be applied to.
+     *
+     * @param string|string[] $accountId
+     *
+     * @return static
+     *
+     * @see 
+     */
+    public function accountId($accountId)
+    {
+        return $this->setProperty('accountId', $accountId);
     }
 
 }

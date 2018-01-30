@@ -7,7 +7,7 @@ namespace Spatie\SchemaOrg;
  * ticket; the rental of a car; a haircut; or an episode of a TV show streamed
  * online.
  *
- * @see http://schema.org/Product
+ * @see 
  */
 class Product extends Thing
 {
@@ -19,7 +19,7 @@ class Product extends Thing
      *
      * @return static
      *
-     * @see http://schema.org/aggregateRating
+     * @see 
      */
     public function aggregateRating($aggregateRating)
     {
@@ -33,7 +33,7 @@ class Product extends Thing
      *
      * @return static
      *
-     * @see http://schema.org/audience
+     * @see 
      */
     public function audience($audience)
     {
@@ -47,7 +47,7 @@ class Product extends Thing
      *
      * @return static
      *
-     * @see http://schema.org/award
+     * @see 
      */
     public function award($award)
     {
@@ -61,7 +61,7 @@ class Product extends Thing
      *
      * @return static
      *
-     * @see http://schema.org/awards
+     * @see 
      */
     public function awards($awards)
     {
@@ -76,7 +76,7 @@ class Product extends Thing
      *
      * @return static
      *
-     * @see http://schema.org/brand
+     * @see 
      */
     public function brand($brand)
     {
@@ -91,7 +91,7 @@ class Product extends Thing
      *
      * @return static
      *
-     * @see http://schema.org/category
+     * @see 
      */
     public function category($category)
     {
@@ -105,7 +105,7 @@ class Product extends Thing
      *
      * @return static
      *
-     * @see http://schema.org/color
+     * @see 
      */
     public function color($color)
     {
@@ -119,7 +119,7 @@ class Product extends Thing
      *
      * @return static
      *
-     * @see http://schema.org/depth
+     * @see 
      */
     public function depth($depth)
     {
@@ -138,31 +138,11 @@ class Product extends Thing
      *
      * @return static
      *
-     * @see http://schema.org/gtin12
+     * @see 
      */
     public function gtin12($gtin12)
     {
         return $this->setProperty('gtin12', $gtin12);
-    }
-
-    /**
-     * The [GTIN-13](http://apps.gs1.org/GDD/glossary/Pages/GTIN-13.aspx) code
-     * of the product, or the product to which the offer refers. This is
-     * equivalent to 13-digit ISBN codes and EAN UCC-13. Former 12-digit UPC
-     * codes can be converted into a GTIN-13 code by simply adding a preceeding
-     * zero. See [GS1 GTIN
-     * Summary](http://www.gs1.org/barcodes/technical/idkeys/gtin) for more
-     * details.
-     *
-     * @param string|string[] $gtin13
-     *
-     * @return static
-     *
-     * @see http://schema.org/gtin13
-     */
-    public function gtin13($gtin13)
-    {
-        return $this->setProperty('gtin13', $gtin13);
     }
 
     /**
@@ -175,7 +155,7 @@ class Product extends Thing
      *
      * @return static
      *
-     * @see http://schema.org/gtin14
+     * @see 
      */
     public function gtin14($gtin14)
     {
@@ -193,11 +173,31 @@ class Product extends Thing
      *
      * @return static
      *
-     * @see http://schema.org/gtin8
+     * @see 
      */
     public function gtin8($gtin8)
     {
         return $this->setProperty('gtin8', $gtin8);
+    }
+
+    /**
+     * The [GTIN-13](http://apps.gs1.org/GDD/glossary/Pages/GTIN-13.aspx) code
+     * of the product, or the product to which the offer refers. This is
+     * equivalent to 13-digit ISBN codes and EAN UCC-13. Former 12-digit UPC
+     * codes can be converted into a GTIN-13 code by simply adding a preceeding
+     * zero. See [GS1 GTIN
+     * Summary](http://www.gs1.org/barcodes/technical/idkeys/gtin) for more
+     * details.
+     *
+     * @param string|string[] $gtin13
+     *
+     * @return static
+     *
+     * @see 
+     */
+    public function gtin13($gtin13)
+    {
+        return $this->setProperty('gtin13', $gtin13);
     }
 
     /**
@@ -207,7 +207,7 @@ class Product extends Thing
      *
      * @return static
      *
-     * @see http://schema.org/height
+     * @see 
      */
     public function height($height)
     {
@@ -222,55 +222,11 @@ class Product extends Thing
      *
      * @return static
      *
-     * @see http://schema.org/isAccessoryOrSparePartFor
+     * @see 
      */
     public function isAccessoryOrSparePartFor($isAccessoryOrSparePartFor)
     {
         return $this->setProperty('isAccessoryOrSparePartFor', $isAccessoryOrSparePartFor);
-    }
-
-    /**
-     * A pointer to another product (or multiple products) for which this
-     * product is a consumable.
-     *
-     * @param Product|Product[] $isConsumableFor
-     *
-     * @return static
-     *
-     * @see http://schema.org/isConsumableFor
-     */
-    public function isConsumableFor($isConsumableFor)
-    {
-        return $this->setProperty('isConsumableFor', $isConsumableFor);
-    }
-
-    /**
-     * A pointer to another, somehow related product (or multiple products).
-     *
-     * @param Product|Product[]|Service|Service[] $isRelatedTo
-     *
-     * @return static
-     *
-     * @see http://schema.org/isRelatedTo
-     */
-    public function isRelatedTo($isRelatedTo)
-    {
-        return $this->setProperty('isRelatedTo', $isRelatedTo);
-    }
-
-    /**
-     * A pointer to another, functionally similar product (or multiple
-     * products).
-     *
-     * @param Product|Product[]|Service|Service[] $isSimilarTo
-     *
-     * @return static
-     *
-     * @see http://schema.org/isSimilarTo
-     */
-    public function isSimilarTo($isSimilarTo)
-    {
-        return $this->setProperty('isSimilarTo', $isSimilarTo);
     }
 
     /**
@@ -282,11 +238,55 @@ class Product extends Thing
      *
      * @return static
      *
-     * @see http://schema.org/itemCondition
+     * @see 
      */
     public function itemCondition($itemCondition)
     {
         return $this->setProperty('itemCondition', $itemCondition);
+    }
+
+    /**
+     * A pointer to another, functionally similar product (or multiple
+     * products).
+     *
+     * @param Product|Product[]|Service|Service[] $isSimilarTo
+     *
+     * @return static
+     *
+     * @see 
+     */
+    public function isSimilarTo($isSimilarTo)
+    {
+        return $this->setProperty('isSimilarTo', $isSimilarTo);
+    }
+
+    /**
+     * A pointer to another, somehow related product (or multiple products).
+     *
+     * @param Product|Product[]|Service|Service[] $isRelatedTo
+     *
+     * @return static
+     *
+     * @see 
+     */
+    public function isRelatedTo($isRelatedTo)
+    {
+        return $this->setProperty('isRelatedTo', $isRelatedTo);
+    }
+
+    /**
+     * A pointer to another product (or multiple products) for which this
+     * product is a consumable.
+     *
+     * @param Product|Product[] $isConsumableFor
+     *
+     * @return static
+     *
+     * @see 
+     */
+    public function isConsumableFor($isConsumableFor)
+    {
+        return $this->setProperty('isConsumableFor', $isConsumableFor);
     }
 
     /**
@@ -296,7 +296,7 @@ class Product extends Thing
      *
      * @return static
      *
-     * @see http://schema.org/logo
+     * @see 
      */
     public function logo($logo)
     {
@@ -314,11 +314,25 @@ class Product extends Thing
      *
      * @return static
      *
-     * @see http://schema.org/model
+     * @see 
      */
     public function model($model)
     {
         return $this->setProperty('model', $model);
+    }
+
+    /**
+     * The manufacturer of the product.
+     *
+     * @param Organization|Organization[] $manufacturer
+     *
+     * @return static
+     *
+     * @see 
+     */
+    public function manufacturer($manufacturer)
+    {
+        return $this->setProperty('manufacturer', $manufacturer);
     }
 
     /**
@@ -329,25 +343,11 @@ class Product extends Thing
      *
      * @return static
      *
-     * @see http://schema.org/mpn
+     * @see 
      */
     public function mpn($mpn)
     {
         return $this->setProperty('mpn', $mpn);
-    }
-
-    /**
-     * The manufacturer of the product.
-     *
-     * @param Organization|Organization[] $manufacturer
-     *
-     * @return static
-     *
-     * @see http://schema.org/manufacturer
-     */
-    public function manufacturer($manufacturer)
-    {
-        return $this->setProperty('manufacturer', $manufacturer);
     }
 
     /**
@@ -359,7 +359,7 @@ class Product extends Thing
      *
      * @return static
      *
-     * @see http://schema.org/offers
+     * @see 
      */
     public function offers($offers)
     {
@@ -374,7 +374,7 @@ class Product extends Thing
      *
      * @return static
      *
-     * @see http://schema.org/productID
+     * @see 
      */
     public function productID($productID)
     {
@@ -389,7 +389,7 @@ class Product extends Thing
      *
      * @return static
      *
-     * @see http://schema.org/releaseDate
+     * @see 
      */
     public function releaseDate($releaseDate)
     {
@@ -403,7 +403,7 @@ class Product extends Thing
      *
      * @return static
      *
-     * @see http://schema.org/review
+     * @see 
      */
     public function review($review)
     {
@@ -417,7 +417,7 @@ class Product extends Thing
      *
      * @return static
      *
-     * @see http://schema.org/reviews
+     * @see 
      */
     public function reviews($reviews)
     {
@@ -432,7 +432,7 @@ class Product extends Thing
      *
      * @return static
      *
-     * @see http://schema.org/sku
+     * @see 
      */
     public function sku($sku)
     {
@@ -446,7 +446,7 @@ class Product extends Thing
      *
      * @return static
      *
-     * @see http://schema.org/weight
+     * @see 
      */
     public function weight($weight)
     {
@@ -460,7 +460,7 @@ class Product extends Thing
      *
      * @return static
      *
-     * @see http://schema.org/width
+     * @see 
      */
     public function width($width)
     {
@@ -475,7 +475,7 @@ class Product extends Thing
      *
      * @return static
      *
-     * @see http://schema.org/material
+     * @see 
      */
     public function material($material)
     {
@@ -497,7 +497,7 @@ class Product extends Thing
      *
      * @return static
      *
-     * @see http://schema.org/additionalProperty
+     * @see 
      */
     public function additionalProperty($additionalProperty)
     {
@@ -511,7 +511,7 @@ class Product extends Thing
      *
      * @return static
      *
-     * @see http://schema.org/productionDate
+     * @see 
      */
     public function productionDate($productionDate)
     {
@@ -525,7 +525,7 @@ class Product extends Thing
      *
      * @return static
      *
-     * @see http://schema.org/purchaseDate
+     * @see 
      */
     public function purchaseDate($purchaseDate)
     {

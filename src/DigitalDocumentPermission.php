@@ -5,10 +5,24 @@ namespace Spatie\SchemaOrg;
 /**
  * A permission for a particular person or group to access a particular file.
  *
- * @see http://schema.org/DigitalDocumentPermission
+ * @see 
  */
 class DigitalDocumentPermission extends Intangible
 {
+    /**
+     * The type of permission granted the person, organization, or audience.
+     *
+     * @param DocumentPermissionType|DocumentPermissionType[] $permissionType
+     *
+     * @return static
+     *
+     * @see 
+     */
+    public function permissionType($permissionType)
+    {
+        return $this->setProperty('permissionType', $permissionType);
+    }
+
     /**
      * The person, organization, contact point, or audience that has been
      * granted this permission.
@@ -17,25 +31,11 @@ class DigitalDocumentPermission extends Intangible
      *
      * @return static
      *
-     * @see http://schema.org/grantee
+     * @see 
      */
     public function grantee($grantee)
     {
         return $this->setProperty('grantee', $grantee);
-    }
-
-    /**
-     * The type of permission granted the person, organization, or audience.
-     *
-     * @param DocumentPermissionType|DocumentPermissionType[] $permissionType
-     *
-     * @return static
-     *
-     * @see http://schema.org/permissionType
-     */
-    public function permissionType($permissionType)
-    {
-        return $this->setProperty('permissionType', $permissionType);
     }
 
 }
