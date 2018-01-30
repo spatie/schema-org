@@ -2,7 +2,6 @@
 
 namespace Spatie\SchemaOrg\Generator\Parser;
 
-use Spatie\Async\Pool;
 use Spatie\SchemaOrg\Generator\Type;
 use Spatie\SchemaOrg\Generator\Property;
 use Symfony\Component\DomCrawler\Crawler;
@@ -15,45 +14,26 @@ class DefinitionParser
 {
     public function parse(Definitions $definitions): TypeCollection
     {
-        $pool = Pool::create();
-
-        $tasks = [];
-
-        $definitions
+        $types = $definitions
             ->query('[typeof="rdfs:Class"]')
-            ->each(function (Crawler $crawler) use (&$tasks) {
-                $tasks[] = new ParseType($crawler->html());
+            ->each(function (Crawler $crawler) {
+                $node = $crawler->getNode(0);
+                $html = $node->ownerDocument->saveHTML($node);
+
+                return call_user_func(new ParseType($html));
             });
 
-        $definitions
+        $properties = $definitions
             ->query('[typeof="rdf:Property"]')
-            ->each(function (Crawler $crawler) use (&$tasks) {
-                $tasks[] = new ParseProperty($crawler->html());
+            ->each(function (Crawler $crawler) use (&$properties) {
+                $node = $crawler->getNode(0);
+                $html = $node->ownerDocument->saveHTML($node);
+
+                return call_user_func(new ParseProperty($html));
             });
 
-        foreach (array_chunk($tasks, 100) as $chunk) {
-            $pool->add(function () use ($chunk) {
-                return array_map(function ($task) {
-                    return call_user_func($task);
-                }, $chunk);
-            });
-        }
-
-        $types = [];
-        $properties = [];
-
-        foreach ($pool->wait() as $results) {
-            foreach ($results as $result) {
-                if ($result instanceof Type) {
-                    $types[] = $result;
-                }
-
-                if ($result instanceof Property) {
-                    $properties[] = $result;
-                }
-            }
-        }
-
-        return new TypeCollection($types, $properties);
+        return new TypeCollection(
+            array_filter($types), array_filter($properties)
+        );
     }
 }

@@ -20,7 +20,7 @@ class ParseProperty
 
     public function __invoke(): ?Property
     {
-        $node = new Crawler($this->definition);
+        $node = new Crawler('<div>'.$this->definition.'</div>');
 
         $property = new Property();
 
@@ -31,6 +31,7 @@ class ParseProperty
         }
 
         $property->description = $this->getText($node, '[property="rdfs:comment"]');
+
         $property->resource = $this->getAttribute($node, 'resource');
 
         $node
