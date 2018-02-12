@@ -13,8 +13,16 @@ class Property
     /** @var string */
     public $resource;
 
+    /** var array */
+    public $types = [];
+
     /** @var array */
     public $ranges = [];
+
+    public function addType(string $type)
+    {
+        $this->types[] = $type;
+    }
 
     public function addRanges(array $ranges)
     {

@@ -2,22 +2,21 @@
 
 namespace Spatie\SchemaOrg\Generator\Console;
 
+use Spatie\SchemaOrg\Generator\Definitions;
 use Symfony\Component\Console\Command\Command;
 use Spatie\SchemaOrg\Generator\PackageGenerator;
-use Symfony\Component\Console\Input\InputArgument;
+use Symfony\Component\Console\Input\InputOption;
 use Symfony\Component\Console\Input\InputInterface;
 use Symfony\Component\Console\Output\OutputInterface;
 
 class GenerateCommand extends Command
 {
-    const SOURCE = 'https://raw.githubusercontent.com/schemaorg/schemaorg/sdo-callisto/data/schema.rdfa';
-
     protected function configure()
     {
         $this
             ->setName('generate')
             ->setDescription('Generate the package code from the schema.org docs')
-            ->addArgument('source', InputArgument::OPTIONAL, 'Path to the RDFa source file', static::SOURCE);
+            ->addOption('local', 'l', InputOption::VALUE_NONE, 'Use a cached version of the source');
     }
 
     /**
@@ -32,13 +31,15 @@ class GenerateCommand extends Command
 
         $generator = new PackageGenerator();
 
-        $generator->generate(
-            file_get_contents($input->getArgument('source'))
-        );
+        $definitions = new Definitions([
+            'core' => 'https://raw.githubusercontent.com/schemaorg/schemaorg/sdo-callisto/data/schema.rdfa',
+        ]);
 
-        $output->writeln('Fresh package generated! Linting...');
+        if (! $input->getOption('local')) {
+            $definitions->preload();
+        }
 
-        exec('find src -exec php -l {} \; | grep "!(No syntax)"');
+        $generator->generate($definitions);
 
         $output->writeln('Done!');
 

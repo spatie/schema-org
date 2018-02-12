@@ -5,25 +5,32 @@ namespace Spatie\SchemaOrg\Generator;
 class TypeCollection
 {
     /** @var array */
-    protected $types = [];
+    private $types = [];
 
-    public function push(Type $type)
+    public function __construct(array $types, array $properties)
     {
-        $this->types[$type->name] = $type;
-    }
+        $typeNames = array_map(function (Type $type) {
+            return $type->name;
+        }, $types);
 
-    public function sort()
-    {
+        $this->types = array_combine($typeNames, $types);
+
         ksort($this->types);
+
+        foreach ($properties as $property) {
+            $this->addProperty($property);
+        }
     }
 
-    public function addPropertyToType(Property $property, string $type)
+    private function addProperty(Property $property)
     {
-        if (! isset($this->types[$type])) {
-            return;
-        }
+        foreach ($property->types as $type) {
+            if (! isset($this->types[$type])) {
+                continue;
+            }
 
-        $this->types[$type]->addProperty($property);
+            $this->types[$type]->addProperty($property);
+        }
     }
 
     public function each($callable)
