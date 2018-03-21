@@ -79,7 +79,7 @@ abstract class BaseType implements Type
         }
 
         if ($property instanceof DateTimeInterface) {
-            $property = $property->format(DateTime::ISO8601);
+            $property = $property->format(DateTime::ATOM);
         }
 
         if (is_object($property)) {
