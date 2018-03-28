@@ -2,6 +2,9 @@
 
 All Notable changes to `schema-org` will be documented in this file.
 
+## 1.4.2 - 2018-03-28
+- Fixed: Date format in schemas is now ISO8601 (`DateTime::ATOM`)
+
 # 1.4.1 - 2017-12-11
 - Fixed: `@param` hints for numbers (`float|int`)
 
