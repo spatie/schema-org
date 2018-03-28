@@ -105,7 +105,7 @@ class BaseTypeTest extends TestCase
         $expected = [
             '@context' => 'http://schema.org',
             '@type' => 'DummyType',
-            'dateCreated' => '2017-01-01T00:00:00+0000',
+            'dateCreated' => '2017-01-01T00:00:00+00:00',
         ];
 
         $this->assertEquals($expected, $type->toArray());
