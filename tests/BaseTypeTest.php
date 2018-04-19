@@ -229,6 +229,30 @@ class BaseTypeTest extends TestCase
 
         $this->assertEquals('bar', $type['foo']);
     }
+
+    /** @test */
+    public function it_can_be_json_serialized()
+    {
+        $type = new DummyType();
+        $child = new DummyType();
+        $child->setProperty('bar', 'baz');
+
+        $type->setProperty('foo', 'bar');
+        $type->setProperty('child', $child);
+
+        $expected = [
+            '@context' => 'http://schema.org',
+            '@type' => 'DummyType',
+            'foo' => 'bar',
+            'child' => [
+                '@type' => 'DummyType',
+                'bar' => 'baz',
+            ],
+        ];
+
+        $this->assertEquals($expected, $type->jsonSerialize(), 'Return value of `jsonSerialize` is wrong');
+        $this->assertEquals(json_encode($expected), json_encode($type), 'JSON representation is wrong');
+    }
 }
 
 class DummyType extends BaseType
