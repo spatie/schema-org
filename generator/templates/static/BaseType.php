@@ -114,14 +114,14 @@ abstract class BaseType implements Type, \ArrayAccess, \JsonSerializable
         unset($this->properties[$offset]);
     }
 
-    public function __call(string $method, array $arguments)
-    {
-        return $this->setProperty($method, $arguments[0] ?? '');
-    }
-
     public function jsonSerialize()
     {
         return $this->toArray();
+    }
+
+    public function __call(string $method, array $arguments)
+    {
+        return $this->setProperty($method, $arguments[0] ?? '');
     }
 
     public function __toString(): string
