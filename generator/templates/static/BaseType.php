@@ -57,6 +57,26 @@ abstract class BaseType implements Type, \ArrayAccess, \JsonSerializable
         return $this->properties;
     }
 
+    public function offsetExists($offset)
+    {
+        return array_key_exists($offset, $this->properties);
+    }
+
+    public function offsetGet($offset)
+    {
+        return $this->getProperty($offset);
+    }
+
+    public function offsetSet($offset, $value)
+    {
+        $this->setProperty($offset, $value);
+    }
+
+    public function offsetUnset($offset)
+    {
+        unset($this->properties[$offset]);
+    }
+
     public function toArray(): array
     {
         $properties = $this->serializeProperty($this->getProperties());
@@ -92,26 +112,6 @@ abstract class BaseType implements Type, \ArrayAccess, \JsonSerializable
     public function toScript(): string
     {
         return '<script type="application/ld+json">'.json_encode($this->toArray(), JSON_UNESCAPED_UNICODE).'</script>';
-    }
-
-    public function offsetExists($offset)
-    {
-        return array_key_exists($offset, $this->properties);
-    }
-
-    public function offsetGet($offset)
-    {
-        return $this->getProperty($offset);
-    }
-
-    public function offsetSet($offset, $value)
-    {
-        $this->setProperty($offset, $value);
-    }
-
-    public function offsetUnset($offset)
-    {
-        unset($this->properties[$offset]);
     }
 
     public function jsonSerialize()
