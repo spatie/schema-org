@@ -7,7 +7,7 @@ use ReflectionClass;
 use DateTimeInterface;
 use Spatie\SchemaOrg\Exceptions\InvalidProperty;
 
-abstract class BaseType implements Type
+abstract class BaseType implements Type, \ArrayAccess
 {
     /** @var array */
     protected $properties = [];
@@ -92,6 +92,26 @@ abstract class BaseType implements Type
     public function toScript(): string
     {
         return '<script type="application/ld+json">'.json_encode($this->toArray(), JSON_UNESCAPED_UNICODE).'</script>';
+    }
+
+    public function offsetExists($offset)
+    {
+        return array_key_exists($offset, $this->properties);
+    }
+
+    public function offsetGet($offset)
+    {
+        return $this->getProperty($offset);
+    }
+
+    public function offsetSet($offset, $value)
+    {
+        $this->setProperty($offset, $value);
+    }
+
+    public function offsetUnset($offset)
+    {
+        unset($this->properties[$offset]);
     }
 
     public function __call(string $method, array $arguments)
