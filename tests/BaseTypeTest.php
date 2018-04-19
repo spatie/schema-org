@@ -186,6 +186,49 @@ class BaseTypeTest extends TestCase
 
         $this->assertEquals(['foo' => 'bar'], $type->getProperties());
     }
+
+    /** @test */
+    public function it_can_use_array_access_to_set_a_property()
+    {
+        $type = new DummyType();
+
+        $type['foo'] = 'bar';
+
+        $this->assertEquals(['foo' => 'bar'], $type->getProperties());
+    }
+
+    /** @test */
+    public function it_can_use_array_access_to_unset_a_property()
+    {
+        $type = new DummyType();
+
+        $type->setProperty('foo', 'bar');
+        $type->setProperty('bar', 'baz');
+        unset($type['foo']);
+
+        $this->assertEquals(['bar' => 'baz'], $type->getProperties());
+    }
+
+    /** @test */
+    public function it_can_use_array_access_to_determine_if_a_property_exists()
+    {
+        $type = new DummyType();
+
+        $type->setProperty('foo', 'bar');
+
+        $this->assertTrue(isset($type['foo']));
+        $this->assertFalse(isset($type['bar']));
+    }
+
+    /** @test */
+    public function it_can_use_array_access_to_get_a_property()
+    {
+        $type = new DummyType();
+
+        $type->setProperty('foo', 'bar');
+
+        $this->assertEquals('bar', $type['foo']);
+    }
 }
 
 class DummyType extends BaseType
