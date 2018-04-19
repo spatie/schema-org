@@ -7,7 +7,7 @@ use ReflectionClass;
 use DateTimeInterface;
 use Spatie\SchemaOrg\Exceptions\InvalidProperty;
 
-abstract class BaseType implements Type, \ArrayAccess
+abstract class BaseType implements Type, \ArrayAccess, \JsonSerializable
 {
     /** @var array */
     protected $properties = [];
@@ -117,6 +117,11 @@ abstract class BaseType implements Type, \ArrayAccess
     public function __call(string $method, array $arguments)
     {
         return $this->setProperty($method, $arguments[0] ?? '');
+    }
+
+    public function jsonSerialize()
+    {
+        return $this->toArray();
     }
 
     public function __toString(): string
