@@ -58,6 +58,18 @@ $localBusiness->name('Spatie');
 
 > *All types also accept arrays of the expected data type, for example `sameAs` accepts a string or an array of strings.*
 
+All types also implement the SPL's `ArrayAccess` for accessing the properties via array notation:
+
+```php
+$anotherLocalBusiness = new LocalBusiness();
+var_dump(isset($anotherLocalBusiness['name'])); // => false
+$anotherLocalBusiness['name'] = 'Spatie';
+var_dump(isset($anotherLocalBusiness['name'])); // => true
+var_dump($anotherLocalBusiness['name']); // => 'Spatie'
+unset($anotherLocalBusiness['name']);
+var_dump(isset($anotherLocalBusiness['name'])); // => false
+```
+
 Types can be converted to an array or rendered to a script.
 
 ```php
@@ -66,6 +78,12 @@ $localBusiness->toArray();
 $localBusiness->toScript();
 
 echo $localBusiness; // Same output as `toScript()`
+```
+
+Additionally, all types can be converted to a plain JSON string by just calling `json_encode()` with your object:
+
+```php
+echo json_encode($localBusiness);
 ```
 
 There's no full API documentation for types and properties. You can refer to [the source](https://github.com/spatie/schema-org/tree/master/src) or to [the schema.org website](http://schema.org).
