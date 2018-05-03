@@ -2,6 +2,9 @@
 
 All Notable changes to `schema-org` will be documented in this file.
 
+## 1.5.0 - 2018-05-03
+- Added: All types are now json serializable and have array access
+
 ## 1.4.2 - 2018-03-28
 - Fixed: Date format in schemas is now ISO8601 (`DateTime::ATOM`)
 
