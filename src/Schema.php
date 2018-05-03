@@ -1967,6 +1967,11 @@ class Schema
         return new PhotographAction();
     }
 
+    public static function physician(): Physician
+    {
+        return new Physician();
+    }
+
     public static function place(): Place
     {
         return new Place();
