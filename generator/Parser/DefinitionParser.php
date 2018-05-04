@@ -26,14 +26,17 @@ class DefinitionParser
             }));
 
         $constants = [];
+
         foreach($types as $type) {
             $constants = array_merge($constants, array_filter($definitions
                 ->query('[typeof="' . $type->resource . '"]')
                 ->each(function (Crawler $crawler) use ($type) {
                     $constant = call_user_func(ParseConstant::fromCrawler($crawler));
+
                     if (!is_null($constant)) {
                         $constant->type = $type->name;
                     }
+
                     return $constant;
                 })));
         }
