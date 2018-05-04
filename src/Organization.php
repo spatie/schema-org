@@ -125,7 +125,7 @@ class Organization extends Thing
      *
      * @see https://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#STI_Accommodation_Ontology
      */
-     const STI Accommodation Ontology = 'https://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#STI_Accommodation_Ontology';
+     const STI_Accommodation_Ontology = 'https://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#STI_Accommodation_Ontology';
 
     /**
      * The Question/Answer types were [based
@@ -134,7 +134,7 @@ class Organization extends Thing
      *
      * @see http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#source_QAStackExchange
      */
-     const Stack Exchange = 'http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#source_QAStackExchange';
+     const Stack_Exchange = 'http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#source_QAStackExchange';
 
     /**
      * This class contains information contributed by

@@ -13,7 +13,7 @@ class ParseConstant extends Task
 
         $constant = new Constant();
 
-        $constant->name = $this->getText($node, '[property="rdfs:label"]');
+        $constant->name = preg_replace('/\s+/', '_', $this->getText($node, '[property="rdfs:label"]'));
 
         if (empty($constant->name)) {
             return null;
