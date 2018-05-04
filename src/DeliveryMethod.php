@@ -24,4 +24,12 @@ namespace Spatie\SchemaOrg;
  */
 class DeliveryMethod extends Enumeration
 {
+    /**
+     * A DeliveryMethod in which an item is collected on site, e.g. in a store
+     * or at a box office.
+     *
+     * @see http://schema.org/OnSitePickup
+     */
+     const OnSitePickup = 'http://schema.org/OnSitePickup';
+
 }

@@ -7,7 +7,7 @@ class TypeCollection
     /** @var array */
     private $types = [];
 
-    public function __construct(array $types, array $properties)
+    public function __construct(array $types, array $properties, array $constants)
     {
         $typeNames = array_map(function (Type $type) {
             return $type->name;
@@ -20,6 +20,10 @@ class TypeCollection
         foreach ($properties as $property) {
             $this->addProperty($property);
         }
+
+        foreach ($constants as $constant) {
+            $this->addConstant($constant);
+        }
     }
 
     private function addProperty(Property $property)
@@ -30,6 +34,13 @@ class TypeCollection
             }
 
             $this->types[$type]->addProperty($property);
+        }
+    }
+
+    private function addConstant(Constant $constant)
+    {
+        if (isset($this->types[$constant->type])) {
+            $this->types[$constant->type]->addConstant($constant);
         }
     }
 
