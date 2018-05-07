@@ -2,11 +2,11 @@
 
 namespace Spatie\SchemaOrg\Generator\Parser;
 
-use Spatie\SchemaOrg\Generator\Parser\Tasks\ParseConstant;
 use Symfony\Component\DomCrawler\Crawler;
 use Spatie\SchemaOrg\Generator\Definitions;
 use Spatie\SchemaOrg\Generator\TypeCollection;
 use Spatie\SchemaOrg\Generator\Parser\Tasks\ParseType;
+use Spatie\SchemaOrg\Generator\Parser\Tasks\ParseConstant;
 use Spatie\SchemaOrg\Generator\Parser\Tasks\ParseProperty;
 
 class DefinitionParser
@@ -27,13 +27,13 @@ class DefinitionParser
 
         $constants = [];
 
-        foreach($types as $type) {
+        foreach ($types as $type) {
             $constants = array_merge($constants, array_filter($definitions
-                ->query('[typeof="' . $type->resource . '"]')
+                ->query('[typeof="'.$type->resource.'"]')
                 ->each(function (Crawler $crawler) use ($type) {
                     $constant = call_user_func(ParseConstant::fromCrawler($crawler));
 
-                    if (!is_null($constant)) {
+                    if (! is_null($constant)) {
                         $constant->type = $type->name;
                     }
 
