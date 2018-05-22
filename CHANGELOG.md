@@ -2,6 +2,9 @@
 
 All Notable changes to `schema-org` will be documented in this file.
 
+## 1.6.0 - 2018-05-22
+- Added: `Enumeration` child types with constants, e.g. `Spatie\Schema\DayOfWeek::Monday`.
+
 ## 1.5.0 - 2018-05-03
 - Added: All types are now json serializable and have array access
 
