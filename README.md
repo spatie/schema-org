@@ -86,6 +86,14 @@ Additionally, all types can be converted to a plain JSON string by just calling 
 echo json_encode($localBusiness);
 ```
 
+### Enumerations
+
+As of v1.6.0, all [Enumeration](http://schema.org/Enumeration) child types are available as classes with constants.
+
+```php
+Schema::book()->bookFormat(Spatie\Schema\BookFormatType::Hardcover);
+```
+
 There's no full API documentation for types and properties. You can refer to [the source](https://github.com/spatie/schema-org/tree/master/src) or to [the schema.org website](http://schema.org).
 
 If you don't want to break the chain of a large schema object, you can use the `if` method to conditionally modify the schema.
