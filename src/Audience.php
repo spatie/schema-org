@@ -10,6 +10,13 @@ namespace Spatie\SchemaOrg;
 class Audience extends Intangible
 {
     /**
+     * Researchers.
+     *
+     * @see http://schema.org/Researcher
+     */
+     const Researcher = 'http://schema.org/Researcher';
+
+    /**
      * The target group associated with a given audience (e.g. veterans, car
      * owners, musicians, etc.).
      *
