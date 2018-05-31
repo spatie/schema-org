@@ -7,7 +7,9 @@ namespace Spatie\SchemaOrg;
  * resume music playback or resume a timer).
  *
  * @see http://schema.org/ResumeAction
+ *
+ * @mixin ControlAction
  */
-class ResumeAction extends ControlAction
+class ResumeAction
 {
 }
