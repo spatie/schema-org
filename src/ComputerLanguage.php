@@ -8,7 +8,9 @@ namespace Spatie\SchemaOrg;
  * best represented with the [[Language]] type.
  *
  * @see http://schema.org/ComputerLanguage
+ *
+ * @mixin Intangible
  */
-class ComputerLanguage extends Intangible
+class ComputerLanguage
 {
 }
