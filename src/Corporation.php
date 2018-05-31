@@ -6,8 +6,10 @@ namespace Spatie\SchemaOrg;
  * Organization: A business corporation.
  *
  * @see http://schema.org/Corporation
+ *
+ * @mixin Organization
  */
-class Corporation extends Organization
+class Corporation
 {
     /**
      * The exchange traded instrument associated with a Corporation object. The
