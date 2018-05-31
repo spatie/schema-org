@@ -6,8 +6,10 @@ namespace Spatie\SchemaOrg;
  * A value indicating which roadwheels will receive torque.
  *
  * @see http://schema.org/DriveWheelConfigurationValue
+ *
+ * @mixin QualitativeValue
  */
-class DriveWheelConfigurationValue extends QualitativeValue
+class DriveWheelConfigurationValue
 {
     /**
      * All-wheel Drive is a transmission layout where the engine drives all four
