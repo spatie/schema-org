@@ -229,6 +229,20 @@ class Place extends Thing
     }
 
     /**
+     * A flag to signal that the item, event, or place is accessible for free.
+     *
+     * @param bool|bool[] $isAccessibleForFree
+     *
+     * @return static
+     *
+     * @see http://schema.org/isAccessibleForFree
+     */
+    public function isAccessibleForFree($isAccessibleForFree)
+    {
+        return $this->setProperty('isAccessibleForFree', $isAccessibleForFree);
+    }
+
+    /**
      * The International Standard of Industrial Classification of All Economic
      * Activities (ISIC), Revision 4 code for a particular organization,
      * business person, or place.
@@ -340,6 +354,21 @@ class Place extends Thing
     public function photos($photos)
     {
         return $this->setProperty('photos', $photos);
+    }
+
+    /**
+     * A flag to signal that the [[Place]] is open to public visitors.  If this
+     * property is omitted there is no assumed default boolean value
+     *
+     * @param bool|bool[] $publicAccess
+     *
+     * @return static
+     *
+     * @see http://schema.org/publicAccess
+     */
+    public function publicAccess($publicAccess)
+    {
+        return $this->setProperty('publicAccess', $publicAccess);
     }
 
     /**
