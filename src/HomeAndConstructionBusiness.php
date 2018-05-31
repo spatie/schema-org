@@ -12,7 +12,9 @@ namespace Spatie\SchemaOrg;
  * [[Service]]\(s).
  *
  * @see http://schema.org/HomeAndConstructionBusiness
+ *
+ * @mixin LocalBusiness
  */
-class HomeAndConstructionBusiness extends LocalBusiness
+class HomeAndConstructionBusiness
 {
 }
