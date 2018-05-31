@@ -41,6 +41,22 @@ class CreativeWorkSeries extends CreativeWork
     }
 
     /**
+     * The International Standard Serial Number (ISSN) that identifies this
+     * serial publication. You can repeat this property to identify different
+     * formats of, or the linking ISSN (ISSN-L) for, this serial publication.
+     *
+     * @param string|string[] $issn
+     *
+     * @return static
+     *
+     * @see http://schema.org/issn
+     */
+    public function issn($issn)
+    {
+        return $this->setProperty('issn', $issn);
+    }
+
+    /**
      * The start date and time of the item (in [ISO 8601 date
      * format](http://en.wikipedia.org/wiki/ISO_8601)).
      *
