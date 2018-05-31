@@ -7,7 +7,9 @@ namespace Spatie\SchemaOrg;
  * fromLocation, optionally with participants.
  *
  * @see http://schema.org/ArriveAction
+ *
+ * @mixin MoveAction
  */
-class ArriveAction extends MoveAction
+class ArriveAction
 {
 }
