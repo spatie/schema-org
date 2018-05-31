@@ -59,7 +59,7 @@ class CommunicateAction extends InteractAction
      * A sub property of participant. The participant who is at the receiving
      * end of the action.
      *
-     * @param Audience|Audience[]|Organization|Organization[]|Person|Person[] $recipient
+     * @param Audience|Audience[]|ContactPoint|ContactPoint[]|Organization|Organization[]|Person|Person[] $recipient
      *
      * @return static
      *
