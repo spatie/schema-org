@@ -6,8 +6,10 @@ namespace Spatie\SchemaOrg;
  * A subclass of Role used to describe roles within organizations.
  *
  * @see http://schema.org/OrganizationRole
+ *
+ * @mixin Role
  */
-class OrganizationRole extends Role
+class OrganizationRole
 {
     /**
      * A number associated with a role in an organization, for example, the
