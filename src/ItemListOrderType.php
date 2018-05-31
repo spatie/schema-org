@@ -7,8 +7,10 @@ namespace Spatie\SchemaOrg;
  * ItemList is organized.
  *
  * @see http://schema.org/ItemListOrderType
+ *
+ * @mixin Enumeration
  */
-class ItemListOrderType extends Enumeration
+class ItemListOrderType
 {
     /**
      * An ItemList ordered with lower values listed first.
