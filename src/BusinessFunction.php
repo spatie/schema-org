@@ -21,7 +21,9 @@ namespace Spatie\SchemaOrg;
  * * http://purl.org/goodrelations/v1#Buy
  *
  * @see http://schema.org/BusinessFunction
+ *
+ * @mixin Enumeration
  */
-class BusinessFunction extends Enumeration
+class BusinessFunction
 {
 }
