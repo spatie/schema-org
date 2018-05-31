@@ -8,7 +8,9 @@ namespace Spatie\SchemaOrg;
  * vocabulary, alongside types such as [[Comment]].
  *
  * @see http://schema.org/UserInteraction
+ *
+ * @mixin Event
  */
-class UserInteraction extends Event
+class UserInteraction
 {
 }
