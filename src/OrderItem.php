@@ -7,8 +7,10 @@ namespace Spatie\SchemaOrg;
  * details of a bought offer.
  *
  * @see http://schema.org/OrderItem
+ *
+ * @mixin Intangible
  */
-class OrderItem extends Intangible
+class OrderItem
 {
     /**
      * The delivery of the parcel related to this order or order item.
