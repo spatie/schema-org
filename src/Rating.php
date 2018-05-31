@@ -6,8 +6,10 @@ namespace Spatie\SchemaOrg;
  * A rating is an evaluation on a numeric scale, such as 1 to 5 stars.
  *
  * @see http://schema.org/Rating
+ *
+ * @mixin Intangible
  */
-class Rating extends Intangible
+class Rating
 {
     /**
      * The author of this content or rating. Please note that author is special
