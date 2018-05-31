@@ -6,8 +6,10 @@ namespace Spatie\SchemaOrg;
  * The act of being defeated in a competitive activity.
  *
  * @see http://schema.org/LoseAction
+ *
+ * @mixin AchieveAction
  */
-class LoseAction extends AchieveAction
+class LoseAction
 {
     /**
      * A sub property of participant. The winner of the action.
