@@ -6,8 +6,10 @@ namespace Spatie\SchemaOrg;
  * A work of art that is primarily visual in character.
  *
  * @see http://schema.org/VisualArtwork
+ *
+ * @mixin CreativeWork
  */
-class VisualArtwork extends CreativeWork
+class VisualArtwork
 {
     /**
      * The number of copies when multiple copies of a piece of artwork are
