@@ -7,8 +7,10 @@ namespace Spatie\SchemaOrg;
  * mode of transport, optionally with participants.
  *
  * @see http://schema.org/TravelAction
+ *
+ * @mixin MoveAction
  */
-class TravelAction extends MoveAction
+class TravelAction
 {
     /**
      * The distance travelled, e.g. exercising or travelling.
