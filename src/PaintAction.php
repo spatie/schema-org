@@ -7,7 +7,9 @@ namespace Spatie\SchemaOrg;
  * instruments.
  *
  * @see http://schema.org/PaintAction
+ *
+ * @mixin CreateAction
  */
-class PaintAction extends CreateAction
+class PaintAction
 {
 }
