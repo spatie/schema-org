@@ -7,8 +7,10 @@ namespace Spatie\SchemaOrg;
  * services rendered.
  *
  * @see http://schema.org/TipAction
+ *
+ * @mixin TradeAction
  */
-class TipAction extends TradeAction
+class TipAction
 {
     /**
      * A sub property of participant. The participant who is at the receiving
