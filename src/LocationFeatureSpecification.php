@@ -8,8 +8,10 @@ namespace Spatie\SchemaOrg;
  * formality.
  *
  * @see http://schema.org/LocationFeatureSpecification
+ *
+ * @mixin PropertyValue
  */
-class LocationFeatureSpecification extends PropertyValue
+class LocationFeatureSpecification
 {
     /**
      * The hours during which this service or contact is available.
