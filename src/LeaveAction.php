@@ -12,8 +12,10 @@ namespace Spatie\SchemaOrg;
  * a group/team of people rather than a service.
  *
  * @see http://schema.org/LeaveAction
+ *
+ * @mixin InteractAction
  */
-class LeaveAction extends InteractAction
+class LeaveAction
 {
     /**
      * Upcoming or past event associated with this place, organization, or
