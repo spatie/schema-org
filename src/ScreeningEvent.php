@@ -6,8 +6,10 @@ namespace Spatie\SchemaOrg;
  * A screening of a movie or other video.
  *
  * @see http://schema.org/ScreeningEvent
+ *
+ * @mixin Event
  */
-class ScreeningEvent extends Event
+class ScreeningEvent
 {
     /**
      * Languages in which subtitles/captions are available, in [IETF BCP 47
