@@ -11,8 +11,10 @@ namespace Spatie\SchemaOrg;
  * post](http://blog.schema.org/2014/09/schemaorg-support-for-bibliographic_2.html).
  *
  * @see http://schema.org/Periodical
+ *
+ * @mixin CreativeWorkSeries
  */
-class Periodical extends CreativeWorkSeries
+class Periodical
 {
     /**
      * The International Standard Serial Number (ISSN) that identifies this
