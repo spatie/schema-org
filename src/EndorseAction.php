@@ -6,8 +6,10 @@ namespace Spatie\SchemaOrg;
  * An agent approves/certifies/likes/supports/sanction an object.
  *
  * @see http://schema.org/EndorseAction
+ *
+ * @mixin ReactAction
  */
-class EndorseAction extends ReactAction
+class EndorseAction
 {
     /**
      * A sub property of participant. The person/organization being supported.
