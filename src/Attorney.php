@@ -9,7 +9,9 @@ namespace Spatie\SchemaOrg;
  * ambiguous.
  *
  * @see http://schema.org/Attorney
+ *
+ * @mixin LegalService
  */
-class Attorney extends LegalService
+class Attorney
 {
 }
