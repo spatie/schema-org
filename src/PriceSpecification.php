@@ -9,8 +9,10 @@ namespace Spatie\SchemaOrg;
  * credit card limits, etc.
  *
  * @see http://schema.org/PriceSpecification
+ *
+ * @mixin StructuredValue
  */
-class PriceSpecification extends StructuredValue
+class PriceSpecification
 {
     /**
      * The interval and unit of measurement of ordering quantities for which the
