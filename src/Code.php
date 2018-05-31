@@ -7,7 +7,9 @@ namespace Spatie\SchemaOrg;
  * code snippet samples, scripts, templates.
  *
  * @see http://schema.org/Code
+ *
+ * @mixin CreativeWork
  */
-class Code extends CreativeWork
+class Code
 {
 }
