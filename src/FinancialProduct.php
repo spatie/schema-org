@@ -8,8 +8,10 @@ namespace Spatie\SchemaOrg;
  * and investment companies which comprise the financial services industry.
  *
  * @see http://schema.org/FinancialProduct
+ *
+ * @mixin Service
  */
-class FinancialProduct extends Service
+class FinancialProduct
 {
     /**
      * The annual rate that is charged for borrowing (or made by investing),
