@@ -6,8 +6,10 @@ namespace Spatie\SchemaOrg;
  * An EducationalAudience.
  *
  * @see http://schema.org/EducationalAudience
+ *
+ * @mixin Audience
  */
-class EducationalAudience extends Audience
+class EducationalAudience
 {
     /**
      * An educationalRole of an EducationalAudience.
