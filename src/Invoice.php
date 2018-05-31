@@ -6,8 +6,10 @@ namespace Spatie\SchemaOrg;
  * A statement of the money due for goods or services; a bill.
  *
  * @see http://schema.org/Invoice
+ *
+ * @mixin Intangible
  */
-class Invoice extends Intangible
+class Invoice
 {
     /**
      * The identifier for the account the payment will be applied to.
