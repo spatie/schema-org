@@ -7,8 +7,10 @@ namespace Spatie\SchemaOrg;
  * code snippet samples, scripts, templates.
  *
  * @see http://schema.org/SoftwareSourceCode
+ *
+ * @mixin CreativeWork
  */
-class SoftwareSourceCode extends CreativeWork
+class SoftwareSourceCode
 {
     /**
      * Link to the repository where the un-compiled, human readable code and
