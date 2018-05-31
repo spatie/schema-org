@@ -6,8 +6,10 @@ namespace Spatie\SchemaOrg;
  * A news article.
  *
  * @see http://schema.org/NewsArticle
+ *
+ * @mixin Article
  */
-class NewsArticle extends Article
+class NewsArticle
 {
     /**
      * The location where the NewsArticle was produced.
