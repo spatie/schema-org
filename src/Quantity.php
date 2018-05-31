@@ -7,7 +7,9 @@ namespace Spatie\SchemaOrg;
  * say Mass are entities like '3 Kg' or '4 milligrams'.
  *
  * @see http://schema.org/Quantity
+ *
+ * @mixin Intangible
  */
-class Quantity extends Intangible
+class Quantity
 {
 }
