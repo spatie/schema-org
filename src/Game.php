@@ -8,8 +8,10 @@ namespace Spatie\SchemaOrg;
  * players assume the role of characters in a fictional setting.
  *
  * @see http://schema.org/Game
+ *
+ * @mixin CreativeWork
  */
-class Game extends CreativeWork
+class Game
 {
     /**
      * A piece of data that represents a particular aspect of a fictional
