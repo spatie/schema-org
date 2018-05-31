@@ -38,8 +38,16 @@ class Ticket extends Intangible
     }
 
     /**
-     * The currency (in 3-letter ISO 4217 format) of the price or a price
-     * component, when attached to [[PriceSpecification]] and its subtypes.
+     * The currency of the price, or a price component when attached to
+     * [[PriceSpecification]] and its subtypes.
+     * 
+     * Use standard formats: [ISO 4217 currency
+     * format](http://en.wikipedia.org/wiki/ISO_4217) e.g. "USD"; [Ticker
+     * symbol](https://en.wikipedia.org/wiki/List_of_cryptocurrencies) for
+     * cryptocurrencies e.g. "BTC"; well known names for [Local Exchange
+     * Tradings
+     * Systems](https://en.wikipedia.org/wiki/Local_exchange_trading_system)
+     * (LETS) and other currency types e.g. "Ithaca HOUR".
      *
      * @param string|string[] $priceCurrency
      *
