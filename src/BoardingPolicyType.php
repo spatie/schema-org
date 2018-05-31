@@ -6,8 +6,10 @@ namespace Spatie\SchemaOrg;
  * A type of boarding policy used by an airline.
  *
  * @see http://schema.org/BoardingPolicyType
+ *
+ * @mixin Enumeration
  */
-class BoardingPolicyType extends Enumeration
+class BoardingPolicyType
 {
     /**
      * The airline boards by groups based on check-in time, priority, etc.
