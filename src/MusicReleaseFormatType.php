@@ -7,8 +7,10 @@ namespace Spatie\SchemaOrg;
  * digital media, LP, etc.).
  *
  * @see http://schema.org/MusicReleaseFormatType
+ *
+ * @mixin Enumeration
  */
-class MusicReleaseFormatType extends Enumeration
+class MusicReleaseFormatType
 {
     /**
      * CDFormat.
