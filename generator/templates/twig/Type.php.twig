@@ -6,8 +6,12 @@ namespace Spatie\SchemaOrg;
  * {{ type.description | doc(0) }}
  *
  * @see {{ type.resource }}
+ *
+{% for parent in type.parents %}
+ * @mixin {{ parent }}
+{% endfor %}
  */
-class {{ type.name }} extends {{ type.parent }}
+class {{ type.name }}
 {
 {% for constant in type.constants %}    /**
      * {{ constant.description | doc(1) }}

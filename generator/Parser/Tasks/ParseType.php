@@ -20,9 +20,16 @@ class ParseType extends Task
         }
 
         $type->description = $this->getText($node, '[property="rdfs:comment"]');
-        $type->parent = $this->getText($node, '[property="rdfs:subClassOf"]') ?: 'BaseType';
 
-        if (strpos($type->parent, ':') !== false) {
+        $type->parents = array_filter($node
+            ->filter('[property="rdfs:subClassOf"]')
+            ->each(function (Crawler $node) {
+                $parent = $this->getText($node, '[property="rdfs:subClassOf"]') ?: 'BaseType';
+
+                return strpos($parent, ':') === false ? $parent : null;
+            }));
+
+        if (empty($type->parents)) {
             return null;
         }
 

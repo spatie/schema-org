@@ -7,8 +7,8 @@ class Type
     /** @var string */
     public $name;
 
-    /** @var string */
-    public $parent;
+    /** @var array */
+    public $parents = [];
 
     /** @var string */
     public $description;
