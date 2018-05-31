@@ -7,8 +7,10 @@ namespace Spatie\SchemaOrg;
  * objects from one place to another.
  *
  * @see http://schema.org/TransferAction
+ *
+ * @mixin Action
  */
-class TransferAction extends Action
+class TransferAction
 {
     /**
      * A sub property of location. The original location of the object or the
