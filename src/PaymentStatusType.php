@@ -6,8 +6,10 @@ namespace Spatie\SchemaOrg;
  * A specific payment status. For example, PaymentDue, PaymentComplete, etc.
  *
  * @see http://schema.org/PaymentStatusType
+ *
+ * @mixin Enumeration
  */
-class PaymentStatusType extends Enumeration
+class PaymentStatusType
 {
     /**
      * An automatic payment system is in place and will be used.
