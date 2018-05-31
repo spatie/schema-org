@@ -7,7 +7,9 @@ namespace Spatie\SchemaOrg;
  * playback or pause a timer).
  *
  * @see http://schema.org/SuspendAction
+ *
+ * @mixin ControlAction
  */
-class SuspendAction extends ControlAction
+class SuspendAction
 {
 }
