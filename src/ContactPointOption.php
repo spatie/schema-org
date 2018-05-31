@@ -6,8 +6,10 @@ namespace Spatie\SchemaOrg;
  * Enumerated options related to a ContactPoint.
  *
  * @see http://schema.org/ContactPointOption
+ *
+ * @mixin Enumeration
  */
-class ContactPointOption extends Enumeration
+class ContactPointOption
 {
     /**
      * Uses devices to support users with hearing impairments.
