@@ -11,8 +11,10 @@ namespace Spatie\SchemaOrg;
  * property, or more approximately using 'address', 'postalCode'.
  *
  * @see http://schema.org/GeoCircle
+ *
+ * @mixin GeoShape
  */
-class GeoCircle extends GeoShape
+class GeoCircle
 {
     /**
      * Indicates the approximate radius of a GeoCircle (metres unless indicated
