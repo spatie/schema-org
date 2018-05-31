@@ -8,7 +8,9 @@ namespace Spatie\SchemaOrg;
  * vocabulary, alongside types such as [[Comment]].
  *
  * @see http://schema.org/UserCheckins
+ *
+ * @mixin UserInteraction
  */
-class UserCheckins extends UserInteraction
+class UserCheckins
 {
 }
