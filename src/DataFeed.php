@@ -7,8 +7,10 @@ namespace Spatie\SchemaOrg;
  * topics.
  *
  * @see http://schema.org/DataFeed
+ *
+ * @mixin Dataset
  */
-class DataFeed extends Dataset
+class DataFeed
 {
     /**
      * An item within in a data feed. Data feeds may have many elements.
