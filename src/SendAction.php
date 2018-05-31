@@ -12,8 +12,10 @@ namespace Spatie\SchemaOrg;
  * it to you).
  *
  * @see http://schema.org/SendAction
+ *
+ * @mixin TransferAction
  */
-class SendAction extends TransferAction
+class SendAction
 {
     /**
      * A sub property of instrument. The method of delivery.
