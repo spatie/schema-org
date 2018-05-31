@@ -7,8 +7,10 @@ namespace Spatie\SchemaOrg;
  * states that an Event may be in.
  *
  * @see http://schema.org/EventStatusType
+ *
+ * @mixin Enumeration
  */
-class EventStatusType extends Enumeration
+class EventStatusType
 {
     /**
      * The event has been cancelled. If the event has multiple startDate values,
