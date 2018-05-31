@@ -14,8 +14,10 @@ namespace Spatie\SchemaOrg;
  * mean the package is now mine).
  *
  * @see http://schema.org/ReceiveAction
+ *
+ * @mixin TransferAction
  */
-class ReceiveAction extends TransferAction
+class ReceiveAction
 {
     /**
      * A sub property of instrument. The method of delivery.
