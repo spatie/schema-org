@@ -6,8 +6,10 @@ namespace Spatie\SchemaOrg;
  * An image file.
  *
  * @see http://schema.org/ImageObject
+ *
+ * @mixin MediaObject
  */
-class ImageObject extends MediaObject
+class ImageObject
 {
     /**
      * The caption for this object.
