@@ -8,7 +8,9 @@ namespace Spatie\SchemaOrg;
  * vocabulary, alongside types such as [[Comment]].
  *
  * @see http://schema.org/UserPageVisits
+ *
+ * @mixin UserInteraction
  */
-class UserPageVisits extends UserInteraction
+class UserPageVisits
 {
 }
