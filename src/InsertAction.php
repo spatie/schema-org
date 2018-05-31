@@ -6,8 +6,10 @@ namespace Spatie\SchemaOrg;
  * The act of adding at a specific location in an ordered collection.
  *
  * @see http://schema.org/InsertAction
+ *
+ * @mixin AddAction
  */
-class InsertAction extends AddAction
+class InsertAction
 {
     /**
      * A sub property of location. The final location of the object or the agent
