@@ -7,7 +7,10 @@ namespace Spatie\SchemaOrg;
  * payment with an account.
  *
  * @see http://schema.org/PaymentCard
+ *
+ * @mixin FinancialProduct
+ * @mixin PaymentMethod
  */
-class PaymentCard extends FinancialProduct
+class PaymentCard
 {
 }
