@@ -6,8 +6,10 @@ namespace Spatie\SchemaOrg;
  * Event type: Sports event.
  *
  * @see http://schema.org/SportsEvent
+ *
+ * @mixin Event
  */
-class SportsEvent extends Event
+class SportsEvent
 {
     /**
      * The away team in a sports event.
