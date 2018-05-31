@@ -10,8 +10,10 @@ namespace Spatie\SchemaOrg;
  * (VideoObject), and a high and low bandwidth audio stream (2 AudioObject's).
  *
  * @see http://schema.org/MediaObject
+ *
+ * @mixin CreativeWork
  */
-class MediaObject extends CreativeWork
+class MediaObject
 {
     /**
      * A NewsArticle associated with the Media Object.
