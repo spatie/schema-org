@@ -9,8 +9,10 @@ namespace Spatie\SchemaOrg;
  * whitespace should be used when writing a list of several such points.
  *
  * @see http://schema.org/GeoShape
+ *
+ * @mixin StructuredValue
  */
-class GeoShape extends StructuredValue
+class GeoShape
 {
     /**
      * Physical address of the item.
