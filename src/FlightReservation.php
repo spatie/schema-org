@@ -10,8 +10,10 @@ namespace Spatie\SchemaOrg;
  * reservations. For offers of tickets, use [[Offer]].
  *
  * @see http://schema.org/FlightReservation
+ *
+ * @mixin Reservation
  */
-class FlightReservation extends Reservation
+class FlightReservation
 {
     /**
      * The priority status assigned to a passenger for security or boarding
