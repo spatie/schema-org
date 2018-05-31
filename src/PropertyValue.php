@@ -13,8 +13,10 @@ namespace Spatie\SchemaOrg;
  * the same effect as using the original, specific property.
  *
  * @see http://schema.org/PropertyValue
+ *
+ * @mixin StructuredValue
  */
-class PropertyValue extends StructuredValue
+class PropertyValue
 {
     /**
      * The upper value of some characteristic or property.
