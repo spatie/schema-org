@@ -6,8 +6,10 @@ namespace Spatie\SchemaOrg;
  * The act of participating in performance arts.
  *
  * @see http://schema.org/PerformAction
+ *
+ * @mixin PlayAction
  */
-class PerformAction extends PlayAction
+class PerformAction
 {
     /**
      * A sub property of location. The entertainment business where the action
