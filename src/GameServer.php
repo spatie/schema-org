@@ -6,8 +6,10 @@ namespace Spatie\SchemaOrg;
  * Server that provides game interaction in a multiplayer game.
  *
  * @see http://schema.org/GameServer
+ *
+ * @mixin Intangible
  */
-class GameServer extends Intangible
+class GameServer
 {
     /**
      * Video game which is played on this server.
