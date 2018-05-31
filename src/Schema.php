@@ -1282,6 +1282,46 @@ class Schema
         return new HousePainter();
     }
 
+    public static function howTo(): HowTo
+    {
+        return new HowTo();
+    }
+
+    public static function howToDirection(): HowToDirection
+    {
+        return new HowToDirection();
+    }
+
+    public static function howToItem(): HowToItem
+    {
+        return new HowToItem();
+    }
+
+    public static function howToSection(): HowToSection
+    {
+        return new HowToSection();
+    }
+
+    public static function howToStep(): HowToStep
+    {
+        return new HowToStep();
+    }
+
+    public static function howToSupply(): HowToSupply
+    {
+        return new HowToSupply();
+    }
+
+    public static function howToTip(): HowToTip
+    {
+        return new HowToTip();
+    }
+
+    public static function howToTool(): HowToTool
+    {
+        return new HowToTool();
+    }
+
     public static function iceCreamShop(): IceCreamShop
     {
         return new IceCreamShop();
@@ -1965,6 +2005,11 @@ class Schema
     public static function photographAction(): PhotographAction
     {
         return new PhotographAction();
+    }
+
+    public static function physician(): Physician
+    {
+        return new Physician();
     }
 
     public static function place(): Place
@@ -2720,6 +2765,11 @@ class Schema
     public static function travelAgency(): TravelAgency
     {
         return new TravelAgency();
+    }
+
+    public static function trip(): Trip
+    {
+        return new Trip();
     }
 
     public static function typeAndQuantityNode(): TypeAndQuantityNode
