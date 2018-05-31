@@ -6,8 +6,10 @@ namespace Spatie\SchemaOrg;
  * The status of an Action.
  *
  * @see http://schema.org/ActionStatusType
+ *
+ * @mixin Enumeration
  */
-class ActionStatusType extends Enumeration
+class ActionStatusType
 {
     /**
      * An in-progress action (e.g, while watching the movie, or driving to a
