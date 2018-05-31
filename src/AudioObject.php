@@ -6,8 +6,10 @@ namespace Spatie\SchemaOrg;
  * An audio file.
  *
  * @see http://schema.org/AudioObject
+ *
+ * @mixin MediaObject
  */
-class AudioObject extends MediaObject
+class AudioObject
 {
     /**
      * If this MediaObject is an AudioObject or VideoObject, the transcript of
