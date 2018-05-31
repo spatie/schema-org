@@ -6,7 +6,9 @@ namespace Spatie\SchemaOrg;
  * Brewery.
  *
  * @see http://schema.org/Brewery
+ *
+ * @mixin FoodEstablishment
  */
-class Brewery extends FoodEstablishment
+class Brewery
 {
 }
