@@ -6,8 +6,10 @@ namespace Spatie\SchemaOrg;
  * The act of authoring written creative content.
  *
  * @see http://schema.org/WriteAction
+ *
+ * @mixin CreateAction
  */
-class WriteAction extends CreateAction
+class WriteAction
 {
     /**
      * The language of the content or performance or used in an action. Please
