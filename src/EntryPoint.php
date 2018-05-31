@@ -6,8 +6,10 @@ namespace Spatie\SchemaOrg;
  * An entry point, within some Web-based protocol.
  *
  * @see http://schema.org/EntryPoint
+ *
+ * @mixin Intangible
  */
-class EntryPoint extends Intangible
+class EntryPoint
 {
     /**
      * An application that can complete the request.
