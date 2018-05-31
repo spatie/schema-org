@@ -11,11 +11,11 @@ namespace Spatie\SchemaOrg;
 class Question extends CreativeWork
 {
     /**
-     * The answer that has been accepted as best, typically on a Question/Answer
-     * site. Sites vary in their selection mechanisms, e.g. drawing on community
-     * opinion and/or the view of the Question author.
+     * The answer(s) that has been accepted as best, typically on a
+     * Question/Answer site. Sites vary in their selection mechanisms, e.g.
+     * drawing on community opinion and/or the view of the Question author.
      *
-     * @param Answer|Answer[] $acceptedAnswer
+     * @param Answer|Answer[]|ItemList|ItemList[] $acceptedAnswer
      *
      * @return static
      *
@@ -59,7 +59,7 @@ class Question extends CreativeWork
      * An answer (possibly one of several, possibly incorrect) to a Question,
      * e.g. on a Question/Answer site.
      *
-     * @param Answer|Answer[] $suggestedAnswer
+     * @param Answer|Answer[]|ItemList|ItemList[] $suggestedAnswer
      *
      * @return static
      *
