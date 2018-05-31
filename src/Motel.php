@@ -9,7 +9,9 @@ namespace Spatie\SchemaOrg;
  * schema.org for marking up hotels and other forms of accommodations</a>.
  *
  * @see http://schema.org/Motel
+ *
+ * @mixin LodgingBusiness
  */
-class Motel extends LodgingBusiness
+class Motel
 {
 }
