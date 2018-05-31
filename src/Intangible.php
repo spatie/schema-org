@@ -7,7 +7,9 @@ namespace Spatie\SchemaOrg;
  * things such as quantities, structured values, etc.
  *
  * @see http://schema.org/Intangible
+ *
+ * @mixin Thing
  */
-class Intangible extends Thing
+class Intangible
 {
 }
