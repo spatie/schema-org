@@ -7,8 +7,10 @@ namespace Spatie\SchemaOrg;
  * traveler clubs (e.g. "AAA"), purchase clubs ("Safeway Club"), etc.
  *
  * @see http://schema.org/ProgramMembership
+ *
+ * @mixin Intangible
  */
-class ProgramMembership extends Intangible
+class ProgramMembership
 {
     /**
      * The organization (airline, travelers' club, etc.) the membership is made
