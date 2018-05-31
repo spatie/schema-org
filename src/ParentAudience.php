@@ -7,8 +7,10 @@ namespace Spatie\SchemaOrg;
  * some content.
  *
  * @see http://schema.org/ParentAudience
+ *
+ * @mixin PeopleAudience
  */
-class ParentAudience extends PeopleAudience
+class ParentAudience
 {
     /**
      * Maximal age of the child.
