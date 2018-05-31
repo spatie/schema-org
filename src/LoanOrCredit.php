@@ -7,8 +7,10 @@ namespace Spatie\SchemaOrg;
  * and charges.
  *
  * @see http://schema.org/LoanOrCredit
+ *
+ * @mixin FinancialProduct
  */
-class LoanOrCredit extends FinancialProduct
+class LoanOrCredit
 {
     /**
      * The amount of money.
