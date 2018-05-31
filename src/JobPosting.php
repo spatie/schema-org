@@ -6,8 +6,10 @@ namespace Spatie\SchemaOrg;
  * A listing that describes a job opening in a certain organization.
  *
  * @see http://schema.org/JobPosting
+ *
+ * @mixin Intangible
  */
-class JobPosting extends Intangible
+class JobPosting
 {
     /**
      * The base salary of the job or of an employee in an EmployeeRole.
