@@ -9,8 +9,10 @@ namespace Spatie\SchemaOrg;
  * dimension of a price component (e.g. "electricity" or "final cleaning").
  *
  * @see http://schema.org/CompoundPriceSpecification
+ *
+ * @mixin PriceSpecification
  */
-class CompoundPriceSpecification extends PriceSpecification
+class CompoundPriceSpecification
 {
     /**
      * This property links to all [[UnitPriceSpecification]] nodes that apply in
