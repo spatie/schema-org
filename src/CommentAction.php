@@ -6,8 +6,10 @@ namespace Spatie\SchemaOrg;
  * The act of generating a comment about a subject.
  *
  * @see http://schema.org/CommentAction
+ *
+ * @mixin CommunicateAction
  */
-class CommentAction extends CommunicateAction
+class CommentAction
 {
     /**
      * A sub property of result. The Comment created or sent as a result of this
