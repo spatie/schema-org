@@ -14,20 +14,4 @@ namespace Spatie\SchemaOrg;
  */
 class Periodical extends CreativeWorkSeries
 {
-    /**
-     * The International Standard Serial Number (ISSN) that identifies this
-     * periodical. You can repeat this property to (for example) identify
-     * different formats of this periodical.
-     *
-     * @param string|string[] $issn
-     *
-     * @return static
-     *
-     * @see http://schema.org/issn
-     */
-    public function issn($issn)
-    {
-        return $this->setProperty('issn', $issn);
-    }
-
 }
