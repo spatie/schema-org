@@ -7,7 +7,9 @@ namespace Spatie\SchemaOrg;
  * timer or turning off a flashlight).
  *
  * @see http://schema.org/DeactivateAction
+ *
+ * @mixin ControlAction
  */
-class DeactivateAction extends ControlAction
+class DeactivateAction
 {
 }
