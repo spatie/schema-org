@@ -6,8 +6,10 @@ namespace Spatie\SchemaOrg;
  * A lodging business, such as a motel, hotel, or inn.
  *
  * @see http://schema.org/LodgingBusiness
+ *
+ * @mixin LocalBusiness
  */
-class LodgingBusiness extends LocalBusiness
+class LodgingBusiness
 {
     /**
      * An amenity feature (e.g. a characteristic or service) of the
