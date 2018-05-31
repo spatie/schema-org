@@ -12,8 +12,10 @@ namespace Spatie\SchemaOrg;
  * rental cars, use [[Offer]].
  *
  * @see http://schema.org/Reservation
+ *
+ * @mixin Intangible
  */
-class Reservation extends Intangible
+class Reservation
 {
     /**
      * 'bookingAgent' is an out-dated term indicating a 'broker' that serves as
