@@ -7,8 +7,10 @@ namespace Spatie\SchemaOrg;
  * theatrical performance, e.g. in a Movie, TVSeries etc.
  *
  * @see http://schema.org/PerformanceRole
+ *
+ * @mixin Role
  */
-class PerformanceRole extends Role
+class PerformanceRole
 {
     /**
      * The name of a character played in some acting or performing role, i.e. in
