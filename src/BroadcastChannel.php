@@ -6,8 +6,10 @@ namespace Spatie\SchemaOrg;
  * A unique instance of a BroadcastService on a CableOrSatelliteService lineup.
  *
  * @see http://schema.org/BroadcastChannel
+ *
+ * @mixin Intangible
  */
-class BroadcastChannel extends Intangible
+class BroadcastChannel
 {
     /**
      * The unique address by which the BroadcastService can be identified in a
