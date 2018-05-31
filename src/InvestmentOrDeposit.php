@@ -8,8 +8,10 @@ namespace Spatie\SchemaOrg;
  * return.
  *
  * @see http://schema.org/InvestmentOrDeposit
+ *
+ * @mixin FinancialProduct
  */
-class InvestmentOrDeposit extends FinancialProduct
+class InvestmentOrDeposit
 {
     /**
      * The amount of money.
