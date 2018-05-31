@@ -6,7 +6,9 @@ namespace Spatie\SchemaOrg;
  * One of the continents (for example, Europe or Africa).
  *
  * @see http://schema.org/Continent
+ *
+ * @mixin Landform
  */
-class Continent extends Landform
+class Continent
 {
 }
