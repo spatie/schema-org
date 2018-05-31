@@ -7,8 +7,10 @@ namespace Spatie\SchemaOrg;
  * prototypical description).
  *
  * @see http://schema.org/ProductModel
+ *
+ * @mixin Product
  */
-class ProductModel extends Product
+class ProductModel
 {
     /**
      * A pointer to a base product from which this product is a variant. It is
