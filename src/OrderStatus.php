@@ -6,8 +6,10 @@ namespace Spatie\SchemaOrg;
  * Enumerated status values for Order.
  *
  * @see http://schema.org/OrderStatus
+ *
+ * @mixin Enumeration
  */
-class OrderStatus extends Enumeration
+class OrderStatus
 {
     /**
      * OrderStatus representing cancellation of an order.
