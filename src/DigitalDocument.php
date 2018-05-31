@@ -6,8 +6,10 @@ namespace Spatie\SchemaOrg;
  * An electronic file or document.
  *
  * @see http://schema.org/DigitalDocument
+ *
+ * @mixin CreativeWork
  */
-class DigitalDocument extends CreativeWork
+class DigitalDocument
 {
     /**
      * A permission related to the access to this document (e.g. permission to
