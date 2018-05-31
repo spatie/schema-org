@@ -6,8 +6,10 @@ namespace Spatie\SchemaOrg;
  * A music recording (track), usually a single song.
  *
  * @see http://schema.org/MusicRecording
+ *
+ * @mixin CreativeWork
  */
-class MusicRecording extends CreativeWork
+class MusicRecording
 {
     /**
      * The artist that performed this album or recording.
