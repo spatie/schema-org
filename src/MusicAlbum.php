@@ -6,8 +6,10 @@ namespace Spatie\SchemaOrg;
  * A collection of music tracks.
  *
  * @see http://schema.org/MusicAlbum
+ *
+ * @mixin MusicPlaylist
  */
-class MusicAlbum extends MusicPlaylist
+class MusicAlbum
 {
     /**
      * Classification of the album by it's type of content: soundtrack, live
