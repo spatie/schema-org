@@ -17,7 +17,9 @@ namespace Spatie\SchemaOrg;
  * is interested in continuing receiving updates from the object.
  *
  * @see http://schema.org/SubscribeAction
+ *
+ * @mixin InteractAction
  */
-class SubscribeAction extends InteractAction
+class SubscribeAction
 {
 }
