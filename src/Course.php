@@ -11,8 +11,10 @@ namespace Spatie\SchemaOrg;
  * learners.
  *
  * @see http://schema.org/Course
+ *
+ * @mixin CreativeWork
  */
-class Course extends CreativeWork
+class Course
 {
     /**
      * The identifier for the [[Course]] used by the course [[provider]] (e.g.
