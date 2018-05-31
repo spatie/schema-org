@@ -12,8 +12,10 @@ namespace Spatie\SchemaOrg;
  * have now been integrated directly into schema.org.
  *
  * @see http://schema.org/DayOfWeek
+ *
+ * @mixin Enumeration
  */
-class DayOfWeek extends Enumeration
+class DayOfWeek
 {
     /**
      * The day of the week between Thursday and Saturday.
