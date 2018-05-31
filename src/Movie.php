@@ -6,8 +6,10 @@ namespace Spatie\SchemaOrg;
  * A movie.
  *
  * @see http://schema.org/Movie
+ *
+ * @mixin CreativeWork
  */
-class Movie extends CreativeWork
+class Movie
 {
     /**
      * An actor, e.g. in tv, radio, movie, video games etc., or in an event.
