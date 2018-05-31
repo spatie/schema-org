@@ -7,7 +7,9 @@ namespace Spatie\SchemaOrg;
  * agrees to/about an object (a proposition, topic or theme) with participants.
  *
  * @see http://schema.org/AgreeAction
+ *
+ * @mixin ReactAction
  */
-class AgreeAction extends ReactAction
+class AgreeAction
 {
 }
