@@ -7,8 +7,10 @@ namespace Spatie\SchemaOrg;
  * in a Frequently Asked Questions (FAQ) document.
  *
  * @see http://schema.org/Question
+ *
+ * @mixin CreativeWork
  */
-class Question extends CreativeWork
+class Question
 {
     /**
      * The answer that has been accepted as best, typically on a Question/Answer
