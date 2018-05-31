@@ -7,8 +7,10 @@ namespace Spatie\SchemaOrg;
  * benefits, etc.
  *
  * @see http://schema.org/GovernmentService
+ *
+ * @mixin Service
  */
-class GovernmentService extends Service
+class GovernmentService
 {
     /**
      * The operating organization, if different from the provider.  This enables
