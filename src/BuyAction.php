@@ -8,8 +8,10 @@ namespace Spatie\SchemaOrg;
  * price. Reciprocal of SellAction.
  *
  * @see http://schema.org/BuyAction
+ *
+ * @mixin TradeAction
  */
-class BuyAction extends TradeAction
+class BuyAction
 {
     /**
      * An entity which offers (sells / leases / lends / loans) the services /
