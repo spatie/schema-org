@@ -6,8 +6,10 @@ namespace Spatie\SchemaOrg;
  * Web applications.
  *
  * @see http://schema.org/WebApplication
+ *
+ * @mixin SoftwareApplication
  */
-class WebApplication extends SoftwareApplication
+class WebApplication
 {
     /**
      * Specifies browser requirements in human-readable text. For example,
