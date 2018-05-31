@@ -17,10 +17,14 @@ class TradeAction extends Action
      * 
      * Usage guidelines:
      * 
-     * * Use the [[priceCurrency]] property (with [ISO 4217
-     * codes](http://en.wikipedia.org/wiki/ISO_4217#Active_codes) e.g. "USD")
-     * instead of
-     *       including [ambiguous
+     * * Use the [[priceCurrency]] property (with standard formats: [ISO 4217
+     * currency format](http://en.wikipedia.org/wiki/ISO_4217) e.g. "USD";
+     * [Ticker symbol](https://en.wikipedia.org/wiki/List_of_cryptocurrencies)
+     * for cryptocurrencies e.g. "BTC"; well known names for [Local Exchange
+     * Tradings
+     * Systems](https://en.wikipedia.org/wiki/Local_exchange_trading_system)
+     * (LETS) and other currency types e.g. "Ithaca HOUR") instead of including
+     * [ambiguous
      * symbols](http://en.wikipedia.org/wiki/Dollar_sign#Currencies_that_use_the_dollar_or_peso_sign)
      * such as '$' in the value.
      * * Use '.' (Unicode 'FULL STOP' (U+002E)) rather than ',' to indicate a
