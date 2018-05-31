@@ -10,7 +10,9 @@ namespace Spatie\SchemaOrg;
  * [[Service]]\(s).
  *
  * @see http://schema.org/LegalService
+ *
+ * @mixin LocalBusiness
  */
-class LegalService extends LocalBusiness
+class LegalService
 {
 }
