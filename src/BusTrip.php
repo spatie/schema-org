@@ -6,8 +6,10 @@ namespace Spatie\SchemaOrg;
  * A trip on a commercial bus line.
  *
  * @see http://schema.org/BusTrip
+ *
+ * @mixin Intangible
  */
-class BusTrip extends Intangible
+class BusTrip
 {
     /**
      * The stop or station from which the bus arrives.
