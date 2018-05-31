@@ -6,8 +6,10 @@ namespace Spatie\SchemaOrg;
  * A musical composition.
  *
  * @see http://schema.org/MusicComposition
+ *
+ * @mixin CreativeWork
  */
-class MusicComposition extends CreativeWork
+class MusicComposition
 {
     /**
      * The person or organization who wrote a composition, or who is the
