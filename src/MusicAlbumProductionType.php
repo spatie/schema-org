@@ -7,8 +7,10 @@ namespace Spatie\SchemaOrg;
  * studio album, etc.
  *
  * @see http://schema.org/MusicAlbumProductionType
+ *
+ * @mixin Enumeration
  */
-class MusicAlbumProductionType extends Enumeration
+class MusicAlbumProductionType
 {
     /**
      * CompilationAlbum.
