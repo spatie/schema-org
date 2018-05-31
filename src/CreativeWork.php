@@ -533,6 +533,33 @@ class CreativeWork extends Thing
     }
 
     /**
+     * Media type typically expressed using a MIME format (see [IANA
+     * site](http://www.iana.org/assignments/media-types/media-types.xhtml) and
+     * [MDN
+     * reference](https://developer.mozilla.org/en-US/docs/Web/HTTP/Basics_of_HTTP/MIME_types))
+     * e.g. application/zip for a SoftwareApplication binary, audio/mpeg for
+     * .mp3 etc.).
+     * 
+     * In cases where a [[CreativeWork]] has several media type representations,
+     * [[encoding]] can be used to indicate each [[MediaObject]] alongside
+     * particular [[encodingFormat]] information.
+     * 
+     * Unregistered or niche encoding and file formats can be indicated instead
+     * via the most appropriate URL, e.g. defining Web page or a
+     * Wikipedia/Wikidata entry.
+     *
+     * @param string|string[] $encodingFormat
+     *
+     * @return static
+     *
+     * @see http://schema.org/encodingFormat
+     */
+    public function encodingFormat($encodingFormat)
+    {
+        return $this->setProperty('encodingFormat', $encodingFormat);
+    }
+
+    /**
      * A media object that encodes this CreativeWork.
      *
      * @param MediaObject|MediaObject[] $encodings
@@ -559,6 +586,24 @@ class CreativeWork extends Thing
     public function exampleOfWork($exampleOfWork)
     {
         return $this->setProperty('exampleOfWork', $exampleOfWork);
+    }
+
+    /**
+     * Date the content expires and is no longer useful or available. For
+     * example a [[VideoObject]] or [[NewsArticle]] whose availability or
+     * relevance is time-limited, or a [[ClaimReview]] fact check whose
+     * publisher wants to indicate that it may no longer be relevant (or helpful
+     * to highlight) after some date.
+     *
+     * @param \DateTimeInterface|\DateTimeInterface[] $expires
+     *
+     * @return static
+     *
+     * @see http://schema.org/expires
+     */
+    public function expires($expires)
+    {
+        return $this->setProperty('expires', $expires);
     }
 
     /**
@@ -612,8 +657,8 @@ class CreativeWork extends Thing
     }
 
     /**
-     * Indicates a CreativeWork that is (in some sense) a part of this
-     * CreativeWork.
+     * Indicates an item or CreativeWork that is part of this item, or
+     * CreativeWork (in some sense).
      *
      * @param CreativeWork|CreativeWork[] $hasPart
      *
@@ -689,7 +734,7 @@ class CreativeWork extends Thing
     }
 
     /**
-     * A flag to signal that the publication is accessible for free.
+     * A flag to signal that the item, event, or place is accessible for free.
      *
      * @param bool|bool[] $isAccessibleForFree
      *
@@ -749,8 +794,8 @@ class CreativeWork extends Thing
     }
 
     /**
-     * Indicates a CreativeWork that this CreativeWork is (in some sense) part
-     * of.
+     * Indicates an item or CreativeWork that this item, or CreativeWork (in
+     * some sense), is part of.
      *
      * @param CreativeWork|CreativeWork[] $isPartOf
      *
@@ -958,10 +1003,19 @@ class CreativeWork extends Thing
     }
 
     /**
-     * Link to page describing the editorial principles of the organization
-     * primarily responsible for the creation of the CreativeWork.
+     * The publishingPrinciples property indicates (typically via [[URL]]) a
+     * document describing the editorial principles of an [[Organization]] (or
+     * individual e.g. a [[Person]] writing a blog) that relate to their
+     * activities as a publisher, e.g. ethics or diversity policies. When
+     * applied to a [[CreativeWork]] (e.g. [[NewsArticle]]) the principles are
+     * those of the party primarily responsible for the creation of the
+     * [[CreativeWork]].
+     * 
+     * While such policies are most typically expressed in natural language,
+     * sometimes related information (e.g. indicating a [[funder]]) can be
+     * expressed using schema.org terminology.
      *
-     * @param string|string[] $publishingPrinciples
+     * @param CreativeWork|CreativeWork[]|string|string[] $publishingPrinciples
      *
      * @return static
      *
