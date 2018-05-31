@@ -13,7 +13,9 @@ namespace Spatie\SchemaOrg;
  * * http://purl.org/goodrelations/v1#PartsAndLabor-PickUp
  *
  * @see http://schema.org/WarrantyScope
+ *
+ * @mixin Enumeration
  */
-class WarrantyScope extends Enumeration
+class WarrantyScope
 {
 }
