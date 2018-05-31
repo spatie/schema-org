@@ -6,8 +6,10 @@ namespace Spatie\SchemaOrg;
  * A list of possible conditions for the item.
  *
  * @see http://schema.org/OfferItemCondition
+ *
+ * @mixin Enumeration
  */
-class OfferItemCondition extends Enumeration
+class OfferItemCondition
 {
     /**
      * Indicates that the item is damaged.
