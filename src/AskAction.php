@@ -10,8 +10,10 @@ namespace Spatie\SchemaOrg;
  * * [[ReplyAction]]: Appears generally as a response to AskAction.
  *
  * @see http://schema.org/AskAction
+ *
+ * @mixin CommunicateAction
  */
-class AskAction extends CommunicateAction
+class AskAction
 {
     /**
      * A sub property of object. A question.
