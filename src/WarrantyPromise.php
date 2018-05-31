@@ -8,8 +8,10 @@ namespace Spatie\SchemaOrg;
  * of a product.
  *
  * @see http://schema.org/WarrantyPromise
+ *
+ * @mixin StructuredValue
  */
-class WarrantyPromise extends StructuredValue
+class WarrantyPromise
 {
     /**
      * The duration of the warranty promise. Common unitCode values are ANN for
