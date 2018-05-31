@@ -9,8 +9,10 @@ namespace Spatie\SchemaOrg;
  * provider.
  *
  * @see http://schema.org/MenuSection
+ *
+ * @mixin CreativeWork
  */
-class MenuSection extends CreativeWork
+class MenuSection
 {
     /**
      * A food or drink item contained in a menu or menu section.
