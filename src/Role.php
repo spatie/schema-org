@@ -13,8 +13,10 @@ namespace Spatie\SchemaOrg;
  * See also [blog post](http://blog.schema.org/2014/06/introducing-role.html).
  *
  * @see http://schema.org/Role
+ *
+ * @mixin Intangible
  */
-class Role extends Intangible
+class Role
 {
     /**
      * The end date and time of the item (in [ISO 8601 date
