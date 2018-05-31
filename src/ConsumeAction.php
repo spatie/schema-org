@@ -6,8 +6,10 @@ namespace Spatie\SchemaOrg;
  * The act of ingesting information/resources/food.
  *
  * @see http://schema.org/ConsumeAction
+ *
+ * @mixin Action
  */
-class ConsumeAction extends Action
+class ConsumeAction
 {
     /**
      * An Offer which must be accepted before the user can perform the Action.
