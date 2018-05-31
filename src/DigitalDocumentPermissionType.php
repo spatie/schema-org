@@ -6,8 +6,10 @@ namespace Spatie\SchemaOrg;
  * A type of permission which can be granted for accessing a digital document.
  *
  * @see http://schema.org/DigitalDocumentPermissionType
+ *
+ * @mixin Enumeration
  */
-class DigitalDocumentPermissionType extends Enumeration
+class DigitalDocumentPermissionType
 {
     /**
      * Permission to add comments to the document.
