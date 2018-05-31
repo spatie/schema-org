@@ -7,8 +7,10 @@ namespace Spatie\SchemaOrg;
  * property.
  *
  * @see http://schema.org/MovieSeries
+ *
+ * @mixin CreativeWorkSeries
  */
-class MovieSeries extends CreativeWorkSeries
+class MovieSeries
 {
     /**
      * An actor, e.g. in tv, radio, movie, video games etc., or in an event.
