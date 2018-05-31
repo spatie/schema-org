@@ -9,7 +9,7 @@ namespace Spatie\SchemaOrg;
  *
  * @see http://schema.org/Recipe
  */
-class Recipe extends CreativeWork
+class Recipe extends HowTo
 {
     /**
      * The time it takes to actually cook the dish, in [ISO 8601 duration
@@ -69,21 +69,6 @@ class Recipe extends CreativeWork
     }
 
     /**
-     * The length of time it takes to prepare the recipe, in [ISO 8601 duration
-     * format](http://en.wikipedia.org/wiki/ISO_8601).
-     *
-     * @param Duration|Duration[] $prepTime
-     *
-     * @return static
-     *
-     * @see http://schema.org/prepTime
-     */
-    public function prepTime($prepTime)
-    {
-        return $this->setProperty('prepTime', $prepTime);
-    }
-
-    /**
      * The category of the recipe—for example, appetizer, entree, etc.
      *
      * @param string|string[] $recipeCategory
@@ -126,9 +111,10 @@ class Recipe extends CreativeWork
     }
 
     /**
-     * A step or instruction involved in making the recipe.
+     * A step in making the recipe, in the form of a single item (document,
+     * video, etc.) or an ordered list with HowToStep and/or HowToSection items.
      *
-     * @param schema:ItemList|schema:ItemList[]|string|string[] $recipeInstructions
+     * @param CreativeWork|CreativeWork[]|ItemList|ItemList[]|string|string[] $recipeInstructions
      *
      * @return static
      *
@@ -143,7 +129,7 @@ class Recipe extends CreativeWork
      * The quantity produced by the recipe (for example, number of people
      * served, number of servings, etc).
      *
-     * @param string|string[] $recipeYield
+     * @param QuantitativeValue|QuantitativeValue[]|string|string[] $recipeYield
      *
      * @return static
      *
@@ -167,21 +153,6 @@ class Recipe extends CreativeWork
     public function suitableForDiet($suitableForDiet)
     {
         return $this->setProperty('suitableForDiet', $suitableForDiet);
-    }
-
-    /**
-     * The total time it takes to prepare and cook the recipe, in [ISO 8601
-     * duration format](http://en.wikipedia.org/wiki/ISO_8601).
-     *
-     * @param Duration|Duration[] $totalTime
-     *
-     * @return static
-     *
-     * @see http://schema.org/totalTime
-     */
-    public function totalTime($totalTime)
-    {
-        return $this->setProperty('totalTime', $totalTime);
     }
 
 }
