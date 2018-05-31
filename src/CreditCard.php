@@ -17,7 +17,10 @@ namespace Spatie\SchemaOrg;
  * * http://purl.org/goodrelations/v1#VISA
  *
  * @see http://schema.org/CreditCard
+ *
+ * @mixin PaymentCard
+ * @mixin LoanOrCredit
  */
-class CreditCard extends PaymentCard
+class CreditCard
 {
 }
