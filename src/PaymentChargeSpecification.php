@@ -6,8 +6,10 @@ namespace Spatie\SchemaOrg;
  * The costs of settling the payment using a particular payment method.
  *
  * @see http://schema.org/PaymentChargeSpecification
+ *
+ * @mixin PriceSpecification
  */
-class PaymentChargeSpecification extends PriceSpecification
+class PaymentChargeSpecification
 {
     /**
      * The delivery method(s) to which the delivery charge or payment charge
