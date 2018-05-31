@@ -16,8 +16,10 @@ namespace Spatie\SchemaOrg;
  * rather than consuming visual content.
  *
  * @see http://schema.org/PlayAction
+ *
+ * @mixin Action
  */
-class PlayAction extends Action
+class PlayAction
 {
     /**
      * An intended audience, i.e. a group for whom something was created.
