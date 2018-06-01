@@ -9,6 +9,6 @@ namespace Spatie\SchemaOrg;
  *
  * @mixin SocialMediaPosting
  */
-class DiscussionForumPosting
+class DiscussionForumPosting extends BaseType
 {
 }
