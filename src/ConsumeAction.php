@@ -9,7 +9,7 @@ namespace Spatie\SchemaOrg;
  *
  * @mixin Action
  */
-class ConsumeAction
+class ConsumeAction extends BaseType
 {
     /**
      * An Offer which must be accepted before the user can perform the Action.
