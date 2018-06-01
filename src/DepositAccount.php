@@ -11,6 +11,6 @@ namespace Spatie\SchemaOrg;
  * @mixin BankAccount
  * @mixin InvestmentOrDeposit
  */
-class DepositAccount
+class DepositAccount extends BaseType
 {
 }
