@@ -10,6 +10,6 @@ namespace Spatie\SchemaOrg;
  *
  * @mixin ReactAction
  */
-class DislikeAction
+class DislikeAction extends BaseType
 {
 }
