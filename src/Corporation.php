@@ -9,7 +9,7 @@ namespace Spatie\SchemaOrg;
  *
  * @mixin Organization
  */
-class Corporation
+class Corporation extends BaseType
 {
     /**
      * The exchange traded instrument associated with a Corporation object. The
