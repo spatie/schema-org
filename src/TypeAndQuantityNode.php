@@ -10,7 +10,7 @@ namespace Spatie\SchemaOrg;
  *
  * @mixin StructuredValue
  */
-class TypeAndQuantityNode
+class TypeAndQuantityNode extends BaseType
 {
     /**
      * The quantity of the goods included in the offer.
