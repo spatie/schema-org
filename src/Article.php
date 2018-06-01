@@ -14,7 +14,7 @@ namespace Spatie\SchemaOrg;
  *
  * @mixin CreativeWork
  */
-class Article
+class Article extends BaseType
 {
     /**
      * The actual body of the article.
