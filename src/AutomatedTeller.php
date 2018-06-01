@@ -9,6 +9,6 @@ namespace Spatie\SchemaOrg;
  *
  * @mixin FinancialService
  */
-class AutomatedTeller
+class AutomatedTeller extends BaseType
 {
 }
