@@ -11,7 +11,7 @@ namespace Spatie\SchemaOrg;
  *
  * @mixin CreativeWork
  */
-class Comment
+class Comment extends BaseType
 {
     /**
      * The number of downvotes this question, answer or comment has received
