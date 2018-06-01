@@ -10,6 +10,6 @@ namespace Spatie\SchemaOrg;
  *
  * @mixin FindAction
  */
-class CheckAction
+class CheckAction extends BaseType
 {
 }
