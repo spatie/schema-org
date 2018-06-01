@@ -9,7 +9,7 @@ namespace Spatie\SchemaOrg;
  *
  * @mixin CreativeWorkSeries
  */
-class VideoGameSeries
+class VideoGameSeries extends BaseType
 {
     /**
      * An actor, e.g. in tv, radio, movie, video games etc., or in an event.
