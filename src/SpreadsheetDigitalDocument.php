@@ -9,6 +9,6 @@ namespace Spatie\SchemaOrg;
  *
  * @mixin DigitalDocument
  */
-class SpreadsheetDigitalDocument
+class SpreadsheetDigitalDocument extends BaseType
 {
 }
