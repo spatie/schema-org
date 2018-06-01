@@ -11,6 +11,6 @@ namespace Spatie\SchemaOrg;
  *
  * @mixin Event
  */
-class UserInteraction
+class UserInteraction extends BaseType
 {
 }
