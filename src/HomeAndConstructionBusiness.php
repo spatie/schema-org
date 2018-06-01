@@ -15,6 +15,6 @@ namespace Spatie\SchemaOrg;
  *
  * @mixin LocalBusiness
  */
-class HomeAndConstructionBusiness
+class HomeAndConstructionBusiness extends BaseType
 {
 }
