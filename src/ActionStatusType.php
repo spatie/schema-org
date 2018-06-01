@@ -9,7 +9,7 @@ namespace Spatie\SchemaOrg;
  *
  * @mixin Enumeration
  */
-class ActionStatusType
+class ActionStatusType extends BaseType
 {
     /**
      * An in-progress action (e.g, while watching the movie, or driving to a
