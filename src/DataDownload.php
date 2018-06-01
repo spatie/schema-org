@@ -9,6 +9,6 @@ namespace Spatie\SchemaOrg;
  *
  * @mixin MediaObject
  */
-class DataDownload
+class DataDownload extends BaseType
 {
 }
