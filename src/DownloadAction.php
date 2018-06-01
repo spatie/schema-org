@@ -9,6 +9,6 @@ namespace Spatie\SchemaOrg;
  *
  * @mixin TransferAction
  */
-class DownloadAction
+class DownloadAction extends BaseType
 {
 }
