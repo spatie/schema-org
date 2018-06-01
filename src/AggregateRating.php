@@ -9,7 +9,7 @@ namespace Spatie\SchemaOrg;
  *
  * @mixin Rating
  */
-class AggregateRating
+class AggregateRating extends BaseType
 {
     /**
      * The item that is being reviewed/rated.
