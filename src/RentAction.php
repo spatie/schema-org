@@ -11,7 +11,7 @@ namespace Spatie\SchemaOrg;
  *
  * @mixin TradeAction
  */
-class RentAction
+class RentAction extends BaseType
 {
     /**
      * A sub property of participant. The owner of the real estate property.
