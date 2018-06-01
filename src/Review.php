@@ -9,7 +9,7 @@ namespace Spatie\SchemaOrg;
  *
  * @mixin CreativeWork
  */
-class Review
+class Review extends BaseType
 {
     /**
      * The item that is being reviewed/rated.
