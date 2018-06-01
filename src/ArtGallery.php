@@ -9,6 +9,6 @@ namespace Spatie\SchemaOrg;
  *
  * @mixin EntertainmentBusiness
  */
-class ArtGallery
+class ArtGallery extends BaseType
 {
 }
