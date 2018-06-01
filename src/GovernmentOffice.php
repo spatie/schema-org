@@ -9,6 +9,6 @@ namespace Spatie\SchemaOrg;
  *
  * @mixin LocalBusiness
  */
-class GovernmentOffice
+class GovernmentOffice extends BaseType
 {
 }
