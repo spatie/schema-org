@@ -9,6 +9,6 @@ namespace Spatie\SchemaOrg;
  *
  * @mixin LocalBusiness
  */
-class RadioStation
+class RadioStation extends BaseType
 {
 }
