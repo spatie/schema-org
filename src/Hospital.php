@@ -11,6 +11,6 @@ namespace Spatie\SchemaOrg;
  * @mixin EmergencyService
  * @mixin MedicalOrganization
  */
-class Hospital
+class Hospital extends BaseType
 {
 }
