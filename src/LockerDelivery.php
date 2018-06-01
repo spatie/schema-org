@@ -9,6 +9,6 @@ namespace Spatie\SchemaOrg;
  *
  * @mixin DeliveryMethod
  */
-class LockerDelivery
+class LockerDelivery extends BaseType
 {
 }
