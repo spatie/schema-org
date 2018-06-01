@@ -13,7 +13,7 @@ namespace Spatie\SchemaOrg;
  *
  * @mixin Reservation
  */
-class LodgingReservation
+class LodgingReservation extends BaseType
 {
     /**
      * The earliest someone may check into a lodging establishment.
