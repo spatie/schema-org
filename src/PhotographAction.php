@@ -9,6 +9,6 @@ namespace Spatie\SchemaOrg;
  *
  * @mixin CreateAction
  */
-class PhotographAction
+class PhotographAction extends BaseType
 {
 }
