@@ -10,6 +10,6 @@ namespace Spatie\SchemaOrg;
  *
  * @mixin Store
  */
-class PawnShop
+class PawnShop extends BaseType
 {
 }
