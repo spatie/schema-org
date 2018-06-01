@@ -10,6 +10,6 @@ namespace Spatie\SchemaOrg;
  *
  * @mixin Action
  */
-class CreateAction
+class CreateAction extends BaseType
 {
 }
