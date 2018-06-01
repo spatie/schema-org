@@ -19,6 +19,6 @@ namespace Spatie\SchemaOrg;
  *
  * @mixin LocalBusiness
  */
-class ProfessionalService
+class ProfessionalService extends BaseType
 {
 }
