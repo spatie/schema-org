@@ -11,7 +11,7 @@ namespace Spatie\SchemaOrg;
  *
  * @mixin Reservation
  */
-class FoodEstablishmentReservation
+class FoodEstablishmentReservation extends BaseType
 {
     /**
      * The endTime of something. For a reserved event or service (e.g.
