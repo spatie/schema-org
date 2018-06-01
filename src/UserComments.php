@@ -11,7 +11,7 @@ namespace Spatie\SchemaOrg;
  *
  * @mixin UserInteraction
  */
-class UserComments
+class UserComments extends BaseType
 {
     /**
      * The text of the UserComment.
