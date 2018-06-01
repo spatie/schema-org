@@ -9,7 +9,7 @@ namespace Spatie\SchemaOrg;
  *
  * @mixin ContactPoint
  */
-class PostalAddress
+class PostalAddress extends BaseType
 {
     /**
      * The country. For example, USA. You can also provide the two-letter [ISO
