@@ -9,7 +9,7 @@ namespace Spatie\SchemaOrg;
  *
  * @mixin Place
  */
-class CivicStructure
+class CivicStructure extends BaseType
 {
     /**
      * The general opening hours for a business. Opening hours can be specified
