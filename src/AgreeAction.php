@@ -10,6 +10,6 @@ namespace Spatie\SchemaOrg;
  *
  * @mixin ReactAction
  */
-class AgreeAction
+class AgreeAction extends BaseType
 {
 }
