@@ -9,7 +9,7 @@ namespace Spatie\SchemaOrg;
  *
  * @mixin Intangible
  */
-class ListItem
+class ListItem extends BaseType
 {
     /**
      * An entity represented by an entry in a list or data feed (e.g. an
