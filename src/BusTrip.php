@@ -9,7 +9,7 @@ namespace Spatie\SchemaOrg;
  *
  * @mixin Intangible
  */
-class BusTrip
+class BusTrip extends BaseType
 {
     /**
      * The stop or station from which the bus arrives.
