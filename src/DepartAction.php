@@ -10,6 +10,6 @@ namespace Spatie\SchemaOrg;
  *
  * @mixin MoveAction
  */
-class DepartAction
+class DepartAction extends BaseType
 {
 }
