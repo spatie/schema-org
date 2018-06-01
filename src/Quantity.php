@@ -10,6 +10,6 @@ namespace Spatie\SchemaOrg;
  *
  * @mixin Intangible
  */
-class Quantity
+class Quantity extends BaseType
 {
 }
