@@ -10,6 +10,6 @@ namespace Spatie\SchemaOrg;
  * @mixin CivicStructure
  * @mixin EmergencyService
  */
-class PoliceStation
+class PoliceStation extends BaseType
 {
 }
