@@ -9,7 +9,7 @@ namespace Spatie\SchemaOrg;
  *
  * @mixin Thing
  */
-class Place
+class Place extends BaseType
 {
     /**
      * A property-value pair representing an additional characteristics of the
