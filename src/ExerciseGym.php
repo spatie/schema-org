@@ -9,6 +9,6 @@ namespace Spatie\SchemaOrg;
  *
  * @mixin SportsActivityLocation
  */
-class ExerciseGym
+class ExerciseGym extends BaseType
 {
 }
