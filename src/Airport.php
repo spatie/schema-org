@@ -9,7 +9,7 @@ namespace Spatie\SchemaOrg;
  *
  * @mixin CivicStructure
  */
-class Airport
+class Airport extends BaseType
 {
     /**
      * IATA identifier for an airline or airport.
