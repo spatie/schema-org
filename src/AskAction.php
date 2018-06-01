@@ -13,7 +13,7 @@ namespace Spatie\SchemaOrg;
  *
  * @mixin CommunicateAction
  */
-class AskAction
+class AskAction extends BaseType
 {
     /**
      * A sub property of object. A question.
