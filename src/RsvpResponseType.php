@@ -10,7 +10,7 @@ namespace Spatie\SchemaOrg;
  *
  * @mixin Enumeration
  */
-class RsvpResponseType
+class RsvpResponseType extends BaseType
 {
     /**
      * The invitee may or may not attend.
