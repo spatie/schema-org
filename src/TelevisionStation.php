@@ -9,6 +9,6 @@ namespace Spatie\SchemaOrg;
  *
  * @mixin LocalBusiness
  */
-class TelevisionStation
+class TelevisionStation extends BaseType
 {
 }
