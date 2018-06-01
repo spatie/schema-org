@@ -9,6 +9,6 @@ namespace Spatie\SchemaOrg;
  *
  * @mixin ConsumeAction
  */
-class ListenAction
+class ListenAction extends BaseType
 {
 }
