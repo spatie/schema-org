@@ -19,7 +19,7 @@ namespace Spatie\SchemaOrg;
  *
  * @mixin Action
  */
-class PlayAction
+class PlayAction extends BaseType
 {
     /**
      * An intended audience, i.e. a group for whom something was created.
