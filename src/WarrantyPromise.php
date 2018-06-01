@@ -11,7 +11,7 @@ namespace Spatie\SchemaOrg;
  *
  * @mixin StructuredValue
  */
-class WarrantyPromise
+class WarrantyPromise extends BaseType
 {
     /**
      * The duration of the warranty promise. Common unitCode values are ANN for
