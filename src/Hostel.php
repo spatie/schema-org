@@ -12,6 +12,6 @@ namespace Spatie\SchemaOrg;
  *
  * @mixin LodgingBusiness
  */
-class Hostel
+class Hostel extends BaseType
 {
 }
