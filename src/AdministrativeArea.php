@@ -10,6 +10,6 @@ namespace Spatie\SchemaOrg;
  *
  * @mixin Place
  */
-class AdministrativeArea
+class AdministrativeArea extends BaseType
 {
 }
