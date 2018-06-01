@@ -24,6 +24,6 @@ namespace Spatie\SchemaOrg;
  *
  * @mixin Enumeration
  */
-class PaymentMethod
+class PaymentMethod extends BaseType
 {
 }
