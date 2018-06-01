@@ -9,6 +9,6 @@ namespace Spatie\SchemaOrg;
  *
  * @mixin LocalBusiness
  */
-class RecyclingCenter
+class RecyclingCenter extends BaseType
 {
 }
