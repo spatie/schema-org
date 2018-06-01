@@ -9,7 +9,7 @@ namespace Spatie\SchemaOrg;
  *
  * @mixin Intangible
  */
-class GameServer
+class GameServer extends BaseType
 {
     /**
      * Video game which is played on this server.
