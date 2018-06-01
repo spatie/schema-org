@@ -10,6 +10,6 @@ namespace Spatie\SchemaOrg;
  *
  * @mixin ControlAction
  */
-class SuspendAction
+class SuspendAction extends BaseType
 {
 }
