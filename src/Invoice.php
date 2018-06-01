@@ -9,7 +9,7 @@ namespace Spatie\SchemaOrg;
  *
  * @mixin Intangible
  */
-class Invoice
+class Invoice extends BaseType
 {
     /**
      * The identifier for the account the payment will be applied to.
