@@ -9,7 +9,7 @@ namespace Spatie\SchemaOrg;
  *
  * @mixin StructuredValue
  */
-class GeoCoordinates
+class GeoCoordinates extends BaseType
 {
     /**
      * Physical address of the item.
