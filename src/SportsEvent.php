@@ -9,7 +9,7 @@ namespace Spatie\SchemaOrg;
  *
  * @mixin Event
  */
-class SportsEvent
+class SportsEvent extends BaseType
 {
     /**
      * The away team in a sports event.
