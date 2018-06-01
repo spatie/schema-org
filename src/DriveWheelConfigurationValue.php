@@ -9,7 +9,7 @@ namespace Spatie\SchemaOrg;
  *
  * @mixin QualitativeValue
  */
-class DriveWheelConfigurationValue
+class DriveWheelConfigurationValue extends BaseType
 {
     /**
      * All-wheel Drive is a transmission layout where the engine drives all four
