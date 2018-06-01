@@ -9,7 +9,7 @@ namespace Spatie\SchemaOrg;
  *
  * @mixin Article
  */
-class NewsArticle
+class NewsArticle extends BaseType
 {
     /**
      * The location where the NewsArticle was produced.
