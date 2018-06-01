@@ -10,6 +10,6 @@ namespace Spatie\SchemaOrg;
  *
  * @mixin EducationalOrganization
  */
-class MiddleSchool
+class MiddleSchool extends BaseType
 {
 }
