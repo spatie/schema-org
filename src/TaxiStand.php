@@ -9,6 +9,6 @@ namespace Spatie\SchemaOrg;
  *
  * @mixin CivicStructure
  */
-class TaxiStand
+class TaxiStand extends BaseType
 {
 }
