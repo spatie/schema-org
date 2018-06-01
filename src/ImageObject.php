@@ -9,7 +9,7 @@ namespace Spatie\SchemaOrg;
  *
  * @mixin MediaObject
  */
-class ImageObject
+class ImageObject extends BaseType
 {
     /**
      * The caption for this object.
