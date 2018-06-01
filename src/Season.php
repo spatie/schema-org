@@ -9,6 +9,6 @@ namespace Spatie\SchemaOrg;
  *
  * @mixin CreativeWork
  */
-class Season
+class Season extends BaseType
 {
 }
