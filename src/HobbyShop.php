@@ -9,6 +9,6 @@ namespace Spatie\SchemaOrg;
  *
  * @mixin Store
  */
-class HobbyShop
+class HobbyShop extends BaseType
 {
 }
