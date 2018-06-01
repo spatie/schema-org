@@ -10,7 +10,7 @@ namespace Spatie\SchemaOrg;
  *
  * @mixin Audience
  */
-class PeopleAudience
+class PeopleAudience extends BaseType
 {
     /**
      * Audiences defined by a person's gender.
