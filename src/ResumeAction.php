@@ -10,6 +10,6 @@ namespace Spatie\SchemaOrg;
  *
  * @mixin ControlAction
  */
-class ResumeAction
+class ResumeAction extends BaseType
 {
 }
