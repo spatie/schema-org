@@ -9,6 +9,6 @@ namespace Spatie\SchemaOrg;
  *
  * @mixin AdministrativeArea
  */
-class City
+class City extends BaseType
 {
 }
