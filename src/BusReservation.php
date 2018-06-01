@@ -13,6 +13,6 @@ namespace Spatie\SchemaOrg;
  *
  * @mixin Reservation
  */
-class BusReservation
+class BusReservation extends BaseType
 {
 }
