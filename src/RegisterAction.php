@@ -18,6 +18,6 @@ namespace Spatie\SchemaOrg;
  *
  * @mixin InteractAction
  */
-class RegisterAction
+class RegisterAction extends BaseType
 {
 }
