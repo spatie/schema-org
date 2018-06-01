@@ -14,6 +14,6 @@ namespace Spatie\SchemaOrg;
  *
  * @mixin Intangible
  */
-class Language
+class Language extends BaseType
 {
 }
