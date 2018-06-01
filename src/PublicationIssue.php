@@ -14,7 +14,7 @@ namespace Spatie\SchemaOrg;
  *
  * @mixin CreativeWork
  */
-class PublicationIssue
+class PublicationIssue extends BaseType
 {
     /**
      * Identifies the issue of publication; for example, "iii" or "2".
