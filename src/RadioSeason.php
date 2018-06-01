@@ -9,6 +9,6 @@ namespace Spatie\SchemaOrg;
  *
  * @mixin CreativeWorkSeason
  */
-class RadioSeason
+class RadioSeason extends BaseType
 {
 }
