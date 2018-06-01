@@ -9,6 +9,6 @@ namespace Spatie\SchemaOrg;
  *
  * @mixin Episode
  */
-class RadioEpisode
+class RadioEpisode extends BaseType
 {
 }
