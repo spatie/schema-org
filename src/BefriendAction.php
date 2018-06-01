@@ -15,6 +15,6 @@ namespace Spatie\SchemaOrg;
  *
  * @mixin InteractAction
  */
-class BefriendAction
+class BefriendAction extends BaseType
 {
 }
