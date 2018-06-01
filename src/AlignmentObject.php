@@ -10,7 +10,7 @@ namespace Spatie\SchemaOrg;
  *
  * @mixin Intangible
  */
-class AlignmentObject
+class AlignmentObject extends BaseType
 {
     /**
      * A category of alignment between the learning resource and the framework
