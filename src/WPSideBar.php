@@ -9,6 +9,6 @@ namespace Spatie\SchemaOrg;
  *
  * @mixin WebPageElement
  */
-class WPSideBar
+class WPSideBar extends BaseType
 {
 }
