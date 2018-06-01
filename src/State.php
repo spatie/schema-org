@@ -9,6 +9,6 @@ namespace Spatie\SchemaOrg;
  *
  * @mixin AdministrativeArea
  */
-class State
+class State extends BaseType
 {
 }
