@@ -9,6 +9,6 @@ namespace Spatie\SchemaOrg;
  *
  * @mixin UpdateAction
  */
-class AddAction
+class AddAction extends BaseType
 {
 }
