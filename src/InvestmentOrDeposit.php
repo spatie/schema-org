@@ -11,7 +11,7 @@ namespace Spatie\SchemaOrg;
  *
  * @mixin FinancialProduct
  */
-class InvestmentOrDeposit
+class InvestmentOrDeposit extends BaseType
 {
     /**
      * The amount of money.
