@@ -9,6 +9,6 @@ namespace Spatie\SchemaOrg;
  *
  * @mixin Event
  */
-class MusicEvent
+class MusicEvent extends BaseType
 {
 }
