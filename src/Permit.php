@@ -9,7 +9,7 @@ namespace Spatie\SchemaOrg;
  *
  * @mixin Intangible
  */
-class Permit
+class Permit extends BaseType
 {
     /**
      * The organization issuing the ticket or permit.
