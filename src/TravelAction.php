@@ -10,7 +10,7 @@ namespace Spatie\SchemaOrg;
  *
  * @mixin MoveAction
  */
-class TravelAction
+class TravelAction extends BaseType
 {
     /**
      * The distance travelled, e.g. exercising or travelling.
