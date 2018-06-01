@@ -9,6 +9,6 @@ namespace Spatie\SchemaOrg;
  *
  * @mixin OrganizeAction
  */
-class BookmarkAction
+class BookmarkAction extends BaseType
 {
 }
