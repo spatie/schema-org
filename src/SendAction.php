@@ -15,7 +15,7 @@ namespace Spatie\SchemaOrg;
  *
  * @mixin TransferAction
  */
-class SendAction
+class SendAction extends BaseType
 {
     /**
      * A sub property of instrument. The method of delivery.
