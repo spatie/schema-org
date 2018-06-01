@@ -10,7 +10,7 @@ namespace Spatie\SchemaOrg;
  *
  * @mixin Article
  */
-class TechArticle
+class TechArticle extends BaseType
 {
     /**
      * Prerequisites needed to fulfill steps in article.
