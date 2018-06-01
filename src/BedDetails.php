@@ -12,7 +12,7 @@ namespace Spatie\SchemaOrg;
  *
  * @mixin Intangible
  */
-class BedDetails
+class BedDetails extends BaseType
 {
     /**
      * The quantity of the given bed type available in the HotelRoom, Suite,
