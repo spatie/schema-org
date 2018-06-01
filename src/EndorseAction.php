@@ -9,7 +9,7 @@ namespace Spatie\SchemaOrg;
  *
  * @mixin ReactAction
  */
-class EndorseAction
+class EndorseAction extends BaseType
 {
     /**
      * A sub property of participant. The person/organization being supported.
