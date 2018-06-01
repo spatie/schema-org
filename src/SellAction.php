@@ -11,7 +11,7 @@ namespace Spatie\SchemaOrg;
  *
  * @mixin TradeAction
  */
-class SellAction
+class SellAction extends BaseType
 {
     /**
      * A sub property of participant. The participant/person/organization that
