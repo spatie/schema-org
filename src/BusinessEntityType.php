@@ -18,6 +18,6 @@ namespace Spatie\SchemaOrg;
  *
  * @mixin Enumeration
  */
-class BusinessEntityType
+class BusinessEntityType extends BaseType
 {
 }
