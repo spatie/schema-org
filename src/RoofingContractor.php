@@ -9,6 +9,6 @@ namespace Spatie\SchemaOrg;
  *
  * @mixin HomeAndConstructionBusiness
  */
-class RoofingContractor
+class RoofingContractor extends BaseType
 {
 }
