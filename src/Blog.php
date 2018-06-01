@@ -9,7 +9,7 @@ namespace Spatie\SchemaOrg;
  *
  * @mixin CreativeWork
  */
-class Blog
+class Blog extends BaseType
 {
     /**
      * A posting that is part of this blog.
