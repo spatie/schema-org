@@ -9,7 +9,7 @@ namespace Spatie\SchemaOrg;
  *
  * @mixin Enumeration
  */
-class OrderStatus
+class OrderStatus extends BaseType
 {
     /**
      * OrderStatus representing cancellation of an order.
