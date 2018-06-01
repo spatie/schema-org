@@ -16,6 +16,6 @@ namespace Spatie\SchemaOrg;
  *
  * @mixin InteractAction
  */
-class UnRegisterAction
+class UnRegisterAction extends BaseType
 {
 }
