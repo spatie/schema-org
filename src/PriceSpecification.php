@@ -12,7 +12,7 @@ namespace Spatie\SchemaOrg;
  *
  * @mixin StructuredValue
  */
-class PriceSpecification
+class PriceSpecification extends BaseType
 {
     /**
      * The interval and unit of measurement of ordering quantities for which the
