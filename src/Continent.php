@@ -9,6 +9,6 @@ namespace Spatie\SchemaOrg;
  *
  * @mixin Landform
  */
-class Continent
+class Continent extends BaseType
 {
 }
