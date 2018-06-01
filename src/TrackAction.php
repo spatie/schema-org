@@ -16,7 +16,7 @@ namespace Spatie\SchemaOrg;
  *
  * @mixin FindAction
  */
-class TrackAction
+class TrackAction extends BaseType
 {
     /**
      * A sub property of instrument. The method of delivery.
