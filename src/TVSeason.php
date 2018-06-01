@@ -10,7 +10,7 @@ namespace Spatie\SchemaOrg;
  * @mixin CreativeWork
  * @mixin CreativeWorkSeason
  */
-class TVSeason
+class TVSeason extends BaseType
 {
     /**
      * The country of the principal offices of the production company or
