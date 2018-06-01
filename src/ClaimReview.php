@@ -10,7 +10,7 @@ namespace Spatie\SchemaOrg;
  *
  * @mixin Review
  */
-class ClaimReview
+class ClaimReview extends BaseType
 {
     /**
      * A short summary of the specific claims reviewed in a ClaimReview.
