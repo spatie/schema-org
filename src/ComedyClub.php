@@ -9,6 +9,6 @@ namespace Spatie\SchemaOrg;
  *
  * @mixin EntertainmentBusiness
  */
-class ComedyClub
+class ComedyClub extends BaseType
 {
 }
