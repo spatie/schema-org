@@ -13,7 +13,7 @@ namespace Spatie\SchemaOrg;
  *
  * @mixin Reservation
  */
-class FlightReservation
+class FlightReservation extends BaseType
 {
     /**
      * The priority status assigned to a passenger for security or boarding
