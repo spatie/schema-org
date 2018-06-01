@@ -6,10 +6,12 @@ namespace Spatie\SchemaOrg;
  * {{ type.description | doc(0) }}
  *
  * @see {{ type.resource }}
+{% if type.parents %}
  *
 {% for parent in type.parents %}
  * @mixin {{ parent }}
 {% endfor %}
+{% endif %}
  */
 class {{ type.name }} extends BaseType
 {
