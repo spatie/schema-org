@@ -15,7 +15,7 @@ namespace Spatie\SchemaOrg;
  *
  * @mixin Accommodation
  */
-class Suite
+class Suite extends BaseType
 {
     /**
      * The type of bed or beds included in the accommodation. For the single
