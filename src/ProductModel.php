@@ -10,7 +10,7 @@ namespace Spatie\SchemaOrg;
  *
  * @mixin Product
  */
-class ProductModel
+class ProductModel extends BaseType
 {
     /**
      * A pointer to a base product from which this product is a variant. It is
