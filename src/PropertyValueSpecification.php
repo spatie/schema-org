@@ -9,7 +9,7 @@ namespace Spatie\SchemaOrg;
  *
  * @mixin Intangible
  */
-class PropertyValueSpecification
+class PropertyValueSpecification extends BaseType
 {
     /**
      * The default value of the input.  For properties that expect a literal,
