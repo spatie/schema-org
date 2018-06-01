@@ -16,7 +16,7 @@ namespace Spatie\SchemaOrg;
  *
  * @mixin Intangible
  */
-class Role
+class Role extends BaseType
 {
     /**
      * The end date and time of the item (in [ISO 8601 date
