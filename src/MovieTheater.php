@@ -10,7 +10,7 @@ namespace Spatie\SchemaOrg;
  * @mixin CivicStructure
  * @mixin EntertainmentBusiness
  */
-class MovieTheater
+class MovieTheater extends BaseType
 {
     /**
      * The number of screens in the movie theater.
