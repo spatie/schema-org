@@ -9,6 +9,6 @@ namespace Spatie\SchemaOrg;
  *
  * @mixin EntertainmentBusiness
  */
-class AdultEntertainment
+class AdultEntertainment extends BaseType
 {
 }
