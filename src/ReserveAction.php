@@ -15,6 +15,6 @@ namespace Spatie\SchemaOrg;
  *
  * @mixin PlanAction
  */
-class ReserveAction
+class ReserveAction extends BaseType
 {
 }
