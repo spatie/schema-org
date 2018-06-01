@@ -9,6 +9,6 @@ namespace Spatie\SchemaOrg;
  *
  * @mixin InteractAction
  */
-class MarryAction
+class MarryAction extends BaseType
 {
 }
