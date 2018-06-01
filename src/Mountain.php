@@ -9,6 +9,6 @@ namespace Spatie\SchemaOrg;
  *
  * @mixin Landform
  */
-class Mountain
+class Mountain extends BaseType
 {
 }
