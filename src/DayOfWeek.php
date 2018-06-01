@@ -15,7 +15,7 @@ namespace Spatie\SchemaOrg;
  *
  * @mixin Enumeration
  */
-class DayOfWeek
+class DayOfWeek extends BaseType
 {
     /**
      * The day of the week between Thursday and Saturday.
