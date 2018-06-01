@@ -10,6 +10,6 @@ namespace Spatie\SchemaOrg;
  *
  * @mixin CivicStructure
  */
-class RVPark
+class RVPark extends BaseType
 {
 }
