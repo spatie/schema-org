@@ -17,7 +17,7 @@ namespace Spatie\SchemaOrg;
  *
  * @mixin StructuredValue
  */
-class OpeningHoursSpecification
+class OpeningHoursSpecification extends BaseType
 {
     /**
      * The closing hour of the place or service on the given day(s) of the week.
