@@ -9,6 +9,6 @@ namespace Spatie\SchemaOrg;
  *
  * @mixin LocalBusiness
  */
-class TouristInformationCenter
+class TouristInformationCenter extends BaseType
 {
 }
