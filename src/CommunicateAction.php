@@ -10,7 +10,7 @@ namespace Spatie\SchemaOrg;
  *
  * @mixin InteractAction
  */
-class CommunicateAction
+class CommunicateAction extends BaseType
 {
     /**
      * The subject matter of the content.
