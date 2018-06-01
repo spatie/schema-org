@@ -9,6 +9,6 @@ namespace Spatie\SchemaOrg;
  *
  * @mixin Message
  */
-class EmailMessage
+class EmailMessage extends BaseType
 {
 }
