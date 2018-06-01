@@ -15,7 +15,7 @@ namespace Spatie\SchemaOrg;
  *
  * @mixin Intangible
  */
-class Reservation
+class Reservation extends BaseType
 {
     /**
      * 'bookingAgent' is an out-dated term indicating a 'broker' that serves as
