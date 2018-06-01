@@ -11,6 +11,6 @@ namespace Spatie\SchemaOrg;
  *
  * @mixin CreativeWork
  */
-class Conversation
+class Conversation extends BaseType
 {
 }
