@@ -9,7 +9,7 @@ namespace Spatie\SchemaOrg;
  *
  * @mixin Product
  */
-class SomeProducts
+class SomeProducts extends BaseType
 {
     /**
      * The current approximate inventory level for the item or items.
