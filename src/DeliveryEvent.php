@@ -9,7 +9,7 @@ namespace Spatie\SchemaOrg;
  *
  * @mixin Event
  */
-class DeliveryEvent
+class DeliveryEvent extends BaseType
 {
     /**
      * Password, PIN, or access code needed for delivery (e.g. from a locker).
