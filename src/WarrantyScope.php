@@ -16,6 +16,6 @@ namespace Spatie\SchemaOrg;
  *
  * @mixin Enumeration
  */
-class WarrantyScope
+class WarrantyScope extends BaseType
 {
 }
