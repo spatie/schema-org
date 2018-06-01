@@ -9,6 +9,6 @@ namespace Spatie\SchemaOrg;
  *
  * @mixin BodyOfWater
  */
-class LakeBodyOfWater
+class LakeBodyOfWater extends BaseType
 {
 }
