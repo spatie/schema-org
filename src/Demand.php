@@ -12,7 +12,7 @@ namespace Spatie\SchemaOrg;
  *
  * @mixin Intangible
  */
-class Demand
+class Demand extends BaseType
 {
     /**
      * The payment method(s) accepted by seller for this offer.
