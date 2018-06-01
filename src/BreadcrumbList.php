@@ -19,6 +19,6 @@ namespace Spatie\SchemaOrg;
  *
  * @mixin ItemList
  */
-class BreadcrumbList
+class BreadcrumbList extends BaseType
 {
 }
