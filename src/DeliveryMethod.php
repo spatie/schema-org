@@ -24,7 +24,7 @@ namespace Spatie\SchemaOrg;
  *
  * @mixin Enumeration
  */
-class DeliveryMethod
+class DeliveryMethod extends BaseType
 {
     /**
      * A DeliveryMethod in which an item is collected on site, e.g. in a store
