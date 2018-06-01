@@ -10,7 +10,7 @@ namespace Spatie\SchemaOrg;
  *
  * @mixin Service
  */
-class GovernmentService
+class GovernmentService extends BaseType
 {
     /**
      * The operating organization, if different from the provider.  This enables
