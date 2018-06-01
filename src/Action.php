@@ -16,7 +16,7 @@ namespace Spatie\SchemaOrg;
  *
  * @mixin Thing
  */
-class Action
+class Action extends BaseType
 {
     /**
      * Indicates the current disposition of the Action.
