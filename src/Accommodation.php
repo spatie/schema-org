@@ -16,7 +16,7 @@ namespace Spatie\SchemaOrg;
  *
  * @mixin Place
  */
-class Accommodation
+class Accommodation extends BaseType
 {
     /**
      * An amenity feature (e.g. a characteristic or service) of the
