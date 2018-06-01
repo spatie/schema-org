@@ -9,6 +9,6 @@ namespace Spatie\SchemaOrg;
  *
  * @mixin CivicStructure
  */
-class Museum
+class Museum extends BaseType
 {
 }
