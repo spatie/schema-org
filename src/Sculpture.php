@@ -9,6 +9,6 @@ namespace Spatie\SchemaOrg;
  *
  * @mixin CreativeWork
  */
-class Sculpture
+class Sculpture extends BaseType
 {
 }
