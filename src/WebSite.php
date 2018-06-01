@@ -10,6 +10,6 @@ namespace Spatie\SchemaOrg;
  *
  * @mixin CreativeWork
  */
-class WebSite
+class WebSite extends BaseType
 {
 }
