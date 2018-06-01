@@ -12,7 +12,7 @@ namespace Spatie\SchemaOrg;
  * @mixin Organization
  * @mixin Place
  */
-class LocalBusiness
+class LocalBusiness extends BaseType
 {
     /**
      * The larger organization that this local business is a branch of, if any.
