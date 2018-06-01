@@ -25,7 +25,7 @@ namespace Spatie\SchemaOrg;
  *
  * @mixin CreativeWork
  */
-class CreativeWorkSeries
+class CreativeWorkSeries extends BaseType
 {
     /**
      * The end date and time of the item (in [ISO 8601 date
