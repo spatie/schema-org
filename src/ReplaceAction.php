@@ -9,7 +9,7 @@ namespace Spatie\SchemaOrg;
  *
  * @mixin UpdateAction
  */
-class ReplaceAction
+class ReplaceAction extends BaseType
 {
     /**
      * A sub property of object. The object that is being replaced.
