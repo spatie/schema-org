@@ -14,7 +14,7 @@ namespace Spatie\SchemaOrg;
  *
  * @mixin TransferAction
  */
-class BorrowAction
+class BorrowAction extends BaseType
 {
     /**
      * A sub property of participant. The person that lends the object being
