@@ -9,7 +9,7 @@ namespace Spatie\SchemaOrg;
  *
  * @mixin LocalBusiness
  */
-class LodgingBusiness
+class LodgingBusiness extends BaseType
 {
     /**
      * An amenity feature (e.g. a characteristic or service) of the
