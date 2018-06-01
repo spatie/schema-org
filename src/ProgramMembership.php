@@ -10,7 +10,7 @@ namespace Spatie\SchemaOrg;
  *
  * @mixin Intangible
  */
-class ProgramMembership
+class ProgramMembership extends BaseType
 {
     /**
      * The organization (airline, travelers' club, etc.) the membership is made
