@@ -12,7 +12,7 @@ namespace Spatie\SchemaOrg;
  *
  * @mixin StructuredValue
  */
-class DatedMoneySpecification
+class DatedMoneySpecification extends BaseType
 {
     /**
      * The amount of money.
