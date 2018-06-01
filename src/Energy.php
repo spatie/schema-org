@@ -10,6 +10,6 @@ namespace Spatie\SchemaOrg;
  *
  * @mixin Quantity
  */
-class Energy
+class Energy extends BaseType
 {
 }
