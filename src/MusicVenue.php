@@ -9,6 +9,6 @@ namespace Spatie\SchemaOrg;
  *
  * @mixin CivicStructure
  */
-class MusicVenue
+class MusicVenue extends BaseType
 {
 }
