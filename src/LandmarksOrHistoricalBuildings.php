@@ -9,6 +9,6 @@ namespace Spatie\SchemaOrg;
  *
  * @mixin Place
  */
-class LandmarksOrHistoricalBuildings
+class LandmarksOrHistoricalBuildings extends BaseType
 {
 }
