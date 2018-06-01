@@ -9,6 +9,6 @@ namespace Spatie\SchemaOrg;
  *
  * @mixin ConsumeAction
  */
-class InstallAction
+class InstallAction extends BaseType
 {
 }
