@@ -9,7 +9,7 @@ namespace Spatie\SchemaOrg;
  *
  * @mixin CreativeWork
  */
-class MenuItem
+class MenuItem extends BaseType
 {
     /**
      * Nutrition information about the recipe or menu item.
