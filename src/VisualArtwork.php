@@ -9,7 +9,7 @@ namespace Spatie\SchemaOrg;
  *
  * @mixin CreativeWork
  */
-class VisualArtwork
+class VisualArtwork extends BaseType
 {
     /**
      * The number of copies when multiple copies of a piece of artwork are
