@@ -10,7 +10,7 @@ namespace Spatie\SchemaOrg;
  *
  * @mixin Thing
  */
-class CreativeWork
+class CreativeWork extends BaseType
 {
     /**
      * The subject matter of the content.
