@@ -9,7 +9,7 @@ namespace Spatie\SchemaOrg;
  *
  * @mixin PlayAction
  */
-class PerformAction
+class PerformAction extends BaseType
 {
     /**
      * A sub property of location. The entertainment business where the action
