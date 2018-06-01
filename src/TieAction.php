@@ -9,6 +9,6 @@ namespace Spatie\SchemaOrg;
  *
  * @mixin AchieveAction
  */
-class TieAction
+class TieAction extends BaseType
 {
 }
