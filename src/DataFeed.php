@@ -10,7 +10,7 @@ namespace Spatie\SchemaOrg;
  *
  * @mixin Dataset
  */
-class DataFeed
+class DataFeed extends BaseType
 {
     /**
      * An item within in a data feed. Data feeds may have many elements.
