@@ -9,7 +9,7 @@ namespace Spatie\SchemaOrg;
  *
  * @mixin Thing
  */
-class Person
+class Person extends BaseType
 {
     /**
      * An additional name for a Person, can be used for a middle name.
