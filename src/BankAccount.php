@@ -10,6 +10,6 @@ namespace Spatie\SchemaOrg;
  *
  * @mixin FinancialProduct
  */
-class BankAccount
+class BankAccount extends BaseType
 {
 }
