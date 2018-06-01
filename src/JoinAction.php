@@ -18,7 +18,7 @@ namespace Spatie\SchemaOrg;
  *
  * @mixin InteractAction
  */
-class JoinAction
+class JoinAction extends BaseType
 {
     /**
      * Upcoming or past event associated with this place, organization, or
