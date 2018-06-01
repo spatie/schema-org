@@ -13,7 +13,7 @@ namespace Spatie\SchemaOrg;
  *
  * @mixin StructuredValue
  */
-class MonetaryAmount
+class MonetaryAmount extends BaseType
 {
     /**
      * The currency in which the monetary amount is expressed (in 3-letter [ISO
