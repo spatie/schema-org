@@ -9,6 +9,6 @@ namespace Spatie\SchemaOrg;
  *
  * @mixin HomeAndConstructionBusiness
  */
-class MovingCompany
+class MovingCompany extends BaseType
 {
 }
