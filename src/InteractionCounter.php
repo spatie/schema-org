@@ -10,7 +10,7 @@ namespace Spatie\SchemaOrg;
  *
  * @mixin StructuredValue
  */
-class InteractionCounter
+class InteractionCounter extends BaseType
 {
     /**
      * The Action representing the type of interaction. For up votes, +1s, etc.
