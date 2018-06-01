@@ -10,7 +10,7 @@ namespace Spatie\SchemaOrg;
  *
  * @mixin Enumeration
  */
-class ItemListOrderType
+class ItemListOrderType extends BaseType
 {
     /**
      * An ItemList ordered with lower values listed first.
