@@ -16,7 +16,7 @@ namespace Spatie\SchemaOrg;
  *
  * @mixin StructuredValue
  */
-class PropertyValue
+class PropertyValue extends BaseType
 {
     /**
      * The upper value of some characteristic or property.
