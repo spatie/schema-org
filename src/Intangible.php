@@ -10,6 +10,6 @@ namespace Spatie\SchemaOrg;
  *
  * @mixin Thing
  */
-class Intangible
+class Intangible extends BaseType
 {
 }
