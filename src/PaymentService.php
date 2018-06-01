@@ -10,6 +10,6 @@ namespace Spatie\SchemaOrg;
  *
  * @mixin FinancialProduct
  */
-class PaymentService
+class PaymentService extends BaseType
 {
 }
