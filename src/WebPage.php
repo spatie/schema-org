@@ -13,7 +13,7 @@ namespace Spatie\SchemaOrg;
  *
  * @mixin CreativeWork
  */
-class WebPage
+class WebPage extends BaseType
 {
     /**
      * A set of links that can help a user understand and navigate a website
