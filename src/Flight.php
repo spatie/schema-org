@@ -9,7 +9,7 @@ namespace Spatie\SchemaOrg;
  *
  * @mixin Intangible
  */
-class Flight
+class Flight extends BaseType
 {
     /**
      * The kind of aircraft (e.g., "Boeing 747").
