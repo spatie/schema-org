@@ -9,6 +9,6 @@ namespace Spatie\SchemaOrg;
  *
  * @mixin Store
  */
-class MobilePhoneStore
+class MobilePhoneStore extends BaseType
 {
 }
