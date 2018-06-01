@@ -9,7 +9,7 @@ namespace Spatie\SchemaOrg;
  *
  * @mixin Enumeration
  */
-class GamePlayMode
+class GamePlayMode extends BaseType
 {
     /**
      * Play mode: CoOp. Co-operative games, where you play on the same team with
