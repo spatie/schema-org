@@ -11,7 +11,7 @@ namespace Spatie\SchemaOrg;
  *
  * @mixin CreativeWork
  */
-class Game
+class Game extends BaseType
 {
     /**
      * A piece of data that represents a particular aspect of a fictional
