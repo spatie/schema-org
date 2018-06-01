@@ -9,6 +9,6 @@ namespace Spatie\SchemaOrg;
  *
  * @mixin PlaceOfWorship
  */
-class Church
+class Church extends BaseType
 {
 }
