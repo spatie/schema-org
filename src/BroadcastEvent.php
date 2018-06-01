@@ -9,7 +9,7 @@ namespace Spatie\SchemaOrg;
  *
  * @mixin PublicationEvent
  */
-class BroadcastEvent
+class BroadcastEvent extends BaseType
 {
     /**
      * The event being broadcast such as a sporting event or awards ceremony.
