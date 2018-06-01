@@ -9,6 +9,6 @@ namespace Spatie\SchemaOrg;
  *
  * @mixin AutomotiveBusiness
  */
-class AutoRepair
+class AutoRepair extends BaseType
 {
 }
