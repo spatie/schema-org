@@ -9,6 +9,6 @@ namespace Spatie\SchemaOrg;
  *
  * @mixin PlaceOfWorship
  */
-class HinduTemple
+class HinduTemple extends BaseType
 {
 }
