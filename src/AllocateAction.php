@@ -9,6 +9,6 @@ namespace Spatie\SchemaOrg;
  *
  * @mixin OrganizeAction
  */
-class AllocateAction
+class AllocateAction extends BaseType
 {
 }
