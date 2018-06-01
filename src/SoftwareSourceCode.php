@@ -10,7 +10,7 @@ namespace Spatie\SchemaOrg;
  *
  * @mixin CreativeWork
  */
-class SoftwareSourceCode
+class SoftwareSourceCode extends BaseType
 {
     /**
      * Link to the repository where the un-compiled, human readable code and
