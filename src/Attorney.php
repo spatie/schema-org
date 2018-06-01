@@ -12,6 +12,6 @@ namespace Spatie\SchemaOrg;
  *
  * @mixin LegalService
  */
-class Attorney
+class Attorney extends BaseType
 {
 }
