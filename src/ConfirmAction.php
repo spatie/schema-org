@@ -14,6 +14,6 @@ namespace Spatie\SchemaOrg;
  *
  * @mixin InformAction
  */
-class ConfirmAction
+class ConfirmAction extends BaseType
 {
 }
