@@ -9,6 +9,6 @@ namespace Spatie\SchemaOrg;
  *
  * @mixin FinancialService
  */
-class BankOrCreditUnion
+class BankOrCreditUnion extends BaseType
 {
 }
