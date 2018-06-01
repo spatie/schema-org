@@ -9,6 +9,6 @@ namespace Spatie\SchemaOrg;
  *
  * @mixin ConsumeAction
  */
-class EatAction
+class EatAction extends BaseType
 {
 }
