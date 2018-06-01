@@ -12,6 +12,6 @@ namespace Spatie\SchemaOrg;
  *
  * @mixin Place
  */
-class Landform
+class Landform extends BaseType
 {
 }
