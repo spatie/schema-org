@@ -9,6 +9,6 @@ namespace Spatie\SchemaOrg;
  *
  * @mixin CreativeWork
  */
-class Photograph
+class Photograph extends BaseType
 {
 }
