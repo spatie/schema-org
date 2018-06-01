@@ -9,7 +9,7 @@ namespace Spatie\SchemaOrg;
  *
  * @mixin CreativeWork
  */
-class MusicRecording
+class MusicRecording extends BaseType
 {
     /**
      * The artist that performed this album or recording.
