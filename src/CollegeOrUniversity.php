@@ -9,6 +9,6 @@ namespace Spatie\SchemaOrg;
  *
  * @mixin EducationalOrganization
  */
-class CollegeOrUniversity
+class CollegeOrUniversity extends BaseType
 {
 }
