@@ -10,7 +10,7 @@ namespace Spatie\SchemaOrg;
  *
  * @mixin CommunicateAction
  */
-class InformAction
+class InformAction extends BaseType
 {
     /**
      * Upcoming or past event associated with this place, organization, or
