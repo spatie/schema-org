@@ -9,7 +9,7 @@ namespace Spatie\SchemaOrg;
  *
  * @mixin CreativeWork
  */
-class MusicPlaylist
+class MusicPlaylist extends BaseType
 {
     /**
      * The number of tracks in this album or playlist.
