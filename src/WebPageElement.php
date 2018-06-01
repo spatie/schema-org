@@ -9,6 +9,6 @@ namespace Spatie\SchemaOrg;
  *
  * @mixin CreativeWork
  */
-class WebPageElement
+class WebPageElement extends BaseType
 {
 }
