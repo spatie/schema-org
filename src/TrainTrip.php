@@ -9,7 +9,7 @@ namespace Spatie\SchemaOrg;
  *
  * @mixin Intangible
  */
-class TrainTrip
+class TrainTrip extends BaseType
 {
     /**
      * The platform where the train arrives.
