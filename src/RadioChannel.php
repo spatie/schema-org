@@ -10,6 +10,6 @@ namespace Spatie\SchemaOrg;
  *
  * @mixin BroadcastChannel
  */
-class RadioChannel
+class RadioChannel extends BaseType
 {
 }
