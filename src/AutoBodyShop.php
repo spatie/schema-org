@@ -9,6 +9,6 @@ namespace Spatie\SchemaOrg;
  *
  * @mixin AutomotiveBusiness
  */
-class AutoBodyShop
+class AutoBodyShop extends BaseType
 {
 }
