@@ -10,7 +10,7 @@ namespace Spatie\SchemaOrg;
  *
  * @mixin StructuredValue
  */
-class EngineSpecification
+class EngineSpecification extends BaseType
 {
     /**
      * The type of fuel suitable for the engine or engines of the vehicle. If
