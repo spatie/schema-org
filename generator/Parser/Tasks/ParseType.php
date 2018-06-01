@@ -19,15 +19,22 @@ class ParseType extends Task
             return null;
         }
 
+        $subClassOf = $node->filter('[property="rdfs:subClassOf"]');
+
+        if ($subClassOf->count() > 0) {
+            $type->parents = array_filter($subClassOf
+                ->each(function (Crawler $node) {
+                    $parent = $this->getText($node);
+
+                    return strpos($parent, ':') === false ? $parent : null;
+                }));
+
+            if (empty($type->parents)) {
+                return null;
+            }
+        }
+
         $type->description = $this->getText($node, '[property="rdfs:comment"]');
-
-        $type->parents = array_filter($node
-            ->filter('[property="rdfs:subClassOf"]')
-            ->each(function (Crawler $node) {
-                $parent = $this->getText($node, '[property="rdfs:subClassOf"]') ?: 'BaseType';
-
-                return strpos($parent, ':') === false ? $parent : null;
-            }));
 
         $type->resource = $this->getAttribute($node, 'resource');
 
