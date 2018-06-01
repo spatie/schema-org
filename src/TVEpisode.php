@@ -9,7 +9,7 @@ namespace Spatie\SchemaOrg;
  *
  * @mixin Episode
  */
-class TVEpisode
+class TVEpisode extends BaseType
 {
     /**
      * The country of the principal offices of the production company or
