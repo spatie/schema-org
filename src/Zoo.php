@@ -9,6 +9,6 @@ namespace Spatie\SchemaOrg;
  *
  * @mixin CivicStructure
  */
-class Zoo
+class Zoo extends BaseType
 {
 }
