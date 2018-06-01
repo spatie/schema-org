@@ -9,7 +9,7 @@ namespace Spatie\SchemaOrg;
  *
  * @mixin Intangible
  */
-class DigitalDocumentPermission
+class DigitalDocumentPermission extends BaseType
 {
     /**
      * The person, organization, contact point, or audience that has been
