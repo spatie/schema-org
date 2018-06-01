@@ -15,6 +15,6 @@ namespace Spatie\SchemaOrg;
  *
  * @mixin DeliveryMethod
  */
-class ParcelService
+class ParcelService extends BaseType
 {
 }
