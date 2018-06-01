@@ -11,6 +11,6 @@ namespace Spatie\SchemaOrg;
  *
  * @mixin WebPage
  */
-class QAPage
+class QAPage extends BaseType
 {
 }
