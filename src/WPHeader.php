@@ -9,6 +9,6 @@ namespace Spatie\SchemaOrg;
  *
  * @mixin WebPageElement
  */
-class WPHeader
+class WPHeader extends BaseType
 {
 }
