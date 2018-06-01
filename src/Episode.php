@@ -10,7 +10,7 @@ namespace Spatie\SchemaOrg;
  *
  * @mixin CreativeWork
  */
-class Episode
+class Episode extends BaseType
 {
     /**
      * An actor, e.g. in tv, radio, movie, video games etc., or in an event.
