@@ -9,7 +9,7 @@ namespace Spatie\SchemaOrg;
  *
  * @mixin OrganizationRole
  */
-class EmployeeRole
+class EmployeeRole extends BaseType
 {
     /**
      * The base salary of the job or of an employee in an EmployeeRole.
