@@ -19,6 +19,6 @@ namespace Spatie\SchemaOrg;
  *
  * @mixin CommunicateAction
  */
-class CheckOutAction
+class CheckOutAction extends BaseType
 {
 }
