@@ -9,6 +9,6 @@ namespace Spatie\SchemaOrg;
  *
  * @mixin LocalBusiness
  */
-class ChildCare
+class ChildCare extends BaseType
 {
 }
