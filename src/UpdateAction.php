@@ -9,7 +9,7 @@ namespace Spatie\SchemaOrg;
  *
  * @mixin Action
  */
-class UpdateAction
+class UpdateAction extends BaseType
 {
     /**
      * A sub property of object. The collection target of the action.
