@@ -9,7 +9,7 @@ namespace Spatie\SchemaOrg;
  *
  * @mixin Enumeration
  */
-class GenderType
+class GenderType extends BaseType
 {
     /**
      * The female gender.
