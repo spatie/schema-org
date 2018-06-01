@@ -9,6 +9,6 @@ namespace Spatie\SchemaOrg;
  *
  * @mixin EntertainmentBusiness
  */
-class NightClub
+class NightClub extends BaseType
 {
 }
