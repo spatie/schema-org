@@ -10,7 +10,7 @@ namespace Spatie\SchemaOrg;
  *
  * @mixin AssessAction
  */
-class ReviewAction
+class ReviewAction extends BaseType
 {
     /**
      * A sub property of result. The review that resulted in the performing of
