@@ -14,7 +14,7 @@ namespace Spatie\SchemaOrg;
  *
  * @mixin CreativeWorkSeries
  */
-class Periodical
+class Periodical extends BaseType
 {
     /**
      * The International Standard Serial Number (ISSN) that identifies this
