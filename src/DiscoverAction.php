@@ -9,6 +9,6 @@ namespace Spatie\SchemaOrg;
  *
  * @mixin FindAction
  */
-class DiscoverAction
+class DiscoverAction extends BaseType
 {
 }
