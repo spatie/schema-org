@@ -9,7 +9,7 @@ namespace Spatie\SchemaOrg;
  *
  * @mixin Thing
  */
-class Organization
+class Organization extends BaseType
 {
     /**
      * The schema.org Actions mechanism benefited from extensive discussions
