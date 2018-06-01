@@ -15,7 +15,7 @@ namespace Spatie\SchemaOrg;
  *
  * @mixin InteractAction
  */
-class LeaveAction
+class LeaveAction extends BaseType
 {
     /**
      * Upcoming or past event associated with this place, organization, or
