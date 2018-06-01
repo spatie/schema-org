@@ -9,7 +9,7 @@ namespace Spatie\SchemaOrg;
  *
  * @mixin CreativeWork
  */
-class Map
+class Map extends BaseType
 {
     /**
      * Indicates the kind of Map, from the MapCategoryType Enumeration.
