@@ -10,7 +10,7 @@ namespace Spatie\SchemaOrg;
  *
  * @mixin Enumeration
  */
-class MusicReleaseFormatType
+class MusicReleaseFormatType extends BaseType
 {
     /**
      * CDFormat.
