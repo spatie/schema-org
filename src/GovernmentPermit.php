@@ -9,6 +9,6 @@ namespace Spatie\SchemaOrg;
  *
  * @mixin Permit
  */
-class GovernmentPermit
+class GovernmentPermit extends BaseType
 {
 }
