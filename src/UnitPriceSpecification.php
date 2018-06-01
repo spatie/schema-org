@@ -9,7 +9,7 @@ namespace Spatie\SchemaOrg;
  *
  * @mixin PriceSpecification
  */
-class UnitPriceSpecification
+class UnitPriceSpecification extends BaseType
 {
     /**
      * This property specifies the minimal quantity and rounding increment that
