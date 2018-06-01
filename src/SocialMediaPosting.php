@@ -10,7 +10,7 @@ namespace Spatie\SchemaOrg;
  *
  * @mixin Article
  */
-class SocialMediaPosting
+class SocialMediaPosting extends BaseType
 {
     /**
      * A CreativeWork such as an image, video, or audio clip shared as part of
