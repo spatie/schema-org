@@ -9,7 +9,7 @@ namespace Spatie\SchemaOrg;
  *
  * @mixin SoftwareApplication
  */
-class WebApplication
+class WebApplication extends BaseType
 {
     /**
      * Specifies browser requirements in human-readable text. For example,
