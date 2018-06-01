@@ -11,7 +11,7 @@ namespace Spatie\SchemaOrg;
  *
  * @mixin Offer
  */
-class AggregateOffer
+class AggregateOffer extends BaseType
 {
     /**
      * The highest price of all offers available.
