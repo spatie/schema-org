@@ -12,6 +12,6 @@ namespace Spatie\SchemaOrg;
  *
  * @mixin FinancialService
  */
-class AccountingService
+class AccountingService extends BaseType
 {
 }
