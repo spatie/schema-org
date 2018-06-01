@@ -9,6 +9,6 @@ namespace Spatie\SchemaOrg;
  *
  * @mixin Action
  */
-class ControlAction
+class ControlAction extends BaseType
 {
 }
