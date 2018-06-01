@@ -9,7 +9,7 @@ namespace Spatie\SchemaOrg;
  *
  * @mixin Enumeration
  */
-class DigitalDocumentPermissionType
+class DigitalDocumentPermissionType extends BaseType
 {
     /**
      * Permission to add comments to the document.
