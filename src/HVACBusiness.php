@@ -9,6 +9,6 @@ namespace Spatie\SchemaOrg;
  *
  * @mixin HomeAndConstructionBusiness
  */
-class HVACBusiness
+class HVACBusiness extends BaseType
 {
 }
