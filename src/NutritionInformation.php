@@ -9,7 +9,7 @@ namespace Spatie\SchemaOrg;
  *
  * @mixin StructuredValue
  */
-class NutritionInformation
+class NutritionInformation extends BaseType
 {
     /**
      * The number of calories.
