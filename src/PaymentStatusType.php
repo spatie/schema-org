@@ -9,7 +9,7 @@ namespace Spatie\SchemaOrg;
  *
  * @mixin Enumeration
  */
-class PaymentStatusType
+class PaymentStatusType extends BaseType
 {
     /**
      * An automatic payment system is in place and will be used.
