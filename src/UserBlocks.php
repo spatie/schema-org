@@ -11,6 +11,6 @@ namespace Spatie\SchemaOrg;
  *
  * @mixin UserInteraction
  */
-class UserBlocks
+class UserBlocks extends BaseType
 {
 }
