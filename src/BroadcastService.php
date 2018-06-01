@@ -10,7 +10,7 @@ namespace Spatie\SchemaOrg;
  *
  * @mixin Service
  */
-class BroadcastService
+class BroadcastService extends BaseType
 {
     /**
      * The area within which users can expect to reach the broadcast service.
