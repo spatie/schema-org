@@ -10,7 +10,7 @@ namespace Spatie\SchemaOrg;
  *
  * @mixin Enumeration
  */
-class RestrictedDiet
+class RestrictedDiet extends BaseType
 {
     /**
      * A diet appropriate for people with diabetes.
