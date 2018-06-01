@@ -9,6 +9,6 @@ namespace Spatie\SchemaOrg;
  *
  * @mixin HealthAndBeautyBusiness
  */
-class TattooParlor
+class TattooParlor extends BaseType
 {
 }
