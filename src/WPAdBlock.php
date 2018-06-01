@@ -9,6 +9,6 @@ namespace Spatie\SchemaOrg;
  *
  * @mixin WebPageElement
  */
-class WPAdBlock
+class WPAdBlock extends BaseType
 {
 }
