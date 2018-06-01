@@ -9,7 +9,7 @@ namespace Spatie\SchemaOrg;
  *
  * @mixin Enumeration
  */
-class ReservationStatusType
+class ReservationStatusType extends BaseType
 {
     /**
      * The status for a previously confirmed reservation that is now cancelled.
