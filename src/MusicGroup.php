@@ -10,7 +10,7 @@ namespace Spatie\SchemaOrg;
  *
  * @mixin PerformingGroup
  */
-class MusicGroup
+class MusicGroup extends BaseType
 {
     /**
      * A music album.
