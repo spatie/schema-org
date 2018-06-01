@@ -10,7 +10,7 @@ namespace Spatie\SchemaOrg;
  *
  * @mixin ChooseAction
  */
-class VoteAction
+class VoteAction extends BaseType
 {
     /**
      * A sub property of object. The candidate subject of this action.
