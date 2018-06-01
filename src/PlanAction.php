@@ -10,7 +10,7 @@ namespace Spatie\SchemaOrg;
  *
  * @mixin OrganizeAction
  */
-class PlanAction
+class PlanAction extends BaseType
 {
     /**
      * The time the object is scheduled to.
