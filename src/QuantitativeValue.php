@@ -9,7 +9,7 @@ namespace Spatie\SchemaOrg;
  *
  * @mixin StructuredValue
  */
-class QuantitativeValue
+class QuantitativeValue extends BaseType
 {
     /**
      * A property-value pair representing an additional characteristics of the
