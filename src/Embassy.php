@@ -9,6 +9,6 @@ namespace Spatie\SchemaOrg;
  *
  * @mixin GovernmentBuilding
  */
-class Embassy
+class Embassy extends BaseType
 {
 }
