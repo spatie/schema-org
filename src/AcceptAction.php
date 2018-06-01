@@ -13,6 +13,6 @@ namespace Spatie\SchemaOrg;
  *
  * @mixin AllocateAction
  */
-class AcceptAction
+class AcceptAction extends BaseType
 {
 }
