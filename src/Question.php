@@ -10,7 +10,7 @@ namespace Spatie\SchemaOrg;
  *
  * @mixin CreativeWork
  */
-class Question
+class Question extends BaseType
 {
     /**
      * The answer that has been accepted as best, typically on a Question/Answer
