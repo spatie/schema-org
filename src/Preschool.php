@@ -9,6 +9,6 @@ namespace Spatie\SchemaOrg;
  *
  * @mixin EducationalOrganization
  */
-class Preschool
+class Preschool extends BaseType
 {
 }
