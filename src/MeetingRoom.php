@@ -15,6 +15,6 @@ namespace Spatie\SchemaOrg;
  *
  * @mixin Room
  */
-class MeetingRoom
+class MeetingRoom extends BaseType
 {
 }
