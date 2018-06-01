@@ -10,7 +10,7 @@ namespace Spatie\SchemaOrg;
  *
  * @mixin Product
  */
-class Vehicle
+class Vehicle extends BaseType
 {
     /**
      * The available volume for cargo or luggage. For automobiles, this is
