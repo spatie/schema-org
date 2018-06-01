@@ -9,6 +9,6 @@ namespace Spatie\SchemaOrg;
  *
  * @mixin Place
  */
-class Residence
+class Residence extends BaseType
 {
 }
