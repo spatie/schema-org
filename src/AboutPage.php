@@ -9,6 +9,6 @@ namespace Spatie\SchemaOrg;
  *
  * @mixin WebPage
  */
-class AboutPage
+class AboutPage extends BaseType
 {
 }
