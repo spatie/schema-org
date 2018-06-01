@@ -10,7 +10,7 @@ namespace Spatie\SchemaOrg;
  *
  * @mixin Intangible
  */
-class OrderItem
+class OrderItem extends BaseType
 {
     /**
      * The delivery of the parcel related to this order or order item.
