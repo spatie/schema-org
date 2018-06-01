@@ -9,6 +9,6 @@ namespace Spatie\SchemaOrg;
  *
  * @mixin HealthAndBeautyBusiness
  */
-class DaySpa
+class DaySpa extends BaseType
 {
 }
