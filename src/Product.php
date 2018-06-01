@@ -11,7 +11,7 @@ namespace Spatie\SchemaOrg;
  *
  * @mixin Thing
  */
-class Product
+class Product extends BaseType
 {
     /**
      * A property-value pair representing an additional characteristics of the
