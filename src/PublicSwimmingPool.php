@@ -9,6 +9,6 @@ namespace Spatie\SchemaOrg;
  *
  * @mixin SportsActivityLocation
  */
-class PublicSwimmingPool
+class PublicSwimmingPool extends BaseType
 {
 }
