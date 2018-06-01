@@ -9,7 +9,7 @@ namespace Spatie\SchemaOrg;
  *
  * @mixin Article
  */
-class Report
+class Report extends BaseType
 {
     /**
      * The number or other unique designator assigned to a Report by the
