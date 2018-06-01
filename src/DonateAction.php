@@ -10,7 +10,7 @@ namespace Spatie\SchemaOrg;
  *
  * @mixin TradeAction
  */
-class DonateAction
+class DonateAction extends BaseType
 {
     /**
      * A sub property of participant. The participant who is at the receiving
