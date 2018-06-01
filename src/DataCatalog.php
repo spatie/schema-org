@@ -9,7 +9,7 @@ namespace Spatie\SchemaOrg;
  *
  * @mixin CreativeWork
  */
-class DataCatalog
+class DataCatalog extends BaseType
 {
     /**
      * A dataset contained in this catalog.
