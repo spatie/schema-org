@@ -9,7 +9,7 @@ namespace Spatie\SchemaOrg;
  *
  * @mixin CreativeWork
  */
-class DigitalDocument
+class DigitalDocument extends BaseType
 {
     /**
      * A permission related to the access to this document (e.g. permission to
