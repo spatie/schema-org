@@ -9,6 +9,6 @@ namespace Spatie\SchemaOrg;
  *
  * @mixin Intangible
  */
-class Enumeration
+class Enumeration extends BaseType
 {
 }
