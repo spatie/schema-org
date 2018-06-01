@@ -9,6 +9,6 @@ namespace Spatie\SchemaOrg;
  *
  * @mixin LocalBusiness
  */
-class RealEstateAgent
+class RealEstateAgent extends BaseType
 {
 }
