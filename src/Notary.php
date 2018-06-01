@@ -9,6 +9,6 @@ namespace Spatie\SchemaOrg;
  *
  * @mixin LegalService
  */
-class Notary
+class Notary extends BaseType
 {
 }
