@@ -9,6 +9,6 @@ namespace Spatie\SchemaOrg;
  *
  * @mixin ReactAction
  */
-class WantAction
+class WantAction extends BaseType
 {
 }
