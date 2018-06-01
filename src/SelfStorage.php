@@ -9,6 +9,6 @@ namespace Spatie\SchemaOrg;
  *
  * @mixin LocalBusiness
  */
-class SelfStorage
+class SelfStorage extends BaseType
 {
 }
