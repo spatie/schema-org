@@ -9,7 +9,7 @@ namespace Spatie\SchemaOrg;
  *
  * @mixin MusicPlaylist
  */
-class MusicRelease
+class MusicRelease extends BaseType
 {
     /**
      * The catalog number for the release.
