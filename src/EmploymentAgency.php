@@ -9,6 +9,6 @@ namespace Spatie\SchemaOrg;
  *
  * @mixin LocalBusiness
  */
-class EmploymentAgency
+class EmploymentAgency extends BaseType
 {
 }
