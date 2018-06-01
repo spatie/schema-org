@@ -9,7 +9,7 @@ namespace Spatie\SchemaOrg;
  *
  * @mixin TradeAction
  */
-class OrderAction
+class OrderAction extends BaseType
 {
     /**
      * A sub property of instrument. The method of delivery.
