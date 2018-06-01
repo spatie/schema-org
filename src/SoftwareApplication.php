@@ -9,7 +9,7 @@ namespace Spatie\SchemaOrg;
  *
  * @mixin CreativeWork
  */
-class SoftwareApplication
+class SoftwareApplication extends BaseType
 {
     /**
      * Type of software application, e.g. 'Game, Multimedia'.
