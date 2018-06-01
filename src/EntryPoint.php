@@ -9,7 +9,7 @@ namespace Spatie\SchemaOrg;
  *
  * @mixin Intangible
  */
-class EntryPoint
+class EntryPoint extends BaseType
 {
     /**
      * An application that can complete the request.
