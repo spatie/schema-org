@@ -9,7 +9,7 @@ namespace Spatie\SchemaOrg;
  *
  * @mixin Intangible
  */
-class Rating
+class Rating extends BaseType
 {
     /**
      * The author of this content or rating. Please note that author is special
