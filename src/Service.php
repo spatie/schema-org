@@ -10,7 +10,7 @@ namespace Spatie\SchemaOrg;
  *
  * @mixin Intangible
  */
-class Service
+class Service extends BaseType
 {
     /**
      * The overall rating, based on a collection of reviews or ratings, of the
