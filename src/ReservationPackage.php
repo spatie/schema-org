@@ -9,7 +9,7 @@ namespace Spatie\SchemaOrg;
  *
  * @mixin Reservation
  */
-class ReservationPackage
+class ReservationPackage extends BaseType
 {
     /**
      * The airline-specific indicator of boarding order / preference.
