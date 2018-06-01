@@ -11,6 +11,6 @@ namespace Spatie\SchemaOrg;
  *
  * @mixin UserInteraction
  */
-class UserPageVisits
+class UserPageVisits extends BaseType
 {
 }
