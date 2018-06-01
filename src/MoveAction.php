@@ -14,7 +14,7 @@ namespace Spatie\SchemaOrg;
  *
  * @mixin Action
  */
-class MoveAction
+class MoveAction extends BaseType
 {
     /**
      * A sub property of location. The original location of the object or the
