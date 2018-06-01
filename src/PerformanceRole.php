@@ -10,7 +10,7 @@ namespace Spatie\SchemaOrg;
  *
  * @mixin Role
  */
-class PerformanceRole
+class PerformanceRole extends BaseType
 {
     /**
      * The name of a character played in some acting or performing role, i.e. in
