@@ -9,6 +9,6 @@ namespace Spatie\SchemaOrg;
  *
  * @mixin HomeAndConstructionBusiness
  */
-class HousePainter
+class HousePainter extends BaseType
 {
 }
