@@ -11,7 +11,7 @@ namespace Spatie\SchemaOrg;
  *
  * @mixin TradeAction
  */
-class BuyAction
+class BuyAction extends BaseType
 {
     /**
      * An entity which offers (sells / leases / lends / loans) the services /
