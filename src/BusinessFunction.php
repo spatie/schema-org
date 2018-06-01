@@ -24,6 +24,6 @@ namespace Spatie\SchemaOrg;
  *
  * @mixin Enumeration
  */
-class BusinessFunction
+class BusinessFunction extends BaseType
 {
 }
