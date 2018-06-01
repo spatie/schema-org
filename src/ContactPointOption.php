@@ -9,7 +9,7 @@ namespace Spatie\SchemaOrg;
  *
  * @mixin Enumeration
  */
-class ContactPointOption
+class ContactPointOption extends BaseType
 {
     /**
      * Uses devices to support users with hearing impairments.
