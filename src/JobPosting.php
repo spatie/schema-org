@@ -9,7 +9,7 @@ namespace Spatie\SchemaOrg;
  *
  * @mixin Intangible
  */
-class JobPosting
+class JobPosting extends BaseType
 {
     /**
      * The base salary of the job or of an employee in an EmployeeRole.
