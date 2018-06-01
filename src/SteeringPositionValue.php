@@ -9,7 +9,7 @@ namespace Spatie\SchemaOrg;
  *
  * @mixin QualitativeValue
  */
-class SteeringPositionValue
+class SteeringPositionValue extends BaseType
 {
     /**
      * The steering position is on the left side of the vehicle (viewed from the
