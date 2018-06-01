@@ -10,6 +10,6 @@ namespace Spatie\SchemaOrg;
  * @mixin MedicalOrganization
  * @mixin LocalBusiness
  */
-class Dentist
+class Dentist extends BaseType
 {
 }
