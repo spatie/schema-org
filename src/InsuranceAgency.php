@@ -9,6 +9,6 @@ namespace Spatie\SchemaOrg;
  *
  * @mixin FinancialService
  */
-class InsuranceAgency
+class InsuranceAgency extends BaseType
 {
 }
