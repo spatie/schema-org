@@ -9,7 +9,7 @@ namespace Spatie\SchemaOrg;
  *
  * @mixin House
  */
-class SingleFamilyResidence
+class SingleFamilyResidence extends BaseType
 {
     /**
      * The number of rooms (excluding bathrooms and closets) of the
