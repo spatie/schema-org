@@ -10,6 +10,6 @@ namespace Spatie\SchemaOrg;
  *
  * @mixin Comment
  */
-class Answer
+class Answer extends BaseType
 {
 }
