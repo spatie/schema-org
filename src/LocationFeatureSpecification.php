@@ -11,7 +11,7 @@ namespace Spatie\SchemaOrg;
  *
  * @mixin PropertyValue
  */
-class LocationFeatureSpecification
+class LocationFeatureSpecification extends BaseType
 {
     /**
      * The hours during which this service or contact is available.
