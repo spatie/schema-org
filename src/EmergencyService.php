@@ -9,6 +9,6 @@ namespace Spatie\SchemaOrg;
  *
  * @mixin LocalBusiness
  */
-class EmergencyService
+class EmergencyService extends BaseType
 {
 }
