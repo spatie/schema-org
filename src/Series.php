@@ -10,7 +10,7 @@ namespace Spatie\SchemaOrg;
  *
  * @mixin CreativeWork
  */
-class Series
+class Series extends BaseType
 {
     /**
      * A director of e.g. tv, radio, movie, video gaming etc. content, or of an
