@@ -9,6 +9,6 @@ namespace Spatie\SchemaOrg;
  *
  * @mixin CommunicateAction
  */
-class ShareAction
+class ShareAction extends BaseType
 {
 }
