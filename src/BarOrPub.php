@@ -9,6 +9,6 @@ namespace Spatie\SchemaOrg;
  *
  * @mixin FoodEstablishment
  */
-class BarOrPub
+class BarOrPub extends BaseType
 {
 }
