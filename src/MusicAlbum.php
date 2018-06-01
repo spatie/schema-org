@@ -9,7 +9,7 @@ namespace Spatie\SchemaOrg;
  *
  * @mixin MusicPlaylist
  */
-class MusicAlbum
+class MusicAlbum extends BaseType
 {
     /**
      * Classification of the album by it's type of content: soundtrack, live
