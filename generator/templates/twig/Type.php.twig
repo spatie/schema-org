@@ -11,7 +11,7 @@ namespace Spatie\SchemaOrg;
  * @mixin {{ parent }}
 {% endfor %}
  */
-class {{ type.name }}
+class {{ type.name }} extends BaseType
 {
 {% for constant in type.constants %}    /**
      * {{ constant.description | doc(1) }}
