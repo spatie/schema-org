@@ -10,6 +10,6 @@ namespace Spatie\SchemaOrg;
  *
  * @mixin Enumeration
  */
-class Specialty
+class Specialty extends BaseType
 {
 }
