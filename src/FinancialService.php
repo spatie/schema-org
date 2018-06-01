@@ -9,7 +9,7 @@ namespace Spatie\SchemaOrg;
  *
  * @mixin LocalBusiness
  */
-class FinancialService
+class FinancialService extends BaseType
 {
     /**
      * Description of fees, commissions, and other terms applied either to a
