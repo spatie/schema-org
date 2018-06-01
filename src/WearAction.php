@@ -9,6 +9,6 @@ namespace Spatie\SchemaOrg;
  *
  * @mixin UseAction
  */
-class WearAction
+class WearAction extends BaseType
 {
 }
