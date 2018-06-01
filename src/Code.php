@@ -10,6 +10,6 @@ namespace Spatie\SchemaOrg;
  *
  * @mixin CreativeWork
  */
-class Code
+class Code extends BaseType
 {
 }
