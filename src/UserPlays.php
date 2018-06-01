@@ -11,6 +11,6 @@ namespace Spatie\SchemaOrg;
  *
  * @mixin UserInteraction
  */
-class UserPlays
+class UserPlays extends BaseType
 {
 }
