@@ -14,7 +14,7 @@ namespace Spatie\SchemaOrg;
  *
  * @mixin CreativeWork
  */
-class Course
+class Course extends BaseType
 {
     /**
      * The identifier for the [[Course]] used by the course [[provider]] (e.g.
