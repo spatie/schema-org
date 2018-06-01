@@ -9,6 +9,6 @@ namespace Spatie\SchemaOrg;
  *
  * @mixin LocalBusiness
  */
-class EntertainmentBusiness
+class EntertainmentBusiness extends BaseType
 {
 }
