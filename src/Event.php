@@ -11,7 +11,7 @@ namespace Spatie\SchemaOrg;
  *
  * @mixin Thing
  */
-class Event
+class Event extends BaseType
 {
     /**
      * The subject matter of the content.
