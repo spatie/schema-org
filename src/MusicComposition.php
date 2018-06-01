@@ -9,7 +9,7 @@ namespace Spatie\SchemaOrg;
  *
  * @mixin CreativeWork
  */
-class MusicComposition
+class MusicComposition extends BaseType
 {
     /**
      * The person or organization who wrote a composition, or who is the
