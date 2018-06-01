@@ -10,7 +10,7 @@ namespace Spatie\SchemaOrg;
  *
  * @mixin Organization
  */
-class SportsOrganization
+class SportsOrganization extends BaseType
 {
     /**
      * A type of sport (e.g. Baseball).
