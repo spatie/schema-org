@@ -9,7 +9,7 @@ namespace Spatie\SchemaOrg;
  *
  * @mixin CreateAction
  */
-class WriteAction
+class WriteAction extends BaseType
 {
     /**
      * The language of the content or performance or used in an action. Please
