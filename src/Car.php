@@ -9,6 +9,6 @@ namespace Spatie\SchemaOrg;
  *
  * @mixin Vehicle
  */
-class Car
+class Car extends BaseType
 {
 }
