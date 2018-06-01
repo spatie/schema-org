@@ -11,7 +11,7 @@ namespace Spatie\SchemaOrg;
  *
  * @mixin Event
  */
-class CourseInstance
+class CourseInstance extends BaseType
 {
     /**
      * The medium or means of delivery of the course instance or the mode of
