@@ -9,7 +9,7 @@ namespace Spatie\SchemaOrg;
  *
  * @mixin Intangible
  */
-class Ticket
+class Ticket extends BaseType
 {
     /**
      * The date the ticket was issued.
