@@ -13,7 +13,7 @@ namespace Spatie\SchemaOrg;
  *
  * @mixin CreativeWork
  */
-class MediaObject
+class MediaObject extends BaseType
 {
     /**
      * A NewsArticle associated with the Media Object.
