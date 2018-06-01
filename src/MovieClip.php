@@ -9,6 +9,6 @@ namespace Spatie\SchemaOrg;
  *
  * @mixin Clip
  */
-class MovieClip
+class MovieClip extends BaseType
 {
 }
