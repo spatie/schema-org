@@ -9,7 +9,7 @@ namespace Spatie\SchemaOrg;
  *
  * @mixin Intangible
  */
-class BroadcastChannel
+class BroadcastChannel extends BaseType
 {
     /**
      * The unique address by which the BroadcastService can be identified in a
