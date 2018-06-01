@@ -10,7 +10,7 @@ namespace Spatie\SchemaOrg;
  *
  * @mixin StructuredValue
  */
-class OwnershipInfo
+class OwnershipInfo extends BaseType
 {
     /**
      * The organization or person from which the product was acquired.
