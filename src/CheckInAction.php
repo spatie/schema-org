@@ -21,6 +21,6 @@ namespace Spatie\SchemaOrg;
  *
  * @mixin CommunicateAction
  */
-class CheckInAction
+class CheckInAction extends BaseType
 {
 }
