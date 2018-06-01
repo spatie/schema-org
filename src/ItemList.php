@@ -11,7 +11,7 @@ namespace Spatie\SchemaOrg;
  *
  * @mixin Intangible
  */
-class ItemList
+class ItemList extends BaseType
 {
     /**
      * For itemListElement values, you can use simple strings (e.g. "Peter",
