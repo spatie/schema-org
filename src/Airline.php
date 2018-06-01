@@ -9,7 +9,7 @@ namespace Spatie\SchemaOrg;
  *
  * @mixin Organization
  */
-class Airline
+class Airline extends BaseType
 {
     /**
      * The type of boarding policy used by the airline (e.g. zone-based or
