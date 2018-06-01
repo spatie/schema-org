@@ -9,7 +9,7 @@ namespace Spatie\SchemaOrg;
  *
  * @mixin PriceSpecification
  */
-class PaymentChargeSpecification
+class PaymentChargeSpecification extends BaseType
 {
     /**
      * The delivery method(s) to which the delivery charge or payment charge
