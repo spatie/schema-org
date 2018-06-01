@@ -14,7 +14,7 @@ namespace Spatie\SchemaOrg;
  *
  * @mixin GeoShape
  */
-class GeoCircle
+class GeoCircle extends BaseType
 {
     /**
      * Indicates the approximate radius of a GeoCircle (metres unless indicated
