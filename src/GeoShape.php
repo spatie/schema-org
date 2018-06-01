@@ -12,7 +12,7 @@ namespace Spatie\SchemaOrg;
  *
  * @mixin StructuredValue
  */
-class GeoShape
+class GeoShape extends BaseType
 {
     /**
      * Physical address of the item.
