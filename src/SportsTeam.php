@@ -9,7 +9,7 @@ namespace Spatie\SchemaOrg;
  *
  * @mixin SportsOrganization
  */
-class SportsTeam
+class SportsTeam extends BaseType
 {
     /**
      * A person that acts as performing member of a sports team; a player as
