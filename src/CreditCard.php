@@ -21,6 +21,6 @@ namespace Spatie\SchemaOrg;
  * @mixin PaymentCard
  * @mixin LoanOrCredit
  */
-class CreditCard
+class CreditCard extends BaseType
 {
 }
