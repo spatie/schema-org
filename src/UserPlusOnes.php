@@ -11,6 +11,6 @@ namespace Spatie\SchemaOrg;
  *
  * @mixin UserInteraction
  */
-class UserPlusOnes
+class UserPlusOnes extends BaseType
 {
 }
