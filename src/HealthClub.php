@@ -10,6 +10,6 @@ namespace Spatie\SchemaOrg;
  * @mixin HealthAndBeautyBusiness
  * @mixin SportsActivityLocation
  */
-class HealthClub
+class HealthClub extends BaseType
 {
 }
