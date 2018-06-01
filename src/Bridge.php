@@ -9,6 +9,6 @@ namespace Spatie\SchemaOrg;
  *
  * @mixin CivicStructure
  */
-class Bridge
+class Bridge extends BaseType
 {
 }
