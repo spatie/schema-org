@@ -10,6 +10,6 @@ namespace Spatie\SchemaOrg;
  *
  * @mixin PublicationEvent
  */
-class OnDemandEvent
+class OnDemandEvent extends BaseType
 {
 }
