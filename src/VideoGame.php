@@ -11,7 +11,7 @@ namespace Spatie\SchemaOrg;
  * @mixin SoftwareApplication
  * @mixin Game
  */
-class VideoGame
+class VideoGame extends BaseType
 {
     /**
      * An actor, e.g. in tv, radio, movie, video games etc., or in an event.
