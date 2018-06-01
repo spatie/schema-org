@@ -16,6 +16,6 @@ namespace Spatie\SchemaOrg;
  *
  * @mixin TransferAction
  */
-class TakeAction
+class TakeAction extends BaseType
 {
 }
