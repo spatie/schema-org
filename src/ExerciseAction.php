@@ -10,7 +10,7 @@ namespace Spatie\SchemaOrg;
  *
  * @mixin PlayAction
  */
-class ExerciseAction
+class ExerciseAction extends BaseType
 {
     /**
      * A sub property of location. The course where this action was taken.
