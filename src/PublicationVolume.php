@@ -12,8 +12,10 @@ namespace Spatie\SchemaOrg;
  * post</a>.
  *
  * @see http://schema.org/PublicationVolume
+ *
+ * @mixin CreativeWork
  */
-class PublicationVolume extends CreativeWork
+class PublicationVolume extends BaseType
 {
     /**
      * The page on which the work ends; for example "138" or "xvi".

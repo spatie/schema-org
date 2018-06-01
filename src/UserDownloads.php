@@ -8,7 +8,9 @@ namespace Spatie\SchemaOrg;
  * vocabulary, alongside types such as [[Comment]].
  *
  * @see http://schema.org/UserDownloads
+ *
+ * @mixin UserInteraction
  */
-class UserDownloads extends UserInteraction
+class UserDownloads extends BaseType
 {
 }

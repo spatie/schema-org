@@ -12,7 +12,9 @@ namespace Spatie\SchemaOrg;
  * allocation.
  *
  * @see http://schema.org/ReserveAction
+ *
+ * @mixin PlanAction
  */
-class ReserveAction extends PlanAction
+class ReserveAction extends BaseType
 {
 }

@@ -8,8 +8,10 @@ namespace Spatie\SchemaOrg;
  * book/journal publication via a variety of delivery media.
  *
  * @see http://schema.org/PublicationEvent
+ *
+ * @mixin Event
  */
-class PublicationEvent extends Event
+class PublicationEvent extends BaseType
 {
     /**
      * A flag to signal that the publication or event is accessible for free.

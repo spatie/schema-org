@@ -7,8 +7,10 @@ namespace Spatie\SchemaOrg;
  * function of goods included in a bundle offer.
  *
  * @see http://schema.org/TypeAndQuantityNode
+ *
+ * @mixin StructuredValue
  */
-class TypeAndQuantityNode extends StructuredValue
+class TypeAndQuantityNode extends BaseType
 {
     /**
      * The quantity of the goods included in the offer.

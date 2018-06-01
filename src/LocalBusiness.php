@@ -8,8 +8,11 @@ namespace Spatie\SchemaOrg;
  * chain, a branch of a bank, a medical practice, a club, a bowling alley, etc.
  *
  * @see http://schema.org/LocalBusiness
+ *
+ * @mixin Organization
+ * @mixin Place
  */
-class LocalBusiness extends Organization
+class LocalBusiness extends BaseType
 {
     /**
      * The larger organization that this local business is a branch of, if any.

@@ -6,8 +6,10 @@ namespace Spatie\SchemaOrg;
  * Used to describe a seat, such as a reserved seat in an event reservation.
  *
  * @see http://schema.org/Seat
+ *
+ * @mixin Intangible
  */
-class Seat extends Intangible
+class Seat extends BaseType
 {
     /**
      * The location of the reserved seat (e.g., 27).

@@ -8,8 +8,10 @@ namespace Spatie\SchemaOrg;
  * property can also be used to add more detail.
  *
  * @see http://schema.org/Recipe
+ *
+ * @mixin CreativeWork
  */
-class Recipe extends CreativeWork
+class Recipe extends BaseType
 {
     /**
      * The time it takes to actually cook the dish, in [ISO 8601 duration

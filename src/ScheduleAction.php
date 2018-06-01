@@ -12,7 +12,9 @@ namespace Spatie\SchemaOrg;
  * allocation.
  *
  * @see http://schema.org/ScheduleAction
+ *
+ * @mixin PlanAction
  */
-class ScheduleAction extends PlanAction
+class ScheduleAction extends BaseType
 {
 }

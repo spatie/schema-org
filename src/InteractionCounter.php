@@ -7,8 +7,10 @@ namespace Spatie\SchemaOrg;
  * authors will use a subtype to specify the specific type of interaction.
  *
  * @see http://schema.org/InteractionCounter
+ *
+ * @mixin StructuredValue
  */
-class InteractionCounter extends StructuredValue
+class InteractionCounter extends BaseType
 {
     /**
      * The Action representing the type of interaction. For up votes, +1s, etc.

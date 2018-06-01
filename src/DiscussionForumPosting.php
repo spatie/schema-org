@@ -6,7 +6,9 @@ namespace Spatie\SchemaOrg;
  * A posting to a discussion forum.
  *
  * @see http://schema.org/DiscussionForumPosting
+ *
+ * @mixin SocialMediaPosting
  */
-class DiscussionForumPosting extends SocialMediaPosting
+class DiscussionForumPosting extends BaseType
 {
 }

@@ -13,7 +13,9 @@ namespace Spatie\SchemaOrg;
  * has been transfered.
  *
  * @see http://schema.org/TakeAction
+ *
+ * @mixin TransferAction
  */
-class TakeAction extends TransferAction
+class TakeAction extends BaseType
 {
 }

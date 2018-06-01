@@ -6,8 +6,10 @@ namespace Spatie\SchemaOrg;
  * A review of an item - for example, of a restaurant, movie, or store.
  *
  * @see http://schema.org/Review
+ *
+ * @mixin CreativeWork
  */
-class Review extends CreativeWork
+class Review extends BaseType
 {
     /**
      * The item that is being reviewed/rated.

@@ -6,7 +6,9 @@ namespace Spatie\SchemaOrg;
  * An email message.
  *
  * @see http://schema.org/EmailMessage
+ *
+ * @mixin Message
  */
-class EmailMessage extends Message
+class EmailMessage extends BaseType
 {
 }

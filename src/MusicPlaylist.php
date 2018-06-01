@@ -6,8 +6,10 @@ namespace Spatie\SchemaOrg;
  * A collection of music tracks in playlist form.
  *
  * @see http://schema.org/MusicPlaylist
+ *
+ * @mixin CreativeWork
  */
-class MusicPlaylist extends CreativeWork
+class MusicPlaylist extends BaseType
 {
     /**
      * The number of tracks in this album or playlist.

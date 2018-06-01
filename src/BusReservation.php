@@ -10,7 +10,9 @@ namespace Spatie\SchemaOrg;
  * reservations. For offers of tickets, use [[Offer]].
  *
  * @see http://schema.org/BusReservation
+ *
+ * @mixin Reservation
  */
-class BusReservation extends Reservation
+class BusReservation extends BaseType
 {
 }

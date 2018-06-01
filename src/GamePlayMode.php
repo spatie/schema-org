@@ -6,8 +6,10 @@ namespace Spatie\SchemaOrg;
  * Indicates whether this game is multi-player, co-op or single-player.
  *
  * @see http://schema.org/GamePlayMode
+ *
+ * @mixin Enumeration
  */
-class GamePlayMode extends Enumeration
+class GamePlayMode extends BaseType
 {
     /**
      * Play mode: CoOp. Co-operative games, where you play on the same team with

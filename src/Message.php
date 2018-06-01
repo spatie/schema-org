@@ -6,8 +6,10 @@ namespace Spatie\SchemaOrg;
  * A single message from a sender to one or more organizations or people.
  *
  * @see http://schema.org/Message
+ *
+ * @mixin CreativeWork
  */
-class Message extends CreativeWork
+class Message extends BaseType
 {
     /**
      * The date/time at which the message has been read by the recipient if a

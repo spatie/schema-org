@@ -8,8 +8,10 @@ namespace Spatie\SchemaOrg;
  * can be used.
  *
  * @see http://schema.org/AggregateOffer
+ *
+ * @mixin Offer
  */
-class AggregateOffer extends Offer
+class AggregateOffer extends BaseType
 {
     /**
      * The highest price of all offers available.

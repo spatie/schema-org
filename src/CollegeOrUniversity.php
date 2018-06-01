@@ -6,7 +6,9 @@ namespace Spatie\SchemaOrg;
  * A college, university, or other third-level educational institution.
  *
  * @see http://schema.org/CollegeOrUniversity
+ *
+ * @mixin EducationalOrganization
  */
-class CollegeOrUniversity extends EducationalOrganization
+class CollegeOrUniversity extends BaseType
 {
 }

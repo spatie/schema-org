@@ -8,7 +8,9 @@ namespace Spatie\SchemaOrg;
  * participants.
  *
  * @see http://schema.org/DisagreeAction
+ *
+ * @mixin ReactAction
  */
-class DisagreeAction extends ReactAction
+class DisagreeAction extends BaseType
 {
 }

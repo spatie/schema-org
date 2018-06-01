@@ -11,8 +11,10 @@ namespace Spatie\SchemaOrg;
  * necessarily.
  *
  * @see http://schema.org/SearchAction
+ *
+ * @mixin Action
  */
-class SearchAction extends Action
+class SearchAction extends BaseType
 {
     /**
      * A sub property of instrument. The query used on this action.

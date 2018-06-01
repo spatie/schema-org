@@ -7,8 +7,10 @@ namespace Spatie\SchemaOrg;
  * health and fitness.
  *
  * @see http://schema.org/ExerciseAction
+ *
+ * @mixin PlayAction
  */
-class ExerciseAction extends PlayAction
+class ExerciseAction extends BaseType
 {
     /**
      * A sub property of location. The course where this action was taken.

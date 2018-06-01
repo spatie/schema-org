@@ -7,7 +7,9 @@ namespace Spatie\SchemaOrg;
  * person or organization.
  *
  * @see http://schema.org/PaymentService
+ *
+ * @mixin FinancialProduct
  */
-class PaymentService extends FinancialProduct
+class PaymentService extends BaseType
 {
 }

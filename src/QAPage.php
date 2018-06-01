@@ -8,7 +8,9 @@ namespace Spatie\SchemaOrg;
  * (FAQs).
  *
  * @see http://schema.org/QAPage
+ *
+ * @mixin WebPage
  */
-class QAPage extends WebPage
+class QAPage extends BaseType
 {
 }

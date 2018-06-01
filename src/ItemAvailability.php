@@ -6,8 +6,10 @@ namespace Spatie\SchemaOrg;
  * A list of possible product availability options.
  *
  * @see http://schema.org/ItemAvailability
+ *
+ * @mixin Enumeration
  */
-class ItemAvailability extends Enumeration
+class ItemAvailability extends BaseType
 {
     /**
      * Indicates that the item has been discontinued.

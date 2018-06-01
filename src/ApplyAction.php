@@ -12,7 +12,9 @@ namespace Spatie\SchemaOrg;
  * that the application will be accepted.
  *
  * @see http://schema.org/ApplyAction
+ *
+ * @mixin OrganizeAction
  */
-class ApplyAction extends OrganizeAction
+class ApplyAction extends BaseType
 {
 }

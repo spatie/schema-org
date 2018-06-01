@@ -6,8 +6,10 @@ namespace Spatie\SchemaOrg;
  * The act of managing by changing/editing the state of the object.
  *
  * @see http://schema.org/UpdateAction
+ *
+ * @mixin Action
  */
-class UpdateAction extends Action
+class UpdateAction extends BaseType
 {
     /**
      * A sub property of object. The collection target of the action.

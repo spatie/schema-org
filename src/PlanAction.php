@@ -7,8 +7,10 @@ namespace Spatie\SchemaOrg;
  * a future date.
  *
  * @see http://schema.org/PlanAction
+ *
+ * @mixin OrganizeAction
  */
-class PlanAction extends OrganizeAction
+class PlanAction extends BaseType
 {
     /**
      * The time the object is scheduled to.

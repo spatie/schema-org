@@ -6,8 +6,10 @@ namespace Spatie\SchemaOrg;
  * The act of asking someone to attend an event. Reciprocal of RsvpAction.
  *
  * @see http://schema.org/InviteAction
+ *
+ * @mixin CommunicateAction
  */
-class InviteAction extends CommunicateAction
+class InviteAction extends BaseType
 {
     /**
      * Upcoming or past event associated with this place, organization, or

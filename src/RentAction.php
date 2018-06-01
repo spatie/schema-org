@@ -8,8 +8,10 @@ namespace Spatie\SchemaOrg;
  * from a landlord in exchange for a periodic payment.
  *
  * @see http://schema.org/RentAction
+ *
+ * @mixin TradeAction
  */
-class RentAction extends TradeAction
+class RentAction extends BaseType
 {
     /**
      * A sub property of participant. The owner of the real estate property.

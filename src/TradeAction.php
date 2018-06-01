@@ -8,8 +8,10 @@ namespace Spatie\SchemaOrg;
  * participant in exchange for a one time or periodic payment.
  *
  * @see http://schema.org/TradeAction
+ *
+ * @mixin Action
  */
-class TradeAction extends Action
+class TradeAction extends BaseType
 {
     /**
      * The offer price of a product, or of a price component when attached to

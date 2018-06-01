@@ -18,7 +18,9 @@ namespace Spatie\SchemaOrg;
  * rather than its validity/existence.
  *
  * @see http://schema.org/CheckInAction
+ *
+ * @mixin CommunicateAction
  */
-class CheckInAction extends CommunicateAction
+class CheckInAction extends BaseType
 {
 }

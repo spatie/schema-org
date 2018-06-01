@@ -6,8 +6,11 @@ namespace Spatie\SchemaOrg;
  * CreativeWorkSeries dedicated to TV broadcast and associated online delivery.
  *
  * @see http://schema.org/TVSeries
+ *
+ * @mixin CreativeWork
+ * @mixin CreativeWorkSeries
  */
-class TVSeries extends CreativeWork
+class TVSeries extends BaseType
 {
     /**
      * An actor, e.g. in tv, radio, movie, video games etc., or in an event.

@@ -6,8 +6,10 @@ namespace Spatie\SchemaOrg;
  * A TV episode which can be part of a series or season.
  *
  * @see http://schema.org/TVEpisode
+ *
+ * @mixin Episode
  */
-class TVEpisode extends Episode
+class TVEpisode extends BaseType
 {
     /**
      * The country of the principal offices of the production company or

@@ -7,7 +7,9 @@ namespace Spatie\SchemaOrg;
  * structure than simply being a textual value or a reference to another thing.
  *
  * @see http://schema.org/StructuredValue
+ *
+ * @mixin Intangible
  */
-class StructuredValue extends Intangible
+class StructuredValue extends BaseType
 {
 }

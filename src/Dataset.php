@@ -6,8 +6,10 @@ namespace Spatie\SchemaOrg;
  * A body of structured information describing some topic(s) of interest.
  *
  * @see http://schema.org/Dataset
+ *
+ * @mixin CreativeWork
  */
-class Dataset extends CreativeWork
+class Dataset extends BaseType
 {
     /**
      * A data catalog which contains this dataset.

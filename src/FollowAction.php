@@ -21,8 +21,10 @@ namespace Spatie\SchemaOrg;
  * inanimate objects (e.g. you track a package, but you don't follow it).
  *
  * @see http://schema.org/FollowAction
+ *
+ * @mixin InteractAction
  */
-class FollowAction extends InteractAction
+class FollowAction extends BaseType
 {
     /**
      * A sub property of object. The person or organization being followed.

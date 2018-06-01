@@ -7,7 +7,9 @@ namespace Spatie\SchemaOrg;
  * and the like.
  *
  * @see http://schema.org/RVPark
+ *
+ * @mixin CivicStructure
  */
-class RVPark extends CivicStructure
+class RVPark extends BaseType
 {
 }

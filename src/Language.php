@@ -11,7 +11,9 @@ namespace Spatie\SchemaOrg;
  * using [[ComputerLanguage]].
  *
  * @see http://schema.org/Language
+ *
+ * @mixin Intangible
  */
-class Language extends Intangible
+class Language extends BaseType
 {
 }

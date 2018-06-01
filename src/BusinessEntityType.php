@@ -15,7 +15,9 @@ namespace Spatie\SchemaOrg;
  * * http://purl.org/goodrelations/v1#Reseller
  *
  * @see http://schema.org/BusinessEntityType
+ *
+ * @mixin Enumeration
  */
-class BusinessEntityType extends Enumeration
+class BusinessEntityType extends BaseType
 {
 }

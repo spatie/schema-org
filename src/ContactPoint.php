@@ -6,8 +6,10 @@ namespace Spatie\SchemaOrg;
  * A contact point&#x2014;for example, a Customer Complaints department.
  *
  * @see http://schema.org/ContactPoint
+ *
+ * @mixin StructuredValue
  */
-class ContactPoint extends StructuredValue
+class ContactPoint extends BaseType
 {
     /**
      * The geographic area where a service or offered item is provided.

@@ -7,7 +7,9 @@ namespace Spatie\SchemaOrg;
  * OfferCatalogs that are offeredBy the same provider.
  *
  * @see http://schema.org/OfferCatalog
+ *
+ * @mixin ItemList
  */
-class OfferCatalog extends ItemList
+class OfferCatalog extends BaseType
 {
 }

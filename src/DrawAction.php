@@ -7,7 +7,9 @@ namespace Spatie\SchemaOrg;
  * typically with a pen/pencil and paper as instruments.
  *
  * @see http://schema.org/DrawAction
+ *
+ * @mixin CreateAction
  */
-class DrawAction extends CreateAction
+class DrawAction extends BaseType
 {
 }

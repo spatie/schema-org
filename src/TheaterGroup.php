@@ -7,7 +7,9 @@ namespace Spatie\SchemaOrg;
  * Druid Theatre.
  *
  * @see http://schema.org/TheaterGroup
+ *
+ * @mixin PerformingGroup
  */
-class TheaterGroup extends PerformingGroup
+class TheaterGroup extends BaseType
 {
 }

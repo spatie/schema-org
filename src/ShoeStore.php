@@ -6,7 +6,9 @@ namespace Spatie\SchemaOrg;
  * A shoe store.
  *
  * @see http://schema.org/ShoeStore
+ *
+ * @mixin Store
  */
-class ShoeStore extends Store
+class ShoeStore extends BaseType
 {
 }

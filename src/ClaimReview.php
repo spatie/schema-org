@@ -7,8 +7,10 @@ namespace Spatie\SchemaOrg;
  * (referenced via itemReviewed).
  *
  * @see http://schema.org/ClaimReview
+ *
+ * @mixin Review
  */
-class ClaimReview extends Review
+class ClaimReview extends BaseType
 {
     /**
      * A short summary of the specific claims reviewed in a ClaimReview.

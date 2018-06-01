@@ -8,7 +8,9 @@ namespace Spatie\SchemaOrg;
  * hasPart properties.
  *
  * @see http://schema.org/Conversation
+ *
+ * @mixin CreativeWork
  */
-class Conversation extends CreativeWork
+class Conversation extends BaseType
 {
 }

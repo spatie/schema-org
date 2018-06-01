@@ -8,8 +8,10 @@ namespace Spatie\SchemaOrg;
  * vocabulary, alongside types such as [[Comment]].
  *
  * @see http://schema.org/UserComments
+ *
+ * @mixin UserInteraction
  */
-class UserComments extends UserInteraction
+class UserComments extends BaseType
 {
     /**
      * The text of the UserComment.

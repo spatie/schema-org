@@ -6,8 +6,10 @@ namespace Spatie\SchemaOrg;
  * Enumerated status values for Reservation.
  *
  * @see http://schema.org/ReservationStatusType
+ *
+ * @mixin Enumeration
  */
-class ReservationStatusType extends Enumeration
+class ReservationStatusType extends BaseType
 {
     /**
      * The status for a previously confirmed reservation that is now cancelled.

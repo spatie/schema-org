@@ -13,8 +13,10 @@ namespace Spatie\SchemaOrg;
  * interest on the location of innanimate objects.
  *
  * @see http://schema.org/TrackAction
+ *
+ * @mixin FindAction
  */
-class TrackAction extends FindAction
+class TrackAction extends BaseType
 {
     /**
      * A sub property of instrument. The method of delivery.

@@ -6,7 +6,9 @@ namespace Spatie\SchemaOrg;
  * A pet store.
  *
  * @see http://schema.org/PetStore
+ *
+ * @mixin Store
  */
-class PetStore extends Store
+class PetStore extends BaseType
 {
 }

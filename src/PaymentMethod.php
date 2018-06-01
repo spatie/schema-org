@@ -21,7 +21,9 @@ namespace Spatie\SchemaOrg;
  * * http://purl.org/goodrelations/v1#PaySwarm
  *
  * @see http://schema.org/PaymentMethod
+ *
+ * @mixin Enumeration
  */
-class PaymentMethod extends Enumeration
+class PaymentMethod extends BaseType
 {
 }

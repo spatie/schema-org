@@ -7,8 +7,10 @@ namespace Spatie\SchemaOrg;
  * over land, water, air, or through space.
  *
  * @see http://schema.org/Vehicle
+ *
+ * @mixin Product
  */
-class Vehicle extends Product
+class Vehicle extends BaseType
 {
     /**
      * The available volume for cargo or luggage. For automobiles, this is

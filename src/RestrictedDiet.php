@@ -7,8 +7,10 @@ namespace Spatie\SchemaOrg;
  * health or lifestyle reasons.
  *
  * @see http://schema.org/RestrictedDiet
+ *
+ * @mixin Enumeration
  */
-class RestrictedDiet extends Enumeration
+class RestrictedDiet extends BaseType
 {
     /**
      * A diet appropriate for people with diabetes.

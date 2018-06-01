@@ -6,8 +6,10 @@ namespace Spatie\SchemaOrg;
  * A book.
  *
  * @see http://schema.org/Book
+ *
+ * @mixin CreativeWork
  */
-class Book extends CreativeWork
+class Book extends BaseType
 {
     /**
      * The edition of the book.

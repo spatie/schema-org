@@ -7,7 +7,9 @@ namespace Spatie\SchemaOrg;
  * &lt;Length unit of measure&gt;'. E.g., '7 ft'.
  *
  * @see http://schema.org/Distance
+ *
+ * @mixin Quantity
  */
-class Distance extends Quantity
+class Distance extends BaseType
 {
 }

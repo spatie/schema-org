@@ -10,8 +10,10 @@ namespace Spatie\SchemaOrg;
  * reservations.
  *
  * @see http://schema.org/LodgingReservation
+ *
+ * @mixin Reservation
  */
-class LodgingReservation extends Reservation
+class LodgingReservation extends BaseType
 {
     /**
      * The earliest someone may check into a lodging establishment.

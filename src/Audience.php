@@ -6,8 +6,10 @@ namespace Spatie\SchemaOrg;
  * Intended audience for an item, i.e. the group for whom the item was created.
  *
  * @see http://schema.org/Audience
+ *
+ * @mixin Intangible
  */
-class Audience extends Intangible
+class Audience extends BaseType
 {
     /**
      * Researchers.

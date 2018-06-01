@@ -6,7 +6,10 @@ namespace Spatie\SchemaOrg;
  * A health club.
  *
  * @see http://schema.org/HealthClub
+ *
+ * @mixin HealthAndBeautyBusiness
+ * @mixin SportsActivityLocation
  */
-class HealthClub extends HealthAndBeautyBusiness
+class HealthClub extends BaseType
 {
 }

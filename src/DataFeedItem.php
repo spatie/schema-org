@@ -6,8 +6,10 @@ namespace Spatie\SchemaOrg;
  * A single item within a larger data feed.
  *
  * @see http://schema.org/DataFeedItem
+ *
+ * @mixin Intangible
  */
-class DataFeedItem extends Intangible
+class DataFeedItem extends BaseType
 {
     /**
      * The date on which the CreativeWork was created or the item was added to a

@@ -9,8 +9,10 @@ namespace Spatie\SchemaOrg;
  * very same properties used for Offer apply.
  *
  * @see http://schema.org/Demand
+ *
+ * @mixin Intangible
  */
-class Demand extends Intangible
+class Demand extends BaseType
 {
     /**
      * The payment method(s) accepted by seller for this offer.

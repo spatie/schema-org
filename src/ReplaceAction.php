@@ -6,8 +6,10 @@ namespace Spatie\SchemaOrg;
  * The act of editing a recipient by replacing an old object with a new object.
  *
  * @see http://schema.org/ReplaceAction
+ *
+ * @mixin UpdateAction
  */
-class ReplaceAction extends UpdateAction
+class ReplaceAction extends BaseType
 {
     /**
      * A sub property of object. The object that is being replaced.

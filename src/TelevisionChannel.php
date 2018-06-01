@@ -7,7 +7,9 @@ namespace Spatie\SchemaOrg;
  * CableOrSatelliteService lineup.
  *
  * @see http://schema.org/TelevisionChannel
+ *
+ * @mixin BroadcastChannel
  */
-class TelevisionChannel extends BroadcastChannel
+class TelevisionChannel extends BaseType
 {
 }

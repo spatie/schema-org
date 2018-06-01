@@ -6,7 +6,9 @@ namespace Spatie\SchemaOrg;
  * An outlet store.
  *
  * @see http://schema.org/OutletStore
+ *
+ * @mixin Store
  */
-class OutletStore extends Store
+class OutletStore extends BaseType
 {
 }

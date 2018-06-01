@@ -10,8 +10,10 @@ namespace Spatie\SchemaOrg;
  * describe the price of an Offer, Invoice, etc.
  *
  * @see http://schema.org/MonetaryAmount
+ *
+ * @mixin StructuredValue
  */
-class MonetaryAmount extends StructuredValue
+class MonetaryAmount extends BaseType
 {
     /**
      * The currency in which the monetary amount is expressed (in 3-letter [ISO

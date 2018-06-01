@@ -6,8 +6,10 @@ namespace Spatie\SchemaOrg;
  * Financial services business.
  *
  * @see http://schema.org/FinancialService
+ *
+ * @mixin LocalBusiness
  */
-class FinancialService extends LocalBusiness
+class FinancialService extends BaseType
 {
     /**
      * Description of fees, commissions, and other terms applied either to a

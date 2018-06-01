@@ -7,7 +7,9 @@ namespace Spatie\SchemaOrg;
  * a destination, optionally with participants.
  *
  * @see http://schema.org/DepartAction
+ *
+ * @mixin MoveAction
  */
-class DepartAction extends MoveAction
+class DepartAction extends BaseType
 {
 }

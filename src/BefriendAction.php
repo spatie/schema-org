@@ -12,7 +12,9 @@ namespace Spatie\SchemaOrg;
  * connection is reciprocal.
  *
  * @see http://schema.org/BefriendAction
+ *
+ * @mixin InteractAction
  */
-class BefriendAction extends InteractAction
+class BefriendAction extends BaseType
 {
 }

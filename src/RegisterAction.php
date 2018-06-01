@@ -15,7 +15,9 @@ namespace Spatie\SchemaOrg;
  * that the agent is expecting updates from the object.
  *
  * @see http://schema.org/RegisterAction
+ *
+ * @mixin InteractAction
  */
-class RegisterAction extends InteractAction
+class RegisterAction extends BaseType
 {
 }

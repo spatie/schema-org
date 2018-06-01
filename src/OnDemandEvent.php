@@ -7,7 +7,9 @@ namespace Spatie\SchemaOrg;
  * is available on-demand.
  *
  * @see http://schema.org/OnDemandEvent
+ *
+ * @mixin PublicationEvent
  */
-class OnDemandEvent extends PublicationEvent
+class OnDemandEvent extends BaseType
 {
 }

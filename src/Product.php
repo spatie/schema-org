@@ -8,8 +8,10 @@ namespace Spatie\SchemaOrg;
  * online.
  *
  * @see http://schema.org/Product
+ *
+ * @mixin Thing
  */
-class Product extends Thing
+class Product extends BaseType
 {
     /**
      * A property-value pair representing an additional characteristics of the

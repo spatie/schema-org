@@ -7,7 +7,9 @@ namespace Spatie\SchemaOrg;
  * varies somewhat).
  *
  * @see http://schema.org/MiddleSchool
+ *
+ * @mixin EducationalOrganization
  */
-class MiddleSchool extends EducationalOrganization
+class MiddleSchool extends BaseType
 {
 }

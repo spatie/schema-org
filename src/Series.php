@@ -7,8 +7,10 @@ namespace Spatie\SchemaOrg;
  * necessarily of the same kind.
  *
  * @see http://schema.org/Series
+ *
+ * @mixin CreativeWork
  */
-class Series extends CreativeWork
+class Series extends BaseType
 {
     /**
      * A director of e.g. tv, radio, movie, video gaming etc. content, or of an

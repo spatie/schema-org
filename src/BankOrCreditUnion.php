@@ -6,7 +6,9 @@ namespace Spatie\SchemaOrg;
  * Bank or credit union.
  *
  * @see http://schema.org/BankOrCreditUnion
+ *
+ * @mixin FinancialService
  */
-class BankOrCreditUnion extends FinancialService
+class BankOrCreditUnion extends BaseType
 {
 }

@@ -6,8 +6,10 @@ namespace Spatie\SchemaOrg;
  * Reference documentation for application programming interfaces (APIs).
  *
  * @see http://schema.org/APIReference
+ *
+ * @mixin TechArticle
  */
-class APIReference extends TechArticle
+class APIReference extends BaseType
 {
     /**
      * Library file name e.g., mscorlib.dll, system.web.dll.

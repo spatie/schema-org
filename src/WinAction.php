@@ -6,8 +6,10 @@ namespace Spatie\SchemaOrg;
  * The act of achieving victory in a competitive activity.
  *
  * @see http://schema.org/WinAction
+ *
+ * @mixin AchieveAction
  */
-class WinAction extends AchieveAction
+class WinAction extends BaseType
 {
     /**
      * A sub property of participant. The loser of the action.

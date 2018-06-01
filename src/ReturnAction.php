@@ -7,8 +7,10 @@ namespace Spatie\SchemaOrg;
  * (concrete objects) or taken (ownership).
  *
  * @see http://schema.org/ReturnAction
+ *
+ * @mixin TransferAction
  */
-class ReturnAction extends TransferAction
+class ReturnAction extends BaseType
 {
     /**
      * A sub property of participant. The participant who is at the receiving

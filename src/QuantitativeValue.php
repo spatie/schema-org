@@ -6,8 +6,10 @@ namespace Spatie\SchemaOrg;
  * A point value or interval for product characteristics and other purposes.
  *
  * @see http://schema.org/QuantitativeValue
+ *
+ * @mixin StructuredValue
  */
-class QuantitativeValue extends StructuredValue
+class QuantitativeValue extends BaseType
 {
     /**
      * A property-value pair representing an additional characteristics of the

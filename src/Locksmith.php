@@ -6,7 +6,9 @@ namespace Spatie\SchemaOrg;
  * A locksmith.
  *
  * @see http://schema.org/Locksmith
+ *
+ * @mixin HomeAndConstructionBusiness
  */
-class Locksmith extends HomeAndConstructionBusiness
+class Locksmith extends BaseType
 {
 }

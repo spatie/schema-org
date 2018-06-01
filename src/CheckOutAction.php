@@ -16,7 +16,9 @@ namespace Spatie\SchemaOrg;
  * agent is informing/confirming the end of a previously reserved service.
  *
  * @see http://schema.org/CheckOutAction
+ *
+ * @mixin CommunicateAction
  */
-class CheckOutAction extends CommunicateAction
+class CheckOutAction extends BaseType
 {
 }

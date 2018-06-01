@@ -7,7 +7,9 @@ namespace Spatie\SchemaOrg;
  * ...
  *
  * @see http://schema.org/ExhibitionEvent
+ *
+ * @mixin Event
  */
-class ExhibitionEvent extends Event
+class ExhibitionEvent extends BaseType
 {
 }

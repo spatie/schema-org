@@ -7,7 +7,9 @@ namespace Spatie\SchemaOrg;
  * a sentiment.
  *
  * @see http://schema.org/ReactAction
+ *
+ * @mixin AssessAction
  */
-class ReactAction extends AssessAction
+class ReactAction extends BaseType
 {
 }

@@ -6,8 +6,10 @@ namespace Spatie\SchemaOrg;
  * A blog.
  *
  * @see http://schema.org/Blog
+ *
+ * @mixin CreativeWork
  */
-class Blog extends CreativeWork
+class Blog extends BaseType
 {
     /**
      * A posting that is part of this blog.

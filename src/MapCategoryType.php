@@ -6,8 +6,10 @@ namespace Spatie\SchemaOrg;
  * An enumeration of several kinds of Map.
  *
  * @see http://schema.org/MapCategoryType
+ *
+ * @mixin Enumeration
  */
-class MapCategoryType extends Enumeration
+class MapCategoryType extends BaseType
 {
     /**
      * A parking map.

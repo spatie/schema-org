@@ -7,7 +7,9 @@ namespace Spatie\SchemaOrg;
  * a single web domain and accessible via URLs.
  *
  * @see http://schema.org/WebSite
+ *
+ * @mixin CreativeWork
  */
-class WebSite extends CreativeWork
+class WebSite extends BaseType
 {
 }

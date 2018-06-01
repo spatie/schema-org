@@ -7,8 +7,10 @@ namespace Spatie\SchemaOrg;
  * FoodEstablishment.
  *
  * @see http://schema.org/Menu
+ *
+ * @mixin CreativeWork
  */
-class Menu extends CreativeWork
+class Menu extends BaseType
 {
     /**
      * A food or drink item contained in a menu or menu section.

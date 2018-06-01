@@ -7,7 +7,9 @@ namespace Spatie\SchemaOrg;
  * government.
  *
  * @see http://schema.org/AdministrativeArea
+ *
+ * @mixin Place
  */
-class AdministrativeArea extends Place
+class AdministrativeArea extends BaseType
 {
 }

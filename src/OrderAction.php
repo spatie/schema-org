@@ -6,8 +6,10 @@ namespace Spatie\SchemaOrg;
  * An agent orders an object/product/service to be delivered/sent.
  *
  * @see http://schema.org/OrderAction
+ *
+ * @mixin TradeAction
  */
-class OrderAction extends TradeAction
+class OrderAction extends BaseType
 {
     /**
      * A sub property of instrument. The method of delivery.

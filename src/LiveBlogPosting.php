@@ -7,8 +7,10 @@ namespace Spatie\SchemaOrg;
  * event through continuous updates.
  *
  * @see http://schema.org/LiveBlogPosting
+ *
+ * @mixin BlogPosting
  */
-class LiveBlogPosting extends BlogPosting
+class LiveBlogPosting extends BaseType
 {
     /**
      * The time when the live blog will stop covering the Event. Note that

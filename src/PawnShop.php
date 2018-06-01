@@ -7,7 +7,9 @@ namespace Spatie\SchemaOrg;
  * possessions.
  *
  * @see http://schema.org/PawnShop
+ *
+ * @mixin Store
  */
-class PawnShop extends Store
+class PawnShop extends BaseType
 {
 }

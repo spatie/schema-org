@@ -13,8 +13,10 @@ namespace Spatie\SchemaOrg;
  * [Actions overview document](http://schema.org/docs/actions.html).
  *
  * @see http://schema.org/Action
+ *
+ * @mixin Thing
  */
-class Action extends Thing
+class Action extends BaseType
 {
     /**
      * Indicates the current disposition of the Action.

@@ -7,7 +7,9 @@ namespace Spatie\SchemaOrg;
  * Kariba reservoir.
  *
  * @see http://schema.org/Reservoir
+ *
+ * @mixin BodyOfWater
  */
-class Reservoir extends BodyOfWater
+class Reservoir extends BaseType
 {
 }

@@ -6,8 +6,10 @@ namespace Spatie\SchemaOrg;
  * A MusicRelease is a specific release of a music album.
  *
  * @see http://schema.org/MusicRelease
+ *
+ * @mixin MusicPlaylist
  */
-class MusicRelease extends MusicPlaylist
+class MusicRelease extends BaseType
 {
     /**
      * The catalog number for the release.

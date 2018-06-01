@@ -7,8 +7,10 @@ namespace Spatie\SchemaOrg;
  * serial number).
  *
  * @see http://schema.org/IndividualProduct
+ *
+ * @mixin Product
  */
-class IndividualProduct extends Product
+class IndividualProduct extends BaseType
 {
     /**
      * The serial number or any alphanumeric identifier of a particular product.
