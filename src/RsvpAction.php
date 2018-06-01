@@ -10,7 +10,7 @@ namespace Spatie\SchemaOrg;
  *
  * @mixin InformAction
  */
-class RsvpAction
+class RsvpAction extends BaseType
 {
     /**
      * If responding yes, the number of guests who will attend in addition to
