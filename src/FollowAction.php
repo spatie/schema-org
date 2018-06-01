@@ -24,7 +24,7 @@ namespace Spatie\SchemaOrg;
  *
  * @mixin InteractAction
  */
-class FollowAction
+class FollowAction extends BaseType
 {
     /**
      * A sub property of object. The person or organization being followed.
