@@ -21,6 +21,6 @@ namespace Spatie\SchemaOrg;
  * @mixin CivicStructure
  * @mixin LodgingBusiness
  */
-class Campground
+class Campground extends BaseType
 {
 }
