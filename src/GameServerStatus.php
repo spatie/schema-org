@@ -9,7 +9,7 @@ namespace Spatie\SchemaOrg;
  *
  * @mixin Enumeration
  */
-class GameServerStatus
+class GameServerStatus extends BaseType
 {
     /**
      * Game server status: OfflinePermanently. Server is offline and not
