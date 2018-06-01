@@ -9,7 +9,7 @@ namespace Spatie\SchemaOrg;
  *
  * @mixin Intangible
  */
-class DataFeedItem
+class DataFeedItem extends BaseType
 {
     /**
      * The date on which the CreativeWork was created or the item was added to a
