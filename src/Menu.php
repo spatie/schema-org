@@ -10,7 +10,7 @@ namespace Spatie\SchemaOrg;
  *
  * @mixin CreativeWork
  */
-class Menu
+class Menu extends BaseType
 {
     /**
      * A food or drink item contained in a menu or menu section.
