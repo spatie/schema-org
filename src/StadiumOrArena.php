@@ -10,6 +10,6 @@ namespace Spatie\SchemaOrg;
  * @mixin CivicStructure
  * @mixin SportsActivityLocation
  */
-class StadiumOrArena
+class StadiumOrArena extends BaseType
 {
 }
