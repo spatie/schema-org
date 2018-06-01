@@ -14,7 +14,7 @@ namespace Spatie\SchemaOrg;
  *
  * @mixin Action
  */
-class SearchAction
+class SearchAction extends BaseType
 {
     /**
      * A sub property of instrument. The query used on this action.
