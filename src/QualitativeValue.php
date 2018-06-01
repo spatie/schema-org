@@ -10,7 +10,7 @@ namespace Spatie\SchemaOrg;
  *
  * @mixin Enumeration
  */
-class QualitativeValue
+class QualitativeValue extends BaseType
 {
     /**
      * A property-value pair representing an additional characteristics of the
