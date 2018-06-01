@@ -9,6 +9,6 @@ namespace Spatie\SchemaOrg;
  *
  * @mixin WebPage
  */
-class SearchResultsPage
+class SearchResultsPage extends BaseType
 {
 }
