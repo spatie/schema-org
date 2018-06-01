@@ -9,7 +9,7 @@ namespace Spatie\SchemaOrg;
  *
  * @mixin Enumeration
  */
-class MusicAlbumReleaseType
+class MusicAlbumReleaseType extends BaseType
 {
     /**
      * AlbumRelease.
