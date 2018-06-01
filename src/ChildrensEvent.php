@@ -9,6 +9,6 @@ namespace Spatie\SchemaOrg;
  *
  * @mixin Event
  */
-class ChildrensEvent
+class ChildrensEvent extends BaseType
 {
 }
