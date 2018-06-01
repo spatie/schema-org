@@ -11,7 +11,7 @@ namespace Spatie\SchemaOrg;
  *
  * @mixin Service
  */
-class FinancialProduct
+class FinancialProduct extends BaseType
 {
     /**
      * The annual rate that is charged for borrowing (or made by investing),
