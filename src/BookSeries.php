@@ -9,6 +9,6 @@ namespace Spatie\SchemaOrg;
  *
  * @mixin CreativeWorkSeries
  */
-class BookSeries
+class BookSeries extends BaseType
 {
 }
