@@ -9,7 +9,7 @@ namespace Spatie\SchemaOrg;
  *
  * @mixin CreativeWork
  */
-class Book
+class Book extends BaseType
 {
     /**
      * The edition of the book.
