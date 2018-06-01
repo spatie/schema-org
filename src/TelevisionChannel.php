@@ -10,6 +10,6 @@ namespace Spatie\SchemaOrg;
  *
  * @mixin BroadcastChannel
  */
-class TelevisionChannel
+class TelevisionChannel extends BaseType
 {
 }
