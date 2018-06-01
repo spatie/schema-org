@@ -11,7 +11,7 @@ namespace Spatie\SchemaOrg;
  *
  * @mixin Event
  */
-class PublicationEvent
+class PublicationEvent extends BaseType
 {
     /**
      * A flag to signal that the publication or event is accessible for free.
