@@ -10,6 +10,6 @@ namespace Spatie\SchemaOrg;
  *
  * @mixin Service
  */
-class TaxiService
+class TaxiService extends BaseType
 {
 }
