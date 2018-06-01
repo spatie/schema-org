@@ -12,6 +12,6 @@ namespace Spatie\SchemaOrg;
  *
  * @mixin LodgingBusiness
  */
-class BedAndBreakfast
+class BedAndBreakfast extends BaseType
 {
 }
