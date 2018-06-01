@@ -9,6 +9,6 @@ namespace Spatie\SchemaOrg;
  *
  * @mixin Organization
  */
-class NGO
+class NGO extends BaseType
 {
 }
