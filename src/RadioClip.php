@@ -9,6 +9,6 @@ namespace Spatie\SchemaOrg;
  *
  * @mixin Clip
  */
-class RadioClip
+class RadioClip extends BaseType
 {
 }
