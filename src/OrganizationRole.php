@@ -9,7 +9,7 @@ namespace Spatie\SchemaOrg;
  *
  * @mixin Role
  */
-class OrganizationRole
+class OrganizationRole extends BaseType
 {
     /**
      * A number associated with a role in an organization, for example, the
