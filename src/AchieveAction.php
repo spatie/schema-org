@@ -10,6 +10,6 @@ namespace Spatie\SchemaOrg;
  *
  * @mixin Action
  */
-class AchieveAction
+class AchieveAction extends BaseType
 {
 }
