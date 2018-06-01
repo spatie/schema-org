@@ -9,7 +9,7 @@ namespace Spatie\SchemaOrg;
  *
  * @mixin Enumeration
  */
-class BoardingPolicyType
+class BoardingPolicyType extends BaseType
 {
     /**
      * The airline boards by groups based on check-in time, priority, etc.
