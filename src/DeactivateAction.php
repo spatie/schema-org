@@ -10,6 +10,6 @@ namespace Spatie\SchemaOrg;
  *
  * @mixin ControlAction
  */
-class DeactivateAction
+class DeactivateAction extends BaseType
 {
 }
