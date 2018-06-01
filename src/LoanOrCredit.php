@@ -10,7 +10,7 @@ namespace Spatie\SchemaOrg;
  *
  * @mixin FinancialProduct
  */
-class LoanOrCredit
+class LoanOrCredit extends BaseType
 {
     /**
      * The amount of money.
