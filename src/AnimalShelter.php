@@ -9,6 +9,6 @@ namespace Spatie\SchemaOrg;
  *
  * @mixin LocalBusiness
  */
-class AnimalShelter
+class AnimalShelter extends BaseType
 {
 }
