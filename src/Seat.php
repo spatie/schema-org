@@ -9,7 +9,7 @@ namespace Spatie\SchemaOrg;
  *
  * @mixin Intangible
  */
-class Seat
+class Seat extends BaseType
 {
     /**
      * The location of the reserved seat (e.g., 27).
