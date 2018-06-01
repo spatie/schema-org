@@ -9,6 +9,6 @@ namespace Spatie\SchemaOrg;
  *
  * @mixin Action
  */
-class InteractAction
+class InteractAction extends BaseType
 {
 }
