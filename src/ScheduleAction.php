@@ -15,6 +15,6 @@ namespace Spatie\SchemaOrg;
  *
  * @mixin PlanAction
  */
-class ScheduleAction
+class ScheduleAction extends BaseType
 {
 }
