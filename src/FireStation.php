@@ -10,6 +10,6 @@ namespace Spatie\SchemaOrg;
  * @mixin CivicStructure
  * @mixin EmergencyService
  */
-class FireStation
+class FireStation extends BaseType
 {
 }
