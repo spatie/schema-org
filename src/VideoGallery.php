@@ -9,6 +9,6 @@ namespace Spatie\SchemaOrg;
  *
  * @mixin CollectionPage
  */
-class VideoGallery
+class VideoGallery extends BaseType
 {
 }
