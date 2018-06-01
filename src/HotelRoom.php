@@ -12,7 +12,7 @@ namespace Spatie\SchemaOrg;
  *
  * @mixin Room
  */
-class HotelRoom
+class HotelRoom extends BaseType
 {
     /**
      * The type of bed or beds included in the accommodation. For the single
