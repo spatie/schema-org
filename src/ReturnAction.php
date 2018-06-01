@@ -10,7 +10,7 @@ namespace Spatie\SchemaOrg;
  *
  * @mixin TransferAction
  */
-class ReturnAction
+class ReturnAction extends BaseType
 {
     /**
      * A sub property of participant. The participant who is at the receiving
