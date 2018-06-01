@@ -9,6 +9,6 @@ namespace Spatie\SchemaOrg;
  *
  * @mixin Place
  */
-class TouristAttraction
+class TouristAttraction extends BaseType
 {
 }
