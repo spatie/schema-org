@@ -29,10 +29,6 @@ class ParseType extends Task
                 return strpos($parent, ':') === false ? $parent : null;
             }));
 
-        if (empty($type->parents)) {
-            return null;
-        }
-
         $type->resource = $this->getAttribute($node, 'resource');
 
         return $type;
