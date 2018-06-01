@@ -10,6 +10,6 @@ namespace Spatie\SchemaOrg;
  *
  * @mixin Organization
  */
-class MedicalOrganization
+class MedicalOrganization extends BaseType
 {
 }
