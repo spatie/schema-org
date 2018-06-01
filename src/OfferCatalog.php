@@ -10,6 +10,6 @@ namespace Spatie\SchemaOrg;
  *
  * @mixin ItemList
  */
-class OfferCatalog
+class OfferCatalog extends BaseType
 {
 }
