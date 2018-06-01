@@ -9,7 +9,7 @@ namespace Spatie\SchemaOrg;
  *
  * @mixin Enumeration
  */
-class MapCategoryType
+class MapCategoryType extends BaseType
 {
     /**
      * A parking map.
