@@ -9,6 +9,6 @@ namespace Spatie\SchemaOrg;
  *
  * @mixin Action
  */
-class AssessAction
+class AssessAction extends BaseType
 {
 }
