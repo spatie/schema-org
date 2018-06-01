@@ -9,7 +9,7 @@ namespace Spatie\SchemaOrg;
  *
  * @mixin CommunicateAction
  */
-class CommentAction
+class CommentAction extends BaseType
 {
     /**
      * A sub property of result. The Comment created or sent as a result of this
