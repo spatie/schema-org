@@ -9,6 +9,6 @@ namespace Spatie\SchemaOrg;
  *
  * @mixin WebPageElement
  */
-class WPFooter
+class WPFooter extends BaseType
 {
 }
