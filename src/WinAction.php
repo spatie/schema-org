@@ -9,7 +9,7 @@ namespace Spatie\SchemaOrg;
  *
  * @mixin AchieveAction
  */
-class WinAction
+class WinAction extends BaseType
 {
     /**
      * A sub property of participant. The loser of the action.
