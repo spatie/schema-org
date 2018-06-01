@@ -9,7 +9,7 @@ namespace Spatie\SchemaOrg;
  *
  * @mixin TechArticle
  */
-class APIReference
+class APIReference extends BaseType
 {
     /**
      * Library file name e.g., mscorlib.dll, system.web.dll.
