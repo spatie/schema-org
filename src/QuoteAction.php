@@ -10,6 +10,6 @@ namespace Spatie\SchemaOrg;
  *
  * @mixin TradeAction
  */
-class QuoteAction
+class QuoteAction extends BaseType
 {
 }
