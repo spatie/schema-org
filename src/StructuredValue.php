@@ -10,6 +10,6 @@ namespace Spatie\SchemaOrg;
  *
  * @mixin Intangible
  */
-class StructuredValue
+class StructuredValue extends BaseType
 {
 }
