@@ -9,6 +9,6 @@ namespace Spatie\SchemaOrg;
  *
  * @mixin Landform
  */
-class Volcano
+class Volcano extends BaseType
 {
 }
