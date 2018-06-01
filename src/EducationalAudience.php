@@ -9,7 +9,7 @@ namespace Spatie\SchemaOrg;
  *
  * @mixin Audience
  */
-class EducationalAudience
+class EducationalAudience extends BaseType
 {
     /**
      * An educationalRole of an EducationalAudience.
