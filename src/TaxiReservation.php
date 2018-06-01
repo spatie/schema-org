@@ -13,7 +13,7 @@ namespace Spatie\SchemaOrg;
  *
  * @mixin Reservation
  */
-class TaxiReservation
+class TaxiReservation extends BaseType
 {
     /**
      * Number of people the reservation should accommodate.
