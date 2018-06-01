@@ -9,6 +9,6 @@ namespace Spatie\SchemaOrg;
  *
  * @mixin CivicStructure
  */
-class Aquarium
+class Aquarium extends BaseType
 {
 }
