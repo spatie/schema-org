@@ -9,6 +9,6 @@ namespace Spatie\SchemaOrg;
  *
  * @mixin AssessAction
  */
-class IgnoreAction
+class IgnoreAction extends BaseType
 {
 }
