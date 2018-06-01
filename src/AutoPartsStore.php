@@ -10,6 +10,6 @@ namespace Spatie\SchemaOrg;
  * @mixin AutomotiveBusiness
  * @mixin Store
  */
-class AutoPartsStore
+class AutoPartsStore extends BaseType
 {
 }
