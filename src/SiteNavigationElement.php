@@ -9,6 +9,6 @@ namespace Spatie\SchemaOrg;
  *
  * @mixin WebPageElement
  */
-class SiteNavigationElement
+class SiteNavigationElement extends BaseType
 {
 }
