@@ -9,6 +9,6 @@ namespace Spatie\SchemaOrg;
  *
  * @mixin ConsumeAction
  */
-class WatchAction
+class WatchAction extends BaseType
 {
 }
