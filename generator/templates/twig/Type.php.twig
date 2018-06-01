@@ -15,7 +15,8 @@ namespace Spatie\SchemaOrg;
  */
 class {{ type.name }} extends BaseType
 {
-{% for constant in type.constants %}    /**
+{% for constant in type.constants %}
+    /**
      * {{ constant.description | doc(1) }}
      *
      * @see {{ constant.value }}
@@ -23,7 +24,8 @@ class {{ type.name }} extends BaseType
      const {{ constant.name }} = '{{ constant.value }}';
 
 {% endfor %}
-{% for property in type.properties %}    /**
+{% for property in type.properties %}
+    /**
      * {{ property.description | doc(1) }}
      *
      * @param {{ property.ranges | join('|') }} ${{ property.name }}
