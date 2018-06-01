@@ -9,6 +9,6 @@ namespace Spatie\SchemaOrg;
  *
  * @mixin ConsumeAction
  */
-class ViewAction
+class ViewAction extends BaseType
 {
 }
