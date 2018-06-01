@@ -10,6 +10,6 @@ namespace Spatie\SchemaOrg;
  *
  * @mixin Quantity
  */
-class Mass
+class Mass extends BaseType
 {
 }
