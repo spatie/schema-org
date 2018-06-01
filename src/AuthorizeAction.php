@@ -9,7 +9,7 @@ namespace Spatie\SchemaOrg;
  *
  * @mixin AllocateAction
  */
-class AuthorizeAction
+class AuthorizeAction extends BaseType
 {
     /**
      * A sub property of participant. The participant who is at the receiving
