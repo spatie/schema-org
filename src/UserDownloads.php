@@ -11,6 +11,6 @@ namespace Spatie\SchemaOrg;
  *
  * @mixin UserInteraction
  */
-class UserDownloads
+class UserDownloads extends BaseType
 {
 }
