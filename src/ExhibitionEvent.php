@@ -10,6 +10,6 @@ namespace Spatie\SchemaOrg;
  *
  * @mixin Event
  */
-class ExhibitionEvent
+class ExhibitionEvent extends BaseType
 {
 }
