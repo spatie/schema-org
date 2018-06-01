@@ -12,7 +12,7 @@ namespace Spatie\SchemaOrg;
  *
  * @mixin PriceSpecification
  */
-class CompoundPriceSpecification
+class CompoundPriceSpecification extends BaseType
 {
     /**
      * This property links to all [[UnitPriceSpecification]] nodes that apply in
