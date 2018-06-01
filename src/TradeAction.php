@@ -11,7 +11,7 @@ namespace Spatie\SchemaOrg;
  *
  * @mixin Action
  */
-class TradeAction
+class TradeAction extends BaseType
 {
     /**
      * The offer price of a product, or of a price component when attached to
