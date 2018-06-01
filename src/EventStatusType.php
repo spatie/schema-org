@@ -10,7 +10,7 @@ namespace Spatie\SchemaOrg;
  *
  * @mixin Enumeration
  */
-class EventStatusType
+class EventStatusType extends BaseType
 {
     /**
      * The event has been cancelled. If the event has multiple startDate values,
