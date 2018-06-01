@@ -13,7 +13,7 @@ namespace Spatie\SchemaOrg;
  *
  * @mixin Reservation
  */
-class RentalCarReservation
+class RentalCarReservation extends BaseType
 {
     /**
      * Where a rental car can be dropped off.
