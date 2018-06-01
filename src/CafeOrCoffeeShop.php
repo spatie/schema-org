@@ -9,6 +9,6 @@ namespace Spatie\SchemaOrg;
  *
  * @mixin FoodEstablishment
  */
-class CafeOrCoffeeShop
+class CafeOrCoffeeShop extends BaseType
 {
 }
