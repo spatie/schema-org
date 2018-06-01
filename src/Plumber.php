@@ -9,6 +9,6 @@ namespace Spatie\SchemaOrg;
  *
  * @mixin HomeAndConstructionBusiness
  */
-class Plumber
+class Plumber extends BaseType
 {
 }
