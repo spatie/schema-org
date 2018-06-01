@@ -9,6 +9,6 @@ namespace Spatie\SchemaOrg;
  *
  * @mixin UpdateAction
  */
-class DeleteAction
+class DeleteAction extends BaseType
 {
 }
