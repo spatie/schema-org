@@ -9,7 +9,7 @@ namespace Spatie\SchemaOrg;
  *
  * @mixin Enumeration
  */
-class ItemAvailability
+class ItemAvailability extends BaseType
 {
     /**
      * Indicates that the item has been discontinued.
