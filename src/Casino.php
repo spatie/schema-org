@@ -9,6 +9,6 @@ namespace Spatie\SchemaOrg;
  *
  * @mixin EntertainmentBusiness
  */
-class Casino
+class Casino extends BaseType
 {
 }
