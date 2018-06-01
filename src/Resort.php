@@ -16,6 +16,6 @@ namespace Spatie\SchemaOrg;
  *
  * @mixin LodgingBusiness
  */
-class Resort
+class Resort extends BaseType
 {
 }
