@@ -9,7 +9,7 @@ namespace Spatie\SchemaOrg;
  *
  * @mixin StructuredValue
  */
-class ContactPoint
+class ContactPoint extends BaseType
 {
     /**
      * The geographic area where a service or offered item is provided.
