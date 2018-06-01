@@ -10,6 +10,6 @@ namespace Spatie\SchemaOrg;
  *
  * @mixin PerformingGroup
  */
-class DanceGroup
+class DanceGroup extends BaseType
 {
 }
