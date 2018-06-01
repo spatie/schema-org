@@ -9,7 +9,7 @@ namespace Spatie\SchemaOrg;
  *
  * @mixin LocalBusiness
  */
-class FoodEstablishment
+class FoodEstablishment extends BaseType
 {
     /**
      * Indicates whether a FoodEstablishment accepts reservations. Values can be
