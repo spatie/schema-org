@@ -9,6 +9,6 @@ namespace Spatie\SchemaOrg;
  *
  * @mixin Store
  */
-class OutletStore
+class OutletStore extends BaseType
 {
 }
