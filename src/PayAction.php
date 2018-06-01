@@ -9,7 +9,7 @@ namespace Spatie\SchemaOrg;
  *
  * @mixin TradeAction
  */
-class PayAction
+class PayAction extends BaseType
 {
     /**
      * A sub property of participant. The participant who is at the receiving
