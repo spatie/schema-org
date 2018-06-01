@@ -10,7 +10,7 @@ namespace Spatie\SchemaOrg;
  *
  * @mixin BlogPosting
  */
-class LiveBlogPosting
+class LiveBlogPosting extends BaseType
 {
     /**
      * The time when the live blog will stop covering the Event. Note that
