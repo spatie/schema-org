@@ -9,6 +9,6 @@ namespace Spatie\SchemaOrg;
  *
  * @mixin CreateAction
  */
-class FilmAction
+class FilmAction extends BaseType
 {
 }
