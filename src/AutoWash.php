@@ -9,6 +9,6 @@ namespace Spatie\SchemaOrg;
  *
  * @mixin AutomotiveBusiness
  */
-class AutoWash
+class AutoWash extends BaseType
 {
 }
