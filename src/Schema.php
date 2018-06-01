@@ -2642,6 +2642,11 @@ class Schema
         return new TheaterGroup();
     }
 
+    public static function thing(): Thing
+    {
+        return new Thing();
+    }
+
     public static function ticket(): Ticket
     {
         return new Ticket();
