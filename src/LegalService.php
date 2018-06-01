@@ -13,6 +13,6 @@ namespace Spatie\SchemaOrg;
  *
  * @mixin LocalBusiness
  */
-class LegalService
+class LegalService extends BaseType
 {
 }
