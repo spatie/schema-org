@@ -11,7 +11,7 @@ namespace Spatie\SchemaOrg;
  *
  * @mixin CreativeWork
  */
-class Recipe
+class Recipe extends BaseType
 {
     /**
      * The time it takes to actually cook the dish, in [ISO 8601 duration
