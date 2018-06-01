@@ -13,6 +13,6 @@ namespace Spatie\SchemaOrg;
  *
  * @mixin Accommodation
  */
-class CampingPitch
+class CampingPitch extends BaseType
 {
 }
