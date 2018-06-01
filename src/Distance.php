@@ -10,6 +10,6 @@ namespace Spatie\SchemaOrg;
  *
  * @mixin Quantity
  */
-class Distance
+class Distance extends BaseType
 {
 }
