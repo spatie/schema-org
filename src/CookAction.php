@@ -9,7 +9,7 @@ namespace Spatie\SchemaOrg;
  *
  * @mixin CreateAction
  */
-class CookAction
+class CookAction extends BaseType
 {
     /**
      * A sub property of location. The specific food establishment where the
