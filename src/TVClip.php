@@ -9,7 +9,7 @@ namespace Spatie\SchemaOrg;
  *
  * @mixin Clip
  */
-class TVClip
+class TVClip extends BaseType
 {
     /**
      * The TV series to which this episode or season belongs.
