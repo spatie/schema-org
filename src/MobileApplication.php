@@ -10,7 +10,7 @@ namespace Spatie\SchemaOrg;
  *
  * @mixin SoftwareApplication
  */
-class MobileApplication
+class MobileApplication extends BaseType
 {
     /**
      * Specifies specific carrier(s) requirements for the application (e.g. an
