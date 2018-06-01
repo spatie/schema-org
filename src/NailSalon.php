@@ -9,6 +9,6 @@ namespace Spatie\SchemaOrg;
  *
  * @mixin HealthAndBeautyBusiness
  */
-class NailSalon
+class NailSalon extends BaseType
 {
 }
