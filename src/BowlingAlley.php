@@ -9,6 +9,6 @@ namespace Spatie\SchemaOrg;
  *
  * @mixin SportsActivityLocation
  */
-class BowlingAlley
+class BowlingAlley extends BaseType
 {
 }
