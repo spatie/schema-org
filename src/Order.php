@@ -11,7 +11,7 @@ namespace Spatie\SchemaOrg;
  *
  * @mixin Intangible
  */
-class Order
+class Order extends BaseType
 {
     /**
      * The offer(s) -- e.g., product, quantity and price combinations --
