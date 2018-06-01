@@ -20,6 +20,6 @@ namespace Spatie\SchemaOrg;
  *
  * @mixin InteractAction
  */
-class SubscribeAction
+class SubscribeAction extends BaseType
 {
 }
