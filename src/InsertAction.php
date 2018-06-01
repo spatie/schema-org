@@ -9,7 +9,7 @@ namespace Spatie\SchemaOrg;
  *
  * @mixin AddAction
  */
-class InsertAction
+class InsertAction extends BaseType
 {
     /**
      * A sub property of location. The final location of the object or the agent
