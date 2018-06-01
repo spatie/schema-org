@@ -9,7 +9,7 @@ namespace Spatie\SchemaOrg;
  *
  * @mixin Event
  */
-class ScreeningEvent
+class ScreeningEvent extends BaseType
 {
     /**
      * Languages in which subtitles/captions are available, in [IETF BCP 47
