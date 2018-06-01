@@ -9,7 +9,7 @@ namespace Spatie\SchemaOrg;
  *
  * @mixin Enumeration
  */
-class BookFormatType
+class BookFormatType extends BaseType
 {
     /**
      * Book format: Audiobook. This is an enumerated value for use with the
