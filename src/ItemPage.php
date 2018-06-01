@@ -9,6 +9,6 @@ namespace Spatie\SchemaOrg;
  *
  * @mixin WebPage
  */
-class ItemPage
+class ItemPage extends BaseType
 {
 }
