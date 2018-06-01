@@ -13,6 +13,6 @@ namespace Spatie\SchemaOrg;
  *
  * @mixin PlanAction
  */
-class CancelAction
+class CancelAction extends BaseType
 {
 }
