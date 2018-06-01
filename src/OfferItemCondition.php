@@ -9,7 +9,7 @@ namespace Spatie\SchemaOrg;
  *
  * @mixin Enumeration
  */
-class OfferItemCondition
+class OfferItemCondition extends BaseType
 {
     /**
      * Indicates that the item is damaged.
