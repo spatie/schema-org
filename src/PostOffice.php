@@ -9,6 +9,6 @@ namespace Spatie\SchemaOrg;
  *
  * @mixin GovernmentOffice
  */
-class PostOffice
+class PostOffice extends BaseType
 {
 }
