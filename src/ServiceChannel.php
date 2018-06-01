@@ -10,7 +10,7 @@ namespace Spatie\SchemaOrg;
  *
  * @mixin Intangible
  */
-class ServiceChannel
+class ServiceChannel extends BaseType
 {
     /**
      * A language someone may use with the item. Please use one of the language
