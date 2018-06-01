@@ -11,6 +11,6 @@ namespace Spatie\SchemaOrg;
  *
  * @mixin ReactAction
  */
-class DisagreeAction
+class DisagreeAction extends BaseType
 {
 }
