@@ -10,7 +10,7 @@ namespace Spatie\SchemaOrg;
  *
  * @mixin PeopleAudience
  */
-class ParentAudience
+class ParentAudience extends BaseType
 {
     /**
      * Maximal age of the child.
