@@ -9,6 +9,6 @@ namespace Spatie\SchemaOrg;
  *
  * @mixin GovernmentBuilding
  */
-class CityHall
+class CityHall extends BaseType
 {
 }
