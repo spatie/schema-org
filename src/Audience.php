@@ -9,7 +9,7 @@ namespace Spatie\SchemaOrg;
  *
  * @mixin Intangible
  */
-class Audience
+class Audience extends BaseType
 {
     /**
      * Researchers.
