@@ -9,7 +9,7 @@ namespace Spatie\SchemaOrg;
  *
  * @mixin Organization
  */
-class EducationalOrganization
+class EducationalOrganization extends BaseType
 {
     /**
      * Alumni of an organization.
