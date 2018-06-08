@@ -4,11 +4,12 @@ namespace Spatie\SchemaOrg;
 
 /**
  * A Series in schema.org is a group of related items, typically but not
- * necessarily of the same kind.
+ * necessarily of the same kind. See also [[CreativeWorkSeries]],
+ * [[EventSeries]].
  *
  * @see http://schema.org/Series
  */
-class Series extends CreativeWork
+class Series extends Intangible
 {
     /**
      * A director of e.g. tv, radio, movie, video gaming etc. content, or of an

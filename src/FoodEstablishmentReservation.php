@@ -3,9 +3,11 @@
 namespace Spatie\SchemaOrg;
 
 /**
- * A reservation to dine at a food-related business.Note: This type is for
- * information about actual reservations, e.g. in confirmation emails or HTML
- * pages with individual confirmations of reservations.
+ * A reservation to dine at a food-related business.
+ * 
+ * Note: This type is for information about actual reservations, e.g. in
+ * confirmation emails or HTML pages with individual confirmations of
+ * reservations.
  *
  * @see http://schema.org/FoodEstablishmentReservation
  */

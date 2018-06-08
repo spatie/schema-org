@@ -3,14 +3,31 @@
 namespace Spatie\SchemaOrg;
 
 /**
- * A news article.
+ * A NewsArticle is an article whose content reports news, or provides
+ * background context and supporting materials for understanding the news.
+ * 
+ * A more detailed overview of [schema.org News markup](/docs/news.html) is also
+ * available.
  *
  * @see http://schema.org/NewsArticle
  */
 class NewsArticle extends Article
 {
     /**
-     * The location where the NewsArticle was produced.
+     * A [dateline](https://en.wikipedia.org/wiki/Dateline) is a brief piece of
+     * text included in news articles that describes where and when the story
+     * was written or filed though the date is often omitted. Sometimes only a
+     * placename is provided.
+     * 
+     * Structured representations of dateline-related information can also be
+     * expressed more explicitly using [[locationCreated]] (which represents
+     * where a work was created e.g. where a news report was written).  For
+     * location depicted or described in the content, use [[contentLocation]].
+     * 
+     * Dateline summaries are oriented more towards human readers than towards
+     * automated processing, and can vary substantially. Some examples: "BEIRUT,
+     * Lebanon, June 2.", "Paris, France", "December 19, 2017 11:43AM Reporting
+     * from Washington", "Beijing/Moscow", "QUEZON CITY, Philippines".
      *
      * @param string|string[] $dateline
      *

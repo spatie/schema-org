@@ -10,6 +10,34 @@ namespace Spatie\SchemaOrg;
 class Message extends CreativeWork
 {
     /**
+     * A sub property of recipient. The recipient blind copied on a message.
+     *
+     * @param ContactPoint|ContactPoint[]|Organization|Organization[]|Person|Person[] $bccRecipient
+     *
+     * @return static
+     *
+     * @see http://schema.org/bccRecipient
+     */
+    public function bccRecipient($bccRecipient)
+    {
+        return $this->setProperty('bccRecipient', $bccRecipient);
+    }
+
+    /**
+     * A sub property of recipient. The recipient copied on a message.
+     *
+     * @param ContactPoint|ContactPoint[]|Organization|Organization[]|Person|Person[] $ccRecipient
+     *
+     * @return static
+     *
+     * @see http://schema.org/ccRecipient
+     */
+    public function ccRecipient($ccRecipient)
+    {
+        return $this->setProperty('ccRecipient', $ccRecipient);
+    }
+
+    /**
      * The date/time at which the message has been read by the recipient if a
      * single recipient exists.
      *
@@ -70,7 +98,7 @@ class Message extends CreativeWork
      * A sub property of participant. The participant who is at the receiving
      * end of the action.
      *
-     * @param Audience|Audience[]|Organization|Organization[]|Person|Person[] $recipient
+     * @param Audience|Audience[]|ContactPoint|ContactPoint[]|Organization|Organization[]|Person|Person[] $recipient
      *
      * @return static
      *
@@ -94,6 +122,21 @@ class Message extends CreativeWork
     public function sender($sender)
     {
         return $this->setProperty('sender', $sender);
+    }
+
+    /**
+     * A sub property of recipient. The recipient who was directly sent the
+     * message.
+     *
+     * @param Audience|Audience[]|ContactPoint|ContactPoint[]|Organization|Organization[]|Person|Person[] $toRecipient
+     *
+     * @return static
+     *
+     * @see http://schema.org/toRecipient
+     */
+    public function toRecipient($toRecipient)
+    {
+        return $this->setProperty('toRecipient', $toRecipient);
     }
 
 }
