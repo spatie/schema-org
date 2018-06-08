@@ -7,7 +7,9 @@ namespace Spatie\SchemaOrg;
  * timer or turning on a flashlight).
  *
  * @see http://schema.org/ActivateAction
+ *
+ * @mixin \Spatie\SchemaOrg\ControlAction
  */
-class ActivateAction extends ControlAction
+class ActivateAction extends BaseType
 {
 }

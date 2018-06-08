@@ -7,8 +7,10 @@ namespace Spatie\SchemaOrg;
  * engines represented by multiple engine specification entities.
  *
  * @see http://schema.org/EngineSpecification
+ *
+ * @mixin \Spatie\SchemaOrg\StructuredValue
  */
-class EngineSpecification extends StructuredValue
+class EngineSpecification extends BaseType
 {
     /**
      * The type of fuel suitable for the engine or engines of the vehicle. If

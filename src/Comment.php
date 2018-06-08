@@ -8,8 +8,10 @@ namespace Spatie\SchemaOrg;
  * properties shared with all CreativeWorks.
  *
  * @see http://schema.org/Comment
+ *
+ * @mixin \Spatie\SchemaOrg\CreativeWork
  */
-class Comment extends CreativeWork
+class Comment extends BaseType
 {
     /**
      * The number of downvotes this question, answer or comment has received

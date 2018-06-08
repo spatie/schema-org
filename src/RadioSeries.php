@@ -7,8 +7,10 @@ namespace Spatie\SchemaOrg;
  * delivery.
  *
  * @see http://schema.org/RadioSeries
+ *
+ * @mixin \Spatie\SchemaOrg\CreativeWorkSeries
  */
-class RadioSeries extends CreativeWorkSeries
+class RadioSeries extends BaseType
 {
     /**
      * An actor, e.g. in tv, radio, movie, video games etc., or in an event.

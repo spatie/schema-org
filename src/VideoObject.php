@@ -6,8 +6,10 @@ namespace Spatie\SchemaOrg;
  * A video file.
  *
  * @see http://schema.org/VideoObject
+ *
+ * @mixin \Spatie\SchemaOrg\MediaObject
  */
-class VideoObject extends MediaObject
+class VideoObject extends BaseType
 {
     /**
      * An actor, e.g. in tv, radio, movie, video games etc., or in an event.

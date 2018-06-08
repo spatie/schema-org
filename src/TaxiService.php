@@ -7,7 +7,9 @@ namespace Spatie\SchemaOrg;
  * usually calculated based on distance traveled.
  *
  * @see http://schema.org/TaxiService
+ *
+ * @mixin \Spatie\SchemaOrg\Service
  */
-class TaxiService extends Service
+class TaxiService extends BaseType
 {
 }

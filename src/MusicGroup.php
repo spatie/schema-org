@@ -7,8 +7,10 @@ namespace Spatie\SchemaOrg;
  * musician.
  *
  * @see http://schema.org/MusicGroup
+ *
+ * @mixin \Spatie\SchemaOrg\PerformingGroup
  */
-class MusicGroup extends PerformingGroup
+class MusicGroup extends BaseType
 {
     /**
      * A music album.

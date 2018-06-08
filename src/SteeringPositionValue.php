@@ -6,8 +6,10 @@ namespace Spatie\SchemaOrg;
  * A value indicating a steering position.
  *
  * @see http://schema.org/SteeringPositionValue
+ *
+ * @mixin \Spatie\SchemaOrg\QualitativeValue
  */
-class SteeringPositionValue extends QualitativeValue
+class SteeringPositionValue extends BaseType
 {
     /**
      * The steering position is on the left side of the vehicle (viewed from the

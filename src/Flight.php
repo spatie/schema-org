@@ -6,8 +6,10 @@ namespace Spatie\SchemaOrg;
  * An airline flight.
  *
  * @see http://schema.org/Flight
+ *
+ * @mixin \Spatie\SchemaOrg\Trip
  */
-class Flight extends Trip
+class Flight extends BaseType
 {
     /**
      * The kind of aircraft (e.g., "Boeing 747").

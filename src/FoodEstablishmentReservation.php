@@ -10,8 +10,10 @@ namespace Spatie\SchemaOrg;
  * reservations.
  *
  * @see http://schema.org/FoodEstablishmentReservation
+ *
+ * @mixin \Spatie\SchemaOrg\Reservation
  */
-class FoodEstablishmentReservation extends Reservation
+class FoodEstablishmentReservation extends BaseType
 {
     /**
      * The endTime of something. For a reserved event or service (e.g.

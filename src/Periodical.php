@@ -11,7 +11,9 @@ namespace Spatie\SchemaOrg;
  * post](http://blog.schema.org/2014/09/schemaorg-support-for-bibliographic_2.html).
  *
  * @see http://schema.org/Periodical
+ *
+ * @mixin \Spatie\SchemaOrg\CreativeWorkSeries
  */
-class Periodical extends CreativeWorkSeries
+class Periodical extends BaseType
 {
 }

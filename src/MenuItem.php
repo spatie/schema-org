@@ -6,8 +6,10 @@ namespace Spatie\SchemaOrg;
  * A food or drink item listed in a menu or menu section.
  *
  * @see http://schema.org/MenuItem
+ *
+ * @mixin \Spatie\SchemaOrg\CreativeWork
  */
-class MenuItem extends CreativeWork
+class MenuItem extends BaseType
 {
     /**
      * Nutrition information about the recipe or menu item.

@@ -6,8 +6,10 @@ namespace Spatie\SchemaOrg;
  * A map.
  *
  * @see http://schema.org/Map
+ *
+ * @mixin \Spatie\SchemaOrg\CreativeWork
  */
-class Map extends CreativeWork
+class Map extends BaseType
 {
     /**
      * Indicates the kind of Map, from the MapCategoryType Enumeration.

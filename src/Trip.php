@@ -6,8 +6,10 @@ namespace Spatie\SchemaOrg;
  * A trip or journey. An itinerary of visits to one or more places.
  *
  * @see http://schema.org/Trip
+ *
+ * @mixin \Spatie\SchemaOrg\Intangible
  */
-class Trip extends Intangible
+class Trip extends BaseType
 {
     /**
      * The expected arrival time.

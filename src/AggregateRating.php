@@ -6,8 +6,10 @@ namespace Spatie\SchemaOrg;
  * The average rating based on multiple ratings or reviews.
  *
  * @see http://schema.org/AggregateRating
+ *
+ * @mixin \Spatie\SchemaOrg\Rating
  */
-class AggregateRating extends Rating
+class AggregateRating extends BaseType
 {
     /**
      * The item that is being reviewed/rated.

@@ -7,7 +7,9 @@ namespace Spatie\SchemaOrg;
  * unit of measure&gt;'. E.g., '7 kg'.
  *
  * @see http://schema.org/Mass
+ *
+ * @mixin \Spatie\SchemaOrg\Quantity
  */
-class Mass extends Quantity
+class Mass extends BaseType
 {
 }

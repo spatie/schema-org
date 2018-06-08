@@ -7,8 +7,10 @@ namespace Spatie\SchemaOrg;
  * (instrument) such as speech, email, or telephone conversation.
  *
  * @see http://schema.org/CommunicateAction
+ *
+ * @mixin \Spatie\SchemaOrg\InteractAction
  */
-class CommunicateAction extends InteractAction
+class CommunicateAction extends BaseType
 {
     /**
      * The subject matter of the content.

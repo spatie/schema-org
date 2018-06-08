@@ -7,8 +7,10 @@ namespace Spatie\SchemaOrg;
  * service.
  *
  * @see http://schema.org/ParcelDelivery
+ *
+ * @mixin \Spatie\SchemaOrg\Intangible
  */
-class ParcelDelivery extends Intangible
+class ParcelDelivery extends BaseType
 {
     /**
      * 'carrier' is an out-dated term indicating the 'provider' for parcel

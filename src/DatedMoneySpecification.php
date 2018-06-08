@@ -9,8 +9,10 @@ namespace Spatie\SchemaOrg;
  * [[MonetaryAmount]] use of that type is recommended
  *
  * @see http://schema.org/DatedMoneySpecification
+ *
+ * @mixin \Spatie\SchemaOrg\StructuredValue
  */
-class DatedMoneySpecification extends StructuredValue
+class DatedMoneySpecification extends BaseType
 {
     /**
      * The amount of money.

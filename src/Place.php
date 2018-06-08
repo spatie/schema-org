@@ -6,8 +6,10 @@ namespace Spatie\SchemaOrg;
  * Entities that have a somewhat fixed, physical extension.
  *
  * @see http://schema.org/Place
+ *
+ * @mixin \Spatie\SchemaOrg\Thing
  */
-class Place extends Thing
+class Place extends BaseType
 {
     /**
      * A property-value pair representing an additional characteristics of the

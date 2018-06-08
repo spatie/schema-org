@@ -6,8 +6,10 @@ namespace Spatie\SchemaOrg;
  * An airport.
  *
  * @see http://schema.org/Airport
+ *
+ * @mixin \Spatie\SchemaOrg\CivicStructure
  */
-class Airport extends CivicStructure
+class Airport extends BaseType
 {
     /**
      * IATA identifier for an airline or airport.

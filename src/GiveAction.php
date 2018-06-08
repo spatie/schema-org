@@ -14,8 +14,10 @@ namespace Spatie\SchemaOrg;
  * I'm giving it to you).
  *
  * @see http://schema.org/GiveAction
+ *
+ * @mixin \Spatie\SchemaOrg\TransferAction
  */
-class GiveAction extends TransferAction
+class GiveAction extends BaseType
 {
     /**
      * A sub property of participant. The participant who is at the receiving

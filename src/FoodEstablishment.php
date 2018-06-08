@@ -6,8 +6,10 @@ namespace Spatie\SchemaOrg;
  * A food-related business.
  *
  * @see http://schema.org/FoodEstablishment
+ *
+ * @mixin \Spatie\SchemaOrg\LocalBusiness
  */
-class FoodEstablishment extends LocalBusiness
+class FoodEstablishment extends BaseType
 {
     /**
      * Indicates whether a FoodEstablishment accepts reservations. Values can be

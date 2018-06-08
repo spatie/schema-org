@@ -9,8 +9,10 @@ namespace Spatie\SchemaOrg;
  * schema.org for marking up hotels and other forms of accommodations</a>.
  *
  * @see http://schema.org/HotelRoom
+ *
+ * @mixin \Spatie\SchemaOrg\Room
  */
-class HotelRoom extends Room
+class HotelRoom extends BaseType
 {
     /**
      * The type of bed or beds included in the accommodation. For the single

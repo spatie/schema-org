@@ -7,8 +7,10 @@ namespace Spatie\SchemaOrg;
  * choices/options.
  *
  * @see http://schema.org/VoteAction
+ *
+ * @mixin \Spatie\SchemaOrg\ChooseAction
  */
-class VoteAction extends ChooseAction
+class VoteAction extends BaseType
 {
     /**
      * A sub property of object. The candidate subject of this action.

@@ -7,8 +7,10 @@ namespace Spatie\SchemaOrg;
  * software programs, etc.
  *
  * @see http://schema.org/CreativeWork
+ *
+ * @mixin \Spatie\SchemaOrg\Thing
  */
-class CreativeWork extends Thing
+class CreativeWork extends BaseType
 {
     /**
      * The subject matter of the content.

@@ -16,8 +16,10 @@ namespace Spatie\SchemaOrg;
  * [GS1](http://www.gs1.org/).
  *
  * @see http://schema.org/Offer
+ *
+ * @mixin \Spatie\SchemaOrg\Intangible
  */
-class Offer extends Intangible
+class Offer extends BaseType
 {
     /**
      * The payment method(s) accepted by seller for this offer.

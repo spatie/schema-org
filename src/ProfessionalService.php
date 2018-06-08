@@ -16,7 +16,9 @@ namespace Spatie\SchemaOrg;
  * [[Attorney]].
  *
  * @see http://schema.org/ProfessionalService
+ *
+ * @mixin \Spatie\SchemaOrg\LocalBusiness
  */
-class ProfessionalService extends LocalBusiness
+class ProfessionalService extends BaseType
 {
 }

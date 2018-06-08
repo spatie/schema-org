@@ -6,8 +6,10 @@ namespace Spatie\SchemaOrg;
  * The mailing address.
  *
  * @see http://schema.org/PostalAddress
+ *
+ * @mixin \Spatie\SchemaOrg\ContactPoint
  */
-class PostalAddress extends ContactPoint
+class PostalAddress extends BaseType
 {
     /**
      * The country. For example, USA. You can also provide the two-letter [ISO

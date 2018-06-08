@@ -6,8 +6,10 @@ namespace Spatie\SchemaOrg;
  * A subclass of OrganizationRole used to describe employee relationships.
  *
  * @see http://schema.org/EmployeeRole
+ *
+ * @mixin \Spatie\SchemaOrg\OrganizationRole
  */
-class EmployeeRole extends OrganizationRole
+class EmployeeRole extends BaseType
 {
     /**
      * The base salary of the job or of an employee in an EmployeeRole.

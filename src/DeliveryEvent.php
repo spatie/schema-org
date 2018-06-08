@@ -6,8 +6,10 @@ namespace Spatie\SchemaOrg;
  * An event involving the delivery of an item.
  *
  * @see http://schema.org/DeliveryEvent
+ *
+ * @mixin \Spatie\SchemaOrg\Event
  */
-class DeliveryEvent extends Event
+class DeliveryEvent extends BaseType
 {
     /**
      * Password, PIN, or access code needed for delivery (e.g. from a locker).

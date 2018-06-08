@@ -7,8 +7,10 @@ namespace Spatie\SchemaOrg;
  * target audience.
  *
  * @see http://schema.org/PeopleAudience
+ *
+ * @mixin \Spatie\SchemaOrg\Audience
  */
-class PeopleAudience extends Audience
+class PeopleAudience extends BaseType
 {
     /**
      * Audiences defined by a person's gender.

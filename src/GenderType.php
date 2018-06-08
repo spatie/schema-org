@@ -6,8 +6,10 @@ namespace Spatie\SchemaOrg;
  * An enumeration of genders.
  *
  * @see http://schema.org/GenderType
+ *
+ * @mixin \Spatie\SchemaOrg\Enumeration
  */
-class GenderType extends Enumeration
+class GenderType extends BaseType
 {
     /**
      * The female gender.

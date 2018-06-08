@@ -7,8 +7,11 @@ namespace Spatie\SchemaOrg;
  * achieve a result.
  *
  * @see http://schema.org/HowToDirection
+ *
+ * @mixin \Spatie\SchemaOrg\ListItem
+ * @mixin \Spatie\SchemaOrg\CreativeWork
  */
-class HowToDirection extends ListItem
+class HowToDirection extends BaseType
 {
     /**
      * A media object representing the circumstances after performing this

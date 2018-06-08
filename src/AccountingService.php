@@ -9,7 +9,9 @@ namespace Spatie\SchemaOrg;
  * [[Service]]\(s).
  *
  * @see http://schema.org/AccountingService
+ *
+ * @mixin \Spatie\SchemaOrg\FinancialService
  */
-class AccountingService extends FinancialService
+class AccountingService extends BaseType
 {
 }

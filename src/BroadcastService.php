@@ -7,8 +7,10 @@ namespace Spatie\SchemaOrg;
  * air or online.
  *
  * @see http://schema.org/BroadcastService
+ *
+ * @mixin \Spatie\SchemaOrg\Service
  */
-class BroadcastService extends Service
+class BroadcastService extends BaseType
 {
     /**
      * The area within which users can expect to reach the broadcast service.

@@ -11,7 +11,9 @@ namespace Spatie\SchemaOrg;
  * * [[CancelAction]]: The antonym of ConfirmAction.
  *
  * @see http://schema.org/ConfirmAction
+ *
+ * @mixin \Spatie\SchemaOrg\InformAction
  */
-class ConfirmAction extends InformAction
+class ConfirmAction extends BaseType
 {
 }

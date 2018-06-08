@@ -7,7 +7,9 @@ namespace Spatie\SchemaOrg;
  * spirits.
  *
  * @see http://schema.org/LiquorStore
+ *
+ * @mixin \Spatie\SchemaOrg\Store
  */
-class LiquorStore extends Store
+class LiquorStore extends BaseType
 {
 }

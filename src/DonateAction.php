@@ -7,8 +7,10 @@ namespace Spatie\SchemaOrg;
  * for philanthropic reasons.
  *
  * @see http://schema.org/DonateAction
+ *
+ * @mixin \Spatie\SchemaOrg\TradeAction
  */
-class DonateAction extends TradeAction
+class DonateAction extends BaseType
 {
     /**
      * A sub property of participant. The participant who is at the receiving

@@ -10,8 +10,10 @@ namespace Spatie\SchemaOrg;
  * attraction properties to any other type.  (See examples below)
  *
  * @see http://schema.org/TouristAttraction
+ *
+ * @mixin \Spatie\SchemaOrg\Place
  */
-class TouristAttraction extends Place
+class TouristAttraction extends BaseType
 {
     /**
      * A language someone may use with or at the item, service or place. Please

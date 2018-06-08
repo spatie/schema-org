@@ -7,8 +7,10 @@ namespace Spatie\SchemaOrg;
  * agent reviews an object with participants resulting in a review.
  *
  * @see http://schema.org/ReviewAction
+ *
+ * @mixin \Spatie\SchemaOrg\AssessAction
  */
-class ReviewAction extends AssessAction
+class ReviewAction extends BaseType
 {
     /**
      * A sub property of result. The review that resulted in the performing of

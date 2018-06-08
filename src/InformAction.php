@@ -7,8 +7,10 @@ namespace Spatie\SchemaOrg;
  * expectation of a response.
  *
  * @see http://schema.org/InformAction
+ *
+ * @mixin \Spatie\SchemaOrg\CommunicateAction
  */
-class InformAction extends CommunicateAction
+class InformAction extends BaseType
 {
     /**
      * Upcoming or past event associated with this place, organization, or

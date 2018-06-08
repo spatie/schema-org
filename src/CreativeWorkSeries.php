@@ -22,8 +22,11 @@ namespace Spatie\SchemaOrg;
  * series parts to the series as a whole wherever they seem appropriate.
  *
  * @see http://schema.org/CreativeWorkSeries
+ *
+ * @mixin \Spatie\SchemaOrg\CreativeWork
+ * @mixin \Spatie\SchemaOrg\Series
  */
-class CreativeWorkSeries extends CreativeWork
+class CreativeWorkSeries extends BaseType
 {
     /**
      * The end date and time of the item (in [ISO 8601 date

@@ -7,8 +7,11 @@ namespace Spatie\SchemaOrg;
  * user interface to generate visual feedback on a video device.
  *
  * @see http://schema.org/VideoGame
+ *
+ * @mixin \Spatie\SchemaOrg\SoftwareApplication
+ * @mixin \Spatie\SchemaOrg\Game
  */
-class VideoGame extends SoftwareApplication
+class VideoGame extends BaseType
 {
     /**
      * An actor, e.g. in tv, radio, movie, video games etc., or in an event.

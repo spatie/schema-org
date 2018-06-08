@@ -7,8 +7,10 @@ namespace Spatie\SchemaOrg;
  * steps.
  *
  * @see http://schema.org/HowTo
+ *
+ * @mixin \Spatie\SchemaOrg\CreativeWork
  */
-class HowTo extends CreativeWork
+class HowTo extends BaseType
 {
     /**
      * The estimated cost of the supply or supplies consumed when performing

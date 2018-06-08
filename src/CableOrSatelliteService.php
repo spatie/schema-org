@@ -7,7 +7,9 @@ namespace Spatie\SchemaOrg;
  * may be via cable or satellite.
  *
  * @see http://schema.org/CableOrSatelliteService
+ *
+ * @mixin \Spatie\SchemaOrg\Service
  */
-class CableOrSatelliteService extends Service
+class CableOrSatelliteService extends BaseType
 {
 }

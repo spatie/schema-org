@@ -6,8 +6,10 @@ namespace Spatie\SchemaOrg;
  * The act of granting permission to an object.
  *
  * @see http://schema.org/AuthorizeAction
+ *
+ * @mixin \Spatie\SchemaOrg\AllocateAction
  */
-class AuthorizeAction extends AllocateAction
+class AuthorizeAction extends BaseType
 {
     /**
      * A sub property of participant. The participant who is at the receiving

@@ -7,7 +7,9 @@ namespace Spatie\SchemaOrg;
  * something).
  *
  * @see http://schema.org/AssignAction
+ *
+ * @mixin \Spatie\SchemaOrg\AllocateAction
  */
-class AssignAction extends AllocateAction
+class AssignAction extends BaseType
 {
 }

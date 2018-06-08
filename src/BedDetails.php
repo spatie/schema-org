@@ -9,8 +9,10 @@ namespace Spatie\SchemaOrg;
  * [[BedType]] (under development).
  *
  * @see http://schema.org/BedDetails
+ *
+ * @mixin \Spatie\SchemaOrg\Intangible
  */
-class BedDetails extends Intangible
+class BedDetails extends BaseType
 {
     /**
      * The quantity of the given bed type available in the HotelRoom, Suite,

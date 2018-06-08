@@ -6,8 +6,10 @@ namespace Spatie\SchemaOrg;
  * A group of multiple reservations with common values for all sub-reservations.
  *
  * @see http://schema.org/ReservationPackage
+ *
+ * @mixin \Spatie\SchemaOrg\Reservation
  */
-class ReservationPackage extends Reservation
+class ReservationPackage extends BaseType
 {
     /**
      * The airline-specific indicator of boarding order / preference.

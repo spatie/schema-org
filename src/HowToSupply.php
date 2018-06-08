@@ -7,8 +7,10 @@ namespace Spatie\SchemaOrg;
  * result.
  *
  * @see http://schema.org/HowToSupply
+ *
+ * @mixin \Spatie\SchemaOrg\HowToItem
  */
-class HowToSupply extends HowToItem
+class HowToSupply extends BaseType
 {
     /**
      * The estimated cost of the supply or supplies consumed when performing

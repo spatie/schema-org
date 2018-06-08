@@ -7,8 +7,10 @@ namespace Spatie\SchemaOrg;
  * person owned a certain product.
  *
  * @see http://schema.org/OwnershipInfo
+ *
+ * @mixin \Spatie\SchemaOrg\StructuredValue
  */
-class OwnershipInfo extends StructuredValue
+class OwnershipInfo extends BaseType
 {
     /**
      * The organization or person from which the product was acquired.

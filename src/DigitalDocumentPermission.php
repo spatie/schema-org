@@ -6,8 +6,10 @@ namespace Spatie\SchemaOrg;
  * A permission for a particular person or group to access a particular file.
  *
  * @see http://schema.org/DigitalDocumentPermission
+ *
+ * @mixin \Spatie\SchemaOrg\Intangible
  */
-class DigitalDocumentPermission extends Intangible
+class DigitalDocumentPermission extends BaseType
 {
     /**
      * The person, organization, contact point, or audience that has been

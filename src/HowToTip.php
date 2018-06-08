@@ -9,7 +9,10 @@ namespace Spatie\SchemaOrg;
  * doesn't specify what should be done (see HowToDirection).
  *
  * @see http://schema.org/HowToTip
+ *
+ * @mixin \Spatie\SchemaOrg\ListItem
+ * @mixin \Spatie\SchemaOrg\CreativeWork
  */
-class HowToTip extends ListItem
+class HowToTip extends BaseType
 {
 }

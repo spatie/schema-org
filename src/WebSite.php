@@ -7,8 +7,10 @@ namespace Spatie\SchemaOrg;
  * a single web domain and accessible via URLs.
  *
  * @see http://schema.org/WebSite
+ *
+ * @mixin \Spatie\SchemaOrg\CreativeWork
  */
-class WebSite extends CreativeWork
+class WebSite extends BaseType
 {
     /**
      * The International Standard Serial Number (ISSN) that identifies this

@@ -10,8 +10,10 @@ namespace Spatie\SchemaOrg;
  * available.
  *
  * @see http://schema.org/NewsArticle
+ *
+ * @mixin \Spatie\SchemaOrg\Article
  */
-class NewsArticle extends Article
+class NewsArticle extends BaseType
 {
     /**
      * A [dateline](https://en.wikipedia.org/wiki/Dateline) is a brief piece of

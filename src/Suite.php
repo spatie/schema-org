@@ -12,8 +12,10 @@ namespace Spatie\SchemaOrg;
  * schema.org for marking up hotels and other forms of accommodations</a>.
  *
  * @see http://schema.org/Suite
+ *
+ * @mixin \Spatie\SchemaOrg\Accommodation
  */
-class Suite extends Accommodation
+class Suite extends BaseType
 {
     /**
      * The type of bed or beds included in the accommodation. For the single

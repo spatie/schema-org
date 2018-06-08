@@ -7,7 +7,9 @@ namespace Spatie\SchemaOrg;
  * dislikes an object (a proposition, topic or theme) with participants.
  *
  * @see http://schema.org/DislikeAction
+ *
+ * @mixin \Spatie\SchemaOrg\ReactAction
  */
-class DislikeAction extends ReactAction
+class DislikeAction extends BaseType
 {
 }

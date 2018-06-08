@@ -7,7 +7,9 @@ namespace Spatie\SchemaOrg;
  * objects.
  *
  * @see http://schema.org/OrganizeAction
+ *
+ * @mixin \Spatie\SchemaOrg\Action
  */
-class OrganizeAction extends Action
+class OrganizeAction extends BaseType
 {
 }

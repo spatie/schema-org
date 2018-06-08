@@ -6,8 +6,10 @@ namespace Spatie\SchemaOrg;
  * A permit issued by an organization, e.g. a parking pass.
  *
  * @see http://schema.org/Permit
+ *
+ * @mixin \Spatie\SchemaOrg\Intangible
  */
-class Permit extends Intangible
+class Permit extends BaseType
 {
     /**
      * The organization issuing the ticket or permit.
