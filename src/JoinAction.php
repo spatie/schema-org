@@ -15,8 +15,10 @@ namespace Spatie\SchemaOrg;
  * you'll be polling for updates.
  *
  * @see http://schema.org/JoinAction
+ *
+ * @mixin \Spatie\SchemaOrg\InteractAction
  */
-class JoinAction extends InteractAction
+class JoinAction extends BaseType
 {
     /**
      * Upcoming or past event associated with this place, organization, or

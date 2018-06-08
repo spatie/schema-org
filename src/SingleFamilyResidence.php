@@ -6,8 +6,10 @@ namespace Spatie\SchemaOrg;
  * Residence type: Single-family home.
  *
  * @see http://schema.org/SingleFamilyResidence
+ *
+ * @mixin \Spatie\SchemaOrg\House
  */
-class SingleFamilyResidence extends House
+class SingleFamilyResidence extends BaseType
 {
     /**
      * The number of rooms (excluding bathrooms and closets) of the

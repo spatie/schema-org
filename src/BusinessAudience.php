@@ -7,8 +7,10 @@ namespace Spatie\SchemaOrg;
  * target audience.
  *
  * @see http://schema.org/BusinessAudience
+ *
+ * @mixin \Spatie\SchemaOrg\Audience
  */
-class BusinessAudience extends Audience
+class BusinessAudience extends BaseType
 {
     /**
      * The number of employees in an organization e.g. business.

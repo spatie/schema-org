@@ -10,8 +10,10 @@ namespace Spatie\SchemaOrg;
  * reservations.
  *
  * @see http://schema.org/RentalCarReservation
+ *
+ * @mixin \Spatie\SchemaOrg\Reservation
  */
-class RentalCarReservation extends Reservation
+class RentalCarReservation extends BaseType
 {
     /**
      * Where a rental car can be dropped off.

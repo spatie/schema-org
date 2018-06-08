@@ -7,7 +7,10 @@ namespace Spatie\SchemaOrg;
  * interest or other benefits.
  *
  * @see http://schema.org/DepositAccount
+ *
+ * @mixin \Spatie\SchemaOrg\BankAccount
+ * @mixin \Spatie\SchemaOrg\InvestmentOrDeposit
  */
-class DepositAccount extends BankAccount
+class DepositAccount extends BaseType
 {
 }

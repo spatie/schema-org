@@ -6,8 +6,10 @@ namespace Spatie\SchemaOrg;
  * A Property value specification.
  *
  * @see http://schema.org/PropertyValueSpecification
+ *
+ * @mixin \Spatie\SchemaOrg\Intangible
  */
-class PropertyValueSpecification extends Intangible
+class PropertyValueSpecification extends BaseType
 {
     /**
      * The default value of the input.  For properties that expect a literal,

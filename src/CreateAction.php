@@ -7,7 +7,9 @@ namespace Spatie\SchemaOrg;
  * of the agent.
  *
  * @see http://schema.org/CreateAction
+ *
+ * @mixin \Spatie\SchemaOrg\Action
  */
-class CreateAction extends Action
+class CreateAction extends BaseType
 {
 }

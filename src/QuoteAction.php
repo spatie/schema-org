@@ -7,7 +7,9 @@ namespace Spatie\SchemaOrg;
  * a location/store.
  *
  * @see http://schema.org/QuoteAction
+ *
+ * @mixin \Spatie\SchemaOrg\TradeAction
  */
-class QuoteAction extends TradeAction
+class QuoteAction extends BaseType
 {
 }

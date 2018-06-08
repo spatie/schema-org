@@ -8,8 +8,10 @@ namespace Spatie\SchemaOrg;
  * are often used only for formatting.
  *
  * @see http://schema.org/ItemList
+ *
+ * @mixin \Spatie\SchemaOrg\Intangible
  */
-class ItemList extends Intangible
+class ItemList extends BaseType
 {
     /**
      * For itemListElement values, you can use simple strings (e.g. "Peter",

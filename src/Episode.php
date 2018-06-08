@@ -7,8 +7,10 @@ namespace Spatie\SchemaOrg;
  * season.
  *
  * @see http://schema.org/Episode
+ *
+ * @mixin \Spatie\SchemaOrg\CreativeWork
  */
-class Episode extends CreativeWork
+class Episode extends BaseType
 {
     /**
      * An actor, e.g. in tv, radio, movie, video games etc., or in an event.

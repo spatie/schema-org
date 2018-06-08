@@ -6,8 +6,10 @@ namespace Spatie\SchemaOrg;
  * The price asked for a given offer by the respective organization or person.
  *
  * @see http://schema.org/UnitPriceSpecification
+ *
+ * @mixin \Spatie\SchemaOrg\PriceSpecification
  */
-class UnitPriceSpecification extends PriceSpecification
+class UnitPriceSpecification extends BaseType
 {
     /**
      * This property specifies the minimal quantity and rounding increment that

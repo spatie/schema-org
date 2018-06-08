@@ -13,7 +13,9 @@ namespace Spatie\SchemaOrg;
  * leaving a team/group of people.
  *
  * @see http://schema.org/UnRegisterAction
+ *
+ * @mixin \Spatie\SchemaOrg\InteractAction
  */
-class UnRegisterAction extends InteractAction
+class UnRegisterAction extends BaseType
 {
 }

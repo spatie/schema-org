@@ -6,8 +6,11 @@ namespace Spatie\SchemaOrg;
  * A movie theater.
  *
  * @see http://schema.org/MovieTheater
+ *
+ * @mixin \Spatie\SchemaOrg\CivicStructure
+ * @mixin \Spatie\SchemaOrg\EntertainmentBusiness
  */
-class MovieTheater extends CivicStructure
+class MovieTheater extends BaseType
 {
     /**
      * The number of screens in the movie theater.

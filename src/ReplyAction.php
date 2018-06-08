@@ -11,8 +11,10 @@ namespace Spatie\SchemaOrg;
  * * [[AskAction]]: Appears generally as an origin of a ReplyAction.
  *
  * @see http://schema.org/ReplyAction
+ *
+ * @mixin \Spatie\SchemaOrg\CommunicateAction
  */
-class ReplyAction extends CommunicateAction
+class ReplyAction extends BaseType
 {
     /**
      * A sub property of result. The Comment created or sent as a result of this

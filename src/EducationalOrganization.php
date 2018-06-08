@@ -6,8 +6,10 @@ namespace Spatie\SchemaOrg;
  * An educational organization.
  *
  * @see http://schema.org/EducationalOrganization
+ *
+ * @mixin \Spatie\SchemaOrg\Organization
  */
-class EducationalOrganization extends Organization
+class EducationalOrganization extends BaseType
 {
     /**
      * Alumni of an organization.

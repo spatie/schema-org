@@ -11,7 +11,9 @@ namespace Spatie\SchemaOrg;
  * necessarily.
  *
  * @see http://schema.org/FindAction
+ *
+ * @mixin \Spatie\SchemaOrg\Action
  */
-class FindAction extends Action
+class FindAction extends BaseType
 {
 }

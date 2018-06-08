@@ -7,7 +7,9 @@ namespace Spatie\SchemaOrg;
  * achieve a result.
  *
  * @see http://schema.org/HowToTool
+ *
+ * @mixin \Spatie\SchemaOrg\HowToItem
  */
-class HowToTool extends HowToItem
+class HowToTool extends BaseType
 {
 }

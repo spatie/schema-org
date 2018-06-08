@@ -7,8 +7,10 @@ namespace Spatie\SchemaOrg;
  * how to to achieve a result.
  *
  * @see http://schema.org/HowToItem
+ *
+ * @mixin \Spatie\SchemaOrg\ListItem
  */
-class HowToItem extends ListItem
+class HowToItem extends BaseType
 {
     /**
      * The required quantity of the item(s).

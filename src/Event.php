@@ -8,8 +8,10 @@ namespace Spatie\SchemaOrg;
  * property. Repeated events may be structured as separate Event objects.
  *
  * @see http://schema.org/Event
+ *
+ * @mixin \Spatie\SchemaOrg\Thing
  */
-class Event extends Thing
+class Event extends BaseType
 {
     /**
      * The subject matter of the content.

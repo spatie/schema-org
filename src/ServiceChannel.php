@@ -7,8 +7,10 @@ namespace Spatie\SchemaOrg;
  * or phone number.
  *
  * @see http://schema.org/ServiceChannel
+ *
+ * @mixin \Spatie\SchemaOrg\Intangible
  */
-class ServiceChannel extends Intangible
+class ServiceChannel extends BaseType
 {
     /**
      * A language someone may use with or at the item, service or place. Please

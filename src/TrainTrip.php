@@ -6,8 +6,10 @@ namespace Spatie\SchemaOrg;
  * A trip on a commercial train line.
  *
  * @see http://schema.org/TrainTrip
+ *
+ * @mixin \Spatie\SchemaOrg\Trip
  */
-class TrainTrip extends Trip
+class TrainTrip extends BaseType
 {
     /**
      * The platform where the train arrives.

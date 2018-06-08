@@ -6,8 +6,10 @@ namespace Spatie\SchemaOrg;
  * Used to describe a ticket to an event, a flight, a bus ride, etc.
  *
  * @see http://schema.org/Ticket
+ *
+ * @mixin \Spatie\SchemaOrg\Intangible
  */
-class Ticket extends Intangible
+class Ticket extends BaseType
 {
     /**
      * The date the ticket was issued.

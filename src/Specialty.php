@@ -7,7 +7,9 @@ namespace Spatie\SchemaOrg;
  * usually after significant study, time, and effort.
  *
  * @see http://schema.org/Specialty
+ *
+ * @mixin \Spatie\SchemaOrg\Enumeration
  */
-class Specialty extends Enumeration
+class Specialty extends BaseType
 {
 }

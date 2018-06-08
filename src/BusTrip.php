@@ -6,8 +6,10 @@ namespace Spatie\SchemaOrg;
  * A trip on a commercial bus line.
  *
  * @see http://schema.org/BusTrip
+ *
+ * @mixin \Spatie\SchemaOrg\Trip
  */
-class BusTrip extends Trip
+class BusTrip extends BaseType
 {
     /**
      * The stop or station from which the bus arrives.

@@ -6,8 +6,10 @@ namespace Spatie\SchemaOrg;
  * Nutritional information about the recipe.
  *
  * @see http://schema.org/NutritionInformation
+ *
+ * @mixin \Spatie\SchemaOrg\StructuredValue
  */
-class NutritionInformation extends StructuredValue
+class NutritionInformation extends BaseType
 {
     /**
      * The number of calories.

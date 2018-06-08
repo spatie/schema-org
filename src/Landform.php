@@ -9,7 +9,9 @@ namespace Spatie\SchemaOrg;
  * such as submersed mountain ranges, volcanoes, and the great ocean basins.
  *
  * @see http://schema.org/Landform
+ *
+ * @mixin \Spatie\SchemaOrg\Place
  */
-class Landform extends Place
+class Landform extends BaseType
 {
 }

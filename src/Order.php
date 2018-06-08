@@ -8,8 +8,10 @@ namespace Spatie\SchemaOrg;
  * the customer.
  *
  * @see http://schema.org/Order
+ *
+ * @mixin \Spatie\SchemaOrg\Intangible
  */
-class Order extends Intangible
+class Order extends BaseType
 {
     /**
      * The offer(s) -- e.g., product, quantity and price combinations --

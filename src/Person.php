@@ -6,8 +6,10 @@ namespace Spatie\SchemaOrg;
  * A person (alive, dead, undead, or fictional).
  *
  * @see http://schema.org/Person
+ *
+ * @mixin \Spatie\SchemaOrg\Thing
  */
-class Person extends Thing
+class Person extends BaseType
 {
     /**
      * An additional name for a Person, can be used for a middle name.

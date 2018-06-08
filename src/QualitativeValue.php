@@ -7,8 +7,10 @@ namespace Spatie\SchemaOrg;
  * type 'US' or the garment sizes 'S', 'M', 'L', and 'XL'.
  *
  * @see http://schema.org/QualitativeValue
+ *
+ * @mixin \Spatie\SchemaOrg\Enumeration
  */
-class QualitativeValue extends Enumeration
+class QualitativeValue extends BaseType
 {
     /**
      * A property-value pair representing an additional characteristics of the

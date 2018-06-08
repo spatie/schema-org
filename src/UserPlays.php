@@ -8,7 +8,9 @@ namespace Spatie\SchemaOrg;
  * vocabulary, alongside types such as [[Comment]].
  *
  * @see http://schema.org/UserPlays
+ *
+ * @mixin \Spatie\SchemaOrg\UserInteraction
  */
-class UserPlays extends UserInteraction
+class UserPlays extends BaseType
 {
 }

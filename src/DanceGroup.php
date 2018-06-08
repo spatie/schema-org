@@ -7,7 +7,9 @@ namespace Spatie\SchemaOrg;
  * Riverdance.
  *
  * @see http://schema.org/DanceGroup
+ *
+ * @mixin \Spatie\SchemaOrg\PerformingGroup
  */
-class DanceGroup extends PerformingGroup
+class DanceGroup extends BaseType
 {
 }

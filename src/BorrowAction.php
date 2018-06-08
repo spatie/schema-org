@@ -11,8 +11,10 @@ namespace Spatie\SchemaOrg;
  * * [[LendAction]]: Reciprocal of BorrowAction.
  *
  * @see http://schema.org/BorrowAction
+ *
+ * @mixin \Spatie\SchemaOrg\TransferAction
  */
-class BorrowAction extends TransferAction
+class BorrowAction extends BaseType
 {
     /**
      * A sub property of participant. The person that lends the object being

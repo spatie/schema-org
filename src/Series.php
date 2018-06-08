@@ -8,8 +8,10 @@ namespace Spatie\SchemaOrg;
  * [[EventSeries]].
  *
  * @see http://schema.org/Series
+ *
+ * @mixin \Spatie\SchemaOrg\Intangible
  */
-class Series extends Intangible
+class Series extends BaseType
 {
     /**
      * A director of e.g. tv, radio, movie, video gaming etc. content, or of an

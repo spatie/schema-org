@@ -7,7 +7,9 @@ namespace Spatie\SchemaOrg;
  * object's accuracy, quality, condition, or state.
  *
  * @see http://schema.org/CheckAction
+ *
+ * @mixin \Spatie\SchemaOrg\FindAction
  */
-class CheckAction extends FindAction
+class CheckAction extends BaseType
 {
 }

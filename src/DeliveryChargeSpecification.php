@@ -6,8 +6,10 @@ namespace Spatie\SchemaOrg;
  * The price for the delivery of an offer using a particular delivery method.
  *
  * @see http://schema.org/DeliveryChargeSpecification
+ *
+ * @mixin \Spatie\SchemaOrg\PriceSpecification
  */
-class DeliveryChargeSpecification extends PriceSpecification
+class DeliveryChargeSpecification extends BaseType
 {
     /**
      * The delivery method(s) to which the delivery charge or payment charge

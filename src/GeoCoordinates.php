@@ -6,8 +6,10 @@ namespace Spatie\SchemaOrg;
  * The geographic coordinates of a place or event.
  *
  * @see http://schema.org/GeoCoordinates
+ *
+ * @mixin \Spatie\SchemaOrg\StructuredValue
  */
-class GeoCoordinates extends StructuredValue
+class GeoCoordinates extends BaseType
 {
     /**
      * Physical address of the item.

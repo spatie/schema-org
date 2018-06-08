@@ -16,7 +16,9 @@ namespace Spatie\SchemaOrg;
  * should be integers, e.g. beginning with '1' for the first item in the list.
  *
  * @see http://schema.org/BreadcrumbList
+ *
+ * @mixin \Spatie\SchemaOrg\ItemList
  */
-class BreadcrumbList extends ItemList
+class BreadcrumbList extends BaseType
 {
 }

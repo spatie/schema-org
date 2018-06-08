@@ -7,7 +7,9 @@ namespace Spatie\SchemaOrg;
  * transfer money and in some cases be paid interest.
  *
  * @see http://schema.org/BankAccount
+ *
+ * @mixin \Spatie\SchemaOrg\FinancialProduct
  */
-class BankAccount extends FinancialProduct
+class BankAccount extends BaseType
 {
 }

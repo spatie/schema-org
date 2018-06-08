@@ -7,7 +7,9 @@ namespace Spatie\SchemaOrg;
  * lineup.
  *
  * @see http://schema.org/RadioChannel
+ *
+ * @mixin \Spatie\SchemaOrg\BroadcastChannel
  */
-class RadioChannel extends BroadcastChannel
+class RadioChannel extends BaseType
 {
 }

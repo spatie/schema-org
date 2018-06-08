@@ -6,8 +6,10 @@ namespace Spatie\SchemaOrg;
  * Status of a game server.
  *
  * @see http://schema.org/GameServerStatus
+ *
+ * @mixin \Spatie\SchemaOrg\Enumeration
  */
-class GameServerStatus extends Enumeration
+class GameServerStatus extends BaseType
 {
     /**
      * Game server status: OfflinePermanently. Server is offline and not

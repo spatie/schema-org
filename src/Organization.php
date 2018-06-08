@@ -6,8 +6,10 @@ namespace Spatie\SchemaOrg;
  * An organization such as a school, NGO, corporation, club, etc.
  *
  * @see http://schema.org/Organization
+ *
+ * @mixin \Spatie\SchemaOrg\Thing
  */
-class Organization extends Thing
+class Organization extends BaseType
 {
     /**
      * The schema.org Actions mechanism benefited from extensive discussions

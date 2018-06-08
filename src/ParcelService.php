@@ -12,7 +12,9 @@ namespace Spatie\SchemaOrg;
  * * http://purl.org/goodrelations/v1#UPS
  *
  * @see http://schema.org/ParcelService
+ *
+ * @mixin \Spatie\SchemaOrg\DeliveryMethod
  */
-class ParcelService extends DeliveryMethod
+class ParcelService extends BaseType
 {
 }

@@ -13,8 +13,10 @@ namespace Spatie\SchemaOrg;
  * schema.org for marking up hotels and other forms of accommodations</a>.
  *
  * @see http://schema.org/Accommodation
+ *
+ * @mixin \Spatie\SchemaOrg\Place
  */
-class Accommodation extends Place
+class Accommodation extends BaseType
 {
     /**
      * An amenity feature (e.g. a characteristic or service) of the

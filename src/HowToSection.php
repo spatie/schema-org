@@ -7,8 +7,12 @@ namespace Spatie\SchemaOrg;
  * steps for making a pie crust within a pie recipe).
  *
  * @see http://schema.org/HowToSection
+ *
+ * @mixin \Spatie\SchemaOrg\ItemList
+ * @mixin \Spatie\SchemaOrg\ListItem
+ * @mixin \Spatie\SchemaOrg\CreativeWork
  */
-class HowToSection extends ItemList
+class HowToSection extends BaseType
 {
     /**
      * A single step item (as HowToStep, text, document, video, etc.) or a

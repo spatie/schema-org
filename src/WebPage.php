@@ -10,8 +10,10 @@ namespace Spatie\SchemaOrg;
  * itemscope, they will be assumed to be about the page.
  *
  * @see http://schema.org/WebPage
+ *
+ * @mixin \Spatie\SchemaOrg\CreativeWork
  */
-class WebPage extends CreativeWork
+class WebPage extends BaseType
 {
     /**
      * A set of links that can help a user understand and navigate a website

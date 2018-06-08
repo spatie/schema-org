@@ -6,8 +6,10 @@ namespace Spatie\SchemaOrg;
  * A single message from a sender to one or more organizations or people.
  *
  * @see http://schema.org/Message
+ *
+ * @mixin \Spatie\SchemaOrg\CreativeWork
  */
-class Message extends CreativeWork
+class Message extends BaseType
 {
     /**
      * A sub property of recipient. The recipient blind copied on a message.

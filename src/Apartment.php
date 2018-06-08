@@ -9,8 +9,10 @@ namespace Spatie\SchemaOrg;
  * href="http://en.wikipedia.org/wiki/Apartment">http://en.wikipedia.org/wiki/Apartment</a>).
  *
  * @see http://schema.org/Apartment
+ *
+ * @mixin \Spatie\SchemaOrg\Accommodation
  */
-class Apartment extends Accommodation
+class Apartment extends BaseType
 {
     /**
      * The number of rooms (excluding bathrooms and closets) of the

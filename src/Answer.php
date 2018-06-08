@@ -7,7 +7,9 @@ namespace Spatie\SchemaOrg;
  * wrong.
  *
  * @see http://schema.org/Answer
+ *
+ * @mixin \Spatie\SchemaOrg\Comment
  */
-class Answer extends Comment
+class Answer extends BaseType
 {
 }

@@ -6,8 +6,10 @@ namespace Spatie\SchemaOrg;
  * An list item, e.g. a step in a checklist or how-to description.
  *
  * @see http://schema.org/ListItem
+ *
+ * @mixin \Spatie\SchemaOrg\Intangible
  */
-class ListItem extends Intangible
+class ListItem extends BaseType
 {
     /**
      * An entity represented by an entry in a list or data feed (e.g. an

@@ -10,8 +10,10 @@ namespace Spatie\SchemaOrg;
  * reservations. For offers of tickets, use [[Offer]].
  *
  * @see http://schema.org/TaxiReservation
+ *
+ * @mixin \Spatie\SchemaOrg\Reservation
  */
-class TaxiReservation extends Reservation
+class TaxiReservation extends BaseType
 {
     /**
      * Number of people the reservation should accommodate.

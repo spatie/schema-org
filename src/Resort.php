@@ -13,7 +13,9 @@ namespace Spatie\SchemaOrg;
  * schema.org for marking up hotels and other forms of accommodations</a>.
  *
  * @see http://schema.org/Resort
+ *
+ * @mixin \Spatie\SchemaOrg\LodgingBusiness
  */
-class Resort extends LodgingBusiness
+class Resort extends BaseType
 {
 }

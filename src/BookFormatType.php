@@ -6,8 +6,10 @@ namespace Spatie\SchemaOrg;
  * The publication format of the book.
  *
  * @see http://schema.org/BookFormatType
+ *
+ * @mixin \Spatie\SchemaOrg\Enumeration
  */
-class BookFormatType extends Enumeration
+class BookFormatType extends BaseType
 {
     /**
      * Book format: Audiobook. This is an enumerated value for use with the
