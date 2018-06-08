@@ -32,7 +32,7 @@ class GenerateCommand extends Command
         $generator = new PackageGenerator();
 
         $definitions = new Definitions([
-            'core' => 'https://raw.githubusercontent.com/schemaorg/schemaorg/sdo-callisto/data/schema.rdfa',
+            'core' => 'https://raw.githubusercontent.com/schemaorg/schemaorg/master/data/schema.rdfa',
         ]);
 
         if (! $input->getOption('local')) {
