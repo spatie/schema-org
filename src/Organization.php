@@ -97,6 +97,14 @@ class Organization extends Thing
      const GoodRelationsTerms = 'http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#source_GoodRelationsTerms';
 
     /**
+     * This element is based on work by the Web Applications for the Future
+     * Internet Lab, Institute of Informatics and Telematics, Pisa, Italy.
+     *
+     * @see http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#IIT-CNR.it
+     */
+     const IITCNRit = 'http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#IIT-CNR.it';
+
+    /**
      * This class is based on the work of the LRMI project, see lrmi.net for
      * details.
      *
@@ -135,6 +143,22 @@ class Organization extends Thing
      * @see http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#source_QAStackExchange
      */
      const Stack_Exchange = 'http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#source_QAStackExchange';
+
+    /**
+     * This term and associated definitions draws upon the work of [The Trust
+     * Project](http://thetrustproject.org/).
+     *
+     * @see https://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#TP-draws
+     */
+     const The_Trust_Project = 'https://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#TP-draws';
+
+    /**
+     * This element is based on the work of the [Tourism Structured Web Data
+     * Community Group](https://www.w3.org/community/tourismdata).
+     *
+     * @see http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#Tourism
+     */
+     const Tourism = 'http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#Tourism';
 
     /**
      * This class contains information contributed by
@@ -718,6 +742,30 @@ class Organization extends Thing
     public function parentOrganization($parentOrganization)
     {
         return $this->setProperty('parentOrganization', $parentOrganization);
+    }
+
+    /**
+     * The publishingPrinciples property indicates (typically via [[URL]]) a
+     * document describing the editorial principles of an [[Organization]] (or
+     * individual e.g. a [[Person]] writing a blog) that relate to their
+     * activities as a publisher, e.g. ethics or diversity policies. When
+     * applied to a [[CreativeWork]] (e.g. [[NewsArticle]]) the principles are
+     * those of the party primarily responsible for the creation of the
+     * [[CreativeWork]].
+     * 
+     * While such policies are most typically expressed in natural language,
+     * sometimes related information (e.g. indicating a [[funder]]) can be
+     * expressed using schema.org terminology.
+     *
+     * @param CreativeWork|CreativeWork[]|string|string[] $publishingPrinciples
+     *
+     * @return static
+     *
+     * @see http://schema.org/publishingPrinciples
+     */
+    public function publishingPrinciples($publishingPrinciples)
+    {
+        return $this->setProperty('publishingPrinciples', $publishingPrinciples);
     }
 
     /**

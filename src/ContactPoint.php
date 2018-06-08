@@ -24,9 +24,9 @@ class ContactPoint extends StructuredValue
     }
 
     /**
-     * A language someone may use with the item. Please use one of the language
-     * codes from the [IETF BCP 47 standard](http://tools.ietf.org/html/bcp47).
-     * See also [[inLanguage]]
+     * A language someone may use with or at the item, service or place. Please
+     * use one of the language codes from the [IETF BCP 47
+     * standard](http://tools.ietf.org/html/bcp47). See also [[inLanguage]]
      *
      * @param Language|Language[]|string|string[] $availableLanguage
      *

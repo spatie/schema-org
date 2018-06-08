@@ -149,11 +149,11 @@ class Product extends Thing
     }
 
     /**
-     * The [GTIN-12](http://apps.gs1.org/GDD/glossary/Pages/GTIN-12.aspx) code
-     * of the product, or the product to which the offer refers. The GTIN-12 is
-     * the 12-digit GS1 Identification Key composed of a U.P.C. Company Prefix,
-     * Item Reference, and Check Digit used to identify trade items. See [GS1
-     * GTIN Summary](http://www.gs1.org/barcodes/technical/idkeys/gtin) for more
+     * The GTIN-12 code of the product, or the product to which the offer
+     * refers. The GTIN-12 is the 12-digit GS1 Identification Key composed of a
+     * U.P.C. Company Prefix, Item Reference, and Check Digit used to identify
+     * trade items. See [GS1 GTIN
+     * Summary](http://www.gs1.org/barcodes/technical/idkeys/gtin) for more
      * details.
      *
      * @param string|string[] $gtin12
@@ -168,11 +168,10 @@ class Product extends Thing
     }
 
     /**
-     * The [GTIN-13](http://apps.gs1.org/GDD/glossary/Pages/GTIN-13.aspx) code
-     * of the product, or the product to which the offer refers. This is
-     * equivalent to 13-digit ISBN codes and EAN UCC-13. Former 12-digit UPC
-     * codes can be converted into a GTIN-13 code by simply adding a preceeding
-     * zero. See [GS1 GTIN
+     * The GTIN-13 code of the product, or the product to which the offer
+     * refers. This is equivalent to 13-digit ISBN codes and EAN UCC-13. Former
+     * 12-digit UPC codes can be converted into a GTIN-13 code by simply adding
+     * a preceeding zero. See [GS1 GTIN
      * Summary](http://www.gs1.org/barcodes/technical/idkeys/gtin) for more
      * details.
      *
@@ -188,8 +187,8 @@ class Product extends Thing
     }
 
     /**
-     * The [GTIN-14](http://apps.gs1.org/GDD/glossary/Pages/GTIN-14.aspx) code
-     * of the product, or the product to which the offer refers. See [GS1 GTIN
+     * The GTIN-14 code of the product, or the product to which the offer
+     * refers. See [GS1 GTIN
      * Summary](http://www.gs1.org/barcodes/technical/idkeys/gtin) for more
      * details.
      *

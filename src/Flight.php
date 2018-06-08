@@ -7,7 +7,7 @@ namespace Spatie\SchemaOrg;
  *
  * @see http://schema.org/Flight
  */
-class Flight extends Intangible
+class Flight extends Trip
 {
     /**
      * The kind of aircraft (e.g., "Boeing 747").
@@ -63,20 +63,6 @@ class Flight extends Intangible
     public function arrivalTerminal($arrivalTerminal)
     {
         return $this->setProperty('arrivalTerminal', $arrivalTerminal);
-    }
-
-    /**
-     * The expected arrival time.
-     *
-     * @param \DateTimeInterface|\DateTimeInterface[] $arrivalTime
-     *
-     * @return static
-     *
-     * @see http://schema.org/arrivalTime
-     */
-    public function arrivalTime($arrivalTime)
-    {
-        return $this->setProperty('arrivalTime', $arrivalTime);
     }
 
     /**
@@ -152,20 +138,6 @@ class Flight extends Intangible
     }
 
     /**
-     * The expected departure time.
-     *
-     * @param \DateTimeInterface|\DateTimeInterface[] $departureTime
-     *
-     * @return static
-     *
-     * @see http://schema.org/departureTime
-     */
-    public function departureTime($departureTime)
-    {
-        return $this->setProperty('departureTime', $departureTime);
-    }
-
-    /**
      * The estimated time the flight will take.
      *
      * @param Duration|Duration[]|string|string[] $estimatedFlightDuration
@@ -221,22 +193,6 @@ class Flight extends Intangible
     public function mealService($mealService)
     {
         return $this->setProperty('mealService', $mealService);
-    }
-
-    /**
-     * The service provider, service operator, or service performer; the goods
-     * producer. Another party (a seller) may offer those services or goods on
-     * behalf of the provider. A provider may also serve as the seller.
-     *
-     * @param Organization|Organization[]|Person|Person[] $provider
-     *
-     * @return static
-     *
-     * @see http://schema.org/provider
-     */
-    public function provider($provider)
-    {
-        return $this->setProperty('provider', $provider);
     }
 
     /**

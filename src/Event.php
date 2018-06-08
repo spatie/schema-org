@@ -235,7 +235,7 @@ class Event extends Thing
     }
 
     /**
-     * A flag to signal that the publication is accessible for free.
+     * A flag to signal that the item, event, or place is accessible for free.
      *
      * @param bool|bool[] $isAccessibleForFree
      *

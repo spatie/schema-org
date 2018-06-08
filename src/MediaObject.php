@@ -116,7 +116,20 @@ class MediaObject extends CreativeWork
     }
 
     /**
-     * mp3, mpeg4, etc.
+     * Media type typically expressed using a MIME format (see [IANA
+     * site](http://www.iana.org/assignments/media-types/media-types.xhtml) and
+     * [MDN
+     * reference](https://developer.mozilla.org/en-US/docs/Web/HTTP/Basics_of_HTTP/MIME_types))
+     * e.g. application/zip for a SoftwareApplication binary, audio/mpeg for
+     * .mp3 etc.).
+     * 
+     * In cases where a [[CreativeWork]] has several media type representations,
+     * [[encoding]] can be used to indicate each [[MediaObject]] alongside
+     * particular [[encodingFormat]] information.
+     * 
+     * Unregistered or niche encoding and file formats can be indicated instead
+     * via the most appropriate URL, e.g. defining Web page or a
+     * Wikipedia/Wikidata entry.
      *
      * @param string|string[] $encodingFormat
      *
@@ -127,21 +140,6 @@ class MediaObject extends CreativeWork
     public function encodingFormat($encodingFormat)
     {
         return $this->setProperty('encodingFormat', $encodingFormat);
-    }
-
-    /**
-     * Date the content expires and is no longer useful or available. Useful for
-     * videos.
-     *
-     * @param \DateTimeInterface|\DateTimeInterface[] $expires
-     *
-     * @return static
-     *
-     * @see http://schema.org/expires
-     */
-    public function expires($expires)
-    {
-        return $this->setProperty('expires', $expires);
     }
 
     /**
