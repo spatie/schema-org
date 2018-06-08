@@ -6,10 +6,17 @@ namespace Spatie\SchemaOrg;
  * {{ type.description | doc(0) }}
  *
  * @see {{ type.resource }}
+{% if type.parents %}
+ *
+{% for parent in type.parents %}
+ * @mixin \Spatie\SchemaOrg\{{ parent }}
+{% endfor %}
+{% endif %}
  */
-class {{ type.name }} extends {{ type.parent }}
+class {{ type.name }} extends BaseType
 {
-{% for constant in type.constants %}    /**
+{% for constant in type.constants %}
+    /**
      * {{ constant.description | doc(1) }}
      *
      * @see {{ constant.value }}
@@ -17,7 +24,8 @@ class {{ type.name }} extends {{ type.parent }}
      const {{ constant.name }} = '{{ constant.value }}';
 
 {% endfor %}
-{% for property in type.properties %}    /**
+{% for property in type.properties %}
+    /**
      * {{ property.description | doc(1) }}
      *
      * @param {{ property.ranges | join('|') }} ${{ property.name }}
