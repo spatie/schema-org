@@ -2,6 +2,9 @@
 
 All Notable changes to `schema-org` will be documented in this file.
 
+## 1.7.0 - 2018-06-08
+- Regenerated types
+
 ## 1.6.0 - 2018-05-22
 - Added: `Enumeration` child types with constants, e.g. `Spatie\Schema\DayOfWeek::Monday`.
 
