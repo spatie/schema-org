@@ -14,7 +14,7 @@ abstract class BaseType implements Type, \ArrayAccess, \JsonSerializable
 
     public function getContext(): string
     {
-        return 'https://schema.org';
+        return 'http://schema.org';
     }
 
     public function getType(): string
