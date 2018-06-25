@@ -2,6 +2,9 @@
 
 All Notable changes to `schema-org` will be documented in this file.
 
+## 2.0.1 - 2018-06-25
+- Use `https` protocol for Schema.org links
+
 ## 2.0.0 - 2018-06-08
 - Supports multiple type inheritance. Types no longer extend each other, they all are a direct extension of `BaseType`
 - This release probably doesn't contain any breaking changes for most people. It breaks all type checks (e.g. `instanceof LocalBusiness`), but doesn't change the way types are generated
