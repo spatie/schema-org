@@ -13,7 +13,7 @@ class BaseTypeTest extends TestCase
     {
         $type = new DummyType();
 
-        $this->assertEquals('http://schema.org', $type->getContext());
+        $this->assertEquals('https://schema.org', $type->getContext());
     }
 
     /** @test */
@@ -84,7 +84,7 @@ class BaseTypeTest extends TestCase
         $type->setProperty('boolean', true);
 
         $expected = [
-            '@context' => 'http://schema.org',
+            '@context' => 'https://schema.org',
             '@type' => 'DummyType',
             'string' => 'Hi',
             'array' => ['Yo'],
@@ -103,7 +103,7 @@ class BaseTypeTest extends TestCase
         $type->setProperty('dateCreated', DateTime::createFromFormat(DateTime::ATOM, '2017-01-01T00:00:00+0000'));
 
         $expected = [
-            '@context' => 'http://schema.org',
+            '@context' => 'https://schema.org',
             '@type' => 'DummyType',
             'dateCreated' => '2017-01-01T00:00:00+00:00',
         ];
@@ -122,7 +122,7 @@ class BaseTypeTest extends TestCase
         $type->setProperty('child', $child);
 
         $expected = [
-            '@context' => 'http://schema.org',
+            '@context' => 'https://schema.org',
             '@type' => 'DummyType',
             'child' => [
                 '@type' => 'DummyType',
@@ -147,7 +147,7 @@ class BaseTypeTest extends TestCase
         $type->setProperty('children', [$child1, $child2]);
 
         $expected = [
-            '@context' => 'http://schema.org',
+            '@context' => 'https://schema.org',
             '@type' => 'DummyType',
             'children' => [
                 [
@@ -241,7 +241,7 @@ class BaseTypeTest extends TestCase
         $type->setProperty('child', $child);
 
         $expected = [
-            '@context' => 'http://schema.org',
+            '@context' => 'https://schema.org',
             '@type' => 'DummyType',
             'foo' => 'bar',
             'child' => [
