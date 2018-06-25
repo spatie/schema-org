@@ -21,122 +21,122 @@
     <p>This is an RDFa-based representation of the schema.org schema, the underlying representation of the schema.org vocabulary.</p>
 
     <p>It is represented in a form based on W3C RDF/RDFS. We encourage proposals for schema.org improvements to be expressed
-      in this same style. See the <a href="http://schema.org/docs/howwework.html">how we work</a> document for information on collaboration.</p>
+      in this same style. See the <a href="https://schema.org/docs/howwework.html">how we work</a> document for information on collaboration.</p>
     <p>
-    See <a href="http://schema.org/docs/datamodel.html">datamodel</a> for more details,
-    the <a href="http://schema.org/docs/developers.html">developers</a> page for alternate formats.
+    See <a href="https://schema.org/docs/datamodel.html">datamodel</a> for more details,
+    the <a href="https://schema.org/docs/developers.html">developers</a> page for alternate formats.
     </p>
     <p>
       Note: the style of RDFa used here may change in the future. To see the substantive content of the schema, view the
       HTML source markup. We use a simple subset of RDFa for syntax, including prefixes that are declared in the
       <a href="http://www.w3.org/2011/rdfa-context/rdfa-1.1">RDFa initial context</a>. We also use Markdown syntax within comments to
-      make hypertext documentation easier to edit. Other <a href="http://schema.org/docs/developers.html#formats">formats</a> are available.
+      make hypertext documentation easier to edit. Other <a href="https://schema.org/docs/developers.html#formats">formats</a> are available.
     </p>
 
     <hr />
 
-    <div typeof="rdfs:Class" resource="http://schema.org/Thing">
+    <div typeof="rdfs:Class" resource="https://schema.org/Thing">
       <span class="h" property="rdfs:label">Thing</span>
       <span property="rdfs:comment">The most generic type of item.</span>
     </div>
 
-    <div typeof="rdfs:Class" resource="http://schema.org/CreativeWork">
+    <div typeof="rdfs:Class" resource="https://schema.org/CreativeWork">
       <span class="h" property="rdfs:label">CreativeWork</span>
       <span property="rdfs:comment">The most generic kind of creative work, including books, movies, photographs, software programs, etc.</span>
-       <span>Subclass of: <a property="rdfs:subClassOf" href="http://schema.org/Thing">Thing</a></span>
+       <span>Subclass of: <a property="rdfs:subClassOf" href="https://schema.org/Thing">Thing</a></span>
        <span>Source:  <a property="dc:source" href="http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#source_rNews">rNews</a></span>
     </div>
 
-    <div typeof="rdfs:Class" resource="http://schema.org/WebPage">
+    <div typeof="rdfs:Class" resource="https://schema.org/WebPage">
       <span class="h" property="rdfs:label">WebPage</span>
       <span property="rdfs:comment">A web page. Every web page is implicitly assumed to be declared to be of type WebPage, so the various properties about that webpage, such as &lt;code&gt;breadcrumb&lt;/code&gt; may be used. We recommend explicit declaration if these properties are specified, but if they are found outside of an itemscope, they will be assumed to be about the page.</span>
-       <span>Subclass of: <a property="rdfs:subClassOf" href="http://schema.org/CreativeWork">CreativeWork</a></span>
+       <span>Subclass of: <a property="rdfs:subClassOf" href="https://schema.org/CreativeWork">CreativeWork</a></span>
     </div>
 
-    <div typeof="rdfs:Class" resource="http://schema.org/AboutPage">
+    <div typeof="rdfs:Class" resource="https://schema.org/AboutPage">
       <span class="h" property="rdfs:label">AboutPage</span>
       <span property="rdfs:comment">Web page type: About page.</span>
-       <span>Subclass of: <a property="rdfs:subClassOf" href="http://schema.org/WebPage">WebPage</a></span>
+       <span>Subclass of: <a property="rdfs:subClassOf" href="https://schema.org/WebPage">WebPage</a></span>
     </div>
 
-        <div typeof="rdfs:Class" resource="http://schema.org/Organization">
+        <div typeof="rdfs:Class" resource="https://schema.org/Organization">
           <span class="h" property="rdfs:label">Organization</span>
           <span property="rdfs:comment">An organization such as a school, NGO, corporation, club, etc.</span>
-           <span>Subclass of: <a property="rdfs:subClassOf" href="http://schema.org/Thing">Thing</a></span>
+           <span>Subclass of: <a property="rdfs:subClassOf" href="https://schema.org/Thing">Thing</a></span>
         </div>
 
-    <div typeof="rdfs:Class" resource="http://schema.org/MusicPlaylist">
+    <div typeof="rdfs:Class" resource="https://schema.org/MusicPlaylist">
       <span class="h" property="rdfs:label">MusicPlaylist</span>
       <span property="rdfs:comment">A collection of music tracks in playlist form.</span>
-       <span>Subclass of: <a property="rdfs:subClassOf" href="http://schema.org/CreativeWork">CreativeWork</a></span>
+       <span>Subclass of: <a property="rdfs:subClassOf" href="https://schema.org/CreativeWork">CreativeWork</a></span>
     </div>
 
-    <div typeof="rdfs:Class" resource="http://schema.org/MusicRelease">
+    <div typeof="rdfs:Class" resource="https://schema.org/MusicRelease">
       <span class="h" property="rdfs:label">MusicRelease</span>
       <span property="rdfs:comment">A MusicRelease is a specific release of a music album.</span>
       <link property="dc:source" href="http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#MBZ"/>
-    <span>Subclass of: <a property="rdfs:subClassOf" href="http://schema.org/MusicPlaylist">MusicPlaylist</a></span>
+    <span>Subclass of: <a property="rdfs:subClassOf" href="https://schema.org/MusicPlaylist">MusicPlaylist</a></span>
     </div>
 
-    <div typeof="rdfs:Class" resource="http://schema.org/Intangible">
+    <div typeof="rdfs:Class" resource="https://schema.org/Intangible">
       <span class="h" property="rdfs:label">Intangible</span>
       <span property="rdfs:comment">A utility class that serves as the umbrella for a number of 'intangible' things such as quantities, structured values, etc.</span>
-       <span>Subclass of: <a property="rdfs:subClassOf" href="http://schema.org/Thing">Thing</a></span>
+       <span>Subclass of: <a property="rdfs:subClassOf" href="https://schema.org/Thing">Thing</a></span>
     </div>
 
-    <div typeof="rdfs:Class" resource="http://schema.org/StructuredValue">
+    <div typeof="rdfs:Class" resource="https://schema.org/StructuredValue">
       <span class="h" property="rdfs:label">StructuredValue</span>
       <span property="rdfs:comment">Structured values are used when the value of a property has a more complex structure than simply being a textual value or a reference to another thing.</span>
-       <span>Subclass of: <a property="rdfs:subClassOf" href="http://schema.org/Intangible">Intangible</a></span>
+       <span>Subclass of: <a property="rdfs:subClassOf" href="https://schema.org/Intangible">Intangible</a></span>
     </div>
 
-<div typeof="rdfs:Class" resource="http://schema.org/ContactPoint">
+<div typeof="rdfs:Class" resource="https://schema.org/ContactPoint">
       <span class="h" property="rdfs:label">ContactPoint</span>
       <span property="rdfs:comment">A contact point&amp;#x2014;for example, a Customer Complaints department.</span>
-       <span>Subclass of: <a property="rdfs:subClassOf" href="http://schema.org/StructuredValue">StructuredValue</a></span>
+       <span>Subclass of: <a property="rdfs:subClassOf" href="https://schema.org/StructuredValue">StructuredValue</a></span>
     </div>
 
-    <div typeof="rdfs:Class" resource="http://schema.org/PostalAddress">
+    <div typeof="rdfs:Class" resource="https://schema.org/PostalAddress">
       <span class="h" property="rdfs:label">PostalAddress</span>
       <span property="rdfs:comment">The mailing address.</span>
-       <span>Subclass of: <a property="rdfs:subClassOf" href="http://schema.org/ContactPoint">ContactPoint</a></span>
+       <span>Subclass of: <a property="rdfs:subClassOf" href="https://schema.org/ContactPoint">ContactPoint</a></span>
     </div>
 
-    <div typeof="rdf:Property" resource="http://schema.org/schemaVersion">
+    <div typeof="rdf:Property" resource="https://schema.org/schemaVersion">
       <span class="h" property="rdfs:label">schemaVersion</span>
-      <span property="rdfs:comment">Indicates (by URL or string) a particular version of a schema used in some CreativeWork. For example, a document could declare a schemaVersion using an URL such as http://schema.org/version/2.0/ if precise indication of schema version was required by some application. </span>
-      <span>Domain: <a property="http://schema.org/domainIncludes" href="http://schema.org/CreativeWork">CreativeWork</a></span>
-      <span>Range: <a property="http://schema.org/rangeIncludes" href="http://schema.org/URL">URL</a></span>
-      <span>Range: <a property="http://schema.org/rangeIncludes" href="http://schema.org/Text">Text</a></span>
+      <span property="rdfs:comment">Indicates (by URL or string) a particular version of a schema used in some CreativeWork. For example, a document could declare a schemaVersion using an URL such as https://schema.org/version/2.0/ if precise indication of schema version was required by some application. </span>
+      <span>Domain: <a property="https://schema.org/domainIncludes" href="https://schema.org/CreativeWork">CreativeWork</a></span>
+      <span>Range: <a property="https://schema.org/rangeIncludes" href="https://schema.org/URL">URL</a></span>
+      <span>Range: <a property="https://schema.org/rangeIncludes" href="https://schema.org/Text">Text</a></span>
     </div>
 
-    <div typeof="rdf:Property" resource="http://schema.org/about">
+    <div typeof="rdf:Property" resource="https://schema.org/about">
       <span class="h" property="rdfs:label">about</span>
       <span property="rdfs:comment">The subject matter of the content.</span>
-      <span>Domain: <a property="http://schema.org/domainIncludes" href="http://schema.org/CreativeWork">CreativeWork</a></span>
-      <span>Range: <a property="http://schema.org/rangeIncludes" href="http://schema.org/Thing">Thing</a></span>
+      <span>Domain: <a property="https://schema.org/domainIncludes" href="https://schema.org/CreativeWork">CreativeWork</a></span>
+      <span>Range: <a property="https://schema.org/rangeIncludes" href="https://schema.org/Thing">Thing</a></span>
     </div>
 
-    <div typeof="rdf:Property" resource="http://schema.org/duration">
+    <div typeof="rdf:Property" resource="https://schema.org/duration">
           <span class="h" property="rdfs:label">duration</span>
           <span property="rdfs:comment">The duration of the item (movie, audio recording, event, etc.) in [ISO 8601 date format](http://en.wikipedia.org/wiki/ISO_8601).</span>
-          <span>Domain: <a property="http://schema.org/domainIncludes" href="http://schema.org/MediaObject">MediaObject</a></span>
-          <span>Domain: <a property="http://schema.org/domainIncludes" href="http://schema.org/Event">Event</a></span>
-          <span>Domain: <a property="http://schema.org/domainIncludes" href="http://schema.org/Movie">Movie</a></span>
-          <span>Domain: <a property="http://schema.org/domainIncludes" href="http://schema.org/MusicRecording">MusicRecording</a></span>
-          <span>Range: <a property="http://schema.org/rangeIncludes" href="http://schema.org/Duration">Duration</a></span>
+          <span>Domain: <a property="https://schema.org/domainIncludes" href="https://schema.org/MediaObject">MediaObject</a></span>
+          <span>Domain: <a property="https://schema.org/domainIncludes" href="https://schema.org/Event">Event</a></span>
+          <span>Domain: <a property="https://schema.org/domainIncludes" href="https://schema.org/Movie">Movie</a></span>
+          <span>Domain: <a property="https://schema.org/domainIncludes" href="https://schema.org/MusicRecording">MusicRecording</a></span>
+          <span>Range: <a property="https://schema.org/rangeIncludes" href="https://schema.org/Duration">Duration</a></span>
         </div>
 
-        <div typeof="rdf:Property" resource="http://schema.org/address">
+        <div typeof="rdf:Property" resource="https://schema.org/address">
               <span class="h" property="rdfs:label">address</span>
               <span property="rdfs:comment">Physical address of the item.</span>
-              <span>Domain: <a property="http://schema.org/domainIncludes" href="http://schema.org/Organization">Organization</a></span>
-              <span>Domain: <a property="http://schema.org/domainIncludes" href="http://schema.org/Place">Place</a></span>
-              <span>Domain: <a property="http://schema.org/domainIncludes" href="http://schema.org/Person">Person</a></span>
-              <span>Domain: <a property="http://schema.org/domainIncludes" href="http://schema.org/GeoCoordinates">GeoCoordinates</a></span>
-              <span>Domain: <a property="http://schema.org/domainIncludes" href="http://schema.org/GeoShape">GeoShape</a></span>
-              <span>Range: <a property="http://schema.org/rangeIncludes" href="http://schema.org/PostalAddress">PostalAddress</a></span>
-              <span>Range: <a property="http://schema.org/rangeIncludes" href="http://schema.org/Text">Text</a></span>
+              <span>Domain: <a property="https://schema.org/domainIncludes" href="https://schema.org/Organization">Organization</a></span>
+              <span>Domain: <a property="https://schema.org/domainIncludes" href="https://schema.org/Place">Place</a></span>
+              <span>Domain: <a property="https://schema.org/domainIncludes" href="https://schema.org/Person">Person</a></span>
+              <span>Domain: <a property="https://schema.org/domainIncludes" href="https://schema.org/GeoCoordinates">GeoCoordinates</a></span>
+              <span>Domain: <a property="https://schema.org/domainIncludes" href="https://schema.org/GeoShape">GeoShape</a></span>
+              <span>Range: <a property="https://schema.org/rangeIncludes" href="https://schema.org/PostalAddress">PostalAddress</a></span>
+              <span>Range: <a property="https://schema.org/rangeIncludes" href="https://schema.org/Text">Text</a></span>
             </div>
   </body>
   </html>

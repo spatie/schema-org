@@ -171,7 +171,7 @@ class BaseTypeTest extends TestCase
         $type->setProperty('foo', 'bar');
 
         $expected = '<script type="application/ld+json">'.
-            '{"@context":"http:\/\/schema.org","@type":"DummyType","foo":"bar"}'.
+            '{"@context":"https:\/\/schema.org","@type":"DummyType","foo":"bar"}'.
         '</script>';
 
         $this->assertEquals($expected, $type->toScript());
