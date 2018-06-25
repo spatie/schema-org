@@ -2,6 +2,9 @@
 
 All Notable changes to `schema-org` will be documented in this file.
 
+## 2.0.2 - 2018-06-25
+- Fix previous release
+
 ## 2.0.1 - 2018-06-25
 - Use `https` protocol for Schema.org links
 
