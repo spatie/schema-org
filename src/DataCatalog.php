@@ -6,8 +6,10 @@ namespace Spatie\SchemaOrg;
  * A collection of datasets.
  *
  * @see http://schema.org/DataCatalog
+ *
+ * @mixin \Spatie\SchemaOrg\CreativeWork
  */
-class DataCatalog extends CreativeWork
+class DataCatalog extends BaseType
 {
     /**
      * A dataset contained in this catalog.

@@ -6,8 +6,10 @@ namespace Spatie\SchemaOrg;
  * Used to describe a ticket to an event, a flight, a bus ride, etc.
  *
  * @see http://schema.org/Ticket
+ *
+ * @mixin \Spatie\SchemaOrg\Intangible
  */
-class Ticket extends Intangible
+class Ticket extends BaseType
 {
     /**
      * The date the ticket was issued.
@@ -38,8 +40,16 @@ class Ticket extends Intangible
     }
 
     /**
-     * The currency (in 3-letter ISO 4217 format) of the price or a price
-     * component, when attached to [[PriceSpecification]] and its subtypes.
+     * The currency of the price, or a price component when attached to
+     * [[PriceSpecification]] and its subtypes.
+     * 
+     * Use standard formats: [ISO 4217 currency
+     * format](http://en.wikipedia.org/wiki/ISO_4217) e.g. "USD"; [Ticker
+     * symbol](https://en.wikipedia.org/wiki/List_of_cryptocurrencies) for
+     * cryptocurrencies e.g. "BTC"; well known names for [Local Exchange
+     * Tradings
+     * Systems](https://en.wikipedia.org/wiki/Local_exchange_trading_system)
+     * (LETS) and other currency types e.g. "Ithaca HOUR".
      *
      * @param string|string[] $priceCurrency
      *

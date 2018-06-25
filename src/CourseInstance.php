@@ -8,8 +8,10 @@ namespace Spatie\SchemaOrg;
  * modes of study or to a specific section of students.
  *
  * @see http://schema.org/CourseInstance
+ *
+ * @mixin \Spatie\SchemaOrg\Event
  */
-class CourseInstance extends Event
+class CourseInstance extends BaseType
 {
     /**
      * The medium or means of delivery of the course instance or the mode of

@@ -7,8 +7,10 @@ namespace Spatie\SchemaOrg;
  * (instrument) such as speech, email, or telephone conversation.
  *
  * @see http://schema.org/CommunicateAction
+ *
+ * @mixin \Spatie\SchemaOrg\InteractAction
  */
-class CommunicateAction extends InteractAction
+class CommunicateAction extends BaseType
 {
     /**
      * The subject matter of the content.
@@ -59,7 +61,7 @@ class CommunicateAction extends InteractAction
      * A sub property of participant. The participant who is at the receiving
      * end of the action.
      *
-     * @param Audience|Audience[]|Organization|Organization[]|Person|Person[] $recipient
+     * @param Audience|Audience[]|ContactPoint|ContactPoint[]|Organization|Organization[]|Person|Person[] $recipient
      *
      * @return static
      *

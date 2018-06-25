@@ -6,8 +6,10 @@ namespace Spatie\SchemaOrg;
  * An organization that provides flights for passengers.
  *
  * @see http://schema.org/Airline
+ *
+ * @mixin \Spatie\SchemaOrg\Organization
  */
-class Airline extends Organization
+class Airline extends BaseType
 {
     /**
      * The type of boarding policy used by the airline (e.g. zone-based or

@@ -2,6 +2,22 @@
 
 All Notable changes to `schema-org` will be documented in this file.
 
+## 2.0.0 - 2018-06-08
+- Supports multiple type inheritance. Types no longer extend each other, they all are a direct extension of `BaseType`
+- This release probably doesn't contain any breaking changes for most people. It breaks all type checks (e.g. `instanceof LocalBusiness`), but doesn't change the way types are generated
+
+## 1.7.0 - 2018-06-08
+- Regenerated types
+
+## 1.6.0 - 2018-05-22
+- Added: `Enumeration` child types with constants, e.g. `Spatie\Schema\DayOfWeek::Monday`.
+
+## 1.5.0 - 2018-05-03
+- Added: All types are now json serializable and have array access
+
+## 1.4.2 - 2018-03-28
+- Fixed: Date format in schemas is now ISO8601 (`DateTime::ATOM`)
+
 # 1.4.1 - 2017-12-11
 - Fixed: `@param` hints for numbers (`float|int`)
 

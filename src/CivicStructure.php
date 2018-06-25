@@ -6,8 +6,10 @@ namespace Spatie\SchemaOrg;
  * A public structure, such as a town hall or concert hall.
  *
  * @see http://schema.org/CivicStructure
+ *
+ * @mixin \Spatie\SchemaOrg\Place
  */
-class CivicStructure extends Place
+class CivicStructure extends BaseType
 {
     /**
      * The general opening hours for a business. Opening hours can be specified

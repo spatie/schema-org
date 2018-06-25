@@ -7,8 +7,10 @@ namespace Spatie\SchemaOrg;
  * unbounded set of choices/options.
  *
  * @see http://schema.org/ChooseAction
+ *
+ * @mixin \Spatie\SchemaOrg\AssessAction
  */
-class ChooseAction extends AssessAction
+class ChooseAction extends BaseType
 {
     /**
      * A sub property of object. The options subject to this action.

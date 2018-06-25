@@ -6,8 +6,10 @@ namespace Spatie\SchemaOrg;
  * A contact point&#x2014;for example, a Customer Complaints department.
  *
  * @see http://schema.org/ContactPoint
+ *
+ * @mixin \Spatie\SchemaOrg\StructuredValue
  */
-class ContactPoint extends StructuredValue
+class ContactPoint extends BaseType
 {
     /**
      * The geographic area where a service or offered item is provided.
@@ -24,9 +26,9 @@ class ContactPoint extends StructuredValue
     }
 
     /**
-     * A language someone may use with the item. Please use one of the language
-     * codes from the [IETF BCP 47 standard](http://tools.ietf.org/html/bcp47).
-     * See also [[inLanguage]]
+     * A language someone may use with or at the item, service or place. Please
+     * use one of the language codes from the [IETF BCP 47
+     * standard](http://tools.ietf.org/html/bcp47). See also [[inLanguage]]
      *
      * @param Language|Language[]|string|string[] $availableLanguage
      *

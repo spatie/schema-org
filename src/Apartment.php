@@ -9,12 +9,14 @@ namespace Spatie\SchemaOrg;
  * href="http://en.wikipedia.org/wiki/Apartment">http://en.wikipedia.org/wiki/Apartment</a>).
  *
  * @see http://schema.org/Apartment
+ *
+ * @mixin \Spatie\SchemaOrg\Accommodation
  */
-class Apartment extends Accommodation
+class Apartment extends BaseType
 {
     /**
      * The number of rooms (excluding bathrooms and closets) of the
-     * acccommodation or lodging business.
+     * accommodation or lodging business.
      * Typical unit code(s): ROM for room or C62 for no unit. The type of room
      * can be put in the unitText property of the QuantitativeValue.
      *

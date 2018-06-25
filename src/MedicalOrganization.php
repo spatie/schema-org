@@ -7,7 +7,9 @@ namespace Spatie\SchemaOrg;
  * clinic.
  *
  * @see http://schema.org/MedicalOrganization
+ *
+ * @mixin \Spatie\SchemaOrg\Organization
  */
-class MedicalOrganization extends Organization
+class MedicalOrganization extends BaseType
 {
 }

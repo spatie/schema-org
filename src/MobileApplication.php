@@ -7,8 +7,10 @@ namespace Spatie\SchemaOrg;
  * such as a telephone.
  *
  * @see http://schema.org/MobileApplication
+ *
+ * @mixin \Spatie\SchemaOrg\SoftwareApplication
  */
-class MobileApplication extends SoftwareApplication
+class MobileApplication extends BaseType
 {
     /**
      * Specifies specific carrier(s) requirements for the application (e.g. an

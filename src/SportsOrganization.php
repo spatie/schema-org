@@ -7,8 +7,10 @@ namespace Spatie\SchemaOrg;
  * teams, governing bodies, and sports associations.
  *
  * @see http://schema.org/SportsOrganization
+ *
+ * @mixin \Spatie\SchemaOrg\Organization
  */
-class SportsOrganization extends Organization
+class SportsOrganization extends BaseType
 {
     /**
      * A type of sport (e.g. Baseball).

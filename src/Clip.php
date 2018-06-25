@@ -6,8 +6,10 @@ namespace Spatie\SchemaOrg;
  * A short TV or radio program or a segment/part of a program.
  *
  * @see http://schema.org/Clip
+ *
+ * @mixin \Spatie\SchemaOrg\CreativeWork
  */
-class Clip extends CreativeWork
+class Clip extends BaseType
 {
     /**
      * An actor, e.g. in tv, radio, movie, video games etc., or in an event.

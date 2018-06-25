@@ -6,8 +6,10 @@ namespace Spatie\SchemaOrg;
  * A trip on a commercial train line.
  *
  * @see http://schema.org/TrainTrip
+ *
+ * @mixin \Spatie\SchemaOrg\Trip
  */
-class TrainTrip extends Intangible
+class TrainTrip extends BaseType
 {
     /**
      * The platform where the train arrives.
@@ -38,20 +40,6 @@ class TrainTrip extends Intangible
     }
 
     /**
-     * The expected arrival time.
-     *
-     * @param \DateTimeInterface|\DateTimeInterface[] $arrivalTime
-     *
-     * @return static
-     *
-     * @see http://schema.org/arrivalTime
-     */
-    public function arrivalTime($arrivalTime)
-    {
-        return $this->setProperty('arrivalTime', $arrivalTime);
-    }
-
-    /**
      * The platform from which the train departs.
      *
      * @param string|string[] $departurePlatform
@@ -77,36 +65,6 @@ class TrainTrip extends Intangible
     public function departureStation($departureStation)
     {
         return $this->setProperty('departureStation', $departureStation);
-    }
-
-    /**
-     * The expected departure time.
-     *
-     * @param \DateTimeInterface|\DateTimeInterface[] $departureTime
-     *
-     * @return static
-     *
-     * @see http://schema.org/departureTime
-     */
-    public function departureTime($departureTime)
-    {
-        return $this->setProperty('departureTime', $departureTime);
-    }
-
-    /**
-     * The service provider, service operator, or service performer; the goods
-     * producer. Another party (a seller) may offer those services or goods on
-     * behalf of the provider. A provider may also serve as the seller.
-     *
-     * @param Organization|Organization[]|Person|Person[] $provider
-     *
-     * @return static
-     *
-     * @see http://schema.org/provider
-     */
-    public function provider($provider)
-    {
-        return $this->setProperty('provider', $provider);
     }
 
     /**

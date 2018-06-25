@@ -6,8 +6,10 @@ namespace Spatie\SchemaOrg;
  * Organization: Sports team.
  *
  * @see http://schema.org/SportsTeam
+ *
+ * @mixin \Spatie\SchemaOrg\SportsOrganization
  */
-class SportsTeam extends SportsOrganization
+class SportsTeam extends BaseType
 {
     /**
      * A person that acts as performing member of a sports team; a player as

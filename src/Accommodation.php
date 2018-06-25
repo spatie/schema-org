@@ -13,8 +13,10 @@ namespace Spatie\SchemaOrg;
  * schema.org for marking up hotels and other forms of accommodations</a>.
  *
  * @see http://schema.org/Accommodation
+ *
+ * @mixin \Spatie\SchemaOrg\Place
  */
-class Accommodation extends Place
+class Accommodation extends BaseType
 {
     /**
      * An amenity feature (e.g. a characteristic or service) of the
@@ -51,7 +53,7 @@ class Accommodation extends Place
 
     /**
      * The number of rooms (excluding bathrooms and closets) of the
-     * acccommodation or lodging business.
+     * accommodation or lodging business.
      * Typical unit code(s): ROM for room or C62 for no unit. The type of room
      * can be put in the unitText property of the QuantitativeValue.
      *

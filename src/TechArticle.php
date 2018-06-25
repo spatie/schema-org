@@ -7,8 +7,10 @@ namespace Spatie\SchemaOrg;
  * troubleshooting, specifications, etc.
  *
  * @see http://schema.org/TechArticle
+ *
+ * @mixin \Spatie\SchemaOrg\Article
  */
-class TechArticle extends Article
+class TechArticle extends BaseType
 {
     /**
      * Prerequisites needed to fulfill steps in article.

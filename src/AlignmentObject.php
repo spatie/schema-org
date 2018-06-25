@@ -7,8 +7,10 @@ namespace Spatie\SchemaOrg;
  * and a node in an educational framework.
  *
  * @see http://schema.org/AlignmentObject
+ *
+ * @mixin \Spatie\SchemaOrg\Intangible
  */
-class AlignmentObject extends Intangible
+class AlignmentObject extends BaseType
 {
     /**
      * A category of alignment between the learning resource and the framework

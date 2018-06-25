@@ -6,8 +6,11 @@ namespace Spatie\SchemaOrg;
  * Season dedicated to TV broadcast and associated online delivery.
  *
  * @see http://schema.org/TVSeason
+ *
+ * @mixin \Spatie\SchemaOrg\CreativeWork
+ * @mixin \Spatie\SchemaOrg\CreativeWorkSeason
  */
-class TVSeason extends CreativeWork
+class TVSeason extends BaseType
 {
     /**
      * The country of the principal offices of the production company or

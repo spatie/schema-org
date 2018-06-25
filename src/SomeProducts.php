@@ -6,8 +6,10 @@ namespace Spatie\SchemaOrg;
  * A placeholder for multiple similar products of the same kind.
  *
  * @see http://schema.org/SomeProducts
+ *
+ * @mixin \Spatie\SchemaOrg\Product
  */
-class SomeProducts extends Product
+class SomeProducts extends BaseType
 {
     /**
      * The current approximate inventory level for the item or items.

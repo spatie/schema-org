@@ -7,7 +7,9 @@ namespace Spatie\SchemaOrg;
  * &lt;Energy unit of measure&gt;'.
  *
  * @see http://schema.org/Energy
+ *
+ * @mixin \Spatie\SchemaOrg\Quantity
  */
-class Energy extends Quantity
+class Energy extends BaseType
 {
 }

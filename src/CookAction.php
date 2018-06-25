@@ -6,8 +6,10 @@ namespace Spatie\SchemaOrg;
  * The act of producing/preparing food.
  *
  * @see http://schema.org/CookAction
+ *
+ * @mixin \Spatie\SchemaOrg\CreateAction
  */
-class CookAction extends CreateAction
+class CookAction extends BaseType
 {
     /**
      * A sub property of location. The specific food establishment where the

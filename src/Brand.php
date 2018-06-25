@@ -7,8 +7,10 @@ namespace Spatie\SchemaOrg;
  * product, product group, or similar.
  *
  * @see http://schema.org/Brand
+ *
+ * @mixin \Spatie\SchemaOrg\Intangible
  */
-class Brand extends Intangible
+class Brand extends BaseType
 {
     /**
      * The overall rating, based on a collection of reviews or ratings, of the

@@ -11,8 +11,10 @@ namespace Spatie\SchemaOrg;
  * living Person or Organization rather than an inanimate object.
  *
  * @see http://schema.org/MoveAction
+ *
+ * @mixin \Spatie\SchemaOrg\Action
  */
-class MoveAction extends Action
+class MoveAction extends BaseType
 {
     /**
      * A sub property of location. The original location of the object or the

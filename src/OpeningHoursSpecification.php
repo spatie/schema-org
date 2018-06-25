@@ -14,8 +14,10 @@ namespace Spatie\SchemaOrg;
  * [[opens]] property then the hour range is assumed to span over the next day.
  *
  * @see http://schema.org/OpeningHoursSpecification
+ *
+ * @mixin \Spatie\SchemaOrg\StructuredValue
  */
-class OpeningHoursSpecification extends StructuredValue
+class OpeningHoursSpecification extends BaseType
 {
     /**
      * The closing hour of the place or service on the given day(s) of the week.

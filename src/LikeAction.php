@@ -7,7 +7,9 @@ namespace Spatie\SchemaOrg;
  * an object (a proposition, topic or theme) with participants.
  *
  * @see http://schema.org/LikeAction
+ *
+ * @mixin \Spatie\SchemaOrg\ReactAction
  */
-class LikeAction extends ReactAction
+class LikeAction extends BaseType
 {
 }

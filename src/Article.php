@@ -11,8 +11,10 @@ namespace Spatie\SchemaOrg;
  * post](http://blog.schema.org/2014/09/schemaorg-support-for-bibliographic_2.html).
  *
  * @see http://schema.org/Article
+ *
+ * @mixin \Spatie\SchemaOrg\CreativeWork
  */
-class Article extends CreativeWork
+class Article extends BaseType
 {
     /**
      * The actual body of the article.

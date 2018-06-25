@@ -6,8 +6,10 @@ namespace Spatie\SchemaOrg;
  * An over the air or online broadcast event.
  *
  * @see http://schema.org/BroadcastEvent
+ *
+ * @mixin \Spatie\SchemaOrg\PublicationEvent
  */
-class BroadcastEvent extends PublicationEvent
+class BroadcastEvent extends BaseType
 {
     /**
      * The event being broadcast such as a sporting event or awards ceremony.

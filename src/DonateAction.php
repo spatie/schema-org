@@ -7,14 +7,16 @@ namespace Spatie\SchemaOrg;
  * for philanthropic reasons.
  *
  * @see http://schema.org/DonateAction
+ *
+ * @mixin \Spatie\SchemaOrg\TradeAction
  */
-class DonateAction extends TradeAction
+class DonateAction extends BaseType
 {
     /**
      * A sub property of participant. The participant who is at the receiving
      * end of the action.
      *
-     * @param Audience|Audience[]|Organization|Organization[]|Person|Person[] $recipient
+     * @param Audience|Audience[]|ContactPoint|ContactPoint[]|Organization|Organization[]|Person|Person[] $recipient
      *
      * @return static
      *

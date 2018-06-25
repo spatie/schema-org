@@ -17,7 +17,10 @@ namespace Spatie\SchemaOrg;
  * schema.org for marking up hotels and other forms of accommodations</a>.
  *
  * @see http://schema.org/Campground
+ *
+ * @mixin \Spatie\SchemaOrg\CivicStructure
+ * @mixin \Spatie\SchemaOrg\LodgingBusiness
  */
-class Campground extends CivicStructure
+class Campground extends BaseType
 {
 }

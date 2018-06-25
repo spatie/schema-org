@@ -22,8 +22,11 @@ namespace Spatie\SchemaOrg;
  * series parts to the series as a whole wherever they seem appropriate.
  *
  * @see http://schema.org/CreativeWorkSeries
+ *
+ * @mixin \Spatie\SchemaOrg\CreativeWork
+ * @mixin \Spatie\SchemaOrg\Series
  */
-class CreativeWorkSeries extends CreativeWork
+class CreativeWorkSeries extends BaseType
 {
     /**
      * The end date and time of the item (in [ISO 8601 date
@@ -38,6 +41,22 @@ class CreativeWorkSeries extends CreativeWork
     public function endDate($endDate)
     {
         return $this->setProperty('endDate', $endDate);
+    }
+
+    /**
+     * The International Standard Serial Number (ISSN) that identifies this
+     * serial publication. You can repeat this property to identify different
+     * formats of, or the linking ISSN (ISSN-L) for, this serial publication.
+     *
+     * @param string|string[] $issn
+     *
+     * @return static
+     *
+     * @see http://schema.org/issn
+     */
+    public function issn($issn)
+    {
+        return $this->setProperty('issn', $issn);
     }
 
     /**

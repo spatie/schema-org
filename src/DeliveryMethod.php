@@ -21,7 +21,17 @@ namespace Spatie\SchemaOrg;
  * * http://purl.org/goodrelations/v1#UPS
  *
  * @see http://schema.org/DeliveryMethod
+ *
+ * @mixin \Spatie\SchemaOrg\Enumeration
  */
-class DeliveryMethod extends Enumeration
+class DeliveryMethod extends BaseType
 {
+    /**
+     * A DeliveryMethod in which an item is collected on site, e.g. in a store
+     * or at a box office.
+     *
+     * @see http://schema.org/OnSitePickup
+     */
+     const OnSitePickup = 'http://schema.org/OnSitePickup';
+
 }

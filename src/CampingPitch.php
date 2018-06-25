@@ -10,7 +10,9 @@ namespace Spatie\SchemaOrg;
  * schema.org for marking up hotels and other forms of accommodations</a>.
  *
  * @see http://schema.org/CampingPitch
+ *
+ * @mixin \Spatie\SchemaOrg\Accommodation
  */
-class CampingPitch extends Accommodation
+class CampingPitch extends BaseType
 {
 }

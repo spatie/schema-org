@@ -16,8 +16,10 @@ namespace Spatie\SchemaOrg;
  * [GS1](http://www.gs1.org/).
  *
  * @see http://schema.org/Offer
+ *
+ * @mixin \Spatie\SchemaOrg\Intangible
  */
-class Offer extends Intangible
+class Offer extends BaseType
 {
     /**
      * The payment method(s) accepted by seller for this offer.
@@ -293,11 +295,11 @@ class Offer extends Intangible
     }
 
     /**
-     * The [GTIN-12](http://apps.gs1.org/GDD/glossary/Pages/GTIN-12.aspx) code
-     * of the product, or the product to which the offer refers. The GTIN-12 is
-     * the 12-digit GS1 Identification Key composed of a U.P.C. Company Prefix,
-     * Item Reference, and Check Digit used to identify trade items. See [GS1
-     * GTIN Summary](http://www.gs1.org/barcodes/technical/idkeys/gtin) for more
+     * The GTIN-12 code of the product, or the product to which the offer
+     * refers. The GTIN-12 is the 12-digit GS1 Identification Key composed of a
+     * U.P.C. Company Prefix, Item Reference, and Check Digit used to identify
+     * trade items. See [GS1 GTIN
+     * Summary](http://www.gs1.org/barcodes/technical/idkeys/gtin) for more
      * details.
      *
      * @param string|string[] $gtin12
@@ -312,11 +314,10 @@ class Offer extends Intangible
     }
 
     /**
-     * The [GTIN-13](http://apps.gs1.org/GDD/glossary/Pages/GTIN-13.aspx) code
-     * of the product, or the product to which the offer refers. This is
-     * equivalent to 13-digit ISBN codes and EAN UCC-13. Former 12-digit UPC
-     * codes can be converted into a GTIN-13 code by simply adding a preceeding
-     * zero. See [GS1 GTIN
+     * The GTIN-13 code of the product, or the product to which the offer
+     * refers. This is equivalent to 13-digit ISBN codes and EAN UCC-13. Former
+     * 12-digit UPC codes can be converted into a GTIN-13 code by simply adding
+     * a preceeding zero. See [GS1 GTIN
      * Summary](http://www.gs1.org/barcodes/technical/idkeys/gtin) for more
      * details.
      *
@@ -332,8 +333,8 @@ class Offer extends Intangible
     }
 
     /**
-     * The [GTIN-14](http://apps.gs1.org/GDD/glossary/Pages/GTIN-14.aspx) code
-     * of the product, or the product to which the offer refers. See [GS1 GTIN
+     * The GTIN-14 code of the product, or the product to which the offer
+     * refers. See [GS1 GTIN
      * Summary](http://www.gs1.org/barcodes/technical/idkeys/gtin) for more
      * details.
      *
@@ -465,10 +466,14 @@ class Offer extends Intangible
      * 
      * Usage guidelines:
      * 
-     * * Use the [[priceCurrency]] property (with [ISO 4217
-     * codes](http://en.wikipedia.org/wiki/ISO_4217#Active_codes) e.g. "USD")
-     * instead of
-     *       including [ambiguous
+     * * Use the [[priceCurrency]] property (with standard formats: [ISO 4217
+     * currency format](http://en.wikipedia.org/wiki/ISO_4217) e.g. "USD";
+     * [Ticker symbol](https://en.wikipedia.org/wiki/List_of_cryptocurrencies)
+     * for cryptocurrencies e.g. "BTC"; well known names for [Local Exchange
+     * Tradings
+     * Systems](https://en.wikipedia.org/wiki/Local_exchange_trading_system)
+     * (LETS) and other currency types e.g. "Ithaca HOUR") instead of including
+     * [ambiguous
      * symbols](http://en.wikipedia.org/wiki/Dollar_sign#Currencies_that_use_the_dollar_or_peso_sign)
      * such as '$' in the value.
      * * Use '.' (Unicode 'FULL STOP' (U+002E)) rather than ',' to indicate a
@@ -493,8 +498,16 @@ class Offer extends Intangible
     }
 
     /**
-     * The currency (in 3-letter ISO 4217 format) of the price or a price
-     * component, when attached to [[PriceSpecification]] and its subtypes.
+     * The currency of the price, or a price component when attached to
+     * [[PriceSpecification]] and its subtypes.
+     * 
+     * Use standard formats: [ISO 4217 currency
+     * format](http://en.wikipedia.org/wiki/ISO_4217) e.g. "USD"; [Ticker
+     * symbol](https://en.wikipedia.org/wiki/List_of_cryptocurrencies) for
+     * cryptocurrencies e.g. "BTC"; well known names for [Local Exchange
+     * Tradings
+     * Systems](https://en.wikipedia.org/wiki/Local_exchange_trading_system)
+     * (LETS) and other currency types e.g. "Ithaca HOUR".
      *
      * @param string|string[] $priceCurrency
      *

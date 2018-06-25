@@ -8,8 +8,10 @@ namespace Spatie\SchemaOrg;
  * property. Repeated events may be structured as separate Event objects.
  *
  * @see http://schema.org/Event
+ *
+ * @mixin \Spatie\SchemaOrg\Thing
  */
-class Event extends Thing
+class Event extends BaseType
 {
     /**
      * The subject matter of the content.
@@ -235,7 +237,7 @@ class Event extends Thing
     }
 
     /**
-     * A flag to signal that the publication is accessible for free.
+     * A flag to signal that the item, event, or place is accessible for free.
      *
      * @param bool|bool[] $isAccessibleForFree
      *

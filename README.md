@@ -58,6 +58,18 @@ $localBusiness->name('Spatie');
 
 > *All types also accept arrays of the expected data type, for example `sameAs` accepts a string or an array of strings.*
 
+All types also implement the SPL's `ArrayAccess` for accessing the properties via array notation:
+
+```php
+$anotherLocalBusiness = new LocalBusiness();
+var_dump(isset($anotherLocalBusiness['name'])); // => false
+$anotherLocalBusiness['name'] = 'Spatie';
+var_dump(isset($anotherLocalBusiness['name'])); // => true
+var_dump($anotherLocalBusiness['name']); // => 'Spatie'
+unset($anotherLocalBusiness['name']);
+var_dump(isset($anotherLocalBusiness['name'])); // => false
+```
+
 Types can be converted to an array or rendered to a script.
 
 ```php
@@ -66,6 +78,20 @@ $localBusiness->toArray();
 $localBusiness->toScript();
 
 echo $localBusiness; // Same output as `toScript()`
+```
+
+Additionally, all types can be converted to a plain JSON string by just calling `json_encode()` with your object:
+
+```php
+echo json_encode($localBusiness);
+```
+
+### Enumerations
+
+As of v1.6.0, all [Enumeration](http://schema.org/Enumeration) child types are available as classes with constants.
+
+```php
+Schema::book()->bookFormat(Spatie\Schema\BookFormatType::Hardcover);
 ```
 
 There's no full API documentation for types and properties. You can refer to [the source](https://github.com/spatie/schema-org/tree/master/src) or to [the schema.org website](http://schema.org).
@@ -142,7 +168,6 @@ Schema::localBusiness()
 
 ### Other Minor Issues
 
-- Some docblocks have some formatting issues (PR's welcome!)
 - The `Float` type isn't available since it's a reserved keyword in PHP
 - The `Physician` type isn't available since it extends a type from the `health` extension spec
 
@@ -181,7 +206,7 @@ We publish all received postcards [on our company website](https://spatie.be/en/
 
 Spatie is a webdesign agency based in Antwerp, Belgium. You'll find an overview of all our open source projects [on our website](https://spatie.be/opensource).
 
-Does your business depend on our contributions? Reach out and support us on [Patreon](https://www.patreon.com/spatie). 
+Does your business depend on our contributions? Reach out and support us on [Patreon](https://www.patreon.com/spatie).
 All pledges will be dedicated to allocating workforce on maintenance and new awesome stuff.
 
 ## License

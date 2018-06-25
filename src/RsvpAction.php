@@ -7,8 +7,10 @@ namespace Spatie\SchemaOrg;
  * the event.
  *
  * @see http://schema.org/RsvpAction
+ *
+ * @mixin \Spatie\SchemaOrg\InformAction
  */
-class RsvpAction extends InformAction
+class RsvpAction extends BaseType
 {
     /**
      * If responding yes, the number of guests who will attend in addition to

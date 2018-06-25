@@ -12,8 +12,10 @@ namespace Spatie\SchemaOrg;
  * it to you).
  *
  * @see http://schema.org/SendAction
+ *
+ * @mixin \Spatie\SchemaOrg\TransferAction
  */
-class SendAction extends TransferAction
+class SendAction extends BaseType
 {
     /**
      * A sub property of instrument. The method of delivery.
@@ -33,7 +35,7 @@ class SendAction extends TransferAction
      * A sub property of participant. The participant who is at the receiving
      * end of the action.
      *
-     * @param Audience|Audience[]|Organization|Organization[]|Person|Person[] $recipient
+     * @param Audience|Audience[]|ContactPoint|ContactPoint[]|Organization|Organization[]|Person|Person[] $recipient
      *
      * @return static
      *

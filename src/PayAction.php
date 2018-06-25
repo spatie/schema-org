@@ -6,14 +6,16 @@ namespace Spatie\SchemaOrg;
  * An agent pays a price to a participant.
  *
  * @see http://schema.org/PayAction
+ *
+ * @mixin \Spatie\SchemaOrg\TradeAction
  */
-class PayAction extends TradeAction
+class PayAction extends BaseType
 {
     /**
      * A sub property of participant. The participant who is at the receiving
      * end of the action.
      *
-     * @param Audience|Audience[]|Organization|Organization[]|Person|Person[] $recipient
+     * @param Audience|Audience[]|ContactPoint|ContactPoint[]|Organization|Organization[]|Person|Person[] $recipient
      *
      * @return static
      *

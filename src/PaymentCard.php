@@ -7,7 +7,10 @@ namespace Spatie\SchemaOrg;
  * payment with an account.
  *
  * @see http://schema.org/PaymentCard
+ *
+ * @mixin \Spatie\SchemaOrg\FinancialProduct
+ * @mixin \Spatie\SchemaOrg\PaymentMethod
  */
-class PaymentCard extends FinancialProduct
+class PaymentCard extends BaseType
 {
 }

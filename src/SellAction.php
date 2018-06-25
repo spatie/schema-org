@@ -8,8 +8,10 @@ namespace Spatie\SchemaOrg;
  * price. Reciprocal of BuyAction.
  *
  * @see http://schema.org/SellAction
+ *
+ * @mixin \Spatie\SchemaOrg\TradeAction
  */
-class SellAction extends TradeAction
+class SellAction extends BaseType
 {
     /**
      * A sub property of participant. The participant/person/organization that

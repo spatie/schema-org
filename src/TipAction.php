@@ -7,14 +7,16 @@ namespace Spatie\SchemaOrg;
  * services rendered.
  *
  * @see http://schema.org/TipAction
+ *
+ * @mixin \Spatie\SchemaOrg\TradeAction
  */
-class TipAction extends TradeAction
+class TipAction extends BaseType
 {
     /**
      * A sub property of participant. The participant who is at the receiving
      * end of the action.
      *
-     * @param Audience|Audience[]|Organization|Organization[]|Person|Person[] $recipient
+     * @param Audience|Audience[]|ContactPoint|ContactPoint[]|Organization|Organization[]|Person|Person[] $recipient
      *
      * @return static
      *

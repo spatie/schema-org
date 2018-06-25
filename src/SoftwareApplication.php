@@ -6,8 +6,10 @@ namespace Spatie\SchemaOrg;
  * A software application.
  *
  * @see http://schema.org/SoftwareApplication
+ *
+ * @mixin \Spatie\SchemaOrg\CreativeWork
  */
-class SoftwareApplication extends CreativeWork
+class SoftwareApplication extends BaseType
 {
     /**
      * Type of software application, e.g. 'Game, Multimedia'.
