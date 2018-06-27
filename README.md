@@ -161,7 +161,7 @@ $graph->product()->name('My cool Product')->brand($graph->organization());
 $graph->hide(\Spatie\SchemaOrg\Organization::class);
 
 // somewhere else fill organization
-$graph->organization()->name('My awesome Comapny');
+$graph->organization()->name('My awesome Company');
 
 // render graph to script tag
 echo $graph;
