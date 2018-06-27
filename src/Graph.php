@@ -2,8 +2,8 @@
 
 namespace Spatie\SchemaOrg;
 
-use InvalidArgumentException;
 use ReflectionClass;
+use InvalidArgumentException;
 
 /**
  * @mixin Schema
@@ -41,7 +41,7 @@ class Graph extends BaseType
 
     public function get(string $type): Type
     {
-        if (!$this->has($type)) {
+        if (! $this->has($type)) {
             throw new InvalidArgumentException(sprintf('The graph does not have an item of type "%s".', $type));
         }
 

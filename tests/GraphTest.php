@@ -2,12 +2,12 @@
 
 namespace Spatie\Skeleton\Test;
 
+use Spatie\SchemaOrg\Type;
+use Spatie\SchemaOrg\Graph;
+use Spatie\SchemaOrg\Schema;
 use InvalidArgumentException;
 use PHPUnit\Framework\TestCase;
-use Spatie\SchemaOrg\Graph;
 use Spatie\SchemaOrg\Organization;
-use Spatie\SchemaOrg\Schema;
-use Spatie\SchemaOrg\Type;
 
 class GraphTest extends TestCase
 {
