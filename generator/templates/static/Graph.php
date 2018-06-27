@@ -3,6 +3,7 @@
 namespace Spatie\SchemaOrg;
 
 use ReflectionClass;
+use BadMethodCallException;
 use InvalidArgumentException;
 
 /**
@@ -16,8 +17,10 @@ class Graph extends BaseType
     public function __call(string $method, array $arguments)
     {
         if (is_callable([Schema::class, $method])) {
-            return $this->getOrNew((new ReflectionClass(Schema::class))->getMethod($method)->getReturnType());
+            return $this->getOrCreate((new ReflectionClass(Schema::class))->getMethod($method)->getReturnType());
         }
+
+        throw new BadMethodCallException(sprintf('The method "%" does not exist on class "%s".', $method, get_class($this)));
     }
 
     public function add(Type $schema)
@@ -49,7 +52,7 @@ class Graph extends BaseType
         return $this->getProperty($type);
     }
 
-    public function getOrNew(string $type): Type
+    public function getOrCreate(string $type): Type
     {
         if ($this->has($type)) {
             return $this->get($type);
