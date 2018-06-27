@@ -16,7 +16,7 @@ class Graph extends BaseType
     public function __call(string $method, array $arguments)
     {
         if (is_callable([Schema::class, $method])) {
-            return $this->getOrNew((new ReflectionClass(Schema::class))->getMethod($method)->getReturnType());
+            return $this->getOrCreate((new ReflectionClass(Schema::class))->getMethod($method)->getReturnType());
         }
     }
 
@@ -49,7 +49,7 @@ class Graph extends BaseType
         return $this->getProperty($type);
     }
 
-    public function getOrNew(string $type): Type
+    public function getOrCreate(string $type): Type
     {
         if ($this->has($type)) {
             return $this->get($type);
