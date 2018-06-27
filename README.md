@@ -148,6 +148,27 @@ $localBusiness->getContext(); // 'http://schema.org'
 $localBusiness->getType(); // 'LocalBusiness'
 ```
 
+### Graph - multiple items
+
+The Graph has a lot of methods and utilities - the type-safe and simplest way is to use the overloaded methods of the `Spatie\SchemaOrg\Schema` class itself. These methods will get an already created or new instance of the requested schema.
+
+```php
+$graph = new Graph();
+
+// create product and prelink organization
+$graph->product()->name('My cool Product')->brand($graph->organization());
+// hide the organization from the created script tag
+$graph->hide(\Spatie\SchemaOrg\Organization::class);
+
+// somewhere else fill organization
+$graph->organization()->name('My awesome Comapny');
+
+// render graph to script tag
+echo $graph;
+```
+
+With these tools the graph is a collection of all available schemas, can link these schemas with each other and prevent helper schemas from being rendered in the script-tag.
+
 ## Known Issues
 
 ### Type Inheritance
