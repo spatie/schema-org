@@ -2,8 +2,8 @@
 
 namespace Spatie\Skeleton\Test;
 
-use Spatie\SchemaOrg\Brand;
 use Spatie\SchemaOrg\Type;
+use Spatie\SchemaOrg\Brand;
 use Spatie\SchemaOrg\Graph;
 use Spatie\SchemaOrg\Schema;
 use InvalidArgumentException;
