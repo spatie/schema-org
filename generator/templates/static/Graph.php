@@ -10,6 +10,7 @@ use InvalidArgumentException;
  */
 class Graph extends BaseType
 {
+    /** @var array */
     protected $hidden = [];
 
     public function __call(string $method, array $arguments)
