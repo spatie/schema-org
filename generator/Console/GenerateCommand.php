@@ -39,7 +39,7 @@ class GenerateCommand extends Command
         if ($input->getOption('extensions')) {
             $extensions = explode(',', $input->getOption('extensions'));
             foreach ($extensions as $extension) {
-                switch($extension) {
+                switch ($extension) {
                     case 'auto':
                         $sources['auto'] = 'https://raw.githubusercontent.com/schemaorg/schemaorg/master/data/ext/auto/auto.rdfa';
                         break;
