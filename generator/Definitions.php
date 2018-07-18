@@ -25,9 +25,14 @@ class Definitions
         }
     }
 
-    public function query(string $selector): Crawler
+    public function query(string $sourceId, string $selector): Crawler
     {
-        return (new Crawler($this->loadSource('core')))->filter($selector);
+        return (new Crawler($this->loadSource($sourceId)))->filter($selector);
+    }
+
+    public function getSourceIds(): array
+    {
+        return array_keys($this->sources);
     }
 
     protected function loadSource(string $sourceId, bool $fromCache = true): string
