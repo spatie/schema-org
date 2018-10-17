@@ -16,7 +16,9 @@
     </testsuites>
     <filter>
         <whitelist>
-            <directory suffix=".php">src/</directory>
+            <directory suffix=".php">src/Exceptions</directory>
+            <file>./src/BaseType.php</file>
+            <file>./src/Type.php</file>
         </whitelist>
     </filter>
     <logging>
