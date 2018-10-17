@@ -23,6 +23,7 @@
         "larapack/dd": "^1.1",
         "league/flysystem": "^1.0",
         "phpunit/phpunit": "^6.0",
+        "scrutinizer/ocular": "^1.5",
         "symfony/console": "^3.2",
         "symfony/css-selector": "^3.2",
         "symfony/dom-crawler": "^3.2",
