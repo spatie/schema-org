@@ -102,6 +102,10 @@ abstract class BaseType implements Type, \ArrayAccess, \JsonSerializable
             $property = $property->format(DateTime::ATOM);
         }
 
+        if (is_object($property) && method_exists($property, '__toString')) {
+            $property = (string) $property;
+        }
+
         if (is_object($property)) {
             throw new InvalidProperty();
         }
