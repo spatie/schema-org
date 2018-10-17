@@ -276,6 +276,20 @@ class BaseTypeTest extends TestCase
 
         $type->jsonSerialize();
     }
+
+    /** @test */
+    public function it_can_be_casted_to_string()
+    {
+        $type = new DummyType();
+
+        $type->setProperty('foo', 'bar');
+
+        $expected = '<script type="application/ld+json">'.
+            '{"@context":"https:\/\/schema.org","@type":"DummyType","foo":"bar"}'.
+        '</script>';
+
+        $this->assertEquals($expected, (string) $type);
+    }
 }
 
 class DummyType extends BaseType
