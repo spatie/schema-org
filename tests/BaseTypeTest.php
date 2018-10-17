@@ -233,12 +233,16 @@ class BaseTypeTest extends TestCase
     /** @test */
     public function it_can_be_json_serialized()
     {
-        $type = new DummyType();
         $child = new DummyType();
         $child->setProperty('bar', 'baz');
 
+        $type = new DummyType();
         $type->setProperty('foo', 'bar');
         $type->setProperty('child', $child);
+        $type->setProperty('array', [
+          'child' => $child,
+          'hello' => 'world',
+        ]);
 
         $expected = [
             '@context' => 'https://schema.org',
@@ -248,10 +252,29 @@ class BaseTypeTest extends TestCase
                 '@type' => 'DummyType',
                 'bar' => 'baz',
             ],
+            'array' => [
+              'child' => [
+                  '@type' => 'DummyType',
+                  'bar' => 'baz',
+              ],
+              'hello' => 'world',
+            ],
         ];
 
         $this->assertEquals($expected, $type->jsonSerialize(), 'Return value of `jsonSerialize` is wrong');
         $this->assertEquals(json_encode($expected), json_encode($type), 'JSON representation is wrong');
+    }
+
+    /**
+     * @test
+     * @expectedException \Spatie\SchemaOrg\Exceptions\InvalidProperty
+     */
+    public function it_will_throw_invalid_property_exception_with_object_property()
+    {
+        $type = new DummyType();
+        $type->setProperty('foo', new class() {});
+
+        $type->jsonSerialize();
     }
 }
 
