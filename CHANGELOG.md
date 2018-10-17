@@ -2,6 +2,9 @@
 
 All Notable changes to `schema-org` will be documented in this file.
 
+## 2.0.3 - 2018-10-18
+- Convert invalid objects that have a `__toString` method to strings
+
 ## 2.0.2 - 2018-06-25
 - Fix previous release
 
