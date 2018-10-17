@@ -272,7 +272,8 @@ class BaseTypeTest extends TestCase
     public function it_will_throw_invalid_property_exception_with_object_property()
     {
         $type = new DummyType();
-        $type->setProperty('foo', new class() {});
+        $type->setProperty('foo', new class() {
+        });
 
         $type->jsonSerialize();
     }
