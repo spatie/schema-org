@@ -243,6 +243,12 @@ class BaseTypeTest extends TestCase
           'child' => $child,
           'hello' => 'world',
         ]);
+        $type->setProperty('string', new class() {
+            public function __toString()
+            {
+                return 'lorem ipsum';
+            }
+        });
 
         $expected = [
             '@context' => 'https://schema.org',
@@ -259,6 +265,7 @@ class BaseTypeTest extends TestCase
               ],
               'hello' => 'world',
             ],
+            'string' => 'lorem ipsum',
         ];
 
         $this->assertEquals($expected, $type->jsonSerialize(), 'Return value of `jsonSerialize` is wrong');
