@@ -17,7 +17,17 @@ class Graph extends BaseType
     public function __call(string $method, array $arguments)
     {
         if (is_callable([Schema::class, $method])) {
-            return $this->getOrCreate((new ReflectionClass(Schema::class))->getMethod($method)->getReturnType());
+            $type = (new ReflectionClass(Schema::class))->getMethod($method)->getReturnType();
+
+            $schema = $this->getOrCreate($type);
+
+            if (isset($arguments[0]) && is_callable($arguments[0])) {
+                call_user_func($arguments[0], $schema, $this);
+
+                return $this;
+            }
+
+            return $schema;
         }
 
         throw new BadMethodCallException(sprintf('The method "%" does not exist on class "%s".', $method, get_class($this)));
@@ -54,13 +64,15 @@ class Graph extends BaseType
 
     public function getOrCreate(string $type): Type
     {
-        if ($this->has($type)) {
-            return $this->get($type);
-        } elseif (is_subclass_of($type, Type::class)) {
-            return $this->properties[$type] = new $type();
+        if (!is_subclass_of($type, Type::class)) {
+            throw new InvalidArgumentException(sprintf('The given type "%s" is not an instance of "%s".', $type, Type::class));
         }
 
-        throw new InvalidArgumentException(sprintf('The given type "%s" is not an instance of "%s".', $type, Type::class));
+        if (!$this->has($type)) {
+            $this->set(new $type());
+        }
+
+        return $this->get($type);
     }
 
     public function hide(string $type)

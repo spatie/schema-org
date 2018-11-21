@@ -134,4 +134,17 @@ class GraphTest extends TestCase
         $this->assertInstanceOf(Organization::class, $organization);
         $this->assertEquals('<script type="application/ld+json">{"@context":"https:\/\/schema.org","@graph":[{"@type":"Organization","name":"My Company"}]}</script>', $graph->toScript());
     }
+
+    /** @test */
+    public function it_can_call_overloaded_schema_methods_with_callback()
+    {
+        $graph = (new Graph())
+            ->organization(function(Organization $organization) {
+                $organization->name('My Company');
+            });
+
+        $this->assertInstanceOf(Graph::class, $graph);
+        $this->assertInstanceOf(Organization::class, $graph->organization());
+        $this->assertEquals('<script type="application/ld+json">{"@context":"https:\/\/schema.org","@graph":[{"@type":"Organization","name":"My Company"}]}</script>', $graph->toScript());
+    }
 }
