@@ -2,12 +2,12 @@
 
 namespace Spatie\Skeleton\Test;
 
-use Spatie\SchemaOrg\Product;
 use Spatie\SchemaOrg\Type;
 use Spatie\SchemaOrg\Brand;
 use Spatie\SchemaOrg\Graph;
 use Spatie\SchemaOrg\Schema;
 use InvalidArgumentException;
+use Spatie\SchemaOrg\Product;
 use PHPUnit\Framework\TestCase;
 use Spatie\SchemaOrg\Organization;
 
@@ -140,7 +140,7 @@ class GraphTest extends TestCase
     public function it_can_call_overloaded_schema_methods_with_callback()
     {
         $graph = (new Graph())
-            ->organization(function(Organization $organization) {
+            ->organization(function (Organization $organization) {
                 $organization->name('My Company');
             });
 
@@ -153,10 +153,10 @@ class GraphTest extends TestCase
     public function it_can_call_overloaded_schema_methods_with_callback_multiple_times()
     {
         $graph = (new Graph())
-            ->organization(function(Organization $organization) {
+            ->organization(function (Organization $organization) {
                 $organization->name('My Company');
             })
-            ->organization(function(Organization $organization) {
+            ->organization(function (Organization $organization) {
                 $organization->description('This is my awesome Company.');
             });
 
