@@ -2,6 +2,7 @@
 
 namespace Spatie\Skeleton\Test;
 
+use Spatie\SchemaOrg\Product;
 use Spatie\SchemaOrg\Type;
 use Spatie\SchemaOrg\Brand;
 use Spatie\SchemaOrg\Graph;
@@ -146,5 +147,41 @@ class GraphTest extends TestCase
         $this->assertInstanceOf(Graph::class, $graph);
         $this->assertInstanceOf(Organization::class, $graph->organization());
         $this->assertEquals('<script type="application/ld+json">{"@context":"https:\/\/schema.org","@graph":[{"@type":"Organization","name":"My Company"}]}</script>', $graph->toScript());
+    }
+
+    /** @test */
+    public function it_can_call_overloaded_schema_methods_with_callback_multiple_times()
+    {
+        $graph = (new Graph())
+            ->organization(function(Organization $organization) {
+                $organization->name('My Company');
+            })
+            ->organization(function(Organization $organization) {
+                $organization->description('This is my awesome Company.');
+            });
+
+        $this->assertInstanceOf(Graph::class, $graph);
+        $this->assertInstanceOf(Organization::class, $graph->organization());
+        $this->assertEquals('<script type="application/ld+json">{"@context":"https:\/\/schema.org","@graph":[{"@type":"Organization","name":"My Company","description":"This is my awesome Company."}]}</script>', $graph->toScript());
+    }
+
+    /** @test */
+    public function it_can_call_overloaded_schema_methods_with_callback_and_access_schemas_in_child()
+    {
+        $graph = (new Graph())
+            ->product(function (Product $product, Graph $graph) {
+                $product
+                    ->name('My Product')
+                    ->brand($graph->organization());
+            })
+            ->organization(function (Organization $organization) {
+                return $organization->name('My Company');
+            })
+            ->hide(Organization::class);
+
+        $this->assertInstanceOf(Graph::class, $graph);
+        $this->assertInstanceOf(Organization::class, $graph->organization());
+        $this->assertInstanceOf(Product::class, $graph->product());
+        $this->assertEquals('<script type="application/ld+json">{"@context":"https:\/\/schema.org","@graph":[{"@type":"Product","name":"My Product","brand":{"@type":"Organization","name":"My Company"}}]}</script>', $graph->toScript());
     }
 }
