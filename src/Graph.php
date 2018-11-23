@@ -33,7 +33,7 @@ class Graph extends BaseType
         throw new BadMethodCallException(sprintf('The method "%" does not exist on class "%s".', $method, get_class($this)));
     }
 
-    public function add(Type $schema)
+    public function add(Type $schema): self
     {
         $type = get_class($schema);
         if ($this->has($type)) {
@@ -64,25 +64,25 @@ class Graph extends BaseType
 
     public function getOrCreate(string $type): Type
     {
-        if (!is_subclass_of($type, Type::class)) {
+        if (! is_subclass_of($type, Type::class)) {
             throw new InvalidArgumentException(sprintf('The given type "%s" is not an instance of "%s".', $type, Type::class));
         }
 
-        if (!$this->has($type)) {
+        if (! $this->has($type)) {
             $this->set(new $type());
         }
 
         return $this->get($type);
     }
 
-    public function hide(string $type)
+    public function hide(string $type): self
     {
         $this->hidden[$type] = true;
 
         return $this;
     }
 
-    public function show(string $type)
+    public function show(string $type): self
     {
         $this->hidden[$type] = false;
 
