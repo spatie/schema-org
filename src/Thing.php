@@ -88,7 +88,7 @@ class Thing extends BaseType
      */
     public function identifier($identifier)
     {
-        return $this->setProperty('identifier', $identifier);
+        return $this->setProperty('id', $identifier);
     }
 
     /**
