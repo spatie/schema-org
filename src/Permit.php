@@ -54,7 +54,7 @@ class Permit extends BaseType
     }
 
     /**
-     * The time validity of the permit.
+     * The duration of validity of a permit or similar thing.
      *
      * @param Duration|Duration[] $validFor
      *
@@ -82,7 +82,7 @@ class Permit extends BaseType
     }
 
     /**
-     * The geographic area where the permit is valid.
+     * The geographic area where a permit or similar thing is valid.
      *
      * @param AdministrativeArea|AdministrativeArea[] $validIn
      *

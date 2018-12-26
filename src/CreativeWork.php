@@ -1165,6 +1165,11 @@ class CreativeWork extends BaseType
      *       Written works such as books may sometimes have precise temporal
      * coverage too, e.g. a work set in 1939 - 1945 can be indicated in ISO 8601
      * interval format format via "1939/1945".
+     * 
+     * Open-ended date ranges can be written with ".." in place of the end date.
+     * For example, "2015-11/.." indicates a range beginning in November 2015
+     * and with no specified final date. This is tentative and might be updated
+     * in future when ISO 8601 is officially updated.
      *
      * @param \DateTimeInterface|\DateTimeInterface[]|string|string[] $temporalCoverage
      *
