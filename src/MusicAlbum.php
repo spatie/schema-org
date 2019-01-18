@@ -57,7 +57,7 @@ class MusicAlbum extends BaseType
     /**
      * The artist that performed this album or recording.
      *
-     * @param MusicGroup|MusicGroup[] $byArtist
+     * @param MusicGroup|MusicGroup[]|Person|Person[] $byArtist
      *
      * @return static
      *
