@@ -7,7 +7,7 @@ use BadMethodCallException;
 use InvalidArgumentException;
 
 /**
- * @mixin Schema
+ * @mixin \Spatie\SchemaOrg\Schema
  */
 class Graph extends BaseType
 {
@@ -36,6 +36,7 @@ class Graph extends BaseType
     public function add(Type $schema): self
     {
         $type = get_class($schema);
+        
         if ($this->has($type)) {
             throw new InvalidArgumentException(sprintf('The graph already has an item of type "%s".', $type));
         }
@@ -92,6 +93,7 @@ class Graph extends BaseType
     public function toArray(): array
     {
         $properties = $this->getProperties();
+        
         foreach ($this->hidden as $type => $hide) {
             if ($hide) {
                 unset($properties[$type]);
