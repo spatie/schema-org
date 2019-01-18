@@ -155,15 +155,21 @@ The Graph has a lot of methods and utilities - the type-safe and simplest way is
 ```php
 $graph = new Graph();
 
-// create product and prelink organization
-$graph->product()->name('My cool Product')->brand($graph->organization());
-// hide the organization from the created script tag
+// Create a product and prelink organization
+$graph
+    ->product()
+    ->name('My cool Product')
+    ->brand($graph->organization());
+
+// Hide the organization from the created script tag
 $graph->hide(\Spatie\SchemaOrg\Organization::class);
 
-// somewhere else fill organization
-$graph->organization()->name('My awesome Company');
+// Somewhere else fill out the organization
+$graph
+    ->organization()
+    ->name('My awesome Company');
 
-// render graph to script tag
+// Render graph to script tag
 echo $graph;
 ```
 
