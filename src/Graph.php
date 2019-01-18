@@ -4,10 +4,12 @@ namespace Spatie\SchemaOrg;
 
 use ReflectionClass;
 use BadMethodCallException;
-use InvalidArgumentException;
+use Spatie\SchemaOrg\Exceptions\InvalidType;
+use Spatie\SchemaOrg\Exceptions\TypeAlreadyInGraph;
+use Spatie\SchemaOrg\Exceptions\TypeNotInGraph;
 
 /**
- * @mixin Schema
+ * @mixin \Spatie\SchemaOrg\Schema
  */
 class Graph extends BaseType
 {
@@ -36,8 +38,9 @@ class Graph extends BaseType
     public function add(Type $schema): self
     {
         $type = get_class($schema);
+
         if ($this->has($type)) {
-            throw new InvalidArgumentException(sprintf('The graph already has an item of type "%s".', $type));
+            throw new TypeAlreadyInGraph(sprintf('The graph already has an item of type "%s".', $type));
         }
 
         return $this->set($schema);
@@ -56,7 +59,7 @@ class Graph extends BaseType
     public function get(string $type): Type
     {
         if (! $this->has($type)) {
-            throw new InvalidArgumentException(sprintf('The graph does not have an item of type "%s".', $type));
+            throw new TypeNotInGraph(sprintf('The graph does not have an item of type "%s".', $type));
         }
 
         return $this->getProperty($type);
@@ -65,7 +68,7 @@ class Graph extends BaseType
     public function getOrCreate(string $type): Type
     {
         if (! is_subclass_of($type, Type::class)) {
-            throw new InvalidArgumentException(sprintf('The given type "%s" is not an instance of "%s".', $type, Type::class));
+            throw new InvalidType(sprintf('The given type "%s" is not an instance of "%s".', $type, Type::class));
         }
 
         if (! $this->has($type)) {
@@ -92,6 +95,7 @@ class Graph extends BaseType
     public function toArray(): array
     {
         $properties = $this->getProperties();
+
         foreach ($this->hidden as $type => $hide) {
             if ($hide) {
                 unset($properties[$type]);
