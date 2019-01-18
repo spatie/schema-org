@@ -2,6 +2,9 @@
 
 All Notable changes to `schema-org` will be documented in this file.
 
+## 2.1.0 - 2019-01-18
+- Add `Graph` support
+
 ## 2.0.3 - 2018-10-18
 - Convert invalid objects that have a `__toString` method to strings
 
