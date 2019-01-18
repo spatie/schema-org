@@ -5,8 +5,8 @@ namespace Spatie\SchemaOrg;
 use ReflectionClass;
 use BadMethodCallException;
 use Spatie\SchemaOrg\Exceptions\InvalidType;
-use Spatie\SchemaOrg\Exceptions\TypeAlreadyInGraph;
 use Spatie\SchemaOrg\Exceptions\TypeNotInGraph;
+use Spatie\SchemaOrg\Exceptions\TypeAlreadyInGraph;
 
 /**
  * @mixin \Spatie\SchemaOrg\Schema
