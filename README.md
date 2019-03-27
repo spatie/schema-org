@@ -92,7 +92,7 @@ echo json_encode($localBusiness);
 As of v1.6.0, all [Enumeration](http://schema.org/Enumeration) child types are available as classes with constants.
 
 ```php
-Schema::book()->bookFormat(Spatie\Schema\BookFormatType::Hardcover);
+Schema::book()->bookFormat(Spatie\SchemaOrg\BookFormatType::Hardcover);
 ```
 
 There's no full API documentation for types and properties. You can refer to [the source](https://github.com/spatie/schema-org/tree/master/src) or to [the schema.org website](http://schema.org).
