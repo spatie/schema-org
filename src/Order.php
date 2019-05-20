@@ -224,7 +224,7 @@ class Order extends BaseType
     /**
      * The item ordered.
      *
-     * @param OrderItem|OrderItem[]|Product|Product[] $orderedItem
+     * @param OrderItem|OrderItem[]|Product|Product[]|Service|Service[] $orderedItem
      *
      * @return static
      *

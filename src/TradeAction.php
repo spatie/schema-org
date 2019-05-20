@@ -51,6 +51,29 @@ class TradeAction extends BaseType
     }
 
     /**
+     * The currency of the price, or a price component when attached to
+     * [[PriceSpecification]] and its subtypes.
+     * 
+     * Use standard formats: [ISO 4217 currency
+     * format](http://en.wikipedia.org/wiki/ISO_4217) e.g. "USD"; [Ticker
+     * symbol](https://en.wikipedia.org/wiki/List_of_cryptocurrencies) for
+     * cryptocurrencies e.g. "BTC"; well known names for [Local Exchange
+     * Tradings
+     * Systems](https://en.wikipedia.org/wiki/Local_exchange_trading_system)
+     * (LETS) and other currency types e.g. "Ithaca HOUR".
+     *
+     * @param string|string[] $priceCurrency
+     *
+     * @return static
+     *
+     * @see http://schema.org/priceCurrency
+     */
+    public function priceCurrency($priceCurrency)
+    {
+        return $this->setProperty('priceCurrency', $priceCurrency);
+    }
+
+    /**
      * One or more detailed price specifications, indicating the unit price and
      * delivery or payment charges.
      *

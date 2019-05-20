@@ -100,34 +100,4 @@ class Dataset extends BaseType
         return $this->setProperty('issn', $issn);
     }
 
-    /**
-     * The range of spatial applicability of a dataset, e.g. for a dataset of
-     * New York weather, the state of New York.
-     *
-     * @param Place|Place[] $spatial
-     *
-     * @return static
-     *
-     * @see http://schema.org/spatial
-     */
-    public function spatial($spatial)
-    {
-        return $this->setProperty('spatial', $spatial);
-    }
-
-    /**
-     * The range of temporal applicability of a dataset, e.g. for a 2011 census
-     * dataset, the year 2011 (in ISO 8601 time interval format).
-     *
-     * @param \DateTimeInterface|\DateTimeInterface[] $temporal
-     *
-     * @return static
-     *
-     * @see http://schema.org/temporal
-     */
-    public function temporal($temporal)
-    {
-        return $this->setProperty('temporal', $temporal);
-    }
-
 }

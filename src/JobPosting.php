@@ -54,7 +54,7 @@ class JobPosting extends BaseType
     }
 
     /**
-     * Educational background needed for the position.
+     * Educational background needed for the position or Occupation.
      *
      * @param string|string[] $educationRequirements
      *
@@ -83,7 +83,26 @@ class JobPosting extends BaseType
     }
 
     /**
-     * Description of skills and experience needed for the position.
+     * An estimated salary for a job posting or occupation, based on a variety
+     * of variables including, but not limited to industry, job title, and
+     * location. Estimated salaries  are often computed by outside organizations
+     * rather than the hiring organization, who may not have committed to the
+     * estimated value.
+     *
+     * @param MonetaryAmountDistribution|MonetaryAmountDistribution[] $estimatedSalary
+     *
+     * @return static
+     *
+     * @see http://schema.org/estimatedSalary
+     */
+    public function estimatedSalary($estimatedSalary)
+    {
+        return $this->setProperty('estimatedSalary', $estimatedSalary);
+    }
+
+    /**
+     * Description of skills and experience needed for the position or
+     * Occupation.
      *
      * @param string|string[] $experienceRequirements
      *
@@ -198,7 +217,7 @@ class JobPosting extends BaseType
     }
 
     /**
-     * Specific qualifications required for this role.
+     * Specific qualifications required for this role or Occupation.
      *
      * @param string|string[] $qualifications
      *
@@ -212,7 +231,21 @@ class JobPosting extends BaseType
     }
 
     /**
-     * Responsibilities associated with this role.
+     * The Occupation for the JobPosting.
+     *
+     * @param Occupation|Occupation[] $relevantOccupation
+     *
+     * @return static
+     *
+     * @see http://schema.org/relevantOccupation
+     */
+    public function relevantOccupation($relevantOccupation)
+    {
+        return $this->setProperty('relevantOccupation', $relevantOccupation);
+    }
+
+    /**
+     * Responsibilities associated with this role or Occupation.
      *
      * @param string|string[] $responsibilities
      *
@@ -242,7 +275,7 @@ class JobPosting extends BaseType
     }
 
     /**
-     * Skills required to fulfill this role.
+     * Skills required to fulfill this role or in this Occupation.
      *
      * @param string|string[] $skills
      *

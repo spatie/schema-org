@@ -79,6 +79,7 @@ abstract class BaseType implements Type, \ArrayAccess, \JsonSerializable
 
     public function toArray(): array
     {
+        $this->serializeIdentifier();
         $properties = $this->serializeProperty($this->getProperties());
 
         return [
@@ -111,6 +112,16 @@ abstract class BaseType implements Type, \ArrayAccess, \JsonSerializable
         }
 
         return $property;
+    }
+
+    protected function serializeIdentifier()
+    {
+        if ($this->offsetExists('identifier'))
+        {
+            $id = $this->getProperty('identifier');
+            $this->setProperty('@id', $id);
+            $this->offsetUnset('identifier');
+        }
     }
 
     public function toScript(): string

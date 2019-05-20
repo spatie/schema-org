@@ -336,4 +336,18 @@ class Service extends BaseType
         return $this->setProperty('serviceType', $serviceType);
     }
 
+    /**
+     * A slogan or motto associated with the item.
+     *
+     * @param string|string[] $slogan
+     *
+     * @return static
+     *
+     * @see http://schema.org/slogan
+     */
+    public function slogan($slogan)
+    {
+        return $this->setProperty('slogan', $slogan);
+    }
+
 }

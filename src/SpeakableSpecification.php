@@ -3,13 +3,16 @@
 namespace Spatie\SchemaOrg;
 
 /**
- * A web page element, like a table or an image.
+ * A SpeakableSpecification indicates (typically via [[xpath]] or
+ * [[cssSelector]]) sections of a document that are highlighted as particularly
+ * [[speakable]]. Instances of this type are expected to be used primarily as
+ * values of the [[speakable]] property.
  *
- * @see http://schema.org/WebPageElement
+ * @see http://schema.org/SpeakableSpecification
  *
- * @mixin \Spatie\SchemaOrg\CreativeWork
+ * @mixin \Spatie\SchemaOrg\Intangible
  */
-class WebPageElement extends BaseType
+class SpeakableSpecification extends BaseType
 {
     /**
      * A CSS selector, e.g. of a [[SpeakableSpecification]] or

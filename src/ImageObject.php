@@ -12,9 +12,11 @@ namespace Spatie\SchemaOrg;
 class ImageObject extends BaseType
 {
     /**
-     * The caption for this object.
+     * The caption for this object. For downloadable machine formats (closed
+     * caption, subtitles etc.) use MediaObject and indicate the
+     * [[encodingFormat]].
      *
-     * @param string|string[] $caption
+     * @param MediaObject|MediaObject[]|string|string[] $caption
      *
      * @return static
      *

@@ -55,4 +55,18 @@ class Brand extends BaseType
         return $this->setProperty('review', $review);
     }
 
+    /**
+     * A slogan or motto associated with the item.
+     *
+     * @param string|string[] $slogan
+     *
+     * @return static
+     *
+     * @see http://schema.org/slogan
+     */
+    public function slogan($slogan)
+    {
+        return $this->setProperty('slogan', $slogan);
+    }
+
 }

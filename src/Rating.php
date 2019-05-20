@@ -44,6 +44,13 @@ class Rating extends BaseType
 
     /**
      * The rating for the content.
+     * 
+     * Usage guidelines:
+     * 
+     * * Use values from 0123456789 (Unicode 'DIGIT ZERO' (U+0030) to 'DIGIT
+     * NINE' (U+0039)) rather than superficially similiar Unicode symbols.
+     * * Use '.' (Unicode 'FULL STOP' (U+002E)) rather than ',' to indicate a
+     * decimal point. Avoid using these symbols as a readability separator.
      *
      * @param float|float[]|int|int[]|string|string[] $ratingValue
      *
@@ -54,6 +61,21 @@ class Rating extends BaseType
     public function ratingValue($ratingValue)
     {
         return $this->setProperty('ratingValue', $ratingValue);
+    }
+
+    /**
+     * This Review or Rating is relevant to this part or facet of the
+     * itemReviewed.
+     *
+     * @param string|string[] $reviewAspect
+     *
+     * @return static
+     *
+     * @see http://schema.org/reviewAspect
+     */
+    public function reviewAspect($reviewAspect)
+    {
+        return $this->setProperty('reviewAspect', $reviewAspect);
     }
 
     /**

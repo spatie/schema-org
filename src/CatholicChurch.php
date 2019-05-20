@@ -7,7 +7,7 @@ namespace Spatie\SchemaOrg;
  *
  * @see http://schema.org/CatholicChurch
  *
- * @mixin \Spatie\SchemaOrg\PlaceOfWorship
+ * @mixin \Spatie\SchemaOrg\Church
  */
 class CatholicChurch extends BaseType
 {

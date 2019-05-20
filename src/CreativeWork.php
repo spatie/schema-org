@@ -217,7 +217,7 @@ class CreativeWork extends BaseType
     /**
      * An embedded audio object.
      *
-     * @param AudioObject|AudioObject[] $audio
+     * @param AudioObject|AudioObject[]|Clip|Clip[] $audio
      *
      * @return static
      *
@@ -1118,6 +1118,22 @@ class CreativeWork extends BaseType
     }
 
     /**
+     * The "spatial" property can be used in cases when more specific properties
+     * (e.g. [[locationCreated]], [[spatialCoverage]], [[contentLocation]]) are
+     * not known to be appropriate.
+     *
+     * @param Place|Place[] $spatial
+     *
+     * @return static
+     *
+     * @see http://schema.org/spatial
+     */
+    public function spatial($spatial)
+    {
+        return $this->setProperty('spatial', $spatial);
+    }
+
+    /**
      * The spatialCoverage of a CreativeWork indicates the place(s) which are
      * the focus of the content. It is a subproperty of
      *       contentLocation intended primarily for more technical and detailed
@@ -1150,6 +1166,23 @@ class CreativeWork extends BaseType
     public function sponsor($sponsor)
     {
         return $this->setProperty('sponsor', $sponsor);
+    }
+
+    /**
+     * The "temporal" property can be used in cases where more specific
+     * properties
+     * (e.g. [[temporalCoverage]], [[dateCreated]], [[dateModified]],
+     * [[datePublished]]) are not known to be appropriate.
+     *
+     * @param \DateTimeInterface|\DateTimeInterface[]|string|string[] $temporal
+     *
+     * @return static
+     *
+     * @see http://schema.org/temporal
+     */
+    public function temporal($temporal)
+    {
+        return $this->setProperty('temporal', $temporal);
     }
 
     /**
@@ -1212,8 +1245,8 @@ class CreativeWork extends BaseType
 
     /**
      * Approximate or typical time it takes to work with or through this
-     * learning resource for the typical intended target audience, e.g. 'P30M',
-     * 'P1H25M'.
+     * learning resource for the typical intended target audience, e.g. 'PT30M',
+     * 'PT1H25M'.
      *
      * @param Duration|Duration[] $timeRequired
      *
@@ -1273,7 +1306,7 @@ class CreativeWork extends BaseType
     /**
      * An embedded video object.
      *
-     * @param VideoObject|VideoObject[] $video
+     * @param Clip|Clip[]|VideoObject|VideoObject[] $video
      *
      * @return static
      *

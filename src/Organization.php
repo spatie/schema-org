@@ -828,6 +828,20 @@ class Organization extends BaseType
     }
 
     /**
+     * A slogan or motto associated with the item.
+     *
+     * @param string|string[] $slogan
+     *
+     * @return static
+     *
+     * @see http://schema.org/slogan
+     */
+    public function slogan($slogan)
+    {
+        return $this->setProperty('slogan', $slogan);
+    }
+
+    /**
      * A person or organization that supports a thing through a pledge, promise,
      * or financial contribution. e.g. a sponsor of a Medical Study or a
      * corporate sponsor of an event.
