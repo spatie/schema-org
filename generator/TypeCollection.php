@@ -18,6 +18,16 @@ class TypeCollection
         ksort($this->types);
 
         foreach ($properties as $property) {
+            foreach ($property->ranges as $range) {
+                if (
+                    strpos($range, '[]') === false
+                    && ! in_array($range, ['bool', 'false', 'true', '\DateTimeInterface', 'string', 'float', 'int'])
+                    && ! isset($this->types[$range])
+                ) {
+                    $property->pending = true;
+                }
+            }
+
             $this->addProperty($property);
         }
 

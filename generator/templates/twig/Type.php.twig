@@ -11,6 +11,9 @@ namespace Spatie\SchemaOrg;
 {% for parent in type.parents %}
  * @mixin \Spatie\SchemaOrg\{{ parent }}
 {% endfor %}
+{% for property in type.properties if property.pending  %}
+ * @method static {{ property.name }}(${{ property.name }}) The value should be instance of pending types {{ property.ranges | join('|') }}
+{% endfor %}
 {% endif %}
  */
 class {{ type.name }} extends BaseType
@@ -24,7 +27,7 @@ class {{ type.name }} extends BaseType
      const {{ constant.name }} = '{{ constant.value }}';
 
 {% endfor %}
-{% for property in type.properties %}
+{% for property in type.properties if not property.pending  %}
     /**
      * {{ property.description | doc(1) }}
      *
