@@ -168,6 +168,20 @@ class Thing extends BaseType
     }
 
     /**
+     * A CreativeWork or Event about this Thing..
+     *
+     * @param CreativeWork|CreativeWork[]|Event|Event[] $subjectOf
+     *
+     * @return static
+     *
+     * @see http://schema.org/subjectOf
+     */
+    public function subjectOf($subjectOf)
+    {
+        return $this->setProperty('subjectOf', $subjectOf);
+    }
+
+    /**
      * URL of the item.
      *
      * @param string|string[] $url

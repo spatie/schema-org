@@ -15,7 +15,7 @@ class Menu extends BaseType
     /**
      * A food or drink item contained in a menu or menu section.
      *
-     * @param MenuSection|MenuSection[] $hasMenuItem
+     * @param MenuItem|MenuItem[] $hasMenuItem
      *
      * @return static
      *

@@ -77,7 +77,9 @@ class GeoShape extends BaseType
 
     /**
      * The elevation of a location ([WGS
-     * 84](https://en.wikipedia.org/wiki/World_Geodetic_System)).
+     * 84](https://en.wikipedia.org/wiki/World_Geodetic_System)). Values may be
+     * of the form 'NUMBER UNIT_OF_MEASUREMENT' (e.g., '1,000 m', '3,200 ft')
+     * while numbers alone should be assumed to be a value in meters.
      *
      * @param float|float[]|int|int[]|string|string[] $elevation
      *

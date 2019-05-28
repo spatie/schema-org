@@ -506,6 +506,20 @@ class Product extends BaseType
     }
 
     /**
+     * A slogan or motto associated with the item.
+     *
+     * @param string|string[] $slogan
+     *
+     * @return static
+     *
+     * @see http://schema.org/slogan
+     */
+    public function slogan($slogan)
+    {
+        return $this->setProperty('slogan', $slogan);
+    }
+
+    /**
      * The weight of the product or person.
      *
      * @param QuantitativeValue|QuantitativeValue[] $weight

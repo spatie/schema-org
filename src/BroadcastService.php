@@ -56,6 +56,22 @@ class BroadcastService extends BaseType
     }
 
     /**
+     * The frequency used for over-the-air broadcasts. Numeric values or simple
+     * ranges e.g. 87-99. In addition a shortcut idiom is supported for
+     * frequences of AM and FM radio channels, e.g. "87 FM".
+     *
+     * @param BroadcastFrequencySpecification|BroadcastFrequencySpecification[]|string|string[] $broadcastFrequency
+     *
+     * @return static
+     *
+     * @see http://schema.org/broadcastFrequency
+     */
+    public function broadcastFrequency($broadcastFrequency)
+    {
+        return $this->setProperty('broadcastFrequency', $broadcastFrequency);
+    }
+
+    /**
      * The timezone in [ISO 8601 format](http://en.wikipedia.org/wiki/ISO_8601)
      * for which the service bases its broadcasts
      *
@@ -82,6 +98,20 @@ class BroadcastService extends BaseType
     public function broadcaster($broadcaster)
     {
         return $this->setProperty('broadcaster', $broadcaster);
+    }
+
+    /**
+     * A broadcast channel of a broadcast service.
+     *
+     * @param BroadcastChannel|BroadcastChannel[] $hasBroadcastChannel
+     *
+     * @return static
+     *
+     * @see http://schema.org/hasBroadcastChannel
+     */
+    public function hasBroadcastChannel($hasBroadcastChannel)
+    {
+        return $this->setProperty('hasBroadcastChannel', $hasBroadcastChannel);
     }
 
     /**

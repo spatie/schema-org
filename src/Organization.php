@@ -706,7 +706,7 @@ class Organization extends BaseType
     /**
      * A pointer to the organization or person making the offer.
      *
-     * @param Offer|Offer[]|Person|Person[] $offeredBy
+     * @param Organization|Organization[]|Person|Person[] $offeredBy
      *
      * @return static
      *
@@ -825,6 +825,20 @@ class Organization extends BaseType
     public function serviceArea($serviceArea)
     {
         return $this->setProperty('serviceArea', $serviceArea);
+    }
+
+    /**
+     * A slogan or motto associated with the item.
+     *
+     * @param string|string[] $slogan
+     *
+     * @return static
+     *
+     * @see http://schema.org/slogan
+     */
+    public function slogan($slogan)
+    {
+        return $this->setProperty('slogan', $slogan);
     }
 
     /**

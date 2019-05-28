@@ -57,7 +57,7 @@ class Person extends BaseType
     /**
      * An organization that the person is an alumni of.
      *
-     * @param EducationalOrganization|EducationalOrganization[] $alumniOf
+     * @param EducationalOrganization|EducationalOrganization[]|Organization|Organization[] $alumniOf
      *
      * @return static
      *
@@ -370,6 +370,21 @@ class Person extends BaseType
     public function globalLocationNumber($globalLocationNumber)
     {
         return $this->setProperty('globalLocationNumber', $globalLocationNumber);
+    }
+
+    /**
+     * The Person's occupation. For past professions, use Role for expressing
+     * dates.
+     *
+     * @param Occupation|Occupation[] $hasOccupation
+     *
+     * @return static
+     *
+     * @see http://schema.org/hasOccupation
+     */
+    public function hasOccupation($hasOccupation)
+    {
+        return $this->setProperty('hasOccupation', $hasOccupation);
     }
 
     /**
