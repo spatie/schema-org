@@ -11,7 +11,7 @@ if [[ `git status --porcelain` ]]; then
 
     git commit --message="update types by current rdfa - $UTC_NOW"
     git tag --annotate "$NEW_TAG" --message="update types by current rdfa - $UTC_NOW"
-    git push
+    git push --all
 else
     echo "nothing changed"
 fi
