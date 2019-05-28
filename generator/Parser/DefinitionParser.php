@@ -13,32 +13,41 @@ class DefinitionParser
 {
     public function parse(Definitions $definitions): TypeCollection
     {
-        $types = array_filter($definitions
-            ->query('[typeof="rdfs:Class"]')
-            ->each(function (Crawler $crawler) {
-                return call_user_func(ParseType::fromCrawler($crawler));
-            }));
-
-        $properties = array_filter($definitions
-            ->query('[typeof="rdf:Property"]')
-            ->each(function (Crawler $crawler) {
-                return call_user_func(ParseProperty::fromCrawler($crawler));
-            }));
-
+        $sources = $definitions->getSourceIds();
+        $types = [];
+        $properties = [];
         $constants = [];
 
-        foreach ($types as $type) {
-            $constants = array_merge($constants, array_filter($definitions
-                ->query('[typeof="'.$type->resource.'"]')
-                ->each(function (Crawler $crawler) use ($type) {
-                    $constant = call_user_func(ParseConstant::fromCrawler($crawler));
-
-                    if (! is_null($constant)) {
-                        $constant->type = $type->name;
-                    }
-
-                    return $constant;
+        foreach ($sources as $sourceId) {
+            $types = array_merge($types, array_filter($definitions
+                ->query($sourceId, '[typeof="rdfs:Class"]')
+                ->each(function (Crawler $crawler) {
+                    return call_user_func(ParseType::fromCrawler($crawler));
                 })));
+        }
+
+        foreach ($sources as $sourceId) {
+            $properties = array_merge($properties, array_filter($definitions
+                ->query($sourceId, '[typeof="rdf:Property"]')
+                ->each(function (Crawler $crawler) {
+                    return call_user_func(ParseProperty::fromCrawler($crawler));
+                })));
+        }
+
+        foreach ($sources as $sourceId) {
+            foreach ($types as $type) {
+                $constants = array_merge($constants, array_filter($definitions
+                    ->query($sourceId, '[typeof="'.$type->resource.'"]')
+                    ->each(function (Crawler $crawler) use ($type) {
+                        $constant = call_user_func(ParseConstant::fromCrawler($crawler));
+
+                        if (! is_null($constant)) {
+                            $constant->type = $type->name;
+                        }
+
+                        return $constant;
+                    })));
+            }
         }
 
         return new TypeCollection($types, $properties, $constants);

@@ -24,7 +24,7 @@ class ParseType extends Task
         if ($subClassOf->count() > 0) {
             $type->parents = array_filter($subClassOf
                 ->each(function (Crawler $node) {
-                    $parent = $this->getText($node);
+                    $parent = str_replace('schema:', '', $this->getText($node));
 
                     return strpos($parent, ':') === false ? $parent : null;
                 }));

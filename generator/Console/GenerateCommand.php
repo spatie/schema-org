@@ -16,7 +16,8 @@ class GenerateCommand extends Command
         $this
             ->setName('generate')
             ->setDescription('Generate the package code from the schema.org docs')
-            ->addOption('local', 'l', InputOption::VALUE_NONE, 'Use a cached version of the source');
+            ->addOption('local', 'l', InputOption::VALUE_NONE, 'Use a cached version of the source')
+            ->addOption('extensions', 'e', InputOption::VALUE_REQUIRED, 'Comma-separated list of Schema.org extensions to include ()');
     }
 
     /**
@@ -31,9 +32,29 @@ class GenerateCommand extends Command
 
         $generator = new PackageGenerator();
 
-        $definitions = new Definitions([
+        $sources = [
             'core' => 'https://raw.githubusercontent.com/schemaorg/schemaorg/master/data/schema.rdfa',
-        ]);
+        ];
+
+        if ($input->getOption('extensions')) {
+            $extensions = explode(',', $input->getOption('extensions'));
+            foreach ($extensions as $extension) {
+                switch ($extension) {
+                    case 'auto':
+                        $sources['auto'] = 'https://raw.githubusercontent.com/schemaorg/schemaorg/master/data/ext/auto/auto.rdfa';
+                        break;
+                    case 'bib':
+                        $sources['bib'] = 'https://raw.githubusercontent.com/schemaorg/schemaorg/master/data/ext/bib/bsdo-1.0.rdfa';
+                        break;
+                    case 'health-lifesci':
+                        $sources['med-health-core'] = 'https://raw.githubusercontent.com/schemaorg/schemaorg/master/data/ext/health-lifesci/med-health-core.rdfa';
+                        $sources['physical-activity-and-exercise'] = 'https://raw.githubusercontent.com/schemaorg/schemaorg/master/data/ext/health-lifesci/physical-activity-and-exercise.rdfa';
+                        break;
+                }
+            }
+        }
+
+        $definitions = new Definitions($sources);
 
         if (! $input->getOption('local')) {
             $definitions->preload();
