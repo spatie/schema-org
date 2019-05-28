@@ -373,6 +373,21 @@ class Person extends BaseType
     }
 
     /**
+     * The Person's occupation. For past professions, use Role for expressing
+     * dates.
+     *
+     * @param Occupation|Occupation[] $hasOccupation
+     *
+     * @return static
+     *
+     * @see http://schema.org/hasOccupation
+     */
+    public function hasOccupation($hasOccupation)
+    {
+        return $this->setProperty('hasOccupation', $hasOccupation);
+    }
+
+    /**
      * Indicates an OfferCatalog listing for this Organization, Person, or
      * Service.
      *

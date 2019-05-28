@@ -87,6 +87,23 @@ class LodgingBusiness extends BaseType
     }
 
     /**
+     * The number of rooms (excluding bathrooms and closets) of the
+     * accommodation or lodging business.
+     * Typical unit code(s): ROM for room or C62 for no unit. The type of room
+     * can be put in the unitText property of the QuantitativeValue.
+     *
+     * @param QuantitativeValue|QuantitativeValue[]|float|float[]|int|int[] $numberOfRooms
+     *
+     * @return static
+     *
+     * @see http://schema.org/numberOfRooms
+     */
+    public function numberOfRooms($numberOfRooms)
+    {
+        return $this->setProperty('numberOfRooms', $numberOfRooms);
+    }
+
+    /**
      * Indicates whether pets are allowed to enter the accommodation or lodging
      * business. More detailed information can be put in a text value.
      *

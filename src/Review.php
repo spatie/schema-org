@@ -26,6 +26,21 @@ class Review extends BaseType
     }
 
     /**
+     * This Review or Rating is relevant to this part or facet of the
+     * itemReviewed.
+     *
+     * @param string|string[] $reviewAspect
+     *
+     * @return static
+     *
+     * @see http://schema.org/reviewAspect
+     */
+    public function reviewAspect($reviewAspect)
+    {
+        return $this->setProperty('reviewAspect', $reviewAspect);
+    }
+
+    /**
      * The actual body of the review.
      *
      * @param string|string[] $reviewBody

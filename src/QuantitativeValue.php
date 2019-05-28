@@ -100,6 +100,10 @@ class QuantitativeValue extends BaseType
      * for values is 'Number'.
      * * For [[PropertyValue]], it can be 'Text;', 'Number', 'Boolean', or
      * 'StructuredValue'.
+     * * Use values from 0123456789 (Unicode 'DIGIT ZERO' (U+0030) to 'DIGIT
+     * NINE' (U+0039)) rather than superficially similiar Unicode symbols.
+     * * Use '.' (Unicode 'FULL STOP' (U+002E)) rather than ',' to indicate a
+     * decimal point. Avoid using these symbols as a readability separator.
      *
      * @param StructuredValue|StructuredValue[]|bool|bool[]|float|float[]|int|int[]|string|string[] $value
      *
