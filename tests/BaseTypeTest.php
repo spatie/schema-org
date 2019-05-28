@@ -5,6 +5,7 @@ namespace Spatie\Skeleton\Test;
 use DateTime;
 use Spatie\SchemaOrg\BaseType;
 use PHPUnit\Framework\TestCase;
+use Spatie\SchemaOrg\Exceptions\InvalidProperty;
 
 class BaseTypeTest extends TestCase
 {
@@ -272,12 +273,11 @@ class BaseTypeTest extends TestCase
         $this->assertEquals(json_encode($expected), json_encode($type), 'JSON representation is wrong');
     }
 
-    /**
-     * @test
-     * @expectedException \Spatie\SchemaOrg\Exceptions\InvalidProperty
-     */
+    /** @test */
     public function it_will_throw_invalid_property_exception_with_object_property()
     {
+        $this->expectException(InvalidProperty::class);
+
         $type = new DummyType();
         $type->setProperty('foo', new class() {
         });
