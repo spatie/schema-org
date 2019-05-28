@@ -57,7 +57,7 @@ class Person extends BaseType
     /**
      * An organization that the person is an alumni of.
      *
-     * @param EducationalOrganization|EducationalOrganization[] $alumniOf
+     * @param EducationalOrganization|EducationalOrganization[]|Organization|Organization[] $alumniOf
      *
      * @return static
      *

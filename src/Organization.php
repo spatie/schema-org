@@ -706,7 +706,7 @@ class Organization extends BaseType
     /**
      * A pointer to the organization or person making the offer.
      *
-     * @param Offer|Offer[]|Person|Person[] $offeredBy
+     * @param Organization|Organization[]|Person|Person[] $offeredBy
      *
      * @return static
      *

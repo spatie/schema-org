@@ -30,7 +30,7 @@ class EntryPoint extends BaseType
      * given URL. To specify a specific application or operating system
      * instance, use actionApplication.
      *
-     * @param |[] $actionPlatform
+     * @param string|string[] $actionPlatform
      *
      * @return static
      *
