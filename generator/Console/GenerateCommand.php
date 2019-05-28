@@ -17,7 +17,10 @@ class GenerateCommand extends Command
             ->setName('generate')
             ->setDescription('Generate the package code from the schema.org docs')
             ->addOption('local', 'l', InputOption::VALUE_NONE, 'Use a cached version of the source')
-            ->addOption('extensions', 'e', InputOption::VALUE_REQUIRED, 'Comma-separated list of Schema.org extensions to include ()');
+            ->addOption('rdfa', null, InputOption::VALUE_REQUIRED | InputOption::VALUE_IS_ARRAY, 'Link to RDFA file which extends schema.org to include')
+            ->addOption('with-auto', null, InputOption::VALUE_NONE, 'Include the https://auto.schema.org extension')
+            ->addOption('with-bib', null, InputOption::VALUE_NONE, 'Include the https://bib.schema.org extension')
+            ->addOption('with-health-lifesci', null, InputOption::VALUE_NONE, 'Include the https://health-lifesci.schema.org extension');
     }
 
     /**
@@ -36,23 +39,25 @@ class GenerateCommand extends Command
             'core' => 'https://raw.githubusercontent.com/schemaorg/schemaorg/master/data/schema.rdfa',
         ];
 
-        if ($input->getOption('extensions')) {
-            $extensions = explode(',', $input->getOption('extensions'));
-            foreach ($extensions as $extension) {
-                switch ($extension) {
-                    case 'auto':
-                        $sources['auto'] = 'https://raw.githubusercontent.com/schemaorg/schemaorg/master/data/ext/auto/auto.rdfa';
-                        break;
-                    case 'bib':
-                        $sources['bib'] = 'https://raw.githubusercontent.com/schemaorg/schemaorg/master/data/ext/bib/bsdo-1.0.rdfa';
-                        break;
-                    case 'health-lifesci':
-                        $sources['med-health-core'] = 'https://raw.githubusercontent.com/schemaorg/schemaorg/master/data/ext/health-lifesci/med-health-core.rdfa';
-                        $sources['physical-activity-and-exercise'] = 'https://raw.githubusercontent.com/schemaorg/schemaorg/master/data/ext/health-lifesci/physical-activity-and-exercise.rdfa';
-                        break;
-                }
-            }
+        if ($input->getOption('with-auto')) {
+            $sources['auto'] = 'https://raw.githubusercontent.com/schemaorg/schemaorg/master/data/ext/auto/auto.rdfa';
         }
+
+        if ($input->getOption('with-bib')) {
+            $sources['bsdo'] = 'https://raw.githubusercontent.com/schemaorg/schemaorg/master/data/ext/bib/bsdo-1.0.rdfa';
+            $sources['comics'] = 'https://raw.githubusercontent.com/schemaorg/schemaorg/master/data/ext/bib/comics.rdfa';
+        }
+
+        if ($input->getOption('with-health-lifesci')) {
+            $sources['med-health-core'] = 'https://raw.githubusercontent.com/schemaorg/schemaorg/master/data/ext/health-lifesci/med-health-core.rdfa';
+            $sources['physical-activity-and-exercise'] = 'https://raw.githubusercontent.com/schemaorg/schemaorg/master/data/ext/health-lifesci/physical-activity-and-exercise.rdfa';
+        }
+
+        foreach ($input->getOption('rdfa') as $rdfa) {
+            $sources[pathinfo($rdfa, PATHINFO_FILENAME)] = $rdfa;
+        }
+
+        $sources = array_unique($sources);
 
         $definitions = new Definitions($sources);
 
