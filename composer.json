@@ -13,14 +13,19 @@
             "email": "sebastian@spatie.be",
             "homepage": "https://spatie.be",
             "role": "Developer"
+        },
+        {
+            "name": "Tom Witkowski",
+            "email": "dev.gummibeer@gmail.com",
+            "homepage": "https://gummibeer.de",
+            "role": "Developer"
         }
     ],
     "require": {
         "php": "^7.0"
     },
     "require-dev": {
-        "graham-campbell/analyzer": "^1.1",
-        "larapack/dd": "^1.1",
+        "graham-campbell/analyzer": "^2.1.1",
         "league/flysystem": "^1.0",
         "phpunit/phpunit": "^6.0",
         "scrutinizer/ocular": "^1.5",
@@ -42,7 +47,7 @@
     },
     "scripts": {
         "test": "vendor/bin/phpunit",
-        "generate": "php ./generate.php generate"
+        "generate": "php ./generate.php"
     },
     "config": {
         "sort-packages": true

@@ -33,7 +33,7 @@ class ParseProperty extends Task
             ->filter('[property="http://schema.org/rangeIncludes"]')
             ->each(function (Crawler $range) use ($property) {
                 $property->addRanges(
-                    $this->castRangesToTypes($this->getText($range))
+                    $this->castRangesToTypes(str_replace('http://schema.org/', '', $this->getAttribute($range, 'href')))
                 );
             });
 

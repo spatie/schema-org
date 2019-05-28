@@ -11,6 +11,7 @@ class Application extends ConsoleApplication
         parent::__construct('Spatie\SchemaOrg package generator', '1.0.0');
 
         $this->add(new GenerateCommand());
+        $this->setDefaultCommand('generate', true);
     }
 
     public function getLongVersion()

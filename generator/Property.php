@@ -19,6 +19,9 @@ class Property
     /** @var array */
     public $ranges = [];
 
+    /** @var bool */
+    public $pending = false;
+
     public function addType(string $type)
     {
         $this->types[] = $type;
