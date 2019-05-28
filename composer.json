@@ -47,7 +47,7 @@
     },
     "scripts": {
         "test": "vendor/bin/phpunit",
-        "generate": "php ./generate.php generate"
+        "generate": "php ./generate.php"
     },
     "config": {
         "sort-packages": true
