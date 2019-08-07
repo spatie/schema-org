@@ -22,7 +22,8 @@
         }
     ],
     "require": {
-        "php": "^7.0"
+        "php": "^7.0",
+        "ext-json": "*"
     },
     "require-dev": {
         "graham-campbell/analyzer": "^2.1.1",
