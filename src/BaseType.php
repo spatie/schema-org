@@ -24,7 +24,9 @@ abstract class BaseType implements Type, \ArrayAccess, \JsonSerializable
 
     public function setProperty(string $property, $value)
     {
-        $this->properties[$property] = $value;
+        if ($value !== null) {
+            $this->properties[$property] = $value;
+        }
 
         return $this;
     }

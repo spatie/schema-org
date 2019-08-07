@@ -40,6 +40,16 @@ class BaseTypeTest extends TestCase
     }
 
     /** @test */
+    public function it_can_not_set_a_null_value()
+    {
+        $type = new DummyType();
+
+        $type->setProperty('foo', null);
+
+        $this->assertEquals([], $type->getProperties());
+    }
+
+    /** @test */
     public function it_can_conditionally_set_and_retrieve_a_property()
     {
         $type = new DummyType();
