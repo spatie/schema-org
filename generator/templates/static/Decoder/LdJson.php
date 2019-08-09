@@ -4,6 +4,7 @@ namespace Spatie\SchemaOrg\Decoder;
 
 use InvalidArgumentException;
 use Spatie\SchemaOrg\BaseType;
+use Spatie\SchemaOrg\Exceptions\InvalidType;
 
 class LdJson
 {
@@ -17,15 +18,11 @@ class LdJson
     public static function fromArray(array $data): BaseType
     {
         if (!isset($data['@context'])) {
-            throw new InvalidArgumentException('no @context');
+            throw new InvalidArgumentException('No context given in schema.');
         }
 
         if (strpos($data['@context'], 'schema.org') === false) {
-            throw new InvalidArgumentException('@context invalid');
-        }
-
-        if (!isset($data['@type'])) {
-            throw new InvalidArgumentException('no @type');
+            throw new InvalidArgumentException('The given @context is not valid.');
         }
 
         unset($data['@context']);
@@ -35,13 +32,13 @@ class LdJson
     protected static function generateType(array $data): BaseType
     {
         if (!isset($data['@type'])) {
-            throw new InvalidArgumentException('no @type');
+            throw new InvalidType('No type given in schema.');
         }
 
         $fqcn = '\\Spatie\\SchemaOrg\\' . $data['@type'];
         unset($data['@type']);
         if (!static::isValidType($fqcn)) {
-            throw new InvalidArgumentException('type does not exist');
+            throw new InvalidType(sprintf('The given type "%s" is not an instance of "%s".', $fqcn, BaseType::class));
         }
         /** @var BaseType $type */
         $type = new $fqcn();
@@ -71,6 +68,6 @@ class LdJson
 
     protected static function isValidType(string $fqcn): bool
     {
-        return class_exists($fqcn);
+        return class_exists($fqcn) && is_a($fqcn, BaseType::class);
     }
 }
