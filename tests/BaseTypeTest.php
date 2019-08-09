@@ -1,6 +1,6 @@
 <?php
 
-namespace Spatie\Skeleton\Test;
+namespace Spatie\SchemaOrg\Tests;
 
 use DateTime;
 use Spatie\SchemaOrg\BaseType;

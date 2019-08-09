@@ -1,6 +1,6 @@
 <?php
 
-namespace Spatie\Skeleton\Test;
+namespace Spatie\SchemaOrg\Tests;
 
 use Spatie\SchemaOrg\Type;
 use Spatie\SchemaOrg\Brand;
