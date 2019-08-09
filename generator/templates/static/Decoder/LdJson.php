@@ -17,7 +17,7 @@ class LdJson
 
     public static function fromArray(array $data): BaseType
     {
-        if (!isset($data['@context'])) {
+        if (! isset($data['@context'])) {
             throw new InvalidArgumentException('No context given in schema.');
         }
 
@@ -26,32 +26,33 @@ class LdJson
         }
 
         unset($data['@context']);
+
         return static::generateType($data);
     }
 
     protected static function generateType(array $data): BaseType
     {
-        if (!isset($data['@type'])) {
+        if (! isset($data['@type'])) {
             throw new InvalidType('No type given in schema.');
         }
 
-        $fqcn = '\\Spatie\\SchemaOrg\\' . $data['@type'];
+        $fqcn = '\\Spatie\\SchemaOrg\\'.$data['@type'];
         unset($data['@type']);
-        if (!static::isValidType($fqcn)) {
+        if (! static::isValidType($fqcn)) {
             throw new InvalidType(sprintf('The given type "%s" is not an instance of "%s".', $fqcn, BaseType::class));
         }
         /** @var BaseType $type */
         $type = new $fqcn();
 
         foreach ($data as $property => $value) {
-            if(is_array($value)) {
-                if(isset($value['@type'])) {
+            if (is_array($value)) {
+                if (isset($value['@type'])) {
                     $type->setProperty($property, static::generateType($value));
                     continue;
                 }
 
                 $type->setProperty($property, array_map(function ($value) {
-                    if(is_array($value) && isset($value['@type'])) {
+                    if (is_array($value) && isset($value['@type'])) {
                         return static::generateType($value);
                     }
 
