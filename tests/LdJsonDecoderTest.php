@@ -2,14 +2,14 @@
 
 namespace Spatie\SchemaOrg\Tests;
 
-use PHPUnit\Framework\TestCase;
-use Spatie\SchemaOrg\BreadcrumbList;
-use Spatie\SchemaOrg\ContactPoint;
-use Spatie\SchemaOrg\Decoder\LdJson;
 use Spatie\SchemaOrg\Graph;
-use Spatie\SchemaOrg\LocalBusiness;
 use Spatie\SchemaOrg\Recipe;
 use Spatie\SchemaOrg\Schema;
+use PHPUnit\Framework\TestCase;
+use Spatie\SchemaOrg\ContactPoint;
+use Spatie\SchemaOrg\LocalBusiness;
+use Spatie\SchemaOrg\BreadcrumbList;
+use Spatie\SchemaOrg\Decoder\LdJson;
 
 class LdJsonDecoderTest extends TestCase
 {
