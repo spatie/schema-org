@@ -16,7 +16,7 @@ namespace Spatie\SchemaOrg;
 {% endfor %}
 {% endif %}
  */
-class {{ type.name }} extends BaseType
+class {{ type.name }} extends {% if type.parents %}{{ type.parents|first }}{% else %}BaseType{% endif %} 
 {
 {% for constant in type.constants %}
     /**
