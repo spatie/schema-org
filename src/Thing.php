@@ -2,10 +2,12 @@
 
 namespace Spatie\SchemaOrg;
 
+
 /**
  * The most generic type of item.
  *
  * @see http://schema.org/Thing
+ *
  */
 class Thing extends BaseType
 {
@@ -168,7 +170,7 @@ class Thing extends BaseType
     }
 
     /**
-     * A CreativeWork or Event about this Thing..
+     * A CreativeWork or Event about this Thing.
      *
      * @param CreativeWork|CreativeWork[]|Event|Event[] $subjectOf
      *
