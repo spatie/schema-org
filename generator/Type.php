@@ -44,20 +44,20 @@ class Type
 
     public function setTypeCollection(TypeCollection $typeCollection): void
     {
-        if($this->parentProperties !== null) {
+        if ($this->parentProperties !== null) {
             return;
         }
 
         $this->parentProperties = [];
 
-        if(empty($this->parents)) {
+        if (empty($this->parents)) {
             return;
         }
 
         $types = $typeCollection->toArray();
 
-        foreach($this->parents as $parent) {
-            if(!isset($types[$parent])) {
+        foreach ($this->parents as $parent) {
+            if (! isset($types[$parent])) {
                 continue;
             }
 
@@ -67,16 +67,16 @@ class Type
 
             $this->grandParents = array_merge($parent->parents, $parent->grandParents);
 
-            foreach($parent->properties as $property) {
-                if(isset($this->parentProperties[$property->name])) {
+            foreach ($parent->properties as $property) {
+                if (isset($this->parentProperties[$property->name])) {
                     continue;
                 }
 
                 $this->parentProperties[$property->name] = $property;
             }
 
-            foreach($parent->parentProperties as $parentProperty) {
-                if(isset($this->parentProperties[$parentProperty->name])) {
+            foreach ($parent->parentProperties as $parentProperty) {
+                if (isset($this->parentProperties[$parentProperty->name])) {
                     continue;
                 }
 
