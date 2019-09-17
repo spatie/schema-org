@@ -5,6 +5,7 @@ namespace Spatie\SchemaOrg;
 use \Spatie\SchemaOrg\Contracts\ListItemContract;
 use \Spatie\SchemaOrg\Contracts\ItemListContract;
 use \Spatie\SchemaOrg\Contracts\CreativeWorkContract;
+use \Spatie\SchemaOrg\Contracts\IntangibleContract;
 use \Spatie\SchemaOrg\Contracts\ThingContract;
 
 /**
@@ -14,7 +15,7 @@ use \Spatie\SchemaOrg\Contracts\ThingContract;
  * @see http://schema.org/HowToStep
  *
  */
-class HowToStep extends BaseType implements ListItemContract, ItemListContract, CreativeWorkContract, ThingContract
+class HowToStep extends BaseType implements ListItemContract, ItemListContract, CreativeWorkContract, IntangibleContract, ThingContract
 {
     /**
      * The subject matter of the content.

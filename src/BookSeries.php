@@ -5,8 +5,8 @@ namespace Spatie\SchemaOrg;
 use \Spatie\SchemaOrg\Contracts\CreativeWorkSeriesContract;
 use \Spatie\SchemaOrg\Contracts\CreativeWorkContract;
 use \Spatie\SchemaOrg\Contracts\SeriesContract;
-use \Spatie\SchemaOrg\Contracts\IntangibleContract;
 use \Spatie\SchemaOrg\Contracts\ThingContract;
+use \Spatie\SchemaOrg\Contracts\IntangibleContract;
 
 /**
  * A series of books. Included books can be indicated with the hasPart property.
@@ -14,7 +14,7 @@ use \Spatie\SchemaOrg\Contracts\ThingContract;
  * @see http://schema.org/BookSeries
  *
  */
-class BookSeries extends BaseType implements CreativeWorkSeriesContract, CreativeWorkContract, SeriesContract, IntangibleContract, ThingContract
+class BookSeries extends BaseType implements CreativeWorkSeriesContract, CreativeWorkContract, SeriesContract, ThingContract, IntangibleContract
 {
     /**
      * The subject matter of the content.

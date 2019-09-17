@@ -4,9 +4,10 @@ namespace Spatie\SchemaOrg;
 
 use \Spatie\SchemaOrg\Contracts\FinancialProductContract;
 use \Spatie\SchemaOrg\Contracts\PaymentMethodContract;
-use \Spatie\SchemaOrg\Contracts\EnumerationContract;
+use \Spatie\SchemaOrg\Contracts\ServiceContract;
 use \Spatie\SchemaOrg\Contracts\IntangibleContract;
 use \Spatie\SchemaOrg\Contracts\ThingContract;
+use \Spatie\SchemaOrg\Contracts\EnumerationContract;
 
 /**
  * A payment method using a credit, debit, store or other card to associate the
@@ -15,7 +16,7 @@ use \Spatie\SchemaOrg\Contracts\ThingContract;
  * @see http://schema.org/PaymentCard
  *
  */
-class PaymentCard extends BaseType implements FinancialProductContract, PaymentMethodContract, EnumerationContract, IntangibleContract, ThingContract
+class PaymentCard extends BaseType implements FinancialProductContract, PaymentMethodContract, ServiceContract, IntangibleContract, ThingContract, EnumerationContract
 {
     /**
      * An additional type for the item, typically used for adding more specific

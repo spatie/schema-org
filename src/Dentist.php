@@ -5,8 +5,8 @@ namespace Spatie\SchemaOrg;
 use \Spatie\SchemaOrg\Contracts\MedicalOrganizationContract;
 use \Spatie\SchemaOrg\Contracts\LocalBusinessContract;
 use \Spatie\SchemaOrg\Contracts\OrganizationContract;
-use \Spatie\SchemaOrg\Contracts\PlaceContract;
 use \Spatie\SchemaOrg\Contracts\ThingContract;
+use \Spatie\SchemaOrg\Contracts\PlaceContract;
 
 /**
  * A dentist.
@@ -14,7 +14,7 @@ use \Spatie\SchemaOrg\Contracts\ThingContract;
  * @see http://schema.org/Dentist
  *
  */
-class Dentist extends BaseType implements MedicalOrganizationContract, LocalBusinessContract, OrganizationContract, PlaceContract, ThingContract
+class Dentist extends BaseType implements MedicalOrganizationContract, LocalBusinessContract, OrganizationContract, ThingContract, PlaceContract
 {
     /**
      * A property-value pair representing an additional characteristics of the
