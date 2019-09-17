@@ -2,8 +2,8 @@
 
 namespace Spatie\SchemaOrg;
 
-use \Spatie\SchemaOrg\Contracts\StructuredValueContract;
 use \Spatie\SchemaOrg\Contracts\IntangibleContract;
+use \Spatie\SchemaOrg\Contracts\StructuredValueContract;
 use \Spatie\SchemaOrg\Contracts\ThingContract;
 
 /**
@@ -14,7 +14,7 @@ use \Spatie\SchemaOrg\Contracts\ThingContract;
  * @see http://schema.org/WarrantyPromise
  *
  */
-class WarrantyPromise extends BaseType implements StructuredValueContract, IntangibleContract, ThingContract
+class WarrantyPromise extends BaseType implements IntangibleContract, StructuredValueContract, ThingContract
 {
     /**
      * An additional type for the item, typically used for adding more specific

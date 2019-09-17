@@ -2,9 +2,9 @@
 
 namespace Spatie\SchemaOrg;
 
-use \Spatie\SchemaOrg\Contracts\WebPageContract;
 use \Spatie\SchemaOrg\Contracts\CreativeWorkContract;
 use \Spatie\SchemaOrg\Contracts\ThingContract;
+use \Spatie\SchemaOrg\Contracts\WebPageContract;
 
 /**
  * Web page type: Search results page.
@@ -12,7 +12,7 @@ use \Spatie\SchemaOrg\Contracts\ThingContract;
  * @see http://schema.org/SearchResultsPage
  *
  */
-class SearchResultsPage extends BaseType implements WebPageContract, CreativeWorkContract, ThingContract
+class SearchResultsPage extends BaseType implements CreativeWorkContract, ThingContract, WebPageContract
 {
     /**
      * The subject matter of the content.

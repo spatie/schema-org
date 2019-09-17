@@ -3,10 +3,10 @@
 namespace Spatie\SchemaOrg;
 
 use \Spatie\SchemaOrg\Contracts\AutomotiveBusinessContract;
-use \Spatie\SchemaOrg\Contracts\StoreContract;
 use \Spatie\SchemaOrg\Contracts\LocalBusinessContract;
 use \Spatie\SchemaOrg\Contracts\OrganizationContract;
 use \Spatie\SchemaOrg\Contracts\PlaceContract;
+use \Spatie\SchemaOrg\Contracts\StoreContract;
 use \Spatie\SchemaOrg\Contracts\ThingContract;
 
 /**
@@ -15,7 +15,7 @@ use \Spatie\SchemaOrg\Contracts\ThingContract;
  * @see http://schema.org/AutoPartsStore
  *
  */
-class AutoPartsStore extends BaseType implements AutomotiveBusinessContract, StoreContract, LocalBusinessContract, OrganizationContract, PlaceContract, ThingContract
+class AutoPartsStore extends BaseType implements AutomotiveBusinessContract, LocalBusinessContract, OrganizationContract, PlaceContract, StoreContract, ThingContract
 {
     /**
      * A property-value pair representing an additional characteristics of the

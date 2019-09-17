@@ -2,10 +2,10 @@
 
 namespace Spatie\SchemaOrg;
 
-use \Spatie\SchemaOrg\Contracts\AddActionContract;
-use \Spatie\SchemaOrg\Contracts\UpdateActionContract;
 use \Spatie\SchemaOrg\Contracts\ActionContract;
+use \Spatie\SchemaOrg\Contracts\AddActionContract;
 use \Spatie\SchemaOrg\Contracts\ThingContract;
+use \Spatie\SchemaOrg\Contracts\UpdateActionContract;
 
 /**
  * The act of adding at a specific location in an ordered collection.
@@ -13,7 +13,7 @@ use \Spatie\SchemaOrg\Contracts\ThingContract;
  * @see http://schema.org/InsertAction
  *
  */
-class InsertAction extends BaseType implements AddActionContract, UpdateActionContract, ActionContract, ThingContract
+class InsertAction extends BaseType implements ActionContract, AddActionContract, ThingContract, UpdateActionContract
 {
     /**
      * Indicates the current disposition of the Action.

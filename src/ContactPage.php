@@ -2,9 +2,9 @@
 
 namespace Spatie\SchemaOrg;
 
-use \Spatie\SchemaOrg\Contracts\WebPageContract;
 use \Spatie\SchemaOrg\Contracts\CreativeWorkContract;
 use \Spatie\SchemaOrg\Contracts\ThingContract;
+use \Spatie\SchemaOrg\Contracts\WebPageContract;
 
 /**
  * Web page type: Contact page.
@@ -12,7 +12,7 @@ use \Spatie\SchemaOrg\Contracts\ThingContract;
  * @see http://schema.org/ContactPage
  *
  */
-class ContactPage extends BaseType implements WebPageContract, CreativeWorkContract, ThingContract
+class ContactPage extends BaseType implements CreativeWorkContract, ThingContract, WebPageContract
 {
     /**
      * The subject matter of the content.

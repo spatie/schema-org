@@ -2,9 +2,9 @@
 
 namespace Spatie\SchemaOrg;
 
+use \Spatie\SchemaOrg\Contracts\CreativeWorkContract;
 use \Spatie\SchemaOrg\Contracts\ImageObjectContract;
 use \Spatie\SchemaOrg\Contracts\MediaObjectContract;
-use \Spatie\SchemaOrg\Contracts\CreativeWorkContract;
 use \Spatie\SchemaOrg\Contracts\ThingContract;
 
 /**
@@ -13,7 +13,7 @@ use \Spatie\SchemaOrg\Contracts\ThingContract;
  * @see http://schema.org/Barcode
  *
  */
-class Barcode extends BaseType implements ImageObjectContract, MediaObjectContract, CreativeWorkContract, ThingContract
+class Barcode extends BaseType implements CreativeWorkContract, ImageObjectContract, MediaObjectContract, ThingContract
 {
     /**
      * The subject matter of the content.

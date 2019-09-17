@@ -2,11 +2,11 @@
 
 namespace Spatie\SchemaOrg;
 
-use \Spatie\SchemaOrg\Contracts\InsertActionContract;
-use \Spatie\SchemaOrg\Contracts\AddActionContract;
-use \Spatie\SchemaOrg\Contracts\UpdateActionContract;
 use \Spatie\SchemaOrg\Contracts\ActionContract;
+use \Spatie\SchemaOrg\Contracts\AddActionContract;
+use \Spatie\SchemaOrg\Contracts\InsertActionContract;
 use \Spatie\SchemaOrg\Contracts\ThingContract;
+use \Spatie\SchemaOrg\Contracts\UpdateActionContract;
 
 /**
  * The act of inserting at the beginning if an ordered collection.
@@ -14,7 +14,7 @@ use \Spatie\SchemaOrg\Contracts\ThingContract;
  * @see http://schema.org/PrependAction
  *
  */
-class PrependAction extends BaseType implements InsertActionContract, AddActionContract, UpdateActionContract, ActionContract, ThingContract
+class PrependAction extends BaseType implements ActionContract, AddActionContract, InsertActionContract, ThingContract, UpdateActionContract
 {
     /**
      * Indicates the current disposition of the Action.

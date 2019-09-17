@@ -2,8 +2,8 @@
 
 namespace Spatie\SchemaOrg;
 
-use \Spatie\SchemaOrg\Contracts\InteractActionContract;
 use \Spatie\SchemaOrg\Contracts\ActionContract;
+use \Spatie\SchemaOrg\Contracts\InteractActionContract;
 use \Spatie\SchemaOrg\Contracts\ThingContract;
 
 /**
@@ -18,7 +18,7 @@ use \Spatie\SchemaOrg\Contracts\ThingContract;
  * @see http://schema.org/BefriendAction
  *
  */
-class BefriendAction extends BaseType implements InteractActionContract, ActionContract, ThingContract
+class BefriendAction extends BaseType implements ActionContract, InteractActionContract, ThingContract
 {
     /**
      * Indicates the current disposition of the Action.

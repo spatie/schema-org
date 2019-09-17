@@ -2,8 +2,8 @@
 
 namespace Spatie\SchemaOrg;
 
-use \Spatie\SchemaOrg\Contracts\MusicPlaylistContract;
 use \Spatie\SchemaOrg\Contracts\CreativeWorkContract;
+use \Spatie\SchemaOrg\Contracts\MusicPlaylistContract;
 use \Spatie\SchemaOrg\Contracts\ThingContract;
 
 /**
@@ -12,7 +12,7 @@ use \Spatie\SchemaOrg\Contracts\ThingContract;
  * @see http://schema.org/MusicRelease
  *
  */
-class MusicRelease extends BaseType implements MusicPlaylistContract, CreativeWorkContract, ThingContract
+class MusicRelease extends BaseType implements CreativeWorkContract, MusicPlaylistContract, ThingContract
 {
     /**
      * The subject matter of the content.

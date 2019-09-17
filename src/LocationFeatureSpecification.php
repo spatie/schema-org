@@ -2,9 +2,9 @@
 
 namespace Spatie\SchemaOrg;
 
+use \Spatie\SchemaOrg\Contracts\IntangibleContract;
 use \Spatie\SchemaOrg\Contracts\PropertyValueContract;
 use \Spatie\SchemaOrg\Contracts\StructuredValueContract;
-use \Spatie\SchemaOrg\Contracts\IntangibleContract;
 use \Spatie\SchemaOrg\Contracts\ThingContract;
 
 /**
@@ -15,7 +15,7 @@ use \Spatie\SchemaOrg\Contracts\ThingContract;
  * @see http://schema.org/LocationFeatureSpecification
  *
  */
-class LocationFeatureSpecification extends BaseType implements PropertyValueContract, StructuredValueContract, IntangibleContract, ThingContract
+class LocationFeatureSpecification extends BaseType implements IntangibleContract, PropertyValueContract, StructuredValueContract, ThingContract
 {
     /**
      * An additional type for the item, typically used for adding more specific

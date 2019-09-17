@@ -2,9 +2,9 @@
 
 namespace Spatie\SchemaOrg;
 
-use \Spatie\SchemaOrg\Contracts\TradeActionContract;
 use \Spatie\SchemaOrg\Contracts\ActionContract;
 use \Spatie\SchemaOrg\Contracts\ThingContract;
+use \Spatie\SchemaOrg\Contracts\TradeActionContract;
 
 /**
  * The act of giving money in return for temporary use, but not ownership, of an
@@ -14,7 +14,7 @@ use \Spatie\SchemaOrg\Contracts\ThingContract;
  * @see http://schema.org/RentAction
  *
  */
-class RentAction extends BaseType implements TradeActionContract, ActionContract, ThingContract
+class RentAction extends BaseType implements ActionContract, ThingContract, TradeActionContract
 {
     /**
      * Indicates the current disposition of the Action.

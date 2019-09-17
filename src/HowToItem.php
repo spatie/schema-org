@@ -2,8 +2,8 @@
 
 namespace Spatie\SchemaOrg;
 
-use \Spatie\SchemaOrg\Contracts\ListItemContract;
 use \Spatie\SchemaOrg\Contracts\IntangibleContract;
+use \Spatie\SchemaOrg\Contracts\ListItemContract;
 use \Spatie\SchemaOrg\Contracts\ThingContract;
 
 /**
@@ -13,7 +13,7 @@ use \Spatie\SchemaOrg\Contracts\ThingContract;
  * @see http://schema.org/HowToItem
  *
  */
-class HowToItem extends BaseType implements ListItemContract, IntangibleContract, ThingContract
+class HowToItem extends BaseType implements IntangibleContract, ListItemContract, ThingContract
 {
     /**
      * An additional type for the item, typically used for adding more specific

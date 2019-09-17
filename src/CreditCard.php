@@ -2,14 +2,14 @@
 
 namespace Spatie\SchemaOrg;
 
-use \Spatie\SchemaOrg\Contracts\PaymentCardContract;
-use \Spatie\SchemaOrg\Contracts\LoanOrCreditContract;
+use \Spatie\SchemaOrg\Contracts\EnumerationContract;
 use \Spatie\SchemaOrg\Contracts\FinancialProductContract;
+use \Spatie\SchemaOrg\Contracts\IntangibleContract;
+use \Spatie\SchemaOrg\Contracts\LoanOrCreditContract;
+use \Spatie\SchemaOrg\Contracts\PaymentCardContract;
 use \Spatie\SchemaOrg\Contracts\PaymentMethodContract;
 use \Spatie\SchemaOrg\Contracts\ServiceContract;
-use \Spatie\SchemaOrg\Contracts\IntangibleContract;
 use \Spatie\SchemaOrg\Contracts\ThingContract;
-use \Spatie\SchemaOrg\Contracts\EnumerationContract;
 
 /**
  * A card payment method of a particular brand or name.  Used to mark up a
@@ -28,7 +28,7 @@ use \Spatie\SchemaOrg\Contracts\EnumerationContract;
  * @see http://schema.org/CreditCard
  *
  */
-class CreditCard extends BaseType implements PaymentCardContract, LoanOrCreditContract, FinancialProductContract, PaymentMethodContract, ServiceContract, IntangibleContract, ThingContract, EnumerationContract
+class CreditCard extends BaseType implements EnumerationContract, FinancialProductContract, IntangibleContract, LoanOrCreditContract, PaymentCardContract, PaymentMethodContract, ServiceContract, ThingContract
 {
     /**
      * An additional type for the item, typically used for adding more specific

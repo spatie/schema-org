@@ -2,9 +2,9 @@
 
 namespace Spatie\SchemaOrg;
 
+use \Spatie\SchemaOrg\Contracts\ActionContract;
 use \Spatie\SchemaOrg\Contracts\AllocateActionContract;
 use \Spatie\SchemaOrg\Contracts\OrganizeActionContract;
-use \Spatie\SchemaOrg\Contracts\ActionContract;
 use \Spatie\SchemaOrg\Contracts\ThingContract;
 
 /**
@@ -14,7 +14,7 @@ use \Spatie\SchemaOrg\Contracts\ThingContract;
  * @see http://schema.org/AssignAction
  *
  */
-class AssignAction extends BaseType implements AllocateActionContract, OrganizeActionContract, ActionContract, ThingContract
+class AssignAction extends BaseType implements ActionContract, AllocateActionContract, OrganizeActionContract, ThingContract
 {
     /**
      * Indicates the current disposition of the Action.

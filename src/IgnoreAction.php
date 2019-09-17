@@ -2,8 +2,8 @@
 
 namespace Spatie\SchemaOrg;
 
-use \Spatie\SchemaOrg\Contracts\AssessActionContract;
 use \Spatie\SchemaOrg\Contracts\ActionContract;
+use \Spatie\SchemaOrg\Contracts\AssessActionContract;
 use \Spatie\SchemaOrg\Contracts\ThingContract;
 
 /**
@@ -12,7 +12,7 @@ use \Spatie\SchemaOrg\Contracts\ThingContract;
  * @see http://schema.org/IgnoreAction
  *
  */
-class IgnoreAction extends BaseType implements AssessActionContract, ActionContract, ThingContract
+class IgnoreAction extends BaseType implements ActionContract, AssessActionContract, ThingContract
 {
     /**
      * Indicates the current disposition of the Action.

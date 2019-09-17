@@ -3,8 +3,8 @@
 namespace Spatie\SchemaOrg;
 
 use \Spatie\SchemaOrg\Contracts\GeoShapeContract;
-use \Spatie\SchemaOrg\Contracts\StructuredValueContract;
 use \Spatie\SchemaOrg\Contracts\IntangibleContract;
+use \Spatie\SchemaOrg\Contracts\StructuredValueContract;
 use \Spatie\SchemaOrg\Contracts\ThingContract;
 
 /**
@@ -18,7 +18,7 @@ use \Spatie\SchemaOrg\Contracts\ThingContract;
  * @see http://schema.org/GeoCircle
  *
  */
-class GeoCircle extends BaseType implements GeoShapeContract, StructuredValueContract, IntangibleContract, ThingContract
+class GeoCircle extends BaseType implements GeoShapeContract, IntangibleContract, StructuredValueContract, ThingContract
 {
     /**
      * An additional type for the item, typically used for adding more specific

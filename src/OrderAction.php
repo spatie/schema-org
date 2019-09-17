@@ -2,9 +2,9 @@
 
 namespace Spatie\SchemaOrg;
 
-use \Spatie\SchemaOrg\Contracts\TradeActionContract;
 use \Spatie\SchemaOrg\Contracts\ActionContract;
 use \Spatie\SchemaOrg\Contracts\ThingContract;
+use \Spatie\SchemaOrg\Contracts\TradeActionContract;
 
 /**
  * An agent orders an object/product/service to be delivered/sent.
@@ -12,7 +12,7 @@ use \Spatie\SchemaOrg\Contracts\ThingContract;
  * @see http://schema.org/OrderAction
  *
  */
-class OrderAction extends BaseType implements TradeActionContract, ActionContract, ThingContract
+class OrderAction extends BaseType implements ActionContract, ThingContract, TradeActionContract
 {
     /**
      * Indicates the current disposition of the Action.

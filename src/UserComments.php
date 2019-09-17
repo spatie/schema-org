@@ -2,9 +2,9 @@
 
 namespace Spatie\SchemaOrg;
 
-use \Spatie\SchemaOrg\Contracts\UserInteractionContract;
 use \Spatie\SchemaOrg\Contracts\EventContract;
 use \Spatie\SchemaOrg\Contracts\ThingContract;
+use \Spatie\SchemaOrg\Contracts\UserInteractionContract;
 
 /**
  * UserInteraction and its subtypes is an old way of talking about users
@@ -14,7 +14,7 @@ use \Spatie\SchemaOrg\Contracts\ThingContract;
  * @see http://schema.org/UserComments
  *
  */
-class UserComments extends BaseType implements UserInteractionContract, EventContract, ThingContract
+class UserComments extends BaseType implements EventContract, ThingContract, UserInteractionContract
 {
     /**
      * The subject matter of the content.

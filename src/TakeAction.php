@@ -2,9 +2,9 @@
 
 namespace Spatie\SchemaOrg;
 
-use \Spatie\SchemaOrg\Contracts\TransferActionContract;
 use \Spatie\SchemaOrg\Contracts\ActionContract;
 use \Spatie\SchemaOrg\Contracts\ThingContract;
+use \Spatie\SchemaOrg\Contracts\TransferActionContract;
 
 /**
  * The act of gaining ownership of an object from an origin. Reciprocal of
@@ -19,7 +19,7 @@ use \Spatie\SchemaOrg\Contracts\ThingContract;
  * @see http://schema.org/TakeAction
  *
  */
-class TakeAction extends BaseType implements TransferActionContract, ActionContract, ThingContract
+class TakeAction extends BaseType implements ActionContract, ThingContract, TransferActionContract
 {
     /**
      * Indicates the current disposition of the Action.

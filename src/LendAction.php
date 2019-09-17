@@ -2,9 +2,9 @@
 
 namespace Spatie\SchemaOrg;
 
-use \Spatie\SchemaOrg\Contracts\TransferActionContract;
 use \Spatie\SchemaOrg\Contracts\ActionContract;
 use \Spatie\SchemaOrg\Contracts\ThingContract;
+use \Spatie\SchemaOrg\Contracts\TransferActionContract;
 
 /**
  * The act of providing an object under an agreement that it will be returned at
@@ -17,7 +17,7 @@ use \Spatie\SchemaOrg\Contracts\ThingContract;
  * @see http://schema.org/LendAction
  *
  */
-class LendAction extends BaseType implements TransferActionContract, ActionContract, ThingContract
+class LendAction extends BaseType implements ActionContract, ThingContract, TransferActionContract
 {
     /**
      * Indicates the current disposition of the Action.

@@ -2,8 +2,8 @@
 
 namespace Spatie\SchemaOrg;
 
-use \Spatie\SchemaOrg\Contracts\StructuredValueContract;
 use \Spatie\SchemaOrg\Contracts\IntangibleContract;
+use \Spatie\SchemaOrg\Contracts\StructuredValueContract;
 use \Spatie\SchemaOrg\Contracts\ThingContract;
 
 /**
@@ -12,7 +12,7 @@ use \Spatie\SchemaOrg\Contracts\ThingContract;
  * @see http://schema.org/QuantitativeValue
  *
  */
-class QuantitativeValue extends BaseType implements StructuredValueContract, IntangibleContract, ThingContract
+class QuantitativeValue extends BaseType implements IntangibleContract, StructuredValueContract, ThingContract
 {
     /**
      * A property-value pair representing an additional characteristics of the

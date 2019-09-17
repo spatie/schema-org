@@ -2,9 +2,9 @@
 
 namespace Spatie\SchemaOrg;
 
+use \Spatie\SchemaOrg\Contracts\IntangibleContract;
 use \Spatie\SchemaOrg\Contracts\PriceSpecificationContract;
 use \Spatie\SchemaOrg\Contracts\StructuredValueContract;
-use \Spatie\SchemaOrg\Contracts\IntangibleContract;
 use \Spatie\SchemaOrg\Contracts\ThingContract;
 
 /**
@@ -13,7 +13,7 @@ use \Spatie\SchemaOrg\Contracts\ThingContract;
  * @see http://schema.org/DeliveryChargeSpecification
  *
  */
-class DeliveryChargeSpecification extends BaseType implements PriceSpecificationContract, StructuredValueContract, IntangibleContract, ThingContract
+class DeliveryChargeSpecification extends BaseType implements IntangibleContract, PriceSpecificationContract, StructuredValueContract, ThingContract
 {
     /**
      * An additional type for the item, typically used for adding more specific

@@ -2,9 +2,9 @@
 
 namespace Spatie\SchemaOrg;
 
-use \Spatie\SchemaOrg\Contracts\WebPageContract;
 use \Spatie\SchemaOrg\Contracts\CreativeWorkContract;
 use \Spatie\SchemaOrg\Contracts\ThingContract;
+use \Spatie\SchemaOrg\Contracts\WebPageContract;
 
 /**
  * A page devoted to a single item, such as a particular product or hotel.
@@ -12,7 +12,7 @@ use \Spatie\SchemaOrg\Contracts\ThingContract;
  * @see http://schema.org/ItemPage
  *
  */
-class ItemPage extends BaseType implements WebPageContract, CreativeWorkContract, ThingContract
+class ItemPage extends BaseType implements CreativeWorkContract, ThingContract, WebPageContract
 {
     /**
      * The subject matter of the content.

@@ -2,9 +2,9 @@
 
 namespace Spatie\SchemaOrg;
 
-use \Spatie\SchemaOrg\Contracts\TransferActionContract;
 use \Spatie\SchemaOrg\Contracts\ActionContract;
 use \Spatie\SchemaOrg\Contracts\ThingContract;
+use \Spatie\SchemaOrg\Contracts\TransferActionContract;
 
 /**
  * The act of downloading an object.
@@ -12,7 +12,7 @@ use \Spatie\SchemaOrg\Contracts\ThingContract;
  * @see http://schema.org/DownloadAction
  *
  */
-class DownloadAction extends BaseType implements TransferActionContract, ActionContract, ThingContract
+class DownloadAction extends BaseType implements ActionContract, ThingContract, TransferActionContract
 {
     /**
      * Indicates the current disposition of the Action.

@@ -2,9 +2,9 @@
 
 namespace Spatie\SchemaOrg;
 
-use \Spatie\SchemaOrg\Contracts\WebPageContract;
 use \Spatie\SchemaOrg\Contracts\CreativeWorkContract;
 use \Spatie\SchemaOrg\Contracts\ThingContract;
+use \Spatie\SchemaOrg\Contracts\WebPageContract;
 
 /**
  * Web page type: About page.
@@ -12,7 +12,7 @@ use \Spatie\SchemaOrg\Contracts\ThingContract;
  * @see http://schema.org/AboutPage
  *
  */
-class AboutPage extends BaseType implements WebPageContract, CreativeWorkContract, ThingContract
+class AboutPage extends BaseType implements CreativeWorkContract, ThingContract, WebPageContract
 {
     /**
      * The subject matter of the content.

@@ -2,9 +2,9 @@
 
 namespace Spatie\SchemaOrg;
 
-use \Spatie\SchemaOrg\Contracts\WebPageContract;
 use \Spatie\SchemaOrg\Contracts\CreativeWorkContract;
 use \Spatie\SchemaOrg\Contracts\ThingContract;
+use \Spatie\SchemaOrg\Contracts\WebPageContract;
 
 /**
  * A QAPage is a WebPage focussed on a specific Question and its Answer(s), e.g.
@@ -14,7 +14,7 @@ use \Spatie\SchemaOrg\Contracts\ThingContract;
  * @see http://schema.org/QAPage
  *
  */
-class QAPage extends BaseType implements WebPageContract, CreativeWorkContract, ThingContract
+class QAPage extends BaseType implements CreativeWorkContract, ThingContract, WebPageContract
 {
     /**
      * The subject matter of the content.

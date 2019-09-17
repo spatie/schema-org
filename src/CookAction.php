@@ -2,8 +2,8 @@
 
 namespace Spatie\SchemaOrg;
 
-use \Spatie\SchemaOrg\Contracts\CreateActionContract;
 use \Spatie\SchemaOrg\Contracts\ActionContract;
+use \Spatie\SchemaOrg\Contracts\CreateActionContract;
 use \Spatie\SchemaOrg\Contracts\ThingContract;
 
 /**
@@ -12,7 +12,7 @@ use \Spatie\SchemaOrg\Contracts\ThingContract;
  * @see http://schema.org/CookAction
  *
  */
-class CookAction extends BaseType implements CreateActionContract, ActionContract, ThingContract
+class CookAction extends BaseType implements ActionContract, CreateActionContract, ThingContract
 {
     /**
      * Indicates the current disposition of the Action.

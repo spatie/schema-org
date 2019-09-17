@@ -2,9 +2,9 @@
 
 namespace Spatie\SchemaOrg;
 
-use \Spatie\SchemaOrg\Contracts\WebPageElementContract;
 use \Spatie\SchemaOrg\Contracts\CreativeWorkContract;
 use \Spatie\SchemaOrg\Contracts\ThingContract;
+use \Spatie\SchemaOrg\Contracts\WebPageElementContract;
 
 /**
  * An advertising section of the page.
@@ -14,7 +14,7 @@ use \Spatie\SchemaOrg\Contracts\ThingContract;
  * @method static cssSelector($cssSelector) The value should be instance of pending types CssSelectorType|CssSelectorType[]
  * @method static xpath($xpath) The value should be instance of pending types XPathType|XPathType[]
  */
-class WPAdBlock extends BaseType implements WebPageElementContract, CreativeWorkContract, ThingContract
+class WPAdBlock extends BaseType implements CreativeWorkContract, ThingContract, WebPageElementContract
 {
     /**
      * The subject matter of the content.

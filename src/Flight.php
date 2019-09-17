@@ -2,9 +2,9 @@
 
 namespace Spatie\SchemaOrg;
 
-use \Spatie\SchemaOrg\Contracts\TripContract;
 use \Spatie\SchemaOrg\Contracts\IntangibleContract;
 use \Spatie\SchemaOrg\Contracts\ThingContract;
+use \Spatie\SchemaOrg\Contracts\TripContract;
 
 /**
  * An airline flight.
@@ -12,7 +12,7 @@ use \Spatie\SchemaOrg\Contracts\ThingContract;
  * @see http://schema.org/Flight
  *
  */
-class Flight extends BaseType implements TripContract, IntangibleContract, ThingContract
+class Flight extends BaseType implements IntangibleContract, ThingContract, TripContract
 {
     /**
      * An additional type for the item, typically used for adding more specific

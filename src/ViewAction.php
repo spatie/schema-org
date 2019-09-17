@@ -2,8 +2,8 @@
 
 namespace Spatie\SchemaOrg;
 
-use \Spatie\SchemaOrg\Contracts\ConsumeActionContract;
 use \Spatie\SchemaOrg\Contracts\ActionContract;
+use \Spatie\SchemaOrg\Contracts\ConsumeActionContract;
 use \Spatie\SchemaOrg\Contracts\ThingContract;
 
 /**
@@ -12,7 +12,7 @@ use \Spatie\SchemaOrg\Contracts\ThingContract;
  * @see http://schema.org/ViewAction
  *
  */
-class ViewAction extends BaseType implements ConsumeActionContract, ActionContract, ThingContract
+class ViewAction extends BaseType implements ActionContract, ConsumeActionContract, ThingContract
 {
     /**
      * A set of requirements that a must be fulfilled in order to perform an

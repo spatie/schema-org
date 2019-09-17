@@ -3,9 +3,9 @@
 namespace Spatie\SchemaOrg;
 
 use \Spatie\SchemaOrg\Contracts\ChurchContract;
-use \Spatie\SchemaOrg\Contracts\PlaceOfWorshipContract;
 use \Spatie\SchemaOrg\Contracts\CivicStructureContract;
 use \Spatie\SchemaOrg\Contracts\PlaceContract;
+use \Spatie\SchemaOrg\Contracts\PlaceOfWorshipContract;
 use \Spatie\SchemaOrg\Contracts\ThingContract;
 
 /**
@@ -14,7 +14,7 @@ use \Spatie\SchemaOrg\Contracts\ThingContract;
  * @see http://schema.org/CatholicChurch
  *
  */
-class CatholicChurch extends BaseType implements ChurchContract, PlaceOfWorshipContract, CivicStructureContract, PlaceContract, ThingContract
+class CatholicChurch extends BaseType implements ChurchContract, CivicStructureContract, PlaceContract, PlaceOfWorshipContract, ThingContract
 {
     /**
      * A property-value pair representing an additional characteristics of the

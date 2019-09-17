@@ -2,8 +2,8 @@
 
 namespace Spatie\SchemaOrg;
 
-use \Spatie\SchemaOrg\Contracts\ServiceContract;
 use \Spatie\SchemaOrg\Contracts\IntangibleContract;
+use \Spatie\SchemaOrg\Contracts\ServiceContract;
 use \Spatie\SchemaOrg\Contracts\ThingContract;
 
 /**
@@ -12,7 +12,7 @@ use \Spatie\SchemaOrg\Contracts\ThingContract;
  * @see http://schema.org/FoodService
  *
  */
-class FoodService extends BaseType implements ServiceContract, IntangibleContract, ThingContract
+class FoodService extends BaseType implements IntangibleContract, ServiceContract, ThingContract
 {
     /**
      * An additional type for the item, typically used for adding more specific

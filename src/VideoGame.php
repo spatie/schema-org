@@ -2,9 +2,9 @@
 
 namespace Spatie\SchemaOrg;
 
-use \Spatie\SchemaOrg\Contracts\SoftwareApplicationContract;
-use \Spatie\SchemaOrg\Contracts\GameContract;
 use \Spatie\SchemaOrg\Contracts\CreativeWorkContract;
+use \Spatie\SchemaOrg\Contracts\GameContract;
+use \Spatie\SchemaOrg\Contracts\SoftwareApplicationContract;
 use \Spatie\SchemaOrg\Contracts\ThingContract;
 
 /**
@@ -14,7 +14,7 @@ use \Spatie\SchemaOrg\Contracts\ThingContract;
  * @see http://schema.org/VideoGame
  *
  */
-class VideoGame extends BaseType implements SoftwareApplicationContract, GameContract, CreativeWorkContract, ThingContract
+class VideoGame extends BaseType implements CreativeWorkContract, GameContract, SoftwareApplicationContract, ThingContract
 {
     /**
      * The subject matter of the content.

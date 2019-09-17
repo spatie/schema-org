@@ -2,9 +2,9 @@
 
 namespace Spatie\SchemaOrg;
 
-use \Spatie\SchemaOrg\Contracts\ReactActionContract;
-use \Spatie\SchemaOrg\Contracts\AssessActionContract;
 use \Spatie\SchemaOrg\Contracts\ActionContract;
+use \Spatie\SchemaOrg\Contracts\AssessActionContract;
+use \Spatie\SchemaOrg\Contracts\ReactActionContract;
 use \Spatie\SchemaOrg\Contracts\ThingContract;
 
 /**
@@ -13,7 +13,7 @@ use \Spatie\SchemaOrg\Contracts\ThingContract;
  * @see http://schema.org/EndorseAction
  *
  */
-class EndorseAction extends BaseType implements ReactActionContract, AssessActionContract, ActionContract, ThingContract
+class EndorseAction extends BaseType implements ActionContract, AssessActionContract, ReactActionContract, ThingContract
 {
     /**
      * Indicates the current disposition of the Action.

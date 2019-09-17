@@ -3,11 +3,11 @@
 namespace Spatie\SchemaOrg;
 
 use \Spatie\SchemaOrg\Contracts\CivicStructureContract;
-use \Spatie\SchemaOrg\Contracts\SportsActivityLocationContract;
-use \Spatie\SchemaOrg\Contracts\PlaceContract;
-use \Spatie\SchemaOrg\Contracts\ThingContract;
 use \Spatie\SchemaOrg\Contracts\LocalBusinessContract;
 use \Spatie\SchemaOrg\Contracts\OrganizationContract;
+use \Spatie\SchemaOrg\Contracts\PlaceContract;
+use \Spatie\SchemaOrg\Contracts\SportsActivityLocationContract;
+use \Spatie\SchemaOrg\Contracts\ThingContract;
 
 /**
  * A stadium.
@@ -15,7 +15,7 @@ use \Spatie\SchemaOrg\Contracts\OrganizationContract;
  * @see http://schema.org/StadiumOrArena
  *
  */
-class StadiumOrArena extends BaseType implements CivicStructureContract, SportsActivityLocationContract, PlaceContract, ThingContract, LocalBusinessContract, OrganizationContract
+class StadiumOrArena extends BaseType implements CivicStructureContract, LocalBusinessContract, OrganizationContract, PlaceContract, SportsActivityLocationContract, ThingContract
 {
     /**
      * A property-value pair representing an additional characteristics of the

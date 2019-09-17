@@ -2,8 +2,8 @@
 
 namespace Spatie\SchemaOrg;
 
-use \Spatie\SchemaOrg\Contracts\ControlActionContract;
 use \Spatie\SchemaOrg\Contracts\ActionContract;
+use \Spatie\SchemaOrg\Contracts\ControlActionContract;
 use \Spatie\SchemaOrg\Contracts\ThingContract;
 
 /**
@@ -13,7 +13,7 @@ use \Spatie\SchemaOrg\Contracts\ThingContract;
  * @see http://schema.org/SuspendAction
  *
  */
-class SuspendAction extends BaseType implements ControlActionContract, ActionContract, ThingContract
+class SuspendAction extends BaseType implements ActionContract, ControlActionContract, ThingContract
 {
     /**
      * Indicates the current disposition of the Action.

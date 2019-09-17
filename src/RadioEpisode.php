@@ -2,8 +2,8 @@
 
 namespace Spatie\SchemaOrg;
 
-use \Spatie\SchemaOrg\Contracts\EpisodeContract;
 use \Spatie\SchemaOrg\Contracts\CreativeWorkContract;
+use \Spatie\SchemaOrg\Contracts\EpisodeContract;
 use \Spatie\SchemaOrg\Contracts\ThingContract;
 
 /**
@@ -12,7 +12,7 @@ use \Spatie\SchemaOrg\Contracts\ThingContract;
  * @see http://schema.org/RadioEpisode
  *
  */
-class RadioEpisode extends BaseType implements EpisodeContract, CreativeWorkContract, ThingContract
+class RadioEpisode extends BaseType implements CreativeWorkContract, EpisodeContract, ThingContract
 {
     /**
      * The subject matter of the content.

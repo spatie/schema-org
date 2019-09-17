@@ -2,8 +2,8 @@
 
 namespace Spatie\SchemaOrg;
 
-use \Spatie\SchemaOrg\Contracts\RatingContract;
 use \Spatie\SchemaOrg\Contracts\IntangibleContract;
+use \Spatie\SchemaOrg\Contracts\RatingContract;
 use \Spatie\SchemaOrg\Contracts\ThingContract;
 
 /**
@@ -12,7 +12,7 @@ use \Spatie\SchemaOrg\Contracts\ThingContract;
  * @see http://schema.org/AggregateRating
  *
  */
-class AggregateRating extends BaseType implements RatingContract, IntangibleContract, ThingContract
+class AggregateRating extends BaseType implements IntangibleContract, RatingContract, ThingContract
 {
     /**
      * An additional type for the item, typically used for adding more specific

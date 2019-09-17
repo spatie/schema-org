@@ -2,9 +2,9 @@
 
 namespace Spatie\SchemaOrg;
 
+use \Spatie\SchemaOrg\Contracts\ActionContract;
 use \Spatie\SchemaOrg\Contracts\CommunicateActionContract;
 use \Spatie\SchemaOrg\Contracts\InteractActionContract;
-use \Spatie\SchemaOrg\Contracts\ActionContract;
 use \Spatie\SchemaOrg\Contracts\ThingContract;
 
 /**
@@ -13,7 +13,7 @@ use \Spatie\SchemaOrg\Contracts\ThingContract;
  * @see http://schema.org/CommentAction
  *
  */
-class CommentAction extends BaseType implements CommunicateActionContract, InteractActionContract, ActionContract, ThingContract
+class CommentAction extends BaseType implements ActionContract, CommunicateActionContract, InteractActionContract, ThingContract
 {
     /**
      * The subject matter of the content.

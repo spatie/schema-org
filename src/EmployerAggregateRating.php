@@ -3,8 +3,8 @@
 namespace Spatie\SchemaOrg;
 
 use \Spatie\SchemaOrg\Contracts\AggregateRatingContract;
-use \Spatie\SchemaOrg\Contracts\RatingContract;
 use \Spatie\SchemaOrg\Contracts\IntangibleContract;
+use \Spatie\SchemaOrg\Contracts\RatingContract;
 use \Spatie\SchemaOrg\Contracts\ThingContract;
 
 /**
@@ -13,7 +13,7 @@ use \Spatie\SchemaOrg\Contracts\ThingContract;
  * @see http://schema.org/EmployerAggregateRating
  *
  */
-class EmployerAggregateRating extends BaseType implements AggregateRatingContract, RatingContract, IntangibleContract, ThingContract
+class EmployerAggregateRating extends BaseType implements AggregateRatingContract, IntangibleContract, RatingContract, ThingContract
 {
     /**
      * An additional type for the item, typically used for adding more specific

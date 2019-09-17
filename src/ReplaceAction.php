@@ -2,9 +2,9 @@
 
 namespace Spatie\SchemaOrg;
 
-use \Spatie\SchemaOrg\Contracts\UpdateActionContract;
 use \Spatie\SchemaOrg\Contracts\ActionContract;
 use \Spatie\SchemaOrg\Contracts\ThingContract;
+use \Spatie\SchemaOrg\Contracts\UpdateActionContract;
 
 /**
  * The act of editing a recipient by replacing an old object with a new object.
@@ -12,7 +12,7 @@ use \Spatie\SchemaOrg\Contracts\ThingContract;
  * @see http://schema.org/ReplaceAction
  *
  */
-class ReplaceAction extends BaseType implements UpdateActionContract, ActionContract, ThingContract
+class ReplaceAction extends BaseType implements ActionContract, ThingContract, UpdateActionContract
 {
     /**
      * Indicates the current disposition of the Action.

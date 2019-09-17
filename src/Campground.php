@@ -3,11 +3,11 @@
 namespace Spatie\SchemaOrg;
 
 use \Spatie\SchemaOrg\Contracts\CivicStructureContract;
+use \Spatie\SchemaOrg\Contracts\LocalBusinessContract;
 use \Spatie\SchemaOrg\Contracts\LodgingBusinessContract;
+use \Spatie\SchemaOrg\Contracts\OrganizationContract;
 use \Spatie\SchemaOrg\Contracts\PlaceContract;
 use \Spatie\SchemaOrg\Contracts\ThingContract;
-use \Spatie\SchemaOrg\Contracts\LocalBusinessContract;
-use \Spatie\SchemaOrg\Contracts\OrganizationContract;
 
 /**
  * A camping site, campsite, or [[Campground]] is a place used for overnight
@@ -32,7 +32,7 @@ use \Spatie\SchemaOrg\Contracts\OrganizationContract;
  * @see http://schema.org/Campground
  *
  */
-class Campground extends BaseType implements CivicStructureContract, LodgingBusinessContract, PlaceContract, ThingContract, LocalBusinessContract, OrganizationContract
+class Campground extends BaseType implements CivicStructureContract, LocalBusinessContract, LodgingBusinessContract, OrganizationContract, PlaceContract, ThingContract
 {
     /**
      * A property-value pair representing an additional characteristics of the

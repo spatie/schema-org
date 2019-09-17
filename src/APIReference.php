@@ -2,9 +2,9 @@
 
 namespace Spatie\SchemaOrg;
 
-use \Spatie\SchemaOrg\Contracts\TechArticleContract;
 use \Spatie\SchemaOrg\Contracts\ArticleContract;
 use \Spatie\SchemaOrg\Contracts\CreativeWorkContract;
+use \Spatie\SchemaOrg\Contracts\TechArticleContract;
 use \Spatie\SchemaOrg\Contracts\ThingContract;
 
 /**
@@ -13,7 +13,7 @@ use \Spatie\SchemaOrg\Contracts\ThingContract;
  * @see http://schema.org/APIReference
  *
  */
-class APIReference extends BaseType implements TechArticleContract, ArticleContract, CreativeWorkContract, ThingContract
+class APIReference extends BaseType implements ArticleContract, CreativeWorkContract, TechArticleContract, ThingContract
 {
     /**
      * The subject matter of the content.

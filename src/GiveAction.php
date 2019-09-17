@@ -2,9 +2,9 @@
 
 namespace Spatie\SchemaOrg;
 
-use \Spatie\SchemaOrg\Contracts\TransferActionContract;
 use \Spatie\SchemaOrg\Contracts\ActionContract;
 use \Spatie\SchemaOrg\Contracts\ThingContract;
+use \Spatie\SchemaOrg\Contracts\TransferActionContract;
 
 /**
  * The act of transferring ownership of an object to a destination. Reciprocal
@@ -20,7 +20,7 @@ use \Spatie\SchemaOrg\Contracts\ThingContract;
  * @see http://schema.org/GiveAction
  *
  */
-class GiveAction extends BaseType implements TransferActionContract, ActionContract, ThingContract
+class GiveAction extends BaseType implements ActionContract, ThingContract, TransferActionContract
 {
     /**
      * Indicates the current disposition of the Action.

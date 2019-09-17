@@ -2,8 +2,8 @@
 
 namespace Spatie\SchemaOrg;
 
-use \Spatie\SchemaOrg\Contracts\QuantityContract;
 use \Spatie\SchemaOrg\Contracts\IntangibleContract;
+use \Spatie\SchemaOrg\Contracts\QuantityContract;
 use \Spatie\SchemaOrg\Contracts\ThingContract;
 
 /**
@@ -13,7 +13,7 @@ use \Spatie\SchemaOrg\Contracts\ThingContract;
  * @see http://schema.org/Distance
  *
  */
-class Distance extends BaseType implements QuantityContract, IntangibleContract, ThingContract
+class Distance extends BaseType implements IntangibleContract, QuantityContract, ThingContract
 {
     /**
      * An additional type for the item, typically used for adding more specific

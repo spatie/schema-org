@@ -2,9 +2,9 @@
 
 namespace Spatie\SchemaOrg;
 
-use \Spatie\SchemaOrg\Contracts\QualitativeValueContract;
 use \Spatie\SchemaOrg\Contracts\EnumerationContract;
 use \Spatie\SchemaOrg\Contracts\IntangibleContract;
+use \Spatie\SchemaOrg\Contracts\QualitativeValueContract;
 use \Spatie\SchemaOrg\Contracts\ThingContract;
 
 /**
@@ -13,7 +13,7 @@ use \Spatie\SchemaOrg\Contracts\ThingContract;
  * @see http://schema.org/DriveWheelConfigurationValue
  *
  */
-class DriveWheelConfigurationValue extends BaseType implements QualitativeValueContract, EnumerationContract, IntangibleContract, ThingContract
+class DriveWheelConfigurationValue extends BaseType implements EnumerationContract, IntangibleContract, QualitativeValueContract, ThingContract
 {
     /**
      * All-wheel Drive is a transmission layout where the engine drives all four

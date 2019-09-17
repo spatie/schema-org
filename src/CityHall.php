@@ -2,8 +2,8 @@
 
 namespace Spatie\SchemaOrg;
 
-use \Spatie\SchemaOrg\Contracts\GovernmentBuildingContract;
 use \Spatie\SchemaOrg\Contracts\CivicStructureContract;
+use \Spatie\SchemaOrg\Contracts\GovernmentBuildingContract;
 use \Spatie\SchemaOrg\Contracts\PlaceContract;
 use \Spatie\SchemaOrg\Contracts\ThingContract;
 
@@ -13,7 +13,7 @@ use \Spatie\SchemaOrg\Contracts\ThingContract;
  * @see http://schema.org/CityHall
  *
  */
-class CityHall extends BaseType implements GovernmentBuildingContract, CivicStructureContract, PlaceContract, ThingContract
+class CityHall extends BaseType implements CivicStructureContract, GovernmentBuildingContract, PlaceContract, ThingContract
 {
     /**
      * A property-value pair representing an additional characteristics of the

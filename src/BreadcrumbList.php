@@ -2,8 +2,8 @@
 
 namespace Spatie\SchemaOrg;
 
-use \Spatie\SchemaOrg\Contracts\ItemListContract;
 use \Spatie\SchemaOrg\Contracts\IntangibleContract;
+use \Spatie\SchemaOrg\Contracts\ItemListContract;
 use \Spatie\SchemaOrg\Contracts\ThingContract;
 
 /**
@@ -22,7 +22,7 @@ use \Spatie\SchemaOrg\Contracts\ThingContract;
  * @see http://schema.org/BreadcrumbList
  *
  */
-class BreadcrumbList extends BaseType implements ItemListContract, IntangibleContract, ThingContract
+class BreadcrumbList extends BaseType implements IntangibleContract, ItemListContract, ThingContract
 {
     /**
      * An additional type for the item, typically used for adding more specific

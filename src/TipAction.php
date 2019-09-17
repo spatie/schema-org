@@ -2,9 +2,9 @@
 
 namespace Spatie\SchemaOrg;
 
-use \Spatie\SchemaOrg\Contracts\TradeActionContract;
 use \Spatie\SchemaOrg\Contracts\ActionContract;
 use \Spatie\SchemaOrg\Contracts\ThingContract;
+use \Spatie\SchemaOrg\Contracts\TradeActionContract;
 
 /**
  * The act of giving money voluntarily to a beneficiary in recognition of
@@ -13,7 +13,7 @@ use \Spatie\SchemaOrg\Contracts\ThingContract;
  * @see http://schema.org/TipAction
  *
  */
-class TipAction extends BaseType implements TradeActionContract, ActionContract, ThingContract
+class TipAction extends BaseType implements ActionContract, ThingContract, TradeActionContract
 {
     /**
      * Indicates the current disposition of the Action.
