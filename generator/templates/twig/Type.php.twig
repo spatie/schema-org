@@ -2,21 +2,23 @@
 
 namespace Spatie\SchemaOrg;
 
+{% for parent in type.parents %}
+use \Spatie\SchemaOrg\Contracts\{{ parent }}Contract;
+{% endfor %}
+{% for grandParent in type.grandParents %}
+use \Spatie\SchemaOrg\Contracts\{{ grandParent }}Contract;
+{% endfor %}
+
 /**
  * {{ type.description | doc(0) }}
  *
  * @see {{ type.resource }}
-{% if type.parents %}
  *
-{% for parent in type.parents %}
- * @mixin \Spatie\SchemaOrg\{{ parent }}
-{% endfor %}
 {% for property in type.properties if property.pending  %}
  * @method static {{ property.name }}(${{ property.name }}) The value should be instance of pending types {{ property.ranges | join('|') }}
 {% endfor %}
-{% endif %}
  */
-class {{ type.name }} extends BaseType
+class {{ type.name }} extends BaseType{% if type.parents or type.grandParents %} implements {% endif %}{{ type.parents|map(parent => "#{parent}Contract")|join(', ') }}{% if type.grandParents %}, {% endif %}{{ type.grandParents|map(grandParent => "#{grandParent}Contract")|join(', ') }}
 {
 {% for constant in type.constants %}
     /**
@@ -40,6 +42,22 @@ class {{ type.name }} extends BaseType
     public function {{ property.name }}(${{ property.name }})
     {
         return $this->setProperty('{{ property.name }}', ${{ property.name }});
+    }
+
+{% endfor %}
+{% for parentProperty in type.parentProperties if not parentProperty.pending  %}
+    /**
+     * {{ parentProperty.description | doc(1) }}
+     *
+     * @param {{ parentProperty.ranges | join('|') }} ${{ parentProperty.name }}
+     *
+     * @return static
+     *
+     * @see {{ parentProperty.resource }}
+     */
+    public function {{ parentProperty.name }}(${{ parentProperty.name }})
+    {
+        return $this->setProperty('{{ parentProperty.name }}', ${{ parentProperty.name }});
     }
 
 {% endfor %}
