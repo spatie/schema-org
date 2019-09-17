@@ -64,7 +64,7 @@ class Type
 
             $this->parents = array_unique(array_merge($this->parents, $parent->parents));
 
-            ksort($this->parents);
+            sort($this->parents);
 
             foreach ($parent->properties as $property) {
                 $this->addProperty($property);
