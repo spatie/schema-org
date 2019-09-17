@@ -19,9 +19,6 @@ class Type
     /** @var Property[] */
     public $properties = [];
 
-    /** @var Property[] */
-    public $parentProperties;
-
     /** @var array */
     public $constants = [];
 
@@ -68,19 +65,11 @@ class Type
             $this->grandParents = array_merge($parent->parents, $parent->grandParents);
 
             foreach ($parent->properties as $property) {
-                if (isset($this->parentProperties[$property->name])) {
-                    continue;
-                }
-
-                $this->parentProperties[$property->name] = $property;
+                $this->addProperty($property);
             }
 
             foreach ($parent->parentProperties as $parentProperty) {
-                if (isset($this->parentProperties[$parentProperty->name])) {
-                    continue;
-                }
-
-                $this->parentProperties[$parentProperty->name] = $parentProperty;
+                $this->addProperty($parentProperty);
             }
         }
     }
