@@ -8,8 +8,4 @@ interface {{ type.name }}Contract
     public function {{ property.name }}(${{ property.name }});
 
 {% endfor %}
-{% for parentProperty in type.parentProperties if not parentProperty.pending  %}
-    public function {{ parentProperty.name }}(${{ parentProperty.name }});
-
-{% endfor %}
 }

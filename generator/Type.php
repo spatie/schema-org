@@ -10,9 +10,6 @@ class Type
     /** @var string[] */
     public $parents = [];
 
-    /** @var string[] */
-    public $grandParents = [];
-
     /** @var string */
     public $description;
 
@@ -24,6 +21,9 @@ class Type
 
     /** @var string */
     public $resource;
+
+    /** @var bool */
+    protected $parentsLoaded = false;
 
     public function addProperty(Property $property)
     {
@@ -41,11 +41,11 @@ class Type
 
     public function setTypeCollection(TypeCollection $typeCollection): void
     {
-        if ($this->parentProperties !== null) {
+        if ($this->parentsLoaded) {
             return;
         }
 
-        $this->parentProperties = [];
+        $this->parentsLoaded = true;
 
         if (empty($this->parents)) {
             return;
@@ -62,14 +62,12 @@ class Type
             $parent = $types[$parent];
             $parent->setTypeCollection($typeCollection);
 
-            $this->grandParents = array_merge($parent->parents, $parent->grandParents);
+            $this->parents = array_unique(array_merge($this->parents, $parent->parents));
+
+            ksort($this->parents);
 
             foreach ($parent->properties as $property) {
                 $this->addProperty($property);
-            }
-
-            foreach ($parent->parentProperties as $parentProperty) {
-                $this->addProperty($parentProperty);
             }
         }
     }
