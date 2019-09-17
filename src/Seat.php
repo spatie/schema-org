@@ -14,62 +14,6 @@ use \Spatie\SchemaOrg\Contracts\ThingContract;
 class Seat extends BaseType implements IntangibleContract, ThingContract
 {
     /**
-     * The location of the reserved seat (e.g., 27).
-     *
-     * @param string|string[] $seatNumber
-     *
-     * @return static
-     *
-     * @see http://schema.org/seatNumber
-     */
-    public function seatNumber($seatNumber)
-    {
-        return $this->setProperty('seatNumber', $seatNumber);
-    }
-
-    /**
-     * The row location of the reserved seat (e.g., B).
-     *
-     * @param string|string[] $seatRow
-     *
-     * @return static
-     *
-     * @see http://schema.org/seatRow
-     */
-    public function seatRow($seatRow)
-    {
-        return $this->setProperty('seatRow', $seatRow);
-    }
-
-    /**
-     * The section location of the reserved seat (e.g. Orchestra).
-     *
-     * @param string|string[] $seatSection
-     *
-     * @return static
-     *
-     * @see http://schema.org/seatSection
-     */
-    public function seatSection($seatSection)
-    {
-        return $this->setProperty('seatSection', $seatSection);
-    }
-
-    /**
-     * The type/class of the seat.
-     *
-     * @param QualitativeValue|QualitativeValue[]|string|string[] $seatingType
-     *
-     * @return static
-     *
-     * @see http://schema.org/seatingType
-     */
-    public function seatingType($seatingType)
-    {
-        return $this->setProperty('seatingType', $seatingType);
-    }
-
-    /**
      * An additional type for the item, typically used for adding more specific
      * types from external vocabularies in microdata syntax. This is a
      * relationship between something and a class that the thing is in. In RDFa
@@ -225,6 +169,62 @@ class Seat extends BaseType implements IntangibleContract, ThingContract
     public function sameAs($sameAs)
     {
         return $this->setProperty('sameAs', $sameAs);
+    }
+
+    /**
+     * The location of the reserved seat (e.g., 27).
+     *
+     * @param string|string[] $seatNumber
+     *
+     * @return static
+     *
+     * @see http://schema.org/seatNumber
+     */
+    public function seatNumber($seatNumber)
+    {
+        return $this->setProperty('seatNumber', $seatNumber);
+    }
+
+    /**
+     * The row location of the reserved seat (e.g., B).
+     *
+     * @param string|string[] $seatRow
+     *
+     * @return static
+     *
+     * @see http://schema.org/seatRow
+     */
+    public function seatRow($seatRow)
+    {
+        return $this->setProperty('seatRow', $seatRow);
+    }
+
+    /**
+     * The section location of the reserved seat (e.g. Orchestra).
+     *
+     * @param string|string[] $seatSection
+     *
+     * @return static
+     *
+     * @see http://schema.org/seatSection
+     */
+    public function seatSection($seatSection)
+    {
+        return $this->setProperty('seatSection', $seatSection);
+    }
+
+    /**
+     * The type/class of the seat.
+     *
+     * @param QualitativeValue|QualitativeValue[]|string|string[] $seatingType
+     *
+     * @return static
+     *
+     * @see http://schema.org/seatingType
+     */
+    public function seatingType($seatingType)
+    {
+        return $this->setProperty('seatingType', $seatingType);
     }
 
     /**

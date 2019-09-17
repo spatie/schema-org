@@ -15,20 +15,6 @@ use \Spatie\SchemaOrg\Contracts\ThingContract;
 class BroadcastFrequencySpecification extends BaseType implements IntangibleContract, ThingContract
 {
     /**
-     * The frequency in MHz for a particular broadcast.
-     *
-     * @param QuantitativeValue|QuantitativeValue[]|float|float[]|int|int[] $broadcastFrequencyValue
-     *
-     * @return static
-     *
-     * @see http://schema.org/broadcastFrequencyValue
-     */
-    public function broadcastFrequencyValue($broadcastFrequencyValue)
-    {
-        return $this->setProperty('broadcastFrequencyValue', $broadcastFrequencyValue);
-    }
-
-    /**
      * An additional type for the item, typically used for adding more specific
      * types from external vocabularies in microdata syntax. This is a
      * relationship between something and a class that the thing is in. In RDFa
@@ -59,6 +45,20 @@ class BroadcastFrequencySpecification extends BaseType implements IntangibleCont
     public function alternateName($alternateName)
     {
         return $this->setProperty('alternateName', $alternateName);
+    }
+
+    /**
+     * The frequency in MHz for a particular broadcast.
+     *
+     * @param QuantitativeValue|QuantitativeValue[]|float|float[]|int|int[] $broadcastFrequencyValue
+     *
+     * @return static
+     *
+     * @see http://schema.org/broadcastFrequencyValue
+     */
+    public function broadcastFrequencyValue($broadcastFrequencyValue)
+    {
+        return $this->setProperty('broadcastFrequencyValue', $broadcastFrequencyValue);
     }
 
     /**

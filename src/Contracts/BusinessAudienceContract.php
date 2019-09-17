@@ -4,23 +4,17 @@ namespace Spatie\SchemaOrg\Contracts;
 
 interface BusinessAudienceContract
 {
-    public function numberOfEmployees($numberOfEmployees);
-
-    public function yearlyRevenue($yearlyRevenue);
-
-    public function yearsInOperation($yearsInOperation);
-
-    public function audienceType($audienceType);
-
-    public function geographicArea($geographicArea);
-
     public function additionalType($additionalType);
 
     public function alternateName($alternateName);
 
+    public function audienceType($audienceType);
+
     public function description($description);
 
     public function disambiguatingDescription($disambiguatingDescription);
+
+    public function geographicArea($geographicArea);
 
     public function identifier($identifier);
 
@@ -30,6 +24,8 @@ interface BusinessAudienceContract
 
     public function name($name);
 
+    public function numberOfEmployees($numberOfEmployees);
+
     public function potentialAction($potentialAction);
 
     public function sameAs($sameAs);
@@ -37,5 +33,9 @@ interface BusinessAudienceContract
     public function subjectOf($subjectOf);
 
     public function url($url);
+
+    public function yearlyRevenue($yearlyRevenue);
+
+    public function yearsInOperation($yearsInOperation);
 
 }

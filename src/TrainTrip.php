@@ -15,6 +15,39 @@ use \Spatie\SchemaOrg\Contracts\ThingContract;
 class TrainTrip extends BaseType implements TripContract, IntangibleContract, ThingContract
 {
     /**
+     * An additional type for the item, typically used for adding more specific
+     * types from external vocabularies in microdata syntax. This is a
+     * relationship between something and a class that the thing is in. In RDFa
+     * syntax, it is better to use the native RDFa syntax - the 'typeof'
+     * attribute - for multiple types. Schema.org tools may have only weaker
+     * understanding of extra types, in particular those defined externally.
+     *
+     * @param string|string[] $additionalType
+     *
+     * @return static
+     *
+     * @see http://schema.org/additionalType
+     */
+    public function additionalType($additionalType)
+    {
+        return $this->setProperty('additionalType', $additionalType);
+    }
+
+    /**
+     * An alias for the item.
+     *
+     * @param string|string[] $alternateName
+     *
+     * @return static
+     *
+     * @see http://schema.org/alternateName
+     */
+    public function alternateName($alternateName)
+    {
+        return $this->setProperty('alternateName', $alternateName);
+    }
+
+    /**
      * The platform where the train arrives.
      *
      * @param string|string[] $arrivalPlatform
@@ -40,6 +73,20 @@ class TrainTrip extends BaseType implements TripContract, IntangibleContract, Th
     public function arrivalStation($arrivalStation)
     {
         return $this->setProperty('arrivalStation', $arrivalStation);
+    }
+
+    /**
+     * The expected arrival time.
+     *
+     * @param \DateTimeInterface|\DateTimeInterface[] $arrivalTime
+     *
+     * @return static
+     *
+     * @see http://schema.org/arrivalTime
+     */
+    public function arrivalTime($arrivalTime)
+    {
+        return $this->setProperty('arrivalTime', $arrivalTime);
     }
 
     /**
@@ -71,48 +118,6 @@ class TrainTrip extends BaseType implements TripContract, IntangibleContract, Th
     }
 
     /**
-     * The name of the train (e.g. The Orient Express).
-     *
-     * @param string|string[] $trainName
-     *
-     * @return static
-     *
-     * @see http://schema.org/trainName
-     */
-    public function trainName($trainName)
-    {
-        return $this->setProperty('trainName', $trainName);
-    }
-
-    /**
-     * The unique identifier for the train.
-     *
-     * @param string|string[] $trainNumber
-     *
-     * @return static
-     *
-     * @see http://schema.org/trainNumber
-     */
-    public function trainNumber($trainNumber)
-    {
-        return $this->setProperty('trainNumber', $trainNumber);
-    }
-
-    /**
-     * The expected arrival time.
-     *
-     * @param \DateTimeInterface|\DateTimeInterface[] $arrivalTime
-     *
-     * @return static
-     *
-     * @see http://schema.org/arrivalTime
-     */
-    public function arrivalTime($arrivalTime)
-    {
-        return $this->setProperty('arrivalTime', $arrivalTime);
-    }
-
-    /**
      * The expected departure time.
      *
      * @param \DateTimeInterface|\DateTimeInterface[] $departureTime
@@ -124,71 +129,6 @@ class TrainTrip extends BaseType implements TripContract, IntangibleContract, Th
     public function departureTime($departureTime)
     {
         return $this->setProperty('departureTime', $departureTime);
-    }
-
-    /**
-     * An offer to provide this item&#x2014;for example, an offer to sell a
-     * product, rent the DVD of a movie, perform a service, or give away tickets
-     * to an event.
-     *
-     * @param Offer|Offer[] $offers
-     *
-     * @return static
-     *
-     * @see http://schema.org/offers
-     */
-    public function offers($offers)
-    {
-        return $this->setProperty('offers', $offers);
-    }
-
-    /**
-     * The service provider, service operator, or service performer; the goods
-     * producer. Another party (a seller) may offer those services or goods on
-     * behalf of the provider. A provider may also serve as the seller.
-     *
-     * @param Organization|Organization[]|Person|Person[] $provider
-     *
-     * @return static
-     *
-     * @see http://schema.org/provider
-     */
-    public function provider($provider)
-    {
-        return $this->setProperty('provider', $provider);
-    }
-
-    /**
-     * An additional type for the item, typically used for adding more specific
-     * types from external vocabularies in microdata syntax. This is a
-     * relationship between something and a class that the thing is in. In RDFa
-     * syntax, it is better to use the native RDFa syntax - the 'typeof'
-     * attribute - for multiple types. Schema.org tools may have only weaker
-     * understanding of extra types, in particular those defined externally.
-     *
-     * @param string|string[] $additionalType
-     *
-     * @return static
-     *
-     * @see http://schema.org/additionalType
-     */
-    public function additionalType($additionalType)
-    {
-        return $this->setProperty('additionalType', $additionalType);
-    }
-
-    /**
-     * An alias for the item.
-     *
-     * @param string|string[] $alternateName
-     *
-     * @return static
-     *
-     * @see http://schema.org/alternateName
-     */
-    public function alternateName($alternateName)
-    {
-        return $this->setProperty('alternateName', $alternateName);
     }
 
     /**
@@ -286,6 +226,22 @@ class TrainTrip extends BaseType implements TripContract, IntangibleContract, Th
     }
 
     /**
+     * An offer to provide this item&#x2014;for example, an offer to sell a
+     * product, rent the DVD of a movie, perform a service, or give away tickets
+     * to an event.
+     *
+     * @param Offer|Offer[] $offers
+     *
+     * @return static
+     *
+     * @see http://schema.org/offers
+     */
+    public function offers($offers)
+    {
+        return $this->setProperty('offers', $offers);
+    }
+
+    /**
      * Indicates a potential Action, which describes an idealized action in
      * which this thing would play an 'object' role.
      *
@@ -298,6 +254,22 @@ class TrainTrip extends BaseType implements TripContract, IntangibleContract, Th
     public function potentialAction($potentialAction)
     {
         return $this->setProperty('potentialAction', $potentialAction);
+    }
+
+    /**
+     * The service provider, service operator, or service performer; the goods
+     * producer. Another party (a seller) may offer those services or goods on
+     * behalf of the provider. A provider may also serve as the seller.
+     *
+     * @param Organization|Organization[]|Person|Person[] $provider
+     *
+     * @return static
+     *
+     * @see http://schema.org/provider
+     */
+    public function provider($provider)
+    {
+        return $this->setProperty('provider', $provider);
     }
 
     /**
@@ -328,6 +300,34 @@ class TrainTrip extends BaseType implements TripContract, IntangibleContract, Th
     public function subjectOf($subjectOf)
     {
         return $this->setProperty('subjectOf', $subjectOf);
+    }
+
+    /**
+     * The name of the train (e.g. The Orient Express).
+     *
+     * @param string|string[] $trainName
+     *
+     * @return static
+     *
+     * @see http://schema.org/trainName
+     */
+    public function trainName($trainName)
+    {
+        return $this->setProperty('trainName', $trainName);
+    }
+
+    /**
+     * The unique identifier for the train.
+     *
+     * @param string|string[] $trainNumber
+     *
+     * @return static
+     *
+     * @see http://schema.org/trainNumber
+     */
+    public function trainNumber($trainNumber)
+    {
+        return $this->setProperty('trainNumber', $trainNumber);
     }
 
     /**

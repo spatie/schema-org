@@ -4,40 +4,6 @@ namespace Spatie\SchemaOrg\Contracts;
 
 interface RadioSeriesContract
 {
-    public function actor($actor);
-
-    public function actors($actors);
-
-    public function containsSeason($containsSeason);
-
-    public function director($director);
-
-    public function directors($directors);
-
-    public function episode($episode);
-
-    public function episodes($episodes);
-
-    public function musicBy($musicBy);
-
-    public function numberOfEpisodes($numberOfEpisodes);
-
-    public function numberOfSeasons($numberOfSeasons);
-
-    public function productionCompany($productionCompany);
-
-    public function season($season);
-
-    public function seasons($seasons);
-
-    public function trailer($trailer);
-
-    public function endDate($endDate);
-
-    public function issn($issn);
-
-    public function startDate($startDate);
-
     public function about($about);
 
     public function accessMode($accessMode);
@@ -56,7 +22,15 @@ interface RadioSeriesContract
 
     public function accountablePerson($accountablePerson);
 
+    public function actor($actor);
+
+    public function actors($actors);
+
+    public function additionalType($additionalType);
+
     public function aggregateRating($aggregateRating);
+
+    public function alternateName($alternateName);
 
     public function alternativeHeadline($alternativeHeadline);
 
@@ -80,6 +54,8 @@ interface RadioSeriesContract
 
     public function commentCount($commentCount);
 
+    public function containsSeason($containsSeason);
+
     public function contentLocation($contentLocation);
 
     public function contentRating($contentRating);
@@ -98,6 +74,14 @@ interface RadioSeriesContract
 
     public function datePublished($datePublished);
 
+    public function description($description);
+
+    public function director($director);
+
+    public function directors($directors);
+
+    public function disambiguatingDescription($disambiguatingDescription);
+
     public function discussionUrl($discussionUrl);
 
     public function editor($editor);
@@ -112,6 +96,12 @@ interface RadioSeriesContract
 
     public function encodings($encodings);
 
+    public function endDate($endDate);
+
+    public function episode($episode);
+
+    public function episodes($episodes);
+
     public function exampleOfWork($exampleOfWork);
 
     public function expires($expires);
@@ -125,6 +115,10 @@ interface RadioSeriesContract
     public function hasPart($hasPart);
 
     public function headline($headline);
+
+    public function identifier($identifier);
+
+    public function image($image);
 
     public function inLanguage($inLanguage);
 
@@ -142,6 +136,8 @@ interface RadioSeriesContract
 
     public function isPartOf($isPartOf);
 
+    public function issn($issn);
+
     public function keywords($keywords);
 
     public function learningResourceType($learningResourceType);
@@ -152,15 +148,29 @@ interface RadioSeriesContract
 
     public function mainEntity($mainEntity);
 
+    public function mainEntityOfPage($mainEntityOfPage);
+
     public function material($material);
 
     public function mentions($mentions);
+
+    public function musicBy($musicBy);
+
+    public function name($name);
+
+    public function numberOfEpisodes($numberOfEpisodes);
+
+    public function numberOfSeasons($numberOfSeasons);
 
     public function offers($offers);
 
     public function position($position);
 
+    public function potentialAction($potentialAction);
+
     public function producer($producer);
+
+    public function productionCompany($productionCompany);
 
     public function provider($provider);
 
@@ -178,7 +188,13 @@ interface RadioSeriesContract
 
     public function reviews($reviews);
 
+    public function sameAs($sameAs);
+
     public function schemaVersion($schemaVersion);
+
+    public function season($season);
+
+    public function seasons($seasons);
 
     public function sourceOrganization($sourceOrganization);
 
@@ -187,6 +203,10 @@ interface RadioSeriesContract
     public function spatialCoverage($spatialCoverage);
 
     public function sponsor($sponsor);
+
+    public function startDate($startDate);
+
+    public function subjectOf($subjectOf);
 
     public function temporal($temporal);
 
@@ -198,40 +218,18 @@ interface RadioSeriesContract
 
     public function timeRequired($timeRequired);
 
+    public function trailer($trailer);
+
     public function translator($translator);
 
     public function typicalAgeRange($typicalAgeRange);
+
+    public function url($url);
 
     public function version($version);
 
     public function video($video);
 
     public function workExample($workExample);
-
-    public function additionalType($additionalType);
-
-    public function alternateName($alternateName);
-
-    public function description($description);
-
-    public function disambiguatingDescription($disambiguatingDescription);
-
-    public function identifier($identifier);
-
-    public function image($image);
-
-    public function mainEntityOfPage($mainEntityOfPage);
-
-    public function name($name);
-
-    public function potentialAction($potentialAction);
-
-    public function sameAs($sameAs);
-
-    public function subjectOf($subjectOf);
-
-    public function url($url);
-
-    public function director($director);
 
 }

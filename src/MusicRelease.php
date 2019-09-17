@@ -15,122 +15,6 @@ use \Spatie\SchemaOrg\Contracts\ThingContract;
 class MusicRelease extends BaseType implements MusicPlaylistContract, CreativeWorkContract, ThingContract
 {
     /**
-     * The catalog number for the release.
-     *
-     * @param string|string[] $catalogNumber
-     *
-     * @return static
-     *
-     * @see http://schema.org/catalogNumber
-     */
-    public function catalogNumber($catalogNumber)
-    {
-        return $this->setProperty('catalogNumber', $catalogNumber);
-    }
-
-    /**
-     * The group the release is credited to if different than the byArtist. For
-     * example, Red and Blue is credited to "Stefani Germanotta Band", but by
-     * Lady Gaga.
-     *
-     * @param Organization|Organization[]|Person|Person[] $creditedTo
-     *
-     * @return static
-     *
-     * @see http://schema.org/creditedTo
-     */
-    public function creditedTo($creditedTo)
-    {
-        return $this->setProperty('creditedTo', $creditedTo);
-    }
-
-    /**
-     * Format of this release (the type of recording media used, ie. compact
-     * disc, digital media, LP, etc.).
-     *
-     * @param MusicReleaseFormatType|MusicReleaseFormatType[] $musicReleaseFormat
-     *
-     * @return static
-     *
-     * @see http://schema.org/musicReleaseFormat
-     */
-    public function musicReleaseFormat($musicReleaseFormat)
-    {
-        return $this->setProperty('musicReleaseFormat', $musicReleaseFormat);
-    }
-
-    /**
-     * The label that issued the release.
-     *
-     * @param Organization|Organization[] $recordLabel
-     *
-     * @return static
-     *
-     * @see http://schema.org/recordLabel
-     */
-    public function recordLabel($recordLabel)
-    {
-        return $this->setProperty('recordLabel', $recordLabel);
-    }
-
-    /**
-     * The album this is a release of.
-     *
-     * @param MusicAlbum|MusicAlbum[] $releaseOf
-     *
-     * @return static
-     *
-     * @see http://schema.org/releaseOf
-     */
-    public function releaseOf($releaseOf)
-    {
-        return $this->setProperty('releaseOf', $releaseOf);
-    }
-
-    /**
-     * The number of tracks in this album or playlist.
-     *
-     * @param int|int[] $numTracks
-     *
-     * @return static
-     *
-     * @see http://schema.org/numTracks
-     */
-    public function numTracks($numTracks)
-    {
-        return $this->setProperty('numTracks', $numTracks);
-    }
-
-    /**
-     * A music recording (track)&#x2014;usually a single song. If an ItemList is
-     * given, the list should contain items of type MusicRecording.
-     *
-     * @param ItemList|ItemList[]|MusicRecording|MusicRecording[] $track
-     *
-     * @return static
-     *
-     * @see http://schema.org/track
-     */
-    public function track($track)
-    {
-        return $this->setProperty('track', $track);
-    }
-
-    /**
-     * A music recording (track)&#x2014;usually a single song.
-     *
-     * @param MusicRecording|MusicRecording[] $tracks
-     *
-     * @return static
-     *
-     * @see http://schema.org/tracks
-     */
-    public function tracks($tracks)
-    {
-        return $this->setProperty('tracks', $tracks);
-    }
-
-    /**
      * The subject matter of the content.
      *
      * @param Thing|Thing[] $about
@@ -275,6 +159,25 @@ class MusicRelease extends BaseType implements MusicPlaylistContract, CreativeWo
     }
 
     /**
+     * An additional type for the item, typically used for adding more specific
+     * types from external vocabularies in microdata syntax. This is a
+     * relationship between something and a class that the thing is in. In RDFa
+     * syntax, it is better to use the native RDFa syntax - the 'typeof'
+     * attribute - for multiple types. Schema.org tools may have only weaker
+     * understanding of extra types, in particular those defined externally.
+     *
+     * @param string|string[] $additionalType
+     *
+     * @return static
+     *
+     * @see http://schema.org/additionalType
+     */
+    public function additionalType($additionalType)
+    {
+        return $this->setProperty('additionalType', $additionalType);
+    }
+
+    /**
      * The overall rating, based on a collection of reviews or ratings, of the
      * item.
      *
@@ -287,6 +190,20 @@ class MusicRelease extends BaseType implements MusicPlaylistContract, CreativeWo
     public function aggregateRating($aggregateRating)
     {
         return $this->setProperty('aggregateRating', $aggregateRating);
+    }
+
+    /**
+     * An alias for the item.
+     *
+     * @param string|string[] $alternateName
+     *
+     * @return static
+     *
+     * @see http://schema.org/alternateName
+     */
+    public function alternateName($alternateName)
+    {
+        return $this->setProperty('alternateName', $alternateName);
     }
 
     /**
@@ -388,6 +305,20 @@ class MusicRelease extends BaseType implements MusicPlaylistContract, CreativeWo
     public function awards($awards)
     {
         return $this->setProperty('awards', $awards);
+    }
+
+    /**
+     * The catalog number for the release.
+     *
+     * @param string|string[] $catalogNumber
+     *
+     * @return static
+     *
+     * @see http://schema.org/catalogNumber
+     */
+    public function catalogNumber($catalogNumber)
+    {
+        return $this->setProperty('catalogNumber', $catalogNumber);
     }
 
     /**
@@ -537,6 +468,22 @@ class MusicRelease extends BaseType implements MusicPlaylistContract, CreativeWo
     }
 
     /**
+     * The group the release is credited to if different than the byArtist. For
+     * example, Red and Blue is credited to "Stefani Germanotta Band", but by
+     * Lady Gaga.
+     *
+     * @param Organization|Organization[]|Person|Person[] $creditedTo
+     *
+     * @return static
+     *
+     * @see http://schema.org/creditedTo
+     */
+    public function creditedTo($creditedTo)
+    {
+        return $this->setProperty('creditedTo', $creditedTo);
+    }
+
+    /**
      * The date on which the CreativeWork was created or the item was added to a
      * DataFeed.
      *
@@ -578,6 +525,37 @@ class MusicRelease extends BaseType implements MusicPlaylistContract, CreativeWo
     public function datePublished($datePublished)
     {
         return $this->setProperty('datePublished', $datePublished);
+    }
+
+    /**
+     * A description of the item.
+     *
+     * @param string|string[] $description
+     *
+     * @return static
+     *
+     * @see http://schema.org/description
+     */
+    public function description($description)
+    {
+        return $this->setProperty('description', $description);
+    }
+
+    /**
+     * A sub property of description. A short description of the item used to
+     * disambiguate from other, similar items. Information from other properties
+     * (in particular, name) may be necessary for the description to be useful
+     * for disambiguation.
+     *
+     * @param string|string[] $disambiguatingDescription
+     *
+     * @return static
+     *
+     * @see http://schema.org/disambiguatingDescription
+     */
+    public function disambiguatingDescription($disambiguatingDescription)
+    {
+        return $this->setProperty('disambiguatingDescription', $disambiguatingDescription);
     }
 
     /**
@@ -806,6 +784,39 @@ class MusicRelease extends BaseType implements MusicPlaylistContract, CreativeWo
     }
 
     /**
+     * The identifier property represents any kind of identifier for any kind of
+     * [[Thing]], such as ISBNs, GTIN codes, UUIDs etc. Schema.org provides
+     * dedicated properties for representing many of these, either as textual
+     * strings or as URL (URI) links. See [background
+     * notes](/docs/datamodel.html#identifierBg) for more details.
+     *
+     * @param PropertyValue|PropertyValue[]|string|string[] $identifier
+     *
+     * @return static
+     *
+     * @see http://schema.org/identifier
+     */
+    public function identifier($identifier)
+    {
+        return $this->setProperty('identifier', $identifier);
+    }
+
+    /**
+     * An image of the item. This can be a [[URL]] or a fully described
+     * [[ImageObject]].
+     *
+     * @param ImageObject|ImageObject[]|string|string[] $image
+     *
+     * @return static
+     *
+     * @see http://schema.org/image
+     */
+    public function image($image)
+    {
+        return $this->setProperty('image', $image);
+    }
+
+    /**
      * The language of the content or performance or used in an action. Please
      * use one of the language codes from the [IETF BCP 47
      * standard](http://tools.ietf.org/html/bcp47). See also
@@ -1003,6 +1014,22 @@ class MusicRelease extends BaseType implements MusicPlaylistContract, CreativeWo
     }
 
     /**
+     * Indicates a page (or other CreativeWork) for which this thing is the main
+     * entity being described. See [background
+     * notes](/docs/datamodel.html#mainEntityBackground) for details.
+     *
+     * @param CreativeWork|CreativeWork[]|string|string[] $mainEntityOfPage
+     *
+     * @return static
+     *
+     * @see http://schema.org/mainEntityOfPage
+     */
+    public function mainEntityOfPage($mainEntityOfPage)
+    {
+        return $this->setProperty('mainEntityOfPage', $mainEntityOfPage);
+    }
+
+    /**
      * A material that something is made from, e.g. leather, wool, cotton,
      * paper.
      *
@@ -1033,6 +1060,49 @@ class MusicRelease extends BaseType implements MusicPlaylistContract, CreativeWo
     }
 
     /**
+     * Format of this release (the type of recording media used, ie. compact
+     * disc, digital media, LP, etc.).
+     *
+     * @param MusicReleaseFormatType|MusicReleaseFormatType[] $musicReleaseFormat
+     *
+     * @return static
+     *
+     * @see http://schema.org/musicReleaseFormat
+     */
+    public function musicReleaseFormat($musicReleaseFormat)
+    {
+        return $this->setProperty('musicReleaseFormat', $musicReleaseFormat);
+    }
+
+    /**
+     * The name of the item.
+     *
+     * @param string|string[] $name
+     *
+     * @return static
+     *
+     * @see http://schema.org/name
+     */
+    public function name($name)
+    {
+        return $this->setProperty('name', $name);
+    }
+
+    /**
+     * The number of tracks in this album or playlist.
+     *
+     * @param int|int[] $numTracks
+     *
+     * @return static
+     *
+     * @see http://schema.org/numTracks
+     */
+    public function numTracks($numTracks)
+    {
+        return $this->setProperty('numTracks', $numTracks);
+    }
+
+    /**
      * An offer to provide this item&#x2014;for example, an offer to sell a
      * product, rent the DVD of a movie, perform a service, or give away tickets
      * to an event.
@@ -1060,6 +1130,21 @@ class MusicRelease extends BaseType implements MusicPlaylistContract, CreativeWo
     public function position($position)
     {
         return $this->setProperty('position', $position);
+    }
+
+    /**
+     * Indicates a potential Action, which describes an idealized action in
+     * which this thing would play an 'object' role.
+     *
+     * @param Action|Action[] $potentialAction
+     *
+     * @return static
+     *
+     * @see http://schema.org/potentialAction
+     */
+    public function potentialAction($potentialAction)
+    {
+        return $this->setProperty('potentialAction', $potentialAction);
     }
 
     /**
@@ -1146,6 +1231,20 @@ class MusicRelease extends BaseType implements MusicPlaylistContract, CreativeWo
     }
 
     /**
+     * The label that issued the release.
+     *
+     * @param Organization|Organization[] $recordLabel
+     *
+     * @return static
+     *
+     * @see http://schema.org/recordLabel
+     */
+    public function recordLabel($recordLabel)
+    {
+        return $this->setProperty('recordLabel', $recordLabel);
+    }
+
+    /**
      * The Event where the CreativeWork was recorded. The CreativeWork may
      * capture all or part of the event.
      *
@@ -1158,6 +1257,20 @@ class MusicRelease extends BaseType implements MusicPlaylistContract, CreativeWo
     public function recordedAt($recordedAt)
     {
         return $this->setProperty('recordedAt', $recordedAt);
+    }
+
+    /**
+     * The album this is a release of.
+     *
+     * @param MusicAlbum|MusicAlbum[] $releaseOf
+     *
+     * @return static
+     *
+     * @see http://schema.org/releaseOf
+     */
+    public function releaseOf($releaseOf)
+    {
+        return $this->setProperty('releaseOf', $releaseOf);
     }
 
     /**
@@ -1201,6 +1314,22 @@ class MusicRelease extends BaseType implements MusicPlaylistContract, CreativeWo
     public function reviews($reviews)
     {
         return $this->setProperty('reviews', $reviews);
+    }
+
+    /**
+     * URL of a reference Web page that unambiguously indicates the item's
+     * identity. E.g. the URL of the item's Wikipedia page, Wikidata entry, or
+     * official website.
+     *
+     * @param string|string[] $sameAs
+     *
+     * @return static
+     *
+     * @see http://schema.org/sameAs
+     */
+    public function sameAs($sameAs)
+    {
+        return $this->setProperty('sameAs', $sameAs);
     }
 
     /**
@@ -1283,6 +1412,20 @@ class MusicRelease extends BaseType implements MusicPlaylistContract, CreativeWo
     public function sponsor($sponsor)
     {
         return $this->setProperty('sponsor', $sponsor);
+    }
+
+    /**
+     * A CreativeWork or Event about this Thing.
+     *
+     * @param CreativeWork|CreativeWork[]|Event|Event[] $subjectOf
+     *
+     * @return static
+     *
+     * @see http://schema.org/subjectOf
+     */
+    public function subjectOf($subjectOf)
+    {
+        return $this->setProperty('subjectOf', $subjectOf);
     }
 
     /**
@@ -1377,6 +1520,35 @@ class MusicRelease extends BaseType implements MusicPlaylistContract, CreativeWo
     }
 
     /**
+     * A music recording (track)&#x2014;usually a single song. If an ItemList is
+     * given, the list should contain items of type MusicRecording.
+     *
+     * @param ItemList|ItemList[]|MusicRecording|MusicRecording[] $track
+     *
+     * @return static
+     *
+     * @see http://schema.org/track
+     */
+    public function track($track)
+    {
+        return $this->setProperty('track', $track);
+    }
+
+    /**
+     * A music recording (track)&#x2014;usually a single song.
+     *
+     * @param MusicRecording|MusicRecording[] $tracks
+     *
+     * @return static
+     *
+     * @see http://schema.org/tracks
+     */
+    public function tracks($tracks)
+    {
+        return $this->setProperty('tracks', $tracks);
+    }
+
+    /**
      * Organization or person who adapts a creative work to different languages,
      * regional differences and technical requirements of a target market, or
      * that translates during some event.
@@ -1404,6 +1576,20 @@ class MusicRelease extends BaseType implements MusicPlaylistContract, CreativeWo
     public function typicalAgeRange($typicalAgeRange)
     {
         return $this->setProperty('typicalAgeRange', $typicalAgeRange);
+    }
+
+    /**
+     * URL of the item.
+     *
+     * @param string|string[] $url
+     *
+     * @return static
+     *
+     * @see http://schema.org/url
+     */
+    public function url($url)
+    {
+        return $this->setProperty('url', $url);
     }
 
     /**
@@ -1447,192 +1633,6 @@ class MusicRelease extends BaseType implements MusicPlaylistContract, CreativeWo
     public function workExample($workExample)
     {
         return $this->setProperty('workExample', $workExample);
-    }
-
-    /**
-     * An additional type for the item, typically used for adding more specific
-     * types from external vocabularies in microdata syntax. This is a
-     * relationship between something and a class that the thing is in. In RDFa
-     * syntax, it is better to use the native RDFa syntax - the 'typeof'
-     * attribute - for multiple types. Schema.org tools may have only weaker
-     * understanding of extra types, in particular those defined externally.
-     *
-     * @param string|string[] $additionalType
-     *
-     * @return static
-     *
-     * @see http://schema.org/additionalType
-     */
-    public function additionalType($additionalType)
-    {
-        return $this->setProperty('additionalType', $additionalType);
-    }
-
-    /**
-     * An alias for the item.
-     *
-     * @param string|string[] $alternateName
-     *
-     * @return static
-     *
-     * @see http://schema.org/alternateName
-     */
-    public function alternateName($alternateName)
-    {
-        return $this->setProperty('alternateName', $alternateName);
-    }
-
-    /**
-     * A description of the item.
-     *
-     * @param string|string[] $description
-     *
-     * @return static
-     *
-     * @see http://schema.org/description
-     */
-    public function description($description)
-    {
-        return $this->setProperty('description', $description);
-    }
-
-    /**
-     * A sub property of description. A short description of the item used to
-     * disambiguate from other, similar items. Information from other properties
-     * (in particular, name) may be necessary for the description to be useful
-     * for disambiguation.
-     *
-     * @param string|string[] $disambiguatingDescription
-     *
-     * @return static
-     *
-     * @see http://schema.org/disambiguatingDescription
-     */
-    public function disambiguatingDescription($disambiguatingDescription)
-    {
-        return $this->setProperty('disambiguatingDescription', $disambiguatingDescription);
-    }
-
-    /**
-     * The identifier property represents any kind of identifier for any kind of
-     * [[Thing]], such as ISBNs, GTIN codes, UUIDs etc. Schema.org provides
-     * dedicated properties for representing many of these, either as textual
-     * strings or as URL (URI) links. See [background
-     * notes](/docs/datamodel.html#identifierBg) for more details.
-     *
-     * @param PropertyValue|PropertyValue[]|string|string[] $identifier
-     *
-     * @return static
-     *
-     * @see http://schema.org/identifier
-     */
-    public function identifier($identifier)
-    {
-        return $this->setProperty('identifier', $identifier);
-    }
-
-    /**
-     * An image of the item. This can be a [[URL]] or a fully described
-     * [[ImageObject]].
-     *
-     * @param ImageObject|ImageObject[]|string|string[] $image
-     *
-     * @return static
-     *
-     * @see http://schema.org/image
-     */
-    public function image($image)
-    {
-        return $this->setProperty('image', $image);
-    }
-
-    /**
-     * Indicates a page (or other CreativeWork) for which this thing is the main
-     * entity being described. See [background
-     * notes](/docs/datamodel.html#mainEntityBackground) for details.
-     *
-     * @param CreativeWork|CreativeWork[]|string|string[] $mainEntityOfPage
-     *
-     * @return static
-     *
-     * @see http://schema.org/mainEntityOfPage
-     */
-    public function mainEntityOfPage($mainEntityOfPage)
-    {
-        return $this->setProperty('mainEntityOfPage', $mainEntityOfPage);
-    }
-
-    /**
-     * The name of the item.
-     *
-     * @param string|string[] $name
-     *
-     * @return static
-     *
-     * @see http://schema.org/name
-     */
-    public function name($name)
-    {
-        return $this->setProperty('name', $name);
-    }
-
-    /**
-     * Indicates a potential Action, which describes an idealized action in
-     * which this thing would play an 'object' role.
-     *
-     * @param Action|Action[] $potentialAction
-     *
-     * @return static
-     *
-     * @see http://schema.org/potentialAction
-     */
-    public function potentialAction($potentialAction)
-    {
-        return $this->setProperty('potentialAction', $potentialAction);
-    }
-
-    /**
-     * URL of a reference Web page that unambiguously indicates the item's
-     * identity. E.g. the URL of the item's Wikipedia page, Wikidata entry, or
-     * official website.
-     *
-     * @param string|string[] $sameAs
-     *
-     * @return static
-     *
-     * @see http://schema.org/sameAs
-     */
-    public function sameAs($sameAs)
-    {
-        return $this->setProperty('sameAs', $sameAs);
-    }
-
-    /**
-     * A CreativeWork or Event about this Thing.
-     *
-     * @param CreativeWork|CreativeWork[]|Event|Event[] $subjectOf
-     *
-     * @return static
-     *
-     * @see http://schema.org/subjectOf
-     */
-    public function subjectOf($subjectOf)
-    {
-        return $this->setProperty('subjectOf', $subjectOf);
-    }
-
-    /**
-     * URL of the item.
-     *
-     * @param string|string[] $url
-     *
-     * @return static
-     *
-     * @see http://schema.org/url
-     */
-    public function url($url)
-    {
-        return $this->setProperty('url', $url);
     }
 
 }

@@ -4,26 +4,6 @@ namespace Spatie\SchemaOrg\Contracts;
 
 interface EpisodeContract
 {
-    public function actor($actor);
-
-    public function actors($actors);
-
-    public function director($director);
-
-    public function directors($directors);
-
-    public function episodeNumber($episodeNumber);
-
-    public function musicBy($musicBy);
-
-    public function partOfSeason($partOfSeason);
-
-    public function partOfSeries($partOfSeries);
-
-    public function productionCompany($productionCompany);
-
-    public function trailer($trailer);
-
     public function about($about);
 
     public function accessMode($accessMode);
@@ -42,7 +22,15 @@ interface EpisodeContract
 
     public function accountablePerson($accountablePerson);
 
+    public function actor($actor);
+
+    public function actors($actors);
+
+    public function additionalType($additionalType);
+
     public function aggregateRating($aggregateRating);
+
+    public function alternateName($alternateName);
 
     public function alternativeHeadline($alternativeHeadline);
 
@@ -84,6 +72,14 @@ interface EpisodeContract
 
     public function datePublished($datePublished);
 
+    public function description($description);
+
+    public function director($director);
+
+    public function directors($directors);
+
+    public function disambiguatingDescription($disambiguatingDescription);
+
     public function discussionUrl($discussionUrl);
 
     public function editor($editor);
@@ -98,6 +94,8 @@ interface EpisodeContract
 
     public function encodings($encodings);
 
+    public function episodeNumber($episodeNumber);
+
     public function exampleOfWork($exampleOfWork);
 
     public function expires($expires);
@@ -111,6 +109,10 @@ interface EpisodeContract
     public function hasPart($hasPart);
 
     public function headline($headline);
+
+    public function identifier($identifier);
+
+    public function image($image);
 
     public function inLanguage($inLanguage);
 
@@ -138,15 +140,29 @@ interface EpisodeContract
 
     public function mainEntity($mainEntity);
 
+    public function mainEntityOfPage($mainEntityOfPage);
+
     public function material($material);
 
     public function mentions($mentions);
 
+    public function musicBy($musicBy);
+
+    public function name($name);
+
     public function offers($offers);
+
+    public function partOfSeason($partOfSeason);
+
+    public function partOfSeries($partOfSeries);
 
     public function position($position);
 
+    public function potentialAction($potentialAction);
+
     public function producer($producer);
+
+    public function productionCompany($productionCompany);
 
     public function provider($provider);
 
@@ -164,6 +180,8 @@ interface EpisodeContract
 
     public function reviews($reviews);
 
+    public function sameAs($sameAs);
+
     public function schemaVersion($schemaVersion);
 
     public function sourceOrganization($sourceOrganization);
@@ -173,6 +191,8 @@ interface EpisodeContract
     public function spatialCoverage($spatialCoverage);
 
     public function sponsor($sponsor);
+
+    public function subjectOf($subjectOf);
 
     public function temporal($temporal);
 
@@ -184,38 +204,18 @@ interface EpisodeContract
 
     public function timeRequired($timeRequired);
 
+    public function trailer($trailer);
+
     public function translator($translator);
 
     public function typicalAgeRange($typicalAgeRange);
+
+    public function url($url);
 
     public function version($version);
 
     public function video($video);
 
     public function workExample($workExample);
-
-    public function additionalType($additionalType);
-
-    public function alternateName($alternateName);
-
-    public function description($description);
-
-    public function disambiguatingDescription($disambiguatingDescription);
-
-    public function identifier($identifier);
-
-    public function image($image);
-
-    public function mainEntityOfPage($mainEntityOfPage);
-
-    public function name($name);
-
-    public function potentialAction($potentialAction);
-
-    public function sameAs($sameAs);
-
-    public function subjectOf($subjectOf);
-
-    public function url($url);
 
 }

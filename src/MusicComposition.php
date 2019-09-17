@@ -14,148 +14,6 @@ use \Spatie\SchemaOrg\Contracts\ThingContract;
 class MusicComposition extends BaseType implements CreativeWorkContract, ThingContract
 {
     /**
-     * The person or organization who wrote a composition, or who is the
-     * composer of a work performed at some event.
-     *
-     * @param Organization|Organization[]|Person|Person[] $composer
-     *
-     * @return static
-     *
-     * @see http://schema.org/composer
-     */
-    public function composer($composer)
-    {
-        return $this->setProperty('composer', $composer);
-    }
-
-    /**
-     * The date and place the work was first performed.
-     *
-     * @param Event|Event[] $firstPerformance
-     *
-     * @return static
-     *
-     * @see http://schema.org/firstPerformance
-     */
-    public function firstPerformance($firstPerformance)
-    {
-        return $this->setProperty('firstPerformance', $firstPerformance);
-    }
-
-    /**
-     * Smaller compositions included in this work (e.g. a movement in a
-     * symphony).
-     *
-     * @param MusicComposition|MusicComposition[] $includedComposition
-     *
-     * @return static
-     *
-     * @see http://schema.org/includedComposition
-     */
-    public function includedComposition($includedComposition)
-    {
-        return $this->setProperty('includedComposition', $includedComposition);
-    }
-
-    /**
-     * The International Standard Musical Work Code for the composition.
-     *
-     * @param string|string[] $iswcCode
-     *
-     * @return static
-     *
-     * @see http://schema.org/iswcCode
-     */
-    public function iswcCode($iswcCode)
-    {
-        return $this->setProperty('iswcCode', $iswcCode);
-    }
-
-    /**
-     * The person who wrote the words.
-     *
-     * @param Person|Person[] $lyricist
-     *
-     * @return static
-     *
-     * @see http://schema.org/lyricist
-     */
-    public function lyricist($lyricist)
-    {
-        return $this->setProperty('lyricist', $lyricist);
-    }
-
-    /**
-     * The words in the song.
-     *
-     * @param CreativeWork|CreativeWork[] $lyrics
-     *
-     * @return static
-     *
-     * @see http://schema.org/lyrics
-     */
-    public function lyrics($lyrics)
-    {
-        return $this->setProperty('lyrics', $lyrics);
-    }
-
-    /**
-     * An arrangement derived from the composition.
-     *
-     * @param MusicComposition|MusicComposition[] $musicArrangement
-     *
-     * @return static
-     *
-     * @see http://schema.org/musicArrangement
-     */
-    public function musicArrangement($musicArrangement)
-    {
-        return $this->setProperty('musicArrangement', $musicArrangement);
-    }
-
-    /**
-     * The type of composition (e.g. overture, sonata, symphony, etc.).
-     *
-     * @param string|string[] $musicCompositionForm
-     *
-     * @return static
-     *
-     * @see http://schema.org/musicCompositionForm
-     */
-    public function musicCompositionForm($musicCompositionForm)
-    {
-        return $this->setProperty('musicCompositionForm', $musicCompositionForm);
-    }
-
-    /**
-     * The key, mode, or scale this composition uses.
-     *
-     * @param string|string[] $musicalKey
-     *
-     * @return static
-     *
-     * @see http://schema.org/musicalKey
-     */
-    public function musicalKey($musicalKey)
-    {
-        return $this->setProperty('musicalKey', $musicalKey);
-    }
-
-    /**
-     * An audio recording of the work.
-     *
-     * @param MusicRecording|MusicRecording[] $recordedAs
-     *
-     * @return static
-     *
-     * @see http://schema.org/recordedAs
-     */
-    public function recordedAs($recordedAs)
-    {
-        return $this->setProperty('recordedAs', $recordedAs);
-    }
-
-    /**
      * The subject matter of the content.
      *
      * @param Thing|Thing[] $about
@@ -300,6 +158,25 @@ class MusicComposition extends BaseType implements CreativeWorkContract, ThingCo
     }
 
     /**
+     * An additional type for the item, typically used for adding more specific
+     * types from external vocabularies in microdata syntax. This is a
+     * relationship between something and a class that the thing is in. In RDFa
+     * syntax, it is better to use the native RDFa syntax - the 'typeof'
+     * attribute - for multiple types. Schema.org tools may have only weaker
+     * understanding of extra types, in particular those defined externally.
+     *
+     * @param string|string[] $additionalType
+     *
+     * @return static
+     *
+     * @see http://schema.org/additionalType
+     */
+    public function additionalType($additionalType)
+    {
+        return $this->setProperty('additionalType', $additionalType);
+    }
+
+    /**
      * The overall rating, based on a collection of reviews or ratings, of the
      * item.
      *
@@ -312,6 +189,20 @@ class MusicComposition extends BaseType implements CreativeWorkContract, ThingCo
     public function aggregateRating($aggregateRating)
     {
         return $this->setProperty('aggregateRating', $aggregateRating);
+    }
+
+    /**
+     * An alias for the item.
+     *
+     * @param string|string[] $alternateName
+     *
+     * @return static
+     *
+     * @see http://schema.org/alternateName
+     */
+    public function alternateName($alternateName)
+    {
+        return $this->setProperty('alternateName', $alternateName);
     }
 
     /**
@@ -475,6 +366,21 @@ class MusicComposition extends BaseType implements CreativeWorkContract, ThingCo
     }
 
     /**
+     * The person or organization who wrote a composition, or who is the
+     * composer of a work performed at some event.
+     *
+     * @param Organization|Organization[]|Person|Person[] $composer
+     *
+     * @return static
+     *
+     * @see http://schema.org/composer
+     */
+    public function composer($composer)
+    {
+        return $this->setProperty('composer', $composer);
+    }
+
+    /**
      * The location depicted or described in the content. For example, the
      * location in a photograph or painting.
      *
@@ -603,6 +509,37 @@ class MusicComposition extends BaseType implements CreativeWorkContract, ThingCo
     public function datePublished($datePublished)
     {
         return $this->setProperty('datePublished', $datePublished);
+    }
+
+    /**
+     * A description of the item.
+     *
+     * @param string|string[] $description
+     *
+     * @return static
+     *
+     * @see http://schema.org/description
+     */
+    public function description($description)
+    {
+        return $this->setProperty('description', $description);
+    }
+
+    /**
+     * A sub property of description. A short description of the item used to
+     * disambiguate from other, similar items. Information from other properties
+     * (in particular, name) may be necessary for the description to be useful
+     * for disambiguation.
+     *
+     * @param string|string[] $disambiguatingDescription
+     *
+     * @return static
+     *
+     * @see http://schema.org/disambiguatingDescription
+     */
+    public function disambiguatingDescription($disambiguatingDescription)
+    {
+        return $this->setProperty('disambiguatingDescription', $disambiguatingDescription);
     }
 
     /**
@@ -773,6 +710,20 @@ class MusicComposition extends BaseType implements CreativeWorkContract, ThingCo
     }
 
     /**
+     * The date and place the work was first performed.
+     *
+     * @param Event|Event[] $firstPerformance
+     *
+     * @return static
+     *
+     * @see http://schema.org/firstPerformance
+     */
+    public function firstPerformance($firstPerformance)
+    {
+        return $this->setProperty('firstPerformance', $firstPerformance);
+    }
+
+    /**
      * A person or organization that supports (sponsors) something through some
      * kind of financial contribution.
      *
@@ -831,6 +782,39 @@ class MusicComposition extends BaseType implements CreativeWorkContract, ThingCo
     }
 
     /**
+     * The identifier property represents any kind of identifier for any kind of
+     * [[Thing]], such as ISBNs, GTIN codes, UUIDs etc. Schema.org provides
+     * dedicated properties for representing many of these, either as textual
+     * strings or as URL (URI) links. See [background
+     * notes](/docs/datamodel.html#identifierBg) for more details.
+     *
+     * @param PropertyValue|PropertyValue[]|string|string[] $identifier
+     *
+     * @return static
+     *
+     * @see http://schema.org/identifier
+     */
+    public function identifier($identifier)
+    {
+        return $this->setProperty('identifier', $identifier);
+    }
+
+    /**
+     * An image of the item. This can be a [[URL]] or a fully described
+     * [[ImageObject]].
+     *
+     * @param ImageObject|ImageObject[]|string|string[] $image
+     *
+     * @return static
+     *
+     * @see http://schema.org/image
+     */
+    public function image($image)
+    {
+        return $this->setProperty('image', $image);
+    }
+
+    /**
      * The language of the content or performance or used in an action. Please
      * use one of the language codes from the [IETF BCP 47
      * standard](http://tools.ietf.org/html/bcp47). See also
@@ -845,6 +829,21 @@ class MusicComposition extends BaseType implements CreativeWorkContract, ThingCo
     public function inLanguage($inLanguage)
     {
         return $this->setProperty('inLanguage', $inLanguage);
+    }
+
+    /**
+     * Smaller compositions included in this work (e.g. a movement in a
+     * symphony).
+     *
+     * @param MusicComposition|MusicComposition[] $includedComposition
+     *
+     * @return static
+     *
+     * @see http://schema.org/includedComposition
+     */
+    public function includedComposition($includedComposition)
+    {
+        return $this->setProperty('includedComposition', $includedComposition);
     }
 
     /**
@@ -953,6 +952,20 @@ class MusicComposition extends BaseType implements CreativeWorkContract, ThingCo
     }
 
     /**
+     * The International Standard Musical Work Code for the composition.
+     *
+     * @param string|string[] $iswcCode
+     *
+     * @return static
+     *
+     * @see http://schema.org/iswcCode
+     */
+    public function iswcCode($iswcCode)
+    {
+        return $this->setProperty('iswcCode', $iswcCode);
+    }
+
+    /**
      * Keywords or tags used to describe this content. Multiple entries in a
      * keywords list are typically delimited by commas.
      *
@@ -1013,6 +1026,34 @@ class MusicComposition extends BaseType implements CreativeWorkContract, ThingCo
     }
 
     /**
+     * The person who wrote the words.
+     *
+     * @param Person|Person[] $lyricist
+     *
+     * @return static
+     *
+     * @see http://schema.org/lyricist
+     */
+    public function lyricist($lyricist)
+    {
+        return $this->setProperty('lyricist', $lyricist);
+    }
+
+    /**
+     * The words in the song.
+     *
+     * @param CreativeWork|CreativeWork[] $lyrics
+     *
+     * @return static
+     *
+     * @see http://schema.org/lyrics
+     */
+    public function lyrics($lyrics)
+    {
+        return $this->setProperty('lyrics', $lyrics);
+    }
+
+    /**
      * Indicates the primary entity described in some page or other
      * CreativeWork.
      *
@@ -1025,6 +1066,22 @@ class MusicComposition extends BaseType implements CreativeWorkContract, ThingCo
     public function mainEntity($mainEntity)
     {
         return $this->setProperty('mainEntity', $mainEntity);
+    }
+
+    /**
+     * Indicates a page (or other CreativeWork) for which this thing is the main
+     * entity being described. See [background
+     * notes](/docs/datamodel.html#mainEntityBackground) for details.
+     *
+     * @param CreativeWork|CreativeWork[]|string|string[] $mainEntityOfPage
+     *
+     * @return static
+     *
+     * @see http://schema.org/mainEntityOfPage
+     */
+    public function mainEntityOfPage($mainEntityOfPage)
+    {
+        return $this->setProperty('mainEntityOfPage', $mainEntityOfPage);
     }
 
     /**
@@ -1058,6 +1115,62 @@ class MusicComposition extends BaseType implements CreativeWorkContract, ThingCo
     }
 
     /**
+     * An arrangement derived from the composition.
+     *
+     * @param MusicComposition|MusicComposition[] $musicArrangement
+     *
+     * @return static
+     *
+     * @see http://schema.org/musicArrangement
+     */
+    public function musicArrangement($musicArrangement)
+    {
+        return $this->setProperty('musicArrangement', $musicArrangement);
+    }
+
+    /**
+     * The type of composition (e.g. overture, sonata, symphony, etc.).
+     *
+     * @param string|string[] $musicCompositionForm
+     *
+     * @return static
+     *
+     * @see http://schema.org/musicCompositionForm
+     */
+    public function musicCompositionForm($musicCompositionForm)
+    {
+        return $this->setProperty('musicCompositionForm', $musicCompositionForm);
+    }
+
+    /**
+     * The key, mode, or scale this composition uses.
+     *
+     * @param string|string[] $musicalKey
+     *
+     * @return static
+     *
+     * @see http://schema.org/musicalKey
+     */
+    public function musicalKey($musicalKey)
+    {
+        return $this->setProperty('musicalKey', $musicalKey);
+    }
+
+    /**
+     * The name of the item.
+     *
+     * @param string|string[] $name
+     *
+     * @return static
+     *
+     * @see http://schema.org/name
+     */
+    public function name($name)
+    {
+        return $this->setProperty('name', $name);
+    }
+
+    /**
      * An offer to provide this item&#x2014;for example, an offer to sell a
      * product, rent the DVD of a movie, perform a service, or give away tickets
      * to an event.
@@ -1085,6 +1198,21 @@ class MusicComposition extends BaseType implements CreativeWorkContract, ThingCo
     public function position($position)
     {
         return $this->setProperty('position', $position);
+    }
+
+    /**
+     * Indicates a potential Action, which describes an idealized action in
+     * which this thing would play an 'object' role.
+     *
+     * @param Action|Action[] $potentialAction
+     *
+     * @return static
+     *
+     * @see http://schema.org/potentialAction
+     */
+    public function potentialAction($potentialAction)
+    {
+        return $this->setProperty('potentialAction', $potentialAction);
     }
 
     /**
@@ -1171,6 +1299,20 @@ class MusicComposition extends BaseType implements CreativeWorkContract, ThingCo
     }
 
     /**
+     * An audio recording of the work.
+     *
+     * @param MusicRecording|MusicRecording[] $recordedAs
+     *
+     * @return static
+     *
+     * @see http://schema.org/recordedAs
+     */
+    public function recordedAs($recordedAs)
+    {
+        return $this->setProperty('recordedAs', $recordedAs);
+    }
+
+    /**
      * The Event where the CreativeWork was recorded. The CreativeWork may
      * capture all or part of the event.
      *
@@ -1226,6 +1368,22 @@ class MusicComposition extends BaseType implements CreativeWorkContract, ThingCo
     public function reviews($reviews)
     {
         return $this->setProperty('reviews', $reviews);
+    }
+
+    /**
+     * URL of a reference Web page that unambiguously indicates the item's
+     * identity. E.g. the URL of the item's Wikipedia page, Wikidata entry, or
+     * official website.
+     *
+     * @param string|string[] $sameAs
+     *
+     * @return static
+     *
+     * @see http://schema.org/sameAs
+     */
+    public function sameAs($sameAs)
+    {
+        return $this->setProperty('sameAs', $sameAs);
     }
 
     /**
@@ -1308,6 +1466,20 @@ class MusicComposition extends BaseType implements CreativeWorkContract, ThingCo
     public function sponsor($sponsor)
     {
         return $this->setProperty('sponsor', $sponsor);
+    }
+
+    /**
+     * A CreativeWork or Event about this Thing.
+     *
+     * @param CreativeWork|CreativeWork[]|Event|Event[] $subjectOf
+     *
+     * @return static
+     *
+     * @see http://schema.org/subjectOf
+     */
+    public function subjectOf($subjectOf)
+    {
+        return $this->setProperty('subjectOf', $subjectOf);
     }
 
     /**
@@ -1432,6 +1604,20 @@ class MusicComposition extends BaseType implements CreativeWorkContract, ThingCo
     }
 
     /**
+     * URL of the item.
+     *
+     * @param string|string[] $url
+     *
+     * @return static
+     *
+     * @see http://schema.org/url
+     */
+    public function url($url)
+    {
+        return $this->setProperty('url', $url);
+    }
+
+    /**
      * The version of the CreativeWork embodied by a specified resource.
      *
      * @param float|float[]|int|int[]|string|string[] $version
@@ -1472,192 +1658,6 @@ class MusicComposition extends BaseType implements CreativeWorkContract, ThingCo
     public function workExample($workExample)
     {
         return $this->setProperty('workExample', $workExample);
-    }
-
-    /**
-     * An additional type for the item, typically used for adding more specific
-     * types from external vocabularies in microdata syntax. This is a
-     * relationship between something and a class that the thing is in. In RDFa
-     * syntax, it is better to use the native RDFa syntax - the 'typeof'
-     * attribute - for multiple types. Schema.org tools may have only weaker
-     * understanding of extra types, in particular those defined externally.
-     *
-     * @param string|string[] $additionalType
-     *
-     * @return static
-     *
-     * @see http://schema.org/additionalType
-     */
-    public function additionalType($additionalType)
-    {
-        return $this->setProperty('additionalType', $additionalType);
-    }
-
-    /**
-     * An alias for the item.
-     *
-     * @param string|string[] $alternateName
-     *
-     * @return static
-     *
-     * @see http://schema.org/alternateName
-     */
-    public function alternateName($alternateName)
-    {
-        return $this->setProperty('alternateName', $alternateName);
-    }
-
-    /**
-     * A description of the item.
-     *
-     * @param string|string[] $description
-     *
-     * @return static
-     *
-     * @see http://schema.org/description
-     */
-    public function description($description)
-    {
-        return $this->setProperty('description', $description);
-    }
-
-    /**
-     * A sub property of description. A short description of the item used to
-     * disambiguate from other, similar items. Information from other properties
-     * (in particular, name) may be necessary for the description to be useful
-     * for disambiguation.
-     *
-     * @param string|string[] $disambiguatingDescription
-     *
-     * @return static
-     *
-     * @see http://schema.org/disambiguatingDescription
-     */
-    public function disambiguatingDescription($disambiguatingDescription)
-    {
-        return $this->setProperty('disambiguatingDescription', $disambiguatingDescription);
-    }
-
-    /**
-     * The identifier property represents any kind of identifier for any kind of
-     * [[Thing]], such as ISBNs, GTIN codes, UUIDs etc. Schema.org provides
-     * dedicated properties for representing many of these, either as textual
-     * strings or as URL (URI) links. See [background
-     * notes](/docs/datamodel.html#identifierBg) for more details.
-     *
-     * @param PropertyValue|PropertyValue[]|string|string[] $identifier
-     *
-     * @return static
-     *
-     * @see http://schema.org/identifier
-     */
-    public function identifier($identifier)
-    {
-        return $this->setProperty('identifier', $identifier);
-    }
-
-    /**
-     * An image of the item. This can be a [[URL]] or a fully described
-     * [[ImageObject]].
-     *
-     * @param ImageObject|ImageObject[]|string|string[] $image
-     *
-     * @return static
-     *
-     * @see http://schema.org/image
-     */
-    public function image($image)
-    {
-        return $this->setProperty('image', $image);
-    }
-
-    /**
-     * Indicates a page (or other CreativeWork) for which this thing is the main
-     * entity being described. See [background
-     * notes](/docs/datamodel.html#mainEntityBackground) for details.
-     *
-     * @param CreativeWork|CreativeWork[]|string|string[] $mainEntityOfPage
-     *
-     * @return static
-     *
-     * @see http://schema.org/mainEntityOfPage
-     */
-    public function mainEntityOfPage($mainEntityOfPage)
-    {
-        return $this->setProperty('mainEntityOfPage', $mainEntityOfPage);
-    }
-
-    /**
-     * The name of the item.
-     *
-     * @param string|string[] $name
-     *
-     * @return static
-     *
-     * @see http://schema.org/name
-     */
-    public function name($name)
-    {
-        return $this->setProperty('name', $name);
-    }
-
-    /**
-     * Indicates a potential Action, which describes an idealized action in
-     * which this thing would play an 'object' role.
-     *
-     * @param Action|Action[] $potentialAction
-     *
-     * @return static
-     *
-     * @see http://schema.org/potentialAction
-     */
-    public function potentialAction($potentialAction)
-    {
-        return $this->setProperty('potentialAction', $potentialAction);
-    }
-
-    /**
-     * URL of a reference Web page that unambiguously indicates the item's
-     * identity. E.g. the URL of the item's Wikipedia page, Wikidata entry, or
-     * official website.
-     *
-     * @param string|string[] $sameAs
-     *
-     * @return static
-     *
-     * @see http://schema.org/sameAs
-     */
-    public function sameAs($sameAs)
-    {
-        return $this->setProperty('sameAs', $sameAs);
-    }
-
-    /**
-     * A CreativeWork or Event about this Thing.
-     *
-     * @param CreativeWork|CreativeWork[]|Event|Event[] $subjectOf
-     *
-     * @return static
-     *
-     * @see http://schema.org/subjectOf
-     */
-    public function subjectOf($subjectOf)
-    {
-        return $this->setProperty('subjectOf', $subjectOf);
-    }
-
-    /**
-     * URL of the item.
-     *
-     * @param string|string[] $url
-     *
-     * @return static
-     *
-     * @see http://schema.org/url
-     */
-    public function url($url)
-    {
-        return $this->setProperty('url', $url);
     }
 
 }

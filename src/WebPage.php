@@ -18,176 +18,6 @@ use \Spatie\SchemaOrg\Contracts\ThingContract;
 class WebPage extends BaseType implements CreativeWorkContract, ThingContract
 {
     /**
-     * A set of links that can help a user understand and navigate a website
-     * hierarchy.
-     *
-     * @param BreadcrumbList|BreadcrumbList[]|string|string[] $breadcrumb
-     *
-     * @return static
-     *
-     * @see http://schema.org/breadcrumb
-     */
-    public function breadcrumb($breadcrumb)
-    {
-        return $this->setProperty('breadcrumb', $breadcrumb);
-    }
-
-    /**
-     * Date on which the content on this web page was last reviewed for accuracy
-     * and/or completeness.
-     *
-     * @param \DateTimeInterface|\DateTimeInterface[] $lastReviewed
-     *
-     * @return static
-     *
-     * @see http://schema.org/lastReviewed
-     */
-    public function lastReviewed($lastReviewed)
-    {
-        return $this->setProperty('lastReviewed', $lastReviewed);
-    }
-
-    /**
-     * Indicates if this web page element is the main subject of the page.
-     *
-     * @param WebPageElement|WebPageElement[] $mainContentOfPage
-     *
-     * @return static
-     *
-     * @see http://schema.org/mainContentOfPage
-     */
-    public function mainContentOfPage($mainContentOfPage)
-    {
-        return $this->setProperty('mainContentOfPage', $mainContentOfPage);
-    }
-
-    /**
-     * Indicates the main image on the page.
-     *
-     * @param ImageObject|ImageObject[] $primaryImageOfPage
-     *
-     * @return static
-     *
-     * @see http://schema.org/primaryImageOfPage
-     */
-    public function primaryImageOfPage($primaryImageOfPage)
-    {
-        return $this->setProperty('primaryImageOfPage', $primaryImageOfPage);
-    }
-
-    /**
-     * A link related to this web page, for example to other related web pages.
-     *
-     * @param string|string[] $relatedLink
-     *
-     * @return static
-     *
-     * @see http://schema.org/relatedLink
-     */
-    public function relatedLink($relatedLink)
-    {
-        return $this->setProperty('relatedLink', $relatedLink);
-    }
-
-    /**
-     * People or organizations that have reviewed the content on this web page
-     * for accuracy and/or completeness.
-     *
-     * @param Organization|Organization[]|Person|Person[] $reviewedBy
-     *
-     * @return static
-     *
-     * @see http://schema.org/reviewedBy
-     */
-    public function reviewedBy($reviewedBy)
-    {
-        return $this->setProperty('reviewedBy', $reviewedBy);
-    }
-
-    /**
-     * One of the more significant URLs on the page. Typically, these are the
-     * non-navigation links that are clicked on the most.
-     *
-     * @param string|string[] $significantLink
-     *
-     * @return static
-     *
-     * @see http://schema.org/significantLink
-     */
-    public function significantLink($significantLink)
-    {
-        return $this->setProperty('significantLink', $significantLink);
-    }
-
-    /**
-     * The most significant URLs on the page. Typically, these are the
-     * non-navigation links that are clicked on the most.
-     *
-     * @param string|string[] $significantLinks
-     *
-     * @return static
-     *
-     * @see http://schema.org/significantLinks
-     */
-    public function significantLinks($significantLinks)
-    {
-        return $this->setProperty('significantLinks', $significantLinks);
-    }
-
-    /**
-     * Indicates sections of a Web page that are particularly 'speakable' in the
-     * sense of being highlighted as being especially appropriate for
-     * text-to-speech conversion. Other sections of a page may also be usefully
-     * spoken in particular circumstances; the 'speakable' property serves to
-     * indicate the parts most likely to be generally useful for speech.
-     * 
-     * The *speakable* property can be repeated an arbitrary number of times,
-     * with three kinds of possible 'content-locator' values:
-     * 
-     * 1.) *id-value* URL references - uses *id-value* of an element in the page
-     * being annotated. The simplest use of *speakable* has (potentially
-     * relative) URL values, referencing identified sections of the document
-     * concerned.
-     * 
-     * 2.) CSS Selectors - addresses content in the annotated page, eg. via
-     * class attribute. Use the [[cssSelector]] property.
-     * 
-     * 3.)  XPaths - addresses content via XPaths (assuming an XML view of the
-     * content). Use the [[xpath]] property.
-     * 
-     * 
-     * For more sophisticated markup of speakable sections beyond simple ID
-     * references, either CSS selectors or XPath expressions to pick out
-     * document section(s) as speakable. For this
-     * we define a supporting type, [[SpeakableSpecification]]  which is defined
-     * to be a possible value of the *speakable* property.
-     *
-     * @param SpeakableSpecification|SpeakableSpecification[]|string|string[] $speakable
-     *
-     * @return static
-     *
-     * @see http://schema.org/speakable
-     */
-    public function speakable($speakable)
-    {
-        return $this->setProperty('speakable', $speakable);
-    }
-
-    /**
-     * One of the domain specialities to which this web page's content applies.
-     *
-     * @param Specialty|Specialty[] $specialty
-     *
-     * @return static
-     *
-     * @see http://schema.org/specialty
-     */
-    public function specialty($specialty)
-    {
-        return $this->setProperty('specialty', $specialty);
-    }
-
-    /**
      * The subject matter of the content.
      *
      * @param Thing|Thing[] $about
@@ -332,6 +162,25 @@ class WebPage extends BaseType implements CreativeWorkContract, ThingContract
     }
 
     /**
+     * An additional type for the item, typically used for adding more specific
+     * types from external vocabularies in microdata syntax. This is a
+     * relationship between something and a class that the thing is in. In RDFa
+     * syntax, it is better to use the native RDFa syntax - the 'typeof'
+     * attribute - for multiple types. Schema.org tools may have only weaker
+     * understanding of extra types, in particular those defined externally.
+     *
+     * @param string|string[] $additionalType
+     *
+     * @return static
+     *
+     * @see http://schema.org/additionalType
+     */
+    public function additionalType($additionalType)
+    {
+        return $this->setProperty('additionalType', $additionalType);
+    }
+
+    /**
      * The overall rating, based on a collection of reviews or ratings, of the
      * item.
      *
@@ -344,6 +193,20 @@ class WebPage extends BaseType implements CreativeWorkContract, ThingContract
     public function aggregateRating($aggregateRating)
     {
         return $this->setProperty('aggregateRating', $aggregateRating);
+    }
+
+    /**
+     * An alias for the item.
+     *
+     * @param string|string[] $alternateName
+     *
+     * @return static
+     *
+     * @see http://schema.org/alternateName
+     */
+    public function alternateName($alternateName)
+    {
+        return $this->setProperty('alternateName', $alternateName);
     }
 
     /**
@@ -445,6 +308,21 @@ class WebPage extends BaseType implements CreativeWorkContract, ThingContract
     public function awards($awards)
     {
         return $this->setProperty('awards', $awards);
+    }
+
+    /**
+     * A set of links that can help a user understand and navigate a website
+     * hierarchy.
+     *
+     * @param BreadcrumbList|BreadcrumbList[]|string|string[] $breadcrumb
+     *
+     * @return static
+     *
+     * @see http://schema.org/breadcrumb
+     */
+    public function breadcrumb($breadcrumb)
+    {
+        return $this->setProperty('breadcrumb', $breadcrumb);
     }
 
     /**
@@ -635,6 +513,37 @@ class WebPage extends BaseType implements CreativeWorkContract, ThingContract
     public function datePublished($datePublished)
     {
         return $this->setProperty('datePublished', $datePublished);
+    }
+
+    /**
+     * A description of the item.
+     *
+     * @param string|string[] $description
+     *
+     * @return static
+     *
+     * @see http://schema.org/description
+     */
+    public function description($description)
+    {
+        return $this->setProperty('description', $description);
+    }
+
+    /**
+     * A sub property of description. A short description of the item used to
+     * disambiguate from other, similar items. Information from other properties
+     * (in particular, name) may be necessary for the description to be useful
+     * for disambiguation.
+     *
+     * @param string|string[] $disambiguatingDescription
+     *
+     * @return static
+     *
+     * @see http://schema.org/disambiguatingDescription
+     */
+    public function disambiguatingDescription($disambiguatingDescription)
+    {
+        return $this->setProperty('disambiguatingDescription', $disambiguatingDescription);
     }
 
     /**
@@ -863,6 +772,39 @@ class WebPage extends BaseType implements CreativeWorkContract, ThingContract
     }
 
     /**
+     * The identifier property represents any kind of identifier for any kind of
+     * [[Thing]], such as ISBNs, GTIN codes, UUIDs etc. Schema.org provides
+     * dedicated properties for representing many of these, either as textual
+     * strings or as URL (URI) links. See [background
+     * notes](/docs/datamodel.html#identifierBg) for more details.
+     *
+     * @param PropertyValue|PropertyValue[]|string|string[] $identifier
+     *
+     * @return static
+     *
+     * @see http://schema.org/identifier
+     */
+    public function identifier($identifier)
+    {
+        return $this->setProperty('identifier', $identifier);
+    }
+
+    /**
+     * An image of the item. This can be a [[URL]] or a fully described
+     * [[ImageObject]].
+     *
+     * @param ImageObject|ImageObject[]|string|string[] $image
+     *
+     * @return static
+     *
+     * @see http://schema.org/image
+     */
+    public function image($image)
+    {
+        return $this->setProperty('image', $image);
+    }
+
+    /**
      * The language of the content or performance or used in an action. Please
      * use one of the language codes from the [IETF BCP 47
      * standard](http://tools.ietf.org/html/bcp47). See also
@@ -1000,6 +942,21 @@ class WebPage extends BaseType implements CreativeWorkContract, ThingContract
     }
 
     /**
+     * Date on which the content on this web page was last reviewed for accuracy
+     * and/or completeness.
+     *
+     * @param \DateTimeInterface|\DateTimeInterface[] $lastReviewed
+     *
+     * @return static
+     *
+     * @see http://schema.org/lastReviewed
+     */
+    public function lastReviewed($lastReviewed)
+    {
+        return $this->setProperty('lastReviewed', $lastReviewed);
+    }
+
+    /**
      * The predominant type or kind characterizing the learning resource. For
      * example, 'presentation', 'handout'.
      *
@@ -1045,6 +1002,20 @@ class WebPage extends BaseType implements CreativeWorkContract, ThingContract
     }
 
     /**
+     * Indicates if this web page element is the main subject of the page.
+     *
+     * @param WebPageElement|WebPageElement[] $mainContentOfPage
+     *
+     * @return static
+     *
+     * @see http://schema.org/mainContentOfPage
+     */
+    public function mainContentOfPage($mainContentOfPage)
+    {
+        return $this->setProperty('mainContentOfPage', $mainContentOfPage);
+    }
+
+    /**
      * Indicates the primary entity described in some page or other
      * CreativeWork.
      *
@@ -1057,6 +1028,22 @@ class WebPage extends BaseType implements CreativeWorkContract, ThingContract
     public function mainEntity($mainEntity)
     {
         return $this->setProperty('mainEntity', $mainEntity);
+    }
+
+    /**
+     * Indicates a page (or other CreativeWork) for which this thing is the main
+     * entity being described. See [background
+     * notes](/docs/datamodel.html#mainEntityBackground) for details.
+     *
+     * @param CreativeWork|CreativeWork[]|string|string[] $mainEntityOfPage
+     *
+     * @return static
+     *
+     * @see http://schema.org/mainEntityOfPage
+     */
+    public function mainEntityOfPage($mainEntityOfPage)
+    {
+        return $this->setProperty('mainEntityOfPage', $mainEntityOfPage);
     }
 
     /**
@@ -1090,6 +1077,20 @@ class WebPage extends BaseType implements CreativeWorkContract, ThingContract
     }
 
     /**
+     * The name of the item.
+     *
+     * @param string|string[] $name
+     *
+     * @return static
+     *
+     * @see http://schema.org/name
+     */
+    public function name($name)
+    {
+        return $this->setProperty('name', $name);
+    }
+
+    /**
      * An offer to provide this item&#x2014;for example, an offer to sell a
      * product, rent the DVD of a movie, perform a service, or give away tickets
      * to an event.
@@ -1117,6 +1118,35 @@ class WebPage extends BaseType implements CreativeWorkContract, ThingContract
     public function position($position)
     {
         return $this->setProperty('position', $position);
+    }
+
+    /**
+     * Indicates a potential Action, which describes an idealized action in
+     * which this thing would play an 'object' role.
+     *
+     * @param Action|Action[] $potentialAction
+     *
+     * @return static
+     *
+     * @see http://schema.org/potentialAction
+     */
+    public function potentialAction($potentialAction)
+    {
+        return $this->setProperty('potentialAction', $potentialAction);
+    }
+
+    /**
+     * Indicates the main image on the page.
+     *
+     * @param ImageObject|ImageObject[] $primaryImageOfPage
+     *
+     * @return static
+     *
+     * @see http://schema.org/primaryImageOfPage
+     */
+    public function primaryImageOfPage($primaryImageOfPage)
+    {
+        return $this->setProperty('primaryImageOfPage', $primaryImageOfPage);
     }
 
     /**
@@ -1218,6 +1248,20 @@ class WebPage extends BaseType implements CreativeWorkContract, ThingContract
     }
 
     /**
+     * A link related to this web page, for example to other related web pages.
+     *
+     * @param string|string[] $relatedLink
+     *
+     * @return static
+     *
+     * @see http://schema.org/relatedLink
+     */
+    public function relatedLink($relatedLink)
+    {
+        return $this->setProperty('relatedLink', $relatedLink);
+    }
+
+    /**
      * The place and time the release was issued, expressed as a
      * PublicationEvent.
      *
@@ -1247,6 +1291,21 @@ class WebPage extends BaseType implements CreativeWorkContract, ThingContract
     }
 
     /**
+     * People or organizations that have reviewed the content on this web page
+     * for accuracy and/or completeness.
+     *
+     * @param Organization|Organization[]|Person|Person[] $reviewedBy
+     *
+     * @return static
+     *
+     * @see http://schema.org/reviewedBy
+     */
+    public function reviewedBy($reviewedBy)
+    {
+        return $this->setProperty('reviewedBy', $reviewedBy);
+    }
+
+    /**
      * Review of the item.
      *
      * @param Review|Review[] $reviews
@@ -1258,6 +1317,22 @@ class WebPage extends BaseType implements CreativeWorkContract, ThingContract
     public function reviews($reviews)
     {
         return $this->setProperty('reviews', $reviews);
+    }
+
+    /**
+     * URL of a reference Web page that unambiguously indicates the item's
+     * identity. E.g. the URL of the item's Wikipedia page, Wikidata entry, or
+     * official website.
+     *
+     * @param string|string[] $sameAs
+     *
+     * @return static
+     *
+     * @see http://schema.org/sameAs
+     */
+    public function sameAs($sameAs)
+    {
+        return $this->setProperty('sameAs', $sameAs);
     }
 
     /**
@@ -1275,6 +1350,36 @@ class WebPage extends BaseType implements CreativeWorkContract, ThingContract
     public function schemaVersion($schemaVersion)
     {
         return $this->setProperty('schemaVersion', $schemaVersion);
+    }
+
+    /**
+     * One of the more significant URLs on the page. Typically, these are the
+     * non-navigation links that are clicked on the most.
+     *
+     * @param string|string[] $significantLink
+     *
+     * @return static
+     *
+     * @see http://schema.org/significantLink
+     */
+    public function significantLink($significantLink)
+    {
+        return $this->setProperty('significantLink', $significantLink);
+    }
+
+    /**
+     * The most significant URLs on the page. Typically, these are the
+     * non-navigation links that are clicked on the most.
+     *
+     * @param string|string[] $significantLinks
+     *
+     * @return static
+     *
+     * @see http://schema.org/significantLinks
+     */
+    public function significantLinks($significantLinks)
+    {
+        return $this->setProperty('significantLinks', $significantLinks);
     }
 
     /**
@@ -1327,6 +1432,59 @@ class WebPage extends BaseType implements CreativeWorkContract, ThingContract
     }
 
     /**
+     * Indicates sections of a Web page that are particularly 'speakable' in the
+     * sense of being highlighted as being especially appropriate for
+     * text-to-speech conversion. Other sections of a page may also be usefully
+     * spoken in particular circumstances; the 'speakable' property serves to
+     * indicate the parts most likely to be generally useful for speech.
+     * 
+     * The *speakable* property can be repeated an arbitrary number of times,
+     * with three kinds of possible 'content-locator' values:
+     * 
+     * 1.) *id-value* URL references - uses *id-value* of an element in the page
+     * being annotated. The simplest use of *speakable* has (potentially
+     * relative) URL values, referencing identified sections of the document
+     * concerned.
+     * 
+     * 2.) CSS Selectors - addresses content in the annotated page, eg. via
+     * class attribute. Use the [[cssSelector]] property.
+     * 
+     * 3.)  XPaths - addresses content via XPaths (assuming an XML view of the
+     * content). Use the [[xpath]] property.
+     * 
+     * 
+     * For more sophisticated markup of speakable sections beyond simple ID
+     * references, either CSS selectors or XPath expressions to pick out
+     * document section(s) as speakable. For this
+     * we define a supporting type, [[SpeakableSpecification]]  which is defined
+     * to be a possible value of the *speakable* property.
+     *
+     * @param SpeakableSpecification|SpeakableSpecification[]|string|string[] $speakable
+     *
+     * @return static
+     *
+     * @see http://schema.org/speakable
+     */
+    public function speakable($speakable)
+    {
+        return $this->setProperty('speakable', $speakable);
+    }
+
+    /**
+     * One of the domain specialities to which this web page's content applies.
+     *
+     * @param Specialty|Specialty[] $specialty
+     *
+     * @return static
+     *
+     * @see http://schema.org/specialty
+     */
+    public function specialty($specialty)
+    {
+        return $this->setProperty('specialty', $specialty);
+    }
+
+    /**
      * A person or organization that supports a thing through a pledge, promise,
      * or financial contribution. e.g. a sponsor of a Medical Study or a
      * corporate sponsor of an event.
@@ -1340,6 +1498,20 @@ class WebPage extends BaseType implements CreativeWorkContract, ThingContract
     public function sponsor($sponsor)
     {
         return $this->setProperty('sponsor', $sponsor);
+    }
+
+    /**
+     * A CreativeWork or Event about this Thing.
+     *
+     * @param CreativeWork|CreativeWork[]|Event|Event[] $subjectOf
+     *
+     * @return static
+     *
+     * @see http://schema.org/subjectOf
+     */
+    public function subjectOf($subjectOf)
+    {
+        return $this->setProperty('subjectOf', $subjectOf);
     }
 
     /**
@@ -1464,6 +1636,20 @@ class WebPage extends BaseType implements CreativeWorkContract, ThingContract
     }
 
     /**
+     * URL of the item.
+     *
+     * @param string|string[] $url
+     *
+     * @return static
+     *
+     * @see http://schema.org/url
+     */
+    public function url($url)
+    {
+        return $this->setProperty('url', $url);
+    }
+
+    /**
      * The version of the CreativeWork embodied by a specified resource.
      *
      * @param float|float[]|int|int[]|string|string[] $version
@@ -1504,192 +1690,6 @@ class WebPage extends BaseType implements CreativeWorkContract, ThingContract
     public function workExample($workExample)
     {
         return $this->setProperty('workExample', $workExample);
-    }
-
-    /**
-     * An additional type for the item, typically used for adding more specific
-     * types from external vocabularies in microdata syntax. This is a
-     * relationship between something and a class that the thing is in. In RDFa
-     * syntax, it is better to use the native RDFa syntax - the 'typeof'
-     * attribute - for multiple types. Schema.org tools may have only weaker
-     * understanding of extra types, in particular those defined externally.
-     *
-     * @param string|string[] $additionalType
-     *
-     * @return static
-     *
-     * @see http://schema.org/additionalType
-     */
-    public function additionalType($additionalType)
-    {
-        return $this->setProperty('additionalType', $additionalType);
-    }
-
-    /**
-     * An alias for the item.
-     *
-     * @param string|string[] $alternateName
-     *
-     * @return static
-     *
-     * @see http://schema.org/alternateName
-     */
-    public function alternateName($alternateName)
-    {
-        return $this->setProperty('alternateName', $alternateName);
-    }
-
-    /**
-     * A description of the item.
-     *
-     * @param string|string[] $description
-     *
-     * @return static
-     *
-     * @see http://schema.org/description
-     */
-    public function description($description)
-    {
-        return $this->setProperty('description', $description);
-    }
-
-    /**
-     * A sub property of description. A short description of the item used to
-     * disambiguate from other, similar items. Information from other properties
-     * (in particular, name) may be necessary for the description to be useful
-     * for disambiguation.
-     *
-     * @param string|string[] $disambiguatingDescription
-     *
-     * @return static
-     *
-     * @see http://schema.org/disambiguatingDescription
-     */
-    public function disambiguatingDescription($disambiguatingDescription)
-    {
-        return $this->setProperty('disambiguatingDescription', $disambiguatingDescription);
-    }
-
-    /**
-     * The identifier property represents any kind of identifier for any kind of
-     * [[Thing]], such as ISBNs, GTIN codes, UUIDs etc. Schema.org provides
-     * dedicated properties for representing many of these, either as textual
-     * strings or as URL (URI) links. See [background
-     * notes](/docs/datamodel.html#identifierBg) for more details.
-     *
-     * @param PropertyValue|PropertyValue[]|string|string[] $identifier
-     *
-     * @return static
-     *
-     * @see http://schema.org/identifier
-     */
-    public function identifier($identifier)
-    {
-        return $this->setProperty('identifier', $identifier);
-    }
-
-    /**
-     * An image of the item. This can be a [[URL]] or a fully described
-     * [[ImageObject]].
-     *
-     * @param ImageObject|ImageObject[]|string|string[] $image
-     *
-     * @return static
-     *
-     * @see http://schema.org/image
-     */
-    public function image($image)
-    {
-        return $this->setProperty('image', $image);
-    }
-
-    /**
-     * Indicates a page (or other CreativeWork) for which this thing is the main
-     * entity being described. See [background
-     * notes](/docs/datamodel.html#mainEntityBackground) for details.
-     *
-     * @param CreativeWork|CreativeWork[]|string|string[] $mainEntityOfPage
-     *
-     * @return static
-     *
-     * @see http://schema.org/mainEntityOfPage
-     */
-    public function mainEntityOfPage($mainEntityOfPage)
-    {
-        return $this->setProperty('mainEntityOfPage', $mainEntityOfPage);
-    }
-
-    /**
-     * The name of the item.
-     *
-     * @param string|string[] $name
-     *
-     * @return static
-     *
-     * @see http://schema.org/name
-     */
-    public function name($name)
-    {
-        return $this->setProperty('name', $name);
-    }
-
-    /**
-     * Indicates a potential Action, which describes an idealized action in
-     * which this thing would play an 'object' role.
-     *
-     * @param Action|Action[] $potentialAction
-     *
-     * @return static
-     *
-     * @see http://schema.org/potentialAction
-     */
-    public function potentialAction($potentialAction)
-    {
-        return $this->setProperty('potentialAction', $potentialAction);
-    }
-
-    /**
-     * URL of a reference Web page that unambiguously indicates the item's
-     * identity. E.g. the URL of the item's Wikipedia page, Wikidata entry, or
-     * official website.
-     *
-     * @param string|string[] $sameAs
-     *
-     * @return static
-     *
-     * @see http://schema.org/sameAs
-     */
-    public function sameAs($sameAs)
-    {
-        return $this->setProperty('sameAs', $sameAs);
-    }
-
-    /**
-     * A CreativeWork or Event about this Thing.
-     *
-     * @param CreativeWork|CreativeWork[]|Event|Event[] $subjectOf
-     *
-     * @return static
-     *
-     * @see http://schema.org/subjectOf
-     */
-    public function subjectOf($subjectOf)
-    {
-        return $this->setProperty('subjectOf', $subjectOf);
-    }
-
-    /**
-     * URL of the item.
-     *
-     * @param string|string[] $url
-     *
-     * @return static
-     *
-     * @see http://schema.org/url
-     */
-    public function url($url)
-    {
-        return $this->setProperty('url', $url);
     }
 
 }

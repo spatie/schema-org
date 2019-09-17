@@ -4,15 +4,13 @@ namespace Spatie\SchemaOrg\Contracts;
 
 interface ProductModelContract
 {
-    public function isVariantOf($isVariantOf);
-
-    public function predecessorOf($predecessorOf);
-
-    public function successorOf($successorOf);
-
     public function additionalProperty($additionalProperty);
 
+    public function additionalType($additionalType);
+
     public function aggregateRating($aggregateRating);
+
+    public function alternateName($alternateName);
 
     public function audience($audience);
 
@@ -28,6 +26,10 @@ interface ProductModelContract
 
     public function depth($depth);
 
+    public function description($description);
+
+    public function disambiguatingDescription($disambiguatingDescription);
+
     public function gtin12($gtin12);
 
     public function gtin13($gtin13);
@@ -38,6 +40,10 @@ interface ProductModelContract
 
     public function height($height);
 
+    public function identifier($identifier);
+
+    public function image($image);
+
     public function isAccessoryOrSparePartFor($isAccessoryOrSparePartFor);
 
     public function isConsumableFor($isConsumableFor);
@@ -46,9 +52,13 @@ interface ProductModelContract
 
     public function isSimilarTo($isSimilarTo);
 
+    public function isVariantOf($isVariantOf);
+
     public function itemCondition($itemCondition);
 
     public function logo($logo);
+
+    public function mainEntityOfPage($mainEntityOfPage);
 
     public function manufacturer($manufacturer);
 
@@ -58,7 +68,13 @@ interface ProductModelContract
 
     public function mpn($mpn);
 
+    public function name($name);
+
     public function offers($offers);
+
+    public function potentialAction($potentialAction);
+
+    public function predecessorOf($predecessorOf);
 
     public function productID($productID);
 
@@ -72,36 +88,20 @@ interface ProductModelContract
 
     public function reviews($reviews);
 
+    public function sameAs($sameAs);
+
     public function sku($sku);
 
     public function slogan($slogan);
 
+    public function subjectOf($subjectOf);
+
+    public function successorOf($successorOf);
+
+    public function url($url);
+
     public function weight($weight);
 
     public function width($width);
-
-    public function additionalType($additionalType);
-
-    public function alternateName($alternateName);
-
-    public function description($description);
-
-    public function disambiguatingDescription($disambiguatingDescription);
-
-    public function identifier($identifier);
-
-    public function image($image);
-
-    public function mainEntityOfPage($mainEntityOfPage);
-
-    public function name($name);
-
-    public function potentialAction($potentialAction);
-
-    public function sameAs($sameAs);
-
-    public function subjectOf($subjectOf);
-
-    public function url($url);
 
 }

@@ -8,23 +8,21 @@ interface EntryPointContract
 
     public function actionPlatform($actionPlatform);
 
-    public function application($application);
-
-    public function contentType($contentType);
-
-    public function encodingType($encodingType);
-
-    public function httpMethod($httpMethod);
-
-    public function urlTemplate($urlTemplate);
-
     public function additionalType($additionalType);
 
     public function alternateName($alternateName);
 
+    public function application($application);
+
+    public function contentType($contentType);
+
     public function description($description);
 
     public function disambiguatingDescription($disambiguatingDescription);
+
+    public function encodingType($encodingType);
+
+    public function httpMethod($httpMethod);
 
     public function identifier($identifier);
 
@@ -41,5 +39,7 @@ interface EntryPointContract
     public function subjectOf($subjectOf);
 
     public function url($url);
+
+    public function urlTemplate($urlTemplate);
 
 }

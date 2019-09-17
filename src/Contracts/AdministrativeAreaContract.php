@@ -6,9 +6,13 @@ interface AdministrativeAreaContract
 {
     public function additionalProperty($additionalProperty);
 
+    public function additionalType($additionalType);
+
     public function address($address);
 
     public function aggregateRating($aggregateRating);
+
+    public function alternateName($alternateName);
 
     public function amenityFeature($amenityFeature);
 
@@ -19,6 +23,10 @@ interface AdministrativeAreaContract
     public function containedInPlace($containedInPlace);
 
     public function containsPlace($containsPlace);
+
+    public function description($description);
+
+    public function disambiguatingDescription($disambiguatingDescription);
 
     public function event($event);
 
@@ -32,6 +40,10 @@ interface AdministrativeAreaContract
 
     public function hasMap($hasMap);
 
+    public function identifier($identifier);
+
+    public function image($image);
+
     public function isAccessibleForFree($isAccessibleForFree);
 
     public function isicV4($isicV4);
@@ -42,11 +54,15 @@ interface AdministrativeAreaContract
 
     public function longitude($longitude);
 
+    public function mainEntityOfPage($mainEntityOfPage);
+
     public function map($map);
 
     public function maps($maps);
 
     public function maximumAttendeeCapacity($maximumAttendeeCapacity);
+
+    public function name($name);
 
     public function openingHoursSpecification($openingHoursSpecification);
 
@@ -54,11 +70,15 @@ interface AdministrativeAreaContract
 
     public function photos($photos);
 
+    public function potentialAction($potentialAction);
+
     public function publicAccess($publicAccess);
 
     public function review($review);
 
     public function reviews($reviews);
+
+    public function sameAs($sameAs);
 
     public function slogan($slogan);
 
@@ -66,29 +86,9 @@ interface AdministrativeAreaContract
 
     public function specialOpeningHoursSpecification($specialOpeningHoursSpecification);
 
-    public function telephone($telephone);
-
-    public function additionalType($additionalType);
-
-    public function alternateName($alternateName);
-
-    public function description($description);
-
-    public function disambiguatingDescription($disambiguatingDescription);
-
-    public function identifier($identifier);
-
-    public function image($image);
-
-    public function mainEntityOfPage($mainEntityOfPage);
-
-    public function name($name);
-
-    public function potentialAction($potentialAction);
-
-    public function sameAs($sameAs);
-
     public function subjectOf($subjectOf);
+
+    public function telephone($telephone);
 
     public function url($url);
 

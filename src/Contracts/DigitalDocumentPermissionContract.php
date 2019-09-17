@@ -4,10 +4,6 @@ namespace Spatie\SchemaOrg\Contracts;
 
 interface DigitalDocumentPermissionContract
 {
-    public function grantee($grantee);
-
-    public function permissionType($permissionType);
-
     public function additionalType($additionalType);
 
     public function alternateName($alternateName);
@@ -16,6 +12,8 @@ interface DigitalDocumentPermissionContract
 
     public function disambiguatingDescription($disambiguatingDescription);
 
+    public function grantee($grantee);
+
     public function identifier($identifier);
 
     public function image($image);
@@ -23,6 +21,8 @@ interface DigitalDocumentPermissionContract
     public function mainEntityOfPage($mainEntityOfPage);
 
     public function name($name);
+
+    public function permissionType($permissionType);
 
     public function potentialAction($potentialAction);
 

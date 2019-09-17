@@ -17,35 +17,6 @@ use \Spatie\SchemaOrg\Contracts\ThingContract;
 class WarrantyPromise extends BaseType implements StructuredValueContract, IntangibleContract, ThingContract
 {
     /**
-     * The duration of the warranty promise. Common unitCode values are ANN for
-     * year, MON for months, or DAY for days.
-     *
-     * @param QuantitativeValue|QuantitativeValue[] $durationOfWarranty
-     *
-     * @return static
-     *
-     * @see http://schema.org/durationOfWarranty
-     */
-    public function durationOfWarranty($durationOfWarranty)
-    {
-        return $this->setProperty('durationOfWarranty', $durationOfWarranty);
-    }
-
-    /**
-     * The scope of the warranty promise.
-     *
-     * @param WarrantyScope|WarrantyScope[] $warrantyScope
-     *
-     * @return static
-     *
-     * @see http://schema.org/warrantyScope
-     */
-    public function warrantyScope($warrantyScope)
-    {
-        return $this->setProperty('warrantyScope', $warrantyScope);
-    }
-
-    /**
      * An additional type for the item, typically used for adding more specific
      * types from external vocabularies in microdata syntax. This is a
      * relationship between something and a class that the thing is in. In RDFa
@@ -107,6 +78,21 @@ class WarrantyPromise extends BaseType implements StructuredValueContract, Intan
     public function disambiguatingDescription($disambiguatingDescription)
     {
         return $this->setProperty('disambiguatingDescription', $disambiguatingDescription);
+    }
+
+    /**
+     * The duration of the warranty promise. Common unitCode values are ANN for
+     * year, MON for months, or DAY for days.
+     *
+     * @param QuantitativeValue|QuantitativeValue[] $durationOfWarranty
+     *
+     * @return static
+     *
+     * @see http://schema.org/durationOfWarranty
+     */
+    public function durationOfWarranty($durationOfWarranty)
+    {
+        return $this->setProperty('durationOfWarranty', $durationOfWarranty);
     }
 
     /**
@@ -229,6 +215,20 @@ class WarrantyPromise extends BaseType implements StructuredValueContract, Intan
     public function url($url)
     {
         return $this->setProperty('url', $url);
+    }
+
+    /**
+     * The scope of the warranty promise.
+     *
+     * @param WarrantyScope|WarrantyScope[] $warrantyScope
+     *
+     * @return static
+     *
+     * @see http://schema.org/warrantyScope
+     */
+    public function warrantyScope($warrantyScope)
+    {
+        return $this->setProperty('warrantyScope', $warrantyScope);
     }
 
 }

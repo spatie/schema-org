@@ -4,11 +4,9 @@ namespace Spatie\SchemaOrg\Contracts;
 
 interface FoodEstablishmentReservationContract
 {
-    public function endTime($endTime);
+    public function additionalType($additionalType);
 
-    public function partySize($partySize);
-
-    public function startTime($startTime);
+    public function alternateName($alternateName);
 
     public function bookingAgent($bookingAgent);
 
@@ -16,7 +14,25 @@ interface FoodEstablishmentReservationContract
 
     public function broker($broker);
 
+    public function description($description);
+
+    public function disambiguatingDescription($disambiguatingDescription);
+
+    public function endTime($endTime);
+
+    public function identifier($identifier);
+
+    public function image($image);
+
+    public function mainEntityOfPage($mainEntityOfPage);
+
     public function modifiedTime($modifiedTime);
+
+    public function name($name);
+
+    public function partySize($partySize);
+
+    public function potentialAction($potentialAction);
 
     public function priceCurrency($priceCurrency);
 
@@ -32,31 +48,15 @@ interface FoodEstablishmentReservationContract
 
     public function reservedTicket($reservedTicket);
 
+    public function sameAs($sameAs);
+
+    public function startTime($startTime);
+
+    public function subjectOf($subjectOf);
+
     public function totalPrice($totalPrice);
 
     public function underName($underName);
-
-    public function additionalType($additionalType);
-
-    public function alternateName($alternateName);
-
-    public function description($description);
-
-    public function disambiguatingDescription($disambiguatingDescription);
-
-    public function identifier($identifier);
-
-    public function image($image);
-
-    public function mainEntityOfPage($mainEntityOfPage);
-
-    public function name($name);
-
-    public function potentialAction($potentialAction);
-
-    public function sameAs($sameAs);
-
-    public function subjectOf($subjectOf);
 
     public function url($url);
 

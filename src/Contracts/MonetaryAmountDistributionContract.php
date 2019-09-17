@@ -4,21 +4,11 @@ namespace Spatie\SchemaOrg\Contracts;
 
 interface MonetaryAmountDistributionContract
 {
-    public function currency($currency);
-
-    public function median($median);
-
-    public function percentile10($percentile10);
-
-    public function percentile25($percentile25);
-
-    public function percentile75($percentile75);
-
-    public function percentile90($percentile90);
-
     public function additionalType($additionalType);
 
     public function alternateName($alternateName);
+
+    public function currency($currency);
 
     public function description($description);
 
@@ -30,7 +20,17 @@ interface MonetaryAmountDistributionContract
 
     public function mainEntityOfPage($mainEntityOfPage);
 
+    public function median($median);
+
     public function name($name);
+
+    public function percentile10($percentile10);
+
+    public function percentile25($percentile25);
+
+    public function percentile75($percentile75);
+
+    public function percentile90($percentile90);
 
     public function potentialAction($potentialAction);
 

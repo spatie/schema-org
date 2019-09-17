@@ -4,19 +4,17 @@ namespace Spatie\SchemaOrg\Contracts;
 
 interface TireShopContract
 {
-    public function branchOf($branchOf);
+    public function additionalProperty($additionalProperty);
 
-    public function currenciesAccepted($currenciesAccepted);
-
-    public function openingHours($openingHours);
-
-    public function paymentAccepted($paymentAccepted);
-
-    public function priceRange($priceRange);
+    public function additionalType($additionalType);
 
     public function address($address);
 
     public function aggregateRating($aggregateRating);
+
+    public function alternateName($alternateName);
+
+    public function amenityFeature($amenityFeature);
 
     public function areaServed($areaServed);
 
@@ -24,13 +22,29 @@ interface TireShopContract
 
     public function awards($awards);
 
+    public function branchCode($branchCode);
+
+    public function branchOf($branchOf);
+
     public function brand($brand);
 
     public function contactPoint($contactPoint);
 
     public function contactPoints($contactPoints);
 
+    public function containedIn($containedIn);
+
+    public function containedInPlace($containedInPlace);
+
+    public function containsPlace($containsPlace);
+
+    public function currenciesAccepted($currenciesAccepted);
+
     public function department($department);
+
+    public function description($description);
+
+    public function disambiguatingDescription($disambiguatingDescription);
 
     public function dissolutionDate($dissolutionDate);
 
@@ -58,13 +72,25 @@ interface TireShopContract
 
     public function funder($funder);
 
+    public function geo($geo);
+
     public function globalLocationNumber($globalLocationNumber);
+
+    public function hasMap($hasMap);
 
     public function hasOfferCatalog($hasOfferCatalog);
 
     public function hasPOS($hasPOS);
 
+    public function identifier($identifier);
+
+    public function image($image);
+
+    public function isAccessibleForFree($isAccessibleForFree);
+
     public function isicV4($isicV4);
+
+    public function latitude($latitude);
 
     public function legalName($legalName);
 
@@ -74,7 +100,17 @@ interface TireShopContract
 
     public function logo($logo);
 
+    public function longitude($longitude);
+
+    public function mainEntityOfPage($mainEntityOfPage);
+
     public function makesOffer($makesOffer);
+
+    public function map($map);
+
+    public function maps($maps);
+
+    public function maximumAttendeeCapacity($maximumAttendeeCapacity);
 
     public function member($member);
 
@@ -84,13 +120,31 @@ interface TireShopContract
 
     public function naics($naics);
 
+    public function name($name);
+
     public function numberOfEmployees($numberOfEmployees);
 
     public function offeredBy($offeredBy);
 
+    public function openingHours($openingHours);
+
+    public function openingHoursSpecification($openingHoursSpecification);
+
     public function owns($owns);
 
     public function parentOrganization($parentOrganization);
+
+    public function paymentAccepted($paymentAccepted);
+
+    public function photo($photo);
+
+    public function photos($photos);
+
+    public function potentialAction($potentialAction);
+
+    public function priceRange($priceRange);
+
+    public function publicAccess($publicAccess);
 
     public function publishingPrinciples($publishingPrinciples);
 
@@ -98,84 +152,30 @@ interface TireShopContract
 
     public function reviews($reviews);
 
+    public function sameAs($sameAs);
+
     public function seeks($seeks);
 
     public function serviceArea($serviceArea);
 
     public function slogan($slogan);
 
+    public function smokingAllowed($smokingAllowed);
+
+    public function specialOpeningHoursSpecification($specialOpeningHoursSpecification);
+
     public function sponsor($sponsor);
 
     public function subOrganization($subOrganization);
+
+    public function subjectOf($subjectOf);
 
     public function taxID($taxID);
 
     public function telephone($telephone);
 
-    public function vatID($vatID);
-
-    public function additionalType($additionalType);
-
-    public function alternateName($alternateName);
-
-    public function description($description);
-
-    public function disambiguatingDescription($disambiguatingDescription);
-
-    public function identifier($identifier);
-
-    public function image($image);
-
-    public function mainEntityOfPage($mainEntityOfPage);
-
-    public function name($name);
-
-    public function potentialAction($potentialAction);
-
-    public function sameAs($sameAs);
-
-    public function subjectOf($subjectOf);
-
     public function url($url);
 
-    public function additionalProperty($additionalProperty);
-
-    public function amenityFeature($amenityFeature);
-
-    public function branchCode($branchCode);
-
-    public function containedIn($containedIn);
-
-    public function containedInPlace($containedInPlace);
-
-    public function containsPlace($containsPlace);
-
-    public function geo($geo);
-
-    public function hasMap($hasMap);
-
-    public function isAccessibleForFree($isAccessibleForFree);
-
-    public function latitude($latitude);
-
-    public function longitude($longitude);
-
-    public function map($map);
-
-    public function maps($maps);
-
-    public function maximumAttendeeCapacity($maximumAttendeeCapacity);
-
-    public function openingHoursSpecification($openingHoursSpecification);
-
-    public function photo($photo);
-
-    public function photos($photos);
-
-    public function publicAccess($publicAccess);
-
-    public function smokingAllowed($smokingAllowed);
-
-    public function specialOpeningHoursSpecification($specialOpeningHoursSpecification);
+    public function vatID($vatID);
 
 }

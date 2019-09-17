@@ -4,19 +4,13 @@ namespace Spatie\SchemaOrg\Contracts;
 
 interface OpeningHoursSpecificationContract
 {
-    public function closes($closes);
-
-    public function dayOfWeek($dayOfWeek);
-
-    public function opens($opens);
-
-    public function validFrom($validFrom);
-
-    public function validThrough($validThrough);
-
     public function additionalType($additionalType);
 
     public function alternateName($alternateName);
+
+    public function closes($closes);
+
+    public function dayOfWeek($dayOfWeek);
 
     public function description($description);
 
@@ -30,6 +24,8 @@ interface OpeningHoursSpecificationContract
 
     public function name($name);
 
+    public function opens($opens);
+
     public function potentialAction($potentialAction);
 
     public function sameAs($sameAs);
@@ -37,5 +33,9 @@ interface OpeningHoursSpecificationContract
     public function subjectOf($subjectOf);
 
     public function url($url);
+
+    public function validFrom($validFrom);
+
+    public function validThrough($validThrough);
 
 }

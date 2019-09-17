@@ -6,12 +6,6 @@ interface OwnershipInfoContract
 {
     public function acquiredFrom($acquiredFrom);
 
-    public function ownedFrom($ownedFrom);
-
-    public function ownedThrough($ownedThrough);
-
-    public function typeOfGood($typeOfGood);
-
     public function additionalType($additionalType);
 
     public function alternateName($alternateName);
@@ -28,11 +22,17 @@ interface OwnershipInfoContract
 
     public function name($name);
 
+    public function ownedFrom($ownedFrom);
+
+    public function ownedThrough($ownedThrough);
+
     public function potentialAction($potentialAction);
 
     public function sameAs($sameAs);
 
     public function subjectOf($subjectOf);
+
+    public function typeOfGood($typeOfGood);
 
     public function url($url);
 

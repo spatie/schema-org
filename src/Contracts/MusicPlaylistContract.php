@@ -4,12 +4,6 @@ namespace Spatie\SchemaOrg\Contracts;
 
 interface MusicPlaylistContract
 {
-    public function numTracks($numTracks);
-
-    public function track($track);
-
-    public function tracks($tracks);
-
     public function about($about);
 
     public function accessMode($accessMode);
@@ -28,7 +22,11 @@ interface MusicPlaylistContract
 
     public function accountablePerson($accountablePerson);
 
+    public function additionalType($additionalType);
+
     public function aggregateRating($aggregateRating);
+
+    public function alternateName($alternateName);
 
     public function alternativeHeadline($alternativeHeadline);
 
@@ -70,6 +68,10 @@ interface MusicPlaylistContract
 
     public function datePublished($datePublished);
 
+    public function description($description);
+
+    public function disambiguatingDescription($disambiguatingDescription);
+
     public function discussionUrl($discussionUrl);
 
     public function editor($editor);
@@ -98,6 +100,10 @@ interface MusicPlaylistContract
 
     public function headline($headline);
 
+    public function identifier($identifier);
+
+    public function image($image);
+
     public function inLanguage($inLanguage);
 
     public function interactionStatistic($interactionStatistic);
@@ -124,13 +130,21 @@ interface MusicPlaylistContract
 
     public function mainEntity($mainEntity);
 
+    public function mainEntityOfPage($mainEntityOfPage);
+
     public function material($material);
 
     public function mentions($mentions);
 
+    public function name($name);
+
+    public function numTracks($numTracks);
+
     public function offers($offers);
 
     public function position($position);
+
+    public function potentialAction($potentialAction);
 
     public function producer($producer);
 
@@ -150,6 +164,8 @@ interface MusicPlaylistContract
 
     public function reviews($reviews);
 
+    public function sameAs($sameAs);
+
     public function schemaVersion($schemaVersion);
 
     public function sourceOrganization($sourceOrganization);
@@ -159,6 +175,8 @@ interface MusicPlaylistContract
     public function spatialCoverage($spatialCoverage);
 
     public function sponsor($sponsor);
+
+    public function subjectOf($subjectOf);
 
     public function temporal($temporal);
 
@@ -170,38 +188,20 @@ interface MusicPlaylistContract
 
     public function timeRequired($timeRequired);
 
+    public function track($track);
+
+    public function tracks($tracks);
+
     public function translator($translator);
 
     public function typicalAgeRange($typicalAgeRange);
+
+    public function url($url);
 
     public function version($version);
 
     public function video($video);
 
     public function workExample($workExample);
-
-    public function additionalType($additionalType);
-
-    public function alternateName($alternateName);
-
-    public function description($description);
-
-    public function disambiguatingDescription($disambiguatingDescription);
-
-    public function identifier($identifier);
-
-    public function image($image);
-
-    public function mainEntityOfPage($mainEntityOfPage);
-
-    public function name($name);
-
-    public function potentialAction($potentialAction);
-
-    public function sameAs($sameAs);
-
-    public function subjectOf($subjectOf);
-
-    public function url($url);
 
 }

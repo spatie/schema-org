@@ -14,35 +14,6 @@ use \Spatie\SchemaOrg\Contracts\ThingContract;
 class DigitalDocumentPermission extends BaseType implements IntangibleContract, ThingContract
 {
     /**
-     * The person, organization, contact point, or audience that has been
-     * granted this permission.
-     *
-     * @param Audience|Audience[]|ContactPoint|ContactPoint[]|Organization|Organization[]|Person|Person[] $grantee
-     *
-     * @return static
-     *
-     * @see http://schema.org/grantee
-     */
-    public function grantee($grantee)
-    {
-        return $this->setProperty('grantee', $grantee);
-    }
-
-    /**
-     * The type of permission granted the person, organization, or audience.
-     *
-     * @param DigitalDocumentPermissionType|DigitalDocumentPermissionType[] $permissionType
-     *
-     * @return static
-     *
-     * @see http://schema.org/permissionType
-     */
-    public function permissionType($permissionType)
-    {
-        return $this->setProperty('permissionType', $permissionType);
-    }
-
-    /**
      * An additional type for the item, typically used for adding more specific
      * types from external vocabularies in microdata syntax. This is a
      * relationship between something and a class that the thing is in. In RDFa
@@ -107,6 +78,21 @@ class DigitalDocumentPermission extends BaseType implements IntangibleContract, 
     }
 
     /**
+     * The person, organization, contact point, or audience that has been
+     * granted this permission.
+     *
+     * @param Audience|Audience[]|ContactPoint|ContactPoint[]|Organization|Organization[]|Person|Person[] $grantee
+     *
+     * @return static
+     *
+     * @see http://schema.org/grantee
+     */
+    public function grantee($grantee)
+    {
+        return $this->setProperty('grantee', $grantee);
+    }
+
+    /**
      * The identifier property represents any kind of identifier for any kind of
      * [[Thing]], such as ISBNs, GTIN codes, UUIDs etc. Schema.org provides
      * dedicated properties for representing many of these, either as textual
@@ -167,6 +153,20 @@ class DigitalDocumentPermission extends BaseType implements IntangibleContract, 
     public function name($name)
     {
         return $this->setProperty('name', $name);
+    }
+
+    /**
+     * The type of permission granted the person, organization, or audience.
+     *
+     * @param DigitalDocumentPermissionType|DigitalDocumentPermissionType[] $permissionType
+     *
+     * @return static
+     *
+     * @see http://schema.org/permissionType
+     */
+    public function permissionType($permissionType)
+    {
+        return $this->setProperty('permissionType', $permissionType);
     }
 
     /**

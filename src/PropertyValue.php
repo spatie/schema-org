@@ -22,128 +22,6 @@ use \Spatie\SchemaOrg\Contracts\ThingContract;
 class PropertyValue extends BaseType implements StructuredValueContract, IntangibleContract, ThingContract
 {
     /**
-     * The upper value of some characteristic or property.
-     *
-     * @param float|float[]|int|int[] $maxValue
-     *
-     * @return static
-     *
-     * @see http://schema.org/maxValue
-     */
-    public function maxValue($maxValue)
-    {
-        return $this->setProperty('maxValue', $maxValue);
-    }
-
-    /**
-     * The lower value of some characteristic or property.
-     *
-     * @param float|float[]|int|int[] $minValue
-     *
-     * @return static
-     *
-     * @see http://schema.org/minValue
-     */
-    public function minValue($minValue)
-    {
-        return $this->setProperty('minValue', $minValue);
-    }
-
-    /**
-     * A commonly used identifier for the characteristic represented by the
-     * property, e.g. a manufacturer or a standard code for a property.
-     * propertyID can be
-     * (1) a prefixed string, mainly meant to be used with standards for product
-     * properties; (2) a site-specific, non-prefixed string (e.g. the primary
-     * key of the property or the vendor-specific id of the property), or (3)
-     * a URL indicating the type of the property, either pointing to an external
-     * vocabulary, or a Web resource that describes the property (e.g. a
-     * glossary entry).
-     * Standards bodies should promote a standard prefix for the identifiers of
-     * properties from their standards.
-     *
-     * @param string|string[] $propertyID
-     *
-     * @return static
-     *
-     * @see http://schema.org/propertyID
-     */
-    public function propertyID($propertyID)
-    {
-        return $this->setProperty('propertyID', $propertyID);
-    }
-
-    /**
-     * The unit of measurement given using the UN/CEFACT Common Code (3
-     * characters) or a URL. Other codes than the UN/CEFACT Common Code may be
-     * used with a prefix followed by a colon.
-     *
-     * @param string|string[] $unitCode
-     *
-     * @return static
-     *
-     * @see http://schema.org/unitCode
-     */
-    public function unitCode($unitCode)
-    {
-        return $this->setProperty('unitCode', $unitCode);
-    }
-
-    /**
-     * A string or text indicating the unit of measurement. Useful if you cannot
-     * provide a standard unit code for
-     * <a href='unitCode'>unitCode</a>.
-     *
-     * @param string|string[] $unitText
-     *
-     * @return static
-     *
-     * @see http://schema.org/unitText
-     */
-    public function unitText($unitText)
-    {
-        return $this->setProperty('unitText', $unitText);
-    }
-
-    /**
-     * The value of the quantitative value or property value node.
-     * 
-     * * For [[QuantitativeValue]] and [[MonetaryAmount]], the recommended type
-     * for values is 'Number'.
-     * * For [[PropertyValue]], it can be 'Text;', 'Number', 'Boolean', or
-     * 'StructuredValue'.
-     * * Use values from 0123456789 (Unicode 'DIGIT ZERO' (U+0030) to 'DIGIT
-     * NINE' (U+0039)) rather than superficially similiar Unicode symbols.
-     * * Use '.' (Unicode 'FULL STOP' (U+002E)) rather than ',' to indicate a
-     * decimal point. Avoid using these symbols as a readability separator.
-     *
-     * @param StructuredValue|StructuredValue[]|bool|bool[]|float|float[]|int|int[]|string|string[] $value
-     *
-     * @return static
-     *
-     * @see http://schema.org/value
-     */
-    public function value($value)
-    {
-        return $this->setProperty('value', $value);
-    }
-
-    /**
-     * A pointer to a secondary value that provides additional information on
-     * the original value, e.g. a reference temperature.
-     *
-     * @param Enumeration|Enumeration[]|PropertyValue|PropertyValue[]|QualitativeValue|QualitativeValue[]|QuantitativeValue|QuantitativeValue[]|StructuredValue|StructuredValue[] $valueReference
-     *
-     * @return static
-     *
-     * @see http://schema.org/valueReference
-     */
-    public function valueReference($valueReference)
-    {
-        return $this->setProperty('valueReference', $valueReference);
-    }
-
-    /**
      * An additional type for the item, typically used for adding more specific
      * types from external vocabularies in microdata syntax. This is a
      * relationship between something and a class that the thing is in. In RDFa
@@ -257,6 +135,34 @@ class PropertyValue extends BaseType implements StructuredValueContract, Intangi
     }
 
     /**
+     * The upper value of some characteristic or property.
+     *
+     * @param float|float[]|int|int[] $maxValue
+     *
+     * @return static
+     *
+     * @see http://schema.org/maxValue
+     */
+    public function maxValue($maxValue)
+    {
+        return $this->setProperty('maxValue', $maxValue);
+    }
+
+    /**
+     * The lower value of some characteristic or property.
+     *
+     * @param float|float[]|int|int[] $minValue
+     *
+     * @return static
+     *
+     * @see http://schema.org/minValue
+     */
+    public function minValue($minValue)
+    {
+        return $this->setProperty('minValue', $minValue);
+    }
+
+    /**
      * The name of the item.
      *
      * @param string|string[] $name
@@ -283,6 +189,30 @@ class PropertyValue extends BaseType implements StructuredValueContract, Intangi
     public function potentialAction($potentialAction)
     {
         return $this->setProperty('potentialAction', $potentialAction);
+    }
+
+    /**
+     * A commonly used identifier for the characteristic represented by the
+     * property, e.g. a manufacturer or a standard code for a property.
+     * propertyID can be
+     * (1) a prefixed string, mainly meant to be used with standards for product
+     * properties; (2) a site-specific, non-prefixed string (e.g. the primary
+     * key of the property or the vendor-specific id of the property), or (3)
+     * a URL indicating the type of the property, either pointing to an external
+     * vocabulary, or a Web resource that describes the property (e.g. a
+     * glossary entry).
+     * Standards bodies should promote a standard prefix for the identifiers of
+     * properties from their standards.
+     *
+     * @param string|string[] $propertyID
+     *
+     * @return static
+     *
+     * @see http://schema.org/propertyID
+     */
+    public function propertyID($propertyID)
+    {
+        return $this->setProperty('propertyID', $propertyID);
     }
 
     /**
@@ -316,6 +246,38 @@ class PropertyValue extends BaseType implements StructuredValueContract, Intangi
     }
 
     /**
+     * The unit of measurement given using the UN/CEFACT Common Code (3
+     * characters) or a URL. Other codes than the UN/CEFACT Common Code may be
+     * used with a prefix followed by a colon.
+     *
+     * @param string|string[] $unitCode
+     *
+     * @return static
+     *
+     * @see http://schema.org/unitCode
+     */
+    public function unitCode($unitCode)
+    {
+        return $this->setProperty('unitCode', $unitCode);
+    }
+
+    /**
+     * A string or text indicating the unit of measurement. Useful if you cannot
+     * provide a standard unit code for
+     * <a href='unitCode'>unitCode</a>.
+     *
+     * @param string|string[] $unitText
+     *
+     * @return static
+     *
+     * @see http://schema.org/unitText
+     */
+    public function unitText($unitText)
+    {
+        return $this->setProperty('unitText', $unitText);
+    }
+
+    /**
      * URL of the item.
      *
      * @param string|string[] $url
@@ -327,6 +289,44 @@ class PropertyValue extends BaseType implements StructuredValueContract, Intangi
     public function url($url)
     {
         return $this->setProperty('url', $url);
+    }
+
+    /**
+     * The value of the quantitative value or property value node.
+     * 
+     * * For [[QuantitativeValue]] and [[MonetaryAmount]], the recommended type
+     * for values is 'Number'.
+     * * For [[PropertyValue]], it can be 'Text;', 'Number', 'Boolean', or
+     * 'StructuredValue'.
+     * * Use values from 0123456789 (Unicode 'DIGIT ZERO' (U+0030) to 'DIGIT
+     * NINE' (U+0039)) rather than superficially similiar Unicode symbols.
+     * * Use '.' (Unicode 'FULL STOP' (U+002E)) rather than ',' to indicate a
+     * decimal point. Avoid using these symbols as a readability separator.
+     *
+     * @param StructuredValue|StructuredValue[]|bool|bool[]|float|float[]|int|int[]|string|string[] $value
+     *
+     * @return static
+     *
+     * @see http://schema.org/value
+     */
+    public function value($value)
+    {
+        return $this->setProperty('value', $value);
+    }
+
+    /**
+     * A pointer to a secondary value that provides additional information on
+     * the original value, e.g. a reference temperature.
+     *
+     * @param Enumeration|Enumeration[]|PropertyValue|PropertyValue[]|QualitativeValue|QualitativeValue[]|QuantitativeValue|QuantitativeValue[]|StructuredValue|StructuredValue[] $valueReference
+     *
+     * @return static
+     *
+     * @see http://schema.org/valueReference
+     */
+    public function valueReference($valueReference)
+    {
+        return $this->setProperty('valueReference', $valueReference);
     }
 
 }

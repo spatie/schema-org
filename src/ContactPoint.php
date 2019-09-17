@@ -15,6 +15,39 @@ use \Spatie\SchemaOrg\Contracts\ThingContract;
 class ContactPoint extends BaseType implements StructuredValueContract, IntangibleContract, ThingContract
 {
     /**
+     * An additional type for the item, typically used for adding more specific
+     * types from external vocabularies in microdata syntax. This is a
+     * relationship between something and a class that the thing is in. In RDFa
+     * syntax, it is better to use the native RDFa syntax - the 'typeof'
+     * attribute - for multiple types. Schema.org tools may have only weaker
+     * understanding of extra types, in particular those defined externally.
+     *
+     * @param string|string[] $additionalType
+     *
+     * @return static
+     *
+     * @see http://schema.org/additionalType
+     */
+    public function additionalType($additionalType)
+    {
+        return $this->setProperty('additionalType', $additionalType);
+    }
+
+    /**
+     * An alias for the item.
+     *
+     * @param string|string[] $alternateName
+     *
+     * @return static
+     *
+     * @see http://schema.org/alternateName
+     */
+    public function alternateName($alternateName)
+    {
+        return $this->setProperty('alternateName', $alternateName);
+    }
+
+    /**
      * The geographic area where a service or offered item is provided.
      *
      * @param AdministrativeArea|AdministrativeArea[]|GeoShape|GeoShape[]|Place|Place[]|string|string[] $areaServed
@@ -76,6 +109,37 @@ class ContactPoint extends BaseType implements StructuredValueContract, Intangib
     }
 
     /**
+     * A description of the item.
+     *
+     * @param string|string[] $description
+     *
+     * @return static
+     *
+     * @see http://schema.org/description
+     */
+    public function description($description)
+    {
+        return $this->setProperty('description', $description);
+    }
+
+    /**
+     * A sub property of description. A short description of the item used to
+     * disambiguate from other, similar items. Information from other properties
+     * (in particular, name) may be necessary for the description to be useful
+     * for disambiguation.
+     *
+     * @param string|string[] $disambiguatingDescription
+     *
+     * @return static
+     *
+     * @see http://schema.org/disambiguatingDescription
+     */
+    public function disambiguatingDescription($disambiguatingDescription)
+    {
+        return $this->setProperty('disambiguatingDescription', $disambiguatingDescription);
+    }
+
+    /**
      * Email address.
      *
      * @param string|string[] $email
@@ -115,115 +179,6 @@ class ContactPoint extends BaseType implements StructuredValueContract, Intangib
     public function hoursAvailable($hoursAvailable)
     {
         return $this->setProperty('hoursAvailable', $hoursAvailable);
-    }
-
-    /**
-     * The product or service this support contact point is related to (such as
-     * product support for a particular product line). This can be a specific
-     * product or product line (e.g. "iPhone") or a general category of products
-     * or services (e.g. "smartphones").
-     *
-     * @param Product|Product[]|string|string[] $productSupported
-     *
-     * @return static
-     *
-     * @see http://schema.org/productSupported
-     */
-    public function productSupported($productSupported)
-    {
-        return $this->setProperty('productSupported', $productSupported);
-    }
-
-    /**
-     * The geographic area where the service is provided.
-     *
-     * @param AdministrativeArea|AdministrativeArea[]|GeoShape|GeoShape[]|Place|Place[] $serviceArea
-     *
-     * @return static
-     *
-     * @see http://schema.org/serviceArea
-     */
-    public function serviceArea($serviceArea)
-    {
-        return $this->setProperty('serviceArea', $serviceArea);
-    }
-
-    /**
-     * The telephone number.
-     *
-     * @param string|string[] $telephone
-     *
-     * @return static
-     *
-     * @see http://schema.org/telephone
-     */
-    public function telephone($telephone)
-    {
-        return $this->setProperty('telephone', $telephone);
-    }
-
-    /**
-     * An additional type for the item, typically used for adding more specific
-     * types from external vocabularies in microdata syntax. This is a
-     * relationship between something and a class that the thing is in. In RDFa
-     * syntax, it is better to use the native RDFa syntax - the 'typeof'
-     * attribute - for multiple types. Schema.org tools may have only weaker
-     * understanding of extra types, in particular those defined externally.
-     *
-     * @param string|string[] $additionalType
-     *
-     * @return static
-     *
-     * @see http://schema.org/additionalType
-     */
-    public function additionalType($additionalType)
-    {
-        return $this->setProperty('additionalType', $additionalType);
-    }
-
-    /**
-     * An alias for the item.
-     *
-     * @param string|string[] $alternateName
-     *
-     * @return static
-     *
-     * @see http://schema.org/alternateName
-     */
-    public function alternateName($alternateName)
-    {
-        return $this->setProperty('alternateName', $alternateName);
-    }
-
-    /**
-     * A description of the item.
-     *
-     * @param string|string[] $description
-     *
-     * @return static
-     *
-     * @see http://schema.org/description
-     */
-    public function description($description)
-    {
-        return $this->setProperty('description', $description);
-    }
-
-    /**
-     * A sub property of description. A short description of the item used to
-     * disambiguate from other, similar items. Information from other properties
-     * (in particular, name) may be necessary for the description to be useful
-     * for disambiguation.
-     *
-     * @param string|string[] $disambiguatingDescription
-     *
-     * @return static
-     *
-     * @see http://schema.org/disambiguatingDescription
-     */
-    public function disambiguatingDescription($disambiguatingDescription)
-    {
-        return $this->setProperty('disambiguatingDescription', $disambiguatingDescription);
     }
 
     /**
@@ -305,6 +260,23 @@ class ContactPoint extends BaseType implements StructuredValueContract, Intangib
     }
 
     /**
+     * The product or service this support contact point is related to (such as
+     * product support for a particular product line). This can be a specific
+     * product or product line (e.g. "iPhone") or a general category of products
+     * or services (e.g. "smartphones").
+     *
+     * @param Product|Product[]|string|string[] $productSupported
+     *
+     * @return static
+     *
+     * @see http://schema.org/productSupported
+     */
+    public function productSupported($productSupported)
+    {
+        return $this->setProperty('productSupported', $productSupported);
+    }
+
+    /**
      * URL of a reference Web page that unambiguously indicates the item's
      * identity. E.g. the URL of the item's Wikipedia page, Wikidata entry, or
      * official website.
@@ -321,6 +293,20 @@ class ContactPoint extends BaseType implements StructuredValueContract, Intangib
     }
 
     /**
+     * The geographic area where the service is provided.
+     *
+     * @param AdministrativeArea|AdministrativeArea[]|GeoShape|GeoShape[]|Place|Place[] $serviceArea
+     *
+     * @return static
+     *
+     * @see http://schema.org/serviceArea
+     */
+    public function serviceArea($serviceArea)
+    {
+        return $this->setProperty('serviceArea', $serviceArea);
+    }
+
+    /**
      * A CreativeWork or Event about this Thing.
      *
      * @param CreativeWork|CreativeWork[]|Event|Event[] $subjectOf
@@ -332,6 +318,20 @@ class ContactPoint extends BaseType implements StructuredValueContract, Intangib
     public function subjectOf($subjectOf)
     {
         return $this->setProperty('subjectOf', $subjectOf);
+    }
+
+    /**
+     * The telephone number.
+     *
+     * @param string|string[] $telephone
+     *
+     * @return static
+     *
+     * @see http://schema.org/telephone
+     */
+    public function telephone($telephone)
+    {
+        return $this->setProperty('telephone', $telephone);
     }
 
     /**

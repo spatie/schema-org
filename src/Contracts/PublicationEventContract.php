@@ -4,17 +4,15 @@ namespace Spatie\SchemaOrg\Contracts;
 
 interface PublicationEventContract
 {
-    public function free($free);
-
-    public function isAccessibleForFree($isAccessibleForFree);
-
-    public function publishedOn($publishedOn);
-
     public function about($about);
 
     public function actor($actor);
 
+    public function additionalType($additionalType);
+
     public function aggregateRating($aggregateRating);
+
+    public function alternateName($alternateName);
 
     public function attendee($attendee);
 
@@ -26,7 +24,11 @@ interface PublicationEventContract
 
     public function contributor($contributor);
 
+    public function description($description);
+
     public function director($director);
+
+    public function disambiguatingDescription($disambiguatingDescription);
 
     public function doorTime($doorTime);
 
@@ -36,7 +38,13 @@ interface PublicationEventContract
 
     public function eventStatus($eventStatus);
 
+    public function free($free);
+
     public function funder($funder);
+
+    public function identifier($identifier);
+
+    public function image($image);
 
     public function inLanguage($inLanguage);
 
@@ -44,7 +52,11 @@ interface PublicationEventContract
 
     public function location($location);
 
+    public function mainEntityOfPage($mainEntityOfPage);
+
     public function maximumAttendeeCapacity($maximumAttendeeCapacity);
+
+    public function name($name);
 
     public function offers($offers);
 
@@ -54,13 +66,19 @@ interface PublicationEventContract
 
     public function performers($performers);
 
+    public function potentialAction($potentialAction);
+
     public function previousStartDate($previousStartDate);
+
+    public function publishedOn($publishedOn);
 
     public function recordedIn($recordedIn);
 
     public function remainingAttendeeCapacity($remainingAttendeeCapacity);
 
     public function review($review);
+
+    public function sameAs($sameAs);
 
     public function sponsor($sponsor);
 
@@ -70,38 +88,18 @@ interface PublicationEventContract
 
     public function subEvents($subEvents);
 
+    public function subjectOf($subjectOf);
+
     public function superEvent($superEvent);
 
     public function translator($translator);
 
     public function typicalAgeRange($typicalAgeRange);
 
+    public function url($url);
+
     public function workFeatured($workFeatured);
 
     public function workPerformed($workPerformed);
-
-    public function additionalType($additionalType);
-
-    public function alternateName($alternateName);
-
-    public function description($description);
-
-    public function disambiguatingDescription($disambiguatingDescription);
-
-    public function identifier($identifier);
-
-    public function image($image);
-
-    public function mainEntityOfPage($mainEntityOfPage);
-
-    public function name($name);
-
-    public function potentialAction($potentialAction);
-
-    public function sameAs($sameAs);
-
-    public function subjectOf($subjectOf);
-
-    public function url($url);
 
 }

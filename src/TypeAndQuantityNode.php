@@ -16,82 +16,6 @@ use \Spatie\SchemaOrg\Contracts\ThingContract;
 class TypeAndQuantityNode extends BaseType implements StructuredValueContract, IntangibleContract, ThingContract
 {
     /**
-     * The quantity of the goods included in the offer.
-     *
-     * @param float|float[]|int|int[] $amountOfThisGood
-     *
-     * @return static
-     *
-     * @see http://schema.org/amountOfThisGood
-     */
-    public function amountOfThisGood($amountOfThisGood)
-    {
-        return $this->setProperty('amountOfThisGood', $amountOfThisGood);
-    }
-
-    /**
-     * The business function (e.g. sell, lease, repair, dispose) of the offer or
-     * component of a bundle (TypeAndQuantityNode). The default is
-     * http://purl.org/goodrelations/v1#Sell.
-     *
-     * @param BusinessFunction|BusinessFunction[] $businessFunction
-     *
-     * @return static
-     *
-     * @see http://schema.org/businessFunction
-     */
-    public function businessFunction($businessFunction)
-    {
-        return $this->setProperty('businessFunction', $businessFunction);
-    }
-
-    /**
-     * The product that this structured value is referring to.
-     *
-     * @param Product|Product[]|Service|Service[] $typeOfGood
-     *
-     * @return static
-     *
-     * @see http://schema.org/typeOfGood
-     */
-    public function typeOfGood($typeOfGood)
-    {
-        return $this->setProperty('typeOfGood', $typeOfGood);
-    }
-
-    /**
-     * The unit of measurement given using the UN/CEFACT Common Code (3
-     * characters) or a URL. Other codes than the UN/CEFACT Common Code may be
-     * used with a prefix followed by a colon.
-     *
-     * @param string|string[] $unitCode
-     *
-     * @return static
-     *
-     * @see http://schema.org/unitCode
-     */
-    public function unitCode($unitCode)
-    {
-        return $this->setProperty('unitCode', $unitCode);
-    }
-
-    /**
-     * A string or text indicating the unit of measurement. Useful if you cannot
-     * provide a standard unit code for
-     * <a href='unitCode'>unitCode</a>.
-     *
-     * @param string|string[] $unitText
-     *
-     * @return static
-     *
-     * @see http://schema.org/unitText
-     */
-    public function unitText($unitText)
-    {
-        return $this->setProperty('unitText', $unitText);
-    }
-
-    /**
      * An additional type for the item, typically used for adding more specific
      * types from external vocabularies in microdata syntax. This is a
      * relationship between something and a class that the thing is in. In RDFa
@@ -122,6 +46,36 @@ class TypeAndQuantityNode extends BaseType implements StructuredValueContract, I
     public function alternateName($alternateName)
     {
         return $this->setProperty('alternateName', $alternateName);
+    }
+
+    /**
+     * The quantity of the goods included in the offer.
+     *
+     * @param float|float[]|int|int[] $amountOfThisGood
+     *
+     * @return static
+     *
+     * @see http://schema.org/amountOfThisGood
+     */
+    public function amountOfThisGood($amountOfThisGood)
+    {
+        return $this->setProperty('amountOfThisGood', $amountOfThisGood);
+    }
+
+    /**
+     * The business function (e.g. sell, lease, repair, dispose) of the offer or
+     * component of a bundle (TypeAndQuantityNode). The default is
+     * http://purl.org/goodrelations/v1#Sell.
+     *
+     * @param BusinessFunction|BusinessFunction[] $businessFunction
+     *
+     * @return static
+     *
+     * @see http://schema.org/businessFunction
+     */
+    public function businessFunction($businessFunction)
+    {
+        return $this->setProperty('businessFunction', $businessFunction);
     }
 
     /**
@@ -261,6 +215,52 @@ class TypeAndQuantityNode extends BaseType implements StructuredValueContract, I
     public function subjectOf($subjectOf)
     {
         return $this->setProperty('subjectOf', $subjectOf);
+    }
+
+    /**
+     * The product that this structured value is referring to.
+     *
+     * @param Product|Product[]|Service|Service[] $typeOfGood
+     *
+     * @return static
+     *
+     * @see http://schema.org/typeOfGood
+     */
+    public function typeOfGood($typeOfGood)
+    {
+        return $this->setProperty('typeOfGood', $typeOfGood);
+    }
+
+    /**
+     * The unit of measurement given using the UN/CEFACT Common Code (3
+     * characters) or a URL. Other codes than the UN/CEFACT Common Code may be
+     * used with a prefix followed by a colon.
+     *
+     * @param string|string[] $unitCode
+     *
+     * @return static
+     *
+     * @see http://schema.org/unitCode
+     */
+    public function unitCode($unitCode)
+    {
+        return $this->setProperty('unitCode', $unitCode);
+    }
+
+    /**
+     * A string or text indicating the unit of measurement. Useful if you cannot
+     * provide a standard unit code for
+     * <a href='unitCode'>unitCode</a>.
+     *
+     * @param string|string[] $unitText
+     *
+     * @return static
+     *
+     * @see http://schema.org/unitText
+     */
+    public function unitText($unitText)
+    {
+        return $this->setProperty('unitText', $unitText);
     }
 
     /**

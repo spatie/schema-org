@@ -15,77 +15,6 @@ use \Spatie\SchemaOrg\Contracts\ThingContract;
 class OrderItem extends BaseType implements IntangibleContract, ThingContract
 {
     /**
-     * The delivery of the parcel related to this order or order item.
-     *
-     * @param ParcelDelivery|ParcelDelivery[] $orderDelivery
-     *
-     * @return static
-     *
-     * @see http://schema.org/orderDelivery
-     */
-    public function orderDelivery($orderDelivery)
-    {
-        return $this->setProperty('orderDelivery', $orderDelivery);
-    }
-
-    /**
-     * The identifier of the order item.
-     *
-     * @param string|string[] $orderItemNumber
-     *
-     * @return static
-     *
-     * @see http://schema.org/orderItemNumber
-     */
-    public function orderItemNumber($orderItemNumber)
-    {
-        return $this->setProperty('orderItemNumber', $orderItemNumber);
-    }
-
-    /**
-     * The current status of the order item.
-     *
-     * @param OrderStatus|OrderStatus[] $orderItemStatus
-     *
-     * @return static
-     *
-     * @see http://schema.org/orderItemStatus
-     */
-    public function orderItemStatus($orderItemStatus)
-    {
-        return $this->setProperty('orderItemStatus', $orderItemStatus);
-    }
-
-    /**
-     * The number of the item ordered. If the property is not set, assume the
-     * quantity is one.
-     *
-     * @param float|float[]|int|int[] $orderQuantity
-     *
-     * @return static
-     *
-     * @see http://schema.org/orderQuantity
-     */
-    public function orderQuantity($orderQuantity)
-    {
-        return $this->setProperty('orderQuantity', $orderQuantity);
-    }
-
-    /**
-     * The item ordered.
-     *
-     * @param OrderItem|OrderItem[]|Product|Product[]|Service|Service[] $orderedItem
-     *
-     * @return static
-     *
-     * @see http://schema.org/orderedItem
-     */
-    public function orderedItem($orderedItem)
-    {
-        return $this->setProperty('orderedItem', $orderedItem);
-    }
-
-    /**
      * An additional type for the item, typically used for adding more specific
      * types from external vocabularies in microdata syntax. This is a
      * relationship between something and a class that the thing is in. In RDFa
@@ -210,6 +139,77 @@ class OrderItem extends BaseType implements IntangibleContract, ThingContract
     public function name($name)
     {
         return $this->setProperty('name', $name);
+    }
+
+    /**
+     * The delivery of the parcel related to this order or order item.
+     *
+     * @param ParcelDelivery|ParcelDelivery[] $orderDelivery
+     *
+     * @return static
+     *
+     * @see http://schema.org/orderDelivery
+     */
+    public function orderDelivery($orderDelivery)
+    {
+        return $this->setProperty('orderDelivery', $orderDelivery);
+    }
+
+    /**
+     * The identifier of the order item.
+     *
+     * @param string|string[] $orderItemNumber
+     *
+     * @return static
+     *
+     * @see http://schema.org/orderItemNumber
+     */
+    public function orderItemNumber($orderItemNumber)
+    {
+        return $this->setProperty('orderItemNumber', $orderItemNumber);
+    }
+
+    /**
+     * The current status of the order item.
+     *
+     * @param OrderStatus|OrderStatus[] $orderItemStatus
+     *
+     * @return static
+     *
+     * @see http://schema.org/orderItemStatus
+     */
+    public function orderItemStatus($orderItemStatus)
+    {
+        return $this->setProperty('orderItemStatus', $orderItemStatus);
+    }
+
+    /**
+     * The number of the item ordered. If the property is not set, assume the
+     * quantity is one.
+     *
+     * @param float|float[]|int|int[] $orderQuantity
+     *
+     * @return static
+     *
+     * @see http://schema.org/orderQuantity
+     */
+    public function orderQuantity($orderQuantity)
+    {
+        return $this->setProperty('orderQuantity', $orderQuantity);
+    }
+
+    /**
+     * The item ordered.
+     *
+     * @param OrderItem|OrderItem[]|Product|Product[]|Service|Service[] $orderedItem
+     *
+     * @return static
+     *
+     * @see http://schema.org/orderedItem
+     */
+    public function orderedItem($orderedItem)
+    {
+        return $this->setProperty('orderedItem', $orderedItem);
     }
 
     /**

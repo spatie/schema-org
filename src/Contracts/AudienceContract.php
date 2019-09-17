@@ -4,17 +4,17 @@ namespace Spatie\SchemaOrg\Contracts;
 
 interface AudienceContract
 {
-    public function audienceType($audienceType);
-
-    public function geographicArea($geographicArea);
-
     public function additionalType($additionalType);
 
     public function alternateName($alternateName);
 
+    public function audienceType($audienceType);
+
     public function description($description);
 
     public function disambiguatingDescription($disambiguatingDescription);
+
+    public function geographicArea($geographicArea);
 
     public function identifier($identifier);
 

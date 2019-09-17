@@ -4,16 +4,6 @@ namespace Spatie\SchemaOrg\Contracts;
 
 interface OrderItemContract
 {
-    public function orderDelivery($orderDelivery);
-
-    public function orderItemNumber($orderItemNumber);
-
-    public function orderItemStatus($orderItemStatus);
-
-    public function orderQuantity($orderQuantity);
-
-    public function orderedItem($orderedItem);
-
     public function additionalType($additionalType);
 
     public function alternateName($alternateName);
@@ -29,6 +19,16 @@ interface OrderItemContract
     public function mainEntityOfPage($mainEntityOfPage);
 
     public function name($name);
+
+    public function orderDelivery($orderDelivery);
+
+    public function orderItemNumber($orderItemNumber);
+
+    public function orderItemStatus($orderItemStatus);
+
+    public function orderQuantity($orderQuantity);
+
+    public function orderedItem($orderedItem);
 
     public function potentialAction($potentialAction);
 

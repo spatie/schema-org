@@ -4,13 +4,13 @@ namespace Spatie\SchemaOrg\Contracts;
 
 interface DatedMoneySpecificationContract
 {
-    public function amount($amount);
-
-    public function currency($currency);
-
     public function additionalType($additionalType);
 
     public function alternateName($alternateName);
+
+    public function amount($amount);
+
+    public function currency($currency);
 
     public function description($description);
 

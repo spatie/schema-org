@@ -15,78 +15,6 @@ use \Spatie\SchemaOrg\Contracts\ThingContract;
 class ProgramMembership extends BaseType implements IntangibleContract, ThingContract
 {
     /**
-     * The organization (airline, travelers' club, etc.) the membership is made
-     * with.
-     *
-     * @param Organization|Organization[] $hostingOrganization
-     *
-     * @return static
-     *
-     * @see http://schema.org/hostingOrganization
-     */
-    public function hostingOrganization($hostingOrganization)
-    {
-        return $this->setProperty('hostingOrganization', $hostingOrganization);
-    }
-
-    /**
-     * A member of an Organization or a ProgramMembership. Organizations can be
-     * members of organizations; ProgramMembership is typically for individuals.
-     *
-     * @param Organization|Organization[]|Person|Person[] $member
-     *
-     * @return static
-     *
-     * @see http://schema.org/member
-     */
-    public function member($member)
-    {
-        return $this->setProperty('member', $member);
-    }
-
-    /**
-     * A member of this organization.
-     *
-     * @param Organization|Organization[]|Person|Person[] $members
-     *
-     * @return static
-     *
-     * @see http://schema.org/members
-     */
-    public function members($members)
-    {
-        return $this->setProperty('members', $members);
-    }
-
-    /**
-     * A unique identifier for the membership.
-     *
-     * @param string|string[] $membershipNumber
-     *
-     * @return static
-     *
-     * @see http://schema.org/membershipNumber
-     */
-    public function membershipNumber($membershipNumber)
-    {
-        return $this->setProperty('membershipNumber', $membershipNumber);
-    }
-
-    /**
-     * The program providing the membership.
-     *
-     * @param string|string[] $programName
-     *
-     * @return static
-     *
-     * @see http://schema.org/programName
-     */
-    public function programName($programName)
-    {
-        return $this->setProperty('programName', $programName);
-    }
-
-    /**
      * An additional type for the item, typically used for adding more specific
      * types from external vocabularies in microdata syntax. This is a
      * relationship between something and a class that the thing is in. In RDFa
@@ -151,6 +79,21 @@ class ProgramMembership extends BaseType implements IntangibleContract, ThingCon
     }
 
     /**
+     * The organization (airline, travelers' club, etc.) the membership is made
+     * with.
+     *
+     * @param Organization|Organization[] $hostingOrganization
+     *
+     * @return static
+     *
+     * @see http://schema.org/hostingOrganization
+     */
+    public function hostingOrganization($hostingOrganization)
+    {
+        return $this->setProperty('hostingOrganization', $hostingOrganization);
+    }
+
+    /**
      * The identifier property represents any kind of identifier for any kind of
      * [[Thing]], such as ISBNs, GTIN codes, UUIDs etc. Schema.org provides
      * dedicated properties for representing many of these, either as textual
@@ -200,6 +143,49 @@ class ProgramMembership extends BaseType implements IntangibleContract, ThingCon
     }
 
     /**
+     * A member of an Organization or a ProgramMembership. Organizations can be
+     * members of organizations; ProgramMembership is typically for individuals.
+     *
+     * @param Organization|Organization[]|Person|Person[] $member
+     *
+     * @return static
+     *
+     * @see http://schema.org/member
+     */
+    public function member($member)
+    {
+        return $this->setProperty('member', $member);
+    }
+
+    /**
+     * A member of this organization.
+     *
+     * @param Organization|Organization[]|Person|Person[] $members
+     *
+     * @return static
+     *
+     * @see http://schema.org/members
+     */
+    public function members($members)
+    {
+        return $this->setProperty('members', $members);
+    }
+
+    /**
+     * A unique identifier for the membership.
+     *
+     * @param string|string[] $membershipNumber
+     *
+     * @return static
+     *
+     * @see http://schema.org/membershipNumber
+     */
+    public function membershipNumber($membershipNumber)
+    {
+        return $this->setProperty('membershipNumber', $membershipNumber);
+    }
+
+    /**
      * The name of the item.
      *
      * @param string|string[] $name
@@ -226,6 +212,20 @@ class ProgramMembership extends BaseType implements IntangibleContract, ThingCon
     public function potentialAction($potentialAction)
     {
         return $this->setProperty('potentialAction', $potentialAction);
+    }
+
+    /**
+     * The program providing the membership.
+     *
+     * @param string|string[] $programName
+     *
+     * @return static
+     *
+     * @see http://schema.org/programName
+     */
+    public function programName($programName)
+    {
+        return $this->setProperty('programName', $programName);
     }
 
     /**

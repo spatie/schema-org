@@ -23,77 +23,6 @@ use \Spatie\SchemaOrg\Contracts\ThingContract;
 class OpeningHoursSpecification extends BaseType implements StructuredValueContract, IntangibleContract, ThingContract
 {
     /**
-     * The closing hour of the place or service on the given day(s) of the week.
-     *
-     * @param \DateTimeInterface|\DateTimeInterface[] $closes
-     *
-     * @return static
-     *
-     * @see http://schema.org/closes
-     */
-    public function closes($closes)
-    {
-        return $this->setProperty('closes', $closes);
-    }
-
-    /**
-     * The day of the week for which these opening hours are valid.
-     *
-     * @param DayOfWeek|DayOfWeek[] $dayOfWeek
-     *
-     * @return static
-     *
-     * @see http://schema.org/dayOfWeek
-     */
-    public function dayOfWeek($dayOfWeek)
-    {
-        return $this->setProperty('dayOfWeek', $dayOfWeek);
-    }
-
-    /**
-     * The opening hour of the place or service on the given day(s) of the week.
-     *
-     * @param \DateTimeInterface|\DateTimeInterface[] $opens
-     *
-     * @return static
-     *
-     * @see http://schema.org/opens
-     */
-    public function opens($opens)
-    {
-        return $this->setProperty('opens', $opens);
-    }
-
-    /**
-     * The date when the item becomes valid.
-     *
-     * @param \DateTimeInterface|\DateTimeInterface[] $validFrom
-     *
-     * @return static
-     *
-     * @see http://schema.org/validFrom
-     */
-    public function validFrom($validFrom)
-    {
-        return $this->setProperty('validFrom', $validFrom);
-    }
-
-    /**
-     * The date after when the item is not valid. For example the end of an
-     * offer, salary period, or a period of opening hours.
-     *
-     * @param \DateTimeInterface|\DateTimeInterface[] $validThrough
-     *
-     * @return static
-     *
-     * @see http://schema.org/validThrough
-     */
-    public function validThrough($validThrough)
-    {
-        return $this->setProperty('validThrough', $validThrough);
-    }
-
-    /**
      * An additional type for the item, typically used for adding more specific
      * types from external vocabularies in microdata syntax. This is a
      * relationship between something and a class that the thing is in. In RDFa
@@ -124,6 +53,34 @@ class OpeningHoursSpecification extends BaseType implements StructuredValueContr
     public function alternateName($alternateName)
     {
         return $this->setProperty('alternateName', $alternateName);
+    }
+
+    /**
+     * The closing hour of the place or service on the given day(s) of the week.
+     *
+     * @param \DateTimeInterface|\DateTimeInterface[] $closes
+     *
+     * @return static
+     *
+     * @see http://schema.org/closes
+     */
+    public function closes($closes)
+    {
+        return $this->setProperty('closes', $closes);
+    }
+
+    /**
+     * The day of the week for which these opening hours are valid.
+     *
+     * @param DayOfWeek|DayOfWeek[] $dayOfWeek
+     *
+     * @return static
+     *
+     * @see http://schema.org/dayOfWeek
+     */
+    public function dayOfWeek($dayOfWeek)
+    {
+        return $this->setProperty('dayOfWeek', $dayOfWeek);
     }
 
     /**
@@ -221,6 +178,20 @@ class OpeningHoursSpecification extends BaseType implements StructuredValueContr
     }
 
     /**
+     * The opening hour of the place or service on the given day(s) of the week.
+     *
+     * @param \DateTimeInterface|\DateTimeInterface[] $opens
+     *
+     * @return static
+     *
+     * @see http://schema.org/opens
+     */
+    public function opens($opens)
+    {
+        return $this->setProperty('opens', $opens);
+    }
+
+    /**
      * Indicates a potential Action, which describes an idealized action in
      * which this thing would play an 'object' role.
      *
@@ -277,6 +248,35 @@ class OpeningHoursSpecification extends BaseType implements StructuredValueContr
     public function url($url)
     {
         return $this->setProperty('url', $url);
+    }
+
+    /**
+     * The date when the item becomes valid.
+     *
+     * @param \DateTimeInterface|\DateTimeInterface[] $validFrom
+     *
+     * @return static
+     *
+     * @see http://schema.org/validFrom
+     */
+    public function validFrom($validFrom)
+    {
+        return $this->setProperty('validFrom', $validFrom);
+    }
+
+    /**
+     * The date after when the item is not valid. For example the end of an
+     * offer, salary period, or a period of opening hours.
+     *
+     * @param \DateTimeInterface|\DateTimeInterface[] $validThrough
+     *
+     * @return static
+     *
+     * @see http://schema.org/validThrough
+     */
+    public function validThrough($validThrough)
+    {
+        return $this->setProperty('validThrough', $validThrough);
     }
 
 }

@@ -16,77 +16,6 @@ use \Spatie\SchemaOrg\Contracts\ThingContract;
 class HowToItem extends BaseType implements ListItemContract, IntangibleContract, ThingContract
 {
     /**
-     * The required quantity of the item(s).
-     *
-     * @param QuantitativeValue|QuantitativeValue[]|float|float[]|int|int[]|string|string[] $requiredQuantity
-     *
-     * @return static
-     *
-     * @see http://schema.org/requiredQuantity
-     */
-    public function requiredQuantity($requiredQuantity)
-    {
-        return $this->setProperty('requiredQuantity', $requiredQuantity);
-    }
-
-    /**
-     * An entity represented by an entry in a list or data feed (e.g. an
-     * 'artist' in a list of 'artists')’.
-     *
-     * @param Thing|Thing[] $item
-     *
-     * @return static
-     *
-     * @see http://schema.org/item
-     */
-    public function item($item)
-    {
-        return $this->setProperty('item', $item);
-    }
-
-    /**
-     * A link to the ListItem that follows the current one.
-     *
-     * @param ListItem|ListItem[] $nextItem
-     *
-     * @return static
-     *
-     * @see http://schema.org/nextItem
-     */
-    public function nextItem($nextItem)
-    {
-        return $this->setProperty('nextItem', $nextItem);
-    }
-
-    /**
-     * The position of an item in a series or sequence of items.
-     *
-     * @param int|int[]|string|string[] $position
-     *
-     * @return static
-     *
-     * @see http://schema.org/position
-     */
-    public function position($position)
-    {
-        return $this->setProperty('position', $position);
-    }
-
-    /**
-     * A link to the ListItem that preceeds the current one.
-     *
-     * @param ListItem|ListItem[] $previousItem
-     *
-     * @return static
-     *
-     * @see http://schema.org/previousItem
-     */
-    public function previousItem($previousItem)
-    {
-        return $this->setProperty('previousItem', $previousItem);
-    }
-
-    /**
      * An additional type for the item, typically used for adding more specific
      * types from external vocabularies in microdata syntax. This is a
      * relationship between something and a class that the thing is in. In RDFa
@@ -184,6 +113,21 @@ class HowToItem extends BaseType implements ListItemContract, IntangibleContract
     }
 
     /**
+     * An entity represented by an entry in a list or data feed (e.g. an
+     * 'artist' in a list of 'artists')’.
+     *
+     * @param Thing|Thing[] $item
+     *
+     * @return static
+     *
+     * @see http://schema.org/item
+     */
+    public function item($item)
+    {
+        return $this->setProperty('item', $item);
+    }
+
+    /**
      * Indicates a page (or other CreativeWork) for which this thing is the main
      * entity being described. See [background
      * notes](/docs/datamodel.html#mainEntityBackground) for details.
@@ -214,6 +158,34 @@ class HowToItem extends BaseType implements ListItemContract, IntangibleContract
     }
 
     /**
+     * A link to the ListItem that follows the current one.
+     *
+     * @param ListItem|ListItem[] $nextItem
+     *
+     * @return static
+     *
+     * @see http://schema.org/nextItem
+     */
+    public function nextItem($nextItem)
+    {
+        return $this->setProperty('nextItem', $nextItem);
+    }
+
+    /**
+     * The position of an item in a series or sequence of items.
+     *
+     * @param int|int[]|string|string[] $position
+     *
+     * @return static
+     *
+     * @see http://schema.org/position
+     */
+    public function position($position)
+    {
+        return $this->setProperty('position', $position);
+    }
+
+    /**
      * Indicates a potential Action, which describes an idealized action in
      * which this thing would play an 'object' role.
      *
@@ -226,6 +198,34 @@ class HowToItem extends BaseType implements ListItemContract, IntangibleContract
     public function potentialAction($potentialAction)
     {
         return $this->setProperty('potentialAction', $potentialAction);
+    }
+
+    /**
+     * A link to the ListItem that preceeds the current one.
+     *
+     * @param ListItem|ListItem[] $previousItem
+     *
+     * @return static
+     *
+     * @see http://schema.org/previousItem
+     */
+    public function previousItem($previousItem)
+    {
+        return $this->setProperty('previousItem', $previousItem);
+    }
+
+    /**
+     * The required quantity of the item(s).
+     *
+     * @param QuantitativeValue|QuantitativeValue[]|float|float[]|int|int[]|string|string[] $requiredQuantity
+     *
+     * @return static
+     *
+     * @see http://schema.org/requiredQuantity
+     */
+    public function requiredQuantity($requiredQuantity)
+    {
+        return $this->setProperty('requiredQuantity', $requiredQuantity);
     }
 
     /**

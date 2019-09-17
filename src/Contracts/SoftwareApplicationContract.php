@@ -4,54 +4,6 @@ namespace Spatie\SchemaOrg\Contracts;
 
 interface SoftwareApplicationContract
 {
-    public function applicationCategory($applicationCategory);
-
-    public function applicationSubCategory($applicationSubCategory);
-
-    public function applicationSuite($applicationSuite);
-
-    public function availableOnDevice($availableOnDevice);
-
-    public function countriesNotSupported($countriesNotSupported);
-
-    public function countriesSupported($countriesSupported);
-
-    public function device($device);
-
-    public function downloadUrl($downloadUrl);
-
-    public function featureList($featureList);
-
-    public function fileSize($fileSize);
-
-    public function installUrl($installUrl);
-
-    public function memoryRequirements($memoryRequirements);
-
-    public function operatingSystem($operatingSystem);
-
-    public function permissions($permissions);
-
-    public function processorRequirements($processorRequirements);
-
-    public function releaseNotes($releaseNotes);
-
-    public function requirements($requirements);
-
-    public function screenshot($screenshot);
-
-    public function softwareAddOn($softwareAddOn);
-
-    public function softwareHelp($softwareHelp);
-
-    public function softwareRequirements($softwareRequirements);
-
-    public function softwareVersion($softwareVersion);
-
-    public function storageRequirements($storageRequirements);
-
-    public function supportingData($supportingData);
-
     public function about($about);
 
     public function accessMode($accessMode);
@@ -70,9 +22,19 @@ interface SoftwareApplicationContract
 
     public function accountablePerson($accountablePerson);
 
+    public function additionalType($additionalType);
+
     public function aggregateRating($aggregateRating);
 
+    public function alternateName($alternateName);
+
     public function alternativeHeadline($alternativeHeadline);
+
+    public function applicationCategory($applicationCategory);
+
+    public function applicationSubCategory($applicationSubCategory);
+
+    public function applicationSuite($applicationSuite);
 
     public function associatedMedia($associatedMedia);
 
@@ -81,6 +43,8 @@ interface SoftwareApplicationContract
     public function audio($audio);
 
     public function author($author);
+
+    public function availableOnDevice($availableOnDevice);
 
     public function award($award);
 
@@ -104,6 +68,10 @@ interface SoftwareApplicationContract
 
     public function copyrightYear($copyrightYear);
 
+    public function countriesNotSupported($countriesNotSupported);
+
+    public function countriesSupported($countriesSupported);
+
     public function creator($creator);
 
     public function dateCreated($dateCreated);
@@ -112,7 +80,15 @@ interface SoftwareApplicationContract
 
     public function datePublished($datePublished);
 
+    public function description($description);
+
+    public function device($device);
+
+    public function disambiguatingDescription($disambiguatingDescription);
+
     public function discussionUrl($discussionUrl);
+
+    public function downloadUrl($downloadUrl);
 
     public function editor($editor);
 
@@ -130,7 +106,11 @@ interface SoftwareApplicationContract
 
     public function expires($expires);
 
+    public function featureList($featureList);
+
     public function fileFormat($fileFormat);
+
+    public function fileSize($fileSize);
 
     public function funder($funder);
 
@@ -140,7 +120,13 @@ interface SoftwareApplicationContract
 
     public function headline($headline);
 
+    public function identifier($identifier);
+
+    public function image($image);
+
     public function inLanguage($inLanguage);
+
+    public function installUrl($installUrl);
 
     public function interactionStatistic($interactionStatistic);
 
@@ -166,13 +152,27 @@ interface SoftwareApplicationContract
 
     public function mainEntity($mainEntity);
 
+    public function mainEntityOfPage($mainEntityOfPage);
+
     public function material($material);
+
+    public function memoryRequirements($memoryRequirements);
 
     public function mentions($mentions);
 
+    public function name($name);
+
     public function offers($offers);
 
+    public function operatingSystem($operatingSystem);
+
+    public function permissions($permissions);
+
     public function position($position);
+
+    public function potentialAction($potentialAction);
+
+    public function processorRequirements($processorRequirements);
 
     public function producer($producer);
 
@@ -186,13 +186,29 @@ interface SoftwareApplicationContract
 
     public function recordedAt($recordedAt);
 
+    public function releaseNotes($releaseNotes);
+
     public function releasedEvent($releasedEvent);
+
+    public function requirements($requirements);
 
     public function review($review);
 
     public function reviews($reviews);
 
+    public function sameAs($sameAs);
+
     public function schemaVersion($schemaVersion);
+
+    public function screenshot($screenshot);
+
+    public function softwareAddOn($softwareAddOn);
+
+    public function softwareHelp($softwareHelp);
+
+    public function softwareRequirements($softwareRequirements);
+
+    public function softwareVersion($softwareVersion);
 
     public function sourceOrganization($sourceOrganization);
 
@@ -201,6 +217,12 @@ interface SoftwareApplicationContract
     public function spatialCoverage($spatialCoverage);
 
     public function sponsor($sponsor);
+
+    public function storageRequirements($storageRequirements);
+
+    public function subjectOf($subjectOf);
+
+    public function supportingData($supportingData);
 
     public function temporal($temporal);
 
@@ -216,34 +238,12 @@ interface SoftwareApplicationContract
 
     public function typicalAgeRange($typicalAgeRange);
 
+    public function url($url);
+
     public function version($version);
 
     public function video($video);
 
     public function workExample($workExample);
-
-    public function additionalType($additionalType);
-
-    public function alternateName($alternateName);
-
-    public function description($description);
-
-    public function disambiguatingDescription($disambiguatingDescription);
-
-    public function identifier($identifier);
-
-    public function image($image);
-
-    public function mainEntityOfPage($mainEntityOfPage);
-
-    public function name($name);
-
-    public function potentialAction($potentialAction);
-
-    public function sameAs($sameAs);
-
-    public function subjectOf($subjectOf);
-
-    public function url($url);
 
 }

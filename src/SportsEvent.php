@@ -14,48 +14,6 @@ use \Spatie\SchemaOrg\Contracts\ThingContract;
 class SportsEvent extends BaseType implements EventContract, ThingContract
 {
     /**
-     * The away team in a sports event.
-     *
-     * @param Person|Person[]|SportsTeam|SportsTeam[] $awayTeam
-     *
-     * @return static
-     *
-     * @see http://schema.org/awayTeam
-     */
-    public function awayTeam($awayTeam)
-    {
-        return $this->setProperty('awayTeam', $awayTeam);
-    }
-
-    /**
-     * A competitor in a sports event.
-     *
-     * @param Person|Person[]|SportsTeam|SportsTeam[] $competitor
-     *
-     * @return static
-     *
-     * @see http://schema.org/competitor
-     */
-    public function competitor($competitor)
-    {
-        return $this->setProperty('competitor', $competitor);
-    }
-
-    /**
-     * The home team in a sports event.
-     *
-     * @param Person|Person[]|SportsTeam|SportsTeam[] $homeTeam
-     *
-     * @return static
-     *
-     * @see http://schema.org/homeTeam
-     */
-    public function homeTeam($homeTeam)
-    {
-        return $this->setProperty('homeTeam', $homeTeam);
-    }
-
-    /**
      * The subject matter of the content.
      *
      * @param Thing|Thing[] $about
@@ -86,6 +44,25 @@ class SportsEvent extends BaseType implements EventContract, ThingContract
     }
 
     /**
+     * An additional type for the item, typically used for adding more specific
+     * types from external vocabularies in microdata syntax. This is a
+     * relationship between something and a class that the thing is in. In RDFa
+     * syntax, it is better to use the native RDFa syntax - the 'typeof'
+     * attribute - for multiple types. Schema.org tools may have only weaker
+     * understanding of extra types, in particular those defined externally.
+     *
+     * @param string|string[] $additionalType
+     *
+     * @return static
+     *
+     * @see http://schema.org/additionalType
+     */
+    public function additionalType($additionalType)
+    {
+        return $this->setProperty('additionalType', $additionalType);
+    }
+
+    /**
      * The overall rating, based on a collection of reviews or ratings, of the
      * item.
      *
@@ -98,6 +75,20 @@ class SportsEvent extends BaseType implements EventContract, ThingContract
     public function aggregateRating($aggregateRating)
     {
         return $this->setProperty('aggregateRating', $aggregateRating);
+    }
+
+    /**
+     * An alias for the item.
+     *
+     * @param string|string[] $alternateName
+     *
+     * @return static
+     *
+     * @see http://schema.org/alternateName
+     */
+    public function alternateName($alternateName)
+    {
+        return $this->setProperty('alternateName', $alternateName);
     }
 
     /**
@@ -143,6 +134,34 @@ class SportsEvent extends BaseType implements EventContract, ThingContract
     }
 
     /**
+     * The away team in a sports event.
+     *
+     * @param Person|Person[]|SportsTeam|SportsTeam[] $awayTeam
+     *
+     * @return static
+     *
+     * @see http://schema.org/awayTeam
+     */
+    public function awayTeam($awayTeam)
+    {
+        return $this->setProperty('awayTeam', $awayTeam);
+    }
+
+    /**
+     * A competitor in a sports event.
+     *
+     * @param Person|Person[]|SportsTeam|SportsTeam[] $competitor
+     *
+     * @return static
+     *
+     * @see http://schema.org/competitor
+     */
+    public function competitor($competitor)
+    {
+        return $this->setProperty('competitor', $competitor);
+    }
+
+    /**
      * The person or organization who wrote a composition, or who is the
      * composer of a work performed at some event.
      *
@@ -172,6 +191,20 @@ class SportsEvent extends BaseType implements EventContract, ThingContract
     }
 
     /**
+     * A description of the item.
+     *
+     * @param string|string[] $description
+     *
+     * @return static
+     *
+     * @see http://schema.org/description
+     */
+    public function description($description)
+    {
+        return $this->setProperty('description', $description);
+    }
+
+    /**
      * A director of e.g. tv, radio, movie, video gaming etc. content, or of an
      * event. Directors can be associated with individual items or with a
      * series, episode, clip.
@@ -185,6 +218,23 @@ class SportsEvent extends BaseType implements EventContract, ThingContract
     public function director($director)
     {
         return $this->setProperty('director', $director);
+    }
+
+    /**
+     * A sub property of description. A short description of the item used to
+     * disambiguate from other, similar items. Information from other properties
+     * (in particular, name) may be necessary for the description to be useful
+     * for disambiguation.
+     *
+     * @param string|string[] $disambiguatingDescription
+     *
+     * @return static
+     *
+     * @see http://schema.org/disambiguatingDescription
+     */
+    public function disambiguatingDescription($disambiguatingDescription)
+    {
+        return $this->setProperty('disambiguatingDescription', $disambiguatingDescription);
     }
 
     /**
@@ -262,6 +312,53 @@ class SportsEvent extends BaseType implements EventContract, ThingContract
     }
 
     /**
+     * The home team in a sports event.
+     *
+     * @param Person|Person[]|SportsTeam|SportsTeam[] $homeTeam
+     *
+     * @return static
+     *
+     * @see http://schema.org/homeTeam
+     */
+    public function homeTeam($homeTeam)
+    {
+        return $this->setProperty('homeTeam', $homeTeam);
+    }
+
+    /**
+     * The identifier property represents any kind of identifier for any kind of
+     * [[Thing]], such as ISBNs, GTIN codes, UUIDs etc. Schema.org provides
+     * dedicated properties for representing many of these, either as textual
+     * strings or as URL (URI) links. See [background
+     * notes](/docs/datamodel.html#identifierBg) for more details.
+     *
+     * @param PropertyValue|PropertyValue[]|string|string[] $identifier
+     *
+     * @return static
+     *
+     * @see http://schema.org/identifier
+     */
+    public function identifier($identifier)
+    {
+        return $this->setProperty('identifier', $identifier);
+    }
+
+    /**
+     * An image of the item. This can be a [[URL]] or a fully described
+     * [[ImageObject]].
+     *
+     * @param ImageObject|ImageObject[]|string|string[] $image
+     *
+     * @return static
+     *
+     * @see http://schema.org/image
+     */
+    public function image($image)
+    {
+        return $this->setProperty('image', $image);
+    }
+
+    /**
      * The language of the content or performance or used in an action. Please
      * use one of the language codes from the [IETF BCP 47
      * standard](http://tools.ietf.org/html/bcp47). See also
@@ -308,6 +405,22 @@ class SportsEvent extends BaseType implements EventContract, ThingContract
     }
 
     /**
+     * Indicates a page (or other CreativeWork) for which this thing is the main
+     * entity being described. See [background
+     * notes](/docs/datamodel.html#mainEntityBackground) for details.
+     *
+     * @param CreativeWork|CreativeWork[]|string|string[] $mainEntityOfPage
+     *
+     * @return static
+     *
+     * @see http://schema.org/mainEntityOfPage
+     */
+    public function mainEntityOfPage($mainEntityOfPage)
+    {
+        return $this->setProperty('mainEntityOfPage', $mainEntityOfPage);
+    }
+
+    /**
      * The total number of individuals that may attend an event or venue.
      *
      * @param int|int[] $maximumAttendeeCapacity
@@ -319,6 +432,20 @@ class SportsEvent extends BaseType implements EventContract, ThingContract
     public function maximumAttendeeCapacity($maximumAttendeeCapacity)
     {
         return $this->setProperty('maximumAttendeeCapacity', $maximumAttendeeCapacity);
+    }
+
+    /**
+     * The name of the item.
+     *
+     * @param string|string[] $name
+     *
+     * @return static
+     *
+     * @see http://schema.org/name
+     */
+    public function name($name)
+    {
+        return $this->setProperty('name', $name);
     }
 
     /**
@@ -382,6 +509,21 @@ class SportsEvent extends BaseType implements EventContract, ThingContract
     }
 
     /**
+     * Indicates a potential Action, which describes an idealized action in
+     * which this thing would play an 'object' role.
+     *
+     * @param Action|Action[] $potentialAction
+     *
+     * @return static
+     *
+     * @see http://schema.org/potentialAction
+     */
+    public function potentialAction($potentialAction)
+    {
+        return $this->setProperty('potentialAction', $potentialAction);
+    }
+
+    /**
      * Used in conjunction with eventStatus for rescheduled or cancelled events.
      * This property contains the previously scheduled start date. For
      * rescheduled events, the startDate property should be used for the newly
@@ -439,6 +581,22 @@ class SportsEvent extends BaseType implements EventContract, ThingContract
     public function review($review)
     {
         return $this->setProperty('review', $review);
+    }
+
+    /**
+     * URL of a reference Web page that unambiguously indicates the item's
+     * identity. E.g. the URL of the item's Wikipedia page, Wikidata entry, or
+     * official website.
+     *
+     * @param string|string[] $sameAs
+     *
+     * @return static
+     *
+     * @see http://schema.org/sameAs
+     */
+    public function sameAs($sameAs)
+    {
+        return $this->setProperty('sameAs', $sameAs);
     }
 
     /**
@@ -504,6 +662,20 @@ class SportsEvent extends BaseType implements EventContract, ThingContract
     }
 
     /**
+     * A CreativeWork or Event about this Thing.
+     *
+     * @param CreativeWork|CreativeWork[]|Event|Event[] $subjectOf
+     *
+     * @return static
+     *
+     * @see http://schema.org/subjectOf
+     */
+    public function subjectOf($subjectOf)
+    {
+        return $this->setProperty('subjectOf', $subjectOf);
+    }
+
+    /**
      * An event that this event is a part of. For example, a collection of
      * individual music performances might each have a music festival as their
      * superEvent.
@@ -550,6 +722,20 @@ class SportsEvent extends BaseType implements EventContract, ThingContract
     }
 
     /**
+     * URL of the item.
+     *
+     * @param string|string[] $url
+     *
+     * @return static
+     *
+     * @see http://schema.org/url
+     */
+    public function url($url)
+    {
+        return $this->setProperty('url', $url);
+    }
+
+    /**
      * A work featured in some event, e.g. exhibited in an ExhibitionEvent.
      *        Specific subproperties are available for workPerformed (e.g. a
      * play), or a workPresented (a Movie at a ScreeningEvent).
@@ -578,192 +764,6 @@ class SportsEvent extends BaseType implements EventContract, ThingContract
     public function workPerformed($workPerformed)
     {
         return $this->setProperty('workPerformed', $workPerformed);
-    }
-
-    /**
-     * An additional type for the item, typically used for adding more specific
-     * types from external vocabularies in microdata syntax. This is a
-     * relationship between something and a class that the thing is in. In RDFa
-     * syntax, it is better to use the native RDFa syntax - the 'typeof'
-     * attribute - for multiple types. Schema.org tools may have only weaker
-     * understanding of extra types, in particular those defined externally.
-     *
-     * @param string|string[] $additionalType
-     *
-     * @return static
-     *
-     * @see http://schema.org/additionalType
-     */
-    public function additionalType($additionalType)
-    {
-        return $this->setProperty('additionalType', $additionalType);
-    }
-
-    /**
-     * An alias for the item.
-     *
-     * @param string|string[] $alternateName
-     *
-     * @return static
-     *
-     * @see http://schema.org/alternateName
-     */
-    public function alternateName($alternateName)
-    {
-        return $this->setProperty('alternateName', $alternateName);
-    }
-
-    /**
-     * A description of the item.
-     *
-     * @param string|string[] $description
-     *
-     * @return static
-     *
-     * @see http://schema.org/description
-     */
-    public function description($description)
-    {
-        return $this->setProperty('description', $description);
-    }
-
-    /**
-     * A sub property of description. A short description of the item used to
-     * disambiguate from other, similar items. Information from other properties
-     * (in particular, name) may be necessary for the description to be useful
-     * for disambiguation.
-     *
-     * @param string|string[] $disambiguatingDescription
-     *
-     * @return static
-     *
-     * @see http://schema.org/disambiguatingDescription
-     */
-    public function disambiguatingDescription($disambiguatingDescription)
-    {
-        return $this->setProperty('disambiguatingDescription', $disambiguatingDescription);
-    }
-
-    /**
-     * The identifier property represents any kind of identifier for any kind of
-     * [[Thing]], such as ISBNs, GTIN codes, UUIDs etc. Schema.org provides
-     * dedicated properties for representing many of these, either as textual
-     * strings or as URL (URI) links. See [background
-     * notes](/docs/datamodel.html#identifierBg) for more details.
-     *
-     * @param PropertyValue|PropertyValue[]|string|string[] $identifier
-     *
-     * @return static
-     *
-     * @see http://schema.org/identifier
-     */
-    public function identifier($identifier)
-    {
-        return $this->setProperty('identifier', $identifier);
-    }
-
-    /**
-     * An image of the item. This can be a [[URL]] or a fully described
-     * [[ImageObject]].
-     *
-     * @param ImageObject|ImageObject[]|string|string[] $image
-     *
-     * @return static
-     *
-     * @see http://schema.org/image
-     */
-    public function image($image)
-    {
-        return $this->setProperty('image', $image);
-    }
-
-    /**
-     * Indicates a page (or other CreativeWork) for which this thing is the main
-     * entity being described. See [background
-     * notes](/docs/datamodel.html#mainEntityBackground) for details.
-     *
-     * @param CreativeWork|CreativeWork[]|string|string[] $mainEntityOfPage
-     *
-     * @return static
-     *
-     * @see http://schema.org/mainEntityOfPage
-     */
-    public function mainEntityOfPage($mainEntityOfPage)
-    {
-        return $this->setProperty('mainEntityOfPage', $mainEntityOfPage);
-    }
-
-    /**
-     * The name of the item.
-     *
-     * @param string|string[] $name
-     *
-     * @return static
-     *
-     * @see http://schema.org/name
-     */
-    public function name($name)
-    {
-        return $this->setProperty('name', $name);
-    }
-
-    /**
-     * Indicates a potential Action, which describes an idealized action in
-     * which this thing would play an 'object' role.
-     *
-     * @param Action|Action[] $potentialAction
-     *
-     * @return static
-     *
-     * @see http://schema.org/potentialAction
-     */
-    public function potentialAction($potentialAction)
-    {
-        return $this->setProperty('potentialAction', $potentialAction);
-    }
-
-    /**
-     * URL of a reference Web page that unambiguously indicates the item's
-     * identity. E.g. the URL of the item's Wikipedia page, Wikidata entry, or
-     * official website.
-     *
-     * @param string|string[] $sameAs
-     *
-     * @return static
-     *
-     * @see http://schema.org/sameAs
-     */
-    public function sameAs($sameAs)
-    {
-        return $this->setProperty('sameAs', $sameAs);
-    }
-
-    /**
-     * A CreativeWork or Event about this Thing.
-     *
-     * @param CreativeWork|CreativeWork[]|Event|Event[] $subjectOf
-     *
-     * @return static
-     *
-     * @see http://schema.org/subjectOf
-     */
-    public function subjectOf($subjectOf)
-    {
-        return $this->setProperty('subjectOf', $subjectOf);
-    }
-
-    /**
-     * URL of the item.
-     *
-     * @param string|string[] $url
-     *
-     * @return static
-     *
-     * @see http://schema.org/url
-     */
-    public function url($url)
-    {
-        return $this->setProperty('url', $url);
     }
 
 }

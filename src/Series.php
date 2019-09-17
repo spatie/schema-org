@@ -16,22 +16,6 @@ use \Spatie\SchemaOrg\Contracts\ThingContract;
 class Series extends BaseType implements IntangibleContract, ThingContract
 {
     /**
-     * A director of e.g. tv, radio, movie, video gaming etc. content, or of an
-     * event. Directors can be associated with individual items or with a
-     * series, episode, clip.
-     *
-     * @param Person|Person[] $director
-     *
-     * @return static
-     *
-     * @see http://schema.org/director
-     */
-    public function director($director)
-    {
-        return $this->setProperty('director', $director);
-    }
-
-    /**
      * An additional type for the item, typically used for adding more specific
      * types from external vocabularies in microdata syntax. This is a
      * relationship between something and a class that the thing is in. In RDFa
@@ -76,6 +60,22 @@ class Series extends BaseType implements IntangibleContract, ThingContract
     public function description($description)
     {
         return $this->setProperty('description', $description);
+    }
+
+    /**
+     * A director of e.g. tv, radio, movie, video gaming etc. content, or of an
+     * event. Directors can be associated with individual items or with a
+     * series, episode, clip.
+     *
+     * @param Person|Person[] $director
+     *
+     * @return static
+     *
+     * @see http://schema.org/director
+     */
+    public function director($director)
+    {
+        return $this->setProperty('director', $director);
     }
 
     /**

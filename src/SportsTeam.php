@@ -15,46 +15,22 @@ use \Spatie\SchemaOrg\Contracts\ThingContract;
 class SportsTeam extends BaseType implements SportsOrganizationContract, OrganizationContract, ThingContract
 {
     /**
-     * A person that acts as performing member of a sports team; a player as
-     * opposed to a coach.
+     * An additional type for the item, typically used for adding more specific
+     * types from external vocabularies in microdata syntax. This is a
+     * relationship between something and a class that the thing is in. In RDFa
+     * syntax, it is better to use the native RDFa syntax - the 'typeof'
+     * attribute - for multiple types. Schema.org tools may have only weaker
+     * understanding of extra types, in particular those defined externally.
      *
-     * @param Person|Person[] $athlete
-     *
-     * @return static
-     *
-     * @see http://schema.org/athlete
-     */
-    public function athlete($athlete)
-    {
-        return $this->setProperty('athlete', $athlete);
-    }
-
-    /**
-     * A person that acts in a coaching role for a sports team.
-     *
-     * @param Person|Person[] $coach
+     * @param string|string[] $additionalType
      *
      * @return static
      *
-     * @see http://schema.org/coach
+     * @see http://schema.org/additionalType
      */
-    public function coach($coach)
+    public function additionalType($additionalType)
     {
-        return $this->setProperty('coach', $coach);
-    }
-
-    /**
-     * A type of sport (e.g. Baseball).
-     *
-     * @param string|string[] $sport
-     *
-     * @return static
-     *
-     * @see http://schema.org/sport
-     */
-    public function sport($sport)
-    {
-        return $this->setProperty('sport', $sport);
+        return $this->setProperty('additionalType', $additionalType);
     }
 
     /**
@@ -87,6 +63,20 @@ class SportsTeam extends BaseType implements SportsOrganizationContract, Organiz
     }
 
     /**
+     * An alias for the item.
+     *
+     * @param string|string[] $alternateName
+     *
+     * @return static
+     *
+     * @see http://schema.org/alternateName
+     */
+    public function alternateName($alternateName)
+    {
+        return $this->setProperty('alternateName', $alternateName);
+    }
+
+    /**
      * The geographic area where a service or offered item is provided.
      *
      * @param AdministrativeArea|AdministrativeArea[]|GeoShape|GeoShape[]|Place|Place[]|string|string[] $areaServed
@@ -98,6 +88,21 @@ class SportsTeam extends BaseType implements SportsOrganizationContract, Organiz
     public function areaServed($areaServed)
     {
         return $this->setProperty('areaServed', $areaServed);
+    }
+
+    /**
+     * A person that acts as performing member of a sports team; a player as
+     * opposed to a coach.
+     *
+     * @param Person|Person[] $athlete
+     *
+     * @return static
+     *
+     * @see http://schema.org/athlete
+     */
+    public function athlete($athlete)
+    {
+        return $this->setProperty('athlete', $athlete);
     }
 
     /**
@@ -144,6 +149,20 @@ class SportsTeam extends BaseType implements SportsOrganizationContract, Organiz
     }
 
     /**
+     * A person that acts in a coaching role for a sports team.
+     *
+     * @param Person|Person[] $coach
+     *
+     * @return static
+     *
+     * @see http://schema.org/coach
+     */
+    public function coach($coach)
+    {
+        return $this->setProperty('coach', $coach);
+    }
+
+    /**
      * A contact point for a person or organization.
      *
      * @param ContactPoint|ContactPoint[] $contactPoint
@@ -186,6 +205,37 @@ class SportsTeam extends BaseType implements SportsOrganizationContract, Organiz
     public function department($department)
     {
         return $this->setProperty('department', $department);
+    }
+
+    /**
+     * A description of the item.
+     *
+     * @param string|string[] $description
+     *
+     * @return static
+     *
+     * @see http://schema.org/description
+     */
+    public function description($description)
+    {
+        return $this->setProperty('description', $description);
+    }
+
+    /**
+     * A sub property of description. A short description of the item used to
+     * disambiguate from other, similar items. Information from other properties
+     * (in particular, name) may be necessary for the description to be useful
+     * for disambiguation.
+     *
+     * @param string|string[] $disambiguatingDescription
+     *
+     * @return static
+     *
+     * @see http://schema.org/disambiguatingDescription
+     */
+    public function disambiguatingDescription($disambiguatingDescription)
+    {
+        return $this->setProperty('disambiguatingDescription', $disambiguatingDescription);
     }
 
     /**
@@ -420,6 +470,39 @@ class SportsTeam extends BaseType implements SportsOrganizationContract, Organiz
     }
 
     /**
+     * The identifier property represents any kind of identifier for any kind of
+     * [[Thing]], such as ISBNs, GTIN codes, UUIDs etc. Schema.org provides
+     * dedicated properties for representing many of these, either as textual
+     * strings or as URL (URI) links. See [background
+     * notes](/docs/datamodel.html#identifierBg) for more details.
+     *
+     * @param PropertyValue|PropertyValue[]|string|string[] $identifier
+     *
+     * @return static
+     *
+     * @see http://schema.org/identifier
+     */
+    public function identifier($identifier)
+    {
+        return $this->setProperty('identifier', $identifier);
+    }
+
+    /**
+     * An image of the item. This can be a [[URL]] or a fully described
+     * [[ImageObject]].
+     *
+     * @param ImageObject|ImageObject[]|string|string[] $image
+     *
+     * @return static
+     *
+     * @see http://schema.org/image
+     */
+    public function image($image)
+    {
+        return $this->setProperty('image', $image);
+    }
+
+    /**
      * The International Standard of Industrial Classification of All Economic
      * Activities (ISIC), Revision 4 code for a particular organization,
      * business person, or place.
@@ -491,6 +574,22 @@ class SportsTeam extends BaseType implements SportsOrganizationContract, Organiz
     public function logo($logo)
     {
         return $this->setProperty('logo', $logo);
+    }
+
+    /**
+     * Indicates a page (or other CreativeWork) for which this thing is the main
+     * entity being described. See [background
+     * notes](/docs/datamodel.html#mainEntityBackground) for details.
+     *
+     * @param CreativeWork|CreativeWork[]|string|string[] $mainEntityOfPage
+     *
+     * @return static
+     *
+     * @see http://schema.org/mainEntityOfPage
+     */
+    public function mainEntityOfPage($mainEntityOfPage)
+    {
+        return $this->setProperty('mainEntityOfPage', $mainEntityOfPage);
     }
 
     /**
@@ -567,6 +666,20 @@ class SportsTeam extends BaseType implements SportsOrganizationContract, Organiz
     }
 
     /**
+     * The name of the item.
+     *
+     * @param string|string[] $name
+     *
+     * @return static
+     *
+     * @see http://schema.org/name
+     */
+    public function name($name)
+    {
+        return $this->setProperty('name', $name);
+    }
+
+    /**
      * The number of employees in an organization e.g. business.
      *
      * @param QuantitativeValue|QuantitativeValue[] $numberOfEmployees
@@ -624,6 +737,21 @@ class SportsTeam extends BaseType implements SportsOrganizationContract, Organiz
     }
 
     /**
+     * Indicates a potential Action, which describes an idealized action in
+     * which this thing would play an 'object' role.
+     *
+     * @param Action|Action[] $potentialAction
+     *
+     * @return static
+     *
+     * @see http://schema.org/potentialAction
+     */
+    public function potentialAction($potentialAction)
+    {
+        return $this->setProperty('potentialAction', $potentialAction);
+    }
+
+    /**
      * The publishingPrinciples property indicates (typically via [[URL]]) a
      * document describing the editorial principles of an [[Organization]] (or
      * individual e.g. a [[Person]] writing a blog) that relate to their
@@ -673,6 +801,22 @@ class SportsTeam extends BaseType implements SportsOrganizationContract, Organiz
     public function reviews($reviews)
     {
         return $this->setProperty('reviews', $reviews);
+    }
+
+    /**
+     * URL of a reference Web page that unambiguously indicates the item's
+     * identity. E.g. the URL of the item's Wikipedia page, Wikidata entry, or
+     * official website.
+     *
+     * @param string|string[] $sameAs
+     *
+     * @return static
+     *
+     * @see http://schema.org/sameAs
+     */
+    public function sameAs($sameAs)
+    {
+        return $this->setProperty('sameAs', $sameAs);
     }
 
     /**
@@ -735,6 +879,20 @@ class SportsTeam extends BaseType implements SportsOrganizationContract, Organiz
     }
 
     /**
+     * A type of sport (e.g. Baseball).
+     *
+     * @param string|string[] $sport
+     *
+     * @return static
+     *
+     * @see http://schema.org/sport
+     */
+    public function sport($sport)
+    {
+        return $this->setProperty('sport', $sport);
+    }
+
+    /**
      * A relationship between two organizations where the first includes the
      * second, e.g., as a subsidiary. See also: the more specific 'department'
      * property.
@@ -748,6 +906,20 @@ class SportsTeam extends BaseType implements SportsOrganizationContract, Organiz
     public function subOrganization($subOrganization)
     {
         return $this->setProperty('subOrganization', $subOrganization);
+    }
+
+    /**
+     * A CreativeWork or Event about this Thing.
+     *
+     * @param CreativeWork|CreativeWork[]|Event|Event[] $subjectOf
+     *
+     * @return static
+     *
+     * @see http://schema.org/subjectOf
+     */
+    public function subjectOf($subjectOf)
+    {
+        return $this->setProperty('subjectOf', $subjectOf);
     }
 
     /**
@@ -780,192 +952,6 @@ class SportsTeam extends BaseType implements SportsOrganizationContract, Organiz
     }
 
     /**
-     * The Value-added Tax ID of the organization or person.
-     *
-     * @param string|string[] $vatID
-     *
-     * @return static
-     *
-     * @see http://schema.org/vatID
-     */
-    public function vatID($vatID)
-    {
-        return $this->setProperty('vatID', $vatID);
-    }
-
-    /**
-     * An additional type for the item, typically used for adding more specific
-     * types from external vocabularies in microdata syntax. This is a
-     * relationship between something and a class that the thing is in. In RDFa
-     * syntax, it is better to use the native RDFa syntax - the 'typeof'
-     * attribute - for multiple types. Schema.org tools may have only weaker
-     * understanding of extra types, in particular those defined externally.
-     *
-     * @param string|string[] $additionalType
-     *
-     * @return static
-     *
-     * @see http://schema.org/additionalType
-     */
-    public function additionalType($additionalType)
-    {
-        return $this->setProperty('additionalType', $additionalType);
-    }
-
-    /**
-     * An alias for the item.
-     *
-     * @param string|string[] $alternateName
-     *
-     * @return static
-     *
-     * @see http://schema.org/alternateName
-     */
-    public function alternateName($alternateName)
-    {
-        return $this->setProperty('alternateName', $alternateName);
-    }
-
-    /**
-     * A description of the item.
-     *
-     * @param string|string[] $description
-     *
-     * @return static
-     *
-     * @see http://schema.org/description
-     */
-    public function description($description)
-    {
-        return $this->setProperty('description', $description);
-    }
-
-    /**
-     * A sub property of description. A short description of the item used to
-     * disambiguate from other, similar items. Information from other properties
-     * (in particular, name) may be necessary for the description to be useful
-     * for disambiguation.
-     *
-     * @param string|string[] $disambiguatingDescription
-     *
-     * @return static
-     *
-     * @see http://schema.org/disambiguatingDescription
-     */
-    public function disambiguatingDescription($disambiguatingDescription)
-    {
-        return $this->setProperty('disambiguatingDescription', $disambiguatingDescription);
-    }
-
-    /**
-     * The identifier property represents any kind of identifier for any kind of
-     * [[Thing]], such as ISBNs, GTIN codes, UUIDs etc. Schema.org provides
-     * dedicated properties for representing many of these, either as textual
-     * strings or as URL (URI) links. See [background
-     * notes](/docs/datamodel.html#identifierBg) for more details.
-     *
-     * @param PropertyValue|PropertyValue[]|string|string[] $identifier
-     *
-     * @return static
-     *
-     * @see http://schema.org/identifier
-     */
-    public function identifier($identifier)
-    {
-        return $this->setProperty('identifier', $identifier);
-    }
-
-    /**
-     * An image of the item. This can be a [[URL]] or a fully described
-     * [[ImageObject]].
-     *
-     * @param ImageObject|ImageObject[]|string|string[] $image
-     *
-     * @return static
-     *
-     * @see http://schema.org/image
-     */
-    public function image($image)
-    {
-        return $this->setProperty('image', $image);
-    }
-
-    /**
-     * Indicates a page (or other CreativeWork) for which this thing is the main
-     * entity being described. See [background
-     * notes](/docs/datamodel.html#mainEntityBackground) for details.
-     *
-     * @param CreativeWork|CreativeWork[]|string|string[] $mainEntityOfPage
-     *
-     * @return static
-     *
-     * @see http://schema.org/mainEntityOfPage
-     */
-    public function mainEntityOfPage($mainEntityOfPage)
-    {
-        return $this->setProperty('mainEntityOfPage', $mainEntityOfPage);
-    }
-
-    /**
-     * The name of the item.
-     *
-     * @param string|string[] $name
-     *
-     * @return static
-     *
-     * @see http://schema.org/name
-     */
-    public function name($name)
-    {
-        return $this->setProperty('name', $name);
-    }
-
-    /**
-     * Indicates a potential Action, which describes an idealized action in
-     * which this thing would play an 'object' role.
-     *
-     * @param Action|Action[] $potentialAction
-     *
-     * @return static
-     *
-     * @see http://schema.org/potentialAction
-     */
-    public function potentialAction($potentialAction)
-    {
-        return $this->setProperty('potentialAction', $potentialAction);
-    }
-
-    /**
-     * URL of a reference Web page that unambiguously indicates the item's
-     * identity. E.g. the URL of the item's Wikipedia page, Wikidata entry, or
-     * official website.
-     *
-     * @param string|string[] $sameAs
-     *
-     * @return static
-     *
-     * @see http://schema.org/sameAs
-     */
-    public function sameAs($sameAs)
-    {
-        return $this->setProperty('sameAs', $sameAs);
-    }
-
-    /**
-     * A CreativeWork or Event about this Thing.
-     *
-     * @param CreativeWork|CreativeWork[]|Event|Event[] $subjectOf
-     *
-     * @return static
-     *
-     * @see http://schema.org/subjectOf
-     */
-    public function subjectOf($subjectOf)
-    {
-        return $this->setProperty('subjectOf', $subjectOf);
-    }
-
-    /**
      * URL of the item.
      *
      * @param string|string[] $url
@@ -977,6 +963,20 @@ class SportsTeam extends BaseType implements SportsOrganizationContract, Organiz
     public function url($url)
     {
         return $this->setProperty('url', $url);
+    }
+
+    /**
+     * The Value-added Tax ID of the organization or person.
+     *
+     * @param string|string[] $vatID
+     *
+     * @return static
+     *
+     * @see http://schema.org/vatID
+     */
+    public function vatID($vatID)
+    {
+        return $this->setProperty('vatID', $vatID);
     }
 
 }

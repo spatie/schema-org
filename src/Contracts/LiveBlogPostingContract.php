@@ -4,28 +4,6 @@ namespace Spatie\SchemaOrg\Contracts;
 
 interface LiveBlogPostingContract
 {
-    public function coverageEndTime($coverageEndTime);
-
-    public function coverageStartTime($coverageStartTime);
-
-    public function liveBlogUpdate($liveBlogUpdate);
-
-    public function sharedContent($sharedContent);
-
-    public function articleBody($articleBody);
-
-    public function articleSection($articleSection);
-
-    public function pageEnd($pageEnd);
-
-    public function pageStart($pageStart);
-
-    public function pagination($pagination);
-
-    public function speakable($speakable);
-
-    public function wordCount($wordCount);
-
     public function about($about);
 
     public function accessMode($accessMode);
@@ -44,9 +22,17 @@ interface LiveBlogPostingContract
 
     public function accountablePerson($accountablePerson);
 
+    public function additionalType($additionalType);
+
     public function aggregateRating($aggregateRating);
 
+    public function alternateName($alternateName);
+
     public function alternativeHeadline($alternativeHeadline);
+
+    public function articleBody($articleBody);
+
+    public function articleSection($articleSection);
 
     public function associatedMedia($associatedMedia);
 
@@ -78,6 +64,10 @@ interface LiveBlogPostingContract
 
     public function copyrightYear($copyrightYear);
 
+    public function coverageEndTime($coverageEndTime);
+
+    public function coverageStartTime($coverageStartTime);
+
     public function creator($creator);
 
     public function dateCreated($dateCreated);
@@ -85,6 +75,10 @@ interface LiveBlogPostingContract
     public function dateModified($dateModified);
 
     public function datePublished($datePublished);
+
+    public function description($description);
+
+    public function disambiguatingDescription($disambiguatingDescription);
 
     public function discussionUrl($discussionUrl);
 
@@ -114,6 +108,10 @@ interface LiveBlogPostingContract
 
     public function headline($headline);
 
+    public function identifier($identifier);
+
+    public function image($image);
+
     public function inLanguage($inLanguage);
 
     public function interactionStatistic($interactionStatistic);
@@ -136,17 +134,31 @@ interface LiveBlogPostingContract
 
     public function license($license);
 
+    public function liveBlogUpdate($liveBlogUpdate);
+
     public function locationCreated($locationCreated);
 
     public function mainEntity($mainEntity);
+
+    public function mainEntityOfPage($mainEntityOfPage);
 
     public function material($material);
 
     public function mentions($mentions);
 
+    public function name($name);
+
     public function offers($offers);
 
+    public function pageEnd($pageEnd);
+
+    public function pageStart($pageStart);
+
+    public function pagination($pagination);
+
     public function position($position);
+
+    public function potentialAction($potentialAction);
 
     public function producer($producer);
 
@@ -166,7 +178,11 @@ interface LiveBlogPostingContract
 
     public function reviews($reviews);
 
+    public function sameAs($sameAs);
+
     public function schemaVersion($schemaVersion);
+
+    public function sharedContent($sharedContent);
 
     public function sourceOrganization($sourceOrganization);
 
@@ -174,7 +190,11 @@ interface LiveBlogPostingContract
 
     public function spatialCoverage($spatialCoverage);
 
+    public function speakable($speakable);
+
     public function sponsor($sponsor);
+
+    public function subjectOf($subjectOf);
 
     public function temporal($temporal);
 
@@ -190,34 +210,14 @@ interface LiveBlogPostingContract
 
     public function typicalAgeRange($typicalAgeRange);
 
+    public function url($url);
+
     public function version($version);
 
     public function video($video);
 
+    public function wordCount($wordCount);
+
     public function workExample($workExample);
-
-    public function additionalType($additionalType);
-
-    public function alternateName($alternateName);
-
-    public function description($description);
-
-    public function disambiguatingDescription($disambiguatingDescription);
-
-    public function identifier($identifier);
-
-    public function image($image);
-
-    public function mainEntityOfPage($mainEntityOfPage);
-
-    public function name($name);
-
-    public function potentialAction($potentialAction);
-
-    public function sameAs($sameAs);
-
-    public function subjectOf($subjectOf);
-
-    public function url($url);
 
 }

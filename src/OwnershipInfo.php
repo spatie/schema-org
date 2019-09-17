@@ -30,48 +30,6 @@ class OwnershipInfo extends BaseType implements StructuredValueContract, Intangi
     }
 
     /**
-     * The date and time of obtaining the product.
-     *
-     * @param \DateTimeInterface|\DateTimeInterface[] $ownedFrom
-     *
-     * @return static
-     *
-     * @see http://schema.org/ownedFrom
-     */
-    public function ownedFrom($ownedFrom)
-    {
-        return $this->setProperty('ownedFrom', $ownedFrom);
-    }
-
-    /**
-     * The date and time of giving up ownership on the product.
-     *
-     * @param \DateTimeInterface|\DateTimeInterface[] $ownedThrough
-     *
-     * @return static
-     *
-     * @see http://schema.org/ownedThrough
-     */
-    public function ownedThrough($ownedThrough)
-    {
-        return $this->setProperty('ownedThrough', $ownedThrough);
-    }
-
-    /**
-     * The product that this structured value is referring to.
-     *
-     * @param Product|Product[]|Service|Service[] $typeOfGood
-     *
-     * @return static
-     *
-     * @see http://schema.org/typeOfGood
-     */
-    public function typeOfGood($typeOfGood)
-    {
-        return $this->setProperty('typeOfGood', $typeOfGood);
-    }
-
-    /**
      * An additional type for the item, typically used for adding more specific
      * types from external vocabularies in microdata syntax. This is a
      * relationship between something and a class that the thing is in. In RDFa
@@ -199,6 +157,34 @@ class OwnershipInfo extends BaseType implements StructuredValueContract, Intangi
     }
 
     /**
+     * The date and time of obtaining the product.
+     *
+     * @param \DateTimeInterface|\DateTimeInterface[] $ownedFrom
+     *
+     * @return static
+     *
+     * @see http://schema.org/ownedFrom
+     */
+    public function ownedFrom($ownedFrom)
+    {
+        return $this->setProperty('ownedFrom', $ownedFrom);
+    }
+
+    /**
+     * The date and time of giving up ownership on the product.
+     *
+     * @param \DateTimeInterface|\DateTimeInterface[] $ownedThrough
+     *
+     * @return static
+     *
+     * @see http://schema.org/ownedThrough
+     */
+    public function ownedThrough($ownedThrough)
+    {
+        return $this->setProperty('ownedThrough', $ownedThrough);
+    }
+
+    /**
      * Indicates a potential Action, which describes an idealized action in
      * which this thing would play an 'object' role.
      *
@@ -241,6 +227,20 @@ class OwnershipInfo extends BaseType implements StructuredValueContract, Intangi
     public function subjectOf($subjectOf)
     {
         return $this->setProperty('subjectOf', $subjectOf);
+    }
+
+    /**
+     * The product that this structured value is referring to.
+     *
+     * @param Product|Product[]|Service|Service[] $typeOfGood
+     *
+     * @return static
+     *
+     * @see http://schema.org/typeOfGood
+     */
+    public function typeOfGood($typeOfGood)
+    {
+        return $this->setProperty('typeOfGood', $typeOfGood);
     }
 
     /**

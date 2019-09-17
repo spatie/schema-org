@@ -4,14 +4,6 @@ namespace Spatie\SchemaOrg\Contracts;
 
 interface ListItemContract
 {
-    public function item($item);
-
-    public function nextItem($nextItem);
-
-    public function position($position);
-
-    public function previousItem($previousItem);
-
     public function additionalType($additionalType);
 
     public function alternateName($alternateName);
@@ -24,11 +16,19 @@ interface ListItemContract
 
     public function image($image);
 
+    public function item($item);
+
     public function mainEntityOfPage($mainEntityOfPage);
 
     public function name($name);
 
+    public function nextItem($nextItem);
+
+    public function position($position);
+
     public function potentialAction($potentialAction);
+
+    public function previousItem($previousItem);
 
     public function sameAs($sameAs);
 

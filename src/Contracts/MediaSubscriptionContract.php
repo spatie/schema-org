@@ -4,17 +4,17 @@ namespace Spatie\SchemaOrg\Contracts;
 
 interface MediaSubscriptionContract
 {
-    public function authenticator($authenticator);
-
-    public function expectsAcceptanceOf($expectsAcceptanceOf);
-
     public function additionalType($additionalType);
 
     public function alternateName($alternateName);
 
+    public function authenticator($authenticator);
+
     public function description($description);
 
     public function disambiguatingDescription($disambiguatingDescription);
+
+    public function expectsAcceptanceOf($expectsAcceptanceOf);
 
     public function identifier($identifier);
 

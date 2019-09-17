@@ -15,79 +15,6 @@ use \Spatie\SchemaOrg\Contracts\ThingContract;
 class AlignmentObject extends BaseType implements IntangibleContract, ThingContract
 {
     /**
-     * A category of alignment between the learning resource and the framework
-     * node. Recommended values include: 'assesses', 'teaches', 'requires',
-     * 'textComplexity', 'readingLevel', 'educationalSubject', and
-     * 'educationalLevel'.
-     *
-     * @param string|string[] $alignmentType
-     *
-     * @return static
-     *
-     * @see http://schema.org/alignmentType
-     */
-    public function alignmentType($alignmentType)
-    {
-        return $this->setProperty('alignmentType', $alignmentType);
-    }
-
-    /**
-     * The framework to which the resource being described is aligned.
-     *
-     * @param string|string[] $educationalFramework
-     *
-     * @return static
-     *
-     * @see http://schema.org/educationalFramework
-     */
-    public function educationalFramework($educationalFramework)
-    {
-        return $this->setProperty('educationalFramework', $educationalFramework);
-    }
-
-    /**
-     * The description of a node in an established educational framework.
-     *
-     * @param string|string[] $targetDescription
-     *
-     * @return static
-     *
-     * @see http://schema.org/targetDescription
-     */
-    public function targetDescription($targetDescription)
-    {
-        return $this->setProperty('targetDescription', $targetDescription);
-    }
-
-    /**
-     * The name of a node in an established educational framework.
-     *
-     * @param string|string[] $targetName
-     *
-     * @return static
-     *
-     * @see http://schema.org/targetName
-     */
-    public function targetName($targetName)
-    {
-        return $this->setProperty('targetName', $targetName);
-    }
-
-    /**
-     * The URL of a node in an established educational framework.
-     *
-     * @param string|string[] $targetUrl
-     *
-     * @return static
-     *
-     * @see http://schema.org/targetUrl
-     */
-    public function targetUrl($targetUrl)
-    {
-        return $this->setProperty('targetUrl', $targetUrl);
-    }
-
-    /**
      * An additional type for the item, typically used for adding more specific
      * types from external vocabularies in microdata syntax. This is a
      * relationship between something and a class that the thing is in. In RDFa
@@ -104,6 +31,23 @@ class AlignmentObject extends BaseType implements IntangibleContract, ThingContr
     public function additionalType($additionalType)
     {
         return $this->setProperty('additionalType', $additionalType);
+    }
+
+    /**
+     * A category of alignment between the learning resource and the framework
+     * node. Recommended values include: 'assesses', 'teaches', 'requires',
+     * 'textComplexity', 'readingLevel', 'educationalSubject', and
+     * 'educationalLevel'.
+     *
+     * @param string|string[] $alignmentType
+     *
+     * @return static
+     *
+     * @see http://schema.org/alignmentType
+     */
+    public function alignmentType($alignmentType)
+    {
+        return $this->setProperty('alignmentType', $alignmentType);
     }
 
     /**
@@ -149,6 +93,20 @@ class AlignmentObject extends BaseType implements IntangibleContract, ThingContr
     public function disambiguatingDescription($disambiguatingDescription)
     {
         return $this->setProperty('disambiguatingDescription', $disambiguatingDescription);
+    }
+
+    /**
+     * The framework to which the resource being described is aligned.
+     *
+     * @param string|string[] $educationalFramework
+     *
+     * @return static
+     *
+     * @see http://schema.org/educationalFramework
+     */
+    public function educationalFramework($educationalFramework)
+    {
+        return $this->setProperty('educationalFramework', $educationalFramework);
     }
 
     /**
@@ -257,6 +215,48 @@ class AlignmentObject extends BaseType implements IntangibleContract, ThingContr
     public function subjectOf($subjectOf)
     {
         return $this->setProperty('subjectOf', $subjectOf);
+    }
+
+    /**
+     * The description of a node in an established educational framework.
+     *
+     * @param string|string[] $targetDescription
+     *
+     * @return static
+     *
+     * @see http://schema.org/targetDescription
+     */
+    public function targetDescription($targetDescription)
+    {
+        return $this->setProperty('targetDescription', $targetDescription);
+    }
+
+    /**
+     * The name of a node in an established educational framework.
+     *
+     * @param string|string[] $targetName
+     *
+     * @return static
+     *
+     * @see http://schema.org/targetName
+     */
+    public function targetName($targetName)
+    {
+        return $this->setProperty('targetName', $targetName);
+    }
+
+    /**
+     * The URL of a node in an established educational framework.
+     *
+     * @param string|string[] $targetUrl
+     *
+     * @return static
+     *
+     * @see http://schema.org/targetUrl
+     */
+    public function targetUrl($targetUrl)
+    {
+        return $this->setProperty('targetUrl', $targetUrl);
     }
 
     /**

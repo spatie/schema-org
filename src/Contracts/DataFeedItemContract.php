@@ -4,17 +4,15 @@ namespace Spatie\SchemaOrg\Contracts;
 
 interface DataFeedItemContract
 {
+    public function additionalType($additionalType);
+
+    public function alternateName($alternateName);
+
     public function dateCreated($dateCreated);
 
     public function dateDeleted($dateDeleted);
 
     public function dateModified($dateModified);
-
-    public function item($item);
-
-    public function additionalType($additionalType);
-
-    public function alternateName($alternateName);
 
     public function description($description);
 
@@ -23,6 +21,8 @@ interface DataFeedItemContract
     public function identifier($identifier);
 
     public function image($image);
+
+    public function item($item);
 
     public function mainEntityOfPage($mainEntityOfPage);
 

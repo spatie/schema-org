@@ -4,24 +4,6 @@ namespace Spatie\SchemaOrg\Contracts;
 
 interface PriceSpecificationContract
 {
-    public function eligibleQuantity($eligibleQuantity);
-
-    public function eligibleTransactionVolume($eligibleTransactionVolume);
-
-    public function maxPrice($maxPrice);
-
-    public function minPrice($minPrice);
-
-    public function price($price);
-
-    public function priceCurrency($priceCurrency);
-
-    public function validFrom($validFrom);
-
-    public function validThrough($validThrough);
-
-    public function valueAddedTaxIncluded($valueAddedTaxIncluded);
-
     public function additionalType($additionalType);
 
     public function alternateName($alternateName);
@@ -30,20 +12,38 @@ interface PriceSpecificationContract
 
     public function disambiguatingDescription($disambiguatingDescription);
 
+    public function eligibleQuantity($eligibleQuantity);
+
+    public function eligibleTransactionVolume($eligibleTransactionVolume);
+
     public function identifier($identifier);
 
     public function image($image);
 
     public function mainEntityOfPage($mainEntityOfPage);
 
+    public function maxPrice($maxPrice);
+
+    public function minPrice($minPrice);
+
     public function name($name);
 
     public function potentialAction($potentialAction);
+
+    public function price($price);
+
+    public function priceCurrency($priceCurrency);
 
     public function sameAs($sameAs);
 
     public function subjectOf($subjectOf);
 
     public function url($url);
+
+    public function validFrom($validFrom);
+
+    public function validThrough($validThrough);
+
+    public function valueAddedTaxIncluded($valueAddedTaxIncluded);
 
 }

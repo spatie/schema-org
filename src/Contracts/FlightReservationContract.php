@@ -4,11 +4,9 @@ namespace Spatie\SchemaOrg\Contracts;
 
 interface FlightReservationContract
 {
-    public function passengerPriorityStatus($passengerPriorityStatus);
+    public function additionalType($additionalType);
 
-    public function passengerSequenceNumber($passengerSequenceNumber);
-
-    public function securityScreening($securityScreening);
+    public function alternateName($alternateName);
 
     public function bookingAgent($bookingAgent);
 
@@ -16,7 +14,25 @@ interface FlightReservationContract
 
     public function broker($broker);
 
+    public function description($description);
+
+    public function disambiguatingDescription($disambiguatingDescription);
+
+    public function identifier($identifier);
+
+    public function image($image);
+
+    public function mainEntityOfPage($mainEntityOfPage);
+
     public function modifiedTime($modifiedTime);
+
+    public function name($name);
+
+    public function passengerPriorityStatus($passengerPriorityStatus);
+
+    public function passengerSequenceNumber($passengerSequenceNumber);
+
+    public function potentialAction($potentialAction);
 
     public function priceCurrency($priceCurrency);
 
@@ -32,31 +48,15 @@ interface FlightReservationContract
 
     public function reservedTicket($reservedTicket);
 
+    public function sameAs($sameAs);
+
+    public function securityScreening($securityScreening);
+
+    public function subjectOf($subjectOf);
+
     public function totalPrice($totalPrice);
 
     public function underName($underName);
-
-    public function additionalType($additionalType);
-
-    public function alternateName($alternateName);
-
-    public function description($description);
-
-    public function disambiguatingDescription($disambiguatingDescription);
-
-    public function identifier($identifier);
-
-    public function image($image);
-
-    public function mainEntityOfPage($mainEntityOfPage);
-
-    public function name($name);
-
-    public function potentialAction($potentialAction);
-
-    public function sameAs($sameAs);
-
-    public function subjectOf($subjectOf);
 
     public function url($url);
 

@@ -4,17 +4,11 @@ namespace Spatie\SchemaOrg\Contracts;
 
 interface MonetaryAmountContract
 {
-    public function currency($currency);
-
-    public function maxValue($maxValue);
-
-    public function minValue($minValue);
-
-    public function value($value);
-
     public function additionalType($additionalType);
 
     public function alternateName($alternateName);
+
+    public function currency($currency);
 
     public function description($description);
 
@@ -26,6 +20,10 @@ interface MonetaryAmountContract
 
     public function mainEntityOfPage($mainEntityOfPage);
 
+    public function maxValue($maxValue);
+
+    public function minValue($minValue);
+
     public function name($name);
 
     public function potentialAction($potentialAction);
@@ -35,5 +33,7 @@ interface MonetaryAmountContract
     public function subjectOf($subjectOf);
 
     public function url($url);
+
+    public function value($value);
 
 }

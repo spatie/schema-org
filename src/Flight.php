@@ -15,6 +15,25 @@ use \Spatie\SchemaOrg\Contracts\ThingContract;
 class Flight extends BaseType implements TripContract, IntangibleContract, ThingContract
 {
     /**
+     * An additional type for the item, typically used for adding more specific
+     * types from external vocabularies in microdata syntax. This is a
+     * relationship between something and a class that the thing is in. In RDFa
+     * syntax, it is better to use the native RDFa syntax - the 'typeof'
+     * attribute - for multiple types. Schema.org tools may have only weaker
+     * understanding of extra types, in particular those defined externally.
+     *
+     * @param string|string[] $additionalType
+     *
+     * @return static
+     *
+     * @see http://schema.org/additionalType
+     */
+    public function additionalType($additionalType)
+    {
+        return $this->setProperty('additionalType', $additionalType);
+    }
+
+    /**
      * The kind of aircraft (e.g., "Boeing 747").
      *
      * @param Vehicle|Vehicle[]|string|string[] $aircraft
@@ -26,6 +45,20 @@ class Flight extends BaseType implements TripContract, IntangibleContract, Thing
     public function aircraft($aircraft)
     {
         return $this->setProperty('aircraft', $aircraft);
+    }
+
+    /**
+     * An alias for the item.
+     *
+     * @param string|string[] $alternateName
+     *
+     * @return static
+     *
+     * @see http://schema.org/alternateName
+     */
+    public function alternateName($alternateName)
+    {
+        return $this->setProperty('alternateName', $alternateName);
     }
 
     /**
@@ -68,6 +101,20 @@ class Flight extends BaseType implements TripContract, IntangibleContract, Thing
     public function arrivalTerminal($arrivalTerminal)
     {
         return $this->setProperty('arrivalTerminal', $arrivalTerminal);
+    }
+
+    /**
+     * The expected arrival time.
+     *
+     * @param \DateTimeInterface|\DateTimeInterface[] $arrivalTime
+     *
+     * @return static
+     *
+     * @see http://schema.org/arrivalTime
+     */
+    public function arrivalTime($arrivalTime)
+    {
+        return $this->setProperty('arrivalTime', $arrivalTime);
     }
 
     /**
@@ -143,6 +190,51 @@ class Flight extends BaseType implements TripContract, IntangibleContract, Thing
     }
 
     /**
+     * The expected departure time.
+     *
+     * @param \DateTimeInterface|\DateTimeInterface[] $departureTime
+     *
+     * @return static
+     *
+     * @see http://schema.org/departureTime
+     */
+    public function departureTime($departureTime)
+    {
+        return $this->setProperty('departureTime', $departureTime);
+    }
+
+    /**
+     * A description of the item.
+     *
+     * @param string|string[] $description
+     *
+     * @return static
+     *
+     * @see http://schema.org/description
+     */
+    public function description($description)
+    {
+        return $this->setProperty('description', $description);
+    }
+
+    /**
+     * A sub property of description. A short description of the item used to
+     * disambiguate from other, similar items. Information from other properties
+     * (in particular, name) may be necessary for the description to be useful
+     * for disambiguation.
+     *
+     * @param string|string[] $disambiguatingDescription
+     *
+     * @return static
+     *
+     * @see http://schema.org/disambiguatingDescription
+     */
+    public function disambiguatingDescription($disambiguatingDescription)
+    {
+        return $this->setProperty('disambiguatingDescription', $disambiguatingDescription);
+    }
+
+    /**
      * The estimated time the flight will take.
      *
      * @param Duration|Duration[]|string|string[] $estimatedFlightDuration
@@ -184,173 +276,6 @@ class Flight extends BaseType implements TripContract, IntangibleContract, Thing
     public function flightNumber($flightNumber)
     {
         return $this->setProperty('flightNumber', $flightNumber);
-    }
-
-    /**
-     * Description of the meals that will be provided or available for purchase.
-     *
-     * @param string|string[] $mealService
-     *
-     * @return static
-     *
-     * @see http://schema.org/mealService
-     */
-    public function mealService($mealService)
-    {
-        return $this->setProperty('mealService', $mealService);
-    }
-
-    /**
-     * An entity which offers (sells / leases / lends / loans) the services /
-     * goods.  A seller may also be a provider.
-     *
-     * @param Organization|Organization[]|Person|Person[] $seller
-     *
-     * @return static
-     *
-     * @see http://schema.org/seller
-     */
-    public function seller($seller)
-    {
-        return $this->setProperty('seller', $seller);
-    }
-
-    /**
-     * The time when a passenger can check into the flight online.
-     *
-     * @param \DateTimeInterface|\DateTimeInterface[] $webCheckinTime
-     *
-     * @return static
-     *
-     * @see http://schema.org/webCheckinTime
-     */
-    public function webCheckinTime($webCheckinTime)
-    {
-        return $this->setProperty('webCheckinTime', $webCheckinTime);
-    }
-
-    /**
-     * The expected arrival time.
-     *
-     * @param \DateTimeInterface|\DateTimeInterface[] $arrivalTime
-     *
-     * @return static
-     *
-     * @see http://schema.org/arrivalTime
-     */
-    public function arrivalTime($arrivalTime)
-    {
-        return $this->setProperty('arrivalTime', $arrivalTime);
-    }
-
-    /**
-     * The expected departure time.
-     *
-     * @param \DateTimeInterface|\DateTimeInterface[] $departureTime
-     *
-     * @return static
-     *
-     * @see http://schema.org/departureTime
-     */
-    public function departureTime($departureTime)
-    {
-        return $this->setProperty('departureTime', $departureTime);
-    }
-
-    /**
-     * An offer to provide this item&#x2014;for example, an offer to sell a
-     * product, rent the DVD of a movie, perform a service, or give away tickets
-     * to an event.
-     *
-     * @param Offer|Offer[] $offers
-     *
-     * @return static
-     *
-     * @see http://schema.org/offers
-     */
-    public function offers($offers)
-    {
-        return $this->setProperty('offers', $offers);
-    }
-
-    /**
-     * The service provider, service operator, or service performer; the goods
-     * producer. Another party (a seller) may offer those services or goods on
-     * behalf of the provider. A provider may also serve as the seller.
-     *
-     * @param Organization|Organization[]|Person|Person[] $provider
-     *
-     * @return static
-     *
-     * @see http://schema.org/provider
-     */
-    public function provider($provider)
-    {
-        return $this->setProperty('provider', $provider);
-    }
-
-    /**
-     * An additional type for the item, typically used for adding more specific
-     * types from external vocabularies in microdata syntax. This is a
-     * relationship between something and a class that the thing is in. In RDFa
-     * syntax, it is better to use the native RDFa syntax - the 'typeof'
-     * attribute - for multiple types. Schema.org tools may have only weaker
-     * understanding of extra types, in particular those defined externally.
-     *
-     * @param string|string[] $additionalType
-     *
-     * @return static
-     *
-     * @see http://schema.org/additionalType
-     */
-    public function additionalType($additionalType)
-    {
-        return $this->setProperty('additionalType', $additionalType);
-    }
-
-    /**
-     * An alias for the item.
-     *
-     * @param string|string[] $alternateName
-     *
-     * @return static
-     *
-     * @see http://schema.org/alternateName
-     */
-    public function alternateName($alternateName)
-    {
-        return $this->setProperty('alternateName', $alternateName);
-    }
-
-    /**
-     * A description of the item.
-     *
-     * @param string|string[] $description
-     *
-     * @return static
-     *
-     * @see http://schema.org/description
-     */
-    public function description($description)
-    {
-        return $this->setProperty('description', $description);
-    }
-
-    /**
-     * A sub property of description. A short description of the item used to
-     * disambiguate from other, similar items. Information from other properties
-     * (in particular, name) may be necessary for the description to be useful
-     * for disambiguation.
-     *
-     * @param string|string[] $disambiguatingDescription
-     *
-     * @return static
-     *
-     * @see http://schema.org/disambiguatingDescription
-     */
-    public function disambiguatingDescription($disambiguatingDescription)
-    {
-        return $this->setProperty('disambiguatingDescription', $disambiguatingDescription);
     }
 
     /**
@@ -403,6 +328,20 @@ class Flight extends BaseType implements TripContract, IntangibleContract, Thing
     }
 
     /**
+     * Description of the meals that will be provided or available for purchase.
+     *
+     * @param string|string[] $mealService
+     *
+     * @return static
+     *
+     * @see http://schema.org/mealService
+     */
+    public function mealService($mealService)
+    {
+        return $this->setProperty('mealService', $mealService);
+    }
+
+    /**
      * The name of the item.
      *
      * @param string|string[] $name
@@ -414,6 +353,22 @@ class Flight extends BaseType implements TripContract, IntangibleContract, Thing
     public function name($name)
     {
         return $this->setProperty('name', $name);
+    }
+
+    /**
+     * An offer to provide this item&#x2014;for example, an offer to sell a
+     * product, rent the DVD of a movie, perform a service, or give away tickets
+     * to an event.
+     *
+     * @param Offer|Offer[] $offers
+     *
+     * @return static
+     *
+     * @see http://schema.org/offers
+     */
+    public function offers($offers)
+    {
+        return $this->setProperty('offers', $offers);
     }
 
     /**
@@ -432,6 +387,22 @@ class Flight extends BaseType implements TripContract, IntangibleContract, Thing
     }
 
     /**
+     * The service provider, service operator, or service performer; the goods
+     * producer. Another party (a seller) may offer those services or goods on
+     * behalf of the provider. A provider may also serve as the seller.
+     *
+     * @param Organization|Organization[]|Person|Person[] $provider
+     *
+     * @return static
+     *
+     * @see http://schema.org/provider
+     */
+    public function provider($provider)
+    {
+        return $this->setProperty('provider', $provider);
+    }
+
+    /**
      * URL of a reference Web page that unambiguously indicates the item's
      * identity. E.g. the URL of the item's Wikipedia page, Wikidata entry, or
      * official website.
@@ -445,6 +416,21 @@ class Flight extends BaseType implements TripContract, IntangibleContract, Thing
     public function sameAs($sameAs)
     {
         return $this->setProperty('sameAs', $sameAs);
+    }
+
+    /**
+     * An entity which offers (sells / leases / lends / loans) the services /
+     * goods.  A seller may also be a provider.
+     *
+     * @param Organization|Organization[]|Person|Person[] $seller
+     *
+     * @return static
+     *
+     * @see http://schema.org/seller
+     */
+    public function seller($seller)
+    {
+        return $this->setProperty('seller', $seller);
     }
 
     /**
@@ -473,6 +459,20 @@ class Flight extends BaseType implements TripContract, IntangibleContract, Thing
     public function url($url)
     {
         return $this->setProperty('url', $url);
+    }
+
+    /**
+     * The time when a passenger can check into the flight online.
+     *
+     * @param \DateTimeInterface|\DateTimeInterface[] $webCheckinTime
+     *
+     * @return static
+     *
+     * @see http://schema.org/webCheckinTime
+     */
+    public function webCheckinTime($webCheckinTime)
+    {
+        return $this->setProperty('webCheckinTime', $webCheckinTime);
     }
 
 }

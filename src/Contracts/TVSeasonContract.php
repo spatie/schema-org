@@ -4,10 +4,6 @@ namespace Spatie\SchemaOrg\Contracts;
 
 interface TVSeasonContract
 {
-    public function countryOfOrigin($countryOfOrigin);
-
-    public function partOfTVSeries($partOfTVSeries);
-
     public function about($about);
 
     public function accessMode($accessMode);
@@ -26,7 +22,13 @@ interface TVSeasonContract
 
     public function accountablePerson($accountablePerson);
 
+    public function actor($actor);
+
+    public function additionalType($additionalType);
+
     public function aggregateRating($aggregateRating);
+
+    public function alternateName($alternateName);
 
     public function alternativeHeadline($alternativeHeadline);
 
@@ -60,6 +62,8 @@ interface TVSeasonContract
 
     public function copyrightYear($copyrightYear);
 
+    public function countryOfOrigin($countryOfOrigin);
+
     public function creator($creator);
 
     public function dateCreated($dateCreated);
@@ -67,6 +71,12 @@ interface TVSeasonContract
     public function dateModified($dateModified);
 
     public function datePublished($datePublished);
+
+    public function description($description);
+
+    public function director($director);
+
+    public function disambiguatingDescription($disambiguatingDescription);
 
     public function discussionUrl($discussionUrl);
 
@@ -82,6 +92,12 @@ interface TVSeasonContract
 
     public function encodings($encodings);
 
+    public function endDate($endDate);
+
+    public function episode($episode);
+
+    public function episodes($episodes);
+
     public function exampleOfWork($exampleOfWork);
 
     public function expires($expires);
@@ -95,6 +111,10 @@ interface TVSeasonContract
     public function hasPart($hasPart);
 
     public function headline($headline);
+
+    public function identifier($identifier);
+
+    public function image($image);
 
     public function inLanguage($inLanguage);
 
@@ -122,15 +142,29 @@ interface TVSeasonContract
 
     public function mainEntity($mainEntity);
 
+    public function mainEntityOfPage($mainEntityOfPage);
+
     public function material($material);
 
     public function mentions($mentions);
 
+    public function name($name);
+
+    public function numberOfEpisodes($numberOfEpisodes);
+
     public function offers($offers);
+
+    public function partOfSeries($partOfSeries);
+
+    public function partOfTVSeries($partOfTVSeries);
 
     public function position($position);
 
+    public function potentialAction($potentialAction);
+
     public function producer($producer);
+
+    public function productionCompany($productionCompany);
 
     public function provider($provider);
 
@@ -148,7 +182,11 @@ interface TVSeasonContract
 
     public function reviews($reviews);
 
+    public function sameAs($sameAs);
+
     public function schemaVersion($schemaVersion);
+
+    public function seasonNumber($seasonNumber);
 
     public function sourceOrganization($sourceOrganization);
 
@@ -157,6 +195,10 @@ interface TVSeasonContract
     public function spatialCoverage($spatialCoverage);
 
     public function sponsor($sponsor);
+
+    public function startDate($startDate);
+
+    public function subjectOf($subjectOf);
 
     public function temporal($temporal);
 
@@ -168,60 +210,18 @@ interface TVSeasonContract
 
     public function timeRequired($timeRequired);
 
+    public function trailer($trailer);
+
     public function translator($translator);
 
     public function typicalAgeRange($typicalAgeRange);
+
+    public function url($url);
 
     public function version($version);
 
     public function video($video);
 
     public function workExample($workExample);
-
-    public function additionalType($additionalType);
-
-    public function alternateName($alternateName);
-
-    public function description($description);
-
-    public function disambiguatingDescription($disambiguatingDescription);
-
-    public function identifier($identifier);
-
-    public function image($image);
-
-    public function mainEntityOfPage($mainEntityOfPage);
-
-    public function name($name);
-
-    public function potentialAction($potentialAction);
-
-    public function sameAs($sameAs);
-
-    public function subjectOf($subjectOf);
-
-    public function url($url);
-
-    public function actor($actor);
-
-    public function director($director);
-
-    public function endDate($endDate);
-
-    public function episode($episode);
-
-    public function episodes($episodes);
-
-    public function numberOfEpisodes($numberOfEpisodes);
-
-    public function partOfSeries($partOfSeries);
-
-    public function productionCompany($productionCompany);
-
-    public function seasonNumber($seasonNumber);
-
-    public function startDate($startDate);
-
-    public function trailer($trailer);
 
 }

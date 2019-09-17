@@ -4,11 +4,9 @@ namespace Spatie\SchemaOrg\Contracts;
 
 interface TaxiReservationContract
 {
-    public function partySize($partySize);
+    public function additionalType($additionalType);
 
-    public function pickupLocation($pickupLocation);
-
-    public function pickupTime($pickupTime);
+    public function alternateName($alternateName);
 
     public function bookingAgent($bookingAgent);
 
@@ -16,7 +14,27 @@ interface TaxiReservationContract
 
     public function broker($broker);
 
+    public function description($description);
+
+    public function disambiguatingDescription($disambiguatingDescription);
+
+    public function identifier($identifier);
+
+    public function image($image);
+
+    public function mainEntityOfPage($mainEntityOfPage);
+
     public function modifiedTime($modifiedTime);
+
+    public function name($name);
+
+    public function partySize($partySize);
+
+    public function pickupLocation($pickupLocation);
+
+    public function pickupTime($pickupTime);
+
+    public function potentialAction($potentialAction);
 
     public function priceCurrency($priceCurrency);
 
@@ -32,31 +50,13 @@ interface TaxiReservationContract
 
     public function reservedTicket($reservedTicket);
 
-    public function totalPrice($totalPrice);
-
-    public function underName($underName);
-
-    public function additionalType($additionalType);
-
-    public function alternateName($alternateName);
-
-    public function description($description);
-
-    public function disambiguatingDescription($disambiguatingDescription);
-
-    public function identifier($identifier);
-
-    public function image($image);
-
-    public function mainEntityOfPage($mainEntityOfPage);
-
-    public function name($name);
-
-    public function potentialAction($potentialAction);
-
     public function sameAs($sameAs);
 
     public function subjectOf($subjectOf);
+
+    public function totalPrice($totalPrice);
+
+    public function underName($underName);
 
     public function url($url);
 

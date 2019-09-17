@@ -4,29 +4,21 @@ namespace Spatie\SchemaOrg\Contracts;
 
 interface TrainTripContract
 {
+    public function additionalType($additionalType);
+
+    public function alternateName($alternateName);
+
     public function arrivalPlatform($arrivalPlatform);
 
     public function arrivalStation($arrivalStation);
+
+    public function arrivalTime($arrivalTime);
 
     public function departurePlatform($departurePlatform);
 
     public function departureStation($departureStation);
 
-    public function trainName($trainName);
-
-    public function trainNumber($trainNumber);
-
-    public function arrivalTime($arrivalTime);
-
     public function departureTime($departureTime);
-
-    public function offers($offers);
-
-    public function provider($provider);
-
-    public function additionalType($additionalType);
-
-    public function alternateName($alternateName);
 
     public function description($description);
 
@@ -40,11 +32,19 @@ interface TrainTripContract
 
     public function name($name);
 
+    public function offers($offers);
+
     public function potentialAction($potentialAction);
+
+    public function provider($provider);
 
     public function sameAs($sameAs);
 
     public function subjectOf($subjectOf);
+
+    public function trainName($trainName);
+
+    public function trainNumber($trainNumber);
 
     public function url($url);
 

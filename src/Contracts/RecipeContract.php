@@ -4,44 +4,6 @@ namespace Spatie\SchemaOrg\Contracts;
 
 interface RecipeContract
 {
-    public function cookTime($cookTime);
-
-    public function cookingMethod($cookingMethod);
-
-    public function ingredients($ingredients);
-
-    public function nutrition($nutrition);
-
-    public function recipeCategory($recipeCategory);
-
-    public function recipeCuisine($recipeCuisine);
-
-    public function recipeIngredient($recipeIngredient);
-
-    public function recipeInstructions($recipeInstructions);
-
-    public function recipeYield($recipeYield);
-
-    public function suitableForDiet($suitableForDiet);
-
-    public function estimatedCost($estimatedCost);
-
-    public function performTime($performTime);
-
-    public function prepTime($prepTime);
-
-    public function step($step);
-
-    public function steps($steps);
-
-    public function supply($supply);
-
-    public function tool($tool);
-
-    public function totalTime($totalTime);
-
-    public function yield($yield);
-
     public function about($about);
 
     public function accessMode($accessMode);
@@ -60,7 +22,11 @@ interface RecipeContract
 
     public function accountablePerson($accountablePerson);
 
+    public function additionalType($additionalType);
+
     public function aggregateRating($aggregateRating);
+
+    public function alternateName($alternateName);
 
     public function alternativeHeadline($alternativeHeadline);
 
@@ -90,6 +56,10 @@ interface RecipeContract
 
     public function contributor($contributor);
 
+    public function cookTime($cookTime);
+
+    public function cookingMethod($cookingMethod);
+
     public function copyrightHolder($copyrightHolder);
 
     public function copyrightYear($copyrightYear);
@@ -101,6 +71,10 @@ interface RecipeContract
     public function dateModified($dateModified);
 
     public function datePublished($datePublished);
+
+    public function description($description);
+
+    public function disambiguatingDescription($disambiguatingDescription);
 
     public function discussionUrl($discussionUrl);
 
@@ -116,6 +90,8 @@ interface RecipeContract
 
     public function encodings($encodings);
 
+    public function estimatedCost($estimatedCost);
+
     public function exampleOfWork($exampleOfWork);
 
     public function expires($expires);
@@ -130,7 +106,13 @@ interface RecipeContract
 
     public function headline($headline);
 
+    public function identifier($identifier);
+
+    public function image($image);
+
     public function inLanguage($inLanguage);
+
+    public function ingredients($ingredients);
 
     public function interactionStatistic($interactionStatistic);
 
@@ -156,13 +138,25 @@ interface RecipeContract
 
     public function mainEntity($mainEntity);
 
+    public function mainEntityOfPage($mainEntityOfPage);
+
     public function material($material);
 
     public function mentions($mentions);
 
+    public function name($name);
+
+    public function nutrition($nutrition);
+
     public function offers($offers);
 
+    public function performTime($performTime);
+
     public function position($position);
+
+    public function potentialAction($potentialAction);
+
+    public function prepTime($prepTime);
 
     public function producer($producer);
 
@@ -174,6 +168,16 @@ interface RecipeContract
 
     public function publishingPrinciples($publishingPrinciples);
 
+    public function recipeCategory($recipeCategory);
+
+    public function recipeCuisine($recipeCuisine);
+
+    public function recipeIngredient($recipeIngredient);
+
+    public function recipeInstructions($recipeInstructions);
+
+    public function recipeYield($recipeYield);
+
     public function recordedAt($recordedAt);
 
     public function releasedEvent($releasedEvent);
@@ -181,6 +185,8 @@ interface RecipeContract
     public function review($review);
 
     public function reviews($reviews);
+
+    public function sameAs($sameAs);
 
     public function schemaVersion($schemaVersion);
 
@@ -192,6 +198,16 @@ interface RecipeContract
 
     public function sponsor($sponsor);
 
+    public function step($step);
+
+    public function steps($steps);
+
+    public function subjectOf($subjectOf);
+
+    public function suitableForDiet($suitableForDiet);
+
+    public function supply($supply);
+
     public function temporal($temporal);
 
     public function temporalCoverage($temporalCoverage);
@@ -202,9 +218,15 @@ interface RecipeContract
 
     public function timeRequired($timeRequired);
 
+    public function tool($tool);
+
+    public function totalTime($totalTime);
+
     public function translator($translator);
 
     public function typicalAgeRange($typicalAgeRange);
+
+    public function url($url);
 
     public function version($version);
 
@@ -212,28 +234,6 @@ interface RecipeContract
 
     public function workExample($workExample);
 
-    public function additionalType($additionalType);
-
-    public function alternateName($alternateName);
-
-    public function description($description);
-
-    public function disambiguatingDescription($disambiguatingDescription);
-
-    public function identifier($identifier);
-
-    public function image($image);
-
-    public function mainEntityOfPage($mainEntityOfPage);
-
-    public function name($name);
-
-    public function potentialAction($potentialAction);
-
-    public function sameAs($sameAs);
-
-    public function subjectOf($subjectOf);
-
-    public function url($url);
+    public function yield($yield);
 
 }

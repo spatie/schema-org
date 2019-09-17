@@ -15,6 +15,39 @@ use \Spatie\SchemaOrg\Contracts\ThingContract;
 class NutritionInformation extends BaseType implements StructuredValueContract, IntangibleContract, ThingContract
 {
     /**
+     * An additional type for the item, typically used for adding more specific
+     * types from external vocabularies in microdata syntax. This is a
+     * relationship between something and a class that the thing is in. In RDFa
+     * syntax, it is better to use the native RDFa syntax - the 'typeof'
+     * attribute - for multiple types. Schema.org tools may have only weaker
+     * understanding of extra types, in particular those defined externally.
+     *
+     * @param string|string[] $additionalType
+     *
+     * @return static
+     *
+     * @see http://schema.org/additionalType
+     */
+    public function additionalType($additionalType)
+    {
+        return $this->setProperty('additionalType', $additionalType);
+    }
+
+    /**
+     * An alias for the item.
+     *
+     * @param string|string[] $alternateName
+     *
+     * @return static
+     *
+     * @see http://schema.org/alternateName
+     */
+    public function alternateName($alternateName)
+    {
+        return $this->setProperty('alternateName', $alternateName);
+    }
+
+    /**
      * The number of calories.
      *
      * @param Energy|Energy[] $calories
@@ -57,165 +90,6 @@ class NutritionInformation extends BaseType implements StructuredValueContract, 
     }
 
     /**
-     * The number of grams of fat.
-     *
-     * @param Mass|Mass[] $fatContent
-     *
-     * @return static
-     *
-     * @see http://schema.org/fatContent
-     */
-    public function fatContent($fatContent)
-    {
-        return $this->setProperty('fatContent', $fatContent);
-    }
-
-    /**
-     * The number of grams of fiber.
-     *
-     * @param Mass|Mass[] $fiberContent
-     *
-     * @return static
-     *
-     * @see http://schema.org/fiberContent
-     */
-    public function fiberContent($fiberContent)
-    {
-        return $this->setProperty('fiberContent', $fiberContent);
-    }
-
-    /**
-     * The number of grams of protein.
-     *
-     * @param Mass|Mass[] $proteinContent
-     *
-     * @return static
-     *
-     * @see http://schema.org/proteinContent
-     */
-    public function proteinContent($proteinContent)
-    {
-        return $this->setProperty('proteinContent', $proteinContent);
-    }
-
-    /**
-     * The number of grams of saturated fat.
-     *
-     * @param Mass|Mass[] $saturatedFatContent
-     *
-     * @return static
-     *
-     * @see http://schema.org/saturatedFatContent
-     */
-    public function saturatedFatContent($saturatedFatContent)
-    {
-        return $this->setProperty('saturatedFatContent', $saturatedFatContent);
-    }
-
-    /**
-     * The serving size, in terms of the number of volume or mass.
-     *
-     * @param string|string[] $servingSize
-     *
-     * @return static
-     *
-     * @see http://schema.org/servingSize
-     */
-    public function servingSize($servingSize)
-    {
-        return $this->setProperty('servingSize', $servingSize);
-    }
-
-    /**
-     * The number of milligrams of sodium.
-     *
-     * @param Mass|Mass[] $sodiumContent
-     *
-     * @return static
-     *
-     * @see http://schema.org/sodiumContent
-     */
-    public function sodiumContent($sodiumContent)
-    {
-        return $this->setProperty('sodiumContent', $sodiumContent);
-    }
-
-    /**
-     * The number of grams of sugar.
-     *
-     * @param Mass|Mass[] $sugarContent
-     *
-     * @return static
-     *
-     * @see http://schema.org/sugarContent
-     */
-    public function sugarContent($sugarContent)
-    {
-        return $this->setProperty('sugarContent', $sugarContent);
-    }
-
-    /**
-     * The number of grams of trans fat.
-     *
-     * @param Mass|Mass[] $transFatContent
-     *
-     * @return static
-     *
-     * @see http://schema.org/transFatContent
-     */
-    public function transFatContent($transFatContent)
-    {
-        return $this->setProperty('transFatContent', $transFatContent);
-    }
-
-    /**
-     * The number of grams of unsaturated fat.
-     *
-     * @param Mass|Mass[] $unsaturatedFatContent
-     *
-     * @return static
-     *
-     * @see http://schema.org/unsaturatedFatContent
-     */
-    public function unsaturatedFatContent($unsaturatedFatContent)
-    {
-        return $this->setProperty('unsaturatedFatContent', $unsaturatedFatContent);
-    }
-
-    /**
-     * An additional type for the item, typically used for adding more specific
-     * types from external vocabularies in microdata syntax. This is a
-     * relationship between something and a class that the thing is in. In RDFa
-     * syntax, it is better to use the native RDFa syntax - the 'typeof'
-     * attribute - for multiple types. Schema.org tools may have only weaker
-     * understanding of extra types, in particular those defined externally.
-     *
-     * @param string|string[] $additionalType
-     *
-     * @return static
-     *
-     * @see http://schema.org/additionalType
-     */
-    public function additionalType($additionalType)
-    {
-        return $this->setProperty('additionalType', $additionalType);
-    }
-
-    /**
-     * An alias for the item.
-     *
-     * @param string|string[] $alternateName
-     *
-     * @return static
-     *
-     * @see http://schema.org/alternateName
-     */
-    public function alternateName($alternateName)
-    {
-        return $this->setProperty('alternateName', $alternateName);
-    }
-
-    /**
      * A description of the item.
      *
      * @param string|string[] $description
@@ -244,6 +118,34 @@ class NutritionInformation extends BaseType implements StructuredValueContract, 
     public function disambiguatingDescription($disambiguatingDescription)
     {
         return $this->setProperty('disambiguatingDescription', $disambiguatingDescription);
+    }
+
+    /**
+     * The number of grams of fat.
+     *
+     * @param Mass|Mass[] $fatContent
+     *
+     * @return static
+     *
+     * @see http://schema.org/fatContent
+     */
+    public function fatContent($fatContent)
+    {
+        return $this->setProperty('fatContent', $fatContent);
+    }
+
+    /**
+     * The number of grams of fiber.
+     *
+     * @param Mass|Mass[] $fiberContent
+     *
+     * @return static
+     *
+     * @see http://schema.org/fiberContent
+     */
+    public function fiberContent($fiberContent)
+    {
+        return $this->setProperty('fiberContent', $fiberContent);
     }
 
     /**
@@ -325,6 +227,20 @@ class NutritionInformation extends BaseType implements StructuredValueContract, 
     }
 
     /**
+     * The number of grams of protein.
+     *
+     * @param Mass|Mass[] $proteinContent
+     *
+     * @return static
+     *
+     * @see http://schema.org/proteinContent
+     */
+    public function proteinContent($proteinContent)
+    {
+        return $this->setProperty('proteinContent', $proteinContent);
+    }
+
+    /**
      * URL of a reference Web page that unambiguously indicates the item's
      * identity. E.g. the URL of the item's Wikipedia page, Wikidata entry, or
      * official website.
@@ -341,6 +257,48 @@ class NutritionInformation extends BaseType implements StructuredValueContract, 
     }
 
     /**
+     * The number of grams of saturated fat.
+     *
+     * @param Mass|Mass[] $saturatedFatContent
+     *
+     * @return static
+     *
+     * @see http://schema.org/saturatedFatContent
+     */
+    public function saturatedFatContent($saturatedFatContent)
+    {
+        return $this->setProperty('saturatedFatContent', $saturatedFatContent);
+    }
+
+    /**
+     * The serving size, in terms of the number of volume or mass.
+     *
+     * @param string|string[] $servingSize
+     *
+     * @return static
+     *
+     * @see http://schema.org/servingSize
+     */
+    public function servingSize($servingSize)
+    {
+        return $this->setProperty('servingSize', $servingSize);
+    }
+
+    /**
+     * The number of milligrams of sodium.
+     *
+     * @param Mass|Mass[] $sodiumContent
+     *
+     * @return static
+     *
+     * @see http://schema.org/sodiumContent
+     */
+    public function sodiumContent($sodiumContent)
+    {
+        return $this->setProperty('sodiumContent', $sodiumContent);
+    }
+
+    /**
      * A CreativeWork or Event about this Thing.
      *
      * @param CreativeWork|CreativeWork[]|Event|Event[] $subjectOf
@@ -352,6 +310,48 @@ class NutritionInformation extends BaseType implements StructuredValueContract, 
     public function subjectOf($subjectOf)
     {
         return $this->setProperty('subjectOf', $subjectOf);
+    }
+
+    /**
+     * The number of grams of sugar.
+     *
+     * @param Mass|Mass[] $sugarContent
+     *
+     * @return static
+     *
+     * @see http://schema.org/sugarContent
+     */
+    public function sugarContent($sugarContent)
+    {
+        return $this->setProperty('sugarContent', $sugarContent);
+    }
+
+    /**
+     * The number of grams of trans fat.
+     *
+     * @param Mass|Mass[] $transFatContent
+     *
+     * @return static
+     *
+     * @see http://schema.org/transFatContent
+     */
+    public function transFatContent($transFatContent)
+    {
+        return $this->setProperty('transFatContent', $transFatContent);
+    }
+
+    /**
+     * The number of grams of unsaturated fat.
+     *
+     * @param Mass|Mass[] $unsaturatedFatContent
+     *
+     * @return static
+     *
+     * @see http://schema.org/unsaturatedFatContent
+     */
+    public function unsaturatedFatContent($unsaturatedFatContent)
+    {
+        return $this->setProperty('unsaturatedFatContent', $unsaturatedFatContent);
     }
 
     /**

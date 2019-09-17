@@ -16,22 +16,6 @@ use \Spatie\SchemaOrg\Contracts\ThingContract;
 class EngineSpecification extends BaseType implements StructuredValueContract, IntangibleContract, ThingContract
 {
     /**
-     * The type of fuel suitable for the engine or engines of the vehicle. If
-     * the vehicle has only one engine, this property can be attached directly
-     * to the vehicle.
-     *
-     * @param QualitativeValue|QualitativeValue[]|string|string[] $fuelType
-     *
-     * @return static
-     *
-     * @see http://schema.org/fuelType
-     */
-    public function fuelType($fuelType)
-    {
-        return $this->setProperty('fuelType', $fuelType);
-    }
-
-    /**
      * An additional type for the item, typically used for adding more specific
      * types from external vocabularies in microdata syntax. This is a
      * relationship between something and a class that the thing is in. In RDFa
@@ -93,6 +77,22 @@ class EngineSpecification extends BaseType implements StructuredValueContract, I
     public function disambiguatingDescription($disambiguatingDescription)
     {
         return $this->setProperty('disambiguatingDescription', $disambiguatingDescription);
+    }
+
+    /**
+     * The type of fuel suitable for the engine or engines of the vehicle. If
+     * the vehicle has only one engine, this property can be attached directly
+     * to the vehicle.
+     *
+     * @param QualitativeValue|QualitativeValue[]|string|string[] $fuelType
+     *
+     * @return static
+     *
+     * @see http://schema.org/fuelType
+     */
+    public function fuelType($fuelType)
+    {
+        return $this->setProperty('fuelType', $fuelType);
     }
 
     /**

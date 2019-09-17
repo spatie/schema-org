@@ -4,13 +4,13 @@ namespace Spatie\SchemaOrg\Contracts;
 
 interface SeriesContract
 {
-    public function director($director);
-
     public function additionalType($additionalType);
 
     public function alternateName($alternateName);
 
     public function description($description);
+
+    public function director($director);
 
     public function disambiguatingDescription($disambiguatingDescription);
 

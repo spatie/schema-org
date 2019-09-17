@@ -4,44 +4,6 @@ namespace Spatie\SchemaOrg\Contracts;
 
 interface AudioObjectContract
 {
-    public function caption($caption);
-
-    public function transcript($transcript);
-
-    public function associatedArticle($associatedArticle);
-
-    public function bitrate($bitrate);
-
-    public function contentSize($contentSize);
-
-    public function contentUrl($contentUrl);
-
-    public function duration($duration);
-
-    public function embedUrl($embedUrl);
-
-    public function encodesCreativeWork($encodesCreativeWork);
-
-    public function encodingFormat($encodingFormat);
-
-    public function endTime($endTime);
-
-    public function height($height);
-
-    public function playerType($playerType);
-
-    public function productionCompany($productionCompany);
-
-    public function regionsAllowed($regionsAllowed);
-
-    public function requiresSubscription($requiresSubscription);
-
-    public function startTime($startTime);
-
-    public function uploadDate($uploadDate);
-
-    public function width($width);
-
     public function about($about);
 
     public function accessMode($accessMode);
@@ -60,9 +22,15 @@ interface AudioObjectContract
 
     public function accountablePerson($accountablePerson);
 
+    public function additionalType($additionalType);
+
     public function aggregateRating($aggregateRating);
 
+    public function alternateName($alternateName);
+
     public function alternativeHeadline($alternativeHeadline);
+
+    public function associatedArticle($associatedArticle);
 
     public function associatedMedia($associatedMedia);
 
@@ -76,6 +44,10 @@ interface AudioObjectContract
 
     public function awards($awards);
 
+    public function bitrate($bitrate);
+
+    public function caption($caption);
+
     public function character($character);
 
     public function citation($citation);
@@ -87,6 +59,10 @@ interface AudioObjectContract
     public function contentLocation($contentLocation);
 
     public function contentRating($contentRating);
+
+    public function contentSize($contentSize);
+
+    public function contentUrl($contentUrl);
 
     public function contributor($contributor);
 
@@ -102,7 +78,13 @@ interface AudioObjectContract
 
     public function datePublished($datePublished);
 
+    public function description($description);
+
+    public function disambiguatingDescription($disambiguatingDescription);
+
     public function discussionUrl($discussionUrl);
+
+    public function duration($duration);
 
     public function editor($editor);
 
@@ -110,9 +92,17 @@ interface AudioObjectContract
 
     public function educationalUse($educationalUse);
 
+    public function embedUrl($embedUrl);
+
+    public function encodesCreativeWork($encodesCreativeWork);
+
     public function encoding($encoding);
 
+    public function encodingFormat($encodingFormat);
+
     public function encodings($encodings);
+
+    public function endTime($endTime);
 
     public function exampleOfWork($exampleOfWork);
 
@@ -127,6 +117,12 @@ interface AudioObjectContract
     public function hasPart($hasPart);
 
     public function headline($headline);
+
+    public function height($height);
+
+    public function identifier($identifier);
+
+    public function image($image);
 
     public function inLanguage($inLanguage);
 
@@ -154,15 +150,25 @@ interface AudioObjectContract
 
     public function mainEntity($mainEntity);
 
+    public function mainEntityOfPage($mainEntityOfPage);
+
     public function material($material);
 
     public function mentions($mentions);
 
+    public function name($name);
+
     public function offers($offers);
+
+    public function playerType($playerType);
 
     public function position($position);
 
+    public function potentialAction($potentialAction);
+
     public function producer($producer);
+
+    public function productionCompany($productionCompany);
 
     public function provider($provider);
 
@@ -174,11 +180,17 @@ interface AudioObjectContract
 
     public function recordedAt($recordedAt);
 
+    public function regionsAllowed($regionsAllowed);
+
     public function releasedEvent($releasedEvent);
+
+    public function requiresSubscription($requiresSubscription);
 
     public function review($review);
 
     public function reviews($reviews);
+
+    public function sameAs($sameAs);
 
     public function schemaVersion($schemaVersion);
 
@@ -190,6 +202,10 @@ interface AudioObjectContract
 
     public function sponsor($sponsor);
 
+    public function startTime($startTime);
+
+    public function subjectOf($subjectOf);
+
     public function temporal($temporal);
 
     public function temporalCoverage($temporalCoverage);
@@ -200,38 +216,22 @@ interface AudioObjectContract
 
     public function timeRequired($timeRequired);
 
+    public function transcript($transcript);
+
     public function translator($translator);
 
     public function typicalAgeRange($typicalAgeRange);
+
+    public function uploadDate($uploadDate);
+
+    public function url($url);
 
     public function version($version);
 
     public function video($video);
 
+    public function width($width);
+
     public function workExample($workExample);
-
-    public function additionalType($additionalType);
-
-    public function alternateName($alternateName);
-
-    public function description($description);
-
-    public function disambiguatingDescription($disambiguatingDescription);
-
-    public function identifier($identifier);
-
-    public function image($image);
-
-    public function mainEntityOfPage($mainEntityOfPage);
-
-    public function name($name);
-
-    public function potentialAction($potentialAction);
-
-    public function sameAs($sameAs);
-
-    public function subjectOf($subjectOf);
-
-    public function url($url);
 
 }

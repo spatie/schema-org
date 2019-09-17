@@ -17,374 +17,6 @@ use \Spatie\SchemaOrg\Contracts\ThingContract;
 class VideoGameSeries extends BaseType implements CreativeWorkSeriesContract, CreativeWorkContract, SeriesContract, IntangibleContract, ThingContract
 {
     /**
-     * An actor, e.g. in tv, radio, movie, video games etc., or in an event.
-     * Actors can be associated with individual items or with a series, episode,
-     * clip.
-     *
-     * @param Person|Person[] $actor
-     *
-     * @return static
-     *
-     * @see http://schema.org/actor
-     */
-    public function actor($actor)
-    {
-        return $this->setProperty('actor', $actor);
-    }
-
-    /**
-     * An actor, e.g. in tv, radio, movie, video games etc. Actors can be
-     * associated with individual items or with a series, episode, clip.
-     *
-     * @param Person|Person[] $actors
-     *
-     * @return static
-     *
-     * @see http://schema.org/actors
-     */
-    public function actors($actors)
-    {
-        return $this->setProperty('actors', $actors);
-    }
-
-    /**
-     * A piece of data that represents a particular aspect of a fictional
-     * character (skill, power, character points, advantage, disadvantage).
-     *
-     * @param Thing|Thing[] $characterAttribute
-     *
-     * @return static
-     *
-     * @see http://schema.org/characterAttribute
-     */
-    public function characterAttribute($characterAttribute)
-    {
-        return $this->setProperty('characterAttribute', $characterAttribute);
-    }
-
-    /**
-     * Cheat codes to the game.
-     *
-     * @param CreativeWork|CreativeWork[] $cheatCode
-     *
-     * @return static
-     *
-     * @see http://schema.org/cheatCode
-     */
-    public function cheatCode($cheatCode)
-    {
-        return $this->setProperty('cheatCode', $cheatCode);
-    }
-
-    /**
-     * A season that is part of the media series.
-     *
-     * @param CreativeWorkSeason|CreativeWorkSeason[] $containsSeason
-     *
-     * @return static
-     *
-     * @see http://schema.org/containsSeason
-     */
-    public function containsSeason($containsSeason)
-    {
-        return $this->setProperty('containsSeason', $containsSeason);
-    }
-
-    /**
-     * A director of e.g. tv, radio, movie, video gaming etc. content, or of an
-     * event. Directors can be associated with individual items or with a
-     * series, episode, clip.
-     *
-     * @param Person|Person[] $director
-     *
-     * @return static
-     *
-     * @see http://schema.org/director
-     */
-    public function director($director)
-    {
-        return $this->setProperty('director', $director);
-    }
-
-    /**
-     * A director of e.g. tv, radio, movie, video games etc. content. Directors
-     * can be associated with individual items or with a series, episode, clip.
-     *
-     * @param Person|Person[] $directors
-     *
-     * @return static
-     *
-     * @see http://schema.org/directors
-     */
-    public function directors($directors)
-    {
-        return $this->setProperty('directors', $directors);
-    }
-
-    /**
-     * An episode of a tv, radio or game media within a series or season.
-     *
-     * @param Episode|Episode[] $episode
-     *
-     * @return static
-     *
-     * @see http://schema.org/episode
-     */
-    public function episode($episode)
-    {
-        return $this->setProperty('episode', $episode);
-    }
-
-    /**
-     * An episode of a TV/radio series or season.
-     *
-     * @param Episode|Episode[] $episodes
-     *
-     * @return static
-     *
-     * @see http://schema.org/episodes
-     */
-    public function episodes($episodes)
-    {
-        return $this->setProperty('episodes', $episodes);
-    }
-
-    /**
-     * An item is an object within the game world that can be collected by a
-     * player or, occasionally, a non-player character.
-     *
-     * @param Thing|Thing[] $gameItem
-     *
-     * @return static
-     *
-     * @see http://schema.org/gameItem
-     */
-    public function gameItem($gameItem)
-    {
-        return $this->setProperty('gameItem', $gameItem);
-    }
-
-    /**
-     * Real or fictional location of the game (or part of game).
-     *
-     * @param Place|Place[]|PostalAddress|PostalAddress[]|string|string[] $gameLocation
-     *
-     * @return static
-     *
-     * @see http://schema.org/gameLocation
-     */
-    public function gameLocation($gameLocation)
-    {
-        return $this->setProperty('gameLocation', $gameLocation);
-    }
-
-    /**
-     * The electronic systems used to play <a
-     * href="http://en.wikipedia.org/wiki/Category:Video_game_platforms">video
-     * games</a>.
-     *
-     * @param Thing|Thing[]|string|string[] $gamePlatform
-     *
-     * @return static
-     *
-     * @see http://schema.org/gamePlatform
-     */
-    public function gamePlatform($gamePlatform)
-    {
-        return $this->setProperty('gamePlatform', $gamePlatform);
-    }
-
-    /**
-     * The composer of the soundtrack.
-     *
-     * @param MusicGroup|MusicGroup[]|Person|Person[] $musicBy
-     *
-     * @return static
-     *
-     * @see http://schema.org/musicBy
-     */
-    public function musicBy($musicBy)
-    {
-        return $this->setProperty('musicBy', $musicBy);
-    }
-
-    /**
-     * The number of episodes in this season or series.
-     *
-     * @param int|int[] $numberOfEpisodes
-     *
-     * @return static
-     *
-     * @see http://schema.org/numberOfEpisodes
-     */
-    public function numberOfEpisodes($numberOfEpisodes)
-    {
-        return $this->setProperty('numberOfEpisodes', $numberOfEpisodes);
-    }
-
-    /**
-     * Indicate how many people can play this game (minimum, maximum, or range).
-     *
-     * @param QuantitativeValue|QuantitativeValue[] $numberOfPlayers
-     *
-     * @return static
-     *
-     * @see http://schema.org/numberOfPlayers
-     */
-    public function numberOfPlayers($numberOfPlayers)
-    {
-        return $this->setProperty('numberOfPlayers', $numberOfPlayers);
-    }
-
-    /**
-     * The number of seasons in this series.
-     *
-     * @param int|int[] $numberOfSeasons
-     *
-     * @return static
-     *
-     * @see http://schema.org/numberOfSeasons
-     */
-    public function numberOfSeasons($numberOfSeasons)
-    {
-        return $this->setProperty('numberOfSeasons', $numberOfSeasons);
-    }
-
-    /**
-     * Indicates whether this game is multi-player, co-op or single-player.  The
-     * game can be marked as multi-player, co-op and single-player at the same
-     * time.
-     *
-     * @param GamePlayMode|GamePlayMode[] $playMode
-     *
-     * @return static
-     *
-     * @see http://schema.org/playMode
-     */
-    public function playMode($playMode)
-    {
-        return $this->setProperty('playMode', $playMode);
-    }
-
-    /**
-     * The production company or studio responsible for the item e.g. series,
-     * video game, episode etc.
-     *
-     * @param Organization|Organization[] $productionCompany
-     *
-     * @return static
-     *
-     * @see http://schema.org/productionCompany
-     */
-    public function productionCompany($productionCompany)
-    {
-        return $this->setProperty('productionCompany', $productionCompany);
-    }
-
-    /**
-     * The task that a player-controlled character, or group of characters may
-     * complete in order to gain a reward.
-     *
-     * @param Thing|Thing[] $quest
-     *
-     * @return static
-     *
-     * @see http://schema.org/quest
-     */
-    public function quest($quest)
-    {
-        return $this->setProperty('quest', $quest);
-    }
-
-    /**
-     * A season in a media series.
-     *
-     * @param CreativeWorkSeason|CreativeWorkSeason[] $season
-     *
-     * @return static
-     *
-     * @see http://schema.org/season
-     */
-    public function season($season)
-    {
-        return $this->setProperty('season', $season);
-    }
-
-    /**
-     * A season in a media series.
-     *
-     * @param CreativeWorkSeason|CreativeWorkSeason[] $seasons
-     *
-     * @return static
-     *
-     * @see http://schema.org/seasons
-     */
-    public function seasons($seasons)
-    {
-        return $this->setProperty('seasons', $seasons);
-    }
-
-    /**
-     * The trailer of a movie or tv/radio series, season, episode, etc.
-     *
-     * @param VideoObject|VideoObject[] $trailer
-     *
-     * @return static
-     *
-     * @see http://schema.org/trailer
-     */
-    public function trailer($trailer)
-    {
-        return $this->setProperty('trailer', $trailer);
-    }
-
-    /**
-     * The end date and time of the item (in [ISO 8601 date
-     * format](http://en.wikipedia.org/wiki/ISO_8601)).
-     *
-     * @param \DateTimeInterface|\DateTimeInterface[] $endDate
-     *
-     * @return static
-     *
-     * @see http://schema.org/endDate
-     */
-    public function endDate($endDate)
-    {
-        return $this->setProperty('endDate', $endDate);
-    }
-
-    /**
-     * The International Standard Serial Number (ISSN) that identifies this
-     * serial publication. You can repeat this property to identify different
-     * formats of, or the linking ISSN (ISSN-L) for, this serial publication.
-     *
-     * @param string|string[] $issn
-     *
-     * @return static
-     *
-     * @see http://schema.org/issn
-     */
-    public function issn($issn)
-    {
-        return $this->setProperty('issn', $issn);
-    }
-
-    /**
-     * The start date and time of the item (in [ISO 8601 date
-     * format](http://en.wikipedia.org/wiki/ISO_8601)).
-     *
-     * @param \DateTimeInterface|\DateTimeInterface[] $startDate
-     *
-     * @return static
-     *
-     * @see http://schema.org/startDate
-     */
-    public function startDate($startDate)
-    {
-        return $this->setProperty('startDate', $startDate);
-    }
-
-    /**
      * The subject matter of the content.
      *
      * @param Thing|Thing[] $about
@@ -529,6 +161,56 @@ class VideoGameSeries extends BaseType implements CreativeWorkSeriesContract, Cr
     }
 
     /**
+     * An actor, e.g. in tv, radio, movie, video games etc., or in an event.
+     * Actors can be associated with individual items or with a series, episode,
+     * clip.
+     *
+     * @param Person|Person[] $actor
+     *
+     * @return static
+     *
+     * @see http://schema.org/actor
+     */
+    public function actor($actor)
+    {
+        return $this->setProperty('actor', $actor);
+    }
+
+    /**
+     * An actor, e.g. in tv, radio, movie, video games etc. Actors can be
+     * associated with individual items or with a series, episode, clip.
+     *
+     * @param Person|Person[] $actors
+     *
+     * @return static
+     *
+     * @see http://schema.org/actors
+     */
+    public function actors($actors)
+    {
+        return $this->setProperty('actors', $actors);
+    }
+
+    /**
+     * An additional type for the item, typically used for adding more specific
+     * types from external vocabularies in microdata syntax. This is a
+     * relationship between something and a class that the thing is in. In RDFa
+     * syntax, it is better to use the native RDFa syntax - the 'typeof'
+     * attribute - for multiple types. Schema.org tools may have only weaker
+     * understanding of extra types, in particular those defined externally.
+     *
+     * @param string|string[] $additionalType
+     *
+     * @return static
+     *
+     * @see http://schema.org/additionalType
+     */
+    public function additionalType($additionalType)
+    {
+        return $this->setProperty('additionalType', $additionalType);
+    }
+
+    /**
      * The overall rating, based on a collection of reviews or ratings, of the
      * item.
      *
@@ -541,6 +223,20 @@ class VideoGameSeries extends BaseType implements CreativeWorkSeriesContract, Cr
     public function aggregateRating($aggregateRating)
     {
         return $this->setProperty('aggregateRating', $aggregateRating);
+    }
+
+    /**
+     * An alias for the item.
+     *
+     * @param string|string[] $alternateName
+     *
+     * @return static
+     *
+     * @see http://schema.org/alternateName
+     */
+    public function alternateName($alternateName)
+    {
+        return $this->setProperty('alternateName', $alternateName);
     }
 
     /**
@@ -659,6 +355,35 @@ class VideoGameSeries extends BaseType implements CreativeWorkSeriesContract, Cr
     }
 
     /**
+     * A piece of data that represents a particular aspect of a fictional
+     * character (skill, power, character points, advantage, disadvantage).
+     *
+     * @param Thing|Thing[] $characterAttribute
+     *
+     * @return static
+     *
+     * @see http://schema.org/characterAttribute
+     */
+    public function characterAttribute($characterAttribute)
+    {
+        return $this->setProperty('characterAttribute', $characterAttribute);
+    }
+
+    /**
+     * Cheat codes to the game.
+     *
+     * @param CreativeWork|CreativeWork[] $cheatCode
+     *
+     * @return static
+     *
+     * @see http://schema.org/cheatCode
+     */
+    public function cheatCode($cheatCode)
+    {
+        return $this->setProperty('cheatCode', $cheatCode);
+    }
+
+    /**
      * A citation or reference to another creative work, such as another
      * publication, web page, scholarly article, etc.
      *
@@ -701,6 +426,20 @@ class VideoGameSeries extends BaseType implements CreativeWorkSeriesContract, Cr
     public function commentCount($commentCount)
     {
         return $this->setProperty('commentCount', $commentCount);
+    }
+
+    /**
+     * A season that is part of the media series.
+     *
+     * @param CreativeWorkSeason|CreativeWorkSeason[] $containsSeason
+     *
+     * @return static
+     *
+     * @see http://schema.org/containsSeason
+     */
+    public function containsSeason($containsSeason)
+    {
+        return $this->setProperty('containsSeason', $containsSeason);
     }
 
     /**
@@ -835,6 +574,68 @@ class VideoGameSeries extends BaseType implements CreativeWorkSeriesContract, Cr
     }
 
     /**
+     * A description of the item.
+     *
+     * @param string|string[] $description
+     *
+     * @return static
+     *
+     * @see http://schema.org/description
+     */
+    public function description($description)
+    {
+        return $this->setProperty('description', $description);
+    }
+
+    /**
+     * A director of e.g. tv, radio, movie, video gaming etc. content, or of an
+     * event. Directors can be associated with individual items or with a
+     * series, episode, clip.
+     *
+     * @param Person|Person[] $director
+     *
+     * @return static
+     *
+     * @see http://schema.org/director
+     */
+    public function director($director)
+    {
+        return $this->setProperty('director', $director);
+    }
+
+    /**
+     * A director of e.g. tv, radio, movie, video games etc. content. Directors
+     * can be associated with individual items or with a series, episode, clip.
+     *
+     * @param Person|Person[] $directors
+     *
+     * @return static
+     *
+     * @see http://schema.org/directors
+     */
+    public function directors($directors)
+    {
+        return $this->setProperty('directors', $directors);
+    }
+
+    /**
+     * A sub property of description. A short description of the item used to
+     * disambiguate from other, similar items. Information from other properties
+     * (in particular, name) may be necessary for the description to be useful
+     * for disambiguation.
+     *
+     * @param string|string[] $disambiguatingDescription
+     *
+     * @return static
+     *
+     * @see http://schema.org/disambiguatingDescription
+     */
+    public function disambiguatingDescription($disambiguatingDescription)
+    {
+        return $this->setProperty('disambiguatingDescription', $disambiguatingDescription);
+    }
+
+    /**
      * A link to the page containing the comments of the CreativeWork.
      *
      * @param string|string[] $discussionUrl
@@ -948,6 +749,49 @@ class VideoGameSeries extends BaseType implements CreativeWorkSeriesContract, Cr
     }
 
     /**
+     * The end date and time of the item (in [ISO 8601 date
+     * format](http://en.wikipedia.org/wiki/ISO_8601)).
+     *
+     * @param \DateTimeInterface|\DateTimeInterface[] $endDate
+     *
+     * @return static
+     *
+     * @see http://schema.org/endDate
+     */
+    public function endDate($endDate)
+    {
+        return $this->setProperty('endDate', $endDate);
+    }
+
+    /**
+     * An episode of a tv, radio or game media within a series or season.
+     *
+     * @param Episode|Episode[] $episode
+     *
+     * @return static
+     *
+     * @see http://schema.org/episode
+     */
+    public function episode($episode)
+    {
+        return $this->setProperty('episode', $episode);
+    }
+
+    /**
+     * An episode of a TV/radio series or season.
+     *
+     * @param Episode|Episode[] $episodes
+     *
+     * @return static
+     *
+     * @see http://schema.org/episodes
+     */
+    public function episodes($episodes)
+    {
+        return $this->setProperty('episodes', $episodes);
+    }
+
+    /**
      * A creative work that this work is an
      * example/instance/realization/derivation of.
      *
@@ -1017,6 +861,51 @@ class VideoGameSeries extends BaseType implements CreativeWorkSeriesContract, Cr
     }
 
     /**
+     * An item is an object within the game world that can be collected by a
+     * player or, occasionally, a non-player character.
+     *
+     * @param Thing|Thing[] $gameItem
+     *
+     * @return static
+     *
+     * @see http://schema.org/gameItem
+     */
+    public function gameItem($gameItem)
+    {
+        return $this->setProperty('gameItem', $gameItem);
+    }
+
+    /**
+     * Real or fictional location of the game (or part of game).
+     *
+     * @param Place|Place[]|PostalAddress|PostalAddress[]|string|string[] $gameLocation
+     *
+     * @return static
+     *
+     * @see http://schema.org/gameLocation
+     */
+    public function gameLocation($gameLocation)
+    {
+        return $this->setProperty('gameLocation', $gameLocation);
+    }
+
+    /**
+     * The electronic systems used to play <a
+     * href="http://en.wikipedia.org/wiki/Category:Video_game_platforms">video
+     * games</a>.
+     *
+     * @param Thing|Thing[]|string|string[] $gamePlatform
+     *
+     * @return static
+     *
+     * @see http://schema.org/gamePlatform
+     */
+    public function gamePlatform($gamePlatform)
+    {
+        return $this->setProperty('gamePlatform', $gamePlatform);
+    }
+
+    /**
      * Genre of the creative work, broadcast channel or group.
      *
      * @param string|string[] $genre
@@ -1057,6 +946,39 @@ class VideoGameSeries extends BaseType implements CreativeWorkSeriesContract, Cr
     public function headline($headline)
     {
         return $this->setProperty('headline', $headline);
+    }
+
+    /**
+     * The identifier property represents any kind of identifier for any kind of
+     * [[Thing]], such as ISBNs, GTIN codes, UUIDs etc. Schema.org provides
+     * dedicated properties for representing many of these, either as textual
+     * strings or as URL (URI) links. See [background
+     * notes](/docs/datamodel.html#identifierBg) for more details.
+     *
+     * @param PropertyValue|PropertyValue[]|string|string[] $identifier
+     *
+     * @return static
+     *
+     * @see http://schema.org/identifier
+     */
+    public function identifier($identifier)
+    {
+        return $this->setProperty('identifier', $identifier);
+    }
+
+    /**
+     * An image of the item. This can be a [[URL]] or a fully described
+     * [[ImageObject]].
+     *
+     * @param ImageObject|ImageObject[]|string|string[] $image
+     *
+     * @return static
+     *
+     * @see http://schema.org/image
+     */
+    public function image($image)
+    {
+        return $this->setProperty('image', $image);
     }
 
     /**
@@ -1182,6 +1104,22 @@ class VideoGameSeries extends BaseType implements CreativeWorkSeriesContract, Cr
     }
 
     /**
+     * The International Standard Serial Number (ISSN) that identifies this
+     * serial publication. You can repeat this property to identify different
+     * formats of, or the linking ISSN (ISSN-L) for, this serial publication.
+     *
+     * @param string|string[] $issn
+     *
+     * @return static
+     *
+     * @see http://schema.org/issn
+     */
+    public function issn($issn)
+    {
+        return $this->setProperty('issn', $issn);
+    }
+
+    /**
      * Keywords or tags used to describe this content. Multiple entries in a
      * keywords list are typically delimited by commas.
      *
@@ -1257,6 +1195,22 @@ class VideoGameSeries extends BaseType implements CreativeWorkSeriesContract, Cr
     }
 
     /**
+     * Indicates a page (or other CreativeWork) for which this thing is the main
+     * entity being described. See [background
+     * notes](/docs/datamodel.html#mainEntityBackground) for details.
+     *
+     * @param CreativeWork|CreativeWork[]|string|string[] $mainEntityOfPage
+     *
+     * @return static
+     *
+     * @see http://schema.org/mainEntityOfPage
+     */
+    public function mainEntityOfPage($mainEntityOfPage)
+    {
+        return $this->setProperty('mainEntityOfPage', $mainEntityOfPage);
+    }
+
+    /**
      * A material that something is made from, e.g. leather, wool, cotton,
      * paper.
      *
@@ -1287,6 +1241,76 @@ class VideoGameSeries extends BaseType implements CreativeWorkSeriesContract, Cr
     }
 
     /**
+     * The composer of the soundtrack.
+     *
+     * @param MusicGroup|MusicGroup[]|Person|Person[] $musicBy
+     *
+     * @return static
+     *
+     * @see http://schema.org/musicBy
+     */
+    public function musicBy($musicBy)
+    {
+        return $this->setProperty('musicBy', $musicBy);
+    }
+
+    /**
+     * The name of the item.
+     *
+     * @param string|string[] $name
+     *
+     * @return static
+     *
+     * @see http://schema.org/name
+     */
+    public function name($name)
+    {
+        return $this->setProperty('name', $name);
+    }
+
+    /**
+     * The number of episodes in this season or series.
+     *
+     * @param int|int[] $numberOfEpisodes
+     *
+     * @return static
+     *
+     * @see http://schema.org/numberOfEpisodes
+     */
+    public function numberOfEpisodes($numberOfEpisodes)
+    {
+        return $this->setProperty('numberOfEpisodes', $numberOfEpisodes);
+    }
+
+    /**
+     * Indicate how many people can play this game (minimum, maximum, or range).
+     *
+     * @param QuantitativeValue|QuantitativeValue[] $numberOfPlayers
+     *
+     * @return static
+     *
+     * @see http://schema.org/numberOfPlayers
+     */
+    public function numberOfPlayers($numberOfPlayers)
+    {
+        return $this->setProperty('numberOfPlayers', $numberOfPlayers);
+    }
+
+    /**
+     * The number of seasons in this series.
+     *
+     * @param int|int[] $numberOfSeasons
+     *
+     * @return static
+     *
+     * @see http://schema.org/numberOfSeasons
+     */
+    public function numberOfSeasons($numberOfSeasons)
+    {
+        return $this->setProperty('numberOfSeasons', $numberOfSeasons);
+    }
+
+    /**
      * An offer to provide this item&#x2014;for example, an offer to sell a
      * product, rent the DVD of a movie, perform a service, or give away tickets
      * to an event.
@@ -1300,6 +1324,22 @@ class VideoGameSeries extends BaseType implements CreativeWorkSeriesContract, Cr
     public function offers($offers)
     {
         return $this->setProperty('offers', $offers);
+    }
+
+    /**
+     * Indicates whether this game is multi-player, co-op or single-player.  The
+     * game can be marked as multi-player, co-op and single-player at the same
+     * time.
+     *
+     * @param GamePlayMode|GamePlayMode[] $playMode
+     *
+     * @return static
+     *
+     * @see http://schema.org/playMode
+     */
+    public function playMode($playMode)
+    {
+        return $this->setProperty('playMode', $playMode);
     }
 
     /**
@@ -1317,6 +1357,21 @@ class VideoGameSeries extends BaseType implements CreativeWorkSeriesContract, Cr
     }
 
     /**
+     * Indicates a potential Action, which describes an idealized action in
+     * which this thing would play an 'object' role.
+     *
+     * @param Action|Action[] $potentialAction
+     *
+     * @return static
+     *
+     * @see http://schema.org/potentialAction
+     */
+    public function potentialAction($potentialAction)
+    {
+        return $this->setProperty('potentialAction', $potentialAction);
+    }
+
+    /**
      * The person or organization who produced the work (e.g. music album,
      * movie, tv/radio series etc.).
      *
@@ -1329,6 +1384,21 @@ class VideoGameSeries extends BaseType implements CreativeWorkSeriesContract, Cr
     public function producer($producer)
     {
         return $this->setProperty('producer', $producer);
+    }
+
+    /**
+     * The production company or studio responsible for the item e.g. series,
+     * video game, episode etc.
+     *
+     * @param Organization|Organization[] $productionCompany
+     *
+     * @return static
+     *
+     * @see http://schema.org/productionCompany
+     */
+    public function productionCompany($productionCompany)
+    {
+        return $this->setProperty('productionCompany', $productionCompany);
     }
 
     /**
@@ -1400,6 +1470,21 @@ class VideoGameSeries extends BaseType implements CreativeWorkSeriesContract, Cr
     }
 
     /**
+     * The task that a player-controlled character, or group of characters may
+     * complete in order to gain a reward.
+     *
+     * @param Thing|Thing[] $quest
+     *
+     * @return static
+     *
+     * @see http://schema.org/quest
+     */
+    public function quest($quest)
+    {
+        return $this->setProperty('quest', $quest);
+    }
+
+    /**
      * The Event where the CreativeWork was recorded. The CreativeWork may
      * capture all or part of the event.
      *
@@ -1458,6 +1543,22 @@ class VideoGameSeries extends BaseType implements CreativeWorkSeriesContract, Cr
     }
 
     /**
+     * URL of a reference Web page that unambiguously indicates the item's
+     * identity. E.g. the URL of the item's Wikipedia page, Wikidata entry, or
+     * official website.
+     *
+     * @param string|string[] $sameAs
+     *
+     * @return static
+     *
+     * @see http://schema.org/sameAs
+     */
+    public function sameAs($sameAs)
+    {
+        return $this->setProperty('sameAs', $sameAs);
+    }
+
+    /**
      * Indicates (by URL or string) a particular version of a schema used in
      * some CreativeWork. For example, a document could declare a schemaVersion
      * using an URL such as http://schema.org/version/2.0/ if precise indication
@@ -1472,6 +1573,34 @@ class VideoGameSeries extends BaseType implements CreativeWorkSeriesContract, Cr
     public function schemaVersion($schemaVersion)
     {
         return $this->setProperty('schemaVersion', $schemaVersion);
+    }
+
+    /**
+     * A season in a media series.
+     *
+     * @param CreativeWorkSeason|CreativeWorkSeason[] $season
+     *
+     * @return static
+     *
+     * @see http://schema.org/season
+     */
+    public function season($season)
+    {
+        return $this->setProperty('season', $season);
+    }
+
+    /**
+     * A season in a media series.
+     *
+     * @param CreativeWorkSeason|CreativeWorkSeason[] $seasons
+     *
+     * @return static
+     *
+     * @see http://schema.org/seasons
+     */
+    public function seasons($seasons)
+    {
+        return $this->setProperty('seasons', $seasons);
     }
 
     /**
@@ -1537,6 +1666,35 @@ class VideoGameSeries extends BaseType implements CreativeWorkSeriesContract, Cr
     public function sponsor($sponsor)
     {
         return $this->setProperty('sponsor', $sponsor);
+    }
+
+    /**
+     * The start date and time of the item (in [ISO 8601 date
+     * format](http://en.wikipedia.org/wiki/ISO_8601)).
+     *
+     * @param \DateTimeInterface|\DateTimeInterface[] $startDate
+     *
+     * @return static
+     *
+     * @see http://schema.org/startDate
+     */
+    public function startDate($startDate)
+    {
+        return $this->setProperty('startDate', $startDate);
+    }
+
+    /**
+     * A CreativeWork or Event about this Thing.
+     *
+     * @param CreativeWork|CreativeWork[]|Event|Event[] $subjectOf
+     *
+     * @return static
+     *
+     * @see http://schema.org/subjectOf
+     */
+    public function subjectOf($subjectOf)
+    {
+        return $this->setProperty('subjectOf', $subjectOf);
     }
 
     /**
@@ -1631,6 +1789,20 @@ class VideoGameSeries extends BaseType implements CreativeWorkSeriesContract, Cr
     }
 
     /**
+     * The trailer of a movie or tv/radio series, season, episode, etc.
+     *
+     * @param VideoObject|VideoObject[] $trailer
+     *
+     * @return static
+     *
+     * @see http://schema.org/trailer
+     */
+    public function trailer($trailer)
+    {
+        return $this->setProperty('trailer', $trailer);
+    }
+
+    /**
      * Organization or person who adapts a creative work to different languages,
      * regional differences and technical requirements of a target market, or
      * that translates during some event.
@@ -1658,6 +1830,20 @@ class VideoGameSeries extends BaseType implements CreativeWorkSeriesContract, Cr
     public function typicalAgeRange($typicalAgeRange)
     {
         return $this->setProperty('typicalAgeRange', $typicalAgeRange);
+    }
+
+    /**
+     * URL of the item.
+     *
+     * @param string|string[] $url
+     *
+     * @return static
+     *
+     * @see http://schema.org/url
+     */
+    public function url($url)
+    {
+        return $this->setProperty('url', $url);
     }
 
     /**
@@ -1701,208 +1887,6 @@ class VideoGameSeries extends BaseType implements CreativeWorkSeriesContract, Cr
     public function workExample($workExample)
     {
         return $this->setProperty('workExample', $workExample);
-    }
-
-    /**
-     * An additional type for the item, typically used for adding more specific
-     * types from external vocabularies in microdata syntax. This is a
-     * relationship between something and a class that the thing is in. In RDFa
-     * syntax, it is better to use the native RDFa syntax - the 'typeof'
-     * attribute - for multiple types. Schema.org tools may have only weaker
-     * understanding of extra types, in particular those defined externally.
-     *
-     * @param string|string[] $additionalType
-     *
-     * @return static
-     *
-     * @see http://schema.org/additionalType
-     */
-    public function additionalType($additionalType)
-    {
-        return $this->setProperty('additionalType', $additionalType);
-    }
-
-    /**
-     * An alias for the item.
-     *
-     * @param string|string[] $alternateName
-     *
-     * @return static
-     *
-     * @see http://schema.org/alternateName
-     */
-    public function alternateName($alternateName)
-    {
-        return $this->setProperty('alternateName', $alternateName);
-    }
-
-    /**
-     * A description of the item.
-     *
-     * @param string|string[] $description
-     *
-     * @return static
-     *
-     * @see http://schema.org/description
-     */
-    public function description($description)
-    {
-        return $this->setProperty('description', $description);
-    }
-
-    /**
-     * A sub property of description. A short description of the item used to
-     * disambiguate from other, similar items. Information from other properties
-     * (in particular, name) may be necessary for the description to be useful
-     * for disambiguation.
-     *
-     * @param string|string[] $disambiguatingDescription
-     *
-     * @return static
-     *
-     * @see http://schema.org/disambiguatingDescription
-     */
-    public function disambiguatingDescription($disambiguatingDescription)
-    {
-        return $this->setProperty('disambiguatingDescription', $disambiguatingDescription);
-    }
-
-    /**
-     * The identifier property represents any kind of identifier for any kind of
-     * [[Thing]], such as ISBNs, GTIN codes, UUIDs etc. Schema.org provides
-     * dedicated properties for representing many of these, either as textual
-     * strings or as URL (URI) links. See [background
-     * notes](/docs/datamodel.html#identifierBg) for more details.
-     *
-     * @param PropertyValue|PropertyValue[]|string|string[] $identifier
-     *
-     * @return static
-     *
-     * @see http://schema.org/identifier
-     */
-    public function identifier($identifier)
-    {
-        return $this->setProperty('identifier', $identifier);
-    }
-
-    /**
-     * An image of the item. This can be a [[URL]] or a fully described
-     * [[ImageObject]].
-     *
-     * @param ImageObject|ImageObject[]|string|string[] $image
-     *
-     * @return static
-     *
-     * @see http://schema.org/image
-     */
-    public function image($image)
-    {
-        return $this->setProperty('image', $image);
-    }
-
-    /**
-     * Indicates a page (or other CreativeWork) for which this thing is the main
-     * entity being described. See [background
-     * notes](/docs/datamodel.html#mainEntityBackground) for details.
-     *
-     * @param CreativeWork|CreativeWork[]|string|string[] $mainEntityOfPage
-     *
-     * @return static
-     *
-     * @see http://schema.org/mainEntityOfPage
-     */
-    public function mainEntityOfPage($mainEntityOfPage)
-    {
-        return $this->setProperty('mainEntityOfPage', $mainEntityOfPage);
-    }
-
-    /**
-     * The name of the item.
-     *
-     * @param string|string[] $name
-     *
-     * @return static
-     *
-     * @see http://schema.org/name
-     */
-    public function name($name)
-    {
-        return $this->setProperty('name', $name);
-    }
-
-    /**
-     * Indicates a potential Action, which describes an idealized action in
-     * which this thing would play an 'object' role.
-     *
-     * @param Action|Action[] $potentialAction
-     *
-     * @return static
-     *
-     * @see http://schema.org/potentialAction
-     */
-    public function potentialAction($potentialAction)
-    {
-        return $this->setProperty('potentialAction', $potentialAction);
-    }
-
-    /**
-     * URL of a reference Web page that unambiguously indicates the item's
-     * identity. E.g. the URL of the item's Wikipedia page, Wikidata entry, or
-     * official website.
-     *
-     * @param string|string[] $sameAs
-     *
-     * @return static
-     *
-     * @see http://schema.org/sameAs
-     */
-    public function sameAs($sameAs)
-    {
-        return $this->setProperty('sameAs', $sameAs);
-    }
-
-    /**
-     * A CreativeWork or Event about this Thing.
-     *
-     * @param CreativeWork|CreativeWork[]|Event|Event[] $subjectOf
-     *
-     * @return static
-     *
-     * @see http://schema.org/subjectOf
-     */
-    public function subjectOf($subjectOf)
-    {
-        return $this->setProperty('subjectOf', $subjectOf);
-    }
-
-    /**
-     * URL of the item.
-     *
-     * @param string|string[] $url
-     *
-     * @return static
-     *
-     * @see http://schema.org/url
-     */
-    public function url($url)
-    {
-        return $this->setProperty('url', $url);
-    }
-
-    /**
-     * A director of e.g. tv, radio, movie, video gaming etc. content, or of an
-     * event. Directors can be associated with individual items or with a
-     * series, episode, clip.
-     *
-     * @param Person|Person[] $director
-     *
-     * @return static
-     *
-     * @see http://schema.org/director
-     */
-    public function director($director)
-    {
-        return $this->setProperty('director', $director);
     }
 
 }

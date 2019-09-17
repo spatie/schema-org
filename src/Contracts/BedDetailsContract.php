@@ -4,10 +4,6 @@ namespace Spatie\SchemaOrg\Contracts;
 
 interface BedDetailsContract
 {
-    public function numberOfBeds($numberOfBeds);
-
-    public function typeOfBed($typeOfBed);
-
     public function additionalType($additionalType);
 
     public function alternateName($alternateName);
@@ -24,11 +20,15 @@ interface BedDetailsContract
 
     public function name($name);
 
+    public function numberOfBeds($numberOfBeds);
+
     public function potentialAction($potentialAction);
 
     public function sameAs($sameAs);
 
     public function subjectOf($subjectOf);
+
+    public function typeOfBed($typeOfBed);
 
     public function url($url);
 

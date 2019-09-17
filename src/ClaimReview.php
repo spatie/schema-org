@@ -16,80 +16,6 @@ use \Spatie\SchemaOrg\Contracts\ThingContract;
 class ClaimReview extends BaseType implements ReviewContract, CreativeWorkContract, ThingContract
 {
     /**
-     * A short summary of the specific claims reviewed in a ClaimReview.
-     *
-     * @param string|string[] $claimReviewed
-     *
-     * @return static
-     *
-     * @see http://schema.org/claimReviewed
-     */
-    public function claimReviewed($claimReviewed)
-    {
-        return $this->setProperty('claimReviewed', $claimReviewed);
-    }
-
-    /**
-     * The item that is being reviewed/rated.
-     *
-     * @param Thing|Thing[] $itemReviewed
-     *
-     * @return static
-     *
-     * @see http://schema.org/itemReviewed
-     */
-    public function itemReviewed($itemReviewed)
-    {
-        return $this->setProperty('itemReviewed', $itemReviewed);
-    }
-
-    /**
-     * This Review or Rating is relevant to this part or facet of the
-     * itemReviewed.
-     *
-     * @param string|string[] $reviewAspect
-     *
-     * @return static
-     *
-     * @see http://schema.org/reviewAspect
-     */
-    public function reviewAspect($reviewAspect)
-    {
-        return $this->setProperty('reviewAspect', $reviewAspect);
-    }
-
-    /**
-     * The actual body of the review.
-     *
-     * @param string|string[] $reviewBody
-     *
-     * @return static
-     *
-     * @see http://schema.org/reviewBody
-     */
-    public function reviewBody($reviewBody)
-    {
-        return $this->setProperty('reviewBody', $reviewBody);
-    }
-
-    /**
-     * The rating given in this review. Note that reviews can themselves be
-     * rated. The ```reviewRating``` applies to rating given by the review. The
-     * [[aggregateRating]] property applies to the review itself, as a creative
-     * work.
-     *
-     * @param Rating|Rating[] $reviewRating
-     *
-     * @return static
-     *
-     * @see http://schema.org/reviewRating
-     */
-    public function reviewRating($reviewRating)
-    {
-        return $this->setProperty('reviewRating', $reviewRating);
-    }
-
-    /**
      * The subject matter of the content.
      *
      * @param Thing|Thing[] $about
@@ -234,6 +160,25 @@ class ClaimReview extends BaseType implements ReviewContract, CreativeWorkContra
     }
 
     /**
+     * An additional type for the item, typically used for adding more specific
+     * types from external vocabularies in microdata syntax. This is a
+     * relationship between something and a class that the thing is in. In RDFa
+     * syntax, it is better to use the native RDFa syntax - the 'typeof'
+     * attribute - for multiple types. Schema.org tools may have only weaker
+     * understanding of extra types, in particular those defined externally.
+     *
+     * @param string|string[] $additionalType
+     *
+     * @return static
+     *
+     * @see http://schema.org/additionalType
+     */
+    public function additionalType($additionalType)
+    {
+        return $this->setProperty('additionalType', $additionalType);
+    }
+
+    /**
      * The overall rating, based on a collection of reviews or ratings, of the
      * item.
      *
@@ -246,6 +191,20 @@ class ClaimReview extends BaseType implements ReviewContract, CreativeWorkContra
     public function aggregateRating($aggregateRating)
     {
         return $this->setProperty('aggregateRating', $aggregateRating);
+    }
+
+    /**
+     * An alias for the item.
+     *
+     * @param string|string[] $alternateName
+     *
+     * @return static
+     *
+     * @see http://schema.org/alternateName
+     */
+    public function alternateName($alternateName)
+    {
+        return $this->setProperty('alternateName', $alternateName);
     }
 
     /**
@@ -376,6 +335,20 @@ class ClaimReview extends BaseType implements ReviewContract, CreativeWorkContra
     public function citation($citation)
     {
         return $this->setProperty('citation', $citation);
+    }
+
+    /**
+     * A short summary of the specific claims reviewed in a ClaimReview.
+     *
+     * @param string|string[] $claimReviewed
+     *
+     * @return static
+     *
+     * @see http://schema.org/claimReviewed
+     */
+    public function claimReviewed($claimReviewed)
+    {
+        return $this->setProperty('claimReviewed', $claimReviewed);
     }
 
     /**
@@ -537,6 +510,37 @@ class ClaimReview extends BaseType implements ReviewContract, CreativeWorkContra
     public function datePublished($datePublished)
     {
         return $this->setProperty('datePublished', $datePublished);
+    }
+
+    /**
+     * A description of the item.
+     *
+     * @param string|string[] $description
+     *
+     * @return static
+     *
+     * @see http://schema.org/description
+     */
+    public function description($description)
+    {
+        return $this->setProperty('description', $description);
+    }
+
+    /**
+     * A sub property of description. A short description of the item used to
+     * disambiguate from other, similar items. Information from other properties
+     * (in particular, name) may be necessary for the description to be useful
+     * for disambiguation.
+     *
+     * @param string|string[] $disambiguatingDescription
+     *
+     * @return static
+     *
+     * @see http://schema.org/disambiguatingDescription
+     */
+    public function disambiguatingDescription($disambiguatingDescription)
+    {
+        return $this->setProperty('disambiguatingDescription', $disambiguatingDescription);
     }
 
     /**
@@ -765,6 +769,39 @@ class ClaimReview extends BaseType implements ReviewContract, CreativeWorkContra
     }
 
     /**
+     * The identifier property represents any kind of identifier for any kind of
+     * [[Thing]], such as ISBNs, GTIN codes, UUIDs etc. Schema.org provides
+     * dedicated properties for representing many of these, either as textual
+     * strings or as URL (URI) links. See [background
+     * notes](/docs/datamodel.html#identifierBg) for more details.
+     *
+     * @param PropertyValue|PropertyValue[]|string|string[] $identifier
+     *
+     * @return static
+     *
+     * @see http://schema.org/identifier
+     */
+    public function identifier($identifier)
+    {
+        return $this->setProperty('identifier', $identifier);
+    }
+
+    /**
+     * An image of the item. This can be a [[URL]] or a fully described
+     * [[ImageObject]].
+     *
+     * @param ImageObject|ImageObject[]|string|string[] $image
+     *
+     * @return static
+     *
+     * @see http://schema.org/image
+     */
+    public function image($image)
+    {
+        return $this->setProperty('image', $image);
+    }
+
+    /**
      * The language of the content or performance or used in an action. Please
      * use one of the language codes from the [IETF BCP 47
      * standard](http://tools.ietf.org/html/bcp47). See also
@@ -887,6 +924,20 @@ class ClaimReview extends BaseType implements ReviewContract, CreativeWorkContra
     }
 
     /**
+     * The item that is being reviewed/rated.
+     *
+     * @param Thing|Thing[] $itemReviewed
+     *
+     * @return static
+     *
+     * @see http://schema.org/itemReviewed
+     */
+    public function itemReviewed($itemReviewed)
+    {
+        return $this->setProperty('itemReviewed', $itemReviewed);
+    }
+
+    /**
      * Keywords or tags used to describe this content. Multiple entries in a
      * keywords list are typically delimited by commas.
      *
@@ -962,6 +1013,22 @@ class ClaimReview extends BaseType implements ReviewContract, CreativeWorkContra
     }
 
     /**
+     * Indicates a page (or other CreativeWork) for which this thing is the main
+     * entity being described. See [background
+     * notes](/docs/datamodel.html#mainEntityBackground) for details.
+     *
+     * @param CreativeWork|CreativeWork[]|string|string[] $mainEntityOfPage
+     *
+     * @return static
+     *
+     * @see http://schema.org/mainEntityOfPage
+     */
+    public function mainEntityOfPage($mainEntityOfPage)
+    {
+        return $this->setProperty('mainEntityOfPage', $mainEntityOfPage);
+    }
+
+    /**
      * A material that something is made from, e.g. leather, wool, cotton,
      * paper.
      *
@@ -992,6 +1059,20 @@ class ClaimReview extends BaseType implements ReviewContract, CreativeWorkContra
     }
 
     /**
+     * The name of the item.
+     *
+     * @param string|string[] $name
+     *
+     * @return static
+     *
+     * @see http://schema.org/name
+     */
+    public function name($name)
+    {
+        return $this->setProperty('name', $name);
+    }
+
+    /**
      * An offer to provide this item&#x2014;for example, an offer to sell a
      * product, rent the DVD of a movie, perform a service, or give away tickets
      * to an event.
@@ -1019,6 +1100,21 @@ class ClaimReview extends BaseType implements ReviewContract, CreativeWorkContra
     public function position($position)
     {
         return $this->setProperty('position', $position);
+    }
+
+    /**
+     * Indicates a potential Action, which describes an idealized action in
+     * which this thing would play an 'object' role.
+     *
+     * @param Action|Action[] $potentialAction
+     *
+     * @return static
+     *
+     * @see http://schema.org/potentialAction
+     */
+    public function potentialAction($potentialAction)
+    {
+        return $this->setProperty('potentialAction', $potentialAction);
     }
 
     /**
@@ -1149,6 +1245,52 @@ class ClaimReview extends BaseType implements ReviewContract, CreativeWorkContra
     }
 
     /**
+     * This Review or Rating is relevant to this part or facet of the
+     * itemReviewed.
+     *
+     * @param string|string[] $reviewAspect
+     *
+     * @return static
+     *
+     * @see http://schema.org/reviewAspect
+     */
+    public function reviewAspect($reviewAspect)
+    {
+        return $this->setProperty('reviewAspect', $reviewAspect);
+    }
+
+    /**
+     * The actual body of the review.
+     *
+     * @param string|string[] $reviewBody
+     *
+     * @return static
+     *
+     * @see http://schema.org/reviewBody
+     */
+    public function reviewBody($reviewBody)
+    {
+        return $this->setProperty('reviewBody', $reviewBody);
+    }
+
+    /**
+     * The rating given in this review. Note that reviews can themselves be
+     * rated. The ```reviewRating``` applies to rating given by the review. The
+     * [[aggregateRating]] property applies to the review itself, as a creative
+     * work.
+     *
+     * @param Rating|Rating[] $reviewRating
+     *
+     * @return static
+     *
+     * @see http://schema.org/reviewRating
+     */
+    public function reviewRating($reviewRating)
+    {
+        return $this->setProperty('reviewRating', $reviewRating);
+    }
+
+    /**
      * Review of the item.
      *
      * @param Review|Review[] $reviews
@@ -1160,6 +1302,22 @@ class ClaimReview extends BaseType implements ReviewContract, CreativeWorkContra
     public function reviews($reviews)
     {
         return $this->setProperty('reviews', $reviews);
+    }
+
+    /**
+     * URL of a reference Web page that unambiguously indicates the item's
+     * identity. E.g. the URL of the item's Wikipedia page, Wikidata entry, or
+     * official website.
+     *
+     * @param string|string[] $sameAs
+     *
+     * @return static
+     *
+     * @see http://schema.org/sameAs
+     */
+    public function sameAs($sameAs)
+    {
+        return $this->setProperty('sameAs', $sameAs);
     }
 
     /**
@@ -1242,6 +1400,20 @@ class ClaimReview extends BaseType implements ReviewContract, CreativeWorkContra
     public function sponsor($sponsor)
     {
         return $this->setProperty('sponsor', $sponsor);
+    }
+
+    /**
+     * A CreativeWork or Event about this Thing.
+     *
+     * @param CreativeWork|CreativeWork[]|Event|Event[] $subjectOf
+     *
+     * @return static
+     *
+     * @see http://schema.org/subjectOf
+     */
+    public function subjectOf($subjectOf)
+    {
+        return $this->setProperty('subjectOf', $subjectOf);
     }
 
     /**
@@ -1366,6 +1538,20 @@ class ClaimReview extends BaseType implements ReviewContract, CreativeWorkContra
     }
 
     /**
+     * URL of the item.
+     *
+     * @param string|string[] $url
+     *
+     * @return static
+     *
+     * @see http://schema.org/url
+     */
+    public function url($url)
+    {
+        return $this->setProperty('url', $url);
+    }
+
+    /**
      * The version of the CreativeWork embodied by a specified resource.
      *
      * @param float|float[]|int|int[]|string|string[] $version
@@ -1406,192 +1592,6 @@ class ClaimReview extends BaseType implements ReviewContract, CreativeWorkContra
     public function workExample($workExample)
     {
         return $this->setProperty('workExample', $workExample);
-    }
-
-    /**
-     * An additional type for the item, typically used for adding more specific
-     * types from external vocabularies in microdata syntax. This is a
-     * relationship between something and a class that the thing is in. In RDFa
-     * syntax, it is better to use the native RDFa syntax - the 'typeof'
-     * attribute - for multiple types. Schema.org tools may have only weaker
-     * understanding of extra types, in particular those defined externally.
-     *
-     * @param string|string[] $additionalType
-     *
-     * @return static
-     *
-     * @see http://schema.org/additionalType
-     */
-    public function additionalType($additionalType)
-    {
-        return $this->setProperty('additionalType', $additionalType);
-    }
-
-    /**
-     * An alias for the item.
-     *
-     * @param string|string[] $alternateName
-     *
-     * @return static
-     *
-     * @see http://schema.org/alternateName
-     */
-    public function alternateName($alternateName)
-    {
-        return $this->setProperty('alternateName', $alternateName);
-    }
-
-    /**
-     * A description of the item.
-     *
-     * @param string|string[] $description
-     *
-     * @return static
-     *
-     * @see http://schema.org/description
-     */
-    public function description($description)
-    {
-        return $this->setProperty('description', $description);
-    }
-
-    /**
-     * A sub property of description. A short description of the item used to
-     * disambiguate from other, similar items. Information from other properties
-     * (in particular, name) may be necessary for the description to be useful
-     * for disambiguation.
-     *
-     * @param string|string[] $disambiguatingDescription
-     *
-     * @return static
-     *
-     * @see http://schema.org/disambiguatingDescription
-     */
-    public function disambiguatingDescription($disambiguatingDescription)
-    {
-        return $this->setProperty('disambiguatingDescription', $disambiguatingDescription);
-    }
-
-    /**
-     * The identifier property represents any kind of identifier for any kind of
-     * [[Thing]], such as ISBNs, GTIN codes, UUIDs etc. Schema.org provides
-     * dedicated properties for representing many of these, either as textual
-     * strings or as URL (URI) links. See [background
-     * notes](/docs/datamodel.html#identifierBg) for more details.
-     *
-     * @param PropertyValue|PropertyValue[]|string|string[] $identifier
-     *
-     * @return static
-     *
-     * @see http://schema.org/identifier
-     */
-    public function identifier($identifier)
-    {
-        return $this->setProperty('identifier', $identifier);
-    }
-
-    /**
-     * An image of the item. This can be a [[URL]] or a fully described
-     * [[ImageObject]].
-     *
-     * @param ImageObject|ImageObject[]|string|string[] $image
-     *
-     * @return static
-     *
-     * @see http://schema.org/image
-     */
-    public function image($image)
-    {
-        return $this->setProperty('image', $image);
-    }
-
-    /**
-     * Indicates a page (or other CreativeWork) for which this thing is the main
-     * entity being described. See [background
-     * notes](/docs/datamodel.html#mainEntityBackground) for details.
-     *
-     * @param CreativeWork|CreativeWork[]|string|string[] $mainEntityOfPage
-     *
-     * @return static
-     *
-     * @see http://schema.org/mainEntityOfPage
-     */
-    public function mainEntityOfPage($mainEntityOfPage)
-    {
-        return $this->setProperty('mainEntityOfPage', $mainEntityOfPage);
-    }
-
-    /**
-     * The name of the item.
-     *
-     * @param string|string[] $name
-     *
-     * @return static
-     *
-     * @see http://schema.org/name
-     */
-    public function name($name)
-    {
-        return $this->setProperty('name', $name);
-    }
-
-    /**
-     * Indicates a potential Action, which describes an idealized action in
-     * which this thing would play an 'object' role.
-     *
-     * @param Action|Action[] $potentialAction
-     *
-     * @return static
-     *
-     * @see http://schema.org/potentialAction
-     */
-    public function potentialAction($potentialAction)
-    {
-        return $this->setProperty('potentialAction', $potentialAction);
-    }
-
-    /**
-     * URL of a reference Web page that unambiguously indicates the item's
-     * identity. E.g. the URL of the item's Wikipedia page, Wikidata entry, or
-     * official website.
-     *
-     * @param string|string[] $sameAs
-     *
-     * @return static
-     *
-     * @see http://schema.org/sameAs
-     */
-    public function sameAs($sameAs)
-    {
-        return $this->setProperty('sameAs', $sameAs);
-    }
-
-    /**
-     * A CreativeWork or Event about this Thing.
-     *
-     * @param CreativeWork|CreativeWork[]|Event|Event[] $subjectOf
-     *
-     * @return static
-     *
-     * @see http://schema.org/subjectOf
-     */
-    public function subjectOf($subjectOf)
-    {
-        return $this->setProperty('subjectOf', $subjectOf);
-    }
-
-    /**
-     * URL of the item.
-     *
-     * @param string|string[] $url
-     *
-     * @return static
-     *
-     * @see http://schema.org/url
-     */
-    public function url($url)
-    {
-        return $this->setProperty('url', $url);
     }
 
 }

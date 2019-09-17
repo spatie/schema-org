@@ -4,19 +4,13 @@ namespace Spatie\SchemaOrg\Contracts;
 
 interface TypeAndQuantityNodeContract
 {
-    public function amountOfThisGood($amountOfThisGood);
-
-    public function businessFunction($businessFunction);
-
-    public function typeOfGood($typeOfGood);
-
-    public function unitCode($unitCode);
-
-    public function unitText($unitText);
-
     public function additionalType($additionalType);
 
     public function alternateName($alternateName);
+
+    public function amountOfThisGood($amountOfThisGood);
+
+    public function businessFunction($businessFunction);
 
     public function description($description);
 
@@ -35,6 +29,12 @@ interface TypeAndQuantityNodeContract
     public function sameAs($sameAs);
 
     public function subjectOf($subjectOf);
+
+    public function typeOfGood($typeOfGood);
+
+    public function unitCode($unitCode);
+
+    public function unitText($unitText);
 
     public function url($url);
 

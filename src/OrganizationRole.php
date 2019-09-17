@@ -15,84 +15,6 @@ use \Spatie\SchemaOrg\Contracts\ThingContract;
 class OrganizationRole extends BaseType implements RoleContract, IntangibleContract, ThingContract
 {
     /**
-     * A number associated with a role in an organization, for example, the
-     * number on an athlete's jersey.
-     *
-     * @param float|float[]|int|int[] $numberedPosition
-     *
-     * @return static
-     *
-     * @see http://schema.org/numberedPosition
-     */
-    public function numberedPosition($numberedPosition)
-    {
-        return $this->setProperty('numberedPosition', $numberedPosition);
-    }
-
-    /**
-     * The end date and time of the item (in [ISO 8601 date
-     * format](http://en.wikipedia.org/wiki/ISO_8601)).
-     *
-     * @param \DateTimeInterface|\DateTimeInterface[] $endDate
-     *
-     * @return static
-     *
-     * @see http://schema.org/endDate
-     */
-    public function endDate($endDate)
-    {
-        return $this->setProperty('endDate', $endDate);
-    }
-
-    /**
-     * A position played, performed or filled by a person or organization, as
-     * part of an organization. For example, an athlete in a SportsTeam might
-     * play in the position named 'Quarterback'.
-     *
-     * @param string|string[] $namedPosition
-     *
-     * @return static
-     *
-     * @see http://schema.org/namedPosition
-     */
-    public function namedPosition($namedPosition)
-    {
-        return $this->setProperty('namedPosition', $namedPosition);
-    }
-
-    /**
-     * A role played, performed or filled by a person or organization. For
-     * example, the team of creators for a comic book might fill the roles named
-     * 'inker', 'penciller', and 'letterer'; or an athlete in a SportsTeam might
-     * play in the position named 'Quarterback'.
-     *
-     * @param string|string[] $roleName
-     *
-     * @return static
-     *
-     * @see http://schema.org/roleName
-     */
-    public function roleName($roleName)
-    {
-        return $this->setProperty('roleName', $roleName);
-    }
-
-    /**
-     * The start date and time of the item (in [ISO 8601 date
-     * format](http://en.wikipedia.org/wiki/ISO_8601)).
-     *
-     * @param \DateTimeInterface|\DateTimeInterface[] $startDate
-     *
-     * @return static
-     *
-     * @see http://schema.org/startDate
-     */
-    public function startDate($startDate)
-    {
-        return $this->setProperty('startDate', $startDate);
-    }
-
-    /**
      * An additional type for the item, typically used for adding more specific
      * types from external vocabularies in microdata syntax. This is a
      * relationship between something and a class that the thing is in. In RDFa
@@ -154,6 +76,21 @@ class OrganizationRole extends BaseType implements RoleContract, IntangibleContr
     public function disambiguatingDescription($disambiguatingDescription)
     {
         return $this->setProperty('disambiguatingDescription', $disambiguatingDescription);
+    }
+
+    /**
+     * The end date and time of the item (in [ISO 8601 date
+     * format](http://en.wikipedia.org/wiki/ISO_8601)).
+     *
+     * @param \DateTimeInterface|\DateTimeInterface[] $endDate
+     *
+     * @return static
+     *
+     * @see http://schema.org/endDate
+     */
+    public function endDate($endDate)
+    {
+        return $this->setProperty('endDate', $endDate);
     }
 
     /**
@@ -220,6 +157,37 @@ class OrganizationRole extends BaseType implements RoleContract, IntangibleContr
     }
 
     /**
+     * A position played, performed or filled by a person or organization, as
+     * part of an organization. For example, an athlete in a SportsTeam might
+     * play in the position named 'Quarterback'.
+     *
+     * @param string|string[] $namedPosition
+     *
+     * @return static
+     *
+     * @see http://schema.org/namedPosition
+     */
+    public function namedPosition($namedPosition)
+    {
+        return $this->setProperty('namedPosition', $namedPosition);
+    }
+
+    /**
+     * A number associated with a role in an organization, for example, the
+     * number on an athlete's jersey.
+     *
+     * @param float|float[]|int|int[] $numberedPosition
+     *
+     * @return static
+     *
+     * @see http://schema.org/numberedPosition
+     */
+    public function numberedPosition($numberedPosition)
+    {
+        return $this->setProperty('numberedPosition', $numberedPosition);
+    }
+
+    /**
      * Indicates a potential Action, which describes an idealized action in
      * which this thing would play an 'object' role.
      *
@@ -232,6 +200,23 @@ class OrganizationRole extends BaseType implements RoleContract, IntangibleContr
     public function potentialAction($potentialAction)
     {
         return $this->setProperty('potentialAction', $potentialAction);
+    }
+
+    /**
+     * A role played, performed or filled by a person or organization. For
+     * example, the team of creators for a comic book might fill the roles named
+     * 'inker', 'penciller', and 'letterer'; or an athlete in a SportsTeam might
+     * play in the position named 'Quarterback'.
+     *
+     * @param string|string[] $roleName
+     *
+     * @return static
+     *
+     * @see http://schema.org/roleName
+     */
+    public function roleName($roleName)
+    {
+        return $this->setProperty('roleName', $roleName);
     }
 
     /**
@@ -248,6 +233,21 @@ class OrganizationRole extends BaseType implements RoleContract, IntangibleContr
     public function sameAs($sameAs)
     {
         return $this->setProperty('sameAs', $sameAs);
+    }
+
+    /**
+     * The start date and time of the item (in [ISO 8601 date
+     * format](http://en.wikipedia.org/wiki/ISO_8601)).
+     *
+     * @param \DateTimeInterface|\DateTimeInterface[] $startDate
+     *
+     * @return static
+     *
+     * @see http://schema.org/startDate
+     */
+    public function startDate($startDate)
+    {
+        return $this->setProperty('startDate', $startDate);
     }
 
     /**

@@ -4,11 +4,11 @@ namespace Spatie\SchemaOrg\Contracts;
 
 interface BroadcastFrequencySpecificationContract
 {
-    public function broadcastFrequencyValue($broadcastFrequencyValue);
-
     public function additionalType($additionalType);
 
     public function alternateName($alternateName);
+
+    public function broadcastFrequencyValue($broadcastFrequencyValue);
 
     public function description($description);
 

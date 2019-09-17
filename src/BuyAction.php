@@ -17,46 +17,273 @@ use \Spatie\SchemaOrg\Contracts\ThingContract;
 class BuyAction extends BaseType implements TradeActionContract, ActionContract, ThingContract
 {
     /**
-     * An entity which offers (sells / leases / lends / loans) the services /
-     * goods.  A seller may also be a provider.
+     * Indicates the current disposition of the Action.
      *
-     * @param Organization|Organization[]|Person|Person[] $seller
+     * @param ActionStatusType|ActionStatusType[] $actionStatus
      *
      * @return static
      *
-     * @see http://schema.org/seller
+     * @see http://schema.org/actionStatus
      */
-    public function seller($seller)
+    public function actionStatus($actionStatus)
     {
-        return $this->setProperty('seller', $seller);
+        return $this->setProperty('actionStatus', $actionStatus);
     }
 
     /**
-     * 'vendor' is an earlier term for 'seller'.
+     * An additional type for the item, typically used for adding more specific
+     * types from external vocabularies in microdata syntax. This is a
+     * relationship between something and a class that the thing is in. In RDFa
+     * syntax, it is better to use the native RDFa syntax - the 'typeof'
+     * attribute - for multiple types. Schema.org tools may have only weaker
+     * understanding of extra types, in particular those defined externally.
      *
-     * @param Organization|Organization[]|Person|Person[] $vendor
+     * @param string|string[] $additionalType
      *
      * @return static
      *
-     * @see http://schema.org/vendor
+     * @see http://schema.org/additionalType
      */
-    public function vendor($vendor)
+    public function additionalType($additionalType)
     {
-        return $this->setProperty('vendor', $vendor);
+        return $this->setProperty('additionalType', $additionalType);
     }
 
     /**
-     * The warranty promise(s) included in the offer.
+     * The direct performer or driver of the action (animate or inanimate). e.g.
+     * *John* wrote a book.
      *
-     * @param WarrantyPromise|WarrantyPromise[] $warrantyPromise
+     * @param Organization|Organization[]|Person|Person[] $agent
      *
      * @return static
      *
-     * @see http://schema.org/warrantyPromise
+     * @see http://schema.org/agent
      */
-    public function warrantyPromise($warrantyPromise)
+    public function agent($agent)
     {
-        return $this->setProperty('warrantyPromise', $warrantyPromise);
+        return $this->setProperty('agent', $agent);
+    }
+
+    /**
+     * An alias for the item.
+     *
+     * @param string|string[] $alternateName
+     *
+     * @return static
+     *
+     * @see http://schema.org/alternateName
+     */
+    public function alternateName($alternateName)
+    {
+        return $this->setProperty('alternateName', $alternateName);
+    }
+
+    /**
+     * A description of the item.
+     *
+     * @param string|string[] $description
+     *
+     * @return static
+     *
+     * @see http://schema.org/description
+     */
+    public function description($description)
+    {
+        return $this->setProperty('description', $description);
+    }
+
+    /**
+     * A sub property of description. A short description of the item used to
+     * disambiguate from other, similar items. Information from other properties
+     * (in particular, name) may be necessary for the description to be useful
+     * for disambiguation.
+     *
+     * @param string|string[] $disambiguatingDescription
+     *
+     * @return static
+     *
+     * @see http://schema.org/disambiguatingDescription
+     */
+    public function disambiguatingDescription($disambiguatingDescription)
+    {
+        return $this->setProperty('disambiguatingDescription', $disambiguatingDescription);
+    }
+
+    /**
+     * The endTime of something. For a reserved event or service (e.g.
+     * FoodEstablishmentReservation), the time that it is expected to end. For
+     * actions that span a period of time, when the action was performed. e.g.
+     * John wrote a book from January to *December*. For media, including audio
+     * and video, it's the time offset of the end of a clip within a larger
+     * file.
+     * 
+     * Note that Event uses startDate/endDate instead of startTime/endTime, even
+     * when describing dates with times. This situation may be clarified in
+     * future revisions.
+     *
+     * @param \DateTimeInterface|\DateTimeInterface[] $endTime
+     *
+     * @return static
+     *
+     * @see http://schema.org/endTime
+     */
+    public function endTime($endTime)
+    {
+        return $this->setProperty('endTime', $endTime);
+    }
+
+    /**
+     * For failed actions, more information on the cause of the failure.
+     *
+     * @param Thing|Thing[] $error
+     *
+     * @return static
+     *
+     * @see http://schema.org/error
+     */
+    public function error($error)
+    {
+        return $this->setProperty('error', $error);
+    }
+
+    /**
+     * The identifier property represents any kind of identifier for any kind of
+     * [[Thing]], such as ISBNs, GTIN codes, UUIDs etc. Schema.org provides
+     * dedicated properties for representing many of these, either as textual
+     * strings or as URL (URI) links. See [background
+     * notes](/docs/datamodel.html#identifierBg) for more details.
+     *
+     * @param PropertyValue|PropertyValue[]|string|string[] $identifier
+     *
+     * @return static
+     *
+     * @see http://schema.org/identifier
+     */
+    public function identifier($identifier)
+    {
+        return $this->setProperty('identifier', $identifier);
+    }
+
+    /**
+     * An image of the item. This can be a [[URL]] or a fully described
+     * [[ImageObject]].
+     *
+     * @param ImageObject|ImageObject[]|string|string[] $image
+     *
+     * @return static
+     *
+     * @see http://schema.org/image
+     */
+    public function image($image)
+    {
+        return $this->setProperty('image', $image);
+    }
+
+    /**
+     * The object that helped the agent perform the action. e.g. John wrote a
+     * book with *a pen*.
+     *
+     * @param Thing|Thing[] $instrument
+     *
+     * @return static
+     *
+     * @see http://schema.org/instrument
+     */
+    public function instrument($instrument)
+    {
+        return $this->setProperty('instrument', $instrument);
+    }
+
+    /**
+     * The location of for example where the event is happening, an organization
+     * is located, or where an action takes place.
+     *
+     * @param Place|Place[]|PostalAddress|PostalAddress[]|string|string[] $location
+     *
+     * @return static
+     *
+     * @see http://schema.org/location
+     */
+    public function location($location)
+    {
+        return $this->setProperty('location', $location);
+    }
+
+    /**
+     * Indicates a page (or other CreativeWork) for which this thing is the main
+     * entity being described. See [background
+     * notes](/docs/datamodel.html#mainEntityBackground) for details.
+     *
+     * @param CreativeWork|CreativeWork[]|string|string[] $mainEntityOfPage
+     *
+     * @return static
+     *
+     * @see http://schema.org/mainEntityOfPage
+     */
+    public function mainEntityOfPage($mainEntityOfPage)
+    {
+        return $this->setProperty('mainEntityOfPage', $mainEntityOfPage);
+    }
+
+    /**
+     * The name of the item.
+     *
+     * @param string|string[] $name
+     *
+     * @return static
+     *
+     * @see http://schema.org/name
+     */
+    public function name($name)
+    {
+        return $this->setProperty('name', $name);
+    }
+
+    /**
+     * The object upon which the action is carried out, whose state is kept
+     * intact or changed. Also known as the semantic roles patient, affected or
+     * undergoer (which change their state) or theme (which doesn't). e.g. John
+     * read *a book*.
+     *
+     * @param Thing|Thing[] $object
+     *
+     * @return static
+     *
+     * @see http://schema.org/object
+     */
+    public function object($object)
+    {
+        return $this->setProperty('object', $object);
+    }
+
+    /**
+     * Other co-agents that participated in the action indirectly. e.g. John
+     * wrote a book with *Steve*.
+     *
+     * @param Organization|Organization[]|Person|Person[] $participant
+     *
+     * @return static
+     *
+     * @see http://schema.org/participant
+     */
+    public function participant($participant)
+    {
+        return $this->setProperty('participant', $participant);
+    }
+
+    /**
+     * Indicates a potential Action, which describes an idealized action in
+     * which this thing would play an 'object' role.
+     *
+     * @param Action|Action[] $potentialAction
+     *
+     * @return static
+     *
+     * @see http://schema.org/potentialAction
+     */
+    public function potentialAction($potentialAction)
+    {
+        return $this->setProperty('potentialAction', $potentialAction);
     }
 
     /**
@@ -135,134 +362,6 @@ class BuyAction extends BaseType implements TradeActionContract, ActionContract,
     }
 
     /**
-     * Indicates the current disposition of the Action.
-     *
-     * @param ActionStatusType|ActionStatusType[] $actionStatus
-     *
-     * @return static
-     *
-     * @see http://schema.org/actionStatus
-     */
-    public function actionStatus($actionStatus)
-    {
-        return $this->setProperty('actionStatus', $actionStatus);
-    }
-
-    /**
-     * The direct performer or driver of the action (animate or inanimate). e.g.
-     * *John* wrote a book.
-     *
-     * @param Organization|Organization[]|Person|Person[] $agent
-     *
-     * @return static
-     *
-     * @see http://schema.org/agent
-     */
-    public function agent($agent)
-    {
-        return $this->setProperty('agent', $agent);
-    }
-
-    /**
-     * The endTime of something. For a reserved event or service (e.g.
-     * FoodEstablishmentReservation), the time that it is expected to end. For
-     * actions that span a period of time, when the action was performed. e.g.
-     * John wrote a book from January to *December*. For media, including audio
-     * and video, it's the time offset of the end of a clip within a larger
-     * file.
-     * 
-     * Note that Event uses startDate/endDate instead of startTime/endTime, even
-     * when describing dates with times. This situation may be clarified in
-     * future revisions.
-     *
-     * @param \DateTimeInterface|\DateTimeInterface[] $endTime
-     *
-     * @return static
-     *
-     * @see http://schema.org/endTime
-     */
-    public function endTime($endTime)
-    {
-        return $this->setProperty('endTime', $endTime);
-    }
-
-    /**
-     * For failed actions, more information on the cause of the failure.
-     *
-     * @param Thing|Thing[] $error
-     *
-     * @return static
-     *
-     * @see http://schema.org/error
-     */
-    public function error($error)
-    {
-        return $this->setProperty('error', $error);
-    }
-
-    /**
-     * The object that helped the agent perform the action. e.g. John wrote a
-     * book with *a pen*.
-     *
-     * @param Thing|Thing[] $instrument
-     *
-     * @return static
-     *
-     * @see http://schema.org/instrument
-     */
-    public function instrument($instrument)
-    {
-        return $this->setProperty('instrument', $instrument);
-    }
-
-    /**
-     * The location of for example where the event is happening, an organization
-     * is located, or where an action takes place.
-     *
-     * @param Place|Place[]|PostalAddress|PostalAddress[]|string|string[] $location
-     *
-     * @return static
-     *
-     * @see http://schema.org/location
-     */
-    public function location($location)
-    {
-        return $this->setProperty('location', $location);
-    }
-
-    /**
-     * The object upon which the action is carried out, whose state is kept
-     * intact or changed. Also known as the semantic roles patient, affected or
-     * undergoer (which change their state) or theme (which doesn't). e.g. John
-     * read *a book*.
-     *
-     * @param Thing|Thing[] $object
-     *
-     * @return static
-     *
-     * @see http://schema.org/object
-     */
-    public function object($object)
-    {
-        return $this->setProperty('object', $object);
-    }
-
-    /**
-     * Other co-agents that participated in the action indirectly. e.g. John
-     * wrote a book with *Steve*.
-     *
-     * @param Organization|Organization[]|Person|Person[] $participant
-     *
-     * @return static
-     *
-     * @see http://schema.org/participant
-     */
-    public function participant($participant)
-    {
-        return $this->setProperty('participant', $participant);
-    }
-
-    /**
      * The result produced in the action. e.g. John wrote *a book*.
      *
      * @param Thing|Thing[] $result
@@ -274,6 +373,37 @@ class BuyAction extends BaseType implements TradeActionContract, ActionContract,
     public function result($result)
     {
         return $this->setProperty('result', $result);
+    }
+
+    /**
+     * URL of a reference Web page that unambiguously indicates the item's
+     * identity. E.g. the URL of the item's Wikipedia page, Wikidata entry, or
+     * official website.
+     *
+     * @param string|string[] $sameAs
+     *
+     * @return static
+     *
+     * @see http://schema.org/sameAs
+     */
+    public function sameAs($sameAs)
+    {
+        return $this->setProperty('sameAs', $sameAs);
+    }
+
+    /**
+     * An entity which offers (sells / leases / lends / loans) the services /
+     * goods.  A seller may also be a provider.
+     *
+     * @param Organization|Organization[]|Person|Person[] $seller
+     *
+     * @return static
+     *
+     * @see http://schema.org/seller
+     */
+    public function seller($seller)
+    {
+        return $this->setProperty('seller', $seller);
     }
 
     /**
@@ -300,178 +430,6 @@ class BuyAction extends BaseType implements TradeActionContract, ActionContract,
     }
 
     /**
-     * Indicates a target EntryPoint for an Action.
-     *
-     * @param EntryPoint|EntryPoint[] $target
-     *
-     * @return static
-     *
-     * @see http://schema.org/target
-     */
-    public function target($target)
-    {
-        return $this->setProperty('target', $target);
-    }
-
-    /**
-     * An additional type for the item, typically used for adding more specific
-     * types from external vocabularies in microdata syntax. This is a
-     * relationship between something and a class that the thing is in. In RDFa
-     * syntax, it is better to use the native RDFa syntax - the 'typeof'
-     * attribute - for multiple types. Schema.org tools may have only weaker
-     * understanding of extra types, in particular those defined externally.
-     *
-     * @param string|string[] $additionalType
-     *
-     * @return static
-     *
-     * @see http://schema.org/additionalType
-     */
-    public function additionalType($additionalType)
-    {
-        return $this->setProperty('additionalType', $additionalType);
-    }
-
-    /**
-     * An alias for the item.
-     *
-     * @param string|string[] $alternateName
-     *
-     * @return static
-     *
-     * @see http://schema.org/alternateName
-     */
-    public function alternateName($alternateName)
-    {
-        return $this->setProperty('alternateName', $alternateName);
-    }
-
-    /**
-     * A description of the item.
-     *
-     * @param string|string[] $description
-     *
-     * @return static
-     *
-     * @see http://schema.org/description
-     */
-    public function description($description)
-    {
-        return $this->setProperty('description', $description);
-    }
-
-    /**
-     * A sub property of description. A short description of the item used to
-     * disambiguate from other, similar items. Information from other properties
-     * (in particular, name) may be necessary for the description to be useful
-     * for disambiguation.
-     *
-     * @param string|string[] $disambiguatingDescription
-     *
-     * @return static
-     *
-     * @see http://schema.org/disambiguatingDescription
-     */
-    public function disambiguatingDescription($disambiguatingDescription)
-    {
-        return $this->setProperty('disambiguatingDescription', $disambiguatingDescription);
-    }
-
-    /**
-     * The identifier property represents any kind of identifier for any kind of
-     * [[Thing]], such as ISBNs, GTIN codes, UUIDs etc. Schema.org provides
-     * dedicated properties for representing many of these, either as textual
-     * strings or as URL (URI) links. See [background
-     * notes](/docs/datamodel.html#identifierBg) for more details.
-     *
-     * @param PropertyValue|PropertyValue[]|string|string[] $identifier
-     *
-     * @return static
-     *
-     * @see http://schema.org/identifier
-     */
-    public function identifier($identifier)
-    {
-        return $this->setProperty('identifier', $identifier);
-    }
-
-    /**
-     * An image of the item. This can be a [[URL]] or a fully described
-     * [[ImageObject]].
-     *
-     * @param ImageObject|ImageObject[]|string|string[] $image
-     *
-     * @return static
-     *
-     * @see http://schema.org/image
-     */
-    public function image($image)
-    {
-        return $this->setProperty('image', $image);
-    }
-
-    /**
-     * Indicates a page (or other CreativeWork) for which this thing is the main
-     * entity being described. See [background
-     * notes](/docs/datamodel.html#mainEntityBackground) for details.
-     *
-     * @param CreativeWork|CreativeWork[]|string|string[] $mainEntityOfPage
-     *
-     * @return static
-     *
-     * @see http://schema.org/mainEntityOfPage
-     */
-    public function mainEntityOfPage($mainEntityOfPage)
-    {
-        return $this->setProperty('mainEntityOfPage', $mainEntityOfPage);
-    }
-
-    /**
-     * The name of the item.
-     *
-     * @param string|string[] $name
-     *
-     * @return static
-     *
-     * @see http://schema.org/name
-     */
-    public function name($name)
-    {
-        return $this->setProperty('name', $name);
-    }
-
-    /**
-     * Indicates a potential Action, which describes an idealized action in
-     * which this thing would play an 'object' role.
-     *
-     * @param Action|Action[] $potentialAction
-     *
-     * @return static
-     *
-     * @see http://schema.org/potentialAction
-     */
-    public function potentialAction($potentialAction)
-    {
-        return $this->setProperty('potentialAction', $potentialAction);
-    }
-
-    /**
-     * URL of a reference Web page that unambiguously indicates the item's
-     * identity. E.g. the URL of the item's Wikipedia page, Wikidata entry, or
-     * official website.
-     *
-     * @param string|string[] $sameAs
-     *
-     * @return static
-     *
-     * @see http://schema.org/sameAs
-     */
-    public function sameAs($sameAs)
-    {
-        return $this->setProperty('sameAs', $sameAs);
-    }
-
-    /**
      * A CreativeWork or Event about this Thing.
      *
      * @param CreativeWork|CreativeWork[]|Event|Event[] $subjectOf
@@ -486,6 +444,20 @@ class BuyAction extends BaseType implements TradeActionContract, ActionContract,
     }
 
     /**
+     * Indicates a target EntryPoint for an Action.
+     *
+     * @param EntryPoint|EntryPoint[] $target
+     *
+     * @return static
+     *
+     * @see http://schema.org/target
+     */
+    public function target($target)
+    {
+        return $this->setProperty('target', $target);
+    }
+
+    /**
      * URL of the item.
      *
      * @param string|string[] $url
@@ -497,6 +469,34 @@ class BuyAction extends BaseType implements TradeActionContract, ActionContract,
     public function url($url)
     {
         return $this->setProperty('url', $url);
+    }
+
+    /**
+     * 'vendor' is an earlier term for 'seller'.
+     *
+     * @param Organization|Organization[]|Person|Person[] $vendor
+     *
+     * @return static
+     *
+     * @see http://schema.org/vendor
+     */
+    public function vendor($vendor)
+    {
+        return $this->setProperty('vendor', $vendor);
+    }
+
+    /**
+     * The warranty promise(s) included in the offer.
+     *
+     * @param WarrantyPromise|WarrantyPromise[] $warrantyPromise
+     *
+     * @return static
+     *
+     * @see http://schema.org/warrantyPromise
+     */
+    public function warrantyPromise($warrantyPromise)
+    {
+        return $this->setProperty('warrantyPromise', $warrantyPromise);
     }
 
 }

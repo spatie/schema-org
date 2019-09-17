@@ -4,18 +4,6 @@ namespace Spatie\SchemaOrg\Contracts;
 
 interface MusicRecordingContract
 {
-    public function byArtist($byArtist);
-
-    public function duration($duration);
-
-    public function inAlbum($inAlbum);
-
-    public function inPlaylist($inPlaylist);
-
-    public function isrcCode($isrcCode);
-
-    public function recordingOf($recordingOf);
-
     public function about($about);
 
     public function accessMode($accessMode);
@@ -34,7 +22,11 @@ interface MusicRecordingContract
 
     public function accountablePerson($accountablePerson);
 
+    public function additionalType($additionalType);
+
     public function aggregateRating($aggregateRating);
+
+    public function alternateName($alternateName);
 
     public function alternativeHeadline($alternativeHeadline);
 
@@ -49,6 +41,8 @@ interface MusicRecordingContract
     public function award($award);
 
     public function awards($awards);
+
+    public function byArtist($byArtist);
 
     public function character($character);
 
@@ -76,7 +70,13 @@ interface MusicRecordingContract
 
     public function datePublished($datePublished);
 
+    public function description($description);
+
+    public function disambiguatingDescription($disambiguatingDescription);
+
     public function discussionUrl($discussionUrl);
+
+    public function duration($duration);
 
     public function editor($editor);
 
@@ -104,7 +104,15 @@ interface MusicRecordingContract
 
     public function headline($headline);
 
+    public function identifier($identifier);
+
+    public function image($image);
+
+    public function inAlbum($inAlbum);
+
     public function inLanguage($inLanguage);
+
+    public function inPlaylist($inPlaylist);
 
     public function interactionStatistic($interactionStatistic);
 
@@ -120,6 +128,8 @@ interface MusicRecordingContract
 
     public function isPartOf($isPartOf);
 
+    public function isrcCode($isrcCode);
+
     public function keywords($keywords);
 
     public function learningResourceType($learningResourceType);
@@ -130,13 +140,19 @@ interface MusicRecordingContract
 
     public function mainEntity($mainEntity);
 
+    public function mainEntityOfPage($mainEntityOfPage);
+
     public function material($material);
 
     public function mentions($mentions);
 
+    public function name($name);
+
     public function offers($offers);
 
     public function position($position);
+
+    public function potentialAction($potentialAction);
 
     public function producer($producer);
 
@@ -150,11 +166,15 @@ interface MusicRecordingContract
 
     public function recordedAt($recordedAt);
 
+    public function recordingOf($recordingOf);
+
     public function releasedEvent($releasedEvent);
 
     public function review($review);
 
     public function reviews($reviews);
+
+    public function sameAs($sameAs);
 
     public function schemaVersion($schemaVersion);
 
@@ -165,6 +185,8 @@ interface MusicRecordingContract
     public function spatialCoverage($spatialCoverage);
 
     public function sponsor($sponsor);
+
+    public function subjectOf($subjectOf);
 
     public function temporal($temporal);
 
@@ -180,34 +202,12 @@ interface MusicRecordingContract
 
     public function typicalAgeRange($typicalAgeRange);
 
+    public function url($url);
+
     public function version($version);
 
     public function video($video);
 
     public function workExample($workExample);
-
-    public function additionalType($additionalType);
-
-    public function alternateName($alternateName);
-
-    public function description($description);
-
-    public function disambiguatingDescription($disambiguatingDescription);
-
-    public function identifier($identifier);
-
-    public function image($image);
-
-    public function mainEntityOfPage($mainEntityOfPage);
-
-    public function name($name);
-
-    public function potentialAction($potentialAction);
-
-    public function sameAs($sameAs);
-
-    public function subjectOf($subjectOf);
-
-    public function url($url);
 
 }

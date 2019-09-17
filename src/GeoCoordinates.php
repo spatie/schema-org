@@ -15,6 +15,25 @@ use \Spatie\SchemaOrg\Contracts\ThingContract;
 class GeoCoordinates extends BaseType implements StructuredValueContract, IntangibleContract, ThingContract
 {
     /**
+     * An additional type for the item, typically used for adding more specific
+     * types from external vocabularies in microdata syntax. This is a
+     * relationship between something and a class that the thing is in. In RDFa
+     * syntax, it is better to use the native RDFa syntax - the 'typeof'
+     * attribute - for multiple types. Schema.org tools may have only weaker
+     * understanding of extra types, in particular those defined externally.
+     *
+     * @param string|string[] $additionalType
+     *
+     * @return static
+     *
+     * @see http://schema.org/additionalType
+     */
+    public function additionalType($additionalType)
+    {
+        return $this->setProperty('additionalType', $additionalType);
+    }
+
+    /**
      * Physical address of the item.
      *
      * @param PostalAddress|PostalAddress[]|string|string[] $address
@@ -41,86 +60,6 @@ class GeoCoordinates extends BaseType implements StructuredValueContract, Intang
     public function addressCountry($addressCountry)
     {
         return $this->setProperty('addressCountry', $addressCountry);
-    }
-
-    /**
-     * The elevation of a location ([WGS
-     * 84](https://en.wikipedia.org/wiki/World_Geodetic_System)). Values may be
-     * of the form 'NUMBER UNIT_OF_MEASUREMENT' (e.g., '1,000 m', '3,200 ft')
-     * while numbers alone should be assumed to be a value in meters.
-     *
-     * @param float|float[]|int|int[]|string|string[] $elevation
-     *
-     * @return static
-     *
-     * @see http://schema.org/elevation
-     */
-    public function elevation($elevation)
-    {
-        return $this->setProperty('elevation', $elevation);
-    }
-
-    /**
-     * The latitude of a location. For example ```37.42242``` ([WGS
-     * 84](https://en.wikipedia.org/wiki/World_Geodetic_System)).
-     *
-     * @param float|float[]|int|int[]|string|string[] $latitude
-     *
-     * @return static
-     *
-     * @see http://schema.org/latitude
-     */
-    public function latitude($latitude)
-    {
-        return $this->setProperty('latitude', $latitude);
-    }
-
-    /**
-     * The longitude of a location. For example ```-122.08585``` ([WGS
-     * 84](https://en.wikipedia.org/wiki/World_Geodetic_System)).
-     *
-     * @param float|float[]|int|int[]|string|string[] $longitude
-     *
-     * @return static
-     *
-     * @see http://schema.org/longitude
-     */
-    public function longitude($longitude)
-    {
-        return $this->setProperty('longitude', $longitude);
-    }
-
-    /**
-     * The postal code. For example, 94043.
-     *
-     * @param string|string[] $postalCode
-     *
-     * @return static
-     *
-     * @see http://schema.org/postalCode
-     */
-    public function postalCode($postalCode)
-    {
-        return $this->setProperty('postalCode', $postalCode);
-    }
-
-    /**
-     * An additional type for the item, typically used for adding more specific
-     * types from external vocabularies in microdata syntax. This is a
-     * relationship between something and a class that the thing is in. In RDFa
-     * syntax, it is better to use the native RDFa syntax - the 'typeof'
-     * attribute - for multiple types. Schema.org tools may have only weaker
-     * understanding of extra types, in particular those defined externally.
-     *
-     * @param string|string[] $additionalType
-     *
-     * @return static
-     *
-     * @see http://schema.org/additionalType
-     */
-    public function additionalType($additionalType)
-    {
-        return $this->setProperty('additionalType', $additionalType);
     }
 
     /**
@@ -169,6 +108,23 @@ class GeoCoordinates extends BaseType implements StructuredValueContract, Intang
     }
 
     /**
+     * The elevation of a location ([WGS
+     * 84](https://en.wikipedia.org/wiki/World_Geodetic_System)). Values may be
+     * of the form 'NUMBER UNIT_OF_MEASUREMENT' (e.g., '1,000 m', '3,200 ft')
+     * while numbers alone should be assumed to be a value in meters.
+     *
+     * @param float|float[]|int|int[]|string|string[] $elevation
+     *
+     * @return static
+     *
+     * @see http://schema.org/elevation
+     */
+    public function elevation($elevation)
+    {
+        return $this->setProperty('elevation', $elevation);
+    }
+
+    /**
      * The identifier property represents any kind of identifier for any kind of
      * [[Thing]], such as ISBNs, GTIN codes, UUIDs etc. Schema.org provides
      * dedicated properties for representing many of these, either as textual
@@ -202,6 +158,36 @@ class GeoCoordinates extends BaseType implements StructuredValueContract, Intang
     }
 
     /**
+     * The latitude of a location. For example ```37.42242``` ([WGS
+     * 84](https://en.wikipedia.org/wiki/World_Geodetic_System)).
+     *
+     * @param float|float[]|int|int[]|string|string[] $latitude
+     *
+     * @return static
+     *
+     * @see http://schema.org/latitude
+     */
+    public function latitude($latitude)
+    {
+        return $this->setProperty('latitude', $latitude);
+    }
+
+    /**
+     * The longitude of a location. For example ```-122.08585``` ([WGS
+     * 84](https://en.wikipedia.org/wiki/World_Geodetic_System)).
+     *
+     * @param float|float[]|int|int[]|string|string[] $longitude
+     *
+     * @return static
+     *
+     * @see http://schema.org/longitude
+     */
+    public function longitude($longitude)
+    {
+        return $this->setProperty('longitude', $longitude);
+    }
+
+    /**
      * Indicates a page (or other CreativeWork) for which this thing is the main
      * entity being described. See [background
      * notes](/docs/datamodel.html#mainEntityBackground) for details.
@@ -229,6 +215,20 @@ class GeoCoordinates extends BaseType implements StructuredValueContract, Intang
     public function name($name)
     {
         return $this->setProperty('name', $name);
+    }
+
+    /**
+     * The postal code. For example, 94043.
+     *
+     * @param string|string[] $postalCode
+     *
+     * @return static
+     *
+     * @see http://schema.org/postalCode
+     */
+    public function postalCode($postalCode)
+    {
+        return $this->setProperty('postalCode', $postalCode);
     }
 
     /**

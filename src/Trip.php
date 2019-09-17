@@ -14,66 +14,6 @@ use \Spatie\SchemaOrg\Contracts\ThingContract;
 class Trip extends BaseType implements IntangibleContract, ThingContract
 {
     /**
-     * The expected arrival time.
-     *
-     * @param \DateTimeInterface|\DateTimeInterface[] $arrivalTime
-     *
-     * @return static
-     *
-     * @see http://schema.org/arrivalTime
-     */
-    public function arrivalTime($arrivalTime)
-    {
-        return $this->setProperty('arrivalTime', $arrivalTime);
-    }
-
-    /**
-     * The expected departure time.
-     *
-     * @param \DateTimeInterface|\DateTimeInterface[] $departureTime
-     *
-     * @return static
-     *
-     * @see http://schema.org/departureTime
-     */
-    public function departureTime($departureTime)
-    {
-        return $this->setProperty('departureTime', $departureTime);
-    }
-
-    /**
-     * An offer to provide this item&#x2014;for example, an offer to sell a
-     * product, rent the DVD of a movie, perform a service, or give away tickets
-     * to an event.
-     *
-     * @param Offer|Offer[] $offers
-     *
-     * @return static
-     *
-     * @see http://schema.org/offers
-     */
-    public function offers($offers)
-    {
-        return $this->setProperty('offers', $offers);
-    }
-
-    /**
-     * The service provider, service operator, or service performer; the goods
-     * producer. Another party (a seller) may offer those services or goods on
-     * behalf of the provider. A provider may also serve as the seller.
-     *
-     * @param Organization|Organization[]|Person|Person[] $provider
-     *
-     * @return static
-     *
-     * @see http://schema.org/provider
-     */
-    public function provider($provider)
-    {
-        return $this->setProperty('provider', $provider);
-    }
-
-    /**
      * An additional type for the item, typically used for adding more specific
      * types from external vocabularies in microdata syntax. This is a
      * relationship between something and a class that the thing is in. In RDFa
@@ -104,6 +44,34 @@ class Trip extends BaseType implements IntangibleContract, ThingContract
     public function alternateName($alternateName)
     {
         return $this->setProperty('alternateName', $alternateName);
+    }
+
+    /**
+     * The expected arrival time.
+     *
+     * @param \DateTimeInterface|\DateTimeInterface[] $arrivalTime
+     *
+     * @return static
+     *
+     * @see http://schema.org/arrivalTime
+     */
+    public function arrivalTime($arrivalTime)
+    {
+        return $this->setProperty('arrivalTime', $arrivalTime);
+    }
+
+    /**
+     * The expected departure time.
+     *
+     * @param \DateTimeInterface|\DateTimeInterface[] $departureTime
+     *
+     * @return static
+     *
+     * @see http://schema.org/departureTime
+     */
+    public function departureTime($departureTime)
+    {
+        return $this->setProperty('departureTime', $departureTime);
     }
 
     /**
@@ -201,6 +169,22 @@ class Trip extends BaseType implements IntangibleContract, ThingContract
     }
 
     /**
+     * An offer to provide this item&#x2014;for example, an offer to sell a
+     * product, rent the DVD of a movie, perform a service, or give away tickets
+     * to an event.
+     *
+     * @param Offer|Offer[] $offers
+     *
+     * @return static
+     *
+     * @see http://schema.org/offers
+     */
+    public function offers($offers)
+    {
+        return $this->setProperty('offers', $offers);
+    }
+
+    /**
      * Indicates a potential Action, which describes an idealized action in
      * which this thing would play an 'object' role.
      *
@@ -213,6 +197,22 @@ class Trip extends BaseType implements IntangibleContract, ThingContract
     public function potentialAction($potentialAction)
     {
         return $this->setProperty('potentialAction', $potentialAction);
+    }
+
+    /**
+     * The service provider, service operator, or service performer; the goods
+     * producer. Another party (a seller) may offer those services or goods on
+     * behalf of the provider. A provider may also serve as the seller.
+     *
+     * @param Organization|Organization[]|Person|Person[] $provider
+     *
+     * @return static
+     *
+     * @see http://schema.org/provider
+     */
+    public function provider($provider)
+    {
+        return $this->setProperty('provider', $provider);
     }
 
     /**

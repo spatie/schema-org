@@ -4,14 +4,6 @@ namespace Spatie\SchemaOrg\Contracts;
 
 interface SeatContract
 {
-    public function seatNumber($seatNumber);
-
-    public function seatRow($seatRow);
-
-    public function seatSection($seatSection);
-
-    public function seatingType($seatingType);
-
     public function additionalType($additionalType);
 
     public function alternateName($alternateName);
@@ -31,6 +23,14 @@ interface SeatContract
     public function potentialAction($potentialAction);
 
     public function sameAs($sameAs);
+
+    public function seatNumber($seatNumber);
+
+    public function seatRow($seatRow);
+
+    public function seatSection($seatSection);
+
+    public function seatingType($seatingType);
 
     public function subjectOf($subjectOf);
 

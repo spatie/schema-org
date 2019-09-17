@@ -4,22 +4,6 @@ namespace Spatie\SchemaOrg\Contracts;
 
 interface OccupationContract
 {
-    public function educationRequirements($educationRequirements);
-
-    public function estimatedSalary($estimatedSalary);
-
-    public function experienceRequirements($experienceRequirements);
-
-    public function occupationLocation($occupationLocation);
-
-    public function occupationalCategory($occupationalCategory);
-
-    public function qualifications($qualifications);
-
-    public function responsibilities($responsibilities);
-
-    public function skills($skills);
-
     public function additionalType($additionalType);
 
     public function alternateName($alternateName);
@@ -27,6 +11,12 @@ interface OccupationContract
     public function description($description);
 
     public function disambiguatingDescription($disambiguatingDescription);
+
+    public function educationRequirements($educationRequirements);
+
+    public function estimatedSalary($estimatedSalary);
+
+    public function experienceRequirements($experienceRequirements);
 
     public function identifier($identifier);
 
@@ -36,9 +26,19 @@ interface OccupationContract
 
     public function name($name);
 
+    public function occupationLocation($occupationLocation);
+
+    public function occupationalCategory($occupationalCategory);
+
     public function potentialAction($potentialAction);
 
+    public function qualifications($qualifications);
+
+    public function responsibilities($responsibilities);
+
     public function sameAs($sameAs);
+
+    public function skills($skills);
 
     public function subjectOf($subjectOf);
 

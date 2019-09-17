@@ -4,8 +4,6 @@ namespace Spatie\SchemaOrg\Contracts;
 
 interface InteractionCounterContract
 {
-    public function interactionType($interactionType);
-
     public function additionalType($additionalType);
 
     public function alternateName($alternateName);
@@ -17,6 +15,8 @@ interface InteractionCounterContract
     public function identifier($identifier);
 
     public function image($image);
+
+    public function interactionType($interactionType);
 
     public function mainEntityOfPage($mainEntityOfPage);
 

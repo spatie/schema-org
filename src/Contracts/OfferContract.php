@@ -8,9 +8,13 @@ interface OfferContract
 
     public function addOn($addOn);
 
+    public function additionalType($additionalType);
+
     public function advanceBookingRequirement($advanceBookingRequirement);
 
     public function aggregateRating($aggregateRating);
+
+    public function alternateName($alternateName);
 
     public function areaServed($areaServed);
 
@@ -30,6 +34,10 @@ interface OfferContract
 
     public function deliveryLeadTime($deliveryLeadTime);
 
+    public function description($description);
+
+    public function disambiguatingDescription($disambiguatingDescription);
+
     public function eligibleCustomerType($eligibleCustomerType);
 
     public function eligibleDuration($eligibleDuration);
@@ -48,6 +56,10 @@ interface OfferContract
 
     public function gtin8($gtin8);
 
+    public function identifier($identifier);
+
+    public function image($image);
+
     public function includesObject($includesObject);
 
     public function ineligibleRegion($ineligibleRegion);
@@ -58,7 +70,13 @@ interface OfferContract
 
     public function itemOffered($itemOffered);
 
+    public function mainEntityOfPage($mainEntityOfPage);
+
     public function mpn($mpn);
+
+    public function name($name);
+
+    public function potentialAction($potentialAction);
 
     public function price($price);
 
@@ -72,40 +90,22 @@ interface OfferContract
 
     public function reviews($reviews);
 
+    public function sameAs($sameAs);
+
     public function seller($seller);
 
     public function serialNumber($serialNumber);
 
     public function sku($sku);
 
+    public function subjectOf($subjectOf);
+
+    public function url($url);
+
     public function validFrom($validFrom);
 
     public function validThrough($validThrough);
 
     public function warranty($warranty);
-
-    public function additionalType($additionalType);
-
-    public function alternateName($alternateName);
-
-    public function description($description);
-
-    public function disambiguatingDescription($disambiguatingDescription);
-
-    public function identifier($identifier);
-
-    public function image($image);
-
-    public function mainEntityOfPage($mainEntityOfPage);
-
-    public function name($name);
-
-    public function potentialAction($potentialAction);
-
-    public function sameAs($sameAs);
-
-    public function subjectOf($subjectOf);
-
-    public function url($url);
 
 }

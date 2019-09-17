@@ -4,14 +4,6 @@ namespace Spatie\SchemaOrg\Contracts;
 
 interface MenuItemContract
 {
-    public function menuAddOn($menuAddOn);
-
-    public function nutrition($nutrition);
-
-    public function offers($offers);
-
-    public function suitableForDiet($suitableForDiet);
-
     public function about($about);
 
     public function accessMode($accessMode);
@@ -30,7 +22,11 @@ interface MenuItemContract
 
     public function accountablePerson($accountablePerson);
 
+    public function additionalType($additionalType);
+
     public function aggregateRating($aggregateRating);
+
+    public function alternateName($alternateName);
 
     public function alternativeHeadline($alternativeHeadline);
 
@@ -72,6 +68,10 @@ interface MenuItemContract
 
     public function datePublished($datePublished);
 
+    public function description($description);
+
+    public function disambiguatingDescription($disambiguatingDescription);
+
     public function discussionUrl($discussionUrl);
 
     public function editor($editor);
@@ -100,6 +100,10 @@ interface MenuItemContract
 
     public function headline($headline);
 
+    public function identifier($identifier);
+
+    public function image($image);
+
     public function inLanguage($inLanguage);
 
     public function interactionStatistic($interactionStatistic);
@@ -126,13 +130,23 @@ interface MenuItemContract
 
     public function mainEntity($mainEntity);
 
+    public function mainEntityOfPage($mainEntityOfPage);
+
     public function material($material);
 
     public function mentions($mentions);
 
+    public function menuAddOn($menuAddOn);
+
+    public function name($name);
+
+    public function nutrition($nutrition);
+
     public function offers($offers);
 
     public function position($position);
+
+    public function potentialAction($potentialAction);
 
     public function producer($producer);
 
@@ -152,6 +166,8 @@ interface MenuItemContract
 
     public function reviews($reviews);
 
+    public function sameAs($sameAs);
+
     public function schemaVersion($schemaVersion);
 
     public function sourceOrganization($sourceOrganization);
@@ -161,6 +177,10 @@ interface MenuItemContract
     public function spatialCoverage($spatialCoverage);
 
     public function sponsor($sponsor);
+
+    public function subjectOf($subjectOf);
+
+    public function suitableForDiet($suitableForDiet);
 
     public function temporal($temporal);
 
@@ -176,34 +196,12 @@ interface MenuItemContract
 
     public function typicalAgeRange($typicalAgeRange);
 
+    public function url($url);
+
     public function version($version);
 
     public function video($video);
 
     public function workExample($workExample);
-
-    public function additionalType($additionalType);
-
-    public function alternateName($alternateName);
-
-    public function description($description);
-
-    public function disambiguatingDescription($disambiguatingDescription);
-
-    public function identifier($identifier);
-
-    public function image($image);
-
-    public function mainEntityOfPage($mainEntityOfPage);
-
-    public function name($name);
-
-    public function potentialAction($potentialAction);
-
-    public function sameAs($sameAs);
-
-    public function subjectOf($subjectOf);
-
-    public function url($url);
 
 }

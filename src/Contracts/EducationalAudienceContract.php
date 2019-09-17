@@ -4,19 +4,19 @@ namespace Spatie\SchemaOrg\Contracts;
 
 interface EducationalAudienceContract
 {
-    public function educationalRole($educationalRole);
-
-    public function audienceType($audienceType);
-
-    public function geographicArea($geographicArea);
-
     public function additionalType($additionalType);
 
     public function alternateName($alternateName);
 
+    public function audienceType($audienceType);
+
     public function description($description);
 
     public function disambiguatingDescription($disambiguatingDescription);
+
+    public function educationalRole($educationalRole);
+
+    public function geographicArea($geographicArea);
 
     public function identifier($identifier);
 

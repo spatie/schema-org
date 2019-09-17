@@ -4,17 +4,9 @@ namespace Spatie\SchemaOrg\Contracts;
 
 interface QuestionContract
 {
-    public function acceptedAnswer($acceptedAnswer);
-
-    public function answerCount($answerCount);
-
-    public function downvoteCount($downvoteCount);
-
-    public function suggestedAnswer($suggestedAnswer);
-
-    public function upvoteCount($upvoteCount);
-
     public function about($about);
+
+    public function acceptedAnswer($acceptedAnswer);
 
     public function accessMode($accessMode);
 
@@ -32,9 +24,15 @@ interface QuestionContract
 
     public function accountablePerson($accountablePerson);
 
+    public function additionalType($additionalType);
+
     public function aggregateRating($aggregateRating);
 
+    public function alternateName($alternateName);
+
     public function alternativeHeadline($alternativeHeadline);
+
+    public function answerCount($answerCount);
 
     public function associatedMedia($associatedMedia);
 
@@ -74,7 +72,13 @@ interface QuestionContract
 
     public function datePublished($datePublished);
 
+    public function description($description);
+
+    public function disambiguatingDescription($disambiguatingDescription);
+
     public function discussionUrl($discussionUrl);
+
+    public function downvoteCount($downvoteCount);
 
     public function editor($editor);
 
@@ -102,6 +106,10 @@ interface QuestionContract
 
     public function headline($headline);
 
+    public function identifier($identifier);
+
+    public function image($image);
+
     public function inLanguage($inLanguage);
 
     public function interactionStatistic($interactionStatistic);
@@ -128,13 +136,19 @@ interface QuestionContract
 
     public function mainEntity($mainEntity);
 
+    public function mainEntityOfPage($mainEntityOfPage);
+
     public function material($material);
 
     public function mentions($mentions);
 
+    public function name($name);
+
     public function offers($offers);
 
     public function position($position);
+
+    public function potentialAction($potentialAction);
 
     public function producer($producer);
 
@@ -154,6 +168,8 @@ interface QuestionContract
 
     public function reviews($reviews);
 
+    public function sameAs($sameAs);
+
     public function schemaVersion($schemaVersion);
 
     public function sourceOrganization($sourceOrganization);
@@ -163,6 +179,10 @@ interface QuestionContract
     public function spatialCoverage($spatialCoverage);
 
     public function sponsor($sponsor);
+
+    public function subjectOf($subjectOf);
+
+    public function suggestedAnswer($suggestedAnswer);
 
     public function temporal($temporal);
 
@@ -178,34 +198,14 @@ interface QuestionContract
 
     public function typicalAgeRange($typicalAgeRange);
 
+    public function upvoteCount($upvoteCount);
+
+    public function url($url);
+
     public function version($version);
 
     public function video($video);
 
     public function workExample($workExample);
-
-    public function additionalType($additionalType);
-
-    public function alternateName($alternateName);
-
-    public function description($description);
-
-    public function disambiguatingDescription($disambiguatingDescription);
-
-    public function identifier($identifier);
-
-    public function image($image);
-
-    public function mainEntityOfPage($mainEntityOfPage);
-
-    public function name($name);
-
-    public function potentialAction($potentialAction);
-
-    public function sameAs($sameAs);
-
-    public function subjectOf($subjectOf);
-
-    public function url($url);
 
 }

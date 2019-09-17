@@ -4,13 +4,31 @@ namespace Spatie\SchemaOrg\Contracts;
 
 interface EventReservationContract
 {
+    public function additionalType($additionalType);
+
+    public function alternateName($alternateName);
+
     public function bookingAgent($bookingAgent);
 
     public function bookingTime($bookingTime);
 
     public function broker($broker);
 
+    public function description($description);
+
+    public function disambiguatingDescription($disambiguatingDescription);
+
+    public function identifier($identifier);
+
+    public function image($image);
+
+    public function mainEntityOfPage($mainEntityOfPage);
+
     public function modifiedTime($modifiedTime);
+
+    public function name($name);
+
+    public function potentialAction($potentialAction);
 
     public function priceCurrency($priceCurrency);
 
@@ -26,31 +44,13 @@ interface EventReservationContract
 
     public function reservedTicket($reservedTicket);
 
-    public function totalPrice($totalPrice);
-
-    public function underName($underName);
-
-    public function additionalType($additionalType);
-
-    public function alternateName($alternateName);
-
-    public function description($description);
-
-    public function disambiguatingDescription($disambiguatingDescription);
-
-    public function identifier($identifier);
-
-    public function image($image);
-
-    public function mainEntityOfPage($mainEntityOfPage);
-
-    public function name($name);
-
-    public function potentialAction($potentialAction);
-
     public function sameAs($sameAs);
 
     public function subjectOf($subjectOf);
+
+    public function totalPrice($totalPrice);
+
+    public function underName($underName);
 
     public function url($url);
 

@@ -4,17 +4,9 @@ namespace Spatie\SchemaOrg\Contracts;
 
 interface LodgingReservationContract
 {
-    public function checkinTime($checkinTime);
+    public function additionalType($additionalType);
 
-    public function checkoutTime($checkoutTime);
-
-    public function lodgingUnitDescription($lodgingUnitDescription);
-
-    public function lodgingUnitType($lodgingUnitType);
-
-    public function numAdults($numAdults);
-
-    public function numChildren($numChildren);
+    public function alternateName($alternateName);
 
     public function bookingAgent($bookingAgent);
 
@@ -22,7 +14,33 @@ interface LodgingReservationContract
 
     public function broker($broker);
 
+    public function checkinTime($checkinTime);
+
+    public function checkoutTime($checkoutTime);
+
+    public function description($description);
+
+    public function disambiguatingDescription($disambiguatingDescription);
+
+    public function identifier($identifier);
+
+    public function image($image);
+
+    public function lodgingUnitDescription($lodgingUnitDescription);
+
+    public function lodgingUnitType($lodgingUnitType);
+
+    public function mainEntityOfPage($mainEntityOfPage);
+
     public function modifiedTime($modifiedTime);
+
+    public function name($name);
+
+    public function numAdults($numAdults);
+
+    public function numChildren($numChildren);
+
+    public function potentialAction($potentialAction);
 
     public function priceCurrency($priceCurrency);
 
@@ -38,31 +56,13 @@ interface LodgingReservationContract
 
     public function reservedTicket($reservedTicket);
 
-    public function totalPrice($totalPrice);
-
-    public function underName($underName);
-
-    public function additionalType($additionalType);
-
-    public function alternateName($alternateName);
-
-    public function description($description);
-
-    public function disambiguatingDescription($disambiguatingDescription);
-
-    public function identifier($identifier);
-
-    public function image($image);
-
-    public function mainEntityOfPage($mainEntityOfPage);
-
-    public function name($name);
-
-    public function potentialAction($potentialAction);
-
     public function sameAs($sameAs);
 
     public function subjectOf($subjectOf);
+
+    public function totalPrice($totalPrice);
+
+    public function underName($underName);
 
     public function url($url);
 

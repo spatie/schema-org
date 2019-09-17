@@ -16,89 +16,22 @@ use \Spatie\SchemaOrg\Contracts\ThingContract;
 class MusicGroup extends BaseType implements PerformingGroupContract, OrganizationContract, ThingContract
 {
     /**
-     * A music album.
+     * An additional type for the item, typically used for adding more specific
+     * types from external vocabularies in microdata syntax. This is a
+     * relationship between something and a class that the thing is in. In RDFa
+     * syntax, it is better to use the native RDFa syntax - the 'typeof'
+     * attribute - for multiple types. Schema.org tools may have only weaker
+     * understanding of extra types, in particular those defined externally.
      *
-     * @param MusicAlbum|MusicAlbum[] $album
-     *
-     * @return static
-     *
-     * @see http://schema.org/album
-     */
-    public function album($album)
-    {
-        return $this->setProperty('album', $album);
-    }
-
-    /**
-     * A collection of music albums.
-     *
-     * @param MusicAlbum|MusicAlbum[] $albums
+     * @param string|string[] $additionalType
      *
      * @return static
      *
-     * @see http://schema.org/albums
+     * @see http://schema.org/additionalType
      */
-    public function albums($albums)
+    public function additionalType($additionalType)
     {
-        return $this->setProperty('albums', $albums);
-    }
-
-    /**
-     * Genre of the creative work, broadcast channel or group.
-     *
-     * @param string|string[] $genre
-     *
-     * @return static
-     *
-     * @see http://schema.org/genre
-     */
-    public function genre($genre)
-    {
-        return $this->setProperty('genre', $genre);
-    }
-
-    /**
-     * A member of a music group&#x2014;for example, John, Paul, George, or
-     * Ringo.
-     *
-     * @param Person|Person[] $musicGroupMember
-     *
-     * @return static
-     *
-     * @see http://schema.org/musicGroupMember
-     */
-    public function musicGroupMember($musicGroupMember)
-    {
-        return $this->setProperty('musicGroupMember', $musicGroupMember);
-    }
-
-    /**
-     * A music recording (track)&#x2014;usually a single song. If an ItemList is
-     * given, the list should contain items of type MusicRecording.
-     *
-     * @param ItemList|ItemList[]|MusicRecording|MusicRecording[] $track
-     *
-     * @return static
-     *
-     * @see http://schema.org/track
-     */
-    public function track($track)
-    {
-        return $this->setProperty('track', $track);
-    }
-
-    /**
-     * A music recording (track)&#x2014;usually a single song.
-     *
-     * @param MusicRecording|MusicRecording[] $tracks
-     *
-     * @return static
-     *
-     * @see http://schema.org/tracks
-     */
-    public function tracks($tracks)
-    {
-        return $this->setProperty('tracks', $tracks);
+        return $this->setProperty('additionalType', $additionalType);
     }
 
     /**
@@ -128,6 +61,48 @@ class MusicGroup extends BaseType implements PerformingGroupContract, Organizati
     public function aggregateRating($aggregateRating)
     {
         return $this->setProperty('aggregateRating', $aggregateRating);
+    }
+
+    /**
+     * A music album.
+     *
+     * @param MusicAlbum|MusicAlbum[] $album
+     *
+     * @return static
+     *
+     * @see http://schema.org/album
+     */
+    public function album($album)
+    {
+        return $this->setProperty('album', $album);
+    }
+
+    /**
+     * A collection of music albums.
+     *
+     * @param MusicAlbum|MusicAlbum[] $albums
+     *
+     * @return static
+     *
+     * @see http://schema.org/albums
+     */
+    public function albums($albums)
+    {
+        return $this->setProperty('albums', $albums);
+    }
+
+    /**
+     * An alias for the item.
+     *
+     * @param string|string[] $alternateName
+     *
+     * @return static
+     *
+     * @see http://schema.org/alternateName
+     */
+    public function alternateName($alternateName)
+    {
+        return $this->setProperty('alternateName', $alternateName);
     }
 
     /**
@@ -230,6 +205,37 @@ class MusicGroup extends BaseType implements PerformingGroupContract, Organizati
     public function department($department)
     {
         return $this->setProperty('department', $department);
+    }
+
+    /**
+     * A description of the item.
+     *
+     * @param string|string[] $description
+     *
+     * @return static
+     *
+     * @see http://schema.org/description
+     */
+    public function description($description)
+    {
+        return $this->setProperty('description', $description);
+    }
+
+    /**
+     * A sub property of description. A short description of the item used to
+     * disambiguate from other, similar items. Information from other properties
+     * (in particular, name) may be necessary for the description to be useful
+     * for disambiguation.
+     *
+     * @param string|string[] $disambiguatingDescription
+     *
+     * @return static
+     *
+     * @see http://schema.org/disambiguatingDescription
+     */
+    public function disambiguatingDescription($disambiguatingDescription)
+    {
+        return $this->setProperty('disambiguatingDescription', $disambiguatingDescription);
     }
 
     /**
@@ -418,6 +424,20 @@ class MusicGroup extends BaseType implements PerformingGroupContract, Organizati
     }
 
     /**
+     * Genre of the creative work, broadcast channel or group.
+     *
+     * @param string|string[] $genre
+     *
+     * @return static
+     *
+     * @see http://schema.org/genre
+     */
+    public function genre($genre)
+    {
+        return $this->setProperty('genre', $genre);
+    }
+
+    /**
      * The [Global Location Number](http://www.gs1.org/gln) (GLN, sometimes also
      * referred to as International Location Number or ILN) of the respective
      * organization, person, or place. The GLN is a 13-digit number used to
@@ -461,6 +481,39 @@ class MusicGroup extends BaseType implements PerformingGroupContract, Organizati
     public function hasPOS($hasPOS)
     {
         return $this->setProperty('hasPOS', $hasPOS);
+    }
+
+    /**
+     * The identifier property represents any kind of identifier for any kind of
+     * [[Thing]], such as ISBNs, GTIN codes, UUIDs etc. Schema.org provides
+     * dedicated properties for representing many of these, either as textual
+     * strings or as URL (URI) links. See [background
+     * notes](/docs/datamodel.html#identifierBg) for more details.
+     *
+     * @param PropertyValue|PropertyValue[]|string|string[] $identifier
+     *
+     * @return static
+     *
+     * @see http://schema.org/identifier
+     */
+    public function identifier($identifier)
+    {
+        return $this->setProperty('identifier', $identifier);
+    }
+
+    /**
+     * An image of the item. This can be a [[URL]] or a fully described
+     * [[ImageObject]].
+     *
+     * @param ImageObject|ImageObject[]|string|string[] $image
+     *
+     * @return static
+     *
+     * @see http://schema.org/image
+     */
+    public function image($image)
+    {
+        return $this->setProperty('image', $image);
     }
 
     /**
@@ -538,6 +591,22 @@ class MusicGroup extends BaseType implements PerformingGroupContract, Organizati
     }
 
     /**
+     * Indicates a page (or other CreativeWork) for which this thing is the main
+     * entity being described. See [background
+     * notes](/docs/datamodel.html#mainEntityBackground) for details.
+     *
+     * @param CreativeWork|CreativeWork[]|string|string[] $mainEntityOfPage
+     *
+     * @return static
+     *
+     * @see http://schema.org/mainEntityOfPage
+     */
+    public function mainEntityOfPage($mainEntityOfPage)
+    {
+        return $this->setProperty('mainEntityOfPage', $mainEntityOfPage);
+    }
+
+    /**
      * A pointer to products or services offered by the organization or person.
      *
      * @param Offer|Offer[] $makesOffer
@@ -596,6 +665,21 @@ class MusicGroup extends BaseType implements PerformingGroupContract, Organizati
     }
 
     /**
+     * A member of a music group&#x2014;for example, John, Paul, George, or
+     * Ringo.
+     *
+     * @param Person|Person[] $musicGroupMember
+     *
+     * @return static
+     *
+     * @see http://schema.org/musicGroupMember
+     */
+    public function musicGroupMember($musicGroupMember)
+    {
+        return $this->setProperty('musicGroupMember', $musicGroupMember);
+    }
+
+    /**
      * The North American Industry Classification System (NAICS) code for a
      * particular organization or business person.
      *
@@ -608,6 +692,20 @@ class MusicGroup extends BaseType implements PerformingGroupContract, Organizati
     public function naics($naics)
     {
         return $this->setProperty('naics', $naics);
+    }
+
+    /**
+     * The name of the item.
+     *
+     * @param string|string[] $name
+     *
+     * @return static
+     *
+     * @see http://schema.org/name
+     */
+    public function name($name)
+    {
+        return $this->setProperty('name', $name);
     }
 
     /**
@@ -668,6 +766,21 @@ class MusicGroup extends BaseType implements PerformingGroupContract, Organizati
     }
 
     /**
+     * Indicates a potential Action, which describes an idealized action in
+     * which this thing would play an 'object' role.
+     *
+     * @param Action|Action[] $potentialAction
+     *
+     * @return static
+     *
+     * @see http://schema.org/potentialAction
+     */
+    public function potentialAction($potentialAction)
+    {
+        return $this->setProperty('potentialAction', $potentialAction);
+    }
+
+    /**
      * The publishingPrinciples property indicates (typically via [[URL]]) a
      * document describing the editorial principles of an [[Organization]] (or
      * individual e.g. a [[Person]] writing a blog) that relate to their
@@ -717,6 +830,22 @@ class MusicGroup extends BaseType implements PerformingGroupContract, Organizati
     public function reviews($reviews)
     {
         return $this->setProperty('reviews', $reviews);
+    }
+
+    /**
+     * URL of a reference Web page that unambiguously indicates the item's
+     * identity. E.g. the URL of the item's Wikipedia page, Wikidata entry, or
+     * official website.
+     *
+     * @param string|string[] $sameAs
+     *
+     * @return static
+     *
+     * @see http://schema.org/sameAs
+     */
+    public function sameAs($sameAs)
+    {
+        return $this->setProperty('sameAs', $sameAs);
     }
 
     /**
@@ -795,6 +924,20 @@ class MusicGroup extends BaseType implements PerformingGroupContract, Organizati
     }
 
     /**
+     * A CreativeWork or Event about this Thing.
+     *
+     * @param CreativeWork|CreativeWork[]|Event|Event[] $subjectOf
+     *
+     * @return static
+     *
+     * @see http://schema.org/subjectOf
+     */
+    public function subjectOf($subjectOf)
+    {
+        return $this->setProperty('subjectOf', $subjectOf);
+    }
+
+    /**
      * The Tax / Fiscal ID of the organization or person, e.g. the TIN in the US
      * or the CIF/NIF in Spain.
      *
@@ -824,189 +967,32 @@ class MusicGroup extends BaseType implements PerformingGroupContract, Organizati
     }
 
     /**
-     * The Value-added Tax ID of the organization or person.
+     * A music recording (track)&#x2014;usually a single song. If an ItemList is
+     * given, the list should contain items of type MusicRecording.
      *
-     * @param string|string[] $vatID
+     * @param ItemList|ItemList[]|MusicRecording|MusicRecording[] $track
      *
      * @return static
      *
-     * @see http://schema.org/vatID
+     * @see http://schema.org/track
      */
-    public function vatID($vatID)
+    public function track($track)
     {
-        return $this->setProperty('vatID', $vatID);
+        return $this->setProperty('track', $track);
     }
 
     /**
-     * An additional type for the item, typically used for adding more specific
-     * types from external vocabularies in microdata syntax. This is a
-     * relationship between something and a class that the thing is in. In RDFa
-     * syntax, it is better to use the native RDFa syntax - the 'typeof'
-     * attribute - for multiple types. Schema.org tools may have only weaker
-     * understanding of extra types, in particular those defined externally.
+     * A music recording (track)&#x2014;usually a single song.
      *
-     * @param string|string[] $additionalType
+     * @param MusicRecording|MusicRecording[] $tracks
      *
      * @return static
      *
-     * @see http://schema.org/additionalType
+     * @see http://schema.org/tracks
      */
-    public function additionalType($additionalType)
+    public function tracks($tracks)
     {
-        return $this->setProperty('additionalType', $additionalType);
-    }
-
-    /**
-     * An alias for the item.
-     *
-     * @param string|string[] $alternateName
-     *
-     * @return static
-     *
-     * @see http://schema.org/alternateName
-     */
-    public function alternateName($alternateName)
-    {
-        return $this->setProperty('alternateName', $alternateName);
-    }
-
-    /**
-     * A description of the item.
-     *
-     * @param string|string[] $description
-     *
-     * @return static
-     *
-     * @see http://schema.org/description
-     */
-    public function description($description)
-    {
-        return $this->setProperty('description', $description);
-    }
-
-    /**
-     * A sub property of description. A short description of the item used to
-     * disambiguate from other, similar items. Information from other properties
-     * (in particular, name) may be necessary for the description to be useful
-     * for disambiguation.
-     *
-     * @param string|string[] $disambiguatingDescription
-     *
-     * @return static
-     *
-     * @see http://schema.org/disambiguatingDescription
-     */
-    public function disambiguatingDescription($disambiguatingDescription)
-    {
-        return $this->setProperty('disambiguatingDescription', $disambiguatingDescription);
-    }
-
-    /**
-     * The identifier property represents any kind of identifier for any kind of
-     * [[Thing]], such as ISBNs, GTIN codes, UUIDs etc. Schema.org provides
-     * dedicated properties for representing many of these, either as textual
-     * strings or as URL (URI) links. See [background
-     * notes](/docs/datamodel.html#identifierBg) for more details.
-     *
-     * @param PropertyValue|PropertyValue[]|string|string[] $identifier
-     *
-     * @return static
-     *
-     * @see http://schema.org/identifier
-     */
-    public function identifier($identifier)
-    {
-        return $this->setProperty('identifier', $identifier);
-    }
-
-    /**
-     * An image of the item. This can be a [[URL]] or a fully described
-     * [[ImageObject]].
-     *
-     * @param ImageObject|ImageObject[]|string|string[] $image
-     *
-     * @return static
-     *
-     * @see http://schema.org/image
-     */
-    public function image($image)
-    {
-        return $this->setProperty('image', $image);
-    }
-
-    /**
-     * Indicates a page (or other CreativeWork) for which this thing is the main
-     * entity being described. See [background
-     * notes](/docs/datamodel.html#mainEntityBackground) for details.
-     *
-     * @param CreativeWork|CreativeWork[]|string|string[] $mainEntityOfPage
-     *
-     * @return static
-     *
-     * @see http://schema.org/mainEntityOfPage
-     */
-    public function mainEntityOfPage($mainEntityOfPage)
-    {
-        return $this->setProperty('mainEntityOfPage', $mainEntityOfPage);
-    }
-
-    /**
-     * The name of the item.
-     *
-     * @param string|string[] $name
-     *
-     * @return static
-     *
-     * @see http://schema.org/name
-     */
-    public function name($name)
-    {
-        return $this->setProperty('name', $name);
-    }
-
-    /**
-     * Indicates a potential Action, which describes an idealized action in
-     * which this thing would play an 'object' role.
-     *
-     * @param Action|Action[] $potentialAction
-     *
-     * @return static
-     *
-     * @see http://schema.org/potentialAction
-     */
-    public function potentialAction($potentialAction)
-    {
-        return $this->setProperty('potentialAction', $potentialAction);
-    }
-
-    /**
-     * URL of a reference Web page that unambiguously indicates the item's
-     * identity. E.g. the URL of the item's Wikipedia page, Wikidata entry, or
-     * official website.
-     *
-     * @param string|string[] $sameAs
-     *
-     * @return static
-     *
-     * @see http://schema.org/sameAs
-     */
-    public function sameAs($sameAs)
-    {
-        return $this->setProperty('sameAs', $sameAs);
-    }
-
-    /**
-     * A CreativeWork or Event about this Thing.
-     *
-     * @param CreativeWork|CreativeWork[]|Event|Event[] $subjectOf
-     *
-     * @return static
-     *
-     * @see http://schema.org/subjectOf
-     */
-    public function subjectOf($subjectOf)
-    {
-        return $this->setProperty('subjectOf', $subjectOf);
+        return $this->setProperty('tracks', $tracks);
     }
 
     /**
@@ -1021,6 +1007,20 @@ class MusicGroup extends BaseType implements PerformingGroupContract, Organizati
     public function url($url)
     {
         return $this->setProperty('url', $url);
+    }
+
+    /**
+     * The Value-added Tax ID of the organization or person.
+     *
+     * @param string|string[] $vatID
+     *
+     * @return static
+     *
+     * @see http://schema.org/vatID
+     */
+    public function vatID($vatID)
+    {
+        return $this->setProperty('vatID', $vatID);
     }
 
 }

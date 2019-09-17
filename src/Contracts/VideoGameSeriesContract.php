@@ -4,56 +4,6 @@ namespace Spatie\SchemaOrg\Contracts;
 
 interface VideoGameSeriesContract
 {
-    public function actor($actor);
-
-    public function actors($actors);
-
-    public function characterAttribute($characterAttribute);
-
-    public function cheatCode($cheatCode);
-
-    public function containsSeason($containsSeason);
-
-    public function director($director);
-
-    public function directors($directors);
-
-    public function episode($episode);
-
-    public function episodes($episodes);
-
-    public function gameItem($gameItem);
-
-    public function gameLocation($gameLocation);
-
-    public function gamePlatform($gamePlatform);
-
-    public function musicBy($musicBy);
-
-    public function numberOfEpisodes($numberOfEpisodes);
-
-    public function numberOfPlayers($numberOfPlayers);
-
-    public function numberOfSeasons($numberOfSeasons);
-
-    public function playMode($playMode);
-
-    public function productionCompany($productionCompany);
-
-    public function quest($quest);
-
-    public function season($season);
-
-    public function seasons($seasons);
-
-    public function trailer($trailer);
-
-    public function endDate($endDate);
-
-    public function issn($issn);
-
-    public function startDate($startDate);
-
     public function about($about);
 
     public function accessMode($accessMode);
@@ -72,7 +22,15 @@ interface VideoGameSeriesContract
 
     public function accountablePerson($accountablePerson);
 
+    public function actor($actor);
+
+    public function actors($actors);
+
+    public function additionalType($additionalType);
+
     public function aggregateRating($aggregateRating);
+
+    public function alternateName($alternateName);
 
     public function alternativeHeadline($alternativeHeadline);
 
@@ -90,11 +48,17 @@ interface VideoGameSeriesContract
 
     public function character($character);
 
+    public function characterAttribute($characterAttribute);
+
+    public function cheatCode($cheatCode);
+
     public function citation($citation);
 
     public function comment($comment);
 
     public function commentCount($commentCount);
+
+    public function containsSeason($containsSeason);
 
     public function contentLocation($contentLocation);
 
@@ -114,6 +78,14 @@ interface VideoGameSeriesContract
 
     public function datePublished($datePublished);
 
+    public function description($description);
+
+    public function director($director);
+
+    public function directors($directors);
+
+    public function disambiguatingDescription($disambiguatingDescription);
+
     public function discussionUrl($discussionUrl);
 
     public function editor($editor);
@@ -128,6 +100,12 @@ interface VideoGameSeriesContract
 
     public function encodings($encodings);
 
+    public function endDate($endDate);
+
+    public function episode($episode);
+
+    public function episodes($episodes);
+
     public function exampleOfWork($exampleOfWork);
 
     public function expires($expires);
@@ -136,11 +114,21 @@ interface VideoGameSeriesContract
 
     public function funder($funder);
 
+    public function gameItem($gameItem);
+
+    public function gameLocation($gameLocation);
+
+    public function gamePlatform($gamePlatform);
+
     public function genre($genre);
 
     public function hasPart($hasPart);
 
     public function headline($headline);
+
+    public function identifier($identifier);
+
+    public function image($image);
 
     public function inLanguage($inLanguage);
 
@@ -158,6 +146,8 @@ interface VideoGameSeriesContract
 
     public function isPartOf($isPartOf);
 
+    public function issn($issn);
+
     public function keywords($keywords);
 
     public function learningResourceType($learningResourceType);
@@ -168,15 +158,33 @@ interface VideoGameSeriesContract
 
     public function mainEntity($mainEntity);
 
+    public function mainEntityOfPage($mainEntityOfPage);
+
     public function material($material);
 
     public function mentions($mentions);
 
+    public function musicBy($musicBy);
+
+    public function name($name);
+
+    public function numberOfEpisodes($numberOfEpisodes);
+
+    public function numberOfPlayers($numberOfPlayers);
+
+    public function numberOfSeasons($numberOfSeasons);
+
     public function offers($offers);
+
+    public function playMode($playMode);
 
     public function position($position);
 
+    public function potentialAction($potentialAction);
+
     public function producer($producer);
+
+    public function productionCompany($productionCompany);
 
     public function provider($provider);
 
@@ -186,6 +194,8 @@ interface VideoGameSeriesContract
 
     public function publishingPrinciples($publishingPrinciples);
 
+    public function quest($quest);
+
     public function recordedAt($recordedAt);
 
     public function releasedEvent($releasedEvent);
@@ -194,7 +204,13 @@ interface VideoGameSeriesContract
 
     public function reviews($reviews);
 
+    public function sameAs($sameAs);
+
     public function schemaVersion($schemaVersion);
+
+    public function season($season);
+
+    public function seasons($seasons);
 
     public function sourceOrganization($sourceOrganization);
 
@@ -203,6 +219,10 @@ interface VideoGameSeriesContract
     public function spatialCoverage($spatialCoverage);
 
     public function sponsor($sponsor);
+
+    public function startDate($startDate);
+
+    public function subjectOf($subjectOf);
 
     public function temporal($temporal);
 
@@ -214,40 +234,18 @@ interface VideoGameSeriesContract
 
     public function timeRequired($timeRequired);
 
+    public function trailer($trailer);
+
     public function translator($translator);
 
     public function typicalAgeRange($typicalAgeRange);
+
+    public function url($url);
 
     public function version($version);
 
     public function video($video);
 
     public function workExample($workExample);
-
-    public function additionalType($additionalType);
-
-    public function alternateName($alternateName);
-
-    public function description($description);
-
-    public function disambiguatingDescription($disambiguatingDescription);
-
-    public function identifier($identifier);
-
-    public function image($image);
-
-    public function mainEntityOfPage($mainEntityOfPage);
-
-    public function name($name);
-
-    public function potentialAction($potentialAction);
-
-    public function sameAs($sameAs);
-
-    public function subjectOf($subjectOf);
-
-    public function url($url);
-
-    public function director($director);
 
 }

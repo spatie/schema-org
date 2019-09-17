@@ -19,88 +19,36 @@ use \Spatie\SchemaOrg\Contracts\ThingContract;
 class LodgingReservation extends BaseType implements ReservationContract, IntangibleContract, ThingContract
 {
     /**
-     * The earliest someone may check into a lodging establishment.
+     * An additional type for the item, typically used for adding more specific
+     * types from external vocabularies in microdata syntax. This is a
+     * relationship between something and a class that the thing is in. In RDFa
+     * syntax, it is better to use the native RDFa syntax - the 'typeof'
+     * attribute - for multiple types. Schema.org tools may have only weaker
+     * understanding of extra types, in particular those defined externally.
      *
-     * @param \DateTimeInterface|\DateTimeInterface[] $checkinTime
+     * @param string|string[] $additionalType
      *
      * @return static
      *
-     * @see http://schema.org/checkinTime
+     * @see http://schema.org/additionalType
      */
-    public function checkinTime($checkinTime)
+    public function additionalType($additionalType)
     {
-        return $this->setProperty('checkinTime', $checkinTime);
+        return $this->setProperty('additionalType', $additionalType);
     }
 
     /**
-     * The latest someone may check out of a lodging establishment.
+     * An alias for the item.
      *
-     * @param \DateTimeInterface|\DateTimeInterface[] $checkoutTime
-     *
-     * @return static
-     *
-     * @see http://schema.org/checkoutTime
-     */
-    public function checkoutTime($checkoutTime)
-    {
-        return $this->setProperty('checkoutTime', $checkoutTime);
-    }
-
-    /**
-     * A full description of the lodging unit.
-     *
-     * @param string|string[] $lodgingUnitDescription
+     * @param string|string[] $alternateName
      *
      * @return static
      *
-     * @see http://schema.org/lodgingUnitDescription
+     * @see http://schema.org/alternateName
      */
-    public function lodgingUnitDescription($lodgingUnitDescription)
+    public function alternateName($alternateName)
     {
-        return $this->setProperty('lodgingUnitDescription', $lodgingUnitDescription);
-    }
-
-    /**
-     * Textual description of the unit type (including suite vs. room, size of
-     * bed, etc.).
-     *
-     * @param QualitativeValue|QualitativeValue[]|string|string[] $lodgingUnitType
-     *
-     * @return static
-     *
-     * @see http://schema.org/lodgingUnitType
-     */
-    public function lodgingUnitType($lodgingUnitType)
-    {
-        return $this->setProperty('lodgingUnitType', $lodgingUnitType);
-    }
-
-    /**
-     * The number of adults staying in the unit.
-     *
-     * @param QuantitativeValue|QuantitativeValue[]|int|int[] $numAdults
-     *
-     * @return static
-     *
-     * @see http://schema.org/numAdults
-     */
-    public function numAdults($numAdults)
-    {
-        return $this->setProperty('numAdults', $numAdults);
-    }
-
-    /**
-     * The number of children staying in the unit.
-     *
-     * @param QuantitativeValue|QuantitativeValue[]|int|int[] $numChildren
-     *
-     * @return static
-     *
-     * @see http://schema.org/numChildren
-     */
-    public function numChildren($numChildren)
-    {
-        return $this->setProperty('numChildren', $numChildren);
+        return $this->setProperty('alternateName', $alternateName);
     }
 
     /**
@@ -150,6 +98,143 @@ class LodgingReservation extends BaseType implements ReservationContract, Intang
     }
 
     /**
+     * The earliest someone may check into a lodging establishment.
+     *
+     * @param \DateTimeInterface|\DateTimeInterface[] $checkinTime
+     *
+     * @return static
+     *
+     * @see http://schema.org/checkinTime
+     */
+    public function checkinTime($checkinTime)
+    {
+        return $this->setProperty('checkinTime', $checkinTime);
+    }
+
+    /**
+     * The latest someone may check out of a lodging establishment.
+     *
+     * @param \DateTimeInterface|\DateTimeInterface[] $checkoutTime
+     *
+     * @return static
+     *
+     * @see http://schema.org/checkoutTime
+     */
+    public function checkoutTime($checkoutTime)
+    {
+        return $this->setProperty('checkoutTime', $checkoutTime);
+    }
+
+    /**
+     * A description of the item.
+     *
+     * @param string|string[] $description
+     *
+     * @return static
+     *
+     * @see http://schema.org/description
+     */
+    public function description($description)
+    {
+        return $this->setProperty('description', $description);
+    }
+
+    /**
+     * A sub property of description. A short description of the item used to
+     * disambiguate from other, similar items. Information from other properties
+     * (in particular, name) may be necessary for the description to be useful
+     * for disambiguation.
+     *
+     * @param string|string[] $disambiguatingDescription
+     *
+     * @return static
+     *
+     * @see http://schema.org/disambiguatingDescription
+     */
+    public function disambiguatingDescription($disambiguatingDescription)
+    {
+        return $this->setProperty('disambiguatingDescription', $disambiguatingDescription);
+    }
+
+    /**
+     * The identifier property represents any kind of identifier for any kind of
+     * [[Thing]], such as ISBNs, GTIN codes, UUIDs etc. Schema.org provides
+     * dedicated properties for representing many of these, either as textual
+     * strings or as URL (URI) links. See [background
+     * notes](/docs/datamodel.html#identifierBg) for more details.
+     *
+     * @param PropertyValue|PropertyValue[]|string|string[] $identifier
+     *
+     * @return static
+     *
+     * @see http://schema.org/identifier
+     */
+    public function identifier($identifier)
+    {
+        return $this->setProperty('identifier', $identifier);
+    }
+
+    /**
+     * An image of the item. This can be a [[URL]] or a fully described
+     * [[ImageObject]].
+     *
+     * @param ImageObject|ImageObject[]|string|string[] $image
+     *
+     * @return static
+     *
+     * @see http://schema.org/image
+     */
+    public function image($image)
+    {
+        return $this->setProperty('image', $image);
+    }
+
+    /**
+     * A full description of the lodging unit.
+     *
+     * @param string|string[] $lodgingUnitDescription
+     *
+     * @return static
+     *
+     * @see http://schema.org/lodgingUnitDescription
+     */
+    public function lodgingUnitDescription($lodgingUnitDescription)
+    {
+        return $this->setProperty('lodgingUnitDescription', $lodgingUnitDescription);
+    }
+
+    /**
+     * Textual description of the unit type (including suite vs. room, size of
+     * bed, etc.).
+     *
+     * @param QualitativeValue|QualitativeValue[]|string|string[] $lodgingUnitType
+     *
+     * @return static
+     *
+     * @see http://schema.org/lodgingUnitType
+     */
+    public function lodgingUnitType($lodgingUnitType)
+    {
+        return $this->setProperty('lodgingUnitType', $lodgingUnitType);
+    }
+
+    /**
+     * Indicates a page (or other CreativeWork) for which this thing is the main
+     * entity being described. See [background
+     * notes](/docs/datamodel.html#mainEntityBackground) for details.
+     *
+     * @param CreativeWork|CreativeWork[]|string|string[] $mainEntityOfPage
+     *
+     * @return static
+     *
+     * @see http://schema.org/mainEntityOfPage
+     */
+    public function mainEntityOfPage($mainEntityOfPage)
+    {
+        return $this->setProperty('mainEntityOfPage', $mainEntityOfPage);
+    }
+
+    /**
      * The date and time the reservation was modified.
      *
      * @param \DateTimeInterface|\DateTimeInterface[] $modifiedTime
@@ -161,6 +246,63 @@ class LodgingReservation extends BaseType implements ReservationContract, Intang
     public function modifiedTime($modifiedTime)
     {
         return $this->setProperty('modifiedTime', $modifiedTime);
+    }
+
+    /**
+     * The name of the item.
+     *
+     * @param string|string[] $name
+     *
+     * @return static
+     *
+     * @see http://schema.org/name
+     */
+    public function name($name)
+    {
+        return $this->setProperty('name', $name);
+    }
+
+    /**
+     * The number of adults staying in the unit.
+     *
+     * @param QuantitativeValue|QuantitativeValue[]|int|int[] $numAdults
+     *
+     * @return static
+     *
+     * @see http://schema.org/numAdults
+     */
+    public function numAdults($numAdults)
+    {
+        return $this->setProperty('numAdults', $numAdults);
+    }
+
+    /**
+     * The number of children staying in the unit.
+     *
+     * @param QuantitativeValue|QuantitativeValue[]|int|int[] $numChildren
+     *
+     * @return static
+     *
+     * @see http://schema.org/numChildren
+     */
+    public function numChildren($numChildren)
+    {
+        return $this->setProperty('numChildren', $numChildren);
+    }
+
+    /**
+     * Indicates a potential Action, which describes an idealized action in
+     * which this thing would play an 'object' role.
+     *
+     * @param Action|Action[] $potentialAction
+     *
+     * @return static
+     *
+     * @see http://schema.org/potentialAction
+     */
+    public function potentialAction($potentialAction)
+    {
+        return $this->setProperty('potentialAction', $potentialAction);
     }
 
     /**
@@ -274,6 +416,36 @@ class LodgingReservation extends BaseType implements ReservationContract, Intang
     }
 
     /**
+     * URL of a reference Web page that unambiguously indicates the item's
+     * identity. E.g. the URL of the item's Wikipedia page, Wikidata entry, or
+     * official website.
+     *
+     * @param string|string[] $sameAs
+     *
+     * @return static
+     *
+     * @see http://schema.org/sameAs
+     */
+    public function sameAs($sameAs)
+    {
+        return $this->setProperty('sameAs', $sameAs);
+    }
+
+    /**
+     * A CreativeWork or Event about this Thing.
+     *
+     * @param CreativeWork|CreativeWork[]|Event|Event[] $subjectOf
+     *
+     * @return static
+     *
+     * @see http://schema.org/subjectOf
+     */
+    public function subjectOf($subjectOf)
+    {
+        return $this->setProperty('subjectOf', $subjectOf);
+    }
+
+    /**
      * The total price for the reservation or ticket, including applicable
      * taxes, shipping, etc.
      * 
@@ -307,178 +479,6 @@ class LodgingReservation extends BaseType implements ReservationContract, Intang
     public function underName($underName)
     {
         return $this->setProperty('underName', $underName);
-    }
-
-    /**
-     * An additional type for the item, typically used for adding more specific
-     * types from external vocabularies in microdata syntax. This is a
-     * relationship between something and a class that the thing is in. In RDFa
-     * syntax, it is better to use the native RDFa syntax - the 'typeof'
-     * attribute - for multiple types. Schema.org tools may have only weaker
-     * understanding of extra types, in particular those defined externally.
-     *
-     * @param string|string[] $additionalType
-     *
-     * @return static
-     *
-     * @see http://schema.org/additionalType
-     */
-    public function additionalType($additionalType)
-    {
-        return $this->setProperty('additionalType', $additionalType);
-    }
-
-    /**
-     * An alias for the item.
-     *
-     * @param string|string[] $alternateName
-     *
-     * @return static
-     *
-     * @see http://schema.org/alternateName
-     */
-    public function alternateName($alternateName)
-    {
-        return $this->setProperty('alternateName', $alternateName);
-    }
-
-    /**
-     * A description of the item.
-     *
-     * @param string|string[] $description
-     *
-     * @return static
-     *
-     * @see http://schema.org/description
-     */
-    public function description($description)
-    {
-        return $this->setProperty('description', $description);
-    }
-
-    /**
-     * A sub property of description. A short description of the item used to
-     * disambiguate from other, similar items. Information from other properties
-     * (in particular, name) may be necessary for the description to be useful
-     * for disambiguation.
-     *
-     * @param string|string[] $disambiguatingDescription
-     *
-     * @return static
-     *
-     * @see http://schema.org/disambiguatingDescription
-     */
-    public function disambiguatingDescription($disambiguatingDescription)
-    {
-        return $this->setProperty('disambiguatingDescription', $disambiguatingDescription);
-    }
-
-    /**
-     * The identifier property represents any kind of identifier for any kind of
-     * [[Thing]], such as ISBNs, GTIN codes, UUIDs etc. Schema.org provides
-     * dedicated properties for representing many of these, either as textual
-     * strings or as URL (URI) links. See [background
-     * notes](/docs/datamodel.html#identifierBg) for more details.
-     *
-     * @param PropertyValue|PropertyValue[]|string|string[] $identifier
-     *
-     * @return static
-     *
-     * @see http://schema.org/identifier
-     */
-    public function identifier($identifier)
-    {
-        return $this->setProperty('identifier', $identifier);
-    }
-
-    /**
-     * An image of the item. This can be a [[URL]] or a fully described
-     * [[ImageObject]].
-     *
-     * @param ImageObject|ImageObject[]|string|string[] $image
-     *
-     * @return static
-     *
-     * @see http://schema.org/image
-     */
-    public function image($image)
-    {
-        return $this->setProperty('image', $image);
-    }
-
-    /**
-     * Indicates a page (or other CreativeWork) for which this thing is the main
-     * entity being described. See [background
-     * notes](/docs/datamodel.html#mainEntityBackground) for details.
-     *
-     * @param CreativeWork|CreativeWork[]|string|string[] $mainEntityOfPage
-     *
-     * @return static
-     *
-     * @see http://schema.org/mainEntityOfPage
-     */
-    public function mainEntityOfPage($mainEntityOfPage)
-    {
-        return $this->setProperty('mainEntityOfPage', $mainEntityOfPage);
-    }
-
-    /**
-     * The name of the item.
-     *
-     * @param string|string[] $name
-     *
-     * @return static
-     *
-     * @see http://schema.org/name
-     */
-    public function name($name)
-    {
-        return $this->setProperty('name', $name);
-    }
-
-    /**
-     * Indicates a potential Action, which describes an idealized action in
-     * which this thing would play an 'object' role.
-     *
-     * @param Action|Action[] $potentialAction
-     *
-     * @return static
-     *
-     * @see http://schema.org/potentialAction
-     */
-    public function potentialAction($potentialAction)
-    {
-        return $this->setProperty('potentialAction', $potentialAction);
-    }
-
-    /**
-     * URL of a reference Web page that unambiguously indicates the item's
-     * identity. E.g. the URL of the item's Wikipedia page, Wikidata entry, or
-     * official website.
-     *
-     * @param string|string[] $sameAs
-     *
-     * @return static
-     *
-     * @see http://schema.org/sameAs
-     */
-    public function sameAs($sameAs)
-    {
-        return $this->setProperty('sameAs', $sameAs);
-    }
-
-    /**
-     * A CreativeWork or Event about this Thing.
-     *
-     * @param CreativeWork|CreativeWork[]|Event|Event[] $subjectOf
-     *
-     * @return static
-     *
-     * @see http://schema.org/subjectOf
-     */
-    public function subjectOf($subjectOf)
-    {
-        return $this->setProperty('subjectOf', $subjectOf);
     }
 
     /**

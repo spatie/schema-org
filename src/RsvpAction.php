@@ -18,64 +18,6 @@ use \Spatie\SchemaOrg\Contracts\ThingContract;
 class RsvpAction extends BaseType implements InformActionContract, CommunicateActionContract, InteractActionContract, ActionContract, ThingContract
 {
     /**
-     * If responding yes, the number of guests who will attend in addition to
-     * the invitee.
-     *
-     * @param float|float[]|int|int[] $additionalNumberOfGuests
-     *
-     * @return static
-     *
-     * @see http://schema.org/additionalNumberOfGuests
-     */
-    public function additionalNumberOfGuests($additionalNumberOfGuests)
-    {
-        return $this->setProperty('additionalNumberOfGuests', $additionalNumberOfGuests);
-    }
-
-    /**
-     * Comments, typically from users.
-     *
-     * @param Comment|Comment[] $comment
-     *
-     * @return static
-     *
-     * @see http://schema.org/comment
-     */
-    public function comment($comment)
-    {
-        return $this->setProperty('comment', $comment);
-    }
-
-    /**
-     * The response (yes, no, maybe) to the RSVP.
-     *
-     * @param RsvpResponseType|RsvpResponseType[] $rsvpResponse
-     *
-     * @return static
-     *
-     * @see http://schema.org/rsvpResponse
-     */
-    public function rsvpResponse($rsvpResponse)
-    {
-        return $this->setProperty('rsvpResponse', $rsvpResponse);
-    }
-
-    /**
-     * Upcoming or past event associated with this place, organization, or
-     * action.
-     *
-     * @param Event|Event[] $event
-     *
-     * @return static
-     *
-     * @see http://schema.org/event
-     */
-    public function event($event)
-    {
-        return $this->setProperty('event', $event);
-    }
-
-    /**
      * The subject matter of the content.
      *
      * @param Thing|Thing[] $about
@@ -87,52 +29,6 @@ class RsvpAction extends BaseType implements InformActionContract, CommunicateAc
     public function about($about)
     {
         return $this->setProperty('about', $about);
-    }
-
-    /**
-     * The language of the content or performance or used in an action. Please
-     * use one of the language codes from the [IETF BCP 47
-     * standard](http://tools.ietf.org/html/bcp47). See also
-     * [[availableLanguage]].
-     *
-     * @param Language|Language[]|string|string[] $inLanguage
-     *
-     * @return static
-     *
-     * @see http://schema.org/inLanguage
-     */
-    public function inLanguage($inLanguage)
-    {
-        return $this->setProperty('inLanguage', $inLanguage);
-    }
-
-    /**
-     * A sub property of instrument. The language used on this action.
-     *
-     * @param Language|Language[] $language
-     *
-     * @return static
-     *
-     * @see http://schema.org/language
-     */
-    public function language($language)
-    {
-        return $this->setProperty('language', $language);
-    }
-
-    /**
-     * A sub property of participant. The participant who is at the receiving
-     * end of the action.
-     *
-     * @param Audience|Audience[]|ContactPoint|ContactPoint[]|Organization|Organization[]|Person|Person[] $recipient
-     *
-     * @return static
-     *
-     * @see http://schema.org/recipient
-     */
-    public function recipient($recipient)
-    {
-        return $this->setProperty('recipient', $recipient);
     }
 
     /**
@@ -150,6 +46,40 @@ class RsvpAction extends BaseType implements InformActionContract, CommunicateAc
     }
 
     /**
+     * If responding yes, the number of guests who will attend in addition to
+     * the invitee.
+     *
+     * @param float|float[]|int|int[] $additionalNumberOfGuests
+     *
+     * @return static
+     *
+     * @see http://schema.org/additionalNumberOfGuests
+     */
+    public function additionalNumberOfGuests($additionalNumberOfGuests)
+    {
+        return $this->setProperty('additionalNumberOfGuests', $additionalNumberOfGuests);
+    }
+
+    /**
+     * An additional type for the item, typically used for adding more specific
+     * types from external vocabularies in microdata syntax. This is a
+     * relationship between something and a class that the thing is in. In RDFa
+     * syntax, it is better to use the native RDFa syntax - the 'typeof'
+     * attribute - for multiple types. Schema.org tools may have only weaker
+     * understanding of extra types, in particular those defined externally.
+     *
+     * @param string|string[] $additionalType
+     *
+     * @return static
+     *
+     * @see http://schema.org/additionalType
+     */
+    public function additionalType($additionalType)
+    {
+        return $this->setProperty('additionalType', $additionalType);
+    }
+
+    /**
      * The direct performer or driver of the action (animate or inanimate). e.g.
      * *John* wrote a book.
      *
@@ -162,6 +92,65 @@ class RsvpAction extends BaseType implements InformActionContract, CommunicateAc
     public function agent($agent)
     {
         return $this->setProperty('agent', $agent);
+    }
+
+    /**
+     * An alias for the item.
+     *
+     * @param string|string[] $alternateName
+     *
+     * @return static
+     *
+     * @see http://schema.org/alternateName
+     */
+    public function alternateName($alternateName)
+    {
+        return $this->setProperty('alternateName', $alternateName);
+    }
+
+    /**
+     * Comments, typically from users.
+     *
+     * @param Comment|Comment[] $comment
+     *
+     * @return static
+     *
+     * @see http://schema.org/comment
+     */
+    public function comment($comment)
+    {
+        return $this->setProperty('comment', $comment);
+    }
+
+    /**
+     * A description of the item.
+     *
+     * @param string|string[] $description
+     *
+     * @return static
+     *
+     * @see http://schema.org/description
+     */
+    public function description($description)
+    {
+        return $this->setProperty('description', $description);
+    }
+
+    /**
+     * A sub property of description. A short description of the item used to
+     * disambiguate from other, similar items. Information from other properties
+     * (in particular, name) may be necessary for the description to be useful
+     * for disambiguation.
+     *
+     * @param string|string[] $disambiguatingDescription
+     *
+     * @return static
+     *
+     * @see http://schema.org/disambiguatingDescription
+     */
+    public function disambiguatingDescription($disambiguatingDescription)
+    {
+        return $this->setProperty('disambiguatingDescription', $disambiguatingDescription);
     }
 
     /**
@@ -202,180 +191,18 @@ class RsvpAction extends BaseType implements InformActionContract, CommunicateAc
     }
 
     /**
-     * The object that helped the agent perform the action. e.g. John wrote a
-     * book with *a pen*.
+     * Upcoming or past event associated with this place, organization, or
+     * action.
      *
-     * @param Thing|Thing[] $instrument
-     *
-     * @return static
-     *
-     * @see http://schema.org/instrument
-     */
-    public function instrument($instrument)
-    {
-        return $this->setProperty('instrument', $instrument);
-    }
-
-    /**
-     * The location of for example where the event is happening, an organization
-     * is located, or where an action takes place.
-     *
-     * @param Place|Place[]|PostalAddress|PostalAddress[]|string|string[] $location
+     * @param Event|Event[] $event
      *
      * @return static
      *
-     * @see http://schema.org/location
+     * @see http://schema.org/event
      */
-    public function location($location)
+    public function event($event)
     {
-        return $this->setProperty('location', $location);
-    }
-
-    /**
-     * The object upon which the action is carried out, whose state is kept
-     * intact or changed. Also known as the semantic roles patient, affected or
-     * undergoer (which change their state) or theme (which doesn't). e.g. John
-     * read *a book*.
-     *
-     * @param Thing|Thing[] $object
-     *
-     * @return static
-     *
-     * @see http://schema.org/object
-     */
-    public function object($object)
-    {
-        return $this->setProperty('object', $object);
-    }
-
-    /**
-     * Other co-agents that participated in the action indirectly. e.g. John
-     * wrote a book with *Steve*.
-     *
-     * @param Organization|Organization[]|Person|Person[] $participant
-     *
-     * @return static
-     *
-     * @see http://schema.org/participant
-     */
-    public function participant($participant)
-    {
-        return $this->setProperty('participant', $participant);
-    }
-
-    /**
-     * The result produced in the action. e.g. John wrote *a book*.
-     *
-     * @param Thing|Thing[] $result
-     *
-     * @return static
-     *
-     * @see http://schema.org/result
-     */
-    public function result($result)
-    {
-        return $this->setProperty('result', $result);
-    }
-
-    /**
-     * The startTime of something. For a reserved event or service (e.g.
-     * FoodEstablishmentReservation), the time that it is expected to start. For
-     * actions that span a period of time, when the action was performed. e.g.
-     * John wrote a book from *January* to December. For media, including audio
-     * and video, it's the time offset of the start of a clip within a larger
-     * file.
-     * 
-     * Note that Event uses startDate/endDate instead of startTime/endTime, even
-     * when describing dates with times. This situation may be clarified in
-     * future revisions.
-     *
-     * @param \DateTimeInterface|\DateTimeInterface[] $startTime
-     *
-     * @return static
-     *
-     * @see http://schema.org/startTime
-     */
-    public function startTime($startTime)
-    {
-        return $this->setProperty('startTime', $startTime);
-    }
-
-    /**
-     * Indicates a target EntryPoint for an Action.
-     *
-     * @param EntryPoint|EntryPoint[] $target
-     *
-     * @return static
-     *
-     * @see http://schema.org/target
-     */
-    public function target($target)
-    {
-        return $this->setProperty('target', $target);
-    }
-
-    /**
-     * An additional type for the item, typically used for adding more specific
-     * types from external vocabularies in microdata syntax. This is a
-     * relationship between something and a class that the thing is in. In RDFa
-     * syntax, it is better to use the native RDFa syntax - the 'typeof'
-     * attribute - for multiple types. Schema.org tools may have only weaker
-     * understanding of extra types, in particular those defined externally.
-     *
-     * @param string|string[] $additionalType
-     *
-     * @return static
-     *
-     * @see http://schema.org/additionalType
-     */
-    public function additionalType($additionalType)
-    {
-        return $this->setProperty('additionalType', $additionalType);
-    }
-
-    /**
-     * An alias for the item.
-     *
-     * @param string|string[] $alternateName
-     *
-     * @return static
-     *
-     * @see http://schema.org/alternateName
-     */
-    public function alternateName($alternateName)
-    {
-        return $this->setProperty('alternateName', $alternateName);
-    }
-
-    /**
-     * A description of the item.
-     *
-     * @param string|string[] $description
-     *
-     * @return static
-     *
-     * @see http://schema.org/description
-     */
-    public function description($description)
-    {
-        return $this->setProperty('description', $description);
-    }
-
-    /**
-     * A sub property of description. A short description of the item used to
-     * disambiguate from other, similar items. Information from other properties
-     * (in particular, name) may be necessary for the description to be useful
-     * for disambiguation.
-     *
-     * @param string|string[] $disambiguatingDescription
-     *
-     * @return static
-     *
-     * @see http://schema.org/disambiguatingDescription
-     */
-    public function disambiguatingDescription($disambiguatingDescription)
-    {
-        return $this->setProperty('disambiguatingDescription', $disambiguatingDescription);
+        return $this->setProperty('event', $event);
     }
 
     /**
@@ -412,6 +239,67 @@ class RsvpAction extends BaseType implements InformActionContract, CommunicateAc
     }
 
     /**
+     * The language of the content or performance or used in an action. Please
+     * use one of the language codes from the [IETF BCP 47
+     * standard](http://tools.ietf.org/html/bcp47). See also
+     * [[availableLanguage]].
+     *
+     * @param Language|Language[]|string|string[] $inLanguage
+     *
+     * @return static
+     *
+     * @see http://schema.org/inLanguage
+     */
+    public function inLanguage($inLanguage)
+    {
+        return $this->setProperty('inLanguage', $inLanguage);
+    }
+
+    /**
+     * The object that helped the agent perform the action. e.g. John wrote a
+     * book with *a pen*.
+     *
+     * @param Thing|Thing[] $instrument
+     *
+     * @return static
+     *
+     * @see http://schema.org/instrument
+     */
+    public function instrument($instrument)
+    {
+        return $this->setProperty('instrument', $instrument);
+    }
+
+    /**
+     * A sub property of instrument. The language used on this action.
+     *
+     * @param Language|Language[] $language
+     *
+     * @return static
+     *
+     * @see http://schema.org/language
+     */
+    public function language($language)
+    {
+        return $this->setProperty('language', $language);
+    }
+
+    /**
+     * The location of for example where the event is happening, an organization
+     * is located, or where an action takes place.
+     *
+     * @param Place|Place[]|PostalAddress|PostalAddress[]|string|string[] $location
+     *
+     * @return static
+     *
+     * @see http://schema.org/location
+     */
+    public function location($location)
+    {
+        return $this->setProperty('location', $location);
+    }
+
+    /**
      * Indicates a page (or other CreativeWork) for which this thing is the main
      * entity being described. See [background
      * notes](/docs/datamodel.html#mainEntityBackground) for details.
@@ -442,6 +330,38 @@ class RsvpAction extends BaseType implements InformActionContract, CommunicateAc
     }
 
     /**
+     * The object upon which the action is carried out, whose state is kept
+     * intact or changed. Also known as the semantic roles patient, affected or
+     * undergoer (which change their state) or theme (which doesn't). e.g. John
+     * read *a book*.
+     *
+     * @param Thing|Thing[] $object
+     *
+     * @return static
+     *
+     * @see http://schema.org/object
+     */
+    public function object($object)
+    {
+        return $this->setProperty('object', $object);
+    }
+
+    /**
+     * Other co-agents that participated in the action indirectly. e.g. John
+     * wrote a book with *Steve*.
+     *
+     * @param Organization|Organization[]|Person|Person[] $participant
+     *
+     * @return static
+     *
+     * @see http://schema.org/participant
+     */
+    public function participant($participant)
+    {
+        return $this->setProperty('participant', $participant);
+    }
+
+    /**
      * Indicates a potential Action, which describes an idealized action in
      * which this thing would play an 'object' role.
      *
@@ -454,6 +374,49 @@ class RsvpAction extends BaseType implements InformActionContract, CommunicateAc
     public function potentialAction($potentialAction)
     {
         return $this->setProperty('potentialAction', $potentialAction);
+    }
+
+    /**
+     * A sub property of participant. The participant who is at the receiving
+     * end of the action.
+     *
+     * @param Audience|Audience[]|ContactPoint|ContactPoint[]|Organization|Organization[]|Person|Person[] $recipient
+     *
+     * @return static
+     *
+     * @see http://schema.org/recipient
+     */
+    public function recipient($recipient)
+    {
+        return $this->setProperty('recipient', $recipient);
+    }
+
+    /**
+     * The result produced in the action. e.g. John wrote *a book*.
+     *
+     * @param Thing|Thing[] $result
+     *
+     * @return static
+     *
+     * @see http://schema.org/result
+     */
+    public function result($result)
+    {
+        return $this->setProperty('result', $result);
+    }
+
+    /**
+     * The response (yes, no, maybe) to the RSVP.
+     *
+     * @param RsvpResponseType|RsvpResponseType[] $rsvpResponse
+     *
+     * @return static
+     *
+     * @see http://schema.org/rsvpResponse
+     */
+    public function rsvpResponse($rsvpResponse)
+    {
+        return $this->setProperty('rsvpResponse', $rsvpResponse);
     }
 
     /**
@@ -473,6 +436,29 @@ class RsvpAction extends BaseType implements InformActionContract, CommunicateAc
     }
 
     /**
+     * The startTime of something. For a reserved event or service (e.g.
+     * FoodEstablishmentReservation), the time that it is expected to start. For
+     * actions that span a period of time, when the action was performed. e.g.
+     * John wrote a book from *January* to December. For media, including audio
+     * and video, it's the time offset of the start of a clip within a larger
+     * file.
+     * 
+     * Note that Event uses startDate/endDate instead of startTime/endTime, even
+     * when describing dates with times. This situation may be clarified in
+     * future revisions.
+     *
+     * @param \DateTimeInterface|\DateTimeInterface[] $startTime
+     *
+     * @return static
+     *
+     * @see http://schema.org/startTime
+     */
+    public function startTime($startTime)
+    {
+        return $this->setProperty('startTime', $startTime);
+    }
+
+    /**
      * A CreativeWork or Event about this Thing.
      *
      * @param CreativeWork|CreativeWork[]|Event|Event[] $subjectOf
@@ -484,6 +470,20 @@ class RsvpAction extends BaseType implements InformActionContract, CommunicateAc
     public function subjectOf($subjectOf)
     {
         return $this->setProperty('subjectOf', $subjectOf);
+    }
+
+    /**
+     * Indicates a target EntryPoint for an Action.
+     *
+     * @param EntryPoint|EntryPoint[] $target
+     *
+     * @return static
+     *
+     * @see http://schema.org/target
+     */
+    public function target($target)
+    {
+        return $this->setProperty('target', $target);
     }
 
     /**

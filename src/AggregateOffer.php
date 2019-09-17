@@ -17,78 +17,6 @@ use \Spatie\SchemaOrg\Contracts\ThingContract;
 class AggregateOffer extends BaseType implements OfferContract, IntangibleContract, ThingContract
 {
     /**
-     * The highest price of all offers available.
-     * 
-     * Usage guidelines:
-     * 
-     * * Use values from 0123456789 (Unicode 'DIGIT ZERO' (U+0030) to 'DIGIT
-     * NINE' (U+0039)) rather than superficially similiar Unicode symbols.
-     * * Use '.' (Unicode 'FULL STOP' (U+002E)) rather than ',' to indicate a
-     * decimal point. Avoid using these symbols as a readability separator.
-     *
-     * @param float|float[]|int|int[]|string|string[] $highPrice
-     *
-     * @return static
-     *
-     * @see http://schema.org/highPrice
-     */
-    public function highPrice($highPrice)
-    {
-        return $this->setProperty('highPrice', $highPrice);
-    }
-
-    /**
-     * The lowest price of all offers available.
-     * 
-     * Usage guidelines:
-     * 
-     * * Use values from 0123456789 (Unicode 'DIGIT ZERO' (U+0030) to 'DIGIT
-     * NINE' (U+0039)) rather than superficially similiar Unicode symbols.
-     * * Use '.' (Unicode 'FULL STOP' (U+002E)) rather than ',' to indicate a
-     * decimal point. Avoid using these symbols as a readability separator.
-     *
-     * @param float|float[]|int|int[]|string|string[] $lowPrice
-     *
-     * @return static
-     *
-     * @see http://schema.org/lowPrice
-     */
-    public function lowPrice($lowPrice)
-    {
-        return $this->setProperty('lowPrice', $lowPrice);
-    }
-
-    /**
-     * The number of offers for the product.
-     *
-     * @param int|int[] $offerCount
-     *
-     * @return static
-     *
-     * @see http://schema.org/offerCount
-     */
-    public function offerCount($offerCount)
-    {
-        return $this->setProperty('offerCount', $offerCount);
-    }
-
-    /**
-     * An offer to provide this item&#x2014;for example, an offer to sell a
-     * product, rent the DVD of a movie, perform a service, or give away tickets
-     * to an event.
-     *
-     * @param Offer|Offer[] $offers
-     *
-     * @return static
-     *
-     * @see http://schema.org/offers
-     */
-    public function offers($offers)
-    {
-        return $this->setProperty('offers', $offers);
-    }
-
-    /**
      * The payment method(s) accepted by seller for this offer.
      *
      * @param LoanOrCredit|LoanOrCredit[]|PaymentMethod|PaymentMethod[] $acceptedPaymentMethod
@@ -119,6 +47,25 @@ class AggregateOffer extends BaseType implements OfferContract, IntangibleContra
     }
 
     /**
+     * An additional type for the item, typically used for adding more specific
+     * types from external vocabularies in microdata syntax. This is a
+     * relationship between something and a class that the thing is in. In RDFa
+     * syntax, it is better to use the native RDFa syntax - the 'typeof'
+     * attribute - for multiple types. Schema.org tools may have only weaker
+     * understanding of extra types, in particular those defined externally.
+     *
+     * @param string|string[] $additionalType
+     *
+     * @return static
+     *
+     * @see http://schema.org/additionalType
+     */
+    public function additionalType($additionalType)
+    {
+        return $this->setProperty('additionalType', $additionalType);
+    }
+
+    /**
      * The amount of time that is required between accepting the offer and the
      * actual usage of the resource or service.
      *
@@ -146,6 +93,20 @@ class AggregateOffer extends BaseType implements OfferContract, IntangibleContra
     public function aggregateRating($aggregateRating)
     {
         return $this->setProperty('aggregateRating', $aggregateRating);
+    }
+
+    /**
+     * An alias for the item.
+     *
+     * @param string|string[] $alternateName
+     *
+     * @return static
+     *
+     * @see http://schema.org/alternateName
+     */
+    public function alternateName($alternateName)
+    {
+        return $this->setProperty('alternateName', $alternateName);
     }
 
     /**
@@ -280,6 +241,37 @@ class AggregateOffer extends BaseType implements OfferContract, IntangibleContra
     public function deliveryLeadTime($deliveryLeadTime)
     {
         return $this->setProperty('deliveryLeadTime', $deliveryLeadTime);
+    }
+
+    /**
+     * A description of the item.
+     *
+     * @param string|string[] $description
+     *
+     * @return static
+     *
+     * @see http://schema.org/description
+     */
+    public function description($description)
+    {
+        return $this->setProperty('description', $description);
+    }
+
+    /**
+     * A sub property of description. A short description of the item used to
+     * disambiguate from other, similar items. Information from other properties
+     * (in particular, name) may be necessary for the description to be useful
+     * for disambiguation.
+     *
+     * @param string|string[] $disambiguatingDescription
+     *
+     * @return static
+     *
+     * @see http://schema.org/disambiguatingDescription
+     */
+    public function disambiguatingDescription($disambiguatingDescription)
+    {
+        return $this->setProperty('disambiguatingDescription', $disambiguatingDescription);
     }
 
     /**
@@ -435,6 +427,60 @@ class AggregateOffer extends BaseType implements OfferContract, IntangibleContra
     }
 
     /**
+     * The highest price of all offers available.
+     * 
+     * Usage guidelines:
+     * 
+     * * Use values from 0123456789 (Unicode 'DIGIT ZERO' (U+0030) to 'DIGIT
+     * NINE' (U+0039)) rather than superficially similiar Unicode symbols.
+     * * Use '.' (Unicode 'FULL STOP' (U+002E)) rather than ',' to indicate a
+     * decimal point. Avoid using these symbols as a readability separator.
+     *
+     * @param float|float[]|int|int[]|string|string[] $highPrice
+     *
+     * @return static
+     *
+     * @see http://schema.org/highPrice
+     */
+    public function highPrice($highPrice)
+    {
+        return $this->setProperty('highPrice', $highPrice);
+    }
+
+    /**
+     * The identifier property represents any kind of identifier for any kind of
+     * [[Thing]], such as ISBNs, GTIN codes, UUIDs etc. Schema.org provides
+     * dedicated properties for representing many of these, either as textual
+     * strings or as URL (URI) links. See [background
+     * notes](/docs/datamodel.html#identifierBg) for more details.
+     *
+     * @param PropertyValue|PropertyValue[]|string|string[] $identifier
+     *
+     * @return static
+     *
+     * @see http://schema.org/identifier
+     */
+    public function identifier($identifier)
+    {
+        return $this->setProperty('identifier', $identifier);
+    }
+
+    /**
+     * An image of the item. This can be a [[URL]] or a fully described
+     * [[ImageObject]].
+     *
+     * @param ImageObject|ImageObject[]|string|string[] $image
+     *
+     * @return static
+     *
+     * @see http://schema.org/image
+     */
+    public function image($image)
+    {
+        return $this->setProperty('image', $image);
+    }
+
+    /**
      * This links to a node or nodes indicating the exact quantity of the
      * products included in the offer.
      *
@@ -513,6 +559,43 @@ class AggregateOffer extends BaseType implements OfferContract, IntangibleContra
     }
 
     /**
+     * The lowest price of all offers available.
+     * 
+     * Usage guidelines:
+     * 
+     * * Use values from 0123456789 (Unicode 'DIGIT ZERO' (U+0030) to 'DIGIT
+     * NINE' (U+0039)) rather than superficially similiar Unicode symbols.
+     * * Use '.' (Unicode 'FULL STOP' (U+002E)) rather than ',' to indicate a
+     * decimal point. Avoid using these symbols as a readability separator.
+     *
+     * @param float|float[]|int|int[]|string|string[] $lowPrice
+     *
+     * @return static
+     *
+     * @see http://schema.org/lowPrice
+     */
+    public function lowPrice($lowPrice)
+    {
+        return $this->setProperty('lowPrice', $lowPrice);
+    }
+
+    /**
+     * Indicates a page (or other CreativeWork) for which this thing is the main
+     * entity being described. See [background
+     * notes](/docs/datamodel.html#mainEntityBackground) for details.
+     *
+     * @param CreativeWork|CreativeWork[]|string|string[] $mainEntityOfPage
+     *
+     * @return static
+     *
+     * @see http://schema.org/mainEntityOfPage
+     */
+    public function mainEntityOfPage($mainEntityOfPage)
+    {
+        return $this->setProperty('mainEntityOfPage', $mainEntityOfPage);
+    }
+
+    /**
      * The Manufacturer Part Number (MPN) of the product, or the product to
      * which the offer refers.
      *
@@ -525,6 +608,65 @@ class AggregateOffer extends BaseType implements OfferContract, IntangibleContra
     public function mpn($mpn)
     {
         return $this->setProperty('mpn', $mpn);
+    }
+
+    /**
+     * The name of the item.
+     *
+     * @param string|string[] $name
+     *
+     * @return static
+     *
+     * @see http://schema.org/name
+     */
+    public function name($name)
+    {
+        return $this->setProperty('name', $name);
+    }
+
+    /**
+     * The number of offers for the product.
+     *
+     * @param int|int[] $offerCount
+     *
+     * @return static
+     *
+     * @see http://schema.org/offerCount
+     */
+    public function offerCount($offerCount)
+    {
+        return $this->setProperty('offerCount', $offerCount);
+    }
+
+    /**
+     * An offer to provide this item&#x2014;for example, an offer to sell a
+     * product, rent the DVD of a movie, perform a service, or give away tickets
+     * to an event.
+     *
+     * @param Offer|Offer[] $offers
+     *
+     * @return static
+     *
+     * @see http://schema.org/offers
+     */
+    public function offers($offers)
+    {
+        return $this->setProperty('offers', $offers);
+    }
+
+    /**
+     * Indicates a potential Action, which describes an idealized action in
+     * which this thing would play an 'object' role.
+     *
+     * @param Action|Action[] $potentialAction
+     *
+     * @return static
+     *
+     * @see http://schema.org/potentialAction
+     */
+    public function potentialAction($potentialAction)
+    {
+        return $this->setProperty('potentialAction', $potentialAction);
     }
 
     /**
@@ -645,6 +787,22 @@ class AggregateOffer extends BaseType implements OfferContract, IntangibleContra
     }
 
     /**
+     * URL of a reference Web page that unambiguously indicates the item's
+     * identity. E.g. the URL of the item's Wikipedia page, Wikidata entry, or
+     * official website.
+     *
+     * @param string|string[] $sameAs
+     *
+     * @return static
+     *
+     * @see http://schema.org/sameAs
+     */
+    public function sameAs($sameAs)
+    {
+        return $this->setProperty('sameAs', $sameAs);
+    }
+
+    /**
      * An entity which offers (sells / leases / lends / loans) the services /
      * goods.  A seller may also be a provider.
      *
@@ -691,6 +849,34 @@ class AggregateOffer extends BaseType implements OfferContract, IntangibleContra
     }
 
     /**
+     * A CreativeWork or Event about this Thing.
+     *
+     * @param CreativeWork|CreativeWork[]|Event|Event[] $subjectOf
+     *
+     * @return static
+     *
+     * @see http://schema.org/subjectOf
+     */
+    public function subjectOf($subjectOf)
+    {
+        return $this->setProperty('subjectOf', $subjectOf);
+    }
+
+    /**
+     * URL of the item.
+     *
+     * @param string|string[] $url
+     *
+     * @return static
+     *
+     * @see http://schema.org/url
+     */
+    public function url($url)
+    {
+        return $this->setProperty('url', $url);
+    }
+
+    /**
      * The date when the item becomes valid.
      *
      * @param \DateTimeInterface|\DateTimeInterface[] $validFrom
@@ -731,192 +917,6 @@ class AggregateOffer extends BaseType implements OfferContract, IntangibleContra
     public function warranty($warranty)
     {
         return $this->setProperty('warranty', $warranty);
-    }
-
-    /**
-     * An additional type for the item, typically used for adding more specific
-     * types from external vocabularies in microdata syntax. This is a
-     * relationship between something and a class that the thing is in. In RDFa
-     * syntax, it is better to use the native RDFa syntax - the 'typeof'
-     * attribute - for multiple types. Schema.org tools may have only weaker
-     * understanding of extra types, in particular those defined externally.
-     *
-     * @param string|string[] $additionalType
-     *
-     * @return static
-     *
-     * @see http://schema.org/additionalType
-     */
-    public function additionalType($additionalType)
-    {
-        return $this->setProperty('additionalType', $additionalType);
-    }
-
-    /**
-     * An alias for the item.
-     *
-     * @param string|string[] $alternateName
-     *
-     * @return static
-     *
-     * @see http://schema.org/alternateName
-     */
-    public function alternateName($alternateName)
-    {
-        return $this->setProperty('alternateName', $alternateName);
-    }
-
-    /**
-     * A description of the item.
-     *
-     * @param string|string[] $description
-     *
-     * @return static
-     *
-     * @see http://schema.org/description
-     */
-    public function description($description)
-    {
-        return $this->setProperty('description', $description);
-    }
-
-    /**
-     * A sub property of description. A short description of the item used to
-     * disambiguate from other, similar items. Information from other properties
-     * (in particular, name) may be necessary for the description to be useful
-     * for disambiguation.
-     *
-     * @param string|string[] $disambiguatingDescription
-     *
-     * @return static
-     *
-     * @see http://schema.org/disambiguatingDescription
-     */
-    public function disambiguatingDescription($disambiguatingDescription)
-    {
-        return $this->setProperty('disambiguatingDescription', $disambiguatingDescription);
-    }
-
-    /**
-     * The identifier property represents any kind of identifier for any kind of
-     * [[Thing]], such as ISBNs, GTIN codes, UUIDs etc. Schema.org provides
-     * dedicated properties for representing many of these, either as textual
-     * strings or as URL (URI) links. See [background
-     * notes](/docs/datamodel.html#identifierBg) for more details.
-     *
-     * @param PropertyValue|PropertyValue[]|string|string[] $identifier
-     *
-     * @return static
-     *
-     * @see http://schema.org/identifier
-     */
-    public function identifier($identifier)
-    {
-        return $this->setProperty('identifier', $identifier);
-    }
-
-    /**
-     * An image of the item. This can be a [[URL]] or a fully described
-     * [[ImageObject]].
-     *
-     * @param ImageObject|ImageObject[]|string|string[] $image
-     *
-     * @return static
-     *
-     * @see http://schema.org/image
-     */
-    public function image($image)
-    {
-        return $this->setProperty('image', $image);
-    }
-
-    /**
-     * Indicates a page (or other CreativeWork) for which this thing is the main
-     * entity being described. See [background
-     * notes](/docs/datamodel.html#mainEntityBackground) for details.
-     *
-     * @param CreativeWork|CreativeWork[]|string|string[] $mainEntityOfPage
-     *
-     * @return static
-     *
-     * @see http://schema.org/mainEntityOfPage
-     */
-    public function mainEntityOfPage($mainEntityOfPage)
-    {
-        return $this->setProperty('mainEntityOfPage', $mainEntityOfPage);
-    }
-
-    /**
-     * The name of the item.
-     *
-     * @param string|string[] $name
-     *
-     * @return static
-     *
-     * @see http://schema.org/name
-     */
-    public function name($name)
-    {
-        return $this->setProperty('name', $name);
-    }
-
-    /**
-     * Indicates a potential Action, which describes an idealized action in
-     * which this thing would play an 'object' role.
-     *
-     * @param Action|Action[] $potentialAction
-     *
-     * @return static
-     *
-     * @see http://schema.org/potentialAction
-     */
-    public function potentialAction($potentialAction)
-    {
-        return $this->setProperty('potentialAction', $potentialAction);
-    }
-
-    /**
-     * URL of a reference Web page that unambiguously indicates the item's
-     * identity. E.g. the URL of the item's Wikipedia page, Wikidata entry, or
-     * official website.
-     *
-     * @param string|string[] $sameAs
-     *
-     * @return static
-     *
-     * @see http://schema.org/sameAs
-     */
-    public function sameAs($sameAs)
-    {
-        return $this->setProperty('sameAs', $sameAs);
-    }
-
-    /**
-     * A CreativeWork or Event about this Thing.
-     *
-     * @param CreativeWork|CreativeWork[]|Event|Event[] $subjectOf
-     *
-     * @return static
-     *
-     * @see http://schema.org/subjectOf
-     */
-    public function subjectOf($subjectOf)
-    {
-        return $this->setProperty('subjectOf', $subjectOf);
-    }
-
-    /**
-     * URL of the item.
-     *
-     * @param string|string[] $url
-     *
-     * @return static
-     *
-     * @see http://schema.org/url
-     */
-    public function url($url)
-    {
-        return $this->setProperty('url', $url);
     }
 
 }

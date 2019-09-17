@@ -29,50 +29,22 @@ use \Spatie\SchemaOrg\Contracts\ThingContract;
 class CreditCard extends BaseType implements PaymentCardContract, LoanOrCreditContract, FinancialProductContract, ServiceContract, IntangibleContract, ThingContract
 {
     /**
-     * The annual rate that is charged for borrowing (or made by investing),
-     * expressed as a single percentage number that represents the actual yearly
-     * cost of funds over the term of a loan. This includes any fees or
-     * additional costs associated with the transaction.
+     * An additional type for the item, typically used for adding more specific
+     * types from external vocabularies in microdata syntax. This is a
+     * relationship between something and a class that the thing is in. In RDFa
+     * syntax, it is better to use the native RDFa syntax - the 'typeof'
+     * attribute - for multiple types. Schema.org tools may have only weaker
+     * understanding of extra types, in particular those defined externally.
      *
-     * @param QuantitativeValue|QuantitativeValue[]|float|float[]|int|int[] $annualPercentageRate
-     *
-     * @return static
-     *
-     * @see http://schema.org/annualPercentageRate
-     */
-    public function annualPercentageRate($annualPercentageRate)
-    {
-        return $this->setProperty('annualPercentageRate', $annualPercentageRate);
-    }
-
-    /**
-     * Description of fees, commissions, and other terms applied either to a
-     * class of financial product, or by a financial service organization.
-     *
-     * @param string|string[] $feesAndCommissionsSpecification
+     * @param string|string[] $additionalType
      *
      * @return static
      *
-     * @see http://schema.org/feesAndCommissionsSpecification
+     * @see http://schema.org/additionalType
      */
-    public function feesAndCommissionsSpecification($feesAndCommissionsSpecification)
+    public function additionalType($additionalType)
     {
-        return $this->setProperty('feesAndCommissionsSpecification', $feesAndCommissionsSpecification);
-    }
-
-    /**
-     * The interest rate, charged or paid, applicable to the financial product.
-     * Note: This is different from the calculated annualPercentageRate.
-     *
-     * @param QuantitativeValue|QuantitativeValue[]|float|float[]|int|int[] $interestRate
-     *
-     * @return static
-     *
-     * @see http://schema.org/interestRate
-     */
-    public function interestRate($interestRate)
-    {
-        return $this->setProperty('interestRate', $interestRate);
+        return $this->setProperty('additionalType', $additionalType);
     }
 
     /**
@@ -88,6 +60,51 @@ class CreditCard extends BaseType implements PaymentCardContract, LoanOrCreditCo
     public function aggregateRating($aggregateRating)
     {
         return $this->setProperty('aggregateRating', $aggregateRating);
+    }
+
+    /**
+     * An alias for the item.
+     *
+     * @param string|string[] $alternateName
+     *
+     * @return static
+     *
+     * @see http://schema.org/alternateName
+     */
+    public function alternateName($alternateName)
+    {
+        return $this->setProperty('alternateName', $alternateName);
+    }
+
+    /**
+     * The amount of money.
+     *
+     * @param MonetaryAmount|MonetaryAmount[]|float|float[]|int|int[] $amount
+     *
+     * @return static
+     *
+     * @see http://schema.org/amount
+     */
+    public function amount($amount)
+    {
+        return $this->setProperty('amount', $amount);
+    }
+
+    /**
+     * The annual rate that is charged for borrowing (or made by investing),
+     * expressed as a single percentage number that represents the actual yearly
+     * cost of funds over the term of a loan. This includes any fees or
+     * additional costs associated with the transaction.
+     *
+     * @param QuantitativeValue|QuantitativeValue[]|float|float[]|int|int[] $annualPercentageRate
+     *
+     * @return static
+     *
+     * @see http://schema.org/annualPercentageRate
+     */
+    public function annualPercentageRate($annualPercentageRate)
+    {
+        return $this->setProperty('annualPercentageRate', $annualPercentageRate);
     }
 
     /**
@@ -195,6 +212,52 @@ class CreditCard extends BaseType implements PaymentCardContract, LoanOrCreditCo
     }
 
     /**
+     * A description of the item.
+     *
+     * @param string|string[] $description
+     *
+     * @return static
+     *
+     * @see http://schema.org/description
+     */
+    public function description($description)
+    {
+        return $this->setProperty('description', $description);
+    }
+
+    /**
+     * A sub property of description. A short description of the item used to
+     * disambiguate from other, similar items. Information from other properties
+     * (in particular, name) may be necessary for the description to be useful
+     * for disambiguation.
+     *
+     * @param string|string[] $disambiguatingDescription
+     *
+     * @return static
+     *
+     * @see http://schema.org/disambiguatingDescription
+     */
+    public function disambiguatingDescription($disambiguatingDescription)
+    {
+        return $this->setProperty('disambiguatingDescription', $disambiguatingDescription);
+    }
+
+    /**
+     * Description of fees, commissions, and other terms applied either to a
+     * class of financial product, or by a financial service organization.
+     *
+     * @param string|string[] $feesAndCommissionsSpecification
+     *
+     * @return static
+     *
+     * @see http://schema.org/feesAndCommissionsSpecification
+     */
+    public function feesAndCommissionsSpecification($feesAndCommissionsSpecification)
+    {
+        return $this->setProperty('feesAndCommissionsSpecification', $feesAndCommissionsSpecification);
+    }
+
+    /**
      * Indicates an OfferCatalog listing for this Organization, Person, or
      * Service.
      *
@@ -221,6 +284,54 @@ class CreditCard extends BaseType implements PaymentCardContract, LoanOrCreditCo
     public function hoursAvailable($hoursAvailable)
     {
         return $this->setProperty('hoursAvailable', $hoursAvailable);
+    }
+
+    /**
+     * The identifier property represents any kind of identifier for any kind of
+     * [[Thing]], such as ISBNs, GTIN codes, UUIDs etc. Schema.org provides
+     * dedicated properties for representing many of these, either as textual
+     * strings or as URL (URI) links. See [background
+     * notes](/docs/datamodel.html#identifierBg) for more details.
+     *
+     * @param PropertyValue|PropertyValue[]|string|string[] $identifier
+     *
+     * @return static
+     *
+     * @see http://schema.org/identifier
+     */
+    public function identifier($identifier)
+    {
+        return $this->setProperty('identifier', $identifier);
+    }
+
+    /**
+     * An image of the item. This can be a [[URL]] or a fully described
+     * [[ImageObject]].
+     *
+     * @param ImageObject|ImageObject[]|string|string[] $image
+     *
+     * @return static
+     *
+     * @see http://schema.org/image
+     */
+    public function image($image)
+    {
+        return $this->setProperty('image', $image);
+    }
+
+    /**
+     * The interest rate, charged or paid, applicable to the financial product.
+     * Note: This is different from the calculated annualPercentageRate.
+     *
+     * @param QuantitativeValue|QuantitativeValue[]|float|float[]|int|int[] $interestRate
+     *
+     * @return static
+     *
+     * @see http://schema.org/interestRate
+     */
+    public function interestRate($interestRate)
+    {
+        return $this->setProperty('interestRate', $interestRate);
     }
 
     /**
@@ -253,6 +364,20 @@ class CreditCard extends BaseType implements PaymentCardContract, LoanOrCreditCo
     }
 
     /**
+     * The duration of the loan or credit agreement.
+     *
+     * @param QuantitativeValue|QuantitativeValue[] $loanTerm
+     *
+     * @return static
+     *
+     * @see http://schema.org/loanTerm
+     */
+    public function loanTerm($loanTerm)
+    {
+        return $this->setProperty('loanTerm', $loanTerm);
+    }
+
+    /**
      * An associated logo.
      *
      * @param ImageObject|ImageObject[]|string|string[] $logo
@@ -264,6 +389,36 @@ class CreditCard extends BaseType implements PaymentCardContract, LoanOrCreditCo
     public function logo($logo)
     {
         return $this->setProperty('logo', $logo);
+    }
+
+    /**
+     * Indicates a page (or other CreativeWork) for which this thing is the main
+     * entity being described. See [background
+     * notes](/docs/datamodel.html#mainEntityBackground) for details.
+     *
+     * @param CreativeWork|CreativeWork[]|string|string[] $mainEntityOfPage
+     *
+     * @return static
+     *
+     * @see http://schema.org/mainEntityOfPage
+     */
+    public function mainEntityOfPage($mainEntityOfPage)
+    {
+        return $this->setProperty('mainEntityOfPage', $mainEntityOfPage);
+    }
+
+    /**
+     * The name of the item.
+     *
+     * @param string|string[] $name
+     *
+     * @return static
+     *
+     * @see http://schema.org/name
+     */
+    public function name($name)
+    {
+        return $this->setProperty('name', $name);
     }
 
     /**
@@ -280,6 +435,21 @@ class CreditCard extends BaseType implements PaymentCardContract, LoanOrCreditCo
     public function offers($offers)
     {
         return $this->setProperty('offers', $offers);
+    }
+
+    /**
+     * Indicates a potential Action, which describes an idealized action in
+     * which this thing would play an 'object' role.
+     *
+     * @param Action|Action[] $potentialAction
+     *
+     * @return static
+     *
+     * @see http://schema.org/potentialAction
+     */
+    public function potentialAction($potentialAction)
+    {
+        return $this->setProperty('potentialAction', $potentialAction);
     }
 
     /**
@@ -328,6 +498,21 @@ class CreditCard extends BaseType implements PaymentCardContract, LoanOrCreditCo
     }
 
     /**
+     * Assets required to secure loan or credit repayments. It may take form of
+     * third party pledge, goods, financial instruments (cash, securities, etc.)
+     *
+     * @param Thing|Thing[]|string|string[] $requiredCollateral
+     *
+     * @return static
+     *
+     * @see http://schema.org/requiredCollateral
+     */
+    public function requiredCollateral($requiredCollateral)
+    {
+        return $this->setProperty('requiredCollateral', $requiredCollateral);
+    }
+
+    /**
      * A review of the item.
      *
      * @param Review|Review[] $review
@@ -339,6 +524,22 @@ class CreditCard extends BaseType implements PaymentCardContract, LoanOrCreditCo
     public function review($review)
     {
         return $this->setProperty('review', $review);
+    }
+
+    /**
+     * URL of a reference Web page that unambiguously indicates the item's
+     * identity. E.g. the URL of the item's Wikipedia page, Wikidata entry, or
+     * official website.
+     *
+     * @param string|string[] $sameAs
+     *
+     * @return static
+     *
+     * @see http://schema.org/sameAs
+     */
+    public function sameAs($sameAs)
+    {
+        return $this->setProperty('sameAs', $sameAs);
     }
 
     /**
@@ -414,164 +615,6 @@ class CreditCard extends BaseType implements PaymentCardContract, LoanOrCreditCo
     }
 
     /**
-     * An additional type for the item, typically used for adding more specific
-     * types from external vocabularies in microdata syntax. This is a
-     * relationship between something and a class that the thing is in. In RDFa
-     * syntax, it is better to use the native RDFa syntax - the 'typeof'
-     * attribute - for multiple types. Schema.org tools may have only weaker
-     * understanding of extra types, in particular those defined externally.
-     *
-     * @param string|string[] $additionalType
-     *
-     * @return static
-     *
-     * @see http://schema.org/additionalType
-     */
-    public function additionalType($additionalType)
-    {
-        return $this->setProperty('additionalType', $additionalType);
-    }
-
-    /**
-     * An alias for the item.
-     *
-     * @param string|string[] $alternateName
-     *
-     * @return static
-     *
-     * @see http://schema.org/alternateName
-     */
-    public function alternateName($alternateName)
-    {
-        return $this->setProperty('alternateName', $alternateName);
-    }
-
-    /**
-     * A description of the item.
-     *
-     * @param string|string[] $description
-     *
-     * @return static
-     *
-     * @see http://schema.org/description
-     */
-    public function description($description)
-    {
-        return $this->setProperty('description', $description);
-    }
-
-    /**
-     * A sub property of description. A short description of the item used to
-     * disambiguate from other, similar items. Information from other properties
-     * (in particular, name) may be necessary for the description to be useful
-     * for disambiguation.
-     *
-     * @param string|string[] $disambiguatingDescription
-     *
-     * @return static
-     *
-     * @see http://schema.org/disambiguatingDescription
-     */
-    public function disambiguatingDescription($disambiguatingDescription)
-    {
-        return $this->setProperty('disambiguatingDescription', $disambiguatingDescription);
-    }
-
-    /**
-     * The identifier property represents any kind of identifier for any kind of
-     * [[Thing]], such as ISBNs, GTIN codes, UUIDs etc. Schema.org provides
-     * dedicated properties for representing many of these, either as textual
-     * strings or as URL (URI) links. See [background
-     * notes](/docs/datamodel.html#identifierBg) for more details.
-     *
-     * @param PropertyValue|PropertyValue[]|string|string[] $identifier
-     *
-     * @return static
-     *
-     * @see http://schema.org/identifier
-     */
-    public function identifier($identifier)
-    {
-        return $this->setProperty('identifier', $identifier);
-    }
-
-    /**
-     * An image of the item. This can be a [[URL]] or a fully described
-     * [[ImageObject]].
-     *
-     * @param ImageObject|ImageObject[]|string|string[] $image
-     *
-     * @return static
-     *
-     * @see http://schema.org/image
-     */
-    public function image($image)
-    {
-        return $this->setProperty('image', $image);
-    }
-
-    /**
-     * Indicates a page (or other CreativeWork) for which this thing is the main
-     * entity being described. See [background
-     * notes](/docs/datamodel.html#mainEntityBackground) for details.
-     *
-     * @param CreativeWork|CreativeWork[]|string|string[] $mainEntityOfPage
-     *
-     * @return static
-     *
-     * @see http://schema.org/mainEntityOfPage
-     */
-    public function mainEntityOfPage($mainEntityOfPage)
-    {
-        return $this->setProperty('mainEntityOfPage', $mainEntityOfPage);
-    }
-
-    /**
-     * The name of the item.
-     *
-     * @param string|string[] $name
-     *
-     * @return static
-     *
-     * @see http://schema.org/name
-     */
-    public function name($name)
-    {
-        return $this->setProperty('name', $name);
-    }
-
-    /**
-     * Indicates a potential Action, which describes an idealized action in
-     * which this thing would play an 'object' role.
-     *
-     * @param Action|Action[] $potentialAction
-     *
-     * @return static
-     *
-     * @see http://schema.org/potentialAction
-     */
-    public function potentialAction($potentialAction)
-    {
-        return $this->setProperty('potentialAction', $potentialAction);
-    }
-
-    /**
-     * URL of a reference Web page that unambiguously indicates the item's
-     * identity. E.g. the URL of the item's Wikipedia page, Wikidata entry, or
-     * official website.
-     *
-     * @param string|string[] $sameAs
-     *
-     * @return static
-     *
-     * @see http://schema.org/sameAs
-     */
-    public function sameAs($sameAs)
-    {
-        return $this->setProperty('sameAs', $sameAs);
-    }
-
-    /**
      * A CreativeWork or Event about this Thing.
      *
      * @param CreativeWork|CreativeWork[]|Event|Event[] $subjectOf
@@ -597,49 +640,6 @@ class CreditCard extends BaseType implements PaymentCardContract, LoanOrCreditCo
     public function url($url)
     {
         return $this->setProperty('url', $url);
-    }
-
-    /**
-     * The amount of money.
-     *
-     * @param MonetaryAmount|MonetaryAmount[]|float|float[]|int|int[] $amount
-     *
-     * @return static
-     *
-     * @see http://schema.org/amount
-     */
-    public function amount($amount)
-    {
-        return $this->setProperty('amount', $amount);
-    }
-
-    /**
-     * The duration of the loan or credit agreement.
-     *
-     * @param QuantitativeValue|QuantitativeValue[] $loanTerm
-     *
-     * @return static
-     *
-     * @see http://schema.org/loanTerm
-     */
-    public function loanTerm($loanTerm)
-    {
-        return $this->setProperty('loanTerm', $loanTerm);
-    }
-
-    /**
-     * Assets required to secure loan or credit repayments. It may take form of
-     * third party pledge, goods, financial instruments (cash, securities, etc.)
-     *
-     * @param Thing|Thing[]|string|string[] $requiredCollateral
-     *
-     * @return static
-     *
-     * @see http://schema.org/requiredCollateral
-     */
-    public function requiredCollateral($requiredCollateral)
-    {
-        return $this->setProperty('requiredCollateral', $requiredCollateral);
     }
 
 }

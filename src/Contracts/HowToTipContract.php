@@ -4,38 +4,6 @@ namespace Spatie\SchemaOrg\Contracts;
 
 interface HowToTipContract
 {
-    public function item($item);
-
-    public function nextItem($nextItem);
-
-    public function position($position);
-
-    public function previousItem($previousItem);
-
-    public function additionalType($additionalType);
-
-    public function alternateName($alternateName);
-
-    public function description($description);
-
-    public function disambiguatingDescription($disambiguatingDescription);
-
-    public function identifier($identifier);
-
-    public function image($image);
-
-    public function mainEntityOfPage($mainEntityOfPage);
-
-    public function name($name);
-
-    public function potentialAction($potentialAction);
-
-    public function sameAs($sameAs);
-
-    public function subjectOf($subjectOf);
-
-    public function url($url);
-
     public function about($about);
 
     public function accessMode($accessMode);
@@ -54,7 +22,11 @@ interface HowToTipContract
 
     public function accountablePerson($accountablePerson);
 
+    public function additionalType($additionalType);
+
     public function aggregateRating($aggregateRating);
+
+    public function alternateName($alternateName);
 
     public function alternativeHeadline($alternativeHeadline);
 
@@ -96,6 +68,10 @@ interface HowToTipContract
 
     public function datePublished($datePublished);
 
+    public function description($description);
+
+    public function disambiguatingDescription($disambiguatingDescription);
+
     public function discussionUrl($discussionUrl);
 
     public function editor($editor);
@@ -124,6 +100,10 @@ interface HowToTipContract
 
     public function headline($headline);
 
+    public function identifier($identifier);
+
+    public function image($image);
+
     public function inLanguage($inLanguage);
 
     public function interactionStatistic($interactionStatistic);
@@ -140,6 +120,8 @@ interface HowToTipContract
 
     public function isPartOf($isPartOf);
 
+    public function item($item);
+
     public function keywords($keywords);
 
     public function learningResourceType($learningResourceType);
@@ -150,11 +132,23 @@ interface HowToTipContract
 
     public function mainEntity($mainEntity);
 
+    public function mainEntityOfPage($mainEntityOfPage);
+
     public function material($material);
 
     public function mentions($mentions);
 
+    public function name($name);
+
+    public function nextItem($nextItem);
+
     public function offers($offers);
+
+    public function position($position);
+
+    public function potentialAction($potentialAction);
+
+    public function previousItem($previousItem);
 
     public function producer($producer);
 
@@ -174,6 +168,8 @@ interface HowToTipContract
 
     public function reviews($reviews);
 
+    public function sameAs($sameAs);
+
     public function schemaVersion($schemaVersion);
 
     public function sourceOrganization($sourceOrganization);
@@ -183,6 +179,8 @@ interface HowToTipContract
     public function spatialCoverage($spatialCoverage);
 
     public function sponsor($sponsor);
+
+    public function subjectOf($subjectOf);
 
     public function temporal($temporal);
 
@@ -197,6 +195,8 @@ interface HowToTipContract
     public function translator($translator);
 
     public function typicalAgeRange($typicalAgeRange);
+
+    public function url($url);
 
     public function version($version);
 

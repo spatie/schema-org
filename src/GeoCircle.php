@@ -21,18 +21,22 @@ use \Spatie\SchemaOrg\Contracts\ThingContract;
 class GeoCircle extends BaseType implements GeoShapeContract, StructuredValueContract, IntangibleContract, ThingContract
 {
     /**
-     * Indicates the approximate radius of a GeoCircle (metres unless indicated
-     * otherwise via Distance notation).
+     * An additional type for the item, typically used for adding more specific
+     * types from external vocabularies in microdata syntax. This is a
+     * relationship between something and a class that the thing is in. In RDFa
+     * syntax, it is better to use the native RDFa syntax - the 'typeof'
+     * attribute - for multiple types. Schema.org tools may have only weaker
+     * understanding of extra types, in particular those defined externally.
      *
-     * @param Distance|Distance[]|float|float[]|int|int[]|string|string[] $geoRadius
+     * @param string|string[] $additionalType
      *
      * @return static
      *
-     * @see http://schema.org/geoRadius
+     * @see http://schema.org/additionalType
      */
-    public function geoRadius($geoRadius)
+    public function additionalType($additionalType)
     {
-        return $this->setProperty('geoRadius', $geoRadius);
+        return $this->setProperty('additionalType', $additionalType);
     }
 
     /**
@@ -62,6 +66,20 @@ class GeoCircle extends BaseType implements GeoShapeContract, StructuredValueCon
     public function addressCountry($addressCountry)
     {
         return $this->setProperty('addressCountry', $addressCountry);
+    }
+
+    /**
+     * An alias for the item.
+     *
+     * @param string|string[] $alternateName
+     *
+     * @return static
+     *
+     * @see http://schema.org/alternateName
+     */
+    public function alternateName($alternateName)
+    {
+        return $this->setProperty('alternateName', $alternateName);
     }
 
     /**
@@ -97,6 +115,37 @@ class GeoCircle extends BaseType implements GeoShapeContract, StructuredValueCon
     }
 
     /**
+     * A description of the item.
+     *
+     * @param string|string[] $description
+     *
+     * @return static
+     *
+     * @see http://schema.org/description
+     */
+    public function description($description)
+    {
+        return $this->setProperty('description', $description);
+    }
+
+    /**
+     * A sub property of description. A short description of the item used to
+     * disambiguate from other, similar items. Information from other properties
+     * (in particular, name) may be necessary for the description to be useful
+     * for disambiguation.
+     *
+     * @param string|string[] $disambiguatingDescription
+     *
+     * @return static
+     *
+     * @see http://schema.org/disambiguatingDescription
+     */
+    public function disambiguatingDescription($disambiguatingDescription)
+    {
+        return $this->setProperty('disambiguatingDescription', $disambiguatingDescription);
+    }
+
+    /**
      * The elevation of a location ([WGS
      * 84](https://en.wikipedia.org/wiki/World_Geodetic_System)). Values may be
      * of the form 'NUMBER UNIT_OF_MEASUREMENT' (e.g., '1,000 m', '3,200 ft')
@@ -128,113 +177,18 @@ class GeoCircle extends BaseType implements GeoShapeContract, StructuredValueCon
     }
 
     /**
-     * A line is a point-to-point path consisting of two or more points. A line
-     * is expressed as a series of two or more point objects separated by space.
+     * Indicates the approximate radius of a GeoCircle (metres unless indicated
+     * otherwise via Distance notation).
      *
-     * @param string|string[] $line
-     *
-     * @return static
-     *
-     * @see http://schema.org/line
-     */
-    public function line($line)
-    {
-        return $this->setProperty('line', $line);
-    }
-
-    /**
-     * A polygon is the area enclosed by a point-to-point path for which the
-     * starting and ending points are the same. A polygon is expressed as a
-     * series of four or more space delimited points where the first and final
-     * points are identical.
-     *
-     * @param string|string[] $polygon
+     * @param Distance|Distance[]|float|float[]|int|int[]|string|string[] $geoRadius
      *
      * @return static
      *
-     * @see http://schema.org/polygon
+     * @see http://schema.org/geoRadius
      */
-    public function polygon($polygon)
+    public function geoRadius($geoRadius)
     {
-        return $this->setProperty('polygon', $polygon);
-    }
-
-    /**
-     * The postal code. For example, 94043.
-     *
-     * @param string|string[] $postalCode
-     *
-     * @return static
-     *
-     * @see http://schema.org/postalCode
-     */
-    public function postalCode($postalCode)
-    {
-        return $this->setProperty('postalCode', $postalCode);
-    }
-
-    /**
-     * An additional type for the item, typically used for adding more specific
-     * types from external vocabularies in microdata syntax. This is a
-     * relationship between something and a class that the thing is in. In RDFa
-     * syntax, it is better to use the native RDFa syntax - the 'typeof'
-     * attribute - for multiple types. Schema.org tools may have only weaker
-     * understanding of extra types, in particular those defined externally.
-     *
-     * @param string|string[] $additionalType
-     *
-     * @return static
-     *
-     * @see http://schema.org/additionalType
-     */
-    public function additionalType($additionalType)
-    {
-        return $this->setProperty('additionalType', $additionalType);
-    }
-
-    /**
-     * An alias for the item.
-     *
-     * @param string|string[] $alternateName
-     *
-     * @return static
-     *
-     * @see http://schema.org/alternateName
-     */
-    public function alternateName($alternateName)
-    {
-        return $this->setProperty('alternateName', $alternateName);
-    }
-
-    /**
-     * A description of the item.
-     *
-     * @param string|string[] $description
-     *
-     * @return static
-     *
-     * @see http://schema.org/description
-     */
-    public function description($description)
-    {
-        return $this->setProperty('description', $description);
-    }
-
-    /**
-     * A sub property of description. A short description of the item used to
-     * disambiguate from other, similar items. Information from other properties
-     * (in particular, name) may be necessary for the description to be useful
-     * for disambiguation.
-     *
-     * @param string|string[] $disambiguatingDescription
-     *
-     * @return static
-     *
-     * @see http://schema.org/disambiguatingDescription
-     */
-    public function disambiguatingDescription($disambiguatingDescription)
-    {
-        return $this->setProperty('disambiguatingDescription', $disambiguatingDescription);
+        return $this->setProperty('geoRadius', $geoRadius);
     }
 
     /**
@@ -271,6 +225,21 @@ class GeoCircle extends BaseType implements GeoShapeContract, StructuredValueCon
     }
 
     /**
+     * A line is a point-to-point path consisting of two or more points. A line
+     * is expressed as a series of two or more point objects separated by space.
+     *
+     * @param string|string[] $line
+     *
+     * @return static
+     *
+     * @see http://schema.org/line
+     */
+    public function line($line)
+    {
+        return $this->setProperty('line', $line);
+    }
+
+    /**
      * Indicates a page (or other CreativeWork) for which this thing is the main
      * entity being described. See [background
      * notes](/docs/datamodel.html#mainEntityBackground) for details.
@@ -298,6 +267,37 @@ class GeoCircle extends BaseType implements GeoShapeContract, StructuredValueCon
     public function name($name)
     {
         return $this->setProperty('name', $name);
+    }
+
+    /**
+     * A polygon is the area enclosed by a point-to-point path for which the
+     * starting and ending points are the same. A polygon is expressed as a
+     * series of four or more space delimited points where the first and final
+     * points are identical.
+     *
+     * @param string|string[] $polygon
+     *
+     * @return static
+     *
+     * @see http://schema.org/polygon
+     */
+    public function polygon($polygon)
+    {
+        return $this->setProperty('polygon', $polygon);
+    }
+
+    /**
+     * The postal code. For example, 94043.
+     *
+     * @param string|string[] $postalCode
+     *
+     * @return static
+     *
+     * @see http://schema.org/postalCode
+     */
+    public function postalCode($postalCode)
+    {
+        return $this->setProperty('postalCode', $postalCode);
     }
 
     /**

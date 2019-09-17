@@ -4,12 +4,6 @@ namespace Spatie\SchemaOrg\Contracts;
 
 interface BookSeriesContract
 {
-    public function endDate($endDate);
-
-    public function issn($issn);
-
-    public function startDate($startDate);
-
     public function about($about);
 
     public function accessMode($accessMode);
@@ -28,7 +22,11 @@ interface BookSeriesContract
 
     public function accountablePerson($accountablePerson);
 
+    public function additionalType($additionalType);
+
     public function aggregateRating($aggregateRating);
+
+    public function alternateName($alternateName);
 
     public function alternativeHeadline($alternativeHeadline);
 
@@ -70,6 +68,12 @@ interface BookSeriesContract
 
     public function datePublished($datePublished);
 
+    public function description($description);
+
+    public function director($director);
+
+    public function disambiguatingDescription($disambiguatingDescription);
+
     public function discussionUrl($discussionUrl);
 
     public function editor($editor);
@@ -84,6 +88,8 @@ interface BookSeriesContract
 
     public function encodings($encodings);
 
+    public function endDate($endDate);
+
     public function exampleOfWork($exampleOfWork);
 
     public function expires($expires);
@@ -97,6 +103,10 @@ interface BookSeriesContract
     public function hasPart($hasPart);
 
     public function headline($headline);
+
+    public function identifier($identifier);
+
+    public function image($image);
 
     public function inLanguage($inLanguage);
 
@@ -114,6 +124,8 @@ interface BookSeriesContract
 
     public function isPartOf($isPartOf);
 
+    public function issn($issn);
+
     public function keywords($keywords);
 
     public function learningResourceType($learningResourceType);
@@ -124,13 +136,19 @@ interface BookSeriesContract
 
     public function mainEntity($mainEntity);
 
+    public function mainEntityOfPage($mainEntityOfPage);
+
     public function material($material);
 
     public function mentions($mentions);
 
+    public function name($name);
+
     public function offers($offers);
 
     public function position($position);
+
+    public function potentialAction($potentialAction);
 
     public function producer($producer);
 
@@ -150,6 +168,8 @@ interface BookSeriesContract
 
     public function reviews($reviews);
 
+    public function sameAs($sameAs);
+
     public function schemaVersion($schemaVersion);
 
     public function sourceOrganization($sourceOrganization);
@@ -159,6 +179,10 @@ interface BookSeriesContract
     public function spatialCoverage($spatialCoverage);
 
     public function sponsor($sponsor);
+
+    public function startDate($startDate);
+
+    public function subjectOf($subjectOf);
 
     public function temporal($temporal);
 
@@ -174,36 +198,12 @@ interface BookSeriesContract
 
     public function typicalAgeRange($typicalAgeRange);
 
+    public function url($url);
+
     public function version($version);
 
     public function video($video);
 
     public function workExample($workExample);
-
-    public function additionalType($additionalType);
-
-    public function alternateName($alternateName);
-
-    public function description($description);
-
-    public function disambiguatingDescription($disambiguatingDescription);
-
-    public function identifier($identifier);
-
-    public function image($image);
-
-    public function mainEntityOfPage($mainEntityOfPage);
-
-    public function name($name);
-
-    public function potentialAction($potentialAction);
-
-    public function sameAs($sameAs);
-
-    public function subjectOf($subjectOf);
-
-    public function url($url);
-
-    public function director($director);
 
 }

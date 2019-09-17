@@ -4,24 +4,6 @@ namespace Spatie\SchemaOrg\Contracts;
 
 interface MessageContract
 {
-    public function bccRecipient($bccRecipient);
-
-    public function ccRecipient($ccRecipient);
-
-    public function dateRead($dateRead);
-
-    public function dateReceived($dateReceived);
-
-    public function dateSent($dateSent);
-
-    public function messageAttachment($messageAttachment);
-
-    public function recipient($recipient);
-
-    public function sender($sender);
-
-    public function toRecipient($toRecipient);
-
     public function about($about);
 
     public function accessMode($accessMode);
@@ -40,7 +22,11 @@ interface MessageContract
 
     public function accountablePerson($accountablePerson);
 
+    public function additionalType($additionalType);
+
     public function aggregateRating($aggregateRating);
+
+    public function alternateName($alternateName);
 
     public function alternativeHeadline($alternativeHeadline);
 
@@ -55,6 +41,10 @@ interface MessageContract
     public function award($award);
 
     public function awards($awards);
+
+    public function bccRecipient($bccRecipient);
+
+    public function ccRecipient($ccRecipient);
 
     public function character($character);
 
@@ -81,6 +71,16 @@ interface MessageContract
     public function dateModified($dateModified);
 
     public function datePublished($datePublished);
+
+    public function dateRead($dateRead);
+
+    public function dateReceived($dateReceived);
+
+    public function dateSent($dateSent);
+
+    public function description($description);
+
+    public function disambiguatingDescription($disambiguatingDescription);
 
     public function discussionUrl($discussionUrl);
 
@@ -110,6 +110,10 @@ interface MessageContract
 
     public function headline($headline);
 
+    public function identifier($identifier);
+
+    public function image($image);
+
     public function inLanguage($inLanguage);
 
     public function interactionStatistic($interactionStatistic);
@@ -136,13 +140,21 @@ interface MessageContract
 
     public function mainEntity($mainEntity);
 
+    public function mainEntityOfPage($mainEntityOfPage);
+
     public function material($material);
 
     public function mentions($mentions);
 
+    public function messageAttachment($messageAttachment);
+
+    public function name($name);
+
     public function offers($offers);
 
     public function position($position);
+
+    public function potentialAction($potentialAction);
 
     public function producer($producer);
 
@@ -154,6 +166,8 @@ interface MessageContract
 
     public function publishingPrinciples($publishingPrinciples);
 
+    public function recipient($recipient);
+
     public function recordedAt($recordedAt);
 
     public function releasedEvent($releasedEvent);
@@ -162,7 +176,11 @@ interface MessageContract
 
     public function reviews($reviews);
 
+    public function sameAs($sameAs);
+
     public function schemaVersion($schemaVersion);
+
+    public function sender($sender);
 
     public function sourceOrganization($sourceOrganization);
 
@@ -171,6 +189,8 @@ interface MessageContract
     public function spatialCoverage($spatialCoverage);
 
     public function sponsor($sponsor);
+
+    public function subjectOf($subjectOf);
 
     public function temporal($temporal);
 
@@ -182,38 +202,18 @@ interface MessageContract
 
     public function timeRequired($timeRequired);
 
+    public function toRecipient($toRecipient);
+
     public function translator($translator);
 
     public function typicalAgeRange($typicalAgeRange);
+
+    public function url($url);
 
     public function version($version);
 
     public function video($video);
 
     public function workExample($workExample);
-
-    public function additionalType($additionalType);
-
-    public function alternateName($alternateName);
-
-    public function description($description);
-
-    public function disambiguatingDescription($disambiguatingDescription);
-
-    public function identifier($identifier);
-
-    public function image($image);
-
-    public function mainEntityOfPage($mainEntityOfPage);
-
-    public function name($name);
-
-    public function potentialAction($potentialAction);
-
-    public function sameAs($sameAs);
-
-    public function subjectOf($subjectOf);
-
-    public function url($url);
 
 }

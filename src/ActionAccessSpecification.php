@@ -14,6 +14,39 @@ use \Spatie\SchemaOrg\Contracts\ThingContract;
 class ActionAccessSpecification extends BaseType implements IntangibleContract, ThingContract
 {
     /**
+     * An additional type for the item, typically used for adding more specific
+     * types from external vocabularies in microdata syntax. This is a
+     * relationship between something and a class that the thing is in. In RDFa
+     * syntax, it is better to use the native RDFa syntax - the 'typeof'
+     * attribute - for multiple types. Schema.org tools may have only weaker
+     * understanding of extra types, in particular those defined externally.
+     *
+     * @param string|string[] $additionalType
+     *
+     * @return static
+     *
+     * @see http://schema.org/additionalType
+     */
+    public function additionalType($additionalType)
+    {
+        return $this->setProperty('additionalType', $additionalType);
+    }
+
+    /**
+     * An alias for the item.
+     *
+     * @param string|string[] $alternateName
+     *
+     * @return static
+     *
+     * @see http://schema.org/alternateName
+     */
+    public function alternateName($alternateName)
+    {
+        return $this->setProperty('alternateName', $alternateName);
+    }
+
+    /**
      * 
      *
      * @param  $availabilityEnds
@@ -56,81 +89,6 @@ class ActionAccessSpecification extends BaseType implements IntangibleContract, 
     }
 
     /**
-     * 
-     *
-     * @param  $eligibleRegion
-     *
-     * @return static
-     *
-     * @see http://schema.org/eligibleRegion
-     */
-    public function eligibleRegion($eligibleRegion)
-    {
-        return $this->setProperty('eligibleRegion', $eligibleRegion);
-    }
-
-    /**
-     * 
-     *
-     * @param  $expectsAcceptanceOf
-     *
-     * @return static
-     *
-     * @see http://schema.org/expectsAcceptanceOf
-     */
-    public function expectsAcceptanceOf($expectsAcceptanceOf)
-    {
-        return $this->setProperty('expectsAcceptanceOf', $expectsAcceptanceOf);
-    }
-
-    /**
-     * 
-     *
-     * @param MediaSubscription|MediaSubscription[] $requiresSubscription
-     *
-     * @return static
-     *
-     * @see http://schema.org/requiresSubscription
-     */
-    public function requiresSubscription($requiresSubscription)
-    {
-        return $this->setProperty('requiresSubscription', $requiresSubscription);
-    }
-
-    /**
-     * An additional type for the item, typically used for adding more specific
-     * types from external vocabularies in microdata syntax. This is a
-     * relationship between something and a class that the thing is in. In RDFa
-     * syntax, it is better to use the native RDFa syntax - the 'typeof'
-     * attribute - for multiple types. Schema.org tools may have only weaker
-     * understanding of extra types, in particular those defined externally.
-     *
-     * @param string|string[] $additionalType
-     *
-     * @return static
-     *
-     * @see http://schema.org/additionalType
-     */
-    public function additionalType($additionalType)
-    {
-        return $this->setProperty('additionalType', $additionalType);
-    }
-
-    /**
-     * An alias for the item.
-     *
-     * @param string|string[] $alternateName
-     *
-     * @return static
-     *
-     * @see http://schema.org/alternateName
-     */
-    public function alternateName($alternateName)
-    {
-        return $this->setProperty('alternateName', $alternateName);
-    }
-
-    /**
      * A description of the item.
      *
      * @param string|string[] $description
@@ -159,6 +117,34 @@ class ActionAccessSpecification extends BaseType implements IntangibleContract, 
     public function disambiguatingDescription($disambiguatingDescription)
     {
         return $this->setProperty('disambiguatingDescription', $disambiguatingDescription);
+    }
+
+    /**
+     * 
+     *
+     * @param  $eligibleRegion
+     *
+     * @return static
+     *
+     * @see http://schema.org/eligibleRegion
+     */
+    public function eligibleRegion($eligibleRegion)
+    {
+        return $this->setProperty('eligibleRegion', $eligibleRegion);
+    }
+
+    /**
+     * 
+     *
+     * @param  $expectsAcceptanceOf
+     *
+     * @return static
+     *
+     * @see http://schema.org/expectsAcceptanceOf
+     */
+    public function expectsAcceptanceOf($expectsAcceptanceOf)
+    {
+        return $this->setProperty('expectsAcceptanceOf', $expectsAcceptanceOf);
     }
 
     /**
@@ -237,6 +223,20 @@ class ActionAccessSpecification extends BaseType implements IntangibleContract, 
     public function potentialAction($potentialAction)
     {
         return $this->setProperty('potentialAction', $potentialAction);
+    }
+
+    /**
+     * 
+     *
+     * @param MediaSubscription|MediaSubscription[] $requiresSubscription
+     *
+     * @return static
+     *
+     * @see http://schema.org/requiresSubscription
+     */
+    public function requiresSubscription($requiresSubscription)
+    {
+        return $this->setProperty('requiresSubscription', $requiresSubscription);
     }
 
     /**

@@ -4,22 +4,6 @@ namespace Spatie\SchemaOrg\Contracts;
 
 interface MusicReleaseContract
 {
-    public function catalogNumber($catalogNumber);
-
-    public function creditedTo($creditedTo);
-
-    public function musicReleaseFormat($musicReleaseFormat);
-
-    public function recordLabel($recordLabel);
-
-    public function releaseOf($releaseOf);
-
-    public function numTracks($numTracks);
-
-    public function track($track);
-
-    public function tracks($tracks);
-
     public function about($about);
 
     public function accessMode($accessMode);
@@ -38,7 +22,11 @@ interface MusicReleaseContract
 
     public function accountablePerson($accountablePerson);
 
+    public function additionalType($additionalType);
+
     public function aggregateRating($aggregateRating);
+
+    public function alternateName($alternateName);
 
     public function alternativeHeadline($alternativeHeadline);
 
@@ -53,6 +41,8 @@ interface MusicReleaseContract
     public function award($award);
 
     public function awards($awards);
+
+    public function catalogNumber($catalogNumber);
 
     public function character($character);
 
@@ -74,11 +64,17 @@ interface MusicReleaseContract
 
     public function creator($creator);
 
+    public function creditedTo($creditedTo);
+
     public function dateCreated($dateCreated);
 
     public function dateModified($dateModified);
 
     public function datePublished($datePublished);
+
+    public function description($description);
+
+    public function disambiguatingDescription($disambiguatingDescription);
 
     public function discussionUrl($discussionUrl);
 
@@ -108,6 +104,10 @@ interface MusicReleaseContract
 
     public function headline($headline);
 
+    public function identifier($identifier);
+
+    public function image($image);
+
     public function inLanguage($inLanguage);
 
     public function interactionStatistic($interactionStatistic);
@@ -134,13 +134,23 @@ interface MusicReleaseContract
 
     public function mainEntity($mainEntity);
 
+    public function mainEntityOfPage($mainEntityOfPage);
+
     public function material($material);
 
     public function mentions($mentions);
 
+    public function musicReleaseFormat($musicReleaseFormat);
+
+    public function name($name);
+
+    public function numTracks($numTracks);
+
     public function offers($offers);
 
     public function position($position);
+
+    public function potentialAction($potentialAction);
 
     public function producer($producer);
 
@@ -152,13 +162,19 @@ interface MusicReleaseContract
 
     public function publishingPrinciples($publishingPrinciples);
 
+    public function recordLabel($recordLabel);
+
     public function recordedAt($recordedAt);
+
+    public function releaseOf($releaseOf);
 
     public function releasedEvent($releasedEvent);
 
     public function review($review);
 
     public function reviews($reviews);
+
+    public function sameAs($sameAs);
 
     public function schemaVersion($schemaVersion);
 
@@ -170,6 +186,8 @@ interface MusicReleaseContract
 
     public function sponsor($sponsor);
 
+    public function subjectOf($subjectOf);
+
     public function temporal($temporal);
 
     public function temporalCoverage($temporalCoverage);
@@ -180,38 +198,20 @@ interface MusicReleaseContract
 
     public function timeRequired($timeRequired);
 
+    public function track($track);
+
+    public function tracks($tracks);
+
     public function translator($translator);
 
     public function typicalAgeRange($typicalAgeRange);
+
+    public function url($url);
 
     public function version($version);
 
     public function video($video);
 
     public function workExample($workExample);
-
-    public function additionalType($additionalType);
-
-    public function alternateName($alternateName);
-
-    public function description($description);
-
-    public function disambiguatingDescription($disambiguatingDescription);
-
-    public function identifier($identifier);
-
-    public function image($image);
-
-    public function mainEntityOfPage($mainEntityOfPage);
-
-    public function name($name);
-
-    public function potentialAction($potentialAction);
-
-    public function sameAs($sameAs);
-
-    public function subjectOf($subjectOf);
-
-    public function url($url);
 
 }

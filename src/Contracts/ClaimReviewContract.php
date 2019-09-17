@@ -4,16 +4,6 @@ namespace Spatie\SchemaOrg\Contracts;
 
 interface ClaimReviewContract
 {
-    public function claimReviewed($claimReviewed);
-
-    public function itemReviewed($itemReviewed);
-
-    public function reviewAspect($reviewAspect);
-
-    public function reviewBody($reviewBody);
-
-    public function reviewRating($reviewRating);
-
     public function about($about);
 
     public function accessMode($accessMode);
@@ -32,7 +22,11 @@ interface ClaimReviewContract
 
     public function accountablePerson($accountablePerson);
 
+    public function additionalType($additionalType);
+
     public function aggregateRating($aggregateRating);
+
+    public function alternateName($alternateName);
 
     public function alternativeHeadline($alternativeHeadline);
 
@@ -51,6 +45,8 @@ interface ClaimReviewContract
     public function character($character);
 
     public function citation($citation);
+
+    public function claimReviewed($claimReviewed);
 
     public function comment($comment);
 
@@ -73,6 +69,10 @@ interface ClaimReviewContract
     public function dateModified($dateModified);
 
     public function datePublished($datePublished);
+
+    public function description($description);
+
+    public function disambiguatingDescription($disambiguatingDescription);
 
     public function discussionUrl($discussionUrl);
 
@@ -102,6 +102,10 @@ interface ClaimReviewContract
 
     public function headline($headline);
 
+    public function identifier($identifier);
+
+    public function image($image);
+
     public function inLanguage($inLanguage);
 
     public function interactionStatistic($interactionStatistic);
@@ -118,6 +122,8 @@ interface ClaimReviewContract
 
     public function isPartOf($isPartOf);
 
+    public function itemReviewed($itemReviewed);
+
     public function keywords($keywords);
 
     public function learningResourceType($learningResourceType);
@@ -128,13 +134,19 @@ interface ClaimReviewContract
 
     public function mainEntity($mainEntity);
 
+    public function mainEntityOfPage($mainEntityOfPage);
+
     public function material($material);
 
     public function mentions($mentions);
 
+    public function name($name);
+
     public function offers($offers);
 
     public function position($position);
+
+    public function potentialAction($potentialAction);
 
     public function producer($producer);
 
@@ -152,7 +164,15 @@ interface ClaimReviewContract
 
     public function review($review);
 
+    public function reviewAspect($reviewAspect);
+
+    public function reviewBody($reviewBody);
+
+    public function reviewRating($reviewRating);
+
     public function reviews($reviews);
+
+    public function sameAs($sameAs);
 
     public function schemaVersion($schemaVersion);
 
@@ -163,6 +183,8 @@ interface ClaimReviewContract
     public function spatialCoverage($spatialCoverage);
 
     public function sponsor($sponsor);
+
+    public function subjectOf($subjectOf);
 
     public function temporal($temporal);
 
@@ -178,34 +200,12 @@ interface ClaimReviewContract
 
     public function typicalAgeRange($typicalAgeRange);
 
+    public function url($url);
+
     public function version($version);
 
     public function video($video);
 
     public function workExample($workExample);
-
-    public function additionalType($additionalType);
-
-    public function alternateName($alternateName);
-
-    public function description($description);
-
-    public function disambiguatingDescription($disambiguatingDescription);
-
-    public function identifier($identifier);
-
-    public function image($image);
-
-    public function mainEntityOfPage($mainEntityOfPage);
-
-    public function name($name);
-
-    public function potentialAction($potentialAction);
-
-    public function sameAs($sameAs);
-
-    public function subjectOf($subjectOf);
-
-    public function url($url);
 
 }

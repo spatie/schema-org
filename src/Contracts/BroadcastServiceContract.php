@@ -4,25 +4,13 @@ namespace Spatie\SchemaOrg\Contracts;
 
 interface BroadcastServiceContract
 {
-    public function area($area);
-
-    public function broadcastAffiliateOf($broadcastAffiliateOf);
-
-    public function broadcastDisplayName($broadcastDisplayName);
-
-    public function broadcastFrequency($broadcastFrequency);
-
-    public function broadcastTimezone($broadcastTimezone);
-
-    public function broadcaster($broadcaster);
-
-    public function hasBroadcastChannel($hasBroadcastChannel);
-
-    public function parentService($parentService);
-
-    public function videoFormat($videoFormat);
+    public function additionalType($additionalType);
 
     public function aggregateRating($aggregateRating);
+
+    public function alternateName($alternateName);
+
+    public function area($area);
 
     public function areaServed($areaServed);
 
@@ -34,13 +22,33 @@ interface BroadcastServiceContract
 
     public function brand($brand);
 
+    public function broadcastAffiliateOf($broadcastAffiliateOf);
+
+    public function broadcastDisplayName($broadcastDisplayName);
+
+    public function broadcastFrequency($broadcastFrequency);
+
+    public function broadcastTimezone($broadcastTimezone);
+
+    public function broadcaster($broadcaster);
+
     public function broker($broker);
 
     public function category($category);
 
+    public function description($description);
+
+    public function disambiguatingDescription($disambiguatingDescription);
+
+    public function hasBroadcastChannel($hasBroadcastChannel);
+
     public function hasOfferCatalog($hasOfferCatalog);
 
     public function hoursAvailable($hoursAvailable);
+
+    public function identifier($identifier);
+
+    public function image($image);
 
     public function isRelatedTo($isRelatedTo);
 
@@ -48,7 +56,15 @@ interface BroadcastServiceContract
 
     public function logo($logo);
 
+    public function mainEntityOfPage($mainEntityOfPage);
+
+    public function name($name);
+
     public function offers($offers);
+
+    public function parentService($parentService);
+
+    public function potentialAction($potentialAction);
 
     public function produces($produces);
 
@@ -57,6 +73,8 @@ interface BroadcastServiceContract
     public function providerMobility($providerMobility);
 
     public function review($review);
+
+    public function sameAs($sameAs);
 
     public function serviceArea($serviceArea);
 
@@ -68,28 +86,10 @@ interface BroadcastServiceContract
 
     public function slogan($slogan);
 
-    public function additionalType($additionalType);
-
-    public function alternateName($alternateName);
-
-    public function description($description);
-
-    public function disambiguatingDescription($disambiguatingDescription);
-
-    public function identifier($identifier);
-
-    public function image($image);
-
-    public function mainEntityOfPage($mainEntityOfPage);
-
-    public function name($name);
-
-    public function potentialAction($potentialAction);
-
-    public function sameAs($sameAs);
-
     public function subjectOf($subjectOf);
 
     public function url($url);
+
+    public function videoFormat($videoFormat);
 
 }

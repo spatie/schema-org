@@ -4,54 +4,6 @@ namespace Spatie\SchemaOrg\Contracts;
 
 interface HowToDirectionContract
 {
-    public function afterMedia($afterMedia);
-
-    public function beforeMedia($beforeMedia);
-
-    public function duringMedia($duringMedia);
-
-    public function performTime($performTime);
-
-    public function prepTime($prepTime);
-
-    public function supply($supply);
-
-    public function tool($tool);
-
-    public function totalTime($totalTime);
-
-    public function item($item);
-
-    public function nextItem($nextItem);
-
-    public function position($position);
-
-    public function previousItem($previousItem);
-
-    public function additionalType($additionalType);
-
-    public function alternateName($alternateName);
-
-    public function description($description);
-
-    public function disambiguatingDescription($disambiguatingDescription);
-
-    public function identifier($identifier);
-
-    public function image($image);
-
-    public function mainEntityOfPage($mainEntityOfPage);
-
-    public function name($name);
-
-    public function potentialAction($potentialAction);
-
-    public function sameAs($sameAs);
-
-    public function subjectOf($subjectOf);
-
-    public function url($url);
-
     public function about($about);
 
     public function accessMode($accessMode);
@@ -70,7 +22,13 @@ interface HowToDirectionContract
 
     public function accountablePerson($accountablePerson);
 
+    public function additionalType($additionalType);
+
+    public function afterMedia($afterMedia);
+
     public function aggregateRating($aggregateRating);
+
+    public function alternateName($alternateName);
 
     public function alternativeHeadline($alternativeHeadline);
 
@@ -85,6 +43,8 @@ interface HowToDirectionContract
     public function award($award);
 
     public function awards($awards);
+
+    public function beforeMedia($beforeMedia);
 
     public function character($character);
 
@@ -112,7 +72,13 @@ interface HowToDirectionContract
 
     public function datePublished($datePublished);
 
+    public function description($description);
+
+    public function disambiguatingDescription($disambiguatingDescription);
+
     public function discussionUrl($discussionUrl);
+
+    public function duringMedia($duringMedia);
 
     public function editor($editor);
 
@@ -140,6 +106,10 @@ interface HowToDirectionContract
 
     public function headline($headline);
 
+    public function identifier($identifier);
+
+    public function image($image);
+
     public function inLanguage($inLanguage);
 
     public function interactionStatistic($interactionStatistic);
@@ -156,6 +126,8 @@ interface HowToDirectionContract
 
     public function isPartOf($isPartOf);
 
+    public function item($item);
+
     public function keywords($keywords);
 
     public function learningResourceType($learningResourceType);
@@ -166,11 +138,27 @@ interface HowToDirectionContract
 
     public function mainEntity($mainEntity);
 
+    public function mainEntityOfPage($mainEntityOfPage);
+
     public function material($material);
 
     public function mentions($mentions);
 
+    public function name($name);
+
+    public function nextItem($nextItem);
+
     public function offers($offers);
+
+    public function performTime($performTime);
+
+    public function position($position);
+
+    public function potentialAction($potentialAction);
+
+    public function prepTime($prepTime);
+
+    public function previousItem($previousItem);
 
     public function producer($producer);
 
@@ -190,6 +178,8 @@ interface HowToDirectionContract
 
     public function reviews($reviews);
 
+    public function sameAs($sameAs);
+
     public function schemaVersion($schemaVersion);
 
     public function sourceOrganization($sourceOrganization);
@@ -199,6 +189,10 @@ interface HowToDirectionContract
     public function spatialCoverage($spatialCoverage);
 
     public function sponsor($sponsor);
+
+    public function subjectOf($subjectOf);
+
+    public function supply($supply);
 
     public function temporal($temporal);
 
@@ -210,9 +204,15 @@ interface HowToDirectionContract
 
     public function timeRequired($timeRequired);
 
+    public function tool($tool);
+
+    public function totalTime($totalTime);
+
     public function translator($translator);
 
     public function typicalAgeRange($typicalAgeRange);
+
+    public function url($url);
 
     public function version($version);
 

@@ -39,111 +39,6 @@ class BedType extends BaseType implements QualitativeValueContract, EnumerationC
     }
 
     /**
-     * This ordering relation for qualitative values indicates that the subject
-     * is equal to the object.
-     *
-     * @param QualitativeValue|QualitativeValue[] $equal
-     *
-     * @return static
-     *
-     * @see http://schema.org/equal
-     */
-    public function equal($equal)
-    {
-        return $this->setProperty('equal', $equal);
-    }
-
-    /**
-     * This ordering relation for qualitative values indicates that the subject
-     * is greater than the object.
-     *
-     * @param QualitativeValue|QualitativeValue[] $greater
-     *
-     * @return static
-     *
-     * @see http://schema.org/greater
-     */
-    public function greater($greater)
-    {
-        return $this->setProperty('greater', $greater);
-    }
-
-    /**
-     * This ordering relation for qualitative values indicates that the subject
-     * is greater than or equal to the object.
-     *
-     * @param QualitativeValue|QualitativeValue[] $greaterOrEqual
-     *
-     * @return static
-     *
-     * @see http://schema.org/greaterOrEqual
-     */
-    public function greaterOrEqual($greaterOrEqual)
-    {
-        return $this->setProperty('greaterOrEqual', $greaterOrEqual);
-    }
-
-    /**
-     * This ordering relation for qualitative values indicates that the subject
-     * is lesser than the object.
-     *
-     * @param QualitativeValue|QualitativeValue[] $lesser
-     *
-     * @return static
-     *
-     * @see http://schema.org/lesser
-     */
-    public function lesser($lesser)
-    {
-        return $this->setProperty('lesser', $lesser);
-    }
-
-    /**
-     * This ordering relation for qualitative values indicates that the subject
-     * is lesser than or equal to the object.
-     *
-     * @param QualitativeValue|QualitativeValue[] $lesserOrEqual
-     *
-     * @return static
-     *
-     * @see http://schema.org/lesserOrEqual
-     */
-    public function lesserOrEqual($lesserOrEqual)
-    {
-        return $this->setProperty('lesserOrEqual', $lesserOrEqual);
-    }
-
-    /**
-     * This ordering relation for qualitative values indicates that the subject
-     * is not equal to the object.
-     *
-     * @param QualitativeValue|QualitativeValue[] $nonEqual
-     *
-     * @return static
-     *
-     * @see http://schema.org/nonEqual
-     */
-    public function nonEqual($nonEqual)
-    {
-        return $this->setProperty('nonEqual', $nonEqual);
-    }
-
-    /**
-     * A pointer to a secondary value that provides additional information on
-     * the original value, e.g. a reference temperature.
-     *
-     * @param Enumeration|Enumeration[]|PropertyValue|PropertyValue[]|QualitativeValue|QualitativeValue[]|QuantitativeValue|QuantitativeValue[]|StructuredValue|StructuredValue[] $valueReference
-     *
-     * @return static
-     *
-     * @see http://schema.org/valueReference
-     */
-    public function valueReference($valueReference)
-    {
-        return $this->setProperty('valueReference', $valueReference);
-    }
-
-    /**
      * An additional type for the item, typically used for adding more specific
      * types from external vocabularies in microdata syntax. This is a
      * relationship between something and a class that the thing is in. In RDFa
@@ -208,6 +103,51 @@ class BedType extends BaseType implements QualitativeValueContract, EnumerationC
     }
 
     /**
+     * This ordering relation for qualitative values indicates that the subject
+     * is equal to the object.
+     *
+     * @param QualitativeValue|QualitativeValue[] $equal
+     *
+     * @return static
+     *
+     * @see http://schema.org/equal
+     */
+    public function equal($equal)
+    {
+        return $this->setProperty('equal', $equal);
+    }
+
+    /**
+     * This ordering relation for qualitative values indicates that the subject
+     * is greater than the object.
+     *
+     * @param QualitativeValue|QualitativeValue[] $greater
+     *
+     * @return static
+     *
+     * @see http://schema.org/greater
+     */
+    public function greater($greater)
+    {
+        return $this->setProperty('greater', $greater);
+    }
+
+    /**
+     * This ordering relation for qualitative values indicates that the subject
+     * is greater than or equal to the object.
+     *
+     * @param QualitativeValue|QualitativeValue[] $greaterOrEqual
+     *
+     * @return static
+     *
+     * @see http://schema.org/greaterOrEqual
+     */
+    public function greaterOrEqual($greaterOrEqual)
+    {
+        return $this->setProperty('greaterOrEqual', $greaterOrEqual);
+    }
+
+    /**
      * The identifier property represents any kind of identifier for any kind of
      * [[Thing]], such as ISBNs, GTIN codes, UUIDs etc. Schema.org provides
      * dedicated properties for representing many of these, either as textual
@@ -241,6 +181,36 @@ class BedType extends BaseType implements QualitativeValueContract, EnumerationC
     }
 
     /**
+     * This ordering relation for qualitative values indicates that the subject
+     * is lesser than the object.
+     *
+     * @param QualitativeValue|QualitativeValue[] $lesser
+     *
+     * @return static
+     *
+     * @see http://schema.org/lesser
+     */
+    public function lesser($lesser)
+    {
+        return $this->setProperty('lesser', $lesser);
+    }
+
+    /**
+     * This ordering relation for qualitative values indicates that the subject
+     * is lesser than or equal to the object.
+     *
+     * @param QualitativeValue|QualitativeValue[] $lesserOrEqual
+     *
+     * @return static
+     *
+     * @see http://schema.org/lesserOrEqual
+     */
+    public function lesserOrEqual($lesserOrEqual)
+    {
+        return $this->setProperty('lesserOrEqual', $lesserOrEqual);
+    }
+
+    /**
      * Indicates a page (or other CreativeWork) for which this thing is the main
      * entity being described. See [background
      * notes](/docs/datamodel.html#mainEntityBackground) for details.
@@ -268,6 +238,21 @@ class BedType extends BaseType implements QualitativeValueContract, EnumerationC
     public function name($name)
     {
         return $this->setProperty('name', $name);
+    }
+
+    /**
+     * This ordering relation for qualitative values indicates that the subject
+     * is not equal to the object.
+     *
+     * @param QualitativeValue|QualitativeValue[] $nonEqual
+     *
+     * @return static
+     *
+     * @see http://schema.org/nonEqual
+     */
+    public function nonEqual($nonEqual)
+    {
+        return $this->setProperty('nonEqual', $nonEqual);
     }
 
     /**
@@ -327,6 +312,21 @@ class BedType extends BaseType implements QualitativeValueContract, EnumerationC
     public function url($url)
     {
         return $this->setProperty('url', $url);
+    }
+
+    /**
+     * A pointer to a secondary value that provides additional information on
+     * the original value, e.g. a reference temperature.
+     *
+     * @param Enumeration|Enumeration[]|PropertyValue|PropertyValue[]|QualitativeValue|QualitativeValue[]|QuantitativeValue|QuantitativeValue[]|StructuredValue|StructuredValue[] $valueReference
+     *
+     * @return static
+     *
+     * @see http://schema.org/valueReference
+     */
+    public function valueReference($valueReference)
+    {
+        return $this->setProperty('valueReference', $valueReference);
     }
 
 }

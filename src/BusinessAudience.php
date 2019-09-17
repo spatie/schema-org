@@ -16,77 +16,6 @@ use \Spatie\SchemaOrg\Contracts\ThingContract;
 class BusinessAudience extends BaseType implements AudienceContract, IntangibleContract, ThingContract
 {
     /**
-     * The number of employees in an organization e.g. business.
-     *
-     * @param QuantitativeValue|QuantitativeValue[] $numberOfEmployees
-     *
-     * @return static
-     *
-     * @see http://schema.org/numberOfEmployees
-     */
-    public function numberOfEmployees($numberOfEmployees)
-    {
-        return $this->setProperty('numberOfEmployees', $numberOfEmployees);
-    }
-
-    /**
-     * The size of the business in annual revenue.
-     *
-     * @param QuantitativeValue|QuantitativeValue[] $yearlyRevenue
-     *
-     * @return static
-     *
-     * @see http://schema.org/yearlyRevenue
-     */
-    public function yearlyRevenue($yearlyRevenue)
-    {
-        return $this->setProperty('yearlyRevenue', $yearlyRevenue);
-    }
-
-    /**
-     * The age of the business.
-     *
-     * @param QuantitativeValue|QuantitativeValue[] $yearsInOperation
-     *
-     * @return static
-     *
-     * @see http://schema.org/yearsInOperation
-     */
-    public function yearsInOperation($yearsInOperation)
-    {
-        return $this->setProperty('yearsInOperation', $yearsInOperation);
-    }
-
-    /**
-     * The target group associated with a given audience (e.g. veterans, car
-     * owners, musicians, etc.).
-     *
-     * @param string|string[] $audienceType
-     *
-     * @return static
-     *
-     * @see http://schema.org/audienceType
-     */
-    public function audienceType($audienceType)
-    {
-        return $this->setProperty('audienceType', $audienceType);
-    }
-
-    /**
-     * The geographic area associated with the audience.
-     *
-     * @param AdministrativeArea|AdministrativeArea[] $geographicArea
-     *
-     * @return static
-     *
-     * @see http://schema.org/geographicArea
-     */
-    public function geographicArea($geographicArea)
-    {
-        return $this->setProperty('geographicArea', $geographicArea);
-    }
-
-    /**
      * An additional type for the item, typically used for adding more specific
      * types from external vocabularies in microdata syntax. This is a
      * relationship between something and a class that the thing is in. In RDFa
@@ -120,6 +49,21 @@ class BusinessAudience extends BaseType implements AudienceContract, IntangibleC
     }
 
     /**
+     * The target group associated with a given audience (e.g. veterans, car
+     * owners, musicians, etc.).
+     *
+     * @param string|string[] $audienceType
+     *
+     * @return static
+     *
+     * @see http://schema.org/audienceType
+     */
+    public function audienceType($audienceType)
+    {
+        return $this->setProperty('audienceType', $audienceType);
+    }
+
+    /**
      * A description of the item.
      *
      * @param string|string[] $description
@@ -148,6 +92,20 @@ class BusinessAudience extends BaseType implements AudienceContract, IntangibleC
     public function disambiguatingDescription($disambiguatingDescription)
     {
         return $this->setProperty('disambiguatingDescription', $disambiguatingDescription);
+    }
+
+    /**
+     * The geographic area associated with the audience.
+     *
+     * @param AdministrativeArea|AdministrativeArea[] $geographicArea
+     *
+     * @return static
+     *
+     * @see http://schema.org/geographicArea
+     */
+    public function geographicArea($geographicArea)
+    {
+        return $this->setProperty('geographicArea', $geographicArea);
     }
 
     /**
@@ -214,6 +172,20 @@ class BusinessAudience extends BaseType implements AudienceContract, IntangibleC
     }
 
     /**
+     * The number of employees in an organization e.g. business.
+     *
+     * @param QuantitativeValue|QuantitativeValue[] $numberOfEmployees
+     *
+     * @return static
+     *
+     * @see http://schema.org/numberOfEmployees
+     */
+    public function numberOfEmployees($numberOfEmployees)
+    {
+        return $this->setProperty('numberOfEmployees', $numberOfEmployees);
+    }
+
+    /**
      * Indicates a potential Action, which describes an idealized action in
      * which this thing would play an 'object' role.
      *
@@ -270,6 +242,34 @@ class BusinessAudience extends BaseType implements AudienceContract, IntangibleC
     public function url($url)
     {
         return $this->setProperty('url', $url);
+    }
+
+    /**
+     * The size of the business in annual revenue.
+     *
+     * @param QuantitativeValue|QuantitativeValue[] $yearlyRevenue
+     *
+     * @return static
+     *
+     * @see http://schema.org/yearlyRevenue
+     */
+    public function yearlyRevenue($yearlyRevenue)
+    {
+        return $this->setProperty('yearlyRevenue', $yearlyRevenue);
+    }
+
+    /**
+     * The age of the business.
+     *
+     * @param QuantitativeValue|QuantitativeValue[] $yearsInOperation
+     *
+     * @return static
+     *
+     * @see http://schema.org/yearsInOperation
+     */
+    public function yearsInOperation($yearsInOperation)
+    {
+        return $this->setProperty('yearsInOperation', $yearsInOperation);
     }
 
 }

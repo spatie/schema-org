@@ -4,26 +4,6 @@ namespace Spatie\SchemaOrg\Contracts;
 
 interface TVClipContract
 {
-    public function partOfTVSeries($partOfTVSeries);
-
-    public function actor($actor);
-
-    public function actors($actors);
-
-    public function clipNumber($clipNumber);
-
-    public function director($director);
-
-    public function directors($directors);
-
-    public function musicBy($musicBy);
-
-    public function partOfEpisode($partOfEpisode);
-
-    public function partOfSeason($partOfSeason);
-
-    public function partOfSeries($partOfSeries);
-
     public function about($about);
 
     public function accessMode($accessMode);
@@ -42,7 +22,15 @@ interface TVClipContract
 
     public function accountablePerson($accountablePerson);
 
+    public function actor($actor);
+
+    public function actors($actors);
+
+    public function additionalType($additionalType);
+
     public function aggregateRating($aggregateRating);
+
+    public function alternateName($alternateName);
 
     public function alternativeHeadline($alternativeHeadline);
 
@@ -61,6 +49,8 @@ interface TVClipContract
     public function character($character);
 
     public function citation($citation);
+
+    public function clipNumber($clipNumber);
 
     public function comment($comment);
 
@@ -83,6 +73,14 @@ interface TVClipContract
     public function dateModified($dateModified);
 
     public function datePublished($datePublished);
+
+    public function description($description);
+
+    public function director($director);
+
+    public function directors($directors);
+
+    public function disambiguatingDescription($disambiguatingDescription);
 
     public function discussionUrl($discussionUrl);
 
@@ -112,6 +110,10 @@ interface TVClipContract
 
     public function headline($headline);
 
+    public function identifier($identifier);
+
+    public function image($image);
+
     public function inLanguage($inLanguage);
 
     public function interactionStatistic($interactionStatistic);
@@ -138,13 +140,29 @@ interface TVClipContract
 
     public function mainEntity($mainEntity);
 
+    public function mainEntityOfPage($mainEntityOfPage);
+
     public function material($material);
 
     public function mentions($mentions);
 
+    public function musicBy($musicBy);
+
+    public function name($name);
+
     public function offers($offers);
 
+    public function partOfEpisode($partOfEpisode);
+
+    public function partOfSeason($partOfSeason);
+
+    public function partOfSeries($partOfSeries);
+
+    public function partOfTVSeries($partOfTVSeries);
+
     public function position($position);
+
+    public function potentialAction($potentialAction);
 
     public function producer($producer);
 
@@ -164,6 +182,8 @@ interface TVClipContract
 
     public function reviews($reviews);
 
+    public function sameAs($sameAs);
+
     public function schemaVersion($schemaVersion);
 
     public function sourceOrganization($sourceOrganization);
@@ -173,6 +193,8 @@ interface TVClipContract
     public function spatialCoverage($spatialCoverage);
 
     public function sponsor($sponsor);
+
+    public function subjectOf($subjectOf);
 
     public function temporal($temporal);
 
@@ -188,34 +210,12 @@ interface TVClipContract
 
     public function typicalAgeRange($typicalAgeRange);
 
+    public function url($url);
+
     public function version($version);
 
     public function video($video);
 
     public function workExample($workExample);
-
-    public function additionalType($additionalType);
-
-    public function alternateName($alternateName);
-
-    public function description($description);
-
-    public function disambiguatingDescription($disambiguatingDescription);
-
-    public function identifier($identifier);
-
-    public function image($image);
-
-    public function mainEntityOfPage($mainEntityOfPage);
-
-    public function name($name);
-
-    public function potentialAction($potentialAction);
-
-    public function sameAs($sameAs);
-
-    public function subjectOf($subjectOf);
-
-    public function url($url);
 
 }

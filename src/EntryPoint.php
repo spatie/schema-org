@@ -44,78 +44,6 @@ class EntryPoint extends BaseType implements IntangibleContract, ThingContract
     }
 
     /**
-     * An application that can complete the request.
-     *
-     * @param SoftwareApplication|SoftwareApplication[] $application
-     *
-     * @return static
-     *
-     * @see http://schema.org/application
-     */
-    public function application($application)
-    {
-        return $this->setProperty('application', $application);
-    }
-
-    /**
-     * The supported content type(s) for an EntryPoint response.
-     *
-     * @param string|string[] $contentType
-     *
-     * @return static
-     *
-     * @see http://schema.org/contentType
-     */
-    public function contentType($contentType)
-    {
-        return $this->setProperty('contentType', $contentType);
-    }
-
-    /**
-     * The supported encoding type(s) for an EntryPoint request.
-     *
-     * @param string|string[] $encodingType
-     *
-     * @return static
-     *
-     * @see http://schema.org/encodingType
-     */
-    public function encodingType($encodingType)
-    {
-        return $this->setProperty('encodingType', $encodingType);
-    }
-
-    /**
-     * An HTTP method that specifies the appropriate HTTP method for a request
-     * to an HTTP EntryPoint. Values are capitalized strings as used in HTTP.
-     *
-     * @param string|string[] $httpMethod
-     *
-     * @return static
-     *
-     * @see http://schema.org/httpMethod
-     */
-    public function httpMethod($httpMethod)
-    {
-        return $this->setProperty('httpMethod', $httpMethod);
-    }
-
-    /**
-     * An url template (RFC6570) that will be used to construct the target of
-     * the execution of the action.
-     *
-     * @param string|string[] $urlTemplate
-     *
-     * @return static
-     *
-     * @see http://schema.org/urlTemplate
-     */
-    public function urlTemplate($urlTemplate)
-    {
-        return $this->setProperty('urlTemplate', $urlTemplate);
-    }
-
-    /**
      * An additional type for the item, typically used for adding more specific
      * types from external vocabularies in microdata syntax. This is a
      * relationship between something and a class that the thing is in. In RDFa
@@ -149,6 +77,34 @@ class EntryPoint extends BaseType implements IntangibleContract, ThingContract
     }
 
     /**
+     * An application that can complete the request.
+     *
+     * @param SoftwareApplication|SoftwareApplication[] $application
+     *
+     * @return static
+     *
+     * @see http://schema.org/application
+     */
+    public function application($application)
+    {
+        return $this->setProperty('application', $application);
+    }
+
+    /**
+     * The supported content type(s) for an EntryPoint response.
+     *
+     * @param string|string[] $contentType
+     *
+     * @return static
+     *
+     * @see http://schema.org/contentType
+     */
+    public function contentType($contentType)
+    {
+        return $this->setProperty('contentType', $contentType);
+    }
+
+    /**
      * A description of the item.
      *
      * @param string|string[] $description
@@ -177,6 +133,35 @@ class EntryPoint extends BaseType implements IntangibleContract, ThingContract
     public function disambiguatingDescription($disambiguatingDescription)
     {
         return $this->setProperty('disambiguatingDescription', $disambiguatingDescription);
+    }
+
+    /**
+     * The supported encoding type(s) for an EntryPoint request.
+     *
+     * @param string|string[] $encodingType
+     *
+     * @return static
+     *
+     * @see http://schema.org/encodingType
+     */
+    public function encodingType($encodingType)
+    {
+        return $this->setProperty('encodingType', $encodingType);
+    }
+
+    /**
+     * An HTTP method that specifies the appropriate HTTP method for a request
+     * to an HTTP EntryPoint. Values are capitalized strings as used in HTTP.
+     *
+     * @param string|string[] $httpMethod
+     *
+     * @return static
+     *
+     * @see http://schema.org/httpMethod
+     */
+    public function httpMethod($httpMethod)
+    {
+        return $this->setProperty('httpMethod', $httpMethod);
     }
 
     /**
@@ -299,6 +284,21 @@ class EntryPoint extends BaseType implements IntangibleContract, ThingContract
     public function url($url)
     {
         return $this->setProperty('url', $url);
+    }
+
+    /**
+     * An url template (RFC6570) that will be used to construct the target of
+     * the execution of the action.
+     *
+     * @param string|string[] $urlTemplate
+     *
+     * @return static
+     *
+     * @see http://schema.org/urlTemplate
+     */
+    public function urlTemplate($urlTemplate)
+    {
+        return $this->setProperty('urlTemplate', $urlTemplate);
     }
 
 }

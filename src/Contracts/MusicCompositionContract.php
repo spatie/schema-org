@@ -4,26 +4,6 @@ namespace Spatie\SchemaOrg\Contracts;
 
 interface MusicCompositionContract
 {
-    public function composer($composer);
-
-    public function firstPerformance($firstPerformance);
-
-    public function includedComposition($includedComposition);
-
-    public function iswcCode($iswcCode);
-
-    public function lyricist($lyricist);
-
-    public function lyrics($lyrics);
-
-    public function musicArrangement($musicArrangement);
-
-    public function musicCompositionForm($musicCompositionForm);
-
-    public function musicalKey($musicalKey);
-
-    public function recordedAs($recordedAs);
-
     public function about($about);
 
     public function accessMode($accessMode);
@@ -42,7 +22,11 @@ interface MusicCompositionContract
 
     public function accountablePerson($accountablePerson);
 
+    public function additionalType($additionalType);
+
     public function aggregateRating($aggregateRating);
+
+    public function alternateName($alternateName);
 
     public function alternativeHeadline($alternativeHeadline);
 
@@ -66,6 +50,8 @@ interface MusicCompositionContract
 
     public function commentCount($commentCount);
 
+    public function composer($composer);
+
     public function contentLocation($contentLocation);
 
     public function contentRating($contentRating);
@@ -83,6 +69,10 @@ interface MusicCompositionContract
     public function dateModified($dateModified);
 
     public function datePublished($datePublished);
+
+    public function description($description);
+
+    public function disambiguatingDescription($disambiguatingDescription);
 
     public function discussionUrl($discussionUrl);
 
@@ -104,6 +94,8 @@ interface MusicCompositionContract
 
     public function fileFormat($fileFormat);
 
+    public function firstPerformance($firstPerformance);
+
     public function funder($funder);
 
     public function genre($genre);
@@ -112,7 +104,13 @@ interface MusicCompositionContract
 
     public function headline($headline);
 
+    public function identifier($identifier);
+
+    public function image($image);
+
     public function inLanguage($inLanguage);
+
+    public function includedComposition($includedComposition);
 
     public function interactionStatistic($interactionStatistic);
 
@@ -128,6 +126,8 @@ interface MusicCompositionContract
 
     public function isPartOf($isPartOf);
 
+    public function iswcCode($iswcCode);
+
     public function keywords($keywords);
 
     public function learningResourceType($learningResourceType);
@@ -136,15 +136,31 @@ interface MusicCompositionContract
 
     public function locationCreated($locationCreated);
 
+    public function lyricist($lyricist);
+
+    public function lyrics($lyrics);
+
     public function mainEntity($mainEntity);
+
+    public function mainEntityOfPage($mainEntityOfPage);
 
     public function material($material);
 
     public function mentions($mentions);
 
+    public function musicArrangement($musicArrangement);
+
+    public function musicCompositionForm($musicCompositionForm);
+
+    public function musicalKey($musicalKey);
+
+    public function name($name);
+
     public function offers($offers);
 
     public function position($position);
+
+    public function potentialAction($potentialAction);
 
     public function producer($producer);
 
@@ -156,6 +172,8 @@ interface MusicCompositionContract
 
     public function publishingPrinciples($publishingPrinciples);
 
+    public function recordedAs($recordedAs);
+
     public function recordedAt($recordedAt);
 
     public function releasedEvent($releasedEvent);
@@ -163,6 +181,8 @@ interface MusicCompositionContract
     public function review($review);
 
     public function reviews($reviews);
+
+    public function sameAs($sameAs);
 
     public function schemaVersion($schemaVersion);
 
@@ -173,6 +193,8 @@ interface MusicCompositionContract
     public function spatialCoverage($spatialCoverage);
 
     public function sponsor($sponsor);
+
+    public function subjectOf($subjectOf);
 
     public function temporal($temporal);
 
@@ -188,34 +210,12 @@ interface MusicCompositionContract
 
     public function typicalAgeRange($typicalAgeRange);
 
+    public function url($url);
+
     public function version($version);
 
     public function video($video);
 
     public function workExample($workExample);
-
-    public function additionalType($additionalType);
-
-    public function alternateName($alternateName);
-
-    public function description($description);
-
-    public function disambiguatingDescription($disambiguatingDescription);
-
-    public function identifier($identifier);
-
-    public function image($image);
-
-    public function mainEntityOfPage($mainEntityOfPage);
-
-    public function name($name);
-
-    public function potentialAction($potentialAction);
-
-    public function sameAs($sameAs);
-
-    public function subjectOf($subjectOf);
-
-    public function url($url);
 
 }

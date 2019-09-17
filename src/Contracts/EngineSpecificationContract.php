@@ -4,8 +4,6 @@ namespace Spatie\SchemaOrg\Contracts;
 
 interface EngineSpecificationContract
 {
-    public function fuelType($fuelType);
-
     public function additionalType($additionalType);
 
     public function alternateName($alternateName);
@@ -13,6 +11,8 @@ interface EngineSpecificationContract
     public function description($description);
 
     public function disambiguatingDescription($disambiguatingDescription);
+
+    public function fuelType($fuelType);
 
     public function identifier($identifier);
 

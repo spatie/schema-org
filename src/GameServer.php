@@ -14,48 +14,6 @@ use \Spatie\SchemaOrg\Contracts\ThingContract;
 class GameServer extends BaseType implements IntangibleContract, ThingContract
 {
     /**
-     * Video game which is played on this server.
-     *
-     * @param VideoGame|VideoGame[] $game
-     *
-     * @return static
-     *
-     * @see http://schema.org/game
-     */
-    public function game($game)
-    {
-        return $this->setProperty('game', $game);
-    }
-
-    /**
-     * Number of players on the server.
-     *
-     * @param int|int[] $playersOnline
-     *
-     * @return static
-     *
-     * @see http://schema.org/playersOnline
-     */
-    public function playersOnline($playersOnline)
-    {
-        return $this->setProperty('playersOnline', $playersOnline);
-    }
-
-    /**
-     * Status of a game server.
-     *
-     * @param GameServerStatus|GameServerStatus[] $serverStatus
-     *
-     * @return static
-     *
-     * @see http://schema.org/serverStatus
-     */
-    public function serverStatus($serverStatus)
-    {
-        return $this->setProperty('serverStatus', $serverStatus);
-    }
-
-    /**
      * An additional type for the item, typically used for adding more specific
      * types from external vocabularies in microdata syntax. This is a
      * relationship between something and a class that the thing is in. In RDFa
@@ -117,6 +75,20 @@ class GameServer extends BaseType implements IntangibleContract, ThingContract
     public function disambiguatingDescription($disambiguatingDescription)
     {
         return $this->setProperty('disambiguatingDescription', $disambiguatingDescription);
+    }
+
+    /**
+     * Video game which is played on this server.
+     *
+     * @param VideoGame|VideoGame[] $game
+     *
+     * @return static
+     *
+     * @see http://schema.org/game
+     */
+    public function game($game)
+    {
+        return $this->setProperty('game', $game);
     }
 
     /**
@@ -183,6 +155,20 @@ class GameServer extends BaseType implements IntangibleContract, ThingContract
     }
 
     /**
+     * Number of players on the server.
+     *
+     * @param int|int[] $playersOnline
+     *
+     * @return static
+     *
+     * @see http://schema.org/playersOnline
+     */
+    public function playersOnline($playersOnline)
+    {
+        return $this->setProperty('playersOnline', $playersOnline);
+    }
+
+    /**
      * Indicates a potential Action, which describes an idealized action in
      * which this thing would play an 'object' role.
      *
@@ -211,6 +197,20 @@ class GameServer extends BaseType implements IntangibleContract, ThingContract
     public function sameAs($sameAs)
     {
         return $this->setProperty('sameAs', $sameAs);
+    }
+
+    /**
+     * Status of a game server.
+     *
+     * @param GameServerStatus|GameServerStatus[] $serverStatus
+     *
+     * @return static
+     *
+     * @see http://schema.org/serverStatus
+     */
+    public function serverStatus($serverStatus)
+    {
+        return $this->setProperty('serverStatus', $serverStatus);
     }
 
     /**

@@ -4,24 +4,6 @@ namespace Spatie\SchemaOrg\Contracts;
 
 interface TechArticleContract
 {
-    public function dependencies($dependencies);
-
-    public function proficiencyLevel($proficiencyLevel);
-
-    public function articleBody($articleBody);
-
-    public function articleSection($articleSection);
-
-    public function pageEnd($pageEnd);
-
-    public function pageStart($pageStart);
-
-    public function pagination($pagination);
-
-    public function speakable($speakable);
-
-    public function wordCount($wordCount);
-
     public function about($about);
 
     public function accessMode($accessMode);
@@ -40,9 +22,17 @@ interface TechArticleContract
 
     public function accountablePerson($accountablePerson);
 
+    public function additionalType($additionalType);
+
     public function aggregateRating($aggregateRating);
 
+    public function alternateName($alternateName);
+
     public function alternativeHeadline($alternativeHeadline);
+
+    public function articleBody($articleBody);
+
+    public function articleSection($articleSection);
 
     public function associatedMedia($associatedMedia);
 
@@ -82,6 +72,12 @@ interface TechArticleContract
 
     public function datePublished($datePublished);
 
+    public function dependencies($dependencies);
+
+    public function description($description);
+
+    public function disambiguatingDescription($disambiguatingDescription);
+
     public function discussionUrl($discussionUrl);
 
     public function editor($editor);
@@ -110,6 +106,10 @@ interface TechArticleContract
 
     public function headline($headline);
 
+    public function identifier($identifier);
+
+    public function image($image);
+
     public function inLanguage($inLanguage);
 
     public function interactionStatistic($interactionStatistic);
@@ -136,15 +136,29 @@ interface TechArticleContract
 
     public function mainEntity($mainEntity);
 
+    public function mainEntityOfPage($mainEntityOfPage);
+
     public function material($material);
 
     public function mentions($mentions);
 
+    public function name($name);
+
     public function offers($offers);
+
+    public function pageEnd($pageEnd);
+
+    public function pageStart($pageStart);
+
+    public function pagination($pagination);
 
     public function position($position);
 
+    public function potentialAction($potentialAction);
+
     public function producer($producer);
+
+    public function proficiencyLevel($proficiencyLevel);
 
     public function provider($provider);
 
@@ -162,6 +176,8 @@ interface TechArticleContract
 
     public function reviews($reviews);
 
+    public function sameAs($sameAs);
+
     public function schemaVersion($schemaVersion);
 
     public function sourceOrganization($sourceOrganization);
@@ -170,7 +186,11 @@ interface TechArticleContract
 
     public function spatialCoverage($spatialCoverage);
 
+    public function speakable($speakable);
+
     public function sponsor($sponsor);
+
+    public function subjectOf($subjectOf);
 
     public function temporal($temporal);
 
@@ -186,34 +206,14 @@ interface TechArticleContract
 
     public function typicalAgeRange($typicalAgeRange);
 
+    public function url($url);
+
     public function version($version);
 
     public function video($video);
 
+    public function wordCount($wordCount);
+
     public function workExample($workExample);
-
-    public function additionalType($additionalType);
-
-    public function alternateName($alternateName);
-
-    public function description($description);
-
-    public function disambiguatingDescription($disambiguatingDescription);
-
-    public function identifier($identifier);
-
-    public function image($image);
-
-    public function mainEntityOfPage($mainEntityOfPage);
-
-    public function name($name);
-
-    public function potentialAction($potentialAction);
-
-    public function sameAs($sameAs);
-
-    public function subjectOf($subjectOf);
-
-    public function url($url);
 
 }

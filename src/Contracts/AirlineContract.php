@@ -4,19 +4,21 @@ namespace Spatie\SchemaOrg\Contracts;
 
 interface AirlineContract
 {
-    public function boardingPolicy($boardingPolicy);
-
-    public function iataCode($iataCode);
+    public function additionalType($additionalType);
 
     public function address($address);
 
     public function aggregateRating($aggregateRating);
+
+    public function alternateName($alternateName);
 
     public function areaServed($areaServed);
 
     public function award($award);
 
     public function awards($awards);
+
+    public function boardingPolicy($boardingPolicy);
 
     public function brand($brand);
 
@@ -25,6 +27,10 @@ interface AirlineContract
     public function contactPoints($contactPoints);
 
     public function department($department);
+
+    public function description($description);
+
+    public function disambiguatingDescription($disambiguatingDescription);
 
     public function dissolutionDate($dissolutionDate);
 
@@ -58,6 +64,12 @@ interface AirlineContract
 
     public function hasPOS($hasPOS);
 
+    public function iataCode($iataCode);
+
+    public function identifier($identifier);
+
+    public function image($image);
+
     public function isicV4($isicV4);
 
     public function legalName($legalName);
@@ -67,6 +79,8 @@ interface AirlineContract
     public function location($location);
 
     public function logo($logo);
+
+    public function mainEntityOfPage($mainEntityOfPage);
 
     public function makesOffer($makesOffer);
 
@@ -78,6 +92,8 @@ interface AirlineContract
 
     public function naics($naics);
 
+    public function name($name);
+
     public function numberOfEmployees($numberOfEmployees);
 
     public function offeredBy($offeredBy);
@@ -86,11 +102,15 @@ interface AirlineContract
 
     public function parentOrganization($parentOrganization);
 
+    public function potentialAction($potentialAction);
+
     public function publishingPrinciples($publishingPrinciples);
 
     public function review($review);
 
     public function reviews($reviews);
+
+    public function sameAs($sameAs);
 
     public function seeks($seeks);
 
@@ -102,34 +122,14 @@ interface AirlineContract
 
     public function subOrganization($subOrganization);
 
+    public function subjectOf($subjectOf);
+
     public function taxID($taxID);
 
     public function telephone($telephone);
 
-    public function vatID($vatID);
-
-    public function additionalType($additionalType);
-
-    public function alternateName($alternateName);
-
-    public function description($description);
-
-    public function disambiguatingDescription($disambiguatingDescription);
-
-    public function identifier($identifier);
-
-    public function image($image);
-
-    public function mainEntityOfPage($mainEntityOfPage);
-
-    public function name($name);
-
-    public function potentialAction($potentialAction);
-
-    public function sameAs($sameAs);
-
-    public function subjectOf($subjectOf);
-
     public function url($url);
+
+    public function vatID($vatID);
 
 }

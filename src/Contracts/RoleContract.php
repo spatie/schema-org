@@ -4,14 +4,6 @@ namespace Spatie\SchemaOrg\Contracts;
 
 interface RoleContract
 {
-    public function endDate($endDate);
-
-    public function namedPosition($namedPosition);
-
-    public function roleName($roleName);
-
-    public function startDate($startDate);
-
     public function additionalType($additionalType);
 
     public function alternateName($alternateName);
@@ -19,6 +11,8 @@ interface RoleContract
     public function description($description);
 
     public function disambiguatingDescription($disambiguatingDescription);
+
+    public function endDate($endDate);
 
     public function identifier($identifier);
 
@@ -28,9 +22,15 @@ interface RoleContract
 
     public function name($name);
 
+    public function namedPosition($namedPosition);
+
     public function potentialAction($potentialAction);
 
+    public function roleName($roleName);
+
     public function sameAs($sameAs);
+
+    public function startDate($startDate);
 
     public function subjectOf($subjectOf);
 

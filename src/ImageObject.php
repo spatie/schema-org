@@ -15,343 +15,6 @@ use \Spatie\SchemaOrg\Contracts\ThingContract;
 class ImageObject extends BaseType implements MediaObjectContract, CreativeWorkContract, ThingContract
 {
     /**
-     * The caption for this object. For downloadable machine formats (closed
-     * caption, subtitles etc.) use MediaObject and indicate the
-     * [[encodingFormat]].
-     *
-     * @param MediaObject|MediaObject[]|string|string[] $caption
-     *
-     * @return static
-     *
-     * @see http://schema.org/caption
-     */
-    public function caption($caption)
-    {
-        return $this->setProperty('caption', $caption);
-    }
-
-    /**
-     * exif data for this object.
-     *
-     * @param PropertyValue|PropertyValue[]|string|string[] $exifData
-     *
-     * @return static
-     *
-     * @see http://schema.org/exifData
-     */
-    public function exifData($exifData)
-    {
-        return $this->setProperty('exifData', $exifData);
-    }
-
-    /**
-     * Indicates whether this image is representative of the content of the
-     * page.
-     *
-     * @param bool|bool[] $representativeOfPage
-     *
-     * @return static
-     *
-     * @see http://schema.org/representativeOfPage
-     */
-    public function representativeOfPage($representativeOfPage)
-    {
-        return $this->setProperty('representativeOfPage', $representativeOfPage);
-    }
-
-    /**
-     * Thumbnail image for an image or video.
-     *
-     * @param ImageObject|ImageObject[] $thumbnail
-     *
-     * @return static
-     *
-     * @see http://schema.org/thumbnail
-     */
-    public function thumbnail($thumbnail)
-    {
-        return $this->setProperty('thumbnail', $thumbnail);
-    }
-
-    /**
-     * A NewsArticle associated with the Media Object.
-     *
-     * @param NewsArticle|NewsArticle[] $associatedArticle
-     *
-     * @return static
-     *
-     * @see http://schema.org/associatedArticle
-     */
-    public function associatedArticle($associatedArticle)
-    {
-        return $this->setProperty('associatedArticle', $associatedArticle);
-    }
-
-    /**
-     * The bitrate of the media object.
-     *
-     * @param string|string[] $bitrate
-     *
-     * @return static
-     *
-     * @see http://schema.org/bitrate
-     */
-    public function bitrate($bitrate)
-    {
-        return $this->setProperty('bitrate', $bitrate);
-    }
-
-    /**
-     * File size in (mega/kilo) bytes.
-     *
-     * @param string|string[] $contentSize
-     *
-     * @return static
-     *
-     * @see http://schema.org/contentSize
-     */
-    public function contentSize($contentSize)
-    {
-        return $this->setProperty('contentSize', $contentSize);
-    }
-
-    /**
-     * Actual bytes of the media object, for example the image file or video
-     * file.
-     *
-     * @param string|string[] $contentUrl
-     *
-     * @return static
-     *
-     * @see http://schema.org/contentUrl
-     */
-    public function contentUrl($contentUrl)
-    {
-        return $this->setProperty('contentUrl', $contentUrl);
-    }
-
-    /**
-     * The duration of the item (movie, audio recording, event, etc.) in [ISO
-     * 8601 date format](http://en.wikipedia.org/wiki/ISO_8601).
-     *
-     * @param Duration|Duration[] $duration
-     *
-     * @return static
-     *
-     * @see http://schema.org/duration
-     */
-    public function duration($duration)
-    {
-        return $this->setProperty('duration', $duration);
-    }
-
-    /**
-     * A URL pointing to a player for a specific video. In general, this is the
-     * information in the ```src``` element of an ```embed``` tag and should not
-     * be the same as the content of the ```loc``` tag.
-     *
-     * @param string|string[] $embedUrl
-     *
-     * @return static
-     *
-     * @see http://schema.org/embedUrl
-     */
-    public function embedUrl($embedUrl)
-    {
-        return $this->setProperty('embedUrl', $embedUrl);
-    }
-
-    /**
-     * The CreativeWork encoded by this media object.
-     *
-     * @param CreativeWork|CreativeWork[] $encodesCreativeWork
-     *
-     * @return static
-     *
-     * @see http://schema.org/encodesCreativeWork
-     */
-    public function encodesCreativeWork($encodesCreativeWork)
-    {
-        return $this->setProperty('encodesCreativeWork', $encodesCreativeWork);
-    }
-
-    /**
-     * Media type typically expressed using a MIME format (see [IANA
-     * site](http://www.iana.org/assignments/media-types/media-types.xhtml) and
-     * [MDN
-     * reference](https://developer.mozilla.org/en-US/docs/Web/HTTP/Basics_of_HTTP/MIME_types))
-     * e.g. application/zip for a SoftwareApplication binary, audio/mpeg for
-     * .mp3 etc.).
-     * 
-     * In cases where a [[CreativeWork]] has several media type representations,
-     * [[encoding]] can be used to indicate each [[MediaObject]] alongside
-     * particular [[encodingFormat]] information.
-     * 
-     * Unregistered or niche encoding and file formats can be indicated instead
-     * via the most appropriate URL, e.g. defining Web page or a
-     * Wikipedia/Wikidata entry.
-     *
-     * @param string|string[] $encodingFormat
-     *
-     * @return static
-     *
-     * @see http://schema.org/encodingFormat
-     */
-    public function encodingFormat($encodingFormat)
-    {
-        return $this->setProperty('encodingFormat', $encodingFormat);
-    }
-
-    /**
-     * The endTime of something. For a reserved event or service (e.g.
-     * FoodEstablishmentReservation), the time that it is expected to end. For
-     * actions that span a period of time, when the action was performed. e.g.
-     * John wrote a book from January to *December*. For media, including audio
-     * and video, it's the time offset of the end of a clip within a larger
-     * file.
-     * 
-     * Note that Event uses startDate/endDate instead of startTime/endTime, even
-     * when describing dates with times. This situation may be clarified in
-     * future revisions.
-     *
-     * @param \DateTimeInterface|\DateTimeInterface[] $endTime
-     *
-     * @return static
-     *
-     * @see http://schema.org/endTime
-     */
-    public function endTime($endTime)
-    {
-        return $this->setProperty('endTime', $endTime);
-    }
-
-    /**
-     * The height of the item.
-     *
-     * @param Distance|Distance[]|QuantitativeValue|QuantitativeValue[] $height
-     *
-     * @return static
-     *
-     * @see http://schema.org/height
-     */
-    public function height($height)
-    {
-        return $this->setProperty('height', $height);
-    }
-
-    /**
-     * Player type required&#x2014;for example, Flash or Silverlight.
-     *
-     * @param string|string[] $playerType
-     *
-     * @return static
-     *
-     * @see http://schema.org/playerType
-     */
-    public function playerType($playerType)
-    {
-        return $this->setProperty('playerType', $playerType);
-    }
-
-    /**
-     * The production company or studio responsible for the item e.g. series,
-     * video game, episode etc.
-     *
-     * @param Organization|Organization[] $productionCompany
-     *
-     * @return static
-     *
-     * @see http://schema.org/productionCompany
-     */
-    public function productionCompany($productionCompany)
-    {
-        return $this->setProperty('productionCompany', $productionCompany);
-    }
-
-    /**
-     * The regions where the media is allowed. If not specified, then it's
-     * assumed to be allowed everywhere. Specify the countries in [ISO 3166
-     * format](http://en.wikipedia.org/wiki/ISO_3166).
-     *
-     * @param Place|Place[] $regionsAllowed
-     *
-     * @return static
-     *
-     * @see http://schema.org/regionsAllowed
-     */
-    public function regionsAllowed($regionsAllowed)
-    {
-        return $this->setProperty('regionsAllowed', $regionsAllowed);
-    }
-
-    /**
-     * Indicates if use of the media require a subscription  (either paid or
-     * free). Allowed values are ```true``` or ```false``` (note that an earlier
-     * version had 'yes', 'no').
-     *
-     * @param bool|bool[] $requiresSubscription
-     *
-     * @return static
-     *
-     * @see http://schema.org/requiresSubscription
-     */
-    public function requiresSubscription($requiresSubscription)
-    {
-        return $this->setProperty('requiresSubscription', $requiresSubscription);
-    }
-
-    /**
-     * The startTime of something. For a reserved event or service (e.g.
-     * FoodEstablishmentReservation), the time that it is expected to start. For
-     * actions that span a period of time, when the action was performed. e.g.
-     * John wrote a book from *January* to December. For media, including audio
-     * and video, it's the time offset of the start of a clip within a larger
-     * file.
-     * 
-     * Note that Event uses startDate/endDate instead of startTime/endTime, even
-     * when describing dates with times. This situation may be clarified in
-     * future revisions.
-     *
-     * @param \DateTimeInterface|\DateTimeInterface[] $startTime
-     *
-     * @return static
-     *
-     * @see http://schema.org/startTime
-     */
-    public function startTime($startTime)
-    {
-        return $this->setProperty('startTime', $startTime);
-    }
-
-    /**
-     * Date when this media object was uploaded to this site.
-     *
-     * @param \DateTimeInterface|\DateTimeInterface[] $uploadDate
-     *
-     * @return static
-     *
-     * @see http://schema.org/uploadDate
-     */
-    public function uploadDate($uploadDate)
-    {
-        return $this->setProperty('uploadDate', $uploadDate);
-    }
-
-    /**
-     * The width of the item.
-     *
-     * @param Distance|Distance[]|QuantitativeValue|QuantitativeValue[] $width
-     *
-     * @return static
-     *
-     * @see http://schema.org/width
-     */
-    public function width($width)
-    {
-        return $this->setProperty('width', $width);
-    }
-
-    /**
      * The subject matter of the content.
      *
      * @param Thing|Thing[] $about
@@ -496,6 +159,25 @@ class ImageObject extends BaseType implements MediaObjectContract, CreativeWorkC
     }
 
     /**
+     * An additional type for the item, typically used for adding more specific
+     * types from external vocabularies in microdata syntax. This is a
+     * relationship between something and a class that the thing is in. In RDFa
+     * syntax, it is better to use the native RDFa syntax - the 'typeof'
+     * attribute - for multiple types. Schema.org tools may have only weaker
+     * understanding of extra types, in particular those defined externally.
+     *
+     * @param string|string[] $additionalType
+     *
+     * @return static
+     *
+     * @see http://schema.org/additionalType
+     */
+    public function additionalType($additionalType)
+    {
+        return $this->setProperty('additionalType', $additionalType);
+    }
+
+    /**
      * The overall rating, based on a collection of reviews or ratings, of the
      * item.
      *
@@ -511,6 +193,20 @@ class ImageObject extends BaseType implements MediaObjectContract, CreativeWorkC
     }
 
     /**
+     * An alias for the item.
+     *
+     * @param string|string[] $alternateName
+     *
+     * @return static
+     *
+     * @see http://schema.org/alternateName
+     */
+    public function alternateName($alternateName)
+    {
+        return $this->setProperty('alternateName', $alternateName);
+    }
+
+    /**
      * A secondary title of the CreativeWork.
      *
      * @param string|string[] $alternativeHeadline
@@ -522,6 +218,20 @@ class ImageObject extends BaseType implements MediaObjectContract, CreativeWorkC
     public function alternativeHeadline($alternativeHeadline)
     {
         return $this->setProperty('alternativeHeadline', $alternativeHeadline);
+    }
+
+    /**
+     * A NewsArticle associated with the Media Object.
+     *
+     * @param NewsArticle|NewsArticle[] $associatedArticle
+     *
+     * @return static
+     *
+     * @see http://schema.org/associatedArticle
+     */
+    public function associatedArticle($associatedArticle)
+    {
+        return $this->setProperty('associatedArticle', $associatedArticle);
     }
 
     /**
@@ -612,6 +322,36 @@ class ImageObject extends BaseType implements MediaObjectContract, CreativeWorkC
     }
 
     /**
+     * The bitrate of the media object.
+     *
+     * @param string|string[] $bitrate
+     *
+     * @return static
+     *
+     * @see http://schema.org/bitrate
+     */
+    public function bitrate($bitrate)
+    {
+        return $this->setProperty('bitrate', $bitrate);
+    }
+
+    /**
+     * The caption for this object. For downloadable machine formats (closed
+     * caption, subtitles etc.) use MediaObject and indicate the
+     * [[encodingFormat]].
+     *
+     * @param MediaObject|MediaObject[]|string|string[] $caption
+     *
+     * @return static
+     *
+     * @see http://schema.org/caption
+     */
+    public function caption($caption)
+    {
+        return $this->setProperty('caption', $caption);
+    }
+
+    /**
      * Fictional person connected with a creative work.
      *
      * @param Person|Person[] $character
@@ -697,6 +437,35 @@ class ImageObject extends BaseType implements MediaObjectContract, CreativeWorkC
     public function contentRating($contentRating)
     {
         return $this->setProperty('contentRating', $contentRating);
+    }
+
+    /**
+     * File size in (mega/kilo) bytes.
+     *
+     * @param string|string[] $contentSize
+     *
+     * @return static
+     *
+     * @see http://schema.org/contentSize
+     */
+    public function contentSize($contentSize)
+    {
+        return $this->setProperty('contentSize', $contentSize);
+    }
+
+    /**
+     * Actual bytes of the media object, for example the image file or video
+     * file.
+     *
+     * @param string|string[] $contentUrl
+     *
+     * @return static
+     *
+     * @see http://schema.org/contentUrl
+     */
+    public function contentUrl($contentUrl)
+    {
+        return $this->setProperty('contentUrl', $contentUrl);
     }
 
     /**
@@ -802,6 +571,37 @@ class ImageObject extends BaseType implements MediaObjectContract, CreativeWorkC
     }
 
     /**
+     * A description of the item.
+     *
+     * @param string|string[] $description
+     *
+     * @return static
+     *
+     * @see http://schema.org/description
+     */
+    public function description($description)
+    {
+        return $this->setProperty('description', $description);
+    }
+
+    /**
+     * A sub property of description. A short description of the item used to
+     * disambiguate from other, similar items. Information from other properties
+     * (in particular, name) may be necessary for the description to be useful
+     * for disambiguation.
+     *
+     * @param string|string[] $disambiguatingDescription
+     *
+     * @return static
+     *
+     * @see http://schema.org/disambiguatingDescription
+     */
+    public function disambiguatingDescription($disambiguatingDescription)
+    {
+        return $this->setProperty('disambiguatingDescription', $disambiguatingDescription);
+    }
+
+    /**
      * A link to the page containing the comments of the CreativeWork.
      *
      * @param string|string[] $discussionUrl
@@ -813,6 +613,21 @@ class ImageObject extends BaseType implements MediaObjectContract, CreativeWorkC
     public function discussionUrl($discussionUrl)
     {
         return $this->setProperty('discussionUrl', $discussionUrl);
+    }
+
+    /**
+     * The duration of the item (movie, audio recording, event, etc.) in [ISO
+     * 8601 date format](http://en.wikipedia.org/wiki/ISO_8601).
+     *
+     * @param Duration|Duration[] $duration
+     *
+     * @return static
+     *
+     * @see http://schema.org/duration
+     */
+    public function duration($duration)
+    {
+        return $this->setProperty('duration', $duration);
     }
 
     /**
@@ -859,6 +674,36 @@ class ImageObject extends BaseType implements MediaObjectContract, CreativeWorkC
     }
 
     /**
+     * A URL pointing to a player for a specific video. In general, this is the
+     * information in the ```src``` element of an ```embed``` tag and should not
+     * be the same as the content of the ```loc``` tag.
+     *
+     * @param string|string[] $embedUrl
+     *
+     * @return static
+     *
+     * @see http://schema.org/embedUrl
+     */
+    public function embedUrl($embedUrl)
+    {
+        return $this->setProperty('embedUrl', $embedUrl);
+    }
+
+    /**
+     * The CreativeWork encoded by this media object.
+     *
+     * @param CreativeWork|CreativeWork[] $encodesCreativeWork
+     *
+     * @return static
+     *
+     * @see http://schema.org/encodesCreativeWork
+     */
+    public function encodesCreativeWork($encodesCreativeWork)
+    {
+        return $this->setProperty('encodesCreativeWork', $encodesCreativeWork);
+    }
+
+    /**
      * A media object that encodes this CreativeWork. This property is a synonym
      * for associatedMedia.
      *
@@ -871,6 +716,33 @@ class ImageObject extends BaseType implements MediaObjectContract, CreativeWorkC
     public function encoding($encoding)
     {
         return $this->setProperty('encoding', $encoding);
+    }
+
+    /**
+     * Media type typically expressed using a MIME format (see [IANA
+     * site](http://www.iana.org/assignments/media-types/media-types.xhtml) and
+     * [MDN
+     * reference](https://developer.mozilla.org/en-US/docs/Web/HTTP/Basics_of_HTTP/MIME_types))
+     * e.g. application/zip for a SoftwareApplication binary, audio/mpeg for
+     * .mp3 etc.).
+     * 
+     * In cases where a [[CreativeWork]] has several media type representations,
+     * [[encoding]] can be used to indicate each [[MediaObject]] alongside
+     * particular [[encodingFormat]] information.
+     * 
+     * Unregistered or niche encoding and file formats can be indicated instead
+     * via the most appropriate URL, e.g. defining Web page or a
+     * Wikipedia/Wikidata entry.
+     *
+     * @param string|string[] $encodingFormat
+     *
+     * @return static
+     *
+     * @see http://schema.org/encodingFormat
+     */
+    public function encodingFormat($encodingFormat)
+    {
+        return $this->setProperty('encodingFormat', $encodingFormat);
     }
 
     /**
@@ -888,6 +760,29 @@ class ImageObject extends BaseType implements MediaObjectContract, CreativeWorkC
     }
 
     /**
+     * The endTime of something. For a reserved event or service (e.g.
+     * FoodEstablishmentReservation), the time that it is expected to end. For
+     * actions that span a period of time, when the action was performed. e.g.
+     * John wrote a book from January to *December*. For media, including audio
+     * and video, it's the time offset of the end of a clip within a larger
+     * file.
+     * 
+     * Note that Event uses startDate/endDate instead of startTime/endTime, even
+     * when describing dates with times. This situation may be clarified in
+     * future revisions.
+     *
+     * @param \DateTimeInterface|\DateTimeInterface[] $endTime
+     *
+     * @return static
+     *
+     * @see http://schema.org/endTime
+     */
+    public function endTime($endTime)
+    {
+        return $this->setProperty('endTime', $endTime);
+    }
+
+    /**
      * A creative work that this work is an
      * example/instance/realization/derivation of.
      *
@@ -900,6 +795,20 @@ class ImageObject extends BaseType implements MediaObjectContract, CreativeWorkC
     public function exampleOfWork($exampleOfWork)
     {
         return $this->setProperty('exampleOfWork', $exampleOfWork);
+    }
+
+    /**
+     * exif data for this object.
+     *
+     * @param PropertyValue|PropertyValue[]|string|string[] $exifData
+     *
+     * @return static
+     *
+     * @see http://schema.org/exifData
+     */
+    public function exifData($exifData)
+    {
+        return $this->setProperty('exifData', $exifData);
     }
 
     /**
@@ -997,6 +906,53 @@ class ImageObject extends BaseType implements MediaObjectContract, CreativeWorkC
     public function headline($headline)
     {
         return $this->setProperty('headline', $headline);
+    }
+
+    /**
+     * The height of the item.
+     *
+     * @param Distance|Distance[]|QuantitativeValue|QuantitativeValue[] $height
+     *
+     * @return static
+     *
+     * @see http://schema.org/height
+     */
+    public function height($height)
+    {
+        return $this->setProperty('height', $height);
+    }
+
+    /**
+     * The identifier property represents any kind of identifier for any kind of
+     * [[Thing]], such as ISBNs, GTIN codes, UUIDs etc. Schema.org provides
+     * dedicated properties for representing many of these, either as textual
+     * strings or as URL (URI) links. See [background
+     * notes](/docs/datamodel.html#identifierBg) for more details.
+     *
+     * @param PropertyValue|PropertyValue[]|string|string[] $identifier
+     *
+     * @return static
+     *
+     * @see http://schema.org/identifier
+     */
+    public function identifier($identifier)
+    {
+        return $this->setProperty('identifier', $identifier);
+    }
+
+    /**
+     * An image of the item. This can be a [[URL]] or a fully described
+     * [[ImageObject]].
+     *
+     * @param ImageObject|ImageObject[]|string|string[] $image
+     *
+     * @return static
+     *
+     * @see http://schema.org/image
+     */
+    public function image($image)
+    {
+        return $this->setProperty('image', $image);
     }
 
     /**
@@ -1197,6 +1153,22 @@ class ImageObject extends BaseType implements MediaObjectContract, CreativeWorkC
     }
 
     /**
+     * Indicates a page (or other CreativeWork) for which this thing is the main
+     * entity being described. See [background
+     * notes](/docs/datamodel.html#mainEntityBackground) for details.
+     *
+     * @param CreativeWork|CreativeWork[]|string|string[] $mainEntityOfPage
+     *
+     * @return static
+     *
+     * @see http://schema.org/mainEntityOfPage
+     */
+    public function mainEntityOfPage($mainEntityOfPage)
+    {
+        return $this->setProperty('mainEntityOfPage', $mainEntityOfPage);
+    }
+
+    /**
      * A material that something is made from, e.g. leather, wool, cotton,
      * paper.
      *
@@ -1227,6 +1199,20 @@ class ImageObject extends BaseType implements MediaObjectContract, CreativeWorkC
     }
 
     /**
+     * The name of the item.
+     *
+     * @param string|string[] $name
+     *
+     * @return static
+     *
+     * @see http://schema.org/name
+     */
+    public function name($name)
+    {
+        return $this->setProperty('name', $name);
+    }
+
+    /**
      * An offer to provide this item&#x2014;for example, an offer to sell a
      * product, rent the DVD of a movie, perform a service, or give away tickets
      * to an event.
@@ -1240,6 +1226,20 @@ class ImageObject extends BaseType implements MediaObjectContract, CreativeWorkC
     public function offers($offers)
     {
         return $this->setProperty('offers', $offers);
+    }
+
+    /**
+     * Player type required&#x2014;for example, Flash or Silverlight.
+     *
+     * @param string|string[] $playerType
+     *
+     * @return static
+     *
+     * @see http://schema.org/playerType
+     */
+    public function playerType($playerType)
+    {
+        return $this->setProperty('playerType', $playerType);
     }
 
     /**
@@ -1257,6 +1257,21 @@ class ImageObject extends BaseType implements MediaObjectContract, CreativeWorkC
     }
 
     /**
+     * Indicates a potential Action, which describes an idealized action in
+     * which this thing would play an 'object' role.
+     *
+     * @param Action|Action[] $potentialAction
+     *
+     * @return static
+     *
+     * @see http://schema.org/potentialAction
+     */
+    public function potentialAction($potentialAction)
+    {
+        return $this->setProperty('potentialAction', $potentialAction);
+    }
+
+    /**
      * The person or organization who produced the work (e.g. music album,
      * movie, tv/radio series etc.).
      *
@@ -1269,6 +1284,21 @@ class ImageObject extends BaseType implements MediaObjectContract, CreativeWorkC
     public function producer($producer)
     {
         return $this->setProperty('producer', $producer);
+    }
+
+    /**
+     * The production company or studio responsible for the item e.g. series,
+     * video game, episode etc.
+     *
+     * @param Organization|Organization[] $productionCompany
+     *
+     * @return static
+     *
+     * @see http://schema.org/productionCompany
+     */
+    public function productionCompany($productionCompany)
+    {
+        return $this->setProperty('productionCompany', $productionCompany);
     }
 
     /**
@@ -1355,6 +1385,22 @@ class ImageObject extends BaseType implements MediaObjectContract, CreativeWorkC
     }
 
     /**
+     * The regions where the media is allowed. If not specified, then it's
+     * assumed to be allowed everywhere. Specify the countries in [ISO 3166
+     * format](http://en.wikipedia.org/wiki/ISO_3166).
+     *
+     * @param Place|Place[] $regionsAllowed
+     *
+     * @return static
+     *
+     * @see http://schema.org/regionsAllowed
+     */
+    public function regionsAllowed($regionsAllowed)
+    {
+        return $this->setProperty('regionsAllowed', $regionsAllowed);
+    }
+
+    /**
      * The place and time the release was issued, expressed as a
      * PublicationEvent.
      *
@@ -1367,6 +1413,37 @@ class ImageObject extends BaseType implements MediaObjectContract, CreativeWorkC
     public function releasedEvent($releasedEvent)
     {
         return $this->setProperty('releasedEvent', $releasedEvent);
+    }
+
+    /**
+     * Indicates whether this image is representative of the content of the
+     * page.
+     *
+     * @param bool|bool[] $representativeOfPage
+     *
+     * @return static
+     *
+     * @see http://schema.org/representativeOfPage
+     */
+    public function representativeOfPage($representativeOfPage)
+    {
+        return $this->setProperty('representativeOfPage', $representativeOfPage);
+    }
+
+    /**
+     * Indicates if use of the media require a subscription  (either paid or
+     * free). Allowed values are ```true``` or ```false``` (note that an earlier
+     * version had 'yes', 'no').
+     *
+     * @param bool|bool[] $requiresSubscription
+     *
+     * @return static
+     *
+     * @see http://schema.org/requiresSubscription
+     */
+    public function requiresSubscription($requiresSubscription)
+    {
+        return $this->setProperty('requiresSubscription', $requiresSubscription);
     }
 
     /**
@@ -1395,6 +1472,22 @@ class ImageObject extends BaseType implements MediaObjectContract, CreativeWorkC
     public function reviews($reviews)
     {
         return $this->setProperty('reviews', $reviews);
+    }
+
+    /**
+     * URL of a reference Web page that unambiguously indicates the item's
+     * identity. E.g. the URL of the item's Wikipedia page, Wikidata entry, or
+     * official website.
+     *
+     * @param string|string[] $sameAs
+     *
+     * @return static
+     *
+     * @see http://schema.org/sameAs
+     */
+    public function sameAs($sameAs)
+    {
+        return $this->setProperty('sameAs', $sameAs);
     }
 
     /**
@@ -1480,6 +1573,43 @@ class ImageObject extends BaseType implements MediaObjectContract, CreativeWorkC
     }
 
     /**
+     * The startTime of something. For a reserved event or service (e.g.
+     * FoodEstablishmentReservation), the time that it is expected to start. For
+     * actions that span a period of time, when the action was performed. e.g.
+     * John wrote a book from *January* to December. For media, including audio
+     * and video, it's the time offset of the start of a clip within a larger
+     * file.
+     * 
+     * Note that Event uses startDate/endDate instead of startTime/endTime, even
+     * when describing dates with times. This situation may be clarified in
+     * future revisions.
+     *
+     * @param \DateTimeInterface|\DateTimeInterface[] $startTime
+     *
+     * @return static
+     *
+     * @see http://schema.org/startTime
+     */
+    public function startTime($startTime)
+    {
+        return $this->setProperty('startTime', $startTime);
+    }
+
+    /**
+     * A CreativeWork or Event about this Thing.
+     *
+     * @param CreativeWork|CreativeWork[]|Event|Event[] $subjectOf
+     *
+     * @return static
+     *
+     * @see http://schema.org/subjectOf
+     */
+    public function subjectOf($subjectOf)
+    {
+        return $this->setProperty('subjectOf', $subjectOf);
+    }
+
+    /**
      * The "temporal" property can be used in cases where more specific
      * properties
      * (e.g. [[temporalCoverage]], [[dateCreated]], [[dateModified]],
@@ -1538,6 +1668,20 @@ class ImageObject extends BaseType implements MediaObjectContract, CreativeWorkC
     public function text($text)
     {
         return $this->setProperty('text', $text);
+    }
+
+    /**
+     * Thumbnail image for an image or video.
+     *
+     * @param ImageObject|ImageObject[] $thumbnail
+     *
+     * @return static
+     *
+     * @see http://schema.org/thumbnail
+     */
+    public function thumbnail($thumbnail)
+    {
+        return $this->setProperty('thumbnail', $thumbnail);
     }
 
     /**
@@ -1601,6 +1745,34 @@ class ImageObject extends BaseType implements MediaObjectContract, CreativeWorkC
     }
 
     /**
+     * Date when this media object was uploaded to this site.
+     *
+     * @param \DateTimeInterface|\DateTimeInterface[] $uploadDate
+     *
+     * @return static
+     *
+     * @see http://schema.org/uploadDate
+     */
+    public function uploadDate($uploadDate)
+    {
+        return $this->setProperty('uploadDate', $uploadDate);
+    }
+
+    /**
+     * URL of the item.
+     *
+     * @param string|string[] $url
+     *
+     * @return static
+     *
+     * @see http://schema.org/url
+     */
+    public function url($url)
+    {
+        return $this->setProperty('url', $url);
+    }
+
+    /**
      * The version of the CreativeWork embodied by a specified resource.
      *
      * @param float|float[]|int|int[]|string|string[] $version
@@ -1629,6 +1801,20 @@ class ImageObject extends BaseType implements MediaObjectContract, CreativeWorkC
     }
 
     /**
+     * The width of the item.
+     *
+     * @param Distance|Distance[]|QuantitativeValue|QuantitativeValue[] $width
+     *
+     * @return static
+     *
+     * @see http://schema.org/width
+     */
+    public function width($width)
+    {
+        return $this->setProperty('width', $width);
+    }
+
+    /**
      * Example/instance/realization/derivation of the concept of this creative
      * work. eg. The paperback edition, first edition, or eBook.
      *
@@ -1641,192 +1827,6 @@ class ImageObject extends BaseType implements MediaObjectContract, CreativeWorkC
     public function workExample($workExample)
     {
         return $this->setProperty('workExample', $workExample);
-    }
-
-    /**
-     * An additional type for the item, typically used for adding more specific
-     * types from external vocabularies in microdata syntax. This is a
-     * relationship between something and a class that the thing is in. In RDFa
-     * syntax, it is better to use the native RDFa syntax - the 'typeof'
-     * attribute - for multiple types. Schema.org tools may have only weaker
-     * understanding of extra types, in particular those defined externally.
-     *
-     * @param string|string[] $additionalType
-     *
-     * @return static
-     *
-     * @see http://schema.org/additionalType
-     */
-    public function additionalType($additionalType)
-    {
-        return $this->setProperty('additionalType', $additionalType);
-    }
-
-    /**
-     * An alias for the item.
-     *
-     * @param string|string[] $alternateName
-     *
-     * @return static
-     *
-     * @see http://schema.org/alternateName
-     */
-    public function alternateName($alternateName)
-    {
-        return $this->setProperty('alternateName', $alternateName);
-    }
-
-    /**
-     * A description of the item.
-     *
-     * @param string|string[] $description
-     *
-     * @return static
-     *
-     * @see http://schema.org/description
-     */
-    public function description($description)
-    {
-        return $this->setProperty('description', $description);
-    }
-
-    /**
-     * A sub property of description. A short description of the item used to
-     * disambiguate from other, similar items. Information from other properties
-     * (in particular, name) may be necessary for the description to be useful
-     * for disambiguation.
-     *
-     * @param string|string[] $disambiguatingDescription
-     *
-     * @return static
-     *
-     * @see http://schema.org/disambiguatingDescription
-     */
-    public function disambiguatingDescription($disambiguatingDescription)
-    {
-        return $this->setProperty('disambiguatingDescription', $disambiguatingDescription);
-    }
-
-    /**
-     * The identifier property represents any kind of identifier for any kind of
-     * [[Thing]], such as ISBNs, GTIN codes, UUIDs etc. Schema.org provides
-     * dedicated properties for representing many of these, either as textual
-     * strings or as URL (URI) links. See [background
-     * notes](/docs/datamodel.html#identifierBg) for more details.
-     *
-     * @param PropertyValue|PropertyValue[]|string|string[] $identifier
-     *
-     * @return static
-     *
-     * @see http://schema.org/identifier
-     */
-    public function identifier($identifier)
-    {
-        return $this->setProperty('identifier', $identifier);
-    }
-
-    /**
-     * An image of the item. This can be a [[URL]] or a fully described
-     * [[ImageObject]].
-     *
-     * @param ImageObject|ImageObject[]|string|string[] $image
-     *
-     * @return static
-     *
-     * @see http://schema.org/image
-     */
-    public function image($image)
-    {
-        return $this->setProperty('image', $image);
-    }
-
-    /**
-     * Indicates a page (or other CreativeWork) for which this thing is the main
-     * entity being described. See [background
-     * notes](/docs/datamodel.html#mainEntityBackground) for details.
-     *
-     * @param CreativeWork|CreativeWork[]|string|string[] $mainEntityOfPage
-     *
-     * @return static
-     *
-     * @see http://schema.org/mainEntityOfPage
-     */
-    public function mainEntityOfPage($mainEntityOfPage)
-    {
-        return $this->setProperty('mainEntityOfPage', $mainEntityOfPage);
-    }
-
-    /**
-     * The name of the item.
-     *
-     * @param string|string[] $name
-     *
-     * @return static
-     *
-     * @see http://schema.org/name
-     */
-    public function name($name)
-    {
-        return $this->setProperty('name', $name);
-    }
-
-    /**
-     * Indicates a potential Action, which describes an idealized action in
-     * which this thing would play an 'object' role.
-     *
-     * @param Action|Action[] $potentialAction
-     *
-     * @return static
-     *
-     * @see http://schema.org/potentialAction
-     */
-    public function potentialAction($potentialAction)
-    {
-        return $this->setProperty('potentialAction', $potentialAction);
-    }
-
-    /**
-     * URL of a reference Web page that unambiguously indicates the item's
-     * identity. E.g. the URL of the item's Wikipedia page, Wikidata entry, or
-     * official website.
-     *
-     * @param string|string[] $sameAs
-     *
-     * @return static
-     *
-     * @see http://schema.org/sameAs
-     */
-    public function sameAs($sameAs)
-    {
-        return $this->setProperty('sameAs', $sameAs);
-    }
-
-    /**
-     * A CreativeWork or Event about this Thing.
-     *
-     * @param CreativeWork|CreativeWork[]|Event|Event[] $subjectOf
-     *
-     * @return static
-     *
-     * @see http://schema.org/subjectOf
-     */
-    public function subjectOf($subjectOf)
-    {
-        return $this->setProperty('subjectOf', $subjectOf);
-    }
-
-    /**
-     * URL of the item.
-     *
-     * @param string|string[] $url
-     *
-     * @return static
-     *
-     * @see http://schema.org/url
-     */
-    public function url($url)
-    {
-        return $this->setProperty('url', $url);
     }
 
 }

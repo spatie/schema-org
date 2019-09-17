@@ -15,36 +15,6 @@ use \Spatie\SchemaOrg\Contracts\ThingContract;
 class MediaSubscription extends BaseType implements IntangibleContract, ThingContract
 {
     /**
-     * The Organization responsible for authenticating the user's subscription.
-     * For example, many media apps require a cable/satellite provider to
-     * authenticate your subscription before playing media.
-     *
-     * @param Organization|Organization[] $authenticator
-     *
-     * @return static
-     *
-     * @see http://schema.org/authenticator
-     */
-    public function authenticator($authenticator)
-    {
-        return $this->setProperty('authenticator', $authenticator);
-    }
-
-    /**
-     * 
-     *
-     * @param  $expectsAcceptanceOf
-     *
-     * @return static
-     *
-     * @see http://schema.org/expectsAcceptanceOf
-     */
-    public function expectsAcceptanceOf($expectsAcceptanceOf)
-    {
-        return $this->setProperty('expectsAcceptanceOf', $expectsAcceptanceOf);
-    }
-
-    /**
      * An additional type for the item, typically used for adding more specific
      * types from external vocabularies in microdata syntax. This is a
      * relationship between something and a class that the thing is in. In RDFa
@@ -78,6 +48,22 @@ class MediaSubscription extends BaseType implements IntangibleContract, ThingCon
     }
 
     /**
+     * The Organization responsible for authenticating the user's subscription.
+     * For example, many media apps require a cable/satellite provider to
+     * authenticate your subscription before playing media.
+     *
+     * @param Organization|Organization[] $authenticator
+     *
+     * @return static
+     *
+     * @see http://schema.org/authenticator
+     */
+    public function authenticator($authenticator)
+    {
+        return $this->setProperty('authenticator', $authenticator);
+    }
+
+    /**
      * A description of the item.
      *
      * @param string|string[] $description
@@ -106,6 +92,20 @@ class MediaSubscription extends BaseType implements IntangibleContract, ThingCon
     public function disambiguatingDescription($disambiguatingDescription)
     {
         return $this->setProperty('disambiguatingDescription', $disambiguatingDescription);
+    }
+
+    /**
+     * 
+     *
+     * @param  $expectsAcceptanceOf
+     *
+     * @return static
+     *
+     * @see http://schema.org/expectsAcceptanceOf
+     */
+    public function expectsAcceptanceOf($expectsAcceptanceOf)
+    {
+        return $this->setProperty('expectsAcceptanceOf', $expectsAcceptanceOf);
     }
 
     /**

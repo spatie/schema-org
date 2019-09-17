@@ -31,85 +31,6 @@ use \Spatie\SchemaOrg\Contracts\ThingContract;
 class CampingPitch extends BaseType implements AccommodationContract, PlaceContract, ThingContract
 {
     /**
-     * An amenity feature (e.g. a characteristic or service) of the
-     * Accommodation. This generic property does not make a statement about
-     * whether the feature is included in an offer for the main accommodation or
-     * available at extra costs.
-     *
-     * @param LocationFeatureSpecification|LocationFeatureSpecification[] $amenityFeature
-     *
-     * @return static
-     *
-     * @see http://schema.org/amenityFeature
-     */
-    public function amenityFeature($amenityFeature)
-    {
-        return $this->setProperty('amenityFeature', $amenityFeature);
-    }
-
-    /**
-     * The size of the accommodation, e.g. in square meter or squarefoot.
-     * Typical unit code(s): MTK for square meter, FTK for square foot, or YDK
-     * for square yard
-     *
-     * @param QuantitativeValue|QuantitativeValue[] $floorSize
-     *
-     * @return static
-     *
-     * @see http://schema.org/floorSize
-     */
-    public function floorSize($floorSize)
-    {
-        return $this->setProperty('floorSize', $floorSize);
-    }
-
-    /**
-     * The number of rooms (excluding bathrooms and closets) of the
-     * accommodation or lodging business.
-     * Typical unit code(s): ROM for room or C62 for no unit. The type of room
-     * can be put in the unitText property of the QuantitativeValue.
-     *
-     * @param QuantitativeValue|QuantitativeValue[]|float|float[]|int|int[] $numberOfRooms
-     *
-     * @return static
-     *
-     * @see http://schema.org/numberOfRooms
-     */
-    public function numberOfRooms($numberOfRooms)
-    {
-        return $this->setProperty('numberOfRooms', $numberOfRooms);
-    }
-
-    /**
-     * Indications regarding the permitted usage of the accommodation.
-     *
-     * @param string|string[] $permittedUsage
-     *
-     * @return static
-     *
-     * @see http://schema.org/permittedUsage
-     */
-    public function permittedUsage($permittedUsage)
-    {
-        return $this->setProperty('permittedUsage', $permittedUsage);
-    }
-
-    /**
-     * Indicates whether pets are allowed to enter the accommodation or lodging
-     * business. More detailed information can be put in a text value.
-     *
-     * @param bool|bool[]|string|string[] $petsAllowed
-     *
-     * @return static
-     *
-     * @see http://schema.org/petsAllowed
-     */
-    public function petsAllowed($petsAllowed)
-    {
-        return $this->setProperty('petsAllowed', $petsAllowed);
-    }
-
-    /**
      * A property-value pair representing an additional characteristics of the
      * entitity, e.g. a product feature or another characteristic for which
      * there is no matching property in schema.org.
@@ -129,6 +50,25 @@ class CampingPitch extends BaseType implements AccommodationContract, PlaceContr
     public function additionalProperty($additionalProperty)
     {
         return $this->setProperty('additionalProperty', $additionalProperty);
+    }
+
+    /**
+     * An additional type for the item, typically used for adding more specific
+     * types from external vocabularies in microdata syntax. This is a
+     * relationship between something and a class that the thing is in. In RDFa
+     * syntax, it is better to use the native RDFa syntax - the 'typeof'
+     * attribute - for multiple types. Schema.org tools may have only weaker
+     * understanding of extra types, in particular those defined externally.
+     *
+     * @param string|string[] $additionalType
+     *
+     * @return static
+     *
+     * @see http://schema.org/additionalType
+     */
+    public function additionalType($additionalType)
+    {
+        return $this->setProperty('additionalType', $additionalType);
     }
 
     /**
@@ -158,6 +98,37 @@ class CampingPitch extends BaseType implements AccommodationContract, PlaceContr
     public function aggregateRating($aggregateRating)
     {
         return $this->setProperty('aggregateRating', $aggregateRating);
+    }
+
+    /**
+     * An alias for the item.
+     *
+     * @param string|string[] $alternateName
+     *
+     * @return static
+     *
+     * @see http://schema.org/alternateName
+     */
+    public function alternateName($alternateName)
+    {
+        return $this->setProperty('alternateName', $alternateName);
+    }
+
+    /**
+     * An amenity feature (e.g. a characteristic or service) of the
+     * Accommodation. This generic property does not make a statement about
+     * whether the feature is included in an offer for the main accommodation or
+     * available at extra costs.
+     *
+     * @param LocationFeatureSpecification|LocationFeatureSpecification[] $amenityFeature
+     *
+     * @return static
+     *
+     * @see http://schema.org/amenityFeature
+     */
+    public function amenityFeature($amenityFeature)
+    {
+        return $this->setProperty('amenityFeature', $amenityFeature);
     }
 
     /**
@@ -224,6 +195,37 @@ class CampingPitch extends BaseType implements AccommodationContract, PlaceContr
     }
 
     /**
+     * A description of the item.
+     *
+     * @param string|string[] $description
+     *
+     * @return static
+     *
+     * @see http://schema.org/description
+     */
+    public function description($description)
+    {
+        return $this->setProperty('description', $description);
+    }
+
+    /**
+     * A sub property of description. A short description of the item used to
+     * disambiguate from other, similar items. Information from other properties
+     * (in particular, name) may be necessary for the description to be useful
+     * for disambiguation.
+     *
+     * @param string|string[] $disambiguatingDescription
+     *
+     * @return static
+     *
+     * @see http://schema.org/disambiguatingDescription
+     */
+    public function disambiguatingDescription($disambiguatingDescription)
+    {
+        return $this->setProperty('disambiguatingDescription', $disambiguatingDescription);
+    }
+
+    /**
      * Upcoming or past event associated with this place, organization, or
      * action.
      *
@@ -264,6 +266,22 @@ class CampingPitch extends BaseType implements AccommodationContract, PlaceContr
     public function faxNumber($faxNumber)
     {
         return $this->setProperty('faxNumber', $faxNumber);
+    }
+
+    /**
+     * The size of the accommodation, e.g. in square meter or squarefoot.
+     * Typical unit code(s): MTK for square meter, FTK for square foot, or YDK
+     * for square yard
+     *
+     * @param QuantitativeValue|QuantitativeValue[] $floorSize
+     *
+     * @return static
+     *
+     * @see http://schema.org/floorSize
+     */
+    public function floorSize($floorSize)
+    {
+        return $this->setProperty('floorSize', $floorSize);
     }
 
     /**
@@ -309,6 +327,39 @@ class CampingPitch extends BaseType implements AccommodationContract, PlaceContr
     public function hasMap($hasMap)
     {
         return $this->setProperty('hasMap', $hasMap);
+    }
+
+    /**
+     * The identifier property represents any kind of identifier for any kind of
+     * [[Thing]], such as ISBNs, GTIN codes, UUIDs etc. Schema.org provides
+     * dedicated properties for representing many of these, either as textual
+     * strings or as URL (URI) links. See [background
+     * notes](/docs/datamodel.html#identifierBg) for more details.
+     *
+     * @param PropertyValue|PropertyValue[]|string|string[] $identifier
+     *
+     * @return static
+     *
+     * @see http://schema.org/identifier
+     */
+    public function identifier($identifier)
+    {
+        return $this->setProperty('identifier', $identifier);
+    }
+
+    /**
+     * An image of the item. This can be a [[URL]] or a fully described
+     * [[ImageObject]].
+     *
+     * @param ImageObject|ImageObject[]|string|string[] $image
+     *
+     * @return static
+     *
+     * @see http://schema.org/image
+     */
+    public function image($image)
+    {
+        return $this->setProperty('image', $image);
     }
 
     /**
@@ -386,6 +437,22 @@ class CampingPitch extends BaseType implements AccommodationContract, PlaceContr
     }
 
     /**
+     * Indicates a page (or other CreativeWork) for which this thing is the main
+     * entity being described. See [background
+     * notes](/docs/datamodel.html#mainEntityBackground) for details.
+     *
+     * @param CreativeWork|CreativeWork[]|string|string[] $mainEntityOfPage
+     *
+     * @return static
+     *
+     * @see http://schema.org/mainEntityOfPage
+     */
+    public function mainEntityOfPage($mainEntityOfPage)
+    {
+        return $this->setProperty('mainEntityOfPage', $mainEntityOfPage);
+    }
+
+    /**
      * A URL to a map of the place.
      *
      * @param string|string[] $map
@@ -428,6 +495,37 @@ class CampingPitch extends BaseType implements AccommodationContract, PlaceContr
     }
 
     /**
+     * The name of the item.
+     *
+     * @param string|string[] $name
+     *
+     * @return static
+     *
+     * @see http://schema.org/name
+     */
+    public function name($name)
+    {
+        return $this->setProperty('name', $name);
+    }
+
+    /**
+     * The number of rooms (excluding bathrooms and closets) of the
+     * accommodation or lodging business.
+     * Typical unit code(s): ROM for room or C62 for no unit. The type of room
+     * can be put in the unitText property of the QuantitativeValue.
+     *
+     * @param QuantitativeValue|QuantitativeValue[]|float|float[]|int|int[] $numberOfRooms
+     *
+     * @return static
+     *
+     * @see http://schema.org/numberOfRooms
+     */
+    public function numberOfRooms($numberOfRooms)
+    {
+        return $this->setProperty('numberOfRooms', $numberOfRooms);
+    }
+
+    /**
      * The opening hours of a certain place.
      *
      * @param OpeningHoursSpecification|OpeningHoursSpecification[] $openingHoursSpecification
@@ -439,6 +537,35 @@ class CampingPitch extends BaseType implements AccommodationContract, PlaceContr
     public function openingHoursSpecification($openingHoursSpecification)
     {
         return $this->setProperty('openingHoursSpecification', $openingHoursSpecification);
+    }
+
+    /**
+     * Indications regarding the permitted usage of the accommodation.
+     *
+     * @param string|string[] $permittedUsage
+     *
+     * @return static
+     *
+     * @see http://schema.org/permittedUsage
+     */
+    public function permittedUsage($permittedUsage)
+    {
+        return $this->setProperty('permittedUsage', $permittedUsage);
+    }
+
+    /**
+     * Indicates whether pets are allowed to enter the accommodation or lodging
+     * business. More detailed information can be put in a text value.
+     *
+     * @param bool|bool[]|string|string[] $petsAllowed
+     *
+     * @return static
+     *
+     * @see http://schema.org/petsAllowed
+     */
+    public function petsAllowed($petsAllowed)
+    {
+        return $this->setProperty('petsAllowed', $petsAllowed);
     }
 
     /**
@@ -467,6 +594,21 @@ class CampingPitch extends BaseType implements AccommodationContract, PlaceContr
     public function photos($photos)
     {
         return $this->setProperty('photos', $photos);
+    }
+
+    /**
+     * Indicates a potential Action, which describes an idealized action in
+     * which this thing would play an 'object' role.
+     *
+     * @param Action|Action[] $potentialAction
+     *
+     * @return static
+     *
+     * @see http://schema.org/potentialAction
+     */
+    public function potentialAction($potentialAction)
+    {
+        return $this->setProperty('potentialAction', $potentialAction);
     }
 
     /**
@@ -510,6 +652,22 @@ class CampingPitch extends BaseType implements AccommodationContract, PlaceContr
     public function reviews($reviews)
     {
         return $this->setProperty('reviews', $reviews);
+    }
+
+    /**
+     * URL of a reference Web page that unambiguously indicates the item's
+     * identity. E.g. the URL of the item's Wikipedia page, Wikidata entry, or
+     * official website.
+     *
+     * @param string|string[] $sameAs
+     *
+     * @return static
+     *
+     * @see http://schema.org/sameAs
+     */
+    public function sameAs($sameAs)
+    {
+        return $this->setProperty('sameAs', $sameAs);
     }
 
     /**
@@ -559,178 +717,6 @@ class CampingPitch extends BaseType implements AccommodationContract, PlaceContr
     }
 
     /**
-     * The telephone number.
-     *
-     * @param string|string[] $telephone
-     *
-     * @return static
-     *
-     * @see http://schema.org/telephone
-     */
-    public function telephone($telephone)
-    {
-        return $this->setProperty('telephone', $telephone);
-    }
-
-    /**
-     * An additional type for the item, typically used for adding more specific
-     * types from external vocabularies in microdata syntax. This is a
-     * relationship between something and a class that the thing is in. In RDFa
-     * syntax, it is better to use the native RDFa syntax - the 'typeof'
-     * attribute - for multiple types. Schema.org tools may have only weaker
-     * understanding of extra types, in particular those defined externally.
-     *
-     * @param string|string[] $additionalType
-     *
-     * @return static
-     *
-     * @see http://schema.org/additionalType
-     */
-    public function additionalType($additionalType)
-    {
-        return $this->setProperty('additionalType', $additionalType);
-    }
-
-    /**
-     * An alias for the item.
-     *
-     * @param string|string[] $alternateName
-     *
-     * @return static
-     *
-     * @see http://schema.org/alternateName
-     */
-    public function alternateName($alternateName)
-    {
-        return $this->setProperty('alternateName', $alternateName);
-    }
-
-    /**
-     * A description of the item.
-     *
-     * @param string|string[] $description
-     *
-     * @return static
-     *
-     * @see http://schema.org/description
-     */
-    public function description($description)
-    {
-        return $this->setProperty('description', $description);
-    }
-
-    /**
-     * A sub property of description. A short description of the item used to
-     * disambiguate from other, similar items. Information from other properties
-     * (in particular, name) may be necessary for the description to be useful
-     * for disambiguation.
-     *
-     * @param string|string[] $disambiguatingDescription
-     *
-     * @return static
-     *
-     * @see http://schema.org/disambiguatingDescription
-     */
-    public function disambiguatingDescription($disambiguatingDescription)
-    {
-        return $this->setProperty('disambiguatingDescription', $disambiguatingDescription);
-    }
-
-    /**
-     * The identifier property represents any kind of identifier for any kind of
-     * [[Thing]], such as ISBNs, GTIN codes, UUIDs etc. Schema.org provides
-     * dedicated properties for representing many of these, either as textual
-     * strings or as URL (URI) links. See [background
-     * notes](/docs/datamodel.html#identifierBg) for more details.
-     *
-     * @param PropertyValue|PropertyValue[]|string|string[] $identifier
-     *
-     * @return static
-     *
-     * @see http://schema.org/identifier
-     */
-    public function identifier($identifier)
-    {
-        return $this->setProperty('identifier', $identifier);
-    }
-
-    /**
-     * An image of the item. This can be a [[URL]] or a fully described
-     * [[ImageObject]].
-     *
-     * @param ImageObject|ImageObject[]|string|string[] $image
-     *
-     * @return static
-     *
-     * @see http://schema.org/image
-     */
-    public function image($image)
-    {
-        return $this->setProperty('image', $image);
-    }
-
-    /**
-     * Indicates a page (or other CreativeWork) for which this thing is the main
-     * entity being described. See [background
-     * notes](/docs/datamodel.html#mainEntityBackground) for details.
-     *
-     * @param CreativeWork|CreativeWork[]|string|string[] $mainEntityOfPage
-     *
-     * @return static
-     *
-     * @see http://schema.org/mainEntityOfPage
-     */
-    public function mainEntityOfPage($mainEntityOfPage)
-    {
-        return $this->setProperty('mainEntityOfPage', $mainEntityOfPage);
-    }
-
-    /**
-     * The name of the item.
-     *
-     * @param string|string[] $name
-     *
-     * @return static
-     *
-     * @see http://schema.org/name
-     */
-    public function name($name)
-    {
-        return $this->setProperty('name', $name);
-    }
-
-    /**
-     * Indicates a potential Action, which describes an idealized action in
-     * which this thing would play an 'object' role.
-     *
-     * @param Action|Action[] $potentialAction
-     *
-     * @return static
-     *
-     * @see http://schema.org/potentialAction
-     */
-    public function potentialAction($potentialAction)
-    {
-        return $this->setProperty('potentialAction', $potentialAction);
-    }
-
-    /**
-     * URL of a reference Web page that unambiguously indicates the item's
-     * identity. E.g. the URL of the item's Wikipedia page, Wikidata entry, or
-     * official website.
-     *
-     * @param string|string[] $sameAs
-     *
-     * @return static
-     *
-     * @see http://schema.org/sameAs
-     */
-    public function sameAs($sameAs)
-    {
-        return $this->setProperty('sameAs', $sameAs);
-    }
-
-    /**
      * A CreativeWork or Event about this Thing.
      *
      * @param CreativeWork|CreativeWork[]|Event|Event[] $subjectOf
@@ -742,6 +728,20 @@ class CampingPitch extends BaseType implements AccommodationContract, PlaceContr
     public function subjectOf($subjectOf)
     {
         return $this->setProperty('subjectOf', $subjectOf);
+    }
+
+    /**
+     * The telephone number.
+     *
+     * @param string|string[] $telephone
+     *
+     * @return static
+     *
+     * @see http://schema.org/telephone
+     */
+    public function telephone($telephone)
+    {
+        return $this->setProperty('telephone', $telephone);
     }
 
     /**

@@ -4,19 +4,13 @@ namespace Spatie\SchemaOrg\Contracts;
 
 interface RatingContract
 {
-    public function author($author);
-
-    public function bestRating($bestRating);
-
-    public function ratingValue($ratingValue);
-
-    public function reviewAspect($reviewAspect);
-
-    public function worstRating($worstRating);
-
     public function additionalType($additionalType);
 
     public function alternateName($alternateName);
+
+    public function author($author);
+
+    public function bestRating($bestRating);
 
     public function description($description);
 
@@ -32,10 +26,16 @@ interface RatingContract
 
     public function potentialAction($potentialAction);
 
+    public function ratingValue($ratingValue);
+
+    public function reviewAspect($reviewAspect);
+
     public function sameAs($sameAs);
 
     public function subjectOf($subjectOf);
 
     public function url($url);
+
+    public function worstRating($worstRating);
 
 }

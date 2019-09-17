@@ -6,6 +6,10 @@ interface OrderContract
 {
     public function acceptedOffer($acceptedOffer);
 
+    public function additionalType($additionalType);
+
+    public function alternateName($alternateName);
+
     public function billingAddress($billingAddress);
 
     public function broker($broker);
@@ -14,15 +18,27 @@ interface OrderContract
 
     public function customer($customer);
 
+    public function description($description);
+
+    public function disambiguatingDescription($disambiguatingDescription);
+
     public function discount($discount);
 
     public function discountCode($discountCode);
 
     public function discountCurrency($discountCurrency);
 
+    public function identifier($identifier);
+
+    public function image($image);
+
     public function isGift($isGift);
 
+    public function mainEntityOfPage($mainEntityOfPage);
+
     public function merchant($merchant);
+
+    public function name($name);
 
     public function orderDate($orderDate);
 
@@ -46,27 +62,11 @@ interface OrderContract
 
     public function paymentUrl($paymentUrl);
 
-    public function seller($seller);
-
-    public function additionalType($additionalType);
-
-    public function alternateName($alternateName);
-
-    public function description($description);
-
-    public function disambiguatingDescription($disambiguatingDescription);
-
-    public function identifier($identifier);
-
-    public function image($image);
-
-    public function mainEntityOfPage($mainEntityOfPage);
-
-    public function name($name);
-
     public function potentialAction($potentialAction);
 
     public function sameAs($sameAs);
+
+    public function seller($seller);
 
     public function subjectOf($subjectOf);
 

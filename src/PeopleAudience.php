@@ -16,119 +16,6 @@ use \Spatie\SchemaOrg\Contracts\ThingContract;
 class PeopleAudience extends BaseType implements AudienceContract, IntangibleContract, ThingContract
 {
     /**
-     * Audiences defined by a person's gender.
-     *
-     * @param string|string[] $requiredGender
-     *
-     * @return static
-     *
-     * @see http://schema.org/requiredGender
-     */
-    public function requiredGender($requiredGender)
-    {
-        return $this->setProperty('requiredGender', $requiredGender);
-    }
-
-    /**
-     * Audiences defined by a person's maximum age.
-     *
-     * @param int|int[] $requiredMaxAge
-     *
-     * @return static
-     *
-     * @see http://schema.org/requiredMaxAge
-     */
-    public function requiredMaxAge($requiredMaxAge)
-    {
-        return $this->setProperty('requiredMaxAge', $requiredMaxAge);
-    }
-
-    /**
-     * Audiences defined by a person's minimum age.
-     *
-     * @param int|int[] $requiredMinAge
-     *
-     * @return static
-     *
-     * @see http://schema.org/requiredMinAge
-     */
-    public function requiredMinAge($requiredMinAge)
-    {
-        return $this->setProperty('requiredMinAge', $requiredMinAge);
-    }
-
-    /**
-     * The gender of the person or audience.
-     *
-     * @param string|string[] $suggestedGender
-     *
-     * @return static
-     *
-     * @see http://schema.org/suggestedGender
-     */
-    public function suggestedGender($suggestedGender)
-    {
-        return $this->setProperty('suggestedGender', $suggestedGender);
-    }
-
-    /**
-     * Maximal age recommended for viewing content.
-     *
-     * @param float|float[]|int|int[] $suggestedMaxAge
-     *
-     * @return static
-     *
-     * @see http://schema.org/suggestedMaxAge
-     */
-    public function suggestedMaxAge($suggestedMaxAge)
-    {
-        return $this->setProperty('suggestedMaxAge', $suggestedMaxAge);
-    }
-
-    /**
-     * Minimal age recommended for viewing content.
-     *
-     * @param float|float[]|int|int[] $suggestedMinAge
-     *
-     * @return static
-     *
-     * @see http://schema.org/suggestedMinAge
-     */
-    public function suggestedMinAge($suggestedMinAge)
-    {
-        return $this->setProperty('suggestedMinAge', $suggestedMinAge);
-    }
-
-    /**
-     * The target group associated with a given audience (e.g. veterans, car
-     * owners, musicians, etc.).
-     *
-     * @param string|string[] $audienceType
-     *
-     * @return static
-     *
-     * @see http://schema.org/audienceType
-     */
-    public function audienceType($audienceType)
-    {
-        return $this->setProperty('audienceType', $audienceType);
-    }
-
-    /**
-     * The geographic area associated with the audience.
-     *
-     * @param AdministrativeArea|AdministrativeArea[] $geographicArea
-     *
-     * @return static
-     *
-     * @see http://schema.org/geographicArea
-     */
-    public function geographicArea($geographicArea)
-    {
-        return $this->setProperty('geographicArea', $geographicArea);
-    }
-
-    /**
      * An additional type for the item, typically used for adding more specific
      * types from external vocabularies in microdata syntax. This is a
      * relationship between something and a class that the thing is in. In RDFa
@@ -162,6 +49,21 @@ class PeopleAudience extends BaseType implements AudienceContract, IntangibleCon
     }
 
     /**
+     * The target group associated with a given audience (e.g. veterans, car
+     * owners, musicians, etc.).
+     *
+     * @param string|string[] $audienceType
+     *
+     * @return static
+     *
+     * @see http://schema.org/audienceType
+     */
+    public function audienceType($audienceType)
+    {
+        return $this->setProperty('audienceType', $audienceType);
+    }
+
+    /**
      * A description of the item.
      *
      * @param string|string[] $description
@@ -190,6 +92,20 @@ class PeopleAudience extends BaseType implements AudienceContract, IntangibleCon
     public function disambiguatingDescription($disambiguatingDescription)
     {
         return $this->setProperty('disambiguatingDescription', $disambiguatingDescription);
+    }
+
+    /**
+     * The geographic area associated with the audience.
+     *
+     * @param AdministrativeArea|AdministrativeArea[] $geographicArea
+     *
+     * @return static
+     *
+     * @see http://schema.org/geographicArea
+     */
+    public function geographicArea($geographicArea)
+    {
+        return $this->setProperty('geographicArea', $geographicArea);
     }
 
     /**
@@ -271,6 +187,48 @@ class PeopleAudience extends BaseType implements AudienceContract, IntangibleCon
     }
 
     /**
+     * Audiences defined by a person's gender.
+     *
+     * @param string|string[] $requiredGender
+     *
+     * @return static
+     *
+     * @see http://schema.org/requiredGender
+     */
+    public function requiredGender($requiredGender)
+    {
+        return $this->setProperty('requiredGender', $requiredGender);
+    }
+
+    /**
+     * Audiences defined by a person's maximum age.
+     *
+     * @param int|int[] $requiredMaxAge
+     *
+     * @return static
+     *
+     * @see http://schema.org/requiredMaxAge
+     */
+    public function requiredMaxAge($requiredMaxAge)
+    {
+        return $this->setProperty('requiredMaxAge', $requiredMaxAge);
+    }
+
+    /**
+     * Audiences defined by a person's minimum age.
+     *
+     * @param int|int[] $requiredMinAge
+     *
+     * @return static
+     *
+     * @see http://schema.org/requiredMinAge
+     */
+    public function requiredMinAge($requiredMinAge)
+    {
+        return $this->setProperty('requiredMinAge', $requiredMinAge);
+    }
+
+    /**
      * URL of a reference Web page that unambiguously indicates the item's
      * identity. E.g. the URL of the item's Wikipedia page, Wikidata entry, or
      * official website.
@@ -298,6 +256,48 @@ class PeopleAudience extends BaseType implements AudienceContract, IntangibleCon
     public function subjectOf($subjectOf)
     {
         return $this->setProperty('subjectOf', $subjectOf);
+    }
+
+    /**
+     * The gender of the person or audience.
+     *
+     * @param string|string[] $suggestedGender
+     *
+     * @return static
+     *
+     * @see http://schema.org/suggestedGender
+     */
+    public function suggestedGender($suggestedGender)
+    {
+        return $this->setProperty('suggestedGender', $suggestedGender);
+    }
+
+    /**
+     * Maximal age recommended for viewing content.
+     *
+     * @param float|float[]|int|int[] $suggestedMaxAge
+     *
+     * @return static
+     *
+     * @see http://schema.org/suggestedMaxAge
+     */
+    public function suggestedMaxAge($suggestedMaxAge)
+    {
+        return $this->setProperty('suggestedMaxAge', $suggestedMaxAge);
+    }
+
+    /**
+     * Minimal age recommended for viewing content.
+     *
+     * @param float|float[]|int|int[] $suggestedMinAge
+     *
+     * @return static
+     *
+     * @see http://schema.org/suggestedMinAge
+     */
+    public function suggestedMinAge($suggestedMinAge)
+    {
+        return $this->setProperty('suggestedMinAge', $suggestedMinAge);
     }
 
     /**

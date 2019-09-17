@@ -4,12 +4,6 @@ namespace Spatie\SchemaOrg\Contracts;
 
 interface OfferCatalogContract
 {
-    public function itemListElement($itemListElement);
-
-    public function itemListOrder($itemListOrder);
-
-    public function numberOfItems($numberOfItems);
-
     public function additionalType($additionalType);
 
     public function alternateName($alternateName);
@@ -22,9 +16,15 @@ interface OfferCatalogContract
 
     public function image($image);
 
+    public function itemListElement($itemListElement);
+
+    public function itemListOrder($itemListOrder);
+
     public function mainEntityOfPage($mainEntityOfPage);
 
     public function name($name);
+
+    public function numberOfItems($numberOfItems);
 
     public function potentialAction($potentialAction);
 

@@ -18,6 +18,25 @@ use \Spatie\SchemaOrg\Contracts\ThingContract;
 class GeoShape extends BaseType implements StructuredValueContract, IntangibleContract, ThingContract
 {
     /**
+     * An additional type for the item, typically used for adding more specific
+     * types from external vocabularies in microdata syntax. This is a
+     * relationship between something and a class that the thing is in. In RDFa
+     * syntax, it is better to use the native RDFa syntax - the 'typeof'
+     * attribute - for multiple types. Schema.org tools may have only weaker
+     * understanding of extra types, in particular those defined externally.
+     *
+     * @param string|string[] $additionalType
+     *
+     * @return static
+     *
+     * @see http://schema.org/additionalType
+     */
+    public function additionalType($additionalType)
+    {
+        return $this->setProperty('additionalType', $additionalType);
+    }
+
+    /**
      * Physical address of the item.
      *
      * @param PostalAddress|PostalAddress[]|string|string[] $address
@@ -44,6 +63,20 @@ class GeoShape extends BaseType implements StructuredValueContract, IntangibleCo
     public function addressCountry($addressCountry)
     {
         return $this->setProperty('addressCountry', $addressCountry);
+    }
+
+    /**
+     * An alias for the item.
+     *
+     * @param string|string[] $alternateName
+     *
+     * @return static
+     *
+     * @see http://schema.org/alternateName
+     */
+    public function alternateName($alternateName)
+    {
+        return $this->setProperty('alternateName', $alternateName);
     }
 
     /**
@@ -79,116 +112,6 @@ class GeoShape extends BaseType implements StructuredValueContract, IntangibleCo
     }
 
     /**
-     * The elevation of a location ([WGS
-     * 84](https://en.wikipedia.org/wiki/World_Geodetic_System)). Values may be
-     * of the form 'NUMBER UNIT_OF_MEASUREMENT' (e.g., '1,000 m', '3,200 ft')
-     * while numbers alone should be assumed to be a value in meters.
-     *
-     * @param float|float[]|int|int[]|string|string[] $elevation
-     *
-     * @return static
-     *
-     * @see http://schema.org/elevation
-     */
-    public function elevation($elevation)
-    {
-        return $this->setProperty('elevation', $elevation);
-    }
-
-    /**
-     * Indicates the GeoCoordinates at the centre of a GeoShape e.g. GeoCircle.
-     *
-     * @param GeoCoordinates|GeoCoordinates[] $geoMidpoint
-     *
-     * @return static
-     *
-     * @see http://schema.org/geoMidpoint
-     */
-    public function geoMidpoint($geoMidpoint)
-    {
-        return $this->setProperty('geoMidpoint', $geoMidpoint);
-    }
-
-    /**
-     * A line is a point-to-point path consisting of two or more points. A line
-     * is expressed as a series of two or more point objects separated by space.
-     *
-     * @param string|string[] $line
-     *
-     * @return static
-     *
-     * @see http://schema.org/line
-     */
-    public function line($line)
-    {
-        return $this->setProperty('line', $line);
-    }
-
-    /**
-     * A polygon is the area enclosed by a point-to-point path for which the
-     * starting and ending points are the same. A polygon is expressed as a
-     * series of four or more space delimited points where the first and final
-     * points are identical.
-     *
-     * @param string|string[] $polygon
-     *
-     * @return static
-     *
-     * @see http://schema.org/polygon
-     */
-    public function polygon($polygon)
-    {
-        return $this->setProperty('polygon', $polygon);
-    }
-
-    /**
-     * The postal code. For example, 94043.
-     *
-     * @param string|string[] $postalCode
-     *
-     * @return static
-     *
-     * @see http://schema.org/postalCode
-     */
-    public function postalCode($postalCode)
-    {
-        return $this->setProperty('postalCode', $postalCode);
-    }
-
-    /**
-     * An additional type for the item, typically used for adding more specific
-     * types from external vocabularies in microdata syntax. This is a
-     * relationship between something and a class that the thing is in. In RDFa
-     * syntax, it is better to use the native RDFa syntax - the 'typeof'
-     * attribute - for multiple types. Schema.org tools may have only weaker
-     * understanding of extra types, in particular those defined externally.
-     *
-     * @param string|string[] $additionalType
-     *
-     * @return static
-     *
-     * @see http://schema.org/additionalType
-     */
-    public function additionalType($additionalType)
-    {
-        return $this->setProperty('additionalType', $additionalType);
-    }
-
-    /**
-     * An alias for the item.
-     *
-     * @param string|string[] $alternateName
-     *
-     * @return static
-     *
-     * @see http://schema.org/alternateName
-     */
-    public function alternateName($alternateName)
-    {
-        return $this->setProperty('alternateName', $alternateName);
-    }
-
-    /**
      * A description of the item.
      *
      * @param string|string[] $description
@@ -217,6 +140,37 @@ class GeoShape extends BaseType implements StructuredValueContract, IntangibleCo
     public function disambiguatingDescription($disambiguatingDescription)
     {
         return $this->setProperty('disambiguatingDescription', $disambiguatingDescription);
+    }
+
+    /**
+     * The elevation of a location ([WGS
+     * 84](https://en.wikipedia.org/wiki/World_Geodetic_System)). Values may be
+     * of the form 'NUMBER UNIT_OF_MEASUREMENT' (e.g., '1,000 m', '3,200 ft')
+     * while numbers alone should be assumed to be a value in meters.
+     *
+     * @param float|float[]|int|int[]|string|string[] $elevation
+     *
+     * @return static
+     *
+     * @see http://schema.org/elevation
+     */
+    public function elevation($elevation)
+    {
+        return $this->setProperty('elevation', $elevation);
+    }
+
+    /**
+     * Indicates the GeoCoordinates at the centre of a GeoShape e.g. GeoCircle.
+     *
+     * @param GeoCoordinates|GeoCoordinates[] $geoMidpoint
+     *
+     * @return static
+     *
+     * @see http://schema.org/geoMidpoint
+     */
+    public function geoMidpoint($geoMidpoint)
+    {
+        return $this->setProperty('geoMidpoint', $geoMidpoint);
     }
 
     /**
@@ -253,6 +207,21 @@ class GeoShape extends BaseType implements StructuredValueContract, IntangibleCo
     }
 
     /**
+     * A line is a point-to-point path consisting of two or more points. A line
+     * is expressed as a series of two or more point objects separated by space.
+     *
+     * @param string|string[] $line
+     *
+     * @return static
+     *
+     * @see http://schema.org/line
+     */
+    public function line($line)
+    {
+        return $this->setProperty('line', $line);
+    }
+
+    /**
      * Indicates a page (or other CreativeWork) for which this thing is the main
      * entity being described. See [background
      * notes](/docs/datamodel.html#mainEntityBackground) for details.
@@ -280,6 +249,37 @@ class GeoShape extends BaseType implements StructuredValueContract, IntangibleCo
     public function name($name)
     {
         return $this->setProperty('name', $name);
+    }
+
+    /**
+     * A polygon is the area enclosed by a point-to-point path for which the
+     * starting and ending points are the same. A polygon is expressed as a
+     * series of four or more space delimited points where the first and final
+     * points are identical.
+     *
+     * @param string|string[] $polygon
+     *
+     * @return static
+     *
+     * @see http://schema.org/polygon
+     */
+    public function polygon($polygon)
+    {
+        return $this->setProperty('polygon', $polygon);
+    }
+
+    /**
+     * The postal code. For example, 94043.
+     *
+     * @param string|string[] $postalCode
+     *
+     * @return static
+     *
+     * @see http://schema.org/postalCode
+     */
+    public function postalCode($postalCode)
+    {
+        return $this->setProperty('postalCode', $postalCode);
     }
 
     /**

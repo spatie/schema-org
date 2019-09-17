@@ -21,35 +21,6 @@ class Audience extends BaseType implements IntangibleContract, ThingContract
      const Researcher = 'http://schema.org/Researcher';
 
     /**
-     * The target group associated with a given audience (e.g. veterans, car
-     * owners, musicians, etc.).
-     *
-     * @param string|string[] $audienceType
-     *
-     * @return static
-     *
-     * @see http://schema.org/audienceType
-     */
-    public function audienceType($audienceType)
-    {
-        return $this->setProperty('audienceType', $audienceType);
-    }
-
-    /**
-     * The geographic area associated with the audience.
-     *
-     * @param AdministrativeArea|AdministrativeArea[] $geographicArea
-     *
-     * @return static
-     *
-     * @see http://schema.org/geographicArea
-     */
-    public function geographicArea($geographicArea)
-    {
-        return $this->setProperty('geographicArea', $geographicArea);
-    }
-
-    /**
      * An additional type for the item, typically used for adding more specific
      * types from external vocabularies in microdata syntax. This is a
      * relationship between something and a class that the thing is in. In RDFa
@@ -83,6 +54,21 @@ class Audience extends BaseType implements IntangibleContract, ThingContract
     }
 
     /**
+     * The target group associated with a given audience (e.g. veterans, car
+     * owners, musicians, etc.).
+     *
+     * @param string|string[] $audienceType
+     *
+     * @return static
+     *
+     * @see http://schema.org/audienceType
+     */
+    public function audienceType($audienceType)
+    {
+        return $this->setProperty('audienceType', $audienceType);
+    }
+
+    /**
      * A description of the item.
      *
      * @param string|string[] $description
@@ -111,6 +97,20 @@ class Audience extends BaseType implements IntangibleContract, ThingContract
     public function disambiguatingDescription($disambiguatingDescription)
     {
         return $this->setProperty('disambiguatingDescription', $disambiguatingDescription);
+    }
+
+    /**
+     * The geographic area associated with the audience.
+     *
+     * @param AdministrativeArea|AdministrativeArea[] $geographicArea
+     *
+     * @return static
+     *
+     * @see http://schema.org/geographicArea
+     */
+    public function geographicArea($geographicArea)
+    {
+        return $this->setProperty('geographicArea', $geographicArea);
     }
 
     /**

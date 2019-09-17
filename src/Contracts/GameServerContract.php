@@ -4,12 +4,6 @@ namespace Spatie\SchemaOrg\Contracts;
 
 interface GameServerContract
 {
-    public function game($game);
-
-    public function playersOnline($playersOnline);
-
-    public function serverStatus($serverStatus);
-
     public function additionalType($additionalType);
 
     public function alternateName($alternateName);
@@ -17,6 +11,8 @@ interface GameServerContract
     public function description($description);
 
     public function disambiguatingDescription($disambiguatingDescription);
+
+    public function game($game);
 
     public function identifier($identifier);
 
@@ -26,9 +22,13 @@ interface GameServerContract
 
     public function name($name);
 
+    public function playersOnline($playersOnline);
+
     public function potentialAction($potentialAction);
 
     public function sameAs($sameAs);
+
+    public function serverStatus($serverStatus);
 
     public function subjectOf($subjectOf);
 

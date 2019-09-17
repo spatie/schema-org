@@ -4,13 +4,15 @@ namespace Spatie\SchemaOrg\Contracts;
 
 interface DepositAccountContract
 {
-    public function annualPercentageRate($annualPercentageRate);
-
-    public function feesAndCommissionsSpecification($feesAndCommissionsSpecification);
-
-    public function interestRate($interestRate);
+    public function additionalType($additionalType);
 
     public function aggregateRating($aggregateRating);
+
+    public function alternateName($alternateName);
+
+    public function amount($amount);
+
+    public function annualPercentageRate($annualPercentageRate);
 
     public function areaServed($areaServed);
 
@@ -26,9 +28,21 @@ interface DepositAccountContract
 
     public function category($category);
 
+    public function description($description);
+
+    public function disambiguatingDescription($disambiguatingDescription);
+
+    public function feesAndCommissionsSpecification($feesAndCommissionsSpecification);
+
     public function hasOfferCatalog($hasOfferCatalog);
 
     public function hoursAvailable($hoursAvailable);
+
+    public function identifier($identifier);
+
+    public function image($image);
+
+    public function interestRate($interestRate);
 
     public function isRelatedTo($isRelatedTo);
 
@@ -36,7 +50,13 @@ interface DepositAccountContract
 
     public function logo($logo);
 
+    public function mainEntityOfPage($mainEntityOfPage);
+
+    public function name($name);
+
     public function offers($offers);
+
+    public function potentialAction($potentialAction);
 
     public function produces($produces);
 
@@ -45,6 +65,8 @@ interface DepositAccountContract
     public function providerMobility($providerMobility);
 
     public function review($review);
+
+    public function sameAs($sameAs);
 
     public function serviceArea($serviceArea);
 
@@ -56,30 +78,8 @@ interface DepositAccountContract
 
     public function slogan($slogan);
 
-    public function additionalType($additionalType);
-
-    public function alternateName($alternateName);
-
-    public function description($description);
-
-    public function disambiguatingDescription($disambiguatingDescription);
-
-    public function identifier($identifier);
-
-    public function image($image);
-
-    public function mainEntityOfPage($mainEntityOfPage);
-
-    public function name($name);
-
-    public function potentialAction($potentialAction);
-
-    public function sameAs($sameAs);
-
     public function subjectOf($subjectOf);
 
     public function url($url);
-
-    public function amount($amount);
 
 }

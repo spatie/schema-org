@@ -4,76 +4,6 @@ namespace Spatie\SchemaOrg\Contracts;
 
 interface VideoGameContract
 {
-    public function actor($actor);
-
-    public function actors($actors);
-
-    public function cheatCode($cheatCode);
-
-    public function director($director);
-
-    public function directors($directors);
-
-    public function gamePlatform($gamePlatform);
-
-    public function gameServer($gameServer);
-
-    public function gameTip($gameTip);
-
-    public function musicBy($musicBy);
-
-    public function playMode($playMode);
-
-    public function trailer($trailer);
-
-    public function applicationCategory($applicationCategory);
-
-    public function applicationSubCategory($applicationSubCategory);
-
-    public function applicationSuite($applicationSuite);
-
-    public function availableOnDevice($availableOnDevice);
-
-    public function countriesNotSupported($countriesNotSupported);
-
-    public function countriesSupported($countriesSupported);
-
-    public function device($device);
-
-    public function downloadUrl($downloadUrl);
-
-    public function featureList($featureList);
-
-    public function fileSize($fileSize);
-
-    public function installUrl($installUrl);
-
-    public function memoryRequirements($memoryRequirements);
-
-    public function operatingSystem($operatingSystem);
-
-    public function permissions($permissions);
-
-    public function processorRequirements($processorRequirements);
-
-    public function releaseNotes($releaseNotes);
-
-    public function requirements($requirements);
-
-    public function screenshot($screenshot);
-
-    public function softwareAddOn($softwareAddOn);
-
-    public function softwareHelp($softwareHelp);
-
-    public function softwareRequirements($softwareRequirements);
-
-    public function softwareVersion($softwareVersion);
-
-    public function storageRequirements($storageRequirements);
-
-    public function supportingData($supportingData);
-
     public function about($about);
 
     public function accessMode($accessMode);
@@ -92,9 +22,23 @@ interface VideoGameContract
 
     public function accountablePerson($accountablePerson);
 
+    public function actor($actor);
+
+    public function actors($actors);
+
+    public function additionalType($additionalType);
+
     public function aggregateRating($aggregateRating);
 
+    public function alternateName($alternateName);
+
     public function alternativeHeadline($alternativeHeadline);
+
+    public function applicationCategory($applicationCategory);
+
+    public function applicationSubCategory($applicationSubCategory);
+
+    public function applicationSuite($applicationSuite);
 
     public function associatedMedia($associatedMedia);
 
@@ -104,11 +48,17 @@ interface VideoGameContract
 
     public function author($author);
 
+    public function availableOnDevice($availableOnDevice);
+
     public function award($award);
 
     public function awards($awards);
 
     public function character($character);
+
+    public function characterAttribute($characterAttribute);
+
+    public function cheatCode($cheatCode);
 
     public function citation($citation);
 
@@ -126,6 +76,10 @@ interface VideoGameContract
 
     public function copyrightYear($copyrightYear);
 
+    public function countriesNotSupported($countriesNotSupported);
+
+    public function countriesSupported($countriesSupported);
+
     public function creator($creator);
 
     public function dateCreated($dateCreated);
@@ -134,7 +88,19 @@ interface VideoGameContract
 
     public function datePublished($datePublished);
 
+    public function description($description);
+
+    public function device($device);
+
+    public function director($director);
+
+    public function directors($directors);
+
+    public function disambiguatingDescription($disambiguatingDescription);
+
     public function discussionUrl($discussionUrl);
+
+    public function downloadUrl($downloadUrl);
 
     public function editor($editor);
 
@@ -152,9 +118,23 @@ interface VideoGameContract
 
     public function expires($expires);
 
+    public function featureList($featureList);
+
     public function fileFormat($fileFormat);
 
+    public function fileSize($fileSize);
+
     public function funder($funder);
+
+    public function gameItem($gameItem);
+
+    public function gameLocation($gameLocation);
+
+    public function gamePlatform($gamePlatform);
+
+    public function gameServer($gameServer);
+
+    public function gameTip($gameTip);
 
     public function genre($genre);
 
@@ -162,7 +142,13 @@ interface VideoGameContract
 
     public function headline($headline);
 
+    public function identifier($identifier);
+
+    public function image($image);
+
     public function inLanguage($inLanguage);
+
+    public function installUrl($installUrl);
 
     public function interactionStatistic($interactionStatistic);
 
@@ -188,13 +174,33 @@ interface VideoGameContract
 
     public function mainEntity($mainEntity);
 
+    public function mainEntityOfPage($mainEntityOfPage);
+
     public function material($material);
+
+    public function memoryRequirements($memoryRequirements);
 
     public function mentions($mentions);
 
+    public function musicBy($musicBy);
+
+    public function name($name);
+
+    public function numberOfPlayers($numberOfPlayers);
+
     public function offers($offers);
 
+    public function operatingSystem($operatingSystem);
+
+    public function permissions($permissions);
+
+    public function playMode($playMode);
+
     public function position($position);
+
+    public function potentialAction($potentialAction);
+
+    public function processorRequirements($processorRequirements);
 
     public function producer($producer);
 
@@ -206,15 +212,33 @@ interface VideoGameContract
 
     public function publishingPrinciples($publishingPrinciples);
 
+    public function quest($quest);
+
     public function recordedAt($recordedAt);
 
+    public function releaseNotes($releaseNotes);
+
     public function releasedEvent($releasedEvent);
+
+    public function requirements($requirements);
 
     public function review($review);
 
     public function reviews($reviews);
 
+    public function sameAs($sameAs);
+
     public function schemaVersion($schemaVersion);
+
+    public function screenshot($screenshot);
+
+    public function softwareAddOn($softwareAddOn);
+
+    public function softwareHelp($softwareHelp);
+
+    public function softwareRequirements($softwareRequirements);
+
+    public function softwareVersion($softwareVersion);
 
     public function sourceOrganization($sourceOrganization);
 
@@ -223,6 +247,12 @@ interface VideoGameContract
     public function spatialCoverage($spatialCoverage);
 
     public function sponsor($sponsor);
+
+    public function storageRequirements($storageRequirements);
+
+    public function subjectOf($subjectOf);
+
+    public function supportingData($supportingData);
 
     public function temporal($temporal);
 
@@ -234,48 +264,18 @@ interface VideoGameContract
 
     public function timeRequired($timeRequired);
 
+    public function trailer($trailer);
+
     public function translator($translator);
 
     public function typicalAgeRange($typicalAgeRange);
+
+    public function url($url);
 
     public function version($version);
 
     public function video($video);
 
     public function workExample($workExample);
-
-    public function additionalType($additionalType);
-
-    public function alternateName($alternateName);
-
-    public function description($description);
-
-    public function disambiguatingDescription($disambiguatingDescription);
-
-    public function identifier($identifier);
-
-    public function image($image);
-
-    public function mainEntityOfPage($mainEntityOfPage);
-
-    public function name($name);
-
-    public function potentialAction($potentialAction);
-
-    public function sameAs($sameAs);
-
-    public function subjectOf($subjectOf);
-
-    public function url($url);
-
-    public function characterAttribute($characterAttribute);
-
-    public function gameItem($gameItem);
-
-    public function gameLocation($gameLocation);
-
-    public function numberOfPlayers($numberOfPlayers);
-
-    public function quest($quest);
 
 }

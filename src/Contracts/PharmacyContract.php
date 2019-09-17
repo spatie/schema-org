@@ -4,9 +4,13 @@ namespace Spatie\SchemaOrg\Contracts;
 
 interface PharmacyContract
 {
+    public function additionalType($additionalType);
+
     public function address($address);
 
     public function aggregateRating($aggregateRating);
+
+    public function alternateName($alternateName);
 
     public function areaServed($areaServed);
 
@@ -21,6 +25,10 @@ interface PharmacyContract
     public function contactPoints($contactPoints);
 
     public function department($department);
+
+    public function description($description);
+
+    public function disambiguatingDescription($disambiguatingDescription);
 
     public function dissolutionDate($dissolutionDate);
 
@@ -54,6 +62,10 @@ interface PharmacyContract
 
     public function hasPOS($hasPOS);
 
+    public function identifier($identifier);
+
+    public function image($image);
+
     public function isicV4($isicV4);
 
     public function legalName($legalName);
@@ -63,6 +75,8 @@ interface PharmacyContract
     public function location($location);
 
     public function logo($logo);
+
+    public function mainEntityOfPage($mainEntityOfPage);
 
     public function makesOffer($makesOffer);
 
@@ -74,6 +88,8 @@ interface PharmacyContract
 
     public function naics($naics);
 
+    public function name($name);
+
     public function numberOfEmployees($numberOfEmployees);
 
     public function offeredBy($offeredBy);
@@ -82,11 +98,15 @@ interface PharmacyContract
 
     public function parentOrganization($parentOrganization);
 
+    public function potentialAction($potentialAction);
+
     public function publishingPrinciples($publishingPrinciples);
 
     public function review($review);
 
     public function reviews($reviews);
+
+    public function sameAs($sameAs);
 
     public function seeks($seeks);
 
@@ -98,34 +118,14 @@ interface PharmacyContract
 
     public function subOrganization($subOrganization);
 
+    public function subjectOf($subjectOf);
+
     public function taxID($taxID);
 
     public function telephone($telephone);
 
-    public function vatID($vatID);
-
-    public function additionalType($additionalType);
-
-    public function alternateName($alternateName);
-
-    public function description($description);
-
-    public function disambiguatingDescription($disambiguatingDescription);
-
-    public function identifier($identifier);
-
-    public function image($image);
-
-    public function mainEntityOfPage($mainEntityOfPage);
-
-    public function name($name);
-
-    public function potentialAction($potentialAction);
-
-    public function sameAs($sameAs);
-
-    public function subjectOf($subjectOf);
-
     public function url($url);
+
+    public function vatID($vatID);
 
 }

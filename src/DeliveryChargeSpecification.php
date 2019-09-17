@@ -16,6 +16,39 @@ use \Spatie\SchemaOrg\Contracts\ThingContract;
 class DeliveryChargeSpecification extends BaseType implements PriceSpecificationContract, StructuredValueContract, IntangibleContract, ThingContract
 {
     /**
+     * An additional type for the item, typically used for adding more specific
+     * types from external vocabularies in microdata syntax. This is a
+     * relationship between something and a class that the thing is in. In RDFa
+     * syntax, it is better to use the native RDFa syntax - the 'typeof'
+     * attribute - for multiple types. Schema.org tools may have only weaker
+     * understanding of extra types, in particular those defined externally.
+     *
+     * @param string|string[] $additionalType
+     *
+     * @return static
+     *
+     * @see http://schema.org/additionalType
+     */
+    public function additionalType($additionalType)
+    {
+        return $this->setProperty('additionalType', $additionalType);
+    }
+
+    /**
+     * An alias for the item.
+     *
+     * @param string|string[] $alternateName
+     *
+     * @return static
+     *
+     * @see http://schema.org/alternateName
+     */
+    public function alternateName($alternateName)
+    {
+        return $this->setProperty('alternateName', $alternateName);
+    }
+
+    /**
      * The delivery method(s) to which the delivery charge or payment charge
      * specification applies.
      *
@@ -45,6 +78,53 @@ class DeliveryChargeSpecification extends BaseType implements PriceSpecification
     }
 
     /**
+     * A description of the item.
+     *
+     * @param string|string[] $description
+     *
+     * @return static
+     *
+     * @see http://schema.org/description
+     */
+    public function description($description)
+    {
+        return $this->setProperty('description', $description);
+    }
+
+    /**
+     * A sub property of description. A short description of the item used to
+     * disambiguate from other, similar items. Information from other properties
+     * (in particular, name) may be necessary for the description to be useful
+     * for disambiguation.
+     *
+     * @param string|string[] $disambiguatingDescription
+     *
+     * @return static
+     *
+     * @see http://schema.org/disambiguatingDescription
+     */
+    public function disambiguatingDescription($disambiguatingDescription)
+    {
+        return $this->setProperty('disambiguatingDescription', $disambiguatingDescription);
+    }
+
+    /**
+     * The interval and unit of measurement of ordering quantities for which the
+     * offer or price specification is valid. This allows e.g. specifying that a
+     * certain freight charge is valid only for a certain quantity.
+     *
+     * @param QuantitativeValue|QuantitativeValue[] $eligibleQuantity
+     *
+     * @return static
+     *
+     * @see http://schema.org/eligibleQuantity
+     */
+    public function eligibleQuantity($eligibleQuantity)
+    {
+        return $this->setProperty('eligibleQuantity', $eligibleQuantity);
+    }
+
+    /**
      * The ISO 3166-1 (ISO 3166-1 alpha-2) or ISO 3166-2 code, the place, or the
      * GeoShape for the geo-political region(s) for which the offer or delivery
      * charge specification is valid.
@@ -60,6 +140,56 @@ class DeliveryChargeSpecification extends BaseType implements PriceSpecification
     public function eligibleRegion($eligibleRegion)
     {
         return $this->setProperty('eligibleRegion', $eligibleRegion);
+    }
+
+    /**
+     * The transaction volume, in a monetary unit, for which the offer or price
+     * specification is valid, e.g. for indicating a minimal purchasing volume,
+     * to express free shipping above a certain order volume, or to limit the
+     * acceptance of credit cards to purchases to a certain minimal amount.
+     *
+     * @param PriceSpecification|PriceSpecification[] $eligibleTransactionVolume
+     *
+     * @return static
+     *
+     * @see http://schema.org/eligibleTransactionVolume
+     */
+    public function eligibleTransactionVolume($eligibleTransactionVolume)
+    {
+        return $this->setProperty('eligibleTransactionVolume', $eligibleTransactionVolume);
+    }
+
+    /**
+     * The identifier property represents any kind of identifier for any kind of
+     * [[Thing]], such as ISBNs, GTIN codes, UUIDs etc. Schema.org provides
+     * dedicated properties for representing many of these, either as textual
+     * strings or as URL (URI) links. See [background
+     * notes](/docs/datamodel.html#identifierBg) for more details.
+     *
+     * @param PropertyValue|PropertyValue[]|string|string[] $identifier
+     *
+     * @return static
+     *
+     * @see http://schema.org/identifier
+     */
+    public function identifier($identifier)
+    {
+        return $this->setProperty('identifier', $identifier);
+    }
+
+    /**
+     * An image of the item. This can be a [[URL]] or a fully described
+     * [[ImageObject]].
+     *
+     * @param ImageObject|ImageObject[]|string|string[] $image
+     *
+     * @return static
+     *
+     * @see http://schema.org/image
+     */
+    public function image($image)
+    {
+        return $this->setProperty('image', $image);
     }
 
     /**
@@ -82,36 +212,19 @@ class DeliveryChargeSpecification extends BaseType implements PriceSpecification
     }
 
     /**
-     * The interval and unit of measurement of ordering quantities for which the
-     * offer or price specification is valid. This allows e.g. specifying that a
-     * certain freight charge is valid only for a certain quantity.
+     * Indicates a page (or other CreativeWork) for which this thing is the main
+     * entity being described. See [background
+     * notes](/docs/datamodel.html#mainEntityBackground) for details.
      *
-     * @param QuantitativeValue|QuantitativeValue[] $eligibleQuantity
-     *
-     * @return static
-     *
-     * @see http://schema.org/eligibleQuantity
-     */
-    public function eligibleQuantity($eligibleQuantity)
-    {
-        return $this->setProperty('eligibleQuantity', $eligibleQuantity);
-    }
-
-    /**
-     * The transaction volume, in a monetary unit, for which the offer or price
-     * specification is valid, e.g. for indicating a minimal purchasing volume,
-     * to express free shipping above a certain order volume, or to limit the
-     * acceptance of credit cards to purchases to a certain minimal amount.
-     *
-     * @param PriceSpecification|PriceSpecification[] $eligibleTransactionVolume
+     * @param CreativeWork|CreativeWork[]|string|string[] $mainEntityOfPage
      *
      * @return static
      *
-     * @see http://schema.org/eligibleTransactionVolume
+     * @see http://schema.org/mainEntityOfPage
      */
-    public function eligibleTransactionVolume($eligibleTransactionVolume)
+    public function mainEntityOfPage($mainEntityOfPage)
     {
-        return $this->setProperty('eligibleTransactionVolume', $eligibleTransactionVolume);
+        return $this->setProperty('mainEntityOfPage', $mainEntityOfPage);
     }
 
     /**
@@ -140,6 +253,35 @@ class DeliveryChargeSpecification extends BaseType implements PriceSpecification
     public function minPrice($minPrice)
     {
         return $this->setProperty('minPrice', $minPrice);
+    }
+
+    /**
+     * The name of the item.
+     *
+     * @param string|string[] $name
+     *
+     * @return static
+     *
+     * @see http://schema.org/name
+     */
+    public function name($name)
+    {
+        return $this->setProperty('name', $name);
+    }
+
+    /**
+     * Indicates a potential Action, which describes an idealized action in
+     * which this thing would play an 'object' role.
+     *
+     * @param Action|Action[] $potentialAction
+     *
+     * @return static
+     *
+     * @see http://schema.org/potentialAction
+     */
+    public function potentialAction($potentialAction)
+    {
+        return $this->setProperty('potentialAction', $potentialAction);
     }
 
     /**
@@ -203,192 +345,6 @@ class DeliveryChargeSpecification extends BaseType implements PriceSpecification
     }
 
     /**
-     * The date when the item becomes valid.
-     *
-     * @param \DateTimeInterface|\DateTimeInterface[] $validFrom
-     *
-     * @return static
-     *
-     * @see http://schema.org/validFrom
-     */
-    public function validFrom($validFrom)
-    {
-        return $this->setProperty('validFrom', $validFrom);
-    }
-
-    /**
-     * The date after when the item is not valid. For example the end of an
-     * offer, salary period, or a period of opening hours.
-     *
-     * @param \DateTimeInterface|\DateTimeInterface[] $validThrough
-     *
-     * @return static
-     *
-     * @see http://schema.org/validThrough
-     */
-    public function validThrough($validThrough)
-    {
-        return $this->setProperty('validThrough', $validThrough);
-    }
-
-    /**
-     * Specifies whether the applicable value-added tax (VAT) is included in the
-     * price specification or not.
-     *
-     * @param bool|bool[] $valueAddedTaxIncluded
-     *
-     * @return static
-     *
-     * @see http://schema.org/valueAddedTaxIncluded
-     */
-    public function valueAddedTaxIncluded($valueAddedTaxIncluded)
-    {
-        return $this->setProperty('valueAddedTaxIncluded', $valueAddedTaxIncluded);
-    }
-
-    /**
-     * An additional type for the item, typically used for adding more specific
-     * types from external vocabularies in microdata syntax. This is a
-     * relationship between something and a class that the thing is in. In RDFa
-     * syntax, it is better to use the native RDFa syntax - the 'typeof'
-     * attribute - for multiple types. Schema.org tools may have only weaker
-     * understanding of extra types, in particular those defined externally.
-     *
-     * @param string|string[] $additionalType
-     *
-     * @return static
-     *
-     * @see http://schema.org/additionalType
-     */
-    public function additionalType($additionalType)
-    {
-        return $this->setProperty('additionalType', $additionalType);
-    }
-
-    /**
-     * An alias for the item.
-     *
-     * @param string|string[] $alternateName
-     *
-     * @return static
-     *
-     * @see http://schema.org/alternateName
-     */
-    public function alternateName($alternateName)
-    {
-        return $this->setProperty('alternateName', $alternateName);
-    }
-
-    /**
-     * A description of the item.
-     *
-     * @param string|string[] $description
-     *
-     * @return static
-     *
-     * @see http://schema.org/description
-     */
-    public function description($description)
-    {
-        return $this->setProperty('description', $description);
-    }
-
-    /**
-     * A sub property of description. A short description of the item used to
-     * disambiguate from other, similar items. Information from other properties
-     * (in particular, name) may be necessary for the description to be useful
-     * for disambiguation.
-     *
-     * @param string|string[] $disambiguatingDescription
-     *
-     * @return static
-     *
-     * @see http://schema.org/disambiguatingDescription
-     */
-    public function disambiguatingDescription($disambiguatingDescription)
-    {
-        return $this->setProperty('disambiguatingDescription', $disambiguatingDescription);
-    }
-
-    /**
-     * The identifier property represents any kind of identifier for any kind of
-     * [[Thing]], such as ISBNs, GTIN codes, UUIDs etc. Schema.org provides
-     * dedicated properties for representing many of these, either as textual
-     * strings or as URL (URI) links. See [background
-     * notes](/docs/datamodel.html#identifierBg) for more details.
-     *
-     * @param PropertyValue|PropertyValue[]|string|string[] $identifier
-     *
-     * @return static
-     *
-     * @see http://schema.org/identifier
-     */
-    public function identifier($identifier)
-    {
-        return $this->setProperty('identifier', $identifier);
-    }
-
-    /**
-     * An image of the item. This can be a [[URL]] or a fully described
-     * [[ImageObject]].
-     *
-     * @param ImageObject|ImageObject[]|string|string[] $image
-     *
-     * @return static
-     *
-     * @see http://schema.org/image
-     */
-    public function image($image)
-    {
-        return $this->setProperty('image', $image);
-    }
-
-    /**
-     * Indicates a page (or other CreativeWork) for which this thing is the main
-     * entity being described. See [background
-     * notes](/docs/datamodel.html#mainEntityBackground) for details.
-     *
-     * @param CreativeWork|CreativeWork[]|string|string[] $mainEntityOfPage
-     *
-     * @return static
-     *
-     * @see http://schema.org/mainEntityOfPage
-     */
-    public function mainEntityOfPage($mainEntityOfPage)
-    {
-        return $this->setProperty('mainEntityOfPage', $mainEntityOfPage);
-    }
-
-    /**
-     * The name of the item.
-     *
-     * @param string|string[] $name
-     *
-     * @return static
-     *
-     * @see http://schema.org/name
-     */
-    public function name($name)
-    {
-        return $this->setProperty('name', $name);
-    }
-
-    /**
-     * Indicates a potential Action, which describes an idealized action in
-     * which this thing would play an 'object' role.
-     *
-     * @param Action|Action[] $potentialAction
-     *
-     * @return static
-     *
-     * @see http://schema.org/potentialAction
-     */
-    public function potentialAction($potentialAction)
-    {
-        return $this->setProperty('potentialAction', $potentialAction);
-    }
-
-    /**
      * URL of a reference Web page that unambiguously indicates the item's
      * identity. E.g. the URL of the item's Wikipedia page, Wikidata entry, or
      * official website.
@@ -430,6 +386,50 @@ class DeliveryChargeSpecification extends BaseType implements PriceSpecification
     public function url($url)
     {
         return $this->setProperty('url', $url);
+    }
+
+    /**
+     * The date when the item becomes valid.
+     *
+     * @param \DateTimeInterface|\DateTimeInterface[] $validFrom
+     *
+     * @return static
+     *
+     * @see http://schema.org/validFrom
+     */
+    public function validFrom($validFrom)
+    {
+        return $this->setProperty('validFrom', $validFrom);
+    }
+
+    /**
+     * The date after when the item is not valid. For example the end of an
+     * offer, salary period, or a period of opening hours.
+     *
+     * @param \DateTimeInterface|\DateTimeInterface[] $validThrough
+     *
+     * @return static
+     *
+     * @see http://schema.org/validThrough
+     */
+    public function validThrough($validThrough)
+    {
+        return $this->setProperty('validThrough', $validThrough);
+    }
+
+    /**
+     * Specifies whether the applicable value-added tax (VAT) is included in the
+     * price specification or not.
+     *
+     * @param bool|bool[] $valueAddedTaxIncluded
+     *
+     * @return static
+     *
+     * @see http://schema.org/valueAddedTaxIncluded
+     */
+    public function valueAddedTaxIncluded($valueAddedTaxIncluded)
+    {
+        return $this->setProperty('valueAddedTaxIncluded', $valueAddedTaxIncluded);
     }
 
 }

@@ -4,11 +4,19 @@ namespace Spatie\SchemaOrg\Contracts;
 
 interface JobPostingContract
 {
+    public function additionalType($additionalType);
+
+    public function alternateName($alternateName);
+
     public function baseSalary($baseSalary);
 
     public function benefits($benefits);
 
     public function datePosted($datePosted);
+
+    public function description($description);
+
+    public function disambiguatingDescription($disambiguatingDescription);
 
     public function educationRequirements($educationRequirements);
 
@@ -20,6 +28,10 @@ interface JobPostingContract
 
     public function hiringOrganization($hiringOrganization);
 
+    public function identifier($identifier);
+
+    public function image($image);
+
     public function incentiveCompensation($incentiveCompensation);
 
     public function incentives($incentives);
@@ -30,7 +42,13 @@ interface JobPostingContract
 
     public function jobLocation($jobLocation);
 
+    public function mainEntityOfPage($mainEntityOfPage);
+
+    public function name($name);
+
     public function occupationalCategory($occupationalCategory);
+
+    public function potentialAction($potentialAction);
 
     public function qualifications($qualifications);
 
@@ -40,38 +58,20 @@ interface JobPostingContract
 
     public function salaryCurrency($salaryCurrency);
 
+    public function sameAs($sameAs);
+
     public function skills($skills);
 
     public function specialCommitments($specialCommitments);
 
+    public function subjectOf($subjectOf);
+
     public function title($title);
+
+    public function url($url);
 
     public function validThrough($validThrough);
 
     public function workHours($workHours);
-
-    public function additionalType($additionalType);
-
-    public function alternateName($alternateName);
-
-    public function description($description);
-
-    public function disambiguatingDescription($disambiguatingDescription);
-
-    public function identifier($identifier);
-
-    public function image($image);
-
-    public function mainEntityOfPage($mainEntityOfPage);
-
-    public function name($name);
-
-    public function potentialAction($potentialAction);
-
-    public function sameAs($sameAs);
-
-    public function subjectOf($subjectOf);
-
-    public function url($url);
 
 }

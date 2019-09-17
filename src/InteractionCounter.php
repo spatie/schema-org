@@ -16,22 +16,6 @@ use \Spatie\SchemaOrg\Contracts\ThingContract;
 class InteractionCounter extends BaseType implements StructuredValueContract, IntangibleContract, ThingContract
 {
     /**
-     * The Action representing the type of interaction. For up votes, +1s, etc.
-     * use [[LikeAction]]. For down votes use [[DislikeAction]]. Otherwise, use
-     * the most specific Action.
-     *
-     * @param Action|Action[] $interactionType
-     *
-     * @return static
-     *
-     * @see http://schema.org/interactionType
-     */
-    public function interactionType($interactionType)
-    {
-        return $this->setProperty('interactionType', $interactionType);
-    }
-
-    /**
      * An additional type for the item, typically used for adding more specific
      * types from external vocabularies in microdata syntax. This is a
      * relationship between something and a class that the thing is in. In RDFa
@@ -126,6 +110,22 @@ class InteractionCounter extends BaseType implements StructuredValueContract, In
     public function image($image)
     {
         return $this->setProperty('image', $image);
+    }
+
+    /**
+     * The Action representing the type of interaction. For up votes, +1s, etc.
+     * use [[LikeAction]]. For down votes use [[DislikeAction]]. Otherwise, use
+     * the most specific Action.
+     *
+     * @param Action|Action[] $interactionType
+     *
+     * @return static
+     *
+     * @see http://schema.org/interactionType
+     */
+    public function interactionType($interactionType)
+    {
+        return $this->setProperty('interactionType', $interactionType);
     }
 
     /**

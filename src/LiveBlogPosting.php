@@ -18,191 +18,6 @@ use \Spatie\SchemaOrg\Contracts\ThingContract;
 class LiveBlogPosting extends BaseType implements BlogPostingContract, SocialMediaPostingContract, ArticleContract, CreativeWorkContract, ThingContract
 {
     /**
-     * The time when the live blog will stop covering the Event. Note that
-     * coverage may continue after the Event concludes.
-     *
-     * @param \DateTimeInterface|\DateTimeInterface[] $coverageEndTime
-     *
-     * @return static
-     *
-     * @see http://schema.org/coverageEndTime
-     */
-    public function coverageEndTime($coverageEndTime)
-    {
-        return $this->setProperty('coverageEndTime', $coverageEndTime);
-    }
-
-    /**
-     * The time when the live blog will begin covering the Event. Note that
-     * coverage may begin before the Event's start time. The LiveBlogPosting may
-     * also be created before coverage begins.
-     *
-     * @param \DateTimeInterface|\DateTimeInterface[] $coverageStartTime
-     *
-     * @return static
-     *
-     * @see http://schema.org/coverageStartTime
-     */
-    public function coverageStartTime($coverageStartTime)
-    {
-        return $this->setProperty('coverageStartTime', $coverageStartTime);
-    }
-
-    /**
-     * An update to the LiveBlog.
-     *
-     * @param BlogPosting|BlogPosting[] $liveBlogUpdate
-     *
-     * @return static
-     *
-     * @see http://schema.org/liveBlogUpdate
-     */
-    public function liveBlogUpdate($liveBlogUpdate)
-    {
-        return $this->setProperty('liveBlogUpdate', $liveBlogUpdate);
-    }
-
-    /**
-     * A CreativeWork such as an image, video, or audio clip shared as part of
-     * this posting.
-     *
-     * @param CreativeWork|CreativeWork[] $sharedContent
-     *
-     * @return static
-     *
-     * @see http://schema.org/sharedContent
-     */
-    public function sharedContent($sharedContent)
-    {
-        return $this->setProperty('sharedContent', $sharedContent);
-    }
-
-    /**
-     * The actual body of the article.
-     *
-     * @param string|string[] $articleBody
-     *
-     * @return static
-     *
-     * @see http://schema.org/articleBody
-     */
-    public function articleBody($articleBody)
-    {
-        return $this->setProperty('articleBody', $articleBody);
-    }
-
-    /**
-     * Articles may belong to one or more 'sections' in a magazine or newspaper,
-     * such as Sports, Lifestyle, etc.
-     *
-     * @param string|string[] $articleSection
-     *
-     * @return static
-     *
-     * @see http://schema.org/articleSection
-     */
-    public function articleSection($articleSection)
-    {
-        return $this->setProperty('articleSection', $articleSection);
-    }
-
-    /**
-     * The page on which the work ends; for example "138" or "xvi".
-     *
-     * @param int|int[]|string|string[] $pageEnd
-     *
-     * @return static
-     *
-     * @see http://schema.org/pageEnd
-     */
-    public function pageEnd($pageEnd)
-    {
-        return $this->setProperty('pageEnd', $pageEnd);
-    }
-
-    /**
-     * The page on which the work starts; for example "135" or "xiii".
-     *
-     * @param int|int[]|string|string[] $pageStart
-     *
-     * @return static
-     *
-     * @see http://schema.org/pageStart
-     */
-    public function pageStart($pageStart)
-    {
-        return $this->setProperty('pageStart', $pageStart);
-    }
-
-    /**
-     * Any description of pages that is not separated into pageStart and
-     * pageEnd; for example, "1-6, 9, 55" or "10-12, 46-49".
-     *
-     * @param string|string[] $pagination
-     *
-     * @return static
-     *
-     * @see http://schema.org/pagination
-     */
-    public function pagination($pagination)
-    {
-        return $this->setProperty('pagination', $pagination);
-    }
-
-    /**
-     * Indicates sections of a Web page that are particularly 'speakable' in the
-     * sense of being highlighted as being especially appropriate for
-     * text-to-speech conversion. Other sections of a page may also be usefully
-     * spoken in particular circumstances; the 'speakable' property serves to
-     * indicate the parts most likely to be generally useful for speech.
-     * 
-     * The *speakable* property can be repeated an arbitrary number of times,
-     * with three kinds of possible 'content-locator' values:
-     * 
-     * 1.) *id-value* URL references - uses *id-value* of an element in the page
-     * being annotated. The simplest use of *speakable* has (potentially
-     * relative) URL values, referencing identified sections of the document
-     * concerned.
-     * 
-     * 2.) CSS Selectors - addresses content in the annotated page, eg. via
-     * class attribute. Use the [[cssSelector]] property.
-     * 
-     * 3.)  XPaths - addresses content via XPaths (assuming an XML view of the
-     * content). Use the [[xpath]] property.
-     * 
-     * 
-     * For more sophisticated markup of speakable sections beyond simple ID
-     * references, either CSS selectors or XPath expressions to pick out
-     * document section(s) as speakable. For this
-     * we define a supporting type, [[SpeakableSpecification]]  which is defined
-     * to be a possible value of the *speakable* property.
-     *
-     * @param SpeakableSpecification|SpeakableSpecification[]|string|string[] $speakable
-     *
-     * @return static
-     *
-     * @see http://schema.org/speakable
-     */
-    public function speakable($speakable)
-    {
-        return $this->setProperty('speakable', $speakable);
-    }
-
-    /**
-     * The number of words in the text of the Article.
-     *
-     * @param int|int[] $wordCount
-     *
-     * @return static
-     *
-     * @see http://schema.org/wordCount
-     */
-    public function wordCount($wordCount)
-    {
-        return $this->setProperty('wordCount', $wordCount);
-    }
-
-    /**
      * The subject matter of the content.
      *
      * @param Thing|Thing[] $about
@@ -347,6 +162,25 @@ class LiveBlogPosting extends BaseType implements BlogPostingContract, SocialMed
     }
 
     /**
+     * An additional type for the item, typically used for adding more specific
+     * types from external vocabularies in microdata syntax. This is a
+     * relationship between something and a class that the thing is in. In RDFa
+     * syntax, it is better to use the native RDFa syntax - the 'typeof'
+     * attribute - for multiple types. Schema.org tools may have only weaker
+     * understanding of extra types, in particular those defined externally.
+     *
+     * @param string|string[] $additionalType
+     *
+     * @return static
+     *
+     * @see http://schema.org/additionalType
+     */
+    public function additionalType($additionalType)
+    {
+        return $this->setProperty('additionalType', $additionalType);
+    }
+
+    /**
      * The overall rating, based on a collection of reviews or ratings, of the
      * item.
      *
@@ -362,6 +196,20 @@ class LiveBlogPosting extends BaseType implements BlogPostingContract, SocialMed
     }
 
     /**
+     * An alias for the item.
+     *
+     * @param string|string[] $alternateName
+     *
+     * @return static
+     *
+     * @see http://schema.org/alternateName
+     */
+    public function alternateName($alternateName)
+    {
+        return $this->setProperty('alternateName', $alternateName);
+    }
+
+    /**
      * A secondary title of the CreativeWork.
      *
      * @param string|string[] $alternativeHeadline
@@ -373,6 +221,35 @@ class LiveBlogPosting extends BaseType implements BlogPostingContract, SocialMed
     public function alternativeHeadline($alternativeHeadline)
     {
         return $this->setProperty('alternativeHeadline', $alternativeHeadline);
+    }
+
+    /**
+     * The actual body of the article.
+     *
+     * @param string|string[] $articleBody
+     *
+     * @return static
+     *
+     * @see http://schema.org/articleBody
+     */
+    public function articleBody($articleBody)
+    {
+        return $this->setProperty('articleBody', $articleBody);
+    }
+
+    /**
+     * Articles may belong to one or more 'sections' in a magazine or newspaper,
+     * such as Sports, Lifestyle, etc.
+     *
+     * @param string|string[] $articleSection
+     *
+     * @return static
+     *
+     * @see http://schema.org/articleSection
+     */
+    public function articleSection($articleSection)
+    {
+        return $this->setProperty('articleSection', $articleSection);
     }
 
     /**
@@ -594,6 +471,37 @@ class LiveBlogPosting extends BaseType implements BlogPostingContract, SocialMed
     }
 
     /**
+     * The time when the live blog will stop covering the Event. Note that
+     * coverage may continue after the Event concludes.
+     *
+     * @param \DateTimeInterface|\DateTimeInterface[] $coverageEndTime
+     *
+     * @return static
+     *
+     * @see http://schema.org/coverageEndTime
+     */
+    public function coverageEndTime($coverageEndTime)
+    {
+        return $this->setProperty('coverageEndTime', $coverageEndTime);
+    }
+
+    /**
+     * The time when the live blog will begin covering the Event. Note that
+     * coverage may begin before the Event's start time. The LiveBlogPosting may
+     * also be created before coverage begins.
+     *
+     * @param \DateTimeInterface|\DateTimeInterface[] $coverageStartTime
+     *
+     * @return static
+     *
+     * @see http://schema.org/coverageStartTime
+     */
+    public function coverageStartTime($coverageStartTime)
+    {
+        return $this->setProperty('coverageStartTime', $coverageStartTime);
+    }
+
+    /**
      * The creator/author of this CreativeWork. This is the same as the Author
      * property for CreativeWork.
      *
@@ -650,6 +558,37 @@ class LiveBlogPosting extends BaseType implements BlogPostingContract, SocialMed
     public function datePublished($datePublished)
     {
         return $this->setProperty('datePublished', $datePublished);
+    }
+
+    /**
+     * A description of the item.
+     *
+     * @param string|string[] $description
+     *
+     * @return static
+     *
+     * @see http://schema.org/description
+     */
+    public function description($description)
+    {
+        return $this->setProperty('description', $description);
+    }
+
+    /**
+     * A sub property of description. A short description of the item used to
+     * disambiguate from other, similar items. Information from other properties
+     * (in particular, name) may be necessary for the description to be useful
+     * for disambiguation.
+     *
+     * @param string|string[] $disambiguatingDescription
+     *
+     * @return static
+     *
+     * @see http://schema.org/disambiguatingDescription
+     */
+    public function disambiguatingDescription($disambiguatingDescription)
+    {
+        return $this->setProperty('disambiguatingDescription', $disambiguatingDescription);
     }
 
     /**
@@ -878,6 +817,39 @@ class LiveBlogPosting extends BaseType implements BlogPostingContract, SocialMed
     }
 
     /**
+     * The identifier property represents any kind of identifier for any kind of
+     * [[Thing]], such as ISBNs, GTIN codes, UUIDs etc. Schema.org provides
+     * dedicated properties for representing many of these, either as textual
+     * strings or as URL (URI) links. See [background
+     * notes](/docs/datamodel.html#identifierBg) for more details.
+     *
+     * @param PropertyValue|PropertyValue[]|string|string[] $identifier
+     *
+     * @return static
+     *
+     * @see http://schema.org/identifier
+     */
+    public function identifier($identifier)
+    {
+        return $this->setProperty('identifier', $identifier);
+    }
+
+    /**
+     * An image of the item. This can be a [[URL]] or a fully described
+     * [[ImageObject]].
+     *
+     * @param ImageObject|ImageObject[]|string|string[] $image
+     *
+     * @return static
+     *
+     * @see http://schema.org/image
+     */
+    public function image($image)
+    {
+        return $this->setProperty('image', $image);
+    }
+
+    /**
      * The language of the content or performance or used in an action. Please
      * use one of the language codes from the [IETF BCP 47
      * standard](http://tools.ietf.org/html/bcp47). See also
@@ -1045,6 +1017,20 @@ class LiveBlogPosting extends BaseType implements BlogPostingContract, SocialMed
     }
 
     /**
+     * An update to the LiveBlog.
+     *
+     * @param BlogPosting|BlogPosting[] $liveBlogUpdate
+     *
+     * @return static
+     *
+     * @see http://schema.org/liveBlogUpdate
+     */
+    public function liveBlogUpdate($liveBlogUpdate)
+    {
+        return $this->setProperty('liveBlogUpdate', $liveBlogUpdate);
+    }
+
+    /**
      * The location where the CreativeWork was created, which may not be the
      * same as the location depicted in the CreativeWork.
      *
@@ -1072,6 +1058,22 @@ class LiveBlogPosting extends BaseType implements BlogPostingContract, SocialMed
     public function mainEntity($mainEntity)
     {
         return $this->setProperty('mainEntity', $mainEntity);
+    }
+
+    /**
+     * Indicates a page (or other CreativeWork) for which this thing is the main
+     * entity being described. See [background
+     * notes](/docs/datamodel.html#mainEntityBackground) for details.
+     *
+     * @param CreativeWork|CreativeWork[]|string|string[] $mainEntityOfPage
+     *
+     * @return static
+     *
+     * @see http://schema.org/mainEntityOfPage
+     */
+    public function mainEntityOfPage($mainEntityOfPage)
+    {
+        return $this->setProperty('mainEntityOfPage', $mainEntityOfPage);
     }
 
     /**
@@ -1105,6 +1107,20 @@ class LiveBlogPosting extends BaseType implements BlogPostingContract, SocialMed
     }
 
     /**
+     * The name of the item.
+     *
+     * @param string|string[] $name
+     *
+     * @return static
+     *
+     * @see http://schema.org/name
+     */
+    public function name($name)
+    {
+        return $this->setProperty('name', $name);
+    }
+
+    /**
      * An offer to provide this item&#x2014;for example, an offer to sell a
      * product, rent the DVD of a movie, perform a service, or give away tickets
      * to an event.
@@ -1121,6 +1137,49 @@ class LiveBlogPosting extends BaseType implements BlogPostingContract, SocialMed
     }
 
     /**
+     * The page on which the work ends; for example "138" or "xvi".
+     *
+     * @param int|int[]|string|string[] $pageEnd
+     *
+     * @return static
+     *
+     * @see http://schema.org/pageEnd
+     */
+    public function pageEnd($pageEnd)
+    {
+        return $this->setProperty('pageEnd', $pageEnd);
+    }
+
+    /**
+     * The page on which the work starts; for example "135" or "xiii".
+     *
+     * @param int|int[]|string|string[] $pageStart
+     *
+     * @return static
+     *
+     * @see http://schema.org/pageStart
+     */
+    public function pageStart($pageStart)
+    {
+        return $this->setProperty('pageStart', $pageStart);
+    }
+
+    /**
+     * Any description of pages that is not separated into pageStart and
+     * pageEnd; for example, "1-6, 9, 55" or "10-12, 46-49".
+     *
+     * @param string|string[] $pagination
+     *
+     * @return static
+     *
+     * @see http://schema.org/pagination
+     */
+    public function pagination($pagination)
+    {
+        return $this->setProperty('pagination', $pagination);
+    }
+
+    /**
      * The position of an item in a series or sequence of items.
      *
      * @param int|int[]|string|string[] $position
@@ -1132,6 +1191,21 @@ class LiveBlogPosting extends BaseType implements BlogPostingContract, SocialMed
     public function position($position)
     {
         return $this->setProperty('position', $position);
+    }
+
+    /**
+     * Indicates a potential Action, which describes an idealized action in
+     * which this thing would play an 'object' role.
+     *
+     * @param Action|Action[] $potentialAction
+     *
+     * @return static
+     *
+     * @see http://schema.org/potentialAction
+     */
+    public function potentialAction($potentialAction)
+    {
+        return $this->setProperty('potentialAction', $potentialAction);
     }
 
     /**
@@ -1276,6 +1350,22 @@ class LiveBlogPosting extends BaseType implements BlogPostingContract, SocialMed
     }
 
     /**
+     * URL of a reference Web page that unambiguously indicates the item's
+     * identity. E.g. the URL of the item's Wikipedia page, Wikidata entry, or
+     * official website.
+     *
+     * @param string|string[] $sameAs
+     *
+     * @return static
+     *
+     * @see http://schema.org/sameAs
+     */
+    public function sameAs($sameAs)
+    {
+        return $this->setProperty('sameAs', $sameAs);
+    }
+
+    /**
      * Indicates (by URL or string) a particular version of a schema used in
      * some CreativeWork. For example, a document could declare a schemaVersion
      * using an URL such as http://schema.org/version/2.0/ if precise indication
@@ -1290,6 +1380,21 @@ class LiveBlogPosting extends BaseType implements BlogPostingContract, SocialMed
     public function schemaVersion($schemaVersion)
     {
         return $this->setProperty('schemaVersion', $schemaVersion);
+    }
+
+    /**
+     * A CreativeWork such as an image, video, or audio clip shared as part of
+     * this posting.
+     *
+     * @param CreativeWork|CreativeWork[] $sharedContent
+     *
+     * @return static
+     *
+     * @see http://schema.org/sharedContent
+     */
+    public function sharedContent($sharedContent)
+    {
+        return $this->setProperty('sharedContent', $sharedContent);
     }
 
     /**
@@ -1342,6 +1447,45 @@ class LiveBlogPosting extends BaseType implements BlogPostingContract, SocialMed
     }
 
     /**
+     * Indicates sections of a Web page that are particularly 'speakable' in the
+     * sense of being highlighted as being especially appropriate for
+     * text-to-speech conversion. Other sections of a page may also be usefully
+     * spoken in particular circumstances; the 'speakable' property serves to
+     * indicate the parts most likely to be generally useful for speech.
+     * 
+     * The *speakable* property can be repeated an arbitrary number of times,
+     * with three kinds of possible 'content-locator' values:
+     * 
+     * 1.) *id-value* URL references - uses *id-value* of an element in the page
+     * being annotated. The simplest use of *speakable* has (potentially
+     * relative) URL values, referencing identified sections of the document
+     * concerned.
+     * 
+     * 2.) CSS Selectors - addresses content in the annotated page, eg. via
+     * class attribute. Use the [[cssSelector]] property.
+     * 
+     * 3.)  XPaths - addresses content via XPaths (assuming an XML view of the
+     * content). Use the [[xpath]] property.
+     * 
+     * 
+     * For more sophisticated markup of speakable sections beyond simple ID
+     * references, either CSS selectors or XPath expressions to pick out
+     * document section(s) as speakable. For this
+     * we define a supporting type, [[SpeakableSpecification]]  which is defined
+     * to be a possible value of the *speakable* property.
+     *
+     * @param SpeakableSpecification|SpeakableSpecification[]|string|string[] $speakable
+     *
+     * @return static
+     *
+     * @see http://schema.org/speakable
+     */
+    public function speakable($speakable)
+    {
+        return $this->setProperty('speakable', $speakable);
+    }
+
+    /**
      * A person or organization that supports a thing through a pledge, promise,
      * or financial contribution. e.g. a sponsor of a Medical Study or a
      * corporate sponsor of an event.
@@ -1355,6 +1499,20 @@ class LiveBlogPosting extends BaseType implements BlogPostingContract, SocialMed
     public function sponsor($sponsor)
     {
         return $this->setProperty('sponsor', $sponsor);
+    }
+
+    /**
+     * A CreativeWork or Event about this Thing.
+     *
+     * @param CreativeWork|CreativeWork[]|Event|Event[] $subjectOf
+     *
+     * @return static
+     *
+     * @see http://schema.org/subjectOf
+     */
+    public function subjectOf($subjectOf)
+    {
+        return $this->setProperty('subjectOf', $subjectOf);
     }
 
     /**
@@ -1479,6 +1637,20 @@ class LiveBlogPosting extends BaseType implements BlogPostingContract, SocialMed
     }
 
     /**
+     * URL of the item.
+     *
+     * @param string|string[] $url
+     *
+     * @return static
+     *
+     * @see http://schema.org/url
+     */
+    public function url($url)
+    {
+        return $this->setProperty('url', $url);
+    }
+
+    /**
      * The version of the CreativeWork embodied by a specified resource.
      *
      * @param float|float[]|int|int[]|string|string[] $version
@@ -1507,6 +1679,20 @@ class LiveBlogPosting extends BaseType implements BlogPostingContract, SocialMed
     }
 
     /**
+     * The number of words in the text of the Article.
+     *
+     * @param int|int[] $wordCount
+     *
+     * @return static
+     *
+     * @see http://schema.org/wordCount
+     */
+    public function wordCount($wordCount)
+    {
+        return $this->setProperty('wordCount', $wordCount);
+    }
+
+    /**
      * Example/instance/realization/derivation of the concept of this creative
      * work. eg. The paperback edition, first edition, or eBook.
      *
@@ -1519,192 +1705,6 @@ class LiveBlogPosting extends BaseType implements BlogPostingContract, SocialMed
     public function workExample($workExample)
     {
         return $this->setProperty('workExample', $workExample);
-    }
-
-    /**
-     * An additional type for the item, typically used for adding more specific
-     * types from external vocabularies in microdata syntax. This is a
-     * relationship between something and a class that the thing is in. In RDFa
-     * syntax, it is better to use the native RDFa syntax - the 'typeof'
-     * attribute - for multiple types. Schema.org tools may have only weaker
-     * understanding of extra types, in particular those defined externally.
-     *
-     * @param string|string[] $additionalType
-     *
-     * @return static
-     *
-     * @see http://schema.org/additionalType
-     */
-    public function additionalType($additionalType)
-    {
-        return $this->setProperty('additionalType', $additionalType);
-    }
-
-    /**
-     * An alias for the item.
-     *
-     * @param string|string[] $alternateName
-     *
-     * @return static
-     *
-     * @see http://schema.org/alternateName
-     */
-    public function alternateName($alternateName)
-    {
-        return $this->setProperty('alternateName', $alternateName);
-    }
-
-    /**
-     * A description of the item.
-     *
-     * @param string|string[] $description
-     *
-     * @return static
-     *
-     * @see http://schema.org/description
-     */
-    public function description($description)
-    {
-        return $this->setProperty('description', $description);
-    }
-
-    /**
-     * A sub property of description. A short description of the item used to
-     * disambiguate from other, similar items. Information from other properties
-     * (in particular, name) may be necessary for the description to be useful
-     * for disambiguation.
-     *
-     * @param string|string[] $disambiguatingDescription
-     *
-     * @return static
-     *
-     * @see http://schema.org/disambiguatingDescription
-     */
-    public function disambiguatingDescription($disambiguatingDescription)
-    {
-        return $this->setProperty('disambiguatingDescription', $disambiguatingDescription);
-    }
-
-    /**
-     * The identifier property represents any kind of identifier for any kind of
-     * [[Thing]], such as ISBNs, GTIN codes, UUIDs etc. Schema.org provides
-     * dedicated properties for representing many of these, either as textual
-     * strings or as URL (URI) links. See [background
-     * notes](/docs/datamodel.html#identifierBg) for more details.
-     *
-     * @param PropertyValue|PropertyValue[]|string|string[] $identifier
-     *
-     * @return static
-     *
-     * @see http://schema.org/identifier
-     */
-    public function identifier($identifier)
-    {
-        return $this->setProperty('identifier', $identifier);
-    }
-
-    /**
-     * An image of the item. This can be a [[URL]] or a fully described
-     * [[ImageObject]].
-     *
-     * @param ImageObject|ImageObject[]|string|string[] $image
-     *
-     * @return static
-     *
-     * @see http://schema.org/image
-     */
-    public function image($image)
-    {
-        return $this->setProperty('image', $image);
-    }
-
-    /**
-     * Indicates a page (or other CreativeWork) for which this thing is the main
-     * entity being described. See [background
-     * notes](/docs/datamodel.html#mainEntityBackground) for details.
-     *
-     * @param CreativeWork|CreativeWork[]|string|string[] $mainEntityOfPage
-     *
-     * @return static
-     *
-     * @see http://schema.org/mainEntityOfPage
-     */
-    public function mainEntityOfPage($mainEntityOfPage)
-    {
-        return $this->setProperty('mainEntityOfPage', $mainEntityOfPage);
-    }
-
-    /**
-     * The name of the item.
-     *
-     * @param string|string[] $name
-     *
-     * @return static
-     *
-     * @see http://schema.org/name
-     */
-    public function name($name)
-    {
-        return $this->setProperty('name', $name);
-    }
-
-    /**
-     * Indicates a potential Action, which describes an idealized action in
-     * which this thing would play an 'object' role.
-     *
-     * @param Action|Action[] $potentialAction
-     *
-     * @return static
-     *
-     * @see http://schema.org/potentialAction
-     */
-    public function potentialAction($potentialAction)
-    {
-        return $this->setProperty('potentialAction', $potentialAction);
-    }
-
-    /**
-     * URL of a reference Web page that unambiguously indicates the item's
-     * identity. E.g. the URL of the item's Wikipedia page, Wikidata entry, or
-     * official website.
-     *
-     * @param string|string[] $sameAs
-     *
-     * @return static
-     *
-     * @see http://schema.org/sameAs
-     */
-    public function sameAs($sameAs)
-    {
-        return $this->setProperty('sameAs', $sameAs);
-    }
-
-    /**
-     * A CreativeWork or Event about this Thing.
-     *
-     * @param CreativeWork|CreativeWork[]|Event|Event[] $subjectOf
-     *
-     * @return static
-     *
-     * @see http://schema.org/subjectOf
-     */
-    public function subjectOf($subjectOf)
-    {
-        return $this->setProperty('subjectOf', $subjectOf);
-    }
-
-    /**
-     * URL of the item.
-     *
-     * @param string|string[] $url
-     *
-     * @return static
-     *
-     * @see http://schema.org/url
-     */
-    public function url($url)
-    {
-        return $this->setProperty('url', $url);
     }
 
 }

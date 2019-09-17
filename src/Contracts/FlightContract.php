@@ -4,13 +4,19 @@ namespace Spatie\SchemaOrg\Contracts;
 
 interface FlightContract
 {
+    public function additionalType($additionalType);
+
     public function aircraft($aircraft);
+
+    public function alternateName($alternateName);
 
     public function arrivalAirport($arrivalAirport);
 
     public function arrivalGate($arrivalGate);
 
     public function arrivalTerminal($arrivalTerminal);
+
+    public function arrivalTime($arrivalTime);
 
     public function boardingPolicy($boardingPolicy);
 
@@ -22,33 +28,17 @@ interface FlightContract
 
     public function departureTerminal($departureTerminal);
 
+    public function departureTime($departureTime);
+
+    public function description($description);
+
+    public function disambiguatingDescription($disambiguatingDescription);
+
     public function estimatedFlightDuration($estimatedFlightDuration);
 
     public function flightDistance($flightDistance);
 
     public function flightNumber($flightNumber);
-
-    public function mealService($mealService);
-
-    public function seller($seller);
-
-    public function webCheckinTime($webCheckinTime);
-
-    public function arrivalTime($arrivalTime);
-
-    public function departureTime($departureTime);
-
-    public function offers($offers);
-
-    public function provider($provider);
-
-    public function additionalType($additionalType);
-
-    public function alternateName($alternateName);
-
-    public function description($description);
-
-    public function disambiguatingDescription($disambiguatingDescription);
 
     public function identifier($identifier);
 
@@ -56,14 +46,24 @@ interface FlightContract
 
     public function mainEntityOfPage($mainEntityOfPage);
 
+    public function mealService($mealService);
+
     public function name($name);
+
+    public function offers($offers);
 
     public function potentialAction($potentialAction);
 
+    public function provider($provider);
+
     public function sameAs($sameAs);
+
+    public function seller($seller);
 
     public function subjectOf($subjectOf);
 
     public function url($url);
+
+    public function webCheckinTime($webCheckinTime);
 
 }

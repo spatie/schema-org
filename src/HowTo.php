@@ -15,144 +15,6 @@ use \Spatie\SchemaOrg\Contracts\ThingContract;
 class HowTo extends BaseType implements CreativeWorkContract, ThingContract
 {
     /**
-     * The estimated cost of the supply or supplies consumed when performing
-     * instructions.
-     *
-     * @param MonetaryAmount|MonetaryAmount[]|string|string[] $estimatedCost
-     *
-     * @return static
-     *
-     * @see http://schema.org/estimatedCost
-     */
-    public function estimatedCost($estimatedCost)
-    {
-        return $this->setProperty('estimatedCost', $estimatedCost);
-    }
-
-    /**
-     * The length of time it takes to perform instructions or a direction (not
-     * including time to prepare the supplies), in [ISO 8601 duration
-     * format](http://en.wikipedia.org/wiki/ISO_8601).
-     *
-     * @param Duration|Duration[] $performTime
-     *
-     * @return static
-     *
-     * @see http://schema.org/performTime
-     */
-    public function performTime($performTime)
-    {
-        return $this->setProperty('performTime', $performTime);
-    }
-
-    /**
-     * The length of time it takes to prepare the items to be used in
-     * instructions or a direction, in [ISO 8601 duration
-     * format](http://en.wikipedia.org/wiki/ISO_8601).
-     *
-     * @param Duration|Duration[] $prepTime
-     *
-     * @return static
-     *
-     * @see http://schema.org/prepTime
-     */
-    public function prepTime($prepTime)
-    {
-        return $this->setProperty('prepTime', $prepTime);
-    }
-
-    /**
-     * A single step item (as HowToStep, text, document, video, etc.) or a
-     * HowToSection.
-     *
-     * @param CreativeWork|CreativeWork[]|HowToSection|HowToSection[]|HowToStep|HowToStep[]|string|string[] $step
-     *
-     * @return static
-     *
-     * @see http://schema.org/step
-     */
-    public function step($step)
-    {
-        return $this->setProperty('step', $step);
-    }
-
-    /**
-     * A single step item (as HowToStep, text, document, video, etc.) or a
-     * HowToSection (originally misnamed 'steps'; 'step' is preferred).
-     *
-     * @param CreativeWork|CreativeWork[]|ItemList|ItemList[]|string|string[] $steps
-     *
-     * @return static
-     *
-     * @see http://schema.org/steps
-     */
-    public function steps($steps)
-    {
-        return $this->setProperty('steps', $steps);
-    }
-
-    /**
-     * A sub-property of instrument. A supply consumed when performing
-     * instructions or a direction.
-     *
-     * @param HowToSupply|HowToSupply[]|string|string[] $supply
-     *
-     * @return static
-     *
-     * @see http://schema.org/supply
-     */
-    public function supply($supply)
-    {
-        return $this->setProperty('supply', $supply);
-    }
-
-    /**
-     * A sub property of instrument. An object used (but not consumed) when
-     * performing instructions or a direction.
-     *
-     * @param HowToTool|HowToTool[]|string|string[] $tool
-     *
-     * @return static
-     *
-     * @see http://schema.org/tool
-     */
-    public function tool($tool)
-    {
-        return $this->setProperty('tool', $tool);
-    }
-
-    /**
-     * The total time required to perform instructions or a direction (including
-     * time to prepare the supplies), in [ISO 8601 duration
-     * format](http://en.wikipedia.org/wiki/ISO_8601).
-     *
-     * @param Duration|Duration[] $totalTime
-     *
-     * @return static
-     *
-     * @see http://schema.org/totalTime
-     */
-    public function totalTime($totalTime)
-    {
-        return $this->setProperty('totalTime', $totalTime);
-    }
-
-    /**
-     * The quantity that results by performing instructions. For example, a
-     * paper airplane, 10 personalized candles.
-     *
-     * @param QuantitativeValue|QuantitativeValue[]|string|string[] $yield
-     *
-     * @return static
-     *
-     * @see http://schema.org/yield
-     */
-    public function yield($yield)
-    {
-        return $this->setProperty('yield', $yield);
-    }
-
-    /**
      * The subject matter of the content.
      *
      * @param Thing|Thing[] $about
@@ -297,6 +159,25 @@ class HowTo extends BaseType implements CreativeWorkContract, ThingContract
     }
 
     /**
+     * An additional type for the item, typically used for adding more specific
+     * types from external vocabularies in microdata syntax. This is a
+     * relationship between something and a class that the thing is in. In RDFa
+     * syntax, it is better to use the native RDFa syntax - the 'typeof'
+     * attribute - for multiple types. Schema.org tools may have only weaker
+     * understanding of extra types, in particular those defined externally.
+     *
+     * @param string|string[] $additionalType
+     *
+     * @return static
+     *
+     * @see http://schema.org/additionalType
+     */
+    public function additionalType($additionalType)
+    {
+        return $this->setProperty('additionalType', $additionalType);
+    }
+
+    /**
      * The overall rating, based on a collection of reviews or ratings, of the
      * item.
      *
@@ -309,6 +190,20 @@ class HowTo extends BaseType implements CreativeWorkContract, ThingContract
     public function aggregateRating($aggregateRating)
     {
         return $this->setProperty('aggregateRating', $aggregateRating);
+    }
+
+    /**
+     * An alias for the item.
+     *
+     * @param string|string[] $alternateName
+     *
+     * @return static
+     *
+     * @see http://schema.org/alternateName
+     */
+    public function alternateName($alternateName)
+    {
+        return $this->setProperty('alternateName', $alternateName);
     }
 
     /**
@@ -603,6 +498,37 @@ class HowTo extends BaseType implements CreativeWorkContract, ThingContract
     }
 
     /**
+     * A description of the item.
+     *
+     * @param string|string[] $description
+     *
+     * @return static
+     *
+     * @see http://schema.org/description
+     */
+    public function description($description)
+    {
+        return $this->setProperty('description', $description);
+    }
+
+    /**
+     * A sub property of description. A short description of the item used to
+     * disambiguate from other, similar items. Information from other properties
+     * (in particular, name) may be necessary for the description to be useful
+     * for disambiguation.
+     *
+     * @param string|string[] $disambiguatingDescription
+     *
+     * @return static
+     *
+     * @see http://schema.org/disambiguatingDescription
+     */
+    public function disambiguatingDescription($disambiguatingDescription)
+    {
+        return $this->setProperty('disambiguatingDescription', $disambiguatingDescription);
+    }
+
+    /**
      * A link to the page containing the comments of the CreativeWork.
      *
      * @param string|string[] $discussionUrl
@@ -716,6 +642,21 @@ class HowTo extends BaseType implements CreativeWorkContract, ThingContract
     }
 
     /**
+     * The estimated cost of the supply or supplies consumed when performing
+     * instructions.
+     *
+     * @param MonetaryAmount|MonetaryAmount[]|string|string[] $estimatedCost
+     *
+     * @return static
+     *
+     * @see http://schema.org/estimatedCost
+     */
+    public function estimatedCost($estimatedCost)
+    {
+        return $this->setProperty('estimatedCost', $estimatedCost);
+    }
+
+    /**
      * A creative work that this work is an
      * example/instance/realization/derivation of.
      *
@@ -825,6 +766,39 @@ class HowTo extends BaseType implements CreativeWorkContract, ThingContract
     public function headline($headline)
     {
         return $this->setProperty('headline', $headline);
+    }
+
+    /**
+     * The identifier property represents any kind of identifier for any kind of
+     * [[Thing]], such as ISBNs, GTIN codes, UUIDs etc. Schema.org provides
+     * dedicated properties for representing many of these, either as textual
+     * strings or as URL (URI) links. See [background
+     * notes](/docs/datamodel.html#identifierBg) for more details.
+     *
+     * @param PropertyValue|PropertyValue[]|string|string[] $identifier
+     *
+     * @return static
+     *
+     * @see http://schema.org/identifier
+     */
+    public function identifier($identifier)
+    {
+        return $this->setProperty('identifier', $identifier);
+    }
+
+    /**
+     * An image of the item. This can be a [[URL]] or a fully described
+     * [[ImageObject]].
+     *
+     * @param ImageObject|ImageObject[]|string|string[] $image
+     *
+     * @return static
+     *
+     * @see http://schema.org/image
+     */
+    public function image($image)
+    {
+        return $this->setProperty('image', $image);
     }
 
     /**
@@ -1025,6 +999,22 @@ class HowTo extends BaseType implements CreativeWorkContract, ThingContract
     }
 
     /**
+     * Indicates a page (or other CreativeWork) for which this thing is the main
+     * entity being described. See [background
+     * notes](/docs/datamodel.html#mainEntityBackground) for details.
+     *
+     * @param CreativeWork|CreativeWork[]|string|string[] $mainEntityOfPage
+     *
+     * @return static
+     *
+     * @see http://schema.org/mainEntityOfPage
+     */
+    public function mainEntityOfPage($mainEntityOfPage)
+    {
+        return $this->setProperty('mainEntityOfPage', $mainEntityOfPage);
+    }
+
+    /**
      * A material that something is made from, e.g. leather, wool, cotton,
      * paper.
      *
@@ -1055,6 +1045,20 @@ class HowTo extends BaseType implements CreativeWorkContract, ThingContract
     }
 
     /**
+     * The name of the item.
+     *
+     * @param string|string[] $name
+     *
+     * @return static
+     *
+     * @see http://schema.org/name
+     */
+    public function name($name)
+    {
+        return $this->setProperty('name', $name);
+    }
+
+    /**
      * An offer to provide this item&#x2014;for example, an offer to sell a
      * product, rent the DVD of a movie, perform a service, or give away tickets
      * to an event.
@@ -1071,6 +1075,22 @@ class HowTo extends BaseType implements CreativeWorkContract, ThingContract
     }
 
     /**
+     * The length of time it takes to perform instructions or a direction (not
+     * including time to prepare the supplies), in [ISO 8601 duration
+     * format](http://en.wikipedia.org/wiki/ISO_8601).
+     *
+     * @param Duration|Duration[] $performTime
+     *
+     * @return static
+     *
+     * @see http://schema.org/performTime
+     */
+    public function performTime($performTime)
+    {
+        return $this->setProperty('performTime', $performTime);
+    }
+
+    /**
      * The position of an item in a series or sequence of items.
      *
      * @param int|int[]|string|string[] $position
@@ -1082,6 +1102,37 @@ class HowTo extends BaseType implements CreativeWorkContract, ThingContract
     public function position($position)
     {
         return $this->setProperty('position', $position);
+    }
+
+    /**
+     * Indicates a potential Action, which describes an idealized action in
+     * which this thing would play an 'object' role.
+     *
+     * @param Action|Action[] $potentialAction
+     *
+     * @return static
+     *
+     * @see http://schema.org/potentialAction
+     */
+    public function potentialAction($potentialAction)
+    {
+        return $this->setProperty('potentialAction', $potentialAction);
+    }
+
+    /**
+     * The length of time it takes to prepare the items to be used in
+     * instructions or a direction, in [ISO 8601 duration
+     * format](http://en.wikipedia.org/wiki/ISO_8601).
+     *
+     * @param Duration|Duration[] $prepTime
+     *
+     * @return static
+     *
+     * @see http://schema.org/prepTime
+     */
+    public function prepTime($prepTime)
+    {
+        return $this->setProperty('prepTime', $prepTime);
     }
 
     /**
@@ -1226,6 +1277,22 @@ class HowTo extends BaseType implements CreativeWorkContract, ThingContract
     }
 
     /**
+     * URL of a reference Web page that unambiguously indicates the item's
+     * identity. E.g. the URL of the item's Wikipedia page, Wikidata entry, or
+     * official website.
+     *
+     * @param string|string[] $sameAs
+     *
+     * @return static
+     *
+     * @see http://schema.org/sameAs
+     */
+    public function sameAs($sameAs)
+    {
+        return $this->setProperty('sameAs', $sameAs);
+    }
+
+    /**
      * Indicates (by URL or string) a particular version of a schema used in
      * some CreativeWork. For example, a document could declare a schemaVersion
      * using an URL such as http://schema.org/version/2.0/ if precise indication
@@ -1305,6 +1372,65 @@ class HowTo extends BaseType implements CreativeWorkContract, ThingContract
     public function sponsor($sponsor)
     {
         return $this->setProperty('sponsor', $sponsor);
+    }
+
+    /**
+     * A single step item (as HowToStep, text, document, video, etc.) or a
+     * HowToSection.
+     *
+     * @param CreativeWork|CreativeWork[]|HowToSection|HowToSection[]|HowToStep|HowToStep[]|string|string[] $step
+     *
+     * @return static
+     *
+     * @see http://schema.org/step
+     */
+    public function step($step)
+    {
+        return $this->setProperty('step', $step);
+    }
+
+    /**
+     * A single step item (as HowToStep, text, document, video, etc.) or a
+     * HowToSection (originally misnamed 'steps'; 'step' is preferred).
+     *
+     * @param CreativeWork|CreativeWork[]|ItemList|ItemList[]|string|string[] $steps
+     *
+     * @return static
+     *
+     * @see http://schema.org/steps
+     */
+    public function steps($steps)
+    {
+        return $this->setProperty('steps', $steps);
+    }
+
+    /**
+     * A CreativeWork or Event about this Thing.
+     *
+     * @param CreativeWork|CreativeWork[]|Event|Event[] $subjectOf
+     *
+     * @return static
+     *
+     * @see http://schema.org/subjectOf
+     */
+    public function subjectOf($subjectOf)
+    {
+        return $this->setProperty('subjectOf', $subjectOf);
+    }
+
+    /**
+     * A sub-property of instrument. A supply consumed when performing
+     * instructions or a direction.
+     *
+     * @param HowToSupply|HowToSupply[]|string|string[] $supply
+     *
+     * @return static
+     *
+     * @see http://schema.org/supply
+     */
+    public function supply($supply)
+    {
+        return $this->setProperty('supply', $supply);
     }
 
     /**
@@ -1399,6 +1525,37 @@ class HowTo extends BaseType implements CreativeWorkContract, ThingContract
     }
 
     /**
+     * A sub property of instrument. An object used (but not consumed) when
+     * performing instructions or a direction.
+     *
+     * @param HowToTool|HowToTool[]|string|string[] $tool
+     *
+     * @return static
+     *
+     * @see http://schema.org/tool
+     */
+    public function tool($tool)
+    {
+        return $this->setProperty('tool', $tool);
+    }
+
+    /**
+     * The total time required to perform instructions or a direction (including
+     * time to prepare the supplies), in [ISO 8601 duration
+     * format](http://en.wikipedia.org/wiki/ISO_8601).
+     *
+     * @param Duration|Duration[] $totalTime
+     *
+     * @return static
+     *
+     * @see http://schema.org/totalTime
+     */
+    public function totalTime($totalTime)
+    {
+        return $this->setProperty('totalTime', $totalTime);
+    }
+
+    /**
      * Organization or person who adapts a creative work to different languages,
      * regional differences and technical requirements of a target market, or
      * that translates during some event.
@@ -1426,6 +1583,20 @@ class HowTo extends BaseType implements CreativeWorkContract, ThingContract
     public function typicalAgeRange($typicalAgeRange)
     {
         return $this->setProperty('typicalAgeRange', $typicalAgeRange);
+    }
+
+    /**
+     * URL of the item.
+     *
+     * @param string|string[] $url
+     *
+     * @return static
+     *
+     * @see http://schema.org/url
+     */
+    public function url($url)
+    {
+        return $this->setProperty('url', $url);
     }
 
     /**
@@ -1472,189 +1643,18 @@ class HowTo extends BaseType implements CreativeWorkContract, ThingContract
     }
 
     /**
-     * An additional type for the item, typically used for adding more specific
-     * types from external vocabularies in microdata syntax. This is a
-     * relationship between something and a class that the thing is in. In RDFa
-     * syntax, it is better to use the native RDFa syntax - the 'typeof'
-     * attribute - for multiple types. Schema.org tools may have only weaker
-     * understanding of extra types, in particular those defined externally.
+     * The quantity that results by performing instructions. For example, a
+     * paper airplane, 10 personalized candles.
      *
-     * @param string|string[] $additionalType
+     * @param QuantitativeValue|QuantitativeValue[]|string|string[] $yield
      *
      * @return static
      *
-     * @see http://schema.org/additionalType
+     * @see http://schema.org/yield
      */
-    public function additionalType($additionalType)
+    public function yield($yield)
     {
-        return $this->setProperty('additionalType', $additionalType);
-    }
-
-    /**
-     * An alias for the item.
-     *
-     * @param string|string[] $alternateName
-     *
-     * @return static
-     *
-     * @see http://schema.org/alternateName
-     */
-    public function alternateName($alternateName)
-    {
-        return $this->setProperty('alternateName', $alternateName);
-    }
-
-    /**
-     * A description of the item.
-     *
-     * @param string|string[] $description
-     *
-     * @return static
-     *
-     * @see http://schema.org/description
-     */
-    public function description($description)
-    {
-        return $this->setProperty('description', $description);
-    }
-
-    /**
-     * A sub property of description. A short description of the item used to
-     * disambiguate from other, similar items. Information from other properties
-     * (in particular, name) may be necessary for the description to be useful
-     * for disambiguation.
-     *
-     * @param string|string[] $disambiguatingDescription
-     *
-     * @return static
-     *
-     * @see http://schema.org/disambiguatingDescription
-     */
-    public function disambiguatingDescription($disambiguatingDescription)
-    {
-        return $this->setProperty('disambiguatingDescription', $disambiguatingDescription);
-    }
-
-    /**
-     * The identifier property represents any kind of identifier for any kind of
-     * [[Thing]], such as ISBNs, GTIN codes, UUIDs etc. Schema.org provides
-     * dedicated properties for representing many of these, either as textual
-     * strings or as URL (URI) links. See [background
-     * notes](/docs/datamodel.html#identifierBg) for more details.
-     *
-     * @param PropertyValue|PropertyValue[]|string|string[] $identifier
-     *
-     * @return static
-     *
-     * @see http://schema.org/identifier
-     */
-    public function identifier($identifier)
-    {
-        return $this->setProperty('identifier', $identifier);
-    }
-
-    /**
-     * An image of the item. This can be a [[URL]] or a fully described
-     * [[ImageObject]].
-     *
-     * @param ImageObject|ImageObject[]|string|string[] $image
-     *
-     * @return static
-     *
-     * @see http://schema.org/image
-     */
-    public function image($image)
-    {
-        return $this->setProperty('image', $image);
-    }
-
-    /**
-     * Indicates a page (or other CreativeWork) for which this thing is the main
-     * entity being described. See [background
-     * notes](/docs/datamodel.html#mainEntityBackground) for details.
-     *
-     * @param CreativeWork|CreativeWork[]|string|string[] $mainEntityOfPage
-     *
-     * @return static
-     *
-     * @see http://schema.org/mainEntityOfPage
-     */
-    public function mainEntityOfPage($mainEntityOfPage)
-    {
-        return $this->setProperty('mainEntityOfPage', $mainEntityOfPage);
-    }
-
-    /**
-     * The name of the item.
-     *
-     * @param string|string[] $name
-     *
-     * @return static
-     *
-     * @see http://schema.org/name
-     */
-    public function name($name)
-    {
-        return $this->setProperty('name', $name);
-    }
-
-    /**
-     * Indicates a potential Action, which describes an idealized action in
-     * which this thing would play an 'object' role.
-     *
-     * @param Action|Action[] $potentialAction
-     *
-     * @return static
-     *
-     * @see http://schema.org/potentialAction
-     */
-    public function potentialAction($potentialAction)
-    {
-        return $this->setProperty('potentialAction', $potentialAction);
-    }
-
-    /**
-     * URL of a reference Web page that unambiguously indicates the item's
-     * identity. E.g. the URL of the item's Wikipedia page, Wikidata entry, or
-     * official website.
-     *
-     * @param string|string[] $sameAs
-     *
-     * @return static
-     *
-     * @see http://schema.org/sameAs
-     */
-    public function sameAs($sameAs)
-    {
-        return $this->setProperty('sameAs', $sameAs);
-    }
-
-    /**
-     * A CreativeWork or Event about this Thing.
-     *
-     * @param CreativeWork|CreativeWork[]|Event|Event[] $subjectOf
-     *
-     * @return static
-     *
-     * @see http://schema.org/subjectOf
-     */
-    public function subjectOf($subjectOf)
-    {
-        return $this->setProperty('subjectOf', $subjectOf);
-    }
-
-    /**
-     * URL of the item.
-     *
-     * @param string|string[] $url
-     *
-     * @return static
-     *
-     * @see http://schema.org/url
-     */
-    public function url($url)
-    {
-        return $this->setProperty('url', $url);
+        return $this->setProperty('yield', $yield);
     }
 
 }

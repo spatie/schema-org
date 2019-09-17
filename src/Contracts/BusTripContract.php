@@ -4,7 +4,13 @@ namespace Spatie\SchemaOrg\Contracts;
 
 interface BusTripContract
 {
+    public function additionalType($additionalType);
+
+    public function alternateName($alternateName);
+
     public function arrivalBusStop($arrivalBusStop);
+
+    public function arrivalTime($arrivalTime);
 
     public function busName($busName);
 
@@ -12,17 +18,7 @@ interface BusTripContract
 
     public function departureBusStop($departureBusStop);
 
-    public function arrivalTime($arrivalTime);
-
     public function departureTime($departureTime);
-
-    public function offers($offers);
-
-    public function provider($provider);
-
-    public function additionalType($additionalType);
-
-    public function alternateName($alternateName);
 
     public function description($description);
 
@@ -36,7 +32,11 @@ interface BusTripContract
 
     public function name($name);
 
+    public function offers($offers);
+
     public function potentialAction($potentialAction);
+
+    public function provider($provider);
 
     public function sameAs($sameAs);
 

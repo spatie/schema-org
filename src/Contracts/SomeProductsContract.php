@@ -4,11 +4,13 @@ namespace Spatie\SchemaOrg\Contracts;
 
 interface SomeProductsContract
 {
-    public function inventoryLevel($inventoryLevel);
-
     public function additionalProperty($additionalProperty);
 
+    public function additionalType($additionalType);
+
     public function aggregateRating($aggregateRating);
+
+    public function alternateName($alternateName);
 
     public function audience($audience);
 
@@ -24,6 +26,10 @@ interface SomeProductsContract
 
     public function depth($depth);
 
+    public function description($description);
+
+    public function disambiguatingDescription($disambiguatingDescription);
+
     public function gtin12($gtin12);
 
     public function gtin13($gtin13);
@@ -33,6 +39,12 @@ interface SomeProductsContract
     public function gtin8($gtin8);
 
     public function height($height);
+
+    public function identifier($identifier);
+
+    public function image($image);
+
+    public function inventoryLevel($inventoryLevel);
 
     public function isAccessoryOrSparePartFor($isAccessoryOrSparePartFor);
 
@@ -46,6 +58,8 @@ interface SomeProductsContract
 
     public function logo($logo);
 
+    public function mainEntityOfPage($mainEntityOfPage);
+
     public function manufacturer($manufacturer);
 
     public function material($material);
@@ -54,7 +68,11 @@ interface SomeProductsContract
 
     public function mpn($mpn);
 
+    public function name($name);
+
     public function offers($offers);
+
+    public function potentialAction($potentialAction);
 
     public function productID($productID);
 
@@ -68,36 +86,18 @@ interface SomeProductsContract
 
     public function reviews($reviews);
 
+    public function sameAs($sameAs);
+
     public function sku($sku);
 
     public function slogan($slogan);
 
-    public function weight($weight);
-
-    public function width($width);
-
-    public function additionalType($additionalType);
-
-    public function alternateName($alternateName);
-
-    public function description($description);
-
-    public function disambiguatingDescription($disambiguatingDescription);
-
-    public function identifier($identifier);
-
-    public function image($image);
-
-    public function mainEntityOfPage($mainEntityOfPage);
-
-    public function name($name);
-
-    public function potentialAction($potentialAction);
-
-    public function sameAs($sameAs);
-
     public function subjectOf($subjectOf);
 
     public function url($url);
+
+    public function weight($weight);
+
+    public function width($width);
 
 }

@@ -4,23 +4,17 @@ namespace Spatie\SchemaOrg\Contracts;
 
 interface HouseContract
 {
-    public function numberOfRooms($numberOfRooms);
-
-    public function amenityFeature($amenityFeature);
-
-    public function floorSize($floorSize);
-
-    public function numberOfRooms($numberOfRooms);
-
-    public function permittedUsage($permittedUsage);
-
-    public function petsAllowed($petsAllowed);
-
     public function additionalProperty($additionalProperty);
+
+    public function additionalType($additionalType);
 
     public function address($address);
 
     public function aggregateRating($aggregateRating);
+
+    public function alternateName($alternateName);
+
+    public function amenityFeature($amenityFeature);
 
     public function branchCode($branchCode);
 
@@ -30,17 +24,27 @@ interface HouseContract
 
     public function containsPlace($containsPlace);
 
+    public function description($description);
+
+    public function disambiguatingDescription($disambiguatingDescription);
+
     public function event($event);
 
     public function events($events);
 
     public function faxNumber($faxNumber);
 
+    public function floorSize($floorSize);
+
     public function geo($geo);
 
     public function globalLocationNumber($globalLocationNumber);
 
     public function hasMap($hasMap);
+
+    public function identifier($identifier);
+
+    public function image($image);
 
     public function isAccessibleForFree($isAccessibleForFree);
 
@@ -52,17 +56,29 @@ interface HouseContract
 
     public function longitude($longitude);
 
+    public function mainEntityOfPage($mainEntityOfPage);
+
     public function map($map);
 
     public function maps($maps);
 
     public function maximumAttendeeCapacity($maximumAttendeeCapacity);
 
+    public function name($name);
+
+    public function numberOfRooms($numberOfRooms);
+
     public function openingHoursSpecification($openingHoursSpecification);
+
+    public function permittedUsage($permittedUsage);
+
+    public function petsAllowed($petsAllowed);
 
     public function photo($photo);
 
     public function photos($photos);
+
+    public function potentialAction($potentialAction);
 
     public function publicAccess($publicAccess);
 
@@ -70,35 +86,17 @@ interface HouseContract
 
     public function reviews($reviews);
 
+    public function sameAs($sameAs);
+
     public function slogan($slogan);
 
     public function smokingAllowed($smokingAllowed);
 
     public function specialOpeningHoursSpecification($specialOpeningHoursSpecification);
 
-    public function telephone($telephone);
-
-    public function additionalType($additionalType);
-
-    public function alternateName($alternateName);
-
-    public function description($description);
-
-    public function disambiguatingDescription($disambiguatingDescription);
-
-    public function identifier($identifier);
-
-    public function image($image);
-
-    public function mainEntityOfPage($mainEntityOfPage);
-
-    public function name($name);
-
-    public function potentialAction($potentialAction);
-
-    public function sameAs($sameAs);
-
     public function subjectOf($subjectOf);
+
+    public function telephone($telephone);
 
     public function url($url);
 

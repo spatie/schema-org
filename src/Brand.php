@@ -15,63 +15,6 @@ use \Spatie\SchemaOrg\Contracts\ThingContract;
 class Brand extends BaseType implements IntangibleContract, ThingContract
 {
     /**
-     * The overall rating, based on a collection of reviews or ratings, of the
-     * item.
-     *
-     * @param AggregateRating|AggregateRating[] $aggregateRating
-     *
-     * @return static
-     *
-     * @see http://schema.org/aggregateRating
-     */
-    public function aggregateRating($aggregateRating)
-    {
-        return $this->setProperty('aggregateRating', $aggregateRating);
-    }
-
-    /**
-     * An associated logo.
-     *
-     * @param ImageObject|ImageObject[]|string|string[] $logo
-     *
-     * @return static
-     *
-     * @see http://schema.org/logo
-     */
-    public function logo($logo)
-    {
-        return $this->setProperty('logo', $logo);
-    }
-
-    /**
-     * A review of the item.
-     *
-     * @param Review|Review[] $review
-     *
-     * @return static
-     *
-     * @see http://schema.org/review
-     */
-    public function review($review)
-    {
-        return $this->setProperty('review', $review);
-    }
-
-    /**
-     * A slogan or motto associated with the item.
-     *
-     * @param string|string[] $slogan
-     *
-     * @return static
-     *
-     * @see http://schema.org/slogan
-     */
-    public function slogan($slogan)
-    {
-        return $this->setProperty('slogan', $slogan);
-    }
-
-    /**
      * An additional type for the item, typically used for adding more specific
      * types from external vocabularies in microdata syntax. This is a
      * relationship between something and a class that the thing is in. In RDFa
@@ -88,6 +31,21 @@ class Brand extends BaseType implements IntangibleContract, ThingContract
     public function additionalType($additionalType)
     {
         return $this->setProperty('additionalType', $additionalType);
+    }
+
+    /**
+     * The overall rating, based on a collection of reviews or ratings, of the
+     * item.
+     *
+     * @param AggregateRating|AggregateRating[] $aggregateRating
+     *
+     * @return static
+     *
+     * @see http://schema.org/aggregateRating
+     */
+    public function aggregateRating($aggregateRating)
+    {
+        return $this->setProperty('aggregateRating', $aggregateRating);
     }
 
     /**
@@ -169,6 +127,20 @@ class Brand extends BaseType implements IntangibleContract, ThingContract
     }
 
     /**
+     * An associated logo.
+     *
+     * @param ImageObject|ImageObject[]|string|string[] $logo
+     *
+     * @return static
+     *
+     * @see http://schema.org/logo
+     */
+    public function logo($logo)
+    {
+        return $this->setProperty('logo', $logo);
+    }
+
+    /**
      * Indicates a page (or other CreativeWork) for which this thing is the main
      * entity being described. See [background
      * notes](/docs/datamodel.html#mainEntityBackground) for details.
@@ -214,6 +186,20 @@ class Brand extends BaseType implements IntangibleContract, ThingContract
     }
 
     /**
+     * A review of the item.
+     *
+     * @param Review|Review[] $review
+     *
+     * @return static
+     *
+     * @see http://schema.org/review
+     */
+    public function review($review)
+    {
+        return $this->setProperty('review', $review);
+    }
+
+    /**
      * URL of a reference Web page that unambiguously indicates the item's
      * identity. E.g. the URL of the item's Wikipedia page, Wikidata entry, or
      * official website.
@@ -227,6 +213,20 @@ class Brand extends BaseType implements IntangibleContract, ThingContract
     public function sameAs($sameAs)
     {
         return $this->setProperty('sameAs', $sameAs);
+    }
+
+    /**
+     * A slogan or motto associated with the item.
+     *
+     * @param string|string[] $slogan
+     *
+     * @return static
+     *
+     * @see http://schema.org/slogan
+     */
+    public function slogan($slogan)
+    {
+        return $this->setProperty('slogan', $slogan);
     }
 
     /**

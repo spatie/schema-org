@@ -28,6 +28,39 @@ class Invoice extends BaseType implements IntangibleContract, ThingContract
     }
 
     /**
+     * An additional type for the item, typically used for adding more specific
+     * types from external vocabularies in microdata syntax. This is a
+     * relationship between something and a class that the thing is in. In RDFa
+     * syntax, it is better to use the native RDFa syntax - the 'typeof'
+     * attribute - for multiple types. Schema.org tools may have only weaker
+     * understanding of extra types, in particular those defined externally.
+     *
+     * @param string|string[] $additionalType
+     *
+     * @return static
+     *
+     * @see http://schema.org/additionalType
+     */
+    public function additionalType($additionalType)
+    {
+        return $this->setProperty('additionalType', $additionalType);
+    }
+
+    /**
+     * An alias for the item.
+     *
+     * @param string|string[] $alternateName
+     *
+     * @return static
+     *
+     * @see http://schema.org/alternateName
+     */
+    public function alternateName($alternateName)
+    {
+        return $this->setProperty('alternateName', $alternateName);
+    }
+
+    /**
      * The time interval used to compute the invoice.
      *
      * @param Duration|Duration[] $billingPeriod
@@ -99,183 +132,6 @@ class Invoice extends BaseType implements IntangibleContract, ThingContract
     public function customer($customer)
     {
         return $this->setProperty('customer', $customer);
-    }
-
-    /**
-     * The minimum payment required at this time.
-     *
-     * @param MonetaryAmount|MonetaryAmount[]|PriceSpecification|PriceSpecification[] $minimumPaymentDue
-     *
-     * @return static
-     *
-     * @see http://schema.org/minimumPaymentDue
-     */
-    public function minimumPaymentDue($minimumPaymentDue)
-    {
-        return $this->setProperty('minimumPaymentDue', $minimumPaymentDue);
-    }
-
-    /**
-     * The date that payment is due.
-     *
-     * @param \DateTimeInterface|\DateTimeInterface[] $paymentDue
-     *
-     * @return static
-     *
-     * @see http://schema.org/paymentDue
-     */
-    public function paymentDue($paymentDue)
-    {
-        return $this->setProperty('paymentDue', $paymentDue);
-    }
-
-    /**
-     * The date that payment is due.
-     *
-     * @param \DateTimeInterface|\DateTimeInterface[] $paymentDueDate
-     *
-     * @return static
-     *
-     * @see http://schema.org/paymentDueDate
-     */
-    public function paymentDueDate($paymentDueDate)
-    {
-        return $this->setProperty('paymentDueDate', $paymentDueDate);
-    }
-
-    /**
-     * The name of the credit card or other method of payment for the order.
-     *
-     * @param PaymentMethod|PaymentMethod[] $paymentMethod
-     *
-     * @return static
-     *
-     * @see http://schema.org/paymentMethod
-     */
-    public function paymentMethod($paymentMethod)
-    {
-        return $this->setProperty('paymentMethod', $paymentMethod);
-    }
-
-    /**
-     * An identifier for the method of payment used (e.g. the last 4 digits of
-     * the credit card).
-     *
-     * @param string|string[] $paymentMethodId
-     *
-     * @return static
-     *
-     * @see http://schema.org/paymentMethodId
-     */
-    public function paymentMethodId($paymentMethodId)
-    {
-        return $this->setProperty('paymentMethodId', $paymentMethodId);
-    }
-
-    /**
-     * The status of payment; whether the invoice has been paid or not.
-     *
-     * @param PaymentStatusType|PaymentStatusType[]|string|string[] $paymentStatus
-     *
-     * @return static
-     *
-     * @see http://schema.org/paymentStatus
-     */
-    public function paymentStatus($paymentStatus)
-    {
-        return $this->setProperty('paymentStatus', $paymentStatus);
-    }
-
-    /**
-     * The service provider, service operator, or service performer; the goods
-     * producer. Another party (a seller) may offer those services or goods on
-     * behalf of the provider. A provider may also serve as the seller.
-     *
-     * @param Organization|Organization[]|Person|Person[] $provider
-     *
-     * @return static
-     *
-     * @see http://schema.org/provider
-     */
-    public function provider($provider)
-    {
-        return $this->setProperty('provider', $provider);
-    }
-
-    /**
-     * The Order(s) related to this Invoice. One or more Orders may be combined
-     * into a single Invoice.
-     *
-     * @param Order|Order[] $referencesOrder
-     *
-     * @return static
-     *
-     * @see http://schema.org/referencesOrder
-     */
-    public function referencesOrder($referencesOrder)
-    {
-        return $this->setProperty('referencesOrder', $referencesOrder);
-    }
-
-    /**
-     * The date the invoice is scheduled to be paid.
-     *
-     * @param \DateTimeInterface|\DateTimeInterface[] $scheduledPaymentDate
-     *
-     * @return static
-     *
-     * @see http://schema.org/scheduledPaymentDate
-     */
-    public function scheduledPaymentDate($scheduledPaymentDate)
-    {
-        return $this->setProperty('scheduledPaymentDate', $scheduledPaymentDate);
-    }
-
-    /**
-     * The total amount due.
-     *
-     * @param MonetaryAmount|MonetaryAmount[]|PriceSpecification|PriceSpecification[] $totalPaymentDue
-     *
-     * @return static
-     *
-     * @see http://schema.org/totalPaymentDue
-     */
-    public function totalPaymentDue($totalPaymentDue)
-    {
-        return $this->setProperty('totalPaymentDue', $totalPaymentDue);
-    }
-
-    /**
-     * An additional type for the item, typically used for adding more specific
-     * types from external vocabularies in microdata syntax. This is a
-     * relationship between something and a class that the thing is in. In RDFa
-     * syntax, it is better to use the native RDFa syntax - the 'typeof'
-     * attribute - for multiple types. Schema.org tools may have only weaker
-     * understanding of extra types, in particular those defined externally.
-     *
-     * @param string|string[] $additionalType
-     *
-     * @return static
-     *
-     * @see http://schema.org/additionalType
-     */
-    public function additionalType($additionalType)
-    {
-        return $this->setProperty('additionalType', $additionalType);
-    }
-
-    /**
-     * An alias for the item.
-     *
-     * @param string|string[] $alternateName
-     *
-     * @return static
-     *
-     * @see http://schema.org/alternateName
-     */
-    public function alternateName($alternateName)
-    {
-        return $this->setProperty('alternateName', $alternateName);
     }
 
     /**
@@ -359,6 +215,20 @@ class Invoice extends BaseType implements IntangibleContract, ThingContract
     }
 
     /**
+     * The minimum payment required at this time.
+     *
+     * @param MonetaryAmount|MonetaryAmount[]|PriceSpecification|PriceSpecification[] $minimumPaymentDue
+     *
+     * @return static
+     *
+     * @see http://schema.org/minimumPaymentDue
+     */
+    public function minimumPaymentDue($minimumPaymentDue)
+    {
+        return $this->setProperty('minimumPaymentDue', $minimumPaymentDue);
+    }
+
+    /**
      * The name of the item.
      *
      * @param string|string[] $name
@@ -370,6 +240,77 @@ class Invoice extends BaseType implements IntangibleContract, ThingContract
     public function name($name)
     {
         return $this->setProperty('name', $name);
+    }
+
+    /**
+     * The date that payment is due.
+     *
+     * @param \DateTimeInterface|\DateTimeInterface[] $paymentDue
+     *
+     * @return static
+     *
+     * @see http://schema.org/paymentDue
+     */
+    public function paymentDue($paymentDue)
+    {
+        return $this->setProperty('paymentDue', $paymentDue);
+    }
+
+    /**
+     * The date that payment is due.
+     *
+     * @param \DateTimeInterface|\DateTimeInterface[] $paymentDueDate
+     *
+     * @return static
+     *
+     * @see http://schema.org/paymentDueDate
+     */
+    public function paymentDueDate($paymentDueDate)
+    {
+        return $this->setProperty('paymentDueDate', $paymentDueDate);
+    }
+
+    /**
+     * The name of the credit card or other method of payment for the order.
+     *
+     * @param PaymentMethod|PaymentMethod[] $paymentMethod
+     *
+     * @return static
+     *
+     * @see http://schema.org/paymentMethod
+     */
+    public function paymentMethod($paymentMethod)
+    {
+        return $this->setProperty('paymentMethod', $paymentMethod);
+    }
+
+    /**
+     * An identifier for the method of payment used (e.g. the last 4 digits of
+     * the credit card).
+     *
+     * @param string|string[] $paymentMethodId
+     *
+     * @return static
+     *
+     * @see http://schema.org/paymentMethodId
+     */
+    public function paymentMethodId($paymentMethodId)
+    {
+        return $this->setProperty('paymentMethodId', $paymentMethodId);
+    }
+
+    /**
+     * The status of payment; whether the invoice has been paid or not.
+     *
+     * @param PaymentStatusType|PaymentStatusType[]|string|string[] $paymentStatus
+     *
+     * @return static
+     *
+     * @see http://schema.org/paymentStatus
+     */
+    public function paymentStatus($paymentStatus)
+    {
+        return $this->setProperty('paymentStatus', $paymentStatus);
     }
 
     /**
@@ -385,6 +326,37 @@ class Invoice extends BaseType implements IntangibleContract, ThingContract
     public function potentialAction($potentialAction)
     {
         return $this->setProperty('potentialAction', $potentialAction);
+    }
+
+    /**
+     * The service provider, service operator, or service performer; the goods
+     * producer. Another party (a seller) may offer those services or goods on
+     * behalf of the provider. A provider may also serve as the seller.
+     *
+     * @param Organization|Organization[]|Person|Person[] $provider
+     *
+     * @return static
+     *
+     * @see http://schema.org/provider
+     */
+    public function provider($provider)
+    {
+        return $this->setProperty('provider', $provider);
+    }
+
+    /**
+     * The Order(s) related to this Invoice. One or more Orders may be combined
+     * into a single Invoice.
+     *
+     * @param Order|Order[] $referencesOrder
+     *
+     * @return static
+     *
+     * @see http://schema.org/referencesOrder
+     */
+    public function referencesOrder($referencesOrder)
+    {
+        return $this->setProperty('referencesOrder', $referencesOrder);
     }
 
     /**
@@ -404,6 +376,20 @@ class Invoice extends BaseType implements IntangibleContract, ThingContract
     }
 
     /**
+     * The date the invoice is scheduled to be paid.
+     *
+     * @param \DateTimeInterface|\DateTimeInterface[] $scheduledPaymentDate
+     *
+     * @return static
+     *
+     * @see http://schema.org/scheduledPaymentDate
+     */
+    public function scheduledPaymentDate($scheduledPaymentDate)
+    {
+        return $this->setProperty('scheduledPaymentDate', $scheduledPaymentDate);
+    }
+
+    /**
      * A CreativeWork or Event about this Thing.
      *
      * @param CreativeWork|CreativeWork[]|Event|Event[] $subjectOf
@@ -415,6 +401,20 @@ class Invoice extends BaseType implements IntangibleContract, ThingContract
     public function subjectOf($subjectOf)
     {
         return $this->setProperty('subjectOf', $subjectOf);
+    }
+
+    /**
+     * The total amount due.
+     *
+     * @param MonetaryAmount|MonetaryAmount[]|PriceSpecification|PriceSpecification[] $totalPaymentDue
+     *
+     * @return static
+     *
+     * @see http://schema.org/totalPaymentDue
+     */
+    public function totalPaymentDue($totalPaymentDue)
+    {
+        return $this->setProperty('totalPaymentDue', $totalPaymentDue);
     }
 
     /**

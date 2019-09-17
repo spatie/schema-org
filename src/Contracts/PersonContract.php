@@ -6,9 +6,13 @@ interface PersonContract
 {
     public function additionalName($additionalName);
 
+    public function additionalType($additionalType);
+
     public function address($address);
 
     public function affiliation($affiliation);
+
+    public function alternateName($alternateName);
 
     public function alumniOf($alumniOf);
 
@@ -35,6 +39,10 @@ interface PersonContract
     public function deathDate($deathDate);
 
     public function deathPlace($deathPlace);
+
+    public function description($description);
+
+    public function disambiguatingDescription($disambiguatingDescription);
 
     public function duns($duns);
 
@@ -68,17 +76,25 @@ interface PersonContract
 
     public function honorificSuffix($honorificSuffix);
 
+    public function identifier($identifier);
+
+    public function image($image);
+
     public function isicV4($isicV4);
 
     public function jobTitle($jobTitle);
 
     public function knows($knows);
 
+    public function mainEntityOfPage($mainEntityOfPage);
+
     public function makesOffer($makesOffer);
 
     public function memberOf($memberOf);
 
     public function naics($naics);
+
+    public function name($name);
 
     public function nationality($nationality);
 
@@ -92,9 +108,13 @@ interface PersonContract
 
     public function performerIn($performerIn);
 
+    public function potentialAction($potentialAction);
+
     public function publishingPrinciples($publishingPrinciples);
 
     public function relatedTo($relatedTo);
+
+    public function sameAs($sameAs);
 
     public function seeks($seeks);
 
@@ -106,9 +126,13 @@ interface PersonContract
 
     public function spouse($spouse);
 
+    public function subjectOf($subjectOf);
+
     public function taxID($taxID);
 
     public function telephone($telephone);
+
+    public function url($url);
 
     public function vatID($vatID);
 
@@ -117,29 +141,5 @@ interface PersonContract
     public function workLocation($workLocation);
 
     public function worksFor($worksFor);
-
-    public function additionalType($additionalType);
-
-    public function alternateName($alternateName);
-
-    public function description($description);
-
-    public function disambiguatingDescription($disambiguatingDescription);
-
-    public function identifier($identifier);
-
-    public function image($image);
-
-    public function mainEntityOfPage($mainEntityOfPage);
-
-    public function name($name);
-
-    public function potentialAction($potentialAction);
-
-    public function sameAs($sameAs);
-
-    public function subjectOf($subjectOf);
-
-    public function url($url);
 
 }

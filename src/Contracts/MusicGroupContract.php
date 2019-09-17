@@ -4,21 +4,17 @@ namespace Spatie\SchemaOrg\Contracts;
 
 interface MusicGroupContract
 {
-    public function album($album);
-
-    public function albums($albums);
-
-    public function genre($genre);
-
-    public function musicGroupMember($musicGroupMember);
-
-    public function track($track);
-
-    public function tracks($tracks);
+    public function additionalType($additionalType);
 
     public function address($address);
 
     public function aggregateRating($aggregateRating);
+
+    public function album($album);
+
+    public function albums($albums);
+
+    public function alternateName($alternateName);
 
     public function areaServed($areaServed);
 
@@ -33,6 +29,10 @@ interface MusicGroupContract
     public function contactPoints($contactPoints);
 
     public function department($department);
+
+    public function description($description);
+
+    public function disambiguatingDescription($disambiguatingDescription);
 
     public function dissolutionDate($dissolutionDate);
 
@@ -60,11 +60,17 @@ interface MusicGroupContract
 
     public function funder($funder);
 
+    public function genre($genre);
+
     public function globalLocationNumber($globalLocationNumber);
 
     public function hasOfferCatalog($hasOfferCatalog);
 
     public function hasPOS($hasPOS);
+
+    public function identifier($identifier);
+
+    public function image($image);
 
     public function isicV4($isicV4);
 
@@ -76,6 +82,8 @@ interface MusicGroupContract
 
     public function logo($logo);
 
+    public function mainEntityOfPage($mainEntityOfPage);
+
     public function makesOffer($makesOffer);
 
     public function member($member);
@@ -84,7 +92,11 @@ interface MusicGroupContract
 
     public function members($members);
 
+    public function musicGroupMember($musicGroupMember);
+
     public function naics($naics);
+
+    public function name($name);
 
     public function numberOfEmployees($numberOfEmployees);
 
@@ -94,11 +106,15 @@ interface MusicGroupContract
 
     public function parentOrganization($parentOrganization);
 
+    public function potentialAction($potentialAction);
+
     public function publishingPrinciples($publishingPrinciples);
 
     public function review($review);
 
     public function reviews($reviews);
+
+    public function sameAs($sameAs);
 
     public function seeks($seeks);
 
@@ -110,34 +126,18 @@ interface MusicGroupContract
 
     public function subOrganization($subOrganization);
 
+    public function subjectOf($subjectOf);
+
     public function taxID($taxID);
 
     public function telephone($telephone);
 
-    public function vatID($vatID);
+    public function track($track);
 
-    public function additionalType($additionalType);
-
-    public function alternateName($alternateName);
-
-    public function description($description);
-
-    public function disambiguatingDescription($disambiguatingDescription);
-
-    public function identifier($identifier);
-
-    public function image($image);
-
-    public function mainEntityOfPage($mainEntityOfPage);
-
-    public function name($name);
-
-    public function potentialAction($potentialAction);
-
-    public function sameAs($sameAs);
-
-    public function subjectOf($subjectOf);
+    public function tracks($tracks);
 
     public function url($url);
+
+    public function vatID($vatID);
 
 }

@@ -16,98 +16,6 @@ use \Spatie\SchemaOrg\Contracts\ThingContract;
 class MonetaryAmountDistribution extends BaseType implements QuantitativeValueDistributionContract, StructuredValueContract, IntangibleContract, ThingContract
 {
     /**
-     * The currency in which the monetary amount is expressed.
-     * 
-     * Use standard formats: [ISO 4217 currency
-     * format](http://en.wikipedia.org/wiki/ISO_4217) e.g. "USD"; [Ticker
-     * symbol](https://en.wikipedia.org/wiki/List_of_cryptocurrencies) for
-     * cryptocurrencies e.g. "BTC"; well known names for [Local Exchange
-     * Tradings
-     * Systems](https://en.wikipedia.org/wiki/Local_exchange_trading_system)
-     * (LETS) and other currency types e.g. "Ithaca HOUR".
-     *
-     * @param string|string[] $currency
-     *
-     * @return static
-     *
-     * @see http://schema.org/currency
-     */
-    public function currency($currency)
-    {
-        return $this->setProperty('currency', $currency);
-    }
-
-    /**
-     * The median value.
-     *
-     * @param float|float[]|int|int[] $median
-     *
-     * @return static
-     *
-     * @see http://schema.org/median
-     */
-    public function median($median)
-    {
-        return $this->setProperty('median', $median);
-    }
-
-    /**
-     * The 10th percentile value.
-     *
-     * @param float|float[]|int|int[] $percentile10
-     *
-     * @return static
-     *
-     * @see http://schema.org/percentile10
-     */
-    public function percentile10($percentile10)
-    {
-        return $this->setProperty('percentile10', $percentile10);
-    }
-
-    /**
-     * The 25th percentile value.
-     *
-     * @param float|float[]|int|int[] $percentile25
-     *
-     * @return static
-     *
-     * @see http://schema.org/percentile25
-     */
-    public function percentile25($percentile25)
-    {
-        return $this->setProperty('percentile25', $percentile25);
-    }
-
-    /**
-     * The 75th percentile value.
-     *
-     * @param float|float[]|int|int[] $percentile75
-     *
-     * @return static
-     *
-     * @see http://schema.org/percentile75
-     */
-    public function percentile75($percentile75)
-    {
-        return $this->setProperty('percentile75', $percentile75);
-    }
-
-    /**
-     * The 90th percentile value.
-     *
-     * @param float|float[]|int|int[] $percentile90
-     *
-     * @return static
-     *
-     * @see http://schema.org/percentile90
-     */
-    public function percentile90($percentile90)
-    {
-        return $this->setProperty('percentile90', $percentile90);
-    }
-
-    /**
      * An additional type for the item, typically used for adding more specific
      * types from external vocabularies in microdata syntax. This is a
      * relationship between something and a class that the thing is in. In RDFa
@@ -138,6 +46,28 @@ class MonetaryAmountDistribution extends BaseType implements QuantitativeValueDi
     public function alternateName($alternateName)
     {
         return $this->setProperty('alternateName', $alternateName);
+    }
+
+    /**
+     * The currency in which the monetary amount is expressed.
+     * 
+     * Use standard formats: [ISO 4217 currency
+     * format](http://en.wikipedia.org/wiki/ISO_4217) e.g. "USD"; [Ticker
+     * symbol](https://en.wikipedia.org/wiki/List_of_cryptocurrencies) for
+     * cryptocurrencies e.g. "BTC"; well known names for [Local Exchange
+     * Tradings
+     * Systems](https://en.wikipedia.org/wiki/Local_exchange_trading_system)
+     * (LETS) and other currency types e.g. "Ithaca HOUR".
+     *
+     * @param string|string[] $currency
+     *
+     * @return static
+     *
+     * @see http://schema.org/currency
+     */
+    public function currency($currency)
+    {
+        return $this->setProperty('currency', $currency);
     }
 
     /**
@@ -221,6 +151,20 @@ class MonetaryAmountDistribution extends BaseType implements QuantitativeValueDi
     }
 
     /**
+     * The median value.
+     *
+     * @param float|float[]|int|int[] $median
+     *
+     * @return static
+     *
+     * @see http://schema.org/median
+     */
+    public function median($median)
+    {
+        return $this->setProperty('median', $median);
+    }
+
+    /**
      * The name of the item.
      *
      * @param string|string[] $name
@@ -232,6 +176,62 @@ class MonetaryAmountDistribution extends BaseType implements QuantitativeValueDi
     public function name($name)
     {
         return $this->setProperty('name', $name);
+    }
+
+    /**
+     * The 10th percentile value.
+     *
+     * @param float|float[]|int|int[] $percentile10
+     *
+     * @return static
+     *
+     * @see http://schema.org/percentile10
+     */
+    public function percentile10($percentile10)
+    {
+        return $this->setProperty('percentile10', $percentile10);
+    }
+
+    /**
+     * The 25th percentile value.
+     *
+     * @param float|float[]|int|int[] $percentile25
+     *
+     * @return static
+     *
+     * @see http://schema.org/percentile25
+     */
+    public function percentile25($percentile25)
+    {
+        return $this->setProperty('percentile25', $percentile25);
+    }
+
+    /**
+     * The 75th percentile value.
+     *
+     * @param float|float[]|int|int[] $percentile75
+     *
+     * @return static
+     *
+     * @see http://schema.org/percentile75
+     */
+    public function percentile75($percentile75)
+    {
+        return $this->setProperty('percentile75', $percentile75);
+    }
+
+    /**
+     * The 90th percentile value.
+     *
+     * @param float|float[]|int|int[] $percentile90
+     *
+     * @return static
+     *
+     * @see http://schema.org/percentile90
+     */
+    public function percentile90($percentile90)
+    {
+        return $this->setProperty('percentile90', $percentile90);
     }
 
     /**

@@ -4,10 +4,6 @@ namespace Spatie\SchemaOrg\Contracts;
 
 interface WarrantyPromiseContract
 {
-    public function durationOfWarranty($durationOfWarranty);
-
-    public function warrantyScope($warrantyScope);
-
     public function additionalType($additionalType);
 
     public function alternateName($alternateName);
@@ -15,6 +11,8 @@ interface WarrantyPromiseContract
     public function description($description);
 
     public function disambiguatingDescription($disambiguatingDescription);
+
+    public function durationOfWarranty($durationOfWarranty);
 
     public function identifier($identifier);
 
@@ -31,5 +29,7 @@ interface WarrantyPromiseContract
     public function subjectOf($subjectOf);
 
     public function url($url);
+
+    public function warrantyScope($warrantyScope);
 
 }

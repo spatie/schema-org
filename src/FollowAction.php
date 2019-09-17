@@ -30,20 +30,6 @@ use \Spatie\SchemaOrg\Contracts\ThingContract;
 class FollowAction extends BaseType implements InteractActionContract, ActionContract, ThingContract
 {
     /**
-     * A sub property of object. The person or organization being followed.
-     *
-     * @param Organization|Organization[]|Person|Person[] $followee
-     *
-     * @return static
-     *
-     * @see http://schema.org/followee
-     */
-    public function followee($followee)
-    {
-        return $this->setProperty('followee', $followee);
-    }
-
-    /**
      * Indicates the current disposition of the Action.
      *
      * @param ActionStatusType|ActionStatusType[] $actionStatus
@@ -55,171 +41,6 @@ class FollowAction extends BaseType implements InteractActionContract, ActionCon
     public function actionStatus($actionStatus)
     {
         return $this->setProperty('actionStatus', $actionStatus);
-    }
-
-    /**
-     * The direct performer or driver of the action (animate or inanimate). e.g.
-     * *John* wrote a book.
-     *
-     * @param Organization|Organization[]|Person|Person[] $agent
-     *
-     * @return static
-     *
-     * @see http://schema.org/agent
-     */
-    public function agent($agent)
-    {
-        return $this->setProperty('agent', $agent);
-    }
-
-    /**
-     * The endTime of something. For a reserved event or service (e.g.
-     * FoodEstablishmentReservation), the time that it is expected to end. For
-     * actions that span a period of time, when the action was performed. e.g.
-     * John wrote a book from January to *December*. For media, including audio
-     * and video, it's the time offset of the end of a clip within a larger
-     * file.
-     * 
-     * Note that Event uses startDate/endDate instead of startTime/endTime, even
-     * when describing dates with times. This situation may be clarified in
-     * future revisions.
-     *
-     * @param \DateTimeInterface|\DateTimeInterface[] $endTime
-     *
-     * @return static
-     *
-     * @see http://schema.org/endTime
-     */
-    public function endTime($endTime)
-    {
-        return $this->setProperty('endTime', $endTime);
-    }
-
-    /**
-     * For failed actions, more information on the cause of the failure.
-     *
-     * @param Thing|Thing[] $error
-     *
-     * @return static
-     *
-     * @see http://schema.org/error
-     */
-    public function error($error)
-    {
-        return $this->setProperty('error', $error);
-    }
-
-    /**
-     * The object that helped the agent perform the action. e.g. John wrote a
-     * book with *a pen*.
-     *
-     * @param Thing|Thing[] $instrument
-     *
-     * @return static
-     *
-     * @see http://schema.org/instrument
-     */
-    public function instrument($instrument)
-    {
-        return $this->setProperty('instrument', $instrument);
-    }
-
-    /**
-     * The location of for example where the event is happening, an organization
-     * is located, or where an action takes place.
-     *
-     * @param Place|Place[]|PostalAddress|PostalAddress[]|string|string[] $location
-     *
-     * @return static
-     *
-     * @see http://schema.org/location
-     */
-    public function location($location)
-    {
-        return $this->setProperty('location', $location);
-    }
-
-    /**
-     * The object upon which the action is carried out, whose state is kept
-     * intact or changed. Also known as the semantic roles patient, affected or
-     * undergoer (which change their state) or theme (which doesn't). e.g. John
-     * read *a book*.
-     *
-     * @param Thing|Thing[] $object
-     *
-     * @return static
-     *
-     * @see http://schema.org/object
-     */
-    public function object($object)
-    {
-        return $this->setProperty('object', $object);
-    }
-
-    /**
-     * Other co-agents that participated in the action indirectly. e.g. John
-     * wrote a book with *Steve*.
-     *
-     * @param Organization|Organization[]|Person|Person[] $participant
-     *
-     * @return static
-     *
-     * @see http://schema.org/participant
-     */
-    public function participant($participant)
-    {
-        return $this->setProperty('participant', $participant);
-    }
-
-    /**
-     * The result produced in the action. e.g. John wrote *a book*.
-     *
-     * @param Thing|Thing[] $result
-     *
-     * @return static
-     *
-     * @see http://schema.org/result
-     */
-    public function result($result)
-    {
-        return $this->setProperty('result', $result);
-    }
-
-    /**
-     * The startTime of something. For a reserved event or service (e.g.
-     * FoodEstablishmentReservation), the time that it is expected to start. For
-     * actions that span a period of time, when the action was performed. e.g.
-     * John wrote a book from *January* to December. For media, including audio
-     * and video, it's the time offset of the start of a clip within a larger
-     * file.
-     * 
-     * Note that Event uses startDate/endDate instead of startTime/endTime, even
-     * when describing dates with times. This situation may be clarified in
-     * future revisions.
-     *
-     * @param \DateTimeInterface|\DateTimeInterface[] $startTime
-     *
-     * @return static
-     *
-     * @see http://schema.org/startTime
-     */
-    public function startTime($startTime)
-    {
-        return $this->setProperty('startTime', $startTime);
-    }
-
-    /**
-     * Indicates a target EntryPoint for an Action.
-     *
-     * @param EntryPoint|EntryPoint[] $target
-     *
-     * @return static
-     *
-     * @see http://schema.org/target
-     */
-    public function target($target)
-    {
-        return $this->setProperty('target', $target);
     }
 
     /**
@@ -239,6 +60,21 @@ class FollowAction extends BaseType implements InteractActionContract, ActionCon
     public function additionalType($additionalType)
     {
         return $this->setProperty('additionalType', $additionalType);
+    }
+
+    /**
+     * The direct performer or driver of the action (animate or inanimate). e.g.
+     * *John* wrote a book.
+     *
+     * @param Organization|Organization[]|Person|Person[] $agent
+     *
+     * @return static
+     *
+     * @see http://schema.org/agent
+     */
+    public function agent($agent)
+    {
+        return $this->setProperty('agent', $agent);
     }
 
     /**
@@ -287,6 +123,57 @@ class FollowAction extends BaseType implements InteractActionContract, ActionCon
     }
 
     /**
+     * The endTime of something. For a reserved event or service (e.g.
+     * FoodEstablishmentReservation), the time that it is expected to end. For
+     * actions that span a period of time, when the action was performed. e.g.
+     * John wrote a book from January to *December*. For media, including audio
+     * and video, it's the time offset of the end of a clip within a larger
+     * file.
+     * 
+     * Note that Event uses startDate/endDate instead of startTime/endTime, even
+     * when describing dates with times. This situation may be clarified in
+     * future revisions.
+     *
+     * @param \DateTimeInterface|\DateTimeInterface[] $endTime
+     *
+     * @return static
+     *
+     * @see http://schema.org/endTime
+     */
+    public function endTime($endTime)
+    {
+        return $this->setProperty('endTime', $endTime);
+    }
+
+    /**
+     * For failed actions, more information on the cause of the failure.
+     *
+     * @param Thing|Thing[] $error
+     *
+     * @return static
+     *
+     * @see http://schema.org/error
+     */
+    public function error($error)
+    {
+        return $this->setProperty('error', $error);
+    }
+
+    /**
+     * A sub property of object. The person or organization being followed.
+     *
+     * @param Organization|Organization[]|Person|Person[] $followee
+     *
+     * @return static
+     *
+     * @see http://schema.org/followee
+     */
+    public function followee($followee)
+    {
+        return $this->setProperty('followee', $followee);
+    }
+
+    /**
      * The identifier property represents any kind of identifier for any kind of
      * [[Thing]], such as ISBNs, GTIN codes, UUIDs etc. Schema.org provides
      * dedicated properties for representing many of these, either as textual
@@ -320,6 +207,36 @@ class FollowAction extends BaseType implements InteractActionContract, ActionCon
     }
 
     /**
+     * The object that helped the agent perform the action. e.g. John wrote a
+     * book with *a pen*.
+     *
+     * @param Thing|Thing[] $instrument
+     *
+     * @return static
+     *
+     * @see http://schema.org/instrument
+     */
+    public function instrument($instrument)
+    {
+        return $this->setProperty('instrument', $instrument);
+    }
+
+    /**
+     * The location of for example where the event is happening, an organization
+     * is located, or where an action takes place.
+     *
+     * @param Place|Place[]|PostalAddress|PostalAddress[]|string|string[] $location
+     *
+     * @return static
+     *
+     * @see http://schema.org/location
+     */
+    public function location($location)
+    {
+        return $this->setProperty('location', $location);
+    }
+
+    /**
      * Indicates a page (or other CreativeWork) for which this thing is the main
      * entity being described. See [background
      * notes](/docs/datamodel.html#mainEntityBackground) for details.
@@ -350,6 +267,38 @@ class FollowAction extends BaseType implements InteractActionContract, ActionCon
     }
 
     /**
+     * The object upon which the action is carried out, whose state is kept
+     * intact or changed. Also known as the semantic roles patient, affected or
+     * undergoer (which change their state) or theme (which doesn't). e.g. John
+     * read *a book*.
+     *
+     * @param Thing|Thing[] $object
+     *
+     * @return static
+     *
+     * @see http://schema.org/object
+     */
+    public function object($object)
+    {
+        return $this->setProperty('object', $object);
+    }
+
+    /**
+     * Other co-agents that participated in the action indirectly. e.g. John
+     * wrote a book with *Steve*.
+     *
+     * @param Organization|Organization[]|Person|Person[] $participant
+     *
+     * @return static
+     *
+     * @see http://schema.org/participant
+     */
+    public function participant($participant)
+    {
+        return $this->setProperty('participant', $participant);
+    }
+
+    /**
      * Indicates a potential Action, which describes an idealized action in
      * which this thing would play an 'object' role.
      *
@@ -362,6 +311,20 @@ class FollowAction extends BaseType implements InteractActionContract, ActionCon
     public function potentialAction($potentialAction)
     {
         return $this->setProperty('potentialAction', $potentialAction);
+    }
+
+    /**
+     * The result produced in the action. e.g. John wrote *a book*.
+     *
+     * @param Thing|Thing[] $result
+     *
+     * @return static
+     *
+     * @see http://schema.org/result
+     */
+    public function result($result)
+    {
+        return $this->setProperty('result', $result);
     }
 
     /**
@@ -381,6 +344,29 @@ class FollowAction extends BaseType implements InteractActionContract, ActionCon
     }
 
     /**
+     * The startTime of something. For a reserved event or service (e.g.
+     * FoodEstablishmentReservation), the time that it is expected to start. For
+     * actions that span a period of time, when the action was performed. e.g.
+     * John wrote a book from *January* to December. For media, including audio
+     * and video, it's the time offset of the start of a clip within a larger
+     * file.
+     * 
+     * Note that Event uses startDate/endDate instead of startTime/endTime, even
+     * when describing dates with times. This situation may be clarified in
+     * future revisions.
+     *
+     * @param \DateTimeInterface|\DateTimeInterface[] $startTime
+     *
+     * @return static
+     *
+     * @see http://schema.org/startTime
+     */
+    public function startTime($startTime)
+    {
+        return $this->setProperty('startTime', $startTime);
+    }
+
+    /**
      * A CreativeWork or Event about this Thing.
      *
      * @param CreativeWork|CreativeWork[]|Event|Event[] $subjectOf
@@ -392,6 +378,20 @@ class FollowAction extends BaseType implements InteractActionContract, ActionCon
     public function subjectOf($subjectOf)
     {
         return $this->setProperty('subjectOf', $subjectOf);
+    }
+
+    /**
+     * Indicates a target EntryPoint for an Action.
+     *
+     * @param EntryPoint|EntryPoint[] $target
+     *
+     * @return static
+     *
+     * @see http://schema.org/target
+     */
+    public function target($target)
+    {
+        return $this->setProperty('target', $target);
     }
 
     /**

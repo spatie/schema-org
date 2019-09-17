@@ -4,20 +4,6 @@ namespace Spatie\SchemaOrg\Contracts;
 
 interface PropertyValueContract
 {
-    public function maxValue($maxValue);
-
-    public function minValue($minValue);
-
-    public function propertyID($propertyID);
-
-    public function unitCode($unitCode);
-
-    public function unitText($unitText);
-
-    public function value($value);
-
-    public function valueReference($valueReference);
-
     public function additionalType($additionalType);
 
     public function alternateName($alternateName);
@@ -32,14 +18,28 @@ interface PropertyValueContract
 
     public function mainEntityOfPage($mainEntityOfPage);
 
+    public function maxValue($maxValue);
+
+    public function minValue($minValue);
+
     public function name($name);
 
     public function potentialAction($potentialAction);
+
+    public function propertyID($propertyID);
 
     public function sameAs($sameAs);
 
     public function subjectOf($subjectOf);
 
+    public function unitCode($unitCode);
+
+    public function unitText($unitText);
+
     public function url($url);
+
+    public function value($value);
+
+    public function valueReference($valueReference);
 
 }

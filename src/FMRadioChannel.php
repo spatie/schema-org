@@ -16,6 +16,39 @@ use \Spatie\SchemaOrg\Contracts\ThingContract;
 class FMRadioChannel extends BaseType implements RadioChannelContract, BroadcastChannelContract, IntangibleContract, ThingContract
 {
     /**
+     * An additional type for the item, typically used for adding more specific
+     * types from external vocabularies in microdata syntax. This is a
+     * relationship between something and a class that the thing is in. In RDFa
+     * syntax, it is better to use the native RDFa syntax - the 'typeof'
+     * attribute - for multiple types. Schema.org tools may have only weaker
+     * understanding of extra types, in particular those defined externally.
+     *
+     * @param string|string[] $additionalType
+     *
+     * @return static
+     *
+     * @see http://schema.org/additionalType
+     */
+    public function additionalType($additionalType)
+    {
+        return $this->setProperty('additionalType', $additionalType);
+    }
+
+    /**
+     * An alias for the item.
+     *
+     * @param string|string[] $alternateName
+     *
+     * @return static
+     *
+     * @see http://schema.org/alternateName
+     */
+    public function alternateName($alternateName)
+    {
+        return $this->setProperty('alternateName', $alternateName);
+    }
+
+    /**
      * The unique address by which the BroadcastService can be identified in a
      * provider lineup. In US, this is typically a number.
      *
@@ -62,81 +95,6 @@ class FMRadioChannel extends BaseType implements RadioChannelContract, Broadcast
     }
 
     /**
-     * Genre of the creative work, broadcast channel or group.
-     *
-     * @param string|string[] $genre
-     *
-     * @return static
-     *
-     * @see http://schema.org/genre
-     */
-    public function genre($genre)
-    {
-        return $this->setProperty('genre', $genre);
-    }
-
-    /**
-     * The CableOrSatelliteService offering the channel.
-     *
-     * @param CableOrSatelliteService|CableOrSatelliteService[] $inBroadcastLineup
-     *
-     * @return static
-     *
-     * @see http://schema.org/inBroadcastLineup
-     */
-    public function inBroadcastLineup($inBroadcastLineup)
-    {
-        return $this->setProperty('inBroadcastLineup', $inBroadcastLineup);
-    }
-
-    /**
-     * The BroadcastService offered on this channel.
-     *
-     * @param BroadcastService|BroadcastService[] $providesBroadcastService
-     *
-     * @return static
-     *
-     * @see http://schema.org/providesBroadcastService
-     */
-    public function providesBroadcastService($providesBroadcastService)
-    {
-        return $this->setProperty('providesBroadcastService', $providesBroadcastService);
-    }
-
-    /**
-     * An additional type for the item, typically used for adding more specific
-     * types from external vocabularies in microdata syntax. This is a
-     * relationship between something and a class that the thing is in. In RDFa
-     * syntax, it is better to use the native RDFa syntax - the 'typeof'
-     * attribute - for multiple types. Schema.org tools may have only weaker
-     * understanding of extra types, in particular those defined externally.
-     *
-     * @param string|string[] $additionalType
-     *
-     * @return static
-     *
-     * @see http://schema.org/additionalType
-     */
-    public function additionalType($additionalType)
-    {
-        return $this->setProperty('additionalType', $additionalType);
-    }
-
-    /**
-     * An alias for the item.
-     *
-     * @param string|string[] $alternateName
-     *
-     * @return static
-     *
-     * @see http://schema.org/alternateName
-     */
-    public function alternateName($alternateName)
-    {
-        return $this->setProperty('alternateName', $alternateName);
-    }
-
-    /**
      * A description of the item.
      *
      * @param string|string[] $description
@@ -165,6 +123,20 @@ class FMRadioChannel extends BaseType implements RadioChannelContract, Broadcast
     public function disambiguatingDescription($disambiguatingDescription)
     {
         return $this->setProperty('disambiguatingDescription', $disambiguatingDescription);
+    }
+
+    /**
+     * Genre of the creative work, broadcast channel or group.
+     *
+     * @param string|string[] $genre
+     *
+     * @return static
+     *
+     * @see http://schema.org/genre
+     */
+    public function genre($genre)
+    {
+        return $this->setProperty('genre', $genre);
     }
 
     /**
@@ -198,6 +170,20 @@ class FMRadioChannel extends BaseType implements RadioChannelContract, Broadcast
     public function image($image)
     {
         return $this->setProperty('image', $image);
+    }
+
+    /**
+     * The CableOrSatelliteService offering the channel.
+     *
+     * @param CableOrSatelliteService|CableOrSatelliteService[] $inBroadcastLineup
+     *
+     * @return static
+     *
+     * @see http://schema.org/inBroadcastLineup
+     */
+    public function inBroadcastLineup($inBroadcastLineup)
+    {
+        return $this->setProperty('inBroadcastLineup', $inBroadcastLineup);
     }
 
     /**
@@ -243,6 +229,20 @@ class FMRadioChannel extends BaseType implements RadioChannelContract, Broadcast
     public function potentialAction($potentialAction)
     {
         return $this->setProperty('potentialAction', $potentialAction);
+    }
+
+    /**
+     * The BroadcastService offered on this channel.
+     *
+     * @param BroadcastService|BroadcastService[] $providesBroadcastService
+     *
+     * @return static
+     *
+     * @see http://schema.org/providesBroadcastService
+     */
+    public function providesBroadcastService($providesBroadcastService)
+    {
+        return $this->setProperty('providesBroadcastService', $providesBroadcastService);
     }
 
     /**

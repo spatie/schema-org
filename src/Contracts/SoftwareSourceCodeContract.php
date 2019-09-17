@@ -4,20 +4,6 @@ namespace Spatie\SchemaOrg\Contracts;
 
 interface SoftwareSourceCodeContract
 {
-    public function codeRepository($codeRepository);
-
-    public function codeSampleType($codeSampleType);
-
-    public function programmingLanguage($programmingLanguage);
-
-    public function runtime($runtime);
-
-    public function runtimePlatform($runtimePlatform);
-
-    public function sampleType($sampleType);
-
-    public function targetProduct($targetProduct);
-
     public function about($about);
 
     public function accessMode($accessMode);
@@ -36,7 +22,11 @@ interface SoftwareSourceCodeContract
 
     public function accountablePerson($accountablePerson);
 
+    public function additionalType($additionalType);
+
     public function aggregateRating($aggregateRating);
+
+    public function alternateName($alternateName);
 
     public function alternativeHeadline($alternativeHeadline);
 
@@ -55,6 +45,10 @@ interface SoftwareSourceCodeContract
     public function character($character);
 
     public function citation($citation);
+
+    public function codeRepository($codeRepository);
+
+    public function codeSampleType($codeSampleType);
 
     public function comment($comment);
 
@@ -77,6 +71,10 @@ interface SoftwareSourceCodeContract
     public function dateModified($dateModified);
 
     public function datePublished($datePublished);
+
+    public function description($description);
+
+    public function disambiguatingDescription($disambiguatingDescription);
 
     public function discussionUrl($discussionUrl);
 
@@ -106,6 +104,10 @@ interface SoftwareSourceCodeContract
 
     public function headline($headline);
 
+    public function identifier($identifier);
+
+    public function image($image);
+
     public function inLanguage($inLanguage);
 
     public function interactionStatistic($interactionStatistic);
@@ -132,15 +134,23 @@ interface SoftwareSourceCodeContract
 
     public function mainEntity($mainEntity);
 
+    public function mainEntityOfPage($mainEntityOfPage);
+
     public function material($material);
 
     public function mentions($mentions);
+
+    public function name($name);
 
     public function offers($offers);
 
     public function position($position);
 
+    public function potentialAction($potentialAction);
+
     public function producer($producer);
+
+    public function programmingLanguage($programmingLanguage);
 
     public function provider($provider);
 
@@ -158,6 +168,14 @@ interface SoftwareSourceCodeContract
 
     public function reviews($reviews);
 
+    public function runtime($runtime);
+
+    public function runtimePlatform($runtimePlatform);
+
+    public function sameAs($sameAs);
+
+    public function sampleType($sampleType);
+
     public function schemaVersion($schemaVersion);
 
     public function sourceOrganization($sourceOrganization);
@@ -167,6 +185,10 @@ interface SoftwareSourceCodeContract
     public function spatialCoverage($spatialCoverage);
 
     public function sponsor($sponsor);
+
+    public function subjectOf($subjectOf);
+
+    public function targetProduct($targetProduct);
 
     public function temporal($temporal);
 
@@ -182,34 +204,12 @@ interface SoftwareSourceCodeContract
 
     public function typicalAgeRange($typicalAgeRange);
 
+    public function url($url);
+
     public function version($version);
 
     public function video($video);
 
     public function workExample($workExample);
-
-    public function additionalType($additionalType);
-
-    public function alternateName($alternateName);
-
-    public function description($description);
-
-    public function disambiguatingDescription($disambiguatingDescription);
-
-    public function identifier($identifier);
-
-    public function image($image);
-
-    public function mainEntityOfPage($mainEntityOfPage);
-
-    public function name($name);
-
-    public function potentialAction($potentialAction);
-
-    public function sameAs($sameAs);
-
-    public function subjectOf($subjectOf);
-
-    public function url($url);
 
 }

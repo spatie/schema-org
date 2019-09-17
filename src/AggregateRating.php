@@ -15,45 +15,36 @@ use \Spatie\SchemaOrg\Contracts\ThingContract;
 class AggregateRating extends BaseType implements RatingContract, IntangibleContract, ThingContract
 {
     /**
-     * The item that is being reviewed/rated.
+     * An additional type for the item, typically used for adding more specific
+     * types from external vocabularies in microdata syntax. This is a
+     * relationship between something and a class that the thing is in. In RDFa
+     * syntax, it is better to use the native RDFa syntax - the 'typeof'
+     * attribute - for multiple types. Schema.org tools may have only weaker
+     * understanding of extra types, in particular those defined externally.
      *
-     * @param Thing|Thing[] $itemReviewed
+     * @param string|string[] $additionalType
      *
      * @return static
      *
-     * @see http://schema.org/itemReviewed
+     * @see http://schema.org/additionalType
      */
-    public function itemReviewed($itemReviewed)
+    public function additionalType($additionalType)
     {
-        return $this->setProperty('itemReviewed', $itemReviewed);
+        return $this->setProperty('additionalType', $additionalType);
     }
 
     /**
-     * The count of total number of ratings.
+     * An alias for the item.
      *
-     * @param int|int[] $ratingCount
-     *
-     * @return static
-     *
-     * @see http://schema.org/ratingCount
-     */
-    public function ratingCount($ratingCount)
-    {
-        return $this->setProperty('ratingCount', $ratingCount);
-    }
-
-    /**
-     * The count of total number of reviews.
-     *
-     * @param int|int[] $reviewCount
+     * @param string|string[] $alternateName
      *
      * @return static
      *
-     * @see http://schema.org/reviewCount
+     * @see http://schema.org/alternateName
      */
-    public function reviewCount($reviewCount)
+    public function alternateName($alternateName)
     {
-        return $this->setProperty('reviewCount', $reviewCount);
+        return $this->setProperty('alternateName', $alternateName);
     }
 
     /**
@@ -85,90 +76,6 @@ class AggregateRating extends BaseType implements RatingContract, IntangibleCont
     public function bestRating($bestRating)
     {
         return $this->setProperty('bestRating', $bestRating);
-    }
-
-    /**
-     * The rating for the content.
-     * 
-     * Usage guidelines:
-     * 
-     * * Use values from 0123456789 (Unicode 'DIGIT ZERO' (U+0030) to 'DIGIT
-     * NINE' (U+0039)) rather than superficially similiar Unicode symbols.
-     * * Use '.' (Unicode 'FULL STOP' (U+002E)) rather than ',' to indicate a
-     * decimal point. Avoid using these symbols as a readability separator.
-     *
-     * @param float|float[]|int|int[]|string|string[] $ratingValue
-     *
-     * @return static
-     *
-     * @see http://schema.org/ratingValue
-     */
-    public function ratingValue($ratingValue)
-    {
-        return $this->setProperty('ratingValue', $ratingValue);
-    }
-
-    /**
-     * This Review or Rating is relevant to this part or facet of the
-     * itemReviewed.
-     *
-     * @param string|string[] $reviewAspect
-     *
-     * @return static
-     *
-     * @see http://schema.org/reviewAspect
-     */
-    public function reviewAspect($reviewAspect)
-    {
-        return $this->setProperty('reviewAspect', $reviewAspect);
-    }
-
-    /**
-     * The lowest value allowed in this rating system. If worstRating is
-     * omitted, 1 is assumed.
-     *
-     * @param float|float[]|int|int[]|string|string[] $worstRating
-     *
-     * @return static
-     *
-     * @see http://schema.org/worstRating
-     */
-    public function worstRating($worstRating)
-    {
-        return $this->setProperty('worstRating', $worstRating);
-    }
-
-    /**
-     * An additional type for the item, typically used for adding more specific
-     * types from external vocabularies in microdata syntax. This is a
-     * relationship between something and a class that the thing is in. In RDFa
-     * syntax, it is better to use the native RDFa syntax - the 'typeof'
-     * attribute - for multiple types. Schema.org tools may have only weaker
-     * understanding of extra types, in particular those defined externally.
-     *
-     * @param string|string[] $additionalType
-     *
-     * @return static
-     *
-     * @see http://schema.org/additionalType
-     */
-    public function additionalType($additionalType)
-    {
-        return $this->setProperty('additionalType', $additionalType);
-    }
-
-    /**
-     * An alias for the item.
-     *
-     * @param string|string[] $alternateName
-     *
-     * @return static
-     *
-     * @see http://schema.org/alternateName
-     */
-    public function alternateName($alternateName)
-    {
-        return $this->setProperty('alternateName', $alternateName);
     }
 
     /**
@@ -236,6 +143,20 @@ class AggregateRating extends BaseType implements RatingContract, IntangibleCont
     }
 
     /**
+     * The item that is being reviewed/rated.
+     *
+     * @param Thing|Thing[] $itemReviewed
+     *
+     * @return static
+     *
+     * @see http://schema.org/itemReviewed
+     */
+    public function itemReviewed($itemReviewed)
+    {
+        return $this->setProperty('itemReviewed', $itemReviewed);
+    }
+
+    /**
      * Indicates a page (or other CreativeWork) for which this thing is the main
      * entity being described. See [background
      * notes](/docs/datamodel.html#mainEntityBackground) for details.
@@ -281,6 +202,70 @@ class AggregateRating extends BaseType implements RatingContract, IntangibleCont
     }
 
     /**
+     * The count of total number of ratings.
+     *
+     * @param int|int[] $ratingCount
+     *
+     * @return static
+     *
+     * @see http://schema.org/ratingCount
+     */
+    public function ratingCount($ratingCount)
+    {
+        return $this->setProperty('ratingCount', $ratingCount);
+    }
+
+    /**
+     * The rating for the content.
+     * 
+     * Usage guidelines:
+     * 
+     * * Use values from 0123456789 (Unicode 'DIGIT ZERO' (U+0030) to 'DIGIT
+     * NINE' (U+0039)) rather than superficially similiar Unicode symbols.
+     * * Use '.' (Unicode 'FULL STOP' (U+002E)) rather than ',' to indicate a
+     * decimal point. Avoid using these symbols as a readability separator.
+     *
+     * @param float|float[]|int|int[]|string|string[] $ratingValue
+     *
+     * @return static
+     *
+     * @see http://schema.org/ratingValue
+     */
+    public function ratingValue($ratingValue)
+    {
+        return $this->setProperty('ratingValue', $ratingValue);
+    }
+
+    /**
+     * This Review or Rating is relevant to this part or facet of the
+     * itemReviewed.
+     *
+     * @param string|string[] $reviewAspect
+     *
+     * @return static
+     *
+     * @see http://schema.org/reviewAspect
+     */
+    public function reviewAspect($reviewAspect)
+    {
+        return $this->setProperty('reviewAspect', $reviewAspect);
+    }
+
+    /**
+     * The count of total number of reviews.
+     *
+     * @param int|int[] $reviewCount
+     *
+     * @return static
+     *
+     * @see http://schema.org/reviewCount
+     */
+    public function reviewCount($reviewCount)
+    {
+        return $this->setProperty('reviewCount', $reviewCount);
+    }
+
+    /**
      * URL of a reference Web page that unambiguously indicates the item's
      * identity. E.g. the URL of the item's Wikipedia page, Wikidata entry, or
      * official website.
@@ -322,6 +307,21 @@ class AggregateRating extends BaseType implements RatingContract, IntangibleCont
     public function url($url)
     {
         return $this->setProperty('url', $url);
+    }
+
+    /**
+     * The lowest value allowed in this rating system. If worstRating is
+     * omitted, 1 is assumed.
+     *
+     * @param float|float[]|int|int[]|string|string[] $worstRating
+     *
+     * @return static
+     *
+     * @see http://schema.org/worstRating
+     */
+    public function worstRating($worstRating)
+    {
+        return $this->setProperty('worstRating', $worstRating);
     }
 
 }
