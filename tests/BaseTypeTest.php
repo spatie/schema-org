@@ -309,7 +309,6 @@ class BaseTypeTest extends TestCase
         $this->assertEquals($expected, (string) $type);
     }
 
-
     /** @test */
     public function it_replaces_identifier_with_at_id_property()
     {
