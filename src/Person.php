@@ -517,6 +517,22 @@ class Person extends BaseType
     }
 
     /**
+     * The languages of a Person, and less typically of an Organization, to indicate a known language.
+     * We do not distinguish skill levels or reading/writing/speaking/signing here.
+     * Use language codes from the [IETF BCP 47 standard](http://tools.ietf.org/html/bcp47).
+     *
+     * @param Language|Language[]|string|string[] $knowsLanguage
+     *
+     * @return static
+     *
+     * @see https://schema.org/knowsLanguage
+     */
+    public function knowsLanguage($knowsLanguage)
+    {
+        return $this->setProperty('knowsLanguage', $knowsLanguage);
+    }
+
+    /**
      * A pointer to products or services offered by the organization or person.
      *
      * @param Offer|Offer[] $makesOffer
@@ -653,7 +669,7 @@ class Person extends BaseType
      * applied to a [[CreativeWork]] (e.g. [[NewsArticle]]) the principles are
      * those of the party primarily responsible for the creation of the
      * [[CreativeWork]].
-     * 
+     *
      * While such policies are most typically expressed in natural language,
      * sometimes related information (e.g. indicating a [[funder]]) can be
      * expressed using schema.org terminology.
