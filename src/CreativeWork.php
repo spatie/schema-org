@@ -48,7 +48,7 @@ class CreativeWork extends BaseType
      * understand all the intellectual content of a resource. Expected values
      * include:  auditory, tactile, textual, visual.
      *
-     * @param string|string[] $accessModeSufficient
+     * @param ItemList|ItemList[] $accessModeSufficient
      *
      * @return static
      *

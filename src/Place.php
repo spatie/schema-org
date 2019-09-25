@@ -261,6 +261,21 @@ class Place extends BaseType
     }
 
     /**
+     * The latitude of a location. For example ```37.42242``` ([WGS
+     * 84](https://en.wikipedia.org/wiki/World_Geodetic_System)).
+     *
+     * @param float|float[]|int|int[]|string|string[] $latitude
+     *
+     * @return static
+     *
+     * @see http://schema.org/latitude
+     */
+    public function latitude($latitude)
+    {
+        return $this->setProperty('latitude', $latitude);
+    }
+
+    /**
      * An associated logo.
      *
      * @param ImageObject|ImageObject[]|string|string[] $logo
@@ -272,6 +287,21 @@ class Place extends BaseType
     public function logo($logo)
     {
         return $this->setProperty('logo', $logo);
+    }
+
+    /**
+     * The longitude of a location. For example ```-122.08585``` ([WGS
+     * 84](https://en.wikipedia.org/wiki/World_Geodetic_System)).
+     *
+     * @param float|float[]|int|int[]|string|string[] $longitude
+     *
+     * @return static
+     *
+     * @see http://schema.org/longitude
+     */
+    public function longitude($longitude)
+    {
+        return $this->setProperty('longitude', $longitude);
     }
 
     /**
