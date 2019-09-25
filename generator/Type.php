@@ -53,13 +53,13 @@ class Type
 
         $types = $typeCollection->toArray();
 
-        foreach ($this->parents as $parent) {
-            if (! isset($types[$parent])) {
+        foreach ($this->parents as $parentType) {
+            if (! isset($types[$parentType])) {
                 continue;
             }
 
             /** @var Type $parent */
-            $parent = $types[$parent];
+            $parent = $types[$parentType];
             $parent->setTypeCollection($typeCollection);
 
             $this->parents = array_unique(array_merge($this->parents, $parent->parents));
