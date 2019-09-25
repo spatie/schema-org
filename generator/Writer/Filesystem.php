@@ -13,13 +13,20 @@ class Filesystem
     protected $flysystem;
 
     /** @var \Spatie\SchemaOrg\Generator\Writer\Template */
+    protected $contractTemplate;
+
+    /** @var \Spatie\SchemaOrg\Generator\Writer\Template */
     protected $typeTemplate;
+
+    /** @var \Spatie\SchemaOrg\Generator\Writer\Template */
+    protected $builderClassTemplate;
 
     public function __construct(string $root)
     {
         $adapter = new Local($root);
         $this->flysystem = new Flysystem($adapter);
 
+        $this->contractTemplate = new Template('Contract.php.twig');
         $this->typeTemplate = new Template('Type.php.twig');
         $this->builderClassTemplate = new Template('Schema.php.twig');
     }
@@ -48,6 +55,11 @@ class Filesystem
 
     public function createType(Type $type)
     {
+        $this->flysystem->put(
+            "src/Contracts/{$type->name}Contract.php",
+            $this->contractTemplate->render(['type' => $type])
+        );
+
         $this->flysystem->put(
             "src/{$type->name}.php",
             $this->typeTemplate->render(['type' => $type])

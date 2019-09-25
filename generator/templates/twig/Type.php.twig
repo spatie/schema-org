@@ -2,21 +2,20 @@
 
 namespace Spatie\SchemaOrg;
 
+{% for parent in type.parents %}
+use \Spatie\SchemaOrg\Contracts\{{ parent }}Contract;
+{% endfor %}
+
 /**
  * {{ type.description | doc(0) }}
  *
  * @see {{ type.resource }}
-{% if type.parents %}
  *
-{% for parent in type.parents %}
- * @mixin \Spatie\SchemaOrg\{{ parent }}
-{% endfor %}
 {% for property in type.properties if property.pending  %}
  * @method static {{ property.name }}(${{ property.name }}) The value should be instance of pending types {{ property.ranges | join('|') }}
 {% endfor %}
-{% endif %}
  */
-class {{ type.name }} extends BaseType
+class {{ type.name }} extends BaseType{% if type.parents %} implements {% endif %}{{ type.parents|map(parent => "#{parent}Contract")|join(', ') }}
 {
 {% for constant in type.constants %}
     /**

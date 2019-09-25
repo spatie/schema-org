@@ -1,0 +1,11 @@
+<?php
+
+namespace Spatie\SchemaOrg\Contracts;
+
+interface {{ type.name }}Contract
+{
+{% for property in type.properties if not property.pending  %}
+    public function {{ property.name }}(${{ property.name }});
+
+{% endfor %}
+}

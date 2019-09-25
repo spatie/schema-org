@@ -2,6 +2,9 @@
 
 namespace Spatie\SchemaOrg;
 
+use \Spatie\SchemaOrg\Contracts\IntangibleContract;
+use \Spatie\SchemaOrg\Contracts\ThingContract;
+
 /**
  * A demand entity represents the public, not necessarily binding, not
  * necessarily exclusive, announcement by an organization or person to seek a
@@ -10,9 +13,8 @@ namespace Spatie\SchemaOrg;
  *
  * @see http://schema.org/Demand
  *
- * @mixin \Spatie\SchemaOrg\Intangible
  */
-class Demand extends BaseType
+class Demand extends BaseType implements IntangibleContract, ThingContract
 {
     /**
      * The payment method(s) accepted by seller for this offer.
@@ -29,6 +31,25 @@ class Demand extends BaseType
     }
 
     /**
+     * An additional type for the item, typically used for adding more specific
+     * types from external vocabularies in microdata syntax. This is a
+     * relationship between something and a class that the thing is in. In RDFa
+     * syntax, it is better to use the native RDFa syntax - the 'typeof'
+     * attribute - for multiple types. Schema.org tools may have only weaker
+     * understanding of extra types, in particular those defined externally.
+     *
+     * @param string|string[] $additionalType
+     *
+     * @return static
+     *
+     * @see http://schema.org/additionalType
+     */
+    public function additionalType($additionalType)
+    {
+        return $this->setProperty('additionalType', $additionalType);
+    }
+
+    /**
      * The amount of time that is required between accepting the offer and the
      * actual usage of the resource or service.
      *
@@ -41,6 +62,20 @@ class Demand extends BaseType
     public function advanceBookingRequirement($advanceBookingRequirement)
     {
         return $this->setProperty('advanceBookingRequirement', $advanceBookingRequirement);
+    }
+
+    /**
+     * An alias for the item.
+     *
+     * @param string|string[] $alternateName
+     *
+     * @return static
+     *
+     * @see http://schema.org/alternateName
+     */
+    public function alternateName($alternateName)
+    {
+        return $this->setProperty('alternateName', $alternateName);
     }
 
     /**
@@ -160,6 +195,37 @@ class Demand extends BaseType
     public function deliveryLeadTime($deliveryLeadTime)
     {
         return $this->setProperty('deliveryLeadTime', $deliveryLeadTime);
+    }
+
+    /**
+     * A description of the item.
+     *
+     * @param string|string[] $description
+     *
+     * @return static
+     *
+     * @see http://schema.org/description
+     */
+    public function description($description)
+    {
+        return $this->setProperty('description', $description);
+    }
+
+    /**
+     * A sub property of description. A short description of the item used to
+     * disambiguate from other, similar items. Information from other properties
+     * (in particular, name) may be necessary for the description to be useful
+     * for disambiguation.
+     *
+     * @param string|string[] $disambiguatingDescription
+     *
+     * @return static
+     *
+     * @see http://schema.org/disambiguatingDescription
+     */
+    public function disambiguatingDescription($disambiguatingDescription)
+    {
+        return $this->setProperty('disambiguatingDescription', $disambiguatingDescription);
     }
 
     /**
@@ -315,6 +381,39 @@ class Demand extends BaseType
     }
 
     /**
+     * The identifier property represents any kind of identifier for any kind of
+     * [[Thing]], such as ISBNs, GTIN codes, UUIDs etc. Schema.org provides
+     * dedicated properties for representing many of these, either as textual
+     * strings or as URL (URI) links. See [background
+     * notes](/docs/datamodel.html#identifierBg) for more details.
+     *
+     * @param PropertyValue|PropertyValue[]|string|string[] $identifier
+     *
+     * @return static
+     *
+     * @see http://schema.org/identifier
+     */
+    public function identifier($identifier)
+    {
+        return $this->setProperty('identifier', $identifier);
+    }
+
+    /**
+     * An image of the item. This can be a [[URL]] or a fully described
+     * [[ImageObject]].
+     *
+     * @param ImageObject|ImageObject[]|string|string[] $image
+     *
+     * @return static
+     *
+     * @see http://schema.org/image
+     */
+    public function image($image)
+    {
+        return $this->setProperty('image', $image);
+    }
+
+    /**
      * This links to a node or nodes indicating the exact quantity of the
      * products included in the offer.
      *
@@ -393,6 +492,22 @@ class Demand extends BaseType
     }
 
     /**
+     * Indicates a page (or other CreativeWork) for which this thing is the main
+     * entity being described. See [background
+     * notes](/docs/datamodel.html#mainEntityBackground) for details.
+     *
+     * @param CreativeWork|CreativeWork[]|string|string[] $mainEntityOfPage
+     *
+     * @return static
+     *
+     * @see http://schema.org/mainEntityOfPage
+     */
+    public function mainEntityOfPage($mainEntityOfPage)
+    {
+        return $this->setProperty('mainEntityOfPage', $mainEntityOfPage);
+    }
+
+    /**
      * The Manufacturer Part Number (MPN) of the product, or the product to
      * which the offer refers.
      *
@@ -408,6 +523,35 @@ class Demand extends BaseType
     }
 
     /**
+     * The name of the item.
+     *
+     * @param string|string[] $name
+     *
+     * @return static
+     *
+     * @see http://schema.org/name
+     */
+    public function name($name)
+    {
+        return $this->setProperty('name', $name);
+    }
+
+    /**
+     * Indicates a potential Action, which describes an idealized action in
+     * which this thing would play an 'object' role.
+     *
+     * @param Action|Action[] $potentialAction
+     *
+     * @return static
+     *
+     * @see http://schema.org/potentialAction
+     */
+    public function potentialAction($potentialAction)
+    {
+        return $this->setProperty('potentialAction', $potentialAction);
+    }
+
+    /**
      * One or more detailed price specifications, indicating the unit price and
      * delivery or payment charges.
      *
@@ -420,6 +564,22 @@ class Demand extends BaseType
     public function priceSpecification($priceSpecification)
     {
         return $this->setProperty('priceSpecification', $priceSpecification);
+    }
+
+    /**
+     * URL of a reference Web page that unambiguously indicates the item's
+     * identity. E.g. the URL of the item's Wikipedia page, Wikidata entry, or
+     * official website.
+     *
+     * @param string|string[] $sameAs
+     *
+     * @return static
+     *
+     * @see http://schema.org/sameAs
+     */
+    public function sameAs($sameAs)
+    {
+        return $this->setProperty('sameAs', $sameAs);
     }
 
     /**
@@ -466,6 +626,34 @@ class Demand extends BaseType
     public function sku($sku)
     {
         return $this->setProperty('sku', $sku);
+    }
+
+    /**
+     * A CreativeWork or Event about this Thing.
+     *
+     * @param CreativeWork|CreativeWork[]|Event|Event[] $subjectOf
+     *
+     * @return static
+     *
+     * @see http://schema.org/subjectOf
+     */
+    public function subjectOf($subjectOf)
+    {
+        return $this->setProperty('subjectOf', $subjectOf);
+    }
+
+    /**
+     * URL of the item.
+     *
+     * @param string|string[] $url
+     *
+     * @return static
+     *
+     * @see http://schema.org/url
+     */
+    public function url($url)
+    {
+        return $this->setProperty('url', $url);
     }
 
     /**
