@@ -308,6 +308,22 @@ class BaseTypeTest extends TestCase
 
         $this->assertEquals($expected, (string) $type);
     }
+
+    /** @test */
+    public function it_replaces_identifier_with_at_id_property()
+    {
+        $type = new DummyType();
+
+        $type->setProperty('identifier', 'object#1');
+
+        $expected = [
+            '@context' => 'https://schema.org',
+            '@type' => 'DummyType',
+            '@id' => 'object#1',
+        ];
+
+        $this->assertEquals($expected, $type->toArray());
+    }
 }
 
 class DummyType extends BaseType
