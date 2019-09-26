@@ -3,11 +3,13 @@
 namespace Spatie\SchemaOrg;
 
 use DateTime;
+use ArrayAccess;
 use ReflectionClass;
+use JsonSerializable;
 use DateTimeInterface;
 use Spatie\SchemaOrg\Exceptions\InvalidProperty;
 
-abstract class BaseType implements Type, \ArrayAccess, \JsonSerializable
+abstract class BaseType implements Type, ArrayAccess, JsonSerializable
 {
     /** @var array */
     protected $properties = [];
