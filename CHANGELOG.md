@@ -2,6 +2,24 @@
 
 All Notable changes to `schema-org` will be documented in this file.
 
+## 2.6.0 - 2019-09-26
+- Fix identifier serialization
+
+## 2.5.0 - 2019-09-25
+- Add reflection support
+
+## 2.4.0 - 2019-09-25
+- RDFa update
+
+## 2.3.0 - 2019-08-07
+- Fix null values
+
+## 2.2.1 - 2019-05-28
+- Fix pending Types
+
+## 2.2.0 - 2019-05-28
+- RDFa update
+
 ## 2.1.0 - 2019-01-18
 - Add `Graph` support
 
