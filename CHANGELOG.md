@@ -2,6 +2,10 @@
 
 All Notable changes to `schema-org` will be documented in this file.
 
+## 2.7.0 - 2019-10-06
+
+- Drop PHP 7.0 support
+
 ## 2.6.0 - 2019-09-26
 - Fix identifier serialization
 
