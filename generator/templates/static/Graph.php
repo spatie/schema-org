@@ -2,11 +2,11 @@
 
 namespace Spatie\SchemaOrg;
 
-use ReflectionClass;
 use BadMethodCallException;
+use ReflectionClass;
 use Spatie\SchemaOrg\Exceptions\InvalidType;
-use Spatie\SchemaOrg\Exceptions\TypeNotInGraph;
 use Spatie\SchemaOrg\Exceptions\TypeAlreadyInGraph;
+use Spatie\SchemaOrg\Exceptions\TypeNotInGraph;
 
 /**
  * @mixin \Spatie\SchemaOrg\Schema
