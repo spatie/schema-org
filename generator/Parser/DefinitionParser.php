@@ -2,12 +2,12 @@
 
 namespace Spatie\SchemaOrg\Generator\Parser;
 
-use Symfony\Component\DomCrawler\Crawler;
 use Spatie\SchemaOrg\Generator\Definitions;
-use Spatie\SchemaOrg\Generator\TypeCollection;
-use Spatie\SchemaOrg\Generator\Parser\Tasks\ParseType;
 use Spatie\SchemaOrg\Generator\Parser\Tasks\ParseConstant;
 use Spatie\SchemaOrg\Generator\Parser\Tasks\ParseProperty;
+use Spatie\SchemaOrg\Generator\Parser\Tasks\ParseType;
+use Spatie\SchemaOrg\Generator\TypeCollection;
+use Symfony\Component\DomCrawler\Crawler;
 
 class DefinitionParser
 {

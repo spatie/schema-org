@@ -2,11 +2,11 @@
 
 namespace Spatie\SchemaOrg;
 
-use DateTime;
 use ArrayAccess;
-use ReflectionClass;
-use JsonSerializable;
+use DateTime;
 use DateTimeInterface;
+use JsonSerializable;
+use ReflectionClass;
 use Spatie\SchemaOrg\Exceptions\InvalidProperty;
 
 abstract class BaseType implements Type, ArrayAccess, JsonSerializable
