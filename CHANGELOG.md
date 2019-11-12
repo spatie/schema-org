@@ -2,6 +2,12 @@
 
 All Notable changes to `schema-org` will be documented in this file.
 
+## 2.10.0 - 2019-11-12
+
+- Add PHP 7.4 support
+- Fix `Graph` magic call
+- RDFa update
+
 ## 2.9.0 - 2019-10-06
 
 - Drop PHP 7.2 support
