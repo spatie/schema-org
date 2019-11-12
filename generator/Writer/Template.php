@@ -3,8 +3,8 @@
 namespace Spatie\SchemaOrg\Generator\Writer;
 
 use Twig_Environment;
-use Twig_SimpleFilter;
 use Twig_Loader_Filesystem;
+use Twig_SimpleFilter;
 
 class Template
 {

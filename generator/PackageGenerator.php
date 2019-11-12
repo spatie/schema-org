@@ -2,8 +2,8 @@
 
 namespace Spatie\SchemaOrg\Generator;
 
-use Spatie\SchemaOrg\Generator\Writer\Filesystem;
 use Spatie\SchemaOrg\Generator\Parser\DefinitionParser;
+use Spatie\SchemaOrg\Generator\Writer\Filesystem;
 
 class PackageGenerator
 {
