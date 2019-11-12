@@ -10,7 +10,7 @@ use \Spatie\SchemaOrg\Contracts\ThingContract;
  * A [[CampingPitch]] is an individual place for overnight stay in the outdoors,
  * typically being part of a larger camping site, or [[Campground]].
  * 
- *       
+ * 
  * In British English a campsite, or campground, is an area, usually divided
  * into a number of pitches, where people can camp overnight using tents or
  * camper vans or caravans; this British English use of the word is synonymous
