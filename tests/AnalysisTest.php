@@ -2,8 +2,8 @@
 
 namespace Spatie\SchemaOrg\Tests;
 
-use PHPUnit\Framework\TestCase;
 use GrahamCampbell\Analyzer\AnalysisTrait;
+use PHPUnit\Framework\TestCase;
 
 class AnalysisTest extends TestCase
 {
