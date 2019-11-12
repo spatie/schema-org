@@ -22,7 +22,7 @@ class Graph extends BaseType
         if (is_callable([Schema::class, $method])) {
             $type = (new ReflectionClass(Schema::class))->getMethod($method)->getReturnType();
 
-            if (!$type instanceof ReflectionNamedType) {
+            if (! $type instanceof ReflectionNamedType) {
                 throw new BadMethodCallException(sprintf('The method "%" has an invalid return type which does not resolve to "%s".', $method, ReflectionNamedType::class));
             }
 
