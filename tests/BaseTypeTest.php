@@ -3,8 +3,8 @@
 namespace Spatie\SchemaOrg\Tests;
 
 use DateTime;
-use Spatie\SchemaOrg\BaseType;
 use PHPUnit\Framework\TestCase;
+use Spatie\SchemaOrg\BaseType;
 use Spatie\SchemaOrg\Exceptions\InvalidProperty;
 
 class BaseTypeTest extends TestCase

@@ -2,11 +2,11 @@
 
 namespace Spatie\SchemaOrg;
 
-use DateTime;
 use ArrayAccess;
-use ReflectionClass;
-use JsonSerializable;
+use DateTime;
 use DateTimeInterface;
+use JsonSerializable;
+use ReflectionClass;
 use Spatie\SchemaOrg\Exceptions\InvalidProperty;
 
 abstract class BaseType implements Type, ArrayAccess, JsonSerializable
@@ -107,7 +107,7 @@ abstract class BaseType implements Type, ArrayAccess, JsonSerializable
             $property = $property->format(DateTime::ATOM);
         }
 
-        if (method_exists($property, '__toString')) {
+        if (is_object($property) && method_exists($property, '__toString')) {
             $property = (string) $property;
         }
 
