@@ -1,16 +1,29 @@
 language: php
 
+cache:
+  directories:
+    - $HOME/.composer/cache/files
+
 php:
   - 7.3
+  - 7.4snapshot
 
 env:
   matrix:
     - COMPOSER_FLAGS="--prefer-lowest"
     - COMPOSER_FLAGS=""
 
-before_script:
+matrix:
+  fast_finish: true
+  allow_failures:
+    - php: 7.4snapshot
+
+before_install:
+  - composer config discard-changes true
   - travis_retry composer self-update
-  - travis_retry composer update ${COMPOSER_FLAGS} --no-interaction --prefer-source
+
+install:
+  - travis_retry composer update ${COMPOSER_FLAGS} --no-interaction --prefer-dist
 
 script:
   - vendor/bin/phpunit --coverage-text --coverage-clover=coverage.clover

@@ -4,6 +4,7 @@ namespace Spatie\SchemaOrg;
 
 use BadMethodCallException;
 use ReflectionClass;
+use ReflectionNamedType;
 use Spatie\SchemaOrg\Exceptions\InvalidType;
 use Spatie\SchemaOrg\Exceptions\TypeAlreadyInGraph;
 use Spatie\SchemaOrg\Exceptions\TypeNotInGraph;
@@ -21,7 +22,11 @@ class Graph extends BaseType
         if (is_callable([Schema::class, $method])) {
             $type = (new ReflectionClass(Schema::class))->getMethod($method)->getReturnType();
 
-            $schema = $this->getOrCreate($type);
+            if (! $type instanceof ReflectionNamedType) {
+                throw new BadMethodCallException(sprintf('The method "%" has an invalid return type which does not resolve to "%s".', $method, ReflectionNamedType::class));
+            }
+
+            $schema = $this->getOrCreate($type->getName());
 
             if (isset($arguments[0]) && is_callable($arguments[0])) {
                 call_user_func($arguments[0], $schema, $this);
