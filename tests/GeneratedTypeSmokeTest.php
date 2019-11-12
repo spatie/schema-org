@@ -2,10 +2,10 @@
 
 namespace Spatie\SchemaOrg\Tests;
 
-use Spatie\SchemaOrg\Type;
-use Spatie\SchemaOrg\Schema;
 use PHPUnit\Framework\TestCase;
 use Spatie\SchemaOrg\LocalBusiness;
+use Spatie\SchemaOrg\Schema;
+use Spatie\SchemaOrg\Type;
 
 class GeneratedTypeSmokeTest extends TestCase
 {
