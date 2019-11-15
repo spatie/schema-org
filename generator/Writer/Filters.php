@@ -49,7 +49,7 @@ class Filters
     {
         $contracts = $type->parents;
         foreach ($type->properties as $property) {
-            if (!$property->pending) {
+            if (! $property->pending) {
                 foreach ($property->ranges as $type) {
                     $baseType = str_replace('[]', '', $type);
                     if (in_array($baseType, self::PRIMARY_TYPES) || in_array($baseType, $contracts)) {
