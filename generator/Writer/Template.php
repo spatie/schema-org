@@ -41,6 +41,10 @@ class Template
         );
 
         $twig->addFilter(
+            new Twig_SimpleFilter('param', [Filters::class, 'param'])
+        );
+
+        $twig->addFilter(
             new Twig_SimpleFilter('lcfirst', [Filters::class, 'lcfirst'])
         );
 

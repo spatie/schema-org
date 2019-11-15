@@ -30,7 +30,7 @@ class {{ type.name }} extends BaseType{% if type.parents %} implements {% endif 
     /**
      * {{ property.description | doc(1) }}
      *
-     * @param {{ property.ranges | join('|') }} ${{ property.name }}
+     * @param {{ property.ranges | param }} ${{ property.name }}
      *
      * @return static
      *
