@@ -48,7 +48,7 @@ class Person extends BaseType implements ThingContract
     /**
      * Physical address of the item.
      *
-     * @param PostalAddress|PostalAddress[]|string|string[] $address
+     * @param \Spatie\SchemaOrg\Contracts\PostalAddressContract|\Spatie\SchemaOrg\Contracts\PostalAddressContract[]|string|string[] $address
      *
      * @return static
      *
@@ -63,7 +63,7 @@ class Person extends BaseType implements ThingContract
      * An organization that this person is affiliated with. For example, a
      * school/university, a club, or a team.
      *
-     * @param Organization|Organization[] $affiliation
+     * @param \Spatie\SchemaOrg\Contracts\OrganizationContract|\Spatie\SchemaOrg\Contracts\OrganizationContract[] $affiliation
      *
      * @return static
      *
@@ -91,7 +91,7 @@ class Person extends BaseType implements ThingContract
     /**
      * An organization that the person is an alumni of.
      *
-     * @param EducationalOrganization|EducationalOrganization[]|Organization|Organization[] $alumniOf
+     * @param \Spatie\SchemaOrg\Contracts\EducationalOrganizationContract|\Spatie\SchemaOrg\Contracts\EducationalOrganizationContract[]|\Spatie\SchemaOrg\Contracts\OrganizationContract|\Spatie\SchemaOrg\Contracts\OrganizationContract[] $alumniOf
      *
      * @return static
      *
@@ -147,7 +147,7 @@ class Person extends BaseType implements ThingContract
     /**
      * The place where the person was born.
      *
-     * @param Place|Place[] $birthPlace
+     * @param \Spatie\SchemaOrg\Contracts\PlaceContract|\Spatie\SchemaOrg\Contracts\PlaceContract[] $birthPlace
      *
      * @return static
      *
@@ -162,7 +162,7 @@ class Person extends BaseType implements ThingContract
      * The brand(s) associated with a product or service, or the brand(s)
      * maintained by an organization or business person.
      *
-     * @param Brand|Brand[]|Organization|Organization[] $brand
+     * @param \Spatie\SchemaOrg\Contracts\BrandContract|\Spatie\SchemaOrg\Contracts\BrandContract[]|\Spatie\SchemaOrg\Contracts\OrganizationContract|\Spatie\SchemaOrg\Contracts\OrganizationContract[] $brand
      *
      * @return static
      *
@@ -176,7 +176,7 @@ class Person extends BaseType implements ThingContract
     /**
      * A child of the person.
      *
-     * @param Person|Person[] $children
+     * @param \Spatie\SchemaOrg\Contracts\PersonContract|\Spatie\SchemaOrg\Contracts\PersonContract[] $children
      *
      * @return static
      *
@@ -190,7 +190,7 @@ class Person extends BaseType implements ThingContract
     /**
      * A colleague of the person.
      *
-     * @param Person|Person[]|string|string[] $colleague
+     * @param \Spatie\SchemaOrg\Contracts\PersonContract|\Spatie\SchemaOrg\Contracts\PersonContract[]|string|string[] $colleague
      *
      * @return static
      *
@@ -204,7 +204,7 @@ class Person extends BaseType implements ThingContract
     /**
      * A colleague of the person.
      *
-     * @param Person|Person[] $colleagues
+     * @param \Spatie\SchemaOrg\Contracts\PersonContract|\Spatie\SchemaOrg\Contracts\PersonContract[] $colleagues
      *
      * @return static
      *
@@ -218,7 +218,7 @@ class Person extends BaseType implements ThingContract
     /**
      * A contact point for a person or organization.
      *
-     * @param ContactPoint|ContactPoint[] $contactPoint
+     * @param \Spatie\SchemaOrg\Contracts\ContactPointContract|\Spatie\SchemaOrg\Contracts\ContactPointContract[] $contactPoint
      *
      * @return static
      *
@@ -232,7 +232,7 @@ class Person extends BaseType implements ThingContract
     /**
      * A contact point for a person or organization.
      *
-     * @param ContactPoint|ContactPoint[] $contactPoints
+     * @param \Spatie\SchemaOrg\Contracts\ContactPointContract|\Spatie\SchemaOrg\Contracts\ContactPointContract[] $contactPoints
      *
      * @return static
      *
@@ -260,7 +260,7 @@ class Person extends BaseType implements ThingContract
     /**
      * The place where the person died.
      *
-     * @param Place|Place[] $deathPlace
+     * @param \Spatie\SchemaOrg\Contracts\PlaceContract|\Spatie\SchemaOrg\Contracts\PlaceContract[] $deathPlace
      *
      * @return static
      *
@@ -363,7 +363,7 @@ class Person extends BaseType implements ThingContract
     /**
      * The most generic uni-directional social relation.
      *
-     * @param Person|Person[] $follows
+     * @param \Spatie\SchemaOrg\Contracts\PersonContract|\Spatie\SchemaOrg\Contracts\PersonContract[] $follows
      *
      * @return static
      *
@@ -378,7 +378,7 @@ class Person extends BaseType implements ThingContract
      * A person or organization that supports (sponsors) something through some
      * kind of financial contribution.
      *
-     * @param Organization|Organization[]|Person|Person[] $funder
+     * @param \Spatie\SchemaOrg\Contracts\OrganizationContract|\Spatie\SchemaOrg\Contracts\OrganizationContract[]|\Spatie\SchemaOrg\Contracts\PersonContract|\Spatie\SchemaOrg\Contracts\PersonContract[] $funder
      *
      * @return static
      *
@@ -399,7 +399,7 @@ class Person extends BaseType implements ThingContract
      * enumerate all possibilities. A mixed-gender [[SportsTeam]] can be
      * indicated with a text value of "Mixed".
      *
-     * @param GenderType|GenderType[]|string|string[] $gender
+     * @param \Spatie\SchemaOrg\Contracts\GenderTypeContract|\Spatie\SchemaOrg\Contracts\GenderTypeContract[]|string|string[] $gender
      *
      * @return static
      *
@@ -446,7 +446,7 @@ class Person extends BaseType implements ThingContract
      * The Person's occupation. For past professions, use Role for expressing
      * dates.
      *
-     * @param Occupation|Occupation[] $hasOccupation
+     * @param \Spatie\SchemaOrg\Contracts\OccupationContract|\Spatie\SchemaOrg\Contracts\OccupationContract[] $hasOccupation
      *
      * @return static
      *
@@ -461,7 +461,7 @@ class Person extends BaseType implements ThingContract
      * Indicates an OfferCatalog listing for this Organization, Person, or
      * Service.
      *
-     * @param OfferCatalog|OfferCatalog[] $hasOfferCatalog
+     * @param \Spatie\SchemaOrg\Contracts\OfferCatalogContract|\Spatie\SchemaOrg\Contracts\OfferCatalogContract[] $hasOfferCatalog
      *
      * @return static
      *
@@ -475,7 +475,7 @@ class Person extends BaseType implements ThingContract
     /**
      * Points-of-Sales operated by the organization or person.
      *
-     * @param Place|Place[] $hasPOS
+     * @param \Spatie\SchemaOrg\Contracts\PlaceContract|\Spatie\SchemaOrg\Contracts\PlaceContract[] $hasPOS
      *
      * @return static
      *
@@ -489,7 +489,7 @@ class Person extends BaseType implements ThingContract
     /**
      * The height of the item.
      *
-     * @param Distance|Distance[]|QuantitativeValue|QuantitativeValue[] $height
+     * @param \Spatie\SchemaOrg\Contracts\DistanceContract|\Spatie\SchemaOrg\Contracts\DistanceContract[]|\Spatie\SchemaOrg\Contracts\QuantitativeValueContract|\Spatie\SchemaOrg\Contracts\QuantitativeValueContract[] $height
      *
      * @return static
      *
@@ -503,7 +503,7 @@ class Person extends BaseType implements ThingContract
     /**
      * A contact location for a person's residence.
      *
-     * @param ContactPoint|ContactPoint[]|Place|Place[] $homeLocation
+     * @param \Spatie\SchemaOrg\Contracts\ContactPointContract|\Spatie\SchemaOrg\Contracts\ContactPointContract[]|\Spatie\SchemaOrg\Contracts\PlaceContract|\Spatie\SchemaOrg\Contracts\PlaceContract[] $homeLocation
      *
      * @return static
      *
@@ -549,7 +549,7 @@ class Person extends BaseType implements ThingContract
      * strings or as URL (URI) links. See [background
      * notes](/docs/datamodel.html#identifierBg) for more details.
      *
-     * @param PropertyValue|PropertyValue[]|string|string[] $identifier
+     * @param \Spatie\SchemaOrg\Contracts\PropertyValueContract|\Spatie\SchemaOrg\Contracts\PropertyValueContract[]|string|string[] $identifier
      *
      * @return static
      *
@@ -564,7 +564,7 @@ class Person extends BaseType implements ThingContract
      * An image of the item. This can be a [[URL]] or a fully described
      * [[ImageObject]].
      *
-     * @param ImageObject|ImageObject[]|string|string[] $image
+     * @param \Spatie\SchemaOrg\Contracts\ImageObjectContract|\Spatie\SchemaOrg\Contracts\ImageObjectContract[]|string|string[] $image
      *
      * @return static
      *
@@ -608,7 +608,7 @@ class Person extends BaseType implements ThingContract
     /**
      * The most generic bi-directional social/work relation.
      *
-     * @param Person|Person[] $knows
+     * @param \Spatie\SchemaOrg\Contracts\PersonContract|\Spatie\SchemaOrg\Contracts\PersonContract[] $knows
      *
      * @return static
      *
@@ -624,7 +624,7 @@ class Person extends BaseType implements ThingContract
      * entity being described. See [background
      * notes](/docs/datamodel.html#mainEntityBackground) for details.
      *
-     * @param CreativeWork|CreativeWork[]|string|string[] $mainEntityOfPage
+     * @param \Spatie\SchemaOrg\Contracts\CreativeWorkContract|\Spatie\SchemaOrg\Contracts\CreativeWorkContract[]|string|string[] $mainEntityOfPage
      *
      * @return static
      *
@@ -638,7 +638,7 @@ class Person extends BaseType implements ThingContract
     /**
      * A pointer to products or services offered by the organization or person.
      *
-     * @param Offer|Offer[] $makesOffer
+     * @param \Spatie\SchemaOrg\Contracts\OfferContract|\Spatie\SchemaOrg\Contracts\OfferContract[] $makesOffer
      *
      * @return static
      *
@@ -653,7 +653,7 @@ class Person extends BaseType implements ThingContract
      * An Organization (or ProgramMembership) to which this Person or
      * Organization belongs.
      *
-     * @param Organization|Organization[]|ProgramMembership|ProgramMembership[] $memberOf
+     * @param \Spatie\SchemaOrg\Contracts\OrganizationContract|\Spatie\SchemaOrg\Contracts\OrganizationContract[]|\Spatie\SchemaOrg\Contracts\ProgramMembershipContract|\Spatie\SchemaOrg\Contracts\ProgramMembershipContract[] $memberOf
      *
      * @return static
      *
@@ -696,7 +696,7 @@ class Person extends BaseType implements ThingContract
     /**
      * Nationality of the person.
      *
-     * @param Country|Country[] $nationality
+     * @param \Spatie\SchemaOrg\Contracts\CountryContract|\Spatie\SchemaOrg\Contracts\CountryContract[] $nationality
      *
      * @return static
      *
@@ -711,7 +711,7 @@ class Person extends BaseType implements ThingContract
      * The total financial value of the person as calculated by subtracting
      * assets from liabilities.
      *
-     * @param MonetaryAmount|MonetaryAmount[]|PriceSpecification|PriceSpecification[] $netWorth
+     * @param \Spatie\SchemaOrg\Contracts\MonetaryAmountContract|\Spatie\SchemaOrg\Contracts\MonetaryAmountContract[]|\Spatie\SchemaOrg\Contracts\PriceSpecificationContract|\Spatie\SchemaOrg\Contracts\PriceSpecificationContract[] $netWorth
      *
      * @return static
      *
@@ -725,7 +725,7 @@ class Person extends BaseType implements ThingContract
     /**
      * Products owned by the organization or person.
      *
-     * @param OwnershipInfo|OwnershipInfo[]|Product|Product[] $owns
+     * @param \Spatie\SchemaOrg\Contracts\OwnershipInfoContract|\Spatie\SchemaOrg\Contracts\OwnershipInfoContract[]|\Spatie\SchemaOrg\Contracts\ProductContract|\Spatie\SchemaOrg\Contracts\ProductContract[] $owns
      *
      * @return static
      *
@@ -739,7 +739,7 @@ class Person extends BaseType implements ThingContract
     /**
      * A parent of this person.
      *
-     * @param Person|Person[] $parent
+     * @param \Spatie\SchemaOrg\Contracts\PersonContract|\Spatie\SchemaOrg\Contracts\PersonContract[] $parent
      *
      * @return static
      *
@@ -753,7 +753,7 @@ class Person extends BaseType implements ThingContract
     /**
      * A parents of the person.
      *
-     * @param Person|Person[] $parents
+     * @param \Spatie\SchemaOrg\Contracts\PersonContract|\Spatie\SchemaOrg\Contracts\PersonContract[] $parents
      *
      * @return static
      *
@@ -767,7 +767,7 @@ class Person extends BaseType implements ThingContract
     /**
      * Event that this person is a performer or participant in.
      *
-     * @param Event|Event[] $performerIn
+     * @param \Spatie\SchemaOrg\Contracts\EventContract|\Spatie\SchemaOrg\Contracts\EventContract[] $performerIn
      *
      * @return static
      *
@@ -782,7 +782,7 @@ class Person extends BaseType implements ThingContract
      * Indicates a potential Action, which describes an idealized action in
      * which this thing would play an 'object' role.
      *
-     * @param Action|Action[] $potentialAction
+     * @param \Spatie\SchemaOrg\Contracts\ActionContract|\Spatie\SchemaOrg\Contracts\ActionContract[] $potentialAction
      *
      * @return static
      *
@@ -806,7 +806,7 @@ class Person extends BaseType implements ThingContract
      * sometimes related information (e.g. indicating a [[funder]]) can be
      * expressed using schema.org terminology.
      *
-     * @param CreativeWork|CreativeWork[]|string|string[] $publishingPrinciples
+     * @param \Spatie\SchemaOrg\Contracts\CreativeWorkContract|\Spatie\SchemaOrg\Contracts\CreativeWorkContract[]|string|string[] $publishingPrinciples
      *
      * @return static
      *
@@ -820,7 +820,7 @@ class Person extends BaseType implements ThingContract
     /**
      * The most generic familial relation.
      *
-     * @param Person|Person[] $relatedTo
+     * @param \Spatie\SchemaOrg\Contracts\PersonContract|\Spatie\SchemaOrg\Contracts\PersonContract[] $relatedTo
      *
      * @return static
      *
@@ -851,7 +851,7 @@ class Person extends BaseType implements ThingContract
      * A pointer to products or services sought by the organization or person
      * (demand).
      *
-     * @param Demand|Demand[] $seeks
+     * @param \Spatie\SchemaOrg\Contracts\DemandContract|\Spatie\SchemaOrg\Contracts\DemandContract[] $seeks
      *
      * @return static
      *
@@ -865,7 +865,7 @@ class Person extends BaseType implements ThingContract
     /**
      * A sibling of the person.
      *
-     * @param Person|Person[] $sibling
+     * @param \Spatie\SchemaOrg\Contracts\PersonContract|\Spatie\SchemaOrg\Contracts\PersonContract[] $sibling
      *
      * @return static
      *
@@ -879,7 +879,7 @@ class Person extends BaseType implements ThingContract
     /**
      * A sibling of the person.
      *
-     * @param Person|Person[] $siblings
+     * @param \Spatie\SchemaOrg\Contracts\PersonContract|\Spatie\SchemaOrg\Contracts\PersonContract[] $siblings
      *
      * @return static
      *
@@ -895,7 +895,7 @@ class Person extends BaseType implements ThingContract
      * or financial contribution. e.g. a sponsor of a Medical Study or a
      * corporate sponsor of an event.
      *
-     * @param Organization|Organization[]|Person|Person[] $sponsor
+     * @param \Spatie\SchemaOrg\Contracts\OrganizationContract|\Spatie\SchemaOrg\Contracts\OrganizationContract[]|\Spatie\SchemaOrg\Contracts\PersonContract|\Spatie\SchemaOrg\Contracts\PersonContract[] $sponsor
      *
      * @return static
      *
@@ -909,7 +909,7 @@ class Person extends BaseType implements ThingContract
     /**
      * The person's spouse.
      *
-     * @param Person|Person[] $spouse
+     * @param \Spatie\SchemaOrg\Contracts\PersonContract|\Spatie\SchemaOrg\Contracts\PersonContract[] $spouse
      *
      * @return static
      *
@@ -923,7 +923,7 @@ class Person extends BaseType implements ThingContract
     /**
      * A CreativeWork or Event about this Thing.
      *
-     * @param CreativeWork|CreativeWork[]|Event|Event[] $subjectOf
+     * @param \Spatie\SchemaOrg\Contracts\CreativeWorkContract|\Spatie\SchemaOrg\Contracts\CreativeWorkContract[]|\Spatie\SchemaOrg\Contracts\EventContract|\Spatie\SchemaOrg\Contracts\EventContract[] $subjectOf
      *
      * @return static
      *
@@ -994,7 +994,7 @@ class Person extends BaseType implements ThingContract
     /**
      * The weight of the product or person.
      *
-     * @param QuantitativeValue|QuantitativeValue[] $weight
+     * @param \Spatie\SchemaOrg\Contracts\QuantitativeValueContract|\Spatie\SchemaOrg\Contracts\QuantitativeValueContract[] $weight
      *
      * @return static
      *
@@ -1008,7 +1008,7 @@ class Person extends BaseType implements ThingContract
     /**
      * A contact location for a person's place of work.
      *
-     * @param ContactPoint|ContactPoint[]|Place|Place[] $workLocation
+     * @param \Spatie\SchemaOrg\Contracts\ContactPointContract|\Spatie\SchemaOrg\Contracts\ContactPointContract[]|\Spatie\SchemaOrg\Contracts\PlaceContract|\Spatie\SchemaOrg\Contracts\PlaceContract[] $workLocation
      *
      * @return static
      *
@@ -1022,7 +1022,7 @@ class Person extends BaseType implements ThingContract
     /**
      * Organizations that the person works for.
      *
-     * @param Organization|Organization[] $worksFor
+     * @param \Spatie\SchemaOrg\Contracts\OrganizationContract|\Spatie\SchemaOrg\Contracts\OrganizationContract[] $worksFor
      *
      * @return static
      *

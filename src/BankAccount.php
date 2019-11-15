@@ -39,7 +39,7 @@ class BankAccount extends BaseType implements FinancialProductContract, Intangib
      * The overall rating, based on a collection of reviews or ratings, of the
      * item.
      *
-     * @param AggregateRating|AggregateRating[] $aggregateRating
+     * @param \Spatie\SchemaOrg\Contracts\AggregateRatingContract|\Spatie\SchemaOrg\Contracts\AggregateRatingContract[] $aggregateRating
      *
      * @return static
      *
@@ -70,7 +70,7 @@ class BankAccount extends BaseType implements FinancialProductContract, Intangib
      * cost of funds over the term of a loan. This includes any fees or
      * additional costs associated with the transaction.
      *
-     * @param QuantitativeValue|QuantitativeValue[]|float|float[]|int|int[] $annualPercentageRate
+     * @param \Spatie\SchemaOrg\Contracts\QuantitativeValueContract|\Spatie\SchemaOrg\Contracts\QuantitativeValueContract[]|float|float[]|int|int[] $annualPercentageRate
      *
      * @return static
      *
@@ -84,7 +84,7 @@ class BankAccount extends BaseType implements FinancialProductContract, Intangib
     /**
      * The geographic area where a service or offered item is provided.
      *
-     * @param AdministrativeArea|AdministrativeArea[]|GeoShape|GeoShape[]|Place|Place[]|string|string[] $areaServed
+     * @param \Spatie\SchemaOrg\Contracts\AdministrativeAreaContract|\Spatie\SchemaOrg\Contracts\AdministrativeAreaContract[]|\Spatie\SchemaOrg\Contracts\GeoShapeContract|\Spatie\SchemaOrg\Contracts\GeoShapeContract[]|\Spatie\SchemaOrg\Contracts\PlaceContract|\Spatie\SchemaOrg\Contracts\PlaceContract[]|string|string[] $areaServed
      *
      * @return static
      *
@@ -98,7 +98,7 @@ class BankAccount extends BaseType implements FinancialProductContract, Intangib
     /**
      * An intended audience, i.e. a group for whom something was created.
      *
-     * @param Audience|Audience[] $audience
+     * @param \Spatie\SchemaOrg\Contracts\AudienceContract|\Spatie\SchemaOrg\Contracts\AudienceContract[] $audience
      *
      * @return static
      *
@@ -113,7 +113,7 @@ class BankAccount extends BaseType implements FinancialProductContract, Intangib
      * A means of accessing the service (e.g. a phone bank, a web site, a
      * location, etc.).
      *
-     * @param ServiceChannel|ServiceChannel[] $availableChannel
+     * @param \Spatie\SchemaOrg\Contracts\ServiceChannelContract|\Spatie\SchemaOrg\Contracts\ServiceChannelContract[] $availableChannel
      *
      * @return static
      *
@@ -142,7 +142,7 @@ class BankAccount extends BaseType implements FinancialProductContract, Intangib
      * The brand(s) associated with a product or service, or the brand(s)
      * maintained by an organization or business person.
      *
-     * @param Brand|Brand[]|Organization|Organization[] $brand
+     * @param \Spatie\SchemaOrg\Contracts\BrandContract|\Spatie\SchemaOrg\Contracts\BrandContract[]|\Spatie\SchemaOrg\Contracts\OrganizationContract|\Spatie\SchemaOrg\Contracts\OrganizationContract[] $brand
      *
      * @return static
      *
@@ -159,7 +159,7 @@ class BankAccount extends BaseType implements FinancialProductContract, Intangib
      * service involved in an exchange.  If it is not clear whether an entity is
      * a broker, seller, or buyer, the latter two terms are preferred.
      *
-     * @param Organization|Organization[]|Person|Person[] $broker
+     * @param \Spatie\SchemaOrg\Contracts\OrganizationContract|\Spatie\SchemaOrg\Contracts\OrganizationContract[]|\Spatie\SchemaOrg\Contracts\PersonContract|\Spatie\SchemaOrg\Contracts\PersonContract[] $broker
      *
      * @return static
      *
@@ -174,7 +174,7 @@ class BankAccount extends BaseType implements FinancialProductContract, Intangib
      * A category for the item. Greater signs or slashes can be used to
      * informally indicate a category hierarchy.
      *
-     * @param Thing|Thing[]|string|string[] $category
+     * @param \Spatie\SchemaOrg\Contracts\ThingContract|\Spatie\SchemaOrg\Contracts\ThingContract[]|string|string[] $category
      *
      * @return static
      *
@@ -235,7 +235,7 @@ class BankAccount extends BaseType implements FinancialProductContract, Intangib
      * Indicates an OfferCatalog listing for this Organization, Person, or
      * Service.
      *
-     * @param OfferCatalog|OfferCatalog[] $hasOfferCatalog
+     * @param \Spatie\SchemaOrg\Contracts\OfferCatalogContract|\Spatie\SchemaOrg\Contracts\OfferCatalogContract[] $hasOfferCatalog
      *
      * @return static
      *
@@ -249,7 +249,7 @@ class BankAccount extends BaseType implements FinancialProductContract, Intangib
     /**
      * The hours during which this service or contact is available.
      *
-     * @param OpeningHoursSpecification|OpeningHoursSpecification[] $hoursAvailable
+     * @param \Spatie\SchemaOrg\Contracts\OpeningHoursSpecificationContract|\Spatie\SchemaOrg\Contracts\OpeningHoursSpecificationContract[] $hoursAvailable
      *
      * @return static
      *
@@ -267,7 +267,7 @@ class BankAccount extends BaseType implements FinancialProductContract, Intangib
      * strings or as URL (URI) links. See [background
      * notes](/docs/datamodel.html#identifierBg) for more details.
      *
-     * @param PropertyValue|PropertyValue[]|string|string[] $identifier
+     * @param \Spatie\SchemaOrg\Contracts\PropertyValueContract|\Spatie\SchemaOrg\Contracts\PropertyValueContract[]|string|string[] $identifier
      *
      * @return static
      *
@@ -282,7 +282,7 @@ class BankAccount extends BaseType implements FinancialProductContract, Intangib
      * An image of the item. This can be a [[URL]] or a fully described
      * [[ImageObject]].
      *
-     * @param ImageObject|ImageObject[]|string|string[] $image
+     * @param \Spatie\SchemaOrg\Contracts\ImageObjectContract|\Spatie\SchemaOrg\Contracts\ImageObjectContract[]|string|string[] $image
      *
      * @return static
      *
@@ -297,7 +297,7 @@ class BankAccount extends BaseType implements FinancialProductContract, Intangib
      * The interest rate, charged or paid, applicable to the financial product.
      * Note: This is different from the calculated annualPercentageRate.
      *
-     * @param QuantitativeValue|QuantitativeValue[]|float|float[]|int|int[] $interestRate
+     * @param \Spatie\SchemaOrg\Contracts\QuantitativeValueContract|\Spatie\SchemaOrg\Contracts\QuantitativeValueContract[]|float|float[]|int|int[] $interestRate
      *
      * @return static
      *
@@ -311,7 +311,7 @@ class BankAccount extends BaseType implements FinancialProductContract, Intangib
     /**
      * A pointer to another, somehow related product (or multiple products).
      *
-     * @param Product|Product[]|Service|Service[] $isRelatedTo
+     * @param \Spatie\SchemaOrg\Contracts\ProductContract|\Spatie\SchemaOrg\Contracts\ProductContract[]|\Spatie\SchemaOrg\Contracts\ServiceContract|\Spatie\SchemaOrg\Contracts\ServiceContract[] $isRelatedTo
      *
      * @return static
      *
@@ -326,7 +326,7 @@ class BankAccount extends BaseType implements FinancialProductContract, Intangib
      * A pointer to another, functionally similar product (or multiple
      * products).
      *
-     * @param Product|Product[]|Service|Service[] $isSimilarTo
+     * @param \Spatie\SchemaOrg\Contracts\ProductContract|\Spatie\SchemaOrg\Contracts\ProductContract[]|\Spatie\SchemaOrg\Contracts\ServiceContract|\Spatie\SchemaOrg\Contracts\ServiceContract[] $isSimilarTo
      *
      * @return static
      *
@@ -340,7 +340,7 @@ class BankAccount extends BaseType implements FinancialProductContract, Intangib
     /**
      * An associated logo.
      *
-     * @param ImageObject|ImageObject[]|string|string[] $logo
+     * @param \Spatie\SchemaOrg\Contracts\ImageObjectContract|\Spatie\SchemaOrg\Contracts\ImageObjectContract[]|string|string[] $logo
      *
      * @return static
      *
@@ -356,7 +356,7 @@ class BankAccount extends BaseType implements FinancialProductContract, Intangib
      * entity being described. See [background
      * notes](/docs/datamodel.html#mainEntityBackground) for details.
      *
-     * @param CreativeWork|CreativeWork[]|string|string[] $mainEntityOfPage
+     * @param \Spatie\SchemaOrg\Contracts\CreativeWorkContract|\Spatie\SchemaOrg\Contracts\CreativeWorkContract[]|string|string[] $mainEntityOfPage
      *
      * @return static
      *
@@ -384,9 +384,14 @@ class BankAccount extends BaseType implements FinancialProductContract, Intangib
     /**
      * An offer to provide this item&#x2014;for example, an offer to sell a
      * product, rent the DVD of a movie, perform a service, or give away tickets
-     * to an event.
+     * to an event. Use [[businessFunction]] to indicate the kind of transaction
+     * offered, i.e. sell, lease, etc. This property can also be used to
+     * describe a [[Demand]]. While this property is listed as expected on a
+     * number of common types, it can be used in others. In that case, using a
+     * second type, such as Product or a subtype of Product, can clarify the
+     * nature of the offer.
      *
-     * @param Offer|Offer[] $offers
+     * @param \Spatie\SchemaOrg\Contracts\DemandContract|\Spatie\SchemaOrg\Contracts\DemandContract[]|\Spatie\SchemaOrg\Contracts\OfferContract|\Spatie\SchemaOrg\Contracts\OfferContract[] $offers
      *
      * @return static
      *
@@ -401,7 +406,7 @@ class BankAccount extends BaseType implements FinancialProductContract, Intangib
      * Indicates a potential Action, which describes an idealized action in
      * which this thing would play an 'object' role.
      *
-     * @param Action|Action[] $potentialAction
+     * @param \Spatie\SchemaOrg\Contracts\ActionContract|\Spatie\SchemaOrg\Contracts\ActionContract[] $potentialAction
      *
      * @return static
      *
@@ -416,7 +421,7 @@ class BankAccount extends BaseType implements FinancialProductContract, Intangib
      * The tangible thing generated by the service, e.g. a passport, permit,
      * etc.
      *
-     * @param Thing|Thing[] $produces
+     * @param \Spatie\SchemaOrg\Contracts\ThingContract|\Spatie\SchemaOrg\Contracts\ThingContract[] $produces
      *
      * @return static
      *
@@ -432,7 +437,7 @@ class BankAccount extends BaseType implements FinancialProductContract, Intangib
      * producer. Another party (a seller) may offer those services or goods on
      * behalf of the provider. A provider may also serve as the seller.
      *
-     * @param Organization|Organization[]|Person|Person[] $provider
+     * @param \Spatie\SchemaOrg\Contracts\OrganizationContract|\Spatie\SchemaOrg\Contracts\OrganizationContract[]|\Spatie\SchemaOrg\Contracts\PersonContract|\Spatie\SchemaOrg\Contracts\PersonContract[] $provider
      *
      * @return static
      *
@@ -460,7 +465,7 @@ class BankAccount extends BaseType implements FinancialProductContract, Intangib
     /**
      * A review of the item.
      *
-     * @param Review|Review[] $review
+     * @param \Spatie\SchemaOrg\Contracts\ReviewContract|\Spatie\SchemaOrg\Contracts\ReviewContract[] $review
      *
      * @return static
      *
@@ -490,7 +495,7 @@ class BankAccount extends BaseType implements FinancialProductContract, Intangib
     /**
      * The geographic area where the service is provided.
      *
-     * @param AdministrativeArea|AdministrativeArea[]|GeoShape|GeoShape[]|Place|Place[] $serviceArea
+     * @param \Spatie\SchemaOrg\Contracts\AdministrativeAreaContract|\Spatie\SchemaOrg\Contracts\AdministrativeAreaContract[]|\Spatie\SchemaOrg\Contracts\GeoShapeContract|\Spatie\SchemaOrg\Contracts\GeoShapeContract[]|\Spatie\SchemaOrg\Contracts\PlaceContract|\Spatie\SchemaOrg\Contracts\PlaceContract[] $serviceArea
      *
      * @return static
      *
@@ -504,7 +509,7 @@ class BankAccount extends BaseType implements FinancialProductContract, Intangib
     /**
      * The audience eligible for this service.
      *
-     * @param Audience|Audience[] $serviceAudience
+     * @param \Spatie\SchemaOrg\Contracts\AudienceContract|\Spatie\SchemaOrg\Contracts\AudienceContract[] $serviceAudience
      *
      * @return static
      *
@@ -519,7 +524,7 @@ class BankAccount extends BaseType implements FinancialProductContract, Intangib
      * The tangible thing generated by the service, e.g. a passport, permit,
      * etc.
      *
-     * @param Thing|Thing[] $serviceOutput
+     * @param \Spatie\SchemaOrg\Contracts\ThingContract|\Spatie\SchemaOrg\Contracts\ThingContract[] $serviceOutput
      *
      * @return static
      *
@@ -562,7 +567,7 @@ class BankAccount extends BaseType implements FinancialProductContract, Intangib
     /**
      * A CreativeWork or Event about this Thing.
      *
-     * @param CreativeWork|CreativeWork[]|Event|Event[] $subjectOf
+     * @param \Spatie\SchemaOrg\Contracts\CreativeWorkContract|\Spatie\SchemaOrg\Contracts\CreativeWorkContract[]|\Spatie\SchemaOrg\Contracts\EventContract|\Spatie\SchemaOrg\Contracts\EventContract[] $subjectOf
      *
      * @return static
      *

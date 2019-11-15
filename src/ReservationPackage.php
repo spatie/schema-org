@@ -65,7 +65,7 @@ class ReservationPackage extends BaseType implements IntangibleContract, Reserva
      * 'bookingAgent' is an out-dated term indicating a 'broker' that serves as
      * a booking agent.
      *
-     * @param Organization|Organization[]|Person|Person[] $bookingAgent
+     * @param \Spatie\SchemaOrg\Contracts\OrganizationContract|\Spatie\SchemaOrg\Contracts\OrganizationContract[]|\Spatie\SchemaOrg\Contracts\PersonContract|\Spatie\SchemaOrg\Contracts\PersonContract[] $bookingAgent
      *
      * @return static
      *
@@ -96,7 +96,7 @@ class ReservationPackage extends BaseType implements IntangibleContract, Reserva
      * service involved in an exchange.  If it is not clear whether an entity is
      * a broker, seller, or buyer, the latter two terms are preferred.
      *
-     * @param Organization|Organization[]|Person|Person[] $broker
+     * @param \Spatie\SchemaOrg\Contracts\OrganizationContract|\Spatie\SchemaOrg\Contracts\OrganizationContract[]|\Spatie\SchemaOrg\Contracts\PersonContract|\Spatie\SchemaOrg\Contracts\PersonContract[] $broker
      *
      * @return static
      *
@@ -145,7 +145,7 @@ class ReservationPackage extends BaseType implements IntangibleContract, Reserva
      * strings or as URL (URI) links. See [background
      * notes](/docs/datamodel.html#identifierBg) for more details.
      *
-     * @param PropertyValue|PropertyValue[]|string|string[] $identifier
+     * @param \Spatie\SchemaOrg\Contracts\PropertyValueContract|\Spatie\SchemaOrg\Contracts\PropertyValueContract[]|string|string[] $identifier
      *
      * @return static
      *
@@ -160,7 +160,7 @@ class ReservationPackage extends BaseType implements IntangibleContract, Reserva
      * An image of the item. This can be a [[URL]] or a fully described
      * [[ImageObject]].
      *
-     * @param ImageObject|ImageObject[]|string|string[] $image
+     * @param \Spatie\SchemaOrg\Contracts\ImageObjectContract|\Spatie\SchemaOrg\Contracts\ImageObjectContract[]|string|string[] $image
      *
      * @return static
      *
@@ -176,7 +176,7 @@ class ReservationPackage extends BaseType implements IntangibleContract, Reserva
      * entity being described. See [background
      * notes](/docs/datamodel.html#mainEntityBackground) for details.
      *
-     * @param CreativeWork|CreativeWork[]|string|string[] $mainEntityOfPage
+     * @param \Spatie\SchemaOrg\Contracts\CreativeWorkContract|\Spatie\SchemaOrg\Contracts\CreativeWorkContract[]|string|string[] $mainEntityOfPage
      *
      * @return static
      *
@@ -219,7 +219,7 @@ class ReservationPackage extends BaseType implements IntangibleContract, Reserva
      * Indicates a potential Action, which describes an idealized action in
      * which this thing would play an 'object' role.
      *
-     * @param Action|Action[] $potentialAction
+     * @param \Spatie\SchemaOrg\Contracts\ActionContract|\Spatie\SchemaOrg\Contracts\ActionContract[] $potentialAction
      *
      * @return static
      *
@@ -257,7 +257,7 @@ class ReservationPackage extends BaseType implements IntangibleContract, Reserva
      * Any membership in a frequent flyer, hotel loyalty program, etc. being
      * applied to the reservation.
      *
-     * @param ProgramMembership|ProgramMembership[] $programMembershipUsed
+     * @param \Spatie\SchemaOrg\Contracts\ProgramMembershipContract|\Spatie\SchemaOrg\Contracts\ProgramMembershipContract[] $programMembershipUsed
      *
      * @return static
      *
@@ -273,7 +273,7 @@ class ReservationPackage extends BaseType implements IntangibleContract, Reserva
      * producer. Another party (a seller) may offer those services or goods on
      * behalf of the provider. A provider may also serve as the seller.
      *
-     * @param Organization|Organization[]|Person|Person[] $provider
+     * @param \Spatie\SchemaOrg\Contracts\OrganizationContract|\Spatie\SchemaOrg\Contracts\OrganizationContract[]|\Spatie\SchemaOrg\Contracts\PersonContract|\Spatie\SchemaOrg\Contracts\PersonContract[] $provider
      *
      * @return static
      *
@@ -287,7 +287,7 @@ class ReservationPackage extends BaseType implements IntangibleContract, Reserva
     /**
      * The thing -- flight, event, restaurant,etc. being reserved.
      *
-     * @param Thing|Thing[] $reservationFor
+     * @param \Spatie\SchemaOrg\Contracts\ThingContract|\Spatie\SchemaOrg\Contracts\ThingContract[] $reservationFor
      *
      * @return static
      *
@@ -315,7 +315,7 @@ class ReservationPackage extends BaseType implements IntangibleContract, Reserva
     /**
      * The current status of the reservation.
      *
-     * @param ReservationStatusType|ReservationStatusType[] $reservationStatus
+     * @param \Spatie\SchemaOrg\Contracts\ReservationStatusTypeContract|\Spatie\SchemaOrg\Contracts\ReservationStatusTypeContract[] $reservationStatus
      *
      * @return static
      *
@@ -329,7 +329,7 @@ class ReservationPackage extends BaseType implements IntangibleContract, Reserva
     /**
      * A ticket associated with the reservation.
      *
-     * @param Ticket|Ticket[] $reservedTicket
+     * @param \Spatie\SchemaOrg\Contracts\TicketContract|\Spatie\SchemaOrg\Contracts\TicketContract[] $reservedTicket
      *
      * @return static
      *
@@ -360,7 +360,7 @@ class ReservationPackage extends BaseType implements IntangibleContract, Reserva
      * The individual reservations included in the package. Typically a repeated
      * property.
      *
-     * @param Reservation|Reservation[] $subReservation
+     * @param \Spatie\SchemaOrg\Contracts\ReservationContract|\Spatie\SchemaOrg\Contracts\ReservationContract[] $subReservation
      *
      * @return static
      *
@@ -374,7 +374,7 @@ class ReservationPackage extends BaseType implements IntangibleContract, Reserva
     /**
      * A CreativeWork or Event about this Thing.
      *
-     * @param CreativeWork|CreativeWork[]|Event|Event[] $subjectOf
+     * @param \Spatie\SchemaOrg\Contracts\CreativeWorkContract|\Spatie\SchemaOrg\Contracts\CreativeWorkContract[]|\Spatie\SchemaOrg\Contracts\EventContract|\Spatie\SchemaOrg\Contracts\EventContract[] $subjectOf
      *
      * @return static
      *
@@ -396,7 +396,7 @@ class ReservationPackage extends BaseType implements IntangibleContract, Reserva
      * * Use '.' (Unicode 'FULL STOP' (U+002E)) rather than ',' to indicate a
      * decimal point. Avoid using these symbols as a readability separator.
      *
-     * @param PriceSpecification|PriceSpecification[]|float|float[]|int|int[]|string|string[] $totalPrice
+     * @param \Spatie\SchemaOrg\Contracts\PriceSpecificationContract|\Spatie\SchemaOrg\Contracts\PriceSpecificationContract[]|float|float[]|int|int[]|string|string[] $totalPrice
      *
      * @return static
      *
@@ -410,7 +410,7 @@ class ReservationPackage extends BaseType implements IntangibleContract, Reserva
     /**
      * The person or organization the reservation or ticket is for.
      *
-     * @param Organization|Organization[]|Person|Person[] $underName
+     * @param \Spatie\SchemaOrg\Contracts\OrganizationContract|\Spatie\SchemaOrg\Contracts\OrganizationContract[]|\Spatie\SchemaOrg\Contracts\PersonContract|\Spatie\SchemaOrg\Contracts\PersonContract[] $underName
      *
      * @return static
      *

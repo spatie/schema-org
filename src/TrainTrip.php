@@ -64,7 +64,7 @@ class TrainTrip extends BaseType implements IntangibleContract, ThingContract, T
     /**
      * The station where the train trip ends.
      *
-     * @param TrainStation|TrainStation[] $arrivalStation
+     * @param \Spatie\SchemaOrg\Contracts\TrainStationContract|\Spatie\SchemaOrg\Contracts\TrainStationContract[] $arrivalStation
      *
      * @return static
      *
@@ -106,7 +106,7 @@ class TrainTrip extends BaseType implements IntangibleContract, ThingContract, T
     /**
      * The station from which the train departs.
      *
-     * @param TrainStation|TrainStation[] $departureStation
+     * @param \Spatie\SchemaOrg\Contracts\TrainStationContract|\Spatie\SchemaOrg\Contracts\TrainStationContract[] $departureStation
      *
      * @return static
      *
@@ -169,7 +169,7 @@ class TrainTrip extends BaseType implements IntangibleContract, ThingContract, T
      * strings or as URL (URI) links. See [background
      * notes](/docs/datamodel.html#identifierBg) for more details.
      *
-     * @param PropertyValue|PropertyValue[]|string|string[] $identifier
+     * @param \Spatie\SchemaOrg\Contracts\PropertyValueContract|\Spatie\SchemaOrg\Contracts\PropertyValueContract[]|string|string[] $identifier
      *
      * @return static
      *
@@ -184,7 +184,7 @@ class TrainTrip extends BaseType implements IntangibleContract, ThingContract, T
      * An image of the item. This can be a [[URL]] or a fully described
      * [[ImageObject]].
      *
-     * @param ImageObject|ImageObject[]|string|string[] $image
+     * @param \Spatie\SchemaOrg\Contracts\ImageObjectContract|\Spatie\SchemaOrg\Contracts\ImageObjectContract[]|string|string[] $image
      *
      * @return static
      *
@@ -200,7 +200,7 @@ class TrainTrip extends BaseType implements IntangibleContract, ThingContract, T
      * entity being described. See [background
      * notes](/docs/datamodel.html#mainEntityBackground) for details.
      *
-     * @param CreativeWork|CreativeWork[]|string|string[] $mainEntityOfPage
+     * @param \Spatie\SchemaOrg\Contracts\CreativeWorkContract|\Spatie\SchemaOrg\Contracts\CreativeWorkContract[]|string|string[] $mainEntityOfPage
      *
      * @return static
      *
@@ -228,9 +228,14 @@ class TrainTrip extends BaseType implements IntangibleContract, ThingContract, T
     /**
      * An offer to provide this item&#x2014;for example, an offer to sell a
      * product, rent the DVD of a movie, perform a service, or give away tickets
-     * to an event.
+     * to an event. Use [[businessFunction]] to indicate the kind of transaction
+     * offered, i.e. sell, lease, etc. This property can also be used to
+     * describe a [[Demand]]. While this property is listed as expected on a
+     * number of common types, it can be used in others. In that case, using a
+     * second type, such as Product or a subtype of Product, can clarify the
+     * nature of the offer.
      *
-     * @param Offer|Offer[] $offers
+     * @param \Spatie\SchemaOrg\Contracts\DemandContract|\Spatie\SchemaOrg\Contracts\DemandContract[]|\Spatie\SchemaOrg\Contracts\OfferContract|\Spatie\SchemaOrg\Contracts\OfferContract[] $offers
      *
      * @return static
      *
@@ -245,7 +250,7 @@ class TrainTrip extends BaseType implements IntangibleContract, ThingContract, T
      * Indicates a potential Action, which describes an idealized action in
      * which this thing would play an 'object' role.
      *
-     * @param Action|Action[] $potentialAction
+     * @param \Spatie\SchemaOrg\Contracts\ActionContract|\Spatie\SchemaOrg\Contracts\ActionContract[] $potentialAction
      *
      * @return static
      *
@@ -261,7 +266,7 @@ class TrainTrip extends BaseType implements IntangibleContract, ThingContract, T
      * producer. Another party (a seller) may offer those services or goods on
      * behalf of the provider. A provider may also serve as the seller.
      *
-     * @param Organization|Organization[]|Person|Person[] $provider
+     * @param \Spatie\SchemaOrg\Contracts\OrganizationContract|\Spatie\SchemaOrg\Contracts\OrganizationContract[]|\Spatie\SchemaOrg\Contracts\PersonContract|\Spatie\SchemaOrg\Contracts\PersonContract[] $provider
      *
      * @return static
      *
@@ -291,7 +296,7 @@ class TrainTrip extends BaseType implements IntangibleContract, ThingContract, T
     /**
      * A CreativeWork or Event about this Thing.
      *
-     * @param CreativeWork|CreativeWork[]|Event|Event[] $subjectOf
+     * @param \Spatie\SchemaOrg\Contracts\CreativeWorkContract|\Spatie\SchemaOrg\Contracts\CreativeWorkContract[]|\Spatie\SchemaOrg\Contracts\EventContract|\Spatie\SchemaOrg\Contracts\EventContract[] $subjectOf
      *
      * @return static
      *

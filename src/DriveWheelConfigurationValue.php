@@ -58,7 +58,7 @@ class DriveWheelConfigurationValue extends BaseType implements EnumerationContra
      * expect such data to be provided using those properties, rather than using
      * the generic property/value mechanism.
      *
-     * @param PropertyValue|PropertyValue[] $additionalProperty
+     * @param \Spatie\SchemaOrg\Contracts\PropertyValueContract|\Spatie\SchemaOrg\Contracts\PropertyValueContract[] $additionalProperty
      *
      * @return static
      *
@@ -137,7 +137,7 @@ class DriveWheelConfigurationValue extends BaseType implements EnumerationContra
      * This ordering relation for qualitative values indicates that the subject
      * is equal to the object.
      *
-     * @param QualitativeValue|QualitativeValue[] $equal
+     * @param \Spatie\SchemaOrg\Contracts\QualitativeValueContract|\Spatie\SchemaOrg\Contracts\QualitativeValueContract[] $equal
      *
      * @return static
      *
@@ -152,7 +152,7 @@ class DriveWheelConfigurationValue extends BaseType implements EnumerationContra
      * This ordering relation for qualitative values indicates that the subject
      * is greater than the object.
      *
-     * @param QualitativeValue|QualitativeValue[] $greater
+     * @param \Spatie\SchemaOrg\Contracts\QualitativeValueContract|\Spatie\SchemaOrg\Contracts\QualitativeValueContract[] $greater
      *
      * @return static
      *
@@ -167,7 +167,7 @@ class DriveWheelConfigurationValue extends BaseType implements EnumerationContra
      * This ordering relation for qualitative values indicates that the subject
      * is greater than or equal to the object.
      *
-     * @param QualitativeValue|QualitativeValue[] $greaterOrEqual
+     * @param \Spatie\SchemaOrg\Contracts\QualitativeValueContract|\Spatie\SchemaOrg\Contracts\QualitativeValueContract[] $greaterOrEqual
      *
      * @return static
      *
@@ -185,7 +185,7 @@ class DriveWheelConfigurationValue extends BaseType implements EnumerationContra
      * strings or as URL (URI) links. See [background
      * notes](/docs/datamodel.html#identifierBg) for more details.
      *
-     * @param PropertyValue|PropertyValue[]|string|string[] $identifier
+     * @param \Spatie\SchemaOrg\Contracts\PropertyValueContract|\Spatie\SchemaOrg\Contracts\PropertyValueContract[]|string|string[] $identifier
      *
      * @return static
      *
@@ -200,7 +200,7 @@ class DriveWheelConfigurationValue extends BaseType implements EnumerationContra
      * An image of the item. This can be a [[URL]] or a fully described
      * [[ImageObject]].
      *
-     * @param ImageObject|ImageObject[]|string|string[] $image
+     * @param \Spatie\SchemaOrg\Contracts\ImageObjectContract|\Spatie\SchemaOrg\Contracts\ImageObjectContract[]|string|string[] $image
      *
      * @return static
      *
@@ -215,7 +215,7 @@ class DriveWheelConfigurationValue extends BaseType implements EnumerationContra
      * This ordering relation for qualitative values indicates that the subject
      * is lesser than the object.
      *
-     * @param QualitativeValue|QualitativeValue[] $lesser
+     * @param \Spatie\SchemaOrg\Contracts\QualitativeValueContract|\Spatie\SchemaOrg\Contracts\QualitativeValueContract[] $lesser
      *
      * @return static
      *
@@ -230,7 +230,7 @@ class DriveWheelConfigurationValue extends BaseType implements EnumerationContra
      * This ordering relation for qualitative values indicates that the subject
      * is lesser than or equal to the object.
      *
-     * @param QualitativeValue|QualitativeValue[] $lesserOrEqual
+     * @param \Spatie\SchemaOrg\Contracts\QualitativeValueContract|\Spatie\SchemaOrg\Contracts\QualitativeValueContract[] $lesserOrEqual
      *
      * @return static
      *
@@ -246,7 +246,7 @@ class DriveWheelConfigurationValue extends BaseType implements EnumerationContra
      * entity being described. See [background
      * notes](/docs/datamodel.html#mainEntityBackground) for details.
      *
-     * @param CreativeWork|CreativeWork[]|string|string[] $mainEntityOfPage
+     * @param \Spatie\SchemaOrg\Contracts\CreativeWorkContract|\Spatie\SchemaOrg\Contracts\CreativeWorkContract[]|string|string[] $mainEntityOfPage
      *
      * @return static
      *
@@ -275,7 +275,7 @@ class DriveWheelConfigurationValue extends BaseType implements EnumerationContra
      * This ordering relation for qualitative values indicates that the subject
      * is not equal to the object.
      *
-     * @param QualitativeValue|QualitativeValue[] $nonEqual
+     * @param \Spatie\SchemaOrg\Contracts\QualitativeValueContract|\Spatie\SchemaOrg\Contracts\QualitativeValueContract[] $nonEqual
      *
      * @return static
      *
@@ -290,7 +290,7 @@ class DriveWheelConfigurationValue extends BaseType implements EnumerationContra
      * Indicates a potential Action, which describes an idealized action in
      * which this thing would play an 'object' role.
      *
-     * @param Action|Action[] $potentialAction
+     * @param \Spatie\SchemaOrg\Contracts\ActionContract|\Spatie\SchemaOrg\Contracts\ActionContract[] $potentialAction
      *
      * @return static
      *
@@ -320,7 +320,7 @@ class DriveWheelConfigurationValue extends BaseType implements EnumerationContra
     /**
      * A CreativeWork or Event about this Thing.
      *
-     * @param CreativeWork|CreativeWork[]|Event|Event[] $subjectOf
+     * @param \Spatie\SchemaOrg\Contracts\CreativeWorkContract|\Spatie\SchemaOrg\Contracts\CreativeWorkContract[]|\Spatie\SchemaOrg\Contracts\EventContract|\Spatie\SchemaOrg\Contracts\EventContract[] $subjectOf
      *
      * @return static
      *
@@ -349,7 +349,7 @@ class DriveWheelConfigurationValue extends BaseType implements EnumerationContra
      * A pointer to a secondary value that provides additional information on
      * the original value, e.g. a reference temperature.
      *
-     * @param Enumeration|Enumeration[]|PropertyValue|PropertyValue[]|QualitativeValue|QualitativeValue[]|QuantitativeValue|QuantitativeValue[]|StructuredValue|StructuredValue[] $valueReference
+     * @param \Spatie\SchemaOrg\Contracts\EnumerationContract|\Spatie\SchemaOrg\Contracts\EnumerationContract[]|\Spatie\SchemaOrg\Contracts\PropertyValueContract|\Spatie\SchemaOrg\Contracts\PropertyValueContract[]|\Spatie\SchemaOrg\Contracts\QualitativeValueContract|\Spatie\SchemaOrg\Contracts\QualitativeValueContract[]|\Spatie\SchemaOrg\Contracts\QuantitativeValueContract|\Spatie\SchemaOrg\Contracts\QuantitativeValueContract[]|\Spatie\SchemaOrg\Contracts\StructuredValueContract|\Spatie\SchemaOrg\Contracts\StructuredValueContract[] $valueReference
      *
      * @return static
      *

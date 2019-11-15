@@ -19,7 +19,7 @@ class Demand extends BaseType implements IntangibleContract, ThingContract
     /**
      * The payment method(s) accepted by seller for this offer.
      *
-     * @param LoanOrCredit|LoanOrCredit[]|PaymentMethod|PaymentMethod[] $acceptedPaymentMethod
+     * @param \Spatie\SchemaOrg\Contracts\LoanOrCreditContract|\Spatie\SchemaOrg\Contracts\LoanOrCreditContract[]|\Spatie\SchemaOrg\Contracts\PaymentMethodContract|\Spatie\SchemaOrg\Contracts\PaymentMethodContract[] $acceptedPaymentMethod
      *
      * @return static
      *
@@ -53,7 +53,7 @@ class Demand extends BaseType implements IntangibleContract, ThingContract
      * The amount of time that is required between accepting the offer and the
      * actual usage of the resource or service.
      *
-     * @param QuantitativeValue|QuantitativeValue[] $advanceBookingRequirement
+     * @param \Spatie\SchemaOrg\Contracts\QuantitativeValueContract|\Spatie\SchemaOrg\Contracts\QuantitativeValueContract[] $advanceBookingRequirement
      *
      * @return static
      *
@@ -81,7 +81,7 @@ class Demand extends BaseType implements IntangibleContract, ThingContract
     /**
      * The geographic area where a service or offered item is provided.
      *
-     * @param AdministrativeArea|AdministrativeArea[]|GeoShape|GeoShape[]|Place|Place[]|string|string[] $areaServed
+     * @param \Spatie\SchemaOrg\Contracts\AdministrativeAreaContract|\Spatie\SchemaOrg\Contracts\AdministrativeAreaContract[]|\Spatie\SchemaOrg\Contracts\GeoShapeContract|\Spatie\SchemaOrg\Contracts\GeoShapeContract[]|\Spatie\SchemaOrg\Contracts\PlaceContract|\Spatie\SchemaOrg\Contracts\PlaceContract[]|string|string[] $areaServed
      *
      * @return static
      *
@@ -96,7 +96,7 @@ class Demand extends BaseType implements IntangibleContract, ThingContract
      * The availability of this item&#x2014;for example In stock, Out of stock,
      * Pre-order, etc.
      *
-     * @param ItemAvailability|ItemAvailability[] $availability
+     * @param \Spatie\SchemaOrg\Contracts\ItemAvailabilityContract|\Spatie\SchemaOrg\Contracts\ItemAvailabilityContract[] $availability
      *
      * @return static
      *
@@ -140,7 +140,7 @@ class Demand extends BaseType implements IntangibleContract, ThingContract
     /**
      * The place(s) from which the offer can be obtained (e.g. store locations).
      *
-     * @param Place|Place[] $availableAtOrFrom
+     * @param \Spatie\SchemaOrg\Contracts\PlaceContract|\Spatie\SchemaOrg\Contracts\PlaceContract[] $availableAtOrFrom
      *
      * @return static
      *
@@ -154,7 +154,7 @@ class Demand extends BaseType implements IntangibleContract, ThingContract
     /**
      * The delivery method(s) available for this offer.
      *
-     * @param DeliveryMethod|DeliveryMethod[] $availableDeliveryMethod
+     * @param \Spatie\SchemaOrg\Contracts\DeliveryMethodContract|\Spatie\SchemaOrg\Contracts\DeliveryMethodContract[] $availableDeliveryMethod
      *
      * @return static
      *
@@ -170,7 +170,7 @@ class Demand extends BaseType implements IntangibleContract, ThingContract
      * component of a bundle (TypeAndQuantityNode). The default is
      * http://purl.org/goodrelations/v1#Sell.
      *
-     * @param BusinessFunction|BusinessFunction[] $businessFunction
+     * @param \Spatie\SchemaOrg\Contracts\BusinessFunctionContract|\Spatie\SchemaOrg\Contracts\BusinessFunctionContract[] $businessFunction
      *
      * @return static
      *
@@ -186,7 +186,7 @@ class Demand extends BaseType implements IntangibleContract, ThingContract
      * leaving the warehouse or being prepared for pickup, in case the delivery
      * method is on site pickup.
      *
-     * @param QuantitativeValue|QuantitativeValue[] $deliveryLeadTime
+     * @param \Spatie\SchemaOrg\Contracts\QuantitativeValueContract|\Spatie\SchemaOrg\Contracts\QuantitativeValueContract[] $deliveryLeadTime
      *
      * @return static
      *
@@ -231,7 +231,7 @@ class Demand extends BaseType implements IntangibleContract, ThingContract
     /**
      * The type(s) of customers for which the given offer is valid.
      *
-     * @param BusinessEntityType|BusinessEntityType[] $eligibleCustomerType
+     * @param \Spatie\SchemaOrg\Contracts\BusinessEntityTypeContract|\Spatie\SchemaOrg\Contracts\BusinessEntityTypeContract[] $eligibleCustomerType
      *
      * @return static
      *
@@ -245,7 +245,7 @@ class Demand extends BaseType implements IntangibleContract, ThingContract
     /**
      * The duration for which the given offer is valid.
      *
-     * @param QuantitativeValue|QuantitativeValue[] $eligibleDuration
+     * @param \Spatie\SchemaOrg\Contracts\QuantitativeValueContract|\Spatie\SchemaOrg\Contracts\QuantitativeValueContract[] $eligibleDuration
      *
      * @return static
      *
@@ -261,7 +261,7 @@ class Demand extends BaseType implements IntangibleContract, ThingContract
      * offer or price specification is valid. This allows e.g. specifying that a
      * certain freight charge is valid only for a certain quantity.
      *
-     * @param QuantitativeValue|QuantitativeValue[] $eligibleQuantity
+     * @param \Spatie\SchemaOrg\Contracts\QuantitativeValueContract|\Spatie\SchemaOrg\Contracts\QuantitativeValueContract[] $eligibleQuantity
      *
      * @return static
      *
@@ -279,7 +279,7 @@ class Demand extends BaseType implements IntangibleContract, ThingContract
      * 
      * See also [[ineligibleRegion]].
      *
-     * @param GeoShape|GeoShape[]|Place|Place[]|string|string[] $eligibleRegion
+     * @param \Spatie\SchemaOrg\Contracts\GeoShapeContract|\Spatie\SchemaOrg\Contracts\GeoShapeContract[]|\Spatie\SchemaOrg\Contracts\PlaceContract|\Spatie\SchemaOrg\Contracts\PlaceContract[]|string|string[] $eligibleRegion
      *
      * @return static
      *
@@ -296,7 +296,7 @@ class Demand extends BaseType implements IntangibleContract, ThingContract
      * to express free shipping above a certain order volume, or to limit the
      * acceptance of credit cards to purchases to a certain minimal amount.
      *
-     * @param PriceSpecification|PriceSpecification[] $eligibleTransactionVolume
+     * @param \Spatie\SchemaOrg\Contracts\PriceSpecificationContract|\Spatie\SchemaOrg\Contracts\PriceSpecificationContract[] $eligibleTransactionVolume
      *
      * @return static
      *
@@ -387,7 +387,7 @@ class Demand extends BaseType implements IntangibleContract, ThingContract
      * strings or as URL (URI) links. See [background
      * notes](/docs/datamodel.html#identifierBg) for more details.
      *
-     * @param PropertyValue|PropertyValue[]|string|string[] $identifier
+     * @param \Spatie\SchemaOrg\Contracts\PropertyValueContract|\Spatie\SchemaOrg\Contracts\PropertyValueContract[]|string|string[] $identifier
      *
      * @return static
      *
@@ -402,7 +402,7 @@ class Demand extends BaseType implements IntangibleContract, ThingContract
      * An image of the item. This can be a [[URL]] or a fully described
      * [[ImageObject]].
      *
-     * @param ImageObject|ImageObject[]|string|string[] $image
+     * @param \Spatie\SchemaOrg\Contracts\ImageObjectContract|\Spatie\SchemaOrg\Contracts\ImageObjectContract[]|string|string[] $image
      *
      * @return static
      *
@@ -417,7 +417,7 @@ class Demand extends BaseType implements IntangibleContract, ThingContract
      * This links to a node or nodes indicating the exact quantity of the
      * products included in the offer.
      *
-     * @param TypeAndQuantityNode|TypeAndQuantityNode[] $includesObject
+     * @param \Spatie\SchemaOrg\Contracts\TypeAndQuantityNodeContract|\Spatie\SchemaOrg\Contracts\TypeAndQuantityNodeContract[] $includesObject
      *
      * @return static
      *
@@ -436,7 +436,7 @@ class Demand extends BaseType implements IntangibleContract, ThingContract
      * 
      * See also [[eligibleRegion]].
      *
-     * @param GeoShape|GeoShape[]|Place|Place[]|string|string[] $ineligibleRegion
+     * @param \Spatie\SchemaOrg\Contracts\GeoShapeContract|\Spatie\SchemaOrg\Contracts\GeoShapeContract[]|\Spatie\SchemaOrg\Contracts\PlaceContract|\Spatie\SchemaOrg\Contracts\PlaceContract[]|string|string[] $ineligibleRegion
      *
      * @return static
      *
@@ -450,7 +450,7 @@ class Demand extends BaseType implements IntangibleContract, ThingContract
     /**
      * The current approximate inventory level for the item or items.
      *
-     * @param QuantitativeValue|QuantitativeValue[] $inventoryLevel
+     * @param \Spatie\SchemaOrg\Contracts\QuantitativeValueContract|\Spatie\SchemaOrg\Contracts\QuantitativeValueContract[] $inventoryLevel
      *
      * @return static
      *
@@ -466,7 +466,7 @@ class Demand extends BaseType implements IntangibleContract, ThingContract
      * the condition of the product or service, or the products or services
      * included in the offer.
      *
-     * @param OfferItemCondition|OfferItemCondition[] $itemCondition
+     * @param \Spatie\SchemaOrg\Contracts\OfferItemConditionContract|\Spatie\SchemaOrg\Contracts\OfferItemConditionContract[] $itemCondition
      *
      * @return static
      *
@@ -478,9 +478,13 @@ class Demand extends BaseType implements IntangibleContract, ThingContract
     }
 
     /**
-     * The item being offered.
+     * An item being offered (or demanded). The transactional nature of the
+     * offer or demand is documented using [[businessFunction]], e.g. sell,
+     * lease etc. While several common expected types are listed explicitly in
+     * this definition, others can be used. Using a second type, such as Product
+     * or a subtype of Product, can clarify the nature of the offer.
      *
-     * @param Product|Product[]|Service|Service[] $itemOffered
+     * @param \Spatie\SchemaOrg\Contracts\AggregateOfferContract|\Spatie\SchemaOrg\Contracts\AggregateOfferContract[]|\Spatie\SchemaOrg\Contracts\CreativeWorkContract|\Spatie\SchemaOrg\Contracts\CreativeWorkContract[]|\Spatie\SchemaOrg\Contracts\EventContract|\Spatie\SchemaOrg\Contracts\EventContract[]|\Spatie\SchemaOrg\Contracts\MenuItemContract|\Spatie\SchemaOrg\Contracts\MenuItemContract[]|\Spatie\SchemaOrg\Contracts\ProductContract|\Spatie\SchemaOrg\Contracts\ProductContract[]|\Spatie\SchemaOrg\Contracts\ServiceContract|\Spatie\SchemaOrg\Contracts\ServiceContract[]|\Spatie\SchemaOrg\Contracts\TripContract|\Spatie\SchemaOrg\Contracts\TripContract[] $itemOffered
      *
      * @return static
      *
@@ -496,7 +500,7 @@ class Demand extends BaseType implements IntangibleContract, ThingContract
      * entity being described. See [background
      * notes](/docs/datamodel.html#mainEntityBackground) for details.
      *
-     * @param CreativeWork|CreativeWork[]|string|string[] $mainEntityOfPage
+     * @param \Spatie\SchemaOrg\Contracts\CreativeWorkContract|\Spatie\SchemaOrg\Contracts\CreativeWorkContract[]|string|string[] $mainEntityOfPage
      *
      * @return static
      *
@@ -540,7 +544,7 @@ class Demand extends BaseType implements IntangibleContract, ThingContract
      * Indicates a potential Action, which describes an idealized action in
      * which this thing would play an 'object' role.
      *
-     * @param Action|Action[] $potentialAction
+     * @param \Spatie\SchemaOrg\Contracts\ActionContract|\Spatie\SchemaOrg\Contracts\ActionContract[] $potentialAction
      *
      * @return static
      *
@@ -555,7 +559,7 @@ class Demand extends BaseType implements IntangibleContract, ThingContract
      * One or more detailed price specifications, indicating the unit price and
      * delivery or payment charges.
      *
-     * @param PriceSpecification|PriceSpecification[] $priceSpecification
+     * @param \Spatie\SchemaOrg\Contracts\PriceSpecificationContract|\Spatie\SchemaOrg\Contracts\PriceSpecificationContract[] $priceSpecification
      *
      * @return static
      *
@@ -586,7 +590,7 @@ class Demand extends BaseType implements IntangibleContract, ThingContract
      * An entity which offers (sells / leases / lends / loans) the services /
      * goods.  A seller may also be a provider.
      *
-     * @param Organization|Organization[]|Person|Person[] $seller
+     * @param \Spatie\SchemaOrg\Contracts\OrganizationContract|\Spatie\SchemaOrg\Contracts\OrganizationContract[]|\Spatie\SchemaOrg\Contracts\PersonContract|\Spatie\SchemaOrg\Contracts\PersonContract[] $seller
      *
      * @return static
      *
@@ -631,7 +635,7 @@ class Demand extends BaseType implements IntangibleContract, ThingContract
     /**
      * A CreativeWork or Event about this Thing.
      *
-     * @param CreativeWork|CreativeWork[]|Event|Event[] $subjectOf
+     * @param \Spatie\SchemaOrg\Contracts\CreativeWorkContract|\Spatie\SchemaOrg\Contracts\CreativeWorkContract[]|\Spatie\SchemaOrg\Contracts\EventContract|\Spatie\SchemaOrg\Contracts\EventContract[] $subjectOf
      *
      * @return static
      *
@@ -688,7 +692,7 @@ class Demand extends BaseType implements IntangibleContract, ThingContract
     /**
      * The warranty promise(s) included in the offer.
      *
-     * @param WarrantyPromise|WarrantyPromise[] $warranty
+     * @param \Spatie\SchemaOrg\Contracts\WarrantyPromiseContract|\Spatie\SchemaOrg\Contracts\WarrantyPromiseContract[] $warranty
      *
      * @return static
      *

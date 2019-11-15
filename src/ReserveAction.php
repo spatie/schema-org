@@ -24,7 +24,7 @@ class ReserveAction extends BaseType implements ActionContract, OrganizeActionCo
     /**
      * Indicates the current disposition of the Action.
      *
-     * @param ActionStatusType|ActionStatusType[] $actionStatus
+     * @param \Spatie\SchemaOrg\Contracts\ActionStatusTypeContract|\Spatie\SchemaOrg\Contracts\ActionStatusTypeContract[] $actionStatus
      *
      * @return static
      *
@@ -58,7 +58,7 @@ class ReserveAction extends BaseType implements ActionContract, OrganizeActionCo
      * The direct performer or driver of the action (animate or inanimate). e.g.
      * *John* wrote a book.
      *
-     * @param Organization|Organization[]|Person|Person[] $agent
+     * @param \Spatie\SchemaOrg\Contracts\OrganizationContract|\Spatie\SchemaOrg\Contracts\OrganizationContract[]|\Spatie\SchemaOrg\Contracts\PersonContract|\Spatie\SchemaOrg\Contracts\PersonContract[] $agent
      *
      * @return static
      *
@@ -140,7 +140,7 @@ class ReserveAction extends BaseType implements ActionContract, OrganizeActionCo
     /**
      * For failed actions, more information on the cause of the failure.
      *
-     * @param Thing|Thing[] $error
+     * @param \Spatie\SchemaOrg\Contracts\ThingContract|\Spatie\SchemaOrg\Contracts\ThingContract[] $error
      *
      * @return static
      *
@@ -158,7 +158,7 @@ class ReserveAction extends BaseType implements ActionContract, OrganizeActionCo
      * strings or as URL (URI) links. See [background
      * notes](/docs/datamodel.html#identifierBg) for more details.
      *
-     * @param PropertyValue|PropertyValue[]|string|string[] $identifier
+     * @param \Spatie\SchemaOrg\Contracts\PropertyValueContract|\Spatie\SchemaOrg\Contracts\PropertyValueContract[]|string|string[] $identifier
      *
      * @return static
      *
@@ -173,7 +173,7 @@ class ReserveAction extends BaseType implements ActionContract, OrganizeActionCo
      * An image of the item. This can be a [[URL]] or a fully described
      * [[ImageObject]].
      *
-     * @param ImageObject|ImageObject[]|string|string[] $image
+     * @param \Spatie\SchemaOrg\Contracts\ImageObjectContract|\Spatie\SchemaOrg\Contracts\ImageObjectContract[]|string|string[] $image
      *
      * @return static
      *
@@ -188,7 +188,7 @@ class ReserveAction extends BaseType implements ActionContract, OrganizeActionCo
      * The object that helped the agent perform the action. e.g. John wrote a
      * book with *a pen*.
      *
-     * @param Thing|Thing[] $instrument
+     * @param \Spatie\SchemaOrg\Contracts\ThingContract|\Spatie\SchemaOrg\Contracts\ThingContract[] $instrument
      *
      * @return static
      *
@@ -203,7 +203,7 @@ class ReserveAction extends BaseType implements ActionContract, OrganizeActionCo
      * The location of for example where the event is happening, an organization
      * is located, or where an action takes place.
      *
-     * @param Place|Place[]|PostalAddress|PostalAddress[]|string|string[] $location
+     * @param \Spatie\SchemaOrg\Contracts\PlaceContract|\Spatie\SchemaOrg\Contracts\PlaceContract[]|\Spatie\SchemaOrg\Contracts\PostalAddressContract|\Spatie\SchemaOrg\Contracts\PostalAddressContract[]|string|string[] $location
      *
      * @return static
      *
@@ -219,7 +219,7 @@ class ReserveAction extends BaseType implements ActionContract, OrganizeActionCo
      * entity being described. See [background
      * notes](/docs/datamodel.html#mainEntityBackground) for details.
      *
-     * @param CreativeWork|CreativeWork[]|string|string[] $mainEntityOfPage
+     * @param \Spatie\SchemaOrg\Contracts\CreativeWorkContract|\Spatie\SchemaOrg\Contracts\CreativeWorkContract[]|string|string[] $mainEntityOfPage
      *
      * @return static
      *
@@ -250,7 +250,7 @@ class ReserveAction extends BaseType implements ActionContract, OrganizeActionCo
      * undergoer (which change their state) or theme (which doesn't). e.g. John
      * read *a book*.
      *
-     * @param Thing|Thing[] $object
+     * @param \Spatie\SchemaOrg\Contracts\ThingContract|\Spatie\SchemaOrg\Contracts\ThingContract[] $object
      *
      * @return static
      *
@@ -265,7 +265,7 @@ class ReserveAction extends BaseType implements ActionContract, OrganizeActionCo
      * Other co-agents that participated in the action indirectly. e.g. John
      * wrote a book with *Steve*.
      *
-     * @param Organization|Organization[]|Person|Person[] $participant
+     * @param \Spatie\SchemaOrg\Contracts\OrganizationContract|\Spatie\SchemaOrg\Contracts\OrganizationContract[]|\Spatie\SchemaOrg\Contracts\PersonContract|\Spatie\SchemaOrg\Contracts\PersonContract[] $participant
      *
      * @return static
      *
@@ -280,7 +280,7 @@ class ReserveAction extends BaseType implements ActionContract, OrganizeActionCo
      * Indicates a potential Action, which describes an idealized action in
      * which this thing would play an 'object' role.
      *
-     * @param Action|Action[] $potentialAction
+     * @param \Spatie\SchemaOrg\Contracts\ActionContract|\Spatie\SchemaOrg\Contracts\ActionContract[] $potentialAction
      *
      * @return static
      *
@@ -294,7 +294,7 @@ class ReserveAction extends BaseType implements ActionContract, OrganizeActionCo
     /**
      * The result produced in the action. e.g. John wrote *a book*.
      *
-     * @param Thing|Thing[] $result
+     * @param \Spatie\SchemaOrg\Contracts\ThingContract|\Spatie\SchemaOrg\Contracts\ThingContract[] $result
      *
      * @return static
      *
@@ -361,7 +361,7 @@ class ReserveAction extends BaseType implements ActionContract, OrganizeActionCo
     /**
      * A CreativeWork or Event about this Thing.
      *
-     * @param CreativeWork|CreativeWork[]|Event|Event[] $subjectOf
+     * @param \Spatie\SchemaOrg\Contracts\CreativeWorkContract|\Spatie\SchemaOrg\Contracts\CreativeWorkContract[]|\Spatie\SchemaOrg\Contracts\EventContract|\Spatie\SchemaOrg\Contracts\EventContract[] $subjectOf
      *
      * @return static
      *
@@ -375,7 +375,7 @@ class ReserveAction extends BaseType implements ActionContract, OrganizeActionCo
     /**
      * Indicates a target EntryPoint for an Action.
      *
-     * @param EntryPoint|EntryPoint[] $target
+     * @param \Spatie\SchemaOrg\Contracts\EntryPointContract|\Spatie\SchemaOrg\Contracts\EntryPointContract[] $target
      *
      * @return static
      *

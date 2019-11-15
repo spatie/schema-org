@@ -52,7 +52,7 @@ class AggregateRating extends BaseType implements IntangibleContract, RatingCont
      * in that HTML 5 provides a special mechanism for indicating authorship via
      * the rel tag. That is equivalent to this and may be used interchangeably.
      *
-     * @param Organization|Organization[]|Person|Person[] $author
+     * @param \Spatie\SchemaOrg\Contracts\OrganizationContract|\Spatie\SchemaOrg\Contracts\OrganizationContract[]|\Spatie\SchemaOrg\Contracts\PersonContract|\Spatie\SchemaOrg\Contracts\PersonContract[] $author
      *
      * @return static
      *
@@ -116,7 +116,7 @@ class AggregateRating extends BaseType implements IntangibleContract, RatingCont
      * strings or as URL (URI) links. See [background
      * notes](/docs/datamodel.html#identifierBg) for more details.
      *
-     * @param PropertyValue|PropertyValue[]|string|string[] $identifier
+     * @param \Spatie\SchemaOrg\Contracts\PropertyValueContract|\Spatie\SchemaOrg\Contracts\PropertyValueContract[]|string|string[] $identifier
      *
      * @return static
      *
@@ -131,7 +131,7 @@ class AggregateRating extends BaseType implements IntangibleContract, RatingCont
      * An image of the item. This can be a [[URL]] or a fully described
      * [[ImageObject]].
      *
-     * @param ImageObject|ImageObject[]|string|string[] $image
+     * @param \Spatie\SchemaOrg\Contracts\ImageObjectContract|\Spatie\SchemaOrg\Contracts\ImageObjectContract[]|string|string[] $image
      *
      * @return static
      *
@@ -145,7 +145,7 @@ class AggregateRating extends BaseType implements IntangibleContract, RatingCont
     /**
      * The item that is being reviewed/rated.
      *
-     * @param Thing|Thing[] $itemReviewed
+     * @param \Spatie\SchemaOrg\Contracts\ThingContract|\Spatie\SchemaOrg\Contracts\ThingContract[] $itemReviewed
      *
      * @return static
      *
@@ -161,7 +161,7 @@ class AggregateRating extends BaseType implements IntangibleContract, RatingCont
      * entity being described. See [background
      * notes](/docs/datamodel.html#mainEntityBackground) for details.
      *
-     * @param CreativeWork|CreativeWork[]|string|string[] $mainEntityOfPage
+     * @param \Spatie\SchemaOrg\Contracts\CreativeWorkContract|\Spatie\SchemaOrg\Contracts\CreativeWorkContract[]|string|string[] $mainEntityOfPage
      *
      * @return static
      *
@@ -190,7 +190,7 @@ class AggregateRating extends BaseType implements IntangibleContract, RatingCont
      * Indicates a potential Action, which describes an idealized action in
      * which this thing would play an 'object' role.
      *
-     * @param Action|Action[] $potentialAction
+     * @param \Spatie\SchemaOrg\Contracts\ActionContract|\Spatie\SchemaOrg\Contracts\ActionContract[] $potentialAction
      *
      * @return static
      *
@@ -284,7 +284,7 @@ class AggregateRating extends BaseType implements IntangibleContract, RatingCont
     /**
      * A CreativeWork or Event about this Thing.
      *
-     * @param CreativeWork|CreativeWork[]|Event|Event[] $subjectOf
+     * @param \Spatie\SchemaOrg\Contracts\CreativeWorkContract|\Spatie\SchemaOrg\Contracts\CreativeWorkContract[]|\Spatie\SchemaOrg\Contracts\EventContract|\Spatie\SchemaOrg\Contracts\EventContract[] $subjectOf
      *
      * @return static
      *

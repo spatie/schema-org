@@ -26,7 +26,7 @@ class LodgingBusiness extends BaseType implements LocalBusinessContract, Organiz
      * expect such data to be provided using those properties, rather than using
      * the generic property/value mechanism.
      *
-     * @param PropertyValue|PropertyValue[] $additionalProperty
+     * @param \Spatie\SchemaOrg\Contracts\PropertyValueContract|\Spatie\SchemaOrg\Contracts\PropertyValueContract[] $additionalProperty
      *
      * @return static
      *
@@ -59,7 +59,7 @@ class LodgingBusiness extends BaseType implements LocalBusinessContract, Organiz
     /**
      * Physical address of the item.
      *
-     * @param PostalAddress|PostalAddress[]|string|string[] $address
+     * @param \Spatie\SchemaOrg\Contracts\PostalAddressContract|\Spatie\SchemaOrg\Contracts\PostalAddressContract[]|string|string[] $address
      *
      * @return static
      *
@@ -74,7 +74,7 @@ class LodgingBusiness extends BaseType implements LocalBusinessContract, Organiz
      * The overall rating, based on a collection of reviews or ratings, of the
      * item.
      *
-     * @param AggregateRating|AggregateRating[] $aggregateRating
+     * @param \Spatie\SchemaOrg\Contracts\AggregateRatingContract|\Spatie\SchemaOrg\Contracts\AggregateRatingContract[] $aggregateRating
      *
      * @return static
      *
@@ -105,7 +105,7 @@ class LodgingBusiness extends BaseType implements LocalBusinessContract, Organiz
      * whether the feature is included in an offer for the main accommodation or
      * available at extra costs.
      *
-     * @param LocationFeatureSpecification|LocationFeatureSpecification[] $amenityFeature
+     * @param \Spatie\SchemaOrg\Contracts\LocationFeatureSpecificationContract|\Spatie\SchemaOrg\Contracts\LocationFeatureSpecificationContract[] $amenityFeature
      *
      * @return static
      *
@@ -119,7 +119,7 @@ class LodgingBusiness extends BaseType implements LocalBusinessContract, Organiz
     /**
      * The geographic area where a service or offered item is provided.
      *
-     * @param AdministrativeArea|AdministrativeArea[]|GeoShape|GeoShape[]|Place|Place[]|string|string[] $areaServed
+     * @param \Spatie\SchemaOrg\Contracts\AdministrativeAreaContract|\Spatie\SchemaOrg\Contracts\AdministrativeAreaContract[]|\Spatie\SchemaOrg\Contracts\GeoShapeContract|\Spatie\SchemaOrg\Contracts\GeoShapeContract[]|\Spatie\SchemaOrg\Contracts\PlaceContract|\Spatie\SchemaOrg\Contracts\PlaceContract[]|string|string[] $areaServed
      *
      * @return static
      *
@@ -133,7 +133,7 @@ class LodgingBusiness extends BaseType implements LocalBusinessContract, Organiz
     /**
      * An intended audience, i.e. a group for whom something was created.
      *
-     * @param Audience|Audience[] $audience
+     * @param \Spatie\SchemaOrg\Contracts\AudienceContract|\Spatie\SchemaOrg\Contracts\AudienceContract[] $audience
      *
      * @return static
      *
@@ -149,7 +149,7 @@ class LodgingBusiness extends BaseType implements LocalBusinessContract, Organiz
      * use one of the language codes from the [IETF BCP 47
      * standard](http://tools.ietf.org/html/bcp47). See also [[inLanguage]]
      *
-     * @param Language|Language[]|string|string[] $availableLanguage
+     * @param \Spatie\SchemaOrg\Contracts\LanguageContract|\Spatie\SchemaOrg\Contracts\LanguageContract[]|string|string[] $availableLanguage
      *
      * @return static
      *
@@ -212,7 +212,7 @@ class LodgingBusiness extends BaseType implements LocalBusinessContract, Organiz
      * The larger organization that this local business is a branch of, if any.
      * Not to be confused with (anatomical)[[branch]].
      *
-     * @param Organization|Organization[] $branchOf
+     * @param \Spatie\SchemaOrg\Contracts\OrganizationContract|\Spatie\SchemaOrg\Contracts\OrganizationContract[] $branchOf
      *
      * @return static
      *
@@ -227,7 +227,7 @@ class LodgingBusiness extends BaseType implements LocalBusinessContract, Organiz
      * The brand(s) associated with a product or service, or the brand(s)
      * maintained by an organization or business person.
      *
-     * @param Brand|Brand[]|Organization|Organization[] $brand
+     * @param \Spatie\SchemaOrg\Contracts\BrandContract|\Spatie\SchemaOrg\Contracts\BrandContract[]|\Spatie\SchemaOrg\Contracts\OrganizationContract|\Spatie\SchemaOrg\Contracts\OrganizationContract[] $brand
      *
      * @return static
      *
@@ -269,7 +269,7 @@ class LodgingBusiness extends BaseType implements LocalBusinessContract, Organiz
     /**
      * A contact point for a person or organization.
      *
-     * @param ContactPoint|ContactPoint[] $contactPoint
+     * @param \Spatie\SchemaOrg\Contracts\ContactPointContract|\Spatie\SchemaOrg\Contracts\ContactPointContract[] $contactPoint
      *
      * @return static
      *
@@ -283,7 +283,7 @@ class LodgingBusiness extends BaseType implements LocalBusinessContract, Organiz
     /**
      * A contact point for a person or organization.
      *
-     * @param ContactPoint|ContactPoint[] $contactPoints
+     * @param \Spatie\SchemaOrg\Contracts\ContactPointContract|\Spatie\SchemaOrg\Contracts\ContactPointContract[] $contactPoints
      *
      * @return static
      *
@@ -297,7 +297,7 @@ class LodgingBusiness extends BaseType implements LocalBusinessContract, Organiz
     /**
      * The basic containment relation between a place and one that contains it.
      *
-     * @param Place|Place[] $containedIn
+     * @param \Spatie\SchemaOrg\Contracts\PlaceContract|\Spatie\SchemaOrg\Contracts\PlaceContract[] $containedIn
      *
      * @return static
      *
@@ -311,7 +311,7 @@ class LodgingBusiness extends BaseType implements LocalBusinessContract, Organiz
     /**
      * The basic containment relation between a place and one that contains it.
      *
-     * @param Place|Place[] $containedInPlace
+     * @param \Spatie\SchemaOrg\Contracts\PlaceContract|\Spatie\SchemaOrg\Contracts\PlaceContract[] $containedInPlace
      *
      * @return static
      *
@@ -326,7 +326,7 @@ class LodgingBusiness extends BaseType implements LocalBusinessContract, Organiz
      * The basic containment relation between a place and another that it
      * contains.
      *
-     * @param Place|Place[] $containsPlace
+     * @param \Spatie\SchemaOrg\Contracts\PlaceContract|\Spatie\SchemaOrg\Contracts\PlaceContract[] $containsPlace
      *
      * @return static
      *
@@ -365,7 +365,7 @@ class LodgingBusiness extends BaseType implements LocalBusinessContract, Organiz
      * logos, opening hours). For example: a store with a pharmacy, or a bakery
      * with a cafe.
      *
-     * @param Organization|Organization[] $department
+     * @param \Spatie\SchemaOrg\Contracts\OrganizationContract|\Spatie\SchemaOrg\Contracts\OrganizationContract[] $department
      *
      * @return static
      *
@@ -453,7 +453,7 @@ class LodgingBusiness extends BaseType implements LocalBusinessContract, Organiz
     /**
      * Someone working for this organization.
      *
-     * @param Person|Person[] $employee
+     * @param \Spatie\SchemaOrg\Contracts\PersonContract|\Spatie\SchemaOrg\Contracts\PersonContract[] $employee
      *
      * @return static
      *
@@ -467,7 +467,7 @@ class LodgingBusiness extends BaseType implements LocalBusinessContract, Organiz
     /**
      * People working for this organization.
      *
-     * @param Person|Person[] $employees
+     * @param \Spatie\SchemaOrg\Contracts\PersonContract|\Spatie\SchemaOrg\Contracts\PersonContract[] $employees
      *
      * @return static
      *
@@ -482,7 +482,7 @@ class LodgingBusiness extends BaseType implements LocalBusinessContract, Organiz
      * Upcoming or past event associated with this place, organization, or
      * action.
      *
-     * @param Event|Event[] $event
+     * @param \Spatie\SchemaOrg\Contracts\EventContract|\Spatie\SchemaOrg\Contracts\EventContract[] $event
      *
      * @return static
      *
@@ -496,7 +496,7 @@ class LodgingBusiness extends BaseType implements LocalBusinessContract, Organiz
     /**
      * Upcoming or past events associated with this place or organization.
      *
-     * @param Event|Event[] $events
+     * @param \Spatie\SchemaOrg\Contracts\EventContract|\Spatie\SchemaOrg\Contracts\EventContract[] $events
      *
      * @return static
      *
@@ -524,7 +524,7 @@ class LodgingBusiness extends BaseType implements LocalBusinessContract, Organiz
     /**
      * A person who founded this organization.
      *
-     * @param Person|Person[] $founder
+     * @param \Spatie\SchemaOrg\Contracts\PersonContract|\Spatie\SchemaOrg\Contracts\PersonContract[] $founder
      *
      * @return static
      *
@@ -538,7 +538,7 @@ class LodgingBusiness extends BaseType implements LocalBusinessContract, Organiz
     /**
      * A person who founded this organization.
      *
-     * @param Person|Person[] $founders
+     * @param \Spatie\SchemaOrg\Contracts\PersonContract|\Spatie\SchemaOrg\Contracts\PersonContract[] $founders
      *
      * @return static
      *
@@ -566,7 +566,7 @@ class LodgingBusiness extends BaseType implements LocalBusinessContract, Organiz
     /**
      * The place where the Organization was founded.
      *
-     * @param Place|Place[] $foundingLocation
+     * @param \Spatie\SchemaOrg\Contracts\PlaceContract|\Spatie\SchemaOrg\Contracts\PlaceContract[] $foundingLocation
      *
      * @return static
      *
@@ -581,7 +581,7 @@ class LodgingBusiness extends BaseType implements LocalBusinessContract, Organiz
      * A person or organization that supports (sponsors) something through some
      * kind of financial contribution.
      *
-     * @param Organization|Organization[]|Person|Person[] $funder
+     * @param \Spatie\SchemaOrg\Contracts\OrganizationContract|\Spatie\SchemaOrg\Contracts\OrganizationContract[]|\Spatie\SchemaOrg\Contracts\PersonContract|\Spatie\SchemaOrg\Contracts\PersonContract[] $funder
      *
      * @return static
      *
@@ -595,7 +595,7 @@ class LodgingBusiness extends BaseType implements LocalBusinessContract, Organiz
     /**
      * The geo coordinates of the place.
      *
-     * @param GeoCoordinates|GeoCoordinates[]|GeoShape|GeoShape[] $geo
+     * @param \Spatie\SchemaOrg\Contracts\GeoCoordinatesContract|\Spatie\SchemaOrg\Contracts\GeoCoordinatesContract[]|\Spatie\SchemaOrg\Contracts\GeoShapeContract|\Spatie\SchemaOrg\Contracts\GeoShapeContract[] $geo
      *
      * @return static
      *
@@ -626,7 +626,7 @@ class LodgingBusiness extends BaseType implements LocalBusinessContract, Organiz
     /**
      * A URL to a map of the place.
      *
-     * @param Map|Map[]|string|string[] $hasMap
+     * @param \Spatie\SchemaOrg\Contracts\MapContract|\Spatie\SchemaOrg\Contracts\MapContract[]|string|string[] $hasMap
      *
      * @return static
      *
@@ -641,7 +641,7 @@ class LodgingBusiness extends BaseType implements LocalBusinessContract, Organiz
      * Indicates an OfferCatalog listing for this Organization, Person, or
      * Service.
      *
-     * @param OfferCatalog|OfferCatalog[] $hasOfferCatalog
+     * @param \Spatie\SchemaOrg\Contracts\OfferCatalogContract|\Spatie\SchemaOrg\Contracts\OfferCatalogContract[] $hasOfferCatalog
      *
      * @return static
      *
@@ -655,7 +655,7 @@ class LodgingBusiness extends BaseType implements LocalBusinessContract, Organiz
     /**
      * Points-of-Sales operated by the organization or person.
      *
-     * @param Place|Place[] $hasPOS
+     * @param \Spatie\SchemaOrg\Contracts\PlaceContract|\Spatie\SchemaOrg\Contracts\PlaceContract[] $hasPOS
      *
      * @return static
      *
@@ -673,7 +673,7 @@ class LodgingBusiness extends BaseType implements LocalBusinessContract, Organiz
      * strings or as URL (URI) links. See [background
      * notes](/docs/datamodel.html#identifierBg) for more details.
      *
-     * @param PropertyValue|PropertyValue[]|string|string[] $identifier
+     * @param \Spatie\SchemaOrg\Contracts\PropertyValueContract|\Spatie\SchemaOrg\Contracts\PropertyValueContract[]|string|string[] $identifier
      *
      * @return static
      *
@@ -688,7 +688,7 @@ class LodgingBusiness extends BaseType implements LocalBusinessContract, Organiz
      * An image of the item. This can be a [[URL]] or a fully described
      * [[ImageObject]].
      *
-     * @param ImageObject|ImageObject[]|string|string[] $image
+     * @param \Spatie\SchemaOrg\Contracts\ImageObjectContract|\Spatie\SchemaOrg\Contracts\ImageObjectContract[]|string|string[] $image
      *
      * @return static
      *
@@ -777,7 +777,7 @@ class LodgingBusiness extends BaseType implements LocalBusinessContract, Organiz
      * The location of for example where the event is happening, an organization
      * is located, or where an action takes place.
      *
-     * @param Place|Place[]|PostalAddress|PostalAddress[]|string|string[] $location
+     * @param \Spatie\SchemaOrg\Contracts\PlaceContract|\Spatie\SchemaOrg\Contracts\PlaceContract[]|\Spatie\SchemaOrg\Contracts\PostalAddressContract|\Spatie\SchemaOrg\Contracts\PostalAddressContract[]|string|string[] $location
      *
      * @return static
      *
@@ -791,7 +791,7 @@ class LodgingBusiness extends BaseType implements LocalBusinessContract, Organiz
     /**
      * An associated logo.
      *
-     * @param ImageObject|ImageObject[]|string|string[] $logo
+     * @param \Spatie\SchemaOrg\Contracts\ImageObjectContract|\Spatie\SchemaOrg\Contracts\ImageObjectContract[]|string|string[] $logo
      *
      * @return static
      *
@@ -822,7 +822,7 @@ class LodgingBusiness extends BaseType implements LocalBusinessContract, Organiz
      * entity being described. See [background
      * notes](/docs/datamodel.html#mainEntityBackground) for details.
      *
-     * @param CreativeWork|CreativeWork[]|string|string[] $mainEntityOfPage
+     * @param \Spatie\SchemaOrg\Contracts\CreativeWorkContract|\Spatie\SchemaOrg\Contracts\CreativeWorkContract[]|string|string[] $mainEntityOfPage
      *
      * @return static
      *
@@ -836,7 +836,7 @@ class LodgingBusiness extends BaseType implements LocalBusinessContract, Organiz
     /**
      * A pointer to products or services offered by the organization or person.
      *
-     * @param Offer|Offer[] $makesOffer
+     * @param \Spatie\SchemaOrg\Contracts\OfferContract|\Spatie\SchemaOrg\Contracts\OfferContract[] $makesOffer
      *
      * @return static
      *
@@ -893,7 +893,7 @@ class LodgingBusiness extends BaseType implements LocalBusinessContract, Organiz
      * A member of an Organization or a ProgramMembership. Organizations can be
      * members of organizations; ProgramMembership is typically for individuals.
      *
-     * @param Organization|Organization[]|Person|Person[] $member
+     * @param \Spatie\SchemaOrg\Contracts\OrganizationContract|\Spatie\SchemaOrg\Contracts\OrganizationContract[]|\Spatie\SchemaOrg\Contracts\PersonContract|\Spatie\SchemaOrg\Contracts\PersonContract[] $member
      *
      * @return static
      *
@@ -908,7 +908,7 @@ class LodgingBusiness extends BaseType implements LocalBusinessContract, Organiz
      * An Organization (or ProgramMembership) to which this Person or
      * Organization belongs.
      *
-     * @param Organization|Organization[]|ProgramMembership|ProgramMembership[] $memberOf
+     * @param \Spatie\SchemaOrg\Contracts\OrganizationContract|\Spatie\SchemaOrg\Contracts\OrganizationContract[]|\Spatie\SchemaOrg\Contracts\ProgramMembershipContract|\Spatie\SchemaOrg\Contracts\ProgramMembershipContract[] $memberOf
      *
      * @return static
      *
@@ -922,7 +922,7 @@ class LodgingBusiness extends BaseType implements LocalBusinessContract, Organiz
     /**
      * A member of this organization.
      *
-     * @param Organization|Organization[]|Person|Person[] $members
+     * @param \Spatie\SchemaOrg\Contracts\OrganizationContract|\Spatie\SchemaOrg\Contracts\OrganizationContract[]|\Spatie\SchemaOrg\Contracts\PersonContract|\Spatie\SchemaOrg\Contracts\PersonContract[] $members
      *
      * @return static
      *
@@ -965,7 +965,7 @@ class LodgingBusiness extends BaseType implements LocalBusinessContract, Organiz
     /**
      * The number of employees in an organization e.g. business.
      *
-     * @param QuantitativeValue|QuantitativeValue[] $numberOfEmployees
+     * @param \Spatie\SchemaOrg\Contracts\QuantitativeValueContract|\Spatie\SchemaOrg\Contracts\QuantitativeValueContract[] $numberOfEmployees
      *
      * @return static
      *
@@ -982,7 +982,7 @@ class LodgingBusiness extends BaseType implements LocalBusinessContract, Organiz
      * Typical unit code(s): ROM for room or C62 for no unit. The type of room
      * can be put in the unitText property of the QuantitativeValue.
      *
-     * @param QuantitativeValue|QuantitativeValue[]|float|float[]|int|int[] $numberOfRooms
+     * @param \Spatie\SchemaOrg\Contracts\QuantitativeValueContract|\Spatie\SchemaOrg\Contracts\QuantitativeValueContract[]|float|float[]|int|int[] $numberOfRooms
      *
      * @return static
      *
@@ -996,7 +996,7 @@ class LodgingBusiness extends BaseType implements LocalBusinessContract, Organiz
     /**
      * A pointer to the organization or person making the offer.
      *
-     * @param Organization|Organization[]|Person|Person[] $offeredBy
+     * @param \Spatie\SchemaOrg\Contracts\OrganizationContract|\Spatie\SchemaOrg\Contracts\OrganizationContract[]|\Spatie\SchemaOrg\Contracts\PersonContract|\Spatie\SchemaOrg\Contracts\PersonContract[] $offeredBy
      *
      * @return static
      *
@@ -1039,7 +1039,7 @@ class LodgingBusiness extends BaseType implements LocalBusinessContract, Organiz
     /**
      * The opening hours of a certain place.
      *
-     * @param OpeningHoursSpecification|OpeningHoursSpecification[] $openingHoursSpecification
+     * @param \Spatie\SchemaOrg\Contracts\OpeningHoursSpecificationContract|\Spatie\SchemaOrg\Contracts\OpeningHoursSpecificationContract[] $openingHoursSpecification
      *
      * @return static
      *
@@ -1053,7 +1053,7 @@ class LodgingBusiness extends BaseType implements LocalBusinessContract, Organiz
     /**
      * Products owned by the organization or person.
      *
-     * @param OwnershipInfo|OwnershipInfo[]|Product|Product[] $owns
+     * @param \Spatie\SchemaOrg\Contracts\OwnershipInfoContract|\Spatie\SchemaOrg\Contracts\OwnershipInfoContract[]|\Spatie\SchemaOrg\Contracts\ProductContract|\Spatie\SchemaOrg\Contracts\ProductContract[] $owns
      *
      * @return static
      *
@@ -1068,7 +1068,7 @@ class LodgingBusiness extends BaseType implements LocalBusinessContract, Organiz
      * The larger organization that this organization is a [[subOrganization]]
      * of, if any.
      *
-     * @param Organization|Organization[] $parentOrganization
+     * @param \Spatie\SchemaOrg\Contracts\OrganizationContract|\Spatie\SchemaOrg\Contracts\OrganizationContract[] $parentOrganization
      *
      * @return static
      *
@@ -1111,7 +1111,7 @@ class LodgingBusiness extends BaseType implements LocalBusinessContract, Organiz
     /**
      * A photograph of this place.
      *
-     * @param ImageObject|ImageObject[]|Photograph|Photograph[] $photo
+     * @param \Spatie\SchemaOrg\Contracts\ImageObjectContract|\Spatie\SchemaOrg\Contracts\ImageObjectContract[]|\Spatie\SchemaOrg\Contracts\PhotographContract|\Spatie\SchemaOrg\Contracts\PhotographContract[] $photo
      *
      * @return static
      *
@@ -1125,7 +1125,7 @@ class LodgingBusiness extends BaseType implements LocalBusinessContract, Organiz
     /**
      * Photographs of this place.
      *
-     * @param ImageObject|ImageObject[]|Photograph|Photograph[] $photos
+     * @param \Spatie\SchemaOrg\Contracts\ImageObjectContract|\Spatie\SchemaOrg\Contracts\ImageObjectContract[]|\Spatie\SchemaOrg\Contracts\PhotographContract|\Spatie\SchemaOrg\Contracts\PhotographContract[] $photos
      *
      * @return static
      *
@@ -1140,7 +1140,7 @@ class LodgingBusiness extends BaseType implements LocalBusinessContract, Organiz
      * Indicates a potential Action, which describes an idealized action in
      * which this thing would play an 'object' role.
      *
-     * @param Action|Action[] $potentialAction
+     * @param \Spatie\SchemaOrg\Contracts\ActionContract|\Spatie\SchemaOrg\Contracts\ActionContract[] $potentialAction
      *
      * @return static
      *
@@ -1193,7 +1193,7 @@ class LodgingBusiness extends BaseType implements LocalBusinessContract, Organiz
      * sometimes related information (e.g. indicating a [[funder]]) can be
      * expressed using schema.org terminology.
      *
-     * @param CreativeWork|CreativeWork[]|string|string[] $publishingPrinciples
+     * @param \Spatie\SchemaOrg\Contracts\CreativeWorkContract|\Spatie\SchemaOrg\Contracts\CreativeWorkContract[]|string|string[] $publishingPrinciples
      *
      * @return static
      *
@@ -1207,7 +1207,7 @@ class LodgingBusiness extends BaseType implements LocalBusinessContract, Organiz
     /**
      * A review of the item.
      *
-     * @param Review|Review[] $review
+     * @param \Spatie\SchemaOrg\Contracts\ReviewContract|\Spatie\SchemaOrg\Contracts\ReviewContract[] $review
      *
      * @return static
      *
@@ -1221,7 +1221,7 @@ class LodgingBusiness extends BaseType implements LocalBusinessContract, Organiz
     /**
      * Review of the item.
      *
-     * @param Review|Review[] $reviews
+     * @param \Spatie\SchemaOrg\Contracts\ReviewContract|\Spatie\SchemaOrg\Contracts\ReviewContract[] $reviews
      *
      * @return static
      *
@@ -1252,7 +1252,7 @@ class LodgingBusiness extends BaseType implements LocalBusinessContract, Organiz
      * A pointer to products or services sought by the organization or person
      * (demand).
      *
-     * @param Demand|Demand[] $seeks
+     * @param \Spatie\SchemaOrg\Contracts\DemandContract|\Spatie\SchemaOrg\Contracts\DemandContract[] $seeks
      *
      * @return static
      *
@@ -1266,7 +1266,7 @@ class LodgingBusiness extends BaseType implements LocalBusinessContract, Organiz
     /**
      * The geographic area where the service is provided.
      *
-     * @param AdministrativeArea|AdministrativeArea[]|GeoShape|GeoShape[]|Place|Place[] $serviceArea
+     * @param \Spatie\SchemaOrg\Contracts\AdministrativeAreaContract|\Spatie\SchemaOrg\Contracts\AdministrativeAreaContract[]|\Spatie\SchemaOrg\Contracts\GeoShapeContract|\Spatie\SchemaOrg\Contracts\GeoShapeContract[]|\Spatie\SchemaOrg\Contracts\PlaceContract|\Spatie\SchemaOrg\Contracts\PlaceContract[] $serviceArea
      *
      * @return static
      *
@@ -1312,7 +1312,7 @@ class LodgingBusiness extends BaseType implements LocalBusinessContract, Organiz
      * Use this to explicitly override general opening hours brought in scope by
      * [[openingHoursSpecification]] or [[openingHours]].
      *
-     * @param OpeningHoursSpecification|OpeningHoursSpecification[] $specialOpeningHoursSpecification
+     * @param \Spatie\SchemaOrg\Contracts\OpeningHoursSpecificationContract|\Spatie\SchemaOrg\Contracts\OpeningHoursSpecificationContract[] $specialOpeningHoursSpecification
      *
      * @return static
      *
@@ -1328,7 +1328,7 @@ class LodgingBusiness extends BaseType implements LocalBusinessContract, Organiz
      * or financial contribution. e.g. a sponsor of a Medical Study or a
      * corporate sponsor of an event.
      *
-     * @param Organization|Organization[]|Person|Person[] $sponsor
+     * @param \Spatie\SchemaOrg\Contracts\OrganizationContract|\Spatie\SchemaOrg\Contracts\OrganizationContract[]|\Spatie\SchemaOrg\Contracts\PersonContract|\Spatie\SchemaOrg\Contracts\PersonContract[] $sponsor
      *
      * @return static
      *
@@ -1345,7 +1345,7 @@ class LodgingBusiness extends BaseType implements LocalBusinessContract, Organiz
      * to indicate the rating organization, e.g. as an Organization with name
      * such as (e.g. HOTREC, DEHOGA, WHR, or Hotelstars).
      *
-     * @param Rating|Rating[] $starRating
+     * @param \Spatie\SchemaOrg\Contracts\RatingContract|\Spatie\SchemaOrg\Contracts\RatingContract[] $starRating
      *
      * @return static
      *
@@ -1361,7 +1361,7 @@ class LodgingBusiness extends BaseType implements LocalBusinessContract, Organiz
      * second, e.g., as a subsidiary. See also: the more specific 'department'
      * property.
      *
-     * @param Organization|Organization[] $subOrganization
+     * @param \Spatie\SchemaOrg\Contracts\OrganizationContract|\Spatie\SchemaOrg\Contracts\OrganizationContract[] $subOrganization
      *
      * @return static
      *
@@ -1375,7 +1375,7 @@ class LodgingBusiness extends BaseType implements LocalBusinessContract, Organiz
     /**
      * A CreativeWork or Event about this Thing.
      *
-     * @param CreativeWork|CreativeWork[]|Event|Event[] $subjectOf
+     * @param \Spatie\SchemaOrg\Contracts\CreativeWorkContract|\Spatie\SchemaOrg\Contracts\CreativeWorkContract[]|\Spatie\SchemaOrg\Contracts\EventContract|\Spatie\SchemaOrg\Contracts\EventContract[] $subjectOf
      *
      * @return static
      *
