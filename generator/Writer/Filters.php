@@ -37,8 +37,7 @@ class Filters
                 return $type;
             }
 
-            return "\\Spatie\\SchemaOrg\\Contracts\\{$baseType}Contract" . ($isArray ? '[]' : '');
+            return "\\Spatie\\SchemaOrg\\Contracts\\{$baseType}Contract".($isArray ? '[]' : '');
         }, $ranges));
-
     }
 }
