@@ -3,7 +3,17 @@
 namespace Spatie\SchemaOrg;
 
 use \Spatie\SchemaOrg\Contracts\ActionContract;
+use \Spatie\SchemaOrg\Contracts\ActionStatusTypeContract;
+use \Spatie\SchemaOrg\Contracts\CreativeWorkContract;
+use \Spatie\SchemaOrg\Contracts\EntryPointContract;
+use \Spatie\SchemaOrg\Contracts\EventContract;
+use \Spatie\SchemaOrg\Contracts\ImageObjectContract;
 use \Spatie\SchemaOrg\Contracts\InteractActionContract;
+use \Spatie\SchemaOrg\Contracts\OrganizationContract;
+use \Spatie\SchemaOrg\Contracts\PersonContract;
+use \Spatie\SchemaOrg\Contracts\PlaceContract;
+use \Spatie\SchemaOrg\Contracts\PostalAddressContract;
+use \Spatie\SchemaOrg\Contracts\PropertyValueContract;
 use \Spatie\SchemaOrg\Contracts\ThingContract;
 
 /**
@@ -32,7 +42,7 @@ class FollowAction extends BaseType implements ActionContract, InteractActionCon
     /**
      * Indicates the current disposition of the Action.
      *
-     * @param \Spatie\SchemaOrg\Contracts\ActionStatusTypeContract|\Spatie\SchemaOrg\Contracts\ActionStatusTypeContract[] $actionStatus
+     * @param ActionStatusTypeContract|ActionStatusTypeContract[] $actionStatus
      *
      * @return static
      *
@@ -66,7 +76,7 @@ class FollowAction extends BaseType implements ActionContract, InteractActionCon
      * The direct performer or driver of the action (animate or inanimate). e.g.
      * *John* wrote a book.
      *
-     * @param \Spatie\SchemaOrg\Contracts\OrganizationContract|\Spatie\SchemaOrg\Contracts\OrganizationContract[]|\Spatie\SchemaOrg\Contracts\PersonContract|\Spatie\SchemaOrg\Contracts\PersonContract[] $agent
+     * @param OrganizationContract|OrganizationContract[]|PersonContract|PersonContract[] $agent
      *
      * @return static
      *
@@ -148,7 +158,7 @@ class FollowAction extends BaseType implements ActionContract, InteractActionCon
     /**
      * For failed actions, more information on the cause of the failure.
      *
-     * @param \Spatie\SchemaOrg\Contracts\ThingContract|\Spatie\SchemaOrg\Contracts\ThingContract[] $error
+     * @param ThingContract|ThingContract[] $error
      *
      * @return static
      *
@@ -162,7 +172,7 @@ class FollowAction extends BaseType implements ActionContract, InteractActionCon
     /**
      * A sub property of object. The person or organization being followed.
      *
-     * @param \Spatie\SchemaOrg\Contracts\OrganizationContract|\Spatie\SchemaOrg\Contracts\OrganizationContract[]|\Spatie\SchemaOrg\Contracts\PersonContract|\Spatie\SchemaOrg\Contracts\PersonContract[] $followee
+     * @param OrganizationContract|OrganizationContract[]|PersonContract|PersonContract[] $followee
      *
      * @return static
      *
@@ -180,7 +190,7 @@ class FollowAction extends BaseType implements ActionContract, InteractActionCon
      * strings or as URL (URI) links. See [background
      * notes](/docs/datamodel.html#identifierBg) for more details.
      *
-     * @param \Spatie\SchemaOrg\Contracts\PropertyValueContract|\Spatie\SchemaOrg\Contracts\PropertyValueContract[]|string|string[] $identifier
+     * @param PropertyValueContract|PropertyValueContract[]|string|string[] $identifier
      *
      * @return static
      *
@@ -195,7 +205,7 @@ class FollowAction extends BaseType implements ActionContract, InteractActionCon
      * An image of the item. This can be a [[URL]] or a fully described
      * [[ImageObject]].
      *
-     * @param \Spatie\SchemaOrg\Contracts\ImageObjectContract|\Spatie\SchemaOrg\Contracts\ImageObjectContract[]|string|string[] $image
+     * @param ImageObjectContract|ImageObjectContract[]|string|string[] $image
      *
      * @return static
      *
@@ -210,7 +220,7 @@ class FollowAction extends BaseType implements ActionContract, InteractActionCon
      * The object that helped the agent perform the action. e.g. John wrote a
      * book with *a pen*.
      *
-     * @param \Spatie\SchemaOrg\Contracts\ThingContract|\Spatie\SchemaOrg\Contracts\ThingContract[] $instrument
+     * @param ThingContract|ThingContract[] $instrument
      *
      * @return static
      *
@@ -225,7 +235,7 @@ class FollowAction extends BaseType implements ActionContract, InteractActionCon
      * The location of for example where the event is happening, an organization
      * is located, or where an action takes place.
      *
-     * @param \Spatie\SchemaOrg\Contracts\PlaceContract|\Spatie\SchemaOrg\Contracts\PlaceContract[]|\Spatie\SchemaOrg\Contracts\PostalAddressContract|\Spatie\SchemaOrg\Contracts\PostalAddressContract[]|string|string[] $location
+     * @param PlaceContract|PlaceContract[]|PostalAddressContract|PostalAddressContract[]|string|string[] $location
      *
      * @return static
      *
@@ -241,7 +251,7 @@ class FollowAction extends BaseType implements ActionContract, InteractActionCon
      * entity being described. See [background
      * notes](/docs/datamodel.html#mainEntityBackground) for details.
      *
-     * @param \Spatie\SchemaOrg\Contracts\CreativeWorkContract|\Spatie\SchemaOrg\Contracts\CreativeWorkContract[]|string|string[] $mainEntityOfPage
+     * @param CreativeWorkContract|CreativeWorkContract[]|string|string[] $mainEntityOfPage
      *
      * @return static
      *
@@ -272,7 +282,7 @@ class FollowAction extends BaseType implements ActionContract, InteractActionCon
      * undergoer (which change their state) or theme (which doesn't). e.g. John
      * read *a book*.
      *
-     * @param \Spatie\SchemaOrg\Contracts\ThingContract|\Spatie\SchemaOrg\Contracts\ThingContract[] $object
+     * @param ThingContract|ThingContract[] $object
      *
      * @return static
      *
@@ -287,7 +297,7 @@ class FollowAction extends BaseType implements ActionContract, InteractActionCon
      * Other co-agents that participated in the action indirectly. e.g. John
      * wrote a book with *Steve*.
      *
-     * @param \Spatie\SchemaOrg\Contracts\OrganizationContract|\Spatie\SchemaOrg\Contracts\OrganizationContract[]|\Spatie\SchemaOrg\Contracts\PersonContract|\Spatie\SchemaOrg\Contracts\PersonContract[] $participant
+     * @param OrganizationContract|OrganizationContract[]|PersonContract|PersonContract[] $participant
      *
      * @return static
      *
@@ -302,7 +312,7 @@ class FollowAction extends BaseType implements ActionContract, InteractActionCon
      * Indicates a potential Action, which describes an idealized action in
      * which this thing would play an 'object' role.
      *
-     * @param \Spatie\SchemaOrg\Contracts\ActionContract|\Spatie\SchemaOrg\Contracts\ActionContract[] $potentialAction
+     * @param ActionContract|ActionContract[] $potentialAction
      *
      * @return static
      *
@@ -316,7 +326,7 @@ class FollowAction extends BaseType implements ActionContract, InteractActionCon
     /**
      * The result produced in the action. e.g. John wrote *a book*.
      *
-     * @param \Spatie\SchemaOrg\Contracts\ThingContract|\Spatie\SchemaOrg\Contracts\ThingContract[] $result
+     * @param ThingContract|ThingContract[] $result
      *
      * @return static
      *
@@ -369,7 +379,7 @@ class FollowAction extends BaseType implements ActionContract, InteractActionCon
     /**
      * A CreativeWork or Event about this Thing.
      *
-     * @param \Spatie\SchemaOrg\Contracts\CreativeWorkContract|\Spatie\SchemaOrg\Contracts\CreativeWorkContract[]|\Spatie\SchemaOrg\Contracts\EventContract|\Spatie\SchemaOrg\Contracts\EventContract[] $subjectOf
+     * @param CreativeWorkContract|CreativeWorkContract[]|EventContract|EventContract[] $subjectOf
      *
      * @return static
      *
@@ -383,7 +393,7 @@ class FollowAction extends BaseType implements ActionContract, InteractActionCon
     /**
      * Indicates a target EntryPoint for an Action.
      *
-     * @param \Spatie\SchemaOrg\Contracts\EntryPointContract|\Spatie\SchemaOrg\Contracts\EntryPointContract[] $target
+     * @param EntryPointContract|EntryPointContract[] $target
      *
      * @return static
      *

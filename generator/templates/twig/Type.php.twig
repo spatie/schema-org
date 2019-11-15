@@ -2,8 +2,8 @@
 
 namespace Spatie\SchemaOrg;
 
-{% for parent in type.parents %}
-use \Spatie\SchemaOrg\Contracts\{{ parent }}Contract;
+{% for contract in contracts(type) %}
+use \Spatie\SchemaOrg\Contracts\{{ contract }}Contract;
 {% endfor %}
 
 /**

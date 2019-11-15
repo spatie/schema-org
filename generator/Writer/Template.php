@@ -5,6 +5,7 @@ namespace Spatie\SchemaOrg\Generator\Writer;
 use Twig_Environment;
 use Twig_Loader_Filesystem;
 use Twig_SimpleFilter;
+use Twig_SimpleFunction;
 
 class Template
 {
@@ -46,6 +47,10 @@ class Template
 
         $twig->addFilter(
             new Twig_SimpleFilter('lcfirst', [Filters::class, 'lcfirst'])
+        );
+
+        $twig->addFunction(
+            new Twig_SimpleFunction('contracts', [Filters::class, 'contracts'])
         );
 
         return $twig;

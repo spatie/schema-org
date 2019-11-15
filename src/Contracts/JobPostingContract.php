@@ -60,8 +60,6 @@ interface JobPostingContract
 
     public function sameAs($sameAs);
 
-    public function skills($skills);
-
     public function specialCommitments($specialCommitments);
 
     public function subjectOf($subjectOf);

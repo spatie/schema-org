@@ -2,7 +2,14 @@
 
 namespace Spatie\SchemaOrg;
 
+use \Spatie\SchemaOrg\Contracts\ActionContract;
+use \Spatie\SchemaOrg\Contracts\AggregateRatingContract;
+use \Spatie\SchemaOrg\Contracts\CreativeWorkContract;
+use \Spatie\SchemaOrg\Contracts\EventContract;
+use \Spatie\SchemaOrg\Contracts\ImageObjectContract;
 use \Spatie\SchemaOrg\Contracts\IntangibleContract;
+use \Spatie\SchemaOrg\Contracts\PropertyValueContract;
+use \Spatie\SchemaOrg\Contracts\ReviewContract;
 use \Spatie\SchemaOrg\Contracts\ThingContract;
 
 /**
@@ -37,7 +44,7 @@ class Brand extends BaseType implements IntangibleContract, ThingContract
      * The overall rating, based on a collection of reviews or ratings, of the
      * item.
      *
-     * @param \Spatie\SchemaOrg\Contracts\AggregateRatingContract|\Spatie\SchemaOrg\Contracts\AggregateRatingContract[] $aggregateRating
+     * @param AggregateRatingContract|AggregateRatingContract[] $aggregateRating
      *
      * @return static
      *
@@ -100,7 +107,7 @@ class Brand extends BaseType implements IntangibleContract, ThingContract
      * strings or as URL (URI) links. See [background
      * notes](/docs/datamodel.html#identifierBg) for more details.
      *
-     * @param \Spatie\SchemaOrg\Contracts\PropertyValueContract|\Spatie\SchemaOrg\Contracts\PropertyValueContract[]|string|string[] $identifier
+     * @param PropertyValueContract|PropertyValueContract[]|string|string[] $identifier
      *
      * @return static
      *
@@ -115,7 +122,7 @@ class Brand extends BaseType implements IntangibleContract, ThingContract
      * An image of the item. This can be a [[URL]] or a fully described
      * [[ImageObject]].
      *
-     * @param \Spatie\SchemaOrg\Contracts\ImageObjectContract|\Spatie\SchemaOrg\Contracts\ImageObjectContract[]|string|string[] $image
+     * @param ImageObjectContract|ImageObjectContract[]|string|string[] $image
      *
      * @return static
      *
@@ -129,7 +136,7 @@ class Brand extends BaseType implements IntangibleContract, ThingContract
     /**
      * An associated logo.
      *
-     * @param \Spatie\SchemaOrg\Contracts\ImageObjectContract|\Spatie\SchemaOrg\Contracts\ImageObjectContract[]|string|string[] $logo
+     * @param ImageObjectContract|ImageObjectContract[]|string|string[] $logo
      *
      * @return static
      *
@@ -145,7 +152,7 @@ class Brand extends BaseType implements IntangibleContract, ThingContract
      * entity being described. See [background
      * notes](/docs/datamodel.html#mainEntityBackground) for details.
      *
-     * @param \Spatie\SchemaOrg\Contracts\CreativeWorkContract|\Spatie\SchemaOrg\Contracts\CreativeWorkContract[]|string|string[] $mainEntityOfPage
+     * @param CreativeWorkContract|CreativeWorkContract[]|string|string[] $mainEntityOfPage
      *
      * @return static
      *
@@ -174,7 +181,7 @@ class Brand extends BaseType implements IntangibleContract, ThingContract
      * Indicates a potential Action, which describes an idealized action in
      * which this thing would play an 'object' role.
      *
-     * @param \Spatie\SchemaOrg\Contracts\ActionContract|\Spatie\SchemaOrg\Contracts\ActionContract[] $potentialAction
+     * @param ActionContract|ActionContract[] $potentialAction
      *
      * @return static
      *
@@ -188,7 +195,7 @@ class Brand extends BaseType implements IntangibleContract, ThingContract
     /**
      * A review of the item.
      *
-     * @param \Spatie\SchemaOrg\Contracts\ReviewContract|\Spatie\SchemaOrg\Contracts\ReviewContract[] $review
+     * @param ReviewContract|ReviewContract[] $review
      *
      * @return static
      *
@@ -232,7 +239,7 @@ class Brand extends BaseType implements IntangibleContract, ThingContract
     /**
      * A CreativeWork or Event about this Thing.
      *
-     * @param \Spatie\SchemaOrg\Contracts\CreativeWorkContract|\Spatie\SchemaOrg\Contracts\CreativeWorkContract[]|\Spatie\SchemaOrg\Contracts\EventContract|\Spatie\SchemaOrg\Contracts\EventContract[] $subjectOf
+     * @param CreativeWorkContract|CreativeWorkContract[]|EventContract|EventContract[] $subjectOf
      *
      * @return static
      *

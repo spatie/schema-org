@@ -2,9 +2,23 @@
 
 namespace Spatie\SchemaOrg;
 
+use \Spatie\SchemaOrg\Contracts\ActionContract;
+use \Spatie\SchemaOrg\Contracts\AggregateRatingContract;
 use \Spatie\SchemaOrg\Contracts\BodyOfWaterContract;
+use \Spatie\SchemaOrg\Contracts\CreativeWorkContract;
+use \Spatie\SchemaOrg\Contracts\EventContract;
+use \Spatie\SchemaOrg\Contracts\GeoCoordinatesContract;
+use \Spatie\SchemaOrg\Contracts\GeoShapeContract;
+use \Spatie\SchemaOrg\Contracts\ImageObjectContract;
 use \Spatie\SchemaOrg\Contracts\LandformContract;
+use \Spatie\SchemaOrg\Contracts\LocationFeatureSpecificationContract;
+use \Spatie\SchemaOrg\Contracts\MapContract;
+use \Spatie\SchemaOrg\Contracts\OpeningHoursSpecificationContract;
+use \Spatie\SchemaOrg\Contracts\PhotographContract;
 use \Spatie\SchemaOrg\Contracts\PlaceContract;
+use \Spatie\SchemaOrg\Contracts\PostalAddressContract;
+use \Spatie\SchemaOrg\Contracts\PropertyValueContract;
+use \Spatie\SchemaOrg\Contracts\ReviewContract;
 use \Spatie\SchemaOrg\Contracts\ThingContract;
 
 /**
@@ -27,7 +41,7 @@ class Reservoir extends BaseType implements BodyOfWaterContract, LandformContrac
      * expect such data to be provided using those properties, rather than using
      * the generic property/value mechanism.
      *
-     * @param \Spatie\SchemaOrg\Contracts\PropertyValueContract|\Spatie\SchemaOrg\Contracts\PropertyValueContract[] $additionalProperty
+     * @param PropertyValueContract|PropertyValueContract[] $additionalProperty
      *
      * @return static
      *
@@ -60,7 +74,7 @@ class Reservoir extends BaseType implements BodyOfWaterContract, LandformContrac
     /**
      * Physical address of the item.
      *
-     * @param \Spatie\SchemaOrg\Contracts\PostalAddressContract|\Spatie\SchemaOrg\Contracts\PostalAddressContract[]|string|string[] $address
+     * @param PostalAddressContract|PostalAddressContract[]|string|string[] $address
      *
      * @return static
      *
@@ -75,7 +89,7 @@ class Reservoir extends BaseType implements BodyOfWaterContract, LandformContrac
      * The overall rating, based on a collection of reviews or ratings, of the
      * item.
      *
-     * @param \Spatie\SchemaOrg\Contracts\AggregateRatingContract|\Spatie\SchemaOrg\Contracts\AggregateRatingContract[] $aggregateRating
+     * @param AggregateRatingContract|AggregateRatingContract[] $aggregateRating
      *
      * @return static
      *
@@ -106,7 +120,7 @@ class Reservoir extends BaseType implements BodyOfWaterContract, LandformContrac
      * whether the feature is included in an offer for the main accommodation or
      * available at extra costs.
      *
-     * @param \Spatie\SchemaOrg\Contracts\LocationFeatureSpecificationContract|\Spatie\SchemaOrg\Contracts\LocationFeatureSpecificationContract[] $amenityFeature
+     * @param LocationFeatureSpecificationContract|LocationFeatureSpecificationContract[] $amenityFeature
      *
      * @return static
      *
@@ -140,7 +154,7 @@ class Reservoir extends BaseType implements BodyOfWaterContract, LandformContrac
     /**
      * The basic containment relation between a place and one that contains it.
      *
-     * @param \Spatie\SchemaOrg\Contracts\PlaceContract|\Spatie\SchemaOrg\Contracts\PlaceContract[] $containedIn
+     * @param PlaceContract|PlaceContract[] $containedIn
      *
      * @return static
      *
@@ -154,7 +168,7 @@ class Reservoir extends BaseType implements BodyOfWaterContract, LandformContrac
     /**
      * The basic containment relation between a place and one that contains it.
      *
-     * @param \Spatie\SchemaOrg\Contracts\PlaceContract|\Spatie\SchemaOrg\Contracts\PlaceContract[] $containedInPlace
+     * @param PlaceContract|PlaceContract[] $containedInPlace
      *
      * @return static
      *
@@ -169,7 +183,7 @@ class Reservoir extends BaseType implements BodyOfWaterContract, LandformContrac
      * The basic containment relation between a place and another that it
      * contains.
      *
-     * @param \Spatie\SchemaOrg\Contracts\PlaceContract|\Spatie\SchemaOrg\Contracts\PlaceContract[] $containsPlace
+     * @param PlaceContract|PlaceContract[] $containsPlace
      *
      * @return static
      *
@@ -215,7 +229,7 @@ class Reservoir extends BaseType implements BodyOfWaterContract, LandformContrac
      * Upcoming or past event associated with this place, organization, or
      * action.
      *
-     * @param \Spatie\SchemaOrg\Contracts\EventContract|\Spatie\SchemaOrg\Contracts\EventContract[] $event
+     * @param EventContract|EventContract[] $event
      *
      * @return static
      *
@@ -229,7 +243,7 @@ class Reservoir extends BaseType implements BodyOfWaterContract, LandformContrac
     /**
      * Upcoming or past events associated with this place or organization.
      *
-     * @param \Spatie\SchemaOrg\Contracts\EventContract|\Spatie\SchemaOrg\Contracts\EventContract[] $events
+     * @param EventContract|EventContract[] $events
      *
      * @return static
      *
@@ -257,7 +271,7 @@ class Reservoir extends BaseType implements BodyOfWaterContract, LandformContrac
     /**
      * The geo coordinates of the place.
      *
-     * @param \Spatie\SchemaOrg\Contracts\GeoCoordinatesContract|\Spatie\SchemaOrg\Contracts\GeoCoordinatesContract[]|\Spatie\SchemaOrg\Contracts\GeoShapeContract|\Spatie\SchemaOrg\Contracts\GeoShapeContract[] $geo
+     * @param GeoCoordinatesContract|GeoCoordinatesContract[]|GeoShapeContract|GeoShapeContract[] $geo
      *
      * @return static
      *
@@ -288,7 +302,7 @@ class Reservoir extends BaseType implements BodyOfWaterContract, LandformContrac
     /**
      * A URL to a map of the place.
      *
-     * @param \Spatie\SchemaOrg\Contracts\MapContract|\Spatie\SchemaOrg\Contracts\MapContract[]|string|string[] $hasMap
+     * @param MapContract|MapContract[]|string|string[] $hasMap
      *
      * @return static
      *
@@ -306,7 +320,7 @@ class Reservoir extends BaseType implements BodyOfWaterContract, LandformContrac
      * strings or as URL (URI) links. See [background
      * notes](/docs/datamodel.html#identifierBg) for more details.
      *
-     * @param \Spatie\SchemaOrg\Contracts\PropertyValueContract|\Spatie\SchemaOrg\Contracts\PropertyValueContract[]|string|string[] $identifier
+     * @param PropertyValueContract|PropertyValueContract[]|string|string[] $identifier
      *
      * @return static
      *
@@ -321,7 +335,7 @@ class Reservoir extends BaseType implements BodyOfWaterContract, LandformContrac
      * An image of the item. This can be a [[URL]] or a fully described
      * [[ImageObject]].
      *
-     * @param \Spatie\SchemaOrg\Contracts\ImageObjectContract|\Spatie\SchemaOrg\Contracts\ImageObjectContract[]|string|string[] $image
+     * @param ImageObjectContract|ImageObjectContract[]|string|string[] $image
      *
      * @return static
      *
@@ -380,7 +394,7 @@ class Reservoir extends BaseType implements BodyOfWaterContract, LandformContrac
     /**
      * An associated logo.
      *
-     * @param \Spatie\SchemaOrg\Contracts\ImageObjectContract|\Spatie\SchemaOrg\Contracts\ImageObjectContract[]|string|string[] $logo
+     * @param ImageObjectContract|ImageObjectContract[]|string|string[] $logo
      *
      * @return static
      *
@@ -411,7 +425,7 @@ class Reservoir extends BaseType implements BodyOfWaterContract, LandformContrac
      * entity being described. See [background
      * notes](/docs/datamodel.html#mainEntityBackground) for details.
      *
-     * @param \Spatie\SchemaOrg\Contracts\CreativeWorkContract|\Spatie\SchemaOrg\Contracts\CreativeWorkContract[]|string|string[] $mainEntityOfPage
+     * @param CreativeWorkContract|CreativeWorkContract[]|string|string[] $mainEntityOfPage
      *
      * @return static
      *
@@ -481,7 +495,7 @@ class Reservoir extends BaseType implements BodyOfWaterContract, LandformContrac
     /**
      * The opening hours of a certain place.
      *
-     * @param \Spatie\SchemaOrg\Contracts\OpeningHoursSpecificationContract|\Spatie\SchemaOrg\Contracts\OpeningHoursSpecificationContract[] $openingHoursSpecification
+     * @param OpeningHoursSpecificationContract|OpeningHoursSpecificationContract[] $openingHoursSpecification
      *
      * @return static
      *
@@ -495,7 +509,7 @@ class Reservoir extends BaseType implements BodyOfWaterContract, LandformContrac
     /**
      * A photograph of this place.
      *
-     * @param \Spatie\SchemaOrg\Contracts\ImageObjectContract|\Spatie\SchemaOrg\Contracts\ImageObjectContract[]|\Spatie\SchemaOrg\Contracts\PhotographContract|\Spatie\SchemaOrg\Contracts\PhotographContract[] $photo
+     * @param ImageObjectContract|ImageObjectContract[]|PhotographContract|PhotographContract[] $photo
      *
      * @return static
      *
@@ -509,7 +523,7 @@ class Reservoir extends BaseType implements BodyOfWaterContract, LandformContrac
     /**
      * Photographs of this place.
      *
-     * @param \Spatie\SchemaOrg\Contracts\ImageObjectContract|\Spatie\SchemaOrg\Contracts\ImageObjectContract[]|\Spatie\SchemaOrg\Contracts\PhotographContract|\Spatie\SchemaOrg\Contracts\PhotographContract[] $photos
+     * @param ImageObjectContract|ImageObjectContract[]|PhotographContract|PhotographContract[] $photos
      *
      * @return static
      *
@@ -524,7 +538,7 @@ class Reservoir extends BaseType implements BodyOfWaterContract, LandformContrac
      * Indicates a potential Action, which describes an idealized action in
      * which this thing would play an 'object' role.
      *
-     * @param \Spatie\SchemaOrg\Contracts\ActionContract|\Spatie\SchemaOrg\Contracts\ActionContract[] $potentialAction
+     * @param ActionContract|ActionContract[] $potentialAction
      *
      * @return static
      *
@@ -553,7 +567,7 @@ class Reservoir extends BaseType implements BodyOfWaterContract, LandformContrac
     /**
      * A review of the item.
      *
-     * @param \Spatie\SchemaOrg\Contracts\ReviewContract|\Spatie\SchemaOrg\Contracts\ReviewContract[] $review
+     * @param ReviewContract|ReviewContract[] $review
      *
      * @return static
      *
@@ -567,7 +581,7 @@ class Reservoir extends BaseType implements BodyOfWaterContract, LandformContrac
     /**
      * Review of the item.
      *
-     * @param \Spatie\SchemaOrg\Contracts\ReviewContract|\Spatie\SchemaOrg\Contracts\ReviewContract[] $reviews
+     * @param ReviewContract|ReviewContract[] $reviews
      *
      * @return static
      *
@@ -629,7 +643,7 @@ class Reservoir extends BaseType implements BodyOfWaterContract, LandformContrac
      * Use this to explicitly override general opening hours brought in scope by
      * [[openingHoursSpecification]] or [[openingHours]].
      *
-     * @param \Spatie\SchemaOrg\Contracts\OpeningHoursSpecificationContract|\Spatie\SchemaOrg\Contracts\OpeningHoursSpecificationContract[] $specialOpeningHoursSpecification
+     * @param OpeningHoursSpecificationContract|OpeningHoursSpecificationContract[] $specialOpeningHoursSpecification
      *
      * @return static
      *
@@ -643,7 +657,7 @@ class Reservoir extends BaseType implements BodyOfWaterContract, LandformContrac
     /**
      * A CreativeWork or Event about this Thing.
      *
-     * @param \Spatie\SchemaOrg\Contracts\CreativeWorkContract|\Spatie\SchemaOrg\Contracts\CreativeWorkContract[]|\Spatie\SchemaOrg\Contracts\EventContract|\Spatie\SchemaOrg\Contracts\EventContract[] $subjectOf
+     * @param CreativeWorkContract|CreativeWorkContract[]|EventContract|EventContract[] $subjectOf
      *
      * @return static
      *

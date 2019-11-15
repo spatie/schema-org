@@ -2,7 +2,14 @@
 
 namespace Spatie\SchemaOrg;
 
+use \Spatie\SchemaOrg\Contracts\ActionContract;
+use \Spatie\SchemaOrg\Contracts\CreativeWorkContract;
+use \Spatie\SchemaOrg\Contracts\EnergyContract;
+use \Spatie\SchemaOrg\Contracts\EventContract;
+use \Spatie\SchemaOrg\Contracts\ImageObjectContract;
 use \Spatie\SchemaOrg\Contracts\IntangibleContract;
+use \Spatie\SchemaOrg\Contracts\MassContract;
+use \Spatie\SchemaOrg\Contracts\PropertyValueContract;
 use \Spatie\SchemaOrg\Contracts\StructuredValueContract;
 use \Spatie\SchemaOrg\Contracts\ThingContract;
 
@@ -50,7 +57,7 @@ class NutritionInformation extends BaseType implements IntangibleContract, Struc
     /**
      * The number of calories.
      *
-     * @param \Spatie\SchemaOrg\Contracts\EnergyContract|\Spatie\SchemaOrg\Contracts\EnergyContract[] $calories
+     * @param EnergyContract|EnergyContract[] $calories
      *
      * @return static
      *
@@ -64,7 +71,7 @@ class NutritionInformation extends BaseType implements IntangibleContract, Struc
     /**
      * The number of grams of carbohydrates.
      *
-     * @param \Spatie\SchemaOrg\Contracts\MassContract|\Spatie\SchemaOrg\Contracts\MassContract[] $carbohydrateContent
+     * @param MassContract|MassContract[] $carbohydrateContent
      *
      * @return static
      *
@@ -78,7 +85,7 @@ class NutritionInformation extends BaseType implements IntangibleContract, Struc
     /**
      * The number of milligrams of cholesterol.
      *
-     * @param \Spatie\SchemaOrg\Contracts\MassContract|\Spatie\SchemaOrg\Contracts\MassContract[] $cholesterolContent
+     * @param MassContract|MassContract[] $cholesterolContent
      *
      * @return static
      *
@@ -123,7 +130,7 @@ class NutritionInformation extends BaseType implements IntangibleContract, Struc
     /**
      * The number of grams of fat.
      *
-     * @param \Spatie\SchemaOrg\Contracts\MassContract|\Spatie\SchemaOrg\Contracts\MassContract[] $fatContent
+     * @param MassContract|MassContract[] $fatContent
      *
      * @return static
      *
@@ -137,7 +144,7 @@ class NutritionInformation extends BaseType implements IntangibleContract, Struc
     /**
      * The number of grams of fiber.
      *
-     * @param \Spatie\SchemaOrg\Contracts\MassContract|\Spatie\SchemaOrg\Contracts\MassContract[] $fiberContent
+     * @param MassContract|MassContract[] $fiberContent
      *
      * @return static
      *
@@ -155,7 +162,7 @@ class NutritionInformation extends BaseType implements IntangibleContract, Struc
      * strings or as URL (URI) links. See [background
      * notes](/docs/datamodel.html#identifierBg) for more details.
      *
-     * @param \Spatie\SchemaOrg\Contracts\PropertyValueContract|\Spatie\SchemaOrg\Contracts\PropertyValueContract[]|string|string[] $identifier
+     * @param PropertyValueContract|PropertyValueContract[]|string|string[] $identifier
      *
      * @return static
      *
@@ -170,7 +177,7 @@ class NutritionInformation extends BaseType implements IntangibleContract, Struc
      * An image of the item. This can be a [[URL]] or a fully described
      * [[ImageObject]].
      *
-     * @param \Spatie\SchemaOrg\Contracts\ImageObjectContract|\Spatie\SchemaOrg\Contracts\ImageObjectContract[]|string|string[] $image
+     * @param ImageObjectContract|ImageObjectContract[]|string|string[] $image
      *
      * @return static
      *
@@ -186,7 +193,7 @@ class NutritionInformation extends BaseType implements IntangibleContract, Struc
      * entity being described. See [background
      * notes](/docs/datamodel.html#mainEntityBackground) for details.
      *
-     * @param \Spatie\SchemaOrg\Contracts\CreativeWorkContract|\Spatie\SchemaOrg\Contracts\CreativeWorkContract[]|string|string[] $mainEntityOfPage
+     * @param CreativeWorkContract|CreativeWorkContract[]|string|string[] $mainEntityOfPage
      *
      * @return static
      *
@@ -215,7 +222,7 @@ class NutritionInformation extends BaseType implements IntangibleContract, Struc
      * Indicates a potential Action, which describes an idealized action in
      * which this thing would play an 'object' role.
      *
-     * @param \Spatie\SchemaOrg\Contracts\ActionContract|\Spatie\SchemaOrg\Contracts\ActionContract[] $potentialAction
+     * @param ActionContract|ActionContract[] $potentialAction
      *
      * @return static
      *
@@ -229,7 +236,7 @@ class NutritionInformation extends BaseType implements IntangibleContract, Struc
     /**
      * The number of grams of protein.
      *
-     * @param \Spatie\SchemaOrg\Contracts\MassContract|\Spatie\SchemaOrg\Contracts\MassContract[] $proteinContent
+     * @param MassContract|MassContract[] $proteinContent
      *
      * @return static
      *
@@ -259,7 +266,7 @@ class NutritionInformation extends BaseType implements IntangibleContract, Struc
     /**
      * The number of grams of saturated fat.
      *
-     * @param \Spatie\SchemaOrg\Contracts\MassContract|\Spatie\SchemaOrg\Contracts\MassContract[] $saturatedFatContent
+     * @param MassContract|MassContract[] $saturatedFatContent
      *
      * @return static
      *
@@ -287,7 +294,7 @@ class NutritionInformation extends BaseType implements IntangibleContract, Struc
     /**
      * The number of milligrams of sodium.
      *
-     * @param \Spatie\SchemaOrg\Contracts\MassContract|\Spatie\SchemaOrg\Contracts\MassContract[] $sodiumContent
+     * @param MassContract|MassContract[] $sodiumContent
      *
      * @return static
      *
@@ -301,7 +308,7 @@ class NutritionInformation extends BaseType implements IntangibleContract, Struc
     /**
      * A CreativeWork or Event about this Thing.
      *
-     * @param \Spatie\SchemaOrg\Contracts\CreativeWorkContract|\Spatie\SchemaOrg\Contracts\CreativeWorkContract[]|\Spatie\SchemaOrg\Contracts\EventContract|\Spatie\SchemaOrg\Contracts\EventContract[] $subjectOf
+     * @param CreativeWorkContract|CreativeWorkContract[]|EventContract|EventContract[] $subjectOf
      *
      * @return static
      *
@@ -315,7 +322,7 @@ class NutritionInformation extends BaseType implements IntangibleContract, Struc
     /**
      * The number of grams of sugar.
      *
-     * @param \Spatie\SchemaOrg\Contracts\MassContract|\Spatie\SchemaOrg\Contracts\MassContract[] $sugarContent
+     * @param MassContract|MassContract[] $sugarContent
      *
      * @return static
      *
@@ -329,7 +336,7 @@ class NutritionInformation extends BaseType implements IntangibleContract, Struc
     /**
      * The number of grams of trans fat.
      *
-     * @param \Spatie\SchemaOrg\Contracts\MassContract|\Spatie\SchemaOrg\Contracts\MassContract[] $transFatContent
+     * @param MassContract|MassContract[] $transFatContent
      *
      * @return static
      *
@@ -343,7 +350,7 @@ class NutritionInformation extends BaseType implements IntangibleContract, Struc
     /**
      * The number of grams of unsaturated fat.
      *
-     * @param \Spatie\SchemaOrg\Contracts\MassContract|\Spatie\SchemaOrg\Contracts\MassContract[] $unsaturatedFatContent
+     * @param MassContract|MassContract[] $unsaturatedFatContent
      *
      * @return static
      *

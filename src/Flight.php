@@ -2,9 +2,23 @@
 
 namespace Spatie\SchemaOrg;
 
+use \Spatie\SchemaOrg\Contracts\ActionContract;
+use \Spatie\SchemaOrg\Contracts\AirportContract;
+use \Spatie\SchemaOrg\Contracts\BoardingPolicyTypeContract;
+use \Spatie\SchemaOrg\Contracts\CreativeWorkContract;
+use \Spatie\SchemaOrg\Contracts\DemandContract;
+use \Spatie\SchemaOrg\Contracts\DistanceContract;
+use \Spatie\SchemaOrg\Contracts\DurationContract;
+use \Spatie\SchemaOrg\Contracts\EventContract;
+use \Spatie\SchemaOrg\Contracts\ImageObjectContract;
 use \Spatie\SchemaOrg\Contracts\IntangibleContract;
+use \Spatie\SchemaOrg\Contracts\OfferContract;
+use \Spatie\SchemaOrg\Contracts\OrganizationContract;
+use \Spatie\SchemaOrg\Contracts\PersonContract;
+use \Spatie\SchemaOrg\Contracts\PropertyValueContract;
 use \Spatie\SchemaOrg\Contracts\ThingContract;
 use \Spatie\SchemaOrg\Contracts\TripContract;
+use \Spatie\SchemaOrg\Contracts\VehicleContract;
 
 /**
  * An airline flight.
@@ -36,7 +50,7 @@ class Flight extends BaseType implements IntangibleContract, ThingContract, Trip
     /**
      * The kind of aircraft (e.g., "Boeing 747").
      *
-     * @param \Spatie\SchemaOrg\Contracts\VehicleContract|\Spatie\SchemaOrg\Contracts\VehicleContract[]|string|string[] $aircraft
+     * @param VehicleContract|VehicleContract[]|string|string[] $aircraft
      *
      * @return static
      *
@@ -64,7 +78,7 @@ class Flight extends BaseType implements IntangibleContract, ThingContract, Trip
     /**
      * The airport where the flight terminates.
      *
-     * @param \Spatie\SchemaOrg\Contracts\AirportContract|\Spatie\SchemaOrg\Contracts\AirportContract[] $arrivalAirport
+     * @param AirportContract|AirportContract[] $arrivalAirport
      *
      * @return static
      *
@@ -121,7 +135,7 @@ class Flight extends BaseType implements IntangibleContract, ThingContract, Trip
      * The type of boarding policy used by the airline (e.g. zone-based or
      * group-based).
      *
-     * @param \Spatie\SchemaOrg\Contracts\BoardingPolicyTypeContract|\Spatie\SchemaOrg\Contracts\BoardingPolicyTypeContract[] $boardingPolicy
+     * @param BoardingPolicyTypeContract|BoardingPolicyTypeContract[] $boardingPolicy
      *
      * @return static
      *
@@ -136,7 +150,7 @@ class Flight extends BaseType implements IntangibleContract, ThingContract, Trip
      * 'carrier' is an out-dated term indicating the 'provider' for parcel
      * delivery and flights.
      *
-     * @param \Spatie\SchemaOrg\Contracts\OrganizationContract|\Spatie\SchemaOrg\Contracts\OrganizationContract[] $carrier
+     * @param OrganizationContract|OrganizationContract[] $carrier
      *
      * @return static
      *
@@ -150,7 +164,7 @@ class Flight extends BaseType implements IntangibleContract, ThingContract, Trip
     /**
      * The airport where the flight originates.
      *
-     * @param \Spatie\SchemaOrg\Contracts\AirportContract|\Spatie\SchemaOrg\Contracts\AirportContract[] $departureAirport
+     * @param AirportContract|AirportContract[] $departureAirport
      *
      * @return static
      *
@@ -237,7 +251,7 @@ class Flight extends BaseType implements IntangibleContract, ThingContract, Trip
     /**
      * The estimated time the flight will take.
      *
-     * @param \Spatie\SchemaOrg\Contracts\DurationContract|\Spatie\SchemaOrg\Contracts\DurationContract[]|string|string[] $estimatedFlightDuration
+     * @param DurationContract|DurationContract[]|string|string[] $estimatedFlightDuration
      *
      * @return static
      *
@@ -251,7 +265,7 @@ class Flight extends BaseType implements IntangibleContract, ThingContract, Trip
     /**
      * The distance of the flight.
      *
-     * @param \Spatie\SchemaOrg\Contracts\DistanceContract|\Spatie\SchemaOrg\Contracts\DistanceContract[]|string|string[] $flightDistance
+     * @param DistanceContract|DistanceContract[]|string|string[] $flightDistance
      *
      * @return static
      *
@@ -285,7 +299,7 @@ class Flight extends BaseType implements IntangibleContract, ThingContract, Trip
      * strings or as URL (URI) links. See [background
      * notes](/docs/datamodel.html#identifierBg) for more details.
      *
-     * @param \Spatie\SchemaOrg\Contracts\PropertyValueContract|\Spatie\SchemaOrg\Contracts\PropertyValueContract[]|string|string[] $identifier
+     * @param PropertyValueContract|PropertyValueContract[]|string|string[] $identifier
      *
      * @return static
      *
@@ -300,7 +314,7 @@ class Flight extends BaseType implements IntangibleContract, ThingContract, Trip
      * An image of the item. This can be a [[URL]] or a fully described
      * [[ImageObject]].
      *
-     * @param \Spatie\SchemaOrg\Contracts\ImageObjectContract|\Spatie\SchemaOrg\Contracts\ImageObjectContract[]|string|string[] $image
+     * @param ImageObjectContract|ImageObjectContract[]|string|string[] $image
      *
      * @return static
      *
@@ -316,7 +330,7 @@ class Flight extends BaseType implements IntangibleContract, ThingContract, Trip
      * entity being described. See [background
      * notes](/docs/datamodel.html#mainEntityBackground) for details.
      *
-     * @param \Spatie\SchemaOrg\Contracts\CreativeWorkContract|\Spatie\SchemaOrg\Contracts\CreativeWorkContract[]|string|string[] $mainEntityOfPage
+     * @param CreativeWorkContract|CreativeWorkContract[]|string|string[] $mainEntityOfPage
      *
      * @return static
      *
@@ -365,7 +379,7 @@ class Flight extends BaseType implements IntangibleContract, ThingContract, Trip
      * second type, such as Product or a subtype of Product, can clarify the
      * nature of the offer.
      *
-     * @param \Spatie\SchemaOrg\Contracts\DemandContract|\Spatie\SchemaOrg\Contracts\DemandContract[]|\Spatie\SchemaOrg\Contracts\OfferContract|\Spatie\SchemaOrg\Contracts\OfferContract[] $offers
+     * @param DemandContract|DemandContract[]|OfferContract|OfferContract[] $offers
      *
      * @return static
      *
@@ -380,7 +394,7 @@ class Flight extends BaseType implements IntangibleContract, ThingContract, Trip
      * Indicates a potential Action, which describes an idealized action in
      * which this thing would play an 'object' role.
      *
-     * @param \Spatie\SchemaOrg\Contracts\ActionContract|\Spatie\SchemaOrg\Contracts\ActionContract[] $potentialAction
+     * @param ActionContract|ActionContract[] $potentialAction
      *
      * @return static
      *
@@ -396,7 +410,7 @@ class Flight extends BaseType implements IntangibleContract, ThingContract, Trip
      * producer. Another party (a seller) may offer those services or goods on
      * behalf of the provider. A provider may also serve as the seller.
      *
-     * @param \Spatie\SchemaOrg\Contracts\OrganizationContract|\Spatie\SchemaOrg\Contracts\OrganizationContract[]|\Spatie\SchemaOrg\Contracts\PersonContract|\Spatie\SchemaOrg\Contracts\PersonContract[] $provider
+     * @param OrganizationContract|OrganizationContract[]|PersonContract|PersonContract[] $provider
      *
      * @return static
      *
@@ -427,7 +441,7 @@ class Flight extends BaseType implements IntangibleContract, ThingContract, Trip
      * An entity which offers (sells / leases / lends / loans) the services /
      * goods.  A seller may also be a provider.
      *
-     * @param \Spatie\SchemaOrg\Contracts\OrganizationContract|\Spatie\SchemaOrg\Contracts\OrganizationContract[]|\Spatie\SchemaOrg\Contracts\PersonContract|\Spatie\SchemaOrg\Contracts\PersonContract[] $seller
+     * @param OrganizationContract|OrganizationContract[]|PersonContract|PersonContract[] $seller
      *
      * @return static
      *
@@ -441,7 +455,7 @@ class Flight extends BaseType implements IntangibleContract, ThingContract, Trip
     /**
      * A CreativeWork or Event about this Thing.
      *
-     * @param \Spatie\SchemaOrg\Contracts\CreativeWorkContract|\Spatie\SchemaOrg\Contracts\CreativeWorkContract[]|\Spatie\SchemaOrg\Contracts\EventContract|\Spatie\SchemaOrg\Contracts\EventContract[] $subjectOf
+     * @param CreativeWorkContract|CreativeWorkContract[]|EventContract|EventContract[] $subjectOf
      *
      * @return static
      *

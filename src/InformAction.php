@@ -3,8 +3,21 @@
 namespace Spatie\SchemaOrg;
 
 use \Spatie\SchemaOrg\Contracts\ActionContract;
+use \Spatie\SchemaOrg\Contracts\ActionStatusTypeContract;
+use \Spatie\SchemaOrg\Contracts\AudienceContract;
 use \Spatie\SchemaOrg\Contracts\CommunicateActionContract;
+use \Spatie\SchemaOrg\Contracts\ContactPointContract;
+use \Spatie\SchemaOrg\Contracts\CreativeWorkContract;
+use \Spatie\SchemaOrg\Contracts\EntryPointContract;
+use \Spatie\SchemaOrg\Contracts\EventContract;
+use \Spatie\SchemaOrg\Contracts\ImageObjectContract;
 use \Spatie\SchemaOrg\Contracts\InteractActionContract;
+use \Spatie\SchemaOrg\Contracts\LanguageContract;
+use \Spatie\SchemaOrg\Contracts\OrganizationContract;
+use \Spatie\SchemaOrg\Contracts\PersonContract;
+use \Spatie\SchemaOrg\Contracts\PlaceContract;
+use \Spatie\SchemaOrg\Contracts\PostalAddressContract;
+use \Spatie\SchemaOrg\Contracts\PropertyValueContract;
 use \Spatie\SchemaOrg\Contracts\ThingContract;
 
 /**
@@ -19,7 +32,7 @@ class InformAction extends BaseType implements ActionContract, CommunicateAction
     /**
      * The subject matter of the content.
      *
-     * @param \Spatie\SchemaOrg\Contracts\ThingContract|\Spatie\SchemaOrg\Contracts\ThingContract[] $about
+     * @param ThingContract|ThingContract[] $about
      *
      * @return static
      *
@@ -33,7 +46,7 @@ class InformAction extends BaseType implements ActionContract, CommunicateAction
     /**
      * Indicates the current disposition of the Action.
      *
-     * @param \Spatie\SchemaOrg\Contracts\ActionStatusTypeContract|\Spatie\SchemaOrg\Contracts\ActionStatusTypeContract[] $actionStatus
+     * @param ActionStatusTypeContract|ActionStatusTypeContract[] $actionStatus
      *
      * @return static
      *
@@ -67,7 +80,7 @@ class InformAction extends BaseType implements ActionContract, CommunicateAction
      * The direct performer or driver of the action (animate or inanimate). e.g.
      * *John* wrote a book.
      *
-     * @param \Spatie\SchemaOrg\Contracts\OrganizationContract|\Spatie\SchemaOrg\Contracts\OrganizationContract[]|\Spatie\SchemaOrg\Contracts\PersonContract|\Spatie\SchemaOrg\Contracts\PersonContract[] $agent
+     * @param OrganizationContract|OrganizationContract[]|PersonContract|PersonContract[] $agent
      *
      * @return static
      *
@@ -149,7 +162,7 @@ class InformAction extends BaseType implements ActionContract, CommunicateAction
     /**
      * For failed actions, more information on the cause of the failure.
      *
-     * @param \Spatie\SchemaOrg\Contracts\ThingContract|\Spatie\SchemaOrg\Contracts\ThingContract[] $error
+     * @param ThingContract|ThingContract[] $error
      *
      * @return static
      *
@@ -164,7 +177,7 @@ class InformAction extends BaseType implements ActionContract, CommunicateAction
      * Upcoming or past event associated with this place, organization, or
      * action.
      *
-     * @param \Spatie\SchemaOrg\Contracts\EventContract|\Spatie\SchemaOrg\Contracts\EventContract[] $event
+     * @param EventContract|EventContract[] $event
      *
      * @return static
      *
@@ -182,7 +195,7 @@ class InformAction extends BaseType implements ActionContract, CommunicateAction
      * strings or as URL (URI) links. See [background
      * notes](/docs/datamodel.html#identifierBg) for more details.
      *
-     * @param \Spatie\SchemaOrg\Contracts\PropertyValueContract|\Spatie\SchemaOrg\Contracts\PropertyValueContract[]|string|string[] $identifier
+     * @param PropertyValueContract|PropertyValueContract[]|string|string[] $identifier
      *
      * @return static
      *
@@ -197,7 +210,7 @@ class InformAction extends BaseType implements ActionContract, CommunicateAction
      * An image of the item. This can be a [[URL]] or a fully described
      * [[ImageObject]].
      *
-     * @param \Spatie\SchemaOrg\Contracts\ImageObjectContract|\Spatie\SchemaOrg\Contracts\ImageObjectContract[]|string|string[] $image
+     * @param ImageObjectContract|ImageObjectContract[]|string|string[] $image
      *
      * @return static
      *
@@ -214,7 +227,7 @@ class InformAction extends BaseType implements ActionContract, CommunicateAction
      * standard](http://tools.ietf.org/html/bcp47). See also
      * [[availableLanguage]].
      *
-     * @param \Spatie\SchemaOrg\Contracts\LanguageContract|\Spatie\SchemaOrg\Contracts\LanguageContract[]|string|string[] $inLanguage
+     * @param LanguageContract|LanguageContract[]|string|string[] $inLanguage
      *
      * @return static
      *
@@ -229,7 +242,7 @@ class InformAction extends BaseType implements ActionContract, CommunicateAction
      * The object that helped the agent perform the action. e.g. John wrote a
      * book with *a pen*.
      *
-     * @param \Spatie\SchemaOrg\Contracts\ThingContract|\Spatie\SchemaOrg\Contracts\ThingContract[] $instrument
+     * @param ThingContract|ThingContract[] $instrument
      *
      * @return static
      *
@@ -243,7 +256,7 @@ class InformAction extends BaseType implements ActionContract, CommunicateAction
     /**
      * A sub property of instrument. The language used on this action.
      *
-     * @param \Spatie\SchemaOrg\Contracts\LanguageContract|\Spatie\SchemaOrg\Contracts\LanguageContract[] $language
+     * @param LanguageContract|LanguageContract[] $language
      *
      * @return static
      *
@@ -258,7 +271,7 @@ class InformAction extends BaseType implements ActionContract, CommunicateAction
      * The location of for example where the event is happening, an organization
      * is located, or where an action takes place.
      *
-     * @param \Spatie\SchemaOrg\Contracts\PlaceContract|\Spatie\SchemaOrg\Contracts\PlaceContract[]|\Spatie\SchemaOrg\Contracts\PostalAddressContract|\Spatie\SchemaOrg\Contracts\PostalAddressContract[]|string|string[] $location
+     * @param PlaceContract|PlaceContract[]|PostalAddressContract|PostalAddressContract[]|string|string[] $location
      *
      * @return static
      *
@@ -274,7 +287,7 @@ class InformAction extends BaseType implements ActionContract, CommunicateAction
      * entity being described. See [background
      * notes](/docs/datamodel.html#mainEntityBackground) for details.
      *
-     * @param \Spatie\SchemaOrg\Contracts\CreativeWorkContract|\Spatie\SchemaOrg\Contracts\CreativeWorkContract[]|string|string[] $mainEntityOfPage
+     * @param CreativeWorkContract|CreativeWorkContract[]|string|string[] $mainEntityOfPage
      *
      * @return static
      *
@@ -305,7 +318,7 @@ class InformAction extends BaseType implements ActionContract, CommunicateAction
      * undergoer (which change their state) or theme (which doesn't). e.g. John
      * read *a book*.
      *
-     * @param \Spatie\SchemaOrg\Contracts\ThingContract|\Spatie\SchemaOrg\Contracts\ThingContract[] $object
+     * @param ThingContract|ThingContract[] $object
      *
      * @return static
      *
@@ -320,7 +333,7 @@ class InformAction extends BaseType implements ActionContract, CommunicateAction
      * Other co-agents that participated in the action indirectly. e.g. John
      * wrote a book with *Steve*.
      *
-     * @param \Spatie\SchemaOrg\Contracts\OrganizationContract|\Spatie\SchemaOrg\Contracts\OrganizationContract[]|\Spatie\SchemaOrg\Contracts\PersonContract|\Spatie\SchemaOrg\Contracts\PersonContract[] $participant
+     * @param OrganizationContract|OrganizationContract[]|PersonContract|PersonContract[] $participant
      *
      * @return static
      *
@@ -335,7 +348,7 @@ class InformAction extends BaseType implements ActionContract, CommunicateAction
      * Indicates a potential Action, which describes an idealized action in
      * which this thing would play an 'object' role.
      *
-     * @param \Spatie\SchemaOrg\Contracts\ActionContract|\Spatie\SchemaOrg\Contracts\ActionContract[] $potentialAction
+     * @param ActionContract|ActionContract[] $potentialAction
      *
      * @return static
      *
@@ -350,7 +363,7 @@ class InformAction extends BaseType implements ActionContract, CommunicateAction
      * A sub property of participant. The participant who is at the receiving
      * end of the action.
      *
-     * @param \Spatie\SchemaOrg\Contracts\AudienceContract|\Spatie\SchemaOrg\Contracts\AudienceContract[]|\Spatie\SchemaOrg\Contracts\ContactPointContract|\Spatie\SchemaOrg\Contracts\ContactPointContract[]|\Spatie\SchemaOrg\Contracts\OrganizationContract|\Spatie\SchemaOrg\Contracts\OrganizationContract[]|\Spatie\SchemaOrg\Contracts\PersonContract|\Spatie\SchemaOrg\Contracts\PersonContract[] $recipient
+     * @param AudienceContract|AudienceContract[]|ContactPointContract|ContactPointContract[]|OrganizationContract|OrganizationContract[]|PersonContract|PersonContract[] $recipient
      *
      * @return static
      *
@@ -364,7 +377,7 @@ class InformAction extends BaseType implements ActionContract, CommunicateAction
     /**
      * The result produced in the action. e.g. John wrote *a book*.
      *
-     * @param \Spatie\SchemaOrg\Contracts\ThingContract|\Spatie\SchemaOrg\Contracts\ThingContract[] $result
+     * @param ThingContract|ThingContract[] $result
      *
      * @return static
      *
@@ -417,7 +430,7 @@ class InformAction extends BaseType implements ActionContract, CommunicateAction
     /**
      * A CreativeWork or Event about this Thing.
      *
-     * @param \Spatie\SchemaOrg\Contracts\CreativeWorkContract|\Spatie\SchemaOrg\Contracts\CreativeWorkContract[]|\Spatie\SchemaOrg\Contracts\EventContract|\Spatie\SchemaOrg\Contracts\EventContract[] $subjectOf
+     * @param CreativeWorkContract|CreativeWorkContract[]|EventContract|EventContract[] $subjectOf
      *
      * @return static
      *
@@ -431,7 +444,7 @@ class InformAction extends BaseType implements ActionContract, CommunicateAction
     /**
      * Indicates a target EntryPoint for an Action.
      *
-     * @param \Spatie\SchemaOrg\Contracts\EntryPointContract|\Spatie\SchemaOrg\Contracts\EntryPointContract[] $target
+     * @param EntryPointContract|EntryPointContract[] $target
      *
      * @return static
      *

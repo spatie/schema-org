@@ -2,7 +2,20 @@
 
 namespace Spatie\SchemaOrg;
 
+use \Spatie\SchemaOrg\Contracts\ActionContract;
+use \Spatie\SchemaOrg\Contracts\CreativeWorkContract;
+use \Spatie\SchemaOrg\Contracts\DurationContract;
+use \Spatie\SchemaOrg\Contracts\EventContract;
+use \Spatie\SchemaOrg\Contracts\ImageObjectContract;
 use \Spatie\SchemaOrg\Contracts\IntangibleContract;
+use \Spatie\SchemaOrg\Contracts\MonetaryAmountContract;
+use \Spatie\SchemaOrg\Contracts\OrderContract;
+use \Spatie\SchemaOrg\Contracts\OrganizationContract;
+use \Spatie\SchemaOrg\Contracts\PaymentMethodContract;
+use \Spatie\SchemaOrg\Contracts\PaymentStatusTypeContract;
+use \Spatie\SchemaOrg\Contracts\PersonContract;
+use \Spatie\SchemaOrg\Contracts\PriceSpecificationContract;
+use \Spatie\SchemaOrg\Contracts\PropertyValueContract;
 use \Spatie\SchemaOrg\Contracts\ThingContract;
 
 /**
@@ -63,7 +76,7 @@ class Invoice extends BaseType implements IntangibleContract, ThingContract
     /**
      * The time interval used to compute the invoice.
      *
-     * @param \Spatie\SchemaOrg\Contracts\DurationContract|\Spatie\SchemaOrg\Contracts\DurationContract[] $billingPeriod
+     * @param DurationContract|DurationContract[] $billingPeriod
      *
      * @return static
      *
@@ -80,7 +93,7 @@ class Invoice extends BaseType implements IntangibleContract, ThingContract
      * service involved in an exchange.  If it is not clear whether an entity is
      * a broker, seller, or buyer, the latter two terms are preferred.
      *
-     * @param \Spatie\SchemaOrg\Contracts\OrganizationContract|\Spatie\SchemaOrg\Contracts\OrganizationContract[]|\Spatie\SchemaOrg\Contracts\PersonContract|\Spatie\SchemaOrg\Contracts\PersonContract[] $broker
+     * @param OrganizationContract|OrganizationContract[]|PersonContract|PersonContract[] $broker
      *
      * @return static
      *
@@ -95,7 +108,7 @@ class Invoice extends BaseType implements IntangibleContract, ThingContract
      * A category for the item. Greater signs or slashes can be used to
      * informally indicate a category hierarchy.
      *
-     * @param \Spatie\SchemaOrg\Contracts\ThingContract|\Spatie\SchemaOrg\Contracts\ThingContract[]|string|string[] $category
+     * @param ThingContract|ThingContract[]|string|string[] $category
      *
      * @return static
      *
@@ -123,7 +136,7 @@ class Invoice extends BaseType implements IntangibleContract, ThingContract
     /**
      * Party placing the order or paying the invoice.
      *
-     * @param \Spatie\SchemaOrg\Contracts\OrganizationContract|\Spatie\SchemaOrg\Contracts\OrganizationContract[]|\Spatie\SchemaOrg\Contracts\PersonContract|\Spatie\SchemaOrg\Contracts\PersonContract[] $customer
+     * @param OrganizationContract|OrganizationContract[]|PersonContract|PersonContract[] $customer
      *
      * @return static
      *
@@ -172,7 +185,7 @@ class Invoice extends BaseType implements IntangibleContract, ThingContract
      * strings or as URL (URI) links. See [background
      * notes](/docs/datamodel.html#identifierBg) for more details.
      *
-     * @param \Spatie\SchemaOrg\Contracts\PropertyValueContract|\Spatie\SchemaOrg\Contracts\PropertyValueContract[]|string|string[] $identifier
+     * @param PropertyValueContract|PropertyValueContract[]|string|string[] $identifier
      *
      * @return static
      *
@@ -187,7 +200,7 @@ class Invoice extends BaseType implements IntangibleContract, ThingContract
      * An image of the item. This can be a [[URL]] or a fully described
      * [[ImageObject]].
      *
-     * @param \Spatie\SchemaOrg\Contracts\ImageObjectContract|\Spatie\SchemaOrg\Contracts\ImageObjectContract[]|string|string[] $image
+     * @param ImageObjectContract|ImageObjectContract[]|string|string[] $image
      *
      * @return static
      *
@@ -203,7 +216,7 @@ class Invoice extends BaseType implements IntangibleContract, ThingContract
      * entity being described. See [background
      * notes](/docs/datamodel.html#mainEntityBackground) for details.
      *
-     * @param \Spatie\SchemaOrg\Contracts\CreativeWorkContract|\Spatie\SchemaOrg\Contracts\CreativeWorkContract[]|string|string[] $mainEntityOfPage
+     * @param CreativeWorkContract|CreativeWorkContract[]|string|string[] $mainEntityOfPage
      *
      * @return static
      *
@@ -217,7 +230,7 @@ class Invoice extends BaseType implements IntangibleContract, ThingContract
     /**
      * The minimum payment required at this time.
      *
-     * @param \Spatie\SchemaOrg\Contracts\MonetaryAmountContract|\Spatie\SchemaOrg\Contracts\MonetaryAmountContract[]|\Spatie\SchemaOrg\Contracts\PriceSpecificationContract|\Spatie\SchemaOrg\Contracts\PriceSpecificationContract[] $minimumPaymentDue
+     * @param MonetaryAmountContract|MonetaryAmountContract[]|PriceSpecificationContract|PriceSpecificationContract[] $minimumPaymentDue
      *
      * @return static
      *
@@ -273,7 +286,7 @@ class Invoice extends BaseType implements IntangibleContract, ThingContract
     /**
      * The name of the credit card or other method of payment for the order.
      *
-     * @param \Spatie\SchemaOrg\Contracts\PaymentMethodContract|\Spatie\SchemaOrg\Contracts\PaymentMethodContract[] $paymentMethod
+     * @param PaymentMethodContract|PaymentMethodContract[] $paymentMethod
      *
      * @return static
      *
@@ -302,7 +315,7 @@ class Invoice extends BaseType implements IntangibleContract, ThingContract
     /**
      * The status of payment; whether the invoice has been paid or not.
      *
-     * @param \Spatie\SchemaOrg\Contracts\PaymentStatusTypeContract|\Spatie\SchemaOrg\Contracts\PaymentStatusTypeContract[]|string|string[] $paymentStatus
+     * @param PaymentStatusTypeContract|PaymentStatusTypeContract[]|string|string[] $paymentStatus
      *
      * @return static
      *
@@ -317,7 +330,7 @@ class Invoice extends BaseType implements IntangibleContract, ThingContract
      * Indicates a potential Action, which describes an idealized action in
      * which this thing would play an 'object' role.
      *
-     * @param \Spatie\SchemaOrg\Contracts\ActionContract|\Spatie\SchemaOrg\Contracts\ActionContract[] $potentialAction
+     * @param ActionContract|ActionContract[] $potentialAction
      *
      * @return static
      *
@@ -333,7 +346,7 @@ class Invoice extends BaseType implements IntangibleContract, ThingContract
      * producer. Another party (a seller) may offer those services or goods on
      * behalf of the provider. A provider may also serve as the seller.
      *
-     * @param \Spatie\SchemaOrg\Contracts\OrganizationContract|\Spatie\SchemaOrg\Contracts\OrganizationContract[]|\Spatie\SchemaOrg\Contracts\PersonContract|\Spatie\SchemaOrg\Contracts\PersonContract[] $provider
+     * @param OrganizationContract|OrganizationContract[]|PersonContract|PersonContract[] $provider
      *
      * @return static
      *
@@ -348,7 +361,7 @@ class Invoice extends BaseType implements IntangibleContract, ThingContract
      * The Order(s) related to this Invoice. One or more Orders may be combined
      * into a single Invoice.
      *
-     * @param \Spatie\SchemaOrg\Contracts\OrderContract|\Spatie\SchemaOrg\Contracts\OrderContract[] $referencesOrder
+     * @param OrderContract|OrderContract[] $referencesOrder
      *
      * @return static
      *
@@ -392,7 +405,7 @@ class Invoice extends BaseType implements IntangibleContract, ThingContract
     /**
      * A CreativeWork or Event about this Thing.
      *
-     * @param \Spatie\SchemaOrg\Contracts\CreativeWorkContract|\Spatie\SchemaOrg\Contracts\CreativeWorkContract[]|\Spatie\SchemaOrg\Contracts\EventContract|\Spatie\SchemaOrg\Contracts\EventContract[] $subjectOf
+     * @param CreativeWorkContract|CreativeWorkContract[]|EventContract|EventContract[] $subjectOf
      *
      * @return static
      *
@@ -406,7 +419,7 @@ class Invoice extends BaseType implements IntangibleContract, ThingContract
     /**
      * The total amount due.
      *
-     * @param \Spatie\SchemaOrg\Contracts\MonetaryAmountContract|\Spatie\SchemaOrg\Contracts\MonetaryAmountContract[]|\Spatie\SchemaOrg\Contracts\PriceSpecificationContract|\Spatie\SchemaOrg\Contracts\PriceSpecificationContract[] $totalPaymentDue
+     * @param MonetaryAmountContract|MonetaryAmountContract[]|PriceSpecificationContract|PriceSpecificationContract[] $totalPaymentDue
      *
      * @return static
      *

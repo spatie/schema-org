@@ -2,8 +2,12 @@
 
 namespace Spatie\SchemaOrg\Generator\Writer;
 
+use Spatie\SchemaOrg\Generator\Type;
+
 class Filters
 {
+    const PRIMARY_TYPES = ['bool', 'false', 'true', 'string', 'float', 'int'];
+
     public static function doc($text, array $options = []): string
     {
         $indentation = $options[0] ?? 0;
@@ -29,7 +33,7 @@ class Filters
             $isArray = strpos($type, '[]') !== false;
             $baseType = str_replace('[]', '', $type);
 
-            if (in_array($baseType, ['bool', 'false', 'true', 'string', 'float', 'int'])) {
+            if (in_array($baseType, self::PRIMARY_TYPES)) {
                 return $type;
             }
 
@@ -37,7 +41,29 @@ class Filters
                 return $type;
             }
 
-            return "\\Spatie\\SchemaOrg\\Contracts\\{$baseType}Contract".($isArray ? '[]' : '');
+            return "{$baseType}Contract".($isArray ? '[]' : '');
         }, $ranges));
+    }
+
+    public static function contracts(Type $type):array
+    {
+        $contracts = $type->parents;
+        foreach ($type->properties as $property) {
+            if (!$property->pending) {
+                foreach ($property->ranges as $type) {
+                    $baseType = str_replace('[]', '', $type);
+                    if (in_array($baseType, self::PRIMARY_TYPES) || in_array($baseType, $contracts)) {
+                        continue;
+                    }
+                    if (substr($type, 0, 1) === '\\') {
+                        continue;
+                    }
+                    $contracts[] = $baseType;
+                }
+            }
+        }
+        sort($contracts);
+
+        return $contracts;
     }
 }

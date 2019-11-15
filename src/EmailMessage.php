@@ -2,9 +2,35 @@
 
 namespace Spatie\SchemaOrg;
 
+use \Spatie\SchemaOrg\Contracts\ActionContract;
+use \Spatie\SchemaOrg\Contracts\AggregateRatingContract;
+use \Spatie\SchemaOrg\Contracts\AlignmentObjectContract;
+use \Spatie\SchemaOrg\Contracts\AudienceContract;
+use \Spatie\SchemaOrg\Contracts\AudioObjectContract;
+use \Spatie\SchemaOrg\Contracts\ClipContract;
+use \Spatie\SchemaOrg\Contracts\CommentContract;
+use \Spatie\SchemaOrg\Contracts\ContactPointContract;
 use \Spatie\SchemaOrg\Contracts\CreativeWorkContract;
+use \Spatie\SchemaOrg\Contracts\DemandContract;
+use \Spatie\SchemaOrg\Contracts\DurationContract;
+use \Spatie\SchemaOrg\Contracts\EventContract;
+use \Spatie\SchemaOrg\Contracts\ImageObjectContract;
+use \Spatie\SchemaOrg\Contracts\InteractionCounterContract;
+use \Spatie\SchemaOrg\Contracts\ItemListContract;
+use \Spatie\SchemaOrg\Contracts\LanguageContract;
+use \Spatie\SchemaOrg\Contracts\MediaObjectContract;
 use \Spatie\SchemaOrg\Contracts\MessageContract;
+use \Spatie\SchemaOrg\Contracts\OfferContract;
+use \Spatie\SchemaOrg\Contracts\OrganizationContract;
+use \Spatie\SchemaOrg\Contracts\PersonContract;
+use \Spatie\SchemaOrg\Contracts\PlaceContract;
+use \Spatie\SchemaOrg\Contracts\ProductContract;
+use \Spatie\SchemaOrg\Contracts\PropertyValueContract;
+use \Spatie\SchemaOrg\Contracts\PublicationEventContract;
+use \Spatie\SchemaOrg\Contracts\RatingContract;
+use \Spatie\SchemaOrg\Contracts\ReviewContract;
 use \Spatie\SchemaOrg\Contracts\ThingContract;
+use \Spatie\SchemaOrg\Contracts\VideoObjectContract;
 
 /**
  * An email message.
@@ -17,7 +43,7 @@ class EmailMessage extends BaseType implements CreativeWorkContract, MessageCont
     /**
      * The subject matter of the content.
      *
-     * @param \Spatie\SchemaOrg\Contracts\ThingContract|\Spatie\SchemaOrg\Contracts\ThingContract[] $about
+     * @param ThingContract|ThingContract[] $about
      *
      * @return static
      *
@@ -50,7 +76,7 @@ class EmailMessage extends BaseType implements CreativeWorkContract, MessageCont
      * understand all the intellectual content of a resource. Expected values
      * include:  auditory, tactile, textual, visual.
      *
-     * @param \Spatie\SchemaOrg\Contracts\ItemListContract|\Spatie\SchemaOrg\Contracts\ItemListContract[] $accessModeSufficient
+     * @param ItemListContract|ItemListContract[] $accessModeSufficient
      *
      * @return static
      *
@@ -147,7 +173,7 @@ class EmailMessage extends BaseType implements CreativeWorkContract, MessageCont
     /**
      * Specifies the Person that is legally accountable for the CreativeWork.
      *
-     * @param \Spatie\SchemaOrg\Contracts\PersonContract|\Spatie\SchemaOrg\Contracts\PersonContract[] $accountablePerson
+     * @param PersonContract|PersonContract[] $accountablePerson
      *
      * @return static
      *
@@ -181,7 +207,7 @@ class EmailMessage extends BaseType implements CreativeWorkContract, MessageCont
      * The overall rating, based on a collection of reviews or ratings, of the
      * item.
      *
-     * @param \Spatie\SchemaOrg\Contracts\AggregateRatingContract|\Spatie\SchemaOrg\Contracts\AggregateRatingContract[] $aggregateRating
+     * @param AggregateRatingContract|AggregateRatingContract[] $aggregateRating
      *
      * @return static
      *
@@ -224,7 +250,7 @@ class EmailMessage extends BaseType implements CreativeWorkContract, MessageCont
      * A media object that encodes this CreativeWork. This property is a synonym
      * for encoding.
      *
-     * @param \Spatie\SchemaOrg\Contracts\MediaObjectContract|\Spatie\SchemaOrg\Contracts\MediaObjectContract[] $associatedMedia
+     * @param MediaObjectContract|MediaObjectContract[] $associatedMedia
      *
      * @return static
      *
@@ -238,7 +264,7 @@ class EmailMessage extends BaseType implements CreativeWorkContract, MessageCont
     /**
      * An intended audience, i.e. a group for whom something was created.
      *
-     * @param \Spatie\SchemaOrg\Contracts\AudienceContract|\Spatie\SchemaOrg\Contracts\AudienceContract[] $audience
+     * @param AudienceContract|AudienceContract[] $audience
      *
      * @return static
      *
@@ -252,7 +278,7 @@ class EmailMessage extends BaseType implements CreativeWorkContract, MessageCont
     /**
      * An embedded audio object.
      *
-     * @param \Spatie\SchemaOrg\Contracts\AudioObjectContract|\Spatie\SchemaOrg\Contracts\AudioObjectContract[]|\Spatie\SchemaOrg\Contracts\ClipContract|\Spatie\SchemaOrg\Contracts\ClipContract[] $audio
+     * @param AudioObjectContract|AudioObjectContract[]|ClipContract|ClipContract[] $audio
      *
      * @return static
      *
@@ -268,7 +294,7 @@ class EmailMessage extends BaseType implements CreativeWorkContract, MessageCont
      * in that HTML 5 provides a special mechanism for indicating authorship via
      * the rel tag. That is equivalent to this and may be used interchangeably.
      *
-     * @param \Spatie\SchemaOrg\Contracts\OrganizationContract|\Spatie\SchemaOrg\Contracts\OrganizationContract[]|\Spatie\SchemaOrg\Contracts\PersonContract|\Spatie\SchemaOrg\Contracts\PersonContract[] $author
+     * @param OrganizationContract|OrganizationContract[]|PersonContract|PersonContract[] $author
      *
      * @return static
      *
@@ -310,7 +336,7 @@ class EmailMessage extends BaseType implements CreativeWorkContract, MessageCont
     /**
      * A sub property of recipient. The recipient blind copied on a message.
      *
-     * @param \Spatie\SchemaOrg\Contracts\ContactPointContract|\Spatie\SchemaOrg\Contracts\ContactPointContract[]|\Spatie\SchemaOrg\Contracts\OrganizationContract|\Spatie\SchemaOrg\Contracts\OrganizationContract[]|\Spatie\SchemaOrg\Contracts\PersonContract|\Spatie\SchemaOrg\Contracts\PersonContract[] $bccRecipient
+     * @param ContactPointContract|ContactPointContract[]|OrganizationContract|OrganizationContract[]|PersonContract|PersonContract[] $bccRecipient
      *
      * @return static
      *
@@ -324,7 +350,7 @@ class EmailMessage extends BaseType implements CreativeWorkContract, MessageCont
     /**
      * A sub property of recipient. The recipient copied on a message.
      *
-     * @param \Spatie\SchemaOrg\Contracts\ContactPointContract|\Spatie\SchemaOrg\Contracts\ContactPointContract[]|\Spatie\SchemaOrg\Contracts\OrganizationContract|\Spatie\SchemaOrg\Contracts\OrganizationContract[]|\Spatie\SchemaOrg\Contracts\PersonContract|\Spatie\SchemaOrg\Contracts\PersonContract[] $ccRecipient
+     * @param ContactPointContract|ContactPointContract[]|OrganizationContract|OrganizationContract[]|PersonContract|PersonContract[] $ccRecipient
      *
      * @return static
      *
@@ -338,7 +364,7 @@ class EmailMessage extends BaseType implements CreativeWorkContract, MessageCont
     /**
      * Fictional person connected with a creative work.
      *
-     * @param \Spatie\SchemaOrg\Contracts\PersonContract|\Spatie\SchemaOrg\Contracts\PersonContract[] $character
+     * @param PersonContract|PersonContract[] $character
      *
      * @return static
      *
@@ -353,7 +379,7 @@ class EmailMessage extends BaseType implements CreativeWorkContract, MessageCont
      * A citation or reference to another creative work, such as another
      * publication, web page, scholarly article, etc.
      *
-     * @param \Spatie\SchemaOrg\Contracts\CreativeWorkContract|\Spatie\SchemaOrg\Contracts\CreativeWorkContract[]|string|string[] $citation
+     * @param CreativeWorkContract|CreativeWorkContract[]|string|string[] $citation
      *
      * @return static
      *
@@ -367,7 +393,7 @@ class EmailMessage extends BaseType implements CreativeWorkContract, MessageCont
     /**
      * Comments, typically from users.
      *
-     * @param \Spatie\SchemaOrg\Contracts\CommentContract|\Spatie\SchemaOrg\Contracts\CommentContract[] $comment
+     * @param CommentContract|CommentContract[] $comment
      *
      * @return static
      *
@@ -398,7 +424,7 @@ class EmailMessage extends BaseType implements CreativeWorkContract, MessageCont
      * The location depicted or described in the content. For example, the
      * location in a photograph or painting.
      *
-     * @param \Spatie\SchemaOrg\Contracts\PlaceContract|\Spatie\SchemaOrg\Contracts\PlaceContract[] $contentLocation
+     * @param PlaceContract|PlaceContract[] $contentLocation
      *
      * @return static
      *
@@ -412,7 +438,7 @@ class EmailMessage extends BaseType implements CreativeWorkContract, MessageCont
     /**
      * Official rating of a piece of content&#x2014;for example,'MPAA PG-13'.
      *
-     * @param \Spatie\SchemaOrg\Contracts\RatingContract|\Spatie\SchemaOrg\Contracts\RatingContract[]|string|string[] $contentRating
+     * @param RatingContract|RatingContract[]|string|string[] $contentRating
      *
      * @return static
      *
@@ -426,7 +452,7 @@ class EmailMessage extends BaseType implements CreativeWorkContract, MessageCont
     /**
      * A secondary contributor to the CreativeWork or Event.
      *
-     * @param \Spatie\SchemaOrg\Contracts\OrganizationContract|\Spatie\SchemaOrg\Contracts\OrganizationContract[]|\Spatie\SchemaOrg\Contracts\PersonContract|\Spatie\SchemaOrg\Contracts\PersonContract[] $contributor
+     * @param OrganizationContract|OrganizationContract[]|PersonContract|PersonContract[] $contributor
      *
      * @return static
      *
@@ -440,7 +466,7 @@ class EmailMessage extends BaseType implements CreativeWorkContract, MessageCont
     /**
      * The party holding the legal copyright to the CreativeWork.
      *
-     * @param \Spatie\SchemaOrg\Contracts\OrganizationContract|\Spatie\SchemaOrg\Contracts\OrganizationContract[]|\Spatie\SchemaOrg\Contracts\PersonContract|\Spatie\SchemaOrg\Contracts\PersonContract[] $copyrightHolder
+     * @param OrganizationContract|OrganizationContract[]|PersonContract|PersonContract[] $copyrightHolder
      *
      * @return static
      *
@@ -470,7 +496,7 @@ class EmailMessage extends BaseType implements CreativeWorkContract, MessageCont
      * The creator/author of this CreativeWork. This is the same as the Author
      * property for CreativeWork.
      *
-     * @param \Spatie\SchemaOrg\Contracts\OrganizationContract|\Spatie\SchemaOrg\Contracts\OrganizationContract[]|\Spatie\SchemaOrg\Contracts\PersonContract|\Spatie\SchemaOrg\Contracts\PersonContract[] $creator
+     * @param OrganizationContract|OrganizationContract[]|PersonContract|PersonContract[] $creator
      *
      * @return static
      *
@@ -616,7 +642,7 @@ class EmailMessage extends BaseType implements CreativeWorkContract, MessageCont
     /**
      * Specifies the Person who edited the CreativeWork.
      *
-     * @param \Spatie\SchemaOrg\Contracts\PersonContract|\Spatie\SchemaOrg\Contracts\PersonContract[] $editor
+     * @param PersonContract|PersonContract[] $editor
      *
      * @return static
      *
@@ -630,7 +656,7 @@ class EmailMessage extends BaseType implements CreativeWorkContract, MessageCont
     /**
      * An alignment to an established educational framework.
      *
-     * @param \Spatie\SchemaOrg\Contracts\AlignmentObjectContract|\Spatie\SchemaOrg\Contracts\AlignmentObjectContract[] $educationalAlignment
+     * @param AlignmentObjectContract|AlignmentObjectContract[] $educationalAlignment
      *
      * @return static
      *
@@ -660,7 +686,7 @@ class EmailMessage extends BaseType implements CreativeWorkContract, MessageCont
      * A media object that encodes this CreativeWork. This property is a synonym
      * for associatedMedia.
      *
-     * @param \Spatie\SchemaOrg\Contracts\MediaObjectContract|\Spatie\SchemaOrg\Contracts\MediaObjectContract[] $encoding
+     * @param MediaObjectContract|MediaObjectContract[] $encoding
      *
      * @return static
      *
@@ -701,7 +727,7 @@ class EmailMessage extends BaseType implements CreativeWorkContract, MessageCont
     /**
      * A media object that encodes this CreativeWork.
      *
-     * @param \Spatie\SchemaOrg\Contracts\MediaObjectContract|\Spatie\SchemaOrg\Contracts\MediaObjectContract[] $encodings
+     * @param MediaObjectContract|MediaObjectContract[] $encodings
      *
      * @return static
      *
@@ -716,7 +742,7 @@ class EmailMessage extends BaseType implements CreativeWorkContract, MessageCont
      * A creative work that this work is an
      * example/instance/realization/derivation of.
      *
-     * @param \Spatie\SchemaOrg\Contracts\CreativeWorkContract|\Spatie\SchemaOrg\Contracts\CreativeWorkContract[] $exampleOfWork
+     * @param CreativeWorkContract|CreativeWorkContract[] $exampleOfWork
      *
      * @return static
      *
@@ -770,7 +796,7 @@ class EmailMessage extends BaseType implements CreativeWorkContract, MessageCont
      * A person or organization that supports (sponsors) something through some
      * kind of financial contribution.
      *
-     * @param \Spatie\SchemaOrg\Contracts\OrganizationContract|\Spatie\SchemaOrg\Contracts\OrganizationContract[]|\Spatie\SchemaOrg\Contracts\PersonContract|\Spatie\SchemaOrg\Contracts\PersonContract[] $funder
+     * @param OrganizationContract|OrganizationContract[]|PersonContract|PersonContract[] $funder
      *
      * @return static
      *
@@ -799,7 +825,7 @@ class EmailMessage extends BaseType implements CreativeWorkContract, MessageCont
      * Indicates an item or CreativeWork that is part of this item, or
      * CreativeWork (in some sense).
      *
-     * @param \Spatie\SchemaOrg\Contracts\CreativeWorkContract|\Spatie\SchemaOrg\Contracts\CreativeWorkContract[] $hasPart
+     * @param CreativeWorkContract|CreativeWorkContract[] $hasPart
      *
      * @return static
      *
@@ -831,7 +857,7 @@ class EmailMessage extends BaseType implements CreativeWorkContract, MessageCont
      * strings or as URL (URI) links. See [background
      * notes](/docs/datamodel.html#identifierBg) for more details.
      *
-     * @param \Spatie\SchemaOrg\Contracts\PropertyValueContract|\Spatie\SchemaOrg\Contracts\PropertyValueContract[]|string|string[] $identifier
+     * @param PropertyValueContract|PropertyValueContract[]|string|string[] $identifier
      *
      * @return static
      *
@@ -846,7 +872,7 @@ class EmailMessage extends BaseType implements CreativeWorkContract, MessageCont
      * An image of the item. This can be a [[URL]] or a fully described
      * [[ImageObject]].
      *
-     * @param \Spatie\SchemaOrg\Contracts\ImageObjectContract|\Spatie\SchemaOrg\Contracts\ImageObjectContract[]|string|string[] $image
+     * @param ImageObjectContract|ImageObjectContract[]|string|string[] $image
      *
      * @return static
      *
@@ -863,7 +889,7 @@ class EmailMessage extends BaseType implements CreativeWorkContract, MessageCont
      * standard](http://tools.ietf.org/html/bcp47). See also
      * [[availableLanguage]].
      *
-     * @param \Spatie\SchemaOrg\Contracts\LanguageContract|\Spatie\SchemaOrg\Contracts\LanguageContract[]|string|string[] $inLanguage
+     * @param LanguageContract|LanguageContract[]|string|string[] $inLanguage
      *
      * @return static
      *
@@ -879,7 +905,7 @@ class EmailMessage extends BaseType implements CreativeWorkContract, MessageCont
      * SoftwareApplication. The most specific child type of InteractionCounter
      * should be used.
      *
-     * @param \Spatie\SchemaOrg\Contracts\InteractionCounterContract|\Spatie\SchemaOrg\Contracts\InteractionCounterContract[] $interactionStatistic
+     * @param InteractionCounterContract|InteractionCounterContract[] $interactionStatistic
      *
      * @return static
      *
@@ -923,7 +949,7 @@ class EmailMessage extends BaseType implements CreativeWorkContract, MessageCont
      * A resource from which this work is derived or from which it is a
      * modification or adaption.
      *
-     * @param \Spatie\SchemaOrg\Contracts\CreativeWorkContract|\Spatie\SchemaOrg\Contracts\CreativeWorkContract[]|\Spatie\SchemaOrg\Contracts\ProductContract|\Spatie\SchemaOrg\Contracts\ProductContract[]|string|string[] $isBasedOn
+     * @param CreativeWorkContract|CreativeWorkContract[]|ProductContract|ProductContract[]|string|string[] $isBasedOn
      *
      * @return static
      *
@@ -939,7 +965,7 @@ class EmailMessage extends BaseType implements CreativeWorkContract, MessageCont
      * be repeated for multiple sources. For example,
      * http://example.com/great-multiplication-intro.html.
      *
-     * @param \Spatie\SchemaOrg\Contracts\CreativeWorkContract|\Spatie\SchemaOrg\Contracts\CreativeWorkContract[]|\Spatie\SchemaOrg\Contracts\ProductContract|\Spatie\SchemaOrg\Contracts\ProductContract[]|string|string[] $isBasedOnUrl
+     * @param CreativeWorkContract|CreativeWorkContract[]|ProductContract|ProductContract[]|string|string[] $isBasedOnUrl
      *
      * @return static
      *
@@ -968,7 +994,7 @@ class EmailMessage extends BaseType implements CreativeWorkContract, MessageCont
      * Indicates an item or CreativeWork that this item, or CreativeWork (in
      * some sense), is part of.
      *
-     * @param \Spatie\SchemaOrg\Contracts\CreativeWorkContract|\Spatie\SchemaOrg\Contracts\CreativeWorkContract[] $isPartOf
+     * @param CreativeWorkContract|CreativeWorkContract[] $isPartOf
      *
      * @return static
      *
@@ -1013,7 +1039,7 @@ class EmailMessage extends BaseType implements CreativeWorkContract, MessageCont
      * A license document that applies to this content, typically indicated by
      * URL.
      *
-     * @param \Spatie\SchemaOrg\Contracts\CreativeWorkContract|\Spatie\SchemaOrg\Contracts\CreativeWorkContract[]|string|string[] $license
+     * @param CreativeWorkContract|CreativeWorkContract[]|string|string[] $license
      *
      * @return static
      *
@@ -1028,7 +1054,7 @@ class EmailMessage extends BaseType implements CreativeWorkContract, MessageCont
      * The location where the CreativeWork was created, which may not be the
      * same as the location depicted in the CreativeWork.
      *
-     * @param \Spatie\SchemaOrg\Contracts\PlaceContract|\Spatie\SchemaOrg\Contracts\PlaceContract[] $locationCreated
+     * @param PlaceContract|PlaceContract[] $locationCreated
      *
      * @return static
      *
@@ -1043,7 +1069,7 @@ class EmailMessage extends BaseType implements CreativeWorkContract, MessageCont
      * Indicates the primary entity described in some page or other
      * CreativeWork.
      *
-     * @param \Spatie\SchemaOrg\Contracts\ThingContract|\Spatie\SchemaOrg\Contracts\ThingContract[] $mainEntity
+     * @param ThingContract|ThingContract[] $mainEntity
      *
      * @return static
      *
@@ -1059,7 +1085,7 @@ class EmailMessage extends BaseType implements CreativeWorkContract, MessageCont
      * entity being described. See [background
      * notes](/docs/datamodel.html#mainEntityBackground) for details.
      *
-     * @param \Spatie\SchemaOrg\Contracts\CreativeWorkContract|\Spatie\SchemaOrg\Contracts\CreativeWorkContract[]|string|string[] $mainEntityOfPage
+     * @param CreativeWorkContract|CreativeWorkContract[]|string|string[] $mainEntityOfPage
      *
      * @return static
      *
@@ -1074,7 +1100,7 @@ class EmailMessage extends BaseType implements CreativeWorkContract, MessageCont
      * A material that something is made from, e.g. leather, wool, cotton,
      * paper.
      *
-     * @param \Spatie\SchemaOrg\Contracts\ProductContract|\Spatie\SchemaOrg\Contracts\ProductContract[]|string|string[] $material
+     * @param ProductContract|ProductContract[]|string|string[] $material
      *
      * @return static
      *
@@ -1089,7 +1115,7 @@ class EmailMessage extends BaseType implements CreativeWorkContract, MessageCont
      * Indicates that the CreativeWork contains a reference to, but is not
      * necessarily about a concept.
      *
-     * @param \Spatie\SchemaOrg\Contracts\ThingContract|\Spatie\SchemaOrg\Contracts\ThingContract[] $mentions
+     * @param ThingContract|ThingContract[] $mentions
      *
      * @return static
      *
@@ -1103,7 +1129,7 @@ class EmailMessage extends BaseType implements CreativeWorkContract, MessageCont
     /**
      * A CreativeWork attached to the message.
      *
-     * @param \Spatie\SchemaOrg\Contracts\CreativeWorkContract|\Spatie\SchemaOrg\Contracts\CreativeWorkContract[] $messageAttachment
+     * @param CreativeWorkContract|CreativeWorkContract[] $messageAttachment
      *
      * @return static
      *
@@ -1138,7 +1164,7 @@ class EmailMessage extends BaseType implements CreativeWorkContract, MessageCont
      * second type, such as Product or a subtype of Product, can clarify the
      * nature of the offer.
      *
-     * @param \Spatie\SchemaOrg\Contracts\DemandContract|\Spatie\SchemaOrg\Contracts\DemandContract[]|\Spatie\SchemaOrg\Contracts\OfferContract|\Spatie\SchemaOrg\Contracts\OfferContract[] $offers
+     * @param DemandContract|DemandContract[]|OfferContract|OfferContract[] $offers
      *
      * @return static
      *
@@ -1167,7 +1193,7 @@ class EmailMessage extends BaseType implements CreativeWorkContract, MessageCont
      * Indicates a potential Action, which describes an idealized action in
      * which this thing would play an 'object' role.
      *
-     * @param \Spatie\SchemaOrg\Contracts\ActionContract|\Spatie\SchemaOrg\Contracts\ActionContract[] $potentialAction
+     * @param ActionContract|ActionContract[] $potentialAction
      *
      * @return static
      *
@@ -1182,7 +1208,7 @@ class EmailMessage extends BaseType implements CreativeWorkContract, MessageCont
      * The person or organization who produced the work (e.g. music album,
      * movie, tv/radio series etc.).
      *
-     * @param \Spatie\SchemaOrg\Contracts\OrganizationContract|\Spatie\SchemaOrg\Contracts\OrganizationContract[]|\Spatie\SchemaOrg\Contracts\PersonContract|\Spatie\SchemaOrg\Contracts\PersonContract[] $producer
+     * @param OrganizationContract|OrganizationContract[]|PersonContract|PersonContract[] $producer
      *
      * @return static
      *
@@ -1198,7 +1224,7 @@ class EmailMessage extends BaseType implements CreativeWorkContract, MessageCont
      * producer. Another party (a seller) may offer those services or goods on
      * behalf of the provider. A provider may also serve as the seller.
      *
-     * @param \Spatie\SchemaOrg\Contracts\OrganizationContract|\Spatie\SchemaOrg\Contracts\OrganizationContract[]|\Spatie\SchemaOrg\Contracts\PersonContract|\Spatie\SchemaOrg\Contracts\PersonContract[] $provider
+     * @param OrganizationContract|OrganizationContract[]|PersonContract|PersonContract[] $provider
      *
      * @return static
      *
@@ -1212,7 +1238,7 @@ class EmailMessage extends BaseType implements CreativeWorkContract, MessageCont
     /**
      * A publication event associated with the item.
      *
-     * @param \Spatie\SchemaOrg\Contracts\PublicationEventContract|\Spatie\SchemaOrg\Contracts\PublicationEventContract[] $publication
+     * @param PublicationEventContract|PublicationEventContract[] $publication
      *
      * @return static
      *
@@ -1226,7 +1252,7 @@ class EmailMessage extends BaseType implements CreativeWorkContract, MessageCont
     /**
      * The publisher of the creative work.
      *
-     * @param \Spatie\SchemaOrg\Contracts\OrganizationContract|\Spatie\SchemaOrg\Contracts\OrganizationContract[]|\Spatie\SchemaOrg\Contracts\PersonContract|\Spatie\SchemaOrg\Contracts\PersonContract[] $publisher
+     * @param OrganizationContract|OrganizationContract[]|PersonContract|PersonContract[] $publisher
      *
      * @return static
      *
@@ -1250,7 +1276,7 @@ class EmailMessage extends BaseType implements CreativeWorkContract, MessageCont
      * sometimes related information (e.g. indicating a [[funder]]) can be
      * expressed using schema.org terminology.
      *
-     * @param \Spatie\SchemaOrg\Contracts\CreativeWorkContract|\Spatie\SchemaOrg\Contracts\CreativeWorkContract[]|string|string[] $publishingPrinciples
+     * @param CreativeWorkContract|CreativeWorkContract[]|string|string[] $publishingPrinciples
      *
      * @return static
      *
@@ -1265,7 +1291,7 @@ class EmailMessage extends BaseType implements CreativeWorkContract, MessageCont
      * A sub property of participant. The participant who is at the receiving
      * end of the action.
      *
-     * @param \Spatie\SchemaOrg\Contracts\AudienceContract|\Spatie\SchemaOrg\Contracts\AudienceContract[]|\Spatie\SchemaOrg\Contracts\ContactPointContract|\Spatie\SchemaOrg\Contracts\ContactPointContract[]|\Spatie\SchemaOrg\Contracts\OrganizationContract|\Spatie\SchemaOrg\Contracts\OrganizationContract[]|\Spatie\SchemaOrg\Contracts\PersonContract|\Spatie\SchemaOrg\Contracts\PersonContract[] $recipient
+     * @param AudienceContract|AudienceContract[]|ContactPointContract|ContactPointContract[]|OrganizationContract|OrganizationContract[]|PersonContract|PersonContract[] $recipient
      *
      * @return static
      *
@@ -1280,7 +1306,7 @@ class EmailMessage extends BaseType implements CreativeWorkContract, MessageCont
      * The Event where the CreativeWork was recorded. The CreativeWork may
      * capture all or part of the event.
      *
-     * @param \Spatie\SchemaOrg\Contracts\EventContract|\Spatie\SchemaOrg\Contracts\EventContract[] $recordedAt
+     * @param EventContract|EventContract[] $recordedAt
      *
      * @return static
      *
@@ -1295,7 +1321,7 @@ class EmailMessage extends BaseType implements CreativeWorkContract, MessageCont
      * The place and time the release was issued, expressed as a
      * PublicationEvent.
      *
-     * @param \Spatie\SchemaOrg\Contracts\PublicationEventContract|\Spatie\SchemaOrg\Contracts\PublicationEventContract[] $releasedEvent
+     * @param PublicationEventContract|PublicationEventContract[] $releasedEvent
      *
      * @return static
      *
@@ -1309,7 +1335,7 @@ class EmailMessage extends BaseType implements CreativeWorkContract, MessageCont
     /**
      * A review of the item.
      *
-     * @param \Spatie\SchemaOrg\Contracts\ReviewContract|\Spatie\SchemaOrg\Contracts\ReviewContract[] $review
+     * @param ReviewContract|ReviewContract[] $review
      *
      * @return static
      *
@@ -1323,7 +1349,7 @@ class EmailMessage extends BaseType implements CreativeWorkContract, MessageCont
     /**
      * Review of the item.
      *
-     * @param \Spatie\SchemaOrg\Contracts\ReviewContract|\Spatie\SchemaOrg\Contracts\ReviewContract[] $reviews
+     * @param ReviewContract|ReviewContract[] $reviews
      *
      * @return static
      *
@@ -1371,7 +1397,7 @@ class EmailMessage extends BaseType implements CreativeWorkContract, MessageCont
      * A sub property of participant. The participant who is at the sending end
      * of the action.
      *
-     * @param \Spatie\SchemaOrg\Contracts\AudienceContract|\Spatie\SchemaOrg\Contracts\AudienceContract[]|\Spatie\SchemaOrg\Contracts\OrganizationContract|\Spatie\SchemaOrg\Contracts\OrganizationContract[]|\Spatie\SchemaOrg\Contracts\PersonContract|\Spatie\SchemaOrg\Contracts\PersonContract[] $sender
+     * @param AudienceContract|AudienceContract[]|OrganizationContract|OrganizationContract[]|PersonContract|PersonContract[] $sender
      *
      * @return static
      *
@@ -1385,7 +1411,7 @@ class EmailMessage extends BaseType implements CreativeWorkContract, MessageCont
     /**
      * The Organization on whose behalf the creator was working.
      *
-     * @param \Spatie\SchemaOrg\Contracts\OrganizationContract|\Spatie\SchemaOrg\Contracts\OrganizationContract[] $sourceOrganization
+     * @param OrganizationContract|OrganizationContract[] $sourceOrganization
      *
      * @return static
      *
@@ -1401,7 +1427,7 @@ class EmailMessage extends BaseType implements CreativeWorkContract, MessageCont
      * (e.g. [[locationCreated]], [[spatialCoverage]], [[contentLocation]]) are
      * not known to be appropriate.
      *
-     * @param \Spatie\SchemaOrg\Contracts\PlaceContract|\Spatie\SchemaOrg\Contracts\PlaceContract[] $spatial
+     * @param PlaceContract|PlaceContract[] $spatial
      *
      * @return static
      *
@@ -1420,7 +1446,7 @@ class EmailMessage extends BaseType implements CreativeWorkContract, MessageCont
      *       areas that the dataset describes: a dataset of New York weather
      * would have spatialCoverage which was the place: the state of New York.
      *
-     * @param \Spatie\SchemaOrg\Contracts\PlaceContract|\Spatie\SchemaOrg\Contracts\PlaceContract[] $spatialCoverage
+     * @param PlaceContract|PlaceContract[] $spatialCoverage
      *
      * @return static
      *
@@ -1436,7 +1462,7 @@ class EmailMessage extends BaseType implements CreativeWorkContract, MessageCont
      * or financial contribution. e.g. a sponsor of a Medical Study or a
      * corporate sponsor of an event.
      *
-     * @param \Spatie\SchemaOrg\Contracts\OrganizationContract|\Spatie\SchemaOrg\Contracts\OrganizationContract[]|\Spatie\SchemaOrg\Contracts\PersonContract|\Spatie\SchemaOrg\Contracts\PersonContract[] $sponsor
+     * @param OrganizationContract|OrganizationContract[]|PersonContract|PersonContract[] $sponsor
      *
      * @return static
      *
@@ -1450,7 +1476,7 @@ class EmailMessage extends BaseType implements CreativeWorkContract, MessageCont
     /**
      * A CreativeWork or Event about this Thing.
      *
-     * @param \Spatie\SchemaOrg\Contracts\CreativeWorkContract|\Spatie\SchemaOrg\Contracts\CreativeWorkContract[]|\Spatie\SchemaOrg\Contracts\EventContract|\Spatie\SchemaOrg\Contracts\EventContract[] $subjectOf
+     * @param CreativeWorkContract|CreativeWorkContract[]|EventContract|EventContract[] $subjectOf
      *
      * @return static
      *
@@ -1541,7 +1567,7 @@ class EmailMessage extends BaseType implements CreativeWorkContract, MessageCont
      * learning resource for the typical intended target audience, e.g. 'PT30M',
      * 'PT1H25M'.
      *
-     * @param \Spatie\SchemaOrg\Contracts\DurationContract|\Spatie\SchemaOrg\Contracts\DurationContract[] $timeRequired
+     * @param DurationContract|DurationContract[] $timeRequired
      *
      * @return static
      *
@@ -1556,7 +1582,7 @@ class EmailMessage extends BaseType implements CreativeWorkContract, MessageCont
      * A sub property of recipient. The recipient who was directly sent the
      * message.
      *
-     * @param \Spatie\SchemaOrg\Contracts\AudienceContract|\Spatie\SchemaOrg\Contracts\AudienceContract[]|\Spatie\SchemaOrg\Contracts\ContactPointContract|\Spatie\SchemaOrg\Contracts\ContactPointContract[]|\Spatie\SchemaOrg\Contracts\OrganizationContract|\Spatie\SchemaOrg\Contracts\OrganizationContract[]|\Spatie\SchemaOrg\Contracts\PersonContract|\Spatie\SchemaOrg\Contracts\PersonContract[] $toRecipient
+     * @param AudienceContract|AudienceContract[]|ContactPointContract|ContactPointContract[]|OrganizationContract|OrganizationContract[]|PersonContract|PersonContract[] $toRecipient
      *
      * @return static
      *
@@ -1572,7 +1598,7 @@ class EmailMessage extends BaseType implements CreativeWorkContract, MessageCont
      * regional differences and technical requirements of a target market, or
      * that translates during some event.
      *
-     * @param \Spatie\SchemaOrg\Contracts\OrganizationContract|\Spatie\SchemaOrg\Contracts\OrganizationContract[]|\Spatie\SchemaOrg\Contracts\PersonContract|\Spatie\SchemaOrg\Contracts\PersonContract[] $translator
+     * @param OrganizationContract|OrganizationContract[]|PersonContract|PersonContract[] $translator
      *
      * @return static
      *
@@ -1628,7 +1654,7 @@ class EmailMessage extends BaseType implements CreativeWorkContract, MessageCont
     /**
      * An embedded video object.
      *
-     * @param \Spatie\SchemaOrg\Contracts\ClipContract|\Spatie\SchemaOrg\Contracts\ClipContract[]|\Spatie\SchemaOrg\Contracts\VideoObjectContract|\Spatie\SchemaOrg\Contracts\VideoObjectContract[] $video
+     * @param ClipContract|ClipContract[]|VideoObjectContract|VideoObjectContract[] $video
      *
      * @return static
      *
@@ -1643,7 +1669,7 @@ class EmailMessage extends BaseType implements CreativeWorkContract, MessageCont
      * Example/instance/realization/derivation of the concept of this creative
      * work. eg. The paperback edition, first edition, or eBook.
      *
-     * @param \Spatie\SchemaOrg\Contracts\CreativeWorkContract|\Spatie\SchemaOrg\Contracts\CreativeWorkContract[] $workExample
+     * @param CreativeWorkContract|CreativeWorkContract[] $workExample
      *
      * @return static
      *

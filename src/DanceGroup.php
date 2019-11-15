@@ -2,8 +2,29 @@
 
 namespace Spatie\SchemaOrg;
 
+use \Spatie\SchemaOrg\Contracts\ActionContract;
+use \Spatie\SchemaOrg\Contracts\AdministrativeAreaContract;
+use \Spatie\SchemaOrg\Contracts\AggregateRatingContract;
+use \Spatie\SchemaOrg\Contracts\BrandContract;
+use \Spatie\SchemaOrg\Contracts\ContactPointContract;
+use \Spatie\SchemaOrg\Contracts\CreativeWorkContract;
+use \Spatie\SchemaOrg\Contracts\DemandContract;
+use \Spatie\SchemaOrg\Contracts\EventContract;
+use \Spatie\SchemaOrg\Contracts\GeoShapeContract;
+use \Spatie\SchemaOrg\Contracts\ImageObjectContract;
+use \Spatie\SchemaOrg\Contracts\OfferContract;
+use \Spatie\SchemaOrg\Contracts\OfferCatalogContract;
 use \Spatie\SchemaOrg\Contracts\OrganizationContract;
+use \Spatie\SchemaOrg\Contracts\OwnershipInfoContract;
 use \Spatie\SchemaOrg\Contracts\PerformingGroupContract;
+use \Spatie\SchemaOrg\Contracts\PersonContract;
+use \Spatie\SchemaOrg\Contracts\PlaceContract;
+use \Spatie\SchemaOrg\Contracts\PostalAddressContract;
+use \Spatie\SchemaOrg\Contracts\ProductContract;
+use \Spatie\SchemaOrg\Contracts\ProgramMembershipContract;
+use \Spatie\SchemaOrg\Contracts\PropertyValueContract;
+use \Spatie\SchemaOrg\Contracts\QuantitativeValueContract;
+use \Spatie\SchemaOrg\Contracts\ReviewContract;
 use \Spatie\SchemaOrg\Contracts\ThingContract;
 
 /**
@@ -37,7 +58,7 @@ class DanceGroup extends BaseType implements OrganizationContract, PerformingGro
     /**
      * Physical address of the item.
      *
-     * @param \Spatie\SchemaOrg\Contracts\PostalAddressContract|\Spatie\SchemaOrg\Contracts\PostalAddressContract[]|string|string[] $address
+     * @param PostalAddressContract|PostalAddressContract[]|string|string[] $address
      *
      * @return static
      *
@@ -52,7 +73,7 @@ class DanceGroup extends BaseType implements OrganizationContract, PerformingGro
      * The overall rating, based on a collection of reviews or ratings, of the
      * item.
      *
-     * @param \Spatie\SchemaOrg\Contracts\AggregateRatingContract|\Spatie\SchemaOrg\Contracts\AggregateRatingContract[] $aggregateRating
+     * @param AggregateRatingContract|AggregateRatingContract[] $aggregateRating
      *
      * @return static
      *
@@ -80,7 +101,7 @@ class DanceGroup extends BaseType implements OrganizationContract, PerformingGro
     /**
      * The geographic area where a service or offered item is provided.
      *
-     * @param \Spatie\SchemaOrg\Contracts\AdministrativeAreaContract|\Spatie\SchemaOrg\Contracts\AdministrativeAreaContract[]|\Spatie\SchemaOrg\Contracts\GeoShapeContract|\Spatie\SchemaOrg\Contracts\GeoShapeContract[]|\Spatie\SchemaOrg\Contracts\PlaceContract|\Spatie\SchemaOrg\Contracts\PlaceContract[]|string|string[] $areaServed
+     * @param AdministrativeAreaContract|AdministrativeAreaContract[]|GeoShapeContract|GeoShapeContract[]|PlaceContract|PlaceContract[]|string|string[] $areaServed
      *
      * @return static
      *
@@ -123,7 +144,7 @@ class DanceGroup extends BaseType implements OrganizationContract, PerformingGro
      * The brand(s) associated with a product or service, or the brand(s)
      * maintained by an organization or business person.
      *
-     * @param \Spatie\SchemaOrg\Contracts\BrandContract|\Spatie\SchemaOrg\Contracts\BrandContract[]|\Spatie\SchemaOrg\Contracts\OrganizationContract|\Spatie\SchemaOrg\Contracts\OrganizationContract[] $brand
+     * @param BrandContract|BrandContract[]|OrganizationContract|OrganizationContract[] $brand
      *
      * @return static
      *
@@ -137,7 +158,7 @@ class DanceGroup extends BaseType implements OrganizationContract, PerformingGro
     /**
      * A contact point for a person or organization.
      *
-     * @param \Spatie\SchemaOrg\Contracts\ContactPointContract|\Spatie\SchemaOrg\Contracts\ContactPointContract[] $contactPoint
+     * @param ContactPointContract|ContactPointContract[] $contactPoint
      *
      * @return static
      *
@@ -151,7 +172,7 @@ class DanceGroup extends BaseType implements OrganizationContract, PerformingGro
     /**
      * A contact point for a person or organization.
      *
-     * @param \Spatie\SchemaOrg\Contracts\ContactPointContract|\Spatie\SchemaOrg\Contracts\ContactPointContract[] $contactPoints
+     * @param ContactPointContract|ContactPointContract[] $contactPoints
      *
      * @return static
      *
@@ -168,7 +189,7 @@ class DanceGroup extends BaseType implements OrganizationContract, PerformingGro
      * logos, opening hours). For example: a store with a pharmacy, or a bakery
      * with a cafe.
      *
-     * @param \Spatie\SchemaOrg\Contracts\OrganizationContract|\Spatie\SchemaOrg\Contracts\OrganizationContract[] $department
+     * @param OrganizationContract|OrganizationContract[] $department
      *
      * @return static
      *
@@ -256,7 +277,7 @@ class DanceGroup extends BaseType implements OrganizationContract, PerformingGro
     /**
      * Someone working for this organization.
      *
-     * @param \Spatie\SchemaOrg\Contracts\PersonContract|\Spatie\SchemaOrg\Contracts\PersonContract[] $employee
+     * @param PersonContract|PersonContract[] $employee
      *
      * @return static
      *
@@ -270,7 +291,7 @@ class DanceGroup extends BaseType implements OrganizationContract, PerformingGro
     /**
      * People working for this organization.
      *
-     * @param \Spatie\SchemaOrg\Contracts\PersonContract|\Spatie\SchemaOrg\Contracts\PersonContract[] $employees
+     * @param PersonContract|PersonContract[] $employees
      *
      * @return static
      *
@@ -285,7 +306,7 @@ class DanceGroup extends BaseType implements OrganizationContract, PerformingGro
      * Upcoming or past event associated with this place, organization, or
      * action.
      *
-     * @param \Spatie\SchemaOrg\Contracts\EventContract|\Spatie\SchemaOrg\Contracts\EventContract[] $event
+     * @param EventContract|EventContract[] $event
      *
      * @return static
      *
@@ -299,7 +320,7 @@ class DanceGroup extends BaseType implements OrganizationContract, PerformingGro
     /**
      * Upcoming or past events associated with this place or organization.
      *
-     * @param \Spatie\SchemaOrg\Contracts\EventContract|\Spatie\SchemaOrg\Contracts\EventContract[] $events
+     * @param EventContract|EventContract[] $events
      *
      * @return static
      *
@@ -327,7 +348,7 @@ class DanceGroup extends BaseType implements OrganizationContract, PerformingGro
     /**
      * A person who founded this organization.
      *
-     * @param \Spatie\SchemaOrg\Contracts\PersonContract|\Spatie\SchemaOrg\Contracts\PersonContract[] $founder
+     * @param PersonContract|PersonContract[] $founder
      *
      * @return static
      *
@@ -341,7 +362,7 @@ class DanceGroup extends BaseType implements OrganizationContract, PerformingGro
     /**
      * A person who founded this organization.
      *
-     * @param \Spatie\SchemaOrg\Contracts\PersonContract|\Spatie\SchemaOrg\Contracts\PersonContract[] $founders
+     * @param PersonContract|PersonContract[] $founders
      *
      * @return static
      *
@@ -369,7 +390,7 @@ class DanceGroup extends BaseType implements OrganizationContract, PerformingGro
     /**
      * The place where the Organization was founded.
      *
-     * @param \Spatie\SchemaOrg\Contracts\PlaceContract|\Spatie\SchemaOrg\Contracts\PlaceContract[] $foundingLocation
+     * @param PlaceContract|PlaceContract[] $foundingLocation
      *
      * @return static
      *
@@ -384,7 +405,7 @@ class DanceGroup extends BaseType implements OrganizationContract, PerformingGro
      * A person or organization that supports (sponsors) something through some
      * kind of financial contribution.
      *
-     * @param \Spatie\SchemaOrg\Contracts\OrganizationContract|\Spatie\SchemaOrg\Contracts\OrganizationContract[]|\Spatie\SchemaOrg\Contracts\PersonContract|\Spatie\SchemaOrg\Contracts\PersonContract[] $funder
+     * @param OrganizationContract|OrganizationContract[]|PersonContract|PersonContract[] $funder
      *
      * @return static
      *
@@ -416,7 +437,7 @@ class DanceGroup extends BaseType implements OrganizationContract, PerformingGro
      * Indicates an OfferCatalog listing for this Organization, Person, or
      * Service.
      *
-     * @param \Spatie\SchemaOrg\Contracts\OfferCatalogContract|\Spatie\SchemaOrg\Contracts\OfferCatalogContract[] $hasOfferCatalog
+     * @param OfferCatalogContract|OfferCatalogContract[] $hasOfferCatalog
      *
      * @return static
      *
@@ -430,7 +451,7 @@ class DanceGroup extends BaseType implements OrganizationContract, PerformingGro
     /**
      * Points-of-Sales operated by the organization or person.
      *
-     * @param \Spatie\SchemaOrg\Contracts\PlaceContract|\Spatie\SchemaOrg\Contracts\PlaceContract[] $hasPOS
+     * @param PlaceContract|PlaceContract[] $hasPOS
      *
      * @return static
      *
@@ -448,7 +469,7 @@ class DanceGroup extends BaseType implements OrganizationContract, PerformingGro
      * strings or as URL (URI) links. See [background
      * notes](/docs/datamodel.html#identifierBg) for more details.
      *
-     * @param \Spatie\SchemaOrg\Contracts\PropertyValueContract|\Spatie\SchemaOrg\Contracts\PropertyValueContract[]|string|string[] $identifier
+     * @param PropertyValueContract|PropertyValueContract[]|string|string[] $identifier
      *
      * @return static
      *
@@ -463,7 +484,7 @@ class DanceGroup extends BaseType implements OrganizationContract, PerformingGro
      * An image of the item. This can be a [[URL]] or a fully described
      * [[ImageObject]].
      *
-     * @param \Spatie\SchemaOrg\Contracts\ImageObjectContract|\Spatie\SchemaOrg\Contracts\ImageObjectContract[]|string|string[] $image
+     * @param ImageObjectContract|ImageObjectContract[]|string|string[] $image
      *
      * @return static
      *
@@ -523,7 +544,7 @@ class DanceGroup extends BaseType implements OrganizationContract, PerformingGro
      * The location of for example where the event is happening, an organization
      * is located, or where an action takes place.
      *
-     * @param \Spatie\SchemaOrg\Contracts\PlaceContract|\Spatie\SchemaOrg\Contracts\PlaceContract[]|\Spatie\SchemaOrg\Contracts\PostalAddressContract|\Spatie\SchemaOrg\Contracts\PostalAddressContract[]|string|string[] $location
+     * @param PlaceContract|PlaceContract[]|PostalAddressContract|PostalAddressContract[]|string|string[] $location
      *
      * @return static
      *
@@ -537,7 +558,7 @@ class DanceGroup extends BaseType implements OrganizationContract, PerformingGro
     /**
      * An associated logo.
      *
-     * @param \Spatie\SchemaOrg\Contracts\ImageObjectContract|\Spatie\SchemaOrg\Contracts\ImageObjectContract[]|string|string[] $logo
+     * @param ImageObjectContract|ImageObjectContract[]|string|string[] $logo
      *
      * @return static
      *
@@ -553,7 +574,7 @@ class DanceGroup extends BaseType implements OrganizationContract, PerformingGro
      * entity being described. See [background
      * notes](/docs/datamodel.html#mainEntityBackground) for details.
      *
-     * @param \Spatie\SchemaOrg\Contracts\CreativeWorkContract|\Spatie\SchemaOrg\Contracts\CreativeWorkContract[]|string|string[] $mainEntityOfPage
+     * @param CreativeWorkContract|CreativeWorkContract[]|string|string[] $mainEntityOfPage
      *
      * @return static
      *
@@ -567,7 +588,7 @@ class DanceGroup extends BaseType implements OrganizationContract, PerformingGro
     /**
      * A pointer to products or services offered by the organization or person.
      *
-     * @param \Spatie\SchemaOrg\Contracts\OfferContract|\Spatie\SchemaOrg\Contracts\OfferContract[] $makesOffer
+     * @param OfferContract|OfferContract[] $makesOffer
      *
      * @return static
      *
@@ -582,7 +603,7 @@ class DanceGroup extends BaseType implements OrganizationContract, PerformingGro
      * A member of an Organization or a ProgramMembership. Organizations can be
      * members of organizations; ProgramMembership is typically for individuals.
      *
-     * @param \Spatie\SchemaOrg\Contracts\OrganizationContract|\Spatie\SchemaOrg\Contracts\OrganizationContract[]|\Spatie\SchemaOrg\Contracts\PersonContract|\Spatie\SchemaOrg\Contracts\PersonContract[] $member
+     * @param OrganizationContract|OrganizationContract[]|PersonContract|PersonContract[] $member
      *
      * @return static
      *
@@ -597,7 +618,7 @@ class DanceGroup extends BaseType implements OrganizationContract, PerformingGro
      * An Organization (or ProgramMembership) to which this Person or
      * Organization belongs.
      *
-     * @param \Spatie\SchemaOrg\Contracts\OrganizationContract|\Spatie\SchemaOrg\Contracts\OrganizationContract[]|\Spatie\SchemaOrg\Contracts\ProgramMembershipContract|\Spatie\SchemaOrg\Contracts\ProgramMembershipContract[] $memberOf
+     * @param OrganizationContract|OrganizationContract[]|ProgramMembershipContract|ProgramMembershipContract[] $memberOf
      *
      * @return static
      *
@@ -611,7 +632,7 @@ class DanceGroup extends BaseType implements OrganizationContract, PerformingGro
     /**
      * A member of this organization.
      *
-     * @param \Spatie\SchemaOrg\Contracts\OrganizationContract|\Spatie\SchemaOrg\Contracts\OrganizationContract[]|\Spatie\SchemaOrg\Contracts\PersonContract|\Spatie\SchemaOrg\Contracts\PersonContract[] $members
+     * @param OrganizationContract|OrganizationContract[]|PersonContract|PersonContract[] $members
      *
      * @return static
      *
@@ -654,7 +675,7 @@ class DanceGroup extends BaseType implements OrganizationContract, PerformingGro
     /**
      * The number of employees in an organization e.g. business.
      *
-     * @param \Spatie\SchemaOrg\Contracts\QuantitativeValueContract|\Spatie\SchemaOrg\Contracts\QuantitativeValueContract[] $numberOfEmployees
+     * @param QuantitativeValueContract|QuantitativeValueContract[] $numberOfEmployees
      *
      * @return static
      *
@@ -668,7 +689,7 @@ class DanceGroup extends BaseType implements OrganizationContract, PerformingGro
     /**
      * A pointer to the organization or person making the offer.
      *
-     * @param \Spatie\SchemaOrg\Contracts\OrganizationContract|\Spatie\SchemaOrg\Contracts\OrganizationContract[]|\Spatie\SchemaOrg\Contracts\PersonContract|\Spatie\SchemaOrg\Contracts\PersonContract[] $offeredBy
+     * @param OrganizationContract|OrganizationContract[]|PersonContract|PersonContract[] $offeredBy
      *
      * @return static
      *
@@ -682,7 +703,7 @@ class DanceGroup extends BaseType implements OrganizationContract, PerformingGro
     /**
      * Products owned by the organization or person.
      *
-     * @param \Spatie\SchemaOrg\Contracts\OwnershipInfoContract|\Spatie\SchemaOrg\Contracts\OwnershipInfoContract[]|\Spatie\SchemaOrg\Contracts\ProductContract|\Spatie\SchemaOrg\Contracts\ProductContract[] $owns
+     * @param OwnershipInfoContract|OwnershipInfoContract[]|ProductContract|ProductContract[] $owns
      *
      * @return static
      *
@@ -697,7 +718,7 @@ class DanceGroup extends BaseType implements OrganizationContract, PerformingGro
      * The larger organization that this organization is a [[subOrganization]]
      * of, if any.
      *
-     * @param \Spatie\SchemaOrg\Contracts\OrganizationContract|\Spatie\SchemaOrg\Contracts\OrganizationContract[] $parentOrganization
+     * @param OrganizationContract|OrganizationContract[] $parentOrganization
      *
      * @return static
      *
@@ -712,7 +733,7 @@ class DanceGroup extends BaseType implements OrganizationContract, PerformingGro
      * Indicates a potential Action, which describes an idealized action in
      * which this thing would play an 'object' role.
      *
-     * @param \Spatie\SchemaOrg\Contracts\ActionContract|\Spatie\SchemaOrg\Contracts\ActionContract[] $potentialAction
+     * @param ActionContract|ActionContract[] $potentialAction
      *
      * @return static
      *
@@ -736,7 +757,7 @@ class DanceGroup extends BaseType implements OrganizationContract, PerformingGro
      * sometimes related information (e.g. indicating a [[funder]]) can be
      * expressed using schema.org terminology.
      *
-     * @param \Spatie\SchemaOrg\Contracts\CreativeWorkContract|\Spatie\SchemaOrg\Contracts\CreativeWorkContract[]|string|string[] $publishingPrinciples
+     * @param CreativeWorkContract|CreativeWorkContract[]|string|string[] $publishingPrinciples
      *
      * @return static
      *
@@ -750,7 +771,7 @@ class DanceGroup extends BaseType implements OrganizationContract, PerformingGro
     /**
      * A review of the item.
      *
-     * @param \Spatie\SchemaOrg\Contracts\ReviewContract|\Spatie\SchemaOrg\Contracts\ReviewContract[] $review
+     * @param ReviewContract|ReviewContract[] $review
      *
      * @return static
      *
@@ -764,7 +785,7 @@ class DanceGroup extends BaseType implements OrganizationContract, PerformingGro
     /**
      * Review of the item.
      *
-     * @param \Spatie\SchemaOrg\Contracts\ReviewContract|\Spatie\SchemaOrg\Contracts\ReviewContract[] $reviews
+     * @param ReviewContract|ReviewContract[] $reviews
      *
      * @return static
      *
@@ -795,7 +816,7 @@ class DanceGroup extends BaseType implements OrganizationContract, PerformingGro
      * A pointer to products or services sought by the organization or person
      * (demand).
      *
-     * @param \Spatie\SchemaOrg\Contracts\DemandContract|\Spatie\SchemaOrg\Contracts\DemandContract[] $seeks
+     * @param DemandContract|DemandContract[] $seeks
      *
      * @return static
      *
@@ -809,7 +830,7 @@ class DanceGroup extends BaseType implements OrganizationContract, PerformingGro
     /**
      * The geographic area where the service is provided.
      *
-     * @param \Spatie\SchemaOrg\Contracts\AdministrativeAreaContract|\Spatie\SchemaOrg\Contracts\AdministrativeAreaContract[]|\Spatie\SchemaOrg\Contracts\GeoShapeContract|\Spatie\SchemaOrg\Contracts\GeoShapeContract[]|\Spatie\SchemaOrg\Contracts\PlaceContract|\Spatie\SchemaOrg\Contracts\PlaceContract[] $serviceArea
+     * @param AdministrativeAreaContract|AdministrativeAreaContract[]|GeoShapeContract|GeoShapeContract[]|PlaceContract|PlaceContract[] $serviceArea
      *
      * @return static
      *
@@ -839,7 +860,7 @@ class DanceGroup extends BaseType implements OrganizationContract, PerformingGro
      * or financial contribution. e.g. a sponsor of a Medical Study or a
      * corporate sponsor of an event.
      *
-     * @param \Spatie\SchemaOrg\Contracts\OrganizationContract|\Spatie\SchemaOrg\Contracts\OrganizationContract[]|\Spatie\SchemaOrg\Contracts\PersonContract|\Spatie\SchemaOrg\Contracts\PersonContract[] $sponsor
+     * @param OrganizationContract|OrganizationContract[]|PersonContract|PersonContract[] $sponsor
      *
      * @return static
      *
@@ -855,7 +876,7 @@ class DanceGroup extends BaseType implements OrganizationContract, PerformingGro
      * second, e.g., as a subsidiary. See also: the more specific 'department'
      * property.
      *
-     * @param \Spatie\SchemaOrg\Contracts\OrganizationContract|\Spatie\SchemaOrg\Contracts\OrganizationContract[] $subOrganization
+     * @param OrganizationContract|OrganizationContract[] $subOrganization
      *
      * @return static
      *
@@ -869,7 +890,7 @@ class DanceGroup extends BaseType implements OrganizationContract, PerformingGro
     /**
      * A CreativeWork or Event about this Thing.
      *
-     * @param \Spatie\SchemaOrg\Contracts\CreativeWorkContract|\Spatie\SchemaOrg\Contracts\CreativeWorkContract[]|\Spatie\SchemaOrg\Contracts\EventContract|\Spatie\SchemaOrg\Contracts\EventContract[] $subjectOf
+     * @param CreativeWorkContract|CreativeWorkContract[]|EventContract|EventContract[] $subjectOf
      *
      * @return static
      *

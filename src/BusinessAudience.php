@@ -2,8 +2,15 @@
 
 namespace Spatie\SchemaOrg;
 
+use \Spatie\SchemaOrg\Contracts\ActionContract;
+use \Spatie\SchemaOrg\Contracts\AdministrativeAreaContract;
 use \Spatie\SchemaOrg\Contracts\AudienceContract;
+use \Spatie\SchemaOrg\Contracts\CreativeWorkContract;
+use \Spatie\SchemaOrg\Contracts\EventContract;
+use \Spatie\SchemaOrg\Contracts\ImageObjectContract;
 use \Spatie\SchemaOrg\Contracts\IntangibleContract;
+use \Spatie\SchemaOrg\Contracts\PropertyValueContract;
+use \Spatie\SchemaOrg\Contracts\QuantitativeValueContract;
 use \Spatie\SchemaOrg\Contracts\ThingContract;
 
 /**
@@ -97,7 +104,7 @@ class BusinessAudience extends BaseType implements AudienceContract, IntangibleC
     /**
      * The geographic area associated with the audience.
      *
-     * @param \Spatie\SchemaOrg\Contracts\AdministrativeAreaContract|\Spatie\SchemaOrg\Contracts\AdministrativeAreaContract[] $geographicArea
+     * @param AdministrativeAreaContract|AdministrativeAreaContract[] $geographicArea
      *
      * @return static
      *
@@ -115,7 +122,7 @@ class BusinessAudience extends BaseType implements AudienceContract, IntangibleC
      * strings or as URL (URI) links. See [background
      * notes](/docs/datamodel.html#identifierBg) for more details.
      *
-     * @param \Spatie\SchemaOrg\Contracts\PropertyValueContract|\Spatie\SchemaOrg\Contracts\PropertyValueContract[]|string|string[] $identifier
+     * @param PropertyValueContract|PropertyValueContract[]|string|string[] $identifier
      *
      * @return static
      *
@@ -130,7 +137,7 @@ class BusinessAudience extends BaseType implements AudienceContract, IntangibleC
      * An image of the item. This can be a [[URL]] or a fully described
      * [[ImageObject]].
      *
-     * @param \Spatie\SchemaOrg\Contracts\ImageObjectContract|\Spatie\SchemaOrg\Contracts\ImageObjectContract[]|string|string[] $image
+     * @param ImageObjectContract|ImageObjectContract[]|string|string[] $image
      *
      * @return static
      *
@@ -146,7 +153,7 @@ class BusinessAudience extends BaseType implements AudienceContract, IntangibleC
      * entity being described. See [background
      * notes](/docs/datamodel.html#mainEntityBackground) for details.
      *
-     * @param \Spatie\SchemaOrg\Contracts\CreativeWorkContract|\Spatie\SchemaOrg\Contracts\CreativeWorkContract[]|string|string[] $mainEntityOfPage
+     * @param CreativeWorkContract|CreativeWorkContract[]|string|string[] $mainEntityOfPage
      *
      * @return static
      *
@@ -174,7 +181,7 @@ class BusinessAudience extends BaseType implements AudienceContract, IntangibleC
     /**
      * The number of employees in an organization e.g. business.
      *
-     * @param \Spatie\SchemaOrg\Contracts\QuantitativeValueContract|\Spatie\SchemaOrg\Contracts\QuantitativeValueContract[] $numberOfEmployees
+     * @param QuantitativeValueContract|QuantitativeValueContract[] $numberOfEmployees
      *
      * @return static
      *
@@ -189,7 +196,7 @@ class BusinessAudience extends BaseType implements AudienceContract, IntangibleC
      * Indicates a potential Action, which describes an idealized action in
      * which this thing would play an 'object' role.
      *
-     * @param \Spatie\SchemaOrg\Contracts\ActionContract|\Spatie\SchemaOrg\Contracts\ActionContract[] $potentialAction
+     * @param ActionContract|ActionContract[] $potentialAction
      *
      * @return static
      *
@@ -219,7 +226,7 @@ class BusinessAudience extends BaseType implements AudienceContract, IntangibleC
     /**
      * A CreativeWork or Event about this Thing.
      *
-     * @param \Spatie\SchemaOrg\Contracts\CreativeWorkContract|\Spatie\SchemaOrg\Contracts\CreativeWorkContract[]|\Spatie\SchemaOrg\Contracts\EventContract|\Spatie\SchemaOrg\Contracts\EventContract[] $subjectOf
+     * @param CreativeWorkContract|CreativeWorkContract[]|EventContract|EventContract[] $subjectOf
      *
      * @return static
      *
@@ -247,7 +254,7 @@ class BusinessAudience extends BaseType implements AudienceContract, IntangibleC
     /**
      * The size of the business in annual revenue.
      *
-     * @param \Spatie\SchemaOrg\Contracts\QuantitativeValueContract|\Spatie\SchemaOrg\Contracts\QuantitativeValueContract[] $yearlyRevenue
+     * @param QuantitativeValueContract|QuantitativeValueContract[] $yearlyRevenue
      *
      * @return static
      *
@@ -261,7 +268,7 @@ class BusinessAudience extends BaseType implements AudienceContract, IntangibleC
     /**
      * The age of the business.
      *
-     * @param \Spatie\SchemaOrg\Contracts\QuantitativeValueContract|\Spatie\SchemaOrg\Contracts\QuantitativeValueContract[] $yearsInOperation
+     * @param QuantitativeValueContract|QuantitativeValueContract[] $yearsInOperation
      *
      * @return static
      *

@@ -2,8 +2,25 @@
 
 namespace Spatie\SchemaOrg;
 
+use \Spatie\SchemaOrg\Contracts\ActionContract;
+use \Spatie\SchemaOrg\Contracts\AggregateRatingContract;
+use \Spatie\SchemaOrg\Contracts\AudienceContract;
+use \Spatie\SchemaOrg\Contracts\BroadcastServiceContract;
+use \Spatie\SchemaOrg\Contracts\CreativeWorkContract;
+use \Spatie\SchemaOrg\Contracts\DemandContract;
+use \Spatie\SchemaOrg\Contracts\DurationContract;
 use \Spatie\SchemaOrg\Contracts\EventContract;
+use \Spatie\SchemaOrg\Contracts\EventStatusTypeContract;
+use \Spatie\SchemaOrg\Contracts\ImageObjectContract;
+use \Spatie\SchemaOrg\Contracts\LanguageContract;
+use \Spatie\SchemaOrg\Contracts\OfferContract;
+use \Spatie\SchemaOrg\Contracts\OrganizationContract;
+use \Spatie\SchemaOrg\Contracts\PersonContract;
+use \Spatie\SchemaOrg\Contracts\PlaceContract;
+use \Spatie\SchemaOrg\Contracts\PostalAddressContract;
+use \Spatie\SchemaOrg\Contracts\PropertyValueContract;
 use \Spatie\SchemaOrg\Contracts\PublicationEventContract;
+use \Spatie\SchemaOrg\Contracts\ReviewContract;
 use \Spatie\SchemaOrg\Contracts\ThingContract;
 
 /**
@@ -17,7 +34,7 @@ class BroadcastEvent extends BaseType implements EventContract, PublicationEvent
     /**
      * The subject matter of the content.
      *
-     * @param \Spatie\SchemaOrg\Contracts\ThingContract|\Spatie\SchemaOrg\Contracts\ThingContract[] $about
+     * @param ThingContract|ThingContract[] $about
      *
      * @return static
      *
@@ -33,7 +50,7 @@ class BroadcastEvent extends BaseType implements EventContract, PublicationEvent
      * Actors can be associated with individual items or with a series, episode,
      * clip.
      *
-     * @param \Spatie\SchemaOrg\Contracts\PersonContract|\Spatie\SchemaOrg\Contracts\PersonContract[] $actor
+     * @param PersonContract|PersonContract[] $actor
      *
      * @return static
      *
@@ -67,7 +84,7 @@ class BroadcastEvent extends BaseType implements EventContract, PublicationEvent
      * The overall rating, based on a collection of reviews or ratings, of the
      * item.
      *
-     * @param \Spatie\SchemaOrg\Contracts\AggregateRatingContract|\Spatie\SchemaOrg\Contracts\AggregateRatingContract[] $aggregateRating
+     * @param AggregateRatingContract|AggregateRatingContract[] $aggregateRating
      *
      * @return static
      *
@@ -95,7 +112,7 @@ class BroadcastEvent extends BaseType implements EventContract, PublicationEvent
     /**
      * A person or organization attending the event.
      *
-     * @param \Spatie\SchemaOrg\Contracts\OrganizationContract|\Spatie\SchemaOrg\Contracts\OrganizationContract[]|\Spatie\SchemaOrg\Contracts\PersonContract|\Spatie\SchemaOrg\Contracts\PersonContract[] $attendee
+     * @param OrganizationContract|OrganizationContract[]|PersonContract|PersonContract[] $attendee
      *
      * @return static
      *
@@ -109,7 +126,7 @@ class BroadcastEvent extends BaseType implements EventContract, PublicationEvent
     /**
      * A person attending the event.
      *
-     * @param \Spatie\SchemaOrg\Contracts\OrganizationContract|\Spatie\SchemaOrg\Contracts\OrganizationContract[]|\Spatie\SchemaOrg\Contracts\PersonContract|\Spatie\SchemaOrg\Contracts\PersonContract[] $attendees
+     * @param OrganizationContract|OrganizationContract[]|PersonContract|PersonContract[] $attendees
      *
      * @return static
      *
@@ -123,7 +140,7 @@ class BroadcastEvent extends BaseType implements EventContract, PublicationEvent
     /**
      * An intended audience, i.e. a group for whom something was created.
      *
-     * @param \Spatie\SchemaOrg\Contracts\AudienceContract|\Spatie\SchemaOrg\Contracts\AudienceContract[] $audience
+     * @param AudienceContract|AudienceContract[] $audience
      *
      * @return static
      *
@@ -137,7 +154,7 @@ class BroadcastEvent extends BaseType implements EventContract, PublicationEvent
     /**
      * The event being broadcast such as a sporting event or awards ceremony.
      *
-     * @param \Spatie\SchemaOrg\Contracts\EventContract|\Spatie\SchemaOrg\Contracts\EventContract[] $broadcastOfEvent
+     * @param EventContract|EventContract[] $broadcastOfEvent
      *
      * @return static
      *
@@ -152,7 +169,7 @@ class BroadcastEvent extends BaseType implements EventContract, PublicationEvent
      * The person or organization who wrote a composition, or who is the
      * composer of a work performed at some event.
      *
-     * @param \Spatie\SchemaOrg\Contracts\OrganizationContract|\Spatie\SchemaOrg\Contracts\OrganizationContract[]|\Spatie\SchemaOrg\Contracts\PersonContract|\Spatie\SchemaOrg\Contracts\PersonContract[] $composer
+     * @param OrganizationContract|OrganizationContract[]|PersonContract|PersonContract[] $composer
      *
      * @return static
      *
@@ -166,7 +183,7 @@ class BroadcastEvent extends BaseType implements EventContract, PublicationEvent
     /**
      * A secondary contributor to the CreativeWork or Event.
      *
-     * @param \Spatie\SchemaOrg\Contracts\OrganizationContract|\Spatie\SchemaOrg\Contracts\OrganizationContract[]|\Spatie\SchemaOrg\Contracts\PersonContract|\Spatie\SchemaOrg\Contracts\PersonContract[] $contributor
+     * @param OrganizationContract|OrganizationContract[]|PersonContract|PersonContract[] $contributor
      *
      * @return static
      *
@@ -196,7 +213,7 @@ class BroadcastEvent extends BaseType implements EventContract, PublicationEvent
      * event. Directors can be associated with individual items or with a
      * series, episode, clip.
      *
-     * @param \Spatie\SchemaOrg\Contracts\PersonContract|\Spatie\SchemaOrg\Contracts\PersonContract[] $director
+     * @param PersonContract|PersonContract[] $director
      *
      * @return static
      *
@@ -242,7 +259,7 @@ class BroadcastEvent extends BaseType implements EventContract, PublicationEvent
      * The duration of the item (movie, audio recording, event, etc.) in [ISO
      * 8601 date format](http://en.wikipedia.org/wiki/ISO_8601).
      *
-     * @param \Spatie\SchemaOrg\Contracts\DurationContract|\Spatie\SchemaOrg\Contracts\DurationContract[] $duration
+     * @param DurationContract|DurationContract[] $duration
      *
      * @return static
      *
@@ -272,7 +289,7 @@ class BroadcastEvent extends BaseType implements EventContract, PublicationEvent
      * An eventStatus of an event represents its status; particularly useful
      * when an event is cancelled or rescheduled.
      *
-     * @param \Spatie\SchemaOrg\Contracts\EventStatusTypeContract|\Spatie\SchemaOrg\Contracts\EventStatusTypeContract[] $eventStatus
+     * @param EventStatusTypeContract|EventStatusTypeContract[] $eventStatus
      *
      * @return static
      *
@@ -301,7 +318,7 @@ class BroadcastEvent extends BaseType implements EventContract, PublicationEvent
      * A person or organization that supports (sponsors) something through some
      * kind of financial contribution.
      *
-     * @param \Spatie\SchemaOrg\Contracts\OrganizationContract|\Spatie\SchemaOrg\Contracts\OrganizationContract[]|\Spatie\SchemaOrg\Contracts\PersonContract|\Spatie\SchemaOrg\Contracts\PersonContract[] $funder
+     * @param OrganizationContract|OrganizationContract[]|PersonContract|PersonContract[] $funder
      *
      * @return static
      *
@@ -319,7 +336,7 @@ class BroadcastEvent extends BaseType implements EventContract, PublicationEvent
      * strings or as URL (URI) links. See [background
      * notes](/docs/datamodel.html#identifierBg) for more details.
      *
-     * @param \Spatie\SchemaOrg\Contracts\PropertyValueContract|\Spatie\SchemaOrg\Contracts\PropertyValueContract[]|string|string[] $identifier
+     * @param PropertyValueContract|PropertyValueContract[]|string|string[] $identifier
      *
      * @return static
      *
@@ -334,7 +351,7 @@ class BroadcastEvent extends BaseType implements EventContract, PublicationEvent
      * An image of the item. This can be a [[URL]] or a fully described
      * [[ImageObject]].
      *
-     * @param \Spatie\SchemaOrg\Contracts\ImageObjectContract|\Spatie\SchemaOrg\Contracts\ImageObjectContract[]|string|string[] $image
+     * @param ImageObjectContract|ImageObjectContract[]|string|string[] $image
      *
      * @return static
      *
@@ -351,7 +368,7 @@ class BroadcastEvent extends BaseType implements EventContract, PublicationEvent
      * standard](http://tools.ietf.org/html/bcp47). See also
      * [[availableLanguage]].
      *
-     * @param \Spatie\SchemaOrg\Contracts\LanguageContract|\Spatie\SchemaOrg\Contracts\LanguageContract[]|string|string[] $inLanguage
+     * @param LanguageContract|LanguageContract[]|string|string[] $inLanguage
      *
      * @return static
      *
@@ -394,7 +411,7 @@ class BroadcastEvent extends BaseType implements EventContract, PublicationEvent
      * The location of for example where the event is happening, an organization
      * is located, or where an action takes place.
      *
-     * @param \Spatie\SchemaOrg\Contracts\PlaceContract|\Spatie\SchemaOrg\Contracts\PlaceContract[]|\Spatie\SchemaOrg\Contracts\PostalAddressContract|\Spatie\SchemaOrg\Contracts\PostalAddressContract[]|string|string[] $location
+     * @param PlaceContract|PlaceContract[]|PostalAddressContract|PostalAddressContract[]|string|string[] $location
      *
      * @return static
      *
@@ -410,7 +427,7 @@ class BroadcastEvent extends BaseType implements EventContract, PublicationEvent
      * entity being described. See [background
      * notes](/docs/datamodel.html#mainEntityBackground) for details.
      *
-     * @param \Spatie\SchemaOrg\Contracts\CreativeWorkContract|\Spatie\SchemaOrg\Contracts\CreativeWorkContract[]|string|string[] $mainEntityOfPage
+     * @param CreativeWorkContract|CreativeWorkContract[]|string|string[] $mainEntityOfPage
      *
      * @return static
      *
@@ -459,7 +476,7 @@ class BroadcastEvent extends BaseType implements EventContract, PublicationEvent
      * second type, such as Product or a subtype of Product, can clarify the
      * nature of the offer.
      *
-     * @param \Spatie\SchemaOrg\Contracts\DemandContract|\Spatie\SchemaOrg\Contracts\DemandContract[]|\Spatie\SchemaOrg\Contracts\OfferContract|\Spatie\SchemaOrg\Contracts\OfferContract[] $offers
+     * @param DemandContract|DemandContract[]|OfferContract|OfferContract[] $offers
      *
      * @return static
      *
@@ -473,7 +490,7 @@ class BroadcastEvent extends BaseType implements EventContract, PublicationEvent
     /**
      * An organizer of an Event.
      *
-     * @param \Spatie\SchemaOrg\Contracts\OrganizationContract|\Spatie\SchemaOrg\Contracts\OrganizationContract[]|\Spatie\SchemaOrg\Contracts\PersonContract|\Spatie\SchemaOrg\Contracts\PersonContract[] $organizer
+     * @param OrganizationContract|OrganizationContract[]|PersonContract|PersonContract[] $organizer
      *
      * @return static
      *
@@ -488,7 +505,7 @@ class BroadcastEvent extends BaseType implements EventContract, PublicationEvent
      * A performer at the event&#x2014;for example, a presenter, musician,
      * musical group or actor.
      *
-     * @param \Spatie\SchemaOrg\Contracts\OrganizationContract|\Spatie\SchemaOrg\Contracts\OrganizationContract[]|\Spatie\SchemaOrg\Contracts\PersonContract|\Spatie\SchemaOrg\Contracts\PersonContract[] $performer
+     * @param OrganizationContract|OrganizationContract[]|PersonContract|PersonContract[] $performer
      *
      * @return static
      *
@@ -503,7 +520,7 @@ class BroadcastEvent extends BaseType implements EventContract, PublicationEvent
      * The main performer or performers of the event&#x2014;for example, a
      * presenter, musician, or actor.
      *
-     * @param \Spatie\SchemaOrg\Contracts\OrganizationContract|\Spatie\SchemaOrg\Contracts\OrganizationContract[]|\Spatie\SchemaOrg\Contracts\PersonContract|\Spatie\SchemaOrg\Contracts\PersonContract[] $performers
+     * @param OrganizationContract|OrganizationContract[]|PersonContract|PersonContract[] $performers
      *
      * @return static
      *
@@ -518,7 +535,7 @@ class BroadcastEvent extends BaseType implements EventContract, PublicationEvent
      * Indicates a potential Action, which describes an idealized action in
      * which this thing would play an 'object' role.
      *
-     * @param \Spatie\SchemaOrg\Contracts\ActionContract|\Spatie\SchemaOrg\Contracts\ActionContract[] $potentialAction
+     * @param ActionContract|ActionContract[] $potentialAction
      *
      * @return static
      *
@@ -550,7 +567,7 @@ class BroadcastEvent extends BaseType implements EventContract, PublicationEvent
     /**
      * A broadcast service associated with the publication event.
      *
-     * @param \Spatie\SchemaOrg\Contracts\BroadcastServiceContract|\Spatie\SchemaOrg\Contracts\BroadcastServiceContract[] $publishedOn
+     * @param BroadcastServiceContract|BroadcastServiceContract[] $publishedOn
      *
      * @return static
      *
@@ -564,7 +581,7 @@ class BroadcastEvent extends BaseType implements EventContract, PublicationEvent
     /**
      * The CreativeWork that captured all or part of this Event.
      *
-     * @param \Spatie\SchemaOrg\Contracts\CreativeWorkContract|\Spatie\SchemaOrg\Contracts\CreativeWorkContract[] $recordedIn
+     * @param CreativeWorkContract|CreativeWorkContract[] $recordedIn
      *
      * @return static
      *
@@ -592,7 +609,7 @@ class BroadcastEvent extends BaseType implements EventContract, PublicationEvent
     /**
      * A review of the item.
      *
-     * @param \Spatie\SchemaOrg\Contracts\ReviewContract|\Spatie\SchemaOrg\Contracts\ReviewContract[] $review
+     * @param ReviewContract|ReviewContract[] $review
      *
      * @return static
      *
@@ -624,7 +641,7 @@ class BroadcastEvent extends BaseType implements EventContract, PublicationEvent
      * or financial contribution. e.g. a sponsor of a Medical Study or a
      * corporate sponsor of an event.
      *
-     * @param \Spatie\SchemaOrg\Contracts\OrganizationContract|\Spatie\SchemaOrg\Contracts\OrganizationContract[]|\Spatie\SchemaOrg\Contracts\PersonContract|\Spatie\SchemaOrg\Contracts\PersonContract[] $sponsor
+     * @param OrganizationContract|OrganizationContract[]|PersonContract|PersonContract[] $sponsor
      *
      * @return static
      *
@@ -655,7 +672,7 @@ class BroadcastEvent extends BaseType implements EventContract, PublicationEvent
      * includes many presentations, each of which is a subEvent of the
      * conference.
      *
-     * @param \Spatie\SchemaOrg\Contracts\EventContract|\Spatie\SchemaOrg\Contracts\EventContract[] $subEvent
+     * @param EventContract|EventContract[] $subEvent
      *
      * @return static
      *
@@ -670,7 +687,7 @@ class BroadcastEvent extends BaseType implements EventContract, PublicationEvent
      * Events that are a part of this event. For example, a conference event
      * includes many presentations, each subEvents of the conference.
      *
-     * @param \Spatie\SchemaOrg\Contracts\EventContract|\Spatie\SchemaOrg\Contracts\EventContract[] $subEvents
+     * @param EventContract|EventContract[] $subEvents
      *
      * @return static
      *
@@ -684,7 +701,7 @@ class BroadcastEvent extends BaseType implements EventContract, PublicationEvent
     /**
      * A CreativeWork or Event about this Thing.
      *
-     * @param \Spatie\SchemaOrg\Contracts\CreativeWorkContract|\Spatie\SchemaOrg\Contracts\CreativeWorkContract[]|\Spatie\SchemaOrg\Contracts\EventContract|\Spatie\SchemaOrg\Contracts\EventContract[] $subjectOf
+     * @param CreativeWorkContract|CreativeWorkContract[]|EventContract|EventContract[] $subjectOf
      *
      * @return static
      *
@@ -700,7 +717,7 @@ class BroadcastEvent extends BaseType implements EventContract, PublicationEvent
      * individual music performances might each have a music festival as their
      * superEvent.
      *
-     * @param \Spatie\SchemaOrg\Contracts\EventContract|\Spatie\SchemaOrg\Contracts\EventContract[] $superEvent
+     * @param EventContract|EventContract[] $superEvent
      *
      * @return static
      *
@@ -716,7 +733,7 @@ class BroadcastEvent extends BaseType implements EventContract, PublicationEvent
      * regional differences and technical requirements of a target market, or
      * that translates during some event.
      *
-     * @param \Spatie\SchemaOrg\Contracts\OrganizationContract|\Spatie\SchemaOrg\Contracts\OrganizationContract[]|\Spatie\SchemaOrg\Contracts\PersonContract|\Spatie\SchemaOrg\Contracts\PersonContract[] $translator
+     * @param OrganizationContract|OrganizationContract[]|PersonContract|PersonContract[] $translator
      *
      * @return static
      *
@@ -775,7 +792,7 @@ class BroadcastEvent extends BaseType implements EventContract, PublicationEvent
      *        Specific subproperties are available for workPerformed (e.g. a
      * play), or a workPresented (a Movie at a ScreeningEvent).
      *
-     * @param \Spatie\SchemaOrg\Contracts\CreativeWorkContract|\Spatie\SchemaOrg\Contracts\CreativeWorkContract[] $workFeatured
+     * @param CreativeWorkContract|CreativeWorkContract[] $workFeatured
      *
      * @return static
      *
@@ -790,7 +807,7 @@ class BroadcastEvent extends BaseType implements EventContract, PublicationEvent
      * A work performed in some event, for example a play performed in a
      * TheaterEvent.
      *
-     * @param \Spatie\SchemaOrg\Contracts\CreativeWorkContract|\Spatie\SchemaOrg\Contracts\CreativeWorkContract[] $workPerformed
+     * @param CreativeWorkContract|CreativeWorkContract[] $workPerformed
      *
      * @return static
      *

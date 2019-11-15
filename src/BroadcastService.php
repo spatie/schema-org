@@ -2,8 +2,31 @@
 
 namespace Spatie\SchemaOrg;
 
+use \Spatie\SchemaOrg\Contracts\ActionContract;
+use \Spatie\SchemaOrg\Contracts\AdministrativeAreaContract;
+use \Spatie\SchemaOrg\Contracts\AggregateRatingContract;
+use \Spatie\SchemaOrg\Contracts\AudienceContract;
+use \Spatie\SchemaOrg\Contracts\BrandContract;
+use \Spatie\SchemaOrg\Contracts\BroadcastChannelContract;
+use \Spatie\SchemaOrg\Contracts\BroadcastFrequencySpecificationContract;
+use \Spatie\SchemaOrg\Contracts\BroadcastServiceContract;
+use \Spatie\SchemaOrg\Contracts\CreativeWorkContract;
+use \Spatie\SchemaOrg\Contracts\DemandContract;
+use \Spatie\SchemaOrg\Contracts\EventContract;
+use \Spatie\SchemaOrg\Contracts\GeoShapeContract;
+use \Spatie\SchemaOrg\Contracts\ImageObjectContract;
 use \Spatie\SchemaOrg\Contracts\IntangibleContract;
+use \Spatie\SchemaOrg\Contracts\OfferContract;
+use \Spatie\SchemaOrg\Contracts\OfferCatalogContract;
+use \Spatie\SchemaOrg\Contracts\OpeningHoursSpecificationContract;
+use \Spatie\SchemaOrg\Contracts\OrganizationContract;
+use \Spatie\SchemaOrg\Contracts\PersonContract;
+use \Spatie\SchemaOrg\Contracts\PlaceContract;
+use \Spatie\SchemaOrg\Contracts\ProductContract;
+use \Spatie\SchemaOrg\Contracts\PropertyValueContract;
+use \Spatie\SchemaOrg\Contracts\ReviewContract;
 use \Spatie\SchemaOrg\Contracts\ServiceContract;
+use \Spatie\SchemaOrg\Contracts\ServiceChannelContract;
 use \Spatie\SchemaOrg\Contracts\ThingContract;
 
 /**
@@ -38,7 +61,7 @@ class BroadcastService extends BaseType implements IntangibleContract, ServiceCo
      * The overall rating, based on a collection of reviews or ratings, of the
      * item.
      *
-     * @param \Spatie\SchemaOrg\Contracts\AggregateRatingContract|\Spatie\SchemaOrg\Contracts\AggregateRatingContract[] $aggregateRating
+     * @param AggregateRatingContract|AggregateRatingContract[] $aggregateRating
      *
      * @return static
      *
@@ -66,7 +89,7 @@ class BroadcastService extends BaseType implements IntangibleContract, ServiceCo
     /**
      * The area within which users can expect to reach the broadcast service.
      *
-     * @param \Spatie\SchemaOrg\Contracts\PlaceContract|\Spatie\SchemaOrg\Contracts\PlaceContract[] $area
+     * @param PlaceContract|PlaceContract[] $area
      *
      * @return static
      *
@@ -80,7 +103,7 @@ class BroadcastService extends BaseType implements IntangibleContract, ServiceCo
     /**
      * The geographic area where a service or offered item is provided.
      *
-     * @param \Spatie\SchemaOrg\Contracts\AdministrativeAreaContract|\Spatie\SchemaOrg\Contracts\AdministrativeAreaContract[]|\Spatie\SchemaOrg\Contracts\GeoShapeContract|\Spatie\SchemaOrg\Contracts\GeoShapeContract[]|\Spatie\SchemaOrg\Contracts\PlaceContract|\Spatie\SchemaOrg\Contracts\PlaceContract[]|string|string[] $areaServed
+     * @param AdministrativeAreaContract|AdministrativeAreaContract[]|GeoShapeContract|GeoShapeContract[]|PlaceContract|PlaceContract[]|string|string[] $areaServed
      *
      * @return static
      *
@@ -94,7 +117,7 @@ class BroadcastService extends BaseType implements IntangibleContract, ServiceCo
     /**
      * An intended audience, i.e. a group for whom something was created.
      *
-     * @param \Spatie\SchemaOrg\Contracts\AudienceContract|\Spatie\SchemaOrg\Contracts\AudienceContract[] $audience
+     * @param AudienceContract|AudienceContract[] $audience
      *
      * @return static
      *
@@ -109,7 +132,7 @@ class BroadcastService extends BaseType implements IntangibleContract, ServiceCo
      * A means of accessing the service (e.g. a phone bank, a web site, a
      * location, etc.).
      *
-     * @param \Spatie\SchemaOrg\Contracts\ServiceChannelContract|\Spatie\SchemaOrg\Contracts\ServiceChannelContract[] $availableChannel
+     * @param ServiceChannelContract|ServiceChannelContract[] $availableChannel
      *
      * @return static
      *
@@ -138,7 +161,7 @@ class BroadcastService extends BaseType implements IntangibleContract, ServiceCo
      * The brand(s) associated with a product or service, or the brand(s)
      * maintained by an organization or business person.
      *
-     * @param \Spatie\SchemaOrg\Contracts\BrandContract|\Spatie\SchemaOrg\Contracts\BrandContract[]|\Spatie\SchemaOrg\Contracts\OrganizationContract|\Spatie\SchemaOrg\Contracts\OrganizationContract[] $brand
+     * @param BrandContract|BrandContract[]|OrganizationContract|OrganizationContract[] $brand
      *
      * @return static
      *
@@ -152,7 +175,7 @@ class BroadcastService extends BaseType implements IntangibleContract, ServiceCo
     /**
      * The media network(s) whose content is broadcast on this station.
      *
-     * @param \Spatie\SchemaOrg\Contracts\OrganizationContract|\Spatie\SchemaOrg\Contracts\OrganizationContract[] $broadcastAffiliateOf
+     * @param OrganizationContract|OrganizationContract[] $broadcastAffiliateOf
      *
      * @return static
      *
@@ -183,7 +206,7 @@ class BroadcastService extends BaseType implements IntangibleContract, ServiceCo
      * ranges e.g. 87-99. In addition a shortcut idiom is supported for
      * frequences of AM and FM radio channels, e.g. "87 FM".
      *
-     * @param \Spatie\SchemaOrg\Contracts\BroadcastFrequencySpecificationContract|\Spatie\SchemaOrg\Contracts\BroadcastFrequencySpecificationContract[]|string|string[] $broadcastFrequency
+     * @param BroadcastFrequencySpecificationContract|BroadcastFrequencySpecificationContract[]|string|string[] $broadcastFrequency
      *
      * @return static
      *
@@ -212,7 +235,7 @@ class BroadcastService extends BaseType implements IntangibleContract, ServiceCo
     /**
      * The organization owning or operating the broadcast service.
      *
-     * @param \Spatie\SchemaOrg\Contracts\OrganizationContract|\Spatie\SchemaOrg\Contracts\OrganizationContract[] $broadcaster
+     * @param OrganizationContract|OrganizationContract[] $broadcaster
      *
      * @return static
      *
@@ -229,7 +252,7 @@ class BroadcastService extends BaseType implements IntangibleContract, ServiceCo
      * service involved in an exchange.  If it is not clear whether an entity is
      * a broker, seller, or buyer, the latter two terms are preferred.
      *
-     * @param \Spatie\SchemaOrg\Contracts\OrganizationContract|\Spatie\SchemaOrg\Contracts\OrganizationContract[]|\Spatie\SchemaOrg\Contracts\PersonContract|\Spatie\SchemaOrg\Contracts\PersonContract[] $broker
+     * @param OrganizationContract|OrganizationContract[]|PersonContract|PersonContract[] $broker
      *
      * @return static
      *
@@ -244,7 +267,7 @@ class BroadcastService extends BaseType implements IntangibleContract, ServiceCo
      * A category for the item. Greater signs or slashes can be used to
      * informally indicate a category hierarchy.
      *
-     * @param \Spatie\SchemaOrg\Contracts\ThingContract|\Spatie\SchemaOrg\Contracts\ThingContract[]|string|string[] $category
+     * @param ThingContract|ThingContract[]|string|string[] $category
      *
      * @return static
      *
@@ -289,7 +312,7 @@ class BroadcastService extends BaseType implements IntangibleContract, ServiceCo
     /**
      * A broadcast channel of a broadcast service.
      *
-     * @param \Spatie\SchemaOrg\Contracts\BroadcastChannelContract|\Spatie\SchemaOrg\Contracts\BroadcastChannelContract[] $hasBroadcastChannel
+     * @param BroadcastChannelContract|BroadcastChannelContract[] $hasBroadcastChannel
      *
      * @return static
      *
@@ -304,7 +327,7 @@ class BroadcastService extends BaseType implements IntangibleContract, ServiceCo
      * Indicates an OfferCatalog listing for this Organization, Person, or
      * Service.
      *
-     * @param \Spatie\SchemaOrg\Contracts\OfferCatalogContract|\Spatie\SchemaOrg\Contracts\OfferCatalogContract[] $hasOfferCatalog
+     * @param OfferCatalogContract|OfferCatalogContract[] $hasOfferCatalog
      *
      * @return static
      *
@@ -318,7 +341,7 @@ class BroadcastService extends BaseType implements IntangibleContract, ServiceCo
     /**
      * The hours during which this service or contact is available.
      *
-     * @param \Spatie\SchemaOrg\Contracts\OpeningHoursSpecificationContract|\Spatie\SchemaOrg\Contracts\OpeningHoursSpecificationContract[] $hoursAvailable
+     * @param OpeningHoursSpecificationContract|OpeningHoursSpecificationContract[] $hoursAvailable
      *
      * @return static
      *
@@ -336,7 +359,7 @@ class BroadcastService extends BaseType implements IntangibleContract, ServiceCo
      * strings or as URL (URI) links. See [background
      * notes](/docs/datamodel.html#identifierBg) for more details.
      *
-     * @param \Spatie\SchemaOrg\Contracts\PropertyValueContract|\Spatie\SchemaOrg\Contracts\PropertyValueContract[]|string|string[] $identifier
+     * @param PropertyValueContract|PropertyValueContract[]|string|string[] $identifier
      *
      * @return static
      *
@@ -351,7 +374,7 @@ class BroadcastService extends BaseType implements IntangibleContract, ServiceCo
      * An image of the item. This can be a [[URL]] or a fully described
      * [[ImageObject]].
      *
-     * @param \Spatie\SchemaOrg\Contracts\ImageObjectContract|\Spatie\SchemaOrg\Contracts\ImageObjectContract[]|string|string[] $image
+     * @param ImageObjectContract|ImageObjectContract[]|string|string[] $image
      *
      * @return static
      *
@@ -365,7 +388,7 @@ class BroadcastService extends BaseType implements IntangibleContract, ServiceCo
     /**
      * A pointer to another, somehow related product (or multiple products).
      *
-     * @param \Spatie\SchemaOrg\Contracts\ProductContract|\Spatie\SchemaOrg\Contracts\ProductContract[]|\Spatie\SchemaOrg\Contracts\ServiceContract|\Spatie\SchemaOrg\Contracts\ServiceContract[] $isRelatedTo
+     * @param ProductContract|ProductContract[]|ServiceContract|ServiceContract[] $isRelatedTo
      *
      * @return static
      *
@@ -380,7 +403,7 @@ class BroadcastService extends BaseType implements IntangibleContract, ServiceCo
      * A pointer to another, functionally similar product (or multiple
      * products).
      *
-     * @param \Spatie\SchemaOrg\Contracts\ProductContract|\Spatie\SchemaOrg\Contracts\ProductContract[]|\Spatie\SchemaOrg\Contracts\ServiceContract|\Spatie\SchemaOrg\Contracts\ServiceContract[] $isSimilarTo
+     * @param ProductContract|ProductContract[]|ServiceContract|ServiceContract[] $isSimilarTo
      *
      * @return static
      *
@@ -394,7 +417,7 @@ class BroadcastService extends BaseType implements IntangibleContract, ServiceCo
     /**
      * An associated logo.
      *
-     * @param \Spatie\SchemaOrg\Contracts\ImageObjectContract|\Spatie\SchemaOrg\Contracts\ImageObjectContract[]|string|string[] $logo
+     * @param ImageObjectContract|ImageObjectContract[]|string|string[] $logo
      *
      * @return static
      *
@@ -410,7 +433,7 @@ class BroadcastService extends BaseType implements IntangibleContract, ServiceCo
      * entity being described. See [background
      * notes](/docs/datamodel.html#mainEntityBackground) for details.
      *
-     * @param \Spatie\SchemaOrg\Contracts\CreativeWorkContract|\Spatie\SchemaOrg\Contracts\CreativeWorkContract[]|string|string[] $mainEntityOfPage
+     * @param CreativeWorkContract|CreativeWorkContract[]|string|string[] $mainEntityOfPage
      *
      * @return static
      *
@@ -445,7 +468,7 @@ class BroadcastService extends BaseType implements IntangibleContract, ServiceCo
      * second type, such as Product or a subtype of Product, can clarify the
      * nature of the offer.
      *
-     * @param \Spatie\SchemaOrg\Contracts\DemandContract|\Spatie\SchemaOrg\Contracts\DemandContract[]|\Spatie\SchemaOrg\Contracts\OfferContract|\Spatie\SchemaOrg\Contracts\OfferContract[] $offers
+     * @param DemandContract|DemandContract[]|OfferContract|OfferContract[] $offers
      *
      * @return static
      *
@@ -460,7 +483,7 @@ class BroadcastService extends BaseType implements IntangibleContract, ServiceCo
      * A broadcast service to which the broadcast service may belong to such as
      * regional variations of a national channel.
      *
-     * @param \Spatie\SchemaOrg\Contracts\BroadcastServiceContract|\Spatie\SchemaOrg\Contracts\BroadcastServiceContract[] $parentService
+     * @param BroadcastServiceContract|BroadcastServiceContract[] $parentService
      *
      * @return static
      *
@@ -475,7 +498,7 @@ class BroadcastService extends BaseType implements IntangibleContract, ServiceCo
      * Indicates a potential Action, which describes an idealized action in
      * which this thing would play an 'object' role.
      *
-     * @param \Spatie\SchemaOrg\Contracts\ActionContract|\Spatie\SchemaOrg\Contracts\ActionContract[] $potentialAction
+     * @param ActionContract|ActionContract[] $potentialAction
      *
      * @return static
      *
@@ -490,7 +513,7 @@ class BroadcastService extends BaseType implements IntangibleContract, ServiceCo
      * The tangible thing generated by the service, e.g. a passport, permit,
      * etc.
      *
-     * @param \Spatie\SchemaOrg\Contracts\ThingContract|\Spatie\SchemaOrg\Contracts\ThingContract[] $produces
+     * @param ThingContract|ThingContract[] $produces
      *
      * @return static
      *
@@ -506,7 +529,7 @@ class BroadcastService extends BaseType implements IntangibleContract, ServiceCo
      * producer. Another party (a seller) may offer those services or goods on
      * behalf of the provider. A provider may also serve as the seller.
      *
-     * @param \Spatie\SchemaOrg\Contracts\OrganizationContract|\Spatie\SchemaOrg\Contracts\OrganizationContract[]|\Spatie\SchemaOrg\Contracts\PersonContract|\Spatie\SchemaOrg\Contracts\PersonContract[] $provider
+     * @param OrganizationContract|OrganizationContract[]|PersonContract|PersonContract[] $provider
      *
      * @return static
      *
@@ -534,7 +557,7 @@ class BroadcastService extends BaseType implements IntangibleContract, ServiceCo
     /**
      * A review of the item.
      *
-     * @param \Spatie\SchemaOrg\Contracts\ReviewContract|\Spatie\SchemaOrg\Contracts\ReviewContract[] $review
+     * @param ReviewContract|ReviewContract[] $review
      *
      * @return static
      *
@@ -564,7 +587,7 @@ class BroadcastService extends BaseType implements IntangibleContract, ServiceCo
     /**
      * The geographic area where the service is provided.
      *
-     * @param \Spatie\SchemaOrg\Contracts\AdministrativeAreaContract|\Spatie\SchemaOrg\Contracts\AdministrativeAreaContract[]|\Spatie\SchemaOrg\Contracts\GeoShapeContract|\Spatie\SchemaOrg\Contracts\GeoShapeContract[]|\Spatie\SchemaOrg\Contracts\PlaceContract|\Spatie\SchemaOrg\Contracts\PlaceContract[] $serviceArea
+     * @param AdministrativeAreaContract|AdministrativeAreaContract[]|GeoShapeContract|GeoShapeContract[]|PlaceContract|PlaceContract[] $serviceArea
      *
      * @return static
      *
@@ -578,7 +601,7 @@ class BroadcastService extends BaseType implements IntangibleContract, ServiceCo
     /**
      * The audience eligible for this service.
      *
-     * @param \Spatie\SchemaOrg\Contracts\AudienceContract|\Spatie\SchemaOrg\Contracts\AudienceContract[] $serviceAudience
+     * @param AudienceContract|AudienceContract[] $serviceAudience
      *
      * @return static
      *
@@ -593,7 +616,7 @@ class BroadcastService extends BaseType implements IntangibleContract, ServiceCo
      * The tangible thing generated by the service, e.g. a passport, permit,
      * etc.
      *
-     * @param \Spatie\SchemaOrg\Contracts\ThingContract|\Spatie\SchemaOrg\Contracts\ThingContract[] $serviceOutput
+     * @param ThingContract|ThingContract[] $serviceOutput
      *
      * @return static
      *
@@ -636,7 +659,7 @@ class BroadcastService extends BaseType implements IntangibleContract, ServiceCo
     /**
      * A CreativeWork or Event about this Thing.
      *
-     * @param \Spatie\SchemaOrg\Contracts\CreativeWorkContract|\Spatie\SchemaOrg\Contracts\CreativeWorkContract[]|\Spatie\SchemaOrg\Contracts\EventContract|\Spatie\SchemaOrg\Contracts\EventContract[] $subjectOf
+     * @param CreativeWorkContract|CreativeWorkContract[]|EventContract|EventContract[] $subjectOf
      *
      * @return static
      *

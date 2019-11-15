@@ -2,9 +2,21 @@
 
 namespace Spatie\SchemaOrg;
 
+use \Spatie\SchemaOrg\Contracts\ActionContract;
+use \Spatie\SchemaOrg\Contracts\CreativeWorkContract;
+use \Spatie\SchemaOrg\Contracts\EventContract;
+use \Spatie\SchemaOrg\Contracts\ImageObjectContract;
 use \Spatie\SchemaOrg\Contracts\IntangibleContract;
+use \Spatie\SchemaOrg\Contracts\OrganizationContract;
+use \Spatie\SchemaOrg\Contracts\PersonContract;
+use \Spatie\SchemaOrg\Contracts\PriceSpecificationContract;
+use \Spatie\SchemaOrg\Contracts\ProgramMembershipContract;
+use \Spatie\SchemaOrg\Contracts\PropertyValueContract;
+use \Spatie\SchemaOrg\Contracts\QuantitativeValueContract;
 use \Spatie\SchemaOrg\Contracts\ReservationContract;
+use \Spatie\SchemaOrg\Contracts\ReservationStatusTypeContract;
 use \Spatie\SchemaOrg\Contracts\ThingContract;
+use \Spatie\SchemaOrg\Contracts\TicketContract;
 
 /**
  * A reservation to dine at a food-related business.
@@ -55,7 +67,7 @@ class FoodEstablishmentReservation extends BaseType implements IntangibleContrac
      * 'bookingAgent' is an out-dated term indicating a 'broker' that serves as
      * a booking agent.
      *
-     * @param \Spatie\SchemaOrg\Contracts\OrganizationContract|\Spatie\SchemaOrg\Contracts\OrganizationContract[]|\Spatie\SchemaOrg\Contracts\PersonContract|\Spatie\SchemaOrg\Contracts\PersonContract[] $bookingAgent
+     * @param OrganizationContract|OrganizationContract[]|PersonContract|PersonContract[] $bookingAgent
      *
      * @return static
      *
@@ -86,7 +98,7 @@ class FoodEstablishmentReservation extends BaseType implements IntangibleContrac
      * service involved in an exchange.  If it is not clear whether an entity is
      * a broker, seller, or buyer, the latter two terms are preferred.
      *
-     * @param \Spatie\SchemaOrg\Contracts\OrganizationContract|\Spatie\SchemaOrg\Contracts\OrganizationContract[]|\Spatie\SchemaOrg\Contracts\PersonContract|\Spatie\SchemaOrg\Contracts\PersonContract[] $broker
+     * @param OrganizationContract|OrganizationContract[]|PersonContract|PersonContract[] $broker
      *
      * @return static
      *
@@ -158,7 +170,7 @@ class FoodEstablishmentReservation extends BaseType implements IntangibleContrac
      * strings or as URL (URI) links. See [background
      * notes](/docs/datamodel.html#identifierBg) for more details.
      *
-     * @param \Spatie\SchemaOrg\Contracts\PropertyValueContract|\Spatie\SchemaOrg\Contracts\PropertyValueContract[]|string|string[] $identifier
+     * @param PropertyValueContract|PropertyValueContract[]|string|string[] $identifier
      *
      * @return static
      *
@@ -173,7 +185,7 @@ class FoodEstablishmentReservation extends BaseType implements IntangibleContrac
      * An image of the item. This can be a [[URL]] or a fully described
      * [[ImageObject]].
      *
-     * @param \Spatie\SchemaOrg\Contracts\ImageObjectContract|\Spatie\SchemaOrg\Contracts\ImageObjectContract[]|string|string[] $image
+     * @param ImageObjectContract|ImageObjectContract[]|string|string[] $image
      *
      * @return static
      *
@@ -189,7 +201,7 @@ class FoodEstablishmentReservation extends BaseType implements IntangibleContrac
      * entity being described. See [background
      * notes](/docs/datamodel.html#mainEntityBackground) for details.
      *
-     * @param \Spatie\SchemaOrg\Contracts\CreativeWorkContract|\Spatie\SchemaOrg\Contracts\CreativeWorkContract[]|string|string[] $mainEntityOfPage
+     * @param CreativeWorkContract|CreativeWorkContract[]|string|string[] $mainEntityOfPage
      *
      * @return static
      *
@@ -231,7 +243,7 @@ class FoodEstablishmentReservation extends BaseType implements IntangibleContrac
     /**
      * Number of people the reservation should accommodate.
      *
-     * @param \Spatie\SchemaOrg\Contracts\QuantitativeValueContract|\Spatie\SchemaOrg\Contracts\QuantitativeValueContract[]|int|int[] $partySize
+     * @param QuantitativeValueContract|QuantitativeValueContract[]|int|int[] $partySize
      *
      * @return static
      *
@@ -246,7 +258,7 @@ class FoodEstablishmentReservation extends BaseType implements IntangibleContrac
      * Indicates a potential Action, which describes an idealized action in
      * which this thing would play an 'object' role.
      *
-     * @param \Spatie\SchemaOrg\Contracts\ActionContract|\Spatie\SchemaOrg\Contracts\ActionContract[] $potentialAction
+     * @param ActionContract|ActionContract[] $potentialAction
      *
      * @return static
      *
@@ -284,7 +296,7 @@ class FoodEstablishmentReservation extends BaseType implements IntangibleContrac
      * Any membership in a frequent flyer, hotel loyalty program, etc. being
      * applied to the reservation.
      *
-     * @param \Spatie\SchemaOrg\Contracts\ProgramMembershipContract|\Spatie\SchemaOrg\Contracts\ProgramMembershipContract[] $programMembershipUsed
+     * @param ProgramMembershipContract|ProgramMembershipContract[] $programMembershipUsed
      *
      * @return static
      *
@@ -300,7 +312,7 @@ class FoodEstablishmentReservation extends BaseType implements IntangibleContrac
      * producer. Another party (a seller) may offer those services or goods on
      * behalf of the provider. A provider may also serve as the seller.
      *
-     * @param \Spatie\SchemaOrg\Contracts\OrganizationContract|\Spatie\SchemaOrg\Contracts\OrganizationContract[]|\Spatie\SchemaOrg\Contracts\PersonContract|\Spatie\SchemaOrg\Contracts\PersonContract[] $provider
+     * @param OrganizationContract|OrganizationContract[]|PersonContract|PersonContract[] $provider
      *
      * @return static
      *
@@ -314,7 +326,7 @@ class FoodEstablishmentReservation extends BaseType implements IntangibleContrac
     /**
      * The thing -- flight, event, restaurant,etc. being reserved.
      *
-     * @param \Spatie\SchemaOrg\Contracts\ThingContract|\Spatie\SchemaOrg\Contracts\ThingContract[] $reservationFor
+     * @param ThingContract|ThingContract[] $reservationFor
      *
      * @return static
      *
@@ -342,7 +354,7 @@ class FoodEstablishmentReservation extends BaseType implements IntangibleContrac
     /**
      * The current status of the reservation.
      *
-     * @param \Spatie\SchemaOrg\Contracts\ReservationStatusTypeContract|\Spatie\SchemaOrg\Contracts\ReservationStatusTypeContract[] $reservationStatus
+     * @param ReservationStatusTypeContract|ReservationStatusTypeContract[] $reservationStatus
      *
      * @return static
      *
@@ -356,7 +368,7 @@ class FoodEstablishmentReservation extends BaseType implements IntangibleContrac
     /**
      * A ticket associated with the reservation.
      *
-     * @param \Spatie\SchemaOrg\Contracts\TicketContract|\Spatie\SchemaOrg\Contracts\TicketContract[] $reservedTicket
+     * @param TicketContract|TicketContract[] $reservedTicket
      *
      * @return static
      *
@@ -409,7 +421,7 @@ class FoodEstablishmentReservation extends BaseType implements IntangibleContrac
     /**
      * A CreativeWork or Event about this Thing.
      *
-     * @param \Spatie\SchemaOrg\Contracts\CreativeWorkContract|\Spatie\SchemaOrg\Contracts\CreativeWorkContract[]|\Spatie\SchemaOrg\Contracts\EventContract|\Spatie\SchemaOrg\Contracts\EventContract[] $subjectOf
+     * @param CreativeWorkContract|CreativeWorkContract[]|EventContract|EventContract[] $subjectOf
      *
      * @return static
      *
@@ -431,7 +443,7 @@ class FoodEstablishmentReservation extends BaseType implements IntangibleContrac
      * * Use '.' (Unicode 'FULL STOP' (U+002E)) rather than ',' to indicate a
      * decimal point. Avoid using these symbols as a readability separator.
      *
-     * @param \Spatie\SchemaOrg\Contracts\PriceSpecificationContract|\Spatie\SchemaOrg\Contracts\PriceSpecificationContract[]|float|float[]|int|int[]|string|string[] $totalPrice
+     * @param PriceSpecificationContract|PriceSpecificationContract[]|float|float[]|int|int[]|string|string[] $totalPrice
      *
      * @return static
      *
@@ -445,7 +457,7 @@ class FoodEstablishmentReservation extends BaseType implements IntangibleContrac
     /**
      * The person or organization the reservation or ticket is for.
      *
-     * @param \Spatie\SchemaOrg\Contracts\OrganizationContract|\Spatie\SchemaOrg\Contracts\OrganizationContract[]|\Spatie\SchemaOrg\Contracts\PersonContract|\Spatie\SchemaOrg\Contracts\PersonContract[] $underName
+     * @param OrganizationContract|OrganizationContract[]|PersonContract|PersonContract[] $underName
      *
      * @return static
      *

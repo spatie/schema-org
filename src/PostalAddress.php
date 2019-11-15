@@ -2,8 +2,21 @@
 
 namespace Spatie\SchemaOrg;
 
+use \Spatie\SchemaOrg\Contracts\ActionContract;
+use \Spatie\SchemaOrg\Contracts\AdministrativeAreaContract;
 use \Spatie\SchemaOrg\Contracts\ContactPointContract;
+use \Spatie\SchemaOrg\Contracts\ContactPointOptionContract;
+use \Spatie\SchemaOrg\Contracts\CountryContract;
+use \Spatie\SchemaOrg\Contracts\CreativeWorkContract;
+use \Spatie\SchemaOrg\Contracts\EventContract;
+use \Spatie\SchemaOrg\Contracts\GeoShapeContract;
+use \Spatie\SchemaOrg\Contracts\ImageObjectContract;
 use \Spatie\SchemaOrg\Contracts\IntangibleContract;
+use \Spatie\SchemaOrg\Contracts\LanguageContract;
+use \Spatie\SchemaOrg\Contracts\OpeningHoursSpecificationContract;
+use \Spatie\SchemaOrg\Contracts\PlaceContract;
+use \Spatie\SchemaOrg\Contracts\ProductContract;
+use \Spatie\SchemaOrg\Contracts\PropertyValueContract;
 use \Spatie\SchemaOrg\Contracts\StructuredValueContract;
 use \Spatie\SchemaOrg\Contracts\ThingContract;
 
@@ -38,7 +51,7 @@ class PostalAddress extends BaseType implements ContactPointContract, Intangible
      * The country. For example, USA. You can also provide the two-letter [ISO
      * 3166-1 alpha-2 country code](http://en.wikipedia.org/wiki/ISO_3166-1).
      *
-     * @param \Spatie\SchemaOrg\Contracts\CountryContract|\Spatie\SchemaOrg\Contracts\CountryContract[]|string|string[] $addressCountry
+     * @param CountryContract|CountryContract[]|string|string[] $addressCountry
      *
      * @return static
      *
@@ -97,7 +110,7 @@ class PostalAddress extends BaseType implements ContactPointContract, Intangible
     /**
      * The geographic area where a service or offered item is provided.
      *
-     * @param \Spatie\SchemaOrg\Contracts\AdministrativeAreaContract|\Spatie\SchemaOrg\Contracts\AdministrativeAreaContract[]|\Spatie\SchemaOrg\Contracts\GeoShapeContract|\Spatie\SchemaOrg\Contracts\GeoShapeContract[]|\Spatie\SchemaOrg\Contracts\PlaceContract|\Spatie\SchemaOrg\Contracts\PlaceContract[]|string|string[] $areaServed
+     * @param AdministrativeAreaContract|AdministrativeAreaContract[]|GeoShapeContract|GeoShapeContract[]|PlaceContract|PlaceContract[]|string|string[] $areaServed
      *
      * @return static
      *
@@ -113,7 +126,7 @@ class PostalAddress extends BaseType implements ContactPointContract, Intangible
      * use one of the language codes from the [IETF BCP 47
      * standard](http://tools.ietf.org/html/bcp47). See also [[inLanguage]]
      *
-     * @param \Spatie\SchemaOrg\Contracts\LanguageContract|\Spatie\SchemaOrg\Contracts\LanguageContract[]|string|string[] $availableLanguage
+     * @param LanguageContract|LanguageContract[]|string|string[] $availableLanguage
      *
      * @return static
      *
@@ -128,7 +141,7 @@ class PostalAddress extends BaseType implements ContactPointContract, Intangible
      * An option available on this contact point (e.g. a toll-free number or
      * support for hearing-impaired callers).
      *
-     * @param \Spatie\SchemaOrg\Contracts\ContactPointOptionContract|\Spatie\SchemaOrg\Contracts\ContactPointOptionContract[] $contactOption
+     * @param ContactPointOptionContract|ContactPointOptionContract[] $contactOption
      *
      * @return static
      *
@@ -217,7 +230,7 @@ class PostalAddress extends BaseType implements ContactPointContract, Intangible
     /**
      * The hours during which this service or contact is available.
      *
-     * @param \Spatie\SchemaOrg\Contracts\OpeningHoursSpecificationContract|\Spatie\SchemaOrg\Contracts\OpeningHoursSpecificationContract[] $hoursAvailable
+     * @param OpeningHoursSpecificationContract|OpeningHoursSpecificationContract[] $hoursAvailable
      *
      * @return static
      *
@@ -235,7 +248,7 @@ class PostalAddress extends BaseType implements ContactPointContract, Intangible
      * strings or as URL (URI) links. See [background
      * notes](/docs/datamodel.html#identifierBg) for more details.
      *
-     * @param \Spatie\SchemaOrg\Contracts\PropertyValueContract|\Spatie\SchemaOrg\Contracts\PropertyValueContract[]|string|string[] $identifier
+     * @param PropertyValueContract|PropertyValueContract[]|string|string[] $identifier
      *
      * @return static
      *
@@ -250,7 +263,7 @@ class PostalAddress extends BaseType implements ContactPointContract, Intangible
      * An image of the item. This can be a [[URL]] or a fully described
      * [[ImageObject]].
      *
-     * @param \Spatie\SchemaOrg\Contracts\ImageObjectContract|\Spatie\SchemaOrg\Contracts\ImageObjectContract[]|string|string[] $image
+     * @param ImageObjectContract|ImageObjectContract[]|string|string[] $image
      *
      * @return static
      *
@@ -266,7 +279,7 @@ class PostalAddress extends BaseType implements ContactPointContract, Intangible
      * entity being described. See [background
      * notes](/docs/datamodel.html#mainEntityBackground) for details.
      *
-     * @param \Spatie\SchemaOrg\Contracts\CreativeWorkContract|\Spatie\SchemaOrg\Contracts\CreativeWorkContract[]|string|string[] $mainEntityOfPage
+     * @param CreativeWorkContract|CreativeWorkContract[]|string|string[] $mainEntityOfPage
      *
      * @return static
      *
@@ -323,7 +336,7 @@ class PostalAddress extends BaseType implements ContactPointContract, Intangible
      * Indicates a potential Action, which describes an idealized action in
      * which this thing would play an 'object' role.
      *
-     * @param \Spatie\SchemaOrg\Contracts\ActionContract|\Spatie\SchemaOrg\Contracts\ActionContract[] $potentialAction
+     * @param ActionContract|ActionContract[] $potentialAction
      *
      * @return static
      *
@@ -340,7 +353,7 @@ class PostalAddress extends BaseType implements ContactPointContract, Intangible
      * product or product line (e.g. "iPhone") or a general category of products
      * or services (e.g. "smartphones").
      *
-     * @param \Spatie\SchemaOrg\Contracts\ProductContract|\Spatie\SchemaOrg\Contracts\ProductContract[]|string|string[] $productSupported
+     * @param ProductContract|ProductContract[]|string|string[] $productSupported
      *
      * @return static
      *
@@ -370,7 +383,7 @@ class PostalAddress extends BaseType implements ContactPointContract, Intangible
     /**
      * The geographic area where the service is provided.
      *
-     * @param \Spatie\SchemaOrg\Contracts\AdministrativeAreaContract|\Spatie\SchemaOrg\Contracts\AdministrativeAreaContract[]|\Spatie\SchemaOrg\Contracts\GeoShapeContract|\Spatie\SchemaOrg\Contracts\GeoShapeContract[]|\Spatie\SchemaOrg\Contracts\PlaceContract|\Spatie\SchemaOrg\Contracts\PlaceContract[] $serviceArea
+     * @param AdministrativeAreaContract|AdministrativeAreaContract[]|GeoShapeContract|GeoShapeContract[]|PlaceContract|PlaceContract[] $serviceArea
      *
      * @return static
      *
@@ -398,7 +411,7 @@ class PostalAddress extends BaseType implements ContactPointContract, Intangible
     /**
      * A CreativeWork or Event about this Thing.
      *
-     * @param \Spatie\SchemaOrg\Contracts\CreativeWorkContract|\Spatie\SchemaOrg\Contracts\CreativeWorkContract[]|\Spatie\SchemaOrg\Contracts\EventContract|\Spatie\SchemaOrg\Contracts\EventContract[] $subjectOf
+     * @param CreativeWorkContract|CreativeWorkContract[]|EventContract|EventContract[] $subjectOf
      *
      * @return static
      *

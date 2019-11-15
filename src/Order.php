@@ -2,7 +2,23 @@
 
 namespace Spatie\SchemaOrg;
 
+use \Spatie\SchemaOrg\Contracts\ActionContract;
+use \Spatie\SchemaOrg\Contracts\CreativeWorkContract;
+use \Spatie\SchemaOrg\Contracts\EventContract;
+use \Spatie\SchemaOrg\Contracts\ImageObjectContract;
 use \Spatie\SchemaOrg\Contracts\IntangibleContract;
+use \Spatie\SchemaOrg\Contracts\InvoiceContract;
+use \Spatie\SchemaOrg\Contracts\OfferContract;
+use \Spatie\SchemaOrg\Contracts\OrderItemContract;
+use \Spatie\SchemaOrg\Contracts\OrderStatusContract;
+use \Spatie\SchemaOrg\Contracts\OrganizationContract;
+use \Spatie\SchemaOrg\Contracts\ParcelDeliveryContract;
+use \Spatie\SchemaOrg\Contracts\PaymentMethodContract;
+use \Spatie\SchemaOrg\Contracts\PersonContract;
+use \Spatie\SchemaOrg\Contracts\PostalAddressContract;
+use \Spatie\SchemaOrg\Contracts\ProductContract;
+use \Spatie\SchemaOrg\Contracts\PropertyValueContract;
+use \Spatie\SchemaOrg\Contracts\ServiceContract;
 use \Spatie\SchemaOrg\Contracts\ThingContract;
 
 /**
@@ -19,7 +35,7 @@ class Order extends BaseType implements IntangibleContract, ThingContract
      * The offer(s) -- e.g., product, quantity and price combinations --
      * included in the order.
      *
-     * @param \Spatie\SchemaOrg\Contracts\OfferContract|\Spatie\SchemaOrg\Contracts\OfferContract[] $acceptedOffer
+     * @param OfferContract|OfferContract[] $acceptedOffer
      *
      * @return static
      *
@@ -66,7 +82,7 @@ class Order extends BaseType implements IntangibleContract, ThingContract
     /**
      * The billing address for the order.
      *
-     * @param \Spatie\SchemaOrg\Contracts\PostalAddressContract|\Spatie\SchemaOrg\Contracts\PostalAddressContract[] $billingAddress
+     * @param PostalAddressContract|PostalAddressContract[] $billingAddress
      *
      * @return static
      *
@@ -83,7 +99,7 @@ class Order extends BaseType implements IntangibleContract, ThingContract
      * service involved in an exchange.  If it is not clear whether an entity is
      * a broker, seller, or buyer, the latter two terms are preferred.
      *
-     * @param \Spatie\SchemaOrg\Contracts\OrganizationContract|\Spatie\SchemaOrg\Contracts\OrganizationContract[]|\Spatie\SchemaOrg\Contracts\PersonContract|\Spatie\SchemaOrg\Contracts\PersonContract[] $broker
+     * @param OrganizationContract|OrganizationContract[]|PersonContract|PersonContract[] $broker
      *
      * @return static
      *
@@ -111,7 +127,7 @@ class Order extends BaseType implements IntangibleContract, ThingContract
     /**
      * Party placing the order or paying the invoice.
      *
-     * @param \Spatie\SchemaOrg\Contracts\OrganizationContract|\Spatie\SchemaOrg\Contracts\OrganizationContract[]|\Spatie\SchemaOrg\Contracts\PersonContract|\Spatie\SchemaOrg\Contracts\PersonContract[] $customer
+     * @param OrganizationContract|OrganizationContract[]|PersonContract|PersonContract[] $customer
      *
      * @return static
      *
@@ -210,7 +226,7 @@ class Order extends BaseType implements IntangibleContract, ThingContract
      * strings or as URL (URI) links. See [background
      * notes](/docs/datamodel.html#identifierBg) for more details.
      *
-     * @param \Spatie\SchemaOrg\Contracts\PropertyValueContract|\Spatie\SchemaOrg\Contracts\PropertyValueContract[]|string|string[] $identifier
+     * @param PropertyValueContract|PropertyValueContract[]|string|string[] $identifier
      *
      * @return static
      *
@@ -225,7 +241,7 @@ class Order extends BaseType implements IntangibleContract, ThingContract
      * An image of the item. This can be a [[URL]] or a fully described
      * [[ImageObject]].
      *
-     * @param \Spatie\SchemaOrg\Contracts\ImageObjectContract|\Spatie\SchemaOrg\Contracts\ImageObjectContract[]|string|string[] $image
+     * @param ImageObjectContract|ImageObjectContract[]|string|string[] $image
      *
      * @return static
      *
@@ -255,7 +271,7 @@ class Order extends BaseType implements IntangibleContract, ThingContract
      * entity being described. See [background
      * notes](/docs/datamodel.html#mainEntityBackground) for details.
      *
-     * @param \Spatie\SchemaOrg\Contracts\CreativeWorkContract|\Spatie\SchemaOrg\Contracts\CreativeWorkContract[]|string|string[] $mainEntityOfPage
+     * @param CreativeWorkContract|CreativeWorkContract[]|string|string[] $mainEntityOfPage
      *
      * @return static
      *
@@ -269,7 +285,7 @@ class Order extends BaseType implements IntangibleContract, ThingContract
     /**
      * 'merchant' is an out-dated term for 'seller'.
      *
-     * @param \Spatie\SchemaOrg\Contracts\OrganizationContract|\Spatie\SchemaOrg\Contracts\OrganizationContract[]|\Spatie\SchemaOrg\Contracts\PersonContract|\Spatie\SchemaOrg\Contracts\PersonContract[] $merchant
+     * @param OrganizationContract|OrganizationContract[]|PersonContract|PersonContract[] $merchant
      *
      * @return static
      *
@@ -311,7 +327,7 @@ class Order extends BaseType implements IntangibleContract, ThingContract
     /**
      * The delivery of the parcel related to this order or order item.
      *
-     * @param \Spatie\SchemaOrg\Contracts\ParcelDeliveryContract|\Spatie\SchemaOrg\Contracts\ParcelDeliveryContract[] $orderDelivery
+     * @param ParcelDeliveryContract|ParcelDeliveryContract[] $orderDelivery
      *
      * @return static
      *
@@ -339,7 +355,7 @@ class Order extends BaseType implements IntangibleContract, ThingContract
     /**
      * The current status of the order.
      *
-     * @param \Spatie\SchemaOrg\Contracts\OrderStatusContract|\Spatie\SchemaOrg\Contracts\OrderStatusContract[] $orderStatus
+     * @param OrderStatusContract|OrderStatusContract[] $orderStatus
      *
      * @return static
      *
@@ -353,7 +369,7 @@ class Order extends BaseType implements IntangibleContract, ThingContract
     /**
      * The item ordered.
      *
-     * @param \Spatie\SchemaOrg\Contracts\OrderItemContract|\Spatie\SchemaOrg\Contracts\OrderItemContract[]|\Spatie\SchemaOrg\Contracts\ProductContract|\Spatie\SchemaOrg\Contracts\ProductContract[]|\Spatie\SchemaOrg\Contracts\ServiceContract|\Spatie\SchemaOrg\Contracts\ServiceContract[] $orderedItem
+     * @param OrderItemContract|OrderItemContract[]|ProductContract|ProductContract[]|ServiceContract|ServiceContract[] $orderedItem
      *
      * @return static
      *
@@ -367,7 +383,7 @@ class Order extends BaseType implements IntangibleContract, ThingContract
     /**
      * The order is being paid as part of the referenced Invoice.
      *
-     * @param \Spatie\SchemaOrg\Contracts\InvoiceContract|\Spatie\SchemaOrg\Contracts\InvoiceContract[] $partOfInvoice
+     * @param InvoiceContract|InvoiceContract[] $partOfInvoice
      *
      * @return static
      *
@@ -409,7 +425,7 @@ class Order extends BaseType implements IntangibleContract, ThingContract
     /**
      * The name of the credit card or other method of payment for the order.
      *
-     * @param \Spatie\SchemaOrg\Contracts\PaymentMethodContract|\Spatie\SchemaOrg\Contracts\PaymentMethodContract[] $paymentMethod
+     * @param PaymentMethodContract|PaymentMethodContract[] $paymentMethod
      *
      * @return static
      *
@@ -453,7 +469,7 @@ class Order extends BaseType implements IntangibleContract, ThingContract
      * Indicates a potential Action, which describes an idealized action in
      * which this thing would play an 'object' role.
      *
-     * @param \Spatie\SchemaOrg\Contracts\ActionContract|\Spatie\SchemaOrg\Contracts\ActionContract[] $potentialAction
+     * @param ActionContract|ActionContract[] $potentialAction
      *
      * @return static
      *
@@ -484,7 +500,7 @@ class Order extends BaseType implements IntangibleContract, ThingContract
      * An entity which offers (sells / leases / lends / loans) the services /
      * goods.  A seller may also be a provider.
      *
-     * @param \Spatie\SchemaOrg\Contracts\OrganizationContract|\Spatie\SchemaOrg\Contracts\OrganizationContract[]|\Spatie\SchemaOrg\Contracts\PersonContract|\Spatie\SchemaOrg\Contracts\PersonContract[] $seller
+     * @param OrganizationContract|OrganizationContract[]|PersonContract|PersonContract[] $seller
      *
      * @return static
      *
@@ -498,7 +514,7 @@ class Order extends BaseType implements IntangibleContract, ThingContract
     /**
      * A CreativeWork or Event about this Thing.
      *
-     * @param \Spatie\SchemaOrg\Contracts\CreativeWorkContract|\Spatie\SchemaOrg\Contracts\CreativeWorkContract[]|\Spatie\SchemaOrg\Contracts\EventContract|\Spatie\SchemaOrg\Contracts\EventContract[] $subjectOf
+     * @param CreativeWorkContract|CreativeWorkContract[]|EventContract|EventContract[] $subjectOf
      *
      * @return static
      *

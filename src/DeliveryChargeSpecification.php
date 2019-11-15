@@ -2,8 +2,18 @@
 
 namespace Spatie\SchemaOrg;
 
+use \Spatie\SchemaOrg\Contracts\ActionContract;
+use \Spatie\SchemaOrg\Contracts\AdministrativeAreaContract;
+use \Spatie\SchemaOrg\Contracts\CreativeWorkContract;
+use \Spatie\SchemaOrg\Contracts\DeliveryMethodContract;
+use \Spatie\SchemaOrg\Contracts\EventContract;
+use \Spatie\SchemaOrg\Contracts\GeoShapeContract;
+use \Spatie\SchemaOrg\Contracts\ImageObjectContract;
 use \Spatie\SchemaOrg\Contracts\IntangibleContract;
+use \Spatie\SchemaOrg\Contracts\PlaceContract;
 use \Spatie\SchemaOrg\Contracts\PriceSpecificationContract;
+use \Spatie\SchemaOrg\Contracts\PropertyValueContract;
+use \Spatie\SchemaOrg\Contracts\QuantitativeValueContract;
 use \Spatie\SchemaOrg\Contracts\StructuredValueContract;
 use \Spatie\SchemaOrg\Contracts\ThingContract;
 
@@ -52,7 +62,7 @@ class DeliveryChargeSpecification extends BaseType implements IntangibleContract
      * The delivery method(s) to which the delivery charge or payment charge
      * specification applies.
      *
-     * @param \Spatie\SchemaOrg\Contracts\DeliveryMethodContract|\Spatie\SchemaOrg\Contracts\DeliveryMethodContract[] $appliesToDeliveryMethod
+     * @param DeliveryMethodContract|DeliveryMethodContract[] $appliesToDeliveryMethod
      *
      * @return static
      *
@@ -66,7 +76,7 @@ class DeliveryChargeSpecification extends BaseType implements IntangibleContract
     /**
      * The geographic area where a service or offered item is provided.
      *
-     * @param \Spatie\SchemaOrg\Contracts\AdministrativeAreaContract|\Spatie\SchemaOrg\Contracts\AdministrativeAreaContract[]|\Spatie\SchemaOrg\Contracts\GeoShapeContract|\Spatie\SchemaOrg\Contracts\GeoShapeContract[]|\Spatie\SchemaOrg\Contracts\PlaceContract|\Spatie\SchemaOrg\Contracts\PlaceContract[]|string|string[] $areaServed
+     * @param AdministrativeAreaContract|AdministrativeAreaContract[]|GeoShapeContract|GeoShapeContract[]|PlaceContract|PlaceContract[]|string|string[] $areaServed
      *
      * @return static
      *
@@ -113,7 +123,7 @@ class DeliveryChargeSpecification extends BaseType implements IntangibleContract
      * offer or price specification is valid. This allows e.g. specifying that a
      * certain freight charge is valid only for a certain quantity.
      *
-     * @param \Spatie\SchemaOrg\Contracts\QuantitativeValueContract|\Spatie\SchemaOrg\Contracts\QuantitativeValueContract[] $eligibleQuantity
+     * @param QuantitativeValueContract|QuantitativeValueContract[] $eligibleQuantity
      *
      * @return static
      *
@@ -131,7 +141,7 @@ class DeliveryChargeSpecification extends BaseType implements IntangibleContract
      * 
      * See also [[ineligibleRegion]].
      *
-     * @param \Spatie\SchemaOrg\Contracts\GeoShapeContract|\Spatie\SchemaOrg\Contracts\GeoShapeContract[]|\Spatie\SchemaOrg\Contracts\PlaceContract|\Spatie\SchemaOrg\Contracts\PlaceContract[]|string|string[] $eligibleRegion
+     * @param GeoShapeContract|GeoShapeContract[]|PlaceContract|PlaceContract[]|string|string[] $eligibleRegion
      *
      * @return static
      *
@@ -148,7 +158,7 @@ class DeliveryChargeSpecification extends BaseType implements IntangibleContract
      * to express free shipping above a certain order volume, or to limit the
      * acceptance of credit cards to purchases to a certain minimal amount.
      *
-     * @param \Spatie\SchemaOrg\Contracts\PriceSpecificationContract|\Spatie\SchemaOrg\Contracts\PriceSpecificationContract[] $eligibleTransactionVolume
+     * @param PriceSpecificationContract|PriceSpecificationContract[] $eligibleTransactionVolume
      *
      * @return static
      *
@@ -166,7 +176,7 @@ class DeliveryChargeSpecification extends BaseType implements IntangibleContract
      * strings or as URL (URI) links. See [background
      * notes](/docs/datamodel.html#identifierBg) for more details.
      *
-     * @param \Spatie\SchemaOrg\Contracts\PropertyValueContract|\Spatie\SchemaOrg\Contracts\PropertyValueContract[]|string|string[] $identifier
+     * @param PropertyValueContract|PropertyValueContract[]|string|string[] $identifier
      *
      * @return static
      *
@@ -181,7 +191,7 @@ class DeliveryChargeSpecification extends BaseType implements IntangibleContract
      * An image of the item. This can be a [[URL]] or a fully described
      * [[ImageObject]].
      *
-     * @param \Spatie\SchemaOrg\Contracts\ImageObjectContract|\Spatie\SchemaOrg\Contracts\ImageObjectContract[]|string|string[] $image
+     * @param ImageObjectContract|ImageObjectContract[]|string|string[] $image
      *
      * @return static
      *
@@ -200,7 +210,7 @@ class DeliveryChargeSpecification extends BaseType implements IntangibleContract
      * 
      * See also [[eligibleRegion]].
      *
-     * @param \Spatie\SchemaOrg\Contracts\GeoShapeContract|\Spatie\SchemaOrg\Contracts\GeoShapeContract[]|\Spatie\SchemaOrg\Contracts\PlaceContract|\Spatie\SchemaOrg\Contracts\PlaceContract[]|string|string[] $ineligibleRegion
+     * @param GeoShapeContract|GeoShapeContract[]|PlaceContract|PlaceContract[]|string|string[] $ineligibleRegion
      *
      * @return static
      *
@@ -216,7 +226,7 @@ class DeliveryChargeSpecification extends BaseType implements IntangibleContract
      * entity being described. See [background
      * notes](/docs/datamodel.html#mainEntityBackground) for details.
      *
-     * @param \Spatie\SchemaOrg\Contracts\CreativeWorkContract|\Spatie\SchemaOrg\Contracts\CreativeWorkContract[]|string|string[] $mainEntityOfPage
+     * @param CreativeWorkContract|CreativeWorkContract[]|string|string[] $mainEntityOfPage
      *
      * @return static
      *
@@ -273,7 +283,7 @@ class DeliveryChargeSpecification extends BaseType implements IntangibleContract
      * Indicates a potential Action, which describes an idealized action in
      * which this thing would play an 'object' role.
      *
-     * @param \Spatie\SchemaOrg\Contracts\ActionContract|\Spatie\SchemaOrg\Contracts\ActionContract[] $potentialAction
+     * @param ActionContract|ActionContract[] $potentialAction
      *
      * @return static
      *
@@ -363,7 +373,7 @@ class DeliveryChargeSpecification extends BaseType implements IntangibleContract
     /**
      * A CreativeWork or Event about this Thing.
      *
-     * @param \Spatie\SchemaOrg\Contracts\CreativeWorkContract|\Spatie\SchemaOrg\Contracts\CreativeWorkContract[]|\Spatie\SchemaOrg\Contracts\EventContract|\Spatie\SchemaOrg\Contracts\EventContract[] $subjectOf
+     * @param CreativeWorkContract|CreativeWorkContract[]|EventContract|EventContract[] $subjectOf
      *
      * @return static
      *

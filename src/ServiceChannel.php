@@ -2,7 +2,18 @@
 
 namespace Spatie\SchemaOrg;
 
+use \Spatie\SchemaOrg\Contracts\ActionContract;
+use \Spatie\SchemaOrg\Contracts\ContactPointContract;
+use \Spatie\SchemaOrg\Contracts\CreativeWorkContract;
+use \Spatie\SchemaOrg\Contracts\DurationContract;
+use \Spatie\SchemaOrg\Contracts\EventContract;
+use \Spatie\SchemaOrg\Contracts\ImageObjectContract;
 use \Spatie\SchemaOrg\Contracts\IntangibleContract;
+use \Spatie\SchemaOrg\Contracts\LanguageContract;
+use \Spatie\SchemaOrg\Contracts\PlaceContract;
+use \Spatie\SchemaOrg\Contracts\PostalAddressContract;
+use \Spatie\SchemaOrg\Contracts\PropertyValueContract;
+use \Spatie\SchemaOrg\Contracts\ServiceContract;
 use \Spatie\SchemaOrg\Contracts\ThingContract;
 
 /**
@@ -52,7 +63,7 @@ class ServiceChannel extends BaseType implements IntangibleContract, ThingContra
      * use one of the language codes from the [IETF BCP 47
      * standard](http://tools.ietf.org/html/bcp47). See also [[inLanguage]]
      *
-     * @param \Spatie\SchemaOrg\Contracts\LanguageContract|\Spatie\SchemaOrg\Contracts\LanguageContract[]|string|string[] $availableLanguage
+     * @param LanguageContract|LanguageContract[]|string|string[] $availableLanguage
      *
      * @return static
      *
@@ -101,7 +112,7 @@ class ServiceChannel extends BaseType implements IntangibleContract, ThingContra
      * strings or as URL (URI) links. See [background
      * notes](/docs/datamodel.html#identifierBg) for more details.
      *
-     * @param \Spatie\SchemaOrg\Contracts\PropertyValueContract|\Spatie\SchemaOrg\Contracts\PropertyValueContract[]|string|string[] $identifier
+     * @param PropertyValueContract|PropertyValueContract[]|string|string[] $identifier
      *
      * @return static
      *
@@ -116,7 +127,7 @@ class ServiceChannel extends BaseType implements IntangibleContract, ThingContra
      * An image of the item. This can be a [[URL]] or a fully described
      * [[ImageObject]].
      *
-     * @param \Spatie\SchemaOrg\Contracts\ImageObjectContract|\Spatie\SchemaOrg\Contracts\ImageObjectContract[]|string|string[] $image
+     * @param ImageObjectContract|ImageObjectContract[]|string|string[] $image
      *
      * @return static
      *
@@ -132,7 +143,7 @@ class ServiceChannel extends BaseType implements IntangibleContract, ThingContra
      * entity being described. See [background
      * notes](/docs/datamodel.html#mainEntityBackground) for details.
      *
-     * @param \Spatie\SchemaOrg\Contracts\CreativeWorkContract|\Spatie\SchemaOrg\Contracts\CreativeWorkContract[]|string|string[] $mainEntityOfPage
+     * @param CreativeWorkContract|CreativeWorkContract[]|string|string[] $mainEntityOfPage
      *
      * @return static
      *
@@ -161,7 +172,7 @@ class ServiceChannel extends BaseType implements IntangibleContract, ThingContra
      * Indicates a potential Action, which describes an idealized action in
      * which this thing would play an 'object' role.
      *
-     * @param \Spatie\SchemaOrg\Contracts\ActionContract|\Spatie\SchemaOrg\Contracts\ActionContract[] $potentialAction
+     * @param ActionContract|ActionContract[] $potentialAction
      *
      * @return static
      *
@@ -175,7 +186,7 @@ class ServiceChannel extends BaseType implements IntangibleContract, ThingContra
     /**
      * Estimated processing time for the service using this channel.
      *
-     * @param \Spatie\SchemaOrg\Contracts\DurationContract|\Spatie\SchemaOrg\Contracts\DurationContract[] $processingTime
+     * @param DurationContract|DurationContract[] $processingTime
      *
      * @return static
      *
@@ -189,7 +200,7 @@ class ServiceChannel extends BaseType implements IntangibleContract, ThingContra
     /**
      * The service provided by this channel.
      *
-     * @param \Spatie\SchemaOrg\Contracts\ServiceContract|\Spatie\SchemaOrg\Contracts\ServiceContract[] $providesService
+     * @param ServiceContract|ServiceContract[] $providesService
      *
      * @return static
      *
@@ -220,7 +231,7 @@ class ServiceChannel extends BaseType implements IntangibleContract, ThingContra
      * The location (e.g. civic structure, local business, etc.) where a person
      * can go to access the service.
      *
-     * @param \Spatie\SchemaOrg\Contracts\PlaceContract|\Spatie\SchemaOrg\Contracts\PlaceContract[] $serviceLocation
+     * @param PlaceContract|PlaceContract[] $serviceLocation
      *
      * @return static
      *
@@ -234,7 +245,7 @@ class ServiceChannel extends BaseType implements IntangibleContract, ThingContra
     /**
      * The phone number to use to access the service.
      *
-     * @param \Spatie\SchemaOrg\Contracts\ContactPointContract|\Spatie\SchemaOrg\Contracts\ContactPointContract[] $servicePhone
+     * @param ContactPointContract|ContactPointContract[] $servicePhone
      *
      * @return static
      *
@@ -248,7 +259,7 @@ class ServiceChannel extends BaseType implements IntangibleContract, ThingContra
     /**
      * The address for accessing the service by mail.
      *
-     * @param \Spatie\SchemaOrg\Contracts\PostalAddressContract|\Spatie\SchemaOrg\Contracts\PostalAddressContract[] $servicePostalAddress
+     * @param PostalAddressContract|PostalAddressContract[] $servicePostalAddress
      *
      * @return static
      *
@@ -262,7 +273,7 @@ class ServiceChannel extends BaseType implements IntangibleContract, ThingContra
     /**
      * The number to access the service by text message.
      *
-     * @param \Spatie\SchemaOrg\Contracts\ContactPointContract|\Spatie\SchemaOrg\Contracts\ContactPointContract[] $serviceSmsNumber
+     * @param ContactPointContract|ContactPointContract[] $serviceSmsNumber
      *
      * @return static
      *
@@ -290,7 +301,7 @@ class ServiceChannel extends BaseType implements IntangibleContract, ThingContra
     /**
      * A CreativeWork or Event about this Thing.
      *
-     * @param \Spatie\SchemaOrg\Contracts\CreativeWorkContract|\Spatie\SchemaOrg\Contracts\CreativeWorkContract[]|\Spatie\SchemaOrg\Contracts\EventContract|\Spatie\SchemaOrg\Contracts\EventContract[] $subjectOf
+     * @param CreativeWorkContract|CreativeWorkContract[]|EventContract|EventContract[] $subjectOf
      *
      * @return static
      *
