@@ -2,6 +2,7 @@
 
 namespace Spatie\SchemaOrg;
 
+use \Spatie\SchemaOrg\Contracts\TaxiServiceContract;
 use \Spatie\SchemaOrg\Contracts\IntangibleContract;
 use \Spatie\SchemaOrg\Contracts\ServiceContract;
 use \Spatie\SchemaOrg\Contracts\ThingContract;
@@ -13,7 +14,7 @@ use \Spatie\SchemaOrg\Contracts\ThingContract;
  * @see http://schema.org/TaxiService
  *
  */
-class TaxiService extends BaseType implements IntangibleContract, ServiceContract, ThingContract
+class TaxiService extends BaseType implements TaxiServiceContract, IntangibleContract, ServiceContract, ThingContract
 {
     /**
      * An additional type for the item, typically used for adding more specific

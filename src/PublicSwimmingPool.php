@@ -2,6 +2,7 @@
 
 namespace Spatie\SchemaOrg;
 
+use \Spatie\SchemaOrg\Contracts\PublicSwimmingPoolContract;
 use \Spatie\SchemaOrg\Contracts\LocalBusinessContract;
 use \Spatie\SchemaOrg\Contracts\OrganizationContract;
 use \Spatie\SchemaOrg\Contracts\PlaceContract;
@@ -14,7 +15,7 @@ use \Spatie\SchemaOrg\Contracts\ThingContract;
  * @see http://schema.org/PublicSwimmingPool
  *
  */
-class PublicSwimmingPool extends BaseType implements LocalBusinessContract, OrganizationContract, PlaceContract, SportsActivityLocationContract, ThingContract
+class PublicSwimmingPool extends BaseType implements PublicSwimmingPoolContract, LocalBusinessContract, OrganizationContract, PlaceContract, SportsActivityLocationContract, ThingContract
 {
     /**
      * A property-value pair representing an additional characteristics of the

@@ -2,6 +2,7 @@
 
 namespace Spatie\SchemaOrg;
 
+use \Spatie\SchemaOrg\Contracts\UpdateActionContract;
 use \Spatie\SchemaOrg\Contracts\ActionContract;
 use \Spatie\SchemaOrg\Contracts\ThingContract;
 
@@ -11,7 +12,7 @@ use \Spatie\SchemaOrg\Contracts\ThingContract;
  * @see http://schema.org/UpdateAction
  *
  */
-class UpdateAction extends BaseType implements ActionContract, ThingContract
+class UpdateAction extends BaseType implements UpdateActionContract, ActionContract, ThingContract
 {
     /**
      * Indicates the current disposition of the Action.

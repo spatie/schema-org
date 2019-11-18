@@ -2,6 +2,7 @@
 
 namespace Spatie\SchemaOrg;
 
+use \Spatie\SchemaOrg\Contracts\ReviewActionContract;
 use \Spatie\SchemaOrg\Contracts\ActionContract;
 use \Spatie\SchemaOrg\Contracts\AssessActionContract;
 use \Spatie\SchemaOrg\Contracts\ThingContract;
@@ -13,7 +14,7 @@ use \Spatie\SchemaOrg\Contracts\ThingContract;
  * @see http://schema.org/ReviewAction
  *
  */
-class ReviewAction extends BaseType implements ActionContract, AssessActionContract, ThingContract
+class ReviewAction extends BaseType implements ReviewActionContract, ActionContract, AssessActionContract, ThingContract
 {
     /**
      * Indicates the current disposition of the Action.

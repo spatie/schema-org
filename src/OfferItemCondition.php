@@ -2,6 +2,7 @@
 
 namespace Spatie\SchemaOrg;
 
+use \Spatie\SchemaOrg\Contracts\OfferItemConditionContract;
 use \Spatie\SchemaOrg\Contracts\EnumerationContract;
 use \Spatie\SchemaOrg\Contracts\IntangibleContract;
 use \Spatie\SchemaOrg\Contracts\ThingContract;
@@ -12,7 +13,7 @@ use \Spatie\SchemaOrg\Contracts\ThingContract;
  * @see http://schema.org/OfferItemCondition
  *
  */
-class OfferItemCondition extends BaseType implements EnumerationContract, IntangibleContract, ThingContract
+class OfferItemCondition extends BaseType implements OfferItemConditionContract, EnumerationContract, IntangibleContract, ThingContract
 {
     /**
      * Indicates that the item is damaged.

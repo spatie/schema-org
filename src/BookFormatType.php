@@ -2,6 +2,7 @@
 
 namespace Spatie\SchemaOrg;
 
+use \Spatie\SchemaOrg\Contracts\BookFormatTypeContract;
 use \Spatie\SchemaOrg\Contracts\EnumerationContract;
 use \Spatie\SchemaOrg\Contracts\IntangibleContract;
 use \Spatie\SchemaOrg\Contracts\ThingContract;
@@ -12,7 +13,7 @@ use \Spatie\SchemaOrg\Contracts\ThingContract;
  * @see http://schema.org/BookFormatType
  *
  */
-class BookFormatType extends BaseType implements EnumerationContract, IntangibleContract, ThingContract
+class BookFormatType extends BaseType implements BookFormatTypeContract, EnumerationContract, IntangibleContract, ThingContract
 {
     /**
      * Book format: Audiobook. This is an enumerated value for use with the

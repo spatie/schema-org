@@ -2,6 +2,7 @@
 
 namespace Spatie\SchemaOrg;
 
+use \Spatie\SchemaOrg\Contracts\UseActionContract;
 use \Spatie\SchemaOrg\Contracts\ActionContract;
 use \Spatie\SchemaOrg\Contracts\ConsumeActionContract;
 use \Spatie\SchemaOrg\Contracts\ThingContract;
@@ -12,7 +13,7 @@ use \Spatie\SchemaOrg\Contracts\ThingContract;
  * @see http://schema.org/UseAction
  *
  */
-class UseAction extends BaseType implements ActionContract, ConsumeActionContract, ThingContract
+class UseAction extends BaseType implements UseActionContract, ActionContract, ConsumeActionContract, ThingContract
 {
     /**
      * A set of requirements that a must be fulfilled in order to perform an

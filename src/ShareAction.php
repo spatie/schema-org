@@ -2,6 +2,7 @@
 
 namespace Spatie\SchemaOrg;
 
+use \Spatie\SchemaOrg\Contracts\ShareActionContract;
 use \Spatie\SchemaOrg\Contracts\ActionContract;
 use \Spatie\SchemaOrg\Contracts\CommunicateActionContract;
 use \Spatie\SchemaOrg\Contracts\InteractActionContract;
@@ -13,7 +14,7 @@ use \Spatie\SchemaOrg\Contracts\ThingContract;
  * @see http://schema.org/ShareAction
  *
  */
-class ShareAction extends BaseType implements ActionContract, CommunicateActionContract, InteractActionContract, ThingContract
+class ShareAction extends BaseType implements ShareActionContract, ActionContract, CommunicateActionContract, InteractActionContract, ThingContract
 {
     /**
      * The subject matter of the content.

@@ -2,6 +2,7 @@
 
 namespace Spatie\SchemaOrg;
 
+use \Spatie\SchemaOrg\Contracts\PerformingGroupContract;
 use \Spatie\SchemaOrg\Contracts\OrganizationContract;
 use \Spatie\SchemaOrg\Contracts\ThingContract;
 
@@ -11,7 +12,7 @@ use \Spatie\SchemaOrg\Contracts\ThingContract;
  * @see http://schema.org/PerformingGroup
  *
  */
-class PerformingGroup extends BaseType implements OrganizationContract, ThingContract
+class PerformingGroup extends BaseType implements PerformingGroupContract, OrganizationContract, ThingContract
 {
     /**
      * An additional type for the item, typically used for adding more specific

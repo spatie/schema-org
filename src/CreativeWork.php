@@ -2,6 +2,7 @@
 
 namespace Spatie\SchemaOrg;
 
+use \Spatie\SchemaOrg\Contracts\CreativeWorkContract;
 use \Spatie\SchemaOrg\Contracts\ThingContract;
 
 /**
@@ -11,7 +12,7 @@ use \Spatie\SchemaOrg\Contracts\ThingContract;
  * @see http://schema.org/CreativeWork
  *
  */
-class CreativeWork extends BaseType implements ThingContract
+class CreativeWork extends BaseType implements CreativeWorkContract, ThingContract
 {
     /**
      * The subject matter of the content.

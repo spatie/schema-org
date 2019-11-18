@@ -2,6 +2,7 @@
 
 namespace Spatie\SchemaOrg;
 
+use \Spatie\SchemaOrg\Contracts\MovieClipContract;
 use \Spatie\SchemaOrg\Contracts\ClipContract;
 use \Spatie\SchemaOrg\Contracts\CreativeWorkContract;
 use \Spatie\SchemaOrg\Contracts\ThingContract;
@@ -12,7 +13,7 @@ use \Spatie\SchemaOrg\Contracts\ThingContract;
  * @see http://schema.org/MovieClip
  *
  */
-class MovieClip extends BaseType implements ClipContract, CreativeWorkContract, ThingContract
+class MovieClip extends BaseType implements MovieClipContract, ClipContract, CreativeWorkContract, ThingContract
 {
     /**
      * The subject matter of the content.

@@ -2,6 +2,7 @@
 
 namespace Spatie\SchemaOrg;
 
+use \Spatie\SchemaOrg\Contracts\HospitalContract;
 use \Spatie\SchemaOrg\Contracts\CivicStructureContract;
 use \Spatie\SchemaOrg\Contracts\EmergencyServiceContract;
 use \Spatie\SchemaOrg\Contracts\LocalBusinessContract;
@@ -16,7 +17,7 @@ use \Spatie\SchemaOrg\Contracts\ThingContract;
  * @see http://schema.org/Hospital
  *
  */
-class Hospital extends BaseType implements CivicStructureContract, EmergencyServiceContract, LocalBusinessContract, MedicalOrganizationContract, OrganizationContract, PlaceContract, ThingContract
+class Hospital extends BaseType implements HospitalContract, CivicStructureContract, EmergencyServiceContract, LocalBusinessContract, MedicalOrganizationContract, OrganizationContract, PlaceContract, ThingContract
 {
     /**
      * A property-value pair representing an additional characteristics of the

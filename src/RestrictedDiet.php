@@ -2,6 +2,7 @@
 
 namespace Spatie\SchemaOrg;
 
+use \Spatie\SchemaOrg\Contracts\RestrictedDietContract;
 use \Spatie\SchemaOrg\Contracts\EnumerationContract;
 use \Spatie\SchemaOrg\Contracts\IntangibleContract;
 use \Spatie\SchemaOrg\Contracts\ThingContract;
@@ -13,7 +14,7 @@ use \Spatie\SchemaOrg\Contracts\ThingContract;
  * @see http://schema.org/RestrictedDiet
  *
  */
-class RestrictedDiet extends BaseType implements EnumerationContract, IntangibleContract, ThingContract
+class RestrictedDiet extends BaseType implements RestrictedDietContract, EnumerationContract, IntangibleContract, ThingContract
 {
     /**
      * A diet appropriate for people with diabetes.

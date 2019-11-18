@@ -2,6 +2,7 @@
 
 namespace Spatie\SchemaOrg;
 
+use \Spatie\SchemaOrg\Contracts\DepositAccountContract;
 use \Spatie\SchemaOrg\Contracts\BankAccountContract;
 use \Spatie\SchemaOrg\Contracts\FinancialProductContract;
 use \Spatie\SchemaOrg\Contracts\IntangibleContract;
@@ -16,7 +17,7 @@ use \Spatie\SchemaOrg\Contracts\ThingContract;
  * @see http://schema.org/DepositAccount
  *
  */
-class DepositAccount extends BaseType implements BankAccountContract, FinancialProductContract, IntangibleContract, InvestmentOrDepositContract, ServiceContract, ThingContract
+class DepositAccount extends BaseType implements DepositAccountContract, BankAccountContract, FinancialProductContract, IntangibleContract, InvestmentOrDepositContract, ServiceContract, ThingContract
 {
     /**
      * An additional type for the item, typically used for adding more specific

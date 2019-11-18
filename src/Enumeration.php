@@ -2,6 +2,7 @@
 
 namespace Spatie\SchemaOrg;
 
+use \Spatie\SchemaOrg\Contracts\EnumerationContract;
 use \Spatie\SchemaOrg\Contracts\IntangibleContract;
 use \Spatie\SchemaOrg\Contracts\ThingContract;
 
@@ -11,7 +12,7 @@ use \Spatie\SchemaOrg\Contracts\ThingContract;
  * @see http://schema.org/Enumeration
  *
  */
-class Enumeration extends BaseType implements IntangibleContract, ThingContract
+class Enumeration extends BaseType implements EnumerationContract, IntangibleContract, ThingContract
 {
     /**
      * An additional type for the item, typically used for adding more specific

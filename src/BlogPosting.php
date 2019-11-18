@@ -2,6 +2,7 @@
 
 namespace Spatie\SchemaOrg;
 
+use \Spatie\SchemaOrg\Contracts\BlogPostingContract;
 use \Spatie\SchemaOrg\Contracts\ArticleContract;
 use \Spatie\SchemaOrg\Contracts\CreativeWorkContract;
 use \Spatie\SchemaOrg\Contracts\SocialMediaPostingContract;
@@ -13,7 +14,7 @@ use \Spatie\SchemaOrg\Contracts\ThingContract;
  * @see http://schema.org/BlogPosting
  *
  */
-class BlogPosting extends BaseType implements ArticleContract, CreativeWorkContract, SocialMediaPostingContract, ThingContract
+class BlogPosting extends BaseType implements BlogPostingContract, ArticleContract, CreativeWorkContract, SocialMediaPostingContract, ThingContract
 {
     /**
      * The subject matter of the content.

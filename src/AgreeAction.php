@@ -2,6 +2,7 @@
 
 namespace Spatie\SchemaOrg;
 
+use \Spatie\SchemaOrg\Contracts\AgreeActionContract;
 use \Spatie\SchemaOrg\Contracts\ActionContract;
 use \Spatie\SchemaOrg\Contracts\AssessActionContract;
 use \Spatie\SchemaOrg\Contracts\ReactActionContract;
@@ -14,7 +15,7 @@ use \Spatie\SchemaOrg\Contracts\ThingContract;
  * @see http://schema.org/AgreeAction
  *
  */
-class AgreeAction extends BaseType implements ActionContract, AssessActionContract, ReactActionContract, ThingContract
+class AgreeAction extends BaseType implements AgreeActionContract, ActionContract, AssessActionContract, ReactActionContract, ThingContract
 {
     /**
      * Indicates the current disposition of the Action.

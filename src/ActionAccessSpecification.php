@@ -2,6 +2,7 @@
 
 namespace Spatie\SchemaOrg;
 
+use \Spatie\SchemaOrg\Contracts\ActionAccessSpecificationContract;
 use \Spatie\SchemaOrg\Contracts\IntangibleContract;
 use \Spatie\SchemaOrg\Contracts\ThingContract;
 
@@ -11,7 +12,7 @@ use \Spatie\SchemaOrg\Contracts\ThingContract;
  * @see http://schema.org/ActionAccessSpecification
  *
  */
-class ActionAccessSpecification extends BaseType implements IntangibleContract, ThingContract
+class ActionAccessSpecification extends BaseType implements ActionAccessSpecificationContract, IntangibleContract, ThingContract
 {
     /**
      * An additional type for the item, typically used for adding more specific

@@ -2,6 +2,7 @@
 
 namespace Spatie\SchemaOrg;
 
+use \Spatie\SchemaOrg\Contracts\CompoundPriceSpecificationContract;
 use \Spatie\SchemaOrg\Contracts\IntangibleContract;
 use \Spatie\SchemaOrg\Contracts\PriceSpecificationContract;
 use \Spatie\SchemaOrg\Contracts\StructuredValueContract;
@@ -16,7 +17,7 @@ use \Spatie\SchemaOrg\Contracts\ThingContract;
  * @see http://schema.org/CompoundPriceSpecification
  *
  */
-class CompoundPriceSpecification extends BaseType implements IntangibleContract, PriceSpecificationContract, StructuredValueContract, ThingContract
+class CompoundPriceSpecification extends BaseType implements CompoundPriceSpecificationContract, IntangibleContract, PriceSpecificationContract, StructuredValueContract, ThingContract
 {
     /**
      * An additional type for the item, typically used for adding more specific

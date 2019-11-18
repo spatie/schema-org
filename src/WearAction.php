@@ -2,6 +2,7 @@
 
 namespace Spatie\SchemaOrg;
 
+use \Spatie\SchemaOrg\Contracts\WearActionContract;
 use \Spatie\SchemaOrg\Contracts\ActionContract;
 use \Spatie\SchemaOrg\Contracts\ConsumeActionContract;
 use \Spatie\SchemaOrg\Contracts\ThingContract;
@@ -13,7 +14,7 @@ use \Spatie\SchemaOrg\Contracts\UseActionContract;
  * @see http://schema.org/WearAction
  *
  */
-class WearAction extends BaseType implements ActionContract, ConsumeActionContract, ThingContract, UseActionContract
+class WearAction extends BaseType implements WearActionContract, ActionContract, ConsumeActionContract, ThingContract, UseActionContract
 {
     /**
      * A set of requirements that a must be fulfilled in order to perform an

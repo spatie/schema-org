@@ -2,6 +2,7 @@
 
 namespace Spatie\SchemaOrg;
 
+use \Spatie\SchemaOrg\Contracts\AutoBodyShopContract;
 use \Spatie\SchemaOrg\Contracts\AutomotiveBusinessContract;
 use \Spatie\SchemaOrg\Contracts\LocalBusinessContract;
 use \Spatie\SchemaOrg\Contracts\OrganizationContract;
@@ -14,7 +15,7 @@ use \Spatie\SchemaOrg\Contracts\ThingContract;
  * @see http://schema.org/AutoBodyShop
  *
  */
-class AutoBodyShop extends BaseType implements AutomotiveBusinessContract, LocalBusinessContract, OrganizationContract, PlaceContract, ThingContract
+class AutoBodyShop extends BaseType implements AutoBodyShopContract, AutomotiveBusinessContract, LocalBusinessContract, OrganizationContract, PlaceContract, ThingContract
 {
     /**
      * A property-value pair representing an additional characteristics of the

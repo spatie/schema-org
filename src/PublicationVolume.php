@@ -2,6 +2,7 @@
 
 namespace Spatie\SchemaOrg;
 
+use \Spatie\SchemaOrg\Contracts\PublicationVolumeContract;
 use \Spatie\SchemaOrg\Contracts\CreativeWorkContract;
 use \Spatie\SchemaOrg\Contracts\ThingContract;
 
@@ -16,7 +17,7 @@ use \Spatie\SchemaOrg\Contracts\ThingContract;
  * @see http://schema.org/PublicationVolume
  *
  */
-class PublicationVolume extends BaseType implements CreativeWorkContract, ThingContract
+class PublicationVolume extends BaseType implements PublicationVolumeContract, CreativeWorkContract, ThingContract
 {
     /**
      * The subject matter of the content.

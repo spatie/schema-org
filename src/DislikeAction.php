@@ -2,6 +2,7 @@
 
 namespace Spatie\SchemaOrg;
 
+use \Spatie\SchemaOrg\Contracts\DislikeActionContract;
 use \Spatie\SchemaOrg\Contracts\ActionContract;
 use \Spatie\SchemaOrg\Contracts\AssessActionContract;
 use \Spatie\SchemaOrg\Contracts\ReactActionContract;
@@ -14,7 +15,7 @@ use \Spatie\SchemaOrg\Contracts\ThingContract;
  * @see http://schema.org/DislikeAction
  *
  */
-class DislikeAction extends BaseType implements ActionContract, AssessActionContract, ReactActionContract, ThingContract
+class DislikeAction extends BaseType implements DislikeActionContract, ActionContract, AssessActionContract, ReactActionContract, ThingContract
 {
     /**
      * Indicates the current disposition of the Action.

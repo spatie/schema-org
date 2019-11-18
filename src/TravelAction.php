@@ -2,6 +2,7 @@
 
 namespace Spatie\SchemaOrg;
 
+use \Spatie\SchemaOrg\Contracts\TravelActionContract;
 use \Spatie\SchemaOrg\Contracts\ActionContract;
 use \Spatie\SchemaOrg\Contracts\MoveActionContract;
 use \Spatie\SchemaOrg\Contracts\ThingContract;
@@ -13,7 +14,7 @@ use \Spatie\SchemaOrg\Contracts\ThingContract;
  * @see http://schema.org/TravelAction
  *
  */
-class TravelAction extends BaseType implements ActionContract, MoveActionContract, ThingContract
+class TravelAction extends BaseType implements TravelActionContract, ActionContract, MoveActionContract, ThingContract
 {
     /**
      * Indicates the current disposition of the Action.

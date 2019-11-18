@@ -2,6 +2,7 @@
 
 namespace Spatie\SchemaOrg;
 
+use \Spatie\SchemaOrg\Contracts\WinActionContract;
 use \Spatie\SchemaOrg\Contracts\AchieveActionContract;
 use \Spatie\SchemaOrg\Contracts\ActionContract;
 use \Spatie\SchemaOrg\Contracts\ThingContract;
@@ -12,7 +13,7 @@ use \Spatie\SchemaOrg\Contracts\ThingContract;
  * @see http://schema.org/WinAction
  *
  */
-class WinAction extends BaseType implements AchieveActionContract, ActionContract, ThingContract
+class WinAction extends BaseType implements WinActionContract, AchieveActionContract, ActionContract, ThingContract
 {
     /**
      * Indicates the current disposition of the Action.

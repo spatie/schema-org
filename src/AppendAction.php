@@ -2,6 +2,7 @@
 
 namespace Spatie\SchemaOrg;
 
+use \Spatie\SchemaOrg\Contracts\AppendActionContract;
 use \Spatie\SchemaOrg\Contracts\ActionContract;
 use \Spatie\SchemaOrg\Contracts\AddActionContract;
 use \Spatie\SchemaOrg\Contracts\InsertActionContract;
@@ -14,7 +15,7 @@ use \Spatie\SchemaOrg\Contracts\UpdateActionContract;
  * @see http://schema.org/AppendAction
  *
  */
-class AppendAction extends BaseType implements ActionContract, AddActionContract, InsertActionContract, ThingContract, UpdateActionContract
+class AppendAction extends BaseType implements AppendActionContract, ActionContract, AddActionContract, InsertActionContract, ThingContract, UpdateActionContract
 {
     /**
      * Indicates the current disposition of the Action.

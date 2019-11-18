@@ -2,6 +2,7 @@
 
 namespace Spatie\SchemaOrg;
 
+use \Spatie\SchemaOrg\Contracts\TechArticleContract;
 use \Spatie\SchemaOrg\Contracts\ArticleContract;
 use \Spatie\SchemaOrg\Contracts\CreativeWorkContract;
 use \Spatie\SchemaOrg\Contracts\ThingContract;
@@ -13,7 +14,7 @@ use \Spatie\SchemaOrg\Contracts\ThingContract;
  * @see http://schema.org/TechArticle
  *
  */
-class TechArticle extends BaseType implements ArticleContract, CreativeWorkContract, ThingContract
+class TechArticle extends BaseType implements TechArticleContract, ArticleContract, CreativeWorkContract, ThingContract
 {
     /**
      * The subject matter of the content.

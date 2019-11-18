@@ -2,6 +2,7 @@
 
 namespace Spatie\SchemaOrg;
 
+use \Spatie\SchemaOrg\Contracts\CarContract;
 use \Spatie\SchemaOrg\Contracts\ProductContract;
 use \Spatie\SchemaOrg\Contracts\ThingContract;
 use \Spatie\SchemaOrg\Contracts\VehicleContract;
@@ -12,7 +13,7 @@ use \Spatie\SchemaOrg\Contracts\VehicleContract;
  * @see http://schema.org/Car
  *
  */
-class Car extends BaseType implements ProductContract, ThingContract, VehicleContract
+class Car extends BaseType implements CarContract, ProductContract, ThingContract, VehicleContract
 {
     /**
      * A property-value pair representing an additional characteristics of the

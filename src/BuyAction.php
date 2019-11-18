@@ -2,6 +2,7 @@
 
 namespace Spatie\SchemaOrg;
 
+use \Spatie\SchemaOrg\Contracts\BuyActionContract;
 use \Spatie\SchemaOrg\Contracts\ActionContract;
 use \Spatie\SchemaOrg\Contracts\ThingContract;
 use \Spatie\SchemaOrg\Contracts\TradeActionContract;
@@ -14,7 +15,7 @@ use \Spatie\SchemaOrg\Contracts\TradeActionContract;
  * @see http://schema.org/BuyAction
  *
  */
-class BuyAction extends BaseType implements ActionContract, ThingContract, TradeActionContract
+class BuyAction extends BaseType implements BuyActionContract, ActionContract, ThingContract, TradeActionContract
 {
     /**
      * Indicates the current disposition of the Action.

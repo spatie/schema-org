@@ -2,6 +2,7 @@
 
 namespace Spatie\SchemaOrg;
 
+use \Spatie\SchemaOrg\Contracts\LiveBlogPostingContract;
 use \Spatie\SchemaOrg\Contracts\ArticleContract;
 use \Spatie\SchemaOrg\Contracts\BlogPostingContract;
 use \Spatie\SchemaOrg\Contracts\CreativeWorkContract;
@@ -15,7 +16,7 @@ use \Spatie\SchemaOrg\Contracts\ThingContract;
  * @see http://schema.org/LiveBlogPosting
  *
  */
-class LiveBlogPosting extends BaseType implements ArticleContract, BlogPostingContract, CreativeWorkContract, SocialMediaPostingContract, ThingContract
+class LiveBlogPosting extends BaseType implements LiveBlogPostingContract, ArticleContract, BlogPostingContract, CreativeWorkContract, SocialMediaPostingContract, ThingContract
 {
     /**
      * The subject matter of the content.

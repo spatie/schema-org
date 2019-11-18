@@ -2,6 +2,7 @@
 
 namespace Spatie\SchemaOrg;
 
+use \Spatie\SchemaOrg\Contracts\ItemAvailabilityContract;
 use \Spatie\SchemaOrg\Contracts\EnumerationContract;
 use \Spatie\SchemaOrg\Contracts\IntangibleContract;
 use \Spatie\SchemaOrg\Contracts\ThingContract;
@@ -12,7 +13,7 @@ use \Spatie\SchemaOrg\Contracts\ThingContract;
  * @see http://schema.org/ItemAvailability
  *
  */
-class ItemAvailability extends BaseType implements EnumerationContract, IntangibleContract, ThingContract
+class ItemAvailability extends BaseType implements ItemAvailabilityContract, EnumerationContract, IntangibleContract, ThingContract
 {
     /**
      * Indicates that the item has been discontinued.

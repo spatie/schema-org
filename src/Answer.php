@@ -2,6 +2,7 @@
 
 namespace Spatie\SchemaOrg;
 
+use \Spatie\SchemaOrg\Contracts\AnswerContract;
 use \Spatie\SchemaOrg\Contracts\CommentContract;
 use \Spatie\SchemaOrg\Contracts\CreativeWorkContract;
 use \Spatie\SchemaOrg\Contracts\ThingContract;
@@ -13,7 +14,7 @@ use \Spatie\SchemaOrg\Contracts\ThingContract;
  * @see http://schema.org/Answer
  *
  */
-class Answer extends BaseType implements CommentContract, CreativeWorkContract, ThingContract
+class Answer extends BaseType implements AnswerContract, CommentContract, CreativeWorkContract, ThingContract
 {
     /**
      * The subject matter of the content.

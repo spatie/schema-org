@@ -2,6 +2,7 @@
 
 namespace Spatie\SchemaOrg;
 
+use \Spatie\SchemaOrg\Contracts\CampgroundContract;
 use \Spatie\SchemaOrg\Contracts\CivicStructureContract;
 use \Spatie\SchemaOrg\Contracts\LocalBusinessContract;
 use \Spatie\SchemaOrg\Contracts\LodgingBusinessContract;
@@ -32,7 +33,7 @@ use \Spatie\SchemaOrg\Contracts\ThingContract;
  * @see http://schema.org/Campground
  *
  */
-class Campground extends BaseType implements CivicStructureContract, LocalBusinessContract, LodgingBusinessContract, OrganizationContract, PlaceContract, ThingContract
+class Campground extends BaseType implements CampgroundContract, CivicStructureContract, LocalBusinessContract, LodgingBusinessContract, OrganizationContract, PlaceContract, ThingContract
 {
     /**
      * A property-value pair representing an additional characteristics of the

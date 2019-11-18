@@ -2,6 +2,7 @@
 
 namespace Spatie\SchemaOrg;
 
+use \Spatie\SchemaOrg\Contracts\OceanBodyOfWaterContract;
 use \Spatie\SchemaOrg\Contracts\BodyOfWaterContract;
 use \Spatie\SchemaOrg\Contracts\LandformContract;
 use \Spatie\SchemaOrg\Contracts\PlaceContract;
@@ -13,7 +14,7 @@ use \Spatie\SchemaOrg\Contracts\ThingContract;
  * @see http://schema.org/OceanBodyOfWater
  *
  */
-class OceanBodyOfWater extends BaseType implements BodyOfWaterContract, LandformContract, PlaceContract, ThingContract
+class OceanBodyOfWater extends BaseType implements OceanBodyOfWaterContract, BodyOfWaterContract, LandformContract, PlaceContract, ThingContract
 {
     /**
      * A property-value pair representing an additional characteristics of the

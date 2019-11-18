@@ -2,6 +2,7 @@
 
 namespace Spatie\SchemaOrg;
 
+use \Spatie\SchemaOrg\Contracts\ThingContract;
 
 /**
  * The most generic type of item.
@@ -9,7 +10,7 @@ namespace Spatie\SchemaOrg;
  * @see http://schema.org/Thing
  *
  */
-class Thing extends BaseType
+class Thing extends BaseType implements ThingContract
 {
     /**
      * An additional type for the item, typically used for adding more specific

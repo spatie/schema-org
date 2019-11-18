@@ -2,6 +2,7 @@
 
 namespace Spatie\SchemaOrg;
 
+use \Spatie\SchemaOrg\Contracts\SeriesContract;
 use \Spatie\SchemaOrg\Contracts\IntangibleContract;
 use \Spatie\SchemaOrg\Contracts\ThingContract;
 
@@ -13,7 +14,7 @@ use \Spatie\SchemaOrg\Contracts\ThingContract;
  * @see http://schema.org/Series
  *
  */
-class Series extends BaseType implements IntangibleContract, ThingContract
+class Series extends BaseType implements SeriesContract, IntangibleContract, ThingContract
 {
     /**
      * An additional type for the item, typically used for adding more specific

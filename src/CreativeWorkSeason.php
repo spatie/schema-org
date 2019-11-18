@@ -2,6 +2,7 @@
 
 namespace Spatie\SchemaOrg;
 
+use \Spatie\SchemaOrg\Contracts\CreativeWorkSeasonContract;
 use \Spatie\SchemaOrg\Contracts\CreativeWorkContract;
 use \Spatie\SchemaOrg\Contracts\ThingContract;
 
@@ -11,7 +12,7 @@ use \Spatie\SchemaOrg\Contracts\ThingContract;
  * @see http://schema.org/CreativeWorkSeason
  *
  */
-class CreativeWorkSeason extends BaseType implements CreativeWorkContract, ThingContract
+class CreativeWorkSeason extends BaseType implements CreativeWorkSeasonContract, CreativeWorkContract, ThingContract
 {
     /**
      * The subject matter of the content.

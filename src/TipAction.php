@@ -2,6 +2,7 @@
 
 namespace Spatie\SchemaOrg;
 
+use \Spatie\SchemaOrg\Contracts\TipActionContract;
 use \Spatie\SchemaOrg\Contracts\ActionContract;
 use \Spatie\SchemaOrg\Contracts\ThingContract;
 use \Spatie\SchemaOrg\Contracts\TradeActionContract;
@@ -13,7 +14,7 @@ use \Spatie\SchemaOrg\Contracts\TradeActionContract;
  * @see http://schema.org/TipAction
  *
  */
-class TipAction extends BaseType implements ActionContract, ThingContract, TradeActionContract
+class TipAction extends BaseType implements TipActionContract, ActionContract, ThingContract, TradeActionContract
 {
     /**
      * Indicates the current disposition of the Action.

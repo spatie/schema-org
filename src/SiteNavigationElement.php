@@ -2,6 +2,7 @@
 
 namespace Spatie\SchemaOrg;
 
+use \Spatie\SchemaOrg\Contracts\SiteNavigationElementContract;
 use \Spatie\SchemaOrg\Contracts\CreativeWorkContract;
 use \Spatie\SchemaOrg\Contracts\ThingContract;
 use \Spatie\SchemaOrg\Contracts\WebPageElementContract;
@@ -14,7 +15,7 @@ use \Spatie\SchemaOrg\Contracts\WebPageElementContract;
  * @method static cssSelector($cssSelector) The value should be instance of pending types CssSelectorType|CssSelectorType[]
  * @method static xpath($xpath) The value should be instance of pending types XPathType|XPathType[]
  */
-class SiteNavigationElement extends BaseType implements CreativeWorkContract, ThingContract, WebPageElementContract
+class SiteNavigationElement extends BaseType implements SiteNavigationElementContract, CreativeWorkContract, ThingContract, WebPageElementContract
 {
     /**
      * The subject matter of the content.

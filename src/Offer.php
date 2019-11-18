@@ -2,6 +2,7 @@
 
 namespace Spatie\SchemaOrg;
 
+use \Spatie\SchemaOrg\Contracts\OfferContract;
 use \Spatie\SchemaOrg\Contracts\IntangibleContract;
 use \Spatie\SchemaOrg\Contracts\ThingContract;
 
@@ -21,7 +22,7 @@ use \Spatie\SchemaOrg\Contracts\ThingContract;
  * @see http://schema.org/Offer
  *
  */
-class Offer extends BaseType implements IntangibleContract, ThingContract
+class Offer extends BaseType implements OfferContract, IntangibleContract, ThingContract
 {
     /**
      * The payment method(s) accepted by seller for this offer.

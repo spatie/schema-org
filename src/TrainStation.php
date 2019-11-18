@@ -2,6 +2,7 @@
 
 namespace Spatie\SchemaOrg;
 
+use \Spatie\SchemaOrg\Contracts\TrainStationContract;
 use \Spatie\SchemaOrg\Contracts\CivicStructureContract;
 use \Spatie\SchemaOrg\Contracts\PlaceContract;
 use \Spatie\SchemaOrg\Contracts\ThingContract;
@@ -12,7 +13,7 @@ use \Spatie\SchemaOrg\Contracts\ThingContract;
  * @see http://schema.org/TrainStation
  *
  */
-class TrainStation extends BaseType implements CivicStructureContract, PlaceContract, ThingContract
+class TrainStation extends BaseType implements TrainStationContract, CivicStructureContract, PlaceContract, ThingContract
 {
     /**
      * A property-value pair representing an additional characteristics of the

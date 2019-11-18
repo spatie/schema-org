@@ -2,6 +2,7 @@
 
 namespace Spatie\SchemaOrg;
 
+use \Spatie\SchemaOrg\Contracts\MotelContract;
 use \Spatie\SchemaOrg\Contracts\LocalBusinessContract;
 use \Spatie\SchemaOrg\Contracts\LodgingBusinessContract;
 use \Spatie\SchemaOrg\Contracts\OrganizationContract;
@@ -17,7 +18,7 @@ use \Spatie\SchemaOrg\Contracts\ThingContract;
  * @see http://schema.org/Motel
  *
  */
-class Motel extends BaseType implements LocalBusinessContract, LodgingBusinessContract, OrganizationContract, PlaceContract, ThingContract
+class Motel extends BaseType implements MotelContract, LocalBusinessContract, LodgingBusinessContract, OrganizationContract, PlaceContract, ThingContract
 {
     /**
      * A property-value pair representing an additional characteristics of the

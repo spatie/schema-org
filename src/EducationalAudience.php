@@ -2,6 +2,7 @@
 
 namespace Spatie\SchemaOrg;
 
+use \Spatie\SchemaOrg\Contracts\EducationalAudienceContract;
 use \Spatie\SchemaOrg\Contracts\AudienceContract;
 use \Spatie\SchemaOrg\Contracts\IntangibleContract;
 use \Spatie\SchemaOrg\Contracts\ThingContract;
@@ -12,7 +13,7 @@ use \Spatie\SchemaOrg\Contracts\ThingContract;
  * @see http://schema.org/EducationalAudience
  *
  */
-class EducationalAudience extends BaseType implements AudienceContract, IntangibleContract, ThingContract
+class EducationalAudience extends BaseType implements EducationalAudienceContract, AudienceContract, IntangibleContract, ThingContract
 {
     /**
      * An additional type for the item, typically used for adding more specific

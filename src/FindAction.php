@@ -2,6 +2,7 @@
 
 namespace Spatie\SchemaOrg;
 
+use \Spatie\SchemaOrg\Contracts\FindActionContract;
 use \Spatie\SchemaOrg\Contracts\ActionContract;
 use \Spatie\SchemaOrg\Contracts\ThingContract;
 
@@ -16,7 +17,7 @@ use \Spatie\SchemaOrg\Contracts\ThingContract;
  * @see http://schema.org/FindAction
  *
  */
-class FindAction extends BaseType implements ActionContract, ThingContract
+class FindAction extends BaseType implements FindActionContract, ActionContract, ThingContract
 {
     /**
      * Indicates the current disposition of the Action.

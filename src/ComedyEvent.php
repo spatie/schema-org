@@ -2,6 +2,7 @@
 
 namespace Spatie\SchemaOrg;
 
+use \Spatie\SchemaOrg\Contracts\ComedyEventContract;
 use \Spatie\SchemaOrg\Contracts\EventContract;
 use \Spatie\SchemaOrg\Contracts\ThingContract;
 
@@ -11,7 +12,7 @@ use \Spatie\SchemaOrg\Contracts\ThingContract;
  * @see http://schema.org/ComedyEvent
  *
  */
-class ComedyEvent extends BaseType implements EventContract, ThingContract
+class ComedyEvent extends BaseType implements ComedyEventContract, EventContract, ThingContract
 {
     /**
      * The subject matter of the content.

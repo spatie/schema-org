@@ -2,6 +2,7 @@
 
 namespace Spatie\SchemaOrg;
 
+use \Spatie\SchemaOrg\Contracts\BedTypeContract;
 use \Spatie\SchemaOrg\Contracts\EnumerationContract;
 use \Spatie\SchemaOrg\Contracts\IntangibleContract;
 use \Spatie\SchemaOrg\Contracts\QualitativeValueContract;
@@ -14,7 +15,7 @@ use \Spatie\SchemaOrg\Contracts\ThingContract;
  * @see http://schema.org/BedType
  *
  */
-class BedType extends BaseType implements EnumerationContract, IntangibleContract, QualitativeValueContract, ThingContract
+class BedType extends BaseType implements BedTypeContract, EnumerationContract, IntangibleContract, QualitativeValueContract, ThingContract
 {
     /**
      * A property-value pair representing an additional characteristics of the

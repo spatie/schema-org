@@ -2,6 +2,7 @@
 
 namespace Spatie\SchemaOrg;
 
+use \Spatie\SchemaOrg\Contracts\InvoiceContract;
 use \Spatie\SchemaOrg\Contracts\IntangibleContract;
 use \Spatie\SchemaOrg\Contracts\ThingContract;
 
@@ -11,7 +12,7 @@ use \Spatie\SchemaOrg\Contracts\ThingContract;
  * @see http://schema.org/Invoice
  *
  */
-class Invoice extends BaseType implements IntangibleContract, ThingContract
+class Invoice extends BaseType implements InvoiceContract, IntangibleContract, ThingContract
 {
     /**
      * The identifier for the account the payment will be applied to.

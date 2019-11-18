@@ -2,6 +2,7 @@
 
 namespace Spatie\SchemaOrg;
 
+use \Spatie\SchemaOrg\Contracts\PostOfficeContract;
 use \Spatie\SchemaOrg\Contracts\GovernmentOfficeContract;
 use \Spatie\SchemaOrg\Contracts\LocalBusinessContract;
 use \Spatie\SchemaOrg\Contracts\OrganizationContract;
@@ -14,7 +15,7 @@ use \Spatie\SchemaOrg\Contracts\ThingContract;
  * @see http://schema.org/PostOffice
  *
  */
-class PostOffice extends BaseType implements GovernmentOfficeContract, LocalBusinessContract, OrganizationContract, PlaceContract, ThingContract
+class PostOffice extends BaseType implements PostOfficeContract, GovernmentOfficeContract, LocalBusinessContract, OrganizationContract, PlaceContract, ThingContract
 {
     /**
      * A property-value pair representing an additional characteristics of the

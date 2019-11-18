@@ -2,6 +2,7 @@
 
 namespace Spatie\SchemaOrg;
 
+use \Spatie\SchemaOrg\Contracts\MenuItemContract;
 use \Spatie\SchemaOrg\Contracts\CreativeWorkContract;
 use \Spatie\SchemaOrg\Contracts\ThingContract;
 
@@ -11,7 +12,7 @@ use \Spatie\SchemaOrg\Contracts\ThingContract;
  * @see http://schema.org/MenuItem
  *
  */
-class MenuItem extends BaseType implements CreativeWorkContract, ThingContract
+class MenuItem extends BaseType implements MenuItemContract, CreativeWorkContract, ThingContract
 {
     /**
      * The subject matter of the content.

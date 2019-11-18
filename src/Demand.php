@@ -2,6 +2,7 @@
 
 namespace Spatie\SchemaOrg;
 
+use \Spatie\SchemaOrg\Contracts\DemandContract;
 use \Spatie\SchemaOrg\Contracts\IntangibleContract;
 use \Spatie\SchemaOrg\Contracts\ThingContract;
 
@@ -14,7 +15,7 @@ use \Spatie\SchemaOrg\Contracts\ThingContract;
  * @see http://schema.org/Demand
  *
  */
-class Demand extends BaseType implements IntangibleContract, ThingContract
+class Demand extends BaseType implements DemandContract, IntangibleContract, ThingContract
 {
     /**
      * The payment method(s) accepted by seller for this offer.

@@ -2,6 +2,7 @@
 
 namespace Spatie\SchemaOrg;
 
+use \Spatie\SchemaOrg\Contracts\PublicationIssueContract;
 use \Spatie\SchemaOrg\Contracts\CreativeWorkContract;
 use \Spatie\SchemaOrg\Contracts\ThingContract;
 
@@ -16,7 +17,7 @@ use \Spatie\SchemaOrg\Contracts\ThingContract;
  * @see http://schema.org/PublicationIssue
  *
  */
-class PublicationIssue extends BaseType implements CreativeWorkContract, ThingContract
+class PublicationIssue extends BaseType implements PublicationIssueContract, CreativeWorkContract, ThingContract
 {
     /**
      * The subject matter of the content.

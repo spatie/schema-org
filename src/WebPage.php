@@ -2,6 +2,7 @@
 
 namespace Spatie\SchemaOrg;
 
+use \Spatie\SchemaOrg\Contracts\WebPageContract;
 use \Spatie\SchemaOrg\Contracts\CreativeWorkContract;
 use \Spatie\SchemaOrg\Contracts\ThingContract;
 
@@ -15,7 +16,7 @@ use \Spatie\SchemaOrg\Contracts\ThingContract;
  * @see http://schema.org/WebPage
  *
  */
-class WebPage extends BaseType implements CreativeWorkContract, ThingContract
+class WebPage extends BaseType implements WebPageContract, CreativeWorkContract, ThingContract
 {
     /**
      * The subject matter of the content.

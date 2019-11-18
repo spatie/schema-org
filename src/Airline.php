@@ -2,6 +2,7 @@
 
 namespace Spatie\SchemaOrg;
 
+use \Spatie\SchemaOrg\Contracts\AirlineContract;
 use \Spatie\SchemaOrg\Contracts\OrganizationContract;
 use \Spatie\SchemaOrg\Contracts\ThingContract;
 
@@ -11,7 +12,7 @@ use \Spatie\SchemaOrg\Contracts\ThingContract;
  * @see http://schema.org/Airline
  *
  */
-class Airline extends BaseType implements OrganizationContract, ThingContract
+class Airline extends BaseType implements AirlineContract, OrganizationContract, ThingContract
 {
     /**
      * An additional type for the item, typically used for adding more specific

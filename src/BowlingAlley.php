@@ -2,6 +2,7 @@
 
 namespace Spatie\SchemaOrg;
 
+use \Spatie\SchemaOrg\Contracts\BowlingAlleyContract;
 use \Spatie\SchemaOrg\Contracts\LocalBusinessContract;
 use \Spatie\SchemaOrg\Contracts\OrganizationContract;
 use \Spatie\SchemaOrg\Contracts\PlaceContract;
@@ -14,7 +15,7 @@ use \Spatie\SchemaOrg\Contracts\ThingContract;
  * @see http://schema.org/BowlingAlley
  *
  */
-class BowlingAlley extends BaseType implements LocalBusinessContract, OrganizationContract, PlaceContract, SportsActivityLocationContract, ThingContract
+class BowlingAlley extends BaseType implements BowlingAlleyContract, LocalBusinessContract, OrganizationContract, PlaceContract, SportsActivityLocationContract, ThingContract
 {
     /**
      * A property-value pair representing an additional characteristics of the

@@ -2,6 +2,7 @@
 
 namespace Spatie\SchemaOrg;
 
+use \Spatie\SchemaOrg\Contracts\CatholicChurchContract;
 use \Spatie\SchemaOrg\Contracts\ChurchContract;
 use \Spatie\SchemaOrg\Contracts\CivicStructureContract;
 use \Spatie\SchemaOrg\Contracts\PlaceContract;
@@ -14,7 +15,7 @@ use \Spatie\SchemaOrg\Contracts\ThingContract;
  * @see http://schema.org/CatholicChurch
  *
  */
-class CatholicChurch extends BaseType implements ChurchContract, CivicStructureContract, PlaceContract, PlaceOfWorshipContract, ThingContract
+class CatholicChurch extends BaseType implements CatholicChurchContract, ChurchContract, CivicStructureContract, PlaceContract, PlaceOfWorshipContract, ThingContract
 {
     /**
      * A property-value pair representing an additional characteristics of the

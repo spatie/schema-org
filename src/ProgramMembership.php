@@ -2,6 +2,7 @@
 
 namespace Spatie\SchemaOrg;
 
+use \Spatie\SchemaOrg\Contracts\ProgramMembershipContract;
 use \Spatie\SchemaOrg\Contracts\IntangibleContract;
 use \Spatie\SchemaOrg\Contracts\ThingContract;
 
@@ -12,7 +13,7 @@ use \Spatie\SchemaOrg\Contracts\ThingContract;
  * @see http://schema.org/ProgramMembership
  *
  */
-class ProgramMembership extends BaseType implements IntangibleContract, ThingContract
+class ProgramMembership extends BaseType implements ProgramMembershipContract, IntangibleContract, ThingContract
 {
     /**
      * An additional type for the item, typically used for adding more specific

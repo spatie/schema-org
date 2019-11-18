@@ -2,6 +2,7 @@
 
 namespace Spatie\SchemaOrg;
 
+use \Spatie\SchemaOrg\Contracts\CanalContract;
 use \Spatie\SchemaOrg\Contracts\BodyOfWaterContract;
 use \Spatie\SchemaOrg\Contracts\LandformContract;
 use \Spatie\SchemaOrg\Contracts\PlaceContract;
@@ -13,7 +14,7 @@ use \Spatie\SchemaOrg\Contracts\ThingContract;
  * @see http://schema.org/Canal
  *
  */
-class Canal extends BaseType implements BodyOfWaterContract, LandformContract, PlaceContract, ThingContract
+class Canal extends BaseType implements CanalContract, BodyOfWaterContract, LandformContract, PlaceContract, ThingContract
 {
     /**
      * A property-value pair representing an additional characteristics of the

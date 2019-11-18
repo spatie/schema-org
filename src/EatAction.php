@@ -2,6 +2,7 @@
 
 namespace Spatie\SchemaOrg;
 
+use \Spatie\SchemaOrg\Contracts\EatActionContract;
 use \Spatie\SchemaOrg\Contracts\ActionContract;
 use \Spatie\SchemaOrg\Contracts\ConsumeActionContract;
 use \Spatie\SchemaOrg\Contracts\ThingContract;
@@ -12,7 +13,7 @@ use \Spatie\SchemaOrg\Contracts\ThingContract;
  * @see http://schema.org/EatAction
  *
  */
-class EatAction extends BaseType implements ActionContract, ConsumeActionContract, ThingContract
+class EatAction extends BaseType implements EatActionContract, ActionContract, ConsumeActionContract, ThingContract
 {
     /**
      * A set of requirements that a must be fulfilled in order to perform an

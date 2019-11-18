@@ -2,6 +2,7 @@
 
 namespace Spatie\SchemaOrg;
 
+use \Spatie\SchemaOrg\Contracts\HowToDirectionContract;
 use \Spatie\SchemaOrg\Contracts\CreativeWorkContract;
 use \Spatie\SchemaOrg\Contracts\IntangibleContract;
 use \Spatie\SchemaOrg\Contracts\ListItemContract;
@@ -14,7 +15,7 @@ use \Spatie\SchemaOrg\Contracts\ThingContract;
  * @see http://schema.org/HowToDirection
  *
  */
-class HowToDirection extends BaseType implements CreativeWorkContract, IntangibleContract, ListItemContract, ThingContract
+class HowToDirection extends BaseType implements HowToDirectionContract, CreativeWorkContract, IntangibleContract, ListItemContract, ThingContract
 {
     /**
      * The subject matter of the content.

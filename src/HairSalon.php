@@ -2,6 +2,7 @@
 
 namespace Spatie\SchemaOrg;
 
+use \Spatie\SchemaOrg\Contracts\HairSalonContract;
 use \Spatie\SchemaOrg\Contracts\HealthAndBeautyBusinessContract;
 use \Spatie\SchemaOrg\Contracts\LocalBusinessContract;
 use \Spatie\SchemaOrg\Contracts\OrganizationContract;
@@ -14,7 +15,7 @@ use \Spatie\SchemaOrg\Contracts\ThingContract;
  * @see http://schema.org/HairSalon
  *
  */
-class HairSalon extends BaseType implements HealthAndBeautyBusinessContract, LocalBusinessContract, OrganizationContract, PlaceContract, ThingContract
+class HairSalon extends BaseType implements HairSalonContract, HealthAndBeautyBusinessContract, LocalBusinessContract, OrganizationContract, PlaceContract, ThingContract
 {
     /**
      * A property-value pair representing an additional characteristics of the

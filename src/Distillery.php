@@ -2,6 +2,7 @@
 
 namespace Spatie\SchemaOrg;
 
+use \Spatie\SchemaOrg\Contracts\DistilleryContract;
 use \Spatie\SchemaOrg\Contracts\FoodEstablishmentContract;
 use \Spatie\SchemaOrg\Contracts\LocalBusinessContract;
 use \Spatie\SchemaOrg\Contracts\OrganizationContract;
@@ -14,7 +15,7 @@ use \Spatie\SchemaOrg\Contracts\ThingContract;
  * @see http://schema.org/Distillery
  *
  */
-class Distillery extends BaseType implements FoodEstablishmentContract, LocalBusinessContract, OrganizationContract, PlaceContract, ThingContract
+class Distillery extends BaseType implements DistilleryContract, FoodEstablishmentContract, LocalBusinessContract, OrganizationContract, PlaceContract, ThingContract
 {
     /**
      * Indicates whether a FoodEstablishment accepts reservations. Values can be

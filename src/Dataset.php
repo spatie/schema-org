@@ -2,6 +2,7 @@
 
 namespace Spatie\SchemaOrg;
 
+use \Spatie\SchemaOrg\Contracts\DatasetContract;
 use \Spatie\SchemaOrg\Contracts\CreativeWorkContract;
 use \Spatie\SchemaOrg\Contracts\ThingContract;
 
@@ -11,7 +12,7 @@ use \Spatie\SchemaOrg\Contracts\ThingContract;
  * @see http://schema.org/Dataset
  *
  */
-class Dataset extends BaseType implements CreativeWorkContract, ThingContract
+class Dataset extends BaseType implements DatasetContract, CreativeWorkContract, ThingContract
 {
     /**
      * The subject matter of the content.

@@ -2,6 +2,7 @@
 
 namespace Spatie\SchemaOrg;
 
+use \Spatie\SchemaOrg\Contracts\MarryActionContract;
 use \Spatie\SchemaOrg\Contracts\ActionContract;
 use \Spatie\SchemaOrg\Contracts\InteractActionContract;
 use \Spatie\SchemaOrg\Contracts\ThingContract;
@@ -12,7 +13,7 @@ use \Spatie\SchemaOrg\Contracts\ThingContract;
  * @see http://schema.org/MarryAction
  *
  */
-class MarryAction extends BaseType implements ActionContract, InteractActionContract, ThingContract
+class MarryAction extends BaseType implements MarryActionContract, ActionContract, InteractActionContract, ThingContract
 {
     /**
      * Indicates the current disposition of the Action.

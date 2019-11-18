@@ -2,6 +2,7 @@
 
 namespace Spatie\SchemaOrg;
 
+use \Spatie\SchemaOrg\Contracts\BridgeContract;
 use \Spatie\SchemaOrg\Contracts\CivicStructureContract;
 use \Spatie\SchemaOrg\Contracts\PlaceContract;
 use \Spatie\SchemaOrg\Contracts\ThingContract;
@@ -12,7 +13,7 @@ use \Spatie\SchemaOrg\Contracts\ThingContract;
  * @see http://schema.org/Bridge
  *
  */
-class Bridge extends BaseType implements CivicStructureContract, PlaceContract, ThingContract
+class Bridge extends BaseType implements BridgeContract, CivicStructureContract, PlaceContract, ThingContract
 {
     /**
      * A property-value pair representing an additional characteristics of the

@@ -2,6 +2,7 @@
 
 namespace Spatie\SchemaOrg;
 
+use \Spatie\SchemaOrg\Contracts\HowToTipContract;
 use \Spatie\SchemaOrg\Contracts\CreativeWorkContract;
 use \Spatie\SchemaOrg\Contracts\IntangibleContract;
 use \Spatie\SchemaOrg\Contracts\ListItemContract;
@@ -16,7 +17,7 @@ use \Spatie\SchemaOrg\Contracts\ThingContract;
  * @see http://schema.org/HowToTip
  *
  */
-class HowToTip extends BaseType implements CreativeWorkContract, IntangibleContract, ListItemContract, ThingContract
+class HowToTip extends BaseType implements HowToTipContract, CreativeWorkContract, IntangibleContract, ListItemContract, ThingContract
 {
     /**
      * The subject matter of the content.

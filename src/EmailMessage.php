@@ -2,6 +2,7 @@
 
 namespace Spatie\SchemaOrg;
 
+use \Spatie\SchemaOrg\Contracts\EmailMessageContract;
 use \Spatie\SchemaOrg\Contracts\CreativeWorkContract;
 use \Spatie\SchemaOrg\Contracts\MessageContract;
 use \Spatie\SchemaOrg\Contracts\ThingContract;
@@ -12,7 +13,7 @@ use \Spatie\SchemaOrg\Contracts\ThingContract;
  * @see http://schema.org/EmailMessage
  *
  */
-class EmailMessage extends BaseType implements CreativeWorkContract, MessageContract, ThingContract
+class EmailMessage extends BaseType implements EmailMessageContract, CreativeWorkContract, MessageContract, ThingContract
 {
     /**
      * The subject matter of the content.

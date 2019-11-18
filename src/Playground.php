@@ -2,6 +2,7 @@
 
 namespace Spatie\SchemaOrg;
 
+use \Spatie\SchemaOrg\Contracts\PlaygroundContract;
 use \Spatie\SchemaOrg\Contracts\CivicStructureContract;
 use \Spatie\SchemaOrg\Contracts\PlaceContract;
 use \Spatie\SchemaOrg\Contracts\ThingContract;
@@ -12,7 +13,7 @@ use \Spatie\SchemaOrg\Contracts\ThingContract;
  * @see http://schema.org/Playground
  *
  */
-class Playground extends BaseType implements CivicStructureContract, PlaceContract, ThingContract
+class Playground extends BaseType implements PlaygroundContract, CivicStructureContract, PlaceContract, ThingContract
 {
     /**
      * A property-value pair representing an additional characteristics of the

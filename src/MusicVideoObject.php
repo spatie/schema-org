@@ -2,6 +2,7 @@
 
 namespace Spatie\SchemaOrg;
 
+use \Spatie\SchemaOrg\Contracts\MusicVideoObjectContract;
 use \Spatie\SchemaOrg\Contracts\CreativeWorkContract;
 use \Spatie\SchemaOrg\Contracts\MediaObjectContract;
 use \Spatie\SchemaOrg\Contracts\ThingContract;
@@ -12,7 +13,7 @@ use \Spatie\SchemaOrg\Contracts\ThingContract;
  * @see http://schema.org/MusicVideoObject
  *
  */
-class MusicVideoObject extends BaseType implements CreativeWorkContract, MediaObjectContract, ThingContract
+class MusicVideoObject extends BaseType implements MusicVideoObjectContract, CreativeWorkContract, MediaObjectContract, ThingContract
 {
     /**
      * The subject matter of the content.

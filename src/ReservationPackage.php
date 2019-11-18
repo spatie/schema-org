@@ -2,6 +2,7 @@
 
 namespace Spatie\SchemaOrg;
 
+use \Spatie\SchemaOrg\Contracts\ReservationPackageContract;
 use \Spatie\SchemaOrg\Contracts\IntangibleContract;
 use \Spatie\SchemaOrg\Contracts\ReservationContract;
 use \Spatie\SchemaOrg\Contracts\ThingContract;
@@ -12,7 +13,7 @@ use \Spatie\SchemaOrg\Contracts\ThingContract;
  * @see http://schema.org/ReservationPackage
  *
  */
-class ReservationPackage extends BaseType implements IntangibleContract, ReservationContract, ThingContract
+class ReservationPackage extends BaseType implements ReservationPackageContract, IntangibleContract, ReservationContract, ThingContract
 {
     /**
      * An additional type for the item, typically used for adding more specific

@@ -2,6 +2,7 @@
 
 namespace Spatie\SchemaOrg;
 
+use \Spatie\SchemaOrg\Contracts\AirportContract;
 use \Spatie\SchemaOrg\Contracts\CivicStructureContract;
 use \Spatie\SchemaOrg\Contracts\PlaceContract;
 use \Spatie\SchemaOrg\Contracts\ThingContract;
@@ -12,7 +13,7 @@ use \Spatie\SchemaOrg\Contracts\ThingContract;
  * @see http://schema.org/Airport
  *
  */
-class Airport extends BaseType implements CivicStructureContract, PlaceContract, ThingContract
+class Airport extends BaseType implements AirportContract, CivicStructureContract, PlaceContract, ThingContract
 {
     /**
      * A property-value pair representing an additional characteristics of the

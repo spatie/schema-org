@@ -2,6 +2,7 @@
 
 namespace Spatie\SchemaOrg;
 
+use \Spatie\SchemaOrg\Contracts\SubscribeActionContract;
 use \Spatie\SchemaOrg\Contracts\ActionContract;
 use \Spatie\SchemaOrg\Contracts\InteractActionContract;
 use \Spatie\SchemaOrg\Contracts\ThingContract;
@@ -23,7 +24,7 @@ use \Spatie\SchemaOrg\Contracts\ThingContract;
  * @see http://schema.org/SubscribeAction
  *
  */
-class SubscribeAction extends BaseType implements ActionContract, InteractActionContract, ThingContract
+class SubscribeAction extends BaseType implements SubscribeActionContract, ActionContract, InteractActionContract, ThingContract
 {
     /**
      * Indicates the current disposition of the Action.

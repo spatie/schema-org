@@ -2,6 +2,7 @@
 
 namespace Spatie\SchemaOrg;
 
+use \Spatie\SchemaOrg\Contracts\BedDetailsContract;
 use \Spatie\SchemaOrg\Contracts\IntangibleContract;
 use \Spatie\SchemaOrg\Contracts\ThingContract;
 
@@ -14,7 +15,7 @@ use \Spatie\SchemaOrg\Contracts\ThingContract;
  * @see http://schema.org/BedDetails
  *
  */
-class BedDetails extends BaseType implements IntangibleContract, ThingContract
+class BedDetails extends BaseType implements BedDetailsContract, IntangibleContract, ThingContract
 {
     /**
      * An additional type for the item, typically used for adding more specific

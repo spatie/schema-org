@@ -2,6 +2,7 @@
 
 namespace Spatie\SchemaOrg;
 
+use \Spatie\SchemaOrg\Contracts\UserLikesContract;
 use \Spatie\SchemaOrg\Contracts\EventContract;
 use \Spatie\SchemaOrg\Contracts\ThingContract;
 use \Spatie\SchemaOrg\Contracts\UserInteractionContract;
@@ -14,7 +15,7 @@ use \Spatie\SchemaOrg\Contracts\UserInteractionContract;
  * @see http://schema.org/UserLikes
  *
  */
-class UserLikes extends BaseType implements EventContract, ThingContract, UserInteractionContract
+class UserLikes extends BaseType implements UserLikesContract, EventContract, ThingContract, UserInteractionContract
 {
     /**
      * The subject matter of the content.

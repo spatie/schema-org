@@ -2,6 +2,7 @@
 
 namespace Spatie\SchemaOrg;
 
+use \Spatie\SchemaOrg\Contracts\NotaryContract;
 use \Spatie\SchemaOrg\Contracts\LegalServiceContract;
 use \Spatie\SchemaOrg\Contracts\LocalBusinessContract;
 use \Spatie\SchemaOrg\Contracts\OrganizationContract;
@@ -14,7 +15,7 @@ use \Spatie\SchemaOrg\Contracts\ThingContract;
  * @see http://schema.org/Notary
  *
  */
-class Notary extends BaseType implements LegalServiceContract, LocalBusinessContract, OrganizationContract, PlaceContract, ThingContract
+class Notary extends BaseType implements NotaryContract, LegalServiceContract, LocalBusinessContract, OrganizationContract, PlaceContract, ThingContract
 {
     /**
      * A property-value pair representing an additional characteristics of the

@@ -2,6 +2,7 @@
 
 namespace Spatie\SchemaOrg;
 
+use \Spatie\SchemaOrg\Contracts\FilmActionContract;
 use \Spatie\SchemaOrg\Contracts\ActionContract;
 use \Spatie\SchemaOrg\Contracts\CreateActionContract;
 use \Spatie\SchemaOrg\Contracts\ThingContract;
@@ -12,7 +13,7 @@ use \Spatie\SchemaOrg\Contracts\ThingContract;
  * @see http://schema.org/FilmAction
  *
  */
-class FilmAction extends BaseType implements ActionContract, CreateActionContract, ThingContract
+class FilmAction extends BaseType implements FilmActionContract, ActionContract, CreateActionContract, ThingContract
 {
     /**
      * Indicates the current disposition of the Action.

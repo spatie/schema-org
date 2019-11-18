@@ -2,6 +2,7 @@
 
 namespace Spatie\SchemaOrg;
 
+use \Spatie\SchemaOrg\Contracts\QuestionContract;
 use \Spatie\SchemaOrg\Contracts\CreativeWorkContract;
 use \Spatie\SchemaOrg\Contracts\ThingContract;
 
@@ -12,7 +13,7 @@ use \Spatie\SchemaOrg\Contracts\ThingContract;
  * @see http://schema.org/Question
  *
  */
-class Question extends BaseType implements CreativeWorkContract, ThingContract
+class Question extends BaseType implements QuestionContract, CreativeWorkContract, ThingContract
 {
     /**
      * The subject matter of the content.

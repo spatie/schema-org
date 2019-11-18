@@ -2,6 +2,7 @@
 
 namespace Spatie\SchemaOrg;
 
+use \Spatie\SchemaOrg\Contracts\SculptureContract;
 use \Spatie\SchemaOrg\Contracts\CreativeWorkContract;
 use \Spatie\SchemaOrg\Contracts\ThingContract;
 
@@ -11,7 +12,7 @@ use \Spatie\SchemaOrg\Contracts\ThingContract;
  * @see http://schema.org/Sculpture
  *
  */
-class Sculpture extends BaseType implements CreativeWorkContract, ThingContract
+class Sculpture extends BaseType implements SculptureContract, CreativeWorkContract, ThingContract
 {
     /**
      * The subject matter of the content.

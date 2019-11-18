@@ -2,6 +2,7 @@
 
 namespace Spatie\SchemaOrg;
 
+use \Spatie\SchemaOrg\Contracts\HowToSectionContract;
 use \Spatie\SchemaOrg\Contracts\CreativeWorkContract;
 use \Spatie\SchemaOrg\Contracts\IntangibleContract;
 use \Spatie\SchemaOrg\Contracts\ItemListContract;
@@ -15,7 +16,7 @@ use \Spatie\SchemaOrg\Contracts\ThingContract;
  * @see http://schema.org/HowToSection
  *
  */
-class HowToSection extends BaseType implements CreativeWorkContract, IntangibleContract, ItemListContract, ListItemContract, ThingContract
+class HowToSection extends BaseType implements HowToSectionContract, CreativeWorkContract, IntangibleContract, ItemListContract, ListItemContract, ThingContract
 {
     /**
      * The subject matter of the content.

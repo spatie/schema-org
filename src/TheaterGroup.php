@@ -2,6 +2,7 @@
 
 namespace Spatie\SchemaOrg;
 
+use \Spatie\SchemaOrg\Contracts\TheaterGroupContract;
 use \Spatie\SchemaOrg\Contracts\OrganizationContract;
 use \Spatie\SchemaOrg\Contracts\PerformingGroupContract;
 use \Spatie\SchemaOrg\Contracts\ThingContract;
@@ -13,7 +14,7 @@ use \Spatie\SchemaOrg\Contracts\ThingContract;
  * @see http://schema.org/TheaterGroup
  *
  */
-class TheaterGroup extends BaseType implements OrganizationContract, PerformingGroupContract, ThingContract
+class TheaterGroup extends BaseType implements TheaterGroupContract, OrganizationContract, PerformingGroupContract, ThingContract
 {
     /**
      * An additional type for the item, typically used for adding more specific

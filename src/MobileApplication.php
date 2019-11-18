@@ -2,6 +2,7 @@
 
 namespace Spatie\SchemaOrg;
 
+use \Spatie\SchemaOrg\Contracts\MobileApplicationContract;
 use \Spatie\SchemaOrg\Contracts\CreativeWorkContract;
 use \Spatie\SchemaOrg\Contracts\SoftwareApplicationContract;
 use \Spatie\SchemaOrg\Contracts\ThingContract;
@@ -13,7 +14,7 @@ use \Spatie\SchemaOrg\Contracts\ThingContract;
  * @see http://schema.org/MobileApplication
  *
  */
-class MobileApplication extends BaseType implements CreativeWorkContract, SoftwareApplicationContract, ThingContract
+class MobileApplication extends BaseType implements MobileApplicationContract, CreativeWorkContract, SoftwareApplicationContract, ThingContract
 {
     /**
      * The subject matter of the content.

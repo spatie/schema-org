@@ -2,6 +2,7 @@
 
 namespace Spatie\SchemaOrg;
 
+use \Spatie\SchemaOrg\Contracts\FlightReservationContract;
 use \Spatie\SchemaOrg\Contracts\IntangibleContract;
 use \Spatie\SchemaOrg\Contracts\ReservationContract;
 use \Spatie\SchemaOrg\Contracts\ThingContract;
@@ -16,7 +17,7 @@ use \Spatie\SchemaOrg\Contracts\ThingContract;
  * @see http://schema.org/FlightReservation
  *
  */
-class FlightReservation extends BaseType implements IntangibleContract, ReservationContract, ThingContract
+class FlightReservation extends BaseType implements FlightReservationContract, IntangibleContract, ReservationContract, ThingContract
 {
     /**
      * An additional type for the item, typically used for adding more specific
