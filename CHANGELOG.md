@@ -2,6 +2,10 @@
 
 All Notable changes to `schema-org` will be documented in this file.
 
+## 2.11.1 - 2019-11-18
+
+- Fix types to implement their own contract
+
 ## 2.11.0 - 2019-11-18
 
 - Use contracts as type-hints in doc-blocks
