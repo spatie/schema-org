@@ -6,6 +6,7 @@ use \Spatie\SchemaOrg\Contracts\ActionContract;
 use \Spatie\SchemaOrg\Contracts\ConsumeActionContract;
 use \Spatie\SchemaOrg\Contracts\ThingContract;
 use \Spatie\SchemaOrg\Contracts\UseActionContract;
+use \Spatie\SchemaOrg\Contracts\WearActionContract;
 
 /**
  * The act of dressing oneself in clothing.
@@ -13,7 +14,7 @@ use \Spatie\SchemaOrg\Contracts\UseActionContract;
  * @see http://schema.org/WearAction
  *
  */
-class WearAction extends BaseType implements ActionContract, ConsumeActionContract, ThingContract, UseActionContract
+class WearAction extends BaseType implements ActionContract, ConsumeActionContract, ThingContract, UseActionContract, WearActionContract
 {
     /**
      * A set of requirements that a must be fulfilled in order to perform an

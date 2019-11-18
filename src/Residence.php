@@ -3,6 +3,7 @@
 namespace Spatie\SchemaOrg;
 
 use \Spatie\SchemaOrg\Contracts\PlaceContract;
+use \Spatie\SchemaOrg\Contracts\ResidenceContract;
 use \Spatie\SchemaOrg\Contracts\ThingContract;
 
 /**
@@ -11,7 +12,7 @@ use \Spatie\SchemaOrg\Contracts\ThingContract;
  * @see http://schema.org/Residence
  *
  */
-class Residence extends BaseType implements PlaceContract, ThingContract
+class Residence extends BaseType implements PlaceContract, ResidenceContract, ThingContract
 {
     /**
      * A property-value pair representing an additional characteristics of the

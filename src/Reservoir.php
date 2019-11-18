@@ -5,6 +5,7 @@ namespace Spatie\SchemaOrg;
 use \Spatie\SchemaOrg\Contracts\BodyOfWaterContract;
 use \Spatie\SchemaOrg\Contracts\LandformContract;
 use \Spatie\SchemaOrg\Contracts\PlaceContract;
+use \Spatie\SchemaOrg\Contracts\ReservoirContract;
 use \Spatie\SchemaOrg\Contracts\ThingContract;
 
 /**
@@ -14,7 +15,7 @@ use \Spatie\SchemaOrg\Contracts\ThingContract;
  * @see http://schema.org/Reservoir
  *
  */
-class Reservoir extends BaseType implements BodyOfWaterContract, LandformContract, PlaceContract, ThingContract
+class Reservoir extends BaseType implements BodyOfWaterContract, LandformContract, PlaceContract, ReservoirContract, ThingContract
 {
     /**
      * A property-value pair representing an additional characteristics of the

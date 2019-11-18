@@ -3,6 +3,7 @@
 namespace Spatie\SchemaOrg;
 
 use \Spatie\SchemaOrg\Contracts\CreativeWorkContract;
+use \Spatie\SchemaOrg\Contracts\MenuSectionContract;
 use \Spatie\SchemaOrg\Contracts\ThingContract;
 
 /**
@@ -14,7 +15,7 @@ use \Spatie\SchemaOrg\Contracts\ThingContract;
  * @see http://schema.org/MenuSection
  *
  */
-class MenuSection extends BaseType implements CreativeWorkContract, ThingContract
+class MenuSection extends BaseType implements CreativeWorkContract, MenuSectionContract, ThingContract
 {
     /**
      * The subject matter of the content.

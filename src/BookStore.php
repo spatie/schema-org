@@ -2,6 +2,7 @@
 
 namespace Spatie\SchemaOrg;
 
+use \Spatie\SchemaOrg\Contracts\BookStoreContract;
 use \Spatie\SchemaOrg\Contracts\LocalBusinessContract;
 use \Spatie\SchemaOrg\Contracts\OrganizationContract;
 use \Spatie\SchemaOrg\Contracts\PlaceContract;
@@ -14,7 +15,7 @@ use \Spatie\SchemaOrg\Contracts\ThingContract;
  * @see http://schema.org/BookStore
  *
  */
-class BookStore extends BaseType implements LocalBusinessContract, OrganizationContract, PlaceContract, StoreContract, ThingContract
+class BookStore extends BaseType implements BookStoreContract, LocalBusinessContract, OrganizationContract, PlaceContract, StoreContract, ThingContract
 {
     /**
      * A property-value pair representing an additional characteristics of the

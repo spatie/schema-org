@@ -6,6 +6,7 @@ use \Spatie\SchemaOrg\Contracts\ActionContract;
 use \Spatie\SchemaOrg\Contracts\AssessActionContract;
 use \Spatie\SchemaOrg\Contracts\ChooseActionContract;
 use \Spatie\SchemaOrg\Contracts\ThingContract;
+use \Spatie\SchemaOrg\Contracts\VoteActionContract;
 
 /**
  * The act of expressing a preference from a fixed/finite/structured set of
@@ -14,7 +15,7 @@ use \Spatie\SchemaOrg\Contracts\ThingContract;
  * @see http://schema.org/VoteAction
  *
  */
-class VoteAction extends BaseType implements ActionContract, AssessActionContract, ChooseActionContract, ThingContract
+class VoteAction extends BaseType implements ActionContract, AssessActionContract, ChooseActionContract, ThingContract, VoteActionContract
 {
     /**
      * A sub property of object. The options subject to this action.

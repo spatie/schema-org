@@ -7,6 +7,7 @@ use \Spatie\SchemaOrg\Contracts\EmergencyServiceContract;
 use \Spatie\SchemaOrg\Contracts\LocalBusinessContract;
 use \Spatie\SchemaOrg\Contracts\OrganizationContract;
 use \Spatie\SchemaOrg\Contracts\PlaceContract;
+use \Spatie\SchemaOrg\Contracts\PoliceStationContract;
 use \Spatie\SchemaOrg\Contracts\ThingContract;
 
 /**
@@ -15,7 +16,7 @@ use \Spatie\SchemaOrg\Contracts\ThingContract;
  * @see http://schema.org/PoliceStation
  *
  */
-class PoliceStation extends BaseType implements CivicStructureContract, EmergencyServiceContract, LocalBusinessContract, OrganizationContract, PlaceContract, ThingContract
+class PoliceStation extends BaseType implements CivicStructureContract, EmergencyServiceContract, LocalBusinessContract, OrganizationContract, PlaceContract, PoliceStationContract, ThingContract
 {
     /**
      * A property-value pair representing an additional characteristics of the

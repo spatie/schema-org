@@ -4,6 +4,7 @@ namespace Spatie\SchemaOrg;
 
 use \Spatie\SchemaOrg\Contracts\AdministrativeAreaContract;
 use \Spatie\SchemaOrg\Contracts\PlaceContract;
+use \Spatie\SchemaOrg\Contracts\StateContract;
 use \Spatie\SchemaOrg\Contracts\ThingContract;
 
 /**
@@ -12,7 +13,7 @@ use \Spatie\SchemaOrg\Contracts\ThingContract;
  * @see http://schema.org/State
  *
  */
-class State extends BaseType implements AdministrativeAreaContract, PlaceContract, ThingContract
+class State extends BaseType implements AdministrativeAreaContract, PlaceContract, StateContract, ThingContract
 {
     /**
      * A property-value pair representing an additional characteristics of the

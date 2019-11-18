@@ -3,6 +3,7 @@
 namespace Spatie\SchemaOrg;
 
 use \Spatie\SchemaOrg\Contracts\EventContract;
+use \Spatie\SchemaOrg\Contracts\PublicationEventContract;
 use \Spatie\SchemaOrg\Contracts\ThingContract;
 
 /**
@@ -13,7 +14,7 @@ use \Spatie\SchemaOrg\Contracts\ThingContract;
  * @see http://schema.org/PublicationEvent
  *
  */
-class PublicationEvent extends BaseType implements EventContract, ThingContract
+class PublicationEvent extends BaseType implements EventContract, PublicationEventContract, ThingContract
 {
     /**
      * The subject matter of the content.

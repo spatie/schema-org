@@ -6,6 +6,7 @@ use \Spatie\SchemaOrg\Contracts\IntangibleContract;
 use \Spatie\SchemaOrg\Contracts\PriceSpecificationContract;
 use \Spatie\SchemaOrg\Contracts\StructuredValueContract;
 use \Spatie\SchemaOrg\Contracts\ThingContract;
+use \Spatie\SchemaOrg\Contracts\UnitPriceSpecificationContract;
 
 /**
  * The price asked for a given offer by the respective organization or person.
@@ -13,7 +14,7 @@ use \Spatie\SchemaOrg\Contracts\ThingContract;
  * @see http://schema.org/UnitPriceSpecification
  *
  */
-class UnitPriceSpecification extends BaseType implements IntangibleContract, PriceSpecificationContract, StructuredValueContract, ThingContract
+class UnitPriceSpecification extends BaseType implements IntangibleContract, PriceSpecificationContract, StructuredValueContract, ThingContract, UnitPriceSpecificationContract
 {
     /**
      * An additional type for the item, typically used for adding more specific

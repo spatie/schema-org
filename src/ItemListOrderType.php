@@ -4,6 +4,7 @@ namespace Spatie\SchemaOrg;
 
 use \Spatie\SchemaOrg\Contracts\EnumerationContract;
 use \Spatie\SchemaOrg\Contracts\IntangibleContract;
+use \Spatie\SchemaOrg\Contracts\ItemListOrderTypeContract;
 use \Spatie\SchemaOrg\Contracts\ThingContract;
 
 /**
@@ -13,7 +14,7 @@ use \Spatie\SchemaOrg\Contracts\ThingContract;
  * @see http://schema.org/ItemListOrderType
  *
  */
-class ItemListOrderType extends BaseType implements EnumerationContract, IntangibleContract, ThingContract
+class ItemListOrderType extends BaseType implements EnumerationContract, IntangibleContract, ItemListOrderTypeContract, ThingContract
 {
     /**
      * An ItemList ordered with lower values listed first.

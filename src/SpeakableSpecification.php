@@ -3,6 +3,7 @@
 namespace Spatie\SchemaOrg;
 
 use \Spatie\SchemaOrg\Contracts\IntangibleContract;
+use \Spatie\SchemaOrg\Contracts\SpeakableSpecificationContract;
 use \Spatie\SchemaOrg\Contracts\ThingContract;
 
 /**
@@ -16,7 +17,7 @@ use \Spatie\SchemaOrg\Contracts\ThingContract;
  * @method static cssSelector($cssSelector) The value should be instance of pending types CssSelectorType|CssSelectorType[]
  * @method static xpath($xpath) The value should be instance of pending types XPathType|XPathType[]
  */
-class SpeakableSpecification extends BaseType implements IntangibleContract, ThingContract
+class SpeakableSpecification extends BaseType implements IntangibleContract, SpeakableSpecificationContract, ThingContract
 {
     /**
      * An additional type for the item, typically used for adding more specific

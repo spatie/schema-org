@@ -5,6 +5,7 @@ namespace Spatie\SchemaOrg;
 use \Spatie\SchemaOrg\Contracts\ActionContract;
 use \Spatie\SchemaOrg\Contracts\InteractActionContract;
 use \Spatie\SchemaOrg\Contracts\ThingContract;
+use \Spatie\SchemaOrg\Contracts\UnRegisterActionContract;
 
 /**
  * The act of un-registering from a service.
@@ -19,7 +20,7 @@ use \Spatie\SchemaOrg\Contracts\ThingContract;
  * @see http://schema.org/UnRegisterAction
  *
  */
-class UnRegisterAction extends BaseType implements ActionContract, InteractActionContract, ThingContract
+class UnRegisterAction extends BaseType implements ActionContract, InteractActionContract, ThingContract, UnRegisterActionContract
 {
     /**
      * Indicates the current disposition of the Action.

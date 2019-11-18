@@ -4,6 +4,7 @@ namespace Spatie\SchemaOrg;
 
 use \Spatie\SchemaOrg\Contracts\CreativeWorkContract;
 use \Spatie\SchemaOrg\Contracts\CreativeWorkSeasonContract;
+use \Spatie\SchemaOrg\Contracts\RadioSeasonContract;
 use \Spatie\SchemaOrg\Contracts\ThingContract;
 
 /**
@@ -12,7 +13,7 @@ use \Spatie\SchemaOrg\Contracts\ThingContract;
  * @see http://schema.org/RadioSeason
  *
  */
-class RadioSeason extends BaseType implements CreativeWorkContract, CreativeWorkSeasonContract, ThingContract
+class RadioSeason extends BaseType implements CreativeWorkContract, CreativeWorkSeasonContract, RadioSeasonContract, ThingContract
 {
     /**
      * The subject matter of the content.

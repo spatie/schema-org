@@ -4,6 +4,7 @@ namespace Spatie\SchemaOrg;
 
 use \Spatie\SchemaOrg\Contracts\CreativeWorkContract;
 use \Spatie\SchemaOrg\Contracts\ThingContract;
+use \Spatie\SchemaOrg\Contracts\WebSiteContract;
 
 /**
  * A WebSite is a set of related web pages and other items typically served from
@@ -12,7 +13,7 @@ use \Spatie\SchemaOrg\Contracts\ThingContract;
  * @see http://schema.org/WebSite
  *
  */
-class WebSite extends BaseType implements CreativeWorkContract, ThingContract
+class WebSite extends BaseType implements CreativeWorkContract, ThingContract, WebSiteContract
 {
     /**
      * The subject matter of the content.

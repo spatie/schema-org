@@ -3,6 +3,7 @@
 namespace Spatie\SchemaOrg;
 
 use \Spatie\SchemaOrg\Contracts\EventContract;
+use \Spatie\SchemaOrg\Contracts\ExhibitionEventContract;
 use \Spatie\SchemaOrg\Contracts\ThingContract;
 
 /**
@@ -12,7 +13,7 @@ use \Spatie\SchemaOrg\Contracts\ThingContract;
  * @see http://schema.org/ExhibitionEvent
  *
  */
-class ExhibitionEvent extends BaseType implements EventContract, ThingContract
+class ExhibitionEvent extends BaseType implements EventContract, ExhibitionEventContract, ThingContract
 {
     /**
      * The subject matter of the content.

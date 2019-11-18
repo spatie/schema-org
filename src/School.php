@@ -4,6 +4,7 @@ namespace Spatie\SchemaOrg;
 
 use \Spatie\SchemaOrg\Contracts\EducationalOrganizationContract;
 use \Spatie\SchemaOrg\Contracts\OrganizationContract;
+use \Spatie\SchemaOrg\Contracts\SchoolContract;
 use \Spatie\SchemaOrg\Contracts\ThingContract;
 
 /**
@@ -12,7 +13,7 @@ use \Spatie\SchemaOrg\Contracts\ThingContract;
  * @see http://schema.org/School
  *
  */
-class School extends BaseType implements EducationalOrganizationContract, OrganizationContract, ThingContract
+class School extends BaseType implements EducationalOrganizationContract, OrganizationContract, SchoolContract, ThingContract
 {
     /**
      * An additional type for the item, typically used for adding more specific

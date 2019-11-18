@@ -3,6 +3,7 @@
 namespace Spatie\SchemaOrg;
 
 use \Spatie\SchemaOrg\Contracts\EnumerationContract;
+use \Spatie\SchemaOrg\Contracts\GameServerStatusContract;
 use \Spatie\SchemaOrg\Contracts\IntangibleContract;
 use \Spatie\SchemaOrg\Contracts\ThingContract;
 
@@ -12,7 +13,7 @@ use \Spatie\SchemaOrg\Contracts\ThingContract;
  * @see http://schema.org/GameServerStatus
  *
  */
-class GameServerStatus extends BaseType implements EnumerationContract, IntangibleContract, ThingContract
+class GameServerStatus extends BaseType implements EnumerationContract, GameServerStatusContract, IntangibleContract, ThingContract
 {
     /**
      * Game server status: OfflinePermanently. Server is offline and not

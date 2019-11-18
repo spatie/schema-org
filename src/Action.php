@@ -2,6 +2,7 @@
 
 namespace Spatie\SchemaOrg;
 
+use \Spatie\SchemaOrg\Contracts\ActionContract;
 use \Spatie\SchemaOrg\Contracts\ThingContract;
 
 /**
@@ -17,7 +18,7 @@ use \Spatie\SchemaOrg\Contracts\ThingContract;
  * @see http://schema.org/Action
  *
  */
-class Action extends BaseType implements ThingContract
+class Action extends BaseType implements ActionContract, ThingContract
 {
     /**
      * Indicates the current disposition of the Action.

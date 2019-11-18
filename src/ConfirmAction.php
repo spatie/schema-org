@@ -4,6 +4,7 @@ namespace Spatie\SchemaOrg;
 
 use \Spatie\SchemaOrg\Contracts\ActionContract;
 use \Spatie\SchemaOrg\Contracts\CommunicateActionContract;
+use \Spatie\SchemaOrg\Contracts\ConfirmActionContract;
 use \Spatie\SchemaOrg\Contracts\InformActionContract;
 use \Spatie\SchemaOrg\Contracts\InteractActionContract;
 use \Spatie\SchemaOrg\Contracts\ThingContract;
@@ -19,7 +20,7 @@ use \Spatie\SchemaOrg\Contracts\ThingContract;
  * @see http://schema.org/ConfirmAction
  *
  */
-class ConfirmAction extends BaseType implements ActionContract, CommunicateActionContract, InformActionContract, InteractActionContract, ThingContract
+class ConfirmAction extends BaseType implements ActionContract, CommunicateActionContract, ConfirmActionContract, InformActionContract, InteractActionContract, ThingContract
 {
     /**
      * The subject matter of the content.

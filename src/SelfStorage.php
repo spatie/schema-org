@@ -5,6 +5,7 @@ namespace Spatie\SchemaOrg;
 use \Spatie\SchemaOrg\Contracts\LocalBusinessContract;
 use \Spatie\SchemaOrg\Contracts\OrganizationContract;
 use \Spatie\SchemaOrg\Contracts\PlaceContract;
+use \Spatie\SchemaOrg\Contracts\SelfStorageContract;
 use \Spatie\SchemaOrg\Contracts\ThingContract;
 
 /**
@@ -13,7 +14,7 @@ use \Spatie\SchemaOrg\Contracts\ThingContract;
  * @see http://schema.org/SelfStorage
  *
  */
-class SelfStorage extends BaseType implements LocalBusinessContract, OrganizationContract, PlaceContract, ThingContract
+class SelfStorage extends BaseType implements LocalBusinessContract, OrganizationContract, PlaceContract, SelfStorageContract, ThingContract
 {
     /**
      * A property-value pair representing an additional characteristics of the

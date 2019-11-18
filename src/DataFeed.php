@@ -3,6 +3,7 @@
 namespace Spatie\SchemaOrg;
 
 use \Spatie\SchemaOrg\Contracts\CreativeWorkContract;
+use \Spatie\SchemaOrg\Contracts\DataFeedContract;
 use \Spatie\SchemaOrg\Contracts\DatasetContract;
 use \Spatie\SchemaOrg\Contracts\ThingContract;
 
@@ -13,7 +14,7 @@ use \Spatie\SchemaOrg\Contracts\ThingContract;
  * @see http://schema.org/DataFeed
  *
  */
-class DataFeed extends BaseType implements CreativeWorkContract, DatasetContract, ThingContract
+class DataFeed extends BaseType implements CreativeWorkContract, DataFeedContract, DatasetContract, ThingContract
 {
     /**
      * The subject matter of the content.

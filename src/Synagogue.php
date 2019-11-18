@@ -5,6 +5,7 @@ namespace Spatie\SchemaOrg;
 use \Spatie\SchemaOrg\Contracts\CivicStructureContract;
 use \Spatie\SchemaOrg\Contracts\PlaceContract;
 use \Spatie\SchemaOrg\Contracts\PlaceOfWorshipContract;
+use \Spatie\SchemaOrg\Contracts\SynagogueContract;
 use \Spatie\SchemaOrg\Contracts\ThingContract;
 
 /**
@@ -13,7 +14,7 @@ use \Spatie\SchemaOrg\Contracts\ThingContract;
  * @see http://schema.org/Synagogue
  *
  */
-class Synagogue extends BaseType implements CivicStructureContract, PlaceContract, PlaceOfWorshipContract, ThingContract
+class Synagogue extends BaseType implements CivicStructureContract, PlaceContract, PlaceOfWorshipContract, SynagogueContract, ThingContract
 {
     /**
      * A property-value pair representing an additional characteristics of the

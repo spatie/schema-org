@@ -3,6 +3,7 @@
 namespace Spatie\SchemaOrg;
 
 use \Spatie\SchemaOrg\Contracts\LocalBusinessContract;
+use \Spatie\SchemaOrg\Contracts\MusicStoreContract;
 use \Spatie\SchemaOrg\Contracts\OrganizationContract;
 use \Spatie\SchemaOrg\Contracts\PlaceContract;
 use \Spatie\SchemaOrg\Contracts\StoreContract;
@@ -14,7 +15,7 @@ use \Spatie\SchemaOrg\Contracts\ThingContract;
  * @see http://schema.org/MusicStore
  *
  */
-class MusicStore extends BaseType implements LocalBusinessContract, OrganizationContract, PlaceContract, StoreContract, ThingContract
+class MusicStore extends BaseType implements LocalBusinessContract, MusicStoreContract, OrganizationContract, PlaceContract, StoreContract, ThingContract
 {
     /**
      * A property-value pair representing an additional characteristics of the

@@ -2,6 +2,7 @@
 
 namespace Spatie\SchemaOrg;
 
+use \Spatie\SchemaOrg\Contracts\BusinessEntityTypeContract;
 use \Spatie\SchemaOrg\Contracts\EnumerationContract;
 use \Spatie\SchemaOrg\Contracts\IntangibleContract;
 use \Spatie\SchemaOrg\Contracts\ThingContract;
@@ -21,7 +22,7 @@ use \Spatie\SchemaOrg\Contracts\ThingContract;
  * @see http://schema.org/BusinessEntityType
  *
  */
-class BusinessEntityType extends BaseType implements EnumerationContract, IntangibleContract, ThingContract
+class BusinessEntityType extends BaseType implements BusinessEntityTypeContract, EnumerationContract, IntangibleContract, ThingContract
 {
     /**
      * An additional type for the item, typically used for adding more specific

@@ -3,6 +3,7 @@
 namespace Spatie\SchemaOrg;
 
 use \Spatie\SchemaOrg\Contracts\HomeAndConstructionBusinessContract;
+use \Spatie\SchemaOrg\Contracts\HousePainterContract;
 use \Spatie\SchemaOrg\Contracts\LocalBusinessContract;
 use \Spatie\SchemaOrg\Contracts\OrganizationContract;
 use \Spatie\SchemaOrg\Contracts\PlaceContract;
@@ -14,7 +15,7 @@ use \Spatie\SchemaOrg\Contracts\ThingContract;
  * @see http://schema.org/HousePainter
  *
  */
-class HousePainter extends BaseType implements HomeAndConstructionBusinessContract, LocalBusinessContract, OrganizationContract, PlaceContract, ThingContract
+class HousePainter extends BaseType implements HomeAndConstructionBusinessContract, HousePainterContract, LocalBusinessContract, OrganizationContract, PlaceContract, ThingContract
 {
     /**
      * A property-value pair representing an additional characteristics of the

@@ -3,6 +3,7 @@
 namespace Spatie\SchemaOrg;
 
 use \Spatie\SchemaOrg\Contracts\HealthAndBeautyBusinessContract;
+use \Spatie\SchemaOrg\Contracts\HealthClubContract;
 use \Spatie\SchemaOrg\Contracts\LocalBusinessContract;
 use \Spatie\SchemaOrg\Contracts\OrganizationContract;
 use \Spatie\SchemaOrg\Contracts\PlaceContract;
@@ -15,7 +16,7 @@ use \Spatie\SchemaOrg\Contracts\ThingContract;
  * @see http://schema.org/HealthClub
  *
  */
-class HealthClub extends BaseType implements HealthAndBeautyBusinessContract, LocalBusinessContract, OrganizationContract, PlaceContract, SportsActivityLocationContract, ThingContract
+class HealthClub extends BaseType implements HealthAndBeautyBusinessContract, HealthClubContract, LocalBusinessContract, OrganizationContract, PlaceContract, SportsActivityLocationContract, ThingContract
 {
     /**
      * A property-value pair representing an additional characteristics of the

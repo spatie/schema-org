@@ -4,6 +4,7 @@ namespace Spatie\SchemaOrg;
 
 use \Spatie\SchemaOrg\Contracts\BroadcastChannelContract;
 use \Spatie\SchemaOrg\Contracts\IntangibleContract;
+use \Spatie\SchemaOrg\Contracts\TelevisionChannelContract;
 use \Spatie\SchemaOrg\Contracts\ThingContract;
 
 /**
@@ -13,7 +14,7 @@ use \Spatie\SchemaOrg\Contracts\ThingContract;
  * @see http://schema.org/TelevisionChannel
  *
  */
-class TelevisionChannel extends BaseType implements BroadcastChannelContract, IntangibleContract, ThingContract
+class TelevisionChannel extends BaseType implements BroadcastChannelContract, IntangibleContract, TelevisionChannelContract, ThingContract
 {
     /**
      * An additional type for the item, typically used for adding more specific

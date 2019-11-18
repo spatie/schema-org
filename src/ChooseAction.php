@@ -4,6 +4,7 @@ namespace Spatie\SchemaOrg;
 
 use \Spatie\SchemaOrg\Contracts\ActionContract;
 use \Spatie\SchemaOrg\Contracts\AssessActionContract;
+use \Spatie\SchemaOrg\Contracts\ChooseActionContract;
 use \Spatie\SchemaOrg\Contracts\ThingContract;
 
 /**
@@ -13,7 +14,7 @@ use \Spatie\SchemaOrg\Contracts\ThingContract;
  * @see http://schema.org/ChooseAction
  *
  */
-class ChooseAction extends BaseType implements ActionContract, AssessActionContract, ThingContract
+class ChooseAction extends BaseType implements ActionContract, AssessActionContract, ChooseActionContract, ThingContract
 {
     /**
      * A sub property of object. The options subject to this action.

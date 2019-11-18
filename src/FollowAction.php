@@ -3,6 +3,7 @@
 namespace Spatie\SchemaOrg;
 
 use \Spatie\SchemaOrg\Contracts\ActionContract;
+use \Spatie\SchemaOrg\Contracts\FollowActionContract;
 use \Spatie\SchemaOrg\Contracts\InteractActionContract;
 use \Spatie\SchemaOrg\Contracts\ThingContract;
 
@@ -27,7 +28,7 @@ use \Spatie\SchemaOrg\Contracts\ThingContract;
  * @see http://schema.org/FollowAction
  *
  */
-class FollowAction extends BaseType implements ActionContract, InteractActionContract, ThingContract
+class FollowAction extends BaseType implements ActionContract, FollowActionContract, InteractActionContract, ThingContract
 {
     /**
      * Indicates the current disposition of the Action.

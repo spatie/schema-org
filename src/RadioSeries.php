@@ -5,6 +5,7 @@ namespace Spatie\SchemaOrg;
 use \Spatie\SchemaOrg\Contracts\CreativeWorkContract;
 use \Spatie\SchemaOrg\Contracts\CreativeWorkSeriesContract;
 use \Spatie\SchemaOrg\Contracts\IntangibleContract;
+use \Spatie\SchemaOrg\Contracts\RadioSeriesContract;
 use \Spatie\SchemaOrg\Contracts\SeriesContract;
 use \Spatie\SchemaOrg\Contracts\ThingContract;
 
@@ -15,7 +16,7 @@ use \Spatie\SchemaOrg\Contracts\ThingContract;
  * @see http://schema.org/RadioSeries
  *
  */
-class RadioSeries extends BaseType implements CreativeWorkContract, CreativeWorkSeriesContract, IntangibleContract, SeriesContract, ThingContract
+class RadioSeries extends BaseType implements CreativeWorkContract, CreativeWorkSeriesContract, IntangibleContract, RadioSeriesContract, SeriesContract, ThingContract
 {
     /**
      * The subject matter of the content.

@@ -4,6 +4,7 @@ namespace Spatie\SchemaOrg;
 
 use \Spatie\SchemaOrg\Contracts\EnumerationContract;
 use \Spatie\SchemaOrg\Contracts\IntangibleContract;
+use \Spatie\SchemaOrg\Contracts\ReservationStatusTypeContract;
 use \Spatie\SchemaOrg\Contracts\ThingContract;
 
 /**
@@ -12,7 +13,7 @@ use \Spatie\SchemaOrg\Contracts\ThingContract;
  * @see http://schema.org/ReservationStatusType
  *
  */
-class ReservationStatusType extends BaseType implements EnumerationContract, IntangibleContract, ThingContract
+class ReservationStatusType extends BaseType implements EnumerationContract, IntangibleContract, ReservationStatusTypeContract, ThingContract
 {
     /**
      * The status for a previously confirmed reservation that is now cancelled.

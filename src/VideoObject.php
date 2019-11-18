@@ -5,6 +5,7 @@ namespace Spatie\SchemaOrg;
 use \Spatie\SchemaOrg\Contracts\CreativeWorkContract;
 use \Spatie\SchemaOrg\Contracts\MediaObjectContract;
 use \Spatie\SchemaOrg\Contracts\ThingContract;
+use \Spatie\SchemaOrg\Contracts\VideoObjectContract;
 
 /**
  * A video file.
@@ -12,7 +13,7 @@ use \Spatie\SchemaOrg\Contracts\ThingContract;
  * @see http://schema.org/VideoObject
  *
  */
-class VideoObject extends BaseType implements CreativeWorkContract, MediaObjectContract, ThingContract
+class VideoObject extends BaseType implements CreativeWorkContract, MediaObjectContract, ThingContract, VideoObjectContract
 {
     /**
      * The subject matter of the content.

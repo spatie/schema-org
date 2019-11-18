@@ -4,6 +4,7 @@ namespace Spatie\SchemaOrg;
 
 use \Spatie\SchemaOrg\Contracts\IntangibleContract;
 use \Spatie\SchemaOrg\Contracts\ItemListContract;
+use \Spatie\SchemaOrg\Contracts\OfferCatalogContract;
 use \Spatie\SchemaOrg\Contracts\ThingContract;
 
 /**
@@ -13,7 +14,7 @@ use \Spatie\SchemaOrg\Contracts\ThingContract;
  * @see http://schema.org/OfferCatalog
  *
  */
-class OfferCatalog extends BaseType implements IntangibleContract, ItemListContract, ThingContract
+class OfferCatalog extends BaseType implements IntangibleContract, ItemListContract, OfferCatalogContract, ThingContract
 {
     /**
      * An additional type for the item, typically used for adding more specific

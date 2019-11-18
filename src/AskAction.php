@@ -3,6 +3,7 @@
 namespace Spatie\SchemaOrg;
 
 use \Spatie\SchemaOrg\Contracts\ActionContract;
+use \Spatie\SchemaOrg\Contracts\AskActionContract;
 use \Spatie\SchemaOrg\Contracts\CommunicateActionContract;
 use \Spatie\SchemaOrg\Contracts\InteractActionContract;
 use \Spatie\SchemaOrg\Contracts\ThingContract;
@@ -17,7 +18,7 @@ use \Spatie\SchemaOrg\Contracts\ThingContract;
  * @see http://schema.org/AskAction
  *
  */
-class AskAction extends BaseType implements ActionContract, CommunicateActionContract, InteractActionContract, ThingContract
+class AskAction extends BaseType implements ActionContract, AskActionContract, CommunicateActionContract, InteractActionContract, ThingContract
 {
     /**
      * The subject matter of the content.

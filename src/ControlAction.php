@@ -3,6 +3,7 @@
 namespace Spatie\SchemaOrg;
 
 use \Spatie\SchemaOrg\Contracts\ActionContract;
+use \Spatie\SchemaOrg\Contracts\ControlActionContract;
 use \Spatie\SchemaOrg\Contracts\ThingContract;
 
 /**
@@ -11,7 +12,7 @@ use \Spatie\SchemaOrg\Contracts\ThingContract;
  * @see http://schema.org/ControlAction
  *
  */
-class ControlAction extends BaseType implements ActionContract, ThingContract
+class ControlAction extends BaseType implements ActionContract, ControlActionContract, ThingContract
 {
     /**
      * Indicates the current disposition of the Action.

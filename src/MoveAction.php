@@ -3,6 +3,7 @@
 namespace Spatie\SchemaOrg;
 
 use \Spatie\SchemaOrg\Contracts\ActionContract;
+use \Spatie\SchemaOrg\Contracts\MoveActionContract;
 use \Spatie\SchemaOrg\Contracts\ThingContract;
 
 /**
@@ -16,7 +17,7 @@ use \Spatie\SchemaOrg\Contracts\ThingContract;
  * @see http://schema.org/MoveAction
  *
  */
-class MoveAction extends BaseType implements ActionContract, ThingContract
+class MoveAction extends BaseType implements ActionContract, MoveActionContract, ThingContract
 {
     /**
      * Indicates the current disposition of the Action.

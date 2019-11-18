@@ -2,6 +2,7 @@
 
 namespace Spatie\SchemaOrg;
 
+use \Spatie\SchemaOrg\Contracts\EventReservationContract;
 use \Spatie\SchemaOrg\Contracts\IntangibleContract;
 use \Spatie\SchemaOrg\Contracts\ReservationContract;
 use \Spatie\SchemaOrg\Contracts\ThingContract;
@@ -16,7 +17,7 @@ use \Spatie\SchemaOrg\Contracts\ThingContract;
  * @see http://schema.org/EventReservation
  *
  */
-class EventReservation extends BaseType implements IntangibleContract, ReservationContract, ThingContract
+class EventReservation extends BaseType implements EventReservationContract, IntangibleContract, ReservationContract, ThingContract
 {
     /**
      * An additional type for the item, typically used for adding more specific

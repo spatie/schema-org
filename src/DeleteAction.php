@@ -3,6 +3,7 @@
 namespace Spatie\SchemaOrg;
 
 use \Spatie\SchemaOrg\Contracts\ActionContract;
+use \Spatie\SchemaOrg\Contracts\DeleteActionContract;
 use \Spatie\SchemaOrg\Contracts\ThingContract;
 use \Spatie\SchemaOrg\Contracts\UpdateActionContract;
 
@@ -12,7 +13,7 @@ use \Spatie\SchemaOrg\Contracts\UpdateActionContract;
  * @see http://schema.org/DeleteAction
  *
  */
-class DeleteAction extends BaseType implements ActionContract, ThingContract, UpdateActionContract
+class DeleteAction extends BaseType implements ActionContract, DeleteActionContract, ThingContract, UpdateActionContract
 {
     /**
      * Indicates the current disposition of the Action.

@@ -7,6 +7,7 @@ use \Spatie\SchemaOrg\Contracts\OrganizationContract;
 use \Spatie\SchemaOrg\Contracts\PlaceContract;
 use \Spatie\SchemaOrg\Contracts\StoreContract;
 use \Spatie\SchemaOrg\Contracts\ThingContract;
+use \Spatie\SchemaOrg\Contracts\ToyStoreContract;
 
 /**
  * A toy store.
@@ -14,7 +15,7 @@ use \Spatie\SchemaOrg\Contracts\ThingContract;
  * @see http://schema.org/ToyStore
  *
  */
-class ToyStore extends BaseType implements LocalBusinessContract, OrganizationContract, PlaceContract, StoreContract, ThingContract
+class ToyStore extends BaseType implements LocalBusinessContract, OrganizationContract, PlaceContract, StoreContract, ThingContract, ToyStoreContract
 {
     /**
      * A property-value pair representing an additional characteristics of the

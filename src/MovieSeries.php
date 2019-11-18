@@ -5,6 +5,7 @@ namespace Spatie\SchemaOrg;
 use \Spatie\SchemaOrg\Contracts\CreativeWorkContract;
 use \Spatie\SchemaOrg\Contracts\CreativeWorkSeriesContract;
 use \Spatie\SchemaOrg\Contracts\IntangibleContract;
+use \Spatie\SchemaOrg\Contracts\MovieSeriesContract;
 use \Spatie\SchemaOrg\Contracts\SeriesContract;
 use \Spatie\SchemaOrg\Contracts\ThingContract;
 
@@ -15,7 +16,7 @@ use \Spatie\SchemaOrg\Contracts\ThingContract;
  * @see http://schema.org/MovieSeries
  *
  */
-class MovieSeries extends BaseType implements CreativeWorkContract, CreativeWorkSeriesContract, IntangibleContract, SeriesContract, ThingContract
+class MovieSeries extends BaseType implements CreativeWorkContract, CreativeWorkSeriesContract, IntangibleContract, MovieSeriesContract, SeriesContract, ThingContract
 {
     /**
      * The subject matter of the content.

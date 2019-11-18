@@ -3,6 +3,7 @@
 namespace Spatie\SchemaOrg;
 
 use \Spatie\SchemaOrg\Contracts\CreativeWorkContract;
+use \Spatie\SchemaOrg\Contracts\MapContract;
 use \Spatie\SchemaOrg\Contracts\ThingContract;
 
 /**
@@ -11,7 +12,7 @@ use \Spatie\SchemaOrg\Contracts\ThingContract;
  * @see http://schema.org/Map
  *
  */
-class Map extends BaseType implements CreativeWorkContract, ThingContract
+class Map extends BaseType implements CreativeWorkContract, MapContract, ThingContract
 {
     /**
      * The subject matter of the content.

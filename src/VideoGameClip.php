@@ -5,6 +5,7 @@ namespace Spatie\SchemaOrg;
 use \Spatie\SchemaOrg\Contracts\ClipContract;
 use \Spatie\SchemaOrg\Contracts\CreativeWorkContract;
 use \Spatie\SchemaOrg\Contracts\ThingContract;
+use \Spatie\SchemaOrg\Contracts\VideoGameClipContract;
 
 /**
  * A short segment/part of a video game.
@@ -12,7 +13,7 @@ use \Spatie\SchemaOrg\Contracts\ThingContract;
  * @see http://schema.org/VideoGameClip
  *
  */
-class VideoGameClip extends BaseType implements ClipContract, CreativeWorkContract, ThingContract
+class VideoGameClip extends BaseType implements ClipContract, CreativeWorkContract, ThingContract, VideoGameClipContract
 {
     /**
      * The subject matter of the content.

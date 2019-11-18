@@ -2,6 +2,7 @@
 
 namespace Spatie\SchemaOrg;
 
+use \Spatie\SchemaOrg\Contracts\GeneralContractorContract;
 use \Spatie\SchemaOrg\Contracts\HomeAndConstructionBusinessContract;
 use \Spatie\SchemaOrg\Contracts\LocalBusinessContract;
 use \Spatie\SchemaOrg\Contracts\OrganizationContract;
@@ -14,7 +15,7 @@ use \Spatie\SchemaOrg\Contracts\ThingContract;
  * @see http://schema.org/GeneralContractor
  *
  */
-class GeneralContractor extends BaseType implements HomeAndConstructionBusinessContract, LocalBusinessContract, OrganizationContract, PlaceContract, ThingContract
+class GeneralContractor extends BaseType implements GeneralContractorContract, HomeAndConstructionBusinessContract, LocalBusinessContract, OrganizationContract, PlaceContract, ThingContract
 {
     /**
      * A property-value pair representing an additional characteristics of the

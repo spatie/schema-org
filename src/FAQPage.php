@@ -3,6 +3,7 @@
 namespace Spatie\SchemaOrg;
 
 use \Spatie\SchemaOrg\Contracts\CreativeWorkContract;
+use \Spatie\SchemaOrg\Contracts\FAQPageContract;
 use \Spatie\SchemaOrg\Contracts\ThingContract;
 use \Spatie\SchemaOrg\Contracts\WebPageContract;
 
@@ -13,7 +14,7 @@ use \Spatie\SchemaOrg\Contracts\WebPageContract;
  * @see http://schema.org/FAQPage
  *
  */
-class FAQPage extends BaseType implements CreativeWorkContract, ThingContract, WebPageContract
+class FAQPage extends BaseType implements CreativeWorkContract, FAQPageContract, ThingContract, WebPageContract
 {
     /**
      * The subject matter of the content.

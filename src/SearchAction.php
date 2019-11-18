@@ -3,6 +3,7 @@
 namespace Spatie\SchemaOrg;
 
 use \Spatie\SchemaOrg\Contracts\ActionContract;
+use \Spatie\SchemaOrg\Contracts\SearchActionContract;
 use \Spatie\SchemaOrg\Contracts\ThingContract;
 
 /**
@@ -16,7 +17,7 @@ use \Spatie\SchemaOrg\Contracts\ThingContract;
  * @see http://schema.org/SearchAction
  *
  */
-class SearchAction extends BaseType implements ActionContract, ThingContract
+class SearchAction extends BaseType implements ActionContract, SearchActionContract, ThingContract
 {
     /**
      * Indicates the current disposition of the Action.

@@ -3,6 +3,7 @@
 namespace Spatie\SchemaOrg;
 
 use \Spatie\SchemaOrg\Contracts\ActionContract;
+use \Spatie\SchemaOrg\Contracts\PreOrderActionContract;
 use \Spatie\SchemaOrg\Contracts\ThingContract;
 use \Spatie\SchemaOrg\Contracts\TradeActionContract;
 
@@ -13,7 +14,7 @@ use \Spatie\SchemaOrg\Contracts\TradeActionContract;
  * @see http://schema.org/PreOrderAction
  *
  */
-class PreOrderAction extends BaseType implements ActionContract, ThingContract, TradeActionContract
+class PreOrderAction extends BaseType implements ActionContract, PreOrderActionContract, ThingContract, TradeActionContract
 {
     /**
      * Indicates the current disposition of the Action.

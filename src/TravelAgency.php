@@ -6,6 +6,7 @@ use \Spatie\SchemaOrg\Contracts\LocalBusinessContract;
 use \Spatie\SchemaOrg\Contracts\OrganizationContract;
 use \Spatie\SchemaOrg\Contracts\PlaceContract;
 use \Spatie\SchemaOrg\Contracts\ThingContract;
+use \Spatie\SchemaOrg\Contracts\TravelAgencyContract;
 
 /**
  * A travel agency.
@@ -13,7 +14,7 @@ use \Spatie\SchemaOrg\Contracts\ThingContract;
  * @see http://schema.org/TravelAgency
  *
  */
-class TravelAgency extends BaseType implements LocalBusinessContract, OrganizationContract, PlaceContract, ThingContract
+class TravelAgency extends BaseType implements LocalBusinessContract, OrganizationContract, PlaceContract, ThingContract, TravelAgencyContract
 {
     /**
      * A property-value pair representing an additional characteristics of the

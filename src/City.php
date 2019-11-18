@@ -3,6 +3,7 @@
 namespace Spatie\SchemaOrg;
 
 use \Spatie\SchemaOrg\Contracts\AdministrativeAreaContract;
+use \Spatie\SchemaOrg\Contracts\CityContract;
 use \Spatie\SchemaOrg\Contracts\PlaceContract;
 use \Spatie\SchemaOrg\Contracts\ThingContract;
 
@@ -12,7 +13,7 @@ use \Spatie\SchemaOrg\Contracts\ThingContract;
  * @see http://schema.org/City
  *
  */
-class City extends BaseType implements AdministrativeAreaContract, PlaceContract, ThingContract
+class City extends BaseType implements AdministrativeAreaContract, CityContract, PlaceContract, ThingContract
 {
     /**
      * A property-value pair representing an additional characteristics of the

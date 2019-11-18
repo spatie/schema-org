@@ -7,6 +7,7 @@ use \Spatie\SchemaOrg\Contracts\OrganizationContract;
 use \Spatie\SchemaOrg\Contracts\PlaceContract;
 use \Spatie\SchemaOrg\Contracts\StoreContract;
 use \Spatie\SchemaOrg\Contracts\ThingContract;
+use \Spatie\SchemaOrg\Contracts\TireShopContract;
 
 /**
  * A tire shop.
@@ -14,7 +15,7 @@ use \Spatie\SchemaOrg\Contracts\ThingContract;
  * @see http://schema.org/TireShop
  *
  */
-class TireShop extends BaseType implements LocalBusinessContract, OrganizationContract, PlaceContract, StoreContract, ThingContract
+class TireShop extends BaseType implements LocalBusinessContract, OrganizationContract, PlaceContract, StoreContract, ThingContract, TireShopContract
 {
     /**
      * A property-value pair representing an additional characteristics of the

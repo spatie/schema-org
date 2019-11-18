@@ -2,6 +2,7 @@
 
 namespace Spatie\SchemaOrg;
 
+use \Spatie\SchemaOrg\Contracts\EnergyContract;
 use \Spatie\SchemaOrg\Contracts\IntangibleContract;
 use \Spatie\SchemaOrg\Contracts\QuantityContract;
 use \Spatie\SchemaOrg\Contracts\ThingContract;
@@ -13,7 +14,7 @@ use \Spatie\SchemaOrg\Contracts\ThingContract;
  * @see http://schema.org/Energy
  *
  */
-class Energy extends BaseType implements IntangibleContract, QuantityContract, ThingContract
+class Energy extends BaseType implements EnergyContract, IntangibleContract, QuantityContract, ThingContract
 {
     /**
      * An additional type for the item, typically used for adding more specific

@@ -2,6 +2,7 @@
 
 namespace Spatie\SchemaOrg;
 
+use \Spatie\SchemaOrg\Contracts\DayOfWeekContract;
 use \Spatie\SchemaOrg\Contracts\EnumerationContract;
 use \Spatie\SchemaOrg\Contracts\IntangibleContract;
 use \Spatie\SchemaOrg\Contracts\ThingContract;
@@ -18,7 +19,7 @@ use \Spatie\SchemaOrg\Contracts\ThingContract;
  * @see http://schema.org/DayOfWeek
  *
  */
-class DayOfWeek extends BaseType implements EnumerationContract, IntangibleContract, ThingContract
+class DayOfWeek extends BaseType implements DayOfWeekContract, EnumerationContract, IntangibleContract, ThingContract
 {
     /**
      * The day of the week between Thursday and Saturday.

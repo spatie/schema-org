@@ -5,6 +5,7 @@ namespace Spatie\SchemaOrg;
 use \Spatie\SchemaOrg\Contracts\EnumerationContract;
 use \Spatie\SchemaOrg\Contracts\IntangibleContract;
 use \Spatie\SchemaOrg\Contracts\QualitativeValueContract;
+use \Spatie\SchemaOrg\Contracts\SteeringPositionValueContract;
 use \Spatie\SchemaOrg\Contracts\ThingContract;
 
 /**
@@ -13,7 +14,7 @@ use \Spatie\SchemaOrg\Contracts\ThingContract;
  * @see http://schema.org/SteeringPositionValue
  *
  */
-class SteeringPositionValue extends BaseType implements EnumerationContract, IntangibleContract, QualitativeValueContract, ThingContract
+class SteeringPositionValue extends BaseType implements EnumerationContract, IntangibleContract, QualitativeValueContract, SteeringPositionValueContract, ThingContract
 {
     /**
      * The steering position is on the left side of the vehicle (viewed from the

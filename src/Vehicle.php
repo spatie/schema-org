@@ -4,6 +4,7 @@ namespace Spatie\SchemaOrg;
 
 use \Spatie\SchemaOrg\Contracts\ProductContract;
 use \Spatie\SchemaOrg\Contracts\ThingContract;
+use \Spatie\SchemaOrg\Contracts\VehicleContract;
 
 /**
  * A vehicle is a device that is designed or used to transport people or cargo
@@ -12,7 +13,7 @@ use \Spatie\SchemaOrg\Contracts\ThingContract;
  * @see http://schema.org/Vehicle
  *
  */
-class Vehicle extends BaseType implements ProductContract, ThingContract
+class Vehicle extends BaseType implements ProductContract, ThingContract, VehicleContract
 {
     /**
      * A property-value pair representing an additional characteristics of the

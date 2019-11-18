@@ -4,6 +4,7 @@ namespace Spatie\SchemaOrg;
 
 use \Spatie\SchemaOrg\Contracts\IntangibleContract;
 use \Spatie\SchemaOrg\Contracts\ThingContract;
+use \Spatie\SchemaOrg\Contracts\TrainTripContract;
 use \Spatie\SchemaOrg\Contracts\TripContract;
 
 /**
@@ -12,7 +13,7 @@ use \Spatie\SchemaOrg\Contracts\TripContract;
  * @see http://schema.org/TrainTrip
  *
  */
-class TrainTrip extends BaseType implements IntangibleContract, ThingContract, TripContract
+class TrainTrip extends BaseType implements IntangibleContract, ThingContract, TrainTripContract, TripContract
 {
     /**
      * An additional type for the item, typically used for adding more specific

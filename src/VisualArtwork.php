@@ -4,6 +4,7 @@ namespace Spatie\SchemaOrg;
 
 use \Spatie\SchemaOrg\Contracts\CreativeWorkContract;
 use \Spatie\SchemaOrg\Contracts\ThingContract;
+use \Spatie\SchemaOrg\Contracts\VisualArtworkContract;
 
 /**
  * A work of art that is primarily visual in character.
@@ -11,7 +12,7 @@ use \Spatie\SchemaOrg\Contracts\ThingContract;
  * @see http://schema.org/VisualArtwork
  *
  */
-class VisualArtwork extends BaseType implements CreativeWorkContract, ThingContract
+class VisualArtwork extends BaseType implements CreativeWorkContract, ThingContract, VisualArtworkContract
 {
     /**
      * The subject matter of the content.

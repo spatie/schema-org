@@ -2,6 +2,7 @@
 
 namespace Spatie\SchemaOrg;
 
+use \Spatie\SchemaOrg\Contracts\FastFoodRestaurantContract;
 use \Spatie\SchemaOrg\Contracts\FoodEstablishmentContract;
 use \Spatie\SchemaOrg\Contracts\LocalBusinessContract;
 use \Spatie\SchemaOrg\Contracts\OrganizationContract;
@@ -14,7 +15,7 @@ use \Spatie\SchemaOrg\Contracts\ThingContract;
  * @see http://schema.org/FastFoodRestaurant
  *
  */
-class FastFoodRestaurant extends BaseType implements FoodEstablishmentContract, LocalBusinessContract, OrganizationContract, PlaceContract, ThingContract
+class FastFoodRestaurant extends BaseType implements FastFoodRestaurantContract, FoodEstablishmentContract, LocalBusinessContract, OrganizationContract, PlaceContract, ThingContract
 {
     /**
      * Indicates whether a FoodEstablishment accepts reservations. Values can be

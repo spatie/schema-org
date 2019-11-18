@@ -2,6 +2,7 @@
 
 namespace Spatie\SchemaOrg;
 
+use \Spatie\SchemaOrg\Contracts\EntryPointContract;
 use \Spatie\SchemaOrg\Contracts\IntangibleContract;
 use \Spatie\SchemaOrg\Contracts\ThingContract;
 
@@ -11,7 +12,7 @@ use \Spatie\SchemaOrg\Contracts\ThingContract;
  * @see http://schema.org/EntryPoint
  *
  */
-class EntryPoint extends BaseType implements IntangibleContract, ThingContract
+class EntryPoint extends BaseType implements EntryPointContract, IntangibleContract, ThingContract
 {
     /**
      * An application that can complete the request.

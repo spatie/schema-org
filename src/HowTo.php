@@ -3,6 +3,7 @@
 namespace Spatie\SchemaOrg;
 
 use \Spatie\SchemaOrg\Contracts\CreativeWorkContract;
+use \Spatie\SchemaOrg\Contracts\HowToContract;
 use \Spatie\SchemaOrg\Contracts\ThingContract;
 
 /**
@@ -12,7 +13,7 @@ use \Spatie\SchemaOrg\Contracts\ThingContract;
  * @see http://schema.org/HowTo
  *
  */
-class HowTo extends BaseType implements CreativeWorkContract, ThingContract
+class HowTo extends BaseType implements CreativeWorkContract, HowToContract, ThingContract
 {
     /**
      * The subject matter of the content.

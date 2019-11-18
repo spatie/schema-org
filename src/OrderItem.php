@@ -3,6 +3,7 @@
 namespace Spatie\SchemaOrg;
 
 use \Spatie\SchemaOrg\Contracts\IntangibleContract;
+use \Spatie\SchemaOrg\Contracts\OrderItemContract;
 use \Spatie\SchemaOrg\Contracts\ThingContract;
 
 /**
@@ -12,7 +13,7 @@ use \Spatie\SchemaOrg\Contracts\ThingContract;
  * @see http://schema.org/OrderItem
  *
  */
-class OrderItem extends BaseType implements IntangibleContract, ThingContract
+class OrderItem extends BaseType implements IntangibleContract, OrderItemContract, ThingContract
 {
     /**
      * An additional type for the item, typically used for adding more specific

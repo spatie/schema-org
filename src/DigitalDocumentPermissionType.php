@@ -2,6 +2,7 @@
 
 namespace Spatie\SchemaOrg;
 
+use \Spatie\SchemaOrg\Contracts\DigitalDocumentPermissionTypeContract;
 use \Spatie\SchemaOrg\Contracts\EnumerationContract;
 use \Spatie\SchemaOrg\Contracts\IntangibleContract;
 use \Spatie\SchemaOrg\Contracts\ThingContract;
@@ -12,7 +13,7 @@ use \Spatie\SchemaOrg\Contracts\ThingContract;
  * @see http://schema.org/DigitalDocumentPermissionType
  *
  */
-class DigitalDocumentPermissionType extends BaseType implements EnumerationContract, IntangibleContract, ThingContract
+class DigitalDocumentPermissionType extends BaseType implements DigitalDocumentPermissionTypeContract, EnumerationContract, IntangibleContract, ThingContract
 {
     /**
      * Permission to add comments to the document.

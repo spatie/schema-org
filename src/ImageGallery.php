@@ -4,6 +4,7 @@ namespace Spatie\SchemaOrg;
 
 use \Spatie\SchemaOrg\Contracts\CollectionPageContract;
 use \Spatie\SchemaOrg\Contracts\CreativeWorkContract;
+use \Spatie\SchemaOrg\Contracts\ImageGalleryContract;
 use \Spatie\SchemaOrg\Contracts\ThingContract;
 use \Spatie\SchemaOrg\Contracts\WebPageContract;
 
@@ -13,7 +14,7 @@ use \Spatie\SchemaOrg\Contracts\WebPageContract;
  * @see http://schema.org/ImageGallery
  *
  */
-class ImageGallery extends BaseType implements CollectionPageContract, CreativeWorkContract, ThingContract, WebPageContract
+class ImageGallery extends BaseType implements CollectionPageContract, CreativeWorkContract, ImageGalleryContract, ThingContract, WebPageContract
 {
     /**
      * The subject matter of the content.

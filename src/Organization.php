@@ -2,6 +2,7 @@
 
 namespace Spatie\SchemaOrg;
 
+use \Spatie\SchemaOrg\Contracts\OrganizationContract;
 use \Spatie\SchemaOrg\Contracts\ThingContract;
 
 /**
@@ -10,7 +11,7 @@ use \Spatie\SchemaOrg\Contracts\ThingContract;
  * @see http://schema.org/Organization
  *
  */
-class Organization extends BaseType implements ThingContract
+class Organization extends BaseType implements OrganizationContract, ThingContract
 {
     /**
      * The schema.org Actions mechanism benefited from extensive discussions

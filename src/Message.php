@@ -3,6 +3,7 @@
 namespace Spatie\SchemaOrg;
 
 use \Spatie\SchemaOrg\Contracts\CreativeWorkContract;
+use \Spatie\SchemaOrg\Contracts\MessageContract;
 use \Spatie\SchemaOrg\Contracts\ThingContract;
 
 /**
@@ -11,7 +12,7 @@ use \Spatie\SchemaOrg\Contracts\ThingContract;
  * @see http://schema.org/Message
  *
  */
-class Message extends BaseType implements CreativeWorkContract, ThingContract
+class Message extends BaseType implements CreativeWorkContract, MessageContract, ThingContract
 {
     /**
      * The subject matter of the content.

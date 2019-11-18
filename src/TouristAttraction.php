@@ -4,6 +4,7 @@ namespace Spatie\SchemaOrg;
 
 use \Spatie\SchemaOrg\Contracts\PlaceContract;
 use \Spatie\SchemaOrg\Contracts\ThingContract;
+use \Spatie\SchemaOrg\Contracts\TouristAttractionContract;
 
 /**
  * A tourist attraction.  In principle any Thing can be a [[TouristAttraction]],
@@ -15,7 +16,7 @@ use \Spatie\SchemaOrg\Contracts\ThingContract;
  * @see http://schema.org/TouristAttraction
  *
  */
-class TouristAttraction extends BaseType implements PlaceContract, ThingContract
+class TouristAttraction extends BaseType implements PlaceContract, ThingContract, TouristAttractionContract
 {
     /**
      * A property-value pair representing an additional characteristics of the

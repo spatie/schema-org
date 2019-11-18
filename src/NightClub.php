@@ -4,6 +4,7 @@ namespace Spatie\SchemaOrg;
 
 use \Spatie\SchemaOrg\Contracts\EntertainmentBusinessContract;
 use \Spatie\SchemaOrg\Contracts\LocalBusinessContract;
+use \Spatie\SchemaOrg\Contracts\NightClubContract;
 use \Spatie\SchemaOrg\Contracts\OrganizationContract;
 use \Spatie\SchemaOrg\Contracts\PlaceContract;
 use \Spatie\SchemaOrg\Contracts\ThingContract;
@@ -14,7 +15,7 @@ use \Spatie\SchemaOrg\Contracts\ThingContract;
  * @see http://schema.org/NightClub
  *
  */
-class NightClub extends BaseType implements EntertainmentBusinessContract, LocalBusinessContract, OrganizationContract, PlaceContract, ThingContract
+class NightClub extends BaseType implements EntertainmentBusinessContract, LocalBusinessContract, NightClubContract, OrganizationContract, PlaceContract, ThingContract
 {
     /**
      * A property-value pair representing an additional characteristics of the

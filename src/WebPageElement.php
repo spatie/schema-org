@@ -4,6 +4,7 @@ namespace Spatie\SchemaOrg;
 
 use \Spatie\SchemaOrg\Contracts\CreativeWorkContract;
 use \Spatie\SchemaOrg\Contracts\ThingContract;
+use \Spatie\SchemaOrg\Contracts\WebPageElementContract;
 
 /**
  * A web page element, like a table or an image.
@@ -13,7 +14,7 @@ use \Spatie\SchemaOrg\Contracts\ThingContract;
  * @method static cssSelector($cssSelector) The value should be instance of pending types CssSelectorType|CssSelectorType[]
  * @method static xpath($xpath) The value should be instance of pending types XPathType|XPathType[]
  */
-class WebPageElement extends BaseType implements CreativeWorkContract, ThingContract
+class WebPageElement extends BaseType implements CreativeWorkContract, ThingContract, WebPageElementContract
 {
     /**
      * The subject matter of the content.

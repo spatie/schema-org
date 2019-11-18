@@ -3,6 +3,7 @@
 namespace Spatie\SchemaOrg;
 
 use \Spatie\SchemaOrg\Contracts\ProductContract;
+use \Spatie\SchemaOrg\Contracts\ProductModelContract;
 use \Spatie\SchemaOrg\Contracts\ThingContract;
 
 /**
@@ -12,7 +13,7 @@ use \Spatie\SchemaOrg\Contracts\ThingContract;
  * @see http://schema.org/ProductModel
  *
  */
-class ProductModel extends BaseType implements ProductContract, ThingContract
+class ProductModel extends BaseType implements ProductContract, ProductModelContract, ThingContract
 {
     /**
      * A property-value pair representing an additional characteristics of the

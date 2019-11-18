@@ -2,6 +2,7 @@
 
 namespace Spatie\SchemaOrg;
 
+use \Spatie\SchemaOrg\Contracts\GatedResidenceCommunityContract;
 use \Spatie\SchemaOrg\Contracts\PlaceContract;
 use \Spatie\SchemaOrg\Contracts\ResidenceContract;
 use \Spatie\SchemaOrg\Contracts\ThingContract;
@@ -12,7 +13,7 @@ use \Spatie\SchemaOrg\Contracts\ThingContract;
  * @see http://schema.org/GatedResidenceCommunity
  *
  */
-class GatedResidenceCommunity extends BaseType implements PlaceContract, ResidenceContract, ThingContract
+class GatedResidenceCommunity extends BaseType implements GatedResidenceCommunityContract, PlaceContract, ResidenceContract, ThingContract
 {
     /**
      * A property-value pair representing an additional characteristics of the

@@ -3,6 +3,7 @@
 namespace Spatie\SchemaOrg;
 
 use \Spatie\SchemaOrg\Contracts\ActionContract;
+use \Spatie\SchemaOrg\Contracts\ReplaceActionContract;
 use \Spatie\SchemaOrg\Contracts\ThingContract;
 use \Spatie\SchemaOrg\Contracts\UpdateActionContract;
 
@@ -12,7 +13,7 @@ use \Spatie\SchemaOrg\Contracts\UpdateActionContract;
  * @see http://schema.org/ReplaceAction
  *
  */
-class ReplaceAction extends BaseType implements ActionContract, ThingContract, UpdateActionContract
+class ReplaceAction extends BaseType implements ActionContract, ReplaceActionContract, ThingContract, UpdateActionContract
 {
     /**
      * Indicates the current disposition of the Action.

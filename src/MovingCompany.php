@@ -4,6 +4,7 @@ namespace Spatie\SchemaOrg;
 
 use \Spatie\SchemaOrg\Contracts\HomeAndConstructionBusinessContract;
 use \Spatie\SchemaOrg\Contracts\LocalBusinessContract;
+use \Spatie\SchemaOrg\Contracts\MovingCompanyContract;
 use \Spatie\SchemaOrg\Contracts\OrganizationContract;
 use \Spatie\SchemaOrg\Contracts\PlaceContract;
 use \Spatie\SchemaOrg\Contracts\ThingContract;
@@ -14,7 +15,7 @@ use \Spatie\SchemaOrg\Contracts\ThingContract;
  * @see http://schema.org/MovingCompany
  *
  */
-class MovingCompany extends BaseType implements HomeAndConstructionBusinessContract, LocalBusinessContract, OrganizationContract, PlaceContract, ThingContract
+class MovingCompany extends BaseType implements HomeAndConstructionBusinessContract, LocalBusinessContract, MovingCompanyContract, OrganizationContract, PlaceContract, ThingContract
 {
     /**
      * A property-value pair representing an additional characteristics of the

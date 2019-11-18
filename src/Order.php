@@ -3,6 +3,7 @@
 namespace Spatie\SchemaOrg;
 
 use \Spatie\SchemaOrg\Contracts\IntangibleContract;
+use \Spatie\SchemaOrg\Contracts\OrderContract;
 use \Spatie\SchemaOrg\Contracts\ThingContract;
 
 /**
@@ -13,7 +14,7 @@ use \Spatie\SchemaOrg\Contracts\ThingContract;
  * @see http://schema.org/Order
  *
  */
-class Order extends BaseType implements IntangibleContract, ThingContract
+class Order extends BaseType implements IntangibleContract, OrderContract, ThingContract
 {
     /**
      * The offer(s) -- e.g., product, quantity and price combinations --

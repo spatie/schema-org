@@ -2,6 +2,7 @@
 
 namespace Spatie\SchemaOrg;
 
+use \Spatie\SchemaOrg\Contracts\BlogContract;
 use \Spatie\SchemaOrg\Contracts\CreativeWorkContract;
 use \Spatie\SchemaOrg\Contracts\ThingContract;
 
@@ -11,7 +12,7 @@ use \Spatie\SchemaOrg\Contracts\ThingContract;
  * @see http://schema.org/Blog
  *
  */
-class Blog extends BaseType implements CreativeWorkContract, ThingContract
+class Blog extends BaseType implements BlogContract, CreativeWorkContract, ThingContract
 {
     /**
      * The subject matter of the content.

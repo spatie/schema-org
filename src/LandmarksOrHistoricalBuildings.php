@@ -2,6 +2,7 @@
 
 namespace Spatie\SchemaOrg;
 
+use \Spatie\SchemaOrg\Contracts\LandmarksOrHistoricalBuildingsContract;
 use \Spatie\SchemaOrg\Contracts\PlaceContract;
 use \Spatie\SchemaOrg\Contracts\ThingContract;
 
@@ -11,7 +12,7 @@ use \Spatie\SchemaOrg\Contracts\ThingContract;
  * @see http://schema.org/LandmarksOrHistoricalBuildings
  *
  */
-class LandmarksOrHistoricalBuildings extends BaseType implements PlaceContract, ThingContract
+class LandmarksOrHistoricalBuildings extends BaseType implements LandmarksOrHistoricalBuildingsContract, PlaceContract, ThingContract
 {
     /**
      * A property-value pair representing an additional characteristics of the

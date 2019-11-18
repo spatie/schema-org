@@ -4,6 +4,7 @@ namespace Spatie\SchemaOrg;
 
 use \Spatie\SchemaOrg\Contracts\EventContract;
 use \Spatie\SchemaOrg\Contracts\ThingContract;
+use \Spatie\SchemaOrg\Contracts\UserBlocksContract;
 use \Spatie\SchemaOrg\Contracts\UserInteractionContract;
 
 /**
@@ -14,7 +15,7 @@ use \Spatie\SchemaOrg\Contracts\UserInteractionContract;
  * @see http://schema.org/UserBlocks
  *
  */
-class UserBlocks extends BaseType implements EventContract, ThingContract, UserInteractionContract
+class UserBlocks extends BaseType implements EventContract, ThingContract, UserBlocksContract, UserInteractionContract
 {
     /**
      * The subject matter of the content.

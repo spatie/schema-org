@@ -5,6 +5,7 @@ namespace Spatie\SchemaOrg;
 use \Spatie\SchemaOrg\Contracts\DeliveryMethodContract;
 use \Spatie\SchemaOrg\Contracts\EnumerationContract;
 use \Spatie\SchemaOrg\Contracts\IntangibleContract;
+use \Spatie\SchemaOrg\Contracts\LockerDeliveryContract;
 use \Spatie\SchemaOrg\Contracts\ThingContract;
 
 /**
@@ -13,7 +14,7 @@ use \Spatie\SchemaOrg\Contracts\ThingContract;
  * @see http://schema.org/LockerDelivery
  *
  */
-class LockerDelivery extends BaseType implements DeliveryMethodContract, EnumerationContract, IntangibleContract, ThingContract
+class LockerDelivery extends BaseType implements DeliveryMethodContract, EnumerationContract, IntangibleContract, LockerDeliveryContract, ThingContract
 {
     /**
      * An additional type for the item, typically used for adding more specific

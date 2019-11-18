@@ -4,6 +4,7 @@ namespace Spatie\SchemaOrg;
 
 use \Spatie\SchemaOrg\Contracts\ActionContract;
 use \Spatie\SchemaOrg\Contracts\ThingContract;
+use \Spatie\SchemaOrg\Contracts\TransferActionContract;
 
 /**
  * The act of transferring/moving (abstract or concrete) animate or inanimate
@@ -12,7 +13,7 @@ use \Spatie\SchemaOrg\Contracts\ThingContract;
  * @see http://schema.org/TransferAction
  *
  */
-class TransferAction extends BaseType implements ActionContract, ThingContract
+class TransferAction extends BaseType implements ActionContract, ThingContract, TransferActionContract
 {
     /**
      * Indicates the current disposition of the Action.

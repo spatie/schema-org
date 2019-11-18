@@ -6,6 +6,7 @@ use \Spatie\SchemaOrg\Contracts\BodyOfWaterContract;
 use \Spatie\SchemaOrg\Contracts\LandformContract;
 use \Spatie\SchemaOrg\Contracts\PlaceContract;
 use \Spatie\SchemaOrg\Contracts\ThingContract;
+use \Spatie\SchemaOrg\Contracts\WaterfallContract;
 
 /**
  * A waterfall, like Niagara.
@@ -13,7 +14,7 @@ use \Spatie\SchemaOrg\Contracts\ThingContract;
  * @see http://schema.org/Waterfall
  *
  */
-class Waterfall extends BaseType implements BodyOfWaterContract, LandformContract, PlaceContract, ThingContract
+class Waterfall extends BaseType implements BodyOfWaterContract, LandformContract, PlaceContract, ThingContract, WaterfallContract
 {
     /**
      * A property-value pair representing an additional characteristics of the

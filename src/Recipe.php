@@ -4,6 +4,7 @@ namespace Spatie\SchemaOrg;
 
 use \Spatie\SchemaOrg\Contracts\CreativeWorkContract;
 use \Spatie\SchemaOrg\Contracts\HowToContract;
+use \Spatie\SchemaOrg\Contracts\RecipeContract;
 use \Spatie\SchemaOrg\Contracts\ThingContract;
 
 /**
@@ -14,7 +15,7 @@ use \Spatie\SchemaOrg\Contracts\ThingContract;
  * @see http://schema.org/Recipe
  *
  */
-class Recipe extends BaseType implements CreativeWorkContract, HowToContract, ThingContract
+class Recipe extends BaseType implements CreativeWorkContract, HowToContract, RecipeContract, ThingContract
 {
     /**
      * The subject matter of the content.

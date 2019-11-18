@@ -2,6 +2,7 @@
 
 namespace Spatie\SchemaOrg;
 
+use \Spatie\SchemaOrg\Contracts\ContactPointContract;
 use \Spatie\SchemaOrg\Contracts\IntangibleContract;
 use \Spatie\SchemaOrg\Contracts\StructuredValueContract;
 use \Spatie\SchemaOrg\Contracts\ThingContract;
@@ -12,7 +13,7 @@ use \Spatie\SchemaOrg\Contracts\ThingContract;
  * @see http://schema.org/ContactPoint
  *
  */
-class ContactPoint extends BaseType implements IntangibleContract, StructuredValueContract, ThingContract
+class ContactPoint extends BaseType implements ContactPointContract, IntangibleContract, StructuredValueContract, ThingContract
 {
     /**
      * An additional type for the item, typically used for adding more specific

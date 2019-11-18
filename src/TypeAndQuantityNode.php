@@ -5,6 +5,7 @@ namespace Spatie\SchemaOrg;
 use \Spatie\SchemaOrg\Contracts\IntangibleContract;
 use \Spatie\SchemaOrg\Contracts\StructuredValueContract;
 use \Spatie\SchemaOrg\Contracts\ThingContract;
+use \Spatie\SchemaOrg\Contracts\TypeAndQuantityNodeContract;
 
 /**
  * A structured value indicating the quantity, unit of measurement, and business
@@ -13,7 +14,7 @@ use \Spatie\SchemaOrg\Contracts\ThingContract;
  * @see http://schema.org/TypeAndQuantityNode
  *
  */
-class TypeAndQuantityNode extends BaseType implements IntangibleContract, StructuredValueContract, ThingContract
+class TypeAndQuantityNode extends BaseType implements IntangibleContract, StructuredValueContract, ThingContract, TypeAndQuantityNodeContract
 {
     /**
      * An additional type for the item, typically used for adding more specific

@@ -4,6 +4,7 @@ namespace Spatie\SchemaOrg;
 
 use \Spatie\SchemaOrg\Contracts\EventContract;
 use \Spatie\SchemaOrg\Contracts\ThingContract;
+use \Spatie\SchemaOrg\Contracts\UserCheckinsContract;
 use \Spatie\SchemaOrg\Contracts\UserInteractionContract;
 
 /**
@@ -14,7 +15,7 @@ use \Spatie\SchemaOrg\Contracts\UserInteractionContract;
  * @see http://schema.org/UserCheckins
  *
  */
-class UserCheckins extends BaseType implements EventContract, ThingContract, UserInteractionContract
+class UserCheckins extends BaseType implements EventContract, ThingContract, UserCheckinsContract, UserInteractionContract
 {
     /**
      * The subject matter of the content.

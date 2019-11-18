@@ -3,6 +3,7 @@
 namespace Spatie\SchemaOrg;
 
 use \Spatie\SchemaOrg\Contracts\CreativeWorkContract;
+use \Spatie\SchemaOrg\Contracts\ItemPageContract;
 use \Spatie\SchemaOrg\Contracts\ThingContract;
 use \Spatie\SchemaOrg\Contracts\WebPageContract;
 
@@ -12,7 +13,7 @@ use \Spatie\SchemaOrg\Contracts\WebPageContract;
  * @see http://schema.org/ItemPage
  *
  */
-class ItemPage extends BaseType implements CreativeWorkContract, ThingContract, WebPageContract
+class ItemPage extends BaseType implements CreativeWorkContract, ItemPageContract, ThingContract, WebPageContract
 {
     /**
      * The subject matter of the content.

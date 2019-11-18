@@ -5,6 +5,7 @@ namespace Spatie\SchemaOrg;
 use \Spatie\SchemaOrg\Contracts\ActionContract;
 use \Spatie\SchemaOrg\Contracts\CreateActionContract;
 use \Spatie\SchemaOrg\Contracts\ThingContract;
+use \Spatie\SchemaOrg\Contracts\WriteActionContract;
 
 /**
  * The act of authoring written creative content.
@@ -12,7 +13,7 @@ use \Spatie\SchemaOrg\Contracts\ThingContract;
  * @see http://schema.org/WriteAction
  *
  */
-class WriteAction extends BaseType implements ActionContract, CreateActionContract, ThingContract
+class WriteAction extends BaseType implements ActionContract, CreateActionContract, ThingContract, WriteActionContract
 {
     /**
      * Indicates the current disposition of the Action.

@@ -5,6 +5,7 @@ namespace Spatie\SchemaOrg;
 use \Spatie\SchemaOrg\Contracts\BodyOfWaterContract;
 use \Spatie\SchemaOrg\Contracts\LandformContract;
 use \Spatie\SchemaOrg\Contracts\PlaceContract;
+use \Spatie\SchemaOrg\Contracts\PondContract;
 use \Spatie\SchemaOrg\Contracts\ThingContract;
 
 /**
@@ -13,7 +14,7 @@ use \Spatie\SchemaOrg\Contracts\ThingContract;
  * @see http://schema.org/Pond
  *
  */
-class Pond extends BaseType implements BodyOfWaterContract, LandformContract, PlaceContract, ThingContract
+class Pond extends BaseType implements BodyOfWaterContract, LandformContract, PlaceContract, PondContract, ThingContract
 {
     /**
      * A property-value pair representing an additional characteristics of the

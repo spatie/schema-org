@@ -2,6 +2,7 @@
 
 namespace Spatie\SchemaOrg;
 
+use \Spatie\SchemaOrg\Contracts\BoardingPolicyTypeContract;
 use \Spatie\SchemaOrg\Contracts\EnumerationContract;
 use \Spatie\SchemaOrg\Contracts\IntangibleContract;
 use \Spatie\SchemaOrg\Contracts\ThingContract;
@@ -12,7 +13,7 @@ use \Spatie\SchemaOrg\Contracts\ThingContract;
  * @see http://schema.org/BoardingPolicyType
  *
  */
-class BoardingPolicyType extends BaseType implements EnumerationContract, IntangibleContract, ThingContract
+class BoardingPolicyType extends BaseType implements BoardingPolicyTypeContract, EnumerationContract, IntangibleContract, ThingContract
 {
     /**
      * The airline boards by groups based on check-in time, priority, etc.

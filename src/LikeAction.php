@@ -4,6 +4,7 @@ namespace Spatie\SchemaOrg;
 
 use \Spatie\SchemaOrg\Contracts\ActionContract;
 use \Spatie\SchemaOrg\Contracts\AssessActionContract;
+use \Spatie\SchemaOrg\Contracts\LikeActionContract;
 use \Spatie\SchemaOrg\Contracts\ReactActionContract;
 use \Spatie\SchemaOrg\Contracts\ThingContract;
 
@@ -14,7 +15,7 @@ use \Spatie\SchemaOrg\Contracts\ThingContract;
  * @see http://schema.org/LikeAction
  *
  */
-class LikeAction extends BaseType implements ActionContract, AssessActionContract, ReactActionContract, ThingContract
+class LikeAction extends BaseType implements ActionContract, AssessActionContract, LikeActionContract, ReactActionContract, ThingContract
 {
     /**
      * Indicates the current disposition of the Action.

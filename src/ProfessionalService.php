@@ -5,6 +5,7 @@ namespace Spatie\SchemaOrg;
 use \Spatie\SchemaOrg\Contracts\LocalBusinessContract;
 use \Spatie\SchemaOrg\Contracts\OrganizationContract;
 use \Spatie\SchemaOrg\Contracts\PlaceContract;
+use \Spatie\SchemaOrg\Contracts\ProfessionalServiceContract;
 use \Spatie\SchemaOrg\Contracts\ThingContract;
 
 /**
@@ -23,7 +24,7 @@ use \Spatie\SchemaOrg\Contracts\ThingContract;
  * @see http://schema.org/ProfessionalService
  *
  */
-class ProfessionalService extends BaseType implements LocalBusinessContract, OrganizationContract, PlaceContract, ThingContract
+class ProfessionalService extends BaseType implements LocalBusinessContract, OrganizationContract, PlaceContract, ProfessionalServiceContract, ThingContract
 {
     /**
      * A property-value pair representing an additional characteristics of the

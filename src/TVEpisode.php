@@ -4,6 +4,7 @@ namespace Spatie\SchemaOrg;
 
 use \Spatie\SchemaOrg\Contracts\CreativeWorkContract;
 use \Spatie\SchemaOrg\Contracts\EpisodeContract;
+use \Spatie\SchemaOrg\Contracts\TVEpisodeContract;
 use \Spatie\SchemaOrg\Contracts\ThingContract;
 
 /**
@@ -12,7 +13,7 @@ use \Spatie\SchemaOrg\Contracts\ThingContract;
  * @see http://schema.org/TVEpisode
  *
  */
-class TVEpisode extends BaseType implements CreativeWorkContract, EpisodeContract, ThingContract
+class TVEpisode extends BaseType implements CreativeWorkContract, EpisodeContract, TVEpisodeContract, ThingContract
 {
     /**
      * The subject matter of the content.

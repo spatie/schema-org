@@ -5,6 +5,7 @@ namespace Spatie\SchemaOrg;
 use \Spatie\SchemaOrg\Contracts\EventContract;
 use \Spatie\SchemaOrg\Contracts\ThingContract;
 use \Spatie\SchemaOrg\Contracts\UserInteractionContract;
+use \Spatie\SchemaOrg\Contracts\UserPlusOnesContract;
 
 /**
  * UserInteraction and its subtypes is an old way of talking about users
@@ -14,7 +15,7 @@ use \Spatie\SchemaOrg\Contracts\UserInteractionContract;
  * @see http://schema.org/UserPlusOnes
  *
  */
-class UserPlusOnes extends BaseType implements EventContract, ThingContract, UserInteractionContract
+class UserPlusOnes extends BaseType implements EventContract, ThingContract, UserInteractionContract, UserPlusOnesContract
 {
     /**
      * The subject matter of the content.

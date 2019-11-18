@@ -3,6 +3,7 @@
 namespace Spatie\SchemaOrg;
 
 use \Spatie\SchemaOrg\Contracts\CreativeWorkContract;
+use \Spatie\SchemaOrg\Contracts\GameContract;
 use \Spatie\SchemaOrg\Contracts\ThingContract;
 
 /**
@@ -13,7 +14,7 @@ use \Spatie\SchemaOrg\Contracts\ThingContract;
  * @see http://schema.org/Game
  *
  */
-class Game extends BaseType implements CreativeWorkContract, ThingContract
+class Game extends BaseType implements CreativeWorkContract, GameContract, ThingContract
 {
     /**
      * The subject matter of the content.

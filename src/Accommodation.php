@@ -2,6 +2,7 @@
 
 namespace Spatie\SchemaOrg;
 
+use \Spatie\SchemaOrg\Contracts\AccommodationContract;
 use \Spatie\SchemaOrg\Contracts\PlaceContract;
 use \Spatie\SchemaOrg\Contracts\ThingContract;
 
@@ -18,7 +19,7 @@ use \Spatie\SchemaOrg\Contracts\ThingContract;
  * @see http://schema.org/Accommodation
  *
  */
-class Accommodation extends BaseType implements PlaceContract, ThingContract
+class Accommodation extends BaseType implements AccommodationContract, PlaceContract, ThingContract
 {
     /**
      * A property-value pair representing an additional characteristics of the

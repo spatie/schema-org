@@ -3,6 +3,7 @@
 namespace Spatie\SchemaOrg;
 
 use \Spatie\SchemaOrg\Contracts\IntangibleContract;
+use \Spatie\SchemaOrg\Contracts\PropertyValueSpecificationContract;
 use \Spatie\SchemaOrg\Contracts\ThingContract;
 
 /**
@@ -11,7 +12,7 @@ use \Spatie\SchemaOrg\Contracts\ThingContract;
  * @see http://schema.org/PropertyValueSpecification
  *
  */
-class PropertyValueSpecification extends BaseType implements IntangibleContract, ThingContract
+class PropertyValueSpecification extends BaseType implements IntangibleContract, PropertyValueSpecificationContract, ThingContract
 {
     /**
      * An additional type for the item, typically used for adding more specific

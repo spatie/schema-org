@@ -3,6 +3,7 @@
 namespace Spatie\SchemaOrg;
 
 use \Spatie\SchemaOrg\Contracts\CreativeWorkContract;
+use \Spatie\SchemaOrg\Contracts\PhotographContract;
 use \Spatie\SchemaOrg\Contracts\ThingContract;
 
 /**
@@ -11,7 +12,7 @@ use \Spatie\SchemaOrg\Contracts\ThingContract;
  * @see http://schema.org/Photograph
  *
  */
-class Photograph extends BaseType implements CreativeWorkContract, ThingContract
+class Photograph extends BaseType implements CreativeWorkContract, PhotographContract, ThingContract
 {
     /**
      * The subject matter of the content.

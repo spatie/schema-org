@@ -4,6 +4,7 @@ namespace Spatie\SchemaOrg;
 
 use \Spatie\SchemaOrg\Contracts\EnumerationContract;
 use \Spatie\SchemaOrg\Contracts\IntangibleContract;
+use \Spatie\SchemaOrg\Contracts\PaymentStatusTypeContract;
 use \Spatie\SchemaOrg\Contracts\ThingContract;
 
 /**
@@ -12,7 +13,7 @@ use \Spatie\SchemaOrg\Contracts\ThingContract;
  * @see http://schema.org/PaymentStatusType
  *
  */
-class PaymentStatusType extends BaseType implements EnumerationContract, IntangibleContract, ThingContract
+class PaymentStatusType extends BaseType implements EnumerationContract, IntangibleContract, PaymentStatusTypeContract, ThingContract
 {
     /**
      * An automatic payment system is in place and will be used.

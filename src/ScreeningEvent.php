@@ -3,6 +3,7 @@
 namespace Spatie\SchemaOrg;
 
 use \Spatie\SchemaOrg\Contracts\EventContract;
+use \Spatie\SchemaOrg\Contracts\ScreeningEventContract;
 use \Spatie\SchemaOrg\Contracts\ThingContract;
 
 /**
@@ -11,7 +12,7 @@ use \Spatie\SchemaOrg\Contracts\ThingContract;
  * @see http://schema.org/ScreeningEvent
  *
  */
-class ScreeningEvent extends BaseType implements EventContract, ThingContract
+class ScreeningEvent extends BaseType implements EventContract, ScreeningEventContract, ThingContract
 {
     /**
      * The subject matter of the content.

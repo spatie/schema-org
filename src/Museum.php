@@ -3,6 +3,7 @@
 namespace Spatie\SchemaOrg;
 
 use \Spatie\SchemaOrg\Contracts\CivicStructureContract;
+use \Spatie\SchemaOrg\Contracts\MuseumContract;
 use \Spatie\SchemaOrg\Contracts\PlaceContract;
 use \Spatie\SchemaOrg\Contracts\ThingContract;
 
@@ -12,7 +13,7 @@ use \Spatie\SchemaOrg\Contracts\ThingContract;
  * @see http://schema.org/Museum
  *
  */
-class Museum extends BaseType implements CivicStructureContract, PlaceContract, ThingContract
+class Museum extends BaseType implements CivicStructureContract, MuseumContract, PlaceContract, ThingContract
 {
     /**
      * A property-value pair representing an additional characteristics of the

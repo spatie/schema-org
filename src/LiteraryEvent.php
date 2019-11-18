@@ -3,6 +3,7 @@
 namespace Spatie\SchemaOrg;
 
 use \Spatie\SchemaOrg\Contracts\EventContract;
+use \Spatie\SchemaOrg\Contracts\LiteraryEventContract;
 use \Spatie\SchemaOrg\Contracts\ThingContract;
 
 /**
@@ -11,7 +12,7 @@ use \Spatie\SchemaOrg\Contracts\ThingContract;
  * @see http://schema.org/LiteraryEvent
  *
  */
-class LiteraryEvent extends BaseType implements EventContract, ThingContract
+class LiteraryEvent extends BaseType implements EventContract, LiteraryEventContract, ThingContract
 {
     /**
      * The subject matter of the content.

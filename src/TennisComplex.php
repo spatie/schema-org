@@ -6,6 +6,7 @@ use \Spatie\SchemaOrg\Contracts\LocalBusinessContract;
 use \Spatie\SchemaOrg\Contracts\OrganizationContract;
 use \Spatie\SchemaOrg\Contracts\PlaceContract;
 use \Spatie\SchemaOrg\Contracts\SportsActivityLocationContract;
+use \Spatie\SchemaOrg\Contracts\TennisComplexContract;
 use \Spatie\SchemaOrg\Contracts\ThingContract;
 
 /**
@@ -14,7 +15,7 @@ use \Spatie\SchemaOrg\Contracts\ThingContract;
  * @see http://schema.org/TennisComplex
  *
  */
-class TennisComplex extends BaseType implements LocalBusinessContract, OrganizationContract, PlaceContract, SportsActivityLocationContract, ThingContract
+class TennisComplex extends BaseType implements LocalBusinessContract, OrganizationContract, PlaceContract, SportsActivityLocationContract, TennisComplexContract, ThingContract
 {
     /**
      * A property-value pair representing an additional characteristics of the

@@ -3,6 +3,7 @@
 namespace Spatie\SchemaOrg;
 
 use \Spatie\SchemaOrg\Contracts\ActionContract;
+use \Spatie\SchemaOrg\Contracts\BookmarkActionContract;
 use \Spatie\SchemaOrg\Contracts\OrganizeActionContract;
 use \Spatie\SchemaOrg\Contracts\ThingContract;
 
@@ -12,7 +13,7 @@ use \Spatie\SchemaOrg\Contracts\ThingContract;
  * @see http://schema.org/BookmarkAction
  *
  */
-class BookmarkAction extends BaseType implements ActionContract, OrganizeActionContract, ThingContract
+class BookmarkAction extends BaseType implements ActionContract, BookmarkActionContract, OrganizeActionContract, ThingContract
 {
     /**
      * Indicates the current disposition of the Action.

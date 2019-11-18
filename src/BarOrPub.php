@@ -2,6 +2,7 @@
 
 namespace Spatie\SchemaOrg;
 
+use \Spatie\SchemaOrg\Contracts\BarOrPubContract;
 use \Spatie\SchemaOrg\Contracts\FoodEstablishmentContract;
 use \Spatie\SchemaOrg\Contracts\LocalBusinessContract;
 use \Spatie\SchemaOrg\Contracts\OrganizationContract;
@@ -14,7 +15,7 @@ use \Spatie\SchemaOrg\Contracts\ThingContract;
  * @see http://schema.org/BarOrPub
  *
  */
-class BarOrPub extends BaseType implements FoodEstablishmentContract, LocalBusinessContract, OrganizationContract, PlaceContract, ThingContract
+class BarOrPub extends BaseType implements BarOrPubContract, FoodEstablishmentContract, LocalBusinessContract, OrganizationContract, PlaceContract, ThingContract
 {
     /**
      * Indicates whether a FoodEstablishment accepts reservations. Values can be

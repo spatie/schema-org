@@ -3,6 +3,7 @@
 namespace Spatie\SchemaOrg;
 
 use \Spatie\SchemaOrg\Contracts\IntangibleContract;
+use \Spatie\SchemaOrg\Contracts\PerformanceRoleContract;
 use \Spatie\SchemaOrg\Contracts\RoleContract;
 use \Spatie\SchemaOrg\Contracts\ThingContract;
 
@@ -13,7 +14,7 @@ use \Spatie\SchemaOrg\Contracts\ThingContract;
  * @see http://schema.org/PerformanceRole
  *
  */
-class PerformanceRole extends BaseType implements IntangibleContract, RoleContract, ThingContract
+class PerformanceRole extends BaseType implements IntangibleContract, PerformanceRoleContract, RoleContract, ThingContract
 {
     /**
      * An additional type for the item, typically used for adding more specific

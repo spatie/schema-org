@@ -7,6 +7,7 @@ use \Spatie\SchemaOrg\Contracts\LocalBusinessContract;
 use \Spatie\SchemaOrg\Contracts\OrganizationContract;
 use \Spatie\SchemaOrg\Contracts\PlaceContract;
 use \Spatie\SchemaOrg\Contracts\ThingContract;
+use \Spatie\SchemaOrg\Contracts\WineryContract;
 
 /**
  * A winery.
@@ -14,7 +15,7 @@ use \Spatie\SchemaOrg\Contracts\ThingContract;
  * @see http://schema.org/Winery
  *
  */
-class Winery extends BaseType implements FoodEstablishmentContract, LocalBusinessContract, OrganizationContract, PlaceContract, ThingContract
+class Winery extends BaseType implements FoodEstablishmentContract, LocalBusinessContract, OrganizationContract, PlaceContract, ThingContract, WineryContract
 {
     /**
      * Indicates whether a FoodEstablishment accepts reservations. Values can be

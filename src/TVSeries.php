@@ -6,6 +6,7 @@ use \Spatie\SchemaOrg\Contracts\CreativeWorkContract;
 use \Spatie\SchemaOrg\Contracts\CreativeWorkSeriesContract;
 use \Spatie\SchemaOrg\Contracts\IntangibleContract;
 use \Spatie\SchemaOrg\Contracts\SeriesContract;
+use \Spatie\SchemaOrg\Contracts\TVSeriesContract;
 use \Spatie\SchemaOrg\Contracts\ThingContract;
 
 /**
@@ -14,7 +15,7 @@ use \Spatie\SchemaOrg\Contracts\ThingContract;
  * @see http://schema.org/TVSeries
  *
  */
-class TVSeries extends BaseType implements CreativeWorkContract, CreativeWorkSeriesContract, IntangibleContract, SeriesContract, ThingContract
+class TVSeries extends BaseType implements CreativeWorkContract, CreativeWorkSeriesContract, IntangibleContract, SeriesContract, TVSeriesContract, ThingContract
 {
     /**
      * The subject matter of the content.

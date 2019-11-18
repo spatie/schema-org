@@ -2,6 +2,7 @@
 
 namespace Spatie\SchemaOrg;
 
+use \Spatie\SchemaOrg\Contracts\EducationEventContract;
 use \Spatie\SchemaOrg\Contracts\EventContract;
 use \Spatie\SchemaOrg\Contracts\ThingContract;
 
@@ -11,7 +12,7 @@ use \Spatie\SchemaOrg\Contracts\ThingContract;
  * @see http://schema.org/EducationEvent
  *
  */
-class EducationEvent extends BaseType implements EventContract, ThingContract
+class EducationEvent extends BaseType implements EducationEventContract, EventContract, ThingContract
 {
     /**
      * The subject matter of the content.

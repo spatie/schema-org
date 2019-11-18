@@ -4,6 +4,7 @@ namespace Spatie\SchemaOrg;
 
 use \Spatie\SchemaOrg\Contracts\ArticleContract;
 use \Spatie\SchemaOrg\Contracts\CreativeWorkContract;
+use \Spatie\SchemaOrg\Contracts\DiscussionForumPostingContract;
 use \Spatie\SchemaOrg\Contracts\SocialMediaPostingContract;
 use \Spatie\SchemaOrg\Contracts\ThingContract;
 
@@ -13,7 +14,7 @@ use \Spatie\SchemaOrg\Contracts\ThingContract;
  * @see http://schema.org/DiscussionForumPosting
  *
  */
-class DiscussionForumPosting extends BaseType implements ArticleContract, CreativeWorkContract, SocialMediaPostingContract, ThingContract
+class DiscussionForumPosting extends BaseType implements ArticleContract, CreativeWorkContract, DiscussionForumPostingContract, SocialMediaPostingContract, ThingContract
 {
     /**
      * The subject matter of the content.

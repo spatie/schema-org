@@ -3,6 +3,7 @@
 namespace Spatie\SchemaOrg;
 
 use \Spatie\SchemaOrg\Contracts\EnumerationContract;
+use \Spatie\SchemaOrg\Contracts\EventStatusTypeContract;
 use \Spatie\SchemaOrg\Contracts\IntangibleContract;
 use \Spatie\SchemaOrg\Contracts\ThingContract;
 
@@ -13,7 +14,7 @@ use \Spatie\SchemaOrg\Contracts\ThingContract;
  * @see http://schema.org/EventStatusType
  *
  */
-class EventStatusType extends BaseType implements EnumerationContract, IntangibleContract, ThingContract
+class EventStatusType extends BaseType implements EnumerationContract, EventStatusTypeContract, IntangibleContract, ThingContract
 {
     /**
      * The event has been cancelled. If the event has multiple startDate values,

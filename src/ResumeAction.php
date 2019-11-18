@@ -4,6 +4,7 @@ namespace Spatie\SchemaOrg;
 
 use \Spatie\SchemaOrg\Contracts\ActionContract;
 use \Spatie\SchemaOrg\Contracts\ControlActionContract;
+use \Spatie\SchemaOrg\Contracts\ResumeActionContract;
 use \Spatie\SchemaOrg\Contracts\ThingContract;
 
 /**
@@ -13,7 +14,7 @@ use \Spatie\SchemaOrg\Contracts\ThingContract;
  * @see http://schema.org/ResumeAction
  *
  */
-class ResumeAction extends BaseType implements ActionContract, ControlActionContract, ThingContract
+class ResumeAction extends BaseType implements ActionContract, ControlActionContract, ResumeActionContract, ThingContract
 {
     /**
      * Indicates the current disposition of the Action.

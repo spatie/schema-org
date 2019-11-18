@@ -5,6 +5,7 @@ namespace Spatie\SchemaOrg;
 use \Spatie\SchemaOrg\Contracts\LocalBusinessContract;
 use \Spatie\SchemaOrg\Contracts\OrganizationContract;
 use \Spatie\SchemaOrg\Contracts\PlaceContract;
+use \Spatie\SchemaOrg\Contracts\RadioStationContract;
 use \Spatie\SchemaOrg\Contracts\ThingContract;
 
 /**
@@ -13,7 +14,7 @@ use \Spatie\SchemaOrg\Contracts\ThingContract;
  * @see http://schema.org/RadioStation
  *
  */
-class RadioStation extends BaseType implements LocalBusinessContract, OrganizationContract, PlaceContract, ThingContract
+class RadioStation extends BaseType implements LocalBusinessContract, OrganizationContract, PlaceContract, RadioStationContract, ThingContract
 {
     /**
      * A property-value pair representing an additional characteristics of the

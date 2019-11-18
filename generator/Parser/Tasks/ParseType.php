@@ -22,17 +22,14 @@ class ParseType extends Task
         $subClassOf = $node->filter('[property="rdfs:subClassOf"]');
 
         if ($subClassOf->count() > 0) {
-            $type->parents = array_filter($subClassOf
+            $parents = array_filter($subClassOf
                 ->each(function (Crawler $node) {
                     $parent = $this->getText($node);
 
                     return strpos($parent, ':') === false ? $parent : null;
                 }));
-
-            if (empty($type->parents)) {
-                return null;
-            }
         }
+        $type->parents = array_merge($parents ?? [], [$type->name]);
 
         $type->description = $this->getText($node, '[property="rdfs:comment"]');
 

@@ -4,6 +4,7 @@ namespace Spatie\SchemaOrg;
 
 use \Spatie\SchemaOrg\Contracts\CivicStructureContract;
 use \Spatie\SchemaOrg\Contracts\PlaceContract;
+use \Spatie\SchemaOrg\Contracts\RVParkContract;
 use \Spatie\SchemaOrg\Contracts\ThingContract;
 
 /**
@@ -13,7 +14,7 @@ use \Spatie\SchemaOrg\Contracts\ThingContract;
  * @see http://schema.org/RVPark
  *
  */
-class RVPark extends BaseType implements CivicStructureContract, PlaceContract, ThingContract
+class RVPark extends BaseType implements CivicStructureContract, PlaceContract, RVParkContract, ThingContract
 {
     /**
      * A property-value pair representing an additional characteristics of the

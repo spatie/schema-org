@@ -4,6 +4,7 @@ namespace Spatie\SchemaOrg;
 
 use \Spatie\SchemaOrg\Contracts\OrganizationContract;
 use \Spatie\SchemaOrg\Contracts\ThingContract;
+use \Spatie\SchemaOrg\Contracts\WorkersUnionContract;
 
 /**
  * A Workers Union (also known as a Labor Union, Labour Union, or Trade Union)
@@ -13,7 +14,7 @@ use \Spatie\SchemaOrg\Contracts\ThingContract;
  * @see http://schema.org/WorkersUnion
  *
  */
-class WorkersUnion extends BaseType implements OrganizationContract, ThingContract
+class WorkersUnion extends BaseType implements OrganizationContract, ThingContract, WorkersUnionContract
 {
     /**
      * An additional type for the item, typically used for adding more specific

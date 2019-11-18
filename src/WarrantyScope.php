@@ -5,6 +5,7 @@ namespace Spatie\SchemaOrg;
 use \Spatie\SchemaOrg\Contracts\EnumerationContract;
 use \Spatie\SchemaOrg\Contracts\IntangibleContract;
 use \Spatie\SchemaOrg\Contracts\ThingContract;
+use \Spatie\SchemaOrg\Contracts\WarrantyScopeContract;
 
 /**
  * A range of of services that will be provided to a customer free of charge in
@@ -19,7 +20,7 @@ use \Spatie\SchemaOrg\Contracts\ThingContract;
  * @see http://schema.org/WarrantyScope
  *
  */
-class WarrantyScope extends BaseType implements EnumerationContract, IntangibleContract, ThingContract
+class WarrantyScope extends BaseType implements EnumerationContract, IntangibleContract, ThingContract, WarrantyScopeContract
 {
     /**
      * An additional type for the item, typically used for adding more specific

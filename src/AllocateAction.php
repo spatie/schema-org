@@ -3,6 +3,7 @@
 namespace Spatie\SchemaOrg;
 
 use \Spatie\SchemaOrg\Contracts\ActionContract;
+use \Spatie\SchemaOrg\Contracts\AllocateActionContract;
 use \Spatie\SchemaOrg\Contracts\OrganizeActionContract;
 use \Spatie\SchemaOrg\Contracts\ThingContract;
 
@@ -12,7 +13,7 @@ use \Spatie\SchemaOrg\Contracts\ThingContract;
  * @see http://schema.org/AllocateAction
  *
  */
-class AllocateAction extends BaseType implements ActionContract, OrganizeActionContract, ThingContract
+class AllocateAction extends BaseType implements ActionContract, AllocateActionContract, OrganizeActionContract, ThingContract
 {
     /**
      * Indicates the current disposition of the Action.

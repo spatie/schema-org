@@ -6,6 +6,7 @@ use \Spatie\SchemaOrg\Contracts\LocalBusinessContract;
 use \Spatie\SchemaOrg\Contracts\LodgingBusinessContract;
 use \Spatie\SchemaOrg\Contracts\OrganizationContract;
 use \Spatie\SchemaOrg\Contracts\PlaceContract;
+use \Spatie\SchemaOrg\Contracts\ResortContract;
 use \Spatie\SchemaOrg\Contracts\ThingContract;
 
 /**
@@ -21,7 +22,7 @@ use \Spatie\SchemaOrg\Contracts\ThingContract;
  * @see http://schema.org/Resort
  *
  */
-class Resort extends BaseType implements LocalBusinessContract, LodgingBusinessContract, OrganizationContract, PlaceContract, ThingContract
+class Resort extends BaseType implements LocalBusinessContract, LodgingBusinessContract, OrganizationContract, PlaceContract, ResortContract, ThingContract
 {
     /**
      * A property-value pair representing an additional characteristics of the

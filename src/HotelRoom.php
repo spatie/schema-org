@@ -3,6 +3,7 @@
 namespace Spatie\SchemaOrg;
 
 use \Spatie\SchemaOrg\Contracts\AccommodationContract;
+use \Spatie\SchemaOrg\Contracts\HotelRoomContract;
 use \Spatie\SchemaOrg\Contracts\PlaceContract;
 use \Spatie\SchemaOrg\Contracts\RoomContract;
 use \Spatie\SchemaOrg\Contracts\ThingContract;
@@ -16,7 +17,7 @@ use \Spatie\SchemaOrg\Contracts\ThingContract;
  * @see http://schema.org/HotelRoom
  *
  */
-class HotelRoom extends BaseType implements AccommodationContract, PlaceContract, RoomContract, ThingContract
+class HotelRoom extends BaseType implements AccommodationContract, HotelRoomContract, PlaceContract, RoomContract, ThingContract
 {
     /**
      * A property-value pair representing an additional characteristics of the

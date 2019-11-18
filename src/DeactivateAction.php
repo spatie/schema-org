@@ -4,6 +4,7 @@ namespace Spatie\SchemaOrg;
 
 use \Spatie\SchemaOrg\Contracts\ActionContract;
 use \Spatie\SchemaOrg\Contracts\ControlActionContract;
+use \Spatie\SchemaOrg\Contracts\DeactivateActionContract;
 use \Spatie\SchemaOrg\Contracts\ThingContract;
 
 /**
@@ -13,7 +14,7 @@ use \Spatie\SchemaOrg\Contracts\ThingContract;
  * @see http://schema.org/DeactivateAction
  *
  */
-class DeactivateAction extends BaseType implements ActionContract, ControlActionContract, ThingContract
+class DeactivateAction extends BaseType implements ActionContract, ControlActionContract, DeactivateActionContract, ThingContract
 {
     /**
      * Indicates the current disposition of the Action.

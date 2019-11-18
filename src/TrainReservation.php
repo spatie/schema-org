@@ -5,6 +5,7 @@ namespace Spatie\SchemaOrg;
 use \Spatie\SchemaOrg\Contracts\IntangibleContract;
 use \Spatie\SchemaOrg\Contracts\ReservationContract;
 use \Spatie\SchemaOrg\Contracts\ThingContract;
+use \Spatie\SchemaOrg\Contracts\TrainReservationContract;
 
 /**
  * A reservation for train travel.
@@ -16,7 +17,7 @@ use \Spatie\SchemaOrg\Contracts\ThingContract;
  * @see http://schema.org/TrainReservation
  *
  */
-class TrainReservation extends BaseType implements IntangibleContract, ReservationContract, ThingContract
+class TrainReservation extends BaseType implements IntangibleContract, ReservationContract, ThingContract, TrainReservationContract
 {
     /**
      * An additional type for the item, typically used for adding more specific

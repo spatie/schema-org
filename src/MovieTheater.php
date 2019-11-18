@@ -5,6 +5,7 @@ namespace Spatie\SchemaOrg;
 use \Spatie\SchemaOrg\Contracts\CivicStructureContract;
 use \Spatie\SchemaOrg\Contracts\EntertainmentBusinessContract;
 use \Spatie\SchemaOrg\Contracts\LocalBusinessContract;
+use \Spatie\SchemaOrg\Contracts\MovieTheaterContract;
 use \Spatie\SchemaOrg\Contracts\OrganizationContract;
 use \Spatie\SchemaOrg\Contracts\PlaceContract;
 use \Spatie\SchemaOrg\Contracts\ThingContract;
@@ -15,7 +16,7 @@ use \Spatie\SchemaOrg\Contracts\ThingContract;
  * @see http://schema.org/MovieTheater
  *
  */
-class MovieTheater extends BaseType implements CivicStructureContract, EntertainmentBusinessContract, LocalBusinessContract, OrganizationContract, PlaceContract, ThingContract
+class MovieTheater extends BaseType implements CivicStructureContract, EntertainmentBusinessContract, LocalBusinessContract, MovieTheaterContract, OrganizationContract, PlaceContract, ThingContract
 {
     /**
      * A property-value pair representing an additional characteristics of the

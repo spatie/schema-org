@@ -3,6 +3,7 @@
 namespace Spatie\SchemaOrg;
 
 use \Spatie\SchemaOrg\Contracts\FoodEstablishmentContract;
+use \Spatie\SchemaOrg\Contracts\IceCreamShopContract;
 use \Spatie\SchemaOrg\Contracts\LocalBusinessContract;
 use \Spatie\SchemaOrg\Contracts\OrganizationContract;
 use \Spatie\SchemaOrg\Contracts\PlaceContract;
@@ -14,7 +15,7 @@ use \Spatie\SchemaOrg\Contracts\ThingContract;
  * @see http://schema.org/IceCreamShop
  *
  */
-class IceCreamShop extends BaseType implements FoodEstablishmentContract, LocalBusinessContract, OrganizationContract, PlaceContract, ThingContract
+class IceCreamShop extends BaseType implements FoodEstablishmentContract, IceCreamShopContract, LocalBusinessContract, OrganizationContract, PlaceContract, ThingContract
 {
     /**
      * Indicates whether a FoodEstablishment accepts reservations. Values can be

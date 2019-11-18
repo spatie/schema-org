@@ -2,6 +2,7 @@
 
 namespace Spatie\SchemaOrg;
 
+use \Spatie\SchemaOrg\Contracts\EmployeeRoleContract;
 use \Spatie\SchemaOrg\Contracts\IntangibleContract;
 use \Spatie\SchemaOrg\Contracts\OrganizationRoleContract;
 use \Spatie\SchemaOrg\Contracts\RoleContract;
@@ -13,7 +14,7 @@ use \Spatie\SchemaOrg\Contracts\ThingContract;
  * @see http://schema.org/EmployeeRole
  *
  */
-class EmployeeRole extends BaseType implements IntangibleContract, OrganizationRoleContract, RoleContract, ThingContract
+class EmployeeRole extends BaseType implements EmployeeRoleContract, IntangibleContract, OrganizationRoleContract, RoleContract, ThingContract
 {
     /**
      * An additional type for the item, typically used for adding more specific

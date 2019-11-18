@@ -5,6 +5,7 @@ namespace Spatie\SchemaOrg;
 use \Spatie\SchemaOrg\Contracts\CreativeWorkContract;
 use \Spatie\SchemaOrg\Contracts\SoftwareApplicationContract;
 use \Spatie\SchemaOrg\Contracts\ThingContract;
+use \Spatie\SchemaOrg\Contracts\WebApplicationContract;
 
 /**
  * Web applications.
@@ -12,7 +13,7 @@ use \Spatie\SchemaOrg\Contracts\ThingContract;
  * @see http://schema.org/WebApplication
  *
  */
-class WebApplication extends BaseType implements CreativeWorkContract, SoftwareApplicationContract, ThingContract
+class WebApplication extends BaseType implements CreativeWorkContract, SoftwareApplicationContract, ThingContract, WebApplicationContract
 {
     /**
      * The subject matter of the content.

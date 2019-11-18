@@ -3,6 +3,7 @@
 namespace Spatie\SchemaOrg;
 
 use \Spatie\SchemaOrg\Contracts\CreativeWorkContract;
+use \Spatie\SchemaOrg\Contracts\SoftwareSourceCodeContract;
 use \Spatie\SchemaOrg\Contracts\ThingContract;
 
 /**
@@ -12,7 +13,7 @@ use \Spatie\SchemaOrg\Contracts\ThingContract;
  * @see http://schema.org/SoftwareSourceCode
  *
  */
-class SoftwareSourceCode extends BaseType implements CreativeWorkContract, ThingContract
+class SoftwareSourceCode extends BaseType implements CreativeWorkContract, SoftwareSourceCodeContract, ThingContract
 {
     /**
      * The subject matter of the content.

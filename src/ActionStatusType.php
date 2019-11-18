@@ -2,6 +2,7 @@
 
 namespace Spatie\SchemaOrg;
 
+use \Spatie\SchemaOrg\Contracts\ActionStatusTypeContract;
 use \Spatie\SchemaOrg\Contracts\EnumerationContract;
 use \Spatie\SchemaOrg\Contracts\IntangibleContract;
 use \Spatie\SchemaOrg\Contracts\ThingContract;
@@ -12,7 +13,7 @@ use \Spatie\SchemaOrg\Contracts\ThingContract;
  * @see http://schema.org/ActionStatusType
  *
  */
-class ActionStatusType extends BaseType implements EnumerationContract, IntangibleContract, ThingContract
+class ActionStatusType extends BaseType implements ActionStatusTypeContract, EnumerationContract, IntangibleContract, ThingContract
 {
     /**
      * An in-progress action (e.g, while watching the movie, or driving to a

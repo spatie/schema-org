@@ -2,6 +2,7 @@
 
 namespace Spatie\SchemaOrg;
 
+use \Spatie\SchemaOrg\Contracts\FinancialProductContract;
 use \Spatie\SchemaOrg\Contracts\IntangibleContract;
 use \Spatie\SchemaOrg\Contracts\ServiceContract;
 use \Spatie\SchemaOrg\Contracts\ThingContract;
@@ -14,7 +15,7 @@ use \Spatie\SchemaOrg\Contracts\ThingContract;
  * @see http://schema.org/FinancialProduct
  *
  */
-class FinancialProduct extends BaseType implements IntangibleContract, ServiceContract, ThingContract
+class FinancialProduct extends BaseType implements FinancialProductContract, IntangibleContract, ServiceContract, ThingContract
 {
     /**
      * An additional type for the item, typically used for adding more specific

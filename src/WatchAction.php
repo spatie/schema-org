@@ -5,6 +5,7 @@ namespace Spatie\SchemaOrg;
 use \Spatie\SchemaOrg\Contracts\ActionContract;
 use \Spatie\SchemaOrg\Contracts\ConsumeActionContract;
 use \Spatie\SchemaOrg\Contracts\ThingContract;
+use \Spatie\SchemaOrg\Contracts\WatchActionContract;
 
 /**
  * The act of consuming dynamic/moving visual content.
@@ -12,7 +13,7 @@ use \Spatie\SchemaOrg\Contracts\ThingContract;
  * @see http://schema.org/WatchAction
  *
  */
-class WatchAction extends BaseType implements ActionContract, ConsumeActionContract, ThingContract
+class WatchAction extends BaseType implements ActionContract, ConsumeActionContract, ThingContract, WatchActionContract
 {
     /**
      * A set of requirements that a must be fulfilled in order to perform an

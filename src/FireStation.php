@@ -4,6 +4,7 @@ namespace Spatie\SchemaOrg;
 
 use \Spatie\SchemaOrg\Contracts\CivicStructureContract;
 use \Spatie\SchemaOrg\Contracts\EmergencyServiceContract;
+use \Spatie\SchemaOrg\Contracts\FireStationContract;
 use \Spatie\SchemaOrg\Contracts\LocalBusinessContract;
 use \Spatie\SchemaOrg\Contracts\OrganizationContract;
 use \Spatie\SchemaOrg\Contracts\PlaceContract;
@@ -15,7 +16,7 @@ use \Spatie\SchemaOrg\Contracts\ThingContract;
  * @see http://schema.org/FireStation
  *
  */
-class FireStation extends BaseType implements CivicStructureContract, EmergencyServiceContract, LocalBusinessContract, OrganizationContract, PlaceContract, ThingContract
+class FireStation extends BaseType implements CivicStructureContract, EmergencyServiceContract, FireStationContract, LocalBusinessContract, OrganizationContract, PlaceContract, ThingContract
 {
     /**
      * A property-value pair representing an additional characteristics of the

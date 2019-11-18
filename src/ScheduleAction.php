@@ -5,6 +5,7 @@ namespace Spatie\SchemaOrg;
 use \Spatie\SchemaOrg\Contracts\ActionContract;
 use \Spatie\SchemaOrg\Contracts\OrganizeActionContract;
 use \Spatie\SchemaOrg\Contracts\PlanActionContract;
+use \Spatie\SchemaOrg\Contracts\ScheduleActionContract;
 use \Spatie\SchemaOrg\Contracts\ThingContract;
 
 /**
@@ -19,7 +20,7 @@ use \Spatie\SchemaOrg\Contracts\ThingContract;
  * @see http://schema.org/ScheduleAction
  *
  */
-class ScheduleAction extends BaseType implements ActionContract, OrganizeActionContract, PlanActionContract, ThingContract
+class ScheduleAction extends BaseType implements ActionContract, OrganizeActionContract, PlanActionContract, ScheduleActionContract, ThingContract
 {
     /**
      * Indicates the current disposition of the Action.

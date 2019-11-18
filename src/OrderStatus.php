@@ -4,6 +4,7 @@ namespace Spatie\SchemaOrg;
 
 use \Spatie\SchemaOrg\Contracts\EnumerationContract;
 use \Spatie\SchemaOrg\Contracts\IntangibleContract;
+use \Spatie\SchemaOrg\Contracts\OrderStatusContract;
 use \Spatie\SchemaOrg\Contracts\ThingContract;
 
 /**
@@ -12,7 +13,7 @@ use \Spatie\SchemaOrg\Contracts\ThingContract;
  * @see http://schema.org/OrderStatus
  *
  */
-class OrderStatus extends BaseType implements EnumerationContract, IntangibleContract, ThingContract
+class OrderStatus extends BaseType implements EnumerationContract, IntangibleContract, OrderStatusContract, ThingContract
 {
     /**
      * OrderStatus representing cancellation of an order.

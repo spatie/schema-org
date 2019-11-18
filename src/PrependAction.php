@@ -5,6 +5,7 @@ namespace Spatie\SchemaOrg;
 use \Spatie\SchemaOrg\Contracts\ActionContract;
 use \Spatie\SchemaOrg\Contracts\AddActionContract;
 use \Spatie\SchemaOrg\Contracts\InsertActionContract;
+use \Spatie\SchemaOrg\Contracts\PrependActionContract;
 use \Spatie\SchemaOrg\Contracts\ThingContract;
 use \Spatie\SchemaOrg\Contracts\UpdateActionContract;
 
@@ -14,7 +15,7 @@ use \Spatie\SchemaOrg\Contracts\UpdateActionContract;
  * @see http://schema.org/PrependAction
  *
  */
-class PrependAction extends BaseType implements ActionContract, AddActionContract, InsertActionContract, ThingContract, UpdateActionContract
+class PrependAction extends BaseType implements ActionContract, AddActionContract, InsertActionContract, PrependActionContract, ThingContract, UpdateActionContract
 {
     /**
      * Indicates the current disposition of the Action.

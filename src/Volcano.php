@@ -5,6 +5,7 @@ namespace Spatie\SchemaOrg;
 use \Spatie\SchemaOrg\Contracts\LandformContract;
 use \Spatie\SchemaOrg\Contracts\PlaceContract;
 use \Spatie\SchemaOrg\Contracts\ThingContract;
+use \Spatie\SchemaOrg\Contracts\VolcanoContract;
 
 /**
  * A volcano, like Fuji san.
@@ -12,7 +13,7 @@ use \Spatie\SchemaOrg\Contracts\ThingContract;
  * @see http://schema.org/Volcano
  *
  */
-class Volcano extends BaseType implements LandformContract, PlaceContract, ThingContract
+class Volcano extends BaseType implements LandformContract, PlaceContract, ThingContract, VolcanoContract
 {
     /**
      * A property-value pair representing an additional characteristics of the

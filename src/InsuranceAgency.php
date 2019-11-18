@@ -3,6 +3,7 @@
 namespace Spatie\SchemaOrg;
 
 use \Spatie\SchemaOrg\Contracts\FinancialServiceContract;
+use \Spatie\SchemaOrg\Contracts\InsuranceAgencyContract;
 use \Spatie\SchemaOrg\Contracts\LocalBusinessContract;
 use \Spatie\SchemaOrg\Contracts\OrganizationContract;
 use \Spatie\SchemaOrg\Contracts\PlaceContract;
@@ -14,7 +15,7 @@ use \Spatie\SchemaOrg\Contracts\ThingContract;
  * @see http://schema.org/InsuranceAgency
  *
  */
-class InsuranceAgency extends BaseType implements FinancialServiceContract, LocalBusinessContract, OrganizationContract, PlaceContract, ThingContract
+class InsuranceAgency extends BaseType implements FinancialServiceContract, InsuranceAgencyContract, LocalBusinessContract, OrganizationContract, PlaceContract, ThingContract
 {
     /**
      * A property-value pair representing an additional characteristics of the

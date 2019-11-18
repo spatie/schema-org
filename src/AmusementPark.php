@@ -2,6 +2,7 @@
 
 namespace Spatie\SchemaOrg;
 
+use \Spatie\SchemaOrg\Contracts\AmusementParkContract;
 use \Spatie\SchemaOrg\Contracts\EntertainmentBusinessContract;
 use \Spatie\SchemaOrg\Contracts\LocalBusinessContract;
 use \Spatie\SchemaOrg\Contracts\OrganizationContract;
@@ -14,7 +15,7 @@ use \Spatie\SchemaOrg\Contracts\ThingContract;
  * @see http://schema.org/AmusementPark
  *
  */
-class AmusementPark extends BaseType implements EntertainmentBusinessContract, LocalBusinessContract, OrganizationContract, PlaceContract, ThingContract
+class AmusementPark extends BaseType implements AmusementParkContract, EntertainmentBusinessContract, LocalBusinessContract, OrganizationContract, PlaceContract, ThingContract
 {
     /**
      * A property-value pair representing an additional characteristics of the

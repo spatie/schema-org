@@ -2,6 +2,7 @@
 
 namespace Spatie\SchemaOrg;
 
+use \Spatie\SchemaOrg\Contracts\NGOContract;
 use \Spatie\SchemaOrg\Contracts\OrganizationContract;
 use \Spatie\SchemaOrg\Contracts\ThingContract;
 
@@ -11,7 +12,7 @@ use \Spatie\SchemaOrg\Contracts\ThingContract;
  * @see http://schema.org/NGO
  *
  */
-class NGO extends BaseType implements OrganizationContract, ThingContract
+class NGO extends BaseType implements NGOContract, OrganizationContract, ThingContract
 {
     /**
      * An additional type for the item, typically used for adding more specific

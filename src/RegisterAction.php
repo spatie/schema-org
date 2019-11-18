@@ -4,6 +4,7 @@ namespace Spatie\SchemaOrg;
 
 use \Spatie\SchemaOrg\Contracts\ActionContract;
 use \Spatie\SchemaOrg\Contracts\InteractActionContract;
+use \Spatie\SchemaOrg\Contracts\RegisterActionContract;
 use \Spatie\SchemaOrg\Contracts\ThingContract;
 
 /**
@@ -21,7 +22,7 @@ use \Spatie\SchemaOrg\Contracts\ThingContract;
  * @see http://schema.org/RegisterAction
  *
  */
-class RegisterAction extends BaseType implements ActionContract, InteractActionContract, ThingContract
+class RegisterAction extends BaseType implements ActionContract, InteractActionContract, RegisterActionContract, ThingContract
 {
     /**
      * Indicates the current disposition of the Action.

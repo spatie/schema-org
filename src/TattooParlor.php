@@ -6,6 +6,7 @@ use \Spatie\SchemaOrg\Contracts\HealthAndBeautyBusinessContract;
 use \Spatie\SchemaOrg\Contracts\LocalBusinessContract;
 use \Spatie\SchemaOrg\Contracts\OrganizationContract;
 use \Spatie\SchemaOrg\Contracts\PlaceContract;
+use \Spatie\SchemaOrg\Contracts\TattooParlorContract;
 use \Spatie\SchemaOrg\Contracts\ThingContract;
 
 /**
@@ -14,7 +15,7 @@ use \Spatie\SchemaOrg\Contracts\ThingContract;
  * @see http://schema.org/TattooParlor
  *
  */
-class TattooParlor extends BaseType implements HealthAndBeautyBusinessContract, LocalBusinessContract, OrganizationContract, PlaceContract, ThingContract
+class TattooParlor extends BaseType implements HealthAndBeautyBusinessContract, LocalBusinessContract, OrganizationContract, PlaceContract, TattooParlorContract, ThingContract
 {
     /**
      * A property-value pair representing an additional characteristics of the

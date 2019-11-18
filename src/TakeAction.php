@@ -3,6 +3,7 @@
 namespace Spatie\SchemaOrg;
 
 use \Spatie\SchemaOrg\Contracts\ActionContract;
+use \Spatie\SchemaOrg\Contracts\TakeActionContract;
 use \Spatie\SchemaOrg\Contracts\ThingContract;
 use \Spatie\SchemaOrg\Contracts\TransferActionContract;
 
@@ -19,7 +20,7 @@ use \Spatie\SchemaOrg\Contracts\TransferActionContract;
  * @see http://schema.org/TakeAction
  *
  */
-class TakeAction extends BaseType implements ActionContract, ThingContract, TransferActionContract
+class TakeAction extends BaseType implements ActionContract, TakeActionContract, ThingContract, TransferActionContract
 {
     /**
      * Indicates the current disposition of the Action.

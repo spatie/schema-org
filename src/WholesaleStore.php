@@ -7,6 +7,7 @@ use \Spatie\SchemaOrg\Contracts\OrganizationContract;
 use \Spatie\SchemaOrg\Contracts\PlaceContract;
 use \Spatie\SchemaOrg\Contracts\StoreContract;
 use \Spatie\SchemaOrg\Contracts\ThingContract;
+use \Spatie\SchemaOrg\Contracts\WholesaleStoreContract;
 
 /**
  * A wholesale store.
@@ -14,7 +15,7 @@ use \Spatie\SchemaOrg\Contracts\ThingContract;
  * @see http://schema.org/WholesaleStore
  *
  */
-class WholesaleStore extends BaseType implements LocalBusinessContract, OrganizationContract, PlaceContract, StoreContract, ThingContract
+class WholesaleStore extends BaseType implements LocalBusinessContract, OrganizationContract, PlaceContract, StoreContract, ThingContract, WholesaleStoreContract
 {
     /**
      * A property-value pair representing an additional characteristics of the

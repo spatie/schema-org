@@ -4,6 +4,7 @@ namespace Spatie\SchemaOrg;
 
 use \Spatie\SchemaOrg\Contracts\CivicStructureContract;
 use \Spatie\SchemaOrg\Contracts\PlaceContract;
+use \Spatie\SchemaOrg\Contracts\SubwayStationContract;
 use \Spatie\SchemaOrg\Contracts\ThingContract;
 
 /**
@@ -12,7 +13,7 @@ use \Spatie\SchemaOrg\Contracts\ThingContract;
  * @see http://schema.org/SubwayStation
  *
  */
-class SubwayStation extends BaseType implements CivicStructureContract, PlaceContract, ThingContract
+class SubwayStation extends BaseType implements CivicStructureContract, PlaceContract, SubwayStationContract, ThingContract
 {
     /**
      * A property-value pair representing an additional characteristics of the

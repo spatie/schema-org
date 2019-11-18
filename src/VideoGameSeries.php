@@ -7,6 +7,7 @@ use \Spatie\SchemaOrg\Contracts\CreativeWorkSeriesContract;
 use \Spatie\SchemaOrg\Contracts\IntangibleContract;
 use \Spatie\SchemaOrg\Contracts\SeriesContract;
 use \Spatie\SchemaOrg\Contracts\ThingContract;
+use \Spatie\SchemaOrg\Contracts\VideoGameSeriesContract;
 
 /**
  * A video game series.
@@ -14,7 +15,7 @@ use \Spatie\SchemaOrg\Contracts\ThingContract;
  * @see http://schema.org/VideoGameSeries
  *
  */
-class VideoGameSeries extends BaseType implements CreativeWorkContract, CreativeWorkSeriesContract, IntangibleContract, SeriesContract, ThingContract
+class VideoGameSeries extends BaseType implements CreativeWorkContract, CreativeWorkSeriesContract, IntangibleContract, SeriesContract, ThingContract, VideoGameSeriesContract
 {
     /**
      * The subject matter of the content.

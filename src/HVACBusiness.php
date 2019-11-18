@@ -2,6 +2,7 @@
 
 namespace Spatie\SchemaOrg;
 
+use \Spatie\SchemaOrg\Contracts\HVACBusinessContract;
 use \Spatie\SchemaOrg\Contracts\HomeAndConstructionBusinessContract;
 use \Spatie\SchemaOrg\Contracts\LocalBusinessContract;
 use \Spatie\SchemaOrg\Contracts\OrganizationContract;
@@ -14,7 +15,7 @@ use \Spatie\SchemaOrg\Contracts\ThingContract;
  * @see http://schema.org/HVACBusiness
  *
  */
-class HVACBusiness extends BaseType implements HomeAndConstructionBusinessContract, LocalBusinessContract, OrganizationContract, PlaceContract, ThingContract
+class HVACBusiness extends BaseType implements HVACBusinessContract, HomeAndConstructionBusinessContract, LocalBusinessContract, OrganizationContract, PlaceContract, ThingContract
 {
     /**
      * A property-value pair representing an additional characteristics of the

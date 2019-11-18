@@ -5,6 +5,7 @@ namespace Spatie\SchemaOrg;
 use \Spatie\SchemaOrg\Contracts\AchieveActionContract;
 use \Spatie\SchemaOrg\Contracts\ActionContract;
 use \Spatie\SchemaOrg\Contracts\ThingContract;
+use \Spatie\SchemaOrg\Contracts\WinActionContract;
 
 /**
  * The act of achieving victory in a competitive activity.
@@ -12,7 +13,7 @@ use \Spatie\SchemaOrg\Contracts\ThingContract;
  * @see http://schema.org/WinAction
  *
  */
-class WinAction extends BaseType implements AchieveActionContract, ActionContract, ThingContract
+class WinAction extends BaseType implements AchieveActionContract, ActionContract, ThingContract, WinActionContract
 {
     /**
      * Indicates the current disposition of the Action.

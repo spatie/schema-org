@@ -3,6 +3,7 @@
 namespace Spatie\SchemaOrg;
 
 use \Spatie\SchemaOrg\Contracts\CreativeWorkContract;
+use \Spatie\SchemaOrg\Contracts\QAPageContract;
 use \Spatie\SchemaOrg\Contracts\ThingContract;
 use \Spatie\SchemaOrg\Contracts\WebPageContract;
 
@@ -14,7 +15,7 @@ use \Spatie\SchemaOrg\Contracts\WebPageContract;
  * @see http://schema.org/QAPage
  *
  */
-class QAPage extends BaseType implements CreativeWorkContract, ThingContract, WebPageContract
+class QAPage extends BaseType implements CreativeWorkContract, QAPageContract, ThingContract, WebPageContract
 {
     /**
      * The subject matter of the content.

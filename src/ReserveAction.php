@@ -5,6 +5,7 @@ namespace Spatie\SchemaOrg;
 use \Spatie\SchemaOrg\Contracts\ActionContract;
 use \Spatie\SchemaOrg\Contracts\OrganizeActionContract;
 use \Spatie\SchemaOrg\Contracts\PlanActionContract;
+use \Spatie\SchemaOrg\Contracts\ReserveActionContract;
 use \Spatie\SchemaOrg\Contracts\ThingContract;
 
 /**
@@ -19,7 +20,7 @@ use \Spatie\SchemaOrg\Contracts\ThingContract;
  * @see http://schema.org/ReserveAction
  *
  */
-class ReserveAction extends BaseType implements ActionContract, OrganizeActionContract, PlanActionContract, ThingContract
+class ReserveAction extends BaseType implements ActionContract, OrganizeActionContract, PlanActionContract, ReserveActionContract, ThingContract
 {
     /**
      * Indicates the current disposition of the Action.

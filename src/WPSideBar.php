@@ -4,6 +4,7 @@ namespace Spatie\SchemaOrg;
 
 use \Spatie\SchemaOrg\Contracts\CreativeWorkContract;
 use \Spatie\SchemaOrg\Contracts\ThingContract;
+use \Spatie\SchemaOrg\Contracts\WPSideBarContract;
 use \Spatie\SchemaOrg\Contracts\WebPageElementContract;
 
 /**
@@ -14,7 +15,7 @@ use \Spatie\SchemaOrg\Contracts\WebPageElementContract;
  * @method static cssSelector($cssSelector) The value should be instance of pending types CssSelectorType|CssSelectorType[]
  * @method static xpath($xpath) The value should be instance of pending types XPathType|XPathType[]
  */
-class WPSideBar extends BaseType implements CreativeWorkContract, ThingContract, WebPageElementContract
+class WPSideBar extends BaseType implements CreativeWorkContract, ThingContract, WPSideBarContract, WebPageElementContract
 {
     /**
      * The subject matter of the content.

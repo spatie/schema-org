@@ -3,6 +3,7 @@
 namespace Spatie\SchemaOrg;
 
 use \Spatie\SchemaOrg\Contracts\CivicStructureContract;
+use \Spatie\SchemaOrg\Contracts\MosqueContract;
 use \Spatie\SchemaOrg\Contracts\PlaceContract;
 use \Spatie\SchemaOrg\Contracts\PlaceOfWorshipContract;
 use \Spatie\SchemaOrg\Contracts\ThingContract;
@@ -13,7 +14,7 @@ use \Spatie\SchemaOrg\Contracts\ThingContract;
  * @see http://schema.org/Mosque
  *
  */
-class Mosque extends BaseType implements CivicStructureContract, PlaceContract, PlaceOfWorshipContract, ThingContract
+class Mosque extends BaseType implements CivicStructureContract, MosqueContract, PlaceContract, PlaceOfWorshipContract, ThingContract
 {
     /**
      * A property-value pair representing an additional characteristics of the

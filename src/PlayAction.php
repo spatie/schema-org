@@ -3,6 +3,7 @@
 namespace Spatie\SchemaOrg;
 
 use \Spatie\SchemaOrg\Contracts\ActionContract;
+use \Spatie\SchemaOrg\Contracts\PlayActionContract;
 use \Spatie\SchemaOrg\Contracts\ThingContract;
 
 /**
@@ -21,7 +22,7 @@ use \Spatie\SchemaOrg\Contracts\ThingContract;
  * @see http://schema.org/PlayAction
  *
  */
-class PlayAction extends BaseType implements ActionContract, ThingContract
+class PlayAction extends BaseType implements ActionContract, PlayActionContract, ThingContract
 {
     /**
      * Indicates the current disposition of the Action.

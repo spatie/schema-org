@@ -4,6 +4,7 @@ namespace Spatie\SchemaOrg;
 
 use \Spatie\SchemaOrg\Contracts\ClipContract;
 use \Spatie\SchemaOrg\Contracts\CreativeWorkContract;
+use \Spatie\SchemaOrg\Contracts\TVClipContract;
 use \Spatie\SchemaOrg\Contracts\ThingContract;
 
 /**
@@ -12,7 +13,7 @@ use \Spatie\SchemaOrg\Contracts\ThingContract;
  * @see http://schema.org/TVClip
  *
  */
-class TVClip extends BaseType implements ClipContract, CreativeWorkContract, ThingContract
+class TVClip extends BaseType implements ClipContract, CreativeWorkContract, TVClipContract, ThingContract
 {
     /**
      * The subject matter of the content.

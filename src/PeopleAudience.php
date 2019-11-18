@@ -4,6 +4,7 @@ namespace Spatie\SchemaOrg;
 
 use \Spatie\SchemaOrg\Contracts\AudienceContract;
 use \Spatie\SchemaOrg\Contracts\IntangibleContract;
+use \Spatie\SchemaOrg\Contracts\PeopleAudienceContract;
 use \Spatie\SchemaOrg\Contracts\ThingContract;
 
 /**
@@ -13,7 +14,7 @@ use \Spatie\SchemaOrg\Contracts\ThingContract;
  * @see http://schema.org/PeopleAudience
  *
  */
-class PeopleAudience extends BaseType implements AudienceContract, IntangibleContract, ThingContract
+class PeopleAudience extends BaseType implements AudienceContract, IntangibleContract, PeopleAudienceContract, ThingContract
 {
     /**
      * An additional type for the item, typically used for adding more specific
