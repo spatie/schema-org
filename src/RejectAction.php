@@ -2,6 +2,7 @@
 
 namespace Spatie\SchemaOrg;
 
+use \Spatie\SchemaOrg\Contracts\RejectActionContract;
 use \Spatie\SchemaOrg\Contracts\ActionContract;
 use \Spatie\SchemaOrg\Contracts\AllocateActionContract;
 use \Spatie\SchemaOrg\Contracts\OrganizeActionContract;
@@ -17,7 +18,7 @@ use \Spatie\SchemaOrg\Contracts\ThingContract;
  * @see http://schema.org/RejectAction
  *
  */
-class RejectAction extends BaseType implements ActionContract, AllocateActionContract, OrganizeActionContract, ThingContract
+class RejectAction extends BaseType implements RejectActionContract, ActionContract, AllocateActionContract, OrganizeActionContract, ThingContract
 {
     /**
      * Indicates the current disposition of the Action.

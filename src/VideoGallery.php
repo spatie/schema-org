@@ -2,6 +2,7 @@
 
 namespace Spatie\SchemaOrg;
 
+use \Spatie\SchemaOrg\Contracts\VideoGalleryContract;
 use \Spatie\SchemaOrg\Contracts\CollectionPageContract;
 use \Spatie\SchemaOrg\Contracts\CreativeWorkContract;
 use \Spatie\SchemaOrg\Contracts\ThingContract;
@@ -13,7 +14,7 @@ use \Spatie\SchemaOrg\Contracts\WebPageContract;
  * @see http://schema.org/VideoGallery
  *
  */
-class VideoGallery extends BaseType implements CollectionPageContract, CreativeWorkContract, ThingContract, WebPageContract
+class VideoGallery extends BaseType implements VideoGalleryContract, CollectionPageContract, CreativeWorkContract, ThingContract, WebPageContract
 {
     /**
      * The subject matter of the content.

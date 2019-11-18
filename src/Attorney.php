@@ -2,6 +2,7 @@
 
 namespace Spatie\SchemaOrg;
 
+use \Spatie\SchemaOrg\Contracts\AttorneyContract;
 use \Spatie\SchemaOrg\Contracts\LegalServiceContract;
 use \Spatie\SchemaOrg\Contracts\LocalBusinessContract;
 use \Spatie\SchemaOrg\Contracts\OrganizationContract;
@@ -17,7 +18,7 @@ use \Spatie\SchemaOrg\Contracts\ThingContract;
  * @see http://schema.org/Attorney
  *
  */
-class Attorney extends BaseType implements LegalServiceContract, LocalBusinessContract, OrganizationContract, PlaceContract, ThingContract
+class Attorney extends BaseType implements AttorneyContract, LegalServiceContract, LocalBusinessContract, OrganizationContract, PlaceContract, ThingContract
 {
     /**
      * A property-value pair representing an additional characteristics of the

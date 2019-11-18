@@ -2,6 +2,7 @@
 
 namespace Spatie\SchemaOrg;
 
+use \Spatie\SchemaOrg\Contracts\GamePlayModeContract;
 use \Spatie\SchemaOrg\Contracts\EnumerationContract;
 use \Spatie\SchemaOrg\Contracts\IntangibleContract;
 use \Spatie\SchemaOrg\Contracts\ThingContract;
@@ -12,7 +13,7 @@ use \Spatie\SchemaOrg\Contracts\ThingContract;
  * @see http://schema.org/GamePlayMode
  *
  */
-class GamePlayMode extends BaseType implements EnumerationContract, IntangibleContract, ThingContract
+class GamePlayMode extends BaseType implements GamePlayModeContract, EnumerationContract, IntangibleContract, ThingContract
 {
     /**
      * Play mode: CoOp. Co-operative games, where you play on the same team with

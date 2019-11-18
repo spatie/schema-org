@@ -2,6 +2,7 @@
 
 namespace Spatie\SchemaOrg;
 
+use \Spatie\SchemaOrg\Contracts\PresentationDigitalDocumentContract;
 use \Spatie\SchemaOrg\Contracts\CreativeWorkContract;
 use \Spatie\SchemaOrg\Contracts\DigitalDocumentContract;
 use \Spatie\SchemaOrg\Contracts\ThingContract;
@@ -12,7 +13,7 @@ use \Spatie\SchemaOrg\Contracts\ThingContract;
  * @see http://schema.org/PresentationDigitalDocument
  *
  */
-class PresentationDigitalDocument extends BaseType implements CreativeWorkContract, DigitalDocumentContract, ThingContract
+class PresentationDigitalDocument extends BaseType implements PresentationDigitalDocumentContract, CreativeWorkContract, DigitalDocumentContract, ThingContract
 {
     /**
      * The subject matter of the content.

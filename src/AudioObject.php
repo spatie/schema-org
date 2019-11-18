@@ -2,6 +2,7 @@
 
 namespace Spatie\SchemaOrg;
 
+use \Spatie\SchemaOrg\Contracts\AudioObjectContract;
 use \Spatie\SchemaOrg\Contracts\CreativeWorkContract;
 use \Spatie\SchemaOrg\Contracts\MediaObjectContract;
 use \Spatie\SchemaOrg\Contracts\ThingContract;
@@ -12,7 +13,7 @@ use \Spatie\SchemaOrg\Contracts\ThingContract;
  * @see http://schema.org/AudioObject
  *
  */
-class AudioObject extends BaseType implements CreativeWorkContract, MediaObjectContract, ThingContract
+class AudioObject extends BaseType implements AudioObjectContract, CreativeWorkContract, MediaObjectContract, ThingContract
 {
     /**
      * The subject matter of the content.

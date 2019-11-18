@@ -2,6 +2,7 @@
 
 namespace Spatie\SchemaOrg;
 
+use \Spatie\SchemaOrg\Contracts\RadioChannelContract;
 use \Spatie\SchemaOrg\Contracts\BroadcastChannelContract;
 use \Spatie\SchemaOrg\Contracts\IntangibleContract;
 use \Spatie\SchemaOrg\Contracts\ThingContract;
@@ -13,7 +14,7 @@ use \Spatie\SchemaOrg\Contracts\ThingContract;
  * @see http://schema.org/RadioChannel
  *
  */
-class RadioChannel extends BaseType implements BroadcastChannelContract, IntangibleContract, ThingContract
+class RadioChannel extends BaseType implements RadioChannelContract, BroadcastChannelContract, IntangibleContract, ThingContract
 {
     /**
      * An additional type for the item, typically used for adding more specific

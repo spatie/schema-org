@@ -2,6 +2,7 @@
 
 namespace Spatie\SchemaOrg;
 
+use \Spatie\SchemaOrg\Contracts\PostalAddressContract;
 use \Spatie\SchemaOrg\Contracts\ContactPointContract;
 use \Spatie\SchemaOrg\Contracts\IntangibleContract;
 use \Spatie\SchemaOrg\Contracts\StructuredValueContract;
@@ -13,7 +14,7 @@ use \Spatie\SchemaOrg\Contracts\ThingContract;
  * @see http://schema.org/PostalAddress
  *
  */
-class PostalAddress extends BaseType implements ContactPointContract, IntangibleContract, StructuredValueContract, ThingContract
+class PostalAddress extends BaseType implements PostalAddressContract, ContactPointContract, IntangibleContract, StructuredValueContract, ThingContract
 {
     /**
      * An additional type for the item, typically used for adding more specific

@@ -2,6 +2,7 @@
 
 namespace Spatie\SchemaOrg;
 
+use \Spatie\SchemaOrg\Contracts\SportsTeamContract;
 use \Spatie\SchemaOrg\Contracts\OrganizationContract;
 use \Spatie\SchemaOrg\Contracts\SportsOrganizationContract;
 use \Spatie\SchemaOrg\Contracts\ThingContract;
@@ -12,7 +13,7 @@ use \Spatie\SchemaOrg\Contracts\ThingContract;
  * @see http://schema.org/SportsTeam
  *
  */
-class SportsTeam extends BaseType implements OrganizationContract, SportsOrganizationContract, ThingContract
+class SportsTeam extends BaseType implements SportsTeamContract, OrganizationContract, SportsOrganizationContract, ThingContract
 {
     /**
      * An additional type for the item, typically used for adding more specific

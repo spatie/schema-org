@@ -2,6 +2,7 @@
 
 namespace Spatie\SchemaOrg;
 
+use \Spatie\SchemaOrg\Contracts\ReceiveActionContract;
 use \Spatie\SchemaOrg\Contracts\ActionContract;
 use \Spatie\SchemaOrg\Contracts\ThingContract;
 use \Spatie\SchemaOrg\Contracts\TransferActionContract;
@@ -20,7 +21,7 @@ use \Spatie\SchemaOrg\Contracts\TransferActionContract;
  * @see http://schema.org/ReceiveAction
  *
  */
-class ReceiveAction extends BaseType implements ActionContract, ThingContract, TransferActionContract
+class ReceiveAction extends BaseType implements ReceiveActionContract, ActionContract, ThingContract, TransferActionContract
 {
     /**
      * Indicates the current disposition of the Action.

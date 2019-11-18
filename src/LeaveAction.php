@@ -2,6 +2,7 @@
 
 namespace Spatie\SchemaOrg;
 
+use \Spatie\SchemaOrg\Contracts\LeaveActionContract;
 use \Spatie\SchemaOrg\Contracts\ActionContract;
 use \Spatie\SchemaOrg\Contracts\InteractActionContract;
 use \Spatie\SchemaOrg\Contracts\ThingContract;
@@ -18,7 +19,7 @@ use \Spatie\SchemaOrg\Contracts\ThingContract;
  * @see http://schema.org/LeaveAction
  *
  */
-class LeaveAction extends BaseType implements ActionContract, InteractActionContract, ThingContract
+class LeaveAction extends BaseType implements LeaveActionContract, ActionContract, InteractActionContract, ThingContract
 {
     /**
      * Indicates the current disposition of the Action.

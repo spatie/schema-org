@@ -2,6 +2,7 @@
 
 namespace Spatie\SchemaOrg;
 
+use \Spatie\SchemaOrg\Contracts\LegislativeBuildingContract;
 use \Spatie\SchemaOrg\Contracts\CivicStructureContract;
 use \Spatie\SchemaOrg\Contracts\GovernmentBuildingContract;
 use \Spatie\SchemaOrg\Contracts\PlaceContract;
@@ -13,7 +14,7 @@ use \Spatie\SchemaOrg\Contracts\ThingContract;
  * @see http://schema.org/LegislativeBuilding
  *
  */
-class LegislativeBuilding extends BaseType implements CivicStructureContract, GovernmentBuildingContract, PlaceContract, ThingContract
+class LegislativeBuilding extends BaseType implements LegislativeBuildingContract, CivicStructureContract, GovernmentBuildingContract, PlaceContract, ThingContract
 {
     /**
      * A property-value pair representing an additional characteristics of the

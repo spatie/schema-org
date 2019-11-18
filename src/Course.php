@@ -2,6 +2,7 @@
 
 namespace Spatie\SchemaOrg;
 
+use \Spatie\SchemaOrg\Contracts\CourseContract;
 use \Spatie\SchemaOrg\Contracts\CreativeWorkContract;
 use \Spatie\SchemaOrg\Contracts\ThingContract;
 
@@ -16,7 +17,7 @@ use \Spatie\SchemaOrg\Contracts\ThingContract;
  * @see http://schema.org/Course
  *
  */
-class Course extends BaseType implements CreativeWorkContract, ThingContract
+class Course extends BaseType implements CourseContract, CreativeWorkContract, ThingContract
 {
     /**
      * The subject matter of the content.

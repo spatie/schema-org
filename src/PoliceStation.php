@@ -2,6 +2,7 @@
 
 namespace Spatie\SchemaOrg;
 
+use \Spatie\SchemaOrg\Contracts\PoliceStationContract;
 use \Spatie\SchemaOrg\Contracts\CivicStructureContract;
 use \Spatie\SchemaOrg\Contracts\EmergencyServiceContract;
 use \Spatie\SchemaOrg\Contracts\LocalBusinessContract;
@@ -15,7 +16,7 @@ use \Spatie\SchemaOrg\Contracts\ThingContract;
  * @see http://schema.org/PoliceStation
  *
  */
-class PoliceStation extends BaseType implements CivicStructureContract, EmergencyServiceContract, LocalBusinessContract, OrganizationContract, PlaceContract, ThingContract
+class PoliceStation extends BaseType implements PoliceStationContract, CivicStructureContract, EmergencyServiceContract, LocalBusinessContract, OrganizationContract, PlaceContract, ThingContract
 {
     /**
      * A property-value pair representing an additional characteristics of the

@@ -2,6 +2,7 @@
 
 namespace Spatie\SchemaOrg;
 
+use \Spatie\SchemaOrg\Contracts\ExerciseActionContract;
 use \Spatie\SchemaOrg\Contracts\ActionContract;
 use \Spatie\SchemaOrg\Contracts\PlayActionContract;
 use \Spatie\SchemaOrg\Contracts\ThingContract;
@@ -13,7 +14,7 @@ use \Spatie\SchemaOrg\Contracts\ThingContract;
  * @see http://schema.org/ExerciseAction
  *
  */
-class ExerciseAction extends BaseType implements ActionContract, PlayActionContract, ThingContract
+class ExerciseAction extends BaseType implements ExerciseActionContract, ActionContract, PlayActionContract, ThingContract
 {
     /**
      * Indicates the current disposition of the Action.

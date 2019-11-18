@@ -2,6 +2,7 @@
 
 namespace Spatie\SchemaOrg;
 
+use \Spatie\SchemaOrg\Contracts\CreativeWorkSeriesContract;
 use \Spatie\SchemaOrg\Contracts\CreativeWorkContract;
 use \Spatie\SchemaOrg\Contracts\IntangibleContract;
 use \Spatie\SchemaOrg\Contracts\SeriesContract;
@@ -29,7 +30,7 @@ use \Spatie\SchemaOrg\Contracts\ThingContract;
  * @see http://schema.org/CreativeWorkSeries
  *
  */
-class CreativeWorkSeries extends BaseType implements CreativeWorkContract, IntangibleContract, SeriesContract, ThingContract
+class CreativeWorkSeries extends BaseType implements CreativeWorkSeriesContract, CreativeWorkContract, IntangibleContract, SeriesContract, ThingContract
 {
     /**
      * The subject matter of the content.

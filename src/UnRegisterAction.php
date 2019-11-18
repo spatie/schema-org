@@ -2,6 +2,7 @@
 
 namespace Spatie\SchemaOrg;
 
+use \Spatie\SchemaOrg\Contracts\UnRegisterActionContract;
 use \Spatie\SchemaOrg\Contracts\ActionContract;
 use \Spatie\SchemaOrg\Contracts\InteractActionContract;
 use \Spatie\SchemaOrg\Contracts\ThingContract;
@@ -19,7 +20,7 @@ use \Spatie\SchemaOrg\Contracts\ThingContract;
  * @see http://schema.org/UnRegisterAction
  *
  */
-class UnRegisterAction extends BaseType implements ActionContract, InteractActionContract, ThingContract
+class UnRegisterAction extends BaseType implements UnRegisterActionContract, ActionContract, InteractActionContract, ThingContract
 {
     /**
      * Indicates the current disposition of the Action.

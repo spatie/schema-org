@@ -2,6 +2,7 @@
 
 namespace Spatie\SchemaOrg;
 
+use \Spatie\SchemaOrg\Contracts\LanguageContract;
 use \Spatie\SchemaOrg\Contracts\IntangibleContract;
 use \Spatie\SchemaOrg\Contracts\ThingContract;
 
@@ -16,7 +17,7 @@ use \Spatie\SchemaOrg\Contracts\ThingContract;
  * @see http://schema.org/Language
  *
  */
-class Language extends BaseType implements IntangibleContract, ThingContract
+class Language extends BaseType implements LanguageContract, IntangibleContract, ThingContract
 {
     /**
      * An additional type for the item, typically used for adding more specific

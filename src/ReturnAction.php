@@ -2,6 +2,7 @@
 
 namespace Spatie\SchemaOrg;
 
+use \Spatie\SchemaOrg\Contracts\ReturnActionContract;
 use \Spatie\SchemaOrg\Contracts\ActionContract;
 use \Spatie\SchemaOrg\Contracts\ThingContract;
 use \Spatie\SchemaOrg\Contracts\TransferActionContract;
@@ -13,7 +14,7 @@ use \Spatie\SchemaOrg\Contracts\TransferActionContract;
  * @see http://schema.org/ReturnAction
  *
  */
-class ReturnAction extends BaseType implements ActionContract, ThingContract, TransferActionContract
+class ReturnAction extends BaseType implements ReturnActionContract, ActionContract, ThingContract, TransferActionContract
 {
     /**
      * Indicates the current disposition of the Action.

@@ -2,6 +2,7 @@
 
 namespace Spatie\SchemaOrg;
 
+use \Spatie\SchemaOrg\Contracts\BroadcastFrequencySpecificationContract;
 use \Spatie\SchemaOrg\Contracts\IntangibleContract;
 use \Spatie\SchemaOrg\Contracts\ThingContract;
 
@@ -12,7 +13,7 @@ use \Spatie\SchemaOrg\Contracts\ThingContract;
  * @see http://schema.org/BroadcastFrequencySpecification
  *
  */
-class BroadcastFrequencySpecification extends BaseType implements IntangibleContract, ThingContract
+class BroadcastFrequencySpecification extends BaseType implements BroadcastFrequencySpecificationContract, IntangibleContract, ThingContract
 {
     /**
      * An additional type for the item, typically used for adding more specific

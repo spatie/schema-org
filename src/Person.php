@@ -2,6 +2,7 @@
 
 namespace Spatie\SchemaOrg;
 
+use \Spatie\SchemaOrg\Contracts\PersonContract;
 use \Spatie\SchemaOrg\Contracts\ThingContract;
 
 /**
@@ -10,7 +11,7 @@ use \Spatie\SchemaOrg\Contracts\ThingContract;
  * @see http://schema.org/Person
  *
  */
-class Person extends BaseType implements ThingContract
+class Person extends BaseType implements PersonContract, ThingContract
 {
     /**
      * An additional name for a Person, can be used for a middle name.

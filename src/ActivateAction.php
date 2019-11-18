@@ -2,6 +2,7 @@
 
 namespace Spatie\SchemaOrg;
 
+use \Spatie\SchemaOrg\Contracts\ActivateActionContract;
 use \Spatie\SchemaOrg\Contracts\ActionContract;
 use \Spatie\SchemaOrg\Contracts\ControlActionContract;
 use \Spatie\SchemaOrg\Contracts\ThingContract;
@@ -13,7 +14,7 @@ use \Spatie\SchemaOrg\Contracts\ThingContract;
  * @see http://schema.org/ActivateAction
  *
  */
-class ActivateAction extends BaseType implements ActionContract, ControlActionContract, ThingContract
+class ActivateAction extends BaseType implements ActivateActionContract, ActionContract, ControlActionContract, ThingContract
 {
     /**
      * Indicates the current disposition of the Action.

@@ -2,6 +2,7 @@
 
 namespace Spatie\SchemaOrg;
 
+use \Spatie\SchemaOrg\Contracts\MotorcycleDealerContract;
 use \Spatie\SchemaOrg\Contracts\AutomotiveBusinessContract;
 use \Spatie\SchemaOrg\Contracts\LocalBusinessContract;
 use \Spatie\SchemaOrg\Contracts\OrganizationContract;
@@ -14,7 +15,7 @@ use \Spatie\SchemaOrg\Contracts\ThingContract;
  * @see http://schema.org/MotorcycleDealer
  *
  */
-class MotorcycleDealer extends BaseType implements AutomotiveBusinessContract, LocalBusinessContract, OrganizationContract, PlaceContract, ThingContract
+class MotorcycleDealer extends BaseType implements MotorcycleDealerContract, AutomotiveBusinessContract, LocalBusinessContract, OrganizationContract, PlaceContract, ThingContract
 {
     /**
      * A property-value pair representing an additional characteristics of the

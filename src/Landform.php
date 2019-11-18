@@ -2,6 +2,7 @@
 
 namespace Spatie\SchemaOrg;
 
+use \Spatie\SchemaOrg\Contracts\LandformContract;
 use \Spatie\SchemaOrg\Contracts\PlaceContract;
 use \Spatie\SchemaOrg\Contracts\ThingContract;
 
@@ -14,7 +15,7 @@ use \Spatie\SchemaOrg\Contracts\ThingContract;
  * @see http://schema.org/Landform
  *
  */
-class Landform extends BaseType implements PlaceContract, ThingContract
+class Landform extends BaseType implements LandformContract, PlaceContract, ThingContract
 {
     /**
      * A property-value pair representing an additional characteristics of the

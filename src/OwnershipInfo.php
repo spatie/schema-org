@@ -2,6 +2,7 @@
 
 namespace Spatie\SchemaOrg;
 
+use \Spatie\SchemaOrg\Contracts\OwnershipInfoContract;
 use \Spatie\SchemaOrg\Contracts\IntangibleContract;
 use \Spatie\SchemaOrg\Contracts\StructuredValueContract;
 use \Spatie\SchemaOrg\Contracts\ThingContract;
@@ -13,7 +14,7 @@ use \Spatie\SchemaOrg\Contracts\ThingContract;
  * @see http://schema.org/OwnershipInfo
  *
  */
-class OwnershipInfo extends BaseType implements IntangibleContract, StructuredValueContract, ThingContract
+class OwnershipInfo extends BaseType implements OwnershipInfoContract, IntangibleContract, StructuredValueContract, ThingContract
 {
     /**
      * The organization or person from which the product was acquired.

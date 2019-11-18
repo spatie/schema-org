@@ -2,6 +2,7 @@
 
 namespace Spatie\SchemaOrg;
 
+use \Spatie\SchemaOrg\Contracts\ContactPointOptionContract;
 use \Spatie\SchemaOrg\Contracts\EnumerationContract;
 use \Spatie\SchemaOrg\Contracts\IntangibleContract;
 use \Spatie\SchemaOrg\Contracts\ThingContract;
@@ -12,7 +13,7 @@ use \Spatie\SchemaOrg\Contracts\ThingContract;
  * @see http://schema.org/ContactPointOption
  *
  */
-class ContactPointOption extends BaseType implements EnumerationContract, IntangibleContract, ThingContract
+class ContactPointOption extends BaseType implements ContactPointOptionContract, EnumerationContract, IntangibleContract, ThingContract
 {
     /**
      * Uses devices to support users with hearing impairments.

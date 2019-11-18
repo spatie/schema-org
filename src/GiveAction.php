@@ -2,6 +2,7 @@
 
 namespace Spatie\SchemaOrg;
 
+use \Spatie\SchemaOrg\Contracts\GiveActionContract;
 use \Spatie\SchemaOrg\Contracts\ActionContract;
 use \Spatie\SchemaOrg\Contracts\ThingContract;
 use \Spatie\SchemaOrg\Contracts\TransferActionContract;
@@ -20,7 +21,7 @@ use \Spatie\SchemaOrg\Contracts\TransferActionContract;
  * @see http://schema.org/GiveAction
  *
  */
-class GiveAction extends BaseType implements ActionContract, ThingContract, TransferActionContract
+class GiveAction extends BaseType implements GiveActionContract, ActionContract, ThingContract, TransferActionContract
 {
     /**
      * Indicates the current disposition of the Action.

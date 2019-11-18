@@ -2,6 +2,7 @@
 
 namespace Spatie\SchemaOrg;
 
+use \Spatie\SchemaOrg\Contracts\CampingPitchContract;
 use \Spatie\SchemaOrg\Contracts\AccommodationContract;
 use \Spatie\SchemaOrg\Contracts\PlaceContract;
 use \Spatie\SchemaOrg\Contracts\ThingContract;
@@ -28,7 +29,7 @@ use \Spatie\SchemaOrg\Contracts\ThingContract;
  * @see http://schema.org/CampingPitch
  *
  */
-class CampingPitch extends BaseType implements AccommodationContract, PlaceContract, ThingContract
+class CampingPitch extends BaseType implements CampingPitchContract, AccommodationContract, PlaceContract, ThingContract
 {
     /**
      * A property-value pair representing an additional characteristics of the

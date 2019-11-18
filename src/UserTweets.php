@@ -2,6 +2,7 @@
 
 namespace Spatie\SchemaOrg;
 
+use \Spatie\SchemaOrg\Contracts\UserTweetsContract;
 use \Spatie\SchemaOrg\Contracts\EventContract;
 use \Spatie\SchemaOrg\Contracts\ThingContract;
 use \Spatie\SchemaOrg\Contracts\UserInteractionContract;
@@ -14,7 +15,7 @@ use \Spatie\SchemaOrg\Contracts\UserInteractionContract;
  * @see http://schema.org/UserTweets
  *
  */
-class UserTweets extends BaseType implements EventContract, ThingContract, UserInteractionContract
+class UserTweets extends BaseType implements UserTweetsContract, EventContract, ThingContract, UserInteractionContract
 {
     /**
      * The subject matter of the content.

@@ -2,6 +2,7 @@
 
 namespace Spatie\SchemaOrg;
 
+use \Spatie\SchemaOrg\Contracts\BookContract;
 use \Spatie\SchemaOrg\Contracts\CreativeWorkContract;
 use \Spatie\SchemaOrg\Contracts\ThingContract;
 
@@ -11,7 +12,7 @@ use \Spatie\SchemaOrg\Contracts\ThingContract;
  * @see http://schema.org/Book
  *
  */
-class Book extends BaseType implements CreativeWorkContract, ThingContract
+class Book extends BaseType implements BookContract, CreativeWorkContract, ThingContract
 {
     /**
      * The subject matter of the content.

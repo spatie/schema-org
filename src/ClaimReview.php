@@ -2,6 +2,7 @@
 
 namespace Spatie\SchemaOrg;
 
+use \Spatie\SchemaOrg\Contracts\ClaimReviewContract;
 use \Spatie\SchemaOrg\Contracts\CreativeWorkContract;
 use \Spatie\SchemaOrg\Contracts\ReviewContract;
 use \Spatie\SchemaOrg\Contracts\ThingContract;
@@ -13,7 +14,7 @@ use \Spatie\SchemaOrg\Contracts\ThingContract;
  * @see http://schema.org/ClaimReview
  *
  */
-class ClaimReview extends BaseType implements CreativeWorkContract, ReviewContract, ThingContract
+class ClaimReview extends BaseType implements ClaimReviewContract, CreativeWorkContract, ReviewContract, ThingContract
 {
     /**
      * The subject matter of the content.

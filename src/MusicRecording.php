@@ -2,6 +2,7 @@
 
 namespace Spatie\SchemaOrg;
 
+use \Spatie\SchemaOrg\Contracts\MusicRecordingContract;
 use \Spatie\SchemaOrg\Contracts\CreativeWorkContract;
 use \Spatie\SchemaOrg\Contracts\ThingContract;
 
@@ -11,7 +12,7 @@ use \Spatie\SchemaOrg\Contracts\ThingContract;
  * @see http://schema.org/MusicRecording
  *
  */
-class MusicRecording extends BaseType implements CreativeWorkContract, ThingContract
+class MusicRecording extends BaseType implements MusicRecordingContract, CreativeWorkContract, ThingContract
 {
     /**
      * The subject matter of the content.

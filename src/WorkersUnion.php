@@ -2,6 +2,7 @@
 
 namespace Spatie\SchemaOrg;
 
+use \Spatie\SchemaOrg\Contracts\WorkersUnionContract;
 use \Spatie\SchemaOrg\Contracts\OrganizationContract;
 use \Spatie\SchemaOrg\Contracts\ThingContract;
 
@@ -13,7 +14,7 @@ use \Spatie\SchemaOrg\Contracts\ThingContract;
  * @see http://schema.org/WorkersUnion
  *
  */
-class WorkersUnion extends BaseType implements OrganizationContract, ThingContract
+class WorkersUnion extends BaseType implements WorkersUnionContract, OrganizationContract, ThingContract
 {
     /**
      * An additional type for the item, typically used for adding more specific

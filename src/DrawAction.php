@@ -2,6 +2,7 @@
 
 namespace Spatie\SchemaOrg;
 
+use \Spatie\SchemaOrg\Contracts\DrawActionContract;
 use \Spatie\SchemaOrg\Contracts\ActionContract;
 use \Spatie\SchemaOrg\Contracts\CreateActionContract;
 use \Spatie\SchemaOrg\Contracts\ThingContract;
@@ -13,7 +14,7 @@ use \Spatie\SchemaOrg\Contracts\ThingContract;
  * @see http://schema.org/DrawAction
  *
  */
-class DrawAction extends BaseType implements ActionContract, CreateActionContract, ThingContract
+class DrawAction extends BaseType implements DrawActionContract, ActionContract, CreateActionContract, ThingContract
 {
     /**
      * Indicates the current disposition of the Action.

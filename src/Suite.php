@@ -2,6 +2,7 @@
 
 namespace Spatie\SchemaOrg;
 
+use \Spatie\SchemaOrg\Contracts\SuiteContract;
 use \Spatie\SchemaOrg\Contracts\AccommodationContract;
 use \Spatie\SchemaOrg\Contracts\PlaceContract;
 use \Spatie\SchemaOrg\Contracts\ThingContract;
@@ -18,7 +19,7 @@ use \Spatie\SchemaOrg\Contracts\ThingContract;
  * @see http://schema.org/Suite
  *
  */
-class Suite extends BaseType implements AccommodationContract, PlaceContract, ThingContract
+class Suite extends BaseType implements SuiteContract, AccommodationContract, PlaceContract, ThingContract
 {
     /**
      * A property-value pair representing an additional characteristics of the

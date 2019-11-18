@@ -2,6 +2,7 @@
 
 namespace Spatie\SchemaOrg;
 
+use \Spatie\SchemaOrg\Contracts\ContinentContract;
 use \Spatie\SchemaOrg\Contracts\LandformContract;
 use \Spatie\SchemaOrg\Contracts\PlaceContract;
 use \Spatie\SchemaOrg\Contracts\ThingContract;
@@ -12,7 +13,7 @@ use \Spatie\SchemaOrg\Contracts\ThingContract;
  * @see http://schema.org/Continent
  *
  */
-class Continent extends BaseType implements LandformContract, PlaceContract, ThingContract
+class Continent extends BaseType implements ContinentContract, LandformContract, PlaceContract, ThingContract
 {
     /**
      * A property-value pair representing an additional characteristics of the

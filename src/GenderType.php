@@ -2,6 +2,7 @@
 
 namespace Spatie\SchemaOrg;
 
+use \Spatie\SchemaOrg\Contracts\GenderTypeContract;
 use \Spatie\SchemaOrg\Contracts\EnumerationContract;
 use \Spatie\SchemaOrg\Contracts\IntangibleContract;
 use \Spatie\SchemaOrg\Contracts\ThingContract;
@@ -12,7 +13,7 @@ use \Spatie\SchemaOrg\Contracts\ThingContract;
  * @see http://schema.org/GenderType
  *
  */
-class GenderType extends BaseType implements EnumerationContract, IntangibleContract, ThingContract
+class GenderType extends BaseType implements GenderTypeContract, EnumerationContract, IntangibleContract, ThingContract
 {
     /**
      * The female gender.

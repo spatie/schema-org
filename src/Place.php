@@ -2,6 +2,7 @@
 
 namespace Spatie\SchemaOrg;
 
+use \Spatie\SchemaOrg\Contracts\PlaceContract;
 use \Spatie\SchemaOrg\Contracts\ThingContract;
 
 /**
@@ -10,7 +11,7 @@ use \Spatie\SchemaOrg\Contracts\ThingContract;
  * @see http://schema.org/Place
  *
  */
-class Place extends BaseType implements ThingContract
+class Place extends BaseType implements PlaceContract, ThingContract
 {
     /**
      * A property-value pair representing an additional characteristics of the

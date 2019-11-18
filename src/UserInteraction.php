@@ -2,6 +2,7 @@
 
 namespace Spatie\SchemaOrg;
 
+use \Spatie\SchemaOrg\Contracts\UserInteractionContract;
 use \Spatie\SchemaOrg\Contracts\EventContract;
 use \Spatie\SchemaOrg\Contracts\ThingContract;
 
@@ -13,7 +14,7 @@ use \Spatie\SchemaOrg\Contracts\ThingContract;
  * @see http://schema.org/UserInteraction
  *
  */
-class UserInteraction extends BaseType implements EventContract, ThingContract
+class UserInteraction extends BaseType implements UserInteractionContract, EventContract, ThingContract
 {
     /**
      * The subject matter of the content.

@@ -2,6 +2,7 @@
 
 namespace Spatie\SchemaOrg;
 
+use \Spatie\SchemaOrg\Contracts\MeetingRoomContract;
 use \Spatie\SchemaOrg\Contracts\AccommodationContract;
 use \Spatie\SchemaOrg\Contracts\PlaceContract;
 use \Spatie\SchemaOrg\Contracts\RoomContract;
@@ -19,7 +20,7 @@ use \Spatie\SchemaOrg\Contracts\ThingContract;
  * @see http://schema.org/MeetingRoom
  *
  */
-class MeetingRoom extends BaseType implements AccommodationContract, PlaceContract, RoomContract, ThingContract
+class MeetingRoom extends BaseType implements MeetingRoomContract, AccommodationContract, PlaceContract, RoomContract, ThingContract
 {
     /**
      * A property-value pair representing an additional characteristics of the

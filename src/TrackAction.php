@@ -2,6 +2,7 @@
 
 namespace Spatie\SchemaOrg;
 
+use \Spatie\SchemaOrg\Contracts\TrackActionContract;
 use \Spatie\SchemaOrg\Contracts\ActionContract;
 use \Spatie\SchemaOrg\Contracts\FindActionContract;
 use \Spatie\SchemaOrg\Contracts\ThingContract;
@@ -19,7 +20,7 @@ use \Spatie\SchemaOrg\Contracts\ThingContract;
  * @see http://schema.org/TrackAction
  *
  */
-class TrackAction extends BaseType implements ActionContract, FindActionContract, ThingContract
+class TrackAction extends BaseType implements TrackActionContract, ActionContract, FindActionContract, ThingContract
 {
     /**
      * Indicates the current disposition of the Action.

@@ -2,6 +2,7 @@
 
 namespace Spatie\SchemaOrg;
 
+use \Spatie\SchemaOrg\Contracts\ReportContract;
 use \Spatie\SchemaOrg\Contracts\ArticleContract;
 use \Spatie\SchemaOrg\Contracts\CreativeWorkContract;
 use \Spatie\SchemaOrg\Contracts\ThingContract;
@@ -12,7 +13,7 @@ use \Spatie\SchemaOrg\Contracts\ThingContract;
  * @see http://schema.org/Report
  *
  */
-class Report extends BaseType implements ArticleContract, CreativeWorkContract, ThingContract
+class Report extends BaseType implements ReportContract, ArticleContract, CreativeWorkContract, ThingContract
 {
     /**
      * The subject matter of the content.

@@ -2,6 +2,7 @@
 
 namespace Spatie\SchemaOrg;
 
+use \Spatie\SchemaOrg\Contracts\RsvpActionContract;
 use \Spatie\SchemaOrg\Contracts\ActionContract;
 use \Spatie\SchemaOrg\Contracts\CommunicateActionContract;
 use \Spatie\SchemaOrg\Contracts\InformActionContract;
@@ -15,7 +16,7 @@ use \Spatie\SchemaOrg\Contracts\ThingContract;
  * @see http://schema.org/RsvpAction
  *
  */
-class RsvpAction extends BaseType implements ActionContract, CommunicateActionContract, InformActionContract, InteractActionContract, ThingContract
+class RsvpAction extends BaseType implements RsvpActionContract, ActionContract, CommunicateActionContract, InformActionContract, InteractActionContract, ThingContract
 {
     /**
      * The subject matter of the content.

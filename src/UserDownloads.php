@@ -2,6 +2,7 @@
 
 namespace Spatie\SchemaOrg;
 
+use \Spatie\SchemaOrg\Contracts\UserDownloadsContract;
 use \Spatie\SchemaOrg\Contracts\EventContract;
 use \Spatie\SchemaOrg\Contracts\ThingContract;
 use \Spatie\SchemaOrg\Contracts\UserInteractionContract;
@@ -14,7 +15,7 @@ use \Spatie\SchemaOrg\Contracts\UserInteractionContract;
  * @see http://schema.org/UserDownloads
  *
  */
-class UserDownloads extends BaseType implements EventContract, ThingContract, UserInteractionContract
+class UserDownloads extends BaseType implements UserDownloadsContract, EventContract, ThingContract, UserInteractionContract
 {
     /**
      * The subject matter of the content.

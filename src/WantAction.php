@@ -2,6 +2,7 @@
 
 namespace Spatie\SchemaOrg;
 
+use \Spatie\SchemaOrg\Contracts\WantActionContract;
 use \Spatie\SchemaOrg\Contracts\ActionContract;
 use \Spatie\SchemaOrg\Contracts\AssessActionContract;
 use \Spatie\SchemaOrg\Contracts\ReactActionContract;
@@ -13,7 +14,7 @@ use \Spatie\SchemaOrg\Contracts\ThingContract;
  * @see http://schema.org/WantAction
  *
  */
-class WantAction extends BaseType implements ActionContract, AssessActionContract, ReactActionContract, ThingContract
+class WantAction extends BaseType implements WantActionContract, ActionContract, AssessActionContract, ReactActionContract, ThingContract
 {
     /**
      * Indicates the current disposition of the Action.

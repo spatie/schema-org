@@ -2,6 +2,7 @@
 
 namespace Spatie\SchemaOrg;
 
+use \Spatie\SchemaOrg\Contracts\MediaObjectContract;
 use \Spatie\SchemaOrg\Contracts\CreativeWorkContract;
 use \Spatie\SchemaOrg\Contracts\ThingContract;
 
@@ -15,7 +16,7 @@ use \Spatie\SchemaOrg\Contracts\ThingContract;
  * @see http://schema.org/MediaObject
  *
  */
-class MediaObject extends BaseType implements CreativeWorkContract, ThingContract
+class MediaObject extends BaseType implements MediaObjectContract, CreativeWorkContract, ThingContract
 {
     /**
      * The subject matter of the content.

@@ -2,6 +2,7 @@
 
 namespace Spatie\SchemaOrg;
 
+use \Spatie\SchemaOrg\Contracts\MassContract;
 use \Spatie\SchemaOrg\Contracts\IntangibleContract;
 use \Spatie\SchemaOrg\Contracts\QuantityContract;
 use \Spatie\SchemaOrg\Contracts\ThingContract;
@@ -13,7 +14,7 @@ use \Spatie\SchemaOrg\Contracts\ThingContract;
  * @see http://schema.org/Mass
  *
  */
-class Mass extends BaseType implements IntangibleContract, QuantityContract, ThingContract
+class Mass extends BaseType implements MassContract, IntangibleContract, QuantityContract, ThingContract
 {
     /**
      * An additional type for the item, typically used for adding more specific

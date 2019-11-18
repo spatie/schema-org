@@ -2,6 +2,7 @@
 
 namespace Spatie\SchemaOrg;
 
+use \Spatie\SchemaOrg\Contracts\InstallActionContract;
 use \Spatie\SchemaOrg\Contracts\ActionContract;
 use \Spatie\SchemaOrg\Contracts\ConsumeActionContract;
 use \Spatie\SchemaOrg\Contracts\ThingContract;
@@ -12,7 +13,7 @@ use \Spatie\SchemaOrg\Contracts\ThingContract;
  * @see http://schema.org/InstallAction
  *
  */
-class InstallAction extends BaseType implements ActionContract, ConsumeActionContract, ThingContract
+class InstallAction extends BaseType implements InstallActionContract, ActionContract, ConsumeActionContract, ThingContract
 {
     /**
      * A set of requirements that a must be fulfilled in order to perform an

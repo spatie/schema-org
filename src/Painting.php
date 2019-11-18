@@ -2,6 +2,7 @@
 
 namespace Spatie\SchemaOrg;
 
+use \Spatie\SchemaOrg\Contracts\PaintingContract;
 use \Spatie\SchemaOrg\Contracts\CreativeWorkContract;
 use \Spatie\SchemaOrg\Contracts\ThingContract;
 
@@ -11,7 +12,7 @@ use \Spatie\SchemaOrg\Contracts\ThingContract;
  * @see http://schema.org/Painting
  *
  */
-class Painting extends BaseType implements CreativeWorkContract, ThingContract
+class Painting extends BaseType implements PaintingContract, CreativeWorkContract, ThingContract
 {
     /**
      * The subject matter of the content.

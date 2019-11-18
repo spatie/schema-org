@@ -2,6 +2,7 @@
 
 namespace Spatie\SchemaOrg;
 
+use \Spatie\SchemaOrg\Contracts\RsvpResponseTypeContract;
 use \Spatie\SchemaOrg\Contracts\EnumerationContract;
 use \Spatie\SchemaOrg\Contracts\IntangibleContract;
 use \Spatie\SchemaOrg\Contracts\ThingContract;
@@ -13,7 +14,7 @@ use \Spatie\SchemaOrg\Contracts\ThingContract;
  * @see http://schema.org/RsvpResponseType
  *
  */
-class RsvpResponseType extends BaseType implements EnumerationContract, IntangibleContract, ThingContract
+class RsvpResponseType extends BaseType implements RsvpResponseTypeContract, EnumerationContract, IntangibleContract, ThingContract
 {
     /**
      * The invitee may or may not attend.

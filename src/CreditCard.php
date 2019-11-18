@@ -2,6 +2,7 @@
 
 namespace Spatie\SchemaOrg;
 
+use \Spatie\SchemaOrg\Contracts\CreditCardContract;
 use \Spatie\SchemaOrg\Contracts\EnumerationContract;
 use \Spatie\SchemaOrg\Contracts\FinancialProductContract;
 use \Spatie\SchemaOrg\Contracts\IntangibleContract;
@@ -28,7 +29,7 @@ use \Spatie\SchemaOrg\Contracts\ThingContract;
  * @see http://schema.org/CreditCard
  *
  */
-class CreditCard extends BaseType implements EnumerationContract, FinancialProductContract, IntangibleContract, LoanOrCreditContract, PaymentCardContract, PaymentMethodContract, ServiceContract, ThingContract
+class CreditCard extends BaseType implements CreditCardContract, EnumerationContract, FinancialProductContract, IntangibleContract, LoanOrCreditContract, PaymentCardContract, PaymentMethodContract, ServiceContract, ThingContract
 {
     /**
      * An additional type for the item, typically used for adding more specific

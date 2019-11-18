@@ -2,6 +2,7 @@
 
 namespace Spatie\SchemaOrg;
 
+use \Spatie\SchemaOrg\Contracts\DeliveryEventContract;
 use \Spatie\SchemaOrg\Contracts\EventContract;
 use \Spatie\SchemaOrg\Contracts\ThingContract;
 
@@ -11,7 +12,7 @@ use \Spatie\SchemaOrg\Contracts\ThingContract;
  * @see http://schema.org/DeliveryEvent
  *
  */
-class DeliveryEvent extends BaseType implements EventContract, ThingContract
+class DeliveryEvent extends BaseType implements DeliveryEventContract, EventContract, ThingContract
 {
     /**
      * The subject matter of the content.

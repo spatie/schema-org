@@ -2,6 +2,7 @@
 
 namespace Spatie\SchemaOrg;
 
+use \Spatie\SchemaOrg\Contracts\MonetaryAmountDistributionContract;
 use \Spatie\SchemaOrg\Contracts\IntangibleContract;
 use \Spatie\SchemaOrg\Contracts\QuantitativeValueDistributionContract;
 use \Spatie\SchemaOrg\Contracts\StructuredValueContract;
@@ -13,7 +14,7 @@ use \Spatie\SchemaOrg\Contracts\ThingContract;
  * @see http://schema.org/MonetaryAmountDistribution
  *
  */
-class MonetaryAmountDistribution extends BaseType implements IntangibleContract, QuantitativeValueDistributionContract, StructuredValueContract, ThingContract
+class MonetaryAmountDistribution extends BaseType implements MonetaryAmountDistributionContract, IntangibleContract, QuantitativeValueDistributionContract, StructuredValueContract, ThingContract
 {
     /**
      * An additional type for the item, typically used for adding more specific
