@@ -25,7 +25,7 @@ class Car extends BaseType implements ProductContract, ThingContract, VehicleCon
      * expect such data to be provided using those properties, rather than using
      * the generic property/value mechanism.
      *
-     * @param PropertyValue|PropertyValue[] $additionalProperty
+     * @param \Spatie\SchemaOrg\Contracts\PropertyValueContract|\Spatie\SchemaOrg\Contracts\PropertyValueContract[] $additionalProperty
      *
      * @return static
      *
@@ -59,7 +59,7 @@ class Car extends BaseType implements ProductContract, ThingContract, VehicleCon
      * The overall rating, based on a collection of reviews or ratings, of the
      * item.
      *
-     * @param AggregateRating|AggregateRating[] $aggregateRating
+     * @param \Spatie\SchemaOrg\Contracts\AggregateRatingContract|\Spatie\SchemaOrg\Contracts\AggregateRatingContract[] $aggregateRating
      *
      * @return static
      *
@@ -87,7 +87,7 @@ class Car extends BaseType implements ProductContract, ThingContract, VehicleCon
     /**
      * An intended audience, i.e. a group for whom something was created.
      *
-     * @param Audience|Audience[] $audience
+     * @param \Spatie\SchemaOrg\Contracts\AudienceContract|\Spatie\SchemaOrg\Contracts\AudienceContract[] $audience
      *
      * @return static
      *
@@ -130,7 +130,7 @@ class Car extends BaseType implements ProductContract, ThingContract, VehicleCon
      * The brand(s) associated with a product or service, or the brand(s)
      * maintained by an organization or business person.
      *
-     * @param Brand|Brand[]|Organization|Organization[] $brand
+     * @param \Spatie\SchemaOrg\Contracts\BrandContract|\Spatie\SchemaOrg\Contracts\BrandContract[]|\Spatie\SchemaOrg\Contracts\OrganizationContract|\Spatie\SchemaOrg\Contracts\OrganizationContract[] $brand
      *
      * @return static
      *
@@ -149,7 +149,7 @@ class Car extends BaseType implements ProductContract, ThingContract, VehicleCon
      * 
      * Note: You can use [[minValue]] and [[maxValue]] to indicate ranges.
      *
-     * @param QuantitativeValue|QuantitativeValue[] $cargoVolume
+     * @param \Spatie\SchemaOrg\Contracts\QuantitativeValueContract|\Spatie\SchemaOrg\Contracts\QuantitativeValueContract[] $cargoVolume
      *
      * @return static
      *
@@ -164,7 +164,7 @@ class Car extends BaseType implements ProductContract, ThingContract, VehicleCon
      * A category for the item. Greater signs or slashes can be used to
      * informally indicate a category hierarchy.
      *
-     * @param Thing|Thing[]|string|string[] $category
+     * @param \Spatie\SchemaOrg\Contracts\ThingContract|\Spatie\SchemaOrg\Contracts\ThingContract[]|string|string[] $category
      *
      * @return static
      *
@@ -207,7 +207,7 @@ class Car extends BaseType implements ProductContract, ThingContract, VehicleCon
     /**
      * The depth of the item.
      *
-     * @param Distance|Distance[]|QuantitativeValue|QuantitativeValue[] $depth
+     * @param \Spatie\SchemaOrg\Contracts\DistanceContract|\Spatie\SchemaOrg\Contracts\DistanceContract[]|\Spatie\SchemaOrg\Contracts\QuantitativeValueContract|\Spatie\SchemaOrg\Contracts\QuantitativeValueContract[] $depth
      *
      * @return static
      *
@@ -253,7 +253,7 @@ class Car extends BaseType implements ProductContract, ThingContract, VehicleCon
      * The drive wheel configuration, i.e. which roadwheels will receive torque
      * from the vehicle's engine via the drivetrain.
      *
-     * @param DriveWheelConfigurationValue|DriveWheelConfigurationValue[]|string|string[] $driveWheelConfiguration
+     * @param \Spatie\SchemaOrg\Contracts\DriveWheelConfigurationValueContract|\Spatie\SchemaOrg\Contracts\DriveWheelConfigurationValueContract[]|string|string[] $driveWheelConfiguration
      *
      * @return static
      *
@@ -279,7 +279,7 @@ class Car extends BaseType implements ProductContract, ThingContract, VehicleCon
      * use [[valueReference]] to link the value for the fuel consumption to
      * another value.
      *
-     * @param QuantitativeValue|QuantitativeValue[] $fuelConsumption
+     * @param \Spatie\SchemaOrg\Contracts\QuantitativeValueContract|\Spatie\SchemaOrg\Contracts\QuantitativeValueContract[] $fuelConsumption
      *
      * @return static
      *
@@ -305,7 +305,7 @@ class Car extends BaseType implements ProductContract, ThingContract, VehicleCon
      * use [[valueReference]] to link the value for the fuel economy to another
      * value.
      *
-     * @param QuantitativeValue|QuantitativeValue[] $fuelEfficiency
+     * @param \Spatie\SchemaOrg\Contracts\QuantitativeValueContract|\Spatie\SchemaOrg\Contracts\QuantitativeValueContract[] $fuelEfficiency
      *
      * @return static
      *
@@ -321,7 +321,7 @@ class Car extends BaseType implements ProductContract, ThingContract, VehicleCon
      * the vehicle has only one engine, this property can be attached directly
      * to the vehicle.
      *
-     * @param QualitativeValue|QualitativeValue[]|string|string[] $fuelType
+     * @param \Spatie\SchemaOrg\Contracts\QualitativeValueContract|\Spatie\SchemaOrg\Contracts\QualitativeValueContract[]|string|string[] $fuelType
      *
      * @return static
      *
@@ -408,7 +408,7 @@ class Car extends BaseType implements ProductContract, ThingContract, VehicleCon
     /**
      * The height of the item.
      *
-     * @param Distance|Distance[]|QuantitativeValue|QuantitativeValue[] $height
+     * @param \Spatie\SchemaOrg\Contracts\DistanceContract|\Spatie\SchemaOrg\Contracts\DistanceContract[]|\Spatie\SchemaOrg\Contracts\QuantitativeValueContract|\Spatie\SchemaOrg\Contracts\QuantitativeValueContract[] $height
      *
      * @return static
      *
@@ -426,7 +426,7 @@ class Car extends BaseType implements ProductContract, ThingContract, VehicleCon
      * strings or as URL (URI) links. See [background
      * notes](/docs/datamodel.html#identifierBg) for more details.
      *
-     * @param PropertyValue|PropertyValue[]|string|string[] $identifier
+     * @param \Spatie\SchemaOrg\Contracts\PropertyValueContract|\Spatie\SchemaOrg\Contracts\PropertyValueContract[]|string|string[] $identifier
      *
      * @return static
      *
@@ -441,7 +441,7 @@ class Car extends BaseType implements ProductContract, ThingContract, VehicleCon
      * An image of the item. This can be a [[URL]] or a fully described
      * [[ImageObject]].
      *
-     * @param ImageObject|ImageObject[]|string|string[] $image
+     * @param \Spatie\SchemaOrg\Contracts\ImageObjectContract|\Spatie\SchemaOrg\Contracts\ImageObjectContract[]|string|string[] $image
      *
      * @return static
      *
@@ -456,7 +456,7 @@ class Car extends BaseType implements ProductContract, ThingContract, VehicleCon
      * A pointer to another product (or multiple products) for which this
      * product is an accessory or spare part.
      *
-     * @param Product|Product[] $isAccessoryOrSparePartFor
+     * @param \Spatie\SchemaOrg\Contracts\ProductContract|\Spatie\SchemaOrg\Contracts\ProductContract[] $isAccessoryOrSparePartFor
      *
      * @return static
      *
@@ -471,7 +471,7 @@ class Car extends BaseType implements ProductContract, ThingContract, VehicleCon
      * A pointer to another product (or multiple products) for which this
      * product is a consumable.
      *
-     * @param Product|Product[] $isConsumableFor
+     * @param \Spatie\SchemaOrg\Contracts\ProductContract|\Spatie\SchemaOrg\Contracts\ProductContract[] $isConsumableFor
      *
      * @return static
      *
@@ -485,7 +485,7 @@ class Car extends BaseType implements ProductContract, ThingContract, VehicleCon
     /**
      * A pointer to another, somehow related product (or multiple products).
      *
-     * @param Product|Product[]|Service|Service[] $isRelatedTo
+     * @param \Spatie\SchemaOrg\Contracts\ProductContract|\Spatie\SchemaOrg\Contracts\ProductContract[]|\Spatie\SchemaOrg\Contracts\ServiceContract|\Spatie\SchemaOrg\Contracts\ServiceContract[] $isRelatedTo
      *
      * @return static
      *
@@ -500,7 +500,7 @@ class Car extends BaseType implements ProductContract, ThingContract, VehicleCon
      * A pointer to another, functionally similar product (or multiple
      * products).
      *
-     * @param Product|Product[]|Service|Service[] $isSimilarTo
+     * @param \Spatie\SchemaOrg\Contracts\ProductContract|\Spatie\SchemaOrg\Contracts\ProductContract[]|\Spatie\SchemaOrg\Contracts\ServiceContract|\Spatie\SchemaOrg\Contracts\ServiceContract[] $isSimilarTo
      *
      * @return static
      *
@@ -516,7 +516,7 @@ class Car extends BaseType implements ProductContract, ThingContract, VehicleCon
      * the condition of the product or service, or the products or services
      * included in the offer.
      *
-     * @param OfferItemCondition|OfferItemCondition[] $itemCondition
+     * @param \Spatie\SchemaOrg\Contracts\OfferItemConditionContract|\Spatie\SchemaOrg\Contracts\OfferItemConditionContract[] $itemCondition
      *
      * @return static
      *
@@ -544,7 +544,7 @@ class Car extends BaseType implements ProductContract, ThingContract, VehicleCon
     /**
      * An associated logo.
      *
-     * @param ImageObject|ImageObject[]|string|string[] $logo
+     * @param \Spatie\SchemaOrg\Contracts\ImageObjectContract|\Spatie\SchemaOrg\Contracts\ImageObjectContract[]|string|string[] $logo
      *
      * @return static
      *
@@ -560,7 +560,7 @@ class Car extends BaseType implements ProductContract, ThingContract, VehicleCon
      * entity being described. See [background
      * notes](/docs/datamodel.html#mainEntityBackground) for details.
      *
-     * @param CreativeWork|CreativeWork[]|string|string[] $mainEntityOfPage
+     * @param \Spatie\SchemaOrg\Contracts\CreativeWorkContract|\Spatie\SchemaOrg\Contracts\CreativeWorkContract[]|string|string[] $mainEntityOfPage
      *
      * @return static
      *
@@ -574,7 +574,7 @@ class Car extends BaseType implements ProductContract, ThingContract, VehicleCon
     /**
      * The manufacturer of the product.
      *
-     * @param Organization|Organization[] $manufacturer
+     * @param \Spatie\SchemaOrg\Contracts\OrganizationContract|\Spatie\SchemaOrg\Contracts\OrganizationContract[] $manufacturer
      *
      * @return static
      *
@@ -589,7 +589,7 @@ class Car extends BaseType implements ProductContract, ThingContract, VehicleCon
      * A material that something is made from, e.g. leather, wool, cotton,
      * paper.
      *
-     * @param Product|Product[]|string|string[] $material
+     * @param \Spatie\SchemaOrg\Contracts\ProductContract|\Spatie\SchemaOrg\Contracts\ProductContract[]|string|string[] $material
      *
      * @return static
      *
@@ -606,7 +606,7 @@ class Car extends BaseType implements ProductContract, ThingContract, VehicleCon
      * 
      * Typical unit code(s): KMT for kilometers, SMI for statute miles
      *
-     * @param QuantitativeValue|QuantitativeValue[] $mileageFromOdometer
+     * @param \Spatie\SchemaOrg\Contracts\QuantitativeValueContract|\Spatie\SchemaOrg\Contracts\QuantitativeValueContract[] $mileageFromOdometer
      *
      * @return static
      *
@@ -624,7 +624,7 @@ class Car extends BaseType implements ProductContract, ThingContract, VehicleCon
      * strong product identifiers via the gtin8/gtin13/gtin14 and mpn
      * properties.
      *
-     * @param ProductModel|ProductModel[]|string|string[] $model
+     * @param \Spatie\SchemaOrg\Contracts\ProductModelContract|\Spatie\SchemaOrg\Contracts\ProductModelContract[]|string|string[] $model
      *
      * @return static
      *
@@ -683,7 +683,7 @@ class Car extends BaseType implements ProductContract, ThingContract, VehicleCon
      * 
      * Typical unit code(s): C62
      *
-     * @param QuantitativeValue|QuantitativeValue[]|float|float[]|int|int[] $numberOfAxles
+     * @param \Spatie\SchemaOrg\Contracts\QuantitativeValueContract|\Spatie\SchemaOrg\Contracts\QuantitativeValueContract[]|float|float[]|int|int[] $numberOfAxles
      *
      * @return static
      *
@@ -699,7 +699,7 @@ class Car extends BaseType implements ProductContract, ThingContract, VehicleCon
      * 
      * Typical unit code(s): C62
      *
-     * @param QuantitativeValue|QuantitativeValue[]|float|float[]|int|int[] $numberOfDoors
+     * @param \Spatie\SchemaOrg\Contracts\QuantitativeValueContract|\Spatie\SchemaOrg\Contracts\QuantitativeValueContract[]|float|float[]|int|int[] $numberOfDoors
      *
      * @return static
      *
@@ -716,7 +716,7 @@ class Car extends BaseType implements ProductContract, ThingContract, VehicleCon
      * 
      * Typical unit code(s): C62
      *
-     * @param QuantitativeValue|QuantitativeValue[]|float|float[]|int|int[] $numberOfForwardGears
+     * @param \Spatie\SchemaOrg\Contracts\QuantitativeValueContract|\Spatie\SchemaOrg\Contracts\QuantitativeValueContract[]|float|float[]|int|int[] $numberOfForwardGears
      *
      * @return static
      *
@@ -732,7 +732,7 @@ class Car extends BaseType implements ProductContract, ThingContract, VehicleCon
      * 
      * Typical unit code(s): C62
      *
-     * @param QuantitativeValue|QuantitativeValue[]|float|float[]|int|int[] $numberOfPreviousOwners
+     * @param \Spatie\SchemaOrg\Contracts\QuantitativeValueContract|\Spatie\SchemaOrg\Contracts\QuantitativeValueContract[]|float|float[]|int|int[] $numberOfPreviousOwners
      *
      * @return static
      *
@@ -746,9 +746,14 @@ class Car extends BaseType implements ProductContract, ThingContract, VehicleCon
     /**
      * An offer to provide this item&#x2014;for example, an offer to sell a
      * product, rent the DVD of a movie, perform a service, or give away tickets
-     * to an event.
+     * to an event. Use [[businessFunction]] to indicate the kind of transaction
+     * offered, i.e. sell, lease, etc. This property can also be used to
+     * describe a [[Demand]]. While this property is listed as expected on a
+     * number of common types, it can be used in others. In that case, using a
+     * second type, such as Product or a subtype of Product, can clarify the
+     * nature of the offer.
      *
-     * @param Offer|Offer[] $offers
+     * @param \Spatie\SchemaOrg\Contracts\DemandContract|\Spatie\SchemaOrg\Contracts\DemandContract[]|\Spatie\SchemaOrg\Contracts\OfferContract|\Spatie\SchemaOrg\Contracts\OfferContract[] $offers
      *
      * @return static
      *
@@ -763,7 +768,7 @@ class Car extends BaseType implements ProductContract, ThingContract, VehicleCon
      * Indicates a potential Action, which describes an idealized action in
      * which this thing would play an 'object' role.
      *
-     * @param Action|Action[] $potentialAction
+     * @param \Spatie\SchemaOrg\Contracts\ActionContract|\Spatie\SchemaOrg\Contracts\ActionContract[] $potentialAction
      *
      * @return static
      *
@@ -835,7 +840,7 @@ class Car extends BaseType implements ProductContract, ThingContract, VehicleCon
     /**
      * A review of the item.
      *
-     * @param Review|Review[] $review
+     * @param \Spatie\SchemaOrg\Contracts\ReviewContract|\Spatie\SchemaOrg\Contracts\ReviewContract[] $review
      *
      * @return static
      *
@@ -849,7 +854,7 @@ class Car extends BaseType implements ProductContract, ThingContract, VehicleCon
     /**
      * Review of the item.
      *
-     * @param Review|Review[] $reviews
+     * @param \Spatie\SchemaOrg\Contracts\ReviewContract|\Spatie\SchemaOrg\Contracts\ReviewContract[] $reviews
      *
      * @return static
      *
@@ -908,7 +913,7 @@ class Car extends BaseType implements ProductContract, ThingContract, VehicleCon
     /**
      * The position of the steering wheel or similar device (mostly for cars).
      *
-     * @param SteeringPositionValue|SteeringPositionValue[] $steeringPosition
+     * @param \Spatie\SchemaOrg\Contracts\SteeringPositionValueContract|\Spatie\SchemaOrg\Contracts\SteeringPositionValueContract[] $steeringPosition
      *
      * @return static
      *
@@ -922,7 +927,7 @@ class Car extends BaseType implements ProductContract, ThingContract, VehicleCon
     /**
      * A CreativeWork or Event about this Thing.
      *
-     * @param CreativeWork|CreativeWork[]|Event|Event[] $subjectOf
+     * @param \Spatie\SchemaOrg\Contracts\CreativeWorkContract|\Spatie\SchemaOrg\Contracts\CreativeWorkContract[]|\Spatie\SchemaOrg\Contracts\EventContract|\Spatie\SchemaOrg\Contracts\EventContract[] $subjectOf
      *
      * @return static
      *
@@ -965,7 +970,7 @@ class Car extends BaseType implements ProductContract, ThingContract, VehicleCon
     /**
      * Information about the engine or engines of the vehicle.
      *
-     * @param EngineSpecification|EngineSpecification[] $vehicleEngine
+     * @param \Spatie\SchemaOrg\Contracts\EngineSpecificationContract|\Spatie\SchemaOrg\Contracts\EngineSpecificationContract[] $vehicleEngine
      *
      * @return static
      *
@@ -1043,7 +1048,7 @@ class Car extends BaseType implements ProductContract, ThingContract, VehicleCon
      * 
      * Typical unit code(s): C62 for persons.
      *
-     * @param QuantitativeValue|QuantitativeValue[]|float|float[]|int|int[] $vehicleSeatingCapacity
+     * @param \Spatie\SchemaOrg\Contracts\QuantitativeValueContract|\Spatie\SchemaOrg\Contracts\QuantitativeValueContract[]|float|float[]|int|int[] $vehicleSeatingCapacity
      *
      * @return static
      *
@@ -1076,7 +1081,7 @@ class Car extends BaseType implements ProductContract, ThingContract, VehicleCon
      * power source to the wheels or other relevant component(s) ("gearbox" for
      * cars).
      *
-     * @param QualitativeValue|QualitativeValue[]|string|string[] $vehicleTransmission
+     * @param \Spatie\SchemaOrg\Contracts\QualitativeValueContract|\Spatie\SchemaOrg\Contracts\QualitativeValueContract[]|string|string[] $vehicleTransmission
      *
      * @return static
      *
@@ -1090,7 +1095,7 @@ class Car extends BaseType implements ProductContract, ThingContract, VehicleCon
     /**
      * The weight of the product or person.
      *
-     * @param QuantitativeValue|QuantitativeValue[] $weight
+     * @param \Spatie\SchemaOrg\Contracts\QuantitativeValueContract|\Spatie\SchemaOrg\Contracts\QuantitativeValueContract[] $weight
      *
      * @return static
      *
@@ -1104,7 +1109,7 @@ class Car extends BaseType implements ProductContract, ThingContract, VehicleCon
     /**
      * The width of the item.
      *
-     * @param Distance|Distance[]|QuantitativeValue|QuantitativeValue[] $width
+     * @param \Spatie\SchemaOrg\Contracts\DistanceContract|\Spatie\SchemaOrg\Contracts\DistanceContract[]|\Spatie\SchemaOrg\Contracts\QuantitativeValueContract|\Spatie\SchemaOrg\Contracts\QuantitativeValueContract[] $width
      *
      * @return static
      *

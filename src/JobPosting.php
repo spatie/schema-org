@@ -49,7 +49,7 @@ class JobPosting extends BaseType implements IntangibleContract, ThingContract
     /**
      * The base salary of the job or of an employee in an EmployeeRole.
      *
-     * @param MonetaryAmount|MonetaryAmount[]|PriceSpecification|PriceSpecification[]|float|float[]|int|int[] $baseSalary
+     * @param \Spatie\SchemaOrg\Contracts\MonetaryAmountContract|\Spatie\SchemaOrg\Contracts\MonetaryAmountContract[]|\Spatie\SchemaOrg\Contracts\PriceSpecificationContract|\Spatie\SchemaOrg\Contracts\PriceSpecificationContract[]|float|float[]|int|int[] $baseSalary
      *
      * @return static
      *
@@ -75,7 +75,7 @@ class JobPosting extends BaseType implements IntangibleContract, ThingContract
     }
 
     /**
-     * Publication date for the job posting.
+     * Publication date of an online listing.
      *
      * @param \DateTimeInterface|\DateTimeInterface[] $datePosted
      *
@@ -155,7 +155,7 @@ class JobPosting extends BaseType implements IntangibleContract, ThingContract
      * rather than the hiring organization, who may not have committed to the
      * estimated value.
      *
-     * @param MonetaryAmount|MonetaryAmountDistribution|MonetaryAmountDistribution[]|MonetaryAmount[]|float|float[]|int|int[] $estimatedSalary
+     * @param \Spatie\SchemaOrg\Contracts\MonetaryAmountContract|\Spatie\SchemaOrg\Contracts\MonetaryAmountDistributionContract|\Spatie\SchemaOrg\Contracts\MonetaryAmountDistributionContract[]|\Spatie\SchemaOrg\Contracts\MonetaryAmountContract[]|float|float[]|int|int[] $estimatedSalary
      *
      * @return static
      *
@@ -184,7 +184,7 @@ class JobPosting extends BaseType implements IntangibleContract, ThingContract
     /**
      * Organization offering the job position.
      *
-     * @param Organization|Organization[] $hiringOrganization
+     * @param \Spatie\SchemaOrg\Contracts\OrganizationContract|\Spatie\SchemaOrg\Contracts\OrganizationContract[] $hiringOrganization
      *
      * @return static
      *
@@ -202,7 +202,7 @@ class JobPosting extends BaseType implements IntangibleContract, ThingContract
      * strings or as URL (URI) links. See [background
      * notes](/docs/datamodel.html#identifierBg) for more details.
      *
-     * @param PropertyValue|PropertyValue[]|string|string[] $identifier
+     * @param \Spatie\SchemaOrg\Contracts\PropertyValueContract|\Spatie\SchemaOrg\Contracts\PropertyValueContract[]|string|string[] $identifier
      *
      * @return static
      *
@@ -217,7 +217,7 @@ class JobPosting extends BaseType implements IntangibleContract, ThingContract
      * An image of the item. This can be a [[URL]] or a fully described
      * [[ImageObject]].
      *
-     * @param ImageObject|ImageObject[]|string|string[] $image
+     * @param \Spatie\SchemaOrg\Contracts\ImageObjectContract|\Spatie\SchemaOrg\Contracts\ImageObjectContract[]|string|string[] $image
      *
      * @return static
      *
@@ -288,7 +288,7 @@ class JobPosting extends BaseType implements IntangibleContract, ThingContract
      * A (typically single) geographic location associated with the job
      * position.
      *
-     * @param Place|Place[] $jobLocation
+     * @param \Spatie\SchemaOrg\Contracts\PlaceContract|\Spatie\SchemaOrg\Contracts\PlaceContract[] $jobLocation
      *
      * @return static
      *
@@ -304,7 +304,7 @@ class JobPosting extends BaseType implements IntangibleContract, ThingContract
      * entity being described. See [background
      * notes](/docs/datamodel.html#mainEntityBackground) for details.
      *
-     * @param CreativeWork|CreativeWork[]|string|string[] $mainEntityOfPage
+     * @param \Spatie\SchemaOrg\Contracts\CreativeWorkContract|\Spatie\SchemaOrg\Contracts\CreativeWorkContract[]|string|string[] $mainEntityOfPage
      *
      * @return static
      *
@@ -336,7 +336,7 @@ class JobPosting extends BaseType implements IntangibleContract, ThingContract
      * similar, with the property repeated for each applicable value. Ideally
      * the taxonomy should be identified, and both the textual label and formal
      * code for the category should be provided.
-     * 
+     *
      * Note: for historical reasons, any textual label and formal code provided
      * as a literal may be assumed to be from O*NET-SOC.
      *
@@ -355,7 +355,7 @@ class JobPosting extends BaseType implements IntangibleContract, ThingContract
      * Indicates a potential Action, which describes an idealized action in
      * which this thing would play an 'object' role.
      *
-     * @param Action|Action[] $potentialAction
+     * @param \Spatie\SchemaOrg\Contracts\ActionContract|\Spatie\SchemaOrg\Contracts\ActionContract[] $potentialAction
      *
      * @return static
      *
@@ -383,7 +383,7 @@ class JobPosting extends BaseType implements IntangibleContract, ThingContract
     /**
      * The Occupation for the JobPosting.
      *
-     * @param Occupation|Occupation[] $relevantOccupation
+     * @param \Spatie\SchemaOrg\Contracts\OccupationContract|\Spatie\SchemaOrg\Contracts\OccupationContract[] $relevantOccupation
      *
      * @return static
      *
@@ -472,7 +472,7 @@ class JobPosting extends BaseType implements IntangibleContract, ThingContract
     /**
      * A CreativeWork or Event about this Thing.
      *
-     * @param CreativeWork|CreativeWork[]|Event|Event[] $subjectOf
+     * @param \Spatie\SchemaOrg\Contracts\CreativeWorkContract|\Spatie\SchemaOrg\Contracts\CreativeWorkContract[]|\Spatie\SchemaOrg\Contracts\EventContract|\Spatie\SchemaOrg\Contracts\EventContract[] $subjectOf
      *
      * @return static
      *

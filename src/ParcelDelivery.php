@@ -51,7 +51,7 @@ class ParcelDelivery extends BaseType implements IntangibleContract, ThingContra
      * 'carrier' is an out-dated term indicating the 'provider' for parcel
      * delivery and flights.
      *
-     * @param Organization|Organization[] $carrier
+     * @param \Spatie\SchemaOrg\Contracts\OrganizationContract|\Spatie\SchemaOrg\Contracts\OrganizationContract[] $carrier
      *
      * @return static
      *
@@ -65,7 +65,7 @@ class ParcelDelivery extends BaseType implements IntangibleContract, ThingContra
     /**
      * Destination address.
      *
-     * @param PostalAddress|PostalAddress[] $deliveryAddress
+     * @param \Spatie\SchemaOrg\Contracts\PostalAddressContract|\Spatie\SchemaOrg\Contracts\PostalAddressContract[] $deliveryAddress
      *
      * @return static
      *
@@ -80,7 +80,7 @@ class ParcelDelivery extends BaseType implements IntangibleContract, ThingContra
      * New entry added as the package passes through each leg of its journey
      * (from shipment to final delivery).
      *
-     * @param DeliveryEvent|DeliveryEvent[] $deliveryStatus
+     * @param \Spatie\SchemaOrg\Contracts\DeliveryEventContract|\Spatie\SchemaOrg\Contracts\DeliveryEventContract[] $deliveryStatus
      *
      * @return static
      *
@@ -153,7 +153,7 @@ class ParcelDelivery extends BaseType implements IntangibleContract, ThingContra
     /**
      * Method used for delivery or shipping.
      *
-     * @param DeliveryMethod|DeliveryMethod[] $hasDeliveryMethod
+     * @param \Spatie\SchemaOrg\Contracts\DeliveryMethodContract|\Spatie\SchemaOrg\Contracts\DeliveryMethodContract[] $hasDeliveryMethod
      *
      * @return static
      *
@@ -171,7 +171,7 @@ class ParcelDelivery extends BaseType implements IntangibleContract, ThingContra
      * strings or as URL (URI) links. See [background
      * notes](/docs/datamodel.html#identifierBg) for more details.
      *
-     * @param PropertyValue|PropertyValue[]|string|string[] $identifier
+     * @param \Spatie\SchemaOrg\Contracts\PropertyValueContract|\Spatie\SchemaOrg\Contracts\PropertyValueContract[]|string|string[] $identifier
      *
      * @return static
      *
@@ -186,7 +186,7 @@ class ParcelDelivery extends BaseType implements IntangibleContract, ThingContra
      * An image of the item. This can be a [[URL]] or a fully described
      * [[ImageObject]].
      *
-     * @param ImageObject|ImageObject[]|string|string[] $image
+     * @param \Spatie\SchemaOrg\Contracts\ImageObjectContract|\Spatie\SchemaOrg\Contracts\ImageObjectContract[]|string|string[] $image
      *
      * @return static
      *
@@ -200,7 +200,7 @@ class ParcelDelivery extends BaseType implements IntangibleContract, ThingContra
     /**
      * Item(s) being shipped.
      *
-     * @param Product|Product[] $itemShipped
+     * @param \Spatie\SchemaOrg\Contracts\ProductContract|\Spatie\SchemaOrg\Contracts\ProductContract[] $itemShipped
      *
      * @return static
      *
@@ -216,7 +216,7 @@ class ParcelDelivery extends BaseType implements IntangibleContract, ThingContra
      * entity being described. See [background
      * notes](/docs/datamodel.html#mainEntityBackground) for details.
      *
-     * @param CreativeWork|CreativeWork[]|string|string[] $mainEntityOfPage
+     * @param \Spatie\SchemaOrg\Contracts\CreativeWorkContract|\Spatie\SchemaOrg\Contracts\CreativeWorkContract[]|string|string[] $mainEntityOfPage
      *
      * @return static
      *
@@ -244,7 +244,7 @@ class ParcelDelivery extends BaseType implements IntangibleContract, ThingContra
     /**
      * Shipper's address.
      *
-     * @param PostalAddress|PostalAddress[] $originAddress
+     * @param \Spatie\SchemaOrg\Contracts\PostalAddressContract|\Spatie\SchemaOrg\Contracts\PostalAddressContract[] $originAddress
      *
      * @return static
      *
@@ -258,7 +258,7 @@ class ParcelDelivery extends BaseType implements IntangibleContract, ThingContra
     /**
      * The overall order the items in this delivery were included in.
      *
-     * @param Order|Order[] $partOfOrder
+     * @param \Spatie\SchemaOrg\Contracts\OrderContract|\Spatie\SchemaOrg\Contracts\OrderContract[] $partOfOrder
      *
      * @return static
      *
@@ -273,7 +273,7 @@ class ParcelDelivery extends BaseType implements IntangibleContract, ThingContra
      * Indicates a potential Action, which describes an idealized action in
      * which this thing would play an 'object' role.
      *
-     * @param Action|Action[] $potentialAction
+     * @param \Spatie\SchemaOrg\Contracts\ActionContract|\Spatie\SchemaOrg\Contracts\ActionContract[] $potentialAction
      *
      * @return static
      *
@@ -289,7 +289,7 @@ class ParcelDelivery extends BaseType implements IntangibleContract, ThingContra
      * producer. Another party (a seller) may offer those services or goods on
      * behalf of the provider. A provider may also serve as the seller.
      *
-     * @param Organization|Organization[]|Person|Person[] $provider
+     * @param \Spatie\SchemaOrg\Contracts\OrganizationContract|\Spatie\SchemaOrg\Contracts\OrganizationContract[]|\Spatie\SchemaOrg\Contracts\PersonContract|\Spatie\SchemaOrg\Contracts\PersonContract[] $provider
      *
      * @return static
      *
@@ -319,7 +319,7 @@ class ParcelDelivery extends BaseType implements IntangibleContract, ThingContra
     /**
      * A CreativeWork or Event about this Thing.
      *
-     * @param CreativeWork|CreativeWork[]|Event|Event[] $subjectOf
+     * @param \Spatie\SchemaOrg\Contracts\CreativeWorkContract|\Spatie\SchemaOrg\Contracts\CreativeWorkContract[]|\Spatie\SchemaOrg\Contracts\EventContract|\Spatie\SchemaOrg\Contracts\EventContract[] $subjectOf
      *
      * @return static
      *

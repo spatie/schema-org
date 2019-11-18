@@ -19,7 +19,7 @@ class WPAdBlock extends BaseType implements CreativeWorkContract, ThingContract,
     /**
      * The subject matter of the content.
      *
-     * @param Thing|Thing[] $about
+     * @param \Spatie\SchemaOrg\Contracts\ThingContract|\Spatie\SchemaOrg\Contracts\ThingContract[] $about
      *
      * @return static
      *
@@ -52,7 +52,7 @@ class WPAdBlock extends BaseType implements CreativeWorkContract, ThingContract,
      * understand all the intellectual content of a resource. Expected values
      * include:  auditory, tactile, textual, visual.
      *
-     * @param ItemList|ItemList[] $accessModeSufficient
+     * @param \Spatie\SchemaOrg\Contracts\ItemListContract|\Spatie\SchemaOrg\Contracts\ItemListContract[] $accessModeSufficient
      *
      * @return static
      *
@@ -149,7 +149,7 @@ class WPAdBlock extends BaseType implements CreativeWorkContract, ThingContract,
     /**
      * Specifies the Person that is legally accountable for the CreativeWork.
      *
-     * @param Person|Person[] $accountablePerson
+     * @param \Spatie\SchemaOrg\Contracts\PersonContract|\Spatie\SchemaOrg\Contracts\PersonContract[] $accountablePerson
      *
      * @return static
      *
@@ -183,7 +183,7 @@ class WPAdBlock extends BaseType implements CreativeWorkContract, ThingContract,
      * The overall rating, based on a collection of reviews or ratings, of the
      * item.
      *
-     * @param AggregateRating|AggregateRating[] $aggregateRating
+     * @param \Spatie\SchemaOrg\Contracts\AggregateRatingContract|\Spatie\SchemaOrg\Contracts\AggregateRatingContract[] $aggregateRating
      *
      * @return static
      *
@@ -226,7 +226,7 @@ class WPAdBlock extends BaseType implements CreativeWorkContract, ThingContract,
      * A media object that encodes this CreativeWork. This property is a synonym
      * for encoding.
      *
-     * @param MediaObject|MediaObject[] $associatedMedia
+     * @param \Spatie\SchemaOrg\Contracts\MediaObjectContract|\Spatie\SchemaOrg\Contracts\MediaObjectContract[] $associatedMedia
      *
      * @return static
      *
@@ -240,7 +240,7 @@ class WPAdBlock extends BaseType implements CreativeWorkContract, ThingContract,
     /**
      * An intended audience, i.e. a group for whom something was created.
      *
-     * @param Audience|Audience[] $audience
+     * @param \Spatie\SchemaOrg\Contracts\AudienceContract|\Spatie\SchemaOrg\Contracts\AudienceContract[] $audience
      *
      * @return static
      *
@@ -254,7 +254,7 @@ class WPAdBlock extends BaseType implements CreativeWorkContract, ThingContract,
     /**
      * An embedded audio object.
      *
-     * @param AudioObject|AudioObject[]|Clip|Clip[] $audio
+     * @param \Spatie\SchemaOrg\Contracts\AudioObjectContract|\Spatie\SchemaOrg\Contracts\AudioObjectContract[]|\Spatie\SchemaOrg\Contracts\ClipContract|\Spatie\SchemaOrg\Contracts\ClipContract[] $audio
      *
      * @return static
      *
@@ -270,7 +270,7 @@ class WPAdBlock extends BaseType implements CreativeWorkContract, ThingContract,
      * in that HTML 5 provides a special mechanism for indicating authorship via
      * the rel tag. That is equivalent to this and may be used interchangeably.
      *
-     * @param Organization|Organization[]|Person|Person[] $author
+     * @param \Spatie\SchemaOrg\Contracts\OrganizationContract|\Spatie\SchemaOrg\Contracts\OrganizationContract[]|\Spatie\SchemaOrg\Contracts\PersonContract|\Spatie\SchemaOrg\Contracts\PersonContract[] $author
      *
      * @return static
      *
@@ -312,7 +312,7 @@ class WPAdBlock extends BaseType implements CreativeWorkContract, ThingContract,
     /**
      * Fictional person connected with a creative work.
      *
-     * @param Person|Person[] $character
+     * @param \Spatie\SchemaOrg\Contracts\PersonContract|\Spatie\SchemaOrg\Contracts\PersonContract[] $character
      *
      * @return static
      *
@@ -327,7 +327,7 @@ class WPAdBlock extends BaseType implements CreativeWorkContract, ThingContract,
      * A citation or reference to another creative work, such as another
      * publication, web page, scholarly article, etc.
      *
-     * @param CreativeWork|CreativeWork[]|string|string[] $citation
+     * @param \Spatie\SchemaOrg\Contracts\CreativeWorkContract|\Spatie\SchemaOrg\Contracts\CreativeWorkContract[]|string|string[] $citation
      *
      * @return static
      *
@@ -341,7 +341,7 @@ class WPAdBlock extends BaseType implements CreativeWorkContract, ThingContract,
     /**
      * Comments, typically from users.
      *
-     * @param Comment|Comment[] $comment
+     * @param \Spatie\SchemaOrg\Contracts\CommentContract|\Spatie\SchemaOrg\Contracts\CommentContract[] $comment
      *
      * @return static
      *
@@ -372,7 +372,7 @@ class WPAdBlock extends BaseType implements CreativeWorkContract, ThingContract,
      * The location depicted or described in the content. For example, the
      * location in a photograph or painting.
      *
-     * @param Place|Place[] $contentLocation
+     * @param \Spatie\SchemaOrg\Contracts\PlaceContract|\Spatie\SchemaOrg\Contracts\PlaceContract[] $contentLocation
      *
      * @return static
      *
@@ -386,7 +386,7 @@ class WPAdBlock extends BaseType implements CreativeWorkContract, ThingContract,
     /**
      * Official rating of a piece of content&#x2014;for example,'MPAA PG-13'.
      *
-     * @param Rating|Rating[]|string|string[] $contentRating
+     * @param \Spatie\SchemaOrg\Contracts\RatingContract|\Spatie\SchemaOrg\Contracts\RatingContract[]|string|string[] $contentRating
      *
      * @return static
      *
@@ -400,7 +400,7 @@ class WPAdBlock extends BaseType implements CreativeWorkContract, ThingContract,
     /**
      * A secondary contributor to the CreativeWork or Event.
      *
-     * @param Organization|Organization[]|Person|Person[] $contributor
+     * @param \Spatie\SchemaOrg\Contracts\OrganizationContract|\Spatie\SchemaOrg\Contracts\OrganizationContract[]|\Spatie\SchemaOrg\Contracts\PersonContract|\Spatie\SchemaOrg\Contracts\PersonContract[] $contributor
      *
      * @return static
      *
@@ -414,7 +414,7 @@ class WPAdBlock extends BaseType implements CreativeWorkContract, ThingContract,
     /**
      * The party holding the legal copyright to the CreativeWork.
      *
-     * @param Organization|Organization[]|Person|Person[] $copyrightHolder
+     * @param \Spatie\SchemaOrg\Contracts\OrganizationContract|\Spatie\SchemaOrg\Contracts\OrganizationContract[]|\Spatie\SchemaOrg\Contracts\PersonContract|\Spatie\SchemaOrg\Contracts\PersonContract[] $copyrightHolder
      *
      * @return static
      *
@@ -444,7 +444,7 @@ class WPAdBlock extends BaseType implements CreativeWorkContract, ThingContract,
      * The creator/author of this CreativeWork. This is the same as the Author
      * property for CreativeWork.
      *
-     * @param Organization|Organization[]|Person|Person[] $creator
+     * @param \Spatie\SchemaOrg\Contracts\OrganizationContract|\Spatie\SchemaOrg\Contracts\OrganizationContract[]|\Spatie\SchemaOrg\Contracts\PersonContract|\Spatie\SchemaOrg\Contracts\PersonContract[] $creator
      *
      * @return static
      *
@@ -547,7 +547,7 @@ class WPAdBlock extends BaseType implements CreativeWorkContract, ThingContract,
     /**
      * Specifies the Person who edited the CreativeWork.
      *
-     * @param Person|Person[] $editor
+     * @param \Spatie\SchemaOrg\Contracts\PersonContract|\Spatie\SchemaOrg\Contracts\PersonContract[] $editor
      *
      * @return static
      *
@@ -561,7 +561,7 @@ class WPAdBlock extends BaseType implements CreativeWorkContract, ThingContract,
     /**
      * An alignment to an established educational framework.
      *
-     * @param AlignmentObject|AlignmentObject[] $educationalAlignment
+     * @param \Spatie\SchemaOrg\Contracts\AlignmentObjectContract|\Spatie\SchemaOrg\Contracts\AlignmentObjectContract[] $educationalAlignment
      *
      * @return static
      *
@@ -591,7 +591,7 @@ class WPAdBlock extends BaseType implements CreativeWorkContract, ThingContract,
      * A media object that encodes this CreativeWork. This property is a synonym
      * for associatedMedia.
      *
-     * @param MediaObject|MediaObject[] $encoding
+     * @param \Spatie\SchemaOrg\Contracts\MediaObjectContract|\Spatie\SchemaOrg\Contracts\MediaObjectContract[] $encoding
      *
      * @return static
      *
@@ -632,7 +632,7 @@ class WPAdBlock extends BaseType implements CreativeWorkContract, ThingContract,
     /**
      * A media object that encodes this CreativeWork.
      *
-     * @param MediaObject|MediaObject[] $encodings
+     * @param \Spatie\SchemaOrg\Contracts\MediaObjectContract|\Spatie\SchemaOrg\Contracts\MediaObjectContract[] $encodings
      *
      * @return static
      *
@@ -647,7 +647,7 @@ class WPAdBlock extends BaseType implements CreativeWorkContract, ThingContract,
      * A creative work that this work is an
      * example/instance/realization/derivation of.
      *
-     * @param CreativeWork|CreativeWork[] $exampleOfWork
+     * @param \Spatie\SchemaOrg\Contracts\CreativeWorkContract|\Spatie\SchemaOrg\Contracts\CreativeWorkContract[] $exampleOfWork
      *
      * @return static
      *
@@ -701,7 +701,7 @@ class WPAdBlock extends BaseType implements CreativeWorkContract, ThingContract,
      * A person or organization that supports (sponsors) something through some
      * kind of financial contribution.
      *
-     * @param Organization|Organization[]|Person|Person[] $funder
+     * @param \Spatie\SchemaOrg\Contracts\OrganizationContract|\Spatie\SchemaOrg\Contracts\OrganizationContract[]|\Spatie\SchemaOrg\Contracts\PersonContract|\Spatie\SchemaOrg\Contracts\PersonContract[] $funder
      *
      * @return static
      *
@@ -730,7 +730,7 @@ class WPAdBlock extends BaseType implements CreativeWorkContract, ThingContract,
      * Indicates an item or CreativeWork that is part of this item, or
      * CreativeWork (in some sense).
      *
-     * @param CreativeWork|CreativeWork[] $hasPart
+     * @param \Spatie\SchemaOrg\Contracts\CreativeWorkContract|\Spatie\SchemaOrg\Contracts\CreativeWorkContract[] $hasPart
      *
      * @return static
      *
@@ -762,7 +762,7 @@ class WPAdBlock extends BaseType implements CreativeWorkContract, ThingContract,
      * strings or as URL (URI) links. See [background
      * notes](/docs/datamodel.html#identifierBg) for more details.
      *
-     * @param PropertyValue|PropertyValue[]|string|string[] $identifier
+     * @param \Spatie\SchemaOrg\Contracts\PropertyValueContract|\Spatie\SchemaOrg\Contracts\PropertyValueContract[]|string|string[] $identifier
      *
      * @return static
      *
@@ -777,7 +777,7 @@ class WPAdBlock extends BaseType implements CreativeWorkContract, ThingContract,
      * An image of the item. This can be a [[URL]] or a fully described
      * [[ImageObject]].
      *
-     * @param ImageObject|ImageObject[]|string|string[] $image
+     * @param \Spatie\SchemaOrg\Contracts\ImageObjectContract|\Spatie\SchemaOrg\Contracts\ImageObjectContract[]|string|string[] $image
      *
      * @return static
      *
@@ -794,7 +794,7 @@ class WPAdBlock extends BaseType implements CreativeWorkContract, ThingContract,
      * standard](http://tools.ietf.org/html/bcp47). See also
      * [[availableLanguage]].
      *
-     * @param Language|Language[]|string|string[] $inLanguage
+     * @param \Spatie\SchemaOrg\Contracts\LanguageContract|\Spatie\SchemaOrg\Contracts\LanguageContract[]|string|string[] $inLanguage
      *
      * @return static
      *
@@ -810,7 +810,7 @@ class WPAdBlock extends BaseType implements CreativeWorkContract, ThingContract,
      * SoftwareApplication. The most specific child type of InteractionCounter
      * should be used.
      *
-     * @param InteractionCounter|InteractionCounter[] $interactionStatistic
+     * @param \Spatie\SchemaOrg\Contracts\InteractionCounterContract|\Spatie\SchemaOrg\Contracts\InteractionCounterContract[] $interactionStatistic
      *
      * @return static
      *
@@ -854,7 +854,7 @@ class WPAdBlock extends BaseType implements CreativeWorkContract, ThingContract,
      * A resource from which this work is derived or from which it is a
      * modification or adaption.
      *
-     * @param CreativeWork|CreativeWork[]|Product|Product[]|string|string[] $isBasedOn
+     * @param \Spatie\SchemaOrg\Contracts\CreativeWorkContract|\Spatie\SchemaOrg\Contracts\CreativeWorkContract[]|\Spatie\SchemaOrg\Contracts\ProductContract|\Spatie\SchemaOrg\Contracts\ProductContract[]|string|string[] $isBasedOn
      *
      * @return static
      *
@@ -870,7 +870,7 @@ class WPAdBlock extends BaseType implements CreativeWorkContract, ThingContract,
      * be repeated for multiple sources. For example,
      * http://example.com/great-multiplication-intro.html.
      *
-     * @param CreativeWork|CreativeWork[]|Product|Product[]|string|string[] $isBasedOnUrl
+     * @param \Spatie\SchemaOrg\Contracts\CreativeWorkContract|\Spatie\SchemaOrg\Contracts\CreativeWorkContract[]|\Spatie\SchemaOrg\Contracts\ProductContract|\Spatie\SchemaOrg\Contracts\ProductContract[]|string|string[] $isBasedOnUrl
      *
      * @return static
      *
@@ -899,7 +899,7 @@ class WPAdBlock extends BaseType implements CreativeWorkContract, ThingContract,
      * Indicates an item or CreativeWork that this item, or CreativeWork (in
      * some sense), is part of.
      *
-     * @param CreativeWork|CreativeWork[] $isPartOf
+     * @param \Spatie\SchemaOrg\Contracts\CreativeWorkContract|\Spatie\SchemaOrg\Contracts\CreativeWorkContract[] $isPartOf
      *
      * @return static
      *
@@ -944,7 +944,7 @@ class WPAdBlock extends BaseType implements CreativeWorkContract, ThingContract,
      * A license document that applies to this content, typically indicated by
      * URL.
      *
-     * @param CreativeWork|CreativeWork[]|string|string[] $license
+     * @param \Spatie\SchemaOrg\Contracts\CreativeWorkContract|\Spatie\SchemaOrg\Contracts\CreativeWorkContract[]|string|string[] $license
      *
      * @return static
      *
@@ -959,7 +959,7 @@ class WPAdBlock extends BaseType implements CreativeWorkContract, ThingContract,
      * The location where the CreativeWork was created, which may not be the
      * same as the location depicted in the CreativeWork.
      *
-     * @param Place|Place[] $locationCreated
+     * @param \Spatie\SchemaOrg\Contracts\PlaceContract|\Spatie\SchemaOrg\Contracts\PlaceContract[] $locationCreated
      *
      * @return static
      *
@@ -974,7 +974,7 @@ class WPAdBlock extends BaseType implements CreativeWorkContract, ThingContract,
      * Indicates the primary entity described in some page or other
      * CreativeWork.
      *
-     * @param Thing|Thing[] $mainEntity
+     * @param \Spatie\SchemaOrg\Contracts\ThingContract|\Spatie\SchemaOrg\Contracts\ThingContract[] $mainEntity
      *
      * @return static
      *
@@ -990,7 +990,7 @@ class WPAdBlock extends BaseType implements CreativeWorkContract, ThingContract,
      * entity being described. See [background
      * notes](/docs/datamodel.html#mainEntityBackground) for details.
      *
-     * @param CreativeWork|CreativeWork[]|string|string[] $mainEntityOfPage
+     * @param \Spatie\SchemaOrg\Contracts\CreativeWorkContract|\Spatie\SchemaOrg\Contracts\CreativeWorkContract[]|string|string[] $mainEntityOfPage
      *
      * @return static
      *
@@ -1005,7 +1005,7 @@ class WPAdBlock extends BaseType implements CreativeWorkContract, ThingContract,
      * A material that something is made from, e.g. leather, wool, cotton,
      * paper.
      *
-     * @param Product|Product[]|string|string[] $material
+     * @param \Spatie\SchemaOrg\Contracts\ProductContract|\Spatie\SchemaOrg\Contracts\ProductContract[]|string|string[] $material
      *
      * @return static
      *
@@ -1020,7 +1020,7 @@ class WPAdBlock extends BaseType implements CreativeWorkContract, ThingContract,
      * Indicates that the CreativeWork contains a reference to, but is not
      * necessarily about a concept.
      *
-     * @param Thing|Thing[] $mentions
+     * @param \Spatie\SchemaOrg\Contracts\ThingContract|\Spatie\SchemaOrg\Contracts\ThingContract[] $mentions
      *
      * @return static
      *
@@ -1048,9 +1048,14 @@ class WPAdBlock extends BaseType implements CreativeWorkContract, ThingContract,
     /**
      * An offer to provide this item&#x2014;for example, an offer to sell a
      * product, rent the DVD of a movie, perform a service, or give away tickets
-     * to an event.
+     * to an event. Use [[businessFunction]] to indicate the kind of transaction
+     * offered, i.e. sell, lease, etc. This property can also be used to
+     * describe a [[Demand]]. While this property is listed as expected on a
+     * number of common types, it can be used in others. In that case, using a
+     * second type, such as Product or a subtype of Product, can clarify the
+     * nature of the offer.
      *
-     * @param Offer|Offer[] $offers
+     * @param \Spatie\SchemaOrg\Contracts\DemandContract|\Spatie\SchemaOrg\Contracts\DemandContract[]|\Spatie\SchemaOrg\Contracts\OfferContract|\Spatie\SchemaOrg\Contracts\OfferContract[] $offers
      *
      * @return static
      *
@@ -1079,7 +1084,7 @@ class WPAdBlock extends BaseType implements CreativeWorkContract, ThingContract,
      * Indicates a potential Action, which describes an idealized action in
      * which this thing would play an 'object' role.
      *
-     * @param Action|Action[] $potentialAction
+     * @param \Spatie\SchemaOrg\Contracts\ActionContract|\Spatie\SchemaOrg\Contracts\ActionContract[] $potentialAction
      *
      * @return static
      *
@@ -1094,7 +1099,7 @@ class WPAdBlock extends BaseType implements CreativeWorkContract, ThingContract,
      * The person or organization who produced the work (e.g. music album,
      * movie, tv/radio series etc.).
      *
-     * @param Organization|Organization[]|Person|Person[] $producer
+     * @param \Spatie\SchemaOrg\Contracts\OrganizationContract|\Spatie\SchemaOrg\Contracts\OrganizationContract[]|\Spatie\SchemaOrg\Contracts\PersonContract|\Spatie\SchemaOrg\Contracts\PersonContract[] $producer
      *
      * @return static
      *
@@ -1110,7 +1115,7 @@ class WPAdBlock extends BaseType implements CreativeWorkContract, ThingContract,
      * producer. Another party (a seller) may offer those services or goods on
      * behalf of the provider. A provider may also serve as the seller.
      *
-     * @param Organization|Organization[]|Person|Person[] $provider
+     * @param \Spatie\SchemaOrg\Contracts\OrganizationContract|\Spatie\SchemaOrg\Contracts\OrganizationContract[]|\Spatie\SchemaOrg\Contracts\PersonContract|\Spatie\SchemaOrg\Contracts\PersonContract[] $provider
      *
      * @return static
      *
@@ -1124,7 +1129,7 @@ class WPAdBlock extends BaseType implements CreativeWorkContract, ThingContract,
     /**
      * A publication event associated with the item.
      *
-     * @param PublicationEvent|PublicationEvent[] $publication
+     * @param \Spatie\SchemaOrg\Contracts\PublicationEventContract|\Spatie\SchemaOrg\Contracts\PublicationEventContract[] $publication
      *
      * @return static
      *
@@ -1138,7 +1143,7 @@ class WPAdBlock extends BaseType implements CreativeWorkContract, ThingContract,
     /**
      * The publisher of the creative work.
      *
-     * @param Organization|Organization[]|Person|Person[] $publisher
+     * @param \Spatie\SchemaOrg\Contracts\OrganizationContract|\Spatie\SchemaOrg\Contracts\OrganizationContract[]|\Spatie\SchemaOrg\Contracts\PersonContract|\Spatie\SchemaOrg\Contracts\PersonContract[] $publisher
      *
      * @return static
      *
@@ -1162,7 +1167,7 @@ class WPAdBlock extends BaseType implements CreativeWorkContract, ThingContract,
      * sometimes related information (e.g. indicating a [[funder]]) can be
      * expressed using schema.org terminology.
      *
-     * @param CreativeWork|CreativeWork[]|string|string[] $publishingPrinciples
+     * @param \Spatie\SchemaOrg\Contracts\CreativeWorkContract|\Spatie\SchemaOrg\Contracts\CreativeWorkContract[]|string|string[] $publishingPrinciples
      *
      * @return static
      *
@@ -1177,7 +1182,7 @@ class WPAdBlock extends BaseType implements CreativeWorkContract, ThingContract,
      * The Event where the CreativeWork was recorded. The CreativeWork may
      * capture all or part of the event.
      *
-     * @param Event|Event[] $recordedAt
+     * @param \Spatie\SchemaOrg\Contracts\EventContract|\Spatie\SchemaOrg\Contracts\EventContract[] $recordedAt
      *
      * @return static
      *
@@ -1192,7 +1197,7 @@ class WPAdBlock extends BaseType implements CreativeWorkContract, ThingContract,
      * The place and time the release was issued, expressed as a
      * PublicationEvent.
      *
-     * @param PublicationEvent|PublicationEvent[] $releasedEvent
+     * @param \Spatie\SchemaOrg\Contracts\PublicationEventContract|\Spatie\SchemaOrg\Contracts\PublicationEventContract[] $releasedEvent
      *
      * @return static
      *
@@ -1206,7 +1211,7 @@ class WPAdBlock extends BaseType implements CreativeWorkContract, ThingContract,
     /**
      * A review of the item.
      *
-     * @param Review|Review[] $review
+     * @param \Spatie\SchemaOrg\Contracts\ReviewContract|\Spatie\SchemaOrg\Contracts\ReviewContract[] $review
      *
      * @return static
      *
@@ -1220,7 +1225,7 @@ class WPAdBlock extends BaseType implements CreativeWorkContract, ThingContract,
     /**
      * Review of the item.
      *
-     * @param Review|Review[] $reviews
+     * @param \Spatie\SchemaOrg\Contracts\ReviewContract|\Spatie\SchemaOrg\Contracts\ReviewContract[] $reviews
      *
      * @return static
      *
@@ -1267,7 +1272,7 @@ class WPAdBlock extends BaseType implements CreativeWorkContract, ThingContract,
     /**
      * The Organization on whose behalf the creator was working.
      *
-     * @param Organization|Organization[] $sourceOrganization
+     * @param \Spatie\SchemaOrg\Contracts\OrganizationContract|\Spatie\SchemaOrg\Contracts\OrganizationContract[] $sourceOrganization
      *
      * @return static
      *
@@ -1283,7 +1288,7 @@ class WPAdBlock extends BaseType implements CreativeWorkContract, ThingContract,
      * (e.g. [[locationCreated]], [[spatialCoverage]], [[contentLocation]]) are
      * not known to be appropriate.
      *
-     * @param Place|Place[] $spatial
+     * @param \Spatie\SchemaOrg\Contracts\PlaceContract|\Spatie\SchemaOrg\Contracts\PlaceContract[] $spatial
      *
      * @return static
      *
@@ -1302,7 +1307,7 @@ class WPAdBlock extends BaseType implements CreativeWorkContract, ThingContract,
      *       areas that the dataset describes: a dataset of New York weather
      * would have spatialCoverage which was the place: the state of New York.
      *
-     * @param Place|Place[] $spatialCoverage
+     * @param \Spatie\SchemaOrg\Contracts\PlaceContract|\Spatie\SchemaOrg\Contracts\PlaceContract[] $spatialCoverage
      *
      * @return static
      *
@@ -1318,7 +1323,7 @@ class WPAdBlock extends BaseType implements CreativeWorkContract, ThingContract,
      * or financial contribution. e.g. a sponsor of a Medical Study or a
      * corporate sponsor of an event.
      *
-     * @param Organization|Organization[]|Person|Person[] $sponsor
+     * @param \Spatie\SchemaOrg\Contracts\OrganizationContract|\Spatie\SchemaOrg\Contracts\OrganizationContract[]|\Spatie\SchemaOrg\Contracts\PersonContract|\Spatie\SchemaOrg\Contracts\PersonContract[] $sponsor
      *
      * @return static
      *
@@ -1332,7 +1337,7 @@ class WPAdBlock extends BaseType implements CreativeWorkContract, ThingContract,
     /**
      * A CreativeWork or Event about this Thing.
      *
-     * @param CreativeWork|CreativeWork[]|Event|Event[] $subjectOf
+     * @param \Spatie\SchemaOrg\Contracts\CreativeWorkContract|\Spatie\SchemaOrg\Contracts\CreativeWorkContract[]|\Spatie\SchemaOrg\Contracts\EventContract|\Spatie\SchemaOrg\Contracts\EventContract[] $subjectOf
      *
      * @return static
      *
@@ -1423,7 +1428,7 @@ class WPAdBlock extends BaseType implements CreativeWorkContract, ThingContract,
      * learning resource for the typical intended target audience, e.g. 'PT30M',
      * 'PT1H25M'.
      *
-     * @param Duration|Duration[] $timeRequired
+     * @param \Spatie\SchemaOrg\Contracts\DurationContract|\Spatie\SchemaOrg\Contracts\DurationContract[] $timeRequired
      *
      * @return static
      *
@@ -1439,7 +1444,7 @@ class WPAdBlock extends BaseType implements CreativeWorkContract, ThingContract,
      * regional differences and technical requirements of a target market, or
      * that translates during some event.
      *
-     * @param Organization|Organization[]|Person|Person[] $translator
+     * @param \Spatie\SchemaOrg\Contracts\OrganizationContract|\Spatie\SchemaOrg\Contracts\OrganizationContract[]|\Spatie\SchemaOrg\Contracts\PersonContract|\Spatie\SchemaOrg\Contracts\PersonContract[] $translator
      *
      * @return static
      *
@@ -1495,7 +1500,7 @@ class WPAdBlock extends BaseType implements CreativeWorkContract, ThingContract,
     /**
      * An embedded video object.
      *
-     * @param Clip|Clip[]|VideoObject|VideoObject[] $video
+     * @param \Spatie\SchemaOrg\Contracts\ClipContract|\Spatie\SchemaOrg\Contracts\ClipContract[]|\Spatie\SchemaOrg\Contracts\VideoObjectContract|\Spatie\SchemaOrg\Contracts\VideoObjectContract[] $video
      *
      * @return static
      *
@@ -1510,7 +1515,7 @@ class WPAdBlock extends BaseType implements CreativeWorkContract, ThingContract,
      * Example/instance/realization/derivation of the concept of this creative
      * work. eg. The paperback edition, first edition, or eBook.
      *
-     * @param CreativeWork|CreativeWork[] $workExample
+     * @param \Spatie\SchemaOrg\Contracts\CreativeWorkContract|\Spatie\SchemaOrg\Contracts\CreativeWorkContract[] $workExample
      *
      * @return static
      *

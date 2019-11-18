@@ -25,7 +25,7 @@ class TrainStation extends BaseType implements CivicStructureContract, PlaceCont
      * expect such data to be provided using those properties, rather than using
      * the generic property/value mechanism.
      *
-     * @param PropertyValue|PropertyValue[] $additionalProperty
+     * @param \Spatie\SchemaOrg\Contracts\PropertyValueContract|\Spatie\SchemaOrg\Contracts\PropertyValueContract[] $additionalProperty
      *
      * @return static
      *
@@ -58,7 +58,7 @@ class TrainStation extends BaseType implements CivicStructureContract, PlaceCont
     /**
      * Physical address of the item.
      *
-     * @param PostalAddress|PostalAddress[]|string|string[] $address
+     * @param \Spatie\SchemaOrg\Contracts\PostalAddressContract|\Spatie\SchemaOrg\Contracts\PostalAddressContract[]|string|string[] $address
      *
      * @return static
      *
@@ -73,7 +73,7 @@ class TrainStation extends BaseType implements CivicStructureContract, PlaceCont
      * The overall rating, based on a collection of reviews or ratings, of the
      * item.
      *
-     * @param AggregateRating|AggregateRating[] $aggregateRating
+     * @param \Spatie\SchemaOrg\Contracts\AggregateRatingContract|\Spatie\SchemaOrg\Contracts\AggregateRatingContract[] $aggregateRating
      *
      * @return static
      *
@@ -104,7 +104,7 @@ class TrainStation extends BaseType implements CivicStructureContract, PlaceCont
      * whether the feature is included in an offer for the main accommodation or
      * available at extra costs.
      *
-     * @param LocationFeatureSpecification|LocationFeatureSpecification[] $amenityFeature
+     * @param \Spatie\SchemaOrg\Contracts\LocationFeatureSpecificationContract|\Spatie\SchemaOrg\Contracts\LocationFeatureSpecificationContract[] $amenityFeature
      *
      * @return static
      *
@@ -138,7 +138,7 @@ class TrainStation extends BaseType implements CivicStructureContract, PlaceCont
     /**
      * The basic containment relation between a place and one that contains it.
      *
-     * @param Place|Place[] $containedIn
+     * @param \Spatie\SchemaOrg\Contracts\PlaceContract|\Spatie\SchemaOrg\Contracts\PlaceContract[] $containedIn
      *
      * @return static
      *
@@ -152,7 +152,7 @@ class TrainStation extends BaseType implements CivicStructureContract, PlaceCont
     /**
      * The basic containment relation between a place and one that contains it.
      *
-     * @param Place|Place[] $containedInPlace
+     * @param \Spatie\SchemaOrg\Contracts\PlaceContract|\Spatie\SchemaOrg\Contracts\PlaceContract[] $containedInPlace
      *
      * @return static
      *
@@ -167,7 +167,7 @@ class TrainStation extends BaseType implements CivicStructureContract, PlaceCont
      * The basic containment relation between a place and another that it
      * contains.
      *
-     * @param Place|Place[] $containsPlace
+     * @param \Spatie\SchemaOrg\Contracts\PlaceContract|\Spatie\SchemaOrg\Contracts\PlaceContract[] $containsPlace
      *
      * @return static
      *
@@ -213,7 +213,7 @@ class TrainStation extends BaseType implements CivicStructureContract, PlaceCont
      * Upcoming or past event associated with this place, organization, or
      * action.
      *
-     * @param Event|Event[] $event
+     * @param \Spatie\SchemaOrg\Contracts\EventContract|\Spatie\SchemaOrg\Contracts\EventContract[] $event
      *
      * @return static
      *
@@ -227,7 +227,7 @@ class TrainStation extends BaseType implements CivicStructureContract, PlaceCont
     /**
      * Upcoming or past events associated with this place or organization.
      *
-     * @param Event|Event[] $events
+     * @param \Spatie\SchemaOrg\Contracts\EventContract|\Spatie\SchemaOrg\Contracts\EventContract[] $events
      *
      * @return static
      *
@@ -255,7 +255,7 @@ class TrainStation extends BaseType implements CivicStructureContract, PlaceCont
     /**
      * The geo coordinates of the place.
      *
-     * @param GeoCoordinates|GeoCoordinates[]|GeoShape|GeoShape[] $geo
+     * @param \Spatie\SchemaOrg\Contracts\GeoCoordinatesContract|\Spatie\SchemaOrg\Contracts\GeoCoordinatesContract[]|\Spatie\SchemaOrg\Contracts\GeoShapeContract|\Spatie\SchemaOrg\Contracts\GeoShapeContract[] $geo
      *
      * @return static
      *
@@ -286,7 +286,7 @@ class TrainStation extends BaseType implements CivicStructureContract, PlaceCont
     /**
      * A URL to a map of the place.
      *
-     * @param Map|Map[]|string|string[] $hasMap
+     * @param \Spatie\SchemaOrg\Contracts\MapContract|\Spatie\SchemaOrg\Contracts\MapContract[]|string|string[] $hasMap
      *
      * @return static
      *
@@ -304,7 +304,7 @@ class TrainStation extends BaseType implements CivicStructureContract, PlaceCont
      * strings or as URL (URI) links. See [background
      * notes](/docs/datamodel.html#identifierBg) for more details.
      *
-     * @param PropertyValue|PropertyValue[]|string|string[] $identifier
+     * @param \Spatie\SchemaOrg\Contracts\PropertyValueContract|\Spatie\SchemaOrg\Contracts\PropertyValueContract[]|string|string[] $identifier
      *
      * @return static
      *
@@ -319,7 +319,7 @@ class TrainStation extends BaseType implements CivicStructureContract, PlaceCont
      * An image of the item. This can be a [[URL]] or a fully described
      * [[ImageObject]].
      *
-     * @param ImageObject|ImageObject[]|string|string[] $image
+     * @param \Spatie\SchemaOrg\Contracts\ImageObjectContract|\Spatie\SchemaOrg\Contracts\ImageObjectContract[]|string|string[] $image
      *
      * @return static
      *
@@ -378,7 +378,7 @@ class TrainStation extends BaseType implements CivicStructureContract, PlaceCont
     /**
      * An associated logo.
      *
-     * @param ImageObject|ImageObject[]|string|string[] $logo
+     * @param \Spatie\SchemaOrg\Contracts\ImageObjectContract|\Spatie\SchemaOrg\Contracts\ImageObjectContract[]|string|string[] $logo
      *
      * @return static
      *
@@ -409,7 +409,7 @@ class TrainStation extends BaseType implements CivicStructureContract, PlaceCont
      * entity being described. See [background
      * notes](/docs/datamodel.html#mainEntityBackground) for details.
      *
-     * @param CreativeWork|CreativeWork[]|string|string[] $mainEntityOfPage
+     * @param \Spatie\SchemaOrg\Contracts\CreativeWorkContract|\Spatie\SchemaOrg\Contracts\CreativeWorkContract[]|string|string[] $mainEntityOfPage
      *
      * @return static
      *
@@ -508,7 +508,7 @@ class TrainStation extends BaseType implements CivicStructureContract, PlaceCont
     /**
      * The opening hours of a certain place.
      *
-     * @param OpeningHoursSpecification|OpeningHoursSpecification[] $openingHoursSpecification
+     * @param \Spatie\SchemaOrg\Contracts\OpeningHoursSpecificationContract|\Spatie\SchemaOrg\Contracts\OpeningHoursSpecificationContract[] $openingHoursSpecification
      *
      * @return static
      *
@@ -522,7 +522,7 @@ class TrainStation extends BaseType implements CivicStructureContract, PlaceCont
     /**
      * A photograph of this place.
      *
-     * @param ImageObject|ImageObject[]|Photograph|Photograph[] $photo
+     * @param \Spatie\SchemaOrg\Contracts\ImageObjectContract|\Spatie\SchemaOrg\Contracts\ImageObjectContract[]|\Spatie\SchemaOrg\Contracts\PhotographContract|\Spatie\SchemaOrg\Contracts\PhotographContract[] $photo
      *
      * @return static
      *
@@ -536,7 +536,7 @@ class TrainStation extends BaseType implements CivicStructureContract, PlaceCont
     /**
      * Photographs of this place.
      *
-     * @param ImageObject|ImageObject[]|Photograph|Photograph[] $photos
+     * @param \Spatie\SchemaOrg\Contracts\ImageObjectContract|\Spatie\SchemaOrg\Contracts\ImageObjectContract[]|\Spatie\SchemaOrg\Contracts\PhotographContract|\Spatie\SchemaOrg\Contracts\PhotographContract[] $photos
      *
      * @return static
      *
@@ -551,7 +551,7 @@ class TrainStation extends BaseType implements CivicStructureContract, PlaceCont
      * Indicates a potential Action, which describes an idealized action in
      * which this thing would play an 'object' role.
      *
-     * @param Action|Action[] $potentialAction
+     * @param \Spatie\SchemaOrg\Contracts\ActionContract|\Spatie\SchemaOrg\Contracts\ActionContract[] $potentialAction
      *
      * @return static
      *
@@ -580,7 +580,7 @@ class TrainStation extends BaseType implements CivicStructureContract, PlaceCont
     /**
      * A review of the item.
      *
-     * @param Review|Review[] $review
+     * @param \Spatie\SchemaOrg\Contracts\ReviewContract|\Spatie\SchemaOrg\Contracts\ReviewContract[] $review
      *
      * @return static
      *
@@ -594,7 +594,7 @@ class TrainStation extends BaseType implements CivicStructureContract, PlaceCont
     /**
      * Review of the item.
      *
-     * @param Review|Review[] $reviews
+     * @param \Spatie\SchemaOrg\Contracts\ReviewContract|\Spatie\SchemaOrg\Contracts\ReviewContract[] $reviews
      *
      * @return static
      *
@@ -656,7 +656,7 @@ class TrainStation extends BaseType implements CivicStructureContract, PlaceCont
      * Use this to explicitly override general opening hours brought in scope by
      * [[openingHoursSpecification]] or [[openingHours]].
      *
-     * @param OpeningHoursSpecification|OpeningHoursSpecification[] $specialOpeningHoursSpecification
+     * @param \Spatie\SchemaOrg\Contracts\OpeningHoursSpecificationContract|\Spatie\SchemaOrg\Contracts\OpeningHoursSpecificationContract[] $specialOpeningHoursSpecification
      *
      * @return static
      *
@@ -670,7 +670,7 @@ class TrainStation extends BaseType implements CivicStructureContract, PlaceCont
     /**
      * A CreativeWork or Event about this Thing.
      *
-     * @param CreativeWork|CreativeWork[]|Event|Event[] $subjectOf
+     * @param \Spatie\SchemaOrg\Contracts\CreativeWorkContract|\Spatie\SchemaOrg\Contracts\CreativeWorkContract[]|\Spatie\SchemaOrg\Contracts\EventContract|\Spatie\SchemaOrg\Contracts\EventContract[] $subjectOf
      *
      * @return static
      *

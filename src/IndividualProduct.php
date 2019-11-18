@@ -25,7 +25,7 @@ class IndividualProduct extends BaseType implements ProductContract, ThingContra
      * expect such data to be provided using those properties, rather than using
      * the generic property/value mechanism.
      *
-     * @param PropertyValue|PropertyValue[] $additionalProperty
+     * @param \Spatie\SchemaOrg\Contracts\PropertyValueContract|\Spatie\SchemaOrg\Contracts\PropertyValueContract[] $additionalProperty
      *
      * @return static
      *
@@ -59,7 +59,7 @@ class IndividualProduct extends BaseType implements ProductContract, ThingContra
      * The overall rating, based on a collection of reviews or ratings, of the
      * item.
      *
-     * @param AggregateRating|AggregateRating[] $aggregateRating
+     * @param \Spatie\SchemaOrg\Contracts\AggregateRatingContract|\Spatie\SchemaOrg\Contracts\AggregateRatingContract[] $aggregateRating
      *
      * @return static
      *
@@ -87,7 +87,7 @@ class IndividualProduct extends BaseType implements ProductContract, ThingContra
     /**
      * An intended audience, i.e. a group for whom something was created.
      *
-     * @param Audience|Audience[] $audience
+     * @param \Spatie\SchemaOrg\Contracts\AudienceContract|\Spatie\SchemaOrg\Contracts\AudienceContract[] $audience
      *
      * @return static
      *
@@ -130,7 +130,7 @@ class IndividualProduct extends BaseType implements ProductContract, ThingContra
      * The brand(s) associated with a product or service, or the brand(s)
      * maintained by an organization or business person.
      *
-     * @param Brand|Brand[]|Organization|Organization[] $brand
+     * @param \Spatie\SchemaOrg\Contracts\BrandContract|\Spatie\SchemaOrg\Contracts\BrandContract[]|\Spatie\SchemaOrg\Contracts\OrganizationContract|\Spatie\SchemaOrg\Contracts\OrganizationContract[] $brand
      *
      * @return static
      *
@@ -145,7 +145,7 @@ class IndividualProduct extends BaseType implements ProductContract, ThingContra
      * A category for the item. Greater signs or slashes can be used to
      * informally indicate a category hierarchy.
      *
-     * @param Thing|Thing[]|string|string[] $category
+     * @param \Spatie\SchemaOrg\Contracts\ThingContract|\Spatie\SchemaOrg\Contracts\ThingContract[]|string|string[] $category
      *
      * @return static
      *
@@ -173,7 +173,7 @@ class IndividualProduct extends BaseType implements ProductContract, ThingContra
     /**
      * The depth of the item.
      *
-     * @param Distance|Distance[]|QuantitativeValue|QuantitativeValue[] $depth
+     * @param \Spatie\SchemaOrg\Contracts\DistanceContract|\Spatie\SchemaOrg\Contracts\DistanceContract[]|\Spatie\SchemaOrg\Contracts\QuantitativeValueContract|\Spatie\SchemaOrg\Contracts\QuantitativeValueContract[] $depth
      *
      * @return static
      *
@@ -291,7 +291,7 @@ class IndividualProduct extends BaseType implements ProductContract, ThingContra
     /**
      * The height of the item.
      *
-     * @param Distance|Distance[]|QuantitativeValue|QuantitativeValue[] $height
+     * @param \Spatie\SchemaOrg\Contracts\DistanceContract|\Spatie\SchemaOrg\Contracts\DistanceContract[]|\Spatie\SchemaOrg\Contracts\QuantitativeValueContract|\Spatie\SchemaOrg\Contracts\QuantitativeValueContract[] $height
      *
      * @return static
      *
@@ -309,7 +309,7 @@ class IndividualProduct extends BaseType implements ProductContract, ThingContra
      * strings or as URL (URI) links. See [background
      * notes](/docs/datamodel.html#identifierBg) for more details.
      *
-     * @param PropertyValue|PropertyValue[]|string|string[] $identifier
+     * @param \Spatie\SchemaOrg\Contracts\PropertyValueContract|\Spatie\SchemaOrg\Contracts\PropertyValueContract[]|string|string[] $identifier
      *
      * @return static
      *
@@ -324,7 +324,7 @@ class IndividualProduct extends BaseType implements ProductContract, ThingContra
      * An image of the item. This can be a [[URL]] or a fully described
      * [[ImageObject]].
      *
-     * @param ImageObject|ImageObject[]|string|string[] $image
+     * @param \Spatie\SchemaOrg\Contracts\ImageObjectContract|\Spatie\SchemaOrg\Contracts\ImageObjectContract[]|string|string[] $image
      *
      * @return static
      *
@@ -339,7 +339,7 @@ class IndividualProduct extends BaseType implements ProductContract, ThingContra
      * A pointer to another product (or multiple products) for which this
      * product is an accessory or spare part.
      *
-     * @param Product|Product[] $isAccessoryOrSparePartFor
+     * @param \Spatie\SchemaOrg\Contracts\ProductContract|\Spatie\SchemaOrg\Contracts\ProductContract[] $isAccessoryOrSparePartFor
      *
      * @return static
      *
@@ -354,7 +354,7 @@ class IndividualProduct extends BaseType implements ProductContract, ThingContra
      * A pointer to another product (or multiple products) for which this
      * product is a consumable.
      *
-     * @param Product|Product[] $isConsumableFor
+     * @param \Spatie\SchemaOrg\Contracts\ProductContract|\Spatie\SchemaOrg\Contracts\ProductContract[] $isConsumableFor
      *
      * @return static
      *
@@ -368,7 +368,7 @@ class IndividualProduct extends BaseType implements ProductContract, ThingContra
     /**
      * A pointer to another, somehow related product (or multiple products).
      *
-     * @param Product|Product[]|Service|Service[] $isRelatedTo
+     * @param \Spatie\SchemaOrg\Contracts\ProductContract|\Spatie\SchemaOrg\Contracts\ProductContract[]|\Spatie\SchemaOrg\Contracts\ServiceContract|\Spatie\SchemaOrg\Contracts\ServiceContract[] $isRelatedTo
      *
      * @return static
      *
@@ -383,7 +383,7 @@ class IndividualProduct extends BaseType implements ProductContract, ThingContra
      * A pointer to another, functionally similar product (or multiple
      * products).
      *
-     * @param Product|Product[]|Service|Service[] $isSimilarTo
+     * @param \Spatie\SchemaOrg\Contracts\ProductContract|\Spatie\SchemaOrg\Contracts\ProductContract[]|\Spatie\SchemaOrg\Contracts\ServiceContract|\Spatie\SchemaOrg\Contracts\ServiceContract[] $isSimilarTo
      *
      * @return static
      *
@@ -399,7 +399,7 @@ class IndividualProduct extends BaseType implements ProductContract, ThingContra
      * the condition of the product or service, or the products or services
      * included in the offer.
      *
-     * @param OfferItemCondition|OfferItemCondition[] $itemCondition
+     * @param \Spatie\SchemaOrg\Contracts\OfferItemConditionContract|\Spatie\SchemaOrg\Contracts\OfferItemConditionContract[] $itemCondition
      *
      * @return static
      *
@@ -413,7 +413,7 @@ class IndividualProduct extends BaseType implements ProductContract, ThingContra
     /**
      * An associated logo.
      *
-     * @param ImageObject|ImageObject[]|string|string[] $logo
+     * @param \Spatie\SchemaOrg\Contracts\ImageObjectContract|\Spatie\SchemaOrg\Contracts\ImageObjectContract[]|string|string[] $logo
      *
      * @return static
      *
@@ -429,7 +429,7 @@ class IndividualProduct extends BaseType implements ProductContract, ThingContra
      * entity being described. See [background
      * notes](/docs/datamodel.html#mainEntityBackground) for details.
      *
-     * @param CreativeWork|CreativeWork[]|string|string[] $mainEntityOfPage
+     * @param \Spatie\SchemaOrg\Contracts\CreativeWorkContract|\Spatie\SchemaOrg\Contracts\CreativeWorkContract[]|string|string[] $mainEntityOfPage
      *
      * @return static
      *
@@ -443,7 +443,7 @@ class IndividualProduct extends BaseType implements ProductContract, ThingContra
     /**
      * The manufacturer of the product.
      *
-     * @param Organization|Organization[] $manufacturer
+     * @param \Spatie\SchemaOrg\Contracts\OrganizationContract|\Spatie\SchemaOrg\Contracts\OrganizationContract[] $manufacturer
      *
      * @return static
      *
@@ -458,7 +458,7 @@ class IndividualProduct extends BaseType implements ProductContract, ThingContra
      * A material that something is made from, e.g. leather, wool, cotton,
      * paper.
      *
-     * @param Product|Product[]|string|string[] $material
+     * @param \Spatie\SchemaOrg\Contracts\ProductContract|\Spatie\SchemaOrg\Contracts\ProductContract[]|string|string[] $material
      *
      * @return static
      *
@@ -476,7 +476,7 @@ class IndividualProduct extends BaseType implements ProductContract, ThingContra
      * strong product identifiers via the gtin8/gtin13/gtin14 and mpn
      * properties.
      *
-     * @param ProductModel|ProductModel[]|string|string[] $model
+     * @param \Spatie\SchemaOrg\Contracts\ProductModelContract|\Spatie\SchemaOrg\Contracts\ProductModelContract[]|string|string[] $model
      *
      * @return static
      *
@@ -519,9 +519,14 @@ class IndividualProduct extends BaseType implements ProductContract, ThingContra
     /**
      * An offer to provide this item&#x2014;for example, an offer to sell a
      * product, rent the DVD of a movie, perform a service, or give away tickets
-     * to an event.
+     * to an event. Use [[businessFunction]] to indicate the kind of transaction
+     * offered, i.e. sell, lease, etc. This property can also be used to
+     * describe a [[Demand]]. While this property is listed as expected on a
+     * number of common types, it can be used in others. In that case, using a
+     * second type, such as Product or a subtype of Product, can clarify the
+     * nature of the offer.
      *
-     * @param Offer|Offer[] $offers
+     * @param \Spatie\SchemaOrg\Contracts\DemandContract|\Spatie\SchemaOrg\Contracts\DemandContract[]|\Spatie\SchemaOrg\Contracts\OfferContract|\Spatie\SchemaOrg\Contracts\OfferContract[] $offers
      *
      * @return static
      *
@@ -536,7 +541,7 @@ class IndividualProduct extends BaseType implements ProductContract, ThingContra
      * Indicates a potential Action, which describes an idealized action in
      * which this thing would play an 'object' role.
      *
-     * @param Action|Action[] $potentialAction
+     * @param \Spatie\SchemaOrg\Contracts\ActionContract|\Spatie\SchemaOrg\Contracts\ActionContract[] $potentialAction
      *
      * @return static
      *
@@ -608,7 +613,7 @@ class IndividualProduct extends BaseType implements ProductContract, ThingContra
     /**
      * A review of the item.
      *
-     * @param Review|Review[] $review
+     * @param \Spatie\SchemaOrg\Contracts\ReviewContract|\Spatie\SchemaOrg\Contracts\ReviewContract[] $review
      *
      * @return static
      *
@@ -622,7 +627,7 @@ class IndividualProduct extends BaseType implements ProductContract, ThingContra
     /**
      * Review of the item.
      *
-     * @param Review|Review[] $reviews
+     * @param \Spatie\SchemaOrg\Contracts\ReviewContract|\Spatie\SchemaOrg\Contracts\ReviewContract[] $reviews
      *
      * @return static
      *
@@ -697,7 +702,7 @@ class IndividualProduct extends BaseType implements ProductContract, ThingContra
     /**
      * A CreativeWork or Event about this Thing.
      *
-     * @param CreativeWork|CreativeWork[]|Event|Event[] $subjectOf
+     * @param \Spatie\SchemaOrg\Contracts\CreativeWorkContract|\Spatie\SchemaOrg\Contracts\CreativeWorkContract[]|\Spatie\SchemaOrg\Contracts\EventContract|\Spatie\SchemaOrg\Contracts\EventContract[] $subjectOf
      *
      * @return static
      *
@@ -725,7 +730,7 @@ class IndividualProduct extends BaseType implements ProductContract, ThingContra
     /**
      * The weight of the product or person.
      *
-     * @param QuantitativeValue|QuantitativeValue[] $weight
+     * @param \Spatie\SchemaOrg\Contracts\QuantitativeValueContract|\Spatie\SchemaOrg\Contracts\QuantitativeValueContract[] $weight
      *
      * @return static
      *
@@ -739,7 +744,7 @@ class IndividualProduct extends BaseType implements ProductContract, ThingContra
     /**
      * The width of the item.
      *
-     * @param Distance|Distance[]|QuantitativeValue|QuantitativeValue[] $width
+     * @param \Spatie\SchemaOrg\Contracts\DistanceContract|\Spatie\SchemaOrg\Contracts\DistanceContract[]|\Spatie\SchemaOrg\Contracts\QuantitativeValueContract|\Spatie\SchemaOrg\Contracts\QuantitativeValueContract[] $width
      *
      * @return static
      *

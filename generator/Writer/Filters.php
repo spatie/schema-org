@@ -22,4 +22,22 @@ class Filters
     {
         return lcfirst($text);
     }
+
+    public static function param(array $ranges): string
+    {
+        return implode('|', array_map(function (string $type) {
+            $isArray = strpos($type, '[]') !== false;
+            $baseType = str_replace('[]', '', $type);
+
+            if (in_array($baseType, ['bool', 'false', 'true', 'string', 'float', 'int'])) {
+                return $type;
+            }
+
+            if (substr($type, 0, 1) === '\\') {
+                return $type;
+            }
+
+            return "\\Spatie\\SchemaOrg\\Contracts\\{$baseType}Contract".($isArray ? '[]' : '');
+        }, $ranges));
+    }
 }

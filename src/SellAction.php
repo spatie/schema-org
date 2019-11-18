@@ -19,7 +19,7 @@ class SellAction extends BaseType implements ActionContract, ThingContract, Trad
     /**
      * Indicates the current disposition of the Action.
      *
-     * @param ActionStatusType|ActionStatusType[] $actionStatus
+     * @param \Spatie\SchemaOrg\Contracts\ActionStatusTypeContract|\Spatie\SchemaOrg\Contracts\ActionStatusTypeContract[] $actionStatus
      *
      * @return static
      *
@@ -53,7 +53,7 @@ class SellAction extends BaseType implements ActionContract, ThingContract, Trad
      * The direct performer or driver of the action (animate or inanimate). e.g.
      * *John* wrote a book.
      *
-     * @param Organization|Organization[]|Person|Person[] $agent
+     * @param \Spatie\SchemaOrg\Contracts\OrganizationContract|\Spatie\SchemaOrg\Contracts\OrganizationContract[]|\Spatie\SchemaOrg\Contracts\PersonContract|\Spatie\SchemaOrg\Contracts\PersonContract[] $agent
      *
      * @return static
      *
@@ -82,7 +82,7 @@ class SellAction extends BaseType implements ActionContract, ThingContract, Trad
      * A sub property of participant. The participant/person/organization that
      * bought the object.
      *
-     * @param Person|Person[] $buyer
+     * @param \Spatie\SchemaOrg\Contracts\PersonContract|\Spatie\SchemaOrg\Contracts\PersonContract[] $buyer
      *
      * @return static
      *
@@ -150,7 +150,7 @@ class SellAction extends BaseType implements ActionContract, ThingContract, Trad
     /**
      * For failed actions, more information on the cause of the failure.
      *
-     * @param Thing|Thing[] $error
+     * @param \Spatie\SchemaOrg\Contracts\ThingContract|\Spatie\SchemaOrg\Contracts\ThingContract[] $error
      *
      * @return static
      *
@@ -168,7 +168,7 @@ class SellAction extends BaseType implements ActionContract, ThingContract, Trad
      * strings or as URL (URI) links. See [background
      * notes](/docs/datamodel.html#identifierBg) for more details.
      *
-     * @param PropertyValue|PropertyValue[]|string|string[] $identifier
+     * @param \Spatie\SchemaOrg\Contracts\PropertyValueContract|\Spatie\SchemaOrg\Contracts\PropertyValueContract[]|string|string[] $identifier
      *
      * @return static
      *
@@ -183,7 +183,7 @@ class SellAction extends BaseType implements ActionContract, ThingContract, Trad
      * An image of the item. This can be a [[URL]] or a fully described
      * [[ImageObject]].
      *
-     * @param ImageObject|ImageObject[]|string|string[] $image
+     * @param \Spatie\SchemaOrg\Contracts\ImageObjectContract|\Spatie\SchemaOrg\Contracts\ImageObjectContract[]|string|string[] $image
      *
      * @return static
      *
@@ -198,7 +198,7 @@ class SellAction extends BaseType implements ActionContract, ThingContract, Trad
      * The object that helped the agent perform the action. e.g. John wrote a
      * book with *a pen*.
      *
-     * @param Thing|Thing[] $instrument
+     * @param \Spatie\SchemaOrg\Contracts\ThingContract|\Spatie\SchemaOrg\Contracts\ThingContract[] $instrument
      *
      * @return static
      *
@@ -213,7 +213,7 @@ class SellAction extends BaseType implements ActionContract, ThingContract, Trad
      * The location of for example where the event is happening, an organization
      * is located, or where an action takes place.
      *
-     * @param Place|Place[]|PostalAddress|PostalAddress[]|string|string[] $location
+     * @param \Spatie\SchemaOrg\Contracts\PlaceContract|\Spatie\SchemaOrg\Contracts\PlaceContract[]|\Spatie\SchemaOrg\Contracts\PostalAddressContract|\Spatie\SchemaOrg\Contracts\PostalAddressContract[]|string|string[] $location
      *
      * @return static
      *
@@ -229,7 +229,7 @@ class SellAction extends BaseType implements ActionContract, ThingContract, Trad
      * entity being described. See [background
      * notes](/docs/datamodel.html#mainEntityBackground) for details.
      *
-     * @param CreativeWork|CreativeWork[]|string|string[] $mainEntityOfPage
+     * @param \Spatie\SchemaOrg\Contracts\CreativeWorkContract|\Spatie\SchemaOrg\Contracts\CreativeWorkContract[]|string|string[] $mainEntityOfPage
      *
      * @return static
      *
@@ -260,7 +260,7 @@ class SellAction extends BaseType implements ActionContract, ThingContract, Trad
      * undergoer (which change their state) or theme (which doesn't). e.g. John
      * read *a book*.
      *
-     * @param Thing|Thing[] $object
+     * @param \Spatie\SchemaOrg\Contracts\ThingContract|\Spatie\SchemaOrg\Contracts\ThingContract[] $object
      *
      * @return static
      *
@@ -275,7 +275,7 @@ class SellAction extends BaseType implements ActionContract, ThingContract, Trad
      * Other co-agents that participated in the action indirectly. e.g. John
      * wrote a book with *Steve*.
      *
-     * @param Organization|Organization[]|Person|Person[] $participant
+     * @param \Spatie\SchemaOrg\Contracts\OrganizationContract|\Spatie\SchemaOrg\Contracts\OrganizationContract[]|\Spatie\SchemaOrg\Contracts\PersonContract|\Spatie\SchemaOrg\Contracts\PersonContract[] $participant
      *
      * @return static
      *
@@ -290,7 +290,7 @@ class SellAction extends BaseType implements ActionContract, ThingContract, Trad
      * Indicates a potential Action, which describes an idealized action in
      * which this thing would play an 'object' role.
      *
-     * @param Action|Action[] $potentialAction
+     * @param \Spatie\SchemaOrg\Contracts\ActionContract|\Spatie\SchemaOrg\Contracts\ActionContract[] $potentialAction
      *
      * @return static
      *
@@ -365,7 +365,7 @@ class SellAction extends BaseType implements ActionContract, ThingContract, Trad
      * One or more detailed price specifications, indicating the unit price and
      * delivery or payment charges.
      *
-     * @param PriceSpecification|PriceSpecification[] $priceSpecification
+     * @param \Spatie\SchemaOrg\Contracts\PriceSpecificationContract|\Spatie\SchemaOrg\Contracts\PriceSpecificationContract[] $priceSpecification
      *
      * @return static
      *
@@ -379,7 +379,7 @@ class SellAction extends BaseType implements ActionContract, ThingContract, Trad
     /**
      * The result produced in the action. e.g. John wrote *a book*.
      *
-     * @param Thing|Thing[] $result
+     * @param \Spatie\SchemaOrg\Contracts\ThingContract|\Spatie\SchemaOrg\Contracts\ThingContract[] $result
      *
      * @return static
      *
@@ -432,7 +432,7 @@ class SellAction extends BaseType implements ActionContract, ThingContract, Trad
     /**
      * A CreativeWork or Event about this Thing.
      *
-     * @param CreativeWork|CreativeWork[]|Event|Event[] $subjectOf
+     * @param \Spatie\SchemaOrg\Contracts\CreativeWorkContract|\Spatie\SchemaOrg\Contracts\CreativeWorkContract[]|\Spatie\SchemaOrg\Contracts\EventContract|\Spatie\SchemaOrg\Contracts\EventContract[] $subjectOf
      *
      * @return static
      *
@@ -446,7 +446,7 @@ class SellAction extends BaseType implements ActionContract, ThingContract, Trad
     /**
      * Indicates a target EntryPoint for an Action.
      *
-     * @param EntryPoint|EntryPoint[] $target
+     * @param \Spatie\SchemaOrg\Contracts\EntryPointContract|\Spatie\SchemaOrg\Contracts\EntryPointContract[] $target
      *
      * @return static
      *
@@ -474,7 +474,7 @@ class SellAction extends BaseType implements ActionContract, ThingContract, Trad
     /**
      * The warranty promise(s) included in the offer.
      *
-     * @param WarrantyPromise|WarrantyPromise[] $warrantyPromise
+     * @param \Spatie\SchemaOrg\Contracts\WarrantyPromiseContract|\Spatie\SchemaOrg\Contracts\WarrantyPromiseContract[] $warrantyPromise
      *
      * @return static
      *
