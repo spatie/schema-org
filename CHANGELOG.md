@@ -2,6 +2,10 @@
 
 All Notable changes to `schema-org` will be documented in this file.
 
+## 2.11.0 - 2019-11-18
+
+- Use contracts as type-hints in doc-blocks
+
 ## 2.10.0 - 2019-11-12
 
 - Add PHP 7.4 support
