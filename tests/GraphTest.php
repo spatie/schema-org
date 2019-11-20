@@ -2,6 +2,7 @@
 
 namespace Spatie\SchemaOrg\Tests;
 
+use BadMethodCallException;
 use InvalidArgumentException;
 use PHPUnit\Framework\TestCase;
 use Spatie\SchemaOrg\Brand;
@@ -18,7 +19,7 @@ class GraphTest extends TestCase
     {
         $graph = new Graph();
 
-        $this->assertEquals('<script type="application/ld+json">{"@context":"https:\/\/schema.org","@graph":[]}</script>', $graph->toScript());
+        $this->assertEquals('<script type="application/ld+json">{"@context":"https:\/\/schema.org","@graph":[]}</script>', (string) $graph);
     }
 
     /** @test */
@@ -98,7 +99,7 @@ class GraphTest extends TestCase
     public function it_forces_unique_items()
     {
         $this->expectException(InvalidArgumentException::class);
-        $this->expectExceptionMessage(sprintf('The graph already has an item of type "%s".', Organization::class));
+        $this->expectExceptionMessage(sprintf('The graph already has an item of type "%s" with identifier "%s".', Organization::class, Graph::IDENTIFIER_DEFAULT));
 
         $graph = new Graph();
         $graph->add(Schema::organization()->name('My Company'));
@@ -109,7 +110,7 @@ class GraphTest extends TestCase
     public function it_throws_exception_if_item_does_not_exist()
     {
         $this->expectException(InvalidArgumentException::class);
-        $this->expectExceptionMessage(sprintf('The graph does not have an item of type "%s".', Organization::class));
+        $this->expectExceptionMessage(sprintf('The graph does not have an item of type "%s" with identifier "%s".', Organization::class, Graph::IDENTIFIER_DEFAULT));
 
         $graph = new Graph();
         $graph->get(Organization::class);
@@ -183,5 +184,15 @@ class GraphTest extends TestCase
         $this->assertInstanceOf(Organization::class, $graph->organization());
         $this->assertInstanceOf(Product::class, $graph->product());
         $this->assertEquals('<script type="application/ld+json">{"@context":"https:\/\/schema.org","@graph":[{"@type":"Product","name":"My Product","brand":{"@type":"Organization","name":"My Company"}}]}</script>', $graph->toScript());
+    }
+
+    /** @test */
+    public function it_throws_exception_if_method_does_not_exist()
+    {
+        $this->expectException(BadMethodCallException::class);
+        $this->expectExceptionMessage(sprintf('The method "%" does not exist on class "%s".', 'foobar', Graph::class));
+
+        $graph = new Graph();
+        $graph->foobar();
     }
 }
