@@ -2,14 +2,10 @@
 
 namespace Spatie\SchemaOrg\Tests;
 
-use InvalidArgumentException;
 use PHPUnit\Framework\TestCase;
-use Spatie\SchemaOrg\Brand;
 use Spatie\SchemaOrg\Graph;
 use Spatie\SchemaOrg\Organization;
-use Spatie\SchemaOrg\Product;
 use Spatie\SchemaOrg\Schema;
-use Spatie\SchemaOrg\Type;
 
 class GraphIdentifierTest extends TestCase
 {

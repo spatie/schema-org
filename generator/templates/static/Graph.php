@@ -27,7 +27,7 @@ class Graph implements Type, ArrayAccess, JsonSerializable
     /**
      * This overloads all \Spatie\SchemaOrg\Schema construction methods.
      * You can call them the same like on the \Spatie\SchemaOrg\Schema class.
-     * But you can also use the extended signatures:
+     * But you can also use the extended signatures.
      *
      * Graph::organisation(): Organisation
      * Graph::organisation('spatie'): Organisation
@@ -136,7 +136,7 @@ class Graph implements Type, ArrayAccess, JsonSerializable
         }
 
         // hide single one if nothing configured
-        if (!isset($this->hidden[$type])) {
+        if (! isset($this->hidden[$type])) {
             $this->hidden[$type][$identifier] = true;
 
             return $this;
@@ -162,7 +162,7 @@ class Graph implements Type, ArrayAccess, JsonSerializable
         }
 
         // show single one if nothing configured
-        if (!isset($this->hidden[$type])) {
+        if (! isset($this->hidden[$type])) {
             $this->hidden[$type][$identifier] = false;
 
             return $this;
@@ -230,6 +230,7 @@ class Graph implements Type, ArrayAccess, JsonSerializable
             '@graph' => $this->serializeElement(array_values($elements)),
         ];
     }
+
     protected function serializeElement($element)
     {
         if (is_array($element)) {
