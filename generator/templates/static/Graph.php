@@ -4,6 +4,7 @@ namespace Spatie\SchemaOrg;
 
 use ArrayAccess;
 use BadMethodCallException;
+use Closure;
 use JsonSerializable;
 use ReflectionClass;
 use ReflectionNamedType;
@@ -79,6 +80,15 @@ class Graph implements Type, ArrayAccess, JsonSerializable
         }
 
         throw new BadMethodCallException(sprintf('The method "%" does not exist on class "%s".', $method, get_class($this)));
+    }
+
+    public function if(bool $condition, Closure $callback)
+    {
+        if ($condition) {
+            $callback($this);
+        }
+
+        return $this;
     }
 
     public function add(Type $schema, string $identifier = self::IDENTIFIER_DEFAULT): self
