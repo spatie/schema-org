@@ -195,4 +195,19 @@ class GraphTest extends TestCase
         $graph = new Graph();
         $graph->foobar();
     }
+
+    /** @test */
+    public function it_can_do_things_conditionally()
+    {
+        $graph = new Graph();
+        $graph->if(true, function (Graph $graph) {
+            $graph->organization()->name('spatie');
+        });
+        $graph->if(false, function (Graph $graph) {
+            $graph->organization()->name('organization');
+        });
+
+        $this->assertEquals('spatie', $graph->organization()['name']);
+        $this->assertNotEquals('organization', $graph->organization()['name']);
+    }
 }
