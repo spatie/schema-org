@@ -20,7 +20,7 @@ class Graph implements Type, ArrayAccess, JsonSerializable
     public const IDENTIFIER_DEFAULT = 'default';
 
     /** @var array */
-    protected $elements = [];
+    protected $nodes = [];
 
     /** @var array */
     protected $hidden = [];
@@ -104,12 +104,12 @@ class Graph implements Type, ArrayAccess, JsonSerializable
 
     public function has(string $type, string $identifier = self::IDENTIFIER_DEFAULT): bool
     {
-        return array_key_exists($type, $this->elements) && array_key_exists($identifier, $this->elements[$type]);
+        return array_key_exists($type, $this->nodes) && array_key_exists($identifier, $this->nodes[$type]);
     }
 
     public function set(Type $schema, string $identifier = self::IDENTIFIER_DEFAULT)
     {
-        $this->elements[get_class($schema)][$identifier] = $schema;
+        $this->nodes[get_class($schema)][$identifier] = $schema;
 
         return $this;
     }
@@ -120,7 +120,7 @@ class Graph implements Type, ArrayAccess, JsonSerializable
             throw new TypeNotInGraph(sprintf('The graph does not have an item of type "%s" with identifier "%s".', $type, $identifier));
         }
 
-        return $this->elements[$type][$identifier];
+        return $this->nodes[$type][$identifier];
     }
 
     public function getOrCreate(string $type, string $identifier = self::IDENTIFIER_DEFAULT): Type
@@ -194,15 +194,15 @@ class Graph implements Type, ArrayAccess, JsonSerializable
             $this->hidden[$type] = [];
 
             // keep everything hidden and show only single one
-            if (isset($this->elements[$type])) {
-                foreach ($this->elements[$type] as $id => $element) {
+            if (isset($this->nodes[$type])) {
+                foreach ($this->nodes[$type] as $id => $node) {
                     $this->hidden[$type][$id] = $id !== $identifier;
                 }
 
                 return $this;
             }
 
-            // show single one if no elements exist
+            // show single one if no nodes exist
             $this->hidden[$type][$identifier] = false;
 
             return $this;
@@ -213,11 +213,11 @@ class Graph implements Type, ArrayAccess, JsonSerializable
 
     public function toArray(): array
     {
-        $elements = $this->getElements();
+        $nodes = $this->getNodes();
 
         foreach ($this->hidden as $type => $hideAll) {
             if (is_bool($hideAll) && $hideAll) {
-                unset($elements[$type]);
+                unset($nodes[$type]);
 
                 continue;
             }
@@ -225,39 +225,39 @@ class Graph implements Type, ArrayAccess, JsonSerializable
             if (is_array($hideAll)) {
                 foreach ($hideAll as $identifier => $hide) {
                     if (is_bool($hide) && $hide) {
-                        unset($elements[$type][$identifier]);
+                        unset($nodes[$type][$identifier]);
                     }
                 }
             }
         }
 
-        $elements = array_reduce($elements, function (array $carry, array $types) {
+        $nodes = array_reduce($nodes, function (array $carry, array $types) {
             return array_merge($carry, array_values($types));
         }, []);
 
         return [
             '@context' => $this->getContext(),
-            '@graph' => $this->serializeElement(array_values($elements)),
+            '@graph' => $this->serializeNode(array_values($nodes)),
         ];
     }
 
-    protected function serializeElement($element)
+    protected function serializeNode($node)
     {
-        if (is_array($element)) {
-            return array_map([$this, 'serializeElement'], array_values($element));
+        if (is_array($node)) {
+            return array_map([$this, 'serializeNode'], array_values($node));
         }
 
-        if ($element instanceof Type) {
-            $element = $element->toArray();
-            unset($element['@context']);
+        if ($node instanceof Type) {
+            $node = $node->toArray();
+            unset($node['@context']);
         }
 
-        return $element;
+        return $node;
     }
 
-    public function getElements(): array
+    public function getNodes(): array
     {
-        return $this->elements;
+        return $this->nodes;
     }
 
     public function getContext(): string
@@ -318,6 +318,6 @@ class Graph implements Type, ArrayAccess, JsonSerializable
     {
         [$type, $identifier] = $this->getTypeAndIdentifier($offset);
 
-        unset($this->elements[$type][$identifier]);
+        unset($this->nodes[$type][$identifier]);
     }
 }
