@@ -11,6 +11,8 @@ use \Spatie\SchemaOrg\Contracts\ThingContract;
  *
  * @see http://schema.org/JobPosting
  *
+ * @method static industry($industry) The value should be instance of pending types DefinedTerm|DefinedTerm[]|string|string[]
+ * @method static skills($skills) The value should be instance of pending types DefinedTerm|DefinedTerm[]|string|string[]
  */
 class JobPosting extends BaseType implements JobPostingContract, IntangibleContract, ThingContract
 {
@@ -258,20 +260,6 @@ class JobPosting extends BaseType implements JobPostingContract, IntangibleContr
     }
 
     /**
-     * The industry associated with the job position.
-     *
-     * @param string|string[] $industry
-     *
-     * @return static
-     *
-     * @see http://schema.org/industry
-     */
-    public function industry($industry)
-    {
-        return $this->setProperty('industry', $industry);
-    }
-
-    /**
      * Description of benefits associated with the job.
      *
      * @param string|string[] $jobBenefits
@@ -439,20 +427,6 @@ class JobPosting extends BaseType implements JobPostingContract, IntangibleContr
     public function sameAs($sameAs)
     {
         return $this->setProperty('sameAs', $sameAs);
-    }
-
-    /**
-     * Skills required to fulfill this role or in this Occupation.
-     *
-     * @param string|string[] $skills
-     *
-     * @return static
-     *
-     * @see http://schema.org/skills
-     */
-    public function skills($skills)
-    {
-        return $this->setProperty('skills', $skills);
     }
 
     /**

@@ -2,18 +2,20 @@
 
 namespace Spatie\SchemaOrg;
 
-use \Spatie\SchemaOrg\Contracts\RadioEpisodeContract;
+use \Spatie\SchemaOrg\Contracts\MediaGalleryContract;
+use \Spatie\SchemaOrg\Contracts\CollectionPageContract;
 use \Spatie\SchemaOrg\Contracts\CreativeWorkContract;
-use \Spatie\SchemaOrg\Contracts\EpisodeContract;
 use \Spatie\SchemaOrg\Contracts\ThingContract;
+use \Spatie\SchemaOrg\Contracts\WebPageContract;
 
 /**
- * A radio episode which can be part of a series or season.
+ * Web page type: Media gallery page. A mixed-media page that can contains media
+ * such as images, videos, and other multimedia.
  *
- * @see http://schema.org/RadioEpisode
+ * @see http://schema.org/MediaGallery
  *
  */
-class RadioEpisode extends BaseType implements RadioEpisodeContract, CreativeWorkContract, EpisodeContract, ThingContract
+class MediaGallery extends BaseType implements MediaGalleryContract, CollectionPageContract, CreativeWorkContract, ThingContract, WebPageContract
 {
     /**
      * The subject matter of the content.
@@ -157,37 +159,6 @@ class RadioEpisode extends BaseType implements RadioEpisodeContract, CreativeWor
     public function accountablePerson($accountablePerson)
     {
         return $this->setProperty('accountablePerson', $accountablePerson);
-    }
-
-    /**
-     * An actor, e.g. in tv, radio, movie, video games etc., or in an event.
-     * Actors can be associated with individual items or with a series, episode,
-     * clip.
-     *
-     * @param \Spatie\SchemaOrg\Contracts\PersonContract|\Spatie\SchemaOrg\Contracts\PersonContract[] $actor
-     *
-     * @return static
-     *
-     * @see http://schema.org/actor
-     */
-    public function actor($actor)
-    {
-        return $this->setProperty('actor', $actor);
-    }
-
-    /**
-     * An actor, e.g. in tv, radio, movie, video games etc. Actors can be
-     * associated with individual items or with a series, episode, clip.
-     *
-     * @param \Spatie\SchemaOrg\Contracts\PersonContract|\Spatie\SchemaOrg\Contracts\PersonContract[] $actors
-     *
-     * @return static
-     *
-     * @see http://schema.org/actors
-     */
-    public function actors($actors)
-    {
-        return $this->setProperty('actors', $actors);
     }
 
     /**
@@ -337,6 +308,21 @@ class RadioEpisode extends BaseType implements RadioEpisodeContract, CreativeWor
     public function awards($awards)
     {
         return $this->setProperty('awards', $awards);
+    }
+
+    /**
+     * A set of links that can help a user understand and navigate a website
+     * hierarchy.
+     *
+     * @param \Spatie\SchemaOrg\Contracts\BreadcrumbListContract|\Spatie\SchemaOrg\Contracts\BreadcrumbListContract[]|string|string[] $breadcrumb
+     *
+     * @return static
+     *
+     * @see http://schema.org/breadcrumb
+     */
+    public function breadcrumb($breadcrumb)
+    {
+        return $this->setProperty('breadcrumb', $breadcrumb);
     }
 
     /**
@@ -544,37 +530,6 @@ class RadioEpisode extends BaseType implements RadioEpisodeContract, CreativeWor
     }
 
     /**
-     * A director of e.g. tv, radio, movie, video gaming etc. content, or of an
-     * event. Directors can be associated with individual items or with a
-     * series, episode, clip.
-     *
-     * @param \Spatie\SchemaOrg\Contracts\PersonContract|\Spatie\SchemaOrg\Contracts\PersonContract[] $director
-     *
-     * @return static
-     *
-     * @see http://schema.org/director
-     */
-    public function director($director)
-    {
-        return $this->setProperty('director', $director);
-    }
-
-    /**
-     * A director of e.g. tv, radio, movie, video games etc. content. Directors
-     * can be associated with individual items or with a series, episode, clip.
-     *
-     * @param \Spatie\SchemaOrg\Contracts\PersonContract|\Spatie\SchemaOrg\Contracts\PersonContract[] $directors
-     *
-     * @return static
-     *
-     * @see http://schema.org/directors
-     */
-    public function directors($directors)
-    {
-        return $this->setProperty('directors', $directors);
-    }
-
-    /**
      * A sub property of description. A short description of the item used to
      * disambiguate from other, similar items. Information from other properties
      * (in particular, name) may be necessary for the description to be useful
@@ -702,20 +657,6 @@ class RadioEpisode extends BaseType implements RadioEpisodeContract, CreativeWor
     public function encodings($encodings)
     {
         return $this->setProperty('encodings', $encodings);
-    }
-
-    /**
-     * Position of the episode within an ordered group of episodes.
-     *
-     * @param int|int[]|string|string[] $episodeNumber
-     *
-     * @return static
-     *
-     * @see http://schema.org/episodeNumber
-     */
-    public function episodeNumber($episodeNumber)
-    {
-        return $this->setProperty('episodeNumber', $episodeNumber);
     }
 
     /**
@@ -1001,6 +942,21 @@ class RadioEpisode extends BaseType implements RadioEpisodeContract, CreativeWor
     }
 
     /**
+     * Date on which the content on this web page was last reviewed for accuracy
+     * and/or completeness.
+     *
+     * @param \DateTimeInterface|\DateTimeInterface[] $lastReviewed
+     *
+     * @return static
+     *
+     * @see http://schema.org/lastReviewed
+     */
+    public function lastReviewed($lastReviewed)
+    {
+        return $this->setProperty('lastReviewed', $lastReviewed);
+    }
+
+    /**
      * The predominant type or kind characterizing the learning resource. For
      * example, 'presentation', 'handout'.
      *
@@ -1043,6 +999,20 @@ class RadioEpisode extends BaseType implements RadioEpisodeContract, CreativeWor
     public function locationCreated($locationCreated)
     {
         return $this->setProperty('locationCreated', $locationCreated);
+    }
+
+    /**
+     * Indicates if this web page element is the main subject of the page.
+     *
+     * @param \Spatie\SchemaOrg\Contracts\WebPageElementContract|\Spatie\SchemaOrg\Contracts\WebPageElementContract[] $mainContentOfPage
+     *
+     * @return static
+     *
+     * @see http://schema.org/mainContentOfPage
+     */
+    public function mainContentOfPage($mainContentOfPage)
+    {
+        return $this->setProperty('mainContentOfPage', $mainContentOfPage);
     }
 
     /**
@@ -1107,20 +1077,6 @@ class RadioEpisode extends BaseType implements RadioEpisodeContract, CreativeWor
     }
 
     /**
-     * The composer of the soundtrack.
-     *
-     * @param \Spatie\SchemaOrg\Contracts\MusicGroupContract|\Spatie\SchemaOrg\Contracts\MusicGroupContract[]|\Spatie\SchemaOrg\Contracts\PersonContract|\Spatie\SchemaOrg\Contracts\PersonContract[] $musicBy
-     *
-     * @return static
-     *
-     * @see http://schema.org/musicBy
-     */
-    public function musicBy($musicBy)
-    {
-        return $this->setProperty('musicBy', $musicBy);
-    }
-
-    /**
      * The name of the item.
      *
      * @param string|string[] $name
@@ -1156,34 +1112,6 @@ class RadioEpisode extends BaseType implements RadioEpisodeContract, CreativeWor
     }
 
     /**
-     * The season to which this episode belongs.
-     *
-     * @param \Spatie\SchemaOrg\Contracts\CreativeWorkSeasonContract|\Spatie\SchemaOrg\Contracts\CreativeWorkSeasonContract[] $partOfSeason
-     *
-     * @return static
-     *
-     * @see http://schema.org/partOfSeason
-     */
-    public function partOfSeason($partOfSeason)
-    {
-        return $this->setProperty('partOfSeason', $partOfSeason);
-    }
-
-    /**
-     * The series to which this episode or season belongs.
-     *
-     * @param \Spatie\SchemaOrg\Contracts\CreativeWorkSeriesContract|\Spatie\SchemaOrg\Contracts\CreativeWorkSeriesContract[] $partOfSeries
-     *
-     * @return static
-     *
-     * @see http://schema.org/partOfSeries
-     */
-    public function partOfSeries($partOfSeries)
-    {
-        return $this->setProperty('partOfSeries', $partOfSeries);
-    }
-
-    /**
      * The position of an item in a series or sequence of items.
      *
      * @param int|int[]|string|string[] $position
@@ -1213,6 +1141,20 @@ class RadioEpisode extends BaseType implements RadioEpisodeContract, CreativeWor
     }
 
     /**
+     * Indicates the main image on the page.
+     *
+     * @param \Spatie\SchemaOrg\Contracts\ImageObjectContract|\Spatie\SchemaOrg\Contracts\ImageObjectContract[] $primaryImageOfPage
+     *
+     * @return static
+     *
+     * @see http://schema.org/primaryImageOfPage
+     */
+    public function primaryImageOfPage($primaryImageOfPage)
+    {
+        return $this->setProperty('primaryImageOfPage', $primaryImageOfPage);
+    }
+
+    /**
      * The person or organization who produced the work (e.g. music album,
      * movie, tv/radio series etc.).
      *
@@ -1225,21 +1167,6 @@ class RadioEpisode extends BaseType implements RadioEpisodeContract, CreativeWor
     public function producer($producer)
     {
         return $this->setProperty('producer', $producer);
-    }
-
-    /**
-     * The production company or studio responsible for the item e.g. series,
-     * video game, episode etc.
-     *
-     * @param \Spatie\SchemaOrg\Contracts\OrganizationContract|\Spatie\SchemaOrg\Contracts\OrganizationContract[] $productionCompany
-     *
-     * @return static
-     *
-     * @see http://schema.org/productionCompany
-     */
-    public function productionCompany($productionCompany)
-    {
-        return $this->setProperty('productionCompany', $productionCompany);
     }
 
     /**
@@ -1326,6 +1253,20 @@ class RadioEpisode extends BaseType implements RadioEpisodeContract, CreativeWor
     }
 
     /**
+     * A link related to this web page, for example to other related web pages.
+     *
+     * @param string|string[] $relatedLink
+     *
+     * @return static
+     *
+     * @see http://schema.org/relatedLink
+     */
+    public function relatedLink($relatedLink)
+    {
+        return $this->setProperty('relatedLink', $relatedLink);
+    }
+
+    /**
      * The place and time the release was issued, expressed as a
      * PublicationEvent.
      *
@@ -1352,6 +1293,21 @@ class RadioEpisode extends BaseType implements RadioEpisodeContract, CreativeWor
     public function review($review)
     {
         return $this->setProperty('review', $review);
+    }
+
+    /**
+     * People or organizations that have reviewed the content on this web page
+     * for accuracy and/or completeness.
+     *
+     * @param \Spatie\SchemaOrg\Contracts\OrganizationContract|\Spatie\SchemaOrg\Contracts\OrganizationContract[]|\Spatie\SchemaOrg\Contracts\PersonContract|\Spatie\SchemaOrg\Contracts\PersonContract[] $reviewedBy
+     *
+     * @return static
+     *
+     * @see http://schema.org/reviewedBy
+     */
+    public function reviewedBy($reviewedBy)
+    {
+        return $this->setProperty('reviewedBy', $reviewedBy);
     }
 
     /**
@@ -1402,6 +1358,36 @@ class RadioEpisode extends BaseType implements RadioEpisodeContract, CreativeWor
     }
 
     /**
+     * One of the more significant URLs on the page. Typically, these are the
+     * non-navigation links that are clicked on the most.
+     *
+     * @param string|string[] $significantLink
+     *
+     * @return static
+     *
+     * @see http://schema.org/significantLink
+     */
+    public function significantLink($significantLink)
+    {
+        return $this->setProperty('significantLink', $significantLink);
+    }
+
+    /**
+     * The most significant URLs on the page. Typically, these are the
+     * non-navigation links that are clicked on the most.
+     *
+     * @param string|string[] $significantLinks
+     *
+     * @return static
+     *
+     * @see http://schema.org/significantLinks
+     */
+    public function significantLinks($significantLinks)
+    {
+        return $this->setProperty('significantLinks', $significantLinks);
+    }
+
+    /**
      * The Organization on whose behalf the creator was working.
      *
      * @param \Spatie\SchemaOrg\Contracts\OrganizationContract|\Spatie\SchemaOrg\Contracts\OrganizationContract[] $sourceOrganization
@@ -1448,6 +1434,59 @@ class RadioEpisode extends BaseType implements RadioEpisodeContract, CreativeWor
     public function spatialCoverage($spatialCoverage)
     {
         return $this->setProperty('spatialCoverage', $spatialCoverage);
+    }
+
+    /**
+     * Indicates sections of a Web page that are particularly 'speakable' in the
+     * sense of being highlighted as being especially appropriate for
+     * text-to-speech conversion. Other sections of a page may also be usefully
+     * spoken in particular circumstances; the 'speakable' property serves to
+     * indicate the parts most likely to be generally useful for speech.
+     * 
+     * The *speakable* property can be repeated an arbitrary number of times,
+     * with three kinds of possible 'content-locator' values:
+     * 
+     * 1.) *id-value* URL references - uses *id-value* of an element in the page
+     * being annotated. The simplest use of *speakable* has (potentially
+     * relative) URL values, referencing identified sections of the document
+     * concerned.
+     * 
+     * 2.) CSS Selectors - addresses content in the annotated page, eg. via
+     * class attribute. Use the [[cssSelector]] property.
+     * 
+     * 3.)  XPaths - addresses content via XPaths (assuming an XML view of the
+     * content). Use the [[xpath]] property.
+     * 
+     * 
+     * For more sophisticated markup of speakable sections beyond simple ID
+     * references, either CSS selectors or XPath expressions to pick out
+     * document section(s) as speakable. For this
+     * we define a supporting type, [[SpeakableSpecification]]  which is defined
+     * to be a possible value of the *speakable* property.
+     *
+     * @param \Spatie\SchemaOrg\Contracts\SpeakableSpecificationContract|\Spatie\SchemaOrg\Contracts\SpeakableSpecificationContract[]|string|string[] $speakable
+     *
+     * @return static
+     *
+     * @see http://schema.org/speakable
+     */
+    public function speakable($speakable)
+    {
+        return $this->setProperty('speakable', $speakable);
+    }
+
+    /**
+     * One of the domain specialities to which this web page's content applies.
+     *
+     * @param \Spatie\SchemaOrg\Contracts\SpecialtyContract|\Spatie\SchemaOrg\Contracts\SpecialtyContract[] $specialty
+     *
+     * @return static
+     *
+     * @see http://schema.org/specialty
+     */
+    public function specialty($specialty)
+    {
+        return $this->setProperty('specialty', $specialty);
     }
 
     /**
@@ -1569,20 +1608,6 @@ class RadioEpisode extends BaseType implements RadioEpisodeContract, CreativeWor
     public function timeRequired($timeRequired)
     {
         return $this->setProperty('timeRequired', $timeRequired);
-    }
-
-    /**
-     * The trailer of a movie or tv/radio series, season, episode, etc.
-     *
-     * @param \Spatie\SchemaOrg\Contracts\VideoObjectContract|\Spatie\SchemaOrg\Contracts\VideoObjectContract[] $trailer
-     *
-     * @return static
-     *
-     * @see http://schema.org/trailer
-     */
-    public function trailer($trailer)
-    {
-        return $this->setProperty('trailer', $trailer);
     }
 
     /**
