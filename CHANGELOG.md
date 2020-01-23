@@ -2,6 +2,10 @@
 
 All Notable changes to `schema-org` will be documented in this file.
 
+## 2.12.0 - 2020-01-23
+
+- RDFa update
+
 ## 2.11.1 - 2019-11-18
 
 - Fix types to implement their own contract
