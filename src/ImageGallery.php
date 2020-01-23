@@ -5,6 +5,7 @@ namespace Spatie\SchemaOrg;
 use \Spatie\SchemaOrg\Contracts\ImageGalleryContract;
 use \Spatie\SchemaOrg\Contracts\CollectionPageContract;
 use \Spatie\SchemaOrg\Contracts\CreativeWorkContract;
+use \Spatie\SchemaOrg\Contracts\MediaGalleryContract;
 use \Spatie\SchemaOrg\Contracts\ThingContract;
 use \Spatie\SchemaOrg\Contracts\WebPageContract;
 
@@ -14,7 +15,7 @@ use \Spatie\SchemaOrg\Contracts\WebPageContract;
  * @see http://schema.org/ImageGallery
  *
  */
-class ImageGallery extends BaseType implements ImageGalleryContract, CollectionPageContract, CreativeWorkContract, ThingContract, WebPageContract
+class ImageGallery extends BaseType implements ImageGalleryContract, CollectionPageContract, CreativeWorkContract, MediaGalleryContract, ThingContract, WebPageContract
 {
     /**
      * The subject matter of the content.
@@ -914,7 +915,7 @@ class ImageGallery extends BaseType implements ImageGalleryContract, CollectionP
      * Indicates an item or CreativeWork that this item, or CreativeWork (in
      * some sense), is part of.
      *
-     * @param \Spatie\SchemaOrg\Contracts\CreativeWorkContract|\Spatie\SchemaOrg\Contracts\CreativeWorkContract[] $isPartOf
+     * @param \Spatie\SchemaOrg\Contracts\CreativeWorkContract|\Spatie\SchemaOrg\Contracts\CreativeWorkContract[]|string|string[] $isPartOf
      *
      * @return static
      *

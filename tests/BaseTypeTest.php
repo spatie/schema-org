@@ -251,8 +251,8 @@ class BaseTypeTest extends TestCase
         $type->setProperty('foo', 'bar');
         $type->setProperty('child', $child);
         $type->setProperty('array', [
-          'child' => $child,
-          'hello' => 'world',
+            'child' => $child,
+            'hello' => 'world',
         ]);
         $type->setProperty('string', new class() {
             public function __toString()
@@ -270,11 +270,11 @@ class BaseTypeTest extends TestCase
                 'bar' => 'baz',
             ],
             'array' => [
-              'child' => [
-                  '@type' => 'DummyType',
-                  'bar' => 'baz',
-              ],
-              'hello' => 'world',
+                'child' => [
+                    '@type' => 'DummyType',
+                    'bar' => 'baz',
+                ],
+                'hello' => 'world',
             ],
             'string' => 'lorem ipsum',
         ];

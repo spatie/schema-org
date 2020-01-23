@@ -31,6 +31,14 @@ use \Spatie\SchemaOrg\Contracts\ThingContract;
 class PaymentMethod extends BaseType implements PaymentMethodContract, EnumerationContract, IntangibleContract, ThingContract
 {
     /**
+     * A payment method using a credit, debit, store or other card to associate
+     * the payment with an account.
+     *
+     * @see http://schema.org/PaymentCard
+     */
+     const PaymentCard = 'http://schema.org/PaymentCard';
+
+    /**
      * An additional type for the item, typically used for adding more specific
      * types from external vocabularies in microdata syntax. This is a
      * relationship between something and a class that the thing is in. In RDFa

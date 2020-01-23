@@ -1034,7 +1034,7 @@ class TVSeries extends BaseType implements TVSeriesContract, CreativeWorkContrac
      * Indicates an item or CreativeWork that this item, or CreativeWork (in
      * some sense), is part of.
      *
-     * @param \Spatie\SchemaOrg\Contracts\CreativeWorkContract|\Spatie\SchemaOrg\Contracts\CreativeWorkContract[] $isPartOf
+     * @param \Spatie\SchemaOrg\Contracts\CreativeWorkContract|\Spatie\SchemaOrg\Contracts\CreativeWorkContract[]|string|string[] $isPartOf
      *
      * @return static
      *
@@ -1480,7 +1480,7 @@ class TVSeries extends BaseType implements TVSeriesContract, CreativeWorkContrac
     /**
      * A season in a media series.
      *
-     * @param \Spatie\SchemaOrg\Contracts\CreativeWorkSeasonContract|\Spatie\SchemaOrg\Contracts\CreativeWorkSeasonContract[] $season
+     * @param \Spatie\SchemaOrg\Contracts\CreativeWorkSeasonContract|\Spatie\SchemaOrg\Contracts\CreativeWorkSeasonContract[]|string|string[] $season
      *
      * @return static
      *

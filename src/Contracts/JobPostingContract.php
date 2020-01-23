@@ -36,8 +36,6 @@ interface JobPostingContract
 
     public function incentives($incentives);
 
-    public function industry($industry);
-
     public function jobBenefits($jobBenefits);
 
     public function jobLocation($jobLocation);
@@ -59,8 +57,6 @@ interface JobPostingContract
     public function salaryCurrency($salaryCurrency);
 
     public function sameAs($sameAs);
-
-    public function skills($skills);
 
     public function specialCommitments($specialCommitments);
 

@@ -931,7 +931,7 @@ class BookSeries extends BaseType implements BookSeriesContract, CreativeWorkCon
      * Indicates an item or CreativeWork that this item, or CreativeWork (in
      * some sense), is part of.
      *
-     * @param \Spatie\SchemaOrg\Contracts\CreativeWorkContract|\Spatie\SchemaOrg\Contracts\CreativeWorkContract[] $isPartOf
+     * @param \Spatie\SchemaOrg\Contracts\CreativeWorkContract|\Spatie\SchemaOrg\Contracts\CreativeWorkContract[]|string|string[] $isPartOf
      *
      * @return static
      *

@@ -12,6 +12,11 @@ use \Spatie\SchemaOrg\Contracts\ThingContract;
  * stream a TV show over the internet, to repair a motorcycle, or to loan a
  * book.
  * 
+ * Note: As the [[businessFunction]] property, which identifies the form of
+ * offer (e.g. sell, lease, repair, dispose), defaults to
+ * http://purl.org/goodrelations/v1#Sell; an Offer without a defined
+ * businessFunction value can be assumed to be an offer to sell.
+ * 
  * For [GTIN](http://www.gs1.org/barcodes/technical/idkeys/gtin)-related fields,
  * see [Check Digit
  * calculator](http://www.gs1.org/barcodes/support/check_digit_calculator) and

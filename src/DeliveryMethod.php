@@ -31,12 +31,33 @@ use \Spatie\SchemaOrg\Contracts\ThingContract;
 class DeliveryMethod extends BaseType implements DeliveryMethodContract, EnumerationContract, IntangibleContract, ThingContract
 {
     /**
+     * A DeliveryMethod in which an item is made available via locker.
+     *
+     * @see http://schema.org/LockerDelivery
+     */
+     const LockerDelivery = 'http://schema.org/LockerDelivery';
+
+    /**
      * A DeliveryMethod in which an item is collected on site, e.g. in a store
      * or at a box office.
      *
      * @see http://schema.org/OnSitePickup
      */
      const OnSitePickup = 'http://schema.org/OnSitePickup';
+
+    /**
+     * A private parcel service as the delivery mode available for a certain
+     * offer.
+     * 
+     * Commonly used values:
+     * 
+     * * http://purl.org/goodrelations/v1#DHL
+     * * http://purl.org/goodrelations/v1#FederalExpress
+     * * http://purl.org/goodrelations/v1#UPS
+     *
+     * @see http://schema.org/ParcelService
+     */
+     const ParcelService = 'http://schema.org/ParcelService';
 
     /**
      * An additional type for the item, typically used for adding more specific
