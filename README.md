@@ -2,8 +2,7 @@
 
 [![Latest Version on Packagist](https://img.shields.io/packagist/v/spatie/schema-org.svg?style=flat-square)](https://packagist.org/packages/spatie/schema-org)
 [![MIT License](https://img.shields.io/badge/license-MIT-brightgreen.svg?style=flat-square)](LICENSE.md)
-[![Code coverage](https://img.shields.io/scrutinizer/coverage/g/spatie/schema-org?style=flat-square)](https://scrutinizer-ci.com/g/spatie/schema-org)
-[![Build Status](https://img.shields.io/travis/spatie/schema-org/master.svg?style=flat-square)](https://travis-ci.org/spatie/schema-org)
+[![GitHub Workflow Status](https://img.shields.io/github/workflow/status/spatie/schema-org/run-tests?style=flat-square&logoColor=white&logo=github&label=Tests)](https://github.com/spatie/schema-org/actions?query=workflow%3Arun-tests)
 [![Quality Score](https://img.shields.io/scrutinizer/g/spatie/schema-org.svg?style=flat-square)](https://scrutinizer-ci.com/g/spatie/schema-org)
 [![StyleCI](https://styleci.io/repos/74684096/shield?branch=master)](https://styleci.io/repos/74684096)
 [![Total Downloads](https://img.shields.io/packagist/dt/spatie/schema-org.svg?style=flat-square)](https://packagist.org/packages/spatie/schema-org)
