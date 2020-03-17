@@ -26,6 +26,15 @@ class EventStatusType extends BaseType implements EventStatusTypeContract, Enume
      const EventCancelled = 'http://schema.org/EventCancelled';
 
     /**
+     * Indicates that the event was changed to allow online participation. See
+     * [[eventAttendanceMode]] for specifics of whether it is now fully or
+     * partially online.
+     *
+     * @see http://schema.org/EventMovedOnline
+     */
+     const EventMovedOnline = 'http://schema.org/EventMovedOnline';
+
+    /**
      * The event has been postponed and no new date has been set. The event's
      * previousStartDate should be set.
      *

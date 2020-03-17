@@ -717,6 +717,11 @@ class Schema
         return new CreativeWorkSeries();
     }
 
+    public static function creditCard(): CreditCard
+    {
+        return new CreditCard();
+    }
+
     public static function crematorium(): Crematorium
     {
         return new Crematorium();
@@ -1567,6 +1572,11 @@ class Schema
         return new LocationFeatureSpecification();
     }
 
+    public static function lockerDelivery(): LockerDelivery
+    {
+        return new LockerDelivery();
+    }
+
     public static function locksmith(): Locksmith
     {
         return new Locksmith();
@@ -1947,6 +1957,11 @@ class Schema
         return new ParcelDelivery();
     }
 
+    public static function parcelService(): ParcelService
+    {
+        return new ParcelService();
+    }
+
     public static function parentAudience(): ParentAudience
     {
         return new ParentAudience();
@@ -1970,6 +1985,11 @@ class Schema
     public static function payAction(): PayAction
     {
         return new PayAction();
+    }
+
+    public static function paymentCard(): PaymentCard
+    {
+        return new PaymentCard();
     }
 
     public static function paymentChargeSpecification(): PaymentChargeSpecification

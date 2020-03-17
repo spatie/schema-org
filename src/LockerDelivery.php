@@ -2,33 +2,19 @@
 
 namespace Spatie\SchemaOrg;
 
-use \Spatie\SchemaOrg\Contracts\PaymentMethodContract;
+use \Spatie\SchemaOrg\Contracts\LockerDeliveryContract;
+use \Spatie\SchemaOrg\Contracts\DeliveryMethodContract;
 use \Spatie\SchemaOrg\Contracts\EnumerationContract;
 use \Spatie\SchemaOrg\Contracts\IntangibleContract;
 use \Spatie\SchemaOrg\Contracts\ThingContract;
 
 /**
- * A payment method is a standardized procedure for transferring the monetary
- * amount for a purchase. Payment methods are characterized by the legal and
- * technical structures used, and by the organization or group carrying out the
- * transaction.
- * 
- * Commonly used values:
- * 
- * * http://purl.org/goodrelations/v1#ByBankTransferInAdvance
- * * http://purl.org/goodrelations/v1#ByInvoice
- * * http://purl.org/goodrelations/v1#Cash
- * * http://purl.org/goodrelations/v1#CheckInAdvance
- * * http://purl.org/goodrelations/v1#COD
- * * http://purl.org/goodrelations/v1#DirectDebit
- * * http://purl.org/goodrelations/v1#GoogleCheckout
- * * http://purl.org/goodrelations/v1#PayPal
- * * http://purl.org/goodrelations/v1#PaySwarm
+ * A DeliveryMethod in which an item is made available via locker.
  *
- * @see http://schema.org/PaymentMethod
+ * @see http://schema.org/LockerDelivery
  *
  */
-class PaymentMethod extends BaseType implements PaymentMethodContract, EnumerationContract, IntangibleContract, ThingContract
+class LockerDelivery extends BaseType implements LockerDeliveryContract, DeliveryMethodContract, EnumerationContract, IntangibleContract, ThingContract
 {
     /**
      * An additional type for the item, typically used for adding more specific

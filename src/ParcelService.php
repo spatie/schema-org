@@ -2,33 +2,25 @@
 
 namespace Spatie\SchemaOrg;
 
-use \Spatie\SchemaOrg\Contracts\PaymentMethodContract;
+use \Spatie\SchemaOrg\Contracts\ParcelServiceContract;
+use \Spatie\SchemaOrg\Contracts\DeliveryMethodContract;
 use \Spatie\SchemaOrg\Contracts\EnumerationContract;
 use \Spatie\SchemaOrg\Contracts\IntangibleContract;
 use \Spatie\SchemaOrg\Contracts\ThingContract;
 
 /**
- * A payment method is a standardized procedure for transferring the monetary
- * amount for a purchase. Payment methods are characterized by the legal and
- * technical structures used, and by the organization or group carrying out the
- * transaction.
+ * A private parcel service as the delivery mode available for a certain offer.
  * 
  * Commonly used values:
  * 
- * * http://purl.org/goodrelations/v1#ByBankTransferInAdvance
- * * http://purl.org/goodrelations/v1#ByInvoice
- * * http://purl.org/goodrelations/v1#Cash
- * * http://purl.org/goodrelations/v1#CheckInAdvance
- * * http://purl.org/goodrelations/v1#COD
- * * http://purl.org/goodrelations/v1#DirectDebit
- * * http://purl.org/goodrelations/v1#GoogleCheckout
- * * http://purl.org/goodrelations/v1#PayPal
- * * http://purl.org/goodrelations/v1#PaySwarm
+ * * http://purl.org/goodrelations/v1#DHL
+ * * http://purl.org/goodrelations/v1#FederalExpress
+ * * http://purl.org/goodrelations/v1#UPS
  *
- * @see http://schema.org/PaymentMethod
+ * @see http://schema.org/ParcelService
  *
  */
-class PaymentMethod extends BaseType implements PaymentMethodContract, EnumerationContract, IntangibleContract, ThingContract
+class ParcelService extends BaseType implements ParcelServiceContract, DeliveryMethodContract, EnumerationContract, IntangibleContract, ThingContract
 {
     /**
      * An additional type for the item, typically used for adding more specific
