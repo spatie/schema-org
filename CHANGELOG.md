@@ -2,6 +2,10 @@
 
 All Notable changes to `schema-org` will be documented in this file.
 
+## 2.13.0 - 2020-04-17
+
+- RDFa update
+
 ## 2.12.1 - 2020-03-17
 
 - fix after malformed RDFa import [twitter.com/ScreamingDev](https://twitter.com/ScreamingDev/status/1239859471335243779)
