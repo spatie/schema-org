@@ -4,6 +4,8 @@ namespace Spatie\SchemaOrg\Contracts;
 
 interface EducationalOrganizationContract
 {
+    public function additionalProperty($additionalProperty);
+
     public function additionalType($additionalType);
 
     public function address($address);
@@ -14,17 +16,27 @@ interface EducationalOrganizationContract
 
     public function alumni($alumni);
 
+    public function amenityFeature($amenityFeature);
+
     public function areaServed($areaServed);
 
     public function award($award);
 
     public function awards($awards);
 
+    public function branchCode($branchCode);
+
     public function brand($brand);
 
     public function contactPoint($contactPoint);
 
     public function contactPoints($contactPoints);
+
+    public function containedIn($containedIn);
+
+    public function containedInPlace($containedInPlace);
+
+    public function containsPlace($containsPlace);
 
     public function department($department);
 
@@ -58,7 +70,11 @@ interface EducationalOrganizationContract
 
     public function funder($funder);
 
+    public function geo($geo);
+
     public function globalLocationNumber($globalLocationNumber);
+
+    public function hasMap($hasMap);
 
     public function hasOfferCatalog($hasOfferCatalog);
 
@@ -68,7 +84,11 @@ interface EducationalOrganizationContract
 
     public function image($image);
 
+    public function isAccessibleForFree($isAccessibleForFree);
+
     public function isicV4($isicV4);
+
+    public function latitude($latitude);
 
     public function legalName($legalName);
 
@@ -78,9 +98,17 @@ interface EducationalOrganizationContract
 
     public function logo($logo);
 
+    public function longitude($longitude);
+
     public function mainEntityOfPage($mainEntityOfPage);
 
     public function makesOffer($makesOffer);
+
+    public function map($map);
+
+    public function maps($maps);
+
+    public function maximumAttendeeCapacity($maximumAttendeeCapacity);
 
     public function member($member);
 
@@ -96,11 +124,21 @@ interface EducationalOrganizationContract
 
     public function offeredBy($offeredBy);
 
+    public function openingHours($openingHours);
+
+    public function openingHoursSpecification($openingHoursSpecification);
+
     public function owns($owns);
 
     public function parentOrganization($parentOrganization);
 
+    public function photo($photo);
+
+    public function photos($photos);
+
     public function potentialAction($potentialAction);
+
+    public function publicAccess($publicAccess);
 
     public function publishingPrinciples($publishingPrinciples);
 
@@ -115,6 +153,10 @@ interface EducationalOrganizationContract
     public function serviceArea($serviceArea);
 
     public function slogan($slogan);
+
+    public function smokingAllowed($smokingAllowed);
+
+    public function specialOpeningHoursSpecification($specialOpeningHoursSpecification);
 
     public function sponsor($sponsor);
 
