@@ -108,7 +108,7 @@ $business = ['name' => 'Spatie'];
 
 $localBusiness = Schema::localBusiness()
     ->name($business['name'])
-    ->if(isset($business['email']), function (LocalBusiness $schema) {
+    ->if(isset($business['email']), function (LocalBusiness $schema) use ($business) {
         $schema->email($business['email']);
     });
 ```
