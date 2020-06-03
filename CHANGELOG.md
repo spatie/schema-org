@@ -2,6 +2,10 @@
 
 All Notable changes to `schema-org` will be documented in this file.
 
+## 2.14.0 - 2020-06-03
+
+- add identifiers to `\Spatie\SchemaOrg\Graph` nodes [#124](https://github.com/spatie/schema-org/pull/124)
+
 ## 2.13.0 - 2020-04-17
 
 - RDFa update
