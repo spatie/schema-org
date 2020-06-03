@@ -193,6 +193,75 @@ echo $graph;
 
 With these tools the graph is a collection of all available schemas, can link these schemas with each other and prevent helper schemas from being rendered in the script-tag.
 
+### Graph Node identifiers
+
+Sometimes you have to keep track of multiple Graph nodes of the same type - for example multiple `Person` nodes for different people in your Organization.
+To do so you are able to use node identifiers on your graph instance.
+If you don't provide an identifier a reserved keyword `default` identifier will be used.
+
+```php
+use Spatie\SchemaOrg\Graph;
+use Spatie\SchemaOrg\Person;
+
+$graph = new Graph();
+
+// add a Person using chaining
+$graph->person('freekmurze')
+    ->givenName('Freek')
+    ->familyName('Van der Herten')
+    ->alternateName('freekmurze');
+
+// add a Person using closure
+$graph->person('sebastiandedeyne', function(Person $sebastian, Graph $graph): void {
+    $sebastian
+        ->givenName('Sebastian')
+        ->familyName('De Deyne')
+        ->alternateName('sebastiandedeyne');
+}); 
+
+// add a person using closure and second call with same identifier
+$graph->person(
+    'gummibeer', 
+    fn(Person $gummibeer) => $gummibeer->alternateName('gummibeer')
+);
+$graph->person('gummibeer')
+    ->givenName('Tom')
+    ->familyName('Witkowski');
+
+$graph->person('random')->name('Random Person');
+
+// hide the random person from Graph
+$graph->hide(Person::class, 'random');
+
+echo json_encode($graph);
+```
+
+```json
+{
+    "@context":"https:\/\/schema.org",
+    "@graph":[
+        {
+            "@type":"Person",
+            "givenName":"Freek",
+            "familyName":"Van der Herten",
+            "alternateName":"freekmurze"
+        },
+        {
+            "@type":"Person",
+            "givenName":"Sebastian",
+            "familyName":"De Deyne",
+            "alternateName":"sebastiandedeyne"
+        },
+        {
+            "@type":"Person",
+            "alternateName":"gummibeer",
+            "givenName":"Tom",
+            "familyName":"Witkowski"
+        }
+    ]
+}
+```
+
 ## Known Issues
 
 - The `Float` type isn't available since it's a reserved keyword in PHP
