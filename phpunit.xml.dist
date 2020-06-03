@@ -19,6 +19,7 @@
             <directory suffix=".php">src/Exceptions</directory>
             <file>./src/BaseType.php</file>
             <file>./src/Type.php</file>
+            <file>./src/Graph.php</file>
         </whitelist>
     </filter>
     <logging>
