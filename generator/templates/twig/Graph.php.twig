@@ -13,7 +13,9 @@ use Spatie\SchemaOrg\Exceptions\TypeAlreadyInGraph;
 use Spatie\SchemaOrg\Exceptions\TypeNotInGraph;
 
 /**
- * @mixin \Spatie\SchemaOrg\Schema
+{% for type in types %}
+ * @method self|{{ type.name }} {{ type.name | lcfirst }}(string|Closure|null $identifier = null, Closure $callback = null)
+{% endfor %}
  */
 class Graph implements Type, ArrayAccess, JsonSerializable
 {
