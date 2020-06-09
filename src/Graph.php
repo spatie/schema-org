@@ -665,7 +665,7 @@ class Graph implements Type, ArrayAccess, JsonSerializable
             $type = (new ReflectionClass(Schema::class))->getMethod($method)->getReturnType();
 
             if (! $type instanceof ReflectionNamedType) {
-                throw new BadMethodCallException(sprintf('The method "%" has an invalid return type which does not resolve to "%s".', $method, ReflectionNamedType::class));
+                throw new BadMethodCallException(sprintf('The method "%s" has an invalid return type which does not resolve to "%s".', $method, ReflectionNamedType::class));
             }
 
             $identifier = self::IDENTIFIER_DEFAULT;
@@ -693,7 +693,7 @@ class Graph implements Type, ArrayAccess, JsonSerializable
             return $schema;
         }
 
-        throw new BadMethodCallException(sprintf('The method "%" does not exist on class "%s".', $method, get_class($this)));
+        throw new BadMethodCallException(sprintf('The method "%s" does not exist on class "%s".', $method, get_class($this)));
     }
 
     public function if(bool $condition, Closure $callback)
