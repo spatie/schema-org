@@ -190,7 +190,7 @@ class GraphTest extends TestCase
     public function it_throws_exception_if_method_does_not_exist()
     {
         $this->expectException(BadMethodCallException::class);
-        $this->expectExceptionMessage(sprintf('The method "%" does not exist on class "%s".', 'foobar', Graph::class));
+        $this->expectExceptionMessage(sprintf('The method "%s" does not exist on class "%s".', 'foobar', Graph::class));
 
         $graph = new Graph();
         $graph->foobar();
