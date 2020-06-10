@@ -2,6 +2,11 @@
 
 All Notable changes to `schema-org` will be documented in this file.
 
+## 2.14.1 - 2020-06-10
+
+- fix `\BadMethodCallException` message thrown in `\Spatie\SchemaOrg\Graph`
+- fix `\Spatie\SchemaOrg\Graph` docblock `@method` annotations
+
 ## 2.14.0 - 2020-06-03
 
 - add identifiers to `\Spatie\SchemaOrg\Graph` nodes [#124](https://github.com/spatie/schema-org/pull/124)

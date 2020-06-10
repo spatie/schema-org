@@ -14,7 +14,7 @@ use Spatie\SchemaOrg\Exceptions\TypeNotInGraph;
 
 /**
 {% for type in types %}
- * @method self|{{ type.name }} {{ type.name | lcfirst }}(string|Closure|null $identifier = null, Closure $callback = null)
+ * @method self|{{ type.name }} {{ type.name | lcfirst }}(string|Closure|null $identifier = null, Closure|null $callback = null)
 {% endfor %}
  */
 class Graph implements Type, ArrayAccess, JsonSerializable
@@ -53,7 +53,7 @@ class Graph implements Type, ArrayAccess, JsonSerializable
             $type = (new ReflectionClass(Schema::class))->getMethod($method)->getReturnType();
 
             if (! $type instanceof ReflectionNamedType) {
-                throw new BadMethodCallException(sprintf('The method "%" has an invalid return type which does not resolve to "%s".', $method, ReflectionNamedType::class));
+                throw new BadMethodCallException(sprintf('The method "%s" has an invalid return type which does not resolve to "%s".', $method, ReflectionNamedType::class));
             }
 
             $identifier = self::IDENTIFIER_DEFAULT;
@@ -81,7 +81,7 @@ class Graph implements Type, ArrayAccess, JsonSerializable
             return $schema;
         }
 
-        throw new BadMethodCallException(sprintf('The method "%" does not exist on class "%s".', $method, get_class($this)));
+        throw new BadMethodCallException(sprintf('The method "%s" does not exist on class "%s".', $method, get_class($this)));
     }
 
     public function if(bool $condition, Closure $callback)
