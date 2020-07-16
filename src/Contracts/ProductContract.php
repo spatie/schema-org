@@ -30,6 +30,8 @@ interface ProductContract
 
     public function disambiguatingDescription($disambiguatingDescription);
 
+    public function gtin($gtin);
+
     public function gtin12($gtin12);
 
     public function gtin13($gtin13);

@@ -217,6 +217,28 @@ class Product extends BaseType implements ProductContract, ThingContract
     }
 
     /**
+     * A Global Trade Item Number (GTIN). GTINs identify trade items, including products
+     * and services, using numeric identification codes. The gtin property generalizes
+     * the earlier gtin8, gtin12, gtin13, and gtin14 properties. The GS1 digital link
+     * specifications express GTINs as URLs. A correct gtin value should be a valid GTIN,
+     * which means that it should be an all-numeric string of either 8, 12, 13 or 14 digits,
+     * or a "GS1 Digital Link" URL based on such a string. The numeric component should also
+     * have a valid GS1 check digit and meet the other rules for valid GTINs. See also GS1's
+     * GTIN Summary and Wikipedia for more details. Left-padding of the gtin values is not
+     * required or encouraged.
+     *
+     * @param string|string[] $gtin
+     *
+     * @return static
+     *
+     * @see http://schema.org/gtin
+     */
+    public function gtin($gtin)
+    {
+        return $this->setProperty('gtin', $gtin);
+    }
+
+    /**
      * The GTIN-12 code of the product, or the product to which the offer
      * refers. The GTIN-12 is the 12-digit GS1 Identification Key composed of a
      * U.P.C. Company Prefix, Item Reference, and Check Digit used to identify
