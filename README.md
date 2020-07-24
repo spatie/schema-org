@@ -311,6 +311,7 @@ We publish all received postcards [on our company website](https://spatie.be/en/
 ## Credits
 
 - [Sebastian De Deyne](https://github.com/sebastiandedeyne)
+- [Tom Witkowski](https://github.com/Gummibeer)
 - [All Contributors](../../contributors)
 
 ## License
