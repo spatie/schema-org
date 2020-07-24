@@ -11,8 +11,8 @@
 
 ------
 
-> **NOTICE:**
-> 
+## NOTICE
+
 > This package supports [schema.org:v7.04](https://schema.org/version/7.04). 
 > Because of the required time to upgrade it to newer versions we won't upgrade it.
 > If you find bugs or want to discuss features not related to schema.org types but the methods provided by this package feel free to open an issue.
