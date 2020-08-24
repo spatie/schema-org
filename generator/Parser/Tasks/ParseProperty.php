@@ -9,31 +9,27 @@ class ParseProperty extends Task
 {
     public function __invoke(): ?Property
     {
-        $node = new Crawler($this->definition);
-
         $property = new Property();
 
-        $property->name = $this->getText($node, '[property="rdfs:label"]');
+        $property->name = $this->getDefinitionProperty('rdfs:label');
 
         if (empty($property->name)) {
             return null;
         }
 
-        $property->description = $this->getText($node, '[property="rdfs:comment"]');
+        $property->description = $this->getDefinitionProperty('rdfs:comment');
 
-        $property->resource = $this->getAttribute($node, 'resource');
+        $property->resource = $this->getResource();
 
-        $node
-            ->filter('[property="http://schema.org/domainIncludes"]')
-            ->each(function (Crawler $domain) use ($property) {
-                $property->addType($this->getText($domain));
+        $this->getWrappedDefinitionProperty('http://schema.org/domainIncludes')
+            ->each(function (array $domain) use ($property) {
+                $property->addType($this->getResourceName($domain));
             });
 
-        $node
-            ->filter('[property="http://schema.org/rangeIncludes"]')
-            ->each(function (Crawler $range) use ($property) {
+        $this->getWrappedDefinitionProperty('http://schema.org/rangeIncludes')
+            ->each(function (array $range) use ($property) {
                 $property->addRanges(
-                    $this->castRangesToTypes(str_replace('http://schema.org/', '', $this->getAttribute($range, 'href')))
+                    $this->castRangesToTypes($this->getResourceName($range))
                 );
             });
 

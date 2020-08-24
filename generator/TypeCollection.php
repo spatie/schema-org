@@ -9,7 +9,7 @@ class TypeCollection
 
     public function __construct(array $types, array $properties, array $constants)
     {
-        $typeNames = array_map(function (Type $type) {
+        $typeNames = array_map(static function (Type $type) {
             return $type->name;
         }, $types);
 
@@ -22,6 +22,7 @@ class TypeCollection
                 if (
                     strpos($range, '[]') === false
                     && ! in_array($range, ['bool', 'false', 'true', '\DateTimeInterface', 'string', 'float', 'int'])
+                    && ! in_array($range, ['GeospatialGeometry', 'EducationalOccupationalCredential', 'DefinedTerm', 'VirtualLocation', 'PhysicalActivityCategory', 'GovernmentBenefitsType'])
                     && ! isset($this->types[$range])
                 ) {
                     $property->pending = true;

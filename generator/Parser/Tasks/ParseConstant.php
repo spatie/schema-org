@@ -9,19 +9,17 @@ class ParseConstant extends Task
 {
     public function __invoke(): ?Constant
     {
-        $node = new Crawler($this->definition);
-
         $constant = new Constant();
 
-        $constant->name = preg_replace('/\s+/', '_', $this->getText($node, '[property="rdfs:label"]'));
+        $constant->name = preg_replace('/\s+/', '_', $this->getDefinitionProperty('rdfs:label'));
 
         if (empty($constant->name)) {
             return null;
         }
 
-        $constant->description = $this->getText($node, '[property="rdfs:comment"]');
+        $constant->description = $this->getDefinitionProperty('rdfs:comment');
 
-        $constant->value = $this->getAttribute($node, 'resource');
+        $constant->value = $this->getResource();
 
         return $constant;
     }

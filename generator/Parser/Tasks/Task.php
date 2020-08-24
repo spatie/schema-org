@@ -2,45 +2,44 @@
 
 namespace Spatie\SchemaOrg\Generator\Parser\Tasks;
 
-use Symfony\Component\DomCrawler\Crawler;
+use Tightenco\Collect\Support\Collection;
 
 abstract class Task
 {
-    /** @string */
+    /** @array */
     protected $definition;
 
-    public function __construct(string $definition)
+    public function __construct(array $definition)
     {
         $this->definition = $definition;
     }
 
-    public static function fromCrawler(Crawler $crawler): self
+    public static function fromJsonLdArray(array $jsonLdArray): self
     {
-        $node = $crawler->getNode(0);
-        $html = $node->ownerDocument->saveHTML($node);
-
-        return new static($html);
+        return new static($jsonLdArray);
     }
 
-    protected function getText(Crawler $node, string $selector = null): string
+    protected function getDefinitionProperty(string $selector): string
     {
-        if ($selector) {
-            $node = $node->filter($selector)->first();
-        }
-
-        if ($node->count() === 0) {
-            return '';
-        }
-
-        return trim($node->text());
+        return $this->definition[$selector] ?? '';
     }
 
-    protected function getAttribute(Crawler $node, string $attribute): string
+    protected function getWrappedDefinitionProperty(string $selector): Collection
     {
-        if ($node->count() === 0) {
-            return '';
+        $property = $this->definition[$selector] ?? [];
+        if (count($property) === 1) {
+            $property = [$property];
         }
+        return collect($property);
+    }
 
-        return $node->filter("[{$attribute}]")->attr($attribute) ?? '';
+    protected function getResource(?array $schemaResource = null)
+    {
+        return $schemaResource['@id'] ?? $this->definition['@id'];
+    }
+
+    protected function getResourceName(?array $schemaResource = null)
+    {
+        return substr($this->getResource($schemaResource), 18);
     }
 }

@@ -30,8 +30,7 @@
         "league/flysystem": "^1.0",
         "phpunit/phpunit": "^8.0",
         "symfony/console": "^3.2",
-        "symfony/css-selector": "^3.2",
-        "symfony/dom-crawler": "^3.2",
+        "tightenco/collect": "^7.25",
         "twig/twig": "^1.28"
     },
     "config": {
