@@ -3,7 +3,6 @@
 namespace Spatie\SchemaOrg\Generator\Parser\Tasks;
 
 use Spatie\SchemaOrg\Generator\Property;
-use Symfony\Component\DomCrawler\Crawler;
 
 class ParseProperty extends Task
 {

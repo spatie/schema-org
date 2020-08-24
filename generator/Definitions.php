@@ -26,7 +26,7 @@ class Definitions
         }
     }
 
-    public function query(string $selector)
+    public function query(string $selector): Collection
     {
         return (new JsonLdParser($this->loadSource('core')))->filter($selector);
     }

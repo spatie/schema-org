@@ -3,7 +3,6 @@
 namespace Spatie\SchemaOrg\Generator\Parser\Tasks;
 
 use Spatie\SchemaOrg\Generator\Constant;
-use Symfony\Component\DomCrawler\Crawler;
 
 class ParseConstant extends Task
 {

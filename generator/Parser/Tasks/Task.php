@@ -30,6 +30,7 @@ abstract class Task
         if (count($property) === 1) {
             $property = [$property];
         }
+
         return collect($property);
     }
 

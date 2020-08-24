@@ -1,13 +1,11 @@
 <?php
 
-
 namespace Spatie\SchemaOrg\Generator\Parser;
 
 use Tightenco\Collect\Support\Collection;
 
 class JsonLdParser
 {
-
     /**
      * @var \Tightenco\Collect\Support\Collection
      */
