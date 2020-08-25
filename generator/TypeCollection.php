@@ -13,7 +13,7 @@ class TypeCollection
             return $type->name;
         }, $types);
 
-        $this->types = array_combine($typeNames, $types);
+        $this->types = array_combine($typeNames, $this->sanitizePendingParents($typeNames, $types));
 
         ksort($this->types);
 
@@ -65,5 +65,22 @@ class TypeCollection
     public function toArray(): array
     {
         return $this->types;
+    }
+
+    /**
+     * @param array $types
+     *
+     * @return array
+     */
+    private function sanitizePendingParents(array $typeNames, array $types): array
+    {
+        $types = collect($types)->map(static function ($type) use ($typeNames) {
+            $type->parents = array_filter($type->parents, static function ($parent) use ($typeNames) {
+               return in_array($parent, $typeNames);
+            });
+            return $type;
+        })->toArray();
+
+        return $types;
     }
 }
