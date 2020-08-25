@@ -36,8 +36,8 @@ class ParseType extends Task
 
         $type->resource = $this->getResource();
 
-        if (array_key_exists('http://schema.org/source', $this->definition)) {
-            $type->source = $this->getWrappedDefinitionProperty('http://schema.org/source')
+        if (array_key_exists('https://schema.org/source', $this->definition)) {
+            $type->source = $this->getWrappedDefinitionProperty('https://schema.org/source')
                 ->map(function ($value) {
                     return $this->getResource($value);
                 })->toArray();

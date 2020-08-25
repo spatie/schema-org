@@ -20,7 +20,7 @@ class ParseProperty extends Task
 
         $property->resource = $this->getResource();
 
-        $this->getWrappedDefinitionProperty('http://schema.org/domainIncludes')
+        $this->getWrappedDefinitionProperty('https://schema.org/domainIncludes')
             ->each(function (array $domain) use ($property) {
                 $property->addType($this->getResourceName($domain));
             });
