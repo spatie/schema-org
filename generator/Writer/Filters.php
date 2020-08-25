@@ -27,6 +27,9 @@ class Filters
         $text = str_replace(["<ul>\n", '</ul>', '</li>'], '', $text);
         $text = str_replace('<li>', '* ', $text);
 
+        // Remove encoded angle braces and quotes
+        $text = str_replace(['&lt;', '&gt;', '&quot;'], ['<', '>', '"'], $text);
+
         // Replace any remote links first...
         $text = preg_replace('/<a href="([\.0-9A-Za-z\:\/\-\_#]+)">([0-9a-zA-Z\s\-\_]*)<\/a>/', '[$2]($1)', $text);
 
