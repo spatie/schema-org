@@ -13,7 +13,7 @@ class ParseType extends Task
         $type->name = $this->getDefinitionProperty('rdfs:label');
 
         if (
-            in_array($type->name, ['', 'DataType', 'Float', 'Integer', 'URL']) ||
+            in_array($type->name, ['', 'DataType', 'Float', 'Integer', 'URL', 'Class']) ||
             $this->isPartOfPending()
         ) {
             return null;
