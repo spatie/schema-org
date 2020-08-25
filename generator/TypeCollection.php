@@ -22,7 +22,6 @@ class TypeCollection
                 if (
                     strpos($range, '[]') === false
                     && ! in_array($range, ['bool', 'false', 'true', '\DateTimeInterface', 'string', 'float', 'int'])
-                    && ! in_array($range, ['GeospatialGeometry', 'EducationalOccupationalCredential', 'DefinedTerm', 'VirtualLocation', 'PhysicalActivityCategory', 'GovernmentBenefitsType'])
                     && ! isset($this->types[$range])
                 ) {
                     $property->pending = true;
@@ -76,7 +75,7 @@ class TypeCollection
     {
         $types = collect($types)->map(static function ($type) use ($typeNames) {
             $type->parents = array_filter($type->parents, static function ($parent) use ($typeNames) {
-               return in_array($parent, $typeNames);
+                return in_array($parent, $typeNames, true);
             });
             return $type;
         })->toArray();
