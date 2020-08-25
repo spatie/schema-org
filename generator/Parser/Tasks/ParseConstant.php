@@ -12,10 +12,7 @@ class ParseConstant extends Task
 
         $constant->name = preg_replace('/\s+/', '_', $this->getDefinitionProperty('rdfs:label'));
 
-        if (
-            empty($constant->name) ||
-            $this->isPartOfPending()
-        ) {
+        if (empty($constant->name)) {
             return null;
         }
 

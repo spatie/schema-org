@@ -25,7 +25,7 @@ class ParseProperty extends Task
                 $property->addType($this->getResourceName($domain));
             });
 
-        $this->getWrappedDefinitionProperty('http://schema.org/rangeIncludes')
+        $this->getWrappedDefinitionProperty('https://schema.org/rangeIncludes')
             ->each(function (array $range) use ($property) {
                 $property->addRanges(
                     $this->castRangesToTypes($this->getResourceName($range))
