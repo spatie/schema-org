@@ -15,4 +15,7 @@ class Constant
 
     /** var string */
     public $type;
+
+    /** @var array */
+    public $source;
 }

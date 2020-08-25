@@ -22,6 +22,9 @@ class Type
     /** @var string */
     public $resource;
 
+    /** @var array */
+    public $source;
+
     /** @var bool */
     protected $parentsLoaded = false;
 

@@ -21,7 +21,9 @@ abstract class Task
 
     protected function getDefinitionProperty(string $selector): string
     {
-        return $this->definition[$selector] ?? '';
+
+        $property = $this->definition[$selector] ?? '';
+        return is_array($property) && array_key_exists('@language', $property) && array_key_exists('@value', $property) ? $property['@value'] : $property;
     }
 
     protected function getWrappedDefinitionProperty(string $selector): Collection
@@ -48,5 +50,22 @@ abstract class Task
     protected function getResourceName(?array $schemaResource = null)
     {
         return str_replace('http://schema.org/', '', $this->getResource($schemaResource));
+    }
+
+    protected function isPartOfPending(): bool
+    {
+        $isPartOf = $this->getWrappedDefinitionProperty('http://schema.org/isPartOf');
+        if ($isPartOf->isEmpty()) {
+            return false;
+        }
+
+        $filtered = $isPartOf->filter(static function ($schema) {
+            return array_key_exists('@id', $schema) && $schema['@id'] === 'http://pending.schema.org';
+        });
+        if ($filtered->isEmpty()) {
+            return false;
+        }
+
+        return true;
     }
 }

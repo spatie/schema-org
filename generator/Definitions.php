@@ -28,7 +28,7 @@ class Definitions
 
     public function query(string $selector): Collection
     {
-        return (new JsonLdParser($this->loadSource('core')))->filter($selector);
+        return (new JsonLdParser($this->loadSource('current')))->filter($selector);
     }
 
     protected function loadSource(string $sourceId, bool $fromCache = true): string

@@ -12,7 +12,10 @@ class ParseType extends Task
 
         $type->name = $this->getDefinitionProperty('rdfs:label');
 
-        if (in_array($type->name, ['', 'DataType', 'Float', 'Integer', 'URL'])) {
+        if (
+            in_array($type->name, ['', 'DataType', 'Float', 'Integer', 'URL']) ||
+            $this->isPartOfPending()
+        ) {
             return null;
         }
 
@@ -32,6 +35,13 @@ class ParseType extends Task
         $type->description = $this->getDefinitionProperty('rdfs:comment');
 
         $type->resource = $this->getResource();
+
+        if (array_key_exists('http://schema.org/source', $this->definition)) {
+            $type->source = $this->getWrappedDefinitionProperty('http://schema.org/source')
+                ->map(function ($value) {
+                    return $this->getResource($value);
+                })->toArray();
+        }
 
         return $type;
     }

@@ -31,10 +31,10 @@ class Filters
         $text = str_replace(['&lt;', '&gt;', '&quot;'], ['<', '>', '"'], $text);
 
         // Replace any remote links first...
-        $text = preg_replace('/<a href="([\.0-9A-Za-z\:\/\-\_#]+)">([0-9a-zA-Z\s\-\_]*)<\/a>/', '[$2]($1)', $text);
+        $text = preg_replace('/<a href="([\.0-9A-Za-z\:\/\-\_#\+]+)">([0-9a-zA-Z\s\-\_]*)<\/a>/', '[$2]($1)', $text);
 
         // Next replace any local links...
-        $text = preg_replace('/<a class="localLink" href="[a-zA-Z0-9\.\/\:]+">([a-zA-Z\s]*)<\/a>/', '[[$1]]', $text);
+        $text = preg_replace('/<a class="localLink" href="[a-zA-Z0-9\.\/\:\#\+]+">([a-zA-Z\s]*)<\/a>/', '[[$1]]', $text);
 
         $text = rtrim($text);
 

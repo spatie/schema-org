@@ -32,7 +32,7 @@ class GenerateCommand extends Command
         $generator = new PackageGenerator();
 
         $definitions = new Definitions([
-            'core' => 'https://raw.githubusercontent.com/schemaorg/schemaorg/main/data/releases/7.04/schema.jsonld',
+            'current' => 'https://raw.githubusercontent.com/schemaorg/schemaorg/main/data/releases/9.0/schemaorg-current-http.jsonld',
         ]);
 
         if (! $input->getOption('local')) {

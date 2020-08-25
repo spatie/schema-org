@@ -15,6 +15,13 @@ use \Spatie\SchemaOrg\Contracts\{{ parent }}Contract;
 {% for property in type.properties if property.pending  %}
  * @method static {{ property.name }}(${{ property.name }}) The value should be instance of pending types {{ property.ranges | join('|') }}
 {% endfor %}
+{% if type.source is not empty %}
+ *
+ * External Sources:
+{% for source in type.source  %}
+ * @see {{ source }}
+{% endfor %}
+{% endif %}
  */
 class {{ type.name }} extends BaseType implements {{ type.name }}Contract{% if type.parents %}, {% endif %}{{ type.parents|map(parent => "#{parent}Contract")|join(', ') }}
 {
@@ -23,6 +30,13 @@ class {{ type.name }} extends BaseType implements {{ type.name }}Contract{% if t
      * {{ constant.description | doc(1) }}
      *
      * @see {{ constant.value }}
+{% if constant.source is not empty %}
+     *
+     * External Sources:
+{% for source in constant.source  %}
+     * @see {{ source }}
+{% endfor %}
+{% endif %}
      */
      const {{ constant.name }} = '{{ constant.value }}';
 
