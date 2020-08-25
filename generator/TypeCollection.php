@@ -66,17 +66,13 @@ class TypeCollection
         return $this->types;
     }
 
-    /**
-     * @param array $types
-     *
-     * @return array
-     */
     private function sanitizePendingParents(array $typeNames, array $types): array
     {
         $types = collect($types)->map(static function ($type) use ($typeNames) {
             $type->parents = array_filter($type->parents, static function ($parent) use ($typeNames) {
                 return in_array($parent, $typeNames, true);
             });
+
             return $type;
         })->toArray();
 
