@@ -8,8 +8,8 @@ use \Spatie\SchemaOrg\Contracts\QuantityContract;
 use \Spatie\SchemaOrg\Contracts\ThingContract;
 
 /**
- * Properties that take Mass as values are of the form '&lt;Number&gt; &lt;Mass
- * unit of measure&gt;'. E.g., '7 kg'.
+ * Properties that take Mass as values are of the form '<Number> <Mass unit of
+ * measure>'. E.g., '7 kg'.
  *
  * @see http://schema.org/Mass
  *

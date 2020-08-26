@@ -16,6 +16,8 @@ interface DatedMoneySpecificationContract
 
     public function disambiguatingDescription($disambiguatingDescription);
 
+    public function endDate($endDate);
+
     public function identifier($identifier);
 
     public function image($image);
@@ -27,6 +29,8 @@ interface DatedMoneySpecificationContract
     public function potentialAction($potentialAction);
 
     public function sameAs($sameAs);
+
+    public function startDate($startDate);
 
     public function subjectOf($subjectOf);
 

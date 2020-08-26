@@ -16,6 +16,16 @@ use \Spatie\SchemaOrg\Contracts\ThingContract;
  *
  * @see http://schema.org/HotelRoom
  *
+ * @method static geoContains($geoContains) The value should be instance of pending types GeospatialGeometry|GeospatialGeometry[]|Place|Place[]
+ * @method static geoCoveredBy($geoCoveredBy) The value should be instance of pending types GeospatialGeometry|GeospatialGeometry[]|Place|Place[]
+ * @method static geoCovers($geoCovers) The value should be instance of pending types GeospatialGeometry|GeospatialGeometry[]|Place|Place[]
+ * @method static geoCrosses($geoCrosses) The value should be instance of pending types GeospatialGeometry|GeospatialGeometry[]|Place|Place[]
+ * @method static geoDisjoint($geoDisjoint) The value should be instance of pending types GeospatialGeometry|GeospatialGeometry[]|Place|Place[]
+ * @method static geoEquals($geoEquals) The value should be instance of pending types GeospatialGeometry|GeospatialGeometry[]|Place|Place[]
+ * @method static geoIntersects($geoIntersects) The value should be instance of pending types GeospatialGeometry|GeospatialGeometry[]|Place|Place[]
+ * @method static geoOverlaps($geoOverlaps) The value should be instance of pending types GeospatialGeometry|GeospatialGeometry[]|Place|Place[]
+ * @method static geoTouches($geoTouches) The value should be instance of pending types GeospatialGeometry|GeospatialGeometry[]|Place|Place[]
+ * @method static geoWithin($geoWithin) The value should be instance of pending types GeospatialGeometry|GeospatialGeometry[]|Place|Place[]
  */
 class HotelRoom extends BaseType implements HotelRoomContract, AccommodationContract, PlaceContract, RoomContract, ThingContract
 {
@@ -127,7 +137,7 @@ class HotelRoom extends BaseType implements HotelRoomContract, AccommodationCont
      * an instance of BedDetails. For more detailed information, use the
      * amenityFeature property.
      *
-     * @param \Spatie\SchemaOrg\Contracts\BedDetailsContract|\Spatie\SchemaOrg\Contracts\BedDetailsContract[]|string|string[] $bed
+     * @param \Spatie\SchemaOrg\Contracts\BedDetailsContract|\Spatie\SchemaOrg\Contracts\BedDetailsContract[]|\Spatie\SchemaOrg\Contracts\BedTypeContract|\Spatie\SchemaOrg\Contracts\BedTypeContract[]|string|string[] $bed
      *
      * @return static
      *

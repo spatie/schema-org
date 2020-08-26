@@ -11,8 +11,8 @@ use \Spatie\SchemaOrg\Contracts\ThingContract;
  * A NewsArticle is an article whose content reports news, or provides
  * background context and supporting materials for understanding the news.
  * 
- * A more detailed overview of [schema.org News markup](/docs/news.html) is also
- * available.
+ * A more detailed overview of <a href="/docs/news.html">schema.org News
+ * markup</a> is also available.
  *
  * @see http://schema.org/NewsArticle
  *
@@ -286,7 +286,7 @@ class NewsArticle extends BaseType implements NewsArticleContract, ArticleContra
     /**
      * An embedded audio object.
      *
-     * @param \Spatie\SchemaOrg\Contracts\AudioObjectContract|\Spatie\SchemaOrg\Contracts\AudioObjectContract[]|\Spatie\SchemaOrg\Contracts\ClipContract|\Spatie\SchemaOrg\Contracts\ClipContract[] $audio
+     * @param \Spatie\SchemaOrg\Contracts\AudioObjectContract|\Spatie\SchemaOrg\Contracts\AudioObjectContract[]|\Spatie\SchemaOrg\Contracts\ClipContract|\Spatie\SchemaOrg\Contracts\ClipContract[]|\Spatie\SchemaOrg\Contracts\MusicRecordingContract|\Spatie\SchemaOrg\Contracts\MusicRecordingContract[] $audio
      *
      * @return static
      *
@@ -1500,7 +1500,6 @@ class NewsArticle extends BaseType implements NewsArticleContract, ArticleContra
      * 
      * 3.)  XPaths - addresses content via XPaths (assuming an XML view of the
      * content). Use the [[xpath]] property.
-     * 
      * 
      * For more sophisticated markup of speakable sections beyond simple ID
      * references, either CSS selectors or XPath expressions to pick out

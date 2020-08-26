@@ -54,8 +54,6 @@ interface BroadcastEventContract
 
     public function isLiveBroadcast($isLiveBroadcast);
 
-    public function location($location);
-
     public function mainEntityOfPage($mainEntityOfPage);
 
     public function maximumAttendeeCapacity($maximumAttendeeCapacity);

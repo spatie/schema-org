@@ -12,6 +12,7 @@ use \Spatie\SchemaOrg\Contracts\VehicleContract;
  *
  * @see http://schema.org/Car
  *
+ * @method static category($category) The value should be instance of pending types PhysicalActivityCategory|PhysicalActivityCategory[]|Thing|Thing[]|string|string[]
  */
 class Car extends BaseType implements CarContract, ProductContract, ThingContract, VehicleContract
 {
@@ -159,21 +160,6 @@ class Car extends BaseType implements CarContract, ProductContract, ThingContrac
     public function cargoVolume($cargoVolume)
     {
         return $this->setProperty('cargoVolume', $cargoVolume);
-    }
-
-    /**
-     * A category for the item. Greater signs or slashes can be used to
-     * informally indicate a category hierarchy.
-     *
-     * @param \Spatie\SchemaOrg\Contracts\ThingContract|\Spatie\SchemaOrg\Contracts\ThingContract[]|string|string[] $category
-     *
-     * @return static
-     *
-     * @see http://schema.org/category
-     */
-    public function category($category)
-    {
-        return $this->setProperty('category', $category);
     }
 
     /**
@@ -781,8 +767,8 @@ class Car extends BaseType implements CarContract, ProductContract, ThingContrac
     }
 
     /**
-     * The product identifier, such as ISBN. For example: ``` meta
-     * itemprop="productID" content="isbn:123-456-789" ```.
+     * The product identifier, such as ISBN. For example: ```meta
+     * itemprop="productID" content="isbn:123-456-789"```.
      *
      * @param string|string[] $productID
      *
@@ -1058,23 +1044,6 @@ class Car extends BaseType implements CarContract, ProductContract, ThingContrac
     public function vehicleSeatingCapacity($vehicleSeatingCapacity)
     {
         return $this->setProperty('vehicleSeatingCapacity', $vehicleSeatingCapacity);
-    }
-
-    /**
-     * Indicates whether the vehicle has been used for special purposes, like
-     * commercial rental, driving school, or as a taxi. The legislation in many
-     * countries requires this information to be revealed when offering a car
-     * for sale.
-     *
-     * @param string|string[] $vehicleSpecialUsage
-     *
-     * @return static
-     *
-     * @see http://schema.org/vehicleSpecialUsage
-     */
-    public function vehicleSpecialUsage($vehicleSpecialUsage)
-    {
-        return $this->setProperty('vehicleSpecialUsage', $vehicleSpecialUsage);
     }
 
     /**

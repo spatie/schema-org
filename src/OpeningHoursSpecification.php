@@ -11,7 +11,6 @@ use \Spatie\SchemaOrg\Contracts\ThingContract;
  * A structured value providing information about the opening hours of a place
  * or a certain service inside a place.
  * 
- * 
  * The place is __open__ if the [[opens]] property is specified, and __closed__
  * otherwise.
  * 

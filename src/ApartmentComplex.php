@@ -12,6 +12,16 @@ use \Spatie\SchemaOrg\Contracts\ThingContract;
  *
  * @see http://schema.org/ApartmentComplex
  *
+ * @method static geoContains($geoContains) The value should be instance of pending types GeospatialGeometry|GeospatialGeometry[]|Place|Place[]
+ * @method static geoCoveredBy($geoCoveredBy) The value should be instance of pending types GeospatialGeometry|GeospatialGeometry[]|Place|Place[]
+ * @method static geoCovers($geoCovers) The value should be instance of pending types GeospatialGeometry|GeospatialGeometry[]|Place|Place[]
+ * @method static geoCrosses($geoCrosses) The value should be instance of pending types GeospatialGeometry|GeospatialGeometry[]|Place|Place[]
+ * @method static geoDisjoint($geoDisjoint) The value should be instance of pending types GeospatialGeometry|GeospatialGeometry[]|Place|Place[]
+ * @method static geoEquals($geoEquals) The value should be instance of pending types GeospatialGeometry|GeospatialGeometry[]|Place|Place[]
+ * @method static geoIntersects($geoIntersects) The value should be instance of pending types GeospatialGeometry|GeospatialGeometry[]|Place|Place[]
+ * @method static geoOverlaps($geoOverlaps) The value should be instance of pending types GeospatialGeometry|GeospatialGeometry[]|Place|Place[]
+ * @method static geoTouches($geoTouches) The value should be instance of pending types GeospatialGeometry|GeospatialGeometry[]|Place|Place[]
+ * @method static geoWithin($geoWithin) The value should be instance of pending types GeospatialGeometry|GeospatialGeometry[]|Place|Place[]
  */
 class ApartmentComplex extends BaseType implements ApartmentComplexContract, PlaceContract, ResidenceContract, ThingContract
 {
@@ -489,6 +499,21 @@ class ApartmentComplex extends BaseType implements ApartmentComplexContract, Pla
     public function openingHoursSpecification($openingHoursSpecification)
     {
         return $this->setProperty('openingHoursSpecification', $openingHoursSpecification);
+    }
+
+    /**
+     * Indicates whether pets are allowed to enter the accommodation or lodging
+     * business. More detailed information can be put in a text value.
+     *
+     * @param bool|bool[]|string|string[] $petsAllowed
+     *
+     * @return static
+     *
+     * @see http://schema.org/petsAllowed
+     */
+    public function petsAllowed($petsAllowed)
+    {
+        return $this->setProperty('petsAllowed', $petsAllowed);
     }
 
     /**

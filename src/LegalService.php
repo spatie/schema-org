@@ -13,10 +13,21 @@ use \Spatie\SchemaOrg\Contracts\ThingContract;
  * and representation, e.g. law firms.
  * 
  * As a [[LocalBusiness]] it can be described as a [[provider]] of one or more
- * [[Service]]\(s).
+ * [[Service]](s).
  *
  * @see http://schema.org/LegalService
  *
+ * @method static geoContains($geoContains) The value should be instance of pending types GeospatialGeometry|GeospatialGeometry[]|Place|Place[]
+ * @method static geoCoveredBy($geoCoveredBy) The value should be instance of pending types GeospatialGeometry|GeospatialGeometry[]|Place|Place[]
+ * @method static geoCovers($geoCovers) The value should be instance of pending types GeospatialGeometry|GeospatialGeometry[]|Place|Place[]
+ * @method static geoCrosses($geoCrosses) The value should be instance of pending types GeospatialGeometry|GeospatialGeometry[]|Place|Place[]
+ * @method static geoDisjoint($geoDisjoint) The value should be instance of pending types GeospatialGeometry|GeospatialGeometry[]|Place|Place[]
+ * @method static geoEquals($geoEquals) The value should be instance of pending types GeospatialGeometry|GeospatialGeometry[]|Place|Place[]
+ * @method static geoIntersects($geoIntersects) The value should be instance of pending types GeospatialGeometry|GeospatialGeometry[]|Place|Place[]
+ * @method static geoOverlaps($geoOverlaps) The value should be instance of pending types GeospatialGeometry|GeospatialGeometry[]|Place|Place[]
+ * @method static geoTouches($geoTouches) The value should be instance of pending types GeospatialGeometry|GeospatialGeometry[]|Place|Place[]
+ * @method static geoWithin($geoWithin) The value should be instance of pending types GeospatialGeometry|GeospatialGeometry[]|Place|Place[]
+ * @method static location($location) The value should be instance of pending types Place|Place[]|PostalAddress|PostalAddress[]|VirtualLocation|VirtualLocation[]|string|string[]
  */
 class LegalService extends BaseType implements LegalServiceContract, LocalBusinessContract, OrganizationContract, PlaceContract, ThingContract
 {
@@ -102,6 +113,20 @@ class LegalService extends BaseType implements LegalServiceContract, LocalBusine
     public function alternateName($alternateName)
     {
         return $this->setProperty('alternateName', $alternateName);
+    }
+
+    /**
+     * Alumni of an organization.
+     *
+     * @param \Spatie\SchemaOrg\Contracts\PersonContract|\Spatie\SchemaOrg\Contracts\PersonContract[] $alumni
+     *
+     * @return static
+     *
+     * @see http://schema.org/alumni
+     */
+    public function alumni($alumni)
+    {
+        return $this->setProperty('alumni', $alumni);
     }
 
     /**
@@ -647,6 +672,22 @@ class LegalService extends BaseType implements LegalServiceContract, LocalBusine
     }
 
     /**
+     * The number of interactions for the CreativeWork using the WebSite or
+     * SoftwareApplication. The most specific child type of InteractionCounter
+     * should be used.
+     *
+     * @param \Spatie\SchemaOrg\Contracts\InteractionCounterContract|\Spatie\SchemaOrg\Contracts\InteractionCounterContract[] $interactionStatistic
+     *
+     * @return static
+     *
+     * @see http://schema.org/interactionStatistic
+     */
+    public function interactionStatistic($interactionStatistic)
+    {
+        return $this->setProperty('interactionStatistic', $interactionStatistic);
+    }
+
+    /**
      * A flag to signal that the item, event, or place is accessible for free.
      *
      * @param bool|bool[] $isAccessibleForFree
@@ -718,21 +759,6 @@ class LegalService extends BaseType implements LegalServiceContract, LocalBusine
     public function leiCode($leiCode)
     {
         return $this->setProperty('leiCode', $leiCode);
-    }
-
-    /**
-     * The location of for example where the event is happening, an organization
-     * is located, or where an action takes place.
-     *
-     * @param \Spatie\SchemaOrg\Contracts\PlaceContract|\Spatie\SchemaOrg\Contracts\PlaceContract[]|\Spatie\SchemaOrg\Contracts\PostalAddressContract|\Spatie\SchemaOrg\Contracts\PostalAddressContract[]|string|string[] $location
-     *
-     * @return static
-     *
-     * @see http://schema.org/location
-     */
-    public function location($location)
-    {
-        return $this->setProperty('location', $location);
     }
 
     /**
@@ -924,20 +950,6 @@ class LegalService extends BaseType implements LegalServiceContract, LocalBusine
     }
 
     /**
-     * A pointer to the organization or person making the offer.
-     *
-     * @param \Spatie\SchemaOrg\Contracts\OrganizationContract|\Spatie\SchemaOrg\Contracts\OrganizationContract[]|\Spatie\SchemaOrg\Contracts\PersonContract|\Spatie\SchemaOrg\Contracts\PersonContract[] $offeredBy
-     *
-     * @return static
-     *
-     * @see http://schema.org/offeredBy
-     */
-    public function offeredBy($offeredBy)
-    {
-        return $this->setProperty('offeredBy', $offeredBy);
-    }
-
-    /**
      * The general opening hours for a business. Opening hours can be specified
      * as a weekly time range, starting with days, then times per day. Multiple
      * days can be listed with commas ',' separating each day. Day or time
@@ -947,13 +959,11 @@ class LegalService extends BaseType implements LegalServiceContract, LocalBusine
      * ```Mo```, ```Tu```, ```We```, ```Th```, ```Fr```, ```Sa```, ```Su```.
      * * Times are specified using 24:00 time. For example, 3pm is specified as
      * ```15:00```. 
-     * * Here is an example: <code>&lt;time itemprop="openingHours"
-     * datetime=&quot;Tu,Th 16:00-20:00&quot;&gt;Tuesdays and Thursdays
-     * 4-8pm&lt;/time&gt;</code>.
+     * * Here is an example: ```<time itemprop="openingHours" datetime="Tu,Th
+     * 16:00-20:00">Tuesdays and Thursdays 4-8pm</time>```.
      * * If a business is open 7 days a week, then it can be specified as
-     * <code>&lt;time itemprop=&quot;openingHours&quot;
-     * datetime=&quot;Mo-Su&quot;&gt;Monday through Sunday, all
-     * day&lt;/time&gt;</code>.
+     * ```<time itemprop="openingHours" datetime="Mo-Su">Monday through Sunday,
+     * all day</time>```.
      *
      * @param string|string[] $openingHours
      *

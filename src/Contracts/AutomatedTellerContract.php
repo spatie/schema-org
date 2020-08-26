@@ -14,6 +14,8 @@ interface AutomatedTellerContract
 
     public function alternateName($alternateName);
 
+    public function alumni($alumni);
+
     public function amenityFeature($amenityFeature);
 
     public function areaServed($areaServed);
@@ -88,6 +90,8 @@ interface AutomatedTellerContract
 
     public function image($image);
 
+    public function interactionStatistic($interactionStatistic);
+
     public function isAccessibleForFree($isAccessibleForFree);
 
     public function isicV4($isicV4);
@@ -97,8 +101,6 @@ interface AutomatedTellerContract
     public function legalName($legalName);
 
     public function leiCode($leiCode);
-
-    public function location($location);
 
     public function logo($logo);
 
@@ -125,8 +127,6 @@ interface AutomatedTellerContract
     public function name($name);
 
     public function numberOfEmployees($numberOfEmployees);
-
-    public function offeredBy($offeredBy);
 
     public function openingHours($openingHours);
 

@@ -19,6 +19,7 @@ use \Spatie\SchemaOrg\Contracts\ThingContract;
  *
  * @see http://schema.org/AggregateOffer
  *
+ * @method static category($category) The value should be instance of pending types PhysicalActivityCategory|PhysicalActivityCategory[]|Thing|Thing[]|string|string[]
  */
 class AggregateOffer extends BaseType implements AggregateOfferContract, IntangibleContract, OfferContract, ThingContract
 {
@@ -216,21 +217,6 @@ class AggregateOffer extends BaseType implements AggregateOfferContract, Intangi
     public function businessFunction($businessFunction)
     {
         return $this->setProperty('businessFunction', $businessFunction);
-    }
-
-    /**
-     * A category for the item. Greater signs or slashes can be used to
-     * informally indicate a category hierarchy.
-     *
-     * @param \Spatie\SchemaOrg\Contracts\ThingContract|\Spatie\SchemaOrg\Contracts\ThingContract[]|string|string[] $category
-     *
-     * @return static
-     *
-     * @see http://schema.org/category
-     */
-    public function category($category)
-    {
-        return $this->setProperty('category', $category);
     }
 
     /**
@@ -502,25 +488,6 @@ class AggregateOffer extends BaseType implements AggregateOfferContract, Intangi
     }
 
     /**
-     * The ISO 3166-1 (ISO 3166-1 alpha-2) or ISO 3166-2 code, the place, or the
-     * GeoShape for the geo-political region(s) for which the offer or delivery
-     * charge specification is not valid, e.g. a region where the transaction is
-     * not allowed.
-     * 
-     * See also [[eligibleRegion]].
-     *
-     * @param \Spatie\SchemaOrg\Contracts\GeoShapeContract|\Spatie\SchemaOrg\Contracts\GeoShapeContract[]|\Spatie\SchemaOrg\Contracts\PlaceContract|\Spatie\SchemaOrg\Contracts\PlaceContract[]|string|string[] $ineligibleRegion
-     *
-     * @return static
-     *
-     * @see http://schema.org/ineligibleRegion
-     */
-    public function ineligibleRegion($ineligibleRegion)
-    {
-        return $this->setProperty('ineligibleRegion', $ineligibleRegion);
-    }
-
-    /**
      * The current approximate inventory level for the item or items.
      *
      * @param \Spatie\SchemaOrg\Contracts\QuantitativeValueContract|\Spatie\SchemaOrg\Contracts\QuantitativeValueContract[] $inventoryLevel
@@ -646,6 +613,20 @@ class AggregateOffer extends BaseType implements AggregateOfferContract, Intangi
     public function offerCount($offerCount)
     {
         return $this->setProperty('offerCount', $offerCount);
+    }
+
+    /**
+     * A pointer to the organization or person making the offer.
+     *
+     * @param \Spatie\SchemaOrg\Contracts\OrganizationContract|\Spatie\SchemaOrg\Contracts\OrganizationContract[]|\Spatie\SchemaOrg\Contracts\PersonContract|\Spatie\SchemaOrg\Contracts\PersonContract[] $offeredBy
+     *
+     * @return static
+     *
+     * @see http://schema.org/offeredBy
+     */
+    public function offeredBy($offeredBy)
+    {
+        return $this->setProperty('offeredBy', $offeredBy);
     }
 
     /**

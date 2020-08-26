@@ -12,8 +12,6 @@ interface ActionAccessSpecificationContract
 
     public function availabilityStarts($availabilityStarts);
 
-    public function category($category);
-
     public function description($description);
 
     public function disambiguatingDescription($disambiguatingDescription);

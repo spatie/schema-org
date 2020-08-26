@@ -8,8 +8,6 @@ interface ReservationPackageContract
 
     public function alternateName($alternateName);
 
-    public function boardingGroup($boardingGroup);
-
     public function bookingAgent($bookingAgent);
 
     public function bookingTime($bookingTime);

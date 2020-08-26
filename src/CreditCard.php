@@ -28,6 +28,8 @@ use \Spatie\SchemaOrg\Contracts\ThingContract;
  *
  * @see http://schema.org/CreditCard
  *
+ * @method static category($category) The value should be instance of pending types PhysicalActivityCategory|PhysicalActivityCategory[]|Thing|Thing[]|string|string[]
+ * @method static serviceType($serviceType) The value should be instance of pending types GovernmentBenefitsType|GovernmentBenefitsType[]|string|string[]
  */
 class CreditCard extends BaseType implements CreditCardContract, EnumerationContract, FinancialProductContract, IntangibleContract, LoanOrCreditContract, PaymentCardContract, PaymentMethodContract, ServiceContract, ThingContract
 {
@@ -200,18 +202,25 @@ class CreditCard extends BaseType implements CreditCardContract, EnumerationCont
     }
 
     /**
-     * A category for the item. Greater signs or slashes can be used to
-     * informally indicate a category hierarchy.
+     * The currency in which the monetary amount is expressed.
+     * 
+     * Use standard formats: [ISO 4217 currency
+     * format](http://en.wikipedia.org/wiki/ISO_4217) e.g. "USD"; [Ticker
+     * symbol](https://en.wikipedia.org/wiki/List_of_cryptocurrencies) for
+     * cryptocurrencies e.g. "BTC"; well known names for [Local Exchange
+     * Tradings
+     * Systems](https://en.wikipedia.org/wiki/Local_exchange_trading_system)
+     * (LETS) and other currency types e.g. "Ithaca HOUR".
      *
-     * @param \Spatie\SchemaOrg\Contracts\ThingContract|\Spatie\SchemaOrg\Contracts\ThingContract[]|string|string[] $category
+     * @param string|string[] $currency
      *
      * @return static
      *
-     * @see http://schema.org/category
+     * @see http://schema.org/currency
      */
-    public function category($category)
+    public function currency($currency)
     {
-        return $this->setProperty('category', $category);
+        return $this->setProperty('currency', $currency);
     }
 
     /**
@@ -591,21 +600,6 @@ class CreditCard extends BaseType implements CreditCardContract, EnumerationCont
     public function serviceOutput($serviceOutput)
     {
         return $this->setProperty('serviceOutput', $serviceOutput);
-    }
-
-    /**
-     * The type of service being offered, e.g. veterans' benefits, emergency
-     * relief, etc.
-     *
-     * @param string|string[] $serviceType
-     *
-     * @return static
-     *
-     * @see http://schema.org/serviceType
-     */
-    public function serviceType($serviceType)
-    {
-        return $this->setProperty('serviceType', $serviceType);
     }
 
     /**

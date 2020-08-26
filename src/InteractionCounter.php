@@ -114,6 +114,20 @@ class InteractionCounter extends BaseType implements InteractionCounterContract,
     }
 
     /**
+     * The WebSite or SoftwareApplication where the interactions took place.
+     *
+     * @param \Spatie\SchemaOrg\Contracts\SoftwareApplicationContract|\Spatie\SchemaOrg\Contracts\SoftwareApplicationContract[]|\Spatie\SchemaOrg\Contracts\WebSiteContract|\Spatie\SchemaOrg\Contracts\WebSiteContract[] $interactionService
+     *
+     * @return static
+     *
+     * @see http://schema.org/interactionService
+     */
+    public function interactionService($interactionService)
+    {
+        return $this->setProperty('interactionService', $interactionService);
+    }
+
+    /**
      * The Action representing the type of interaction. For up votes, +1s, etc.
      * use [[LikeAction]]. For down votes use [[DislikeAction]]. Otherwise, use
      * the most specific Action.
@@ -216,6 +230,21 @@ class InteractionCounter extends BaseType implements InteractionCounterContract,
     public function url($url)
     {
         return $this->setProperty('url', $url);
+    }
+
+    /**
+     * The number of interactions for the CreativeWork using the WebSite or
+     * SoftwareApplication.
+     *
+     * @param int|int[] $userInteractionCount
+     *
+     * @return static
+     *
+     * @see http://schema.org/userInteractionCount
+     */
+    public function userInteractionCount($userInteractionCount)
+    {
+        return $this->setProperty('userInteractionCount', $userInteractionCount);
     }
 
 }

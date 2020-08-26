@@ -14,6 +14,7 @@ use \Spatie\SchemaOrg\Contracts\UserInteractionContract;
  *
  * @see http://schema.org/UserComments
  *
+ * @method static location($location) The value should be instance of pending types Place|Place[]|PostalAddress|PostalAddress[]|VirtualLocation|VirtualLocation[]|string|string[]
  */
 class UserComments extends BaseType implements UserCommentsContract, EventContract, ThingContract, UserInteractionContract
 {
@@ -406,21 +407,6 @@ class UserComments extends BaseType implements UserCommentsContract, EventContra
     public function isAccessibleForFree($isAccessibleForFree)
     {
         return $this->setProperty('isAccessibleForFree', $isAccessibleForFree);
-    }
-
-    /**
-     * The location of for example where the event is happening, an organization
-     * is located, or where an action takes place.
-     *
-     * @param \Spatie\SchemaOrg\Contracts\PlaceContract|\Spatie\SchemaOrg\Contracts\PlaceContract[]|\Spatie\SchemaOrg\Contracts\PostalAddressContract|\Spatie\SchemaOrg\Contracts\PostalAddressContract[]|string|string[] $location
-     *
-     * @return static
-     *
-     * @see http://schema.org/location
-     */
-    public function location($location)
-    {
-        return $this->setProperty('location', $location);
     }
 
     /**

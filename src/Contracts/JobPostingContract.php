@@ -18,8 +18,6 @@ interface JobPostingContract
 
     public function disambiguatingDescription($disambiguatingDescription);
 
-    public function educationRequirements($educationRequirements);
-
     public function employmentType($employmentType);
 
     public function estimatedSalary($estimatedSalary);
@@ -44,11 +42,7 @@ interface JobPostingContract
 
     public function name($name);
 
-    public function occupationalCategory($occupationalCategory);
-
     public function potentialAction($potentialAction);
-
-    public function qualifications($qualifications);
 
     public function relevantOccupation($relevantOccupation);
 

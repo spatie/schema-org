@@ -16,6 +16,8 @@ interface InteractionCounterContract
 
     public function image($image);
 
+    public function interactionService($interactionService);
+
     public function interactionType($interactionType);
 
     public function mainEntityOfPage($mainEntityOfPage);
@@ -29,5 +31,7 @@ interface InteractionCounterContract
     public function subjectOf($subjectOf);
 
     public function url($url);
+
+    public function userInteractionCount($userInteractionCount);
 
 }

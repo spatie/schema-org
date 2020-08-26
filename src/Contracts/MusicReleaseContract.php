@@ -78,6 +78,8 @@ interface MusicReleaseContract
 
     public function discussionUrl($discussionUrl);
 
+    public function duration($duration);
+
     public function editor($editor);
 
     public function educationalAlignment($educationalAlignment);

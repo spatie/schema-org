@@ -103,6 +103,21 @@ class MonetaryAmountDistribution extends BaseType implements MonetaryAmountDistr
     }
 
     /**
+     * The duration of the item (movie, audio recording, event, etc.) in [ISO
+     * 8601 date format](http://en.wikipedia.org/wiki/ISO_8601).
+     *
+     * @param \Spatie\SchemaOrg\Contracts\DurationContract|\Spatie\SchemaOrg\Contracts\DurationContract[] $duration
+     *
+     * @return static
+     *
+     * @see http://schema.org/duration
+     */
+    public function duration($duration)
+    {
+        return $this->setProperty('duration', $duration);
+    }
+
+    /**
      * The identifier property represents any kind of identifier for any kind of
      * [[Thing]], such as ISBNs, GTIN codes, UUIDs etc. Schema.org provides
      * dedicated properties for representing many of these, either as textual

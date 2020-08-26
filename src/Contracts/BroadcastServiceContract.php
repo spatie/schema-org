@@ -34,8 +34,6 @@ interface BroadcastServiceContract
 
     public function broker($broker);
 
-    public function category($category);
-
     public function description($description);
 
     public function disambiguatingDescription($disambiguatingDescription);
@@ -49,6 +47,8 @@ interface BroadcastServiceContract
     public function identifier($identifier);
 
     public function image($image);
+
+    public function inLanguage($inLanguage);
 
     public function isRelatedTo($isRelatedTo);
 
@@ -81,8 +81,6 @@ interface BroadcastServiceContract
     public function serviceAudience($serviceAudience);
 
     public function serviceOutput($serviceOutput);
-
-    public function serviceType($serviceType);
 
     public function slogan($slogan);
 

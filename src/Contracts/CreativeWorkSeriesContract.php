@@ -70,8 +70,6 @@ interface CreativeWorkSeriesContract
 
     public function description($description);
 
-    public function director($director);
-
     public function disambiguatingDescription($disambiguatingDescription);
 
     public function discussionUrl($discussionUrl);

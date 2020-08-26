@@ -119,6 +119,21 @@ class DatedMoneySpecification extends BaseType implements DatedMoneySpecificatio
     }
 
     /**
+     * The end date and time of the item (in [ISO 8601 date
+     * format](http://en.wikipedia.org/wiki/ISO_8601)).
+     *
+     * @param \DateTimeInterface|\DateTimeInterface[] $endDate
+     *
+     * @return static
+     *
+     * @see http://schema.org/endDate
+     */
+    public function endDate($endDate)
+    {
+        return $this->setProperty('endDate', $endDate);
+    }
+
+    /**
      * The identifier property represents any kind of identifier for any kind of
      * [[Thing]], such as ISBNs, GTIN codes, UUIDs etc. Schema.org provides
      * dedicated properties for representing many of these, either as textual
@@ -210,6 +225,21 @@ class DatedMoneySpecification extends BaseType implements DatedMoneySpecificatio
     public function sameAs($sameAs)
     {
         return $this->setProperty('sameAs', $sameAs);
+    }
+
+    /**
+     * The start date and time of the item (in [ISO 8601 date
+     * format](http://en.wikipedia.org/wiki/ISO_8601)).
+     *
+     * @param \DateTimeInterface|\DateTimeInterface[] $startDate
+     *
+     * @return static
+     *
+     * @see http://schema.org/startDate
+     */
+    public function startDate($startDate)
+    {
+        return $this->setProperty('startDate', $startDate);
     }
 
     /**

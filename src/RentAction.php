@@ -14,6 +14,7 @@ use \Spatie\SchemaOrg\Contracts\TradeActionContract;
  *
  * @see http://schema.org/RentAction
  *
+ * @method static location($location) The value should be instance of pending types Place|Place[]|PostalAddress|PostalAddress[]|VirtualLocation|VirtualLocation[]|string|string[]
  */
 class RentAction extends BaseType implements RentActionContract, ActionContract, ThingContract, TradeActionContract
 {
@@ -207,21 +208,6 @@ class RentAction extends BaseType implements RentActionContract, ActionContract,
     public function landlord($landlord)
     {
         return $this->setProperty('landlord', $landlord);
-    }
-
-    /**
-     * The location of for example where the event is happening, an organization
-     * is located, or where an action takes place.
-     *
-     * @param \Spatie\SchemaOrg\Contracts\PlaceContract|\Spatie\SchemaOrg\Contracts\PlaceContract[]|\Spatie\SchemaOrg\Contracts\PostalAddressContract|\Spatie\SchemaOrg\Contracts\PostalAddressContract[]|string|string[] $location
-     *
-     * @return static
-     *
-     * @see http://schema.org/location
-     */
-    public function location($location)
-    {
-        return $this->setProperty('location', $location);
     }
 
     /**

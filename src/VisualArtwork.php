@@ -314,7 +314,7 @@ class VisualArtwork extends BaseType implements VisualArtworkContract, CreativeW
     /**
      * An embedded audio object.
      *
-     * @param \Spatie\SchemaOrg\Contracts\AudioObjectContract|\Spatie\SchemaOrg\Contracts\AudioObjectContract[]|\Spatie\SchemaOrg\Contracts\ClipContract|\Spatie\SchemaOrg\Contracts\ClipContract[] $audio
+     * @param \Spatie\SchemaOrg\Contracts\AudioObjectContract|\Spatie\SchemaOrg\Contracts\AudioObjectContract[]|\Spatie\SchemaOrg\Contracts\ClipContract|\Spatie\SchemaOrg\Contracts\ClipContract[]|\Spatie\SchemaOrg\Contracts\MusicRecordingContract|\Spatie\SchemaOrg\Contracts\MusicRecordingContract[] $audio
      *
      * @return static
      *
@@ -557,6 +557,20 @@ class VisualArtwork extends BaseType implements VisualArtworkContract, CreativeW
     public function datePublished($datePublished)
     {
         return $this->setProperty('datePublished', $datePublished);
+    }
+
+    /**
+     * The depth of the item.
+     *
+     * @param \Spatie\SchemaOrg\Contracts\DistanceContract|\Spatie\SchemaOrg\Contracts\DistanceContract[]|\Spatie\SchemaOrg\Contracts\QuantitativeValueContract|\Spatie\SchemaOrg\Contracts\QuantitativeValueContract[] $depth
+     *
+     * @return static
+     *
+     * @see http://schema.org/depth
+     */
+    public function depth($depth)
+    {
+        return $this->setProperty('depth', $depth);
     }
 
     /**
@@ -813,6 +827,20 @@ class VisualArtwork extends BaseType implements VisualArtworkContract, CreativeW
     public function headline($headline)
     {
         return $this->setProperty('headline', $headline);
+    }
+
+    /**
+     * The height of the item.
+     *
+     * @param \Spatie\SchemaOrg\Contracts\DistanceContract|\Spatie\SchemaOrg\Contracts\DistanceContract[]|\Spatie\SchemaOrg\Contracts\QuantitativeValueContract|\Spatie\SchemaOrg\Contracts\QuantitativeValueContract[] $height
+     *
+     * @return static
+     *
+     * @see http://schema.org/height
+     */
+    public function height($height)
+    {
+        return $this->setProperty('height', $height);
     }
 
     /**
@@ -1584,6 +1612,20 @@ class VisualArtwork extends BaseType implements VisualArtworkContract, CreativeW
     public function video($video)
     {
         return $this->setProperty('video', $video);
+    }
+
+    /**
+     * The width of the item.
+     *
+     * @param \Spatie\SchemaOrg\Contracts\DistanceContract|\Spatie\SchemaOrg\Contracts\DistanceContract[]|\Spatie\SchemaOrg\Contracts\QuantitativeValueContract|\Spatie\SchemaOrg\Contracts\QuantitativeValueContract[] $width
+     *
+     * @return static
+     *
+     * @see http://schema.org/width
+     */
+    public function width($width)
+    {
+        return $this->setProperty('width', $width);
     }
 
     /**

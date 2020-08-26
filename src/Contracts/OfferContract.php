@@ -30,8 +30,6 @@ interface OfferContract
 
     public function businessFunction($businessFunction);
 
-    public function category($category);
-
     public function deliveryLeadTime($deliveryLeadTime);
 
     public function description($description);
@@ -62,8 +60,6 @@ interface OfferContract
 
     public function includesObject($includesObject);
 
-    public function ineligibleRegion($ineligibleRegion);
-
     public function inventoryLevel($inventoryLevel);
 
     public function itemCondition($itemCondition);
@@ -75,6 +71,8 @@ interface OfferContract
     public function mpn($mpn);
 
     public function name($name);
+
+    public function offeredBy($offeredBy);
 
     public function potentialAction($potentialAction);
 

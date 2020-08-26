@@ -66,6 +66,8 @@ interface ApartmentComplexContract
 
     public function openingHoursSpecification($openingHoursSpecification);
 
+    public function petsAllowed($petsAllowed);
+
     public function photo($photo);
 
     public function photos($photos);

@@ -76,6 +76,8 @@ interface VisualArtworkContract
 
     public function datePublished($datePublished);
 
+    public function depth($depth);
+
     public function description($description);
 
     public function disambiguatingDescription($disambiguatingDescription);
@@ -107,6 +109,8 @@ interface VisualArtworkContract
     public function hasPart($hasPart);
 
     public function headline($headline);
+
+    public function height($height);
 
     public function identifier($identifier);
 
@@ -205,6 +209,8 @@ interface VisualArtworkContract
     public function version($version);
 
     public function video($video);
+
+    public function width($width);
 
     public function workExample($workExample);
 

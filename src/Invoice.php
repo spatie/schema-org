@@ -11,6 +11,7 @@ use \Spatie\SchemaOrg\Contracts\ThingContract;
  *
  * @see http://schema.org/Invoice
  *
+ * @method static category($category) The value should be instance of pending types PhysicalActivityCategory|PhysicalActivityCategory[]|Thing|Thing[]|string|string[]
  */
 class Invoice extends BaseType implements InvoiceContract, IntangibleContract, ThingContract
 {
@@ -90,21 +91,6 @@ class Invoice extends BaseType implements InvoiceContract, IntangibleContract, T
     public function broker($broker)
     {
         return $this->setProperty('broker', $broker);
-    }
-
-    /**
-     * A category for the item. Greater signs or slashes can be used to
-     * informally indicate a category hierarchy.
-     *
-     * @param \Spatie\SchemaOrg\Contracts\ThingContract|\Spatie\SchemaOrg\Contracts\ThingContract[]|string|string[] $category
-     *
-     * @return static
-     *
-     * @see http://schema.org/category
-     */
-    public function category($category)
-    {
-        return $this->setProperty('category', $category);
     }
 
     /**

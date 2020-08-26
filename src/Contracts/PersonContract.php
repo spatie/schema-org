@@ -56,8 +56,6 @@ interface PersonContract
 
     public function funder($funder);
 
-    public function gender($gender);
-
     public function givenName($givenName);
 
     public function globalLocationNumber($globalLocationNumber);
@@ -80,9 +78,9 @@ interface PersonContract
 
     public function image($image);
 
-    public function isicV4($isicV4);
+    public function interactionStatistic($interactionStatistic);
 
-    public function jobTitle($jobTitle);
+    public function isicV4($isicV4);
 
     public function knows($knows);
 

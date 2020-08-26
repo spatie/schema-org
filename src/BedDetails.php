@@ -208,7 +208,7 @@ class BedDetails extends BaseType implements BedDetailsContract, IntangibleContr
      * The type of bed to which the BedDetail refers, i.e. the type of bed
      * available in the quantity indicated by quantity.
      *
-     * @param string|string[] $typeOfBed
+     * @param \Spatie\SchemaOrg\Contracts\BedTypeContract|\Spatie\SchemaOrg\Contracts\BedTypeContract[]|string|string[] $typeOfBed
      *
      * @return static
      *

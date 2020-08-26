@@ -20,8 +20,6 @@ interface ProductContract
 
     public function brand($brand);
 
-    public function category($category);
-
     public function color($color);
 
     public function depth($depth);

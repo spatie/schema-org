@@ -11,7 +11,6 @@ use \Spatie\SchemaOrg\Contracts\ThingContract;
  * A [[CampingPitch]] is an individual place for overnight stay in the outdoors,
  * typically being part of a larger camping site, or [[Campground]].
  * 
- * 
  * In British English a campsite, or campground, is an area, usually divided
  * into a number of pitches, where people can camp overnight using tents or
  * camper vans or caravans; this British English use of the word is synonymous
@@ -19,15 +18,24 @@ use \Spatie\SchemaOrg\Contracts\ThingContract;
  * campsite generally means an area where an individual, family, group, or
  * military unit can pitch a tent or park a camper; a campground may contain
  * many campsites.
- * (Source: Wikipedia see
- * [https://en.wikipedia.org/wiki/Campsite](https://en.wikipedia.org/wiki/Campsite)).
+ * (Source: Wikipedia see <a
+ * href="https://en.wikipedia.org/wiki/Campsite">https://en.wikipedia.org/wiki/Campsite</a>).
  * 
- * 
- * See also the dedicated [document on the use of schema.org for marking up
- * hotels and other forms of accommodations](/docs/hotels.html).
+ * See also the dedicated <a href="/docs/hotels.html">document on the use of
+ * schema.org for marking up hotels and other forms of accommodations</a>.
  *
  * @see http://schema.org/CampingPitch
  *
+ * @method static geoContains($geoContains) The value should be instance of pending types GeospatialGeometry|GeospatialGeometry[]|Place|Place[]
+ * @method static geoCoveredBy($geoCoveredBy) The value should be instance of pending types GeospatialGeometry|GeospatialGeometry[]|Place|Place[]
+ * @method static geoCovers($geoCovers) The value should be instance of pending types GeospatialGeometry|GeospatialGeometry[]|Place|Place[]
+ * @method static geoCrosses($geoCrosses) The value should be instance of pending types GeospatialGeometry|GeospatialGeometry[]|Place|Place[]
+ * @method static geoDisjoint($geoDisjoint) The value should be instance of pending types GeospatialGeometry|GeospatialGeometry[]|Place|Place[]
+ * @method static geoEquals($geoEquals) The value should be instance of pending types GeospatialGeometry|GeospatialGeometry[]|Place|Place[]
+ * @method static geoIntersects($geoIntersects) The value should be instance of pending types GeospatialGeometry|GeospatialGeometry[]|Place|Place[]
+ * @method static geoOverlaps($geoOverlaps) The value should be instance of pending types GeospatialGeometry|GeospatialGeometry[]|Place|Place[]
+ * @method static geoTouches($geoTouches) The value should be instance of pending types GeospatialGeometry|GeospatialGeometry[]|Place|Place[]
+ * @method static geoWithin($geoWithin) The value should be instance of pending types GeospatialGeometry|GeospatialGeometry[]|Place|Place[]
  */
 class CampingPitch extends BaseType implements CampingPitchContract, AccommodationContract, PlaceContract, ThingContract
 {
