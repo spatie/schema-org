@@ -34,11 +34,19 @@ abstract class Task
         return collect($property);
     }
 
+    /**
+     * Get the schema resource URL.
+     */
     protected function getResource(?array $schemaResource = null)
     {
         return $schemaResource['@id'] ?? $this->definition['@id'];
     }
 
+    /**
+     * Get the Schema resource name.
+     *
+     * Currently this omits the schema.org domain "http://scheme.org/"
+     */
     protected function getResourceName(?array $schemaResource = null)
     {
         return substr($this->getResource($schemaResource), 18);
