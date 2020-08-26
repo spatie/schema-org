@@ -26,9 +26,6 @@ class ParseProperty extends Task
             });
 
         $this->getWrappedDefinitionProperty('http://schema.org/rangeIncludes')
-            ->filter(function ($value) {
-                return ! in_array($this->getResourceName($value), ['GeospatialGeometry', 'EducationalOccupationalCredential', 'DefinedTerm', 'VirtualLocation', 'PhysicalActivityCategory', 'GovernmentBenefitsType'], true);
-            })
             ->each(function (array $range) use ($property) {
                 $property->addRanges(
                     $this->castRangesToTypes($this->getResourceName($range))

@@ -9,13 +9,9 @@ class TypeCollection
 
     public function __construct(array $types, array $properties, array $constants)
     {
-        $typeNames = array_map(static function (Type $type) {
-            return $type->name;
-        }, $types);
-
-        $this->types = array_combine($typeNames, $this->sanitizePendingParents($typeNames, $types));
-
-        ksort($this->types);
+        $this->types = collect($types)->mapWithKeys(static function (Type $type) {
+            return [$type->name => $type];
+        })->sortKeys()->toArray();
 
         foreach ($properties as $property) {
             foreach ($property->ranges as $range) {
@@ -64,18 +60,5 @@ class TypeCollection
     public function toArray(): array
     {
         return $this->types;
-    }
-
-    private function sanitizePendingParents(array $typeNames, array $types): array
-    {
-        $types = collect($types)->map(static function ($type) use ($typeNames) {
-            $type->parents = array_filter($type->parents, static function ($parent) use ($typeNames) {
-                return in_array($parent, $typeNames, true);
-            });
-
-            return $type;
-        })->toArray();
-
-        return $types;
     }
 }
