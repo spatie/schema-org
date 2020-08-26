@@ -21,6 +21,7 @@ class TypeCollection
             $type->parents = array_filter($type->parents, static function ($parentType) use ($definedTypes) {
                 return in_array($parentType, $definedTypes, true);
             });
+
             return $type;
         })->toArray();
 
