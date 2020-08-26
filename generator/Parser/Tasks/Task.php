@@ -44,11 +44,9 @@ abstract class Task
 
     /**
      * Get the Schema resource name.
-     *
-     * Currently this omits the schema.org domain "http://scheme.org/"
      */
     protected function getResourceName(?array $schemaResource = null)
     {
-        return substr($this->getResource($schemaResource), 18);
+        return str_replace('http://schema.org/', '', $this->getResource($schemaResource));
     }
 }
