@@ -3,40 +3,35 @@
 namespace Spatie\SchemaOrg\Generator\Parser\Tasks;
 
 use Spatie\SchemaOrg\Generator\Type;
-use Symfony\Component\DomCrawler\Crawler;
 
 class ParseType extends Task
 {
     public function __invoke(): ?Type
     {
-        $node = new Crawler($this->definition);
-
         $type = new Type();
 
-        $type->name = $this->getText($node, '[property="rdfs:label"]');
+        $type->name = $this->getDefinitionProperty('rdfs:label');
 
         if (in_array($type->name, ['', 'DataType', 'Float', 'Integer', 'URL'])) {
             return null;
         }
 
-        $subClassOf = $node->filter('[property="rdfs:subClassOf"]');
+        $subClassOf = $this->getWrappedDefinitionProperty('rdfs:subClassOf');
 
         if ($subClassOf->count() > 0) {
             $type->parents = array_filter($subClassOf
-                ->each(function (Crawler $node) {
-                    $parent = $this->getText($node);
-
-                    return strpos($parent, ':') === false ? $parent : null;
-                }));
+                ->map(function ($parent, $key) {
+                    return $this->getResourceName($parent);
+                })->toArray());
 
             if (empty($type->parents)) {
                 return null;
             }
         }
 
-        $type->description = $this->getText($node, '[property="rdfs:comment"]');
+        $type->description = $this->getDefinitionProperty('rdfs:comment');
 
-        $type->resource = $this->getAttribute($node, 'resource');
+        $type->resource = $this->getResource();
 
         return $type;
     }

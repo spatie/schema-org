@@ -3,7 +3,8 @@
 namespace Spatie\SchemaOrg\Generator;
 
 use RuntimeError;
-use Symfony\Component\DomCrawler\Crawler;
+use Spatie\SchemaOrg\Generator\Parser\JsonLdParser;
+use Tightenco\Collect\Support\Collection;
 
 class Definitions
 {
@@ -25,9 +26,9 @@ class Definitions
         }
     }
 
-    public function query(string $selector): Crawler
+    public function query(string $selector): Collection
     {
-        return (new Crawler($this->loadSource('core')))->filter($selector);
+        return (new JsonLdParser($this->loadSource('core')))->filter($selector);
     }
 
     protected function loadSource(string $sourceId, bool $fromCache = true): string
@@ -36,16 +37,16 @@ class Definitions
             throw new RuntimeError("Source `{$sourceId}` doesn't exist");
         }
 
-        $cachePath = $this->tempDir.'/'.$sourceId.'.rdfa';
+        $cachePath = $this->tempDir.'/'.$sourceId.'.jsonld';
 
         if ($fromCache && file_exists($cachePath)) {
             return file_get_contents($cachePath);
         }
 
-        $rdfa = file_get_contents($this->sources[$sourceId]);
+        $jsonLd = file_get_contents($this->sources[$sourceId]);
 
-        file_put_contents($cachePath, $rdfa);
+        file_put_contents($cachePath, $jsonLd);
 
-        return $rdfa;
+        return $jsonLd;
     }
 }

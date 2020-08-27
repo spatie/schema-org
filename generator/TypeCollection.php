@@ -9,13 +9,21 @@ class TypeCollection
 
     public function __construct(array $types, array $properties, array $constants)
     {
-        $typeNames = array_map(function (Type $type) {
-            return $type->name;
-        }, $types);
+        // Initially map the types to named keys and sort them.
+        $this->types = collect($types)->mapWithKeys(static function (Type $type) {
+            return [$type->name => $type];
+        })->sortKeys();
 
-        $this->types = array_combine($typeNames, $types);
+        // Grab list of defined types.
+        $definedTypes = $this->types->keys()->toArray();
+        // Filter out every type's parents that aren't defined then cast to array.
+        $this->types = $this->types->map(static function ($type) use ($definedTypes) {
+            $type->parents = array_filter($type->parents, static function ($parentType) use ($definedTypes) {
+                return in_array($parentType, $definedTypes, true);
+            });
 
-        ksort($this->types);
+            return $type;
+        })->toArray();
 
         foreach ($properties as $property) {
             foreach ($property->ranges as $range) {
