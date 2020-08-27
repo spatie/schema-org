@@ -2,6 +2,10 @@
 
 All Notable changes to `schema-org` will be documented in this file.
 
+## 3.0.0 - 2020-08-27
+
+- Upgrade to schema.org:v9 which includes all extensions
+
 ## 2.16.0 - 2020-08-27
 
 - Upgrade to schema.org:v8
