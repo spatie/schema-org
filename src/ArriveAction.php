@@ -13,6 +13,7 @@ use \Spatie\SchemaOrg\Contracts\ThingContract;
  *
  * @see http://schema.org/ArriveAction
  *
+ * @method static location($location) The value should be instance of pending types Place|Place[]|PostalAddress|PostalAddress[]|VirtualLocation|VirtualLocation[]|string|string[]
  */
 class ArriveAction extends BaseType implements ArriveActionContract, ActionContract, MoveActionContract, ThingContract
 {
@@ -207,21 +208,6 @@ class ArriveAction extends BaseType implements ArriveActionContract, ActionContr
     public function instrument($instrument)
     {
         return $this->setProperty('instrument', $instrument);
-    }
-
-    /**
-     * The location of for example where the event is happening, an organization
-     * is located, or where an action takes place.
-     *
-     * @param \Spatie\SchemaOrg\Contracts\PlaceContract|\Spatie\SchemaOrg\Contracts\PlaceContract[]|\Spatie\SchemaOrg\Contracts\PostalAddressContract|\Spatie\SchemaOrg\Contracts\PostalAddressContract[]|string|string[] $location
-     *
-     * @return static
-     *
-     * @see http://schema.org/location
-     */
-    public function location($location)
-    {
-        return $this->setProperty('location', $location);
     }
 
     /**

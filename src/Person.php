@@ -391,27 +391,6 @@ class Person extends BaseType implements PersonContract, ThingContract
     }
 
     /**
-     * Gender of something, typically a [[Person]], but possibly also fictional
-     * characters, animals, etc. While http://schema.org/Male and
-     * http://schema.org/Female may be used, text strings are also acceptable
-     * for people who do not identify as a binary gender. The [[gender]]
-     * property can also be used in an extended sense to cover e.g. the gender
-     * of sports teams. As with the gender of individuals, we do not try to
-     * enumerate all possibilities. A mixed-gender [[SportsTeam]] can be
-     * indicated with a text value of "Mixed".
-     *
-     * @param \Spatie\SchemaOrg\Contracts\GenderTypeContract|\Spatie\SchemaOrg\Contracts\GenderTypeContract[]|string|string[] $gender
-     *
-     * @return static
-     *
-     * @see http://schema.org/gender
-     */
-    public function gender($gender)
-    {
-        return $this->setProperty('gender', $gender);
-    }
-
-    /**
      * Given name. In the U.S., the first name of a Person. This can be used
      * along with familyName instead of the name property.
      *
@@ -577,6 +556,22 @@ class Person extends BaseType implements PersonContract, ThingContract
     }
 
     /**
+     * The number of interactions for the CreativeWork using the WebSite or
+     * SoftwareApplication. The most specific child type of InteractionCounter
+     * should be used.
+     *
+     * @param \Spatie\SchemaOrg\Contracts\InteractionCounterContract|\Spatie\SchemaOrg\Contracts\InteractionCounterContract[] $interactionStatistic
+     *
+     * @return static
+     *
+     * @see http://schema.org/interactionStatistic
+     */
+    public function interactionStatistic($interactionStatistic)
+    {
+        return $this->setProperty('interactionStatistic', $interactionStatistic);
+    }
+
+    /**
      * The International Standard of Industrial Classification of All Economic
      * Activities (ISIC), Revision 4 code for a particular organization,
      * business person, or place.
@@ -590,20 +585,6 @@ class Person extends BaseType implements PersonContract, ThingContract
     public function isicV4($isicV4)
     {
         return $this->setProperty('isicV4', $isicV4);
-    }
-
-    /**
-     * The job title of the person (for example, Financial Manager).
-     *
-     * @param string|string[] $jobTitle
-     *
-     * @return static
-     *
-     * @see http://schema.org/jobTitle
-     */
-    public function jobTitle($jobTitle)
-    {
-        return $this->setProperty('jobTitle', $jobTitle);
     }
 
     /**

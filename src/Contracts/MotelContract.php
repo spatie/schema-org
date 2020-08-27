@@ -14,6 +14,8 @@ interface MotelContract
 
     public function alternateName($alternateName);
 
+    public function alumni($alumni);
+
     public function amenityFeature($amenityFeature);
 
     public function areaServed($areaServed);
@@ -94,6 +96,8 @@ interface MotelContract
 
     public function image($image);
 
+    public function interactionStatistic($interactionStatistic);
+
     public function isAccessibleForFree($isAccessibleForFree);
 
     public function isicV4($isicV4);
@@ -103,8 +107,6 @@ interface MotelContract
     public function legalName($legalName);
 
     public function leiCode($leiCode);
-
-    public function location($location);
 
     public function logo($logo);
 
@@ -133,8 +135,6 @@ interface MotelContract
     public function numberOfEmployees($numberOfEmployees);
 
     public function numberOfRooms($numberOfRooms);
-
-    public function offeredBy($offeredBy);
 
     public function openingHours($openingHours);
 

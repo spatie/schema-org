@@ -28,8 +28,6 @@ interface RentActionContract
 
     public function landlord($landlord);
 
-    public function location($location);
-
     public function mainEntityOfPage($mainEntityOfPage);
 
     public function name($name);

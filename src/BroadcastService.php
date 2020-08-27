@@ -13,6 +13,8 @@ use \Spatie\SchemaOrg\Contracts\ThingContract;
  *
  * @see http://schema.org/BroadcastService
  *
+ * @method static category($category) The value should be instance of pending types PhysicalActivityCategory|PhysicalActivityCategory[]|Thing|Thing[]|string|string[]
+ * @method static serviceType($serviceType) The value should be instance of pending types GovernmentBenefitsType|GovernmentBenefitsType[]|string|string[]
  */
 class BroadcastService extends BaseType implements BroadcastServiceContract, IntangibleContract, ServiceContract, ThingContract
 {
@@ -242,21 +244,6 @@ class BroadcastService extends BaseType implements BroadcastServiceContract, Int
     }
 
     /**
-     * A category for the item. Greater signs or slashes can be used to
-     * informally indicate a category hierarchy.
-     *
-     * @param \Spatie\SchemaOrg\Contracts\ThingContract|\Spatie\SchemaOrg\Contracts\ThingContract[]|string|string[] $category
-     *
-     * @return static
-     *
-     * @see http://schema.org/category
-     */
-    public function category($category)
-    {
-        return $this->setProperty('category', $category);
-    }
-
-    /**
      * A description of the item.
      *
      * @param string|string[] $description
@@ -361,6 +348,23 @@ class BroadcastService extends BaseType implements BroadcastServiceContract, Int
     public function image($image)
     {
         return $this->setProperty('image', $image);
+    }
+
+    /**
+     * The language of the content or performance or used in an action. Please
+     * use one of the language codes from the [IETF BCP 47
+     * standard](http://tools.ietf.org/html/bcp47). See also
+     * [[availableLanguage]].
+     *
+     * @param \Spatie\SchemaOrg\Contracts\LanguageContract|\Spatie\SchemaOrg\Contracts\LanguageContract[]|string|string[] $inLanguage
+     *
+     * @return static
+     *
+     * @see http://schema.org/inLanguage
+     */
+    public function inLanguage($inLanguage)
+    {
+        return $this->setProperty('inLanguage', $inLanguage);
     }
 
     /**
@@ -603,21 +607,6 @@ class BroadcastService extends BaseType implements BroadcastServiceContract, Int
     public function serviceOutput($serviceOutput)
     {
         return $this->setProperty('serviceOutput', $serviceOutput);
-    }
-
-    /**
-     * The type of service being offered, e.g. veterans' benefits, emergency
-     * relief, etc.
-     *
-     * @param string|string[] $serviceType
-     *
-     * @return static
-     *
-     * @see http://schema.org/serviceType
-     */
-    public function serviceType($serviceType)
-    {
-        return $this->setProperty('serviceType', $serviceType);
     }
 
     /**

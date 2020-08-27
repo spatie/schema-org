@@ -284,7 +284,7 @@ class TVEpisode extends BaseType implements TVEpisodeContract, CreativeWorkContr
     /**
      * An embedded audio object.
      *
-     * @param \Spatie\SchemaOrg\Contracts\AudioObjectContract|\Spatie\SchemaOrg\Contracts\AudioObjectContract[]|\Spatie\SchemaOrg\Contracts\ClipContract|\Spatie\SchemaOrg\Contracts\ClipContract[] $audio
+     * @param \Spatie\SchemaOrg\Contracts\AudioObjectContract|\Spatie\SchemaOrg\Contracts\AudioObjectContract[]|\Spatie\SchemaOrg\Contracts\ClipContract|\Spatie\SchemaOrg\Contracts\ClipContract[]|\Spatie\SchemaOrg\Contracts\MusicRecordingContract|\Spatie\SchemaOrg\Contracts\MusicRecordingContract[] $audio
      *
      * @return static
      *
@@ -1507,21 +1507,6 @@ class TVEpisode extends BaseType implements TVEpisodeContract, CreativeWorkContr
     public function subjectOf($subjectOf)
     {
         return $this->setProperty('subjectOf', $subjectOf);
-    }
-
-    /**
-     * Languages in which subtitles/captions are available, in [IETF BCP 47
-     * standard format](http://tools.ietf.org/html/bcp47).
-     *
-     * @param \Spatie\SchemaOrg\Contracts\LanguageContract|\Spatie\SchemaOrg\Contracts\LanguageContract[]|string|string[] $subtitleLanguage
-     *
-     * @return static
-     *
-     * @see http://schema.org/subtitleLanguage
-     */
-    public function subtitleLanguage($subtitleLanguage)
-    {
-        return $this->setProperty('subtitleLanguage', $subtitleLanguage);
     }
 
     /**

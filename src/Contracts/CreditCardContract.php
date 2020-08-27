@@ -26,7 +26,7 @@ interface CreditCardContract
 
     public function broker($broker);
 
-    public function category($category);
+    public function currency($currency);
 
     public function description($description);
 
@@ -77,8 +77,6 @@ interface CreditCardContract
     public function serviceAudience($serviceAudience);
 
     public function serviceOutput($serviceOutput);
-
-    public function serviceType($serviceType);
 
     public function slogan($slogan);
 

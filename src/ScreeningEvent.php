@@ -11,6 +11,7 @@ use \Spatie\SchemaOrg\Contracts\ThingContract;
  *
  * @see http://schema.org/ScreeningEvent
  *
+ * @method static location($location) The value should be instance of pending types Place|Place[]|PostalAddress|PostalAddress[]|VirtualLocation|VirtualLocation[]|string|string[]
  */
 class ScreeningEvent extends BaseType implements ScreeningEventContract, EventContract, ThingContract
 {
@@ -349,21 +350,6 @@ class ScreeningEvent extends BaseType implements ScreeningEventContract, EventCo
     }
 
     /**
-     * The location of for example where the event is happening, an organization
-     * is located, or where an action takes place.
-     *
-     * @param \Spatie\SchemaOrg\Contracts\PlaceContract|\Spatie\SchemaOrg\Contracts\PlaceContract[]|\Spatie\SchemaOrg\Contracts\PostalAddressContract|\Spatie\SchemaOrg\Contracts\PostalAddressContract[]|string|string[] $location
-     *
-     * @return static
-     *
-     * @see http://schema.org/location
-     */
-    public function location($location)
-    {
-        return $this->setProperty('location', $location);
-    }
-
-    /**
      * Indicates a page (or other CreativeWork) for which this thing is the main
      * entity being described. See [background
      * notes](/docs/datamodel.html#mainEntityBackground) for details.
@@ -637,21 +623,6 @@ class ScreeningEvent extends BaseType implements ScreeningEventContract, EventCo
     public function subjectOf($subjectOf)
     {
         return $this->setProperty('subjectOf', $subjectOf);
-    }
-
-    /**
-     * Languages in which subtitles/captions are available, in [IETF BCP 47
-     * standard format](http://tools.ietf.org/html/bcp47).
-     *
-     * @param \Spatie\SchemaOrg\Contracts\LanguageContract|\Spatie\SchemaOrg\Contracts\LanguageContract[]|string|string[] $subtitleLanguage
-     *
-     * @return static
-     *
-     * @see http://schema.org/subtitleLanguage
-     */
-    public function subtitleLanguage($subtitleLanguage)
-    {
-        return $this->setProperty('subtitleLanguage', $subtitleLanguage);
     }
 
     /**

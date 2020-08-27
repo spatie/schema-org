@@ -13,6 +13,7 @@ use \Spatie\SchemaOrg\Contracts\ThingContract;
  *
  * @see http://schema.org/MusicGroup
  *
+ * @method static location($location) The value should be instance of pending types Place|Place[]|PostalAddress|PostalAddress[]|VirtualLocation|VirtualLocation[]|string|string[]
  */
 class MusicGroup extends BaseType implements MusicGroupContract, OrganizationContract, PerformingGroupContract, ThingContract
 {
@@ -104,6 +105,20 @@ class MusicGroup extends BaseType implements MusicGroupContract, OrganizationCon
     public function alternateName($alternateName)
     {
         return $this->setProperty('alternateName', $alternateName);
+    }
+
+    /**
+     * Alumni of an organization.
+     *
+     * @param \Spatie\SchemaOrg\Contracts\PersonContract|\Spatie\SchemaOrg\Contracts\PersonContract[] $alumni
+     *
+     * @return static
+     *
+     * @see http://schema.org/alumni
+     */
+    public function alumni($alumni)
+    {
+        return $this->setProperty('alumni', $alumni);
     }
 
     /**
@@ -518,6 +533,22 @@ class MusicGroup extends BaseType implements MusicGroupContract, OrganizationCon
     }
 
     /**
+     * The number of interactions for the CreativeWork using the WebSite or
+     * SoftwareApplication. The most specific child type of InteractionCounter
+     * should be used.
+     *
+     * @param \Spatie\SchemaOrg\Contracts\InteractionCounterContract|\Spatie\SchemaOrg\Contracts\InteractionCounterContract[] $interactionStatistic
+     *
+     * @return static
+     *
+     * @see http://schema.org/interactionStatistic
+     */
+    public function interactionStatistic($interactionStatistic)
+    {
+        return $this->setProperty('interactionStatistic', $interactionStatistic);
+    }
+
+    /**
      * The International Standard of Industrial Classification of All Economic
      * Activities (ISIC), Revision 4 code for a particular organization,
      * business person, or place.
@@ -560,21 +591,6 @@ class MusicGroup extends BaseType implements MusicGroupContract, OrganizationCon
     public function leiCode($leiCode)
     {
         return $this->setProperty('leiCode', $leiCode);
-    }
-
-    /**
-     * The location of for example where the event is happening, an organization
-     * is located, or where an action takes place.
-     *
-     * @param \Spatie\SchemaOrg\Contracts\PlaceContract|\Spatie\SchemaOrg\Contracts\PlaceContract[]|\Spatie\SchemaOrg\Contracts\PostalAddressContract|\Spatie\SchemaOrg\Contracts\PostalAddressContract[]|string|string[] $location
-     *
-     * @return static
-     *
-     * @see http://schema.org/location
-     */
-    public function location($location)
-    {
-        return $this->setProperty('location', $location);
     }
 
     /**
@@ -721,20 +737,6 @@ class MusicGroup extends BaseType implements MusicGroupContract, OrganizationCon
     public function numberOfEmployees($numberOfEmployees)
     {
         return $this->setProperty('numberOfEmployees', $numberOfEmployees);
-    }
-
-    /**
-     * A pointer to the organization or person making the offer.
-     *
-     * @param \Spatie\SchemaOrg\Contracts\OrganizationContract|\Spatie\SchemaOrg\Contracts\OrganizationContract[]|\Spatie\SchemaOrg\Contracts\PersonContract|\Spatie\SchemaOrg\Contracts\PersonContract[] $offeredBy
-     *
-     * @return static
-     *
-     * @see http://schema.org/offeredBy
-     */
-    public function offeredBy($offeredBy)
-    {
-        return $this->setProperty('offeredBy', $offeredBy);
     }
 
     /**

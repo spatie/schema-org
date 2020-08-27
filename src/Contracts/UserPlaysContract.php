@@ -48,8 +48,6 @@ interface UserPlaysContract
 
     public function isAccessibleForFree($isAccessibleForFree);
 
-    public function location($location);
-
     public function mainEntityOfPage($mainEntityOfPage);
 
     public function maximumAttendeeCapacity($maximumAttendeeCapacity);

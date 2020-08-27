@@ -13,7 +13,7 @@ use \Spatie\SchemaOrg\Contracts\ThingContract;
  * human-readable version of the value, put that into the 'description'
  * property.
  * 
- *  Always use specific schema.org properties when a) they exist and b) you can
+ * Always use specific schema.org properties when a) they exist and b) you can
  * populate them. Using PropertyValue as a substitute will typically not trigger
  * the same effect as using the original, specific property.
  *

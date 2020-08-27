@@ -16,6 +16,7 @@ use \Spatie\SchemaOrg\Contracts\ThingContract;
  *
  * @see http://schema.org/Course
  *
+ * @method static educationalCredentialAwarded($educationalCredentialAwarded) The value should be instance of pending types EducationalOccupationalCredential|EducationalOccupationalCredential[]|string|string[]
  */
 class Course extends BaseType implements CourseContract, CreativeWorkContract, ThingContract
 {
@@ -257,7 +258,7 @@ class Course extends BaseType implements CourseContract, CreativeWorkContract, T
     /**
      * An embedded audio object.
      *
-     * @param \Spatie\SchemaOrg\Contracts\AudioObjectContract|\Spatie\SchemaOrg\Contracts\AudioObjectContract[]|\Spatie\SchemaOrg\Contracts\ClipContract|\Spatie\SchemaOrg\Contracts\ClipContract[] $audio
+     * @param \Spatie\SchemaOrg\Contracts\AudioObjectContract|\Spatie\SchemaOrg\Contracts\AudioObjectContract[]|\Spatie\SchemaOrg\Contracts\ClipContract|\Spatie\SchemaOrg\Contracts\ClipContract[]|\Spatie\SchemaOrg\Contracts\MusicRecordingContract|\Spatie\SchemaOrg\Contracts\MusicRecordingContract[] $audio
      *
      * @return static
      *

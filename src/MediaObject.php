@@ -270,7 +270,7 @@ class MediaObject extends BaseType implements MediaObjectContract, CreativeWorkC
     /**
      * An embedded audio object.
      *
-     * @param \Spatie\SchemaOrg\Contracts\AudioObjectContract|\Spatie\SchemaOrg\Contracts\AudioObjectContract[]|\Spatie\SchemaOrg\Contracts\ClipContract|\Spatie\SchemaOrg\Contracts\ClipContract[] $audio
+     * @param \Spatie\SchemaOrg\Contracts\AudioObjectContract|\Spatie\SchemaOrg\Contracts\AudioObjectContract[]|\Spatie\SchemaOrg\Contracts\ClipContract|\Spatie\SchemaOrg\Contracts\ClipContract[]|\Spatie\SchemaOrg\Contracts\MusicRecordingContract|\Spatie\SchemaOrg\Contracts\MusicRecordingContract[] $audio
      *
      * @return static
      *
@@ -1399,7 +1399,7 @@ class MediaObject extends BaseType implements MediaObjectContract, CreativeWorkC
      * free). Allowed values are ```true``` or ```false``` (note that an earlier
      * version had 'yes', 'no').
      *
-     * @param bool|bool[] $requiresSubscription
+     * @param \Spatie\SchemaOrg\Contracts\MediaSubscriptionContract|\Spatie\SchemaOrg\Contracts\MediaSubscriptionContract[]|bool|bool[] $requiresSubscription
      *
      * @return static
      *

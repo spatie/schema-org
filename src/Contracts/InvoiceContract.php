@@ -14,8 +14,6 @@ interface InvoiceContract
 
     public function broker($broker);
 
-    public function category($category);
-
     public function confirmationNumber($confirmationNumber);
 
     public function customer($customer);

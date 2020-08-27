@@ -53,6 +53,20 @@ class FlightReservation extends BaseType implements FlightReservationContract, I
     }
 
     /**
+     * The airline-specific indicator of boarding order / preference.
+     *
+     * @param string|string[] $boardingGroup
+     *
+     * @return static
+     *
+     * @see http://schema.org/boardingGroup
+     */
+    public function boardingGroup($boardingGroup)
+    {
+        return $this->setProperty('boardingGroup', $boardingGroup);
+    }
+
+    /**
      * 'bookingAgent' is an out-dated term indicating a 'broker' that serves as
      * a booking agent.
      *

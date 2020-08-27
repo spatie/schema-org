@@ -24,8 +24,6 @@ interface PaymentServiceContract
 
     public function broker($broker);
 
-    public function category($category);
-
     public function description($description);
 
     public function disambiguatingDescription($disambiguatingDescription);
@@ -71,8 +69,6 @@ interface PaymentServiceContract
     public function serviceAudience($serviceAudience);
 
     public function serviceOutput($serviceOutput);
-
-    public function serviceType($serviceType);
 
     public function slogan($slogan);
 

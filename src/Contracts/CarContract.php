@@ -22,8 +22,6 @@ interface CarContract
 
     public function cargoVolume($cargoVolume);
 
-    public function category($category);
-
     public function color($color);
 
     public function dateVehicleFirstRegistered($dateVehicleFirstRegistered);
@@ -135,8 +133,6 @@ interface CarContract
     public function vehicleModelDate($vehicleModelDate);
 
     public function vehicleSeatingCapacity($vehicleSeatingCapacity);
-
-    public function vehicleSpecialUsage($vehicleSpecialUsage);
 
     public function vehicleTransmission($vehicleTransmission);
 

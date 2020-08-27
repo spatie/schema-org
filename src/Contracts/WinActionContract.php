@@ -26,8 +26,6 @@ interface WinActionContract
 
     public function instrument($instrument);
 
-    public function location($location);
-
     public function loser($loser);
 
     public function mainEntityOfPage($mainEntityOfPage);

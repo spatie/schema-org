@@ -14,6 +14,8 @@ use \Spatie\SchemaOrg\Contracts\ThingContract;
  *
  * @see http://schema.org/BankAccount
  *
+ * @method static category($category) The value should be instance of pending types PhysicalActivityCategory|PhysicalActivityCategory[]|Thing|Thing[]|string|string[]
+ * @method static serviceType($serviceType) The value should be instance of pending types GovernmentBenefitsType|GovernmentBenefitsType[]|string|string[]
  */
 class BankAccount extends BaseType implements BankAccountContract, FinancialProductContract, IntangibleContract, ServiceContract, ThingContract
 {
@@ -169,21 +171,6 @@ class BankAccount extends BaseType implements BankAccountContract, FinancialProd
     public function broker($broker)
     {
         return $this->setProperty('broker', $broker);
-    }
-
-    /**
-     * A category for the item. Greater signs or slashes can be used to
-     * informally indicate a category hierarchy.
-     *
-     * @param \Spatie\SchemaOrg\Contracts\ThingContract|\Spatie\SchemaOrg\Contracts\ThingContract[]|string|string[] $category
-     *
-     * @return static
-     *
-     * @see http://schema.org/category
-     */
-    public function category($category)
-    {
-        return $this->setProperty('category', $category);
     }
 
     /**
@@ -534,21 +521,6 @@ class BankAccount extends BaseType implements BankAccountContract, FinancialProd
     public function serviceOutput($serviceOutput)
     {
         return $this->setProperty('serviceOutput', $serviceOutput);
-    }
-
-    /**
-     * The type of service being offered, e.g. veterans' benefits, emergency
-     * relief, etc.
-     *
-     * @param string|string[] $serviceType
-     *
-     * @return static
-     *
-     * @see http://schema.org/serviceType
-     */
-    public function serviceType($serviceType)
-    {
-        return $this->setProperty('serviceType', $serviceType);
     }
 
     /**

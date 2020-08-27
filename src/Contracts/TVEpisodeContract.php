@@ -198,8 +198,6 @@ interface TVEpisodeContract
 
     public function subjectOf($subjectOf);
 
-    public function subtitleLanguage($subtitleLanguage);
-
     public function temporal($temporal);
 
     public function temporalCoverage($temporalCoverage);

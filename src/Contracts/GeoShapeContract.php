@@ -22,8 +22,6 @@ interface GeoShapeContract
 
     public function elevation($elevation);
 
-    public function geoMidpoint($geoMidpoint);
-
     public function identifier($identifier);
 
     public function image($image);

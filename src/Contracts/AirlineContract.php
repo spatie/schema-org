@@ -12,6 +12,8 @@ interface AirlineContract
 
     public function alternateName($alternateName);
 
+    public function alumni($alumni);
+
     public function areaServed($areaServed);
 
     public function award($award);
@@ -70,13 +72,13 @@ interface AirlineContract
 
     public function image($image);
 
+    public function interactionStatistic($interactionStatistic);
+
     public function isicV4($isicV4);
 
     public function legalName($legalName);
 
     public function leiCode($leiCode);
-
-    public function location($location);
 
     public function logo($logo);
 
@@ -95,8 +97,6 @@ interface AirlineContract
     public function name($name);
 
     public function numberOfEmployees($numberOfEmployees);
-
-    public function offeredBy($offeredBy);
 
     public function owns($owns);
 

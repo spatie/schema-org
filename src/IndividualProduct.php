@@ -12,6 +12,7 @@ use \Spatie\SchemaOrg\Contracts\ThingContract;
  *
  * @see http://schema.org/IndividualProduct
  *
+ * @method static category($category) The value should be instance of pending types PhysicalActivityCategory|PhysicalActivityCategory[]|Thing|Thing[]|string|string[]
  */
 class IndividualProduct extends BaseType implements IndividualProductContract, ProductContract, ThingContract
 {
@@ -140,21 +141,6 @@ class IndividualProduct extends BaseType implements IndividualProductContract, P
     public function brand($brand)
     {
         return $this->setProperty('brand', $brand);
-    }
-
-    /**
-     * A category for the item. Greater signs or slashes can be used to
-     * informally indicate a category hierarchy.
-     *
-     * @param \Spatie\SchemaOrg\Contracts\ThingContract|\Spatie\SchemaOrg\Contracts\ThingContract[]|string|string[] $category
-     *
-     * @return static
-     *
-     * @see http://schema.org/category
-     */
-    public function category($category)
-    {
-        return $this->setProperty('category', $category);
     }
 
     /**
@@ -554,8 +540,8 @@ class IndividualProduct extends BaseType implements IndividualProductContract, P
     }
 
     /**
-     * The product identifier, such as ISBN. For example: ``` meta
-     * itemprop="productID" content="isbn:123-456-789" ```.
+     * The product identifier, such as ISBN. For example: ```meta
+     * itemprop="productID" content="isbn:123-456-789"```.
      *
      * @param string|string[] $productID
      *

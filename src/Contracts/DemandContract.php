@@ -56,8 +56,6 @@ interface DemandContract
 
     public function includesObject($includesObject);
 
-    public function ineligibleRegion($ineligibleRegion);
-
     public function inventoryLevel($inventoryLevel);
 
     public function itemCondition($itemCondition);

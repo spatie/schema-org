@@ -48,8 +48,6 @@ interface ScreeningEventContract
 
     public function isAccessibleForFree($isAccessibleForFree);
 
-    public function location($location);
-
     public function mainEntityOfPage($mainEntityOfPage);
 
     public function maximumAttendeeCapacity($maximumAttendeeCapacity);
@@ -85,8 +83,6 @@ interface ScreeningEventContract
     public function subEvents($subEvents);
 
     public function subjectOf($subjectOf);
-
-    public function subtitleLanguage($subtitleLanguage);
 
     public function superEvent($superEvent);
 

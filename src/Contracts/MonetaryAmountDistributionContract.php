@@ -14,6 +14,8 @@ interface MonetaryAmountDistributionContract
 
     public function disambiguatingDescription($disambiguatingDescription);
 
+    public function duration($duration);
+
     public function identifier($identifier);
 
     public function image($image);
