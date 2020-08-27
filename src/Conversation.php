@@ -560,6 +560,10 @@ class Conversation extends BaseType implements ConversationContract, CreativeWor
 
     /**
      * An alignment to an established educational framework.
+     * 
+     * This property should not be used where the nature of the alignment can be
+     * described using a simple property, for example to express that a resource
+     * [[teaches]] or [[assesses]] a competency.
      *
      * @param \Spatie\SchemaOrg\Contracts\AlignmentObjectContract|\Spatie\SchemaOrg\Contracts\AlignmentObjectContract[] $educationalAlignment
      *

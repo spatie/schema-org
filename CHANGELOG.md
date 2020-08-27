@@ -2,9 +2,13 @@
 
 All Notable changes to `schema-org` will be documented in this file.
 
+## 2.16.0 - 2020-08-27
+
+- Upgrade to schema.org:v8
+
 ## 2.15.0 - 2020-08-27
 
-Generated files with new JSON-LD source - some methods have been dropped which aren't part of the corresponding types but were listed in old RDFa - it's not a breaking release because of same schema.org version and changes only because of schema file inconsistencies.
+Generated files with new JSON-LD source - some methods have been dropped which aren't part of the corresponding types but were listed in old RDFa - it's not a breaking release because of the same schema.org version and changes only because of schema file inconsistencies.
 
 ## 2.14.1 - 2020-06-10
 

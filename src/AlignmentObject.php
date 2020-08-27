@@ -9,6 +9,10 @@ use \Spatie\SchemaOrg\Contracts\ThingContract;
 /**
  * An intangible item that describes an alignment between a learning resource
  * and a node in an educational framework.
+ * 
+ * Should not be used where the nature of the alignment can be described using a
+ * simple property, for example to express that a resource [[teaches]] or
+ * [[assesses]] a competency.
  *
  * @see http://schema.org/AlignmentObject
  *
@@ -36,9 +40,8 @@ class AlignmentObject extends BaseType implements AlignmentObjectContract, Intan
 
     /**
      * A category of alignment between the learning resource and the framework
-     * node. Recommended values include: 'assesses', 'teaches', 'requires',
-     * 'textComplexity', 'readingLevel', 'educationalSubject', and
-     * 'educationalLevel'.
+     * node. Recommended values include: 'requires', 'textComplexity',
+     * 'readingLevel', and 'educationalSubject'.
      *
      * @param string|string[] $alignmentType
      *
