@@ -21,6 +21,10 @@ class Type
 
     public string $resource;
 
+    public ?string $partOf;
+
+    public ?string $source;
+
     protected bool $parentsLoaded = false;
 
     public function addProperty(Property $property): void

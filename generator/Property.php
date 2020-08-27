@@ -18,6 +18,10 @@ class Property
 
     public bool $pending = false;
 
+    public ?string $partOf;
+
+    public ?string $source;
+
     public function addType(string $type): void
     {
         $this->types[] = $type;

@@ -32,6 +32,10 @@ class ParseProperty extends Task
                 );
             });
 
+        $property->partOf = $this->definition['https://schema.org/isPartOf']['@id'] ?? null;
+
+        $property->source = $this->definition['https://schema.org/source']['@id'] ?? null;
+
         return $property;
     }
 

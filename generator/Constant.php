@@ -11,4 +11,8 @@ class Constant
     public string $value;
 
     public string $type;
+
+    public ?string $partOf;
+
+    public ?string $source;
 }
