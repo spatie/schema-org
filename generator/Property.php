@@ -4,30 +4,26 @@ namespace Spatie\SchemaOrg\Generator;
 
 class Property
 {
-    /** @var string */
-    public $name;
+    public string $name;
 
-    /** @var string */
-    public $description;
+    public string $description;
 
-    /** @var string */
-    public $resource;
+    public string $resource;
 
-    /** var array */
-    public $types = [];
+    /** @var Type[] */
+    public array $types = [];
 
-    /** @var array */
-    public $ranges = [];
+    /** @var string[] */
+    public array $ranges = [];
 
-    /** @var bool */
-    public $pending = false;
+    public bool $pending = false;
 
-    public function addType(string $type)
+    public function addType(string $type): void
     {
         $this->types[] = $type;
     }
 
-    public function addRanges(array $ranges)
+    public function addRanges(array $ranges): void
     {
         foreach ($ranges as $range) {
             $this->addRange($range);
@@ -36,7 +32,7 @@ class Property
         sort($this->ranges);
     }
 
-    private function addRange(string $range)
+    private function addRange(string $range): void
     {
         $this->ranges[] = $range;
         $this->ranges[] = "{$range}[]";

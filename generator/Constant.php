@@ -4,15 +4,11 @@ namespace Spatie\SchemaOrg\Generator;
 
 class Constant
 {
-    /** @var string */
-    public $name;
+    public string $name;
 
-    /** @var string */
-    public $description;
+    public string $description;
 
-    /** @var string */
-    public $value;
+    public string $value;
 
-    /** var string */
-    public $type;
+    public string $type;
 }

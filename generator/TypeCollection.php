@@ -2,35 +2,45 @@
 
 namespace Spatie\SchemaOrg\Generator;
 
+use Closure;
+use Tightenco\Collect\Support\Collection;
+
 class TypeCollection
 {
-    /** @var array */
+    /** @var iterable|Collection|Type[]
+     */
     private $types = [];
 
-    public function __construct(array $types, array $properties, array $constants)
+    /**
+     * @param iterable|Type[] $types
+     * @param iterable|Property[] $properties
+     * @param iterable|Constant[] $constants
+     */
+    public function __construct(iterable $types, iterable $properties, iterable $constants)
     {
         // Initially map the types to named keys and sort them.
-        $this->types = collect($types)->mapWithKeys(static function (Type $type) {
-            return [$type->name => $type];
-        })->sortKeys();
+        $this->types = collect($types)
+            ->mapWithKeys(static function (Type $type): array {
+                return [$type->name => $type];
+            })
+            ->sortKeys();
 
         // Grab list of defined types.
         $definedTypes = $this->types->keys()->toArray();
+
         // Filter out every type's parents that aren't defined then cast to array.
-        $this->types = $this->types->map(static function ($type) use ($definedTypes) {
-            $type->parents = array_filter($type->parents, static function ($parentType) use ($definedTypes) {
+        $this->types->each(static function (Type $type) use ($definedTypes): void {
+            $type->parents = array_filter($type->parents, static function (string $parentType) use ($definedTypes): bool {
                 return in_array($parentType, $definedTypes, true);
             });
-
-            return $type;
-        })->toArray();
+        });
 
         foreach ($properties as $property) {
             foreach ($property->ranges as $range) {
                 if (
                     strpos($range, '[]') === false
                     && ! in_array($range, ['bool', 'false', 'true', '\DateTimeInterface', 'string', 'float', 'int'])
-                    && ! isset($this->types[$range])
+                    && empty($this->types[$range])
                 ) {
                     $property->pending = true;
                 }
@@ -44,7 +54,7 @@ class TypeCollection
         }
     }
 
-    private function addProperty(Property $property)
+    private function addProperty(Property $property): void
     {
         foreach ($property->types as $type) {
             if (! isset($this->types[$type])) {
@@ -55,14 +65,14 @@ class TypeCollection
         }
     }
 
-    private function addConstant(Constant $constant)
+    private function addConstant(Constant $constant): void
     {
         if (isset($this->types[$constant->type])) {
             $this->types[$constant->type]->addConstant($constant);
         }
     }
 
-    public function each($callable)
+    public function each(Closure $callable): void
     {
         foreach ($this->types as $type) {
             $callable($type);
@@ -71,6 +81,6 @@ class TypeCollection
 
     public function toArray(): array
     {
-        return $this->types;
+        return collect($this->types)->all();
     }
 }

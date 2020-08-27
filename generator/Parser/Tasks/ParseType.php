@@ -19,10 +19,12 @@ class ParseType extends Task
         $subClassOf = $this->getWrappedDefinitionProperty('rdfs:subClassOf');
 
         if ($subClassOf->count() > 0) {
-            $type->parents = array_filter($subClassOf
-                ->map(function ($parent, $key) {
+            $type->parents = $subClassOf
+                ->map(function (array $parent): string {
                     return $this->getResourceName($parent);
-                })->toArray());
+                })
+                ->filter()
+                ->toArray();
 
             if (empty($type->parents)) {
                 return null;

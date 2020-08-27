@@ -6,8 +6,7 @@ use Tightenco\Collect\Support\Collection;
 
 abstract class Task
 {
-    /** @array */
-    protected $definition;
+    protected array $definition;
 
     public function __construct(array $definition)
     {
@@ -27,6 +26,7 @@ abstract class Task
     protected function getWrappedDefinitionProperty(string $selector): Collection
     {
         $property = $this->definition[$selector] ?? [];
+
         if (count($property) === 1) {
             $property = [$property];
         }
@@ -37,7 +37,7 @@ abstract class Task
     /**
      * Get the schema resource URL.
      */
-    protected function getResource(?array $schemaResource = null)
+    protected function getResource(?array $schemaResource = null): string
     {
         return $schemaResource['@id'] ?? $this->definition['@id'];
     }
@@ -45,7 +45,7 @@ abstract class Task
     /**
      * Get the Schema resource name.
      */
-    protected function getResourceName(?array $schemaResource = null)
+    protected function getResourceName(?array $schemaResource = null): string
     {
         return str_replace('http://schema.org/', '', $this->getResource($schemaResource));
     }

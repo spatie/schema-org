@@ -6,16 +6,8 @@ use Tightenco\Collect\Support\Collection;
 
 class JsonLdParser
 {
-    /**
-     * @var \Tightenco\Collect\Support\Collection
-     */
-    private $jsonLdGraph;
+    protected Collection $jsonLdGraph;
 
-    /**
-     * JsonLdParser constructor.
-     *
-     * @param string $rawJsonLd
-     */
     public function __construct(string $rawJsonLd)
     {
         $parsedJson = json_decode($rawJsonLd, true);
@@ -24,7 +16,7 @@ class JsonLdParser
 
     public function filter(string $selector): Collection
     {
-        return $this->jsonLdGraph->filter(static function ($schema) use ($selector) {
+        return $this->jsonLdGraph->filter(static function ($schema) use ($selector): bool {
             return array_key_exists('@type', $schema) && $schema['@type'] === $selector;
         });
     }

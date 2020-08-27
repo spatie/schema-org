@@ -13,7 +13,7 @@ class Filters
 
         // Remove HTML breaks
         $text = str_replace(['<br/>', '<br />'], '', $text);
-        $text = str_replace('&amp;', '&', $text);
+        $text = str_replace(['&amp;', '&lt;', '&gt;', '&quot;'], ['&', '<', '>', '"'], $text);
 
         // HTML code block to MD code
         $text = str_replace(['<code>', '</code>'], '```', $text);
@@ -26,9 +26,6 @@ class Filters
         // Parse lists into markdown
         $text = str_replace(["<ul>\n", '</ul>', '</li>'], '', $text);
         $text = str_replace('<li>', '* ', $text);
-
-        // Remove encoded angle braces and quotes
-        $text = str_replace(['&lt;', '&gt;', '&quot;'], ['<', '>', '"'], $text);
 
         // Replace any remote links first...
         $text = preg_replace('/<a href="([\.0-9A-Za-z\:\/\-\_#]+)">([0-9a-zA-Z\s\-\_]*)<\/a>/', '[$2]($1)', $text);

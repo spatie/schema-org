@@ -4,35 +4,31 @@ namespace Spatie\SchemaOrg\Generator;
 
 class Type
 {
-    /** @var string */
-    public $name;
+    public string $name;
 
     /** @var string[] */
-    public $parents = [];
+    public array $parents = [];
 
-    /** @var string */
-    public $description;
+    public string $description;
 
     /** @var Property[] */
-    public $properties = [];
+    public array $properties = [];
 
-    /** @var array */
-    public $constants = [];
+    /** @var Constant[] */
+    public array $constants = [];
 
-    /** @var string */
-    public $resource;
+    public string $resource;
 
-    /** @var bool */
-    protected $parentsLoaded = false;
+    protected bool $parentsLoaded = false;
 
-    public function addProperty(Property $property)
+    public function addProperty(Property $property): void
     {
         $this->properties[$property->name] = $property;
 
         ksort($this->properties);
     }
 
-    public function addConstant(Constant $constant)
+    public function addConstant(Constant $constant): void
     {
         $this->constants[$constant->name] = $constant;
 

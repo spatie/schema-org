@@ -2,24 +2,22 @@
 
 namespace Spatie\SchemaOrg\Generator;
 
-use RuntimeError;
+use OutOfBoundsException;
 use Spatie\SchemaOrg\Generator\Parser\JsonLdParser;
 use Tightenco\Collect\Support\Collection;
 
 class Definitions
 {
-    /** @var array */
-    protected $sources;
+    protected array $sources;
 
-    /** @var string */
-    protected $tempDir = __DIR__.'/temp';
+    protected string $tempDir = __DIR__.'/temp';
 
     public function __construct(array $sources)
     {
         $this->sources = $sources;
     }
 
-    public function preload()
+    public function preload(): void
     {
         foreach ($this->sources as $sourceId => $sourcePath) {
             $this->loadSource($sourceId, false);
@@ -34,7 +32,7 @@ class Definitions
     protected function loadSource(string $sourceId, bool $fromCache = true): string
     {
         if (! isset($this->sources[$sourceId])) {
-            throw new RuntimeError("Source `{$sourceId}` doesn't exist");
+            throw new OutOfBoundsException("Source `{$sourceId}` doesn't exist");
         }
 
         $cachePath = $this->tempDir.'/'.$sourceId.'.jsonld';
