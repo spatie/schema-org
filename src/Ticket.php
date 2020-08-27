@@ -9,7 +9,7 @@ use \Spatie\SchemaOrg\Contracts\ThingContract;
 /**
  * Used to describe a ticket to an event, a flight, a bus ride, etc.
  *
- * @see http://schema.org/Ticket
+ * @see https://schema.org/Ticket
  *
  */
 class Ticket extends BaseType implements TicketContract, IntangibleContract, ThingContract
@@ -26,7 +26,7 @@ class Ticket extends BaseType implements TicketContract, IntangibleContract, Thi
      *
      * @return static
      *
-     * @see http://schema.org/additionalType
+     * @see https://schema.org/additionalType
      */
     public function additionalType($additionalType)
     {
@@ -40,7 +40,7 @@ class Ticket extends BaseType implements TicketContract, IntangibleContract, Thi
      *
      * @return static
      *
-     * @see http://schema.org/alternateName
+     * @see https://schema.org/alternateName
      */
     public function alternateName($alternateName)
     {
@@ -54,7 +54,7 @@ class Ticket extends BaseType implements TicketContract, IntangibleContract, Thi
      *
      * @return static
      *
-     * @see http://schema.org/dateIssued
+     * @see https://schema.org/dateIssued
      */
     public function dateIssued($dateIssued)
     {
@@ -68,7 +68,7 @@ class Ticket extends BaseType implements TicketContract, IntangibleContract, Thi
      *
      * @return static
      *
-     * @see http://schema.org/description
+     * @see https://schema.org/description
      */
     public function description($description)
     {
@@ -85,7 +85,7 @@ class Ticket extends BaseType implements TicketContract, IntangibleContract, Thi
      *
      * @return static
      *
-     * @see http://schema.org/disambiguatingDescription
+     * @see https://schema.org/disambiguatingDescription
      */
     public function disambiguatingDescription($disambiguatingDescription)
     {
@@ -103,7 +103,7 @@ class Ticket extends BaseType implements TicketContract, IntangibleContract, Thi
      *
      * @return static
      *
-     * @see http://schema.org/identifier
+     * @see https://schema.org/identifier
      */
     public function identifier($identifier)
     {
@@ -118,7 +118,7 @@ class Ticket extends BaseType implements TicketContract, IntangibleContract, Thi
      *
      * @return static
      *
-     * @see http://schema.org/image
+     * @see https://schema.org/image
      */
     public function image($image)
     {
@@ -132,7 +132,7 @@ class Ticket extends BaseType implements TicketContract, IntangibleContract, Thi
      *
      * @return static
      *
-     * @see http://schema.org/issuedBy
+     * @see https://schema.org/issuedBy
      */
     public function issuedBy($issuedBy)
     {
@@ -148,7 +148,7 @@ class Ticket extends BaseType implements TicketContract, IntangibleContract, Thi
      *
      * @return static
      *
-     * @see http://schema.org/mainEntityOfPage
+     * @see https://schema.org/mainEntityOfPage
      */
     public function mainEntityOfPage($mainEntityOfPage)
     {
@@ -162,7 +162,7 @@ class Ticket extends BaseType implements TicketContract, IntangibleContract, Thi
      *
      * @return static
      *
-     * @see http://schema.org/name
+     * @see https://schema.org/name
      */
     public function name($name)
     {
@@ -177,7 +177,7 @@ class Ticket extends BaseType implements TicketContract, IntangibleContract, Thi
      *
      * @return static
      *
-     * @see http://schema.org/potentialAction
+     * @see https://schema.org/potentialAction
      */
     public function potentialAction($potentialAction)
     {
@@ -200,7 +200,7 @@ class Ticket extends BaseType implements TicketContract, IntangibleContract, Thi
      *
      * @return static
      *
-     * @see http://schema.org/priceCurrency
+     * @see https://schema.org/priceCurrency
      */
     public function priceCurrency($priceCurrency)
     {
@@ -216,7 +216,7 @@ class Ticket extends BaseType implements TicketContract, IntangibleContract, Thi
      *
      * @return static
      *
-     * @see http://schema.org/sameAs
+     * @see https://schema.org/sameAs
      */
     public function sameAs($sameAs)
     {
@@ -230,7 +230,8 @@ class Ticket extends BaseType implements TicketContract, IntangibleContract, Thi
      *
      * @return static
      *
-     * @see http://schema.org/subjectOf
+     * @see https://schema.org/subjectOf
+     * @link https://github.com/schemaorg/schemaorg/issues/1670
      */
     public function subjectOf($subjectOf)
     {
@@ -244,7 +245,7 @@ class Ticket extends BaseType implements TicketContract, IntangibleContract, Thi
      *
      * @return static
      *
-     * @see http://schema.org/ticketNumber
+     * @see https://schema.org/ticketNumber
      */
     public function ticketNumber($ticketNumber)
     {
@@ -259,7 +260,7 @@ class Ticket extends BaseType implements TicketContract, IntangibleContract, Thi
      *
      * @return static
      *
-     * @see http://schema.org/ticketToken
+     * @see https://schema.org/ticketToken
      */
     public function ticketToken($ticketToken)
     {
@@ -273,7 +274,7 @@ class Ticket extends BaseType implements TicketContract, IntangibleContract, Thi
      *
      * @return static
      *
-     * @see http://schema.org/ticketedSeat
+     * @see https://schema.org/ticketedSeat
      */
     public function ticketedSeat($ticketedSeat)
     {
@@ -295,7 +296,7 @@ class Ticket extends BaseType implements TicketContract, IntangibleContract, Thi
      *
      * @return static
      *
-     * @see http://schema.org/totalPrice
+     * @see https://schema.org/totalPrice
      */
     public function totalPrice($totalPrice)
     {
@@ -309,7 +310,7 @@ class Ticket extends BaseType implements TicketContract, IntangibleContract, Thi
      *
      * @return static
      *
-     * @see http://schema.org/underName
+     * @see https://schema.org/underName
      */
     public function underName($underName)
     {
@@ -323,7 +324,7 @@ class Ticket extends BaseType implements TicketContract, IntangibleContract, Thi
      *
      * @return static
      *
-     * @see http://schema.org/url
+     * @see https://schema.org/url
      */
     public function url($url)
     {

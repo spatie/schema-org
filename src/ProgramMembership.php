@@ -10,7 +10,7 @@ use \Spatie\SchemaOrg\Contracts\ThingContract;
  * Used to describe membership in a loyalty programs (e.g. "StarAliance"),
  * traveler clubs (e.g. "AAA"), purchase clubs ("Safeway Club"), etc.
  *
- * @see http://schema.org/ProgramMembership
+ * @see https://schema.org/ProgramMembership
  *
  */
 class ProgramMembership extends BaseType implements ProgramMembershipContract, IntangibleContract, ThingContract
@@ -27,7 +27,7 @@ class ProgramMembership extends BaseType implements ProgramMembershipContract, I
      *
      * @return static
      *
-     * @see http://schema.org/additionalType
+     * @see https://schema.org/additionalType
      */
     public function additionalType($additionalType)
     {
@@ -41,7 +41,7 @@ class ProgramMembership extends BaseType implements ProgramMembershipContract, I
      *
      * @return static
      *
-     * @see http://schema.org/alternateName
+     * @see https://schema.org/alternateName
      */
     public function alternateName($alternateName)
     {
@@ -55,7 +55,7 @@ class ProgramMembership extends BaseType implements ProgramMembershipContract, I
      *
      * @return static
      *
-     * @see http://schema.org/description
+     * @see https://schema.org/description
      */
     public function description($description)
     {
@@ -72,7 +72,7 @@ class ProgramMembership extends BaseType implements ProgramMembershipContract, I
      *
      * @return static
      *
-     * @see http://schema.org/disambiguatingDescription
+     * @see https://schema.org/disambiguatingDescription
      */
     public function disambiguatingDescription($disambiguatingDescription)
     {
@@ -87,7 +87,7 @@ class ProgramMembership extends BaseType implements ProgramMembershipContract, I
      *
      * @return static
      *
-     * @see http://schema.org/hostingOrganization
+     * @see https://schema.org/hostingOrganization
      */
     public function hostingOrganization($hostingOrganization)
     {
@@ -105,7 +105,7 @@ class ProgramMembership extends BaseType implements ProgramMembershipContract, I
      *
      * @return static
      *
-     * @see http://schema.org/identifier
+     * @see https://schema.org/identifier
      */
     public function identifier($identifier)
     {
@@ -120,7 +120,7 @@ class ProgramMembership extends BaseType implements ProgramMembershipContract, I
      *
      * @return static
      *
-     * @see http://schema.org/image
+     * @see https://schema.org/image
      */
     public function image($image)
     {
@@ -136,7 +136,7 @@ class ProgramMembership extends BaseType implements ProgramMembershipContract, I
      *
      * @return static
      *
-     * @see http://schema.org/mainEntityOfPage
+     * @see https://schema.org/mainEntityOfPage
      */
     public function mainEntityOfPage($mainEntityOfPage)
     {
@@ -151,7 +151,7 @@ class ProgramMembership extends BaseType implements ProgramMembershipContract, I
      *
      * @return static
      *
-     * @see http://schema.org/member
+     * @see https://schema.org/member
      */
     public function member($member)
     {
@@ -165,7 +165,7 @@ class ProgramMembership extends BaseType implements ProgramMembershipContract, I
      *
      * @return static
      *
-     * @see http://schema.org/members
+     * @see https://schema.org/members
      */
     public function members($members)
     {
@@ -179,11 +179,29 @@ class ProgramMembership extends BaseType implements ProgramMembershipContract, I
      *
      * @return static
      *
-     * @see http://schema.org/membershipNumber
+     * @see https://schema.org/membershipNumber
      */
     public function membershipNumber($membershipNumber)
     {
         return $this->setProperty('membershipNumber', $membershipNumber);
+    }
+
+    /**
+     * The number of membership points earned by the member. If necessary, the
+     * unitText can be used to express the units the points are issued in. (e.g.
+     * stars, miles, etc.)
+     *
+     * @param \Spatie\SchemaOrg\Contracts\QuantitativeValueContract|\Spatie\SchemaOrg\Contracts\QuantitativeValueContract[]|float|float[]|int|int[] $membershipPointsEarned
+     *
+     * @return static
+     *
+     * @see https://schema.org/membershipPointsEarned
+     * @see http://pending.schema.org
+     * @link https://github.com/schemaorg/schemaorg/issues/2085
+     */
+    public function membershipPointsEarned($membershipPointsEarned)
+    {
+        return $this->setProperty('membershipPointsEarned', $membershipPointsEarned);
     }
 
     /**
@@ -193,7 +211,7 @@ class ProgramMembership extends BaseType implements ProgramMembershipContract, I
      *
      * @return static
      *
-     * @see http://schema.org/name
+     * @see https://schema.org/name
      */
     public function name($name)
     {
@@ -208,7 +226,7 @@ class ProgramMembership extends BaseType implements ProgramMembershipContract, I
      *
      * @return static
      *
-     * @see http://schema.org/potentialAction
+     * @see https://schema.org/potentialAction
      */
     public function potentialAction($potentialAction)
     {
@@ -222,7 +240,7 @@ class ProgramMembership extends BaseType implements ProgramMembershipContract, I
      *
      * @return static
      *
-     * @see http://schema.org/programName
+     * @see https://schema.org/programName
      */
     public function programName($programName)
     {
@@ -238,7 +256,7 @@ class ProgramMembership extends BaseType implements ProgramMembershipContract, I
      *
      * @return static
      *
-     * @see http://schema.org/sameAs
+     * @see https://schema.org/sameAs
      */
     public function sameAs($sameAs)
     {
@@ -252,7 +270,8 @@ class ProgramMembership extends BaseType implements ProgramMembershipContract, I
      *
      * @return static
      *
-     * @see http://schema.org/subjectOf
+     * @see https://schema.org/subjectOf
+     * @link https://github.com/schemaorg/schemaorg/issues/1670
      */
     public function subjectOf($subjectOf)
     {
@@ -266,7 +285,7 @@ class ProgramMembership extends BaseType implements ProgramMembershipContract, I
      *
      * @return static
      *
-     * @see http://schema.org/url
+     * @see https://schema.org/url
      */
     public function url($url)
     {

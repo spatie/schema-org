@@ -4,6 +4,10 @@ namespace Spatie\SchemaOrg\Contracts;
 
 interface CarContract
 {
+    public function accelerationTime($accelerationTime);
+
+    public function acrissCode($acrissCode);
+
     public function additionalProperty($additionalProperty);
 
     public function additionalType($additionalType);
@@ -18,9 +22,15 @@ interface CarContract
 
     public function awards($awards);
 
+    public function bodyType($bodyType);
+
     public function brand($brand);
 
+    public function callSign($callSign);
+
     public function cargoVolume($cargoVolume);
+
+    public function category($category);
 
     public function color($color);
 
@@ -34,11 +44,17 @@ interface CarContract
 
     public function driveWheelConfiguration($driveWheelConfiguration);
 
+    public function emissionsCO2($emissionsCO2);
+
+    public function fuelCapacity($fuelCapacity);
+
     public function fuelConsumption($fuelConsumption);
 
     public function fuelEfficiency($fuelEfficiency);
 
     public function fuelType($fuelType);
+
+    public function gtin($gtin);
 
     public function gtin12($gtin12);
 
@@ -48,11 +64,17 @@ interface CarContract
 
     public function gtin8($gtin8);
 
+    public function hasMerchantReturnPolicy($hasMerchantReturnPolicy);
+
+    public function hasProductReturnPolicy($hasProductReturnPolicy);
+
     public function height($height);
 
     public function identifier($identifier);
 
     public function image($image);
+
+    public function inProductGroupWithID($inProductGroupWithID);
 
     public function isAccessoryOrSparePartFor($isAccessoryOrSparePartFor);
 
@@ -61,6 +83,8 @@ interface CarContract
     public function isRelatedTo($isRelatedTo);
 
     public function isSimilarTo($isSimilarTo);
+
+    public function isVariantOf($isVariantOf);
 
     public function itemCondition($itemCondition);
 
@@ -74,13 +98,19 @@ interface CarContract
 
     public function material($material);
 
+    public function meetsEmissionStandard($meetsEmissionStandard);
+
     public function mileageFromOdometer($mileageFromOdometer);
 
     public function model($model);
 
+    public function modelDate($modelDate);
+
     public function mpn($mpn);
 
     public function name($name);
+
+    public function nsn($nsn);
 
     public function numberOfAirbags($numberOfAirbags);
 
@@ -93,6 +123,10 @@ interface CarContract
     public function numberOfPreviousOwners($numberOfPreviousOwners);
 
     public function offers($offers);
+
+    public function pattern($pattern);
+
+    public function payload($payload);
 
     public function potentialAction($potentialAction);
 
@@ -108,15 +142,29 @@ interface CarContract
 
     public function reviews($reviews);
 
+    public function roofLoad($roofLoad);
+
     public function sameAs($sameAs);
+
+    public function seatingCapacity($seatingCapacity);
+
+    public function size($size);
 
     public function sku($sku);
 
     public function slogan($slogan);
 
+    public function speed($speed);
+
     public function steeringPosition($steeringPosition);
 
+    public function stupidProperty($stupidProperty);
+
     public function subjectOf($subjectOf);
+
+    public function tongueWeight($tongueWeight);
+
+    public function trailerWeight($trailerWeight);
 
     public function url($url);
 
@@ -134,9 +182,15 @@ interface CarContract
 
     public function vehicleSeatingCapacity($vehicleSeatingCapacity);
 
+    public function vehicleSpecialUsage($vehicleSpecialUsage);
+
     public function vehicleTransmission($vehicleTransmission);
 
     public function weight($weight);
+
+    public function weightTotal($weightTotal);
+
+    public function wheelbase($wheelbase);
 
     public function width($width);
 

@@ -20,6 +20,8 @@ interface ParentAudienceContract
 
     public function geographicArea($geographicArea);
 
+    public function healthCondition($healthCondition);
+
     public function identifier($identifier);
 
     public function image($image);

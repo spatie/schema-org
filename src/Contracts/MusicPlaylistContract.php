@@ -6,6 +6,8 @@ interface MusicPlaylistContract
 {
     public function about($about);
 
+    public function abstract($abstract);
+
     public function accessMode($accessMode);
 
     public function accessModeSufficient($accessModeSufficient);
@@ -22,6 +24,8 @@ interface MusicPlaylistContract
 
     public function accountablePerson($accountablePerson);
 
+    public function acquireLicensePage($acquireLicensePage);
+
     public function additionalType($additionalType);
 
     public function aggregateRating($aggregateRating);
@@ -29,6 +33,8 @@ interface MusicPlaylistContract
     public function alternateName($alternateName);
 
     public function alternativeHeadline($alternativeHeadline);
+
+    public function assesses($assesses);
 
     public function associatedMedia($associatedMedia);
 
@@ -50,15 +56,23 @@ interface MusicPlaylistContract
 
     public function commentCount($commentCount);
 
+    public function conditionsOfAccess($conditionsOfAccess);
+
     public function contentLocation($contentLocation);
 
     public function contentRating($contentRating);
+
+    public function contentReferenceTime($contentReferenceTime);
 
     public function contributor($contributor);
 
     public function copyrightHolder($copyrightHolder);
 
     public function copyrightYear($copyrightYear);
+
+    public function correction($correction);
+
+    public function creativeWorkStatus($creativeWorkStatus);
 
     public function creator($creator);
 
@@ -74,9 +88,13 @@ interface MusicPlaylistContract
 
     public function discussionUrl($discussionUrl);
 
+    public function editEIDR($editEIDR);
+
     public function editor($editor);
 
     public function educationalAlignment($educationalAlignment);
+
+    public function educationalLevel($educationalLevel);
 
     public function educationalUse($educationalUse);
 
@@ -132,7 +150,11 @@ interface MusicPlaylistContract
 
     public function mainEntityOfPage($mainEntityOfPage);
 
+    public function maintainer($maintainer);
+
     public function material($material);
+
+    public function materialExtent($materialExtent);
 
     public function mentions($mentions);
 
@@ -141,6 +163,8 @@ interface MusicPlaylistContract
     public function numTracks($numTracks);
 
     public function offers($offers);
+
+    public function pattern($pattern);
 
     public function position($position);
 
@@ -153,6 +177,8 @@ interface MusicPlaylistContract
     public function publication($publication);
 
     public function publisher($publisher);
+
+    public function publisherImprint($publisherImprint);
 
     public function publishingPrinciples($publishingPrinciples);
 
@@ -168,6 +194,14 @@ interface MusicPlaylistContract
 
     public function schemaVersion($schemaVersion);
 
+    public function sdDatePublished($sdDatePublished);
+
+    public function sdLicense($sdLicense);
+
+    public function sdPublisher($sdPublisher);
+
+    public function size($size);
+
     public function sourceOrganization($sourceOrganization);
 
     public function spatial($spatial);
@@ -177,6 +211,8 @@ interface MusicPlaylistContract
     public function sponsor($sponsor);
 
     public function subjectOf($subjectOf);
+
+    public function teaches($teaches);
 
     public function temporal($temporal);
 
@@ -192,16 +228,22 @@ interface MusicPlaylistContract
 
     public function tracks($tracks);
 
+    public function translationOfWork($translationOfWork);
+
     public function translator($translator);
 
     public function typicalAgeRange($typicalAgeRange);
 
     public function url($url);
 
+    public function usageInfo($usageInfo);
+
     public function version($version);
 
     public function video($video);
 
     public function workExample($workExample);
+
+    public function workTranslation($workTranslation);
 
 }

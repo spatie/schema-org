@@ -9,7 +9,8 @@ use \Spatie\SchemaOrg\Contracts\ThingContract;
 /**
  * An entry point, within some Web-based protocol.
  *
- * @see http://schema.org/EntryPoint
+ * @see https://schema.org/EntryPoint
+ * @link http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#source_ActionCollabClass
  *
  */
 class EntryPoint extends BaseType implements EntryPointContract, IntangibleContract, ThingContract
@@ -21,7 +22,7 @@ class EntryPoint extends BaseType implements EntryPointContract, IntangibleContr
      *
      * @return static
      *
-     * @see http://schema.org/actionApplication
+     * @see https://schema.org/actionApplication
      */
     public function actionApplication($actionApplication)
     {
@@ -37,7 +38,7 @@ class EntryPoint extends BaseType implements EntryPointContract, IntangibleContr
      *
      * @return static
      *
-     * @see http://schema.org/actionPlatform
+     * @see https://schema.org/actionPlatform
      */
     public function actionPlatform($actionPlatform)
     {
@@ -56,7 +57,7 @@ class EntryPoint extends BaseType implements EntryPointContract, IntangibleContr
      *
      * @return static
      *
-     * @see http://schema.org/additionalType
+     * @see https://schema.org/additionalType
      */
     public function additionalType($additionalType)
     {
@@ -70,7 +71,7 @@ class EntryPoint extends BaseType implements EntryPointContract, IntangibleContr
      *
      * @return static
      *
-     * @see http://schema.org/alternateName
+     * @see https://schema.org/alternateName
      */
     public function alternateName($alternateName)
     {
@@ -84,7 +85,7 @@ class EntryPoint extends BaseType implements EntryPointContract, IntangibleContr
      *
      * @return static
      *
-     * @see http://schema.org/application
+     * @see https://schema.org/application
      */
     public function application($application)
     {
@@ -98,7 +99,7 @@ class EntryPoint extends BaseType implements EntryPointContract, IntangibleContr
      *
      * @return static
      *
-     * @see http://schema.org/contentType
+     * @see https://schema.org/contentType
      */
     public function contentType($contentType)
     {
@@ -112,7 +113,7 @@ class EntryPoint extends BaseType implements EntryPointContract, IntangibleContr
      *
      * @return static
      *
-     * @see http://schema.org/description
+     * @see https://schema.org/description
      */
     public function description($description)
     {
@@ -129,7 +130,7 @@ class EntryPoint extends BaseType implements EntryPointContract, IntangibleContr
      *
      * @return static
      *
-     * @see http://schema.org/disambiguatingDescription
+     * @see https://schema.org/disambiguatingDescription
      */
     public function disambiguatingDescription($disambiguatingDescription)
     {
@@ -143,7 +144,7 @@ class EntryPoint extends BaseType implements EntryPointContract, IntangibleContr
      *
      * @return static
      *
-     * @see http://schema.org/encodingType
+     * @see https://schema.org/encodingType
      */
     public function encodingType($encodingType)
     {
@@ -158,7 +159,7 @@ class EntryPoint extends BaseType implements EntryPointContract, IntangibleContr
      *
      * @return static
      *
-     * @see http://schema.org/httpMethod
+     * @see https://schema.org/httpMethod
      */
     public function httpMethod($httpMethod)
     {
@@ -176,7 +177,7 @@ class EntryPoint extends BaseType implements EntryPointContract, IntangibleContr
      *
      * @return static
      *
-     * @see http://schema.org/identifier
+     * @see https://schema.org/identifier
      */
     public function identifier($identifier)
     {
@@ -191,7 +192,7 @@ class EntryPoint extends BaseType implements EntryPointContract, IntangibleContr
      *
      * @return static
      *
-     * @see http://schema.org/image
+     * @see https://schema.org/image
      */
     public function image($image)
     {
@@ -207,7 +208,7 @@ class EntryPoint extends BaseType implements EntryPointContract, IntangibleContr
      *
      * @return static
      *
-     * @see http://schema.org/mainEntityOfPage
+     * @see https://schema.org/mainEntityOfPage
      */
     public function mainEntityOfPage($mainEntityOfPage)
     {
@@ -221,7 +222,7 @@ class EntryPoint extends BaseType implements EntryPointContract, IntangibleContr
      *
      * @return static
      *
-     * @see http://schema.org/name
+     * @see https://schema.org/name
      */
     public function name($name)
     {
@@ -236,7 +237,7 @@ class EntryPoint extends BaseType implements EntryPointContract, IntangibleContr
      *
      * @return static
      *
-     * @see http://schema.org/potentialAction
+     * @see https://schema.org/potentialAction
      */
     public function potentialAction($potentialAction)
     {
@@ -252,7 +253,7 @@ class EntryPoint extends BaseType implements EntryPointContract, IntangibleContr
      *
      * @return static
      *
-     * @see http://schema.org/sameAs
+     * @see https://schema.org/sameAs
      */
     public function sameAs($sameAs)
     {
@@ -266,7 +267,8 @@ class EntryPoint extends BaseType implements EntryPointContract, IntangibleContr
      *
      * @return static
      *
-     * @see http://schema.org/subjectOf
+     * @see https://schema.org/subjectOf
+     * @link https://github.com/schemaorg/schemaorg/issues/1670
      */
     public function subjectOf($subjectOf)
     {
@@ -280,7 +282,7 @@ class EntryPoint extends BaseType implements EntryPointContract, IntangibleContr
      *
      * @return static
      *
-     * @see http://schema.org/url
+     * @see https://schema.org/url
      */
     public function url($url)
     {
@@ -295,7 +297,7 @@ class EntryPoint extends BaseType implements EntryPointContract, IntangibleContr
      *
      * @return static
      *
-     * @see http://schema.org/urlTemplate
+     * @see https://schema.org/urlTemplate
      */
     public function urlTemplate($urlTemplate)
     {

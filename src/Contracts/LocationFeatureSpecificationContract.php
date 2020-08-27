@@ -22,6 +22,8 @@ interface LocationFeatureSpecificationContract
 
     public function maxValue($maxValue);
 
+    public function measurementTechnique($measurementTechnique);
+
     public function minValue($minValue);
 
     public function name($name);

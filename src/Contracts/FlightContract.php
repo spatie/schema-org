@@ -44,6 +44,8 @@ interface FlightContract
 
     public function image($image);
 
+    public function itinerary($itinerary);
+
     public function mainEntityOfPage($mainEntityOfPage);
 
     public function mealService($mealService);
@@ -52,6 +54,8 @@ interface FlightContract
 
     public function offers($offers);
 
+    public function partOfTrip($partOfTrip);
+
     public function potentialAction($potentialAction);
 
     public function provider($provider);
@@ -59,6 +63,8 @@ interface FlightContract
     public function sameAs($sameAs);
 
     public function seller($seller);
+
+    public function subTrip($subTrip);
 
     public function subjectOf($subjectOf);
 

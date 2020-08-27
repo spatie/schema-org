@@ -12,6 +12,8 @@ interface ActionAccessSpecificationContract
 
     public function availabilityStarts($availabilityStarts);
 
+    public function category($category);
+
     public function description($description);
 
     public function disambiguatingDescription($disambiguatingDescription);
@@ -23,6 +25,8 @@ interface ActionAccessSpecificationContract
     public function identifier($identifier);
 
     public function image($image);
+
+    public function ineligibleRegion($ineligibleRegion);
 
     public function mainEntityOfPage($mainEntityOfPage);
 

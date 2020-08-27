@@ -9,7 +9,7 @@ use \Spatie\SchemaOrg\Contracts\ThingContract;
 /**
  * An list item, e.g. a step in a checklist or how-to description.
  *
- * @see http://schema.org/ListItem
+ * @see https://schema.org/ListItem
  *
  */
 class ListItem extends BaseType implements ListItemContract, IntangibleContract, ThingContract
@@ -26,7 +26,7 @@ class ListItem extends BaseType implements ListItemContract, IntangibleContract,
      *
      * @return static
      *
-     * @see http://schema.org/additionalType
+     * @see https://schema.org/additionalType
      */
     public function additionalType($additionalType)
     {
@@ -40,7 +40,7 @@ class ListItem extends BaseType implements ListItemContract, IntangibleContract,
      *
      * @return static
      *
-     * @see http://schema.org/alternateName
+     * @see https://schema.org/alternateName
      */
     public function alternateName($alternateName)
     {
@@ -54,7 +54,7 @@ class ListItem extends BaseType implements ListItemContract, IntangibleContract,
      *
      * @return static
      *
-     * @see http://schema.org/description
+     * @see https://schema.org/description
      */
     public function description($description)
     {
@@ -71,7 +71,7 @@ class ListItem extends BaseType implements ListItemContract, IntangibleContract,
      *
      * @return static
      *
-     * @see http://schema.org/disambiguatingDescription
+     * @see https://schema.org/disambiguatingDescription
      */
     public function disambiguatingDescription($disambiguatingDescription)
     {
@@ -89,7 +89,7 @@ class ListItem extends BaseType implements ListItemContract, IntangibleContract,
      *
      * @return static
      *
-     * @see http://schema.org/identifier
+     * @see https://schema.org/identifier
      */
     public function identifier($identifier)
     {
@@ -104,7 +104,7 @@ class ListItem extends BaseType implements ListItemContract, IntangibleContract,
      *
      * @return static
      *
-     * @see http://schema.org/image
+     * @see https://schema.org/image
      */
     public function image($image)
     {
@@ -119,7 +119,7 @@ class ListItem extends BaseType implements ListItemContract, IntangibleContract,
      *
      * @return static
      *
-     * @see http://schema.org/item
+     * @see https://schema.org/item
      */
     public function item($item)
     {
@@ -135,7 +135,7 @@ class ListItem extends BaseType implements ListItemContract, IntangibleContract,
      *
      * @return static
      *
-     * @see http://schema.org/mainEntityOfPage
+     * @see https://schema.org/mainEntityOfPage
      */
     public function mainEntityOfPage($mainEntityOfPage)
     {
@@ -149,7 +149,7 @@ class ListItem extends BaseType implements ListItemContract, IntangibleContract,
      *
      * @return static
      *
-     * @see http://schema.org/name
+     * @see https://schema.org/name
      */
     public function name($name)
     {
@@ -163,7 +163,7 @@ class ListItem extends BaseType implements ListItemContract, IntangibleContract,
      *
      * @return static
      *
-     * @see http://schema.org/nextItem
+     * @see https://schema.org/nextItem
      */
     public function nextItem($nextItem)
     {
@@ -177,7 +177,7 @@ class ListItem extends BaseType implements ListItemContract, IntangibleContract,
      *
      * @return static
      *
-     * @see http://schema.org/position
+     * @see https://schema.org/position
      */
     public function position($position)
     {
@@ -192,7 +192,7 @@ class ListItem extends BaseType implements ListItemContract, IntangibleContract,
      *
      * @return static
      *
-     * @see http://schema.org/potentialAction
+     * @see https://schema.org/potentialAction
      */
     public function potentialAction($potentialAction)
     {
@@ -206,7 +206,7 @@ class ListItem extends BaseType implements ListItemContract, IntangibleContract,
      *
      * @return static
      *
-     * @see http://schema.org/previousItem
+     * @see https://schema.org/previousItem
      */
     public function previousItem($previousItem)
     {
@@ -222,7 +222,7 @@ class ListItem extends BaseType implements ListItemContract, IntangibleContract,
      *
      * @return static
      *
-     * @see http://schema.org/sameAs
+     * @see https://schema.org/sameAs
      */
     public function sameAs($sameAs)
     {
@@ -236,7 +236,8 @@ class ListItem extends BaseType implements ListItemContract, IntangibleContract,
      *
      * @return static
      *
-     * @see http://schema.org/subjectOf
+     * @see https://schema.org/subjectOf
+     * @link https://github.com/schemaorg/schemaorg/issues/1670
      */
     public function subjectOf($subjectOf)
     {
@@ -250,7 +251,7 @@ class ListItem extends BaseType implements ListItemContract, IntangibleContract,
      *
      * @return static
      *
-     * @see http://schema.org/url
+     * @see https://schema.org/url
      */
     public function url($url)
     {

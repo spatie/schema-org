@@ -14,7 +14,7 @@ use \Spatie\SchemaOrg\Contracts\ThingContract;
  * confirmation emails or HTML pages with individual confirmations of
  * reservations.
  *
- * @see http://schema.org/FoodEstablishmentReservation
+ * @see https://schema.org/FoodEstablishmentReservation
  *
  */
 class FoodEstablishmentReservation extends BaseType implements FoodEstablishmentReservationContract, IntangibleContract, ReservationContract, ThingContract
@@ -31,7 +31,7 @@ class FoodEstablishmentReservation extends BaseType implements FoodEstablishment
      *
      * @return static
      *
-     * @see http://schema.org/additionalType
+     * @see https://schema.org/additionalType
      */
     public function additionalType($additionalType)
     {
@@ -45,7 +45,7 @@ class FoodEstablishmentReservation extends BaseType implements FoodEstablishment
      *
      * @return static
      *
-     * @see http://schema.org/alternateName
+     * @see https://schema.org/alternateName
      */
     public function alternateName($alternateName)
     {
@@ -60,7 +60,7 @@ class FoodEstablishmentReservation extends BaseType implements FoodEstablishment
      *
      * @return static
      *
-     * @see http://schema.org/bookingAgent
+     * @see https://schema.org/bookingAgent
      */
     public function bookingAgent($bookingAgent)
     {
@@ -74,7 +74,7 @@ class FoodEstablishmentReservation extends BaseType implements FoodEstablishment
      *
      * @return static
      *
-     * @see http://schema.org/bookingTime
+     * @see https://schema.org/bookingTime
      */
     public function bookingTime($bookingTime)
     {
@@ -91,7 +91,7 @@ class FoodEstablishmentReservation extends BaseType implements FoodEstablishment
      *
      * @return static
      *
-     * @see http://schema.org/broker
+     * @see https://schema.org/broker
      */
     public function broker($broker)
     {
@@ -105,7 +105,7 @@ class FoodEstablishmentReservation extends BaseType implements FoodEstablishment
      *
      * @return static
      *
-     * @see http://schema.org/description
+     * @see https://schema.org/description
      */
     public function description($description)
     {
@@ -122,7 +122,7 @@ class FoodEstablishmentReservation extends BaseType implements FoodEstablishment
      *
      * @return static
      *
-     * @see http://schema.org/disambiguatingDescription
+     * @see https://schema.org/disambiguatingDescription
      */
     public function disambiguatingDescription($disambiguatingDescription)
     {
@@ -145,7 +145,8 @@ class FoodEstablishmentReservation extends BaseType implements FoodEstablishment
      *
      * @return static
      *
-     * @see http://schema.org/endTime
+     * @see https://schema.org/endTime
+     * @link https://github.com/schemaorg/schemaorg/issues/2493
      */
     public function endTime($endTime)
     {
@@ -163,7 +164,7 @@ class FoodEstablishmentReservation extends BaseType implements FoodEstablishment
      *
      * @return static
      *
-     * @see http://schema.org/identifier
+     * @see https://schema.org/identifier
      */
     public function identifier($identifier)
     {
@@ -178,7 +179,7 @@ class FoodEstablishmentReservation extends BaseType implements FoodEstablishment
      *
      * @return static
      *
-     * @see http://schema.org/image
+     * @see https://schema.org/image
      */
     public function image($image)
     {
@@ -194,7 +195,7 @@ class FoodEstablishmentReservation extends BaseType implements FoodEstablishment
      *
      * @return static
      *
-     * @see http://schema.org/mainEntityOfPage
+     * @see https://schema.org/mainEntityOfPage
      */
     public function mainEntityOfPage($mainEntityOfPage)
     {
@@ -208,7 +209,7 @@ class FoodEstablishmentReservation extends BaseType implements FoodEstablishment
      *
      * @return static
      *
-     * @see http://schema.org/modifiedTime
+     * @see https://schema.org/modifiedTime
      */
     public function modifiedTime($modifiedTime)
     {
@@ -222,7 +223,7 @@ class FoodEstablishmentReservation extends BaseType implements FoodEstablishment
      *
      * @return static
      *
-     * @see http://schema.org/name
+     * @see https://schema.org/name
      */
     public function name($name)
     {
@@ -236,7 +237,7 @@ class FoodEstablishmentReservation extends BaseType implements FoodEstablishment
      *
      * @return static
      *
-     * @see http://schema.org/partySize
+     * @see https://schema.org/partySize
      */
     public function partySize($partySize)
     {
@@ -251,7 +252,7 @@ class FoodEstablishmentReservation extends BaseType implements FoodEstablishment
      *
      * @return static
      *
-     * @see http://schema.org/potentialAction
+     * @see https://schema.org/potentialAction
      */
     public function potentialAction($potentialAction)
     {
@@ -274,7 +275,7 @@ class FoodEstablishmentReservation extends BaseType implements FoodEstablishment
      *
      * @return static
      *
-     * @see http://schema.org/priceCurrency
+     * @see https://schema.org/priceCurrency
      */
     public function priceCurrency($priceCurrency)
     {
@@ -289,7 +290,7 @@ class FoodEstablishmentReservation extends BaseType implements FoodEstablishment
      *
      * @return static
      *
-     * @see http://schema.org/programMembershipUsed
+     * @see https://schema.org/programMembershipUsed
      */
     public function programMembershipUsed($programMembershipUsed)
     {
@@ -305,7 +306,8 @@ class FoodEstablishmentReservation extends BaseType implements FoodEstablishment
      *
      * @return static
      *
-     * @see http://schema.org/provider
+     * @see https://schema.org/provider
+     * @link https://github.com/schemaorg/schemaorg/issues/2289
      */
     public function provider($provider)
     {
@@ -319,7 +321,7 @@ class FoodEstablishmentReservation extends BaseType implements FoodEstablishment
      *
      * @return static
      *
-     * @see http://schema.org/reservationFor
+     * @see https://schema.org/reservationFor
      */
     public function reservationFor($reservationFor)
     {
@@ -333,7 +335,7 @@ class FoodEstablishmentReservation extends BaseType implements FoodEstablishment
      *
      * @return static
      *
-     * @see http://schema.org/reservationId
+     * @see https://schema.org/reservationId
      */
     public function reservationId($reservationId)
     {
@@ -347,7 +349,7 @@ class FoodEstablishmentReservation extends BaseType implements FoodEstablishment
      *
      * @return static
      *
-     * @see http://schema.org/reservationStatus
+     * @see https://schema.org/reservationStatus
      */
     public function reservationStatus($reservationStatus)
     {
@@ -361,7 +363,7 @@ class FoodEstablishmentReservation extends BaseType implements FoodEstablishment
      *
      * @return static
      *
-     * @see http://schema.org/reservedTicket
+     * @see https://schema.org/reservedTicket
      */
     public function reservedTicket($reservedTicket)
     {
@@ -377,7 +379,7 @@ class FoodEstablishmentReservation extends BaseType implements FoodEstablishment
      *
      * @return static
      *
-     * @see http://schema.org/sameAs
+     * @see https://schema.org/sameAs
      */
     public function sameAs($sameAs)
     {
@@ -400,7 +402,8 @@ class FoodEstablishmentReservation extends BaseType implements FoodEstablishment
      *
      * @return static
      *
-     * @see http://schema.org/startTime
+     * @see https://schema.org/startTime
+     * @link https://github.com/schemaorg/schemaorg/issues/2493
      */
     public function startTime($startTime)
     {
@@ -414,7 +417,8 @@ class FoodEstablishmentReservation extends BaseType implements FoodEstablishment
      *
      * @return static
      *
-     * @see http://schema.org/subjectOf
+     * @see https://schema.org/subjectOf
+     * @link https://github.com/schemaorg/schemaorg/issues/1670
      */
     public function subjectOf($subjectOf)
     {
@@ -436,7 +440,7 @@ class FoodEstablishmentReservation extends BaseType implements FoodEstablishment
      *
      * @return static
      *
-     * @see http://schema.org/totalPrice
+     * @see https://schema.org/totalPrice
      */
     public function totalPrice($totalPrice)
     {
@@ -450,7 +454,7 @@ class FoodEstablishmentReservation extends BaseType implements FoodEstablishment
      *
      * @return static
      *
-     * @see http://schema.org/underName
+     * @see https://schema.org/underName
      */
     public function underName($underName)
     {
@@ -464,7 +468,7 @@ class FoodEstablishmentReservation extends BaseType implements FoodEstablishment
      *
      * @return static
      *
-     * @see http://schema.org/url
+     * @see https://schema.org/url
      */
     public function url($url)
     {

@@ -16,29 +16,57 @@ use \Spatie\SchemaOrg\Contracts\ThingContract;
  * See also the <a href="/docs/hotels.html">dedicated document on the use of
  * schema.org for marking up hotels and other forms of accommodations</a>.
  *
- * @see http://schema.org/Suite
+ * @see https://schema.org/Suite
+ * @link https://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#STI_Accommodation_Ontology
  *
- * @method static geoContains($geoContains) The value should be instance of pending types GeospatialGeometry|GeospatialGeometry[]|Place|Place[]
- * @method static geoCoveredBy($geoCoveredBy) The value should be instance of pending types GeospatialGeometry|GeospatialGeometry[]|Place|Place[]
- * @method static geoCovers($geoCovers) The value should be instance of pending types GeospatialGeometry|GeospatialGeometry[]|Place|Place[]
- * @method static geoCrosses($geoCrosses) The value should be instance of pending types GeospatialGeometry|GeospatialGeometry[]|Place|Place[]
- * @method static geoDisjoint($geoDisjoint) The value should be instance of pending types GeospatialGeometry|GeospatialGeometry[]|Place|Place[]
- * @method static geoEquals($geoEquals) The value should be instance of pending types GeospatialGeometry|GeospatialGeometry[]|Place|Place[]
- * @method static geoIntersects($geoIntersects) The value should be instance of pending types GeospatialGeometry|GeospatialGeometry[]|Place|Place[]
- * @method static geoOverlaps($geoOverlaps) The value should be instance of pending types GeospatialGeometry|GeospatialGeometry[]|Place|Place[]
- * @method static geoTouches($geoTouches) The value should be instance of pending types GeospatialGeometry|GeospatialGeometry[]|Place|Place[]
- * @method static geoWithin($geoWithin) The value should be instance of pending types GeospatialGeometry|GeospatialGeometry[]|Place|Place[]
  */
 class Suite extends BaseType implements SuiteContract, AccommodationContract, PlaceContract, ThingContract
 {
+    /**
+     * Category of an [[Accommodation]], following real estate conventions e.g.
+     * RESO (see
+     * [PropertySubType](https://ddwiki.reso.org/display/DDW17/PropertySubType+Field),
+     * and
+     * [PropertyType](https://ddwiki.reso.org/display/DDW17/PropertyType+Field)
+     * fields  for suggested values).
+     *
+     * @param string|string[] $accommodationCategory
+     *
+     * @return static
+     *
+     * @see https://schema.org/accommodationCategory
+     * @see http://pending.schema.org
+     * @link https://github.com/schemaorg/schemaorg/issues/2373
+     */
+    public function accommodationCategory($accommodationCategory)
+    {
+        return $this->setProperty('accommodationCategory', $accommodationCategory);
+    }
+
+    /**
+     * A floorplan of some [[Accommodation]].
+     *
+     * @param \Spatie\SchemaOrg\Contracts\FloorPlanContract|\Spatie\SchemaOrg\Contracts\FloorPlanContract[] $accommodationFloorPlan
+     *
+     * @return static
+     *
+     * @see https://schema.org/accommodationFloorPlan
+     * @see http://pending.schema.org
+     * @link https://github.com/schemaorg/schemaorg/issues/2373
+     */
+    public function accommodationFloorPlan($accommodationFloorPlan)
+    {
+        return $this->setProperty('accommodationFloorPlan', $accommodationFloorPlan);
+    }
+
     /**
      * A property-value pair representing an additional characteristics of the
      * entitity, e.g. a product feature or another characteristic for which
      * there is no matching property in schema.org.
      * 
      * Note: Publishers should be aware that applications designed to use
-     * specific schema.org properties (e.g. http://schema.org/width,
-     * http://schema.org/color, http://schema.org/gtin13, ...) will typically
+     * specific schema.org properties (e.g. https://schema.org/width,
+     * https://schema.org/color, https://schema.org/gtin13, ...) will typically
      * expect such data to be provided using those properties, rather than using
      * the generic property/value mechanism.
      *
@@ -46,7 +74,7 @@ class Suite extends BaseType implements SuiteContract, AccommodationContract, Pl
      *
      * @return static
      *
-     * @see http://schema.org/additionalProperty
+     * @see https://schema.org/additionalProperty
      */
     public function additionalProperty($additionalProperty)
     {
@@ -65,7 +93,7 @@ class Suite extends BaseType implements SuiteContract, AccommodationContract, Pl
      *
      * @return static
      *
-     * @see http://schema.org/additionalType
+     * @see https://schema.org/additionalType
      */
     public function additionalType($additionalType)
     {
@@ -79,7 +107,7 @@ class Suite extends BaseType implements SuiteContract, AccommodationContract, Pl
      *
      * @return static
      *
-     * @see http://schema.org/address
+     * @see https://schema.org/address
      */
     public function address($address)
     {
@@ -94,7 +122,7 @@ class Suite extends BaseType implements SuiteContract, AccommodationContract, Pl
      *
      * @return static
      *
-     * @see http://schema.org/aggregateRating
+     * @see https://schema.org/aggregateRating
      */
     public function aggregateRating($aggregateRating)
     {
@@ -108,7 +136,7 @@ class Suite extends BaseType implements SuiteContract, AccommodationContract, Pl
      *
      * @return static
      *
-     * @see http://schema.org/alternateName
+     * @see https://schema.org/alternateName
      */
     public function alternateName($alternateName)
     {
@@ -125,7 +153,8 @@ class Suite extends BaseType implements SuiteContract, AccommodationContract, Pl
      *
      * @return static
      *
-     * @see http://schema.org/amenityFeature
+     * @see https://schema.org/amenityFeature
+     * @link https://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#STI_Accommodation_Ontology
      */
     public function amenityFeature($amenityFeature)
     {
@@ -143,7 +172,8 @@ class Suite extends BaseType implements SuiteContract, AccommodationContract, Pl
      *
      * @return static
      *
-     * @see http://schema.org/bed
+     * @see https://schema.org/bed
+     * @link https://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#STI_Accommodation_Ontology
      */
     public function bed($bed)
     {
@@ -163,7 +193,7 @@ class Suite extends BaseType implements SuiteContract, AccommodationContract, Pl
      *
      * @return static
      *
-     * @see http://schema.org/branchCode
+     * @see https://schema.org/branchCode
      */
     public function branchCode($branchCode)
     {
@@ -177,7 +207,7 @@ class Suite extends BaseType implements SuiteContract, AccommodationContract, Pl
      *
      * @return static
      *
-     * @see http://schema.org/containedIn
+     * @see https://schema.org/containedIn
      */
     public function containedIn($containedIn)
     {
@@ -191,7 +221,7 @@ class Suite extends BaseType implements SuiteContract, AccommodationContract, Pl
      *
      * @return static
      *
-     * @see http://schema.org/containedInPlace
+     * @see https://schema.org/containedInPlace
      */
     public function containedInPlace($containedInPlace)
     {
@@ -206,7 +236,7 @@ class Suite extends BaseType implements SuiteContract, AccommodationContract, Pl
      *
      * @return static
      *
-     * @see http://schema.org/containsPlace
+     * @see https://schema.org/containsPlace
      */
     public function containsPlace($containsPlace)
     {
@@ -220,7 +250,7 @@ class Suite extends BaseType implements SuiteContract, AccommodationContract, Pl
      *
      * @return static
      *
-     * @see http://schema.org/description
+     * @see https://schema.org/description
      */
     public function description($description)
     {
@@ -237,7 +267,7 @@ class Suite extends BaseType implements SuiteContract, AccommodationContract, Pl
      *
      * @return static
      *
-     * @see http://schema.org/disambiguatingDescription
+     * @see https://schema.org/disambiguatingDescription
      */
     public function disambiguatingDescription($disambiguatingDescription)
     {
@@ -252,7 +282,7 @@ class Suite extends BaseType implements SuiteContract, AccommodationContract, Pl
      *
      * @return static
      *
-     * @see http://schema.org/event
+     * @see https://schema.org/event
      */
     public function event($event)
     {
@@ -266,7 +296,7 @@ class Suite extends BaseType implements SuiteContract, AccommodationContract, Pl
      *
      * @return static
      *
-     * @see http://schema.org/events
+     * @see https://schema.org/events
      */
     public function events($events)
     {
@@ -280,11 +310,31 @@ class Suite extends BaseType implements SuiteContract, AccommodationContract, Pl
      *
      * @return static
      *
-     * @see http://schema.org/faxNumber
+     * @see https://schema.org/faxNumber
      */
     public function faxNumber($faxNumber)
     {
         return $this->setProperty('faxNumber', $faxNumber);
+    }
+
+    /**
+     * The floor level for an [[Accommodation]] in a multi-storey building.
+     * Since counting
+     *   systems [vary
+     * internationally](https://en.wikipedia.org/wiki/Storey#Consecutive_number_floor_designations),
+     * the local system should be used where possible.
+     *
+     * @param string|string[] $floorLevel
+     *
+     * @return static
+     *
+     * @see https://schema.org/floorLevel
+     * @see http://pending.schema.org
+     * @link https://github.com/schemaorg/schemaorg/issues/2373
+     */
+    public function floorLevel($floorLevel)
+    {
+        return $this->setProperty('floorLevel', $floorLevel);
     }
 
     /**
@@ -296,7 +346,8 @@ class Suite extends BaseType implements SuiteContract, AccommodationContract, Pl
      *
      * @return static
      *
-     * @see http://schema.org/floorSize
+     * @see https://schema.org/floorSize
+     * @link https://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#STI_Accommodation_Ontology
      */
     public function floorSize($floorSize)
     {
@@ -310,11 +361,183 @@ class Suite extends BaseType implements SuiteContract, AccommodationContract, Pl
      *
      * @return static
      *
-     * @see http://schema.org/geo
+     * @see https://schema.org/geo
      */
     public function geo($geo)
     {
         return $this->setProperty('geo', $geo);
+    }
+
+    /**
+     * Represents a relationship between two geometries (or the places they
+     * represent), relating a containing geometry to a contained geometry. "a
+     * contains b iff no points of b lie in the exterior of a, and at least one
+     * point of the interior of b lies in the interior of a". As defined in
+     * [DE-9IM](https://en.wikipedia.org/wiki/DE-9IM).
+     *
+     * @param \Spatie\SchemaOrg\Contracts\GeospatialGeometryContract|\Spatie\SchemaOrg\Contracts\GeospatialGeometryContract[]|\Spatie\SchemaOrg\Contracts\PlaceContract|\Spatie\SchemaOrg\Contracts\PlaceContract[] $geoContains
+     *
+     * @return static
+     *
+     * @see https://schema.org/geoContains
+     */
+    public function geoContains($geoContains)
+    {
+        return $this->setProperty('geoContains', $geoContains);
+    }
+
+    /**
+     * Represents a relationship between two geometries (or the places they
+     * represent), relating a geometry to another that covers it. As defined in
+     * [DE-9IM](https://en.wikipedia.org/wiki/DE-9IM).
+     *
+     * @param \Spatie\SchemaOrg\Contracts\GeospatialGeometryContract|\Spatie\SchemaOrg\Contracts\GeospatialGeometryContract[]|\Spatie\SchemaOrg\Contracts\PlaceContract|\Spatie\SchemaOrg\Contracts\PlaceContract[] $geoCoveredBy
+     *
+     * @return static
+     *
+     * @see https://schema.org/geoCoveredBy
+     */
+    public function geoCoveredBy($geoCoveredBy)
+    {
+        return $this->setProperty('geoCoveredBy', $geoCoveredBy);
+    }
+
+    /**
+     * Represents a relationship between two geometries (or the places they
+     * represent), relating a covering geometry to a covered geometry. "Every
+     * point of b is a point of (the interior or boundary of) a". As defined in
+     * [DE-9IM](https://en.wikipedia.org/wiki/DE-9IM).
+     *
+     * @param \Spatie\SchemaOrg\Contracts\GeospatialGeometryContract|\Spatie\SchemaOrg\Contracts\GeospatialGeometryContract[]|\Spatie\SchemaOrg\Contracts\PlaceContract|\Spatie\SchemaOrg\Contracts\PlaceContract[] $geoCovers
+     *
+     * @return static
+     *
+     * @see https://schema.org/geoCovers
+     */
+    public function geoCovers($geoCovers)
+    {
+        return $this->setProperty('geoCovers', $geoCovers);
+    }
+
+    /**
+     * Represents a relationship between two geometries (or the places they
+     * represent), relating a geometry to another that crosses it: "a crosses b:
+     * they have some but not all interior points in common, and the dimension
+     * of the intersection is less than that of at least one of them". As
+     * defined in [DE-9IM](https://en.wikipedia.org/wiki/DE-9IM).
+     *
+     * @param \Spatie\SchemaOrg\Contracts\GeospatialGeometryContract|\Spatie\SchemaOrg\Contracts\GeospatialGeometryContract[]|\Spatie\SchemaOrg\Contracts\PlaceContract|\Spatie\SchemaOrg\Contracts\PlaceContract[] $geoCrosses
+     *
+     * @return static
+     *
+     * @see https://schema.org/geoCrosses
+     */
+    public function geoCrosses($geoCrosses)
+    {
+        return $this->setProperty('geoCrosses', $geoCrosses);
+    }
+
+    /**
+     * Represents spatial relations in which two geometries (or the places they
+     * represent) are topologically disjoint: they have no point in common. They
+     * form a set of disconnected geometries." (a symmetric relationship, as
+     * defined in [DE-9IM](https://en.wikipedia.org/wiki/DE-9IM))
+     *
+     * @param \Spatie\SchemaOrg\Contracts\GeospatialGeometryContract|\Spatie\SchemaOrg\Contracts\GeospatialGeometryContract[]|\Spatie\SchemaOrg\Contracts\PlaceContract|\Spatie\SchemaOrg\Contracts\PlaceContract[] $geoDisjoint
+     *
+     * @return static
+     *
+     * @see https://schema.org/geoDisjoint
+     */
+    public function geoDisjoint($geoDisjoint)
+    {
+        return $this->setProperty('geoDisjoint', $geoDisjoint);
+    }
+
+    /**
+     * Represents spatial relations in which two geometries (or the places they
+     * represent) are topologically equal, as defined in
+     * [DE-9IM](https://en.wikipedia.org/wiki/DE-9IM). "Two geometries are
+     * topologically equal if their interiors intersect and no part of the
+     * interior or boundary of one geometry intersects the exterior of the
+     * other" (a symmetric relationship)
+     *
+     * @param \Spatie\SchemaOrg\Contracts\GeospatialGeometryContract|\Spatie\SchemaOrg\Contracts\GeospatialGeometryContract[]|\Spatie\SchemaOrg\Contracts\PlaceContract|\Spatie\SchemaOrg\Contracts\PlaceContract[] $geoEquals
+     *
+     * @return static
+     *
+     * @see https://schema.org/geoEquals
+     */
+    public function geoEquals($geoEquals)
+    {
+        return $this->setProperty('geoEquals', $geoEquals);
+    }
+
+    /**
+     * Represents spatial relations in which two geometries (or the places they
+     * represent) have at least one point in common. As defined in
+     * [DE-9IM](https://en.wikipedia.org/wiki/DE-9IM).
+     *
+     * @param \Spatie\SchemaOrg\Contracts\GeospatialGeometryContract|\Spatie\SchemaOrg\Contracts\GeospatialGeometryContract[]|\Spatie\SchemaOrg\Contracts\PlaceContract|\Spatie\SchemaOrg\Contracts\PlaceContract[] $geoIntersects
+     *
+     * @return static
+     *
+     * @see https://schema.org/geoIntersects
+     */
+    public function geoIntersects($geoIntersects)
+    {
+        return $this->setProperty('geoIntersects', $geoIntersects);
+    }
+
+    /**
+     * Represents a relationship between two geometries (or the places they
+     * represent), relating a geometry to another that geospatially overlaps it,
+     * i.e. they have some but not all points in common. As defined in
+     * [DE-9IM](https://en.wikipedia.org/wiki/DE-9IM).
+     *
+     * @param \Spatie\SchemaOrg\Contracts\GeospatialGeometryContract|\Spatie\SchemaOrg\Contracts\GeospatialGeometryContract[]|\Spatie\SchemaOrg\Contracts\PlaceContract|\Spatie\SchemaOrg\Contracts\PlaceContract[] $geoOverlaps
+     *
+     * @return static
+     *
+     * @see https://schema.org/geoOverlaps
+     */
+    public function geoOverlaps($geoOverlaps)
+    {
+        return $this->setProperty('geoOverlaps', $geoOverlaps);
+    }
+
+    /**
+     * Represents spatial relations in which two geometries (or the places they
+     * represent) touch: they have at least one boundary point in common, but no
+     * interior points." (a symmetric relationship, as defined in
+     * [DE-9IM](https://en.wikipedia.org/wiki/DE-9IM) )
+     *
+     * @param \Spatie\SchemaOrg\Contracts\GeospatialGeometryContract|\Spatie\SchemaOrg\Contracts\GeospatialGeometryContract[]|\Spatie\SchemaOrg\Contracts\PlaceContract|\Spatie\SchemaOrg\Contracts\PlaceContract[] $geoTouches
+     *
+     * @return static
+     *
+     * @see https://schema.org/geoTouches
+     */
+    public function geoTouches($geoTouches)
+    {
+        return $this->setProperty('geoTouches', $geoTouches);
+    }
+
+    /**
+     * Represents a relationship between two geometries (or the places they
+     * represent), relating a geometry to one that contains it, i.e. it is
+     * inside (i.e. within) its interior. As defined in
+     * [DE-9IM](https://en.wikipedia.org/wiki/DE-9IM).
+     *
+     * @param \Spatie\SchemaOrg\Contracts\GeospatialGeometryContract|\Spatie\SchemaOrg\Contracts\GeospatialGeometryContract[]|\Spatie\SchemaOrg\Contracts\PlaceContract|\Spatie\SchemaOrg\Contracts\PlaceContract[] $geoWithin
+     *
+     * @return static
+     *
+     * @see https://schema.org/geoWithin
+     */
+    public function geoWithin($geoWithin)
+    {
+        return $this->setProperty('geoWithin', $geoWithin);
     }
 
     /**
@@ -327,11 +550,32 @@ class Suite extends BaseType implements SuiteContract, AccommodationContract, Pl
      *
      * @return static
      *
-     * @see http://schema.org/globalLocationNumber
+     * @see https://schema.org/globalLocationNumber
+     * @link http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#source_GoodRelationsTerms
      */
     public function globalLocationNumber($globalLocationNumber)
     {
         return $this->setProperty('globalLocationNumber', $globalLocationNumber);
+    }
+
+    /**
+     * Indicates whether some facility (e.g. [[FoodEstablishment]],
+     * [[CovidTestingFacility]]) offers a service that can be used by driving
+     * through in a car. In the case of [[CovidTestingFacility]] such facilities
+     * could potentially help with social distancing from other
+     * potentially-infected users.
+     *
+     * @param bool|bool[] $hasDriveThroughService
+     *
+     * @return static
+     *
+     * @see https://schema.org/hasDriveThroughService
+     * @see http://pending.schema.org
+     * @link https://github.com/schemaorg/schemaorg/issues/2490
+     */
+    public function hasDriveThroughService($hasDriveThroughService)
+    {
+        return $this->setProperty('hasDriveThroughService', $hasDriveThroughService);
     }
 
     /**
@@ -341,7 +585,7 @@ class Suite extends BaseType implements SuiteContract, AccommodationContract, Pl
      *
      * @return static
      *
-     * @see http://schema.org/hasMap
+     * @see https://schema.org/hasMap
      */
     public function hasMap($hasMap)
     {
@@ -359,7 +603,7 @@ class Suite extends BaseType implements SuiteContract, AccommodationContract, Pl
      *
      * @return static
      *
-     * @see http://schema.org/identifier
+     * @see https://schema.org/identifier
      */
     public function identifier($identifier)
     {
@@ -374,7 +618,7 @@ class Suite extends BaseType implements SuiteContract, AccommodationContract, Pl
      *
      * @return static
      *
-     * @see http://schema.org/image
+     * @see https://schema.org/image
      */
     public function image($image)
     {
@@ -388,7 +632,7 @@ class Suite extends BaseType implements SuiteContract, AccommodationContract, Pl
      *
      * @return static
      *
-     * @see http://schema.org/isAccessibleForFree
+     * @see https://schema.org/isAccessibleForFree
      */
     public function isAccessibleForFree($isAccessibleForFree)
     {
@@ -404,7 +648,8 @@ class Suite extends BaseType implements SuiteContract, AccommodationContract, Pl
      *
      * @return static
      *
-     * @see http://schema.org/isicV4
+     * @see https://schema.org/isicV4
+     * @link http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#source_GoodRelationsTerms
      */
     public function isicV4($isicV4)
     {
@@ -419,11 +664,28 @@ class Suite extends BaseType implements SuiteContract, AccommodationContract, Pl
      *
      * @return static
      *
-     * @see http://schema.org/latitude
+     * @see https://schema.org/latitude
      */
     public function latitude($latitude)
     {
         return $this->setProperty('latitude', $latitude);
+    }
+
+    /**
+     * Length of the lease for some [[Accommodation]], either particular to some
+     * [[Offer]] or in some cases intrinsic to the property.
+     *
+     * @param \Spatie\SchemaOrg\Contracts\DurationContract|\Spatie\SchemaOrg\Contracts\DurationContract[]|\Spatie\SchemaOrg\Contracts\QuantitativeValueContract|\Spatie\SchemaOrg\Contracts\QuantitativeValueContract[] $leaseLength
+     *
+     * @return static
+     *
+     * @see https://schema.org/leaseLength
+     * @see http://pending.schema.org
+     * @link https://github.com/schemaorg/schemaorg/issues/2373
+     */
+    public function leaseLength($leaseLength)
+    {
+        return $this->setProperty('leaseLength', $leaseLength);
     }
 
     /**
@@ -433,7 +695,8 @@ class Suite extends BaseType implements SuiteContract, AccommodationContract, Pl
      *
      * @return static
      *
-     * @see http://schema.org/logo
+     * @see https://schema.org/logo
+     * @link http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#source_GoodRelationsTerms
      */
     public function logo($logo)
     {
@@ -448,7 +711,7 @@ class Suite extends BaseType implements SuiteContract, AccommodationContract, Pl
      *
      * @return static
      *
-     * @see http://schema.org/longitude
+     * @see https://schema.org/longitude
      */
     public function longitude($longitude)
     {
@@ -464,7 +727,7 @@ class Suite extends BaseType implements SuiteContract, AccommodationContract, Pl
      *
      * @return static
      *
-     * @see http://schema.org/mainEntityOfPage
+     * @see https://schema.org/mainEntityOfPage
      */
     public function mainEntityOfPage($mainEntityOfPage)
     {
@@ -478,7 +741,7 @@ class Suite extends BaseType implements SuiteContract, AccommodationContract, Pl
      *
      * @return static
      *
-     * @see http://schema.org/map
+     * @see https://schema.org/map
      */
     public function map($map)
     {
@@ -492,7 +755,7 @@ class Suite extends BaseType implements SuiteContract, AccommodationContract, Pl
      *
      * @return static
      *
-     * @see http://schema.org/maps
+     * @see https://schema.org/maps
      */
     public function maps($maps)
     {
@@ -506,7 +769,7 @@ class Suite extends BaseType implements SuiteContract, AccommodationContract, Pl
      *
      * @return static
      *
-     * @see http://schema.org/maximumAttendeeCapacity
+     * @see https://schema.org/maximumAttendeeCapacity
      */
     public function maximumAttendeeCapacity($maximumAttendeeCapacity)
     {
@@ -520,11 +783,85 @@ class Suite extends BaseType implements SuiteContract, AccommodationContract, Pl
      *
      * @return static
      *
-     * @see http://schema.org/name
+     * @see https://schema.org/name
      */
     public function name($name)
     {
         return $this->setProperty('name', $name);
+    }
+
+    /**
+     * The total integer number of bathrooms in a some [[Accommodation]],
+     * following real estate conventions as [documented in
+     * RESO](https://ddwiki.reso.org/display/DDW17/BathroomsTotalInteger+Field):
+     * "The simple sum of the number of bathrooms. For example for a property
+     * with two Full Bathrooms and one Half Bathroom, the Bathrooms Total
+     * Integer will be 3.". See also [[numberOfRooms]].
+     *
+     * @param int|int[] $numberOfBathroomsTotal
+     *
+     * @return static
+     *
+     * @see https://schema.org/numberOfBathroomsTotal
+     * @see http://pending.schema.org
+     * @link https://github.com/schemaorg/schemaorg/issues/2373
+     */
+    public function numberOfBathroomsTotal($numberOfBathroomsTotal)
+    {
+        return $this->setProperty('numberOfBathroomsTotal', $numberOfBathroomsTotal);
+    }
+
+    /**
+     * The total integer number of bedrooms in a some [[Accommodation]],
+     * [[ApartmentComplex]] or [[FloorPlan]].
+     *
+     * @param \Spatie\SchemaOrg\Contracts\QuantitativeValueContract|\Spatie\SchemaOrg\Contracts\QuantitativeValueContract[]|float|float[]|int|int[] $numberOfBedrooms
+     *
+     * @return static
+     *
+     * @see https://schema.org/numberOfBedrooms
+     * @see http://pending.schema.org
+     * @link https://github.com/schemaorg/schemaorg/issues/2373
+     */
+    public function numberOfBedrooms($numberOfBedrooms)
+    {
+        return $this->setProperty('numberOfBedrooms', $numberOfBedrooms);
+    }
+
+    /**
+     * Number of full bathrooms - The total number of full and ¾ bathrooms in
+     * an [[Accommodation]]. This corresponds to the [BathroomsFull field in
+     * RESO](https://ddwiki.reso.org/display/DDW17/BathroomsFull+Field).
+     *
+     * @param float|float[]|int|int[] $numberOfFullBathrooms
+     *
+     * @return static
+     *
+     * @see https://schema.org/numberOfFullBathrooms
+     * @see http://pending.schema.org
+     * @link https://github.com/schemaorg/schemaorg/issues/2373
+     */
+    public function numberOfFullBathrooms($numberOfFullBathrooms)
+    {
+        return $this->setProperty('numberOfFullBathrooms', $numberOfFullBathrooms);
+    }
+
+    /**
+     * Number of partial bathrooms - The total number of half and ¼ bathrooms
+     * in an [[Accommodation]]. This corresponds to the [BathroomsPartial field
+     * in RESO](https://ddwiki.reso.org/display/DDW17/BathroomsPartial+Field).
+     *
+     * @param float|float[]|int|int[] $numberOfPartialBathrooms
+     *
+     * @return static
+     *
+     * @see https://schema.org/numberOfPartialBathrooms
+     * @see http://pending.schema.org
+     * @link https://github.com/schemaorg/schemaorg/issues/2373
+     */
+    public function numberOfPartialBathrooms($numberOfPartialBathrooms)
+    {
+        return $this->setProperty('numberOfPartialBathrooms', $numberOfPartialBathrooms);
     }
 
     /**
@@ -537,7 +874,8 @@ class Suite extends BaseType implements SuiteContract, AccommodationContract, Pl
      *
      * @return static
      *
-     * @see http://schema.org/numberOfRooms
+     * @see https://schema.org/numberOfRooms
+     * @link https://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#STI_Accommodation_Ontology
      */
     public function numberOfRooms($numberOfRooms)
     {
@@ -555,7 +893,8 @@ class Suite extends BaseType implements SuiteContract, AccommodationContract, Pl
      *
      * @return static
      *
-     * @see http://schema.org/occupancy
+     * @see https://schema.org/occupancy
+     * @link https://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#STI_Accommodation_Ontology
      */
     public function occupancy($occupancy)
     {
@@ -569,7 +908,8 @@ class Suite extends BaseType implements SuiteContract, AccommodationContract, Pl
      *
      * @return static
      *
-     * @see http://schema.org/openingHoursSpecification
+     * @see https://schema.org/openingHoursSpecification
+     * @link http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#source_GoodRelationsTerms
      */
     public function openingHoursSpecification($openingHoursSpecification)
     {
@@ -583,7 +923,8 @@ class Suite extends BaseType implements SuiteContract, AccommodationContract, Pl
      *
      * @return static
      *
-     * @see http://schema.org/permittedUsage
+     * @see https://schema.org/permittedUsage
+     * @link https://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#STI_Accommodation_Ontology
      */
     public function permittedUsage($permittedUsage)
     {
@@ -598,7 +939,8 @@ class Suite extends BaseType implements SuiteContract, AccommodationContract, Pl
      *
      * @return static
      *
-     * @see http://schema.org/petsAllowed
+     * @see https://schema.org/petsAllowed
+     * @link https://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#STI_Accommodation_Ontology
      */
     public function petsAllowed($petsAllowed)
     {
@@ -612,7 +954,7 @@ class Suite extends BaseType implements SuiteContract, AccommodationContract, Pl
      *
      * @return static
      *
-     * @see http://schema.org/photo
+     * @see https://schema.org/photo
      */
     public function photo($photo)
     {
@@ -626,7 +968,7 @@ class Suite extends BaseType implements SuiteContract, AccommodationContract, Pl
      *
      * @return static
      *
-     * @see http://schema.org/photos
+     * @see https://schema.org/photos
      */
     public function photos($photos)
     {
@@ -641,7 +983,7 @@ class Suite extends BaseType implements SuiteContract, AccommodationContract, Pl
      *
      * @return static
      *
-     * @see http://schema.org/potentialAction
+     * @see https://schema.org/potentialAction
      */
     public function potentialAction($potentialAction)
     {
@@ -656,7 +998,7 @@ class Suite extends BaseType implements SuiteContract, AccommodationContract, Pl
      *
      * @return static
      *
-     * @see http://schema.org/publicAccess
+     * @see https://schema.org/publicAccess
      */
     public function publicAccess($publicAccess)
     {
@@ -670,7 +1012,7 @@ class Suite extends BaseType implements SuiteContract, AccommodationContract, Pl
      *
      * @return static
      *
-     * @see http://schema.org/review
+     * @see https://schema.org/review
      */
     public function review($review)
     {
@@ -684,7 +1026,7 @@ class Suite extends BaseType implements SuiteContract, AccommodationContract, Pl
      *
      * @return static
      *
-     * @see http://schema.org/reviews
+     * @see https://schema.org/reviews
      */
     public function reviews($reviews)
     {
@@ -700,7 +1042,7 @@ class Suite extends BaseType implements SuiteContract, AccommodationContract, Pl
      *
      * @return static
      *
-     * @see http://schema.org/sameAs
+     * @see https://schema.org/sameAs
      */
     public function sameAs($sameAs)
     {
@@ -714,7 +1056,7 @@ class Suite extends BaseType implements SuiteContract, AccommodationContract, Pl
      *
      * @return static
      *
-     * @see http://schema.org/slogan
+     * @see https://schema.org/slogan
      */
     public function slogan($slogan)
     {
@@ -729,7 +1071,8 @@ class Suite extends BaseType implements SuiteContract, AccommodationContract, Pl
      *
      * @return static
      *
-     * @see http://schema.org/smokingAllowed
+     * @see https://schema.org/smokingAllowed
+     * @link https://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#STI_Accommodation_Ontology
      */
     public function smokingAllowed($smokingAllowed)
     {
@@ -746,7 +1089,7 @@ class Suite extends BaseType implements SuiteContract, AccommodationContract, Pl
      *
      * @return static
      *
-     * @see http://schema.org/specialOpeningHoursSpecification
+     * @see https://schema.org/specialOpeningHoursSpecification
      */
     public function specialOpeningHoursSpecification($specialOpeningHoursSpecification)
     {
@@ -760,7 +1103,8 @@ class Suite extends BaseType implements SuiteContract, AccommodationContract, Pl
      *
      * @return static
      *
-     * @see http://schema.org/subjectOf
+     * @see https://schema.org/subjectOf
+     * @link https://github.com/schemaorg/schemaorg/issues/1670
      */
     public function subjectOf($subjectOf)
     {
@@ -774,11 +1118,29 @@ class Suite extends BaseType implements SuiteContract, AccommodationContract, Pl
      *
      * @return static
      *
-     * @see http://schema.org/telephone
+     * @see https://schema.org/telephone
      */
     public function telephone($telephone)
     {
         return $this->setProperty('telephone', $telephone);
+    }
+
+    /**
+     * A page providing information on how to book a tour of some [[Place]],
+     * such as an [[Accommodation]] or [[ApartmentComplex]] in a real estate
+     * setting, as well as other kinds of tours as appropriate.
+     *
+     * @param string|string[] $tourBookingPage
+     *
+     * @return static
+     *
+     * @see https://schema.org/tourBookingPage
+     * @see http://pending.schema.org
+     * @link https://github.com/schemaorg/schemaorg/issues/2373
+     */
+    public function tourBookingPage($tourBookingPage)
+    {
+        return $this->setProperty('tourBookingPage', $tourBookingPage);
     }
 
     /**
@@ -788,11 +1150,29 @@ class Suite extends BaseType implements SuiteContract, AccommodationContract, Pl
      *
      * @return static
      *
-     * @see http://schema.org/url
+     * @see https://schema.org/url
      */
     public function url($url)
     {
         return $this->setProperty('url', $url);
+    }
+
+    /**
+     * The year an [[Accommodation]] was constructed. This corresponds to the
+     * [YearBuilt field in
+     * RESO](https://ddwiki.reso.org/display/DDW17/YearBuilt+Field).
+     *
+     * @param float|float[]|int|int[] $yearBuilt
+     *
+     * @return static
+     *
+     * @see https://schema.org/yearBuilt
+     * @see http://pending.schema.org
+     * @link https://github.com/schemaorg/schemaorg/issues/2373
+     */
+    public function yearBuilt($yearBuilt)
+    {
+        return $this->setProperty('yearBuilt', $yearBuilt);
     }
 
 }

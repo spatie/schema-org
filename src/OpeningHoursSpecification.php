@@ -17,7 +17,8 @@ use \Spatie\SchemaOrg\Contracts\ThingContract;
  * If the value for the [[closes]] property is less than the value for the
  * [[opens]] property then the hour range is assumed to span over the next day.
  *
- * @see http://schema.org/OpeningHoursSpecification
+ * @see https://schema.org/OpeningHoursSpecification
+ * @link http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#source_GoodRelationsClass
  *
  */
 class OpeningHoursSpecification extends BaseType implements OpeningHoursSpecificationContract, IntangibleContract, StructuredValueContract, ThingContract
@@ -34,7 +35,7 @@ class OpeningHoursSpecification extends BaseType implements OpeningHoursSpecific
      *
      * @return static
      *
-     * @see http://schema.org/additionalType
+     * @see https://schema.org/additionalType
      */
     public function additionalType($additionalType)
     {
@@ -48,7 +49,7 @@ class OpeningHoursSpecification extends BaseType implements OpeningHoursSpecific
      *
      * @return static
      *
-     * @see http://schema.org/alternateName
+     * @see https://schema.org/alternateName
      */
     public function alternateName($alternateName)
     {
@@ -62,7 +63,8 @@ class OpeningHoursSpecification extends BaseType implements OpeningHoursSpecific
      *
      * @return static
      *
-     * @see http://schema.org/closes
+     * @see https://schema.org/closes
+     * @link http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#source_GoodRelationsTerms
      */
     public function closes($closes)
     {
@@ -76,7 +78,8 @@ class OpeningHoursSpecification extends BaseType implements OpeningHoursSpecific
      *
      * @return static
      *
-     * @see http://schema.org/dayOfWeek
+     * @see https://schema.org/dayOfWeek
+     * @link http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#source_GoodRelationsTerms
      */
     public function dayOfWeek($dayOfWeek)
     {
@@ -90,7 +93,7 @@ class OpeningHoursSpecification extends BaseType implements OpeningHoursSpecific
      *
      * @return static
      *
-     * @see http://schema.org/description
+     * @see https://schema.org/description
      */
     public function description($description)
     {
@@ -107,7 +110,7 @@ class OpeningHoursSpecification extends BaseType implements OpeningHoursSpecific
      *
      * @return static
      *
-     * @see http://schema.org/disambiguatingDescription
+     * @see https://schema.org/disambiguatingDescription
      */
     public function disambiguatingDescription($disambiguatingDescription)
     {
@@ -125,7 +128,7 @@ class OpeningHoursSpecification extends BaseType implements OpeningHoursSpecific
      *
      * @return static
      *
-     * @see http://schema.org/identifier
+     * @see https://schema.org/identifier
      */
     public function identifier($identifier)
     {
@@ -140,7 +143,7 @@ class OpeningHoursSpecification extends BaseType implements OpeningHoursSpecific
      *
      * @return static
      *
-     * @see http://schema.org/image
+     * @see https://schema.org/image
      */
     public function image($image)
     {
@@ -156,7 +159,7 @@ class OpeningHoursSpecification extends BaseType implements OpeningHoursSpecific
      *
      * @return static
      *
-     * @see http://schema.org/mainEntityOfPage
+     * @see https://schema.org/mainEntityOfPage
      */
     public function mainEntityOfPage($mainEntityOfPage)
     {
@@ -170,7 +173,7 @@ class OpeningHoursSpecification extends BaseType implements OpeningHoursSpecific
      *
      * @return static
      *
-     * @see http://schema.org/name
+     * @see https://schema.org/name
      */
     public function name($name)
     {
@@ -184,7 +187,8 @@ class OpeningHoursSpecification extends BaseType implements OpeningHoursSpecific
      *
      * @return static
      *
-     * @see http://schema.org/opens
+     * @see https://schema.org/opens
+     * @link http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#source_GoodRelationsTerms
      */
     public function opens($opens)
     {
@@ -199,7 +203,7 @@ class OpeningHoursSpecification extends BaseType implements OpeningHoursSpecific
      *
      * @return static
      *
-     * @see http://schema.org/potentialAction
+     * @see https://schema.org/potentialAction
      */
     public function potentialAction($potentialAction)
     {
@@ -215,7 +219,7 @@ class OpeningHoursSpecification extends BaseType implements OpeningHoursSpecific
      *
      * @return static
      *
-     * @see http://schema.org/sameAs
+     * @see https://schema.org/sameAs
      */
     public function sameAs($sameAs)
     {
@@ -229,7 +233,8 @@ class OpeningHoursSpecification extends BaseType implements OpeningHoursSpecific
      *
      * @return static
      *
-     * @see http://schema.org/subjectOf
+     * @see https://schema.org/subjectOf
+     * @link https://github.com/schemaorg/schemaorg/issues/1670
      */
     public function subjectOf($subjectOf)
     {
@@ -243,7 +248,7 @@ class OpeningHoursSpecification extends BaseType implements OpeningHoursSpecific
      *
      * @return static
      *
-     * @see http://schema.org/url
+     * @see https://schema.org/url
      */
     public function url($url)
     {
@@ -257,7 +262,8 @@ class OpeningHoursSpecification extends BaseType implements OpeningHoursSpecific
      *
      * @return static
      *
-     * @see http://schema.org/validFrom
+     * @see https://schema.org/validFrom
+     * @link http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#source_GoodRelationsTerms
      */
     public function validFrom($validFrom)
     {
@@ -272,7 +278,8 @@ class OpeningHoursSpecification extends BaseType implements OpeningHoursSpecific
      *
      * @return static
      *
-     * @see http://schema.org/validThrough
+     * @see https://schema.org/validThrough
+     * @link http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#source_GoodRelationsTerms
      */
     public function validThrough($validThrough)
     {

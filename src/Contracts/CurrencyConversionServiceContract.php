@@ -24,6 +24,8 @@ interface CurrencyConversionServiceContract
 
     public function broker($broker);
 
+    public function category($category);
+
     public function description($description);
 
     public function disambiguatingDescription($disambiguatingDescription);
@@ -70,9 +72,13 @@ interface CurrencyConversionServiceContract
 
     public function serviceOutput($serviceOutput);
 
+    public function serviceType($serviceType);
+
     public function slogan($slogan);
 
     public function subjectOf($subjectOf);
+
+    public function termsOfService($termsOfService);
 
     public function url($url);
 

@@ -36,6 +36,10 @@ interface ScreeningEventContract
 
     public function endDate($endDate);
 
+    public function eventAttendanceMode($eventAttendanceMode);
+
+    public function eventSchedule($eventSchedule);
+
     public function eventStatus($eventStatus);
 
     public function funder($funder);
@@ -48,9 +52,15 @@ interface ScreeningEventContract
 
     public function isAccessibleForFree($isAccessibleForFree);
 
+    public function location($location);
+
     public function mainEntityOfPage($mainEntityOfPage);
 
     public function maximumAttendeeCapacity($maximumAttendeeCapacity);
+
+    public function maximumPhysicalAttendeeCapacity($maximumPhysicalAttendeeCapacity);
+
+    public function maximumVirtualAttendeeCapacity($maximumVirtualAttendeeCapacity);
 
     public function name($name);
 
@@ -83,6 +93,8 @@ interface ScreeningEventContract
     public function subEvents($subEvents);
 
     public function subjectOf($subjectOf);
+
+    public function subtitleLanguage($subtitleLanguage);
 
     public function superEvent($superEvent);
 

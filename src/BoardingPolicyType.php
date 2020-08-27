@@ -10,24 +10,25 @@ use \Spatie\SchemaOrg\Contracts\ThingContract;
 /**
  * A type of boarding policy used by an airline.
  *
- * @see http://schema.org/BoardingPolicyType
+ * @see https://schema.org/BoardingPolicyType
  *
+ * @method static supersededBy($supersededBy) The value should be instance of pending types Class|Class[]|Enumeration|Enumeration[]|Property|Property[]
  */
 class BoardingPolicyType extends BaseType implements BoardingPolicyTypeContract, EnumerationContract, IntangibleContract, ThingContract
 {
     /**
      * The airline boards by groups based on check-in time, priority, etc.
      *
-     * @see http://schema.org/GroupBoardingPolicy
+     * @see https://schema.org/GroupBoardingPolicy
      */
-     const GroupBoardingPolicy = 'http://schema.org/GroupBoardingPolicy';
+     const GroupBoardingPolicy = 'https://schema.org/GroupBoardingPolicy';
 
     /**
      * The airline boards by zones of the plane.
      *
-     * @see http://schema.org/ZoneBoardingPolicy
+     * @see https://schema.org/ZoneBoardingPolicy
      */
-     const ZoneBoardingPolicy = 'http://schema.org/ZoneBoardingPolicy';
+     const ZoneBoardingPolicy = 'https://schema.org/ZoneBoardingPolicy';
 
     /**
      * An additional type for the item, typically used for adding more specific
@@ -41,7 +42,7 @@ class BoardingPolicyType extends BaseType implements BoardingPolicyTypeContract,
      *
      * @return static
      *
-     * @see http://schema.org/additionalType
+     * @see https://schema.org/additionalType
      */
     public function additionalType($additionalType)
     {
@@ -55,7 +56,7 @@ class BoardingPolicyType extends BaseType implements BoardingPolicyTypeContract,
      *
      * @return static
      *
-     * @see http://schema.org/alternateName
+     * @see https://schema.org/alternateName
      */
     public function alternateName($alternateName)
     {
@@ -69,7 +70,7 @@ class BoardingPolicyType extends BaseType implements BoardingPolicyTypeContract,
      *
      * @return static
      *
-     * @see http://schema.org/description
+     * @see https://schema.org/description
      */
     public function description($description)
     {
@@ -86,7 +87,7 @@ class BoardingPolicyType extends BaseType implements BoardingPolicyTypeContract,
      *
      * @return static
      *
-     * @see http://schema.org/disambiguatingDescription
+     * @see https://schema.org/disambiguatingDescription
      */
     public function disambiguatingDescription($disambiguatingDescription)
     {
@@ -104,7 +105,7 @@ class BoardingPolicyType extends BaseType implements BoardingPolicyTypeContract,
      *
      * @return static
      *
-     * @see http://schema.org/identifier
+     * @see https://schema.org/identifier
      */
     public function identifier($identifier)
     {
@@ -119,7 +120,7 @@ class BoardingPolicyType extends BaseType implements BoardingPolicyTypeContract,
      *
      * @return static
      *
-     * @see http://schema.org/image
+     * @see https://schema.org/image
      */
     public function image($image)
     {
@@ -135,7 +136,7 @@ class BoardingPolicyType extends BaseType implements BoardingPolicyTypeContract,
      *
      * @return static
      *
-     * @see http://schema.org/mainEntityOfPage
+     * @see https://schema.org/mainEntityOfPage
      */
     public function mainEntityOfPage($mainEntityOfPage)
     {
@@ -149,7 +150,7 @@ class BoardingPolicyType extends BaseType implements BoardingPolicyTypeContract,
      *
      * @return static
      *
-     * @see http://schema.org/name
+     * @see https://schema.org/name
      */
     public function name($name)
     {
@@ -164,7 +165,7 @@ class BoardingPolicyType extends BaseType implements BoardingPolicyTypeContract,
      *
      * @return static
      *
-     * @see http://schema.org/potentialAction
+     * @see https://schema.org/potentialAction
      */
     public function potentialAction($potentialAction)
     {
@@ -180,7 +181,7 @@ class BoardingPolicyType extends BaseType implements BoardingPolicyTypeContract,
      *
      * @return static
      *
-     * @see http://schema.org/sameAs
+     * @see https://schema.org/sameAs
      */
     public function sameAs($sameAs)
     {
@@ -194,7 +195,8 @@ class BoardingPolicyType extends BaseType implements BoardingPolicyTypeContract,
      *
      * @return static
      *
-     * @see http://schema.org/subjectOf
+     * @see https://schema.org/subjectOf
+     * @link https://github.com/schemaorg/schemaorg/issues/1670
      */
     public function subjectOf($subjectOf)
     {
@@ -208,7 +210,7 @@ class BoardingPolicyType extends BaseType implements BoardingPolicyTypeContract,
      *
      * @return static
      *
-     * @see http://schema.org/url
+     * @see https://schema.org/url
      */
     public function url($url)
     {

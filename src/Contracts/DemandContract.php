@@ -42,6 +42,8 @@ interface DemandContract
 
     public function eligibleTransactionVolume($eligibleTransactionVolume);
 
+    public function gtin($gtin);
+
     public function gtin12($gtin12);
 
     public function gtin13($gtin13);
@@ -55,6 +57,8 @@ interface DemandContract
     public function image($image);
 
     public function includesObject($includesObject);
+
+    public function ineligibleRegion($ineligibleRegion);
 
     public function inventoryLevel($inventoryLevel);
 

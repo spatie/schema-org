@@ -9,9 +9,9 @@ use \Spatie\SchemaOrg\Contracts\ThingContract;
 /**
  * A profession, may involve prolonged training and/or a formal qualification.
  *
- * @see http://schema.org/Occupation
+ * @see https://schema.org/Occupation
+ * @link https://github.com/schemaorg/schemaorg/issues/1698
  *
- * @method static skills($skills) The value should be instance of pending types DefinedTerm|DefinedTerm[]|string|string[]
  */
 class Occupation extends BaseType implements OccupationContract, IntangibleContract, ThingContract
 {
@@ -27,7 +27,7 @@ class Occupation extends BaseType implements OccupationContract, IntangibleContr
      *
      * @return static
      *
-     * @see http://schema.org/additionalType
+     * @see https://schema.org/additionalType
      */
     public function additionalType($additionalType)
     {
@@ -41,7 +41,7 @@ class Occupation extends BaseType implements OccupationContract, IntangibleContr
      *
      * @return static
      *
-     * @see http://schema.org/alternateName
+     * @see https://schema.org/alternateName
      */
     public function alternateName($alternateName)
     {
@@ -55,7 +55,7 @@ class Occupation extends BaseType implements OccupationContract, IntangibleContr
      *
      * @return static
      *
-     * @see http://schema.org/description
+     * @see https://schema.org/description
      */
     public function description($description)
     {
@@ -72,11 +72,26 @@ class Occupation extends BaseType implements OccupationContract, IntangibleContr
      *
      * @return static
      *
-     * @see http://schema.org/disambiguatingDescription
+     * @see https://schema.org/disambiguatingDescription
      */
     public function disambiguatingDescription($disambiguatingDescription)
     {
         return $this->setProperty('disambiguatingDescription', $disambiguatingDescription);
+    }
+
+    /**
+     * Educational background needed for the position or Occupation.
+     *
+     * @param \Spatie\SchemaOrg\Contracts\EducationalOccupationalCredentialContract|\Spatie\SchemaOrg\Contracts\EducationalOccupationalCredentialContract[]|string|string[] $educationRequirements
+     *
+     * @return static
+     *
+     * @see https://schema.org/educationRequirements
+     * @see http://pending.schema.org
+     */
+    public function educationRequirements($educationRequirements)
+    {
+        return $this->setProperty('educationRequirements', $educationRequirements);
     }
 
     /**
@@ -90,7 +105,8 @@ class Occupation extends BaseType implements OccupationContract, IntangibleContr
      *
      * @return static
      *
-     * @see http://schema.org/estimatedSalary
+     * @see https://schema.org/estimatedSalary
+     * @link https://github.com/schemaorg/schemaorg/issues/1698
      */
     public function estimatedSalary($estimatedSalary)
     {
@@ -105,7 +121,8 @@ class Occupation extends BaseType implements OccupationContract, IntangibleContr
      *
      * @return static
      *
-     * @see http://schema.org/experienceRequirements
+     * @see https://schema.org/experienceRequirements
+     * @link https://github.com/schemaorg/schemaorg/issues/1698
      */
     public function experienceRequirements($experienceRequirements)
     {
@@ -123,7 +140,7 @@ class Occupation extends BaseType implements OccupationContract, IntangibleContr
      *
      * @return static
      *
-     * @see http://schema.org/identifier
+     * @see https://schema.org/identifier
      */
     public function identifier($identifier)
     {
@@ -138,7 +155,7 @@ class Occupation extends BaseType implements OccupationContract, IntangibleContr
      *
      * @return static
      *
-     * @see http://schema.org/image
+     * @see https://schema.org/image
      */
     public function image($image)
     {
@@ -154,7 +171,7 @@ class Occupation extends BaseType implements OccupationContract, IntangibleContr
      *
      * @return static
      *
-     * @see http://schema.org/mainEntityOfPage
+     * @see https://schema.org/mainEntityOfPage
      */
     public function mainEntityOfPage($mainEntityOfPage)
     {
@@ -168,7 +185,7 @@ class Occupation extends BaseType implements OccupationContract, IntangibleContr
      *
      * @return static
      *
-     * @see http://schema.org/name
+     * @see https://schema.org/name
      */
     public function name($name)
     {
@@ -184,11 +201,36 @@ class Occupation extends BaseType implements OccupationContract, IntangibleContr
      *
      * @return static
      *
-     * @see http://schema.org/occupationLocation
+     * @see https://schema.org/occupationLocation
+     * @link https://github.com/schemaorg/schemaorg/issues/1698
      */
     public function occupationLocation($occupationLocation)
     {
         return $this->setProperty('occupationLocation', $occupationLocation);
+    }
+
+    /**
+     * A category describing the job, preferably using a term from a taxonomy
+     * such as <a href="http://www.onetcenter.org/taxonomy.html">BLS
+     * O*NET-SOC</a>,
+     * [ISCO-08](https://www.ilo.org/public/english/bureau/stat/isco/isco08/) or
+     * similar, with the property repeated for each applicable value. Ideally
+     * the taxonomy should be identified, and both the textual label and formal
+     * code for the category should be provided.
+     * 
+     * Note: for historical reasons, any textual label and formal code provided
+     * as a literal may be assumed to be from O*NET-SOC.
+     *
+     * @param \Spatie\SchemaOrg\Contracts\CategoryCodeContract|\Spatie\SchemaOrg\Contracts\CategoryCodeContract[]|string|string[] $occupationalCategory
+     *
+     * @return static
+     *
+     * @see https://schema.org/occupationalCategory
+     * @see http://pending.schema.org
+     */
+    public function occupationalCategory($occupationalCategory)
+    {
+        return $this->setProperty('occupationalCategory', $occupationalCategory);
     }
 
     /**
@@ -199,11 +241,26 @@ class Occupation extends BaseType implements OccupationContract, IntangibleContr
      *
      * @return static
      *
-     * @see http://schema.org/potentialAction
+     * @see https://schema.org/potentialAction
      */
     public function potentialAction($potentialAction)
     {
         return $this->setProperty('potentialAction', $potentialAction);
+    }
+
+    /**
+     * Specific qualifications required for this role or Occupation.
+     *
+     * @param \Spatie\SchemaOrg\Contracts\EducationalOccupationalCredentialContract|\Spatie\SchemaOrg\Contracts\EducationalOccupationalCredentialContract[]|string|string[] $qualifications
+     *
+     * @return static
+     *
+     * @see https://schema.org/qualifications
+     * @see http://pending.schema.org
+     */
+    public function qualifications($qualifications)
+    {
+        return $this->setProperty('qualifications', $qualifications);
     }
 
     /**
@@ -213,7 +270,8 @@ class Occupation extends BaseType implements OccupationContract, IntangibleContr
      *
      * @return static
      *
-     * @see http://schema.org/responsibilities
+     * @see https://schema.org/responsibilities
+     * @link https://github.com/schemaorg/schemaorg/issues/1698
      */
     public function responsibilities($responsibilities)
     {
@@ -229,11 +287,27 @@ class Occupation extends BaseType implements OccupationContract, IntangibleContr
      *
      * @return static
      *
-     * @see http://schema.org/sameAs
+     * @see https://schema.org/sameAs
      */
     public function sameAs($sameAs)
     {
         return $this->setProperty('sameAs', $sameAs);
+    }
+
+    /**
+     * A statement of knowledge, skill, ability, task or any other assertion
+     * expressing a competency that is desired or required to fulfill this role
+     * or to work in this occupation.
+     *
+     * @param \Spatie\SchemaOrg\Contracts\DefinedTermContract|\Spatie\SchemaOrg\Contracts\DefinedTermContract[]|string|string[] $skills
+     *
+     * @return static
+     *
+     * @see https://schema.org/skills
+     */
+    public function skills($skills)
+    {
+        return $this->setProperty('skills', $skills);
     }
 
     /**
@@ -243,7 +317,8 @@ class Occupation extends BaseType implements OccupationContract, IntangibleContr
      *
      * @return static
      *
-     * @see http://schema.org/subjectOf
+     * @see https://schema.org/subjectOf
+     * @link https://github.com/schemaorg/schemaorg/issues/1670
      */
     public function subjectOf($subjectOf)
     {
@@ -257,7 +332,7 @@ class Occupation extends BaseType implements OccupationContract, IntangibleContr
      *
      * @return static
      *
-     * @see http://schema.org/url
+     * @see https://schema.org/url
      */
     public function url($url)
     {

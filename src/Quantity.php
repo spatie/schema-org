@@ -10,7 +10,7 @@ use \Spatie\SchemaOrg\Contracts\ThingContract;
  * Quantities such as distance, time, mass, weight, etc. Particular instances of
  * say Mass are entities like '3 Kg' or '4 milligrams'.
  *
- * @see http://schema.org/Quantity
+ * @see https://schema.org/Quantity
  *
  */
 class Quantity extends BaseType implements QuantityContract, IntangibleContract, ThingContract
@@ -27,7 +27,7 @@ class Quantity extends BaseType implements QuantityContract, IntangibleContract,
      *
      * @return static
      *
-     * @see http://schema.org/additionalType
+     * @see https://schema.org/additionalType
      */
     public function additionalType($additionalType)
     {
@@ -41,7 +41,7 @@ class Quantity extends BaseType implements QuantityContract, IntangibleContract,
      *
      * @return static
      *
-     * @see http://schema.org/alternateName
+     * @see https://schema.org/alternateName
      */
     public function alternateName($alternateName)
     {
@@ -55,7 +55,7 @@ class Quantity extends BaseType implements QuantityContract, IntangibleContract,
      *
      * @return static
      *
-     * @see http://schema.org/description
+     * @see https://schema.org/description
      */
     public function description($description)
     {
@@ -72,7 +72,7 @@ class Quantity extends BaseType implements QuantityContract, IntangibleContract,
      *
      * @return static
      *
-     * @see http://schema.org/disambiguatingDescription
+     * @see https://schema.org/disambiguatingDescription
      */
     public function disambiguatingDescription($disambiguatingDescription)
     {
@@ -90,7 +90,7 @@ class Quantity extends BaseType implements QuantityContract, IntangibleContract,
      *
      * @return static
      *
-     * @see http://schema.org/identifier
+     * @see https://schema.org/identifier
      */
     public function identifier($identifier)
     {
@@ -105,7 +105,7 @@ class Quantity extends BaseType implements QuantityContract, IntangibleContract,
      *
      * @return static
      *
-     * @see http://schema.org/image
+     * @see https://schema.org/image
      */
     public function image($image)
     {
@@ -121,7 +121,7 @@ class Quantity extends BaseType implements QuantityContract, IntangibleContract,
      *
      * @return static
      *
-     * @see http://schema.org/mainEntityOfPage
+     * @see https://schema.org/mainEntityOfPage
      */
     public function mainEntityOfPage($mainEntityOfPage)
     {
@@ -135,7 +135,7 @@ class Quantity extends BaseType implements QuantityContract, IntangibleContract,
      *
      * @return static
      *
-     * @see http://schema.org/name
+     * @see https://schema.org/name
      */
     public function name($name)
     {
@@ -150,7 +150,7 @@ class Quantity extends BaseType implements QuantityContract, IntangibleContract,
      *
      * @return static
      *
-     * @see http://schema.org/potentialAction
+     * @see https://schema.org/potentialAction
      */
     public function potentialAction($potentialAction)
     {
@@ -166,7 +166,7 @@ class Quantity extends BaseType implements QuantityContract, IntangibleContract,
      *
      * @return static
      *
-     * @see http://schema.org/sameAs
+     * @see https://schema.org/sameAs
      */
     public function sameAs($sameAs)
     {
@@ -180,7 +180,8 @@ class Quantity extends BaseType implements QuantityContract, IntangibleContract,
      *
      * @return static
      *
-     * @see http://schema.org/subjectOf
+     * @see https://schema.org/subjectOf
+     * @link https://github.com/schemaorg/schemaorg/issues/1670
      */
     public function subjectOf($subjectOf)
     {
@@ -194,7 +195,7 @@ class Quantity extends BaseType implements QuantityContract, IntangibleContract,
      *
      * @return static
      *
-     * @see http://schema.org/url
+     * @see https://schema.org/url
      */
     public function url($url)
     {

@@ -11,9 +11,8 @@ use \Spatie\SchemaOrg\Contracts\ThingContract;
  * The act of expressing a preference from a set of options or a large or
  * unbounded set of choices/options.
  *
- * @see http://schema.org/ChooseAction
+ * @see https://schema.org/ChooseAction
  *
- * @method static location($location) The value should be instance of pending types Place|Place[]|PostalAddress|PostalAddress[]|VirtualLocation|VirtualLocation[]|string|string[]
  */
 class ChooseAction extends BaseType implements ChooseActionContract, ActionContract, AssessActionContract, ThingContract
 {
@@ -24,7 +23,7 @@ class ChooseAction extends BaseType implements ChooseActionContract, ActionContr
      *
      * @return static
      *
-     * @see http://schema.org/actionOption
+     * @see https://schema.org/actionOption
      */
     public function actionOption($actionOption)
     {
@@ -38,7 +37,7 @@ class ChooseAction extends BaseType implements ChooseActionContract, ActionContr
      *
      * @return static
      *
-     * @see http://schema.org/actionStatus
+     * @see https://schema.org/actionStatus
      */
     public function actionStatus($actionStatus)
     {
@@ -57,7 +56,7 @@ class ChooseAction extends BaseType implements ChooseActionContract, ActionContr
      *
      * @return static
      *
-     * @see http://schema.org/additionalType
+     * @see https://schema.org/additionalType
      */
     public function additionalType($additionalType)
     {
@@ -72,7 +71,7 @@ class ChooseAction extends BaseType implements ChooseActionContract, ActionContr
      *
      * @return static
      *
-     * @see http://schema.org/agent
+     * @see https://schema.org/agent
      */
     public function agent($agent)
     {
@@ -86,7 +85,7 @@ class ChooseAction extends BaseType implements ChooseActionContract, ActionContr
      *
      * @return static
      *
-     * @see http://schema.org/alternateName
+     * @see https://schema.org/alternateName
      */
     public function alternateName($alternateName)
     {
@@ -100,7 +99,7 @@ class ChooseAction extends BaseType implements ChooseActionContract, ActionContr
      *
      * @return static
      *
-     * @see http://schema.org/description
+     * @see https://schema.org/description
      */
     public function description($description)
     {
@@ -117,7 +116,7 @@ class ChooseAction extends BaseType implements ChooseActionContract, ActionContr
      *
      * @return static
      *
-     * @see http://schema.org/disambiguatingDescription
+     * @see https://schema.org/disambiguatingDescription
      */
     public function disambiguatingDescription($disambiguatingDescription)
     {
@@ -140,7 +139,8 @@ class ChooseAction extends BaseType implements ChooseActionContract, ActionContr
      *
      * @return static
      *
-     * @see http://schema.org/endTime
+     * @see https://schema.org/endTime
+     * @link https://github.com/schemaorg/schemaorg/issues/2493
      */
     public function endTime($endTime)
     {
@@ -154,7 +154,7 @@ class ChooseAction extends BaseType implements ChooseActionContract, ActionContr
      *
      * @return static
      *
-     * @see http://schema.org/error
+     * @see https://schema.org/error
      */
     public function error($error)
     {
@@ -172,7 +172,7 @@ class ChooseAction extends BaseType implements ChooseActionContract, ActionContr
      *
      * @return static
      *
-     * @see http://schema.org/identifier
+     * @see https://schema.org/identifier
      */
     public function identifier($identifier)
     {
@@ -187,7 +187,7 @@ class ChooseAction extends BaseType implements ChooseActionContract, ActionContr
      *
      * @return static
      *
-     * @see http://schema.org/image
+     * @see https://schema.org/image
      */
     public function image($image)
     {
@@ -202,11 +202,26 @@ class ChooseAction extends BaseType implements ChooseActionContract, ActionContr
      *
      * @return static
      *
-     * @see http://schema.org/instrument
+     * @see https://schema.org/instrument
      */
     public function instrument($instrument)
     {
         return $this->setProperty('instrument', $instrument);
+    }
+
+    /**
+     * The location of for example where the event is happening, an organization
+     * is located, or where an action takes place.
+     *
+     * @param \Spatie\SchemaOrg\Contracts\PlaceContract|\Spatie\SchemaOrg\Contracts\PlaceContract[]|\Spatie\SchemaOrg\Contracts\PostalAddressContract|\Spatie\SchemaOrg\Contracts\PostalAddressContract[]|\Spatie\SchemaOrg\Contracts\VirtualLocationContract|\Spatie\SchemaOrg\Contracts\VirtualLocationContract[]|string|string[] $location
+     *
+     * @return static
+     *
+     * @see https://schema.org/location
+     */
+    public function location($location)
+    {
+        return $this->setProperty('location', $location);
     }
 
     /**
@@ -218,7 +233,7 @@ class ChooseAction extends BaseType implements ChooseActionContract, ActionContr
      *
      * @return static
      *
-     * @see http://schema.org/mainEntityOfPage
+     * @see https://schema.org/mainEntityOfPage
      */
     public function mainEntityOfPage($mainEntityOfPage)
     {
@@ -232,7 +247,7 @@ class ChooseAction extends BaseType implements ChooseActionContract, ActionContr
      *
      * @return static
      *
-     * @see http://schema.org/name
+     * @see https://schema.org/name
      */
     public function name($name)
     {
@@ -249,7 +264,7 @@ class ChooseAction extends BaseType implements ChooseActionContract, ActionContr
      *
      * @return static
      *
-     * @see http://schema.org/object
+     * @see https://schema.org/object
      */
     public function object($object)
     {
@@ -263,7 +278,7 @@ class ChooseAction extends BaseType implements ChooseActionContract, ActionContr
      *
      * @return static
      *
-     * @see http://schema.org/option
+     * @see https://schema.org/option
      */
     public function option($option)
     {
@@ -278,7 +293,7 @@ class ChooseAction extends BaseType implements ChooseActionContract, ActionContr
      *
      * @return static
      *
-     * @see http://schema.org/participant
+     * @see https://schema.org/participant
      */
     public function participant($participant)
     {
@@ -293,7 +308,7 @@ class ChooseAction extends BaseType implements ChooseActionContract, ActionContr
      *
      * @return static
      *
-     * @see http://schema.org/potentialAction
+     * @see https://schema.org/potentialAction
      */
     public function potentialAction($potentialAction)
     {
@@ -307,7 +322,7 @@ class ChooseAction extends BaseType implements ChooseActionContract, ActionContr
      *
      * @return static
      *
-     * @see http://schema.org/result
+     * @see https://schema.org/result
      */
     public function result($result)
     {
@@ -323,7 +338,7 @@ class ChooseAction extends BaseType implements ChooseActionContract, ActionContr
      *
      * @return static
      *
-     * @see http://schema.org/sameAs
+     * @see https://schema.org/sameAs
      */
     public function sameAs($sameAs)
     {
@@ -346,7 +361,8 @@ class ChooseAction extends BaseType implements ChooseActionContract, ActionContr
      *
      * @return static
      *
-     * @see http://schema.org/startTime
+     * @see https://schema.org/startTime
+     * @link https://github.com/schemaorg/schemaorg/issues/2493
      */
     public function startTime($startTime)
     {
@@ -360,7 +376,8 @@ class ChooseAction extends BaseType implements ChooseActionContract, ActionContr
      *
      * @return static
      *
-     * @see http://schema.org/subjectOf
+     * @see https://schema.org/subjectOf
+     * @link https://github.com/schemaorg/schemaorg/issues/1670
      */
     public function subjectOf($subjectOf)
     {
@@ -374,7 +391,7 @@ class ChooseAction extends BaseType implements ChooseActionContract, ActionContr
      *
      * @return static
      *
-     * @see http://schema.org/target
+     * @see https://schema.org/target
      */
     public function target($target)
     {
@@ -388,7 +405,7 @@ class ChooseAction extends BaseType implements ChooseActionContract, ActionContr
      *
      * @return static
      *
-     * @see http://schema.org/url
+     * @see https://schema.org/url
      */
     public function url($url)
     {

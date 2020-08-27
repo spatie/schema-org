@@ -10,7 +10,7 @@ use \Spatie\SchemaOrg\Contracts\TripContract;
 /**
  * An airline flight.
  *
- * @see http://schema.org/Flight
+ * @see https://schema.org/Flight
  *
  */
 class Flight extends BaseType implements FlightContract, IntangibleContract, ThingContract, TripContract
@@ -27,7 +27,7 @@ class Flight extends BaseType implements FlightContract, IntangibleContract, Thi
      *
      * @return static
      *
-     * @see http://schema.org/additionalType
+     * @see https://schema.org/additionalType
      */
     public function additionalType($additionalType)
     {
@@ -41,7 +41,7 @@ class Flight extends BaseType implements FlightContract, IntangibleContract, Thi
      *
      * @return static
      *
-     * @see http://schema.org/aircraft
+     * @see https://schema.org/aircraft
      */
     public function aircraft($aircraft)
     {
@@ -55,7 +55,7 @@ class Flight extends BaseType implements FlightContract, IntangibleContract, Thi
      *
      * @return static
      *
-     * @see http://schema.org/alternateName
+     * @see https://schema.org/alternateName
      */
     public function alternateName($alternateName)
     {
@@ -69,7 +69,7 @@ class Flight extends BaseType implements FlightContract, IntangibleContract, Thi
      *
      * @return static
      *
-     * @see http://schema.org/arrivalAirport
+     * @see https://schema.org/arrivalAirport
      */
     public function arrivalAirport($arrivalAirport)
     {
@@ -83,7 +83,7 @@ class Flight extends BaseType implements FlightContract, IntangibleContract, Thi
      *
      * @return static
      *
-     * @see http://schema.org/arrivalGate
+     * @see https://schema.org/arrivalGate
      */
     public function arrivalGate($arrivalGate)
     {
@@ -97,7 +97,7 @@ class Flight extends BaseType implements FlightContract, IntangibleContract, Thi
      *
      * @return static
      *
-     * @see http://schema.org/arrivalTerminal
+     * @see https://schema.org/arrivalTerminal
      */
     public function arrivalTerminal($arrivalTerminal)
     {
@@ -111,7 +111,7 @@ class Flight extends BaseType implements FlightContract, IntangibleContract, Thi
      *
      * @return static
      *
-     * @see http://schema.org/arrivalTime
+     * @see https://schema.org/arrivalTime
      */
     public function arrivalTime($arrivalTime)
     {
@@ -126,7 +126,7 @@ class Flight extends BaseType implements FlightContract, IntangibleContract, Thi
      *
      * @return static
      *
-     * @see http://schema.org/boardingPolicy
+     * @see https://schema.org/boardingPolicy
      */
     public function boardingPolicy($boardingPolicy)
     {
@@ -141,7 +141,7 @@ class Flight extends BaseType implements FlightContract, IntangibleContract, Thi
      *
      * @return static
      *
-     * @see http://schema.org/carrier
+     * @see https://schema.org/carrier
      */
     public function carrier($carrier)
     {
@@ -155,7 +155,7 @@ class Flight extends BaseType implements FlightContract, IntangibleContract, Thi
      *
      * @return static
      *
-     * @see http://schema.org/departureAirport
+     * @see https://schema.org/departureAirport
      */
     public function departureAirport($departureAirport)
     {
@@ -169,7 +169,7 @@ class Flight extends BaseType implements FlightContract, IntangibleContract, Thi
      *
      * @return static
      *
-     * @see http://schema.org/departureGate
+     * @see https://schema.org/departureGate
      */
     public function departureGate($departureGate)
     {
@@ -183,7 +183,7 @@ class Flight extends BaseType implements FlightContract, IntangibleContract, Thi
      *
      * @return static
      *
-     * @see http://schema.org/departureTerminal
+     * @see https://schema.org/departureTerminal
      */
     public function departureTerminal($departureTerminal)
     {
@@ -197,7 +197,7 @@ class Flight extends BaseType implements FlightContract, IntangibleContract, Thi
      *
      * @return static
      *
-     * @see http://schema.org/departureTime
+     * @see https://schema.org/departureTime
      */
     public function departureTime($departureTime)
     {
@@ -211,7 +211,7 @@ class Flight extends BaseType implements FlightContract, IntangibleContract, Thi
      *
      * @return static
      *
-     * @see http://schema.org/description
+     * @see https://schema.org/description
      */
     public function description($description)
     {
@@ -228,7 +228,7 @@ class Flight extends BaseType implements FlightContract, IntangibleContract, Thi
      *
      * @return static
      *
-     * @see http://schema.org/disambiguatingDescription
+     * @see https://schema.org/disambiguatingDescription
      */
     public function disambiguatingDescription($disambiguatingDescription)
     {
@@ -242,7 +242,7 @@ class Flight extends BaseType implements FlightContract, IntangibleContract, Thi
      *
      * @return static
      *
-     * @see http://schema.org/estimatedFlightDuration
+     * @see https://schema.org/estimatedFlightDuration
      */
     public function estimatedFlightDuration($estimatedFlightDuration)
     {
@@ -256,7 +256,7 @@ class Flight extends BaseType implements FlightContract, IntangibleContract, Thi
      *
      * @return static
      *
-     * @see http://schema.org/flightDistance
+     * @see https://schema.org/flightDistance
      */
     public function flightDistance($flightDistance)
     {
@@ -272,7 +272,7 @@ class Flight extends BaseType implements FlightContract, IntangibleContract, Thi
      *
      * @return static
      *
-     * @see http://schema.org/flightNumber
+     * @see https://schema.org/flightNumber
      */
     public function flightNumber($flightNumber)
     {
@@ -290,7 +290,7 @@ class Flight extends BaseType implements FlightContract, IntangibleContract, Thi
      *
      * @return static
      *
-     * @see http://schema.org/identifier
+     * @see https://schema.org/identifier
      */
     public function identifier($identifier)
     {
@@ -305,11 +305,29 @@ class Flight extends BaseType implements FlightContract, IntangibleContract, Thi
      *
      * @return static
      *
-     * @see http://schema.org/image
+     * @see https://schema.org/image
      */
     public function image($image)
     {
         return $this->setProperty('image', $image);
+    }
+
+    /**
+     * Destination(s) ( [[Place]] ) that make up a trip. For a trip where
+     * destination order is important use [[ItemList]] to specify that order
+     * (see examples).
+     *
+     * @param \Spatie\SchemaOrg\Contracts\ItemListContract|\Spatie\SchemaOrg\Contracts\ItemListContract[]|\Spatie\SchemaOrg\Contracts\PlaceContract|\Spatie\SchemaOrg\Contracts\PlaceContract[] $itinerary
+     *
+     * @return static
+     *
+     * @see https://schema.org/itinerary
+     * @see http://pending.schema.org
+     * @link http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#Tourism
+     */
+    public function itinerary($itinerary)
+    {
+        return $this->setProperty('itinerary', $itinerary);
     }
 
     /**
@@ -321,7 +339,7 @@ class Flight extends BaseType implements FlightContract, IntangibleContract, Thi
      *
      * @return static
      *
-     * @see http://schema.org/mainEntityOfPage
+     * @see https://schema.org/mainEntityOfPage
      */
     public function mainEntityOfPage($mainEntityOfPage)
     {
@@ -335,7 +353,7 @@ class Flight extends BaseType implements FlightContract, IntangibleContract, Thi
      *
      * @return static
      *
-     * @see http://schema.org/mealService
+     * @see https://schema.org/mealService
      */
     public function mealService($mealService)
     {
@@ -349,7 +367,7 @@ class Flight extends BaseType implements FlightContract, IntangibleContract, Thi
      *
      * @return static
      *
-     * @see http://schema.org/name
+     * @see https://schema.org/name
      */
     public function name($name)
     {
@@ -370,11 +388,29 @@ class Flight extends BaseType implements FlightContract, IntangibleContract, Thi
      *
      * @return static
      *
-     * @see http://schema.org/offers
+     * @see https://schema.org/offers
+     * @link https://github.com/schemaorg/schemaorg/issues/2289
      */
     public function offers($offers)
     {
         return $this->setProperty('offers', $offers);
+    }
+
+    /**
+     * Identifies that this [[Trip]] is a subTrip of another Trip.  For example
+     * Day 1, Day 2, etc. of a multi-day trip.
+     *
+     * @param \Spatie\SchemaOrg\Contracts\TripContract|\Spatie\SchemaOrg\Contracts\TripContract[] $partOfTrip
+     *
+     * @return static
+     *
+     * @see https://schema.org/partOfTrip
+     * @see http://pending.schema.org
+     * @link http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#Tourism
+     */
+    public function partOfTrip($partOfTrip)
+    {
+        return $this->setProperty('partOfTrip', $partOfTrip);
     }
 
     /**
@@ -385,7 +421,7 @@ class Flight extends BaseType implements FlightContract, IntangibleContract, Thi
      *
      * @return static
      *
-     * @see http://schema.org/potentialAction
+     * @see https://schema.org/potentialAction
      */
     public function potentialAction($potentialAction)
     {
@@ -401,7 +437,8 @@ class Flight extends BaseType implements FlightContract, IntangibleContract, Thi
      *
      * @return static
      *
-     * @see http://schema.org/provider
+     * @see https://schema.org/provider
+     * @link https://github.com/schemaorg/schemaorg/issues/2289
      */
     public function provider($provider)
     {
@@ -417,7 +454,7 @@ class Flight extends BaseType implements FlightContract, IntangibleContract, Thi
      *
      * @return static
      *
-     * @see http://schema.org/sameAs
+     * @see https://schema.org/sameAs
      */
     public function sameAs($sameAs)
     {
@@ -432,11 +469,28 @@ class Flight extends BaseType implements FlightContract, IntangibleContract, Thi
      *
      * @return static
      *
-     * @see http://schema.org/seller
+     * @see https://schema.org/seller
      */
     public function seller($seller)
     {
         return $this->setProperty('seller', $seller);
+    }
+
+    /**
+     * Identifies a [[Trip]] that is a subTrip of this Trip.  For example Day 1,
+     * Day 2, etc. of a multi-day trip.
+     *
+     * @param \Spatie\SchemaOrg\Contracts\TripContract|\Spatie\SchemaOrg\Contracts\TripContract[] $subTrip
+     *
+     * @return static
+     *
+     * @see https://schema.org/subTrip
+     * @see http://pending.schema.org
+     * @link http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#Tourism
+     */
+    public function subTrip($subTrip)
+    {
+        return $this->setProperty('subTrip', $subTrip);
     }
 
     /**
@@ -446,7 +500,8 @@ class Flight extends BaseType implements FlightContract, IntangibleContract, Thi
      *
      * @return static
      *
-     * @see http://schema.org/subjectOf
+     * @see https://schema.org/subjectOf
+     * @link https://github.com/schemaorg/schemaorg/issues/1670
      */
     public function subjectOf($subjectOf)
     {
@@ -460,7 +515,7 @@ class Flight extends BaseType implements FlightContract, IntangibleContract, Thi
      *
      * @return static
      *
-     * @see http://schema.org/url
+     * @see https://schema.org/url
      */
     public function url($url)
     {
@@ -474,7 +529,7 @@ class Flight extends BaseType implements FlightContract, IntangibleContract, Thi
      *
      * @return static
      *
-     * @see http://schema.org/webCheckinTime
+     * @see https://schema.org/webCheckinTime
      */
     public function webCheckinTime($webCheckinTime)
     {

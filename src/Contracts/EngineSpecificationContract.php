@@ -12,6 +12,12 @@ interface EngineSpecificationContract
 
     public function disambiguatingDescription($disambiguatingDescription);
 
+    public function engineDisplacement($engineDisplacement);
+
+    public function enginePower($enginePower);
+
+    public function engineType($engineType);
+
     public function fuelType($fuelType);
 
     public function identifier($identifier);
@@ -27,6 +33,8 @@ interface EngineSpecificationContract
     public function sameAs($sameAs);
 
     public function subjectOf($subjectOf);
+
+    public function torque($torque);
 
     public function url($url);
 

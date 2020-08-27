@@ -10,7 +10,7 @@ use \Spatie\SchemaOrg\Contracts\ThingContract;
  * A means for accessing a service, e.g. a government office location, web site,
  * or phone number.
  *
- * @see http://schema.org/ServiceChannel
+ * @see https://schema.org/ServiceChannel
  *
  */
 class ServiceChannel extends BaseType implements ServiceChannelContract, IntangibleContract, ThingContract
@@ -27,7 +27,7 @@ class ServiceChannel extends BaseType implements ServiceChannelContract, Intangi
      *
      * @return static
      *
-     * @see http://schema.org/additionalType
+     * @see https://schema.org/additionalType
      */
     public function additionalType($additionalType)
     {
@@ -41,7 +41,7 @@ class ServiceChannel extends BaseType implements ServiceChannelContract, Intangi
      *
      * @return static
      *
-     * @see http://schema.org/alternateName
+     * @see https://schema.org/alternateName
      */
     public function alternateName($alternateName)
     {
@@ -57,7 +57,7 @@ class ServiceChannel extends BaseType implements ServiceChannelContract, Intangi
      *
      * @return static
      *
-     * @see http://schema.org/availableLanguage
+     * @see https://schema.org/availableLanguage
      */
     public function availableLanguage($availableLanguage)
     {
@@ -71,7 +71,7 @@ class ServiceChannel extends BaseType implements ServiceChannelContract, Intangi
      *
      * @return static
      *
-     * @see http://schema.org/description
+     * @see https://schema.org/description
      */
     public function description($description)
     {
@@ -88,7 +88,7 @@ class ServiceChannel extends BaseType implements ServiceChannelContract, Intangi
      *
      * @return static
      *
-     * @see http://schema.org/disambiguatingDescription
+     * @see https://schema.org/disambiguatingDescription
      */
     public function disambiguatingDescription($disambiguatingDescription)
     {
@@ -106,7 +106,7 @@ class ServiceChannel extends BaseType implements ServiceChannelContract, Intangi
      *
      * @return static
      *
-     * @see http://schema.org/identifier
+     * @see https://schema.org/identifier
      */
     public function identifier($identifier)
     {
@@ -121,7 +121,7 @@ class ServiceChannel extends BaseType implements ServiceChannelContract, Intangi
      *
      * @return static
      *
-     * @see http://schema.org/image
+     * @see https://schema.org/image
      */
     public function image($image)
     {
@@ -137,7 +137,7 @@ class ServiceChannel extends BaseType implements ServiceChannelContract, Intangi
      *
      * @return static
      *
-     * @see http://schema.org/mainEntityOfPage
+     * @see https://schema.org/mainEntityOfPage
      */
     public function mainEntityOfPage($mainEntityOfPage)
     {
@@ -151,7 +151,7 @@ class ServiceChannel extends BaseType implements ServiceChannelContract, Intangi
      *
      * @return static
      *
-     * @see http://schema.org/name
+     * @see https://schema.org/name
      */
     public function name($name)
     {
@@ -166,7 +166,7 @@ class ServiceChannel extends BaseType implements ServiceChannelContract, Intangi
      *
      * @return static
      *
-     * @see http://schema.org/potentialAction
+     * @see https://schema.org/potentialAction
      */
     public function potentialAction($potentialAction)
     {
@@ -180,7 +180,7 @@ class ServiceChannel extends BaseType implements ServiceChannelContract, Intangi
      *
      * @return static
      *
-     * @see http://schema.org/processingTime
+     * @see https://schema.org/processingTime
      */
     public function processingTime($processingTime)
     {
@@ -194,7 +194,7 @@ class ServiceChannel extends BaseType implements ServiceChannelContract, Intangi
      *
      * @return static
      *
-     * @see http://schema.org/providesService
+     * @see https://schema.org/providesService
      */
     public function providesService($providesService)
     {
@@ -210,7 +210,7 @@ class ServiceChannel extends BaseType implements ServiceChannelContract, Intangi
      *
      * @return static
      *
-     * @see http://schema.org/sameAs
+     * @see https://schema.org/sameAs
      */
     public function sameAs($sameAs)
     {
@@ -225,7 +225,7 @@ class ServiceChannel extends BaseType implements ServiceChannelContract, Intangi
      *
      * @return static
      *
-     * @see http://schema.org/serviceLocation
+     * @see https://schema.org/serviceLocation
      */
     public function serviceLocation($serviceLocation)
     {
@@ -239,7 +239,7 @@ class ServiceChannel extends BaseType implements ServiceChannelContract, Intangi
      *
      * @return static
      *
-     * @see http://schema.org/servicePhone
+     * @see https://schema.org/servicePhone
      */
     public function servicePhone($servicePhone)
     {
@@ -253,7 +253,7 @@ class ServiceChannel extends BaseType implements ServiceChannelContract, Intangi
      *
      * @return static
      *
-     * @see http://schema.org/servicePostalAddress
+     * @see https://schema.org/servicePostalAddress
      */
     public function servicePostalAddress($servicePostalAddress)
     {
@@ -267,7 +267,7 @@ class ServiceChannel extends BaseType implements ServiceChannelContract, Intangi
      *
      * @return static
      *
-     * @see http://schema.org/serviceSmsNumber
+     * @see https://schema.org/serviceSmsNumber
      */
     public function serviceSmsNumber($serviceSmsNumber)
     {
@@ -281,7 +281,7 @@ class ServiceChannel extends BaseType implements ServiceChannelContract, Intangi
      *
      * @return static
      *
-     * @see http://schema.org/serviceUrl
+     * @see https://schema.org/serviceUrl
      */
     public function serviceUrl($serviceUrl)
     {
@@ -295,7 +295,8 @@ class ServiceChannel extends BaseType implements ServiceChannelContract, Intangi
      *
      * @return static
      *
-     * @see http://schema.org/subjectOf
+     * @see https://schema.org/subjectOf
+     * @link https://github.com/schemaorg/schemaorg/issues/1670
      */
     public function subjectOf($subjectOf)
     {
@@ -309,7 +310,7 @@ class ServiceChannel extends BaseType implements ServiceChannelContract, Intangi
      *
      * @return static
      *
-     * @see http://schema.org/url
+     * @see https://schema.org/url
      */
     public function url($url)
     {

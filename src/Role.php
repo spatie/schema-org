@@ -16,7 +16,7 @@ use \Spatie\SchemaOrg\Contracts\ThingContract;
  * 
  * See also [blog post](http://blog.schema.org/2014/06/introducing-role.html).
  *
- * @see http://schema.org/Role
+ * @see https://schema.org/Role
  *
  */
 class Role extends BaseType implements RoleContract, IntangibleContract, ThingContract
@@ -33,7 +33,7 @@ class Role extends BaseType implements RoleContract, IntangibleContract, ThingCo
      *
      * @return static
      *
-     * @see http://schema.org/additionalType
+     * @see https://schema.org/additionalType
      */
     public function additionalType($additionalType)
     {
@@ -47,7 +47,7 @@ class Role extends BaseType implements RoleContract, IntangibleContract, ThingCo
      *
      * @return static
      *
-     * @see http://schema.org/alternateName
+     * @see https://schema.org/alternateName
      */
     public function alternateName($alternateName)
     {
@@ -61,7 +61,7 @@ class Role extends BaseType implements RoleContract, IntangibleContract, ThingCo
      *
      * @return static
      *
-     * @see http://schema.org/description
+     * @see https://schema.org/description
      */
     public function description($description)
     {
@@ -78,7 +78,7 @@ class Role extends BaseType implements RoleContract, IntangibleContract, ThingCo
      *
      * @return static
      *
-     * @see http://schema.org/disambiguatingDescription
+     * @see https://schema.org/disambiguatingDescription
      */
     public function disambiguatingDescription($disambiguatingDescription)
     {
@@ -93,7 +93,8 @@ class Role extends BaseType implements RoleContract, IntangibleContract, ThingCo
      *
      * @return static
      *
-     * @see http://schema.org/endDate
+     * @see https://schema.org/endDate
+     * @link https://github.com/schemaorg/schemaorg/issues/2486
      */
     public function endDate($endDate)
     {
@@ -111,7 +112,7 @@ class Role extends BaseType implements RoleContract, IntangibleContract, ThingCo
      *
      * @return static
      *
-     * @see http://schema.org/identifier
+     * @see https://schema.org/identifier
      */
     public function identifier($identifier)
     {
@@ -126,7 +127,7 @@ class Role extends BaseType implements RoleContract, IntangibleContract, ThingCo
      *
      * @return static
      *
-     * @see http://schema.org/image
+     * @see https://schema.org/image
      */
     public function image($image)
     {
@@ -142,7 +143,7 @@ class Role extends BaseType implements RoleContract, IntangibleContract, ThingCo
      *
      * @return static
      *
-     * @see http://schema.org/mainEntityOfPage
+     * @see https://schema.org/mainEntityOfPage
      */
     public function mainEntityOfPage($mainEntityOfPage)
     {
@@ -156,7 +157,7 @@ class Role extends BaseType implements RoleContract, IntangibleContract, ThingCo
      *
      * @return static
      *
-     * @see http://schema.org/name
+     * @see https://schema.org/name
      */
     public function name($name)
     {
@@ -172,7 +173,7 @@ class Role extends BaseType implements RoleContract, IntangibleContract, ThingCo
      *
      * @return static
      *
-     * @see http://schema.org/namedPosition
+     * @see https://schema.org/namedPosition
      */
     public function namedPosition($namedPosition)
     {
@@ -187,7 +188,7 @@ class Role extends BaseType implements RoleContract, IntangibleContract, ThingCo
      *
      * @return static
      *
-     * @see http://schema.org/potentialAction
+     * @see https://schema.org/potentialAction
      */
     public function potentialAction($potentialAction)
     {
@@ -204,7 +205,7 @@ class Role extends BaseType implements RoleContract, IntangibleContract, ThingCo
      *
      * @return static
      *
-     * @see http://schema.org/roleName
+     * @see https://schema.org/roleName
      */
     public function roleName($roleName)
     {
@@ -220,7 +221,7 @@ class Role extends BaseType implements RoleContract, IntangibleContract, ThingCo
      *
      * @return static
      *
-     * @see http://schema.org/sameAs
+     * @see https://schema.org/sameAs
      */
     public function sameAs($sameAs)
     {
@@ -235,7 +236,8 @@ class Role extends BaseType implements RoleContract, IntangibleContract, ThingCo
      *
      * @return static
      *
-     * @see http://schema.org/startDate
+     * @see https://schema.org/startDate
+     * @link https://github.com/schemaorg/schemaorg/issues/2486
      */
     public function startDate($startDate)
     {
@@ -249,7 +251,8 @@ class Role extends BaseType implements RoleContract, IntangibleContract, ThingCo
      *
      * @return static
      *
-     * @see http://schema.org/subjectOf
+     * @see https://schema.org/subjectOf
+     * @link https://github.com/schemaorg/schemaorg/issues/1670
      */
     public function subjectOf($subjectOf)
     {
@@ -263,7 +266,7 @@ class Role extends BaseType implements RoleContract, IntangibleContract, ThingCo
      *
      * @return static
      *
-     * @see http://schema.org/url
+     * @see https://schema.org/url
      */
     public function url($url)
     {

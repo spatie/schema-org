@@ -11,7 +11,8 @@ use \Spatie\SchemaOrg\Contracts\ThingContract;
 /**
  * A statistical distribution of monetary amounts.
  *
- * @see http://schema.org/MonetaryAmountDistribution
+ * @see https://schema.org/MonetaryAmountDistribution
+ * @link https://github.com/schemaorg/schemaorg/issues/1698
  *
  */
 class MonetaryAmountDistribution extends BaseType implements MonetaryAmountDistributionContract, IntangibleContract, QuantitativeValueDistributionContract, StructuredValueContract, ThingContract
@@ -28,7 +29,7 @@ class MonetaryAmountDistribution extends BaseType implements MonetaryAmountDistr
      *
      * @return static
      *
-     * @see http://schema.org/additionalType
+     * @see https://schema.org/additionalType
      */
     public function additionalType($additionalType)
     {
@@ -42,7 +43,7 @@ class MonetaryAmountDistribution extends BaseType implements MonetaryAmountDistr
      *
      * @return static
      *
-     * @see http://schema.org/alternateName
+     * @see https://schema.org/alternateName
      */
     public function alternateName($alternateName)
     {
@@ -64,7 +65,8 @@ class MonetaryAmountDistribution extends BaseType implements MonetaryAmountDistr
      *
      * @return static
      *
-     * @see http://schema.org/currency
+     * @see https://schema.org/currency
+     * @link https://github.com/schemaorg/schemaorg/issues/1253
      */
     public function currency($currency)
     {
@@ -78,7 +80,7 @@ class MonetaryAmountDistribution extends BaseType implements MonetaryAmountDistr
      *
      * @return static
      *
-     * @see http://schema.org/description
+     * @see https://schema.org/description
      */
     public function description($description)
     {
@@ -95,7 +97,7 @@ class MonetaryAmountDistribution extends BaseType implements MonetaryAmountDistr
      *
      * @return static
      *
-     * @see http://schema.org/disambiguatingDescription
+     * @see https://schema.org/disambiguatingDescription
      */
     public function disambiguatingDescription($disambiguatingDescription)
     {
@@ -110,7 +112,7 @@ class MonetaryAmountDistribution extends BaseType implements MonetaryAmountDistr
      *
      * @return static
      *
-     * @see http://schema.org/duration
+     * @see https://schema.org/duration
      */
     public function duration($duration)
     {
@@ -128,7 +130,7 @@ class MonetaryAmountDistribution extends BaseType implements MonetaryAmountDistr
      *
      * @return static
      *
-     * @see http://schema.org/identifier
+     * @see https://schema.org/identifier
      */
     public function identifier($identifier)
     {
@@ -143,7 +145,7 @@ class MonetaryAmountDistribution extends BaseType implements MonetaryAmountDistr
      *
      * @return static
      *
-     * @see http://schema.org/image
+     * @see https://schema.org/image
      */
     public function image($image)
     {
@@ -159,7 +161,7 @@ class MonetaryAmountDistribution extends BaseType implements MonetaryAmountDistr
      *
      * @return static
      *
-     * @see http://schema.org/mainEntityOfPage
+     * @see https://schema.org/mainEntityOfPage
      */
     public function mainEntityOfPage($mainEntityOfPage)
     {
@@ -173,7 +175,8 @@ class MonetaryAmountDistribution extends BaseType implements MonetaryAmountDistr
      *
      * @return static
      *
-     * @see http://schema.org/median
+     * @see https://schema.org/median
+     * @link https://github.com/schemaorg/schemaorg/issues/1698
      */
     public function median($median)
     {
@@ -187,7 +190,7 @@ class MonetaryAmountDistribution extends BaseType implements MonetaryAmountDistr
      *
      * @return static
      *
-     * @see http://schema.org/name
+     * @see https://schema.org/name
      */
     public function name($name)
     {
@@ -201,7 +204,8 @@ class MonetaryAmountDistribution extends BaseType implements MonetaryAmountDistr
      *
      * @return static
      *
-     * @see http://schema.org/percentile10
+     * @see https://schema.org/percentile10
+     * @link https://github.com/schemaorg/schemaorg/issues/1698
      */
     public function percentile10($percentile10)
     {
@@ -215,7 +219,8 @@ class MonetaryAmountDistribution extends BaseType implements MonetaryAmountDistr
      *
      * @return static
      *
-     * @see http://schema.org/percentile25
+     * @see https://schema.org/percentile25
+     * @link https://github.com/schemaorg/schemaorg/issues/1698
      */
     public function percentile25($percentile25)
     {
@@ -229,7 +234,8 @@ class MonetaryAmountDistribution extends BaseType implements MonetaryAmountDistr
      *
      * @return static
      *
-     * @see http://schema.org/percentile75
+     * @see https://schema.org/percentile75
+     * @link https://github.com/schemaorg/schemaorg/issues/1698
      */
     public function percentile75($percentile75)
     {
@@ -243,7 +249,8 @@ class MonetaryAmountDistribution extends BaseType implements MonetaryAmountDistr
      *
      * @return static
      *
-     * @see http://schema.org/percentile90
+     * @see https://schema.org/percentile90
+     * @link https://github.com/schemaorg/schemaorg/issues/1698
      */
     public function percentile90($percentile90)
     {
@@ -258,7 +265,7 @@ class MonetaryAmountDistribution extends BaseType implements MonetaryAmountDistr
      *
      * @return static
      *
-     * @see http://schema.org/potentialAction
+     * @see https://schema.org/potentialAction
      */
     public function potentialAction($potentialAction)
     {
@@ -274,7 +281,7 @@ class MonetaryAmountDistribution extends BaseType implements MonetaryAmountDistr
      *
      * @return static
      *
-     * @see http://schema.org/sameAs
+     * @see https://schema.org/sameAs
      */
     public function sameAs($sameAs)
     {
@@ -288,7 +295,8 @@ class MonetaryAmountDistribution extends BaseType implements MonetaryAmountDistr
      *
      * @return static
      *
-     * @see http://schema.org/subjectOf
+     * @see https://schema.org/subjectOf
+     * @link https://github.com/schemaorg/schemaorg/issues/1670
      */
     public function subjectOf($subjectOf)
     {
@@ -302,7 +310,7 @@ class MonetaryAmountDistribution extends BaseType implements MonetaryAmountDistr
      *
      * @return static
      *
-     * @see http://schema.org/url
+     * @see https://schema.org/url
      */
     public function url($url)
     {

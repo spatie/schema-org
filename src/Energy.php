@@ -11,7 +11,7 @@ use \Spatie\SchemaOrg\Contracts\ThingContract;
  * Properties that take Energy as values are of the form '<Number> <Energy unit
  * of measure>'.
  *
- * @see http://schema.org/Energy
+ * @see https://schema.org/Energy
  *
  */
 class Energy extends BaseType implements EnergyContract, IntangibleContract, QuantityContract, ThingContract
@@ -28,7 +28,7 @@ class Energy extends BaseType implements EnergyContract, IntangibleContract, Qua
      *
      * @return static
      *
-     * @see http://schema.org/additionalType
+     * @see https://schema.org/additionalType
      */
     public function additionalType($additionalType)
     {
@@ -42,7 +42,7 @@ class Energy extends BaseType implements EnergyContract, IntangibleContract, Qua
      *
      * @return static
      *
-     * @see http://schema.org/alternateName
+     * @see https://schema.org/alternateName
      */
     public function alternateName($alternateName)
     {
@@ -56,7 +56,7 @@ class Energy extends BaseType implements EnergyContract, IntangibleContract, Qua
      *
      * @return static
      *
-     * @see http://schema.org/description
+     * @see https://schema.org/description
      */
     public function description($description)
     {
@@ -73,7 +73,7 @@ class Energy extends BaseType implements EnergyContract, IntangibleContract, Qua
      *
      * @return static
      *
-     * @see http://schema.org/disambiguatingDescription
+     * @see https://schema.org/disambiguatingDescription
      */
     public function disambiguatingDescription($disambiguatingDescription)
     {
@@ -91,7 +91,7 @@ class Energy extends BaseType implements EnergyContract, IntangibleContract, Qua
      *
      * @return static
      *
-     * @see http://schema.org/identifier
+     * @see https://schema.org/identifier
      */
     public function identifier($identifier)
     {
@@ -106,7 +106,7 @@ class Energy extends BaseType implements EnergyContract, IntangibleContract, Qua
      *
      * @return static
      *
-     * @see http://schema.org/image
+     * @see https://schema.org/image
      */
     public function image($image)
     {
@@ -122,7 +122,7 @@ class Energy extends BaseType implements EnergyContract, IntangibleContract, Qua
      *
      * @return static
      *
-     * @see http://schema.org/mainEntityOfPage
+     * @see https://schema.org/mainEntityOfPage
      */
     public function mainEntityOfPage($mainEntityOfPage)
     {
@@ -136,7 +136,7 @@ class Energy extends BaseType implements EnergyContract, IntangibleContract, Qua
      *
      * @return static
      *
-     * @see http://schema.org/name
+     * @see https://schema.org/name
      */
     public function name($name)
     {
@@ -151,7 +151,7 @@ class Energy extends BaseType implements EnergyContract, IntangibleContract, Qua
      *
      * @return static
      *
-     * @see http://schema.org/potentialAction
+     * @see https://schema.org/potentialAction
      */
     public function potentialAction($potentialAction)
     {
@@ -167,7 +167,7 @@ class Energy extends BaseType implements EnergyContract, IntangibleContract, Qua
      *
      * @return static
      *
-     * @see http://schema.org/sameAs
+     * @see https://schema.org/sameAs
      */
     public function sameAs($sameAs)
     {
@@ -181,7 +181,8 @@ class Energy extends BaseType implements EnergyContract, IntangibleContract, Qua
      *
      * @return static
      *
-     * @see http://schema.org/subjectOf
+     * @see https://schema.org/subjectOf
+     * @link https://github.com/schemaorg/schemaorg/issues/1670
      */
     public function subjectOf($subjectOf)
     {
@@ -195,7 +196,7 @@ class Energy extends BaseType implements EnergyContract, IntangibleContract, Qua
      *
      * @return static
      *
-     * @see http://schema.org/url
+     * @see https://schema.org/url
      */
     public function url($url)
     {

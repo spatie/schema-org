@@ -20,6 +20,8 @@ interface SomeProductsContract
 
     public function brand($brand);
 
+    public function category($category);
+
     public function color($color);
 
     public function depth($depth);
@@ -27,6 +29,8 @@ interface SomeProductsContract
     public function description($description);
 
     public function disambiguatingDescription($disambiguatingDescription);
+
+    public function gtin($gtin);
 
     public function gtin12($gtin12);
 
@@ -36,11 +40,17 @@ interface SomeProductsContract
 
     public function gtin8($gtin8);
 
+    public function hasMerchantReturnPolicy($hasMerchantReturnPolicy);
+
+    public function hasProductReturnPolicy($hasProductReturnPolicy);
+
     public function height($height);
 
     public function identifier($identifier);
 
     public function image($image);
+
+    public function inProductGroupWithID($inProductGroupWithID);
 
     public function inventoryLevel($inventoryLevel);
 
@@ -51,6 +61,8 @@ interface SomeProductsContract
     public function isRelatedTo($isRelatedTo);
 
     public function isSimilarTo($isSimilarTo);
+
+    public function isVariantOf($isVariantOf);
 
     public function itemCondition($itemCondition);
 
@@ -68,7 +80,11 @@ interface SomeProductsContract
 
     public function name($name);
 
+    public function nsn($nsn);
+
     public function offers($offers);
+
+    public function pattern($pattern);
 
     public function potentialAction($potentialAction);
 
@@ -85,6 +101,8 @@ interface SomeProductsContract
     public function reviews($reviews);
 
     public function sameAs($sameAs);
+
+    public function size($size);
 
     public function sku($sku);
 

@@ -8,6 +8,8 @@ interface SpeakableSpecificationContract
 
     public function alternateName($alternateName);
 
+    public function cssSelector($cssSelector);
+
     public function description($description);
 
     public function disambiguatingDescription($disambiguatingDescription);
@@ -27,5 +29,7 @@ interface SpeakableSpecificationContract
     public function subjectOf($subjectOf);
 
     public function url($url);
+
+    public function xpath($xpath);
 
 }

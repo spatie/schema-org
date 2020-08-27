@@ -9,9 +9,8 @@ use \Spatie\SchemaOrg\Contracts\ThingContract;
 /**
  * Event type: Education event.
  *
- * @see http://schema.org/EducationEvent
+ * @see https://schema.org/EducationEvent
  *
- * @method static location($location) The value should be instance of pending types Place|Place[]|PostalAddress|PostalAddress[]|VirtualLocation|VirtualLocation[]|string|string[]
  */
 class EducationEvent extends BaseType implements EducationEventContract, EventContract, ThingContract
 {
@@ -22,7 +21,8 @@ class EducationEvent extends BaseType implements EducationEventContract, EventCo
      *
      * @return static
      *
-     * @see http://schema.org/about
+     * @see https://schema.org/about
+     * @link https://github.com/schemaorg/schemaorg/issues/1670
      */
     public function about($about)
     {
@@ -38,7 +38,7 @@ class EducationEvent extends BaseType implements EducationEventContract, EventCo
      *
      * @return static
      *
-     * @see http://schema.org/actor
+     * @see https://schema.org/actor
      */
     public function actor($actor)
     {
@@ -57,7 +57,7 @@ class EducationEvent extends BaseType implements EducationEventContract, EventCo
      *
      * @return static
      *
-     * @see http://schema.org/additionalType
+     * @see https://schema.org/additionalType
      */
     public function additionalType($additionalType)
     {
@@ -72,7 +72,7 @@ class EducationEvent extends BaseType implements EducationEventContract, EventCo
      *
      * @return static
      *
-     * @see http://schema.org/aggregateRating
+     * @see https://schema.org/aggregateRating
      */
     public function aggregateRating($aggregateRating)
     {
@@ -86,11 +86,28 @@ class EducationEvent extends BaseType implements EducationEventContract, EventCo
      *
      * @return static
      *
-     * @see http://schema.org/alternateName
+     * @see https://schema.org/alternateName
      */
     public function alternateName($alternateName)
     {
         return $this->setProperty('alternateName', $alternateName);
+    }
+
+    /**
+     * The item being described is intended to assess the competency or learning
+     * outcome defined by the referenced term.
+     *
+     * @param \Spatie\SchemaOrg\Contracts\DefinedTermContract|\Spatie\SchemaOrg\Contracts\DefinedTermContract[]|string|string[] $assesses
+     *
+     * @return static
+     *
+     * @see https://schema.org/assesses
+     * @see http://pending.schema.org
+     * @link https://github.com/schemaorg/schemaorg/issues/2427
+     */
+    public function assesses($assesses)
+    {
+        return $this->setProperty('assesses', $assesses);
     }
 
     /**
@@ -100,7 +117,7 @@ class EducationEvent extends BaseType implements EducationEventContract, EventCo
      *
      * @return static
      *
-     * @see http://schema.org/attendee
+     * @see https://schema.org/attendee
      */
     public function attendee($attendee)
     {
@@ -114,7 +131,7 @@ class EducationEvent extends BaseType implements EducationEventContract, EventCo
      *
      * @return static
      *
-     * @see http://schema.org/attendees
+     * @see https://schema.org/attendees
      */
     public function attendees($attendees)
     {
@@ -128,7 +145,7 @@ class EducationEvent extends BaseType implements EducationEventContract, EventCo
      *
      * @return static
      *
-     * @see http://schema.org/audience
+     * @see https://schema.org/audience
      */
     public function audience($audience)
     {
@@ -143,7 +160,8 @@ class EducationEvent extends BaseType implements EducationEventContract, EventCo
      *
      * @return static
      *
-     * @see http://schema.org/composer
+     * @see https://schema.org/composer
+     * @link http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#MBZ
      */
     public function composer($composer)
     {
@@ -157,7 +175,7 @@ class EducationEvent extends BaseType implements EducationEventContract, EventCo
      *
      * @return static
      *
-     * @see http://schema.org/contributor
+     * @see https://schema.org/contributor
      */
     public function contributor($contributor)
     {
@@ -171,7 +189,7 @@ class EducationEvent extends BaseType implements EducationEventContract, EventCo
      *
      * @return static
      *
-     * @see http://schema.org/description
+     * @see https://schema.org/description
      */
     public function description($description)
     {
@@ -187,7 +205,7 @@ class EducationEvent extends BaseType implements EducationEventContract, EventCo
      *
      * @return static
      *
-     * @see http://schema.org/director
+     * @see https://schema.org/director
      */
     public function director($director)
     {
@@ -204,7 +222,7 @@ class EducationEvent extends BaseType implements EducationEventContract, EventCo
      *
      * @return static
      *
-     * @see http://schema.org/disambiguatingDescription
+     * @see https://schema.org/disambiguatingDescription
      */
     public function disambiguatingDescription($disambiguatingDescription)
     {
@@ -218,7 +236,7 @@ class EducationEvent extends BaseType implements EducationEventContract, EventCo
      *
      * @return static
      *
-     * @see http://schema.org/doorTime
+     * @see https://schema.org/doorTime
      */
     public function doorTime($doorTime)
     {
@@ -233,11 +251,29 @@ class EducationEvent extends BaseType implements EducationEventContract, EventCo
      *
      * @return static
      *
-     * @see http://schema.org/duration
+     * @see https://schema.org/duration
      */
     public function duration($duration)
     {
         return $this->setProperty('duration', $duration);
+    }
+
+    /**
+     * The level in terms of progression through an educational or training
+     * context. Examples of educational levels include 'beginner',
+     * 'intermediate' or 'advanced', and formal sets of level indicators.
+     *
+     * @param \Spatie\SchemaOrg\Contracts\DefinedTermContract|\Spatie\SchemaOrg\Contracts\DefinedTermContract[]|string|string[] $educationalLevel
+     *
+     * @return static
+     *
+     * @see https://schema.org/educationalLevel
+     * @see http://pending.schema.org
+     * @link https://github.com/schemaorg/schemaorg/issues/1779
+     */
+    public function educationalLevel($educationalLevel)
+    {
+        return $this->setProperty('educationalLevel', $educationalLevel);
     }
 
     /**
@@ -248,11 +284,59 @@ class EducationEvent extends BaseType implements EducationEventContract, EventCo
      *
      * @return static
      *
-     * @see http://schema.org/endDate
+     * @see https://schema.org/endDate
+     * @link https://github.com/schemaorg/schemaorg/issues/2486
      */
     public function endDate($endDate)
     {
         return $this->setProperty('endDate', $endDate);
+    }
+
+    /**
+     * The eventAttendanceMode of an event indicates whether it occurs online,
+     * offline, or a mix.
+     *
+     * @param \Spatie\SchemaOrg\Contracts\EventAttendanceModeEnumerationContract|\Spatie\SchemaOrg\Contracts\EventAttendanceModeEnumerationContract[] $eventAttendanceMode
+     *
+     * @return static
+     *
+     * @see https://schema.org/eventAttendanceMode
+     * @see http://pending.schema.org
+     * @link https://github.com/schemaorg/schemaorg/issues/1842
+     */
+    public function eventAttendanceMode($eventAttendanceMode)
+    {
+        return $this->setProperty('eventAttendanceMode', $eventAttendanceMode);
+    }
+
+    /**
+     * Associates an [[Event]] with a [[Schedule]]. There are circumstances
+     * where it is preferable to share a schedule for a series of
+     *       repeating events rather than data on the individual events
+     * themselves. For example, a website or application might prefer to publish
+     * a schedule for a weekly
+     *       gym class rather than provide data on every event. A schedule could
+     * be processed by applications to add forthcoming events to a calendar. An
+     * [[Event]] that
+     *       is associated with a [[Schedule]] using this property should not
+     * have [[startDate]] or [[endDate]] properties. These are instead defined
+     * within the associated
+     *       [[Schedule]], this avoids any ambiguity for clients using the data.
+     * The property might have repeated values to specify different schedules,
+     * e.g. for different months
+     *       or seasons.
+     *
+     * @param \Spatie\SchemaOrg\Contracts\ScheduleContract|\Spatie\SchemaOrg\Contracts\ScheduleContract[] $eventSchedule
+     *
+     * @return static
+     *
+     * @see https://schema.org/eventSchedule
+     * @see http://pending.schema.org
+     * @link https://github.com/schemaorg/schemaorg/issues/1457
+     */
+    public function eventSchedule($eventSchedule)
+    {
+        return $this->setProperty('eventSchedule', $eventSchedule);
     }
 
     /**
@@ -263,7 +347,7 @@ class EducationEvent extends BaseType implements EducationEventContract, EventCo
      *
      * @return static
      *
-     * @see http://schema.org/eventStatus
+     * @see https://schema.org/eventStatus
      */
     public function eventStatus($eventStatus)
     {
@@ -278,7 +362,7 @@ class EducationEvent extends BaseType implements EducationEventContract, EventCo
      *
      * @return static
      *
-     * @see http://schema.org/funder
+     * @see https://schema.org/funder
      */
     public function funder($funder)
     {
@@ -296,7 +380,7 @@ class EducationEvent extends BaseType implements EducationEventContract, EventCo
      *
      * @return static
      *
-     * @see http://schema.org/identifier
+     * @see https://schema.org/identifier
      */
     public function identifier($identifier)
     {
@@ -311,7 +395,7 @@ class EducationEvent extends BaseType implements EducationEventContract, EventCo
      *
      * @return static
      *
-     * @see http://schema.org/image
+     * @see https://schema.org/image
      */
     public function image($image)
     {
@@ -328,7 +412,8 @@ class EducationEvent extends BaseType implements EducationEventContract, EventCo
      *
      * @return static
      *
-     * @see http://schema.org/inLanguage
+     * @see https://schema.org/inLanguage
+     * @link https://github.com/schemaorg/schemaorg/issues/2382
      */
     public function inLanguage($inLanguage)
     {
@@ -342,11 +427,26 @@ class EducationEvent extends BaseType implements EducationEventContract, EventCo
      *
      * @return static
      *
-     * @see http://schema.org/isAccessibleForFree
+     * @see https://schema.org/isAccessibleForFree
      */
     public function isAccessibleForFree($isAccessibleForFree)
     {
         return $this->setProperty('isAccessibleForFree', $isAccessibleForFree);
+    }
+
+    /**
+     * The location of for example where the event is happening, an organization
+     * is located, or where an action takes place.
+     *
+     * @param \Spatie\SchemaOrg\Contracts\PlaceContract|\Spatie\SchemaOrg\Contracts\PlaceContract[]|\Spatie\SchemaOrg\Contracts\PostalAddressContract|\Spatie\SchemaOrg\Contracts\PostalAddressContract[]|\Spatie\SchemaOrg\Contracts\VirtualLocationContract|\Spatie\SchemaOrg\Contracts\VirtualLocationContract[]|string|string[] $location
+     *
+     * @return static
+     *
+     * @see https://schema.org/location
+     */
+    public function location($location)
+    {
+        return $this->setProperty('location', $location);
     }
 
     /**
@@ -358,7 +458,7 @@ class EducationEvent extends BaseType implements EducationEventContract, EventCo
      *
      * @return static
      *
-     * @see http://schema.org/mainEntityOfPage
+     * @see https://schema.org/mainEntityOfPage
      */
     public function mainEntityOfPage($mainEntityOfPage)
     {
@@ -372,11 +472,47 @@ class EducationEvent extends BaseType implements EducationEventContract, EventCo
      *
      * @return static
      *
-     * @see http://schema.org/maximumAttendeeCapacity
+     * @see https://schema.org/maximumAttendeeCapacity
      */
     public function maximumAttendeeCapacity($maximumAttendeeCapacity)
     {
         return $this->setProperty('maximumAttendeeCapacity', $maximumAttendeeCapacity);
+    }
+
+    /**
+     * The maximum physical attendee capacity of an [[Event]] whose
+     * [[eventAttendanceMode]] is [[OfflineEventAttendanceMode]] (or the offline
+     * aspects, in the case of a [[MixedEventAttendanceMode]]).
+     *
+     * @param int|int[] $maximumPhysicalAttendeeCapacity
+     *
+     * @return static
+     *
+     * @see https://schema.org/maximumPhysicalAttendeeCapacity
+     * @see http://pending.schema.org
+     * @link https://github.com/schemaorg/schemaorg/issues/1842
+     */
+    public function maximumPhysicalAttendeeCapacity($maximumPhysicalAttendeeCapacity)
+    {
+        return $this->setProperty('maximumPhysicalAttendeeCapacity', $maximumPhysicalAttendeeCapacity);
+    }
+
+    /**
+     * The maximum physical attendee capacity of an [[Event]] whose
+     * [[eventAttendanceMode]] is [[OnlineEventAttendanceMode]] (or the online
+     * aspects, in the case of a [[MixedEventAttendanceMode]]).
+     *
+     * @param int|int[] $maximumVirtualAttendeeCapacity
+     *
+     * @return static
+     *
+     * @see https://schema.org/maximumVirtualAttendeeCapacity
+     * @see http://pending.schema.org
+     * @link https://github.com/schemaorg/schemaorg/issues/1842
+     */
+    public function maximumVirtualAttendeeCapacity($maximumVirtualAttendeeCapacity)
+    {
+        return $this->setProperty('maximumVirtualAttendeeCapacity', $maximumVirtualAttendeeCapacity);
     }
 
     /**
@@ -386,7 +522,7 @@ class EducationEvent extends BaseType implements EducationEventContract, EventCo
      *
      * @return static
      *
-     * @see http://schema.org/name
+     * @see https://schema.org/name
      */
     public function name($name)
     {
@@ -407,7 +543,8 @@ class EducationEvent extends BaseType implements EducationEventContract, EventCo
      *
      * @return static
      *
-     * @see http://schema.org/offers
+     * @see https://schema.org/offers
+     * @link https://github.com/schemaorg/schemaorg/issues/2289
      */
     public function offers($offers)
     {
@@ -421,7 +558,7 @@ class EducationEvent extends BaseType implements EducationEventContract, EventCo
      *
      * @return static
      *
-     * @see http://schema.org/organizer
+     * @see https://schema.org/organizer
      */
     public function organizer($organizer)
     {
@@ -436,7 +573,7 @@ class EducationEvent extends BaseType implements EducationEventContract, EventCo
      *
      * @return static
      *
-     * @see http://schema.org/performer
+     * @see https://schema.org/performer
      */
     public function performer($performer)
     {
@@ -451,7 +588,7 @@ class EducationEvent extends BaseType implements EducationEventContract, EventCo
      *
      * @return static
      *
-     * @see http://schema.org/performers
+     * @see https://schema.org/performers
      */
     public function performers($performers)
     {
@@ -466,7 +603,7 @@ class EducationEvent extends BaseType implements EducationEventContract, EventCo
      *
      * @return static
      *
-     * @see http://schema.org/potentialAction
+     * @see https://schema.org/potentialAction
      */
     public function potentialAction($potentialAction)
     {
@@ -484,7 +621,7 @@ class EducationEvent extends BaseType implements EducationEventContract, EventCo
      *
      * @return static
      *
-     * @see http://schema.org/previousStartDate
+     * @see https://schema.org/previousStartDate
      */
     public function previousStartDate($previousStartDate)
     {
@@ -498,7 +635,7 @@ class EducationEvent extends BaseType implements EducationEventContract, EventCo
      *
      * @return static
      *
-     * @see http://schema.org/recordedIn
+     * @see https://schema.org/recordedIn
      */
     public function recordedIn($recordedIn)
     {
@@ -512,7 +649,7 @@ class EducationEvent extends BaseType implements EducationEventContract, EventCo
      *
      * @return static
      *
-     * @see http://schema.org/remainingAttendeeCapacity
+     * @see https://schema.org/remainingAttendeeCapacity
      */
     public function remainingAttendeeCapacity($remainingAttendeeCapacity)
     {
@@ -526,7 +663,7 @@ class EducationEvent extends BaseType implements EducationEventContract, EventCo
      *
      * @return static
      *
-     * @see http://schema.org/review
+     * @see https://schema.org/review
      */
     public function review($review)
     {
@@ -542,7 +679,7 @@ class EducationEvent extends BaseType implements EducationEventContract, EventCo
      *
      * @return static
      *
-     * @see http://schema.org/sameAs
+     * @see https://schema.org/sameAs
      */
     public function sameAs($sameAs)
     {
@@ -558,7 +695,7 @@ class EducationEvent extends BaseType implements EducationEventContract, EventCo
      *
      * @return static
      *
-     * @see http://schema.org/sponsor
+     * @see https://schema.org/sponsor
      */
     public function sponsor($sponsor)
     {
@@ -573,7 +710,8 @@ class EducationEvent extends BaseType implements EducationEventContract, EventCo
      *
      * @return static
      *
-     * @see http://schema.org/startDate
+     * @see https://schema.org/startDate
+     * @link https://github.com/schemaorg/schemaorg/issues/2486
      */
     public function startDate($startDate)
     {
@@ -589,7 +727,7 @@ class EducationEvent extends BaseType implements EducationEventContract, EventCo
      *
      * @return static
      *
-     * @see http://schema.org/subEvent
+     * @see https://schema.org/subEvent
      */
     public function subEvent($subEvent)
     {
@@ -604,7 +742,7 @@ class EducationEvent extends BaseType implements EducationEventContract, EventCo
      *
      * @return static
      *
-     * @see http://schema.org/subEvents
+     * @see https://schema.org/subEvents
      */
     public function subEvents($subEvents)
     {
@@ -618,7 +756,8 @@ class EducationEvent extends BaseType implements EducationEventContract, EventCo
      *
      * @return static
      *
-     * @see http://schema.org/subjectOf
+     * @see https://schema.org/subjectOf
+     * @link https://github.com/schemaorg/schemaorg/issues/1670
      */
     public function subjectOf($subjectOf)
     {
@@ -634,11 +773,28 @@ class EducationEvent extends BaseType implements EducationEventContract, EventCo
      *
      * @return static
      *
-     * @see http://schema.org/superEvent
+     * @see https://schema.org/superEvent
      */
     public function superEvent($superEvent)
     {
         return $this->setProperty('superEvent', $superEvent);
+    }
+
+    /**
+     * The item being described is intended to help a person learn the
+     * competency or learning outcome defined by the referenced term.
+     *
+     * @param \Spatie\SchemaOrg\Contracts\DefinedTermContract|\Spatie\SchemaOrg\Contracts\DefinedTermContract[]|string|string[] $teaches
+     *
+     * @return static
+     *
+     * @see https://schema.org/teaches
+     * @see http://pending.schema.org
+     * @link https://github.com/schemaorg/schemaorg/issues/2427
+     */
+    public function teaches($teaches)
+    {
+        return $this->setProperty('teaches', $teaches);
     }
 
     /**
@@ -650,7 +806,7 @@ class EducationEvent extends BaseType implements EducationEventContract, EventCo
      *
      * @return static
      *
-     * @see http://schema.org/translator
+     * @see https://schema.org/translator
      */
     public function translator($translator)
     {
@@ -664,7 +820,7 @@ class EducationEvent extends BaseType implements EducationEventContract, EventCo
      *
      * @return static
      *
-     * @see http://schema.org/typicalAgeRange
+     * @see https://schema.org/typicalAgeRange
      */
     public function typicalAgeRange($typicalAgeRange)
     {
@@ -678,7 +834,7 @@ class EducationEvent extends BaseType implements EducationEventContract, EventCo
      *
      * @return static
      *
-     * @see http://schema.org/url
+     * @see https://schema.org/url
      */
     public function url($url)
     {
@@ -694,7 +850,7 @@ class EducationEvent extends BaseType implements EducationEventContract, EventCo
      *
      * @return static
      *
-     * @see http://schema.org/workFeatured
+     * @see https://schema.org/workFeatured
      */
     public function workFeatured($workFeatured)
     {
@@ -709,7 +865,7 @@ class EducationEvent extends BaseType implements EducationEventContract, EventCo
      *
      * @return static
      *
-     * @see http://schema.org/workPerformed
+     * @see https://schema.org/workPerformed
      */
     public function workPerformed($workPerformed)
     {

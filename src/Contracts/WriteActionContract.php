@@ -30,6 +30,8 @@ interface WriteActionContract
 
     public function language($language);
 
+    public function location($location);
+
     public function mainEntityOfPage($mainEntityOfPage);
 
     public function name($name);

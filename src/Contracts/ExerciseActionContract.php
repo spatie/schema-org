@@ -18,6 +18,8 @@ interface ExerciseActionContract
 
     public function description($description);
 
+    public function diet($diet);
+
     public function disambiguatingDescription($disambiguatingDescription);
 
     public function distance($distance);
@@ -30,6 +32,12 @@ interface ExerciseActionContract
 
     public function exerciseCourse($exerciseCourse);
 
+    public function exercisePlan($exercisePlan);
+
+    public function exerciseRelatedDiet($exerciseRelatedDiet);
+
+    public function exerciseType($exerciseType);
+
     public function fromLocation($fromLocation);
 
     public function identifier($identifier);
@@ -37,6 +45,8 @@ interface ExerciseActionContract
     public function image($image);
 
     public function instrument($instrument);
+
+    public function location($location);
 
     public function mainEntityOfPage($mainEntityOfPage);
 

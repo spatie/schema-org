@@ -28,17 +28,23 @@ interface TrainTripContract
 
     public function image($image);
 
+    public function itinerary($itinerary);
+
     public function mainEntityOfPage($mainEntityOfPage);
 
     public function name($name);
 
     public function offers($offers);
 
+    public function partOfTrip($partOfTrip);
+
     public function potentialAction($potentialAction);
 
     public function provider($provider);
 
     public function sameAs($sameAs);
+
+    public function subTrip($subTrip);
 
     public function subjectOf($subjectOf);
 

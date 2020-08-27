@@ -13,7 +13,8 @@ use \Spatie\SchemaOrg\Contracts\ThingContract;
  * whitespace or commas can be used to separate latitude and longitude;
  * whitespace should be used when writing a list of several such points.
  *
- * @see http://schema.org/GeoShape
+ * @see https://schema.org/GeoShape
+ * @link http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#source_rNews
  *
  */
 class GeoShape extends BaseType implements GeoShapeContract, IntangibleContract, StructuredValueContract, ThingContract
@@ -30,7 +31,7 @@ class GeoShape extends BaseType implements GeoShapeContract, IntangibleContract,
      *
      * @return static
      *
-     * @see http://schema.org/additionalType
+     * @see https://schema.org/additionalType
      */
     public function additionalType($additionalType)
     {
@@ -44,7 +45,7 @@ class GeoShape extends BaseType implements GeoShapeContract, IntangibleContract,
      *
      * @return static
      *
-     * @see http://schema.org/address
+     * @see https://schema.org/address
      */
     public function address($address)
     {
@@ -59,7 +60,8 @@ class GeoShape extends BaseType implements GeoShapeContract, IntangibleContract,
      *
      * @return static
      *
-     * @see http://schema.org/addressCountry
+     * @see https://schema.org/addressCountry
+     * @link https://github.com/schemaorg/schemaorg/issues/2506
      */
     public function addressCountry($addressCountry)
     {
@@ -73,7 +75,7 @@ class GeoShape extends BaseType implements GeoShapeContract, IntangibleContract,
      *
      * @return static
      *
-     * @see http://schema.org/alternateName
+     * @see https://schema.org/alternateName
      */
     public function alternateName($alternateName)
     {
@@ -89,7 +91,7 @@ class GeoShape extends BaseType implements GeoShapeContract, IntangibleContract,
      *
      * @return static
      *
-     * @see http://schema.org/box
+     * @see https://schema.org/box
      */
     public function box($box)
     {
@@ -105,7 +107,7 @@ class GeoShape extends BaseType implements GeoShapeContract, IntangibleContract,
      *
      * @return static
      *
-     * @see http://schema.org/circle
+     * @see https://schema.org/circle
      */
     public function circle($circle)
     {
@@ -119,7 +121,7 @@ class GeoShape extends BaseType implements GeoShapeContract, IntangibleContract,
      *
      * @return static
      *
-     * @see http://schema.org/description
+     * @see https://schema.org/description
      */
     public function description($description)
     {
@@ -136,7 +138,7 @@ class GeoShape extends BaseType implements GeoShapeContract, IntangibleContract,
      *
      * @return static
      *
-     * @see http://schema.org/disambiguatingDescription
+     * @see https://schema.org/disambiguatingDescription
      */
     public function disambiguatingDescription($disambiguatingDescription)
     {
@@ -153,7 +155,7 @@ class GeoShape extends BaseType implements GeoShapeContract, IntangibleContract,
      *
      * @return static
      *
-     * @see http://schema.org/elevation
+     * @see https://schema.org/elevation
      */
     public function elevation($elevation)
     {
@@ -171,7 +173,7 @@ class GeoShape extends BaseType implements GeoShapeContract, IntangibleContract,
      *
      * @return static
      *
-     * @see http://schema.org/identifier
+     * @see https://schema.org/identifier
      */
     public function identifier($identifier)
     {
@@ -186,7 +188,7 @@ class GeoShape extends BaseType implements GeoShapeContract, IntangibleContract,
      *
      * @return static
      *
-     * @see http://schema.org/image
+     * @see https://schema.org/image
      */
     public function image($image)
     {
@@ -201,7 +203,7 @@ class GeoShape extends BaseType implements GeoShapeContract, IntangibleContract,
      *
      * @return static
      *
-     * @see http://schema.org/line
+     * @see https://schema.org/line
      */
     public function line($line)
     {
@@ -217,7 +219,7 @@ class GeoShape extends BaseType implements GeoShapeContract, IntangibleContract,
      *
      * @return static
      *
-     * @see http://schema.org/mainEntityOfPage
+     * @see https://schema.org/mainEntityOfPage
      */
     public function mainEntityOfPage($mainEntityOfPage)
     {
@@ -231,7 +233,7 @@ class GeoShape extends BaseType implements GeoShapeContract, IntangibleContract,
      *
      * @return static
      *
-     * @see http://schema.org/name
+     * @see https://schema.org/name
      */
     public function name($name)
     {
@@ -248,7 +250,7 @@ class GeoShape extends BaseType implements GeoShapeContract, IntangibleContract,
      *
      * @return static
      *
-     * @see http://schema.org/polygon
+     * @see https://schema.org/polygon
      */
     public function polygon($polygon)
     {
@@ -262,7 +264,8 @@ class GeoShape extends BaseType implements GeoShapeContract, IntangibleContract,
      *
      * @return static
      *
-     * @see http://schema.org/postalCode
+     * @see https://schema.org/postalCode
+     * @link https://github.com/schemaorg/schemaorg/issues/2506
      */
     public function postalCode($postalCode)
     {
@@ -277,7 +280,7 @@ class GeoShape extends BaseType implements GeoShapeContract, IntangibleContract,
      *
      * @return static
      *
-     * @see http://schema.org/potentialAction
+     * @see https://schema.org/potentialAction
      */
     public function potentialAction($potentialAction)
     {
@@ -293,7 +296,7 @@ class GeoShape extends BaseType implements GeoShapeContract, IntangibleContract,
      *
      * @return static
      *
-     * @see http://schema.org/sameAs
+     * @see https://schema.org/sameAs
      */
     public function sameAs($sameAs)
     {
@@ -307,7 +310,8 @@ class GeoShape extends BaseType implements GeoShapeContract, IntangibleContract,
      *
      * @return static
      *
-     * @see http://schema.org/subjectOf
+     * @see https://schema.org/subjectOf
+     * @link https://github.com/schemaorg/schemaorg/issues/1670
      */
     public function subjectOf($subjectOf)
     {
@@ -321,7 +325,7 @@ class GeoShape extends BaseType implements GeoShapeContract, IntangibleContract,
      *
      * @return static
      *
-     * @see http://schema.org/url
+     * @see https://schema.org/url
      */
     public function url($url)
     {

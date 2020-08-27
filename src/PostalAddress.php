@@ -11,7 +11,7 @@ use \Spatie\SchemaOrg\Contracts\ThingContract;
 /**
  * The mailing address.
  *
- * @see http://schema.org/PostalAddress
+ * @see https://schema.org/PostalAddress
  *
  */
 class PostalAddress extends BaseType implements PostalAddressContract, ContactPointContract, IntangibleContract, StructuredValueContract, ThingContract
@@ -28,7 +28,7 @@ class PostalAddress extends BaseType implements PostalAddressContract, ContactPo
      *
      * @return static
      *
-     * @see http://schema.org/additionalType
+     * @see https://schema.org/additionalType
      */
     public function additionalType($additionalType)
     {
@@ -43,7 +43,8 @@ class PostalAddress extends BaseType implements PostalAddressContract, ContactPo
      *
      * @return static
      *
-     * @see http://schema.org/addressCountry
+     * @see https://schema.org/addressCountry
+     * @link https://github.com/schemaorg/schemaorg/issues/2506
      */
     public function addressCountry($addressCountry)
     {
@@ -58,7 +59,7 @@ class PostalAddress extends BaseType implements PostalAddressContract, ContactPo
      *
      * @return static
      *
-     * @see http://schema.org/addressLocality
+     * @see https://schema.org/addressLocality
      */
     public function addressLocality($addressLocality)
     {
@@ -74,7 +75,8 @@ class PostalAddress extends BaseType implements PostalAddressContract, ContactPo
      *
      * @return static
      *
-     * @see http://schema.org/addressRegion
+     * @see https://schema.org/addressRegion
+     * @link https://github.com/schemaorg/schemaorg/issues/2506
      */
     public function addressRegion($addressRegion)
     {
@@ -88,7 +90,7 @@ class PostalAddress extends BaseType implements PostalAddressContract, ContactPo
      *
      * @return static
      *
-     * @see http://schema.org/alternateName
+     * @see https://schema.org/alternateName
      */
     public function alternateName($alternateName)
     {
@@ -102,7 +104,7 @@ class PostalAddress extends BaseType implements PostalAddressContract, ContactPo
      *
      * @return static
      *
-     * @see http://schema.org/areaServed
+     * @see https://schema.org/areaServed
      */
     public function areaServed($areaServed)
     {
@@ -118,7 +120,7 @@ class PostalAddress extends BaseType implements PostalAddressContract, ContactPo
      *
      * @return static
      *
-     * @see http://schema.org/availableLanguage
+     * @see https://schema.org/availableLanguage
      */
     public function availableLanguage($availableLanguage)
     {
@@ -133,7 +135,7 @@ class PostalAddress extends BaseType implements PostalAddressContract, ContactPo
      *
      * @return static
      *
-     * @see http://schema.org/contactOption
+     * @see https://schema.org/contactOption
      */
     public function contactOption($contactOption)
     {
@@ -149,7 +151,7 @@ class PostalAddress extends BaseType implements PostalAddressContract, ContactPo
      *
      * @return static
      *
-     * @see http://schema.org/contactType
+     * @see https://schema.org/contactType
      */
     public function contactType($contactType)
     {
@@ -163,7 +165,7 @@ class PostalAddress extends BaseType implements PostalAddressContract, ContactPo
      *
      * @return static
      *
-     * @see http://schema.org/description
+     * @see https://schema.org/description
      */
     public function description($description)
     {
@@ -180,7 +182,7 @@ class PostalAddress extends BaseType implements PostalAddressContract, ContactPo
      *
      * @return static
      *
-     * @see http://schema.org/disambiguatingDescription
+     * @see https://schema.org/disambiguatingDescription
      */
     public function disambiguatingDescription($disambiguatingDescription)
     {
@@ -194,7 +196,7 @@ class PostalAddress extends BaseType implements PostalAddressContract, ContactPo
      *
      * @return static
      *
-     * @see http://schema.org/email
+     * @see https://schema.org/email
      */
     public function email($email)
     {
@@ -208,7 +210,7 @@ class PostalAddress extends BaseType implements PostalAddressContract, ContactPo
      *
      * @return static
      *
-     * @see http://schema.org/faxNumber
+     * @see https://schema.org/faxNumber
      */
     public function faxNumber($faxNumber)
     {
@@ -222,7 +224,7 @@ class PostalAddress extends BaseType implements PostalAddressContract, ContactPo
      *
      * @return static
      *
-     * @see http://schema.org/hoursAvailable
+     * @see https://schema.org/hoursAvailable
      */
     public function hoursAvailable($hoursAvailable)
     {
@@ -240,7 +242,7 @@ class PostalAddress extends BaseType implements PostalAddressContract, ContactPo
      *
      * @return static
      *
-     * @see http://schema.org/identifier
+     * @see https://schema.org/identifier
      */
     public function identifier($identifier)
     {
@@ -255,7 +257,7 @@ class PostalAddress extends BaseType implements PostalAddressContract, ContactPo
      *
      * @return static
      *
-     * @see http://schema.org/image
+     * @see https://schema.org/image
      */
     public function image($image)
     {
@@ -271,7 +273,7 @@ class PostalAddress extends BaseType implements PostalAddressContract, ContactPo
      *
      * @return static
      *
-     * @see http://schema.org/mainEntityOfPage
+     * @see https://schema.org/mainEntityOfPage
      */
     public function mainEntityOfPage($mainEntityOfPage)
     {
@@ -285,7 +287,7 @@ class PostalAddress extends BaseType implements PostalAddressContract, ContactPo
      *
      * @return static
      *
-     * @see http://schema.org/name
+     * @see https://schema.org/name
      */
     public function name($name)
     {
@@ -299,7 +301,7 @@ class PostalAddress extends BaseType implements PostalAddressContract, ContactPo
      *
      * @return static
      *
-     * @see http://schema.org/postOfficeBoxNumber
+     * @see https://schema.org/postOfficeBoxNumber
      */
     public function postOfficeBoxNumber($postOfficeBoxNumber)
     {
@@ -313,7 +315,8 @@ class PostalAddress extends BaseType implements PostalAddressContract, ContactPo
      *
      * @return static
      *
-     * @see http://schema.org/postalCode
+     * @see https://schema.org/postalCode
+     * @link https://github.com/schemaorg/schemaorg/issues/2506
      */
     public function postalCode($postalCode)
     {
@@ -328,7 +331,7 @@ class PostalAddress extends BaseType implements PostalAddressContract, ContactPo
      *
      * @return static
      *
-     * @see http://schema.org/potentialAction
+     * @see https://schema.org/potentialAction
      */
     public function potentialAction($potentialAction)
     {
@@ -345,7 +348,7 @@ class PostalAddress extends BaseType implements PostalAddressContract, ContactPo
      *
      * @return static
      *
-     * @see http://schema.org/productSupported
+     * @see https://schema.org/productSupported
      */
     public function productSupported($productSupported)
     {
@@ -361,7 +364,7 @@ class PostalAddress extends BaseType implements PostalAddressContract, ContactPo
      *
      * @return static
      *
-     * @see http://schema.org/sameAs
+     * @see https://schema.org/sameAs
      */
     public function sameAs($sameAs)
     {
@@ -375,7 +378,7 @@ class PostalAddress extends BaseType implements PostalAddressContract, ContactPo
      *
      * @return static
      *
-     * @see http://schema.org/serviceArea
+     * @see https://schema.org/serviceArea
      */
     public function serviceArea($serviceArea)
     {
@@ -389,7 +392,7 @@ class PostalAddress extends BaseType implements PostalAddressContract, ContactPo
      *
      * @return static
      *
-     * @see http://schema.org/streetAddress
+     * @see https://schema.org/streetAddress
      */
     public function streetAddress($streetAddress)
     {
@@ -403,7 +406,8 @@ class PostalAddress extends BaseType implements PostalAddressContract, ContactPo
      *
      * @return static
      *
-     * @see http://schema.org/subjectOf
+     * @see https://schema.org/subjectOf
+     * @link https://github.com/schemaorg/schemaorg/issues/1670
      */
     public function subjectOf($subjectOf)
     {
@@ -417,7 +421,7 @@ class PostalAddress extends BaseType implements PostalAddressContract, ContactPo
      *
      * @return static
      *
-     * @see http://schema.org/telephone
+     * @see https://schema.org/telephone
      */
     public function telephone($telephone)
     {
@@ -431,7 +435,7 @@ class PostalAddress extends BaseType implements PostalAddressContract, ContactPo
      *
      * @return static
      *
-     * @see http://schema.org/url
+     * @see https://schema.org/url
      */
     public function url($url)
     {

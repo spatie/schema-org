@@ -5,50 +5,52 @@ namespace Spatie\SchemaOrg;
 use \Spatie\SchemaOrg\Contracts\PaymentStatusTypeContract;
 use \Spatie\SchemaOrg\Contracts\EnumerationContract;
 use \Spatie\SchemaOrg\Contracts\IntangibleContract;
+use \Spatie\SchemaOrg\Contracts\StatusEnumerationContract;
 use \Spatie\SchemaOrg\Contracts\ThingContract;
 
 /**
  * A specific payment status. For example, PaymentDue, PaymentComplete, etc.
  *
- * @see http://schema.org/PaymentStatusType
+ * @see https://schema.org/PaymentStatusType
  *
+ * @method static supersededBy($supersededBy) The value should be instance of pending types Class|Class[]|Enumeration|Enumeration[]|Property|Property[]
  */
-class PaymentStatusType extends BaseType implements PaymentStatusTypeContract, EnumerationContract, IntangibleContract, ThingContract
+class PaymentStatusType extends BaseType implements PaymentStatusTypeContract, EnumerationContract, IntangibleContract, StatusEnumerationContract, ThingContract
 {
     /**
      * An automatic payment system is in place and will be used.
      *
-     * @see http://schema.org/PaymentAutomaticallyApplied
+     * @see https://schema.org/PaymentAutomaticallyApplied
      */
-     const PaymentAutomaticallyApplied = 'http://schema.org/PaymentAutomaticallyApplied';
+     const PaymentAutomaticallyApplied = 'https://schema.org/PaymentAutomaticallyApplied';
 
     /**
      * The payment has been received and processed.
      *
-     * @see http://schema.org/PaymentComplete
+     * @see https://schema.org/PaymentComplete
      */
-     const PaymentComplete = 'http://schema.org/PaymentComplete';
+     const PaymentComplete = 'https://schema.org/PaymentComplete';
 
     /**
      * The payee received the payment, but it was declined for some reason.
      *
-     * @see http://schema.org/PaymentDeclined
+     * @see https://schema.org/PaymentDeclined
      */
-     const PaymentDeclined = 'http://schema.org/PaymentDeclined';
+     const PaymentDeclined = 'https://schema.org/PaymentDeclined';
 
     /**
      * The payment is due, but still within an acceptable time to be received.
      *
-     * @see http://schema.org/PaymentDue
+     * @see https://schema.org/PaymentDue
      */
-     const PaymentDue = 'http://schema.org/PaymentDue';
+     const PaymentDue = 'https://schema.org/PaymentDue';
 
     /**
      * The payment is due and considered late.
      *
-     * @see http://schema.org/PaymentPastDue
+     * @see https://schema.org/PaymentPastDue
      */
-     const PaymentPastDue = 'http://schema.org/PaymentPastDue';
+     const PaymentPastDue = 'https://schema.org/PaymentPastDue';
 
     /**
      * An additional type for the item, typically used for adding more specific
@@ -62,7 +64,7 @@ class PaymentStatusType extends BaseType implements PaymentStatusTypeContract, E
      *
      * @return static
      *
-     * @see http://schema.org/additionalType
+     * @see https://schema.org/additionalType
      */
     public function additionalType($additionalType)
     {
@@ -76,7 +78,7 @@ class PaymentStatusType extends BaseType implements PaymentStatusTypeContract, E
      *
      * @return static
      *
-     * @see http://schema.org/alternateName
+     * @see https://schema.org/alternateName
      */
     public function alternateName($alternateName)
     {
@@ -90,7 +92,7 @@ class PaymentStatusType extends BaseType implements PaymentStatusTypeContract, E
      *
      * @return static
      *
-     * @see http://schema.org/description
+     * @see https://schema.org/description
      */
     public function description($description)
     {
@@ -107,7 +109,7 @@ class PaymentStatusType extends BaseType implements PaymentStatusTypeContract, E
      *
      * @return static
      *
-     * @see http://schema.org/disambiguatingDescription
+     * @see https://schema.org/disambiguatingDescription
      */
     public function disambiguatingDescription($disambiguatingDescription)
     {
@@ -125,7 +127,7 @@ class PaymentStatusType extends BaseType implements PaymentStatusTypeContract, E
      *
      * @return static
      *
-     * @see http://schema.org/identifier
+     * @see https://schema.org/identifier
      */
     public function identifier($identifier)
     {
@@ -140,7 +142,7 @@ class PaymentStatusType extends BaseType implements PaymentStatusTypeContract, E
      *
      * @return static
      *
-     * @see http://schema.org/image
+     * @see https://schema.org/image
      */
     public function image($image)
     {
@@ -156,7 +158,7 @@ class PaymentStatusType extends BaseType implements PaymentStatusTypeContract, E
      *
      * @return static
      *
-     * @see http://schema.org/mainEntityOfPage
+     * @see https://schema.org/mainEntityOfPage
      */
     public function mainEntityOfPage($mainEntityOfPage)
     {
@@ -170,7 +172,7 @@ class PaymentStatusType extends BaseType implements PaymentStatusTypeContract, E
      *
      * @return static
      *
-     * @see http://schema.org/name
+     * @see https://schema.org/name
      */
     public function name($name)
     {
@@ -185,7 +187,7 @@ class PaymentStatusType extends BaseType implements PaymentStatusTypeContract, E
      *
      * @return static
      *
-     * @see http://schema.org/potentialAction
+     * @see https://schema.org/potentialAction
      */
     public function potentialAction($potentialAction)
     {
@@ -201,7 +203,7 @@ class PaymentStatusType extends BaseType implements PaymentStatusTypeContract, E
      *
      * @return static
      *
-     * @see http://schema.org/sameAs
+     * @see https://schema.org/sameAs
      */
     public function sameAs($sameAs)
     {
@@ -215,7 +217,8 @@ class PaymentStatusType extends BaseType implements PaymentStatusTypeContract, E
      *
      * @return static
      *
-     * @see http://schema.org/subjectOf
+     * @see https://schema.org/subjectOf
+     * @link https://github.com/schemaorg/schemaorg/issues/1670
      */
     public function subjectOf($subjectOf)
     {
@@ -229,7 +232,7 @@ class PaymentStatusType extends BaseType implements PaymentStatusTypeContract, E
      *
      * @return static
      *
-     * @see http://schema.org/url
+     * @see https://schema.org/url
      */
     public function url($url)
     {

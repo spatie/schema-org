@@ -10,7 +10,7 @@ use \Spatie\SchemaOrg\Contracts\ThingContract;
 /**
  * A group of multiple reservations with common values for all sub-reservations.
  *
- * @see http://schema.org/ReservationPackage
+ * @see https://schema.org/ReservationPackage
  *
  */
 class ReservationPackage extends BaseType implements ReservationPackageContract, IntangibleContract, ReservationContract, ThingContract
@@ -27,7 +27,7 @@ class ReservationPackage extends BaseType implements ReservationPackageContract,
      *
      * @return static
      *
-     * @see http://schema.org/additionalType
+     * @see https://schema.org/additionalType
      */
     public function additionalType($additionalType)
     {
@@ -41,7 +41,7 @@ class ReservationPackage extends BaseType implements ReservationPackageContract,
      *
      * @return static
      *
-     * @see http://schema.org/alternateName
+     * @see https://schema.org/alternateName
      */
     public function alternateName($alternateName)
     {
@@ -56,7 +56,7 @@ class ReservationPackage extends BaseType implements ReservationPackageContract,
      *
      * @return static
      *
-     * @see http://schema.org/bookingAgent
+     * @see https://schema.org/bookingAgent
      */
     public function bookingAgent($bookingAgent)
     {
@@ -70,7 +70,7 @@ class ReservationPackage extends BaseType implements ReservationPackageContract,
      *
      * @return static
      *
-     * @see http://schema.org/bookingTime
+     * @see https://schema.org/bookingTime
      */
     public function bookingTime($bookingTime)
     {
@@ -87,7 +87,7 @@ class ReservationPackage extends BaseType implements ReservationPackageContract,
      *
      * @return static
      *
-     * @see http://schema.org/broker
+     * @see https://schema.org/broker
      */
     public function broker($broker)
     {
@@ -101,7 +101,7 @@ class ReservationPackage extends BaseType implements ReservationPackageContract,
      *
      * @return static
      *
-     * @see http://schema.org/description
+     * @see https://schema.org/description
      */
     public function description($description)
     {
@@ -118,7 +118,7 @@ class ReservationPackage extends BaseType implements ReservationPackageContract,
      *
      * @return static
      *
-     * @see http://schema.org/disambiguatingDescription
+     * @see https://schema.org/disambiguatingDescription
      */
     public function disambiguatingDescription($disambiguatingDescription)
     {
@@ -136,7 +136,7 @@ class ReservationPackage extends BaseType implements ReservationPackageContract,
      *
      * @return static
      *
-     * @see http://schema.org/identifier
+     * @see https://schema.org/identifier
      */
     public function identifier($identifier)
     {
@@ -151,7 +151,7 @@ class ReservationPackage extends BaseType implements ReservationPackageContract,
      *
      * @return static
      *
-     * @see http://schema.org/image
+     * @see https://schema.org/image
      */
     public function image($image)
     {
@@ -167,7 +167,7 @@ class ReservationPackage extends BaseType implements ReservationPackageContract,
      *
      * @return static
      *
-     * @see http://schema.org/mainEntityOfPage
+     * @see https://schema.org/mainEntityOfPage
      */
     public function mainEntityOfPage($mainEntityOfPage)
     {
@@ -181,7 +181,7 @@ class ReservationPackage extends BaseType implements ReservationPackageContract,
      *
      * @return static
      *
-     * @see http://schema.org/modifiedTime
+     * @see https://schema.org/modifiedTime
      */
     public function modifiedTime($modifiedTime)
     {
@@ -195,7 +195,7 @@ class ReservationPackage extends BaseType implements ReservationPackageContract,
      *
      * @return static
      *
-     * @see http://schema.org/name
+     * @see https://schema.org/name
      */
     public function name($name)
     {
@@ -210,7 +210,7 @@ class ReservationPackage extends BaseType implements ReservationPackageContract,
      *
      * @return static
      *
-     * @see http://schema.org/potentialAction
+     * @see https://schema.org/potentialAction
      */
     public function potentialAction($potentialAction)
     {
@@ -233,7 +233,7 @@ class ReservationPackage extends BaseType implements ReservationPackageContract,
      *
      * @return static
      *
-     * @see http://schema.org/priceCurrency
+     * @see https://schema.org/priceCurrency
      */
     public function priceCurrency($priceCurrency)
     {
@@ -248,7 +248,7 @@ class ReservationPackage extends BaseType implements ReservationPackageContract,
      *
      * @return static
      *
-     * @see http://schema.org/programMembershipUsed
+     * @see https://schema.org/programMembershipUsed
      */
     public function programMembershipUsed($programMembershipUsed)
     {
@@ -264,7 +264,8 @@ class ReservationPackage extends BaseType implements ReservationPackageContract,
      *
      * @return static
      *
-     * @see http://schema.org/provider
+     * @see https://schema.org/provider
+     * @link https://github.com/schemaorg/schemaorg/issues/2289
      */
     public function provider($provider)
     {
@@ -278,7 +279,7 @@ class ReservationPackage extends BaseType implements ReservationPackageContract,
      *
      * @return static
      *
-     * @see http://schema.org/reservationFor
+     * @see https://schema.org/reservationFor
      */
     public function reservationFor($reservationFor)
     {
@@ -292,7 +293,7 @@ class ReservationPackage extends BaseType implements ReservationPackageContract,
      *
      * @return static
      *
-     * @see http://schema.org/reservationId
+     * @see https://schema.org/reservationId
      */
     public function reservationId($reservationId)
     {
@@ -306,7 +307,7 @@ class ReservationPackage extends BaseType implements ReservationPackageContract,
      *
      * @return static
      *
-     * @see http://schema.org/reservationStatus
+     * @see https://schema.org/reservationStatus
      */
     public function reservationStatus($reservationStatus)
     {
@@ -320,7 +321,7 @@ class ReservationPackage extends BaseType implements ReservationPackageContract,
      *
      * @return static
      *
-     * @see http://schema.org/reservedTicket
+     * @see https://schema.org/reservedTicket
      */
     public function reservedTicket($reservedTicket)
     {
@@ -336,7 +337,7 @@ class ReservationPackage extends BaseType implements ReservationPackageContract,
      *
      * @return static
      *
-     * @see http://schema.org/sameAs
+     * @see https://schema.org/sameAs
      */
     public function sameAs($sameAs)
     {
@@ -351,7 +352,7 @@ class ReservationPackage extends BaseType implements ReservationPackageContract,
      *
      * @return static
      *
-     * @see http://schema.org/subReservation
+     * @see https://schema.org/subReservation
      */
     public function subReservation($subReservation)
     {
@@ -365,7 +366,8 @@ class ReservationPackage extends BaseType implements ReservationPackageContract,
      *
      * @return static
      *
-     * @see http://schema.org/subjectOf
+     * @see https://schema.org/subjectOf
+     * @link https://github.com/schemaorg/schemaorg/issues/1670
      */
     public function subjectOf($subjectOf)
     {
@@ -387,7 +389,7 @@ class ReservationPackage extends BaseType implements ReservationPackageContract,
      *
      * @return static
      *
-     * @see http://schema.org/totalPrice
+     * @see https://schema.org/totalPrice
      */
     public function totalPrice($totalPrice)
     {
@@ -401,7 +403,7 @@ class ReservationPackage extends BaseType implements ReservationPackageContract,
      *
      * @return static
      *
-     * @see http://schema.org/underName
+     * @see https://schema.org/underName
      */
     public function underName($underName)
     {
@@ -415,7 +417,7 @@ class ReservationPackage extends BaseType implements ReservationPackageContract,
      *
      * @return static
      *
-     * @see http://schema.org/url
+     * @see https://schema.org/url
      */
     public function url($url)
     {

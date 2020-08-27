@@ -5,71 +5,73 @@ namespace Spatie\SchemaOrg;
 use \Spatie\SchemaOrg\Contracts\OrderStatusContract;
 use \Spatie\SchemaOrg\Contracts\EnumerationContract;
 use \Spatie\SchemaOrg\Contracts\IntangibleContract;
+use \Spatie\SchemaOrg\Contracts\StatusEnumerationContract;
 use \Spatie\SchemaOrg\Contracts\ThingContract;
 
 /**
  * Enumerated status values for Order.
  *
- * @see http://schema.org/OrderStatus
+ * @see https://schema.org/OrderStatus
  *
+ * @method static supersededBy($supersededBy) The value should be instance of pending types Class|Class[]|Enumeration|Enumeration[]|Property|Property[]
  */
-class OrderStatus extends BaseType implements OrderStatusContract, EnumerationContract, IntangibleContract, ThingContract
+class OrderStatus extends BaseType implements OrderStatusContract, EnumerationContract, IntangibleContract, StatusEnumerationContract, ThingContract
 {
     /**
      * OrderStatus representing cancellation of an order.
      *
-     * @see http://schema.org/OrderCancelled
+     * @see https://schema.org/OrderCancelled
      */
-     const OrderCancelled = 'http://schema.org/OrderCancelled';
+     const OrderCancelled = 'https://schema.org/OrderCancelled';
 
     /**
      * OrderStatus representing successful delivery of an order.
      *
-     * @see http://schema.org/OrderDelivered
+     * @see https://schema.org/OrderDelivered
      */
-     const OrderDelivered = 'http://schema.org/OrderDelivered';
+     const OrderDelivered = 'https://schema.org/OrderDelivered';
 
     /**
      * OrderStatus representing that an order is in transit.
      *
-     * @see http://schema.org/OrderInTransit
+     * @see https://schema.org/OrderInTransit
      */
-     const OrderInTransit = 'http://schema.org/OrderInTransit';
+     const OrderInTransit = 'https://schema.org/OrderInTransit';
 
     /**
      * OrderStatus representing that payment is due on an order.
      *
-     * @see http://schema.org/OrderPaymentDue
+     * @see https://schema.org/OrderPaymentDue
      */
-     const OrderPaymentDue = 'http://schema.org/OrderPaymentDue';
+     const OrderPaymentDue = 'https://schema.org/OrderPaymentDue';
 
     /**
      * OrderStatus representing availability of an order for pickup.
      *
-     * @see http://schema.org/OrderPickupAvailable
+     * @see https://schema.org/OrderPickupAvailable
      */
-     const OrderPickupAvailable = 'http://schema.org/OrderPickupAvailable';
+     const OrderPickupAvailable = 'https://schema.org/OrderPickupAvailable';
 
     /**
      * OrderStatus representing that there is a problem with the order.
      *
-     * @see http://schema.org/OrderProblem
+     * @see https://schema.org/OrderProblem
      */
-     const OrderProblem = 'http://schema.org/OrderProblem';
+     const OrderProblem = 'https://schema.org/OrderProblem';
 
     /**
      * OrderStatus representing that an order is being processed.
      *
-     * @see http://schema.org/OrderProcessing
+     * @see https://schema.org/OrderProcessing
      */
-     const OrderProcessing = 'http://schema.org/OrderProcessing';
+     const OrderProcessing = 'https://schema.org/OrderProcessing';
 
     /**
      * OrderStatus representing that an order has been returned.
      *
-     * @see http://schema.org/OrderReturned
+     * @see https://schema.org/OrderReturned
      */
-     const OrderReturned = 'http://schema.org/OrderReturned';
+     const OrderReturned = 'https://schema.org/OrderReturned';
 
     /**
      * An additional type for the item, typically used for adding more specific
@@ -83,7 +85,7 @@ class OrderStatus extends BaseType implements OrderStatusContract, EnumerationCo
      *
      * @return static
      *
-     * @see http://schema.org/additionalType
+     * @see https://schema.org/additionalType
      */
     public function additionalType($additionalType)
     {
@@ -97,7 +99,7 @@ class OrderStatus extends BaseType implements OrderStatusContract, EnumerationCo
      *
      * @return static
      *
-     * @see http://schema.org/alternateName
+     * @see https://schema.org/alternateName
      */
     public function alternateName($alternateName)
     {
@@ -111,7 +113,7 @@ class OrderStatus extends BaseType implements OrderStatusContract, EnumerationCo
      *
      * @return static
      *
-     * @see http://schema.org/description
+     * @see https://schema.org/description
      */
     public function description($description)
     {
@@ -128,7 +130,7 @@ class OrderStatus extends BaseType implements OrderStatusContract, EnumerationCo
      *
      * @return static
      *
-     * @see http://schema.org/disambiguatingDescription
+     * @see https://schema.org/disambiguatingDescription
      */
     public function disambiguatingDescription($disambiguatingDescription)
     {
@@ -146,7 +148,7 @@ class OrderStatus extends BaseType implements OrderStatusContract, EnumerationCo
      *
      * @return static
      *
-     * @see http://schema.org/identifier
+     * @see https://schema.org/identifier
      */
     public function identifier($identifier)
     {
@@ -161,7 +163,7 @@ class OrderStatus extends BaseType implements OrderStatusContract, EnumerationCo
      *
      * @return static
      *
-     * @see http://schema.org/image
+     * @see https://schema.org/image
      */
     public function image($image)
     {
@@ -177,7 +179,7 @@ class OrderStatus extends BaseType implements OrderStatusContract, EnumerationCo
      *
      * @return static
      *
-     * @see http://schema.org/mainEntityOfPage
+     * @see https://schema.org/mainEntityOfPage
      */
     public function mainEntityOfPage($mainEntityOfPage)
     {
@@ -191,7 +193,7 @@ class OrderStatus extends BaseType implements OrderStatusContract, EnumerationCo
      *
      * @return static
      *
-     * @see http://schema.org/name
+     * @see https://schema.org/name
      */
     public function name($name)
     {
@@ -206,7 +208,7 @@ class OrderStatus extends BaseType implements OrderStatusContract, EnumerationCo
      *
      * @return static
      *
-     * @see http://schema.org/potentialAction
+     * @see https://schema.org/potentialAction
      */
     public function potentialAction($potentialAction)
     {
@@ -222,7 +224,7 @@ class OrderStatus extends BaseType implements OrderStatusContract, EnumerationCo
      *
      * @return static
      *
-     * @see http://schema.org/sameAs
+     * @see https://schema.org/sameAs
      */
     public function sameAs($sameAs)
     {
@@ -236,7 +238,8 @@ class OrderStatus extends BaseType implements OrderStatusContract, EnumerationCo
      *
      * @return static
      *
-     * @see http://schema.org/subjectOf
+     * @see https://schema.org/subjectOf
+     * @link https://github.com/schemaorg/schemaorg/issues/1670
      */
     public function subjectOf($subjectOf)
     {
@@ -250,7 +253,7 @@ class OrderStatus extends BaseType implements OrderStatusContract, EnumerationCo
      *
      * @return static
      *
-     * @see http://schema.org/url
+     * @see https://schema.org/url
      */
     public function url($url)
     {

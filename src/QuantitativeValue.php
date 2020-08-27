@@ -10,7 +10,8 @@ use \Spatie\SchemaOrg\Contracts\ThingContract;
 /**
  * A point value or interval for product characteristics and other purposes.
  *
- * @see http://schema.org/QuantitativeValue
+ * @see https://schema.org/QuantitativeValue
+ * @link http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#source_GoodRelationsClass
  *
  */
 class QuantitativeValue extends BaseType implements QuantitativeValueContract, IntangibleContract, StructuredValueContract, ThingContract
@@ -21,8 +22,8 @@ class QuantitativeValue extends BaseType implements QuantitativeValueContract, I
      * there is no matching property in schema.org.
      * 
      * Note: Publishers should be aware that applications designed to use
-     * specific schema.org properties (e.g. http://schema.org/width,
-     * http://schema.org/color, http://schema.org/gtin13, ...) will typically
+     * specific schema.org properties (e.g. https://schema.org/width,
+     * https://schema.org/color, https://schema.org/gtin13, ...) will typically
      * expect such data to be provided using those properties, rather than using
      * the generic property/value mechanism.
      *
@@ -30,7 +31,7 @@ class QuantitativeValue extends BaseType implements QuantitativeValueContract, I
      *
      * @return static
      *
-     * @see http://schema.org/additionalProperty
+     * @see https://schema.org/additionalProperty
      */
     public function additionalProperty($additionalProperty)
     {
@@ -49,7 +50,7 @@ class QuantitativeValue extends BaseType implements QuantitativeValueContract, I
      *
      * @return static
      *
-     * @see http://schema.org/additionalType
+     * @see https://schema.org/additionalType
      */
     public function additionalType($additionalType)
     {
@@ -63,7 +64,7 @@ class QuantitativeValue extends BaseType implements QuantitativeValueContract, I
      *
      * @return static
      *
-     * @see http://schema.org/alternateName
+     * @see https://schema.org/alternateName
      */
     public function alternateName($alternateName)
     {
@@ -77,7 +78,7 @@ class QuantitativeValue extends BaseType implements QuantitativeValueContract, I
      *
      * @return static
      *
-     * @see http://schema.org/description
+     * @see https://schema.org/description
      */
     public function description($description)
     {
@@ -94,7 +95,7 @@ class QuantitativeValue extends BaseType implements QuantitativeValueContract, I
      *
      * @return static
      *
-     * @see http://schema.org/disambiguatingDescription
+     * @see https://schema.org/disambiguatingDescription
      */
     public function disambiguatingDescription($disambiguatingDescription)
     {
@@ -112,7 +113,7 @@ class QuantitativeValue extends BaseType implements QuantitativeValueContract, I
      *
      * @return static
      *
-     * @see http://schema.org/identifier
+     * @see https://schema.org/identifier
      */
     public function identifier($identifier)
     {
@@ -127,7 +128,7 @@ class QuantitativeValue extends BaseType implements QuantitativeValueContract, I
      *
      * @return static
      *
-     * @see http://schema.org/image
+     * @see https://schema.org/image
      */
     public function image($image)
     {
@@ -143,7 +144,7 @@ class QuantitativeValue extends BaseType implements QuantitativeValueContract, I
      *
      * @return static
      *
-     * @see http://schema.org/mainEntityOfPage
+     * @see https://schema.org/mainEntityOfPage
      */
     public function mainEntityOfPage($mainEntityOfPage)
     {
@@ -157,7 +158,8 @@ class QuantitativeValue extends BaseType implements QuantitativeValueContract, I
      *
      * @return static
      *
-     * @see http://schema.org/maxValue
+     * @see https://schema.org/maxValue
+     * @link http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#source_GoodRelationsTerms
      */
     public function maxValue($maxValue)
     {
@@ -171,7 +173,8 @@ class QuantitativeValue extends BaseType implements QuantitativeValueContract, I
      *
      * @return static
      *
-     * @see http://schema.org/minValue
+     * @see https://schema.org/minValue
+     * @link http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#source_GoodRelationsTerms
      */
     public function minValue($minValue)
     {
@@ -185,7 +188,7 @@ class QuantitativeValue extends BaseType implements QuantitativeValueContract, I
      *
      * @return static
      *
-     * @see http://schema.org/name
+     * @see https://schema.org/name
      */
     public function name($name)
     {
@@ -200,7 +203,7 @@ class QuantitativeValue extends BaseType implements QuantitativeValueContract, I
      *
      * @return static
      *
-     * @see http://schema.org/potentialAction
+     * @see https://schema.org/potentialAction
      */
     public function potentialAction($potentialAction)
     {
@@ -216,7 +219,7 @@ class QuantitativeValue extends BaseType implements QuantitativeValueContract, I
      *
      * @return static
      *
-     * @see http://schema.org/sameAs
+     * @see https://schema.org/sameAs
      */
     public function sameAs($sameAs)
     {
@@ -230,7 +233,8 @@ class QuantitativeValue extends BaseType implements QuantitativeValueContract, I
      *
      * @return static
      *
-     * @see http://schema.org/subjectOf
+     * @see https://schema.org/subjectOf
+     * @link https://github.com/schemaorg/schemaorg/issues/1670
      */
     public function subjectOf($subjectOf)
     {
@@ -246,7 +250,8 @@ class QuantitativeValue extends BaseType implements QuantitativeValueContract, I
      *
      * @return static
      *
-     * @see http://schema.org/unitCode
+     * @see https://schema.org/unitCode
+     * @link http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#source_GoodRelationsTerms
      */
     public function unitCode($unitCode)
     {
@@ -262,7 +267,7 @@ class QuantitativeValue extends BaseType implements QuantitativeValueContract, I
      *
      * @return static
      *
-     * @see http://schema.org/unitText
+     * @see https://schema.org/unitText
      */
     public function unitText($unitText)
     {
@@ -276,7 +281,7 @@ class QuantitativeValue extends BaseType implements QuantitativeValueContract, I
      *
      * @return static
      *
-     * @see http://schema.org/url
+     * @see https://schema.org/url
      */
     public function url($url)
     {
@@ -299,7 +304,8 @@ class QuantitativeValue extends BaseType implements QuantitativeValueContract, I
      *
      * @return static
      *
-     * @see http://schema.org/value
+     * @see https://schema.org/value
+     * @link http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#source_GoodRelationsTerms
      */
     public function value($value)
     {
@@ -314,7 +320,8 @@ class QuantitativeValue extends BaseType implements QuantitativeValueContract, I
      *
      * @return static
      *
-     * @see http://schema.org/valueReference
+     * @see https://schema.org/valueReference
+     * @link http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#source_GoodRelationsTerms
      */
     public function valueReference($valueReference)
     {

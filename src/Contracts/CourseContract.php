@@ -6,6 +6,8 @@ interface CourseContract
 {
     public function about($about);
 
+    public function abstract($abstract);
+
     public function accessMode($accessMode);
 
     public function accessModeSufficient($accessModeSufficient);
@@ -22,6 +24,8 @@ interface CourseContract
 
     public function accountablePerson($accountablePerson);
 
+    public function acquireLicensePage($acquireLicensePage);
+
     public function additionalType($additionalType);
 
     public function aggregateRating($aggregateRating);
@@ -29,6 +33,8 @@ interface CourseContract
     public function alternateName($alternateName);
 
     public function alternativeHeadline($alternativeHeadline);
+
+    public function assesses($assesses);
 
     public function associatedMedia($associatedMedia);
 
@@ -50,9 +56,13 @@ interface CourseContract
 
     public function commentCount($commentCount);
 
+    public function conditionsOfAccess($conditionsOfAccess);
+
     public function contentLocation($contentLocation);
 
     public function contentRating($contentRating);
+
+    public function contentReferenceTime($contentReferenceTime);
 
     public function contributor($contributor);
 
@@ -60,9 +70,13 @@ interface CourseContract
 
     public function copyrightYear($copyrightYear);
 
+    public function correction($correction);
+
     public function courseCode($courseCode);
 
     public function coursePrerequisites($coursePrerequisites);
+
+    public function creativeWorkStatus($creativeWorkStatus);
 
     public function creator($creator);
 
@@ -78,9 +92,15 @@ interface CourseContract
 
     public function discussionUrl($discussionUrl);
 
+    public function editEIDR($editEIDR);
+
     public function editor($editor);
 
     public function educationalAlignment($educationalAlignment);
+
+    public function educationalCredentialAwarded($educationalCredentialAwarded);
+
+    public function educationalLevel($educationalLevel);
 
     public function educationalUse($educationalUse);
 
@@ -138,13 +158,23 @@ interface CourseContract
 
     public function mainEntityOfPage($mainEntityOfPage);
 
+    public function maintainer($maintainer);
+
     public function material($material);
+
+    public function materialExtent($materialExtent);
 
     public function mentions($mentions);
 
     public function name($name);
 
+    public function numberOfCredits($numberOfCredits);
+
+    public function occupationalCredentialAwarded($occupationalCredentialAwarded);
+
     public function offers($offers);
+
+    public function pattern($pattern);
 
     public function position($position);
 
@@ -157,6 +187,8 @@ interface CourseContract
     public function publication($publication);
 
     public function publisher($publisher);
+
+    public function publisherImprint($publisherImprint);
 
     public function publishingPrinciples($publishingPrinciples);
 
@@ -172,6 +204,14 @@ interface CourseContract
 
     public function schemaVersion($schemaVersion);
 
+    public function sdDatePublished($sdDatePublished);
+
+    public function sdLicense($sdLicense);
+
+    public function sdPublisher($sdPublisher);
+
+    public function size($size);
+
     public function sourceOrganization($sourceOrganization);
 
     public function spatial($spatial);
@@ -181,6 +221,8 @@ interface CourseContract
     public function sponsor($sponsor);
 
     public function subjectOf($subjectOf);
+
+    public function teaches($teaches);
 
     public function temporal($temporal);
 
@@ -192,16 +234,22 @@ interface CourseContract
 
     public function timeRequired($timeRequired);
 
+    public function translationOfWork($translationOfWork);
+
     public function translator($translator);
 
     public function typicalAgeRange($typicalAgeRange);
 
     public function url($url);
 
+    public function usageInfo($usageInfo);
+
     public function version($version);
 
     public function video($video);
 
     public function workExample($workExample);
+
+    public function workTranslation($workTranslation);
 
 }

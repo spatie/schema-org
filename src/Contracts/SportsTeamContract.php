@@ -4,6 +4,8 @@ namespace Spatie\SchemaOrg\Contracts;
 
 interface SportsTeamContract
 {
+    public function actionableFeedbackPolicy($actionableFeedbackPolicy);
+
     public function additionalType($additionalType);
 
     public function address($address);
@@ -30,6 +32,8 @@ interface SportsTeamContract
 
     public function contactPoints($contactPoints);
 
+    public function correctionsPolicy($correctionsPolicy);
+
     public function department($department);
 
     public function description($description);
@@ -38,6 +42,10 @@ interface SportsTeamContract
 
     public function dissolutionDate($dissolutionDate);
 
+    public function diversityPolicy($diversityPolicy);
+
+    public function diversityStaffingReport($diversityStaffingReport);
+
     public function duns($duns);
 
     public function email($email);
@@ -45,6 +53,8 @@ interface SportsTeamContract
     public function employee($employee);
 
     public function employees($employees);
+
+    public function ethicsPolicy($ethicsPolicy);
 
     public function event($event);
 
@@ -62,11 +72,19 @@ interface SportsTeamContract
 
     public function funder($funder);
 
+    public function gender($gender);
+
     public function globalLocationNumber($globalLocationNumber);
+
+    public function hasCredential($hasCredential);
+
+    public function hasMerchantReturnPolicy($hasMerchantReturnPolicy);
 
     public function hasOfferCatalog($hasOfferCatalog);
 
     public function hasPOS($hasPOS);
+
+    public function hasProductReturnPolicy($hasProductReturnPolicy);
 
     public function identifier($identifier);
 
@@ -76,9 +94,15 @@ interface SportsTeamContract
 
     public function isicV4($isicV4);
 
+    public function knowsAbout($knowsAbout);
+
+    public function knowsLanguage($knowsLanguage);
+
     public function legalName($legalName);
 
     public function leiCode($leiCode);
+
+    public function location($location);
 
     public function logo($logo);
 
@@ -96,7 +120,11 @@ interface SportsTeamContract
 
     public function name($name);
 
+    public function nonprofitStatus($nonprofitStatus);
+
     public function numberOfEmployees($numberOfEmployees);
+
+    public function ownershipFundingInfo($ownershipFundingInfo);
 
     public function owns($owns);
 
@@ -120,6 +148,8 @@ interface SportsTeamContract
 
     public function sponsor($sponsor);
 
+    public function sport($sport);
+
     public function subOrganization($subOrganization);
 
     public function subjectOf($subjectOf);
@@ -127,6 +157,8 @@ interface SportsTeamContract
     public function taxID($taxID);
 
     public function telephone($telephone);
+
+    public function unnamedSourcesPolicy($unnamedSourcesPolicy);
 
     public function url($url);
 

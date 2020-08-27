@@ -12,7 +12,7 @@ use \Spatie\SchemaOrg\Contracts\ThingContract;
  * A video game is an electronic game that involves human interaction with a
  * user interface to generate visual feedback on a video device.
  *
- * @see http://schema.org/VideoGame
+ * @see https://schema.org/VideoGame
  *
  */
 class VideoGame extends BaseType implements VideoGameContract, CreativeWorkContract, GameContract, SoftwareApplicationContract, ThingContract
@@ -24,11 +24,28 @@ class VideoGame extends BaseType implements VideoGameContract, CreativeWorkContr
      *
      * @return static
      *
-     * @see http://schema.org/about
+     * @see https://schema.org/about
+     * @link https://github.com/schemaorg/schemaorg/issues/1670
      */
     public function about($about)
     {
         return $this->setProperty('about', $about);
+    }
+
+    /**
+     * An abstract is a short description that summarizes a [[CreativeWork]].
+     *
+     * @param string|string[] $abstract
+     *
+     * @return static
+     *
+     * @see https://schema.org/abstract
+     * @see http://pending.schema.org
+     * @link https://github.com/schemaorg/schemaorg/issues/276
+     */
+    public function abstract($abstract)
+    {
+        return $this->setProperty('abstract', $abstract);
     }
 
     /**
@@ -41,7 +58,8 @@ class VideoGame extends BaseType implements VideoGameContract, CreativeWorkContr
      *
      * @return static
      *
-     * @see http://schema.org/accessMode
+     * @see https://schema.org/accessMode
+     * @link https://github.com/schemaorg/schemaorg/issues/1100
      */
     public function accessMode($accessMode)
     {
@@ -57,7 +75,8 @@ class VideoGame extends BaseType implements VideoGameContract, CreativeWorkContr
      *
      * @return static
      *
-     * @see http://schema.org/accessModeSufficient
+     * @see https://schema.org/accessModeSufficient
+     * @link https://github.com/schemaorg/schemaorg/issues/1100
      */
     public function accessModeSufficient($accessModeSufficient)
     {
@@ -73,7 +92,7 @@ class VideoGame extends BaseType implements VideoGameContract, CreativeWorkContr
      *
      * @return static
      *
-     * @see http://schema.org/accessibilityAPI
+     * @see https://schema.org/accessibilityAPI
      */
     public function accessibilityAPI($accessibilityAPI)
     {
@@ -89,7 +108,7 @@ class VideoGame extends BaseType implements VideoGameContract, CreativeWorkContr
      *
      * @return static
      *
-     * @see http://schema.org/accessibilityControl
+     * @see https://schema.org/accessibilityControl
      */
     public function accessibilityControl($accessibilityControl)
     {
@@ -105,7 +124,7 @@ class VideoGame extends BaseType implements VideoGameContract, CreativeWorkContr
      *
      * @return static
      *
-     * @see http://schema.org/accessibilityFeature
+     * @see https://schema.org/accessibilityFeature
      */
     public function accessibilityFeature($accessibilityFeature)
     {
@@ -122,7 +141,7 @@ class VideoGame extends BaseType implements VideoGameContract, CreativeWorkContr
      *
      * @return static
      *
-     * @see http://schema.org/accessibilityHazard
+     * @see https://schema.org/accessibilityHazard
      */
     public function accessibilityHazard($accessibilityHazard)
     {
@@ -140,7 +159,8 @@ class VideoGame extends BaseType implements VideoGameContract, CreativeWorkContr
      *
      * @return static
      *
-     * @see http://schema.org/accessibilitySummary
+     * @see https://schema.org/accessibilitySummary
+     * @link https://github.com/schemaorg/schemaorg/issues/1100
      */
     public function accessibilitySummary($accessibilitySummary)
     {
@@ -154,11 +174,28 @@ class VideoGame extends BaseType implements VideoGameContract, CreativeWorkContr
      *
      * @return static
      *
-     * @see http://schema.org/accountablePerson
+     * @see https://schema.org/accountablePerson
      */
     public function accountablePerson($accountablePerson)
     {
         return $this->setProperty('accountablePerson', $accountablePerson);
+    }
+
+    /**
+     * Indicates a page documenting how licenses can be purchased or otherwise
+     * acquired, for the current item.
+     *
+     * @param \Spatie\SchemaOrg\Contracts\CreativeWorkContract|\Spatie\SchemaOrg\Contracts\CreativeWorkContract[]|string|string[] $acquireLicensePage
+     *
+     * @return static
+     *
+     * @see https://schema.org/acquireLicensePage
+     * @see http://pending.schema.org
+     * @link https://github.com/schemaorg/schemaorg/issues/2454
+     */
+    public function acquireLicensePage($acquireLicensePage)
+    {
+        return $this->setProperty('acquireLicensePage', $acquireLicensePage);
     }
 
     /**
@@ -170,7 +207,7 @@ class VideoGame extends BaseType implements VideoGameContract, CreativeWorkContr
      *
      * @return static
      *
-     * @see http://schema.org/actor
+     * @see https://schema.org/actor
      */
     public function actor($actor)
     {
@@ -185,7 +222,7 @@ class VideoGame extends BaseType implements VideoGameContract, CreativeWorkContr
      *
      * @return static
      *
-     * @see http://schema.org/actors
+     * @see https://schema.org/actors
      */
     public function actors($actors)
     {
@@ -204,7 +241,7 @@ class VideoGame extends BaseType implements VideoGameContract, CreativeWorkContr
      *
      * @return static
      *
-     * @see http://schema.org/additionalType
+     * @see https://schema.org/additionalType
      */
     public function additionalType($additionalType)
     {
@@ -219,7 +256,7 @@ class VideoGame extends BaseType implements VideoGameContract, CreativeWorkContr
      *
      * @return static
      *
-     * @see http://schema.org/aggregateRating
+     * @see https://schema.org/aggregateRating
      */
     public function aggregateRating($aggregateRating)
     {
@@ -233,7 +270,7 @@ class VideoGame extends BaseType implements VideoGameContract, CreativeWorkContr
      *
      * @return static
      *
-     * @see http://schema.org/alternateName
+     * @see https://schema.org/alternateName
      */
     public function alternateName($alternateName)
     {
@@ -247,7 +284,7 @@ class VideoGame extends BaseType implements VideoGameContract, CreativeWorkContr
      *
      * @return static
      *
-     * @see http://schema.org/alternativeHeadline
+     * @see https://schema.org/alternativeHeadline
      */
     public function alternativeHeadline($alternativeHeadline)
     {
@@ -261,7 +298,7 @@ class VideoGame extends BaseType implements VideoGameContract, CreativeWorkContr
      *
      * @return static
      *
-     * @see http://schema.org/applicationCategory
+     * @see https://schema.org/applicationCategory
      */
     public function applicationCategory($applicationCategory)
     {
@@ -275,7 +312,7 @@ class VideoGame extends BaseType implements VideoGameContract, CreativeWorkContr
      *
      * @return static
      *
-     * @see http://schema.org/applicationSubCategory
+     * @see https://schema.org/applicationSubCategory
      */
     public function applicationSubCategory($applicationSubCategory)
     {
@@ -290,11 +327,28 @@ class VideoGame extends BaseType implements VideoGameContract, CreativeWorkContr
      *
      * @return static
      *
-     * @see http://schema.org/applicationSuite
+     * @see https://schema.org/applicationSuite
      */
     public function applicationSuite($applicationSuite)
     {
         return $this->setProperty('applicationSuite', $applicationSuite);
+    }
+
+    /**
+     * The item being described is intended to assess the competency or learning
+     * outcome defined by the referenced term.
+     *
+     * @param \Spatie\SchemaOrg\Contracts\DefinedTermContract|\Spatie\SchemaOrg\Contracts\DefinedTermContract[]|string|string[] $assesses
+     *
+     * @return static
+     *
+     * @see https://schema.org/assesses
+     * @see http://pending.schema.org
+     * @link https://github.com/schemaorg/schemaorg/issues/2427
+     */
+    public function assesses($assesses)
+    {
+        return $this->setProperty('assesses', $assesses);
     }
 
     /**
@@ -305,7 +359,7 @@ class VideoGame extends BaseType implements VideoGameContract, CreativeWorkContr
      *
      * @return static
      *
-     * @see http://schema.org/associatedMedia
+     * @see https://schema.org/associatedMedia
      */
     public function associatedMedia($associatedMedia)
     {
@@ -319,7 +373,7 @@ class VideoGame extends BaseType implements VideoGameContract, CreativeWorkContr
      *
      * @return static
      *
-     * @see http://schema.org/audience
+     * @see https://schema.org/audience
      */
     public function audience($audience)
     {
@@ -333,7 +387,8 @@ class VideoGame extends BaseType implements VideoGameContract, CreativeWorkContr
      *
      * @return static
      *
-     * @see http://schema.org/audio
+     * @see https://schema.org/audio
+     * @link https://github.com/schemaorg/schemaorg/issues/2420
      */
     public function audio($audio)
     {
@@ -349,7 +404,7 @@ class VideoGame extends BaseType implements VideoGameContract, CreativeWorkContr
      *
      * @return static
      *
-     * @see http://schema.org/author
+     * @see https://schema.org/author
      */
     public function author($author)
     {
@@ -364,7 +419,7 @@ class VideoGame extends BaseType implements VideoGameContract, CreativeWorkContr
      *
      * @return static
      *
-     * @see http://schema.org/availableOnDevice
+     * @see https://schema.org/availableOnDevice
      */
     public function availableOnDevice($availableOnDevice)
     {
@@ -378,7 +433,7 @@ class VideoGame extends BaseType implements VideoGameContract, CreativeWorkContr
      *
      * @return static
      *
-     * @see http://schema.org/award
+     * @see https://schema.org/award
      */
     public function award($award)
     {
@@ -392,7 +447,7 @@ class VideoGame extends BaseType implements VideoGameContract, CreativeWorkContr
      *
      * @return static
      *
-     * @see http://schema.org/awards
+     * @see https://schema.org/awards
      */
     public function awards($awards)
     {
@@ -406,7 +461,7 @@ class VideoGame extends BaseType implements VideoGameContract, CreativeWorkContr
      *
      * @return static
      *
-     * @see http://schema.org/character
+     * @see https://schema.org/character
      */
     public function character($character)
     {
@@ -421,7 +476,7 @@ class VideoGame extends BaseType implements VideoGameContract, CreativeWorkContr
      *
      * @return static
      *
-     * @see http://schema.org/characterAttribute
+     * @see https://schema.org/characterAttribute
      */
     public function characterAttribute($characterAttribute)
     {
@@ -435,7 +490,7 @@ class VideoGame extends BaseType implements VideoGameContract, CreativeWorkContr
      *
      * @return static
      *
-     * @see http://schema.org/cheatCode
+     * @see https://schema.org/cheatCode
      */
     public function cheatCode($cheatCode)
     {
@@ -450,7 +505,7 @@ class VideoGame extends BaseType implements VideoGameContract, CreativeWorkContr
      *
      * @return static
      *
-     * @see http://schema.org/citation
+     * @see https://schema.org/citation
      */
     public function citation($citation)
     {
@@ -464,7 +519,7 @@ class VideoGame extends BaseType implements VideoGameContract, CreativeWorkContr
      *
      * @return static
      *
-     * @see http://schema.org/comment
+     * @see https://schema.org/comment
      */
     public function comment($comment)
     {
@@ -480,11 +535,34 @@ class VideoGame extends BaseType implements VideoGameContract, CreativeWorkContr
      *
      * @return static
      *
-     * @see http://schema.org/commentCount
+     * @see https://schema.org/commentCount
      */
     public function commentCount($commentCount)
     {
         return $this->setProperty('commentCount', $commentCount);
+    }
+
+    /**
+     * Conditions that affect the availability of, or method(s) of access to, an
+     * item. Typically used for real world items such as an [[ArchiveComponent]]
+     * held by an [[ArchiveOrganization]]. This property is not suitable for use
+     * as a general Web access control mechanism. It is expressed only in
+     * natural language.
+     * 
+     * For example "Available by appointment from the Reading Room" or
+     * "Accessible only from logged-in accounts ".
+     *
+     * @param string|string[] $conditionsOfAccess
+     *
+     * @return static
+     *
+     * @see https://schema.org/conditionsOfAccess
+     * @see http://pending.schema.org
+     * @link https://github.com/schemaorg/schemaorg/issues/2173
+     */
+    public function conditionsOfAccess($conditionsOfAccess)
+    {
+        return $this->setProperty('conditionsOfAccess', $conditionsOfAccess);
     }
 
     /**
@@ -495,7 +573,7 @@ class VideoGame extends BaseType implements VideoGameContract, CreativeWorkContr
      *
      * @return static
      *
-     * @see http://schema.org/contentLocation
+     * @see https://schema.org/contentLocation
      */
     public function contentLocation($contentLocation)
     {
@@ -509,11 +587,28 @@ class VideoGame extends BaseType implements VideoGameContract, CreativeWorkContr
      *
      * @return static
      *
-     * @see http://schema.org/contentRating
+     * @see https://schema.org/contentRating
      */
     public function contentRating($contentRating)
     {
         return $this->setProperty('contentRating', $contentRating);
+    }
+
+    /**
+     * The specific time described by a creative work, for works (e.g. articles,
+     * video objects etc.) that emphasise a particular moment within an Event.
+     *
+     * @param \DateTimeInterface|\DateTimeInterface[] $contentReferenceTime
+     *
+     * @return static
+     *
+     * @see https://schema.org/contentReferenceTime
+     * @see http://pending.schema.org
+     * @link https://github.com/schemaorg/schemaorg/issues/1050
+     */
+    public function contentReferenceTime($contentReferenceTime)
+    {
+        return $this->setProperty('contentReferenceTime', $contentReferenceTime);
     }
 
     /**
@@ -523,7 +618,7 @@ class VideoGame extends BaseType implements VideoGameContract, CreativeWorkContr
      *
      * @return static
      *
-     * @see http://schema.org/contributor
+     * @see https://schema.org/contributor
      */
     public function contributor($contributor)
     {
@@ -537,7 +632,7 @@ class VideoGame extends BaseType implements VideoGameContract, CreativeWorkContr
      *
      * @return static
      *
-     * @see http://schema.org/copyrightHolder
+     * @see https://schema.org/copyrightHolder
      */
     public function copyrightHolder($copyrightHolder)
     {
@@ -552,11 +647,27 @@ class VideoGame extends BaseType implements VideoGameContract, CreativeWorkContr
      *
      * @return static
      *
-     * @see http://schema.org/copyrightYear
+     * @see https://schema.org/copyrightYear
      */
     public function copyrightYear($copyrightYear)
     {
         return $this->setProperty('copyrightYear', $copyrightYear);
+    }
+
+    /**
+     * Indicates a correction to a [[CreativeWork]], either via a
+     * [[CorrectionComment]], textually or in another document.
+     *
+     * @param \Spatie\SchemaOrg\Contracts\CorrectionCommentContract|\Spatie\SchemaOrg\Contracts\CorrectionCommentContract[]|string|string[] $correction
+     *
+     * @return static
+     *
+     * @see https://schema.org/correction
+     * @see http://pending.schema.org
+     */
+    public function correction($correction)
+    {
+        return $this->setProperty('correction', $correction);
     }
 
     /**
@@ -567,7 +678,7 @@ class VideoGame extends BaseType implements VideoGameContract, CreativeWorkContr
      *
      * @return static
      *
-     * @see http://schema.org/countriesNotSupported
+     * @see https://schema.org/countriesNotSupported
      */
     public function countriesNotSupported($countriesNotSupported)
     {
@@ -582,11 +693,30 @@ class VideoGame extends BaseType implements VideoGameContract, CreativeWorkContr
      *
      * @return static
      *
-     * @see http://schema.org/countriesSupported
+     * @see https://schema.org/countriesSupported
      */
     public function countriesSupported($countriesSupported)
     {
         return $this->setProperty('countriesSupported', $countriesSupported);
+    }
+
+    /**
+     * The status of a creative work in terms of its stage in a lifecycle.
+     * Example terms include Incomplete, Draft, Published, Obsolete. Some
+     * organizations define a set of terms for the stages of their publication
+     * lifecycle.
+     *
+     * @param \Spatie\SchemaOrg\Contracts\DefinedTermContract|\Spatie\SchemaOrg\Contracts\DefinedTermContract[]|string|string[] $creativeWorkStatus
+     *
+     * @return static
+     *
+     * @see https://schema.org/creativeWorkStatus
+     * @see http://pending.schema.org
+     * @link https://github.com/schemaorg/schemaorg/issues/987
+     */
+    public function creativeWorkStatus($creativeWorkStatus)
+    {
+        return $this->setProperty('creativeWorkStatus', $creativeWorkStatus);
     }
 
     /**
@@ -597,7 +727,7 @@ class VideoGame extends BaseType implements VideoGameContract, CreativeWorkContr
      *
      * @return static
      *
-     * @see http://schema.org/creator
+     * @see https://schema.org/creator
      */
     public function creator($creator)
     {
@@ -612,7 +742,7 @@ class VideoGame extends BaseType implements VideoGameContract, CreativeWorkContr
      *
      * @return static
      *
-     * @see http://schema.org/dateCreated
+     * @see https://schema.org/dateCreated
      */
     public function dateCreated($dateCreated)
     {
@@ -627,7 +757,7 @@ class VideoGame extends BaseType implements VideoGameContract, CreativeWorkContr
      *
      * @return static
      *
-     * @see http://schema.org/dateModified
+     * @see https://schema.org/dateModified
      */
     public function dateModified($dateModified)
     {
@@ -641,7 +771,7 @@ class VideoGame extends BaseType implements VideoGameContract, CreativeWorkContr
      *
      * @return static
      *
-     * @see http://schema.org/datePublished
+     * @see https://schema.org/datePublished
      */
     public function datePublished($datePublished)
     {
@@ -655,7 +785,7 @@ class VideoGame extends BaseType implements VideoGameContract, CreativeWorkContr
      *
      * @return static
      *
-     * @see http://schema.org/description
+     * @see https://schema.org/description
      */
     public function description($description)
     {
@@ -670,7 +800,7 @@ class VideoGame extends BaseType implements VideoGameContract, CreativeWorkContr
      *
      * @return static
      *
-     * @see http://schema.org/device
+     * @see https://schema.org/device
      */
     public function device($device)
     {
@@ -686,7 +816,7 @@ class VideoGame extends BaseType implements VideoGameContract, CreativeWorkContr
      *
      * @return static
      *
-     * @see http://schema.org/director
+     * @see https://schema.org/director
      */
     public function director($director)
     {
@@ -701,7 +831,7 @@ class VideoGame extends BaseType implements VideoGameContract, CreativeWorkContr
      *
      * @return static
      *
-     * @see http://schema.org/directors
+     * @see https://schema.org/directors
      */
     public function directors($directors)
     {
@@ -718,7 +848,7 @@ class VideoGame extends BaseType implements VideoGameContract, CreativeWorkContr
      *
      * @return static
      *
-     * @see http://schema.org/disambiguatingDescription
+     * @see https://schema.org/disambiguatingDescription
      */
     public function disambiguatingDescription($disambiguatingDescription)
     {
@@ -732,7 +862,7 @@ class VideoGame extends BaseType implements VideoGameContract, CreativeWorkContr
      *
      * @return static
      *
-     * @see http://schema.org/discussionUrl
+     * @see https://schema.org/discussionUrl
      */
     public function discussionUrl($discussionUrl)
     {
@@ -746,11 +876,39 @@ class VideoGame extends BaseType implements VideoGameContract, CreativeWorkContr
      *
      * @return static
      *
-     * @see http://schema.org/downloadUrl
+     * @see https://schema.org/downloadUrl
      */
     public function downloadUrl($downloadUrl)
     {
         return $this->setProperty('downloadUrl', $downloadUrl);
+    }
+
+    /**
+     * An [EIDR](https://eidr.org/) (Entertainment Identifier Registry)
+     * [[identifier]] representing a specific edit / edition for a work of film
+     * or television.
+     * 
+     * For example, the motion picture known as "Ghostbusters" whose
+     * [[titleEIDR]] is "10.5240/7EC7-228A-510A-053E-CBB8-J", has several edits
+     * e.g. "10.5240/1F2A-E1C5-680A-14C6-E76B-I" and
+     * "10.5240/8A35-3BEE-6497-5D12-9E4F-3".
+     * 
+     * Since schema.org types like [[Movie]] and [[TVEpisode]] can be used for
+     * both works and their multiple expressions, it is possible to use
+     * [[titleEIDR]] alone (for a general description), or alongside
+     * [[editEIDR]] for a more edit-specific description.
+     *
+     * @param string|string[] $editEIDR
+     *
+     * @return static
+     *
+     * @see https://schema.org/editEIDR
+     * @see http://pending.schema.org
+     * @link https://github.com/schemaorg/schemaorg/issues/2469
+     */
+    public function editEIDR($editEIDR)
+    {
+        return $this->setProperty('editEIDR', $editEIDR);
     }
 
     /**
@@ -760,7 +918,7 @@ class VideoGame extends BaseType implements VideoGameContract, CreativeWorkContr
      *
      * @return static
      *
-     * @see http://schema.org/editor
+     * @see https://schema.org/editor
      */
     public function editor($editor)
     {
@@ -778,11 +936,29 @@ class VideoGame extends BaseType implements VideoGameContract, CreativeWorkContr
      *
      * @return static
      *
-     * @see http://schema.org/educationalAlignment
+     * @see https://schema.org/educationalAlignment
      */
     public function educationalAlignment($educationalAlignment)
     {
         return $this->setProperty('educationalAlignment', $educationalAlignment);
+    }
+
+    /**
+     * The level in terms of progression through an educational or training
+     * context. Examples of educational levels include 'beginner',
+     * 'intermediate' or 'advanced', and formal sets of level indicators.
+     *
+     * @param \Spatie\SchemaOrg\Contracts\DefinedTermContract|\Spatie\SchemaOrg\Contracts\DefinedTermContract[]|string|string[] $educationalLevel
+     *
+     * @return static
+     *
+     * @see https://schema.org/educationalLevel
+     * @see http://pending.schema.org
+     * @link https://github.com/schemaorg/schemaorg/issues/1779
+     */
+    public function educationalLevel($educationalLevel)
+    {
+        return $this->setProperty('educationalLevel', $educationalLevel);
     }
 
     /**
@@ -793,7 +969,7 @@ class VideoGame extends BaseType implements VideoGameContract, CreativeWorkContr
      *
      * @return static
      *
-     * @see http://schema.org/educationalUse
+     * @see https://schema.org/educationalUse
      */
     public function educationalUse($educationalUse)
     {
@@ -808,7 +984,7 @@ class VideoGame extends BaseType implements VideoGameContract, CreativeWorkContr
      *
      * @return static
      *
-     * @see http://schema.org/encoding
+     * @see https://schema.org/encoding
      */
     public function encoding($encoding)
     {
@@ -835,7 +1011,7 @@ class VideoGame extends BaseType implements VideoGameContract, CreativeWorkContr
      *
      * @return static
      *
-     * @see http://schema.org/encodingFormat
+     * @see https://schema.org/encodingFormat
      */
     public function encodingFormat($encodingFormat)
     {
@@ -849,7 +1025,7 @@ class VideoGame extends BaseType implements VideoGameContract, CreativeWorkContr
      *
      * @return static
      *
-     * @see http://schema.org/encodings
+     * @see https://schema.org/encodings
      */
     public function encodings($encodings)
     {
@@ -864,7 +1040,8 @@ class VideoGame extends BaseType implements VideoGameContract, CreativeWorkContr
      *
      * @return static
      *
-     * @see http://schema.org/exampleOfWork
+     * @see https://schema.org/exampleOfWork
+     * @link http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#source_bibex
      */
     public function exampleOfWork($exampleOfWork)
     {
@@ -882,7 +1059,7 @@ class VideoGame extends BaseType implements VideoGameContract, CreativeWorkContr
      *
      * @return static
      *
-     * @see http://schema.org/expires
+     * @see https://schema.org/expires
      */
     public function expires($expires)
     {
@@ -897,7 +1074,7 @@ class VideoGame extends BaseType implements VideoGameContract, CreativeWorkContr
      *
      * @return static
      *
-     * @see http://schema.org/featureList
+     * @see https://schema.org/featureList
      */
     public function featureList($featureList)
     {
@@ -918,7 +1095,7 @@ class VideoGame extends BaseType implements VideoGameContract, CreativeWorkContr
      *
      * @return static
      *
-     * @see http://schema.org/fileFormat
+     * @see https://schema.org/fileFormat
      */
     public function fileFormat($fileFormat)
     {
@@ -933,7 +1110,7 @@ class VideoGame extends BaseType implements VideoGameContract, CreativeWorkContr
      *
      * @return static
      *
-     * @see http://schema.org/fileSize
+     * @see https://schema.org/fileSize
      */
     public function fileSize($fileSize)
     {
@@ -948,7 +1125,7 @@ class VideoGame extends BaseType implements VideoGameContract, CreativeWorkContr
      *
      * @return static
      *
-     * @see http://schema.org/funder
+     * @see https://schema.org/funder
      */
     public function funder($funder)
     {
@@ -963,7 +1140,7 @@ class VideoGame extends BaseType implements VideoGameContract, CreativeWorkContr
      *
      * @return static
      *
-     * @see http://schema.org/gameItem
+     * @see https://schema.org/gameItem
      */
     public function gameItem($gameItem)
     {
@@ -977,7 +1154,7 @@ class VideoGame extends BaseType implements VideoGameContract, CreativeWorkContr
      *
      * @return static
      *
-     * @see http://schema.org/gameLocation
+     * @see https://schema.org/gameLocation
      */
     public function gameLocation($gameLocation)
     {
@@ -992,7 +1169,7 @@ class VideoGame extends BaseType implements VideoGameContract, CreativeWorkContr
      *
      * @return static
      *
-     * @see http://schema.org/gamePlatform
+     * @see https://schema.org/gamePlatform
      */
     public function gamePlatform($gamePlatform)
     {
@@ -1006,7 +1183,7 @@ class VideoGame extends BaseType implements VideoGameContract, CreativeWorkContr
      *
      * @return static
      *
-     * @see http://schema.org/gameServer
+     * @see https://schema.org/gameServer
      */
     public function gameServer($gameServer)
     {
@@ -1020,7 +1197,7 @@ class VideoGame extends BaseType implements VideoGameContract, CreativeWorkContr
      *
      * @return static
      *
-     * @see http://schema.org/gameTip
+     * @see https://schema.org/gameTip
      */
     public function gameTip($gameTip)
     {
@@ -1034,7 +1211,7 @@ class VideoGame extends BaseType implements VideoGameContract, CreativeWorkContr
      *
      * @return static
      *
-     * @see http://schema.org/genre
+     * @see https://schema.org/genre
      */
     public function genre($genre)
     {
@@ -1049,7 +1226,8 @@ class VideoGame extends BaseType implements VideoGameContract, CreativeWorkContr
      *
      * @return static
      *
-     * @see http://schema.org/hasPart
+     * @see https://schema.org/hasPart
+     * @link http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#source_bibex
      */
     public function hasPart($hasPart)
     {
@@ -1063,7 +1241,7 @@ class VideoGame extends BaseType implements VideoGameContract, CreativeWorkContr
      *
      * @return static
      *
-     * @see http://schema.org/headline
+     * @see https://schema.org/headline
      */
     public function headline($headline)
     {
@@ -1081,7 +1259,7 @@ class VideoGame extends BaseType implements VideoGameContract, CreativeWorkContr
      *
      * @return static
      *
-     * @see http://schema.org/identifier
+     * @see https://schema.org/identifier
      */
     public function identifier($identifier)
     {
@@ -1096,7 +1274,7 @@ class VideoGame extends BaseType implements VideoGameContract, CreativeWorkContr
      *
      * @return static
      *
-     * @see http://schema.org/image
+     * @see https://schema.org/image
      */
     public function image($image)
     {
@@ -1113,7 +1291,8 @@ class VideoGame extends BaseType implements VideoGameContract, CreativeWorkContr
      *
      * @return static
      *
-     * @see http://schema.org/inLanguage
+     * @see https://schema.org/inLanguage
+     * @link https://github.com/schemaorg/schemaorg/issues/2382
      */
     public function inLanguage($inLanguage)
     {
@@ -1128,7 +1307,7 @@ class VideoGame extends BaseType implements VideoGameContract, CreativeWorkContr
      *
      * @return static
      *
-     * @see http://schema.org/installUrl
+     * @see https://schema.org/installUrl
      */
     public function installUrl($installUrl)
     {
@@ -1144,7 +1323,8 @@ class VideoGame extends BaseType implements VideoGameContract, CreativeWorkContr
      *
      * @return static
      *
-     * @see http://schema.org/interactionStatistic
+     * @see https://schema.org/interactionStatistic
+     * @link https://github.com/schemaorg/schemaorg/issues/2421
      */
     public function interactionStatistic($interactionStatistic)
     {
@@ -1159,7 +1339,7 @@ class VideoGame extends BaseType implements VideoGameContract, CreativeWorkContr
      *
      * @return static
      *
-     * @see http://schema.org/interactivityType
+     * @see https://schema.org/interactivityType
      */
     public function interactivityType($interactivityType)
     {
@@ -1173,7 +1353,7 @@ class VideoGame extends BaseType implements VideoGameContract, CreativeWorkContr
      *
      * @return static
      *
-     * @see http://schema.org/isAccessibleForFree
+     * @see https://schema.org/isAccessibleForFree
      */
     public function isAccessibleForFree($isAccessibleForFree)
     {
@@ -1188,7 +1368,7 @@ class VideoGame extends BaseType implements VideoGameContract, CreativeWorkContr
      *
      * @return static
      *
-     * @see http://schema.org/isBasedOn
+     * @see https://schema.org/isBasedOn
      */
     public function isBasedOn($isBasedOn)
     {
@@ -1204,7 +1384,7 @@ class VideoGame extends BaseType implements VideoGameContract, CreativeWorkContr
      *
      * @return static
      *
-     * @see http://schema.org/isBasedOnUrl
+     * @see https://schema.org/isBasedOnUrl
      */
     public function isBasedOnUrl($isBasedOnUrl)
     {
@@ -1218,7 +1398,7 @@ class VideoGame extends BaseType implements VideoGameContract, CreativeWorkContr
      *
      * @return static
      *
-     * @see http://schema.org/isFamilyFriendly
+     * @see https://schema.org/isFamilyFriendly
      */
     public function isFamilyFriendly($isFamilyFriendly)
     {
@@ -1233,7 +1413,7 @@ class VideoGame extends BaseType implements VideoGameContract, CreativeWorkContr
      *
      * @return static
      *
-     * @see http://schema.org/isPartOf
+     * @see https://schema.org/isPartOf
      */
     public function isPartOf($isPartOf)
     {
@@ -1248,7 +1428,7 @@ class VideoGame extends BaseType implements VideoGameContract, CreativeWorkContr
      *
      * @return static
      *
-     * @see http://schema.org/keywords
+     * @see https://schema.org/keywords
      */
     public function keywords($keywords)
     {
@@ -1263,7 +1443,7 @@ class VideoGame extends BaseType implements VideoGameContract, CreativeWorkContr
      *
      * @return static
      *
-     * @see http://schema.org/learningResourceType
+     * @see https://schema.org/learningResourceType
      */
     public function learningResourceType($learningResourceType)
     {
@@ -1278,7 +1458,7 @@ class VideoGame extends BaseType implements VideoGameContract, CreativeWorkContr
      *
      * @return static
      *
-     * @see http://schema.org/license
+     * @see https://schema.org/license
      */
     public function license($license)
     {
@@ -1293,7 +1473,7 @@ class VideoGame extends BaseType implements VideoGameContract, CreativeWorkContr
      *
      * @return static
      *
-     * @see http://schema.org/locationCreated
+     * @see https://schema.org/locationCreated
      */
     public function locationCreated($locationCreated)
     {
@@ -1308,7 +1488,7 @@ class VideoGame extends BaseType implements VideoGameContract, CreativeWorkContr
      *
      * @return static
      *
-     * @see http://schema.org/mainEntity
+     * @see https://schema.org/mainEntity
      */
     public function mainEntity($mainEntity)
     {
@@ -1324,11 +1504,39 @@ class VideoGame extends BaseType implements VideoGameContract, CreativeWorkContr
      *
      * @return static
      *
-     * @see http://schema.org/mainEntityOfPage
+     * @see https://schema.org/mainEntityOfPage
      */
     public function mainEntityOfPage($mainEntityOfPage)
     {
         return $this->setProperty('mainEntityOfPage', $mainEntityOfPage);
+    }
+
+    /**
+     * A maintainer of a [[Dataset]], software package
+     * ([[SoftwareApplication]]), or other [[Project]]. A maintainer is a
+     * [[Person]] or [[Organization]] that manages contributions to, and/or
+     * publication of, some (typically complex) artifact. It is common for
+     * distributions of software and data to be based on "upstream" sources.
+     * When [[maintainer]] is applied to a specific version of something e.g. a
+     * particular version or packaging of a [[Dataset]], it is always  possible
+     * that the upstream source has a different maintainer. The [[isBasedOn]]
+     * property can be used to indicate such relationships between datasets to
+     * make the different maintenance roles clear. Similarly in the case of
+     * software, a package may have dedicated maintainers working on integration
+     * into software distributions such as Ubuntu, as well as upstream
+     * maintainers of the underlying work.
+     *
+     * @param \Spatie\SchemaOrg\Contracts\OrganizationContract|\Spatie\SchemaOrg\Contracts\OrganizationContract[]|\Spatie\SchemaOrg\Contracts\PersonContract|\Spatie\SchemaOrg\Contracts\PersonContract[] $maintainer
+     *
+     * @return static
+     *
+     * @see https://schema.org/maintainer
+     * @see http://pending.schema.org
+     * @link https://github.com/schemaorg/schemaorg/issues/2311
+     */
+    public function maintainer($maintainer)
+    {
+        return $this->setProperty('maintainer', $maintainer);
     }
 
     /**
@@ -1339,11 +1547,28 @@ class VideoGame extends BaseType implements VideoGameContract, CreativeWorkContr
      *
      * @return static
      *
-     * @see http://schema.org/material
+     * @see https://schema.org/material
      */
     public function material($material)
     {
         return $this->setProperty('material', $material);
+    }
+
+    /**
+     * The quantity of the materials being described or an expression of the
+     * physical space they occupy.
+     *
+     * @param \Spatie\SchemaOrg\Contracts\QuantitativeValueContract|\Spatie\SchemaOrg\Contracts\QuantitativeValueContract[]|string|string[] $materialExtent
+     *
+     * @return static
+     *
+     * @see https://schema.org/materialExtent
+     * @see http://pending.schema.org
+     * @link https://github.com/schemaorg/schemaorg/issues/1759
+     */
+    public function materialExtent($materialExtent)
+    {
+        return $this->setProperty('materialExtent', $materialExtent);
     }
 
     /**
@@ -1353,7 +1578,7 @@ class VideoGame extends BaseType implements VideoGameContract, CreativeWorkContr
      *
      * @return static
      *
-     * @see http://schema.org/memoryRequirements
+     * @see https://schema.org/memoryRequirements
      */
     public function memoryRequirements($memoryRequirements)
     {
@@ -1368,7 +1593,7 @@ class VideoGame extends BaseType implements VideoGameContract, CreativeWorkContr
      *
      * @return static
      *
-     * @see http://schema.org/mentions
+     * @see https://schema.org/mentions
      */
     public function mentions($mentions)
     {
@@ -1382,7 +1607,7 @@ class VideoGame extends BaseType implements VideoGameContract, CreativeWorkContr
      *
      * @return static
      *
-     * @see http://schema.org/musicBy
+     * @see https://schema.org/musicBy
      */
     public function musicBy($musicBy)
     {
@@ -1396,7 +1621,7 @@ class VideoGame extends BaseType implements VideoGameContract, CreativeWorkContr
      *
      * @return static
      *
-     * @see http://schema.org/name
+     * @see https://schema.org/name
      */
     public function name($name)
     {
@@ -1410,7 +1635,7 @@ class VideoGame extends BaseType implements VideoGameContract, CreativeWorkContr
      *
      * @return static
      *
-     * @see http://schema.org/numberOfPlayers
+     * @see https://schema.org/numberOfPlayers
      */
     public function numberOfPlayers($numberOfPlayers)
     {
@@ -1431,7 +1656,8 @@ class VideoGame extends BaseType implements VideoGameContract, CreativeWorkContr
      *
      * @return static
      *
-     * @see http://schema.org/offers
+     * @see https://schema.org/offers
+     * @link https://github.com/schemaorg/schemaorg/issues/2289
      */
     public function offers($offers)
     {
@@ -1445,11 +1671,29 @@ class VideoGame extends BaseType implements VideoGameContract, CreativeWorkContr
      *
      * @return static
      *
-     * @see http://schema.org/operatingSystem
+     * @see https://schema.org/operatingSystem
      */
     public function operatingSystem($operatingSystem)
     {
         return $this->setProperty('operatingSystem', $operatingSystem);
+    }
+
+    /**
+     * A pattern that something has, for example 'polka dot', 'striped',
+     * 'Canadian flag'. Values are typically expressed as text, although links
+     * to controlled value schemes are also supported.
+     *
+     * @param \Spatie\SchemaOrg\Contracts\DefinedTermContract|\Spatie\SchemaOrg\Contracts\DefinedTermContract[]|string|string[] $pattern
+     *
+     * @return static
+     *
+     * @see https://schema.org/pattern
+     * @see http://pending.schema.org
+     * @link https://github.com/schemaorg/schemaorg/issues/1797
+     */
+    public function pattern($pattern)
+    {
+        return $this->setProperty('pattern', $pattern);
     }
 
     /**
@@ -1460,7 +1704,7 @@ class VideoGame extends BaseType implements VideoGameContract, CreativeWorkContr
      *
      * @return static
      *
-     * @see http://schema.org/permissions
+     * @see https://schema.org/permissions
      */
     public function permissions($permissions)
     {
@@ -1476,7 +1720,7 @@ class VideoGame extends BaseType implements VideoGameContract, CreativeWorkContr
      *
      * @return static
      *
-     * @see http://schema.org/playMode
+     * @see https://schema.org/playMode
      */
     public function playMode($playMode)
     {
@@ -1490,7 +1734,7 @@ class VideoGame extends BaseType implements VideoGameContract, CreativeWorkContr
      *
      * @return static
      *
-     * @see http://schema.org/position
+     * @see https://schema.org/position
      */
     public function position($position)
     {
@@ -1505,7 +1749,7 @@ class VideoGame extends BaseType implements VideoGameContract, CreativeWorkContr
      *
      * @return static
      *
-     * @see http://schema.org/potentialAction
+     * @see https://schema.org/potentialAction
      */
     public function potentialAction($potentialAction)
     {
@@ -1519,7 +1763,7 @@ class VideoGame extends BaseType implements VideoGameContract, CreativeWorkContr
      *
      * @return static
      *
-     * @see http://schema.org/processorRequirements
+     * @see https://schema.org/processorRequirements
      */
     public function processorRequirements($processorRequirements)
     {
@@ -1534,7 +1778,7 @@ class VideoGame extends BaseType implements VideoGameContract, CreativeWorkContr
      *
      * @return static
      *
-     * @see http://schema.org/producer
+     * @see https://schema.org/producer
      */
     public function producer($producer)
     {
@@ -1550,7 +1794,8 @@ class VideoGame extends BaseType implements VideoGameContract, CreativeWorkContr
      *
      * @return static
      *
-     * @see http://schema.org/provider
+     * @see https://schema.org/provider
+     * @link https://github.com/schemaorg/schemaorg/issues/2289
      */
     public function provider($provider)
     {
@@ -1564,7 +1809,7 @@ class VideoGame extends BaseType implements VideoGameContract, CreativeWorkContr
      *
      * @return static
      *
-     * @see http://schema.org/publication
+     * @see https://schema.org/publication
      */
     public function publication($publication)
     {
@@ -1578,11 +1823,26 @@ class VideoGame extends BaseType implements VideoGameContract, CreativeWorkContr
      *
      * @return static
      *
-     * @see http://schema.org/publisher
+     * @see https://schema.org/publisher
      */
     public function publisher($publisher)
     {
         return $this->setProperty('publisher', $publisher);
+    }
+
+    /**
+     * The publishing division which published the comic.
+     *
+     * @param \Spatie\SchemaOrg\Contracts\OrganizationContract|\Spatie\SchemaOrg\Contracts\OrganizationContract[] $publisherImprint
+     *
+     * @return static
+     *
+     * @see https://schema.org/publisherImprint
+     * @see http://bib.schema.org
+     */
+    public function publisherImprint($publisherImprint)
+    {
+        return $this->setProperty('publisherImprint', $publisherImprint);
     }
 
     /**
@@ -1602,7 +1862,7 @@ class VideoGame extends BaseType implements VideoGameContract, CreativeWorkContr
      *
      * @return static
      *
-     * @see http://schema.org/publishingPrinciples
+     * @see https://schema.org/publishingPrinciples
      */
     public function publishingPrinciples($publishingPrinciples)
     {
@@ -1617,7 +1877,7 @@ class VideoGame extends BaseType implements VideoGameContract, CreativeWorkContr
      *
      * @return static
      *
-     * @see http://schema.org/quest
+     * @see https://schema.org/quest
      */
     public function quest($quest)
     {
@@ -1632,7 +1892,7 @@ class VideoGame extends BaseType implements VideoGameContract, CreativeWorkContr
      *
      * @return static
      *
-     * @see http://schema.org/recordedAt
+     * @see https://schema.org/recordedAt
      */
     public function recordedAt($recordedAt)
     {
@@ -1646,7 +1906,7 @@ class VideoGame extends BaseType implements VideoGameContract, CreativeWorkContr
      *
      * @return static
      *
-     * @see http://schema.org/releaseNotes
+     * @see https://schema.org/releaseNotes
      */
     public function releaseNotes($releaseNotes)
     {
@@ -1661,7 +1921,7 @@ class VideoGame extends BaseType implements VideoGameContract, CreativeWorkContr
      *
      * @return static
      *
-     * @see http://schema.org/releasedEvent
+     * @see https://schema.org/releasedEvent
      */
     public function releasedEvent($releasedEvent)
     {
@@ -1678,7 +1938,7 @@ class VideoGame extends BaseType implements VideoGameContract, CreativeWorkContr
      *
      * @return static
      *
-     * @see http://schema.org/requirements
+     * @see https://schema.org/requirements
      */
     public function requirements($requirements)
     {
@@ -1692,7 +1952,7 @@ class VideoGame extends BaseType implements VideoGameContract, CreativeWorkContr
      *
      * @return static
      *
-     * @see http://schema.org/review
+     * @see https://schema.org/review
      */
     public function review($review)
     {
@@ -1706,7 +1966,7 @@ class VideoGame extends BaseType implements VideoGameContract, CreativeWorkContr
      *
      * @return static
      *
-     * @see http://schema.org/reviews
+     * @see https://schema.org/reviews
      */
     public function reviews($reviews)
     {
@@ -1722,7 +1982,7 @@ class VideoGame extends BaseType implements VideoGameContract, CreativeWorkContr
      *
      * @return static
      *
-     * @see http://schema.org/sameAs
+     * @see https://schema.org/sameAs
      */
     public function sameAs($sameAs)
     {
@@ -1732,14 +1992,14 @@ class VideoGame extends BaseType implements VideoGameContract, CreativeWorkContr
     /**
      * Indicates (by URL or string) a particular version of a schema used in
      * some CreativeWork. For example, a document could declare a schemaVersion
-     * using an URL such as http://schema.org/version/2.0/ if precise indication
-     * of schema version was required by some application.
+     * using an URL such as https://schema.org/version/2.0/ if precise
+     * indication of schema version was required by some application.
      *
      * @param string|string[] $schemaVersion
      *
      * @return static
      *
-     * @see http://schema.org/schemaVersion
+     * @see https://schema.org/schemaVersion
      */
     public function schemaVersion($schemaVersion)
     {
@@ -1753,11 +2013,88 @@ class VideoGame extends BaseType implements VideoGameContract, CreativeWorkContr
      *
      * @return static
      *
-     * @see http://schema.org/screenshot
+     * @see https://schema.org/screenshot
      */
     public function screenshot($screenshot)
     {
         return $this->setProperty('screenshot', $screenshot);
+    }
+
+    /**
+     * Indicates the date on which the current structured data was generated /
+     * published. Typically used alongside [[sdPublisher]]
+     *
+     * @param \DateTimeInterface|\DateTimeInterface[] $sdDatePublished
+     *
+     * @return static
+     *
+     * @see https://schema.org/sdDatePublished
+     * @see http://pending.schema.org
+     * @link https://github.com/schemaorg/schemaorg/issues/1886
+     */
+    public function sdDatePublished($sdDatePublished)
+    {
+        return $this->setProperty('sdDatePublished', $sdDatePublished);
+    }
+
+    /**
+     * A license document that applies to this structured data, typically
+     * indicated by URL.
+     *
+     * @param \Spatie\SchemaOrg\Contracts\CreativeWorkContract|\Spatie\SchemaOrg\Contracts\CreativeWorkContract[]|string|string[] $sdLicense
+     *
+     * @return static
+     *
+     * @see https://schema.org/sdLicense
+     * @see http://pending.schema.org
+     * @link https://github.com/schemaorg/schemaorg/issues/1886
+     */
+    public function sdLicense($sdLicense)
+    {
+        return $this->setProperty('sdLicense', $sdLicense);
+    }
+
+    /**
+     * Indicates the party responsible for generating and publishing the current
+     * structured data markup, typically in cases where the structured data is
+     * derived automatically from existing published content but published on a
+     * different site. For example, student projects and open data initiatives
+     * often re-publish existing content with more explicitly structured
+     * metadata. The
+     * [[sdPublisher]] property helps make such practices more explicit.
+     *
+     * @param \Spatie\SchemaOrg\Contracts\OrganizationContract|\Spatie\SchemaOrg\Contracts\OrganizationContract[]|\Spatie\SchemaOrg\Contracts\PersonContract|\Spatie\SchemaOrg\Contracts\PersonContract[] $sdPublisher
+     *
+     * @return static
+     *
+     * @see https://schema.org/sdPublisher
+     * @see http://pending.schema.org
+     * @link https://github.com/schemaorg/schemaorg/issues/1886
+     */
+    public function sdPublisher($sdPublisher)
+    {
+        return $this->setProperty('sdPublisher', $sdPublisher);
+    }
+
+    /**
+     * A standardized size of a product or creative work, often simplifying
+     * richer information into a simple textual string, either through referring
+     * to named sizes or (in the case of product markup), by adopting
+     * conventional simplifications. Use of QuantitativeValue with a unitCode or
+     * unitText can add more structure; in other cases, the /width, /height,
+     * /depth and /weight properties may be more applicable.
+     *
+     * @param \Spatie\SchemaOrg\Contracts\DefinedTermContract|\Spatie\SchemaOrg\Contracts\DefinedTermContract[]|\Spatie\SchemaOrg\Contracts\QuantitativeValueContract|\Spatie\SchemaOrg\Contracts\QuantitativeValueContract[]|string|string[] $size
+     *
+     * @return static
+     *
+     * @see https://schema.org/size
+     * @see http://pending.schema.org
+     * @link https://github.com/schemaorg/schemaorg/issues/1797
+     */
+    public function size($size)
+    {
+        return $this->setProperty('size', $size);
     }
 
     /**
@@ -1767,7 +2104,7 @@ class VideoGame extends BaseType implements VideoGameContract, CreativeWorkContr
      *
      * @return static
      *
-     * @see http://schema.org/softwareAddOn
+     * @see https://schema.org/softwareAddOn
      */
     public function softwareAddOn($softwareAddOn)
     {
@@ -1781,7 +2118,7 @@ class VideoGame extends BaseType implements VideoGameContract, CreativeWorkContr
      *
      * @return static
      *
-     * @see http://schema.org/softwareHelp
+     * @see https://schema.org/softwareHelp
      */
     public function softwareHelp($softwareHelp)
     {
@@ -1798,7 +2135,7 @@ class VideoGame extends BaseType implements VideoGameContract, CreativeWorkContr
      *
      * @return static
      *
-     * @see http://schema.org/softwareRequirements
+     * @see https://schema.org/softwareRequirements
      */
     public function softwareRequirements($softwareRequirements)
     {
@@ -1812,7 +2149,7 @@ class VideoGame extends BaseType implements VideoGameContract, CreativeWorkContr
      *
      * @return static
      *
-     * @see http://schema.org/softwareVersion
+     * @see https://schema.org/softwareVersion
      */
     public function softwareVersion($softwareVersion)
     {
@@ -1826,7 +2163,7 @@ class VideoGame extends BaseType implements VideoGameContract, CreativeWorkContr
      *
      * @return static
      *
-     * @see http://schema.org/sourceOrganization
+     * @see https://schema.org/sourceOrganization
      */
     public function sourceOrganization($sourceOrganization)
     {
@@ -1842,7 +2179,7 @@ class VideoGame extends BaseType implements VideoGameContract, CreativeWorkContr
      *
      * @return static
      *
-     * @see http://schema.org/spatial
+     * @see https://schema.org/spatial
      */
     public function spatial($spatial)
     {
@@ -1861,7 +2198,7 @@ class VideoGame extends BaseType implements VideoGameContract, CreativeWorkContr
      *
      * @return static
      *
-     * @see http://schema.org/spatialCoverage
+     * @see https://schema.org/spatialCoverage
      */
     public function spatialCoverage($spatialCoverage)
     {
@@ -1877,7 +2214,7 @@ class VideoGame extends BaseType implements VideoGameContract, CreativeWorkContr
      *
      * @return static
      *
-     * @see http://schema.org/sponsor
+     * @see https://schema.org/sponsor
      */
     public function sponsor($sponsor)
     {
@@ -1891,7 +2228,7 @@ class VideoGame extends BaseType implements VideoGameContract, CreativeWorkContr
      *
      * @return static
      *
-     * @see http://schema.org/storageRequirements
+     * @see https://schema.org/storageRequirements
      */
     public function storageRequirements($storageRequirements)
     {
@@ -1905,7 +2242,8 @@ class VideoGame extends BaseType implements VideoGameContract, CreativeWorkContr
      *
      * @return static
      *
-     * @see http://schema.org/subjectOf
+     * @see https://schema.org/subjectOf
+     * @link https://github.com/schemaorg/schemaorg/issues/1670
      */
     public function subjectOf($subjectOf)
     {
@@ -1919,11 +2257,28 @@ class VideoGame extends BaseType implements VideoGameContract, CreativeWorkContr
      *
      * @return static
      *
-     * @see http://schema.org/supportingData
+     * @see https://schema.org/supportingData
      */
     public function supportingData($supportingData)
     {
         return $this->setProperty('supportingData', $supportingData);
+    }
+
+    /**
+     * The item being described is intended to help a person learn the
+     * competency or learning outcome defined by the referenced term.
+     *
+     * @param \Spatie\SchemaOrg\Contracts\DefinedTermContract|\Spatie\SchemaOrg\Contracts\DefinedTermContract[]|string|string[] $teaches
+     *
+     * @return static
+     *
+     * @see https://schema.org/teaches
+     * @see http://pending.schema.org
+     * @link https://github.com/schemaorg/schemaorg/issues/2427
+     */
+    public function teaches($teaches)
+    {
+        return $this->setProperty('teaches', $teaches);
     }
 
     /**
@@ -1936,7 +2291,7 @@ class VideoGame extends BaseType implements VideoGameContract, CreativeWorkContr
      *
      * @return static
      *
-     * @see http://schema.org/temporal
+     * @see https://schema.org/temporal
      */
     public function temporal($temporal)
     {
@@ -1966,7 +2321,7 @@ class VideoGame extends BaseType implements VideoGameContract, CreativeWorkContr
      *
      * @return static
      *
-     * @see http://schema.org/temporalCoverage
+     * @see https://schema.org/temporalCoverage
      */
     public function temporalCoverage($temporalCoverage)
     {
@@ -1980,7 +2335,7 @@ class VideoGame extends BaseType implements VideoGameContract, CreativeWorkContr
      *
      * @return static
      *
-     * @see http://schema.org/text
+     * @see https://schema.org/text
      */
     public function text($text)
     {
@@ -1994,7 +2349,7 @@ class VideoGame extends BaseType implements VideoGameContract, CreativeWorkContr
      *
      * @return static
      *
-     * @see http://schema.org/thumbnailUrl
+     * @see https://schema.org/thumbnailUrl
      */
     public function thumbnailUrl($thumbnailUrl)
     {
@@ -2010,7 +2365,7 @@ class VideoGame extends BaseType implements VideoGameContract, CreativeWorkContr
      *
      * @return static
      *
-     * @see http://schema.org/timeRequired
+     * @see https://schema.org/timeRequired
      */
     public function timeRequired($timeRequired)
     {
@@ -2024,11 +2379,27 @@ class VideoGame extends BaseType implements VideoGameContract, CreativeWorkContr
      *
      * @return static
      *
-     * @see http://schema.org/trailer
+     * @see https://schema.org/trailer
      */
     public function trailer($trailer)
     {
         return $this->setProperty('trailer', $trailer);
+    }
+
+    /**
+     * The work that this work has been translated from. e.g. 物种起源 is a
+     * translationOf “On the Origin of Species”
+     *
+     * @param \Spatie\SchemaOrg\Contracts\CreativeWorkContract|\Spatie\SchemaOrg\Contracts\CreativeWorkContract[] $translationOfWork
+     *
+     * @return static
+     *
+     * @see https://schema.org/translationOfWork
+     * @see http://bib.schema.org
+     */
+    public function translationOfWork($translationOfWork)
+    {
+        return $this->setProperty('translationOfWork', $translationOfWork);
     }
 
     /**
@@ -2040,7 +2411,7 @@ class VideoGame extends BaseType implements VideoGameContract, CreativeWorkContr
      *
      * @return static
      *
-     * @see http://schema.org/translator
+     * @see https://schema.org/translator
      */
     public function translator($translator)
     {
@@ -2054,7 +2425,7 @@ class VideoGame extends BaseType implements VideoGameContract, CreativeWorkContr
      *
      * @return static
      *
-     * @see http://schema.org/typicalAgeRange
+     * @see https://schema.org/typicalAgeRange
      */
     public function typicalAgeRange($typicalAgeRange)
     {
@@ -2068,11 +2439,39 @@ class VideoGame extends BaseType implements VideoGameContract, CreativeWorkContr
      *
      * @return static
      *
-     * @see http://schema.org/url
+     * @see https://schema.org/url
      */
     public function url($url)
     {
         return $this->setProperty('url', $url);
+    }
+
+    /**
+     * The schema.org [[usageInfo]] property indicates further information about
+     * a [[CreativeWork]]. This property is applicable both to works that are
+     * freely available and to those that require payment or other transactions.
+     * It can reference additional information e.g. community expectations on
+     * preferred linking and citation conventions, as well as purchasing
+     * details. For something that can be commercially licensed, usageInfo can
+     * provide detailed, resource-specific information about licensing options.
+     * 
+     * This property can be used alongside the license property which indicates
+     * license(s) applicable to some piece of content. The usageInfo property
+     * can provide information about other licensing options, e.g. acquiring
+     * commercial usage rights for an image that is also available under
+     * non-commercial creative commons licenses.
+     *
+     * @param \Spatie\SchemaOrg\Contracts\CreativeWorkContract|\Spatie\SchemaOrg\Contracts\CreativeWorkContract[]|string|string[] $usageInfo
+     *
+     * @return static
+     *
+     * @see https://schema.org/usageInfo
+     * @see http://pending.schema.org
+     * @link https://github.com/schemaorg/schemaorg/issues/2454
+     */
+    public function usageInfo($usageInfo)
+    {
+        return $this->setProperty('usageInfo', $usageInfo);
     }
 
     /**
@@ -2082,7 +2481,7 @@ class VideoGame extends BaseType implements VideoGameContract, CreativeWorkContr
      *
      * @return static
      *
-     * @see http://schema.org/version
+     * @see https://schema.org/version
      */
     public function version($version)
     {
@@ -2096,7 +2495,7 @@ class VideoGame extends BaseType implements VideoGameContract, CreativeWorkContr
      *
      * @return static
      *
-     * @see http://schema.org/video
+     * @see https://schema.org/video
      */
     public function video($video)
     {
@@ -2111,11 +2510,30 @@ class VideoGame extends BaseType implements VideoGameContract, CreativeWorkContr
      *
      * @return static
      *
-     * @see http://schema.org/workExample
+     * @see https://schema.org/workExample
+     * @link http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#source_bibex
      */
     public function workExample($workExample)
     {
         return $this->setProperty('workExample', $workExample);
+    }
+
+    /**
+     * A work that is a translation of the content of this work. e.g. 西遊記
+     * has an English workTranslation “Journey to the West”,a German
+     * workTranslation “Monkeys Pilgerfahrt” and a Vietnamese  translation
+     * Tây du ký bình khảo.
+     *
+     * @param \Spatie\SchemaOrg\Contracts\CreativeWorkContract|\Spatie\SchemaOrg\Contracts\CreativeWorkContract[] $workTranslation
+     *
+     * @return static
+     *
+     * @see https://schema.org/workTranslation
+     * @see http://bib.schema.org
+     */
+    public function workTranslation($workTranslation)
+    {
+        return $this->setProperty('workTranslation', $workTranslation);
     }
 
 }

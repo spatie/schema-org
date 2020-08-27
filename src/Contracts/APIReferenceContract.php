@@ -6,6 +6,8 @@ interface APIReferenceContract
 {
     public function about($about);
 
+    public function abstract($abstract);
+
     public function accessMode($accessMode);
 
     public function accessModeSufficient($accessModeSufficient);
@@ -21,6 +23,8 @@ interface APIReferenceContract
     public function accessibilitySummary($accessibilitySummary);
 
     public function accountablePerson($accountablePerson);
+
+    public function acquireLicensePage($acquireLicensePage);
 
     public function additionalType($additionalType);
 
@@ -38,6 +42,8 @@ interface APIReferenceContract
 
     public function assemblyVersion($assemblyVersion);
 
+    public function assesses($assesses);
+
     public function associatedMedia($associatedMedia);
 
     public function audience($audience);
@@ -50,6 +56,8 @@ interface APIReferenceContract
 
     public function awards($awards);
 
+    public function backstory($backstory);
+
     public function character($character);
 
     public function citation($citation);
@@ -58,15 +66,23 @@ interface APIReferenceContract
 
     public function commentCount($commentCount);
 
+    public function conditionsOfAccess($conditionsOfAccess);
+
     public function contentLocation($contentLocation);
 
     public function contentRating($contentRating);
+
+    public function contentReferenceTime($contentReferenceTime);
 
     public function contributor($contributor);
 
     public function copyrightHolder($copyrightHolder);
 
     public function copyrightYear($copyrightYear);
+
+    public function correction($correction);
+
+    public function creativeWorkStatus($creativeWorkStatus);
 
     public function creator($creator);
 
@@ -84,9 +100,13 @@ interface APIReferenceContract
 
     public function discussionUrl($discussionUrl);
 
+    public function editEIDR($editEIDR);
+
     public function editor($editor);
 
     public function educationalAlignment($educationalAlignment);
+
+    public function educationalLevel($educationalLevel);
 
     public function educationalUse($educationalUse);
 
@@ -144,7 +164,11 @@ interface APIReferenceContract
 
     public function mainEntityOfPage($mainEntityOfPage);
 
+    public function maintainer($maintainer);
+
     public function material($material);
+
+    public function materialExtent($materialExtent);
 
     public function mentions($mentions);
 
@@ -157,6 +181,8 @@ interface APIReferenceContract
     public function pageStart($pageStart);
 
     public function pagination($pagination);
+
+    public function pattern($pattern);
 
     public function position($position);
 
@@ -174,6 +200,8 @@ interface APIReferenceContract
 
     public function publisher($publisher);
 
+    public function publisherImprint($publisherImprint);
+
     public function publishingPrinciples($publishingPrinciples);
 
     public function recordedAt($recordedAt);
@@ -187,6 +215,14 @@ interface APIReferenceContract
     public function sameAs($sameAs);
 
     public function schemaVersion($schemaVersion);
+
+    public function sdDatePublished($sdDatePublished);
+
+    public function sdLicense($sdLicense);
+
+    public function sdPublisher($sdPublisher);
+
+    public function size($size);
 
     public function sourceOrganization($sourceOrganization);
 
@@ -202,6 +238,8 @@ interface APIReferenceContract
 
     public function targetPlatform($targetPlatform);
 
+    public function teaches($teaches);
+
     public function temporal($temporal);
 
     public function temporalCoverage($temporalCoverage);
@@ -212,11 +250,15 @@ interface APIReferenceContract
 
     public function timeRequired($timeRequired);
 
+    public function translationOfWork($translationOfWork);
+
     public function translator($translator);
 
     public function typicalAgeRange($typicalAgeRange);
 
     public function url($url);
+
+    public function usageInfo($usageInfo);
 
     public function version($version);
 
@@ -225,5 +267,7 @@ interface APIReferenceContract
     public function wordCount($wordCount);
 
     public function workExample($workExample);
+
+    public function workTranslation($workTranslation);
 
 }

@@ -6,6 +6,8 @@ interface SoftwareApplicationContract
 {
     public function about($about);
 
+    public function abstract($abstract);
+
     public function accessMode($accessMode);
 
     public function accessModeSufficient($accessModeSufficient);
@@ -22,6 +24,8 @@ interface SoftwareApplicationContract
 
     public function accountablePerson($accountablePerson);
 
+    public function acquireLicensePage($acquireLicensePage);
+
     public function additionalType($additionalType);
 
     public function aggregateRating($aggregateRating);
@@ -35,6 +39,8 @@ interface SoftwareApplicationContract
     public function applicationSubCategory($applicationSubCategory);
 
     public function applicationSuite($applicationSuite);
+
+    public function assesses($assesses);
 
     public function associatedMedia($associatedMedia);
 
@@ -58,9 +64,13 @@ interface SoftwareApplicationContract
 
     public function commentCount($commentCount);
 
+    public function conditionsOfAccess($conditionsOfAccess);
+
     public function contentLocation($contentLocation);
 
     public function contentRating($contentRating);
+
+    public function contentReferenceTime($contentReferenceTime);
 
     public function contributor($contributor);
 
@@ -68,9 +78,13 @@ interface SoftwareApplicationContract
 
     public function copyrightYear($copyrightYear);
 
+    public function correction($correction);
+
     public function countriesNotSupported($countriesNotSupported);
 
     public function countriesSupported($countriesSupported);
+
+    public function creativeWorkStatus($creativeWorkStatus);
 
     public function creator($creator);
 
@@ -90,9 +104,13 @@ interface SoftwareApplicationContract
 
     public function downloadUrl($downloadUrl);
 
+    public function editEIDR($editEIDR);
+
     public function editor($editor);
 
     public function educationalAlignment($educationalAlignment);
+
+    public function educationalLevel($educationalLevel);
 
     public function educationalUse($educationalUse);
 
@@ -154,7 +172,11 @@ interface SoftwareApplicationContract
 
     public function mainEntityOfPage($mainEntityOfPage);
 
+    public function maintainer($maintainer);
+
     public function material($material);
+
+    public function materialExtent($materialExtent);
 
     public function memoryRequirements($memoryRequirements);
 
@@ -165,6 +187,8 @@ interface SoftwareApplicationContract
     public function offers($offers);
 
     public function operatingSystem($operatingSystem);
+
+    public function pattern($pattern);
 
     public function permissions($permissions);
 
@@ -181,6 +205,8 @@ interface SoftwareApplicationContract
     public function publication($publication);
 
     public function publisher($publisher);
+
+    public function publisherImprint($publisherImprint);
 
     public function publishingPrinciples($publishingPrinciples);
 
@@ -201,6 +227,14 @@ interface SoftwareApplicationContract
     public function schemaVersion($schemaVersion);
 
     public function screenshot($screenshot);
+
+    public function sdDatePublished($sdDatePublished);
+
+    public function sdLicense($sdLicense);
+
+    public function sdPublisher($sdPublisher);
+
+    public function size($size);
 
     public function softwareAddOn($softwareAddOn);
 
@@ -224,6 +258,8 @@ interface SoftwareApplicationContract
 
     public function supportingData($supportingData);
 
+    public function teaches($teaches);
+
     public function temporal($temporal);
 
     public function temporalCoverage($temporalCoverage);
@@ -234,16 +270,22 @@ interface SoftwareApplicationContract
 
     public function timeRequired($timeRequired);
 
+    public function translationOfWork($translationOfWork);
+
     public function translator($translator);
 
     public function typicalAgeRange($typicalAgeRange);
 
     public function url($url);
 
+    public function usageInfo($usageInfo);
+
     public function version($version);
 
     public function video($video);
 
     public function workExample($workExample);
+
+    public function workTranslation($workTranslation);
 
 }

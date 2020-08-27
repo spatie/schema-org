@@ -17,8 +17,10 @@ use \Spatie\SchemaOrg\Contracts\ThingContract;
  * * http://purl.org/goodrelations/v1#PartsAndLabor-BringIn
  * * http://purl.org/goodrelations/v1#PartsAndLabor-PickUp
  *
- * @see http://schema.org/WarrantyScope
+ * @see https://schema.org/WarrantyScope
+ * @link http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#source_GoodRelationsClass
  *
+ * @method static supersededBy($supersededBy) The value should be instance of pending types Class|Class[]|Enumeration|Enumeration[]|Property|Property[]
  */
 class WarrantyScope extends BaseType implements WarrantyScopeContract, EnumerationContract, IntangibleContract, ThingContract
 {
@@ -34,7 +36,7 @@ class WarrantyScope extends BaseType implements WarrantyScopeContract, Enumerati
      *
      * @return static
      *
-     * @see http://schema.org/additionalType
+     * @see https://schema.org/additionalType
      */
     public function additionalType($additionalType)
     {
@@ -48,7 +50,7 @@ class WarrantyScope extends BaseType implements WarrantyScopeContract, Enumerati
      *
      * @return static
      *
-     * @see http://schema.org/alternateName
+     * @see https://schema.org/alternateName
      */
     public function alternateName($alternateName)
     {
@@ -62,7 +64,7 @@ class WarrantyScope extends BaseType implements WarrantyScopeContract, Enumerati
      *
      * @return static
      *
-     * @see http://schema.org/description
+     * @see https://schema.org/description
      */
     public function description($description)
     {
@@ -79,7 +81,7 @@ class WarrantyScope extends BaseType implements WarrantyScopeContract, Enumerati
      *
      * @return static
      *
-     * @see http://schema.org/disambiguatingDescription
+     * @see https://schema.org/disambiguatingDescription
      */
     public function disambiguatingDescription($disambiguatingDescription)
     {
@@ -97,7 +99,7 @@ class WarrantyScope extends BaseType implements WarrantyScopeContract, Enumerati
      *
      * @return static
      *
-     * @see http://schema.org/identifier
+     * @see https://schema.org/identifier
      */
     public function identifier($identifier)
     {
@@ -112,7 +114,7 @@ class WarrantyScope extends BaseType implements WarrantyScopeContract, Enumerati
      *
      * @return static
      *
-     * @see http://schema.org/image
+     * @see https://schema.org/image
      */
     public function image($image)
     {
@@ -128,7 +130,7 @@ class WarrantyScope extends BaseType implements WarrantyScopeContract, Enumerati
      *
      * @return static
      *
-     * @see http://schema.org/mainEntityOfPage
+     * @see https://schema.org/mainEntityOfPage
      */
     public function mainEntityOfPage($mainEntityOfPage)
     {
@@ -142,7 +144,7 @@ class WarrantyScope extends BaseType implements WarrantyScopeContract, Enumerati
      *
      * @return static
      *
-     * @see http://schema.org/name
+     * @see https://schema.org/name
      */
     public function name($name)
     {
@@ -157,7 +159,7 @@ class WarrantyScope extends BaseType implements WarrantyScopeContract, Enumerati
      *
      * @return static
      *
-     * @see http://schema.org/potentialAction
+     * @see https://schema.org/potentialAction
      */
     public function potentialAction($potentialAction)
     {
@@ -173,7 +175,7 @@ class WarrantyScope extends BaseType implements WarrantyScopeContract, Enumerati
      *
      * @return static
      *
-     * @see http://schema.org/sameAs
+     * @see https://schema.org/sameAs
      */
     public function sameAs($sameAs)
     {
@@ -187,7 +189,8 @@ class WarrantyScope extends BaseType implements WarrantyScopeContract, Enumerati
      *
      * @return static
      *
-     * @see http://schema.org/subjectOf
+     * @see https://schema.org/subjectOf
+     * @link https://github.com/schemaorg/schemaorg/issues/1670
      */
     public function subjectOf($subjectOf)
     {
@@ -201,7 +204,7 @@ class WarrantyScope extends BaseType implements WarrantyScopeContract, Enumerati
      *
      * @return static
      *
-     * @see http://schema.org/url
+     * @see https://schema.org/url
      */
     public function url($url)
     {

@@ -4,6 +4,10 @@ namespace Spatie\SchemaOrg\Contracts;
 
 interface HotelRoomContract
 {
+    public function accommodationCategory($accommodationCategory);
+
+    public function accommodationFloorPlan($accommodationFloorPlan);
+
     public function additionalProperty($additionalProperty);
 
     public function additionalType($additionalType);
@@ -36,11 +40,35 @@ interface HotelRoomContract
 
     public function faxNumber($faxNumber);
 
+    public function floorLevel($floorLevel);
+
     public function floorSize($floorSize);
 
     public function geo($geo);
 
+    public function geoContains($geoContains);
+
+    public function geoCoveredBy($geoCoveredBy);
+
+    public function geoCovers($geoCovers);
+
+    public function geoCrosses($geoCrosses);
+
+    public function geoDisjoint($geoDisjoint);
+
+    public function geoEquals($geoEquals);
+
+    public function geoIntersects($geoIntersects);
+
+    public function geoOverlaps($geoOverlaps);
+
+    public function geoTouches($geoTouches);
+
+    public function geoWithin($geoWithin);
+
     public function globalLocationNumber($globalLocationNumber);
+
+    public function hasDriveThroughService($hasDriveThroughService);
 
     public function hasMap($hasMap);
 
@@ -53,6 +81,8 @@ interface HotelRoomContract
     public function isicV4($isicV4);
 
     public function latitude($latitude);
+
+    public function leaseLength($leaseLength);
 
     public function logo($logo);
 
@@ -67,6 +97,14 @@ interface HotelRoomContract
     public function maximumAttendeeCapacity($maximumAttendeeCapacity);
 
     public function name($name);
+
+    public function numberOfBathroomsTotal($numberOfBathroomsTotal);
+
+    public function numberOfBedrooms($numberOfBedrooms);
+
+    public function numberOfFullBathrooms($numberOfFullBathrooms);
+
+    public function numberOfPartialBathrooms($numberOfPartialBathrooms);
 
     public function numberOfRooms($numberOfRooms);
 
@@ -102,6 +140,10 @@ interface HotelRoomContract
 
     public function telephone($telephone);
 
+    public function tourBookingPage($tourBookingPage);
+
     public function url($url);
+
+    public function yearBuilt($yearBuilt);
 
 }

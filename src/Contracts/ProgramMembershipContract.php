@@ -26,6 +26,8 @@ interface ProgramMembershipContract
 
     public function membershipNumber($membershipNumber);
 
+    public function membershipPointsEarned($membershipPointsEarned);
+
     public function name($name);
 
     public function potentialAction($potentialAction);

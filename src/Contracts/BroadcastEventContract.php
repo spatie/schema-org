@@ -38,6 +38,10 @@ interface BroadcastEventContract
 
     public function endDate($endDate);
 
+    public function eventAttendanceMode($eventAttendanceMode);
+
+    public function eventSchedule($eventSchedule);
+
     public function eventStatus($eventStatus);
 
     public function free($free);
@@ -54,9 +58,15 @@ interface BroadcastEventContract
 
     public function isLiveBroadcast($isLiveBroadcast);
 
+    public function location($location);
+
     public function mainEntityOfPage($mainEntityOfPage);
 
     public function maximumAttendeeCapacity($maximumAttendeeCapacity);
+
+    public function maximumPhysicalAttendeeCapacity($maximumPhysicalAttendeeCapacity);
+
+    public function maximumVirtualAttendeeCapacity($maximumVirtualAttendeeCapacity);
 
     public function name($name);
 
@@ -71,6 +81,8 @@ interface BroadcastEventContract
     public function potentialAction($potentialAction);
 
     public function previousStartDate($previousStartDate);
+
+    public function publishedBy($publishedBy);
 
     public function publishedOn($publishedOn);
 
@@ -91,6 +103,8 @@ interface BroadcastEventContract
     public function subEvents($subEvents);
 
     public function subjectOf($subjectOf);
+
+    public function subtitleLanguage($subtitleLanguage);
 
     public function superEvent($superEvent);
 

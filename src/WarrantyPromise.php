@@ -12,7 +12,8 @@ use \Spatie\SchemaOrg\Contracts\ThingContract;
  * be provided to a customer free of charge in case of a defect or malfunction
  * of a product.
  *
- * @see http://schema.org/WarrantyPromise
+ * @see https://schema.org/WarrantyPromise
+ * @link http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#source_GoodRelationsClass
  *
  */
 class WarrantyPromise extends BaseType implements WarrantyPromiseContract, IntangibleContract, StructuredValueContract, ThingContract
@@ -29,7 +30,7 @@ class WarrantyPromise extends BaseType implements WarrantyPromiseContract, Intan
      *
      * @return static
      *
-     * @see http://schema.org/additionalType
+     * @see https://schema.org/additionalType
      */
     public function additionalType($additionalType)
     {
@@ -43,7 +44,7 @@ class WarrantyPromise extends BaseType implements WarrantyPromiseContract, Intan
      *
      * @return static
      *
-     * @see http://schema.org/alternateName
+     * @see https://schema.org/alternateName
      */
     public function alternateName($alternateName)
     {
@@ -57,7 +58,7 @@ class WarrantyPromise extends BaseType implements WarrantyPromiseContract, Intan
      *
      * @return static
      *
-     * @see http://schema.org/description
+     * @see https://schema.org/description
      */
     public function description($description)
     {
@@ -74,7 +75,7 @@ class WarrantyPromise extends BaseType implements WarrantyPromiseContract, Intan
      *
      * @return static
      *
-     * @see http://schema.org/disambiguatingDescription
+     * @see https://schema.org/disambiguatingDescription
      */
     public function disambiguatingDescription($disambiguatingDescription)
     {
@@ -89,7 +90,8 @@ class WarrantyPromise extends BaseType implements WarrantyPromiseContract, Intan
      *
      * @return static
      *
-     * @see http://schema.org/durationOfWarranty
+     * @see https://schema.org/durationOfWarranty
+     * @link http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#source_GoodRelationsTerms
      */
     public function durationOfWarranty($durationOfWarranty)
     {
@@ -107,7 +109,7 @@ class WarrantyPromise extends BaseType implements WarrantyPromiseContract, Intan
      *
      * @return static
      *
-     * @see http://schema.org/identifier
+     * @see https://schema.org/identifier
      */
     public function identifier($identifier)
     {
@@ -122,7 +124,7 @@ class WarrantyPromise extends BaseType implements WarrantyPromiseContract, Intan
      *
      * @return static
      *
-     * @see http://schema.org/image
+     * @see https://schema.org/image
      */
     public function image($image)
     {
@@ -138,7 +140,7 @@ class WarrantyPromise extends BaseType implements WarrantyPromiseContract, Intan
      *
      * @return static
      *
-     * @see http://schema.org/mainEntityOfPage
+     * @see https://schema.org/mainEntityOfPage
      */
     public function mainEntityOfPage($mainEntityOfPage)
     {
@@ -152,7 +154,7 @@ class WarrantyPromise extends BaseType implements WarrantyPromiseContract, Intan
      *
      * @return static
      *
-     * @see http://schema.org/name
+     * @see https://schema.org/name
      */
     public function name($name)
     {
@@ -167,7 +169,7 @@ class WarrantyPromise extends BaseType implements WarrantyPromiseContract, Intan
      *
      * @return static
      *
-     * @see http://schema.org/potentialAction
+     * @see https://schema.org/potentialAction
      */
     public function potentialAction($potentialAction)
     {
@@ -183,7 +185,7 @@ class WarrantyPromise extends BaseType implements WarrantyPromiseContract, Intan
      *
      * @return static
      *
-     * @see http://schema.org/sameAs
+     * @see https://schema.org/sameAs
      */
     public function sameAs($sameAs)
     {
@@ -197,7 +199,8 @@ class WarrantyPromise extends BaseType implements WarrantyPromiseContract, Intan
      *
      * @return static
      *
-     * @see http://schema.org/subjectOf
+     * @see https://schema.org/subjectOf
+     * @link https://github.com/schemaorg/schemaorg/issues/1670
      */
     public function subjectOf($subjectOf)
     {
@@ -211,7 +214,7 @@ class WarrantyPromise extends BaseType implements WarrantyPromiseContract, Intan
      *
      * @return static
      *
-     * @see http://schema.org/url
+     * @see https://schema.org/url
      */
     public function url($url)
     {
@@ -225,7 +228,8 @@ class WarrantyPromise extends BaseType implements WarrantyPromiseContract, Intan
      *
      * @return static
      *
-     * @see http://schema.org/warrantyScope
+     * @see https://schema.org/warrantyScope
+     * @link http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#source_GoodRelationsTerms
      */
     public function warrantyScope($warrantyScope)
     {

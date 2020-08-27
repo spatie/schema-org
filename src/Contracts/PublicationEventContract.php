@@ -36,6 +36,10 @@ interface PublicationEventContract
 
     public function endDate($endDate);
 
+    public function eventAttendanceMode($eventAttendanceMode);
+
+    public function eventSchedule($eventSchedule);
+
     public function eventStatus($eventStatus);
 
     public function free($free);
@@ -50,9 +54,15 @@ interface PublicationEventContract
 
     public function isAccessibleForFree($isAccessibleForFree);
 
+    public function location($location);
+
     public function mainEntityOfPage($mainEntityOfPage);
 
     public function maximumAttendeeCapacity($maximumAttendeeCapacity);
+
+    public function maximumPhysicalAttendeeCapacity($maximumPhysicalAttendeeCapacity);
+
+    public function maximumVirtualAttendeeCapacity($maximumVirtualAttendeeCapacity);
 
     public function name($name);
 
@@ -67,6 +77,8 @@ interface PublicationEventContract
     public function potentialAction($potentialAction);
 
     public function previousStartDate($previousStartDate);
+
+    public function publishedBy($publishedBy);
 
     public function publishedOn($publishedOn);
 

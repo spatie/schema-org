@@ -11,8 +11,10 @@ use \Spatie\SchemaOrg\Contracts\ThingContract;
  * A predefined value for a product characteristic, e.g. the power cord plug
  * type 'US' or the garment sizes 'S', 'M', 'L', and 'XL'.
  *
- * @see http://schema.org/QualitativeValue
+ * @see https://schema.org/QualitativeValue
+ * @link http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#source_GoodRelationsClass
  *
+ * @method static supersededBy($supersededBy) The value should be instance of pending types Class|Class[]|Enumeration|Enumeration[]|Property|Property[]
  */
 class QualitativeValue extends BaseType implements QualitativeValueContract, EnumerationContract, IntangibleContract, ThingContract
 {
@@ -22,8 +24,8 @@ class QualitativeValue extends BaseType implements QualitativeValueContract, Enu
      * there is no matching property in schema.org.
      * 
      * Note: Publishers should be aware that applications designed to use
-     * specific schema.org properties (e.g. http://schema.org/width,
-     * http://schema.org/color, http://schema.org/gtin13, ...) will typically
+     * specific schema.org properties (e.g. https://schema.org/width,
+     * https://schema.org/color, https://schema.org/gtin13, ...) will typically
      * expect such data to be provided using those properties, rather than using
      * the generic property/value mechanism.
      *
@@ -31,7 +33,7 @@ class QualitativeValue extends BaseType implements QualitativeValueContract, Enu
      *
      * @return static
      *
-     * @see http://schema.org/additionalProperty
+     * @see https://schema.org/additionalProperty
      */
     public function additionalProperty($additionalProperty)
     {
@@ -50,7 +52,7 @@ class QualitativeValue extends BaseType implements QualitativeValueContract, Enu
      *
      * @return static
      *
-     * @see http://schema.org/additionalType
+     * @see https://schema.org/additionalType
      */
     public function additionalType($additionalType)
     {
@@ -64,7 +66,7 @@ class QualitativeValue extends BaseType implements QualitativeValueContract, Enu
      *
      * @return static
      *
-     * @see http://schema.org/alternateName
+     * @see https://schema.org/alternateName
      */
     public function alternateName($alternateName)
     {
@@ -78,7 +80,7 @@ class QualitativeValue extends BaseType implements QualitativeValueContract, Enu
      *
      * @return static
      *
-     * @see http://schema.org/description
+     * @see https://schema.org/description
      */
     public function description($description)
     {
@@ -95,7 +97,7 @@ class QualitativeValue extends BaseType implements QualitativeValueContract, Enu
      *
      * @return static
      *
-     * @see http://schema.org/disambiguatingDescription
+     * @see https://schema.org/disambiguatingDescription
      */
     public function disambiguatingDescription($disambiguatingDescription)
     {
@@ -110,7 +112,8 @@ class QualitativeValue extends BaseType implements QualitativeValueContract, Enu
      *
      * @return static
      *
-     * @see http://schema.org/equal
+     * @see https://schema.org/equal
+     * @link http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#source_GoodRelationsTerms
      */
     public function equal($equal)
     {
@@ -125,7 +128,8 @@ class QualitativeValue extends BaseType implements QualitativeValueContract, Enu
      *
      * @return static
      *
-     * @see http://schema.org/greater
+     * @see https://schema.org/greater
+     * @link http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#source_GoodRelationsTerms
      */
     public function greater($greater)
     {
@@ -140,7 +144,8 @@ class QualitativeValue extends BaseType implements QualitativeValueContract, Enu
      *
      * @return static
      *
-     * @see http://schema.org/greaterOrEqual
+     * @see https://schema.org/greaterOrEqual
+     * @link http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#source_GoodRelationsTerms
      */
     public function greaterOrEqual($greaterOrEqual)
     {
@@ -158,7 +163,7 @@ class QualitativeValue extends BaseType implements QualitativeValueContract, Enu
      *
      * @return static
      *
-     * @see http://schema.org/identifier
+     * @see https://schema.org/identifier
      */
     public function identifier($identifier)
     {
@@ -173,7 +178,7 @@ class QualitativeValue extends BaseType implements QualitativeValueContract, Enu
      *
      * @return static
      *
-     * @see http://schema.org/image
+     * @see https://schema.org/image
      */
     public function image($image)
     {
@@ -188,7 +193,8 @@ class QualitativeValue extends BaseType implements QualitativeValueContract, Enu
      *
      * @return static
      *
-     * @see http://schema.org/lesser
+     * @see https://schema.org/lesser
+     * @link http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#source_GoodRelationsTerms
      */
     public function lesser($lesser)
     {
@@ -203,7 +209,8 @@ class QualitativeValue extends BaseType implements QualitativeValueContract, Enu
      *
      * @return static
      *
-     * @see http://schema.org/lesserOrEqual
+     * @see https://schema.org/lesserOrEqual
+     * @link http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#source_GoodRelationsTerms
      */
     public function lesserOrEqual($lesserOrEqual)
     {
@@ -219,7 +226,7 @@ class QualitativeValue extends BaseType implements QualitativeValueContract, Enu
      *
      * @return static
      *
-     * @see http://schema.org/mainEntityOfPage
+     * @see https://schema.org/mainEntityOfPage
      */
     public function mainEntityOfPage($mainEntityOfPage)
     {
@@ -233,7 +240,7 @@ class QualitativeValue extends BaseType implements QualitativeValueContract, Enu
      *
      * @return static
      *
-     * @see http://schema.org/name
+     * @see https://schema.org/name
      */
     public function name($name)
     {
@@ -248,7 +255,8 @@ class QualitativeValue extends BaseType implements QualitativeValueContract, Enu
      *
      * @return static
      *
-     * @see http://schema.org/nonEqual
+     * @see https://schema.org/nonEqual
+     * @link http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#source_GoodRelationsTerms
      */
     public function nonEqual($nonEqual)
     {
@@ -263,7 +271,7 @@ class QualitativeValue extends BaseType implements QualitativeValueContract, Enu
      *
      * @return static
      *
-     * @see http://schema.org/potentialAction
+     * @see https://schema.org/potentialAction
      */
     public function potentialAction($potentialAction)
     {
@@ -279,7 +287,7 @@ class QualitativeValue extends BaseType implements QualitativeValueContract, Enu
      *
      * @return static
      *
-     * @see http://schema.org/sameAs
+     * @see https://schema.org/sameAs
      */
     public function sameAs($sameAs)
     {
@@ -293,7 +301,8 @@ class QualitativeValue extends BaseType implements QualitativeValueContract, Enu
      *
      * @return static
      *
-     * @see http://schema.org/subjectOf
+     * @see https://schema.org/subjectOf
+     * @link https://github.com/schemaorg/schemaorg/issues/1670
      */
     public function subjectOf($subjectOf)
     {
@@ -307,7 +316,7 @@ class QualitativeValue extends BaseType implements QualitativeValueContract, Enu
      *
      * @return static
      *
-     * @see http://schema.org/url
+     * @see https://schema.org/url
      */
     public function url($url)
     {
@@ -322,7 +331,8 @@ class QualitativeValue extends BaseType implements QualitativeValueContract, Enu
      *
      * @return static
      *
-     * @see http://schema.org/valueReference
+     * @see https://schema.org/valueReference
+     * @link http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#source_GoodRelationsTerms
      */
     public function valueReference($valueReference)
     {

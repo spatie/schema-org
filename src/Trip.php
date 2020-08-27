@@ -9,7 +9,8 @@ use \Spatie\SchemaOrg\Contracts\ThingContract;
 /**
  * A trip or journey. An itinerary of visits to one or more places.
  *
- * @see http://schema.org/Trip
+ * @see https://schema.org/Trip
+ * @link http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#Tourism
  *
  */
 class Trip extends BaseType implements TripContract, IntangibleContract, ThingContract
@@ -26,7 +27,7 @@ class Trip extends BaseType implements TripContract, IntangibleContract, ThingCo
      *
      * @return static
      *
-     * @see http://schema.org/additionalType
+     * @see https://schema.org/additionalType
      */
     public function additionalType($additionalType)
     {
@@ -40,7 +41,7 @@ class Trip extends BaseType implements TripContract, IntangibleContract, ThingCo
      *
      * @return static
      *
-     * @see http://schema.org/alternateName
+     * @see https://schema.org/alternateName
      */
     public function alternateName($alternateName)
     {
@@ -54,7 +55,7 @@ class Trip extends BaseType implements TripContract, IntangibleContract, ThingCo
      *
      * @return static
      *
-     * @see http://schema.org/arrivalTime
+     * @see https://schema.org/arrivalTime
      */
     public function arrivalTime($arrivalTime)
     {
@@ -68,7 +69,7 @@ class Trip extends BaseType implements TripContract, IntangibleContract, ThingCo
      *
      * @return static
      *
-     * @see http://schema.org/departureTime
+     * @see https://schema.org/departureTime
      */
     public function departureTime($departureTime)
     {
@@ -82,7 +83,7 @@ class Trip extends BaseType implements TripContract, IntangibleContract, ThingCo
      *
      * @return static
      *
-     * @see http://schema.org/description
+     * @see https://schema.org/description
      */
     public function description($description)
     {
@@ -99,7 +100,7 @@ class Trip extends BaseType implements TripContract, IntangibleContract, ThingCo
      *
      * @return static
      *
-     * @see http://schema.org/disambiguatingDescription
+     * @see https://schema.org/disambiguatingDescription
      */
     public function disambiguatingDescription($disambiguatingDescription)
     {
@@ -117,7 +118,7 @@ class Trip extends BaseType implements TripContract, IntangibleContract, ThingCo
      *
      * @return static
      *
-     * @see http://schema.org/identifier
+     * @see https://schema.org/identifier
      */
     public function identifier($identifier)
     {
@@ -132,11 +133,29 @@ class Trip extends BaseType implements TripContract, IntangibleContract, ThingCo
      *
      * @return static
      *
-     * @see http://schema.org/image
+     * @see https://schema.org/image
      */
     public function image($image)
     {
         return $this->setProperty('image', $image);
+    }
+
+    /**
+     * Destination(s) ( [[Place]] ) that make up a trip. For a trip where
+     * destination order is important use [[ItemList]] to specify that order
+     * (see examples).
+     *
+     * @param \Spatie\SchemaOrg\Contracts\ItemListContract|\Spatie\SchemaOrg\Contracts\ItemListContract[]|\Spatie\SchemaOrg\Contracts\PlaceContract|\Spatie\SchemaOrg\Contracts\PlaceContract[] $itinerary
+     *
+     * @return static
+     *
+     * @see https://schema.org/itinerary
+     * @see http://pending.schema.org
+     * @link http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#Tourism
+     */
+    public function itinerary($itinerary)
+    {
+        return $this->setProperty('itinerary', $itinerary);
     }
 
     /**
@@ -148,7 +167,7 @@ class Trip extends BaseType implements TripContract, IntangibleContract, ThingCo
      *
      * @return static
      *
-     * @see http://schema.org/mainEntityOfPage
+     * @see https://schema.org/mainEntityOfPage
      */
     public function mainEntityOfPage($mainEntityOfPage)
     {
@@ -162,7 +181,7 @@ class Trip extends BaseType implements TripContract, IntangibleContract, ThingCo
      *
      * @return static
      *
-     * @see http://schema.org/name
+     * @see https://schema.org/name
      */
     public function name($name)
     {
@@ -183,11 +202,29 @@ class Trip extends BaseType implements TripContract, IntangibleContract, ThingCo
      *
      * @return static
      *
-     * @see http://schema.org/offers
+     * @see https://schema.org/offers
+     * @link https://github.com/schemaorg/schemaorg/issues/2289
      */
     public function offers($offers)
     {
         return $this->setProperty('offers', $offers);
+    }
+
+    /**
+     * Identifies that this [[Trip]] is a subTrip of another Trip.  For example
+     * Day 1, Day 2, etc. of a multi-day trip.
+     *
+     * @param \Spatie\SchemaOrg\Contracts\TripContract|\Spatie\SchemaOrg\Contracts\TripContract[] $partOfTrip
+     *
+     * @return static
+     *
+     * @see https://schema.org/partOfTrip
+     * @see http://pending.schema.org
+     * @link http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#Tourism
+     */
+    public function partOfTrip($partOfTrip)
+    {
+        return $this->setProperty('partOfTrip', $partOfTrip);
     }
 
     /**
@@ -198,7 +235,7 @@ class Trip extends BaseType implements TripContract, IntangibleContract, ThingCo
      *
      * @return static
      *
-     * @see http://schema.org/potentialAction
+     * @see https://schema.org/potentialAction
      */
     public function potentialAction($potentialAction)
     {
@@ -214,7 +251,8 @@ class Trip extends BaseType implements TripContract, IntangibleContract, ThingCo
      *
      * @return static
      *
-     * @see http://schema.org/provider
+     * @see https://schema.org/provider
+     * @link https://github.com/schemaorg/schemaorg/issues/2289
      */
     public function provider($provider)
     {
@@ -230,11 +268,28 @@ class Trip extends BaseType implements TripContract, IntangibleContract, ThingCo
      *
      * @return static
      *
-     * @see http://schema.org/sameAs
+     * @see https://schema.org/sameAs
      */
     public function sameAs($sameAs)
     {
         return $this->setProperty('sameAs', $sameAs);
+    }
+
+    /**
+     * Identifies a [[Trip]] that is a subTrip of this Trip.  For example Day 1,
+     * Day 2, etc. of a multi-day trip.
+     *
+     * @param \Spatie\SchemaOrg\Contracts\TripContract|\Spatie\SchemaOrg\Contracts\TripContract[] $subTrip
+     *
+     * @return static
+     *
+     * @see https://schema.org/subTrip
+     * @see http://pending.schema.org
+     * @link http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#Tourism
+     */
+    public function subTrip($subTrip)
+    {
+        return $this->setProperty('subTrip', $subTrip);
     }
 
     /**
@@ -244,7 +299,8 @@ class Trip extends BaseType implements TripContract, IntangibleContract, ThingCo
      *
      * @return static
      *
-     * @see http://schema.org/subjectOf
+     * @see https://schema.org/subjectOf
+     * @link https://github.com/schemaorg/schemaorg/issues/1670
      */
     public function subjectOf($subjectOf)
     {
@@ -258,7 +314,7 @@ class Trip extends BaseType implements TripContract, IntangibleContract, ThingCo
      *
      * @return static
      *
-     * @see http://schema.org/url
+     * @see https://schema.org/url
      */
     public function url($url)
     {

@@ -30,6 +30,8 @@ interface AggregateRatingContract
 
     public function ratingCount($ratingCount);
 
+    public function ratingExplanation($ratingExplanation);
+
     public function ratingValue($ratingValue);
 
     public function reviewAspect($reviewAspect);

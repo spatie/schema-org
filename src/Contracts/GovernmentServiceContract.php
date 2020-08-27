@@ -22,6 +22,8 @@ interface GovernmentServiceContract
 
     public function broker($broker);
 
+    public function category($category);
+
     public function description($description);
 
     public function disambiguatingDescription($disambiguatingDescription);
@@ -37,6 +39,8 @@ interface GovernmentServiceContract
     public function isRelatedTo($isRelatedTo);
 
     public function isSimilarTo($isSimilarTo);
+
+    public function jurisdiction($jurisdiction);
 
     public function logo($logo);
 
@@ -66,9 +70,13 @@ interface GovernmentServiceContract
 
     public function serviceOutput($serviceOutput);
 
+    public function serviceType($serviceType);
+
     public function slogan($slogan);
 
     public function subjectOf($subjectOf);
+
+    public function termsOfService($termsOfService);
 
     public function url($url);
 

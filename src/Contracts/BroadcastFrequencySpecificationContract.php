@@ -10,6 +10,10 @@ interface BroadcastFrequencySpecificationContract
 
     public function broadcastFrequencyValue($broadcastFrequencyValue);
 
+    public function broadcastSignalModulation($broadcastSignalModulation);
+
+    public function broadcastSubChannel($broadcastSubChannel);
+
     public function description($description);
 
     public function disambiguatingDescription($disambiguatingDescription);

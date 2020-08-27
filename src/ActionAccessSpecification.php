@@ -9,9 +9,9 @@ use \Spatie\SchemaOrg\Contracts\ThingContract;
 /**
  * A set of requirements that a must be fulfilled in order to perform an Action.
  *
- * @see http://schema.org/ActionAccessSpecification
+ * @see https://schema.org/ActionAccessSpecification
+ * @link https://github.com/schemaorg/schemaorg/issues/1741
  *
- * @method static category($category) The value should be instance of pending types PhysicalActivityCategory|PhysicalActivityCategory[]|Thing|Thing[]|string|string[]
  */
 class ActionAccessSpecification extends BaseType implements ActionAccessSpecificationContract, IntangibleContract, ThingContract
 {
@@ -27,7 +27,7 @@ class ActionAccessSpecification extends BaseType implements ActionAccessSpecific
      *
      * @return static
      *
-     * @see http://schema.org/additionalType
+     * @see https://schema.org/additionalType
      */
     public function additionalType($additionalType)
     {
@@ -41,7 +41,7 @@ class ActionAccessSpecification extends BaseType implements ActionAccessSpecific
      *
      * @return static
      *
-     * @see http://schema.org/alternateName
+     * @see https://schema.org/alternateName
      */
     public function alternateName($alternateName)
     {
@@ -56,7 +56,7 @@ class ActionAccessSpecification extends BaseType implements ActionAccessSpecific
      *
      * @return static
      *
-     * @see http://schema.org/availabilityEnds
+     * @see https://schema.org/availabilityEnds
      */
     public function availabilityEnds($availabilityEnds)
     {
@@ -71,11 +71,26 @@ class ActionAccessSpecification extends BaseType implements ActionAccessSpecific
      *
      * @return static
      *
-     * @see http://schema.org/availabilityStarts
+     * @see https://schema.org/availabilityStarts
      */
     public function availabilityStarts($availabilityStarts)
     {
         return $this->setProperty('availabilityStarts', $availabilityStarts);
+    }
+
+    /**
+     * A category for the item. Greater signs or slashes can be used to
+     * informally indicate a category hierarchy.
+     *
+     * @param \Spatie\SchemaOrg\Contracts\PhysicalActivityCategoryContract|\Spatie\SchemaOrg\Contracts\PhysicalActivityCategoryContract[]|\Spatie\SchemaOrg\Contracts\ThingContract|\Spatie\SchemaOrg\Contracts\ThingContract[]|string|string[] $category
+     *
+     * @return static
+     *
+     * @see https://schema.org/category
+     */
+    public function category($category)
+    {
+        return $this->setProperty('category', $category);
     }
 
     /**
@@ -85,7 +100,7 @@ class ActionAccessSpecification extends BaseType implements ActionAccessSpecific
      *
      * @return static
      *
-     * @see http://schema.org/description
+     * @see https://schema.org/description
      */
     public function description($description)
     {
@@ -102,7 +117,7 @@ class ActionAccessSpecification extends BaseType implements ActionAccessSpecific
      *
      * @return static
      *
-     * @see http://schema.org/disambiguatingDescription
+     * @see https://schema.org/disambiguatingDescription
      */
     public function disambiguatingDescription($disambiguatingDescription)
     {
@@ -120,7 +135,7 @@ class ActionAccessSpecification extends BaseType implements ActionAccessSpecific
      *
      * @return static
      *
-     * @see http://schema.org/eligibleRegion
+     * @see https://schema.org/eligibleRegion
      */
     public function eligibleRegion($eligibleRegion)
     {
@@ -136,7 +151,8 @@ class ActionAccessSpecification extends BaseType implements ActionAccessSpecific
      *
      * @return static
      *
-     * @see http://schema.org/expectsAcceptanceOf
+     * @see https://schema.org/expectsAcceptanceOf
+     * @link https://github.com/schemaorg/schemaorg/issues/1741
      */
     public function expectsAcceptanceOf($expectsAcceptanceOf)
     {
@@ -154,7 +170,7 @@ class ActionAccessSpecification extends BaseType implements ActionAccessSpecific
      *
      * @return static
      *
-     * @see http://schema.org/identifier
+     * @see https://schema.org/identifier
      */
     public function identifier($identifier)
     {
@@ -169,11 +185,32 @@ class ActionAccessSpecification extends BaseType implements ActionAccessSpecific
      *
      * @return static
      *
-     * @see http://schema.org/image
+     * @see https://schema.org/image
      */
     public function image($image)
     {
         return $this->setProperty('image', $image);
+    }
+
+    /**
+     * The ISO 3166-1 (ISO 3166-1 alpha-2) or ISO 3166-2 code, the place, or the
+     * GeoShape for the geo-political region(s) for which the offer or delivery
+     * charge specification is not valid, e.g. a region where the transaction is
+     * not allowed.
+     * 
+     * See also [[eligibleRegion]].
+     *
+     * @param \Spatie\SchemaOrg\Contracts\GeoShapeContract|\Spatie\SchemaOrg\Contracts\GeoShapeContract[]|\Spatie\SchemaOrg\Contracts\PlaceContract|\Spatie\SchemaOrg\Contracts\PlaceContract[]|string|string[] $ineligibleRegion
+     *
+     * @return static
+     *
+     * @see https://schema.org/ineligibleRegion
+     * @see http://pending.schema.org
+     * @link https://github.com/schemaorg/schemaorg/issues/2242
+     */
+    public function ineligibleRegion($ineligibleRegion)
+    {
+        return $this->setProperty('ineligibleRegion', $ineligibleRegion);
     }
 
     /**
@@ -185,7 +222,7 @@ class ActionAccessSpecification extends BaseType implements ActionAccessSpecific
      *
      * @return static
      *
-     * @see http://schema.org/mainEntityOfPage
+     * @see https://schema.org/mainEntityOfPage
      */
     public function mainEntityOfPage($mainEntityOfPage)
     {
@@ -199,7 +236,7 @@ class ActionAccessSpecification extends BaseType implements ActionAccessSpecific
      *
      * @return static
      *
-     * @see http://schema.org/name
+     * @see https://schema.org/name
      */
     public function name($name)
     {
@@ -214,7 +251,7 @@ class ActionAccessSpecification extends BaseType implements ActionAccessSpecific
      *
      * @return static
      *
-     * @see http://schema.org/potentialAction
+     * @see https://schema.org/potentialAction
      */
     public function potentialAction($potentialAction)
     {
@@ -230,7 +267,8 @@ class ActionAccessSpecification extends BaseType implements ActionAccessSpecific
      *
      * @return static
      *
-     * @see http://schema.org/requiresSubscription
+     * @see https://schema.org/requiresSubscription
+     * @link https://github.com/schemaorg/schemaorg/issues/1741
      */
     public function requiresSubscription($requiresSubscription)
     {
@@ -246,7 +284,7 @@ class ActionAccessSpecification extends BaseType implements ActionAccessSpecific
      *
      * @return static
      *
-     * @see http://schema.org/sameAs
+     * @see https://schema.org/sameAs
      */
     public function sameAs($sameAs)
     {
@@ -260,7 +298,8 @@ class ActionAccessSpecification extends BaseType implements ActionAccessSpecific
      *
      * @return static
      *
-     * @see http://schema.org/subjectOf
+     * @see https://schema.org/subjectOf
+     * @link https://github.com/schemaorg/schemaorg/issues/1670
      */
     public function subjectOf($subjectOf)
     {
@@ -274,7 +313,7 @@ class ActionAccessSpecification extends BaseType implements ActionAccessSpecific
      *
      * @return static
      *
-     * @see http://schema.org/url
+     * @see https://schema.org/url
      */
     public function url($url)
     {

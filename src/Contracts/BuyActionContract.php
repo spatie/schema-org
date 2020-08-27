@@ -26,6 +26,8 @@ interface BuyActionContract
 
     public function instrument($instrument);
 
+    public function location($location);
+
     public function mainEntityOfPage($mainEntityOfPage);
 
     public function name($name);

@@ -12,8 +12,9 @@ use \Spatie\SchemaOrg\Contracts\ThingContract;
  * A type of bed. This is used for indicating the bed or beds available in an
  * accommodation.
  *
- * @see http://schema.org/BedType
+ * @see https://schema.org/BedType
  *
+ * @method static supersededBy($supersededBy) The value should be instance of pending types Class|Class[]|Enumeration|Enumeration[]|Property|Property[]
  */
 class BedType extends BaseType implements BedTypeContract, EnumerationContract, IntangibleContract, QualitativeValueContract, ThingContract
 {
@@ -23,8 +24,8 @@ class BedType extends BaseType implements BedTypeContract, EnumerationContract, 
      * there is no matching property in schema.org.
      * 
      * Note: Publishers should be aware that applications designed to use
-     * specific schema.org properties (e.g. http://schema.org/width,
-     * http://schema.org/color, http://schema.org/gtin13, ...) will typically
+     * specific schema.org properties (e.g. https://schema.org/width,
+     * https://schema.org/color, https://schema.org/gtin13, ...) will typically
      * expect such data to be provided using those properties, rather than using
      * the generic property/value mechanism.
      *
@@ -32,7 +33,7 @@ class BedType extends BaseType implements BedTypeContract, EnumerationContract, 
      *
      * @return static
      *
-     * @see http://schema.org/additionalProperty
+     * @see https://schema.org/additionalProperty
      */
     public function additionalProperty($additionalProperty)
     {
@@ -51,7 +52,7 @@ class BedType extends BaseType implements BedTypeContract, EnumerationContract, 
      *
      * @return static
      *
-     * @see http://schema.org/additionalType
+     * @see https://schema.org/additionalType
      */
     public function additionalType($additionalType)
     {
@@ -65,7 +66,7 @@ class BedType extends BaseType implements BedTypeContract, EnumerationContract, 
      *
      * @return static
      *
-     * @see http://schema.org/alternateName
+     * @see https://schema.org/alternateName
      */
     public function alternateName($alternateName)
     {
@@ -79,7 +80,7 @@ class BedType extends BaseType implements BedTypeContract, EnumerationContract, 
      *
      * @return static
      *
-     * @see http://schema.org/description
+     * @see https://schema.org/description
      */
     public function description($description)
     {
@@ -96,7 +97,7 @@ class BedType extends BaseType implements BedTypeContract, EnumerationContract, 
      *
      * @return static
      *
-     * @see http://schema.org/disambiguatingDescription
+     * @see https://schema.org/disambiguatingDescription
      */
     public function disambiguatingDescription($disambiguatingDescription)
     {
@@ -111,7 +112,8 @@ class BedType extends BaseType implements BedTypeContract, EnumerationContract, 
      *
      * @return static
      *
-     * @see http://schema.org/equal
+     * @see https://schema.org/equal
+     * @link http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#source_GoodRelationsTerms
      */
     public function equal($equal)
     {
@@ -126,7 +128,8 @@ class BedType extends BaseType implements BedTypeContract, EnumerationContract, 
      *
      * @return static
      *
-     * @see http://schema.org/greater
+     * @see https://schema.org/greater
+     * @link http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#source_GoodRelationsTerms
      */
     public function greater($greater)
     {
@@ -141,7 +144,8 @@ class BedType extends BaseType implements BedTypeContract, EnumerationContract, 
      *
      * @return static
      *
-     * @see http://schema.org/greaterOrEqual
+     * @see https://schema.org/greaterOrEqual
+     * @link http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#source_GoodRelationsTerms
      */
     public function greaterOrEqual($greaterOrEqual)
     {
@@ -159,7 +163,7 @@ class BedType extends BaseType implements BedTypeContract, EnumerationContract, 
      *
      * @return static
      *
-     * @see http://schema.org/identifier
+     * @see https://schema.org/identifier
      */
     public function identifier($identifier)
     {
@@ -174,7 +178,7 @@ class BedType extends BaseType implements BedTypeContract, EnumerationContract, 
      *
      * @return static
      *
-     * @see http://schema.org/image
+     * @see https://schema.org/image
      */
     public function image($image)
     {
@@ -189,7 +193,8 @@ class BedType extends BaseType implements BedTypeContract, EnumerationContract, 
      *
      * @return static
      *
-     * @see http://schema.org/lesser
+     * @see https://schema.org/lesser
+     * @link http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#source_GoodRelationsTerms
      */
     public function lesser($lesser)
     {
@@ -204,7 +209,8 @@ class BedType extends BaseType implements BedTypeContract, EnumerationContract, 
      *
      * @return static
      *
-     * @see http://schema.org/lesserOrEqual
+     * @see https://schema.org/lesserOrEqual
+     * @link http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#source_GoodRelationsTerms
      */
     public function lesserOrEqual($lesserOrEqual)
     {
@@ -220,7 +226,7 @@ class BedType extends BaseType implements BedTypeContract, EnumerationContract, 
      *
      * @return static
      *
-     * @see http://schema.org/mainEntityOfPage
+     * @see https://schema.org/mainEntityOfPage
      */
     public function mainEntityOfPage($mainEntityOfPage)
     {
@@ -234,7 +240,7 @@ class BedType extends BaseType implements BedTypeContract, EnumerationContract, 
      *
      * @return static
      *
-     * @see http://schema.org/name
+     * @see https://schema.org/name
      */
     public function name($name)
     {
@@ -249,7 +255,8 @@ class BedType extends BaseType implements BedTypeContract, EnumerationContract, 
      *
      * @return static
      *
-     * @see http://schema.org/nonEqual
+     * @see https://schema.org/nonEqual
+     * @link http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#source_GoodRelationsTerms
      */
     public function nonEqual($nonEqual)
     {
@@ -264,7 +271,7 @@ class BedType extends BaseType implements BedTypeContract, EnumerationContract, 
      *
      * @return static
      *
-     * @see http://schema.org/potentialAction
+     * @see https://schema.org/potentialAction
      */
     public function potentialAction($potentialAction)
     {
@@ -280,7 +287,7 @@ class BedType extends BaseType implements BedTypeContract, EnumerationContract, 
      *
      * @return static
      *
-     * @see http://schema.org/sameAs
+     * @see https://schema.org/sameAs
      */
     public function sameAs($sameAs)
     {
@@ -294,7 +301,8 @@ class BedType extends BaseType implements BedTypeContract, EnumerationContract, 
      *
      * @return static
      *
-     * @see http://schema.org/subjectOf
+     * @see https://schema.org/subjectOf
+     * @link https://github.com/schemaorg/schemaorg/issues/1670
      */
     public function subjectOf($subjectOf)
     {
@@ -308,7 +316,7 @@ class BedType extends BaseType implements BedTypeContract, EnumerationContract, 
      *
      * @return static
      *
-     * @see http://schema.org/url
+     * @see https://schema.org/url
      */
     public function url($url)
     {
@@ -323,7 +331,8 @@ class BedType extends BaseType implements BedTypeContract, EnumerationContract, 
      *
      * @return static
      *
-     * @see http://schema.org/valueReference
+     * @see https://schema.org/valueReference
+     * @link http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#source_GoodRelationsTerms
      */
     public function valueReference($valueReference)
     {

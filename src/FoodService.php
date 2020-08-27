@@ -10,10 +10,9 @@ use \Spatie\SchemaOrg\Contracts\ThingContract;
 /**
  * A food service, like breakfast, lunch, or dinner.
  *
- * @see http://schema.org/FoodService
+ * @see https://schema.org/FoodService
+ * @link https://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#STI_Accommodation_Ontology
  *
- * @method static category($category) The value should be instance of pending types PhysicalActivityCategory|PhysicalActivityCategory[]|Thing|Thing[]|string|string[]
- * @method static serviceType($serviceType) The value should be instance of pending types GovernmentBenefitsType|GovernmentBenefitsType[]|string|string[]
  */
 class FoodService extends BaseType implements FoodServiceContract, IntangibleContract, ServiceContract, ThingContract
 {
@@ -29,7 +28,7 @@ class FoodService extends BaseType implements FoodServiceContract, IntangibleCon
      *
      * @return static
      *
-     * @see http://schema.org/additionalType
+     * @see https://schema.org/additionalType
      */
     public function additionalType($additionalType)
     {
@@ -44,7 +43,7 @@ class FoodService extends BaseType implements FoodServiceContract, IntangibleCon
      *
      * @return static
      *
-     * @see http://schema.org/aggregateRating
+     * @see https://schema.org/aggregateRating
      */
     public function aggregateRating($aggregateRating)
     {
@@ -58,7 +57,7 @@ class FoodService extends BaseType implements FoodServiceContract, IntangibleCon
      *
      * @return static
      *
-     * @see http://schema.org/alternateName
+     * @see https://schema.org/alternateName
      */
     public function alternateName($alternateName)
     {
@@ -72,7 +71,7 @@ class FoodService extends BaseType implements FoodServiceContract, IntangibleCon
      *
      * @return static
      *
-     * @see http://schema.org/areaServed
+     * @see https://schema.org/areaServed
      */
     public function areaServed($areaServed)
     {
@@ -86,7 +85,7 @@ class FoodService extends BaseType implements FoodServiceContract, IntangibleCon
      *
      * @return static
      *
-     * @see http://schema.org/audience
+     * @see https://schema.org/audience
      */
     public function audience($audience)
     {
@@ -101,7 +100,7 @@ class FoodService extends BaseType implements FoodServiceContract, IntangibleCon
      *
      * @return static
      *
-     * @see http://schema.org/availableChannel
+     * @see https://schema.org/availableChannel
      */
     public function availableChannel($availableChannel)
     {
@@ -115,7 +114,7 @@ class FoodService extends BaseType implements FoodServiceContract, IntangibleCon
      *
      * @return static
      *
-     * @see http://schema.org/award
+     * @see https://schema.org/award
      */
     public function award($award)
     {
@@ -130,7 +129,7 @@ class FoodService extends BaseType implements FoodServiceContract, IntangibleCon
      *
      * @return static
      *
-     * @see http://schema.org/brand
+     * @see https://schema.org/brand
      */
     public function brand($brand)
     {
@@ -147,11 +146,26 @@ class FoodService extends BaseType implements FoodServiceContract, IntangibleCon
      *
      * @return static
      *
-     * @see http://schema.org/broker
+     * @see https://schema.org/broker
      */
     public function broker($broker)
     {
         return $this->setProperty('broker', $broker);
+    }
+
+    /**
+     * A category for the item. Greater signs or slashes can be used to
+     * informally indicate a category hierarchy.
+     *
+     * @param \Spatie\SchemaOrg\Contracts\PhysicalActivityCategoryContract|\Spatie\SchemaOrg\Contracts\PhysicalActivityCategoryContract[]|\Spatie\SchemaOrg\Contracts\ThingContract|\Spatie\SchemaOrg\Contracts\ThingContract[]|string|string[] $category
+     *
+     * @return static
+     *
+     * @see https://schema.org/category
+     */
+    public function category($category)
+    {
+        return $this->setProperty('category', $category);
     }
 
     /**
@@ -161,7 +175,7 @@ class FoodService extends BaseType implements FoodServiceContract, IntangibleCon
      *
      * @return static
      *
-     * @see http://schema.org/description
+     * @see https://schema.org/description
      */
     public function description($description)
     {
@@ -178,7 +192,7 @@ class FoodService extends BaseType implements FoodServiceContract, IntangibleCon
      *
      * @return static
      *
-     * @see http://schema.org/disambiguatingDescription
+     * @see https://schema.org/disambiguatingDescription
      */
     public function disambiguatingDescription($disambiguatingDescription)
     {
@@ -193,7 +207,7 @@ class FoodService extends BaseType implements FoodServiceContract, IntangibleCon
      *
      * @return static
      *
-     * @see http://schema.org/hasOfferCatalog
+     * @see https://schema.org/hasOfferCatalog
      */
     public function hasOfferCatalog($hasOfferCatalog)
     {
@@ -207,7 +221,7 @@ class FoodService extends BaseType implements FoodServiceContract, IntangibleCon
      *
      * @return static
      *
-     * @see http://schema.org/hoursAvailable
+     * @see https://schema.org/hoursAvailable
      */
     public function hoursAvailable($hoursAvailable)
     {
@@ -225,7 +239,7 @@ class FoodService extends BaseType implements FoodServiceContract, IntangibleCon
      *
      * @return static
      *
-     * @see http://schema.org/identifier
+     * @see https://schema.org/identifier
      */
     public function identifier($identifier)
     {
@@ -240,7 +254,7 @@ class FoodService extends BaseType implements FoodServiceContract, IntangibleCon
      *
      * @return static
      *
-     * @see http://schema.org/image
+     * @see https://schema.org/image
      */
     public function image($image)
     {
@@ -254,7 +268,8 @@ class FoodService extends BaseType implements FoodServiceContract, IntangibleCon
      *
      * @return static
      *
-     * @see http://schema.org/isRelatedTo
+     * @see https://schema.org/isRelatedTo
+     * @link http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#source_GoodRelationsTerms
      */
     public function isRelatedTo($isRelatedTo)
     {
@@ -269,7 +284,8 @@ class FoodService extends BaseType implements FoodServiceContract, IntangibleCon
      *
      * @return static
      *
-     * @see http://schema.org/isSimilarTo
+     * @see https://schema.org/isSimilarTo
+     * @link http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#source_GoodRelationsTerms
      */
     public function isSimilarTo($isSimilarTo)
     {
@@ -283,7 +299,8 @@ class FoodService extends BaseType implements FoodServiceContract, IntangibleCon
      *
      * @return static
      *
-     * @see http://schema.org/logo
+     * @see https://schema.org/logo
+     * @link http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#source_GoodRelationsTerms
      */
     public function logo($logo)
     {
@@ -299,7 +316,7 @@ class FoodService extends BaseType implements FoodServiceContract, IntangibleCon
      *
      * @return static
      *
-     * @see http://schema.org/mainEntityOfPage
+     * @see https://schema.org/mainEntityOfPage
      */
     public function mainEntityOfPage($mainEntityOfPage)
     {
@@ -313,7 +330,7 @@ class FoodService extends BaseType implements FoodServiceContract, IntangibleCon
      *
      * @return static
      *
-     * @see http://schema.org/name
+     * @see https://schema.org/name
      */
     public function name($name)
     {
@@ -334,7 +351,8 @@ class FoodService extends BaseType implements FoodServiceContract, IntangibleCon
      *
      * @return static
      *
-     * @see http://schema.org/offers
+     * @see https://schema.org/offers
+     * @link https://github.com/schemaorg/schemaorg/issues/2289
      */
     public function offers($offers)
     {
@@ -349,7 +367,7 @@ class FoodService extends BaseType implements FoodServiceContract, IntangibleCon
      *
      * @return static
      *
-     * @see http://schema.org/potentialAction
+     * @see https://schema.org/potentialAction
      */
     public function potentialAction($potentialAction)
     {
@@ -364,7 +382,7 @@ class FoodService extends BaseType implements FoodServiceContract, IntangibleCon
      *
      * @return static
      *
-     * @see http://schema.org/produces
+     * @see https://schema.org/produces
      */
     public function produces($produces)
     {
@@ -380,7 +398,8 @@ class FoodService extends BaseType implements FoodServiceContract, IntangibleCon
      *
      * @return static
      *
-     * @see http://schema.org/provider
+     * @see https://schema.org/provider
+     * @link https://github.com/schemaorg/schemaorg/issues/2289
      */
     public function provider($provider)
     {
@@ -394,7 +413,7 @@ class FoodService extends BaseType implements FoodServiceContract, IntangibleCon
      *
      * @return static
      *
-     * @see http://schema.org/providerMobility
+     * @see https://schema.org/providerMobility
      */
     public function providerMobility($providerMobility)
     {
@@ -408,7 +427,7 @@ class FoodService extends BaseType implements FoodServiceContract, IntangibleCon
      *
      * @return static
      *
-     * @see http://schema.org/review
+     * @see https://schema.org/review
      */
     public function review($review)
     {
@@ -424,7 +443,7 @@ class FoodService extends BaseType implements FoodServiceContract, IntangibleCon
      *
      * @return static
      *
-     * @see http://schema.org/sameAs
+     * @see https://schema.org/sameAs
      */
     public function sameAs($sameAs)
     {
@@ -438,7 +457,7 @@ class FoodService extends BaseType implements FoodServiceContract, IntangibleCon
      *
      * @return static
      *
-     * @see http://schema.org/serviceArea
+     * @see https://schema.org/serviceArea
      */
     public function serviceArea($serviceArea)
     {
@@ -452,7 +471,7 @@ class FoodService extends BaseType implements FoodServiceContract, IntangibleCon
      *
      * @return static
      *
-     * @see http://schema.org/serviceAudience
+     * @see https://schema.org/serviceAudience
      */
     public function serviceAudience($serviceAudience)
     {
@@ -467,11 +486,26 @@ class FoodService extends BaseType implements FoodServiceContract, IntangibleCon
      *
      * @return static
      *
-     * @see http://schema.org/serviceOutput
+     * @see https://schema.org/serviceOutput
      */
     public function serviceOutput($serviceOutput)
     {
         return $this->setProperty('serviceOutput', $serviceOutput);
+    }
+
+    /**
+     * The type of service being offered, e.g. veterans' benefits, emergency
+     * relief, etc.
+     *
+     * @param \Spatie\SchemaOrg\Contracts\GovernmentBenefitsTypeContract|\Spatie\SchemaOrg\Contracts\GovernmentBenefitsTypeContract[]|string|string[] $serviceType
+     *
+     * @return static
+     *
+     * @see https://schema.org/serviceType
+     */
+    public function serviceType($serviceType)
+    {
+        return $this->setProperty('serviceType', $serviceType);
     }
 
     /**
@@ -481,7 +515,7 @@ class FoodService extends BaseType implements FoodServiceContract, IntangibleCon
      *
      * @return static
      *
-     * @see http://schema.org/slogan
+     * @see https://schema.org/slogan
      */
     public function slogan($slogan)
     {
@@ -495,11 +529,28 @@ class FoodService extends BaseType implements FoodServiceContract, IntangibleCon
      *
      * @return static
      *
-     * @see http://schema.org/subjectOf
+     * @see https://schema.org/subjectOf
+     * @link https://github.com/schemaorg/schemaorg/issues/1670
      */
     public function subjectOf($subjectOf)
     {
         return $this->setProperty('subjectOf', $subjectOf);
+    }
+
+    /**
+     * Human-readable terms of service documentation.
+     *
+     * @param string|string[] $termsOfService
+     *
+     * @return static
+     *
+     * @see https://schema.org/termsOfService
+     * @see http://pending.schema.org
+     * @link https://github.com/schemaorg/schemaorg/issues/1423
+     */
+    public function termsOfService($termsOfService)
+    {
+        return $this->setProperty('termsOfService', $termsOfService);
     }
 
     /**
@@ -509,7 +560,7 @@ class FoodService extends BaseType implements FoodServiceContract, IntangibleCon
      *
      * @return static
      *
-     * @see http://schema.org/url
+     * @see https://schema.org/url
      */
     public function url($url)
     {

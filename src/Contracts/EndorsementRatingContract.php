@@ -26,6 +26,8 @@ interface EndorsementRatingContract
 
     public function potentialAction($potentialAction);
 
+    public function ratingExplanation($ratingExplanation);
+
     public function ratingValue($ratingValue);
 
     public function reviewAspect($reviewAspect);

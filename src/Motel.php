@@ -15,30 +15,37 @@ use \Spatie\SchemaOrg\Contracts\ThingContract;
  * See also the <a href="/docs/hotels.html">dedicated document on the use of
  * schema.org for marking up hotels and other forms of accommodations</a>.
  *
- * @see http://schema.org/Motel
+ * @see https://schema.org/Motel
  *
- * @method static geoContains($geoContains) The value should be instance of pending types GeospatialGeometry|GeospatialGeometry[]|Place|Place[]
- * @method static geoCoveredBy($geoCoveredBy) The value should be instance of pending types GeospatialGeometry|GeospatialGeometry[]|Place|Place[]
- * @method static geoCovers($geoCovers) The value should be instance of pending types GeospatialGeometry|GeospatialGeometry[]|Place|Place[]
- * @method static geoCrosses($geoCrosses) The value should be instance of pending types GeospatialGeometry|GeospatialGeometry[]|Place|Place[]
- * @method static geoDisjoint($geoDisjoint) The value should be instance of pending types GeospatialGeometry|GeospatialGeometry[]|Place|Place[]
- * @method static geoEquals($geoEquals) The value should be instance of pending types GeospatialGeometry|GeospatialGeometry[]|Place|Place[]
- * @method static geoIntersects($geoIntersects) The value should be instance of pending types GeospatialGeometry|GeospatialGeometry[]|Place|Place[]
- * @method static geoOverlaps($geoOverlaps) The value should be instance of pending types GeospatialGeometry|GeospatialGeometry[]|Place|Place[]
- * @method static geoTouches($geoTouches) The value should be instance of pending types GeospatialGeometry|GeospatialGeometry[]|Place|Place[]
- * @method static geoWithin($geoWithin) The value should be instance of pending types GeospatialGeometry|GeospatialGeometry[]|Place|Place[]
- * @method static location($location) The value should be instance of pending types Place|Place[]|PostalAddress|PostalAddress[]|VirtualLocation|VirtualLocation[]|string|string[]
  */
 class Motel extends BaseType implements MotelContract, LocalBusinessContract, LodgingBusinessContract, OrganizationContract, PlaceContract, ThingContract
 {
+    /**
+     * For a [[NewsMediaOrganization]] or other news-related [[Organization]], a
+     * statement about public engagement activities (for news media, the
+     * newsroom’s), including involving the public - digitally or otherwise --
+     * in coverage decisions, reporting and activities after publication.
+     *
+     * @param \Spatie\SchemaOrg\Contracts\CreativeWorkContract|\Spatie\SchemaOrg\Contracts\CreativeWorkContract[]|string|string[] $actionableFeedbackPolicy
+     *
+     * @return static
+     *
+     * @see https://schema.org/actionableFeedbackPolicy
+     * @see http://pending.schema.org
+     */
+    public function actionableFeedbackPolicy($actionableFeedbackPolicy)
+    {
+        return $this->setProperty('actionableFeedbackPolicy', $actionableFeedbackPolicy);
+    }
+
     /**
      * A property-value pair representing an additional characteristics of the
      * entitity, e.g. a product feature or another characteristic for which
      * there is no matching property in schema.org.
      * 
      * Note: Publishers should be aware that applications designed to use
-     * specific schema.org properties (e.g. http://schema.org/width,
-     * http://schema.org/color, http://schema.org/gtin13, ...) will typically
+     * specific schema.org properties (e.g. https://schema.org/width,
+     * https://schema.org/color, https://schema.org/gtin13, ...) will typically
      * expect such data to be provided using those properties, rather than using
      * the generic property/value mechanism.
      *
@@ -46,7 +53,7 @@ class Motel extends BaseType implements MotelContract, LocalBusinessContract, Lo
      *
      * @return static
      *
-     * @see http://schema.org/additionalProperty
+     * @see https://schema.org/additionalProperty
      */
     public function additionalProperty($additionalProperty)
     {
@@ -65,7 +72,7 @@ class Motel extends BaseType implements MotelContract, LocalBusinessContract, Lo
      *
      * @return static
      *
-     * @see http://schema.org/additionalType
+     * @see https://schema.org/additionalType
      */
     public function additionalType($additionalType)
     {
@@ -79,7 +86,7 @@ class Motel extends BaseType implements MotelContract, LocalBusinessContract, Lo
      *
      * @return static
      *
-     * @see http://schema.org/address
+     * @see https://schema.org/address
      */
     public function address($address)
     {
@@ -94,7 +101,7 @@ class Motel extends BaseType implements MotelContract, LocalBusinessContract, Lo
      *
      * @return static
      *
-     * @see http://schema.org/aggregateRating
+     * @see https://schema.org/aggregateRating
      */
     public function aggregateRating($aggregateRating)
     {
@@ -108,7 +115,7 @@ class Motel extends BaseType implements MotelContract, LocalBusinessContract, Lo
      *
      * @return static
      *
-     * @see http://schema.org/alternateName
+     * @see https://schema.org/alternateName
      */
     public function alternateName($alternateName)
     {
@@ -122,7 +129,7 @@ class Motel extends BaseType implements MotelContract, LocalBusinessContract, Lo
      *
      * @return static
      *
-     * @see http://schema.org/alumni
+     * @see https://schema.org/alumni
      */
     public function alumni($alumni)
     {
@@ -139,7 +146,8 @@ class Motel extends BaseType implements MotelContract, LocalBusinessContract, Lo
      *
      * @return static
      *
-     * @see http://schema.org/amenityFeature
+     * @see https://schema.org/amenityFeature
+     * @link https://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#STI_Accommodation_Ontology
      */
     public function amenityFeature($amenityFeature)
     {
@@ -153,7 +161,7 @@ class Motel extends BaseType implements MotelContract, LocalBusinessContract, Lo
      *
      * @return static
      *
-     * @see http://schema.org/areaServed
+     * @see https://schema.org/areaServed
      */
     public function areaServed($areaServed)
     {
@@ -167,7 +175,7 @@ class Motel extends BaseType implements MotelContract, LocalBusinessContract, Lo
      *
      * @return static
      *
-     * @see http://schema.org/audience
+     * @see https://schema.org/audience
      */
     public function audience($audience)
     {
@@ -183,7 +191,7 @@ class Motel extends BaseType implements MotelContract, LocalBusinessContract, Lo
      *
      * @return static
      *
-     * @see http://schema.org/availableLanguage
+     * @see https://schema.org/availableLanguage
      */
     public function availableLanguage($availableLanguage)
     {
@@ -197,7 +205,7 @@ class Motel extends BaseType implements MotelContract, LocalBusinessContract, Lo
      *
      * @return static
      *
-     * @see http://schema.org/award
+     * @see https://schema.org/award
      */
     public function award($award)
     {
@@ -211,7 +219,7 @@ class Motel extends BaseType implements MotelContract, LocalBusinessContract, Lo
      *
      * @return static
      *
-     * @see http://schema.org/awards
+     * @see https://schema.org/awards
      */
     public function awards($awards)
     {
@@ -231,7 +239,7 @@ class Motel extends BaseType implements MotelContract, LocalBusinessContract, Lo
      *
      * @return static
      *
-     * @see http://schema.org/branchCode
+     * @see https://schema.org/branchCode
      */
     public function branchCode($branchCode)
     {
@@ -246,7 +254,7 @@ class Motel extends BaseType implements MotelContract, LocalBusinessContract, Lo
      *
      * @return static
      *
-     * @see http://schema.org/branchOf
+     * @see https://schema.org/branchOf
      */
     public function branchOf($branchOf)
     {
@@ -261,7 +269,7 @@ class Motel extends BaseType implements MotelContract, LocalBusinessContract, Lo
      *
      * @return static
      *
-     * @see http://schema.org/brand
+     * @see https://schema.org/brand
      */
     public function brand($brand)
     {
@@ -275,7 +283,7 @@ class Motel extends BaseType implements MotelContract, LocalBusinessContract, Lo
      *
      * @return static
      *
-     * @see http://schema.org/checkinTime
+     * @see https://schema.org/checkinTime
      */
     public function checkinTime($checkinTime)
     {
@@ -289,7 +297,7 @@ class Motel extends BaseType implements MotelContract, LocalBusinessContract, Lo
      *
      * @return static
      *
-     * @see http://schema.org/checkoutTime
+     * @see https://schema.org/checkoutTime
      */
     public function checkoutTime($checkoutTime)
     {
@@ -303,7 +311,7 @@ class Motel extends BaseType implements MotelContract, LocalBusinessContract, Lo
      *
      * @return static
      *
-     * @see http://schema.org/contactPoint
+     * @see https://schema.org/contactPoint
      */
     public function contactPoint($contactPoint)
     {
@@ -317,7 +325,7 @@ class Motel extends BaseType implements MotelContract, LocalBusinessContract, Lo
      *
      * @return static
      *
-     * @see http://schema.org/contactPoints
+     * @see https://schema.org/contactPoints
      */
     public function contactPoints($contactPoints)
     {
@@ -331,7 +339,7 @@ class Motel extends BaseType implements MotelContract, LocalBusinessContract, Lo
      *
      * @return static
      *
-     * @see http://schema.org/containedIn
+     * @see https://schema.org/containedIn
      */
     public function containedIn($containedIn)
     {
@@ -345,7 +353,7 @@ class Motel extends BaseType implements MotelContract, LocalBusinessContract, Lo
      *
      * @return static
      *
-     * @see http://schema.org/containedInPlace
+     * @see https://schema.org/containedInPlace
      */
     public function containedInPlace($containedInPlace)
     {
@@ -360,11 +368,28 @@ class Motel extends BaseType implements MotelContract, LocalBusinessContract, Lo
      *
      * @return static
      *
-     * @see http://schema.org/containsPlace
+     * @see https://schema.org/containsPlace
      */
     public function containsPlace($containsPlace)
     {
         return $this->setProperty('containsPlace', $containsPlace);
+    }
+
+    /**
+     * For an [[Organization]] (e.g. [[NewsMediaOrganization]]), a statement
+     * describing (in news media, the newsroom’s) disclosure and correction
+     * policy for errors.
+     *
+     * @param \Spatie\SchemaOrg\Contracts\CreativeWorkContract|\Spatie\SchemaOrg\Contracts\CreativeWorkContract[]|string|string[] $correctionsPolicy
+     *
+     * @return static
+     *
+     * @see https://schema.org/correctionsPolicy
+     * @see http://pending.schema.org
+     */
+    public function correctionsPolicy($correctionsPolicy)
+    {
+        return $this->setProperty('correctionsPolicy', $correctionsPolicy);
     }
 
     /**
@@ -382,7 +407,7 @@ class Motel extends BaseType implements MotelContract, LocalBusinessContract, Lo
      *
      * @return static
      *
-     * @see http://schema.org/currenciesAccepted
+     * @see https://schema.org/currenciesAccepted
      */
     public function currenciesAccepted($currenciesAccepted)
     {
@@ -399,7 +424,7 @@ class Motel extends BaseType implements MotelContract, LocalBusinessContract, Lo
      *
      * @return static
      *
-     * @see http://schema.org/department
+     * @see https://schema.org/department
      */
     public function department($department)
     {
@@ -413,7 +438,7 @@ class Motel extends BaseType implements MotelContract, LocalBusinessContract, Lo
      *
      * @return static
      *
-     * @see http://schema.org/description
+     * @see https://schema.org/description
      */
     public function description($description)
     {
@@ -430,7 +455,7 @@ class Motel extends BaseType implements MotelContract, LocalBusinessContract, Lo
      *
      * @return static
      *
-     * @see http://schema.org/disambiguatingDescription
+     * @see https://schema.org/disambiguatingDescription
      */
     public function disambiguatingDescription($disambiguatingDescription)
     {
@@ -444,11 +469,47 @@ class Motel extends BaseType implements MotelContract, LocalBusinessContract, Lo
      *
      * @return static
      *
-     * @see http://schema.org/dissolutionDate
+     * @see https://schema.org/dissolutionDate
      */
     public function dissolutionDate($dissolutionDate)
     {
         return $this->setProperty('dissolutionDate', $dissolutionDate);
+    }
+
+    /**
+     * Statement on diversity policy by an [[Organization]] e.g. a
+     * [[NewsMediaOrganization]]. For a [[NewsMediaOrganization]], a statement
+     * describing the newsroom’s diversity policy on both staffing and
+     * sources, typically providing staffing data.
+     *
+     * @param \Spatie\SchemaOrg\Contracts\CreativeWorkContract|\Spatie\SchemaOrg\Contracts\CreativeWorkContract[]|string|string[] $diversityPolicy
+     *
+     * @return static
+     *
+     * @see https://schema.org/diversityPolicy
+     * @see http://pending.schema.org
+     */
+    public function diversityPolicy($diversityPolicy)
+    {
+        return $this->setProperty('diversityPolicy', $diversityPolicy);
+    }
+
+    /**
+     * For an [[Organization]] (often but not necessarily a
+     * [[NewsMediaOrganization]]), a report on staffing diversity issues. In a
+     * news context this might be for example ASNE or RTDNA (US) reports, or
+     * self-reported.
+     *
+     * @param \Spatie\SchemaOrg\Contracts\ArticleContract|\Spatie\SchemaOrg\Contracts\ArticleContract[]|string|string[] $diversityStaffingReport
+     *
+     * @return static
+     *
+     * @see https://schema.org/diversityStaffingReport
+     * @see http://pending.schema.org
+     */
+    public function diversityStaffingReport($diversityStaffingReport)
+    {
+        return $this->setProperty('diversityStaffingReport', $diversityStaffingReport);
     }
 
     /**
@@ -459,7 +520,8 @@ class Motel extends BaseType implements MotelContract, LocalBusinessContract, Lo
      *
      * @return static
      *
-     * @see http://schema.org/duns
+     * @see https://schema.org/duns
+     * @link http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#source_GoodRelationsTerms
      */
     public function duns($duns)
     {
@@ -473,7 +535,7 @@ class Motel extends BaseType implements MotelContract, LocalBusinessContract, Lo
      *
      * @return static
      *
-     * @see http://schema.org/email
+     * @see https://schema.org/email
      */
     public function email($email)
     {
@@ -487,7 +549,7 @@ class Motel extends BaseType implements MotelContract, LocalBusinessContract, Lo
      *
      * @return static
      *
-     * @see http://schema.org/employee
+     * @see https://schema.org/employee
      */
     public function employee($employee)
     {
@@ -501,11 +563,32 @@ class Motel extends BaseType implements MotelContract, LocalBusinessContract, Lo
      *
      * @return static
      *
-     * @see http://schema.org/employees
+     * @see https://schema.org/employees
      */
     public function employees($employees)
     {
         return $this->setProperty('employees', $employees);
+    }
+
+    /**
+     * Statement about ethics policy, e.g. of a [[NewsMediaOrganization]]
+     * regarding journalistic and publishing practices, or of a [[Restaurant]],
+     * a page describing food source policies. In the case of a
+     * [[NewsMediaOrganization]], an ethicsPolicy is typically a statement
+     * describing the personal, organizational, and corporate standards of
+     * behavior expected by the organization.
+     *
+     * @param \Spatie\SchemaOrg\Contracts\CreativeWorkContract|\Spatie\SchemaOrg\Contracts\CreativeWorkContract[]|string|string[] $ethicsPolicy
+     *
+     * @return static
+     *
+     * @see https://schema.org/ethicsPolicy
+     * @see http://pending.schema.org
+     * @link https://github.com/schemaorg/schemaorg/issues/1525
+     */
+    public function ethicsPolicy($ethicsPolicy)
+    {
+        return $this->setProperty('ethicsPolicy', $ethicsPolicy);
     }
 
     /**
@@ -516,7 +599,7 @@ class Motel extends BaseType implements MotelContract, LocalBusinessContract, Lo
      *
      * @return static
      *
-     * @see http://schema.org/event
+     * @see https://schema.org/event
      */
     public function event($event)
     {
@@ -530,7 +613,7 @@ class Motel extends BaseType implements MotelContract, LocalBusinessContract, Lo
      *
      * @return static
      *
-     * @see http://schema.org/events
+     * @see https://schema.org/events
      */
     public function events($events)
     {
@@ -544,7 +627,7 @@ class Motel extends BaseType implements MotelContract, LocalBusinessContract, Lo
      *
      * @return static
      *
-     * @see http://schema.org/faxNumber
+     * @see https://schema.org/faxNumber
      */
     public function faxNumber($faxNumber)
     {
@@ -558,7 +641,7 @@ class Motel extends BaseType implements MotelContract, LocalBusinessContract, Lo
      *
      * @return static
      *
-     * @see http://schema.org/founder
+     * @see https://schema.org/founder
      */
     public function founder($founder)
     {
@@ -572,7 +655,7 @@ class Motel extends BaseType implements MotelContract, LocalBusinessContract, Lo
      *
      * @return static
      *
-     * @see http://schema.org/founders
+     * @see https://schema.org/founders
      */
     public function founders($founders)
     {
@@ -586,7 +669,7 @@ class Motel extends BaseType implements MotelContract, LocalBusinessContract, Lo
      *
      * @return static
      *
-     * @see http://schema.org/foundingDate
+     * @see https://schema.org/foundingDate
      */
     public function foundingDate($foundingDate)
     {
@@ -600,7 +683,7 @@ class Motel extends BaseType implements MotelContract, LocalBusinessContract, Lo
      *
      * @return static
      *
-     * @see http://schema.org/foundingLocation
+     * @see https://schema.org/foundingLocation
      */
     public function foundingLocation($foundingLocation)
     {
@@ -615,7 +698,7 @@ class Motel extends BaseType implements MotelContract, LocalBusinessContract, Lo
      *
      * @return static
      *
-     * @see http://schema.org/funder
+     * @see https://schema.org/funder
      */
     public function funder($funder)
     {
@@ -629,11 +712,183 @@ class Motel extends BaseType implements MotelContract, LocalBusinessContract, Lo
      *
      * @return static
      *
-     * @see http://schema.org/geo
+     * @see https://schema.org/geo
      */
     public function geo($geo)
     {
         return $this->setProperty('geo', $geo);
+    }
+
+    /**
+     * Represents a relationship between two geometries (or the places they
+     * represent), relating a containing geometry to a contained geometry. "a
+     * contains b iff no points of b lie in the exterior of a, and at least one
+     * point of the interior of b lies in the interior of a". As defined in
+     * [DE-9IM](https://en.wikipedia.org/wiki/DE-9IM).
+     *
+     * @param \Spatie\SchemaOrg\Contracts\GeospatialGeometryContract|\Spatie\SchemaOrg\Contracts\GeospatialGeometryContract[]|\Spatie\SchemaOrg\Contracts\PlaceContract|\Spatie\SchemaOrg\Contracts\PlaceContract[] $geoContains
+     *
+     * @return static
+     *
+     * @see https://schema.org/geoContains
+     */
+    public function geoContains($geoContains)
+    {
+        return $this->setProperty('geoContains', $geoContains);
+    }
+
+    /**
+     * Represents a relationship between two geometries (or the places they
+     * represent), relating a geometry to another that covers it. As defined in
+     * [DE-9IM](https://en.wikipedia.org/wiki/DE-9IM).
+     *
+     * @param \Spatie\SchemaOrg\Contracts\GeospatialGeometryContract|\Spatie\SchemaOrg\Contracts\GeospatialGeometryContract[]|\Spatie\SchemaOrg\Contracts\PlaceContract|\Spatie\SchemaOrg\Contracts\PlaceContract[] $geoCoveredBy
+     *
+     * @return static
+     *
+     * @see https://schema.org/geoCoveredBy
+     */
+    public function geoCoveredBy($geoCoveredBy)
+    {
+        return $this->setProperty('geoCoveredBy', $geoCoveredBy);
+    }
+
+    /**
+     * Represents a relationship between two geometries (or the places they
+     * represent), relating a covering geometry to a covered geometry. "Every
+     * point of b is a point of (the interior or boundary of) a". As defined in
+     * [DE-9IM](https://en.wikipedia.org/wiki/DE-9IM).
+     *
+     * @param \Spatie\SchemaOrg\Contracts\GeospatialGeometryContract|\Spatie\SchemaOrg\Contracts\GeospatialGeometryContract[]|\Spatie\SchemaOrg\Contracts\PlaceContract|\Spatie\SchemaOrg\Contracts\PlaceContract[] $geoCovers
+     *
+     * @return static
+     *
+     * @see https://schema.org/geoCovers
+     */
+    public function geoCovers($geoCovers)
+    {
+        return $this->setProperty('geoCovers', $geoCovers);
+    }
+
+    /**
+     * Represents a relationship between two geometries (or the places they
+     * represent), relating a geometry to another that crosses it: "a crosses b:
+     * they have some but not all interior points in common, and the dimension
+     * of the intersection is less than that of at least one of them". As
+     * defined in [DE-9IM](https://en.wikipedia.org/wiki/DE-9IM).
+     *
+     * @param \Spatie\SchemaOrg\Contracts\GeospatialGeometryContract|\Spatie\SchemaOrg\Contracts\GeospatialGeometryContract[]|\Spatie\SchemaOrg\Contracts\PlaceContract|\Spatie\SchemaOrg\Contracts\PlaceContract[] $geoCrosses
+     *
+     * @return static
+     *
+     * @see https://schema.org/geoCrosses
+     */
+    public function geoCrosses($geoCrosses)
+    {
+        return $this->setProperty('geoCrosses', $geoCrosses);
+    }
+
+    /**
+     * Represents spatial relations in which two geometries (or the places they
+     * represent) are topologically disjoint: they have no point in common. They
+     * form a set of disconnected geometries." (a symmetric relationship, as
+     * defined in [DE-9IM](https://en.wikipedia.org/wiki/DE-9IM))
+     *
+     * @param \Spatie\SchemaOrg\Contracts\GeospatialGeometryContract|\Spatie\SchemaOrg\Contracts\GeospatialGeometryContract[]|\Spatie\SchemaOrg\Contracts\PlaceContract|\Spatie\SchemaOrg\Contracts\PlaceContract[] $geoDisjoint
+     *
+     * @return static
+     *
+     * @see https://schema.org/geoDisjoint
+     */
+    public function geoDisjoint($geoDisjoint)
+    {
+        return $this->setProperty('geoDisjoint', $geoDisjoint);
+    }
+
+    /**
+     * Represents spatial relations in which two geometries (or the places they
+     * represent) are topologically equal, as defined in
+     * [DE-9IM](https://en.wikipedia.org/wiki/DE-9IM). "Two geometries are
+     * topologically equal if their interiors intersect and no part of the
+     * interior or boundary of one geometry intersects the exterior of the
+     * other" (a symmetric relationship)
+     *
+     * @param \Spatie\SchemaOrg\Contracts\GeospatialGeometryContract|\Spatie\SchemaOrg\Contracts\GeospatialGeometryContract[]|\Spatie\SchemaOrg\Contracts\PlaceContract|\Spatie\SchemaOrg\Contracts\PlaceContract[] $geoEquals
+     *
+     * @return static
+     *
+     * @see https://schema.org/geoEquals
+     */
+    public function geoEquals($geoEquals)
+    {
+        return $this->setProperty('geoEquals', $geoEquals);
+    }
+
+    /**
+     * Represents spatial relations in which two geometries (or the places they
+     * represent) have at least one point in common. As defined in
+     * [DE-9IM](https://en.wikipedia.org/wiki/DE-9IM).
+     *
+     * @param \Spatie\SchemaOrg\Contracts\GeospatialGeometryContract|\Spatie\SchemaOrg\Contracts\GeospatialGeometryContract[]|\Spatie\SchemaOrg\Contracts\PlaceContract|\Spatie\SchemaOrg\Contracts\PlaceContract[] $geoIntersects
+     *
+     * @return static
+     *
+     * @see https://schema.org/geoIntersects
+     */
+    public function geoIntersects($geoIntersects)
+    {
+        return $this->setProperty('geoIntersects', $geoIntersects);
+    }
+
+    /**
+     * Represents a relationship between two geometries (or the places they
+     * represent), relating a geometry to another that geospatially overlaps it,
+     * i.e. they have some but not all points in common. As defined in
+     * [DE-9IM](https://en.wikipedia.org/wiki/DE-9IM).
+     *
+     * @param \Spatie\SchemaOrg\Contracts\GeospatialGeometryContract|\Spatie\SchemaOrg\Contracts\GeospatialGeometryContract[]|\Spatie\SchemaOrg\Contracts\PlaceContract|\Spatie\SchemaOrg\Contracts\PlaceContract[] $geoOverlaps
+     *
+     * @return static
+     *
+     * @see https://schema.org/geoOverlaps
+     */
+    public function geoOverlaps($geoOverlaps)
+    {
+        return $this->setProperty('geoOverlaps', $geoOverlaps);
+    }
+
+    /**
+     * Represents spatial relations in which two geometries (or the places they
+     * represent) touch: they have at least one boundary point in common, but no
+     * interior points." (a symmetric relationship, as defined in
+     * [DE-9IM](https://en.wikipedia.org/wiki/DE-9IM) )
+     *
+     * @param \Spatie\SchemaOrg\Contracts\GeospatialGeometryContract|\Spatie\SchemaOrg\Contracts\GeospatialGeometryContract[]|\Spatie\SchemaOrg\Contracts\PlaceContract|\Spatie\SchemaOrg\Contracts\PlaceContract[] $geoTouches
+     *
+     * @return static
+     *
+     * @see https://schema.org/geoTouches
+     */
+    public function geoTouches($geoTouches)
+    {
+        return $this->setProperty('geoTouches', $geoTouches);
+    }
+
+    /**
+     * Represents a relationship between two geometries (or the places they
+     * represent), relating a geometry to one that contains it, i.e. it is
+     * inside (i.e. within) its interior. As defined in
+     * [DE-9IM](https://en.wikipedia.org/wiki/DE-9IM).
+     *
+     * @param \Spatie\SchemaOrg\Contracts\GeospatialGeometryContract|\Spatie\SchemaOrg\Contracts\GeospatialGeometryContract[]|\Spatie\SchemaOrg\Contracts\PlaceContract|\Spatie\SchemaOrg\Contracts\PlaceContract[] $geoWithin
+     *
+     * @return static
+     *
+     * @see https://schema.org/geoWithin
+     */
+    public function geoWithin($geoWithin)
+    {
+        return $this->setProperty('geoWithin', $geoWithin);
     }
 
     /**
@@ -646,11 +901,48 @@ class Motel extends BaseType implements MotelContract, LocalBusinessContract, Lo
      *
      * @return static
      *
-     * @see http://schema.org/globalLocationNumber
+     * @see https://schema.org/globalLocationNumber
+     * @link http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#source_GoodRelationsTerms
      */
     public function globalLocationNumber($globalLocationNumber)
     {
         return $this->setProperty('globalLocationNumber', $globalLocationNumber);
+    }
+
+    /**
+     * A credential awarded to the Person or Organization.
+     *
+     * @param \Spatie\SchemaOrg\Contracts\EducationalOccupationalCredentialContract|\Spatie\SchemaOrg\Contracts\EducationalOccupationalCredentialContract[] $hasCredential
+     *
+     * @return static
+     *
+     * @see https://schema.org/hasCredential
+     * @see http://pending.schema.org
+     * @link https://github.com/schemaorg/schemaorg/issues/2289
+     */
+    public function hasCredential($hasCredential)
+    {
+        return $this->setProperty('hasCredential', $hasCredential);
+    }
+
+    /**
+     * Indicates whether some facility (e.g. [[FoodEstablishment]],
+     * [[CovidTestingFacility]]) offers a service that can be used by driving
+     * through in a car. In the case of [[CovidTestingFacility]] such facilities
+     * could potentially help with social distancing from other
+     * potentially-infected users.
+     *
+     * @param bool|bool[] $hasDriveThroughService
+     *
+     * @return static
+     *
+     * @see https://schema.org/hasDriveThroughService
+     * @see http://pending.schema.org
+     * @link https://github.com/schemaorg/schemaorg/issues/2490
+     */
+    public function hasDriveThroughService($hasDriveThroughService)
+    {
+        return $this->setProperty('hasDriveThroughService', $hasDriveThroughService);
     }
 
     /**
@@ -660,11 +952,27 @@ class Motel extends BaseType implements MotelContract, LocalBusinessContract, Lo
      *
      * @return static
      *
-     * @see http://schema.org/hasMap
+     * @see https://schema.org/hasMap
      */
     public function hasMap($hasMap)
     {
         return $this->setProperty('hasMap', $hasMap);
+    }
+
+    /**
+     * Indicates a MerchantReturnPolicy that may be applicable.
+     *
+     * @param \Spatie\SchemaOrg\Contracts\MerchantReturnPolicyContract|\Spatie\SchemaOrg\Contracts\MerchantReturnPolicyContract[] $hasMerchantReturnPolicy
+     *
+     * @return static
+     *
+     * @see https://schema.org/hasMerchantReturnPolicy
+     * @see http://pending.schema.org
+     * @link https://github.com/schemaorg/schemaorg/issues/2288
+     */
+    public function hasMerchantReturnPolicy($hasMerchantReturnPolicy)
+    {
+        return $this->setProperty('hasMerchantReturnPolicy', $hasMerchantReturnPolicy);
     }
 
     /**
@@ -675,7 +983,7 @@ class Motel extends BaseType implements MotelContract, LocalBusinessContract, Lo
      *
      * @return static
      *
-     * @see http://schema.org/hasOfferCatalog
+     * @see https://schema.org/hasOfferCatalog
      */
     public function hasOfferCatalog($hasOfferCatalog)
     {
@@ -689,11 +997,28 @@ class Motel extends BaseType implements MotelContract, LocalBusinessContract, Lo
      *
      * @return static
      *
-     * @see http://schema.org/hasPOS
+     * @see https://schema.org/hasPOS
+     * @link http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#source_GoodRelationsTerms
      */
     public function hasPOS($hasPOS)
     {
         return $this->setProperty('hasPOS', $hasPOS);
+    }
+
+    /**
+     * Indicates a ProductReturnPolicy that may be applicable.
+     *
+     * @param \Spatie\SchemaOrg\Contracts\ProductReturnPolicyContract|\Spatie\SchemaOrg\Contracts\ProductReturnPolicyContract[] $hasProductReturnPolicy
+     *
+     * @return static
+     *
+     * @see https://schema.org/hasProductReturnPolicy
+     * @see http://attic.schema.org
+     * @link https://github.com/schemaorg/schemaorg/issues/2288
+     */
+    public function hasProductReturnPolicy($hasProductReturnPolicy)
+    {
+        return $this->setProperty('hasProductReturnPolicy', $hasProductReturnPolicy);
     }
 
     /**
@@ -707,7 +1032,7 @@ class Motel extends BaseType implements MotelContract, LocalBusinessContract, Lo
      *
      * @return static
      *
-     * @see http://schema.org/identifier
+     * @see https://schema.org/identifier
      */
     public function identifier($identifier)
     {
@@ -722,7 +1047,7 @@ class Motel extends BaseType implements MotelContract, LocalBusinessContract, Lo
      *
      * @return static
      *
-     * @see http://schema.org/image
+     * @see https://schema.org/image
      */
     public function image($image)
     {
@@ -738,7 +1063,8 @@ class Motel extends BaseType implements MotelContract, LocalBusinessContract, Lo
      *
      * @return static
      *
-     * @see http://schema.org/interactionStatistic
+     * @see https://schema.org/interactionStatistic
+     * @link https://github.com/schemaorg/schemaorg/issues/2421
      */
     public function interactionStatistic($interactionStatistic)
     {
@@ -752,7 +1078,7 @@ class Motel extends BaseType implements MotelContract, LocalBusinessContract, Lo
      *
      * @return static
      *
-     * @see http://schema.org/isAccessibleForFree
+     * @see https://schema.org/isAccessibleForFree
      */
     public function isAccessibleForFree($isAccessibleForFree)
     {
@@ -768,11 +1094,48 @@ class Motel extends BaseType implements MotelContract, LocalBusinessContract, Lo
      *
      * @return static
      *
-     * @see http://schema.org/isicV4
+     * @see https://schema.org/isicV4
+     * @link http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#source_GoodRelationsTerms
      */
     public function isicV4($isicV4)
     {
         return $this->setProperty('isicV4', $isicV4);
+    }
+
+    /**
+     * Of a [[Person]], and less typically of an [[Organization]], to indicate a
+     * topic that is known about - suggesting possible expertise but not
+     * implying it. We do not distinguish skill levels here, or relate this to
+     * educational content, events, objectives or [[JobPosting]] descriptions.
+     *
+     * @param \Spatie\SchemaOrg\Contracts\ThingContract|\Spatie\SchemaOrg\Contracts\ThingContract[]|string|string[] $knowsAbout
+     *
+     * @return static
+     *
+     * @see https://schema.org/knowsAbout
+     * @see http://pending.schema.org
+     */
+    public function knowsAbout($knowsAbout)
+    {
+        return $this->setProperty('knowsAbout', $knowsAbout);
+    }
+
+    /**
+     * Of a [[Person]], and less typically of an [[Organization]], to indicate a
+     * known language. We do not distinguish skill levels or
+     * reading/writing/speaking/signing here. Use language codes from the [IETF
+     * BCP 47 standard](http://tools.ietf.org/html/bcp47).
+     *
+     * @param \Spatie\SchemaOrg\Contracts\LanguageContract|\Spatie\SchemaOrg\Contracts\LanguageContract[]|string|string[] $knowsLanguage
+     *
+     * @return static
+     *
+     * @see https://schema.org/knowsLanguage
+     * @see http://pending.schema.org
+     */
+    public function knowsLanguage($knowsLanguage)
+    {
+        return $this->setProperty('knowsLanguage', $knowsLanguage);
     }
 
     /**
@@ -783,7 +1146,7 @@ class Motel extends BaseType implements MotelContract, LocalBusinessContract, Lo
      *
      * @return static
      *
-     * @see http://schema.org/latitude
+     * @see https://schema.org/latitude
      */
     public function latitude($latitude)
     {
@@ -797,7 +1160,8 @@ class Motel extends BaseType implements MotelContract, LocalBusinessContract, Lo
      *
      * @return static
      *
-     * @see http://schema.org/legalName
+     * @see https://schema.org/legalName
+     * @link http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#source_GoodRelationsTerms
      */
     public function legalName($legalName)
     {
@@ -812,11 +1176,26 @@ class Motel extends BaseType implements MotelContract, LocalBusinessContract, Lo
      *
      * @return static
      *
-     * @see http://schema.org/leiCode
+     * @see https://schema.org/leiCode
      */
     public function leiCode($leiCode)
     {
         return $this->setProperty('leiCode', $leiCode);
+    }
+
+    /**
+     * The location of for example where the event is happening, an organization
+     * is located, or where an action takes place.
+     *
+     * @param \Spatie\SchemaOrg\Contracts\PlaceContract|\Spatie\SchemaOrg\Contracts\PlaceContract[]|\Spatie\SchemaOrg\Contracts\PostalAddressContract|\Spatie\SchemaOrg\Contracts\PostalAddressContract[]|\Spatie\SchemaOrg\Contracts\VirtualLocationContract|\Spatie\SchemaOrg\Contracts\VirtualLocationContract[]|string|string[] $location
+     *
+     * @return static
+     *
+     * @see https://schema.org/location
+     */
+    public function location($location)
+    {
+        return $this->setProperty('location', $location);
     }
 
     /**
@@ -826,7 +1205,8 @@ class Motel extends BaseType implements MotelContract, LocalBusinessContract, Lo
      *
      * @return static
      *
-     * @see http://schema.org/logo
+     * @see https://schema.org/logo
+     * @link http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#source_GoodRelationsTerms
      */
     public function logo($logo)
     {
@@ -841,7 +1221,7 @@ class Motel extends BaseType implements MotelContract, LocalBusinessContract, Lo
      *
      * @return static
      *
-     * @see http://schema.org/longitude
+     * @see https://schema.org/longitude
      */
     public function longitude($longitude)
     {
@@ -857,7 +1237,7 @@ class Motel extends BaseType implements MotelContract, LocalBusinessContract, Lo
      *
      * @return static
      *
-     * @see http://schema.org/mainEntityOfPage
+     * @see https://schema.org/mainEntityOfPage
      */
     public function mainEntityOfPage($mainEntityOfPage)
     {
@@ -871,7 +1251,8 @@ class Motel extends BaseType implements MotelContract, LocalBusinessContract, Lo
      *
      * @return static
      *
-     * @see http://schema.org/makesOffer
+     * @see https://schema.org/makesOffer
+     * @link http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#source_GoodRelationsTerms
      */
     public function makesOffer($makesOffer)
     {
@@ -885,7 +1266,7 @@ class Motel extends BaseType implements MotelContract, LocalBusinessContract, Lo
      *
      * @return static
      *
-     * @see http://schema.org/map
+     * @see https://schema.org/map
      */
     public function map($map)
     {
@@ -899,7 +1280,7 @@ class Motel extends BaseType implements MotelContract, LocalBusinessContract, Lo
      *
      * @return static
      *
-     * @see http://schema.org/maps
+     * @see https://schema.org/maps
      */
     public function maps($maps)
     {
@@ -913,7 +1294,7 @@ class Motel extends BaseType implements MotelContract, LocalBusinessContract, Lo
      *
      * @return static
      *
-     * @see http://schema.org/maximumAttendeeCapacity
+     * @see https://schema.org/maximumAttendeeCapacity
      */
     public function maximumAttendeeCapacity($maximumAttendeeCapacity)
     {
@@ -928,7 +1309,7 @@ class Motel extends BaseType implements MotelContract, LocalBusinessContract, Lo
      *
      * @return static
      *
-     * @see http://schema.org/member
+     * @see https://schema.org/member
      */
     public function member($member)
     {
@@ -943,7 +1324,7 @@ class Motel extends BaseType implements MotelContract, LocalBusinessContract, Lo
      *
      * @return static
      *
-     * @see http://schema.org/memberOf
+     * @see https://schema.org/memberOf
      */
     public function memberOf($memberOf)
     {
@@ -957,7 +1338,7 @@ class Motel extends BaseType implements MotelContract, LocalBusinessContract, Lo
      *
      * @return static
      *
-     * @see http://schema.org/members
+     * @see https://schema.org/members
      */
     public function members($members)
     {
@@ -972,7 +1353,8 @@ class Motel extends BaseType implements MotelContract, LocalBusinessContract, Lo
      *
      * @return static
      *
-     * @see http://schema.org/naics
+     * @see https://schema.org/naics
+     * @link http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#source_GoodRelationsTerms
      */
     public function naics($naics)
     {
@@ -986,11 +1368,28 @@ class Motel extends BaseType implements MotelContract, LocalBusinessContract, Lo
      *
      * @return static
      *
-     * @see http://schema.org/name
+     * @see https://schema.org/name
      */
     public function name($name)
     {
         return $this->setProperty('name', $name);
+    }
+
+    /**
+     * nonprofit Status indicates the legal status of a non-profit organization
+     * in its primary place of business.
+     *
+     * @param \Spatie\SchemaOrg\Contracts\NonprofitTypeContract|\Spatie\SchemaOrg\Contracts\NonprofitTypeContract[] $nonprofitStatus
+     *
+     * @return static
+     *
+     * @see https://schema.org/nonprofitStatus
+     * @see http://pending.schema.org
+     * @link https://github.com/schemaorg/schemaorg/issues/2543
+     */
+    public function nonprofitStatus($nonprofitStatus)
+    {
+        return $this->setProperty('nonprofitStatus', $nonprofitStatus);
     }
 
     /**
@@ -1000,7 +1399,7 @@ class Motel extends BaseType implements MotelContract, LocalBusinessContract, Lo
      *
      * @return static
      *
-     * @see http://schema.org/numberOfEmployees
+     * @see https://schema.org/numberOfEmployees
      */
     public function numberOfEmployees($numberOfEmployees)
     {
@@ -1017,7 +1416,8 @@ class Motel extends BaseType implements MotelContract, LocalBusinessContract, Lo
      *
      * @return static
      *
-     * @see http://schema.org/numberOfRooms
+     * @see https://schema.org/numberOfRooms
+     * @link https://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#STI_Accommodation_Ontology
      */
     public function numberOfRooms($numberOfRooms)
     {
@@ -1044,7 +1444,7 @@ class Motel extends BaseType implements MotelContract, LocalBusinessContract, Lo
      *
      * @return static
      *
-     * @see http://schema.org/openingHours
+     * @see https://schema.org/openingHours
      */
     public function openingHours($openingHours)
     {
@@ -1058,11 +1458,32 @@ class Motel extends BaseType implements MotelContract, LocalBusinessContract, Lo
      *
      * @return static
      *
-     * @see http://schema.org/openingHoursSpecification
+     * @see https://schema.org/openingHoursSpecification
+     * @link http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#source_GoodRelationsTerms
      */
     public function openingHoursSpecification($openingHoursSpecification)
     {
         return $this->setProperty('openingHoursSpecification', $openingHoursSpecification);
+    }
+
+    /**
+     * For an [[Organization]] (often but not necessarily a
+     * [[NewsMediaOrganization]]), a description of organizational ownership
+     * structure; funding and grants. In a news/media setting, this is with
+     * particular reference to editorial independence.   Note that the
+     * [[funder]] is also available and can be used to make basic funder
+     * information machine-readable.
+     *
+     * @param \Spatie\SchemaOrg\Contracts\AboutPageContract|\Spatie\SchemaOrg\Contracts\AboutPageContract[]|\Spatie\SchemaOrg\Contracts\CreativeWorkContract|\Spatie\SchemaOrg\Contracts\CreativeWorkContract[]|string|string[] $ownershipFundingInfo
+     *
+     * @return static
+     *
+     * @see https://schema.org/ownershipFundingInfo
+     * @see http://pending.schema.org
+     */
+    public function ownershipFundingInfo($ownershipFundingInfo)
+    {
+        return $this->setProperty('ownershipFundingInfo', $ownershipFundingInfo);
     }
 
     /**
@@ -1072,7 +1493,8 @@ class Motel extends BaseType implements MotelContract, LocalBusinessContract, Lo
      *
      * @return static
      *
-     * @see http://schema.org/owns
+     * @see https://schema.org/owns
+     * @link http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#source_GoodRelationsTerms
      */
     public function owns($owns)
     {
@@ -1087,7 +1509,7 @@ class Motel extends BaseType implements MotelContract, LocalBusinessContract, Lo
      *
      * @return static
      *
-     * @see http://schema.org/parentOrganization
+     * @see https://schema.org/parentOrganization
      */
     public function parentOrganization($parentOrganization)
     {
@@ -1101,7 +1523,7 @@ class Motel extends BaseType implements MotelContract, LocalBusinessContract, Lo
      *
      * @return static
      *
-     * @see http://schema.org/paymentAccepted
+     * @see https://schema.org/paymentAccepted
      */
     public function paymentAccepted($paymentAccepted)
     {
@@ -1116,7 +1538,8 @@ class Motel extends BaseType implements MotelContract, LocalBusinessContract, Lo
      *
      * @return static
      *
-     * @see http://schema.org/petsAllowed
+     * @see https://schema.org/petsAllowed
+     * @link https://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#STI_Accommodation_Ontology
      */
     public function petsAllowed($petsAllowed)
     {
@@ -1130,7 +1553,7 @@ class Motel extends BaseType implements MotelContract, LocalBusinessContract, Lo
      *
      * @return static
      *
-     * @see http://schema.org/photo
+     * @see https://schema.org/photo
      */
     public function photo($photo)
     {
@@ -1144,7 +1567,7 @@ class Motel extends BaseType implements MotelContract, LocalBusinessContract, Lo
      *
      * @return static
      *
-     * @see http://schema.org/photos
+     * @see https://schema.org/photos
      */
     public function photos($photos)
     {
@@ -1159,7 +1582,7 @@ class Motel extends BaseType implements MotelContract, LocalBusinessContract, Lo
      *
      * @return static
      *
-     * @see http://schema.org/potentialAction
+     * @see https://schema.org/potentialAction
      */
     public function potentialAction($potentialAction)
     {
@@ -1173,7 +1596,7 @@ class Motel extends BaseType implements MotelContract, LocalBusinessContract, Lo
      *
      * @return static
      *
-     * @see http://schema.org/priceRange
+     * @see https://schema.org/priceRange
      */
     public function priceRange($priceRange)
     {
@@ -1188,7 +1611,7 @@ class Motel extends BaseType implements MotelContract, LocalBusinessContract, Lo
      *
      * @return static
      *
-     * @see http://schema.org/publicAccess
+     * @see https://schema.org/publicAccess
      */
     public function publicAccess($publicAccess)
     {
@@ -1212,7 +1635,7 @@ class Motel extends BaseType implements MotelContract, LocalBusinessContract, Lo
      *
      * @return static
      *
-     * @see http://schema.org/publishingPrinciples
+     * @see https://schema.org/publishingPrinciples
      */
     public function publishingPrinciples($publishingPrinciples)
     {
@@ -1226,7 +1649,7 @@ class Motel extends BaseType implements MotelContract, LocalBusinessContract, Lo
      *
      * @return static
      *
-     * @see http://schema.org/review
+     * @see https://schema.org/review
      */
     public function review($review)
     {
@@ -1240,7 +1663,7 @@ class Motel extends BaseType implements MotelContract, LocalBusinessContract, Lo
      *
      * @return static
      *
-     * @see http://schema.org/reviews
+     * @see https://schema.org/reviews
      */
     public function reviews($reviews)
     {
@@ -1256,7 +1679,7 @@ class Motel extends BaseType implements MotelContract, LocalBusinessContract, Lo
      *
      * @return static
      *
-     * @see http://schema.org/sameAs
+     * @see https://schema.org/sameAs
      */
     public function sameAs($sameAs)
     {
@@ -1271,7 +1694,8 @@ class Motel extends BaseType implements MotelContract, LocalBusinessContract, Lo
      *
      * @return static
      *
-     * @see http://schema.org/seeks
+     * @see https://schema.org/seeks
+     * @link http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#source_GoodRelationsTerms
      */
     public function seeks($seeks)
     {
@@ -1285,7 +1709,7 @@ class Motel extends BaseType implements MotelContract, LocalBusinessContract, Lo
      *
      * @return static
      *
-     * @see http://schema.org/serviceArea
+     * @see https://schema.org/serviceArea
      */
     public function serviceArea($serviceArea)
     {
@@ -1299,7 +1723,7 @@ class Motel extends BaseType implements MotelContract, LocalBusinessContract, Lo
      *
      * @return static
      *
-     * @see http://schema.org/slogan
+     * @see https://schema.org/slogan
      */
     public function slogan($slogan)
     {
@@ -1314,7 +1738,8 @@ class Motel extends BaseType implements MotelContract, LocalBusinessContract, Lo
      *
      * @return static
      *
-     * @see http://schema.org/smokingAllowed
+     * @see https://schema.org/smokingAllowed
+     * @link https://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#STI_Accommodation_Ontology
      */
     public function smokingAllowed($smokingAllowed)
     {
@@ -1331,7 +1756,7 @@ class Motel extends BaseType implements MotelContract, LocalBusinessContract, Lo
      *
      * @return static
      *
-     * @see http://schema.org/specialOpeningHoursSpecification
+     * @see https://schema.org/specialOpeningHoursSpecification
      */
     public function specialOpeningHoursSpecification($specialOpeningHoursSpecification)
     {
@@ -1347,7 +1772,7 @@ class Motel extends BaseType implements MotelContract, LocalBusinessContract, Lo
      *
      * @return static
      *
-     * @see http://schema.org/sponsor
+     * @see https://schema.org/sponsor
      */
     public function sponsor($sponsor)
     {
@@ -1364,7 +1789,8 @@ class Motel extends BaseType implements MotelContract, LocalBusinessContract, Lo
      *
      * @return static
      *
-     * @see http://schema.org/starRating
+     * @see https://schema.org/starRating
+     * @link https://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#STI_Accommodation_Ontology
      */
     public function starRating($starRating)
     {
@@ -1380,7 +1806,7 @@ class Motel extends BaseType implements MotelContract, LocalBusinessContract, Lo
      *
      * @return static
      *
-     * @see http://schema.org/subOrganization
+     * @see https://schema.org/subOrganization
      */
     public function subOrganization($subOrganization)
     {
@@ -1394,7 +1820,8 @@ class Motel extends BaseType implements MotelContract, LocalBusinessContract, Lo
      *
      * @return static
      *
-     * @see http://schema.org/subjectOf
+     * @see https://schema.org/subjectOf
+     * @link https://github.com/schemaorg/schemaorg/issues/1670
      */
     public function subjectOf($subjectOf)
     {
@@ -1409,7 +1836,8 @@ class Motel extends BaseType implements MotelContract, LocalBusinessContract, Lo
      *
      * @return static
      *
-     * @see http://schema.org/taxID
+     * @see https://schema.org/taxID
+     * @link http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#source_GoodRelationsTerms
      */
     public function taxID($taxID)
     {
@@ -1423,11 +1851,46 @@ class Motel extends BaseType implements MotelContract, LocalBusinessContract, Lo
      *
      * @return static
      *
-     * @see http://schema.org/telephone
+     * @see https://schema.org/telephone
      */
     public function telephone($telephone)
     {
         return $this->setProperty('telephone', $telephone);
+    }
+
+    /**
+     * A page providing information on how to book a tour of some [[Place]],
+     * such as an [[Accommodation]] or [[ApartmentComplex]] in a real estate
+     * setting, as well as other kinds of tours as appropriate.
+     *
+     * @param string|string[] $tourBookingPage
+     *
+     * @return static
+     *
+     * @see https://schema.org/tourBookingPage
+     * @see http://pending.schema.org
+     * @link https://github.com/schemaorg/schemaorg/issues/2373
+     */
+    public function tourBookingPage($tourBookingPage)
+    {
+        return $this->setProperty('tourBookingPage', $tourBookingPage);
+    }
+
+    /**
+     * For an [[Organization]] (typically a [[NewsMediaOrganization]]), a
+     * statement about policy on use of unnamed sources and the decision process
+     * required.
+     *
+     * @param \Spatie\SchemaOrg\Contracts\CreativeWorkContract|\Spatie\SchemaOrg\Contracts\CreativeWorkContract[]|string|string[] $unnamedSourcesPolicy
+     *
+     * @return static
+     *
+     * @see https://schema.org/unnamedSourcesPolicy
+     * @see http://pending.schema.org
+     */
+    public function unnamedSourcesPolicy($unnamedSourcesPolicy)
+    {
+        return $this->setProperty('unnamedSourcesPolicy', $unnamedSourcesPolicy);
     }
 
     /**
@@ -1437,7 +1900,7 @@ class Motel extends BaseType implements MotelContract, LocalBusinessContract, Lo
      *
      * @return static
      *
-     * @see http://schema.org/url
+     * @see https://schema.org/url
      */
     public function url($url)
     {
@@ -1451,7 +1914,8 @@ class Motel extends BaseType implements MotelContract, LocalBusinessContract, Lo
      *
      * @return static
      *
-     * @see http://schema.org/vatID
+     * @see https://schema.org/vatID
+     * @link http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#source_GoodRelationsTerms
      */
     public function vatID($vatID)
     {
