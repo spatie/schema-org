@@ -6,6 +6,8 @@ class Type
 {
     public string $name;
 
+    public string $className;
+
     /** @var string[] */
     public array $parents = [];
 

@@ -60,12 +60,12 @@ class Filesystem
     public function createType(Type $type)
     {
         $this->flysystem->put(
-            "src/Contracts/{$type->name}Contract.php",
+            "src/Contracts/{$type->className}Contract.php",
             $this->contractTemplate->render(['type' => $type])
         );
 
         $this->flysystem->put(
-            "src/{$type->name}.php",
+            "src/{$type->className}.php",
             $this->typeTemplate->render(['type' => $type])
         );
     }

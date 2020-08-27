@@ -20,7 +20,11 @@ abstract class Task
 
     protected function getDefinitionProperty(string $selector): string
     {
-        return $this->definition[$selector] ?? '';
+        $property = $this->definition[$selector] ?? '';
+
+        return is_array($property) && array_key_exists('@language', $property) && array_key_exists('@value', $property)
+            ? $property['@value']
+            : $property;
     }
 
     protected function getWrappedDefinitionProperty(string $selector): Collection
@@ -47,6 +51,6 @@ abstract class Task
      */
     protected function getResourceName(?array $schemaResource = null): string
     {
-        return str_replace('http://schema.org/', '', $this->getResource($schemaResource));
+        return str_replace('https://schema.org/', '', $this->getResource($schemaResource));
     }
 }

@@ -10,9 +10,13 @@ class ParseType extends Task
     {
         $type = new Type();
 
-        $type->name = $this->getDefinitionProperty('rdfs:label');
+        $type->className = $type->name = $this->getDefinitionProperty('rdfs:label');
 
-        if (in_array($type->name, ['', 'DataType', 'Float', 'Integer', 'URL'])) {
+        if ($type->className === '3DModel') {
+            $type->className = 'ThreeDimensionalModel';
+        }
+
+        if (in_array($type->name, ['', 'DataType', 'Float', 'Integer', 'URL', 'Class'])) {
             return null;
         }
 
