@@ -7,9 +7,9 @@ namespace Spatie\SchemaOrg;
  */
 class Schema
 {
-    public static function 3DModel(): 3DModel
+    public static function threeDimensionalModel(): ThreeDimensionalModel
     {
-        return new 3DModel();
+        return new ThreeDimensionalModel();
     }
 
     public static function aMRadioChannel(): AMRadioChannel
