@@ -6,22 +6,7 @@
 [![StyleCI](https://styleci.io/repos/74684096/shield?branch=master)](https://styleci.io/repos/74684096)
 [![Total Downloads](https://img.shields.io/packagist/dt/spatie/schema-org.svg?style=flat-square)](https://packagist.org/packages/spatie/schema-org)
 
-`spatie/schema-org` provides a fluent builder for **all** Schema.org types and their properties. The code in `src` is generated from Schema.org's [RDFa standards file](https://github.com/schemaorg/schemaorg/blob/master/data/schema.rdfa), so it provides objects and methods for the entire core vocabulary. The classes and methods are also fully documented as a quick reference.
-
-------
-
-## NOTICE
-
-> This package supports [schema.org:v7.04](https://schema.org/version/7.04). 
-> Because of the required time to upgrade it to newer versions we won't upgrade it.
-> If you find bugs or want to discuss features not related to schema.org types but the methods provided by this package feel free to open an issue.
-> If you need a newer version and want to upgrade this package: we will accept a PR which upgrades the generator to work with newer releases. 
-> You can find more details in [#133](https://github.com/spatie/schema-org/issues/133). 
-> We won't accept PRs adding single types/properties.
-> 
-> — **Tom Witkowski** [@Gummibeer](https://github.com/Gummibeer) @ _2020-07-24_
-
-------
+`spatie/schema-org` provides a fluent builder for **all** Schema.org types and their properties. The code in `src` is generated from Schema.org's [JSOSN-LD standards file](https://raw.githubusercontent.com/schemaorg/schemaorg/main/data/releases/7.04/schema.jsonld), so it provides objects and methods for the entire core vocabulary. The classes and methods are also fully documented as a quick reference.
 
 ```php
 use Spatie\SchemaOrg\Schema;
