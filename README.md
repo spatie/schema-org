@@ -22,7 +22,7 @@ echo $localBusiness->toScript();
 ```html
 <script type="application/ld+json">
 {
-    "@context": "http:\/\/schema.org",
+    "@context": "https:\/\/schema.org",
     "@type": "LocalBusiness",
     "name": "Spatie",
     "email": "info@spatie.be",
@@ -99,13 +99,13 @@ I recommend double checking your structured data with [Google's structured data 
 
 ### Enumerations
 
-As of v1.6.0, all [Enumeration](http://schema.org/Enumeration) child types are available as classes with constants.
+As of v1.6.0, all [Enumeration](https://schema.org/Enumeration) child types are available as classes with constants.
 
 ```php
 Schema::book()->bookFormat(Spatie\SchemaOrg\BookFormatType::Hardcover);
 ```
 
-There's no full API documentation for types and properties. You can refer to [the source](https://github.com/spatie/schema-org/tree/master/src) or to [the schema.org website](http://schema.org).
+There's no full API documentation for types and properties. You can refer to [the source](https://github.com/spatie/schema-org/tree/master/src) or to [the schema.org website](https://schema.org).
 
 If you don't want to break the chain of a large schema object, you can use the `if` method to conditionally modify the schema.
 
@@ -161,7 +161,7 @@ $localBusiness->addProperties(['name' => 'value', 'foo' => 'bar']);
 Context and type can be retrieved with the `getContext` and `getType` methods.
 
 ```php
-$localBusiness->getContext(); // 'http://schema.org'
+$localBusiness->getContext(); // 'https://schema.org'
 $localBusiness->getType(); // 'LocalBusiness'
 ```
 
