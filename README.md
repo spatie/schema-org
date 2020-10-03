@@ -307,6 +307,8 @@ echo json_encode($mte);
 }
 ```
 
+There isn't a real rule in place how the properties are merged. It only uses `array_merge()` behind the scenes. So you should avoid defining the same property on different types in the MTE or be sure that all properties hold the same value that it's not important which property is used at the end.
+
 ## Known Issues
 
 - The `Float` type isn't available since it's a reserved keyword in PHP
