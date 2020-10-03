@@ -24,6 +24,9 @@ class Filesystem
     /** @var \Spatie\SchemaOrg\Generator\Writer\Template */
     protected $graphClassTemplate;
 
+    /** @var \Spatie\SchemaOrg\Generator\Writer\Template */
+    protected $multiTypedEntityClassTemplate;
+
     public function __construct(string $root)
     {
         $adapter = new Local($root);
@@ -33,6 +36,7 @@ class Filesystem
         $this->typeTemplate = new Template('Type.php.twig');
         $this->builderClassTemplate = new Template('Schema.php.twig');
         $this->graphClassTemplate = new Template('Graph.php.twig');
+        $this->multiTypedEntityClassTemplate = new Template('MultiTypedEntity.php.twig');
     }
 
     public function clear()
@@ -80,6 +84,11 @@ class Filesystem
         $this->flysystem->put(
             'src/Graph.php',
             $this->graphClassTemplate->render(['types' => $types->toArray()])
+        );
+
+        $this->flysystem->put(
+            'src/MultiTypedEntity.php',
+            $this->multiTypedEntityClassTemplate->render(['types' => $types->toArray()])
         );
     }
 }

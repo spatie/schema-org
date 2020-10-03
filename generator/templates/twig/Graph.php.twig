@@ -14,14 +14,14 @@ use Spatie\SchemaOrg\Exceptions\TypeNotInGraph;
 
 /**
 {% for type in types %}
- * @method self|{{ type.name }} {{ type.name | lcfirst }}(string|Closure|null $identifier = null, Closure|null $callback = null)
+ * @method self|{{ type.className }} {{ type.className | lcfirst }}(string|Closure|null $identifier = null, Closure|null $callback = null)
 {% endfor %}
  */
 class Graph implements Type, ArrayAccess, JsonSerializable
 {
     public const IDENTIFIER_DEFAULT = 'default';
 
-    /** @var array */
+    /** @var Type[] */
     protected $nodes = [];
 
     /** @var array */
