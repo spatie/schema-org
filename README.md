@@ -261,6 +261,52 @@ echo json_encode($graph);
 }
 ```
 
+### Multi Typed Entities
+
+Schema.org allows [multi typed entities](https://github.com/schemaorg/schemaorg/wiki/How-to-use-Multi-Typed-Entities-or-MTEs) - to use them with this package you can use the `MultiTypedEntity` class - which works similar to the graph.
+
+```php
+$mte = new MultiTypedEntity();
+$mte->hotelRoom()->name('The Presidential Suite');
+$mte->product()->offers(
+    Schema::offer()
+        ->name('One Night')
+        ->price(100000.00)
+        ->priceCurrency('USD')
+);
+$mte->product(function (Product $product) {
+    $product->aggregateRating(
+        Schema::aggregateRating()
+            ->bestRating(5)
+            ->worstRating(4)
+    );
+});
+
+echo json_encode($mte);
+```
+
+```json
+{
+   "@context":"https:\/\/schema.org",
+   "@type":[
+      "HotelRoom",
+      "Product"
+   ],
+   "name":"The Presidential Suite",
+   "offers":{
+      "@type":"Offer",
+      "name":"One Night",
+      "price":100000,
+      "priceCurrency":"USD"
+   },
+   "aggregateRating":{
+      "@type":"AggregateRating",
+      "bestRating":5,
+      "worstRating":4
+   }
+}
+```
+
 ## Known Issues
 
 - The `Float` type isn't available since it's a reserved keyword in PHP
