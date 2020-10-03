@@ -2,16 +2,10 @@
 
 namespace Spatie\SchemaOrg\Tests;
 
-use BadMethodCallException;
-use InvalidArgumentException;
 use PHPUnit\Framework\TestCase;
-use Spatie\SchemaOrg\Brand;
-use Spatie\SchemaOrg\Graph;
 use Spatie\SchemaOrg\MultiTypedEntity;
-use Spatie\SchemaOrg\Organization;
 use Spatie\SchemaOrg\Product;
 use Spatie\SchemaOrg\Schema;
-use Spatie\SchemaOrg\Type;
 
 class MultiTypedEntityTest extends TestCase
 {
