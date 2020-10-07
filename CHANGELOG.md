@@ -2,6 +2,10 @@
 
 All Notable changes to `schema-org` will be documented in this file.
 
+## 3.1.0 - 2020-10-07
+
+- add Multi-Typed-Entity support `\Spatie\SchemaOrg\MultiTypedEntity` - [#148](https://github.com/spatie/schema-org/pull/148)
+
 ## 3.0.0 - 2020-08-27
 
 - Upgrade to schema.org:v9 which includes all extensions
