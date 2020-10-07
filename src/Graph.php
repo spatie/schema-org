@@ -13,7 +13,7 @@ use Spatie\SchemaOrg\Exceptions\TypeAlreadyInGraph;
 use Spatie\SchemaOrg\Exceptions\TypeNotInGraph;
 
 /**
- * @method self|3DModel 3DModel(string|Closure|null $identifier = null, Closure|null $callback = null)
+ * @method self|ThreeDimensionalModel threeDimensionalModel(string|Closure|null $identifier = null, Closure|null $callback = null)
  * @method self|AMRadioChannel aMRadioChannel(string|Closure|null $identifier = null, Closure|null $callback = null)
  * @method self|APIReference aPIReference(string|Closure|null $identifier = null, Closure|null $callback = null)
  * @method self|AboutPage aboutPage(string|Closure|null $identifier = null, Closure|null $callback = null)
@@ -859,7 +859,7 @@ class Graph implements Type, ArrayAccess, JsonSerializable
 {
     public const IDENTIFIER_DEFAULT = 'default';
 
-    /** @var array */
+    /** @var Type[] */
     protected $nodes = [];
 
     /** @var array */

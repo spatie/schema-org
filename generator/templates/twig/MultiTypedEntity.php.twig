@@ -1,0 +1,179 @@
+<?php
+
+namespace Spatie\SchemaOrg;
+
+use BadMethodCallException;
+use Closure;
+use JsonSerializable;
+use ReflectionClass;
+use ReflectionNamedType;
+use Spatie\SchemaOrg\Exceptions\InvalidType;
+use Spatie\SchemaOrg\Exceptions\TypeAlreadyInMultiTypedEntity;
+use Spatie\SchemaOrg\Exceptions\TypeNotInMultiTypedEntity;
+
+/**
+{% for type in types %}
+ * @method self|{{ type.className }} {{ type.name | lcfirst }}(Closure|null $callback = null)
+{% endfor %}
+ */
+class MultiTypedEntity implements Type, JsonSerializable
+{
+    /** @var Type[] */
+    protected $nodes = [];
+
+    /**
+     * This overloads all \Spatie\SchemaOrg\Schema construction methods.
+     * You can call them the same like on the \Spatie\SchemaOrg\Schema class.
+     * But you can also use the extended signatures.
+     *
+     * MultiTypedEntity::organisation(): Organisation
+     * MultiTypedEntity::organisation(function(Organisation $organisation, MultiTypedEntity $mte) {}): MultiTypedEntity
+     *
+     * @see \Spatie\SchemaOrg\Schema
+     *
+     * @param string $method
+     * @param array $arguments
+     *
+     * @return $this|Type
+     *
+     * @throws \ReflectionException
+     * @throws \BadMethodCallException
+     */
+    public function __call(string $method, array $arguments)
+    {
+        if (is_callable([Schema::class, $method])) {
+            $type = (new ReflectionClass(Schema::class))->getMethod($method)->getReturnType();
+
+            if (! $type instanceof ReflectionNamedType) {
+                throw new BadMethodCallException(sprintf('The method "%s" has an invalid return type which does not resolve to "%s".', $method, ReflectionNamedType::class));
+            }
+
+            $schema = $this->getOrCreate($type->getName());
+
+            if (isset($arguments[0]) && is_callable($arguments[0])) {
+                call_user_func($arguments[0], $schema, $this);
+
+                return $this;
+            }
+
+            return $schema;
+        }
+
+        throw new BadMethodCallException(sprintf('The method "%s" does not exist on class "%s".', $method, get_class($this)));
+    }
+
+    public function if(bool $condition, Closure $callback)
+    {
+        if ($condition) {
+            $callback($this);
+        }
+
+        return $this;
+    }
+
+    public function add(Type $schema): self
+    {
+        $type = get_class($schema);
+
+        if ($this->has($type)) {
+            throw new TypeAlreadyInMultiTypedEntity(sprintf('The multi typed entity already has an item of type "%s".', $type));
+        }
+
+        return $this->set($schema);
+    }
+
+    public function has(string $type): bool
+    {
+        return array_key_exists($type, $this->nodes);
+    }
+
+    public function set(Type $schema)
+    {
+        $this->nodes[get_class($schema)] = $schema;
+
+        return $this;
+    }
+
+    public function get(string $type): Type
+    {
+        if (! $this->has($type)) {
+            throw new TypeNotInMultiTypedEntity(sprintf('The multi typed entity does not have an item of type "%s".', $type));
+        }
+
+        return $this->nodes[$type];
+    }
+
+    public function getOrCreate(string $type): Type
+    {
+        if (! is_subclass_of($type, Type::class)) {
+            throw new InvalidType(sprintf('The given type "%s" is not an instance of "%s".', $type, Type::class));
+        }
+
+        if (! $this->has($type)) {
+            $this->set(new $type());
+        }
+
+        return $this->get($type);
+    }
+
+    public function toArray(): array
+    {
+        $properties = [];
+        $types = [];
+
+        foreach($this->nodes as $node) {
+            $temp = $this->serializeNode($node);
+
+            if(isset($temp['@type'])) {
+                array_push($types, $temp['@type']);
+                unset($temp['@type']);
+            }
+
+            $properties = array_merge($properties, $temp);
+        }
+
+        return [
+            '@context' => $this->getContext(),
+            '@type' => array_unique($types),
+        ] + $properties;
+    }
+
+    protected function serializeNode($node)
+    {
+        if (is_array($node)) {
+            return array_map([$this, 'serializeNode'], array_values($node));
+        }
+
+        if ($node instanceof Type) {
+            $node = $node->toArray();
+            unset($node['@context']);
+        }
+
+        return $node;
+    }
+
+    public function getNodes(): array
+    {
+        return $this->nodes;
+    }
+
+    public function getContext(): string
+    {
+        return 'https://schema.org';
+    }
+
+    public function toScript(): string
+    {
+        return '<script type="application/ld+json">'.json_encode($this, JSON_UNESCAPED_UNICODE).'</script>';
+    }
+
+    public function jsonSerialize()
+    {
+        return $this->toArray();
+    }
+
+    public function __toString(): string
+    {
+        return $this->toScript();
+    }
+}
