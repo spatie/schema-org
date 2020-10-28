@@ -210,4 +210,24 @@ class GraphTest extends TestCase
         $this->assertEquals('spatie', $graph->organization()['name']);
         $this->assertNotEquals('organization', $graph->organization()['name']);
     }
+
+    /** @test */
+    public function it_can_use_references()
+    {
+        $graph = new Graph();
+
+        $graph->blogPosting()
+            ->identifier('https://example.com/blog/my-post/#blogPosting')
+            ->author($graph->organization()->name('organization')->referenced())
+            ->publisher($graph->organization()->url('https://example.com')->referenced());
+
+        $graph->organization()
+            ->identifier('https://example.com/#organization')
+            ->email('contact@example.com');
+
+        $this->assertEquals(
+            '<script type="application/ld+json">{"@context":"https:\/\/schema.org","@graph":[{"@type":"BlogPosting","author":{"@id":"https:\/\/example.com\/#organization"},"publisher":{"@id":"https:\/\/example.com\/#organization"},"@id":"https:\/\/example.com\/blog\/my-post\/#blogPosting"},{"@type":"Organization","name":"organization","url":"https:\/\/example.com","email":"contact@example.com","@id":"https:\/\/example.com\/#organization"}]}</script>',
+            $graph->toScript()
+        );
+    }
 }

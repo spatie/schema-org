@@ -324,6 +324,29 @@ class BaseTypeTest extends TestCase
 
         $this->assertEquals($expected, $type->toArray());
     }
+
+    /** @test */
+    public function it_can_reference_type_by_identifier()
+    {
+        $type1 = new AnotherDummyType();
+        $type1->setProperty('identifier', '#1');
+        $type1->setProperty('name', 'another-object');
+        $type2 = new DummyType();
+        $type2->setProperty('identifier', '#2');
+        $type1->setProperty('name', 'object');
+        $type2->setProperty('referenced', $type1->referenced());
+
+        $expected = [
+            '@context' => 'https://schema.org',
+            '@type' => 'DummyType',
+            '@id' => '#2',
+            'referenced' => [
+                '@id' => '#1'
+            ]
+        ];
+
+        $this->assertEquals($expected, $type2->toArray());
+    }
 }
 
 class DummyType extends BaseType
