@@ -341,8 +341,8 @@ class BaseTypeTest extends TestCase
             '@type' => 'DummyType',
             '@id' => '#2',
             'referenced' => [
-                '@id' => '#1'
-            ]
+                '@id' => '#1',
+            ],
         ];
 
         $this->assertEquals($expected, $type2->toArray());
