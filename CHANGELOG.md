@@ -2,6 +2,10 @@
 
 All Notable changes to `schema-org` will be documented in this file.
 
+## 3.2.0 - 2020-11-05
+
+- add `\Spatie\SchemaOrg\ReferencedType` to reference types in schemas and graphs - [#155](https://github.com/spatie/schema-org/pull/155)
+
 ## 3.1.1 - 2020-10-22
 
 - fix empty string property values - [#153](https://github.com/spatie/schema-org/pull/153)
