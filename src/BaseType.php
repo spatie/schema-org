@@ -61,6 +61,14 @@ abstract class BaseType implements Type, ArrayAccess, JsonSerializable
         return $this->properties;
     }
 
+    /**
+     * @return ReferencedType|static
+     */
+    public function referenced()
+    {
+        return new ReferencedType($this);
+    }
+
     public function offsetExists($offset)
     {
         return array_key_exists($offset, $this->properties);
