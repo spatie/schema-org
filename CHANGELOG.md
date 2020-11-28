@@ -2,6 +2,10 @@
 
 All Notable changes to `schema-org` will be documented in this file.
 
+## 3.2.1 - 2020-11-28
+
+- add support for PHP 8
+
 ## 3.2.0 - 2020-11-05
 
 - add `\Spatie\SchemaOrg\ReferencedType` to reference types in schemas and graphs - [#155](https://github.com/spatie/schema-org/pull/155)
