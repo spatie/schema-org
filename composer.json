@@ -26,7 +26,7 @@
         "ext-json": "*"
     },
     "require-dev": {
-        "graham-campbell/analyzer": "^2.3",
+        "graham-campbell/analyzer": "^3.0",
         "league/flysystem": "^1.0",
         "phpunit/phpunit": "^9.0",
         "symfony/console": "^3.2",
