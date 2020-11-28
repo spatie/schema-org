@@ -22,16 +22,16 @@
         }
     ],
     "require": {
-        "php": "^7.3 || ^8.0",
+        "php": "^7.3|^8.0",
         "ext-json": "*"
     },
     "require-dev": {
         "graham-campbell/analyzer": "^3.0.4",
-        "illuminate/collections": "^8.16",
-        "league/flysystem": "^1.1",
-        "phpunit/phpunit": "^9.4",
-        "symfony/console": "^3.4",
-        "twig/twig": "^1.44"
+        "illuminate/collections": "^8.16.1",
+        "league/flysystem": "^1.1.3",
+        "phpunit/phpunit": "^9.4.3",
+        "symfony/console": "^3.4.47",
+        "twig/twig": "^1.44.1"
     },
     "config": {
         "sort-packages": true
