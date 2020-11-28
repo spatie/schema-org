@@ -26,12 +26,12 @@
         "ext-json": "*"
     },
     "require-dev": {
-        "graham-campbell/analyzer": "^3.0",
+        "graham-campbell/analyzer": "^3.0.4",
         "illuminate/collections": "^8.16",
-        "league/flysystem": "^1.0",
-        "phpunit/phpunit": "^9.0",
-        "symfony/console": "^3.2",
-        "twig/twig": "^1.28"
+        "league/flysystem": "^1.1",
+        "phpunit/phpunit": "^9.4",
+        "symfony/console": "^3.4",
+        "twig/twig": "^1.44"
     },
     "config": {
         "sort-packages": true
