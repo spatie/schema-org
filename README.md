@@ -122,11 +122,11 @@ $localBusiness = Schema::localBusiness()
 
 ### Identifier
 
-As of v2.6.0 the `identifier` key is replaced by `@id`. This is due to the definition for the `ld+json` syntax.
+As of v2.6.0 the `identifier` key is replaced by `@id` for simple string identifiers. This is due to the definition for the `ld+json` syntax.
 
 > All schema.org syntaxes already have built-in representation for URIs and URLs, e.g. in Microdata 'itemid', in RDFa 1.1, 'resource', **in JSON-LD, '@id'.**
 > 
-> &mdash; [schema.org/docs](https://schema.org/docs/datamodel.html#identifierBg) // [PR#102](https://github.com/spatie/schema-org/pull/102) 
+> &mdash; [schema.org/docs](https://schema.org/docs/datamodel.html#identifierBg) // [PR#102](https://github.com/spatie/schema-org/pull/102)  // [PR#157](https://github.com/spatie/schema-org/pull/157) 
 
 ### Advanced Usage
 
