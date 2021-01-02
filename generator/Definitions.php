@@ -4,7 +4,7 @@ namespace Spatie\SchemaOrg\Generator;
 
 use OutOfBoundsException;
 use Spatie\SchemaOrg\Generator\Parser\JsonLdParser;
-use Tightenco\Collect\Support\Collection;
+use Illuminate\Support\Collection;
 
 class Definitions
 {

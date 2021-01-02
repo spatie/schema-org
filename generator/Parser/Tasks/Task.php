@@ -2,7 +2,7 @@
 
 namespace Spatie\SchemaOrg\Generator\Parser\Tasks;
 
-use Tightenco\Collect\Support\Collection;
+use Illuminate\Support\Collection;
 
 abstract class Task
 {
