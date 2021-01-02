@@ -2,9 +2,9 @@
 
 namespace Spatie\SchemaOrg\Generator;
 
+use Illuminate\Support\Collection;
 use OutOfBoundsException;
 use Spatie\SchemaOrg\Generator\Parser\JsonLdParser;
-use Tightenco\Collect\Support\Collection;
 
 class Definitions
 {
