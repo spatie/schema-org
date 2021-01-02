@@ -339,8 +339,8 @@ class BaseTypeTest extends TestCase
             '@context' => 'https://schema.org',
             '@type' => 'Product',
             'identifier' => [
-                "@type" => "PropertyValue",
-                "@id" => "#1",
+                '@type' => 'PropertyValue',
+                '@id' => '#1',
             ],
         ];
 
