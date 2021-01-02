@@ -6,6 +6,8 @@ use DateTime;
 use PHPUnit\Framework\TestCase;
 use Spatie\SchemaOrg\BaseType;
 use Spatie\SchemaOrg\Exceptions\InvalidProperty;
+use Spatie\SchemaOrg\Product;
+use Spatie\SchemaOrg\PropertyValue;
 
 class BaseTypeTest extends TestCase
 {
@@ -323,6 +325,26 @@ class BaseTypeTest extends TestCase
         ];
 
         $this->assertEquals($expected, $type->toArray());
+    }
+
+    /** @test */
+    public function it_can_render_identifier_for_typed_identifiers()
+    {
+        $productType = new Product();
+        $propertyValue = new PropertyValue();
+        $propertyValue->identifier('#1');
+        $productType->setProperty('identifier', $propertyValue);
+
+        $expected = [
+            '@context' => 'https://schema.org',
+            '@type' => 'Product',
+            'identifier' => [
+                "@type" => "PropertyValue",
+                "@id" => "#1",
+            ],
+        ];
+
+        $this->assertEquals($expected, $productType->toArray());
     }
 
     /** @test */
