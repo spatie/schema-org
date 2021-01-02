@@ -14,7 +14,7 @@ use Spatie\SchemaOrg\Exceptions\TypeNotInGraph;
 
 /**
 {% for type in types %}
- * @method self|{{ type.className }} {{ type.className | lcfirst }}(string|Closure|null $identifier = null, Closure|null $callback = null)
+ * @method self|{{ type.className }} {{ type.className | lcfirst }}(string|\Closure|null $identifier = null, \Closure|null $callback = null)
 {% endfor %}
  */
 class Graph implements Type, ArrayAccess, JsonSerializable
