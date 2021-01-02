@@ -2,7 +2,7 @@
 
 namespace Spatie\SchemaOrg\Generator\Parser;
 
-use Tightenco\Collect\Support\Collection;
+use Illuminate\Support\Collection;
 
 class JsonLdParser
 {

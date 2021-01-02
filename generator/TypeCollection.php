@@ -3,7 +3,7 @@
 namespace Spatie\SchemaOrg\Generator;
 
 use Closure;
-use Tightenco\Collect\Support\Collection;
+use Illuminate\Support\Collection;
 
 class TypeCollection
 {
