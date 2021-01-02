@@ -13,7 +13,7 @@ use Spatie\SchemaOrg\Exceptions\TypeNotInMultiTypedEntity;
 
 /**
 {% for type in types %}
- * @method self|{{ type.className }} {{ type.name | lcfirst }}(Closure|null $callback = null)
+ * @method self|{{ type.className }} {{ type.name | lcfirst }}(\Closure|null $callback = null)
 {% endfor %}
  */
 class MultiTypedEntity implements Type, JsonSerializable
