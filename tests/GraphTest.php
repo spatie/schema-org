@@ -230,4 +230,13 @@ class GraphTest extends TestCase
             $graph->toScript()
         );
     }
+
+    /** @test */
+    public function it_can_change_context()
+    {
+        $graph = new Graph();
+
+        $graph->setContext('https://foobar.com');
+        $this->assertSame('https://foobar.com', $graph->getContext());
+    }
 }
