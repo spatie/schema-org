@@ -232,11 +232,9 @@ class GraphTest extends TestCase
     }
 
     /** @test */
-    public function it_can_change_context()
+    public function it_can_be_initialized_with_different_context()
     {
-        $graph = new Graph();
-
-        $graph->setContext('https://foobar.com');
+        $graph = new Graph('https://foobar.com');
         $this->assertSame('https://foobar.com', $graph->getContext());
     }
 }
