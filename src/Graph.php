@@ -865,6 +865,14 @@ class Graph implements Type, ArrayAccess, JsonSerializable
     /** @var array */
     protected $hidden = [];
 
+    /** @var string|null */
+    protected $context;
+
+    public function __construct(?string $context = null)
+    {
+        $this->context = $context;
+    }
+
     /**
      * This overloads all \Spatie\SchemaOrg\Schema construction methods.
      * You can call them the same like on the \Spatie\SchemaOrg\Schema class.
@@ -1102,7 +1110,7 @@ class Graph implements Type, ArrayAccess, JsonSerializable
 
     public function getContext(): string
     {
-        return 'https://schema.org';
+        return $this->context ?? 'https://schema.org';
     }
 
     public function toScript(): string
