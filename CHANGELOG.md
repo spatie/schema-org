@@ -2,6 +2,10 @@
 
 All Notable changes to `schema-org` will be documented in this file.
 
+## 3.4.0 - 2021-05-10
+
+- add custom `\Spatie\SchemaOrg\Graph` context support - [#160](https://github.com/spatie/schema-org/pull/160)
+
 ## 3.3.0 - 2021-01-02
 
 - fix `@id` and `identifier` serialization for typed identifiers - [#157](https://github.com/spatie/schema-org/pull/157)
