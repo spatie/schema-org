@@ -256,7 +256,8 @@ class BaseTypeTest extends TestCase
             'child' => $child,
             'hello' => 'world',
         ]);
-        $type->setProperty('string', new class() {
+        $type->setProperty('string', new class()
+        {
             public function __toString()
             {
                 return 'lorem ipsum';
@@ -291,7 +292,8 @@ class BaseTypeTest extends TestCase
         $this->expectException(InvalidProperty::class);
 
         $type = new DummyType();
-        $type->setProperty('foo', new class() {
+        $type->setProperty('foo', new class()
+        {
         });
 
         $type->jsonSerialize();
