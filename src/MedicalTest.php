@@ -10,7 +10,7 @@ use \Spatie\SchemaOrg\Contracts\ThingContract;
  * Any medical test, typically performed for diagnostic purposes.
  *
  * @see https://schema.org/MedicalTest
- * @see http://health-lifesci.schema.org
+ * @see https://health-lifesci.schema.org
  *
  */
 class MedicalTest extends BaseType implements MedicalTestContract, MedicalEntityContract, ThingContract
@@ -42,7 +42,7 @@ class MedicalTest extends BaseType implements MedicalTestContract, MedicalEntity
      * @return static
      *
      * @see https://schema.org/affectedBy
-     * @see http://health-lifesci.schema.org
+     * @see https://health-lifesci.schema.org
      */
     public function affectedBy($affectedBy)
     {
@@ -72,7 +72,7 @@ class MedicalTest extends BaseType implements MedicalTestContract, MedicalEntity
      * @return static
      *
      * @see https://schema.org/code
-     * @see http://health-lifesci.schema.org
+     * @see https://health-lifesci.schema.org
      */
     public function code($code)
     {
@@ -118,7 +118,7 @@ class MedicalTest extends BaseType implements MedicalTestContract, MedicalEntity
      * @return static
      *
      * @see https://schema.org/guideline
-     * @see http://health-lifesci.schema.org
+     * @see https://health-lifesci.schema.org
      */
     public function guideline($guideline)
     {
@@ -167,7 +167,7 @@ class MedicalTest extends BaseType implements MedicalTestContract, MedicalEntity
      * @return static
      *
      * @see https://schema.org/legalStatus
-     * @see http://health-lifesci.schema.org
+     * @see https://health-lifesci.schema.org
      */
     public function legalStatus($legalStatus)
     {
@@ -199,7 +199,7 @@ class MedicalTest extends BaseType implements MedicalTestContract, MedicalEntity
      * @return static
      *
      * @see https://schema.org/medicineSystem
-     * @see http://health-lifesci.schema.org
+     * @see https://health-lifesci.schema.org
      */
     public function medicineSystem($medicineSystem)
     {
@@ -228,7 +228,7 @@ class MedicalTest extends BaseType implements MedicalTestContract, MedicalEntity
      * @return static
      *
      * @see https://schema.org/normalRange
-     * @see http://health-lifesci.schema.org
+     * @see https://health-lifesci.schema.org
      */
     public function normalRange($normalRange)
     {
@@ -259,7 +259,7 @@ class MedicalTest extends BaseType implements MedicalTestContract, MedicalEntity
      * @return static
      *
      * @see https://schema.org/recognizingAuthority
-     * @see http://health-lifesci.schema.org
+     * @see https://health-lifesci.schema.org
      */
     public function recognizingAuthority($recognizingAuthority)
     {
@@ -274,7 +274,7 @@ class MedicalTest extends BaseType implements MedicalTestContract, MedicalEntity
      * @return static
      *
      * @see https://schema.org/relevantSpecialty
-     * @see http://health-lifesci.schema.org
+     * @see https://health-lifesci.schema.org
      */
     public function relevantSpecialty($relevantSpecialty)
     {
@@ -305,7 +305,7 @@ class MedicalTest extends BaseType implements MedicalTestContract, MedicalEntity
      * @return static
      *
      * @see https://schema.org/signDetected
-     * @see http://health-lifesci.schema.org
+     * @see https://health-lifesci.schema.org
      */
     public function signDetected($signDetected)
     {
@@ -320,7 +320,7 @@ class MedicalTest extends BaseType implements MedicalTestContract, MedicalEntity
      * @return static
      *
      * @see https://schema.org/study
-     * @see http://health-lifesci.schema.org
+     * @see https://health-lifesci.schema.org
      */
     public function study($study)
     {
@@ -364,7 +364,7 @@ class MedicalTest extends BaseType implements MedicalTestContract, MedicalEntity
      * @return static
      *
      * @see https://schema.org/usedToDiagnose
-     * @see http://health-lifesci.schema.org
+     * @see https://health-lifesci.schema.org
      */
     public function usedToDiagnose($usedToDiagnose)
     {
@@ -379,7 +379,7 @@ class MedicalTest extends BaseType implements MedicalTestContract, MedicalEntity
      * @return static
      *
      * @see https://schema.org/usesDevice
-     * @see http://health-lifesci.schema.org
+     * @see https://health-lifesci.schema.org
      */
     public function usesDevice($usesDevice)
     {

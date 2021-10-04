@@ -13,7 +13,7 @@ use \Spatie\SchemaOrg\Contracts\ThingContract;
  * Enumerated type.
  *
  * @see https://schema.org/MedicalImagingTechnique
- * @see http://health-lifesci.schema.org
+ * @see https://health-lifesci.schema.org
  *
  * @method static supersededBy($supersededBy) The value should be instance of pending types Class|Class[]|Enumeration|Enumeration[]|Property|Property[]
  */
@@ -23,7 +23,7 @@ class MedicalImagingTechnique extends BaseType implements MedicalImagingTechniqu
      * X-ray computed tomography imaging.
      *
      * @see https://schema.org/CT
-     * @see http://health-lifesci.schema.org
+     * @see https://health-lifesci.schema.org
      */
      const CT = 'https://schema.org/CT';
 
@@ -31,7 +31,7 @@ class MedicalImagingTechnique extends BaseType implements MedicalImagingTechniqu
      * Magnetic resonance imaging.
      *
      * @see https://schema.org/MRI
-     * @see http://health-lifesci.schema.org
+     * @see https://health-lifesci.schema.org
      */
      const MRI = 'https://schema.org/MRI';
 
@@ -39,7 +39,7 @@ class MedicalImagingTechnique extends BaseType implements MedicalImagingTechniqu
      * Positron emission tomography imaging.
      *
      * @see https://schema.org/PET
-     * @see http://health-lifesci.schema.org
+     * @see https://health-lifesci.schema.org
      */
      const PET = 'https://schema.org/PET';
 
@@ -47,7 +47,7 @@ class MedicalImagingTechnique extends BaseType implements MedicalImagingTechniqu
      * Ultrasound imaging.
      *
      * @see https://schema.org/Ultrasound
-     * @see http://health-lifesci.schema.org
+     * @see https://health-lifesci.schema.org
      */
      const Ultrasound = 'https://schema.org/Ultrasound';
 
@@ -55,7 +55,7 @@ class MedicalImagingTechnique extends BaseType implements MedicalImagingTechniqu
      * X-ray imaging.
      *
      * @see https://schema.org/XRay
-     * @see http://health-lifesci.schema.org
+     * @see https://health-lifesci.schema.org
      */
      const XRay = 'https://schema.org/XRay';
 

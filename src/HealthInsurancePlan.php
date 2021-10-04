@@ -10,7 +10,7 @@ use \Spatie\SchemaOrg\Contracts\ThingContract;
  * A US-style health insurance plan, including PPOs, EPOs, and HMOs.
  *
  * @see https://schema.org/HealthInsurancePlan
- * @see http://pending.schema.org
+ * @see https://pending.schema.org
  * @link https://github.com/schemaorg/schemaorg/issues/1062
  *
  */
@@ -58,7 +58,7 @@ class HealthInsurancePlan extends BaseType implements HealthInsurancePlanContrac
      * @return static
      *
      * @see https://schema.org/benefitsSummaryUrl
-     * @see http://pending.schema.org
+     * @see https://pending.schema.org
      * @link https://github.com/schemaorg/schemaorg/issues/1062
      */
     public function benefitsSummaryUrl($benefitsSummaryUrl)
@@ -119,7 +119,7 @@ class HealthInsurancePlan extends BaseType implements HealthInsurancePlanContrac
      * @return static
      *
      * @see https://schema.org/healthPlanDrugOption
-     * @see http://pending.schema.org
+     * @see https://pending.schema.org
      * @link https://github.com/schemaorg/schemaorg/issues/1062
      */
     public function healthPlanDrugOption($healthPlanDrugOption)
@@ -135,7 +135,7 @@ class HealthInsurancePlan extends BaseType implements HealthInsurancePlanContrac
      * @return static
      *
      * @see https://schema.org/healthPlanDrugTier
-     * @see http://pending.schema.org
+     * @see https://pending.schema.org
      * @link https://github.com/schemaorg/schemaorg/issues/1062
      */
     public function healthPlanDrugTier($healthPlanDrugTier)
@@ -152,7 +152,7 @@ class HealthInsurancePlan extends BaseType implements HealthInsurancePlanContrac
      * @return static
      *
      * @see https://schema.org/healthPlanId
-     * @see http://pending.schema.org
+     * @see https://pending.schema.org
      * @link https://github.com/schemaorg/schemaorg/issues/1062
      */
     public function healthPlanId($healthPlanId)
@@ -169,7 +169,7 @@ class HealthInsurancePlan extends BaseType implements HealthInsurancePlanContrac
      * @return static
      *
      * @see https://schema.org/healthPlanMarketingUrl
-     * @see http://pending.schema.org
+     * @see https://pending.schema.org
      * @link https://github.com/schemaorg/schemaorg/issues/1062
      */
     public function healthPlanMarketingUrl($healthPlanMarketingUrl)
@@ -218,7 +218,7 @@ class HealthInsurancePlan extends BaseType implements HealthInsurancePlanContrac
      * @return static
      *
      * @see https://schema.org/includesHealthPlanFormulary
-     * @see http://pending.schema.org
+     * @see https://pending.schema.org
      * @link https://github.com/schemaorg/schemaorg/issues/1062
      */
     public function includesHealthPlanFormulary($includesHealthPlanFormulary)
@@ -234,7 +234,7 @@ class HealthInsurancePlan extends BaseType implements HealthInsurancePlanContrac
      * @return static
      *
      * @see https://schema.org/includesHealthPlanNetwork
-     * @see http://pending.schema.org
+     * @see https://pending.schema.org
      * @link https://github.com/schemaorg/schemaorg/issues/1062
      */
     public function includesHealthPlanNetwork($includesHealthPlanNetwork)
@@ -341,7 +341,7 @@ class HealthInsurancePlan extends BaseType implements HealthInsurancePlanContrac
      * @return static
      *
      * @see https://schema.org/usesHealthPlanIdStandard
-     * @see http://pending.schema.org
+     * @see https://pending.schema.org
      * @link https://github.com/schemaorg/schemaorg/issues/1062
      */
     public function usesHealthPlanIdStandard($usesHealthPlanIdStandard)

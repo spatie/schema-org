@@ -12,7 +12,7 @@ use \Spatie\SchemaOrg\Contracts\ThingContract;
  * technologies.
  *
  * @see https://schema.org/WebAPI
- * @see http://pending.schema.org
+ * @see https://pending.schema.org
  * @link https://github.com/schemaorg/schemaorg/issues/1423
  *
  */
@@ -209,7 +209,7 @@ class WebAPI extends BaseType implements WebAPIContract, IntangibleContract, Ser
      * @return static
      *
      * @see https://schema.org/documentation
-     * @see http://pending.schema.org
+     * @see https://pending.schema.org
      * @link https://github.com/schemaorg/schemaorg/issues/1423
      */
     public function documentation($documentation)
@@ -563,7 +563,7 @@ class WebAPI extends BaseType implements WebAPIContract, IntangibleContract, Ser
      * @return static
      *
      * @see https://schema.org/termsOfService
-     * @see http://pending.schema.org
+     * @see https://pending.schema.org
      * @link https://github.com/schemaorg/schemaorg/issues/1423
      */
     public function termsOfService($termsOfService)

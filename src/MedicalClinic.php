@@ -16,7 +16,7 @@ use \Spatie\SchemaOrg\Contracts\ThingContract;
  * outpatients but with evolution it may be open to inpatients as well.
  *
  * @see https://schema.org/MedicalClinic
- * @see http://health-lifesci.schema.org
+ * @see https://health-lifesci.schema.org
  *
  */
 class MedicalClinic extends BaseType implements MedicalClinicContract, LocalBusinessContract, MedicalBusinessContract, MedicalOrganizationContract, OrganizationContract, PlaceContract, ThingContract
@@ -32,7 +32,7 @@ class MedicalClinic extends BaseType implements MedicalClinicContract, LocalBusi
      * @return static
      *
      * @see https://schema.org/actionableFeedbackPolicy
-     * @see http://pending.schema.org
+     * @see https://pending.schema.org
      */
     public function actionableFeedbackPolicy($actionableFeedbackPolicy)
     {
@@ -177,7 +177,7 @@ class MedicalClinic extends BaseType implements MedicalClinicContract, LocalBusi
      * @return static
      *
      * @see https://schema.org/availableService
-     * @see http://health-lifesci.schema.org
+     * @see https://health-lifesci.schema.org
      */
     public function availableService($availableService)
     {
@@ -343,7 +343,7 @@ class MedicalClinic extends BaseType implements MedicalClinicContract, LocalBusi
      * @return static
      *
      * @see https://schema.org/correctionsPolicy
-     * @see http://pending.schema.org
+     * @see https://pending.schema.org
      */
     public function correctionsPolicy($correctionsPolicy)
     {
@@ -445,7 +445,7 @@ class MedicalClinic extends BaseType implements MedicalClinicContract, LocalBusi
      * @return static
      *
      * @see https://schema.org/diversityPolicy
-     * @see http://pending.schema.org
+     * @see https://pending.schema.org
      */
     public function diversityPolicy($diversityPolicy)
     {
@@ -463,7 +463,7 @@ class MedicalClinic extends BaseType implements MedicalClinicContract, LocalBusi
      * @return static
      *
      * @see https://schema.org/diversityStaffingReport
-     * @see http://pending.schema.org
+     * @see https://pending.schema.org
      */
     public function diversityStaffingReport($diversityStaffingReport)
     {
@@ -541,7 +541,7 @@ class MedicalClinic extends BaseType implements MedicalClinicContract, LocalBusi
      * @return static
      *
      * @see https://schema.org/ethicsPolicy
-     * @see http://pending.schema.org
+     * @see https://pending.schema.org
      * @link https://github.com/schemaorg/schemaorg/issues/1525
      */
     public function ethicsPolicy($ethicsPolicy)
@@ -875,7 +875,7 @@ class MedicalClinic extends BaseType implements MedicalClinicContract, LocalBusi
      * @return static
      *
      * @see https://schema.org/hasCredential
-     * @see http://pending.schema.org
+     * @see https://pending.schema.org
      * @link https://github.com/schemaorg/schemaorg/issues/2289
      */
     public function hasCredential($hasCredential)
@@ -895,7 +895,7 @@ class MedicalClinic extends BaseType implements MedicalClinicContract, LocalBusi
      * @return static
      *
      * @see https://schema.org/hasDriveThroughService
-     * @see http://pending.schema.org
+     * @see https://pending.schema.org
      * @link https://github.com/schemaorg/schemaorg/issues/2490
      */
     public function hasDriveThroughService($hasDriveThroughService)
@@ -925,7 +925,7 @@ class MedicalClinic extends BaseType implements MedicalClinicContract, LocalBusi
      * @return static
      *
      * @see https://schema.org/hasMerchantReturnPolicy
-     * @see http://pending.schema.org
+     * @see https://pending.schema.org
      * @link https://github.com/schemaorg/schemaorg/issues/2288
      */
     public function hasMerchantReturnPolicy($hasMerchantReturnPolicy)
@@ -971,7 +971,7 @@ class MedicalClinic extends BaseType implements MedicalClinicContract, LocalBusi
      * @return static
      *
      * @see https://schema.org/hasProductReturnPolicy
-     * @see http://attic.schema.org
+     * @see https://attic.schema.org
      * @link https://github.com/schemaorg/schemaorg/issues/2288
      */
     public function hasProductReturnPolicy($hasProductReturnPolicy)
@@ -988,7 +988,7 @@ class MedicalClinic extends BaseType implements MedicalClinicContract, LocalBusi
      * @return static
      *
      * @see https://schema.org/healthPlanNetworkId
-     * @see http://pending.schema.org
+     * @see https://pending.schema.org
      * @link https://github.com/schemaorg/schemaorg/issues/1062
      */
     public function healthPlanNetworkId($healthPlanNetworkId)
@@ -1054,7 +1054,7 @@ class MedicalClinic extends BaseType implements MedicalClinicContract, LocalBusi
      * @return static
      *
      * @see https://schema.org/isAcceptingNewPatients
-     * @see http://pending.schema.org
+     * @see https://pending.schema.org
      * @link https://github.com/schemaorg/schemaorg/issues/1062
      */
     public function isAcceptingNewPatients($isAcceptingNewPatients)
@@ -1104,7 +1104,7 @@ class MedicalClinic extends BaseType implements MedicalClinicContract, LocalBusi
      * @return static
      *
      * @see https://schema.org/knowsAbout
-     * @see http://pending.schema.org
+     * @see https://pending.schema.org
      */
     public function knowsAbout($knowsAbout)
     {
@@ -1122,7 +1122,7 @@ class MedicalClinic extends BaseType implements MedicalClinicContract, LocalBusi
      * @return static
      *
      * @see https://schema.org/knowsLanguage
-     * @see http://pending.schema.org
+     * @see https://pending.schema.org
      */
     public function knowsLanguage($knowsLanguage)
     {
@@ -1300,7 +1300,7 @@ class MedicalClinic extends BaseType implements MedicalClinicContract, LocalBusi
      * @return static
      *
      * @see https://schema.org/medicalSpecialty
-     * @see http://health-lifesci.schema.org
+     * @see https://health-lifesci.schema.org
      */
     public function medicalSpecialty($medicalSpecialty)
     {
@@ -1390,7 +1390,7 @@ class MedicalClinic extends BaseType implements MedicalClinicContract, LocalBusi
      * @return static
      *
      * @see https://schema.org/nonprofitStatus
-     * @see http://pending.schema.org
+     * @see https://pending.schema.org
      * @link https://github.com/schemaorg/schemaorg/issues/2543
      */
     public function nonprofitStatus($nonprofitStatus)
@@ -1467,7 +1467,7 @@ class MedicalClinic extends BaseType implements MedicalClinicContract, LocalBusi
      * @return static
      *
      * @see https://schema.org/ownershipFundingInfo
-     * @see http://pending.schema.org
+     * @see https://pending.schema.org
      */
     public function ownershipFundingInfo($ownershipFundingInfo)
     {
@@ -1822,7 +1822,7 @@ class MedicalClinic extends BaseType implements MedicalClinicContract, LocalBusi
      * @return static
      *
      * @see https://schema.org/tourBookingPage
-     * @see http://pending.schema.org
+     * @see https://pending.schema.org
      * @link https://github.com/schemaorg/schemaorg/issues/2373
      */
     public function tourBookingPage($tourBookingPage)
@@ -1840,7 +1840,7 @@ class MedicalClinic extends BaseType implements MedicalClinicContract, LocalBusi
      * @return static
      *
      * @see https://schema.org/unnamedSourcesPolicy
-     * @see http://pending.schema.org
+     * @see https://pending.schema.org
      */
     public function unnamedSourcesPolicy($unnamedSourcesPolicy)
     {

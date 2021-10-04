@@ -12,7 +12,7 @@ use \Spatie\SchemaOrg\Contracts\ThingContract;
  * school, or as a taxi.
  *
  * @see https://schema.org/CarUsageType
- * @see http://auto.schema.org
+ * @see https://auto.schema.org
  * @link http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#Automotive_Ontology_Working_Group
  *
  * @method static supersededBy($supersededBy) The value should be instance of pending types Class|Class[]|Enumeration|Enumeration[]|Property|Property[]
@@ -23,7 +23,7 @@ class CarUsageType extends BaseType implements CarUsageTypeContract, Enumeration
      * Indicates the usage of the vehicle for driving school.
      *
      * @see https://schema.org/DrivingSchoolVehicleUsage
-     * @see http://auto.schema.org
+     * @see https://auto.schema.org
      * @link http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#Automotive_Ontology_Working_Group
      */
      const DrivingSchoolVehicleUsage = 'https://schema.org/DrivingSchoolVehicleUsage';
@@ -32,7 +32,7 @@ class CarUsageType extends BaseType implements CarUsageTypeContract, Enumeration
      * Indicates the usage of the vehicle as a rental car.
      *
      * @see https://schema.org/RentalVehicleUsage
-     * @see http://auto.schema.org
+     * @see https://auto.schema.org
      * @link http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#Automotive_Ontology_Working_Group
      */
      const RentalVehicleUsage = 'https://schema.org/RentalVehicleUsage';
@@ -41,7 +41,7 @@ class CarUsageType extends BaseType implements CarUsageTypeContract, Enumeration
      * Indicates the usage of the car as a taxi.
      *
      * @see https://schema.org/TaxiVehicleUsage
-     * @see http://auto.schema.org
+     * @see https://auto.schema.org
      * @link http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#Automotive_Ontology_Working_Group
      */
      const TaxiVehicleUsage = 'https://schema.org/TaxiVehicleUsage';

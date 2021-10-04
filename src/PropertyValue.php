@@ -177,7 +177,7 @@ class PropertyValue extends BaseType implements PropertyValueContract, Intangibl
      * @return static
      *
      * @see https://schema.org/measurementTechnique
-     * @see http://pending.schema.org
+     * @see https://pending.schema.org
      * @link https://github.com/schemaorg/schemaorg/issues/1425
      */
     public function measurementTechnique($measurementTechnique)

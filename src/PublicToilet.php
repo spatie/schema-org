@@ -13,7 +13,7 @@ use \Spatie\SchemaOrg\Contracts\ThingContract;
  * or by customers or employees of certain businesses.
  *
  * @see https://schema.org/PublicToilet
- * @see http://pending.schema.org
+ * @see https://pending.schema.org
  * @link https://github.com/schemaorg/schemaorg/issues/1624
  *
  */
@@ -474,7 +474,7 @@ class PublicToilet extends BaseType implements PublicToiletContract, CivicStruct
      * @return static
      *
      * @see https://schema.org/hasDriveThroughService
-     * @see http://pending.schema.org
+     * @see https://pending.schema.org
      * @link https://github.com/schemaorg/schemaorg/issues/2490
      */
     public function hasDriveThroughService($hasDriveThroughService)
@@ -907,7 +907,7 @@ class PublicToilet extends BaseType implements PublicToiletContract, CivicStruct
      * @return static
      *
      * @see https://schema.org/tourBookingPage
-     * @see http://pending.schema.org
+     * @see https://pending.schema.org
      * @link https://github.com/schemaorg/schemaorg/issues/2373
      */
     public function tourBookingPage($tourBookingPage)

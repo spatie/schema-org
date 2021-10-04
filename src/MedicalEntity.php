@@ -10,7 +10,7 @@ use \Spatie\SchemaOrg\Contracts\ThingContract;
  * medicine.
  *
  * @see https://schema.org/MedicalEntity
- * @see http://health-lifesci.schema.org
+ * @see https://health-lifesci.schema.org
  *
  */
 class MedicalEntity extends BaseType implements MedicalEntityContract, ThingContract
@@ -57,7 +57,7 @@ class MedicalEntity extends BaseType implements MedicalEntityContract, ThingCont
      * @return static
      *
      * @see https://schema.org/code
-     * @see http://health-lifesci.schema.org
+     * @see https://health-lifesci.schema.org
      */
     public function code($code)
     {
@@ -103,7 +103,7 @@ class MedicalEntity extends BaseType implements MedicalEntityContract, ThingCont
      * @return static
      *
      * @see https://schema.org/guideline
-     * @see http://health-lifesci.schema.org
+     * @see https://health-lifesci.schema.org
      */
     public function guideline($guideline)
     {
@@ -152,7 +152,7 @@ class MedicalEntity extends BaseType implements MedicalEntityContract, ThingCont
      * @return static
      *
      * @see https://schema.org/legalStatus
-     * @see http://health-lifesci.schema.org
+     * @see https://health-lifesci.schema.org
      */
     public function legalStatus($legalStatus)
     {
@@ -184,7 +184,7 @@ class MedicalEntity extends BaseType implements MedicalEntityContract, ThingCont
      * @return static
      *
      * @see https://schema.org/medicineSystem
-     * @see http://health-lifesci.schema.org
+     * @see https://health-lifesci.schema.org
      */
     public function medicineSystem($medicineSystem)
     {
@@ -229,7 +229,7 @@ class MedicalEntity extends BaseType implements MedicalEntityContract, ThingCont
      * @return static
      *
      * @see https://schema.org/recognizingAuthority
-     * @see http://health-lifesci.schema.org
+     * @see https://health-lifesci.schema.org
      */
     public function recognizingAuthority($recognizingAuthority)
     {
@@ -244,7 +244,7 @@ class MedicalEntity extends BaseType implements MedicalEntityContract, ThingCont
      * @return static
      *
      * @see https://schema.org/relevantSpecialty
-     * @see http://health-lifesci.schema.org
+     * @see https://health-lifesci.schema.org
      */
     public function relevantSpecialty($relevantSpecialty)
     {
@@ -275,7 +275,7 @@ class MedicalEntity extends BaseType implements MedicalEntityContract, ThingCont
      * @return static
      *
      * @see https://schema.org/study
-     * @see http://health-lifesci.schema.org
+     * @see https://health-lifesci.schema.org
      */
     public function study($study)
     {

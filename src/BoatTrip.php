@@ -11,7 +11,7 @@ use \Spatie\SchemaOrg\Contracts\TripContract;
  * A trip on a commercial ferry line.
  *
  * @see https://schema.org/BoatTrip
- * @see http://pending.schema.org
+ * @see https://pending.schema.org
  * @link https://github.com/schemaorg/schemaorg/issues/1755
  *
  */
@@ -58,7 +58,7 @@ class BoatTrip extends BaseType implements BoatTripContract, IntangibleContract,
      * @return static
      *
      * @see https://schema.org/arrivalBoatTerminal
-     * @see http://pending.schema.org
+     * @see https://pending.schema.org
      * @link https://github.com/schemaorg/schemaorg/issues/1755
      */
     public function arrivalBoatTerminal($arrivalBoatTerminal)
@@ -88,7 +88,7 @@ class BoatTrip extends BaseType implements BoatTripContract, IntangibleContract,
      * @return static
      *
      * @see https://schema.org/departureBoatTerminal
-     * @see http://pending.schema.org
+     * @see https://pending.schema.org
      * @link https://github.com/schemaorg/schemaorg/issues/1755
      */
     public function departureBoatTerminal($departureBoatTerminal)
@@ -184,7 +184,7 @@ class BoatTrip extends BaseType implements BoatTripContract, IntangibleContract,
      * @return static
      *
      * @see https://schema.org/itinerary
-     * @see http://pending.schema.org
+     * @see https://pending.schema.org
      * @link http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#Tourism
      */
     public function itinerary($itinerary)
@@ -253,7 +253,7 @@ class BoatTrip extends BaseType implements BoatTripContract, IntangibleContract,
      * @return static
      *
      * @see https://schema.org/partOfTrip
-     * @see http://pending.schema.org
+     * @see https://pending.schema.org
      * @link http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#Tourism
      */
     public function partOfTrip($partOfTrip)
@@ -318,7 +318,7 @@ class BoatTrip extends BaseType implements BoatTripContract, IntangibleContract,
      * @return static
      *
      * @see https://schema.org/subTrip
-     * @see http://pending.schema.org
+     * @see https://pending.schema.org
      * @link http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#Tourism
      */
     public function subTrip($subTrip)

@@ -12,7 +12,7 @@ use \Spatie\SchemaOrg\Contracts\ThingContract;
  * Note that this structure may not capture all aspects of the policy.
  *
  * @see https://schema.org/MerchantReturnEnumeration
- * @see http://pending.schema.org
+ * @see https://pending.schema.org
  * @link https://github.com/schemaorg/schemaorg/issues/2288
  *
  * @method static supersededBy($supersededBy) The value should be instance of pending types Class|Class[]|Enumeration|Enumeration[]|Property|Property[]
@@ -24,7 +24,7 @@ class MerchantReturnEnumeration extends BaseType implements MerchantReturnEnumer
      * returns.
      *
      * @see https://schema.org/MerchantReturnFiniteReturnWindow
-     * @see http://pending.schema.org
+     * @see https://pending.schema.org
      * @link https://github.com/schemaorg/schemaorg/issues/2288
      */
      const MerchantReturnFiniteReturnWindow = 'https://schema.org/MerchantReturnFiniteReturnWindow';
@@ -33,7 +33,7 @@ class MerchantReturnEnumeration extends BaseType implements MerchantReturnEnumer
      * MerchantReturnNotPermitted: product returns are not permitted.
      *
      * @see https://schema.org/MerchantReturnNotPermitted
-     * @see http://pending.schema.org
+     * @see https://pending.schema.org
      * @link https://github.com/schemaorg/schemaorg/issues/2288
      */
      const MerchantReturnNotPermitted = 'https://schema.org/MerchantReturnNotPermitted';
@@ -43,7 +43,7 @@ class MerchantReturnEnumeration extends BaseType implements MerchantReturnEnumer
      * returns.
      *
      * @see https://schema.org/MerchantReturnUnlimitedWindow
-     * @see http://pending.schema.org
+     * @see https://pending.schema.org
      * @link https://github.com/schemaorg/schemaorg/issues/2288
      */
      const MerchantReturnUnlimitedWindow = 'https://schema.org/MerchantReturnUnlimitedWindow';
@@ -52,7 +52,7 @@ class MerchantReturnEnumeration extends BaseType implements MerchantReturnEnumer
      * MerchantReturnUnspecified: a product return policy is not specified here.
      *
      * @see https://schema.org/MerchantReturnUnspecified
-     * @see http://pending.schema.org
+     * @see https://pending.schema.org
      * @link https://github.com/schemaorg/schemaorg/issues/2288
      */
      const MerchantReturnUnspecified = 'https://schema.org/MerchantReturnUnspecified';

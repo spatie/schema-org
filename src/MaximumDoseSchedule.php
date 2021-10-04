@@ -15,7 +15,7 @@ use \Spatie\SchemaOrg\Contracts\ThingContract;
  * MedicalEntity.
  *
  * @see https://schema.org/MaximumDoseSchedule
- * @see http://health-lifesci.schema.org
+ * @see https://health-lifesci.schema.org
  *
  */
 class MaximumDoseSchedule extends BaseType implements MaximumDoseScheduleContract, DoseScheduleContract, MedicalEntityContract, MedicalIntangibleContract, ThingContract
@@ -62,7 +62,7 @@ class MaximumDoseSchedule extends BaseType implements MaximumDoseScheduleContrac
      * @return static
      *
      * @see https://schema.org/code
-     * @see http://health-lifesci.schema.org
+     * @see https://health-lifesci.schema.org
      */
     public function code($code)
     {
@@ -108,7 +108,7 @@ class MaximumDoseSchedule extends BaseType implements MaximumDoseScheduleContrac
      * @return static
      *
      * @see https://schema.org/doseUnit
-     * @see http://health-lifesci.schema.org
+     * @see https://health-lifesci.schema.org
      */
     public function doseUnit($doseUnit)
     {
@@ -123,7 +123,7 @@ class MaximumDoseSchedule extends BaseType implements MaximumDoseScheduleContrac
      * @return static
      *
      * @see https://schema.org/doseValue
-     * @see http://health-lifesci.schema.org
+     * @see https://health-lifesci.schema.org
      */
     public function doseValue($doseValue)
     {
@@ -138,7 +138,7 @@ class MaximumDoseSchedule extends BaseType implements MaximumDoseScheduleContrac
      * @return static
      *
      * @see https://schema.org/frequency
-     * @see http://health-lifesci.schema.org
+     * @see https://health-lifesci.schema.org
      */
     public function frequency($frequency)
     {
@@ -153,7 +153,7 @@ class MaximumDoseSchedule extends BaseType implements MaximumDoseScheduleContrac
      * @return static
      *
      * @see https://schema.org/guideline
-     * @see http://health-lifesci.schema.org
+     * @see https://health-lifesci.schema.org
      */
     public function guideline($guideline)
     {
@@ -202,7 +202,7 @@ class MaximumDoseSchedule extends BaseType implements MaximumDoseScheduleContrac
      * @return static
      *
      * @see https://schema.org/legalStatus
-     * @see http://health-lifesci.schema.org
+     * @see https://health-lifesci.schema.org
      */
     public function legalStatus($legalStatus)
     {
@@ -234,7 +234,7 @@ class MaximumDoseSchedule extends BaseType implements MaximumDoseScheduleContrac
      * @return static
      *
      * @see https://schema.org/medicineSystem
-     * @see http://health-lifesci.schema.org
+     * @see https://health-lifesci.schema.org
      */
     public function medicineSystem($medicineSystem)
     {
@@ -279,7 +279,7 @@ class MaximumDoseSchedule extends BaseType implements MaximumDoseScheduleContrac
      * @return static
      *
      * @see https://schema.org/recognizingAuthority
-     * @see http://health-lifesci.schema.org
+     * @see https://health-lifesci.schema.org
      */
     public function recognizingAuthority($recognizingAuthority)
     {
@@ -294,7 +294,7 @@ class MaximumDoseSchedule extends BaseType implements MaximumDoseScheduleContrac
      * @return static
      *
      * @see https://schema.org/relevantSpecialty
-     * @see http://health-lifesci.schema.org
+     * @see https://health-lifesci.schema.org
      */
     public function relevantSpecialty($relevantSpecialty)
     {
@@ -325,7 +325,7 @@ class MaximumDoseSchedule extends BaseType implements MaximumDoseScheduleContrac
      * @return static
      *
      * @see https://schema.org/study
-     * @see http://health-lifesci.schema.org
+     * @see https://health-lifesci.schema.org
      */
     public function study($study)
     {
@@ -356,7 +356,7 @@ class MaximumDoseSchedule extends BaseType implements MaximumDoseScheduleContrac
      * @return static
      *
      * @see https://schema.org/targetPopulation
-     * @see http://health-lifesci.schema.org
+     * @see https://health-lifesci.schema.org
      */
     public function targetPopulation($targetPopulation)
     {

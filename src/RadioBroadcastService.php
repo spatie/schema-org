@@ -13,7 +13,7 @@ use \Spatie\SchemaOrg\Contracts\ThingContract;
  * the air or online.
  *
  * @see https://schema.org/RadioBroadcastService
- * @see http://pending.schema.org
+ * @see https://pending.schema.org
  * @link https://github.com/schemaorg/schemaorg/issues/2109
  *
  */
@@ -255,7 +255,7 @@ class RadioBroadcastService extends BaseType implements RadioBroadcastServiceCon
      * @return static
      *
      * @see https://schema.org/callSign
-     * @see http://pending.schema.org
+     * @see https://pending.schema.org
      * @link https://github.com/schemaorg/schemaorg/issues/2109
      */
     public function callSign($callSign)
@@ -703,7 +703,7 @@ class RadioBroadcastService extends BaseType implements RadioBroadcastServiceCon
      * @return static
      *
      * @see https://schema.org/termsOfService
-     * @see http://pending.schema.org
+     * @see https://pending.schema.org
      * @link https://github.com/schemaorg/schemaorg/issues/1423
      */
     public function termsOfService($termsOfService)

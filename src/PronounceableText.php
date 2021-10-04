@@ -8,7 +8,7 @@ use \Spatie\SchemaOrg\Contracts\PronounceableTextContract;
  * Data type: PronounceableText.
  *
  * @see https://schema.org/PronounceableText
- * @see http://pending.schema.org
+ * @see https://pending.schema.org
  * @link https://github.com/schemaorg/schemaorg/issues/2108
  *
  */
@@ -42,7 +42,7 @@ class PronounceableText extends BaseType implements PronounceableTextContract
      * @return static
      *
      * @see https://schema.org/phoneticText
-     * @see http://pending.schema.org
+     * @see https://pending.schema.org
      * @link https://github.com/schemaorg/schemaorg/issues/2108
      */
     public function phoneticText($phoneticText)
@@ -59,7 +59,7 @@ class PronounceableText extends BaseType implements PronounceableTextContract
      * @return static
      *
      * @see https://schema.org/speechToTextMarkup
-     * @see http://pending.schema.org
+     * @see https://pending.schema.org
      * @link https://github.com/schemaorg/schemaorg/issues/2108
      */
     public function speechToTextMarkup($speechToTextMarkup)
@@ -75,7 +75,7 @@ class PronounceableText extends BaseType implements PronounceableTextContract
      * @return static
      *
      * @see https://schema.org/textValue
-     * @see http://pending.schema.org
+     * @see https://pending.schema.org
      * @link https://github.com/schemaorg/schemaorg/issues/2108
      */
     public function textValue($textValue)

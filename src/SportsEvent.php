@@ -294,7 +294,7 @@ class SportsEvent extends BaseType implements SportsEventContract, EventContract
      * @return static
      *
      * @see https://schema.org/eventAttendanceMode
-     * @see http://pending.schema.org
+     * @see https://pending.schema.org
      * @link https://github.com/schemaorg/schemaorg/issues/1842
      */
     public function eventAttendanceMode($eventAttendanceMode)
@@ -324,7 +324,7 @@ class SportsEvent extends BaseType implements SportsEventContract, EventContract
      * @return static
      *
      * @see https://schema.org/eventSchedule
-     * @see http://pending.schema.org
+     * @see https://pending.schema.org
      * @link https://github.com/schemaorg/schemaorg/issues/1457
      */
     public function eventSchedule($eventSchedule)
@@ -496,7 +496,7 @@ class SportsEvent extends BaseType implements SportsEventContract, EventContract
      * @return static
      *
      * @see https://schema.org/maximumPhysicalAttendeeCapacity
-     * @see http://pending.schema.org
+     * @see https://pending.schema.org
      * @link https://github.com/schemaorg/schemaorg/issues/1842
      */
     public function maximumPhysicalAttendeeCapacity($maximumPhysicalAttendeeCapacity)
@@ -514,7 +514,7 @@ class SportsEvent extends BaseType implements SportsEventContract, EventContract
      * @return static
      *
      * @see https://schema.org/maximumVirtualAttendeeCapacity
-     * @see http://pending.schema.org
+     * @see https://pending.schema.org
      * @link https://github.com/schemaorg/schemaorg/issues/1842
      */
     public function maximumVirtualAttendeeCapacity($maximumVirtualAttendeeCapacity)
@@ -717,7 +717,7 @@ class SportsEvent extends BaseType implements SportsEventContract, EventContract
      * @return static
      *
      * @see https://schema.org/sport
-     * @see http://pending.schema.org
+     * @see https://pending.schema.org
      * @link https://github.com/schemaorg/schemaorg/issues/1951
      */
     public function sport($sport)

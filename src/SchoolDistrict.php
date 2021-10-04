@@ -12,7 +12,7 @@ use \Spatie\SchemaOrg\Contracts\ThingContract;
  * schools.
  *
  * @see https://schema.org/SchoolDistrict
- * @see http://pending.schema.org
+ * @see https://pending.schema.org
  * @link https://github.com/schemaorg/schemaorg/issues/2500
  *
  */
@@ -473,7 +473,7 @@ class SchoolDistrict extends BaseType implements SchoolDistrictContract, Adminis
      * @return static
      *
      * @see https://schema.org/hasDriveThroughService
-     * @see http://pending.schema.org
+     * @see https://pending.schema.org
      * @link https://github.com/schemaorg/schemaorg/issues/2490
      */
     public function hasDriveThroughService($hasDriveThroughService)
@@ -879,7 +879,7 @@ class SchoolDistrict extends BaseType implements SchoolDistrictContract, Adminis
      * @return static
      *
      * @see https://schema.org/tourBookingPage
-     * @see http://pending.schema.org
+     * @see https://pending.schema.org
      * @link https://github.com/schemaorg/schemaorg/issues/2373
      */
     public function tourBookingPage($tourBookingPage)

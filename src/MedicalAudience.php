@@ -12,7 +12,7 @@ use \Spatie\SchemaOrg\Contracts\ThingContract;
  * Target audiences for medical web pages.
  *
  * @see https://schema.org/MedicalAudience
- * @see http://health-lifesci.schema.org
+ * @see https://health-lifesci.schema.org
  *
  */
 class MedicalAudience extends BaseType implements MedicalAudienceContract, AudienceContract, IntangibleContract, PeopleAudienceContract, ThingContract
@@ -119,7 +119,7 @@ class MedicalAudience extends BaseType implements MedicalAudienceContract, Audie
      * @return static
      *
      * @see https://schema.org/healthCondition
-     * @see http://health-lifesci.schema.org
+     * @see https://health-lifesci.schema.org
      */
     public function healthCondition($healthCondition)
     {

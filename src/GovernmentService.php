@@ -301,7 +301,7 @@ class GovernmentService extends BaseType implements GovernmentServiceContract, I
      * @return static
      *
      * @see https://schema.org/jurisdiction
-     * @see http://pending.schema.org
+     * @see https://pending.schema.org
      * @link https://github.com/schemaorg/schemaorg/issues/2534
      */
     public function jurisdiction($jurisdiction)
@@ -578,7 +578,7 @@ class GovernmentService extends BaseType implements GovernmentServiceContract, I
      * @return static
      *
      * @see https://schema.org/termsOfService
-     * @see http://pending.schema.org
+     * @see https://pending.schema.org
      * @link https://github.com/schemaorg/schemaorg/issues/1423
      */
     public function termsOfService($termsOfService)

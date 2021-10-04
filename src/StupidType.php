@@ -9,7 +9,7 @@ use \Spatie\SchemaOrg\Contracts\ThingContract;
  * A StupidType for testing.
  *
  * @see https://schema.org/StupidType
- * @see http://attic.schema.org
+ * @see https://attic.schema.org
  *
  */
 class StupidType extends BaseType implements StupidTypeContract, ThingContract
@@ -180,7 +180,7 @@ class StupidType extends BaseType implements StupidTypeContract, ThingContract
      * @return static
      *
      * @see https://schema.org/stupidProperty
-     * @see http://attic.schema.org
+     * @see https://attic.schema.org
      */
     public function stupidProperty($stupidProperty)
     {

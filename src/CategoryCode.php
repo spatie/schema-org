@@ -11,7 +11,7 @@ use \Spatie\SchemaOrg\Contracts\ThingContract;
  * A Category Code.
  *
  * @see https://schema.org/CategoryCode
- * @see http://pending.schema.org
+ * @see https://pending.schema.org
  * @link https://github.com/schemaorg/schemaorg/issues/894
  *
  */
@@ -58,7 +58,7 @@ class CategoryCode extends BaseType implements CategoryCodeContract, DefinedTerm
      * @return static
      *
      * @see https://schema.org/codeValue
-     * @see http://pending.schema.org
+     * @see https://pending.schema.org
      * @link https://github.com/schemaorg/schemaorg/issues/894
      */
     public function codeValue($codeValue)
@@ -138,7 +138,7 @@ class CategoryCode extends BaseType implements CategoryCodeContract, DefinedTerm
      * @return static
      *
      * @see https://schema.org/inCodeSet
-     * @see http://pending.schema.org
+     * @see https://pending.schema.org
      * @link https://github.com/schemaorg/schemaorg/issues/894
      */
     public function inCodeSet($inCodeSet)
@@ -154,7 +154,7 @@ class CategoryCode extends BaseType implements CategoryCodeContract, DefinedTerm
      * @return static
      *
      * @see https://schema.org/inDefinedTermSet
-     * @see http://pending.schema.org
+     * @see https://pending.schema.org
      * @link https://github.com/schemaorg/schemaorg/issues/894
      */
     public function inDefinedTermSet($inDefinedTermSet)
@@ -246,7 +246,7 @@ class CategoryCode extends BaseType implements CategoryCodeContract, DefinedTerm
      * @return static
      *
      * @see https://schema.org/termCode
-     * @see http://pending.schema.org
+     * @see https://pending.schema.org
      * @link https://github.com/schemaorg/schemaorg/issues/894
      */
     public function termCode($termCode)

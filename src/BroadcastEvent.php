@@ -281,7 +281,7 @@ class BroadcastEvent extends BaseType implements BroadcastEventContract, EventCo
      * @return static
      *
      * @see https://schema.org/eventAttendanceMode
-     * @see http://pending.schema.org
+     * @see https://pending.schema.org
      * @link https://github.com/schemaorg/schemaorg/issues/1842
      */
     public function eventAttendanceMode($eventAttendanceMode)
@@ -311,7 +311,7 @@ class BroadcastEvent extends BaseType implements BroadcastEventContract, EventCo
      * @return static
      *
      * @see https://schema.org/eventSchedule
-     * @see http://pending.schema.org
+     * @see https://pending.schema.org
      * @link https://github.com/schemaorg/schemaorg/issues/1457
      */
     public function eventSchedule($eventSchedule)
@@ -497,7 +497,7 @@ class BroadcastEvent extends BaseType implements BroadcastEventContract, EventCo
      * @return static
      *
      * @see https://schema.org/maximumPhysicalAttendeeCapacity
-     * @see http://pending.schema.org
+     * @see https://pending.schema.org
      * @link https://github.com/schemaorg/schemaorg/issues/1842
      */
     public function maximumPhysicalAttendeeCapacity($maximumPhysicalAttendeeCapacity)
@@ -515,7 +515,7 @@ class BroadcastEvent extends BaseType implements BroadcastEventContract, EventCo
      * @return static
      *
      * @see https://schema.org/maximumVirtualAttendeeCapacity
-     * @see http://pending.schema.org
+     * @see https://pending.schema.org
      * @link https://github.com/schemaorg/schemaorg/issues/1842
      */
     public function maximumVirtualAttendeeCapacity($maximumVirtualAttendeeCapacity)
@@ -644,7 +644,7 @@ class BroadcastEvent extends BaseType implements BroadcastEventContract, EventCo
      * @return static
      *
      * @see https://schema.org/publishedBy
-     * @see http://bib.schema.org
+     * @see https://bib.schema.org
      */
     public function publishedBy($publishedBy)
     {
@@ -810,7 +810,7 @@ class BroadcastEvent extends BaseType implements BroadcastEventContract, EventCo
      * @return static
      *
      * @see https://schema.org/subtitleLanguage
-     * @see http://pending.schema.org
+     * @see https://pending.schema.org
      * @link https://github.com/schemaorg/schemaorg/issues/2110
      */
     public function subtitleLanguage($subtitleLanguage)

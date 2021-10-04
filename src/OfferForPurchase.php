@@ -15,7 +15,7 @@ use \Spatie\SchemaOrg\Contracts\ThingContract;
  *   background on the underlying concepts.
  *
  * @see https://schema.org/OfferForPurchase
- * @see http://pending.schema.org
+ * @see https://pending.schema.org
  * @link https://github.com/schemaorg/schemaorg/issues/2348
  *
  */
@@ -397,7 +397,7 @@ class OfferForPurchase extends BaseType implements OfferForPurchaseContract, Int
      * @return static
      *
      * @see https://schema.org/gtin
-     * @see http://pending.schema.org
+     * @see https://pending.schema.org
      * @link https://github.com/schemaorg/schemaorg/issues/2288
      */
     public function gtin($gtin)
@@ -543,7 +543,7 @@ class OfferForPurchase extends BaseType implements OfferForPurchaseContract, Int
      * @return static
      *
      * @see https://schema.org/ineligibleRegion
-     * @see http://pending.schema.org
+     * @see https://pending.schema.org
      * @link https://github.com/schemaorg/schemaorg/issues/2242
      */
     public function ineligibleRegion($ineligibleRegion)
@@ -609,7 +609,7 @@ class OfferForPurchase extends BaseType implements OfferForPurchaseContract, Int
      * @return static
      *
      * @see https://schema.org/leaseLength
-     * @see http://pending.schema.org
+     * @see https://pending.schema.org
      * @link https://github.com/schemaorg/schemaorg/issues/2373
      */
     public function leaseLength($leaseLength)
@@ -867,7 +867,7 @@ class OfferForPurchase extends BaseType implements OfferForPurchaseContract, Int
      * @return static
      *
      * @see https://schema.org/shippingDetails
-     * @see http://pending.schema.org
+     * @see https://pending.schema.org
      * @link https://github.com/schemaorg/schemaorg/issues/2506
      */
     public function shippingDetails($shippingDetails)

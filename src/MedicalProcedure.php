@@ -12,7 +12,7 @@ use \Spatie\SchemaOrg\Contracts\ThingContract;
  * other techniques.
  *
  * @see https://schema.org/MedicalProcedure
- * @see http://health-lifesci.schema.org
+ * @see https://health-lifesci.schema.org
  *
  */
 class MedicalProcedure extends BaseType implements MedicalProcedureContract, MedicalEntityContract, ThingContract
@@ -58,7 +58,7 @@ class MedicalProcedure extends BaseType implements MedicalProcedureContract, Med
      * @return static
      *
      * @see https://schema.org/bodyLocation
-     * @see http://health-lifesci.schema.org
+     * @see https://health-lifesci.schema.org
      */
     public function bodyLocation($bodyLocation)
     {
@@ -74,7 +74,7 @@ class MedicalProcedure extends BaseType implements MedicalProcedureContract, Med
      * @return static
      *
      * @see https://schema.org/code
-     * @see http://health-lifesci.schema.org
+     * @see https://health-lifesci.schema.org
      */
     public function code($code)
     {
@@ -120,7 +120,7 @@ class MedicalProcedure extends BaseType implements MedicalProcedureContract, Med
      * @return static
      *
      * @see https://schema.org/followup
-     * @see http://health-lifesci.schema.org
+     * @see https://health-lifesci.schema.org
      */
     public function followup($followup)
     {
@@ -135,7 +135,7 @@ class MedicalProcedure extends BaseType implements MedicalProcedureContract, Med
      * @return static
      *
      * @see https://schema.org/guideline
-     * @see http://health-lifesci.schema.org
+     * @see https://health-lifesci.schema.org
      */
     public function guideline($guideline)
     {
@@ -150,7 +150,7 @@ class MedicalProcedure extends BaseType implements MedicalProcedureContract, Med
      * @return static
      *
      * @see https://schema.org/howPerformed
-     * @see http://health-lifesci.schema.org
+     * @see https://health-lifesci.schema.org
      */
     public function howPerformed($howPerformed)
     {
@@ -199,7 +199,7 @@ class MedicalProcedure extends BaseType implements MedicalProcedureContract, Med
      * @return static
      *
      * @see https://schema.org/legalStatus
-     * @see http://health-lifesci.schema.org
+     * @see https://health-lifesci.schema.org
      */
     public function legalStatus($legalStatus)
     {
@@ -231,7 +231,7 @@ class MedicalProcedure extends BaseType implements MedicalProcedureContract, Med
      * @return static
      *
      * @see https://schema.org/medicineSystem
-     * @see http://health-lifesci.schema.org
+     * @see https://health-lifesci.schema.org
      */
     public function medicineSystem($medicineSystem)
     {
@@ -276,7 +276,7 @@ class MedicalProcedure extends BaseType implements MedicalProcedureContract, Med
      * @return static
      *
      * @see https://schema.org/preparation
-     * @see http://health-lifesci.schema.org
+     * @see https://health-lifesci.schema.org
      */
     public function preparation($preparation)
     {
@@ -292,7 +292,7 @@ class MedicalProcedure extends BaseType implements MedicalProcedureContract, Med
      * @return static
      *
      * @see https://schema.org/procedureType
-     * @see http://health-lifesci.schema.org
+     * @see https://health-lifesci.schema.org
      */
     public function procedureType($procedureType)
     {
@@ -308,7 +308,7 @@ class MedicalProcedure extends BaseType implements MedicalProcedureContract, Med
      * @return static
      *
      * @see https://schema.org/recognizingAuthority
-     * @see http://health-lifesci.schema.org
+     * @see https://health-lifesci.schema.org
      */
     public function recognizingAuthority($recognizingAuthority)
     {
@@ -323,7 +323,7 @@ class MedicalProcedure extends BaseType implements MedicalProcedureContract, Med
      * @return static
      *
      * @see https://schema.org/relevantSpecialty
-     * @see http://health-lifesci.schema.org
+     * @see https://health-lifesci.schema.org
      */
     public function relevantSpecialty($relevantSpecialty)
     {
@@ -354,7 +354,7 @@ class MedicalProcedure extends BaseType implements MedicalProcedureContract, Med
      * @return static
      *
      * @see https://schema.org/status
-     * @see http://health-lifesci.schema.org
+     * @see https://health-lifesci.schema.org
      */
     public function status($status)
     {
@@ -369,7 +369,7 @@ class MedicalProcedure extends BaseType implements MedicalProcedureContract, Med
      * @return static
      *
      * @see https://schema.org/study
-     * @see http://health-lifesci.schema.org
+     * @see https://health-lifesci.schema.org
      */
     public function study($study)
     {

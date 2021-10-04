@@ -14,7 +14,7 @@ use \Spatie\SchemaOrg\Contracts\ThingContract;
  * pool of money that is then re-invested into stocks, bonds and other assets.
  *
  * @see https://schema.org/InvestmentFund
- * @see http://pending.schema.org
+ * @see https://pending.schema.org
  *
  */
 class InvestmentFund extends BaseType implements InvestmentFundContract, FinancialProductContract, IntangibleContract, InvestmentOrDepositContract, ServiceContract, ThingContract
@@ -612,7 +612,7 @@ class InvestmentFund extends BaseType implements InvestmentFundContract, Financi
      * @return static
      *
      * @see https://schema.org/termsOfService
-     * @see http://pending.schema.org
+     * @see https://pending.schema.org
      * @link https://github.com/schemaorg/schemaorg/issues/1423
      */
     public function termsOfService($termsOfService)

@@ -14,7 +14,7 @@ use \Spatie\SchemaOrg\Contracts\ThingContract;
  * A patient is any person recipient of health care services.
  *
  * @see https://schema.org/Patient
- * @see http://health-lifesci.schema.org
+ * @see https://health-lifesci.schema.org
  *
  */
 class Patient extends BaseType implements PatientContract, AudienceContract, IntangibleContract, MedicalAudienceContract, PeopleAudienceContract, PersonContract, ThingContract
@@ -205,7 +205,7 @@ class Patient extends BaseType implements PatientContract, AudienceContract, Int
      * @return static
      *
      * @see https://schema.org/callSign
-     * @see http://pending.schema.org
+     * @see https://pending.schema.org
      * @link https://github.com/schemaorg/schemaorg/issues/2109
      */
     public function callSign($callSign)
@@ -334,7 +334,7 @@ class Patient extends BaseType implements PatientContract, AudienceContract, Int
      * @return static
      *
      * @see https://schema.org/diagnosis
-     * @see http://health-lifesci.schema.org
+     * @see https://health-lifesci.schema.org
      */
     public function diagnosis($diagnosis)
     {
@@ -366,7 +366,7 @@ class Patient extends BaseType implements PatientContract, AudienceContract, Int
      * @return static
      *
      * @see https://schema.org/drug
-     * @see http://health-lifesci.schema.org
+     * @see https://health-lifesci.schema.org
      */
     public function drug($drug)
     {
@@ -404,8 +404,7 @@ class Patient extends BaseType implements PatientContract, AudienceContract, Int
     }
 
     /**
-     * Family name. In the U.S., the last name of an Person. This can be used
-     * along with givenName instead of the name property.
+     * Family name. In the U.S., the last name of a Person.
      *
      * @param string|string[] $familyName
      *
@@ -476,7 +475,7 @@ class Patient extends BaseType implements PatientContract, AudienceContract, Int
      * @return static
      *
      * @see https://schema.org/gender
-     * @see http://pending.schema.org
+     * @see https://pending.schema.org
      * @link https://github.com/schemaorg/schemaorg/issues/2341
      */
     public function gender($gender)
@@ -499,8 +498,7 @@ class Patient extends BaseType implements PatientContract, AudienceContract, Int
     }
 
     /**
-     * Given name. In the U.S., the first name of a Person. This can be used
-     * along with familyName instead of the name property.
+     * Given name. In the U.S., the first name of a Person.
      *
      * @param string|string[] $givenName
      *
@@ -539,7 +537,7 @@ class Patient extends BaseType implements PatientContract, AudienceContract, Int
      * @return static
      *
      * @see https://schema.org/hasCredential
-     * @see http://pending.schema.org
+     * @see https://pending.schema.org
      * @link https://github.com/schemaorg/schemaorg/issues/2289
      */
     public function hasCredential($hasCredential)
@@ -602,7 +600,7 @@ class Patient extends BaseType implements PatientContract, AudienceContract, Int
      * @return static
      *
      * @see https://schema.org/healthCondition
-     * @see http://health-lifesci.schema.org
+     * @see https://health-lifesci.schema.org
      */
     public function healthCondition($healthCondition)
     {
@@ -652,7 +650,7 @@ class Patient extends BaseType implements PatientContract, AudienceContract, Int
     }
 
     /**
-     * An honorific suffix preceding a Person's name such as M.D. /PhD/MSCSW.
+     * An honorific suffix following a Person's name such as M.D. /PhD/MSCSW.
      *
      * @param string|string[] $honorificSuffix
      *
@@ -740,7 +738,7 @@ class Patient extends BaseType implements PatientContract, AudienceContract, Int
      * @return static
      *
      * @see https://schema.org/jobTitle
-     * @see http://pending.schema.org
+     * @see https://pending.schema.org
      * @link https://github.com/schemaorg/schemaorg/issues/2192
      */
     public function jobTitle($jobTitle)
@@ -773,7 +771,7 @@ class Patient extends BaseType implements PatientContract, AudienceContract, Int
      * @return static
      *
      * @see https://schema.org/knowsAbout
-     * @see http://pending.schema.org
+     * @see https://pending.schema.org
      */
     public function knowsAbout($knowsAbout)
     {
@@ -791,7 +789,7 @@ class Patient extends BaseType implements PatientContract, AudienceContract, Int
      * @return static
      *
      * @see https://schema.org/knowsLanguage
-     * @see http://pending.schema.org
+     * @see https://pending.schema.org
      */
     public function knowsLanguage($knowsLanguage)
     {

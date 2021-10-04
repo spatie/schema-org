@@ -13,7 +13,7 @@ use \Spatie\SchemaOrg\Contracts\ThingContract;
  * States.
  *
  * @see https://schema.org/USNonprofitType
- * @see http://pending.schema.org
+ * @see https://pending.schema.org
  * @link https://github.com/schemaorg/schemaorg/issues/2543
  *
  * @method static supersededBy($supersededBy) The value should be instance of pending types Class|Class[]|Enumeration|Enumeration[]|Property|Property[]
@@ -25,7 +25,7 @@ class USNonprofitType extends BaseType implements USNonprofitTypeContract, Enume
      * Associations.
      *
      * @see https://schema.org/Nonprofit501a
-     * @see http://pending.schema.org
+     * @see https://pending.schema.org
      * @link https://github.com/schemaorg/schemaorg/issues/2543
      */
      const Nonprofit501a = 'https://schema.org/Nonprofit501a';
@@ -36,7 +36,7 @@ class USNonprofitType extends BaseType implements USNonprofitTypeContract, Enume
      * Associations.
      *
      * @see https://schema.org/Nonprofit501c1
-     * @see http://pending.schema.org
+     * @see https://pending.schema.org
      * @link https://github.com/schemaorg/schemaorg/issues/2543
      */
      const Nonprofit501c1 = 'https://schema.org/Nonprofit501c1';
@@ -46,7 +46,7 @@ class USNonprofitType extends BaseType implements USNonprofitTypeContract, Enume
      * Societies and Associations.
      *
      * @see https://schema.org/Nonprofit501c10
-     * @see http://pending.schema.org
+     * @see https://pending.schema.org
      * @link https://github.com/schemaorg/schemaorg/issues/2543
      */
      const Nonprofit501c10 = 'https://schema.org/Nonprofit501c10';
@@ -56,7 +56,7 @@ class USNonprofitType extends BaseType implements USNonprofitTypeContract, Enume
      * Associations.
      *
      * @see https://schema.org/Nonprofit501c11
-     * @see http://pending.schema.org
+     * @see https://pending.schema.org
      * @link https://github.com/schemaorg/schemaorg/issues/2543
      */
      const Nonprofit501c11 = 'https://schema.org/Nonprofit501c11';
@@ -67,7 +67,7 @@ class USNonprofitType extends BaseType implements USNonprofitTypeContract, Enume
      * Telephone Companies.
      *
      * @see https://schema.org/Nonprofit501c12
-     * @see http://pending.schema.org
+     * @see https://pending.schema.org
      * @link https://github.com/schemaorg/schemaorg/issues/2543
      */
      const Nonprofit501c12 = 'https://schema.org/Nonprofit501c12';
@@ -76,7 +76,7 @@ class USNonprofitType extends BaseType implements USNonprofitTypeContract, Enume
      * Nonprofit501c13: Non-profit type referring to Cemetery Companies.
      *
      * @see https://schema.org/Nonprofit501c13
-     * @see http://pending.schema.org
+     * @see https://pending.schema.org
      * @link https://github.com/schemaorg/schemaorg/issues/2543
      */
      const Nonprofit501c13 = 'https://schema.org/Nonprofit501c13';
@@ -86,7 +86,7 @@ class USNonprofitType extends BaseType implements USNonprofitTypeContract, Enume
      * Unions, Mutual Reserve Funds.
      *
      * @see https://schema.org/Nonprofit501c14
-     * @see http://pending.schema.org
+     * @see https://pending.schema.org
      * @link https://github.com/schemaorg/schemaorg/issues/2543
      */
      const Nonprofit501c14 = 'https://schema.org/Nonprofit501c14';
@@ -96,7 +96,7 @@ class USNonprofitType extends BaseType implements USNonprofitTypeContract, Enume
      * or Associations.
      *
      * @see https://schema.org/Nonprofit501c15
-     * @see http://pending.schema.org
+     * @see https://pending.schema.org
      * @link https://github.com/schemaorg/schemaorg/issues/2543
      */
      const Nonprofit501c15 = 'https://schema.org/Nonprofit501c15';
@@ -106,7 +106,7 @@ class USNonprofitType extends BaseType implements USNonprofitTypeContract, Enume
      * to Finance Crop Operations.
      *
      * @see https://schema.org/Nonprofit501c16
-     * @see http://pending.schema.org
+     * @see https://pending.schema.org
      * @link https://github.com/schemaorg/schemaorg/issues/2543
      */
      const Nonprofit501c16 = 'https://schema.org/Nonprofit501c16';
@@ -116,7 +116,7 @@ class USNonprofitType extends BaseType implements USNonprofitTypeContract, Enume
      * Benefit Trusts.
      *
      * @see https://schema.org/Nonprofit501c17
-     * @see http://pending.schema.org
+     * @see https://pending.schema.org
      * @link https://github.com/schemaorg/schemaorg/issues/2543
      */
      const Nonprofit501c17 = 'https://schema.org/Nonprofit501c17';
@@ -126,7 +126,7 @@ class USNonprofitType extends BaseType implements USNonprofitTypeContract, Enume
      * Trust (created before 25 June 1959).
      *
      * @see https://schema.org/Nonprofit501c18
-     * @see http://pending.schema.org
+     * @see https://pending.schema.org
      * @link https://github.com/schemaorg/schemaorg/issues/2543
      */
      const Nonprofit501c18 = 'https://schema.org/Nonprofit501c18';
@@ -136,7 +136,7 @@ class USNonprofitType extends BaseType implements USNonprofitTypeContract, Enume
      * Past or Present Members of the Armed Forces.
      *
      * @see https://schema.org/Nonprofit501c19
-     * @see http://pending.schema.org
+     * @see https://pending.schema.org
      * @link https://github.com/schemaorg/schemaorg/issues/2543
      */
      const Nonprofit501c19 = 'https://schema.org/Nonprofit501c19';
@@ -146,7 +146,7 @@ class USNonprofitType extends BaseType implements USNonprofitTypeContract, Enume
      * for Exempt Organizations.
      *
      * @see https://schema.org/Nonprofit501c2
-     * @see http://pending.schema.org
+     * @see https://pending.schema.org
      * @link https://github.com/schemaorg/schemaorg/issues/2543
      */
      const Nonprofit501c2 = 'https://schema.org/Nonprofit501c2';
@@ -156,7 +156,7 @@ class USNonprofitType extends BaseType implements USNonprofitTypeContract, Enume
      * Organizations.
      *
      * @see https://schema.org/Nonprofit501c20
-     * @see http://pending.schema.org
+     * @see https://pending.schema.org
      * @link https://github.com/schemaorg/schemaorg/issues/2543
      */
      const Nonprofit501c20 = 'https://schema.org/Nonprofit501c20';
@@ -165,7 +165,7 @@ class USNonprofitType extends BaseType implements USNonprofitTypeContract, Enume
      * Nonprofit501c21: Non-profit type referring to Black Lung Benefit Trusts.
      *
      * @see https://schema.org/Nonprofit501c21
-     * @see http://pending.schema.org
+     * @see https://pending.schema.org
      * @link https://github.com/schemaorg/schemaorg/issues/2543
      */
      const Nonprofit501c21 = 'https://schema.org/Nonprofit501c21';
@@ -175,7 +175,7 @@ class USNonprofitType extends BaseType implements USNonprofitTypeContract, Enume
      * Payment Funds.
      *
      * @see https://schema.org/Nonprofit501c22
-     * @see http://pending.schema.org
+     * @see https://pending.schema.org
      * @link https://github.com/schemaorg/schemaorg/issues/2543
      */
      const Nonprofit501c22 = 'https://schema.org/Nonprofit501c22';
@@ -184,7 +184,7 @@ class USNonprofitType extends BaseType implements USNonprofitTypeContract, Enume
      * Nonprofit501c23: Non-profit type referring to Veterans Organizations.
      *
      * @see https://schema.org/Nonprofit501c23
-     * @see http://pending.schema.org
+     * @see https://pending.schema.org
      * @link https://github.com/schemaorg/schemaorg/issues/2543
      */
      const Nonprofit501c23 = 'https://schema.org/Nonprofit501c23';
@@ -193,7 +193,7 @@ class USNonprofitType extends BaseType implements USNonprofitTypeContract, Enume
      * Nonprofit501c24: Non-profit type referring to Section 4049 ERISA Trusts.
      *
      * @see https://schema.org/Nonprofit501c24
-     * @see http://pending.schema.org
+     * @see https://pending.schema.org
      * @link https://github.com/schemaorg/schemaorg/issues/2543
      */
      const Nonprofit501c24 = 'https://schema.org/Nonprofit501c24';
@@ -203,7 +203,7 @@ class USNonprofitType extends BaseType implements USNonprofitTypeContract, Enume
      * Corporations or Trusts with Multiple Parents.
      *
      * @see https://schema.org/Nonprofit501c25
-     * @see http://pending.schema.org
+     * @see https://pending.schema.org
      * @link https://github.com/schemaorg/schemaorg/issues/2543
      */
      const Nonprofit501c25 = 'https://schema.org/Nonprofit501c25';
@@ -213,7 +213,7 @@ class USNonprofitType extends BaseType implements USNonprofitTypeContract, Enume
      * Organizations Providing Health Coverage for High-Risk Individuals.
      *
      * @see https://schema.org/Nonprofit501c26
-     * @see http://pending.schema.org
+     * @see https://pending.schema.org
      * @link https://github.com/schemaorg/schemaorg/issues/2543
      */
      const Nonprofit501c26 = 'https://schema.org/Nonprofit501c26';
@@ -223,7 +223,7 @@ class USNonprofitType extends BaseType implements USNonprofitTypeContract, Enume
      * Compensation Reinsurance Organizations.
      *
      * @see https://schema.org/Nonprofit501c27
-     * @see http://pending.schema.org
+     * @see https://pending.schema.org
      * @link https://github.com/schemaorg/schemaorg/issues/2543
      */
      const Nonprofit501c27 = 'https://schema.org/Nonprofit501c27';
@@ -233,7 +233,7 @@ class USNonprofitType extends BaseType implements USNonprofitTypeContract, Enume
      * Retirement Investment Trusts.
      *
      * @see https://schema.org/Nonprofit501c28
-     * @see http://pending.schema.org
+     * @see https://pending.schema.org
      * @link https://github.com/schemaorg/schemaorg/issues/2543
      */
      const Nonprofit501c28 = 'https://schema.org/Nonprofit501c28';
@@ -245,7 +245,7 @@ class USNonprofitType extends BaseType implements USNonprofitTypeContract, Enume
      * Cruelty to Children or Animals Organizations.
      *
      * @see https://schema.org/Nonprofit501c3
-     * @see http://pending.schema.org
+     * @see https://pending.schema.org
      * @link https://github.com/schemaorg/schemaorg/issues/2543
      */
      const Nonprofit501c3 = 'https://schema.org/Nonprofit501c3';
@@ -255,7 +255,7 @@ class USNonprofitType extends BaseType implements USNonprofitTypeContract, Enume
      * Welfare Organizations, and Local Associations of Employees.
      *
      * @see https://schema.org/Nonprofit501c4
-     * @see http://pending.schema.org
+     * @see https://pending.schema.org
      * @link https://github.com/schemaorg/schemaorg/issues/2543
      */
      const Nonprofit501c4 = 'https://schema.org/Nonprofit501c4';
@@ -265,7 +265,7 @@ class USNonprofitType extends BaseType implements USNonprofitTypeContract, Enume
      * Horticultural Organizations.
      *
      * @see https://schema.org/Nonprofit501c5
-     * @see http://pending.schema.org
+     * @see https://pending.schema.org
      * @link https://github.com/schemaorg/schemaorg/issues/2543
      */
      const Nonprofit501c5 = 'https://schema.org/Nonprofit501c5';
@@ -275,7 +275,7 @@ class USNonprofitType extends BaseType implements USNonprofitTypeContract, Enume
      * of Commerce, Real Estate Boards.
      *
      * @see https://schema.org/Nonprofit501c6
-     * @see http://pending.schema.org
+     * @see https://pending.schema.org
      * @link https://github.com/schemaorg/schemaorg/issues/2543
      */
      const Nonprofit501c6 = 'https://schema.org/Nonprofit501c6';
@@ -285,7 +285,7 @@ class USNonprofitType extends BaseType implements USNonprofitTypeContract, Enume
      * Clubs.
      *
      * @see https://schema.org/Nonprofit501c7
-     * @see http://pending.schema.org
+     * @see https://pending.schema.org
      * @link https://github.com/schemaorg/schemaorg/issues/2543
      */
      const Nonprofit501c7 = 'https://schema.org/Nonprofit501c7';
@@ -295,7 +295,7 @@ class USNonprofitType extends BaseType implements USNonprofitTypeContract, Enume
      * Societies and Associations.
      *
      * @see https://schema.org/Nonprofit501c8
-     * @see http://pending.schema.org
+     * @see https://pending.schema.org
      * @link https://github.com/schemaorg/schemaorg/issues/2543
      */
      const Nonprofit501c8 = 'https://schema.org/Nonprofit501c8';
@@ -305,7 +305,7 @@ class USNonprofitType extends BaseType implements USNonprofitTypeContract, Enume
      * Beneficiary Associations.
      *
      * @see https://schema.org/Nonprofit501c9
-     * @see http://pending.schema.org
+     * @see https://pending.schema.org
      * @link https://github.com/schemaorg/schemaorg/issues/2543
      */
      const Nonprofit501c9 = 'https://schema.org/Nonprofit501c9';
@@ -315,7 +315,7 @@ class USNonprofitType extends BaseType implements USNonprofitTypeContract, Enume
      * Associations.
      *
      * @see https://schema.org/Nonprofit501d
-     * @see http://pending.schema.org
+     * @see https://pending.schema.org
      * @link https://github.com/schemaorg/schemaorg/issues/2543
      */
      const Nonprofit501d = 'https://schema.org/Nonprofit501d';
@@ -325,7 +325,7 @@ class USNonprofitType extends BaseType implements USNonprofitTypeContract, Enume
      * Organizations.
      *
      * @see https://schema.org/Nonprofit501e
-     * @see http://pending.schema.org
+     * @see https://pending.schema.org
      * @link https://github.com/schemaorg/schemaorg/issues/2543
      */
      const Nonprofit501e = 'https://schema.org/Nonprofit501e';
@@ -335,7 +335,7 @@ class USNonprofitType extends BaseType implements USNonprofitTypeContract, Enume
      * Organizations.
      *
      * @see https://schema.org/Nonprofit501f
-     * @see http://pending.schema.org
+     * @see https://pending.schema.org
      * @link https://github.com/schemaorg/schemaorg/issues/2543
      */
      const Nonprofit501f = 'https://schema.org/Nonprofit501f';
@@ -344,7 +344,7 @@ class USNonprofitType extends BaseType implements USNonprofitTypeContract, Enume
      * Nonprofit501k: Non-profit type referring to Child Care Organizations.
      *
      * @see https://schema.org/Nonprofit501k
-     * @see http://pending.schema.org
+     * @see https://pending.schema.org
      * @link https://github.com/schemaorg/schemaorg/issues/2543
      */
      const Nonprofit501k = 'https://schema.org/Nonprofit501k';
@@ -353,7 +353,7 @@ class USNonprofitType extends BaseType implements USNonprofitTypeContract, Enume
      * Nonprofit501n: Non-profit type referring to Charitable Risk Pools.
      *
      * @see https://schema.org/Nonprofit501n
-     * @see http://pending.schema.org
+     * @see https://pending.schema.org
      * @link https://github.com/schemaorg/schemaorg/issues/2543
      */
      const Nonprofit501n = 'https://schema.org/Nonprofit501n';
@@ -363,7 +363,7 @@ class USNonprofitType extends BaseType implements USNonprofitTypeContract, Enume
      * Organizations.
      *
      * @see https://schema.org/Nonprofit501q
-     * @see http://pending.schema.org
+     * @see https://pending.schema.org
      * @link https://github.com/schemaorg/schemaorg/issues/2543
      */
      const Nonprofit501q = 'https://schema.org/Nonprofit501q';
@@ -372,7 +372,7 @@ class USNonprofitType extends BaseType implements USNonprofitTypeContract, Enume
      * Nonprofit527: Non-profit type referring to Political organizations.
      *
      * @see https://schema.org/Nonprofit527
-     * @see http://pending.schema.org
+     * @see https://pending.schema.org
      * @link https://github.com/schemaorg/schemaorg/issues/2543
      */
      const Nonprofit527 = 'https://schema.org/Nonprofit527';

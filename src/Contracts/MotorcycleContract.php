@@ -62,6 +62,8 @@ interface MotorcycleContract
 
     public function gtin8($gtin8);
 
+    public function hasEnergyConsumptionDetails($hasEnergyConsumptionDetails);
+
     public function hasMerchantReturnPolicy($hasMerchantReturnPolicy);
 
     public function hasProductReturnPolicy($hasProductReturnPolicy);

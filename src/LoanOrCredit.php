@@ -281,7 +281,7 @@ class LoanOrCredit extends BaseType implements LoanOrCreditContract, FinancialPr
      * @return static
      *
      * @see https://schema.org/gracePeriod
-     * @see http://pending.schema.org
+     * @see https://pending.schema.org
      */
     public function gracePeriod($gracePeriod)
     {
@@ -407,7 +407,7 @@ class LoanOrCredit extends BaseType implements LoanOrCreditContract, FinancialPr
      * @return static
      *
      * @see https://schema.org/loanRepaymentForm
-     * @see http://pending.schema.org
+     * @see https://pending.schema.org
      */
     public function loanRepaymentForm($loanRepaymentForm)
     {
@@ -437,7 +437,7 @@ class LoanOrCredit extends BaseType implements LoanOrCreditContract, FinancialPr
      * @return static
      *
      * @see https://schema.org/loanType
-     * @see http://pending.schema.org
+     * @see https://pending.schema.org
      */
     public function loanType($loanType)
     {
@@ -582,7 +582,7 @@ class LoanOrCredit extends BaseType implements LoanOrCreditContract, FinancialPr
      * @return static
      *
      * @see https://schema.org/recourseLoan
-     * @see http://pending.schema.org
+     * @see https://pending.schema.org
      */
     public function recourseLoan($recourseLoan)
     {
@@ -598,7 +598,7 @@ class LoanOrCredit extends BaseType implements LoanOrCreditContract, FinancialPr
      * @return static
      *
      * @see https://schema.org/renegotiableLoan
-     * @see http://pending.schema.org
+     * @see https://pending.schema.org
      */
     public function renegotiableLoan($renegotiableLoan)
     {
@@ -746,7 +746,7 @@ class LoanOrCredit extends BaseType implements LoanOrCreditContract, FinancialPr
      * @return static
      *
      * @see https://schema.org/termsOfService
-     * @see http://pending.schema.org
+     * @see https://pending.schema.org
      * @link https://github.com/schemaorg/schemaorg/issues/1423
      */
     public function termsOfService($termsOfService)

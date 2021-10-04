@@ -14,7 +14,7 @@ use \Spatie\SchemaOrg\Contracts\ThingContract;
  * treatment or recovery plan.
  *
  * @see https://schema.org/PhysicalActivity
- * @see http://health-lifesci.schema.org
+ * @see https://health-lifesci.schema.org
  *
  */
 class PhysicalActivity extends BaseType implements PhysicalActivityContract, LifestyleModificationContract, MedicalEntityContract, ThingContract
@@ -61,7 +61,7 @@ class PhysicalActivity extends BaseType implements PhysicalActivityContract, Lif
      * @return static
      *
      * @see https://schema.org/associatedAnatomy
-     * @see http://health-lifesci.schema.org
+     * @see https://health-lifesci.schema.org
      */
     public function associatedAnatomy($associatedAnatomy)
     {
@@ -92,7 +92,7 @@ class PhysicalActivity extends BaseType implements PhysicalActivityContract, Lif
      * @return static
      *
      * @see https://schema.org/code
-     * @see http://health-lifesci.schema.org
+     * @see https://health-lifesci.schema.org
      */
     public function code($code)
     {
@@ -139,7 +139,7 @@ class PhysicalActivity extends BaseType implements PhysicalActivityContract, Lif
      * @return static
      *
      * @see https://schema.org/epidemiology
-     * @see http://health-lifesci.schema.org
+     * @see https://health-lifesci.schema.org
      */
     public function epidemiology($epidemiology)
     {
@@ -154,7 +154,7 @@ class PhysicalActivity extends BaseType implements PhysicalActivityContract, Lif
      * @return static
      *
      * @see https://schema.org/guideline
-     * @see http://health-lifesci.schema.org
+     * @see https://health-lifesci.schema.org
      */
     public function guideline($guideline)
     {
@@ -203,7 +203,7 @@ class PhysicalActivity extends BaseType implements PhysicalActivityContract, Lif
      * @return static
      *
      * @see https://schema.org/legalStatus
-     * @see http://health-lifesci.schema.org
+     * @see https://health-lifesci.schema.org
      */
     public function legalStatus($legalStatus)
     {
@@ -235,7 +235,7 @@ class PhysicalActivity extends BaseType implements PhysicalActivityContract, Lif
      * @return static
      *
      * @see https://schema.org/medicineSystem
-     * @see http://health-lifesci.schema.org
+     * @see https://health-lifesci.schema.org
      */
     public function medicineSystem($medicineSystem)
     {
@@ -265,7 +265,7 @@ class PhysicalActivity extends BaseType implements PhysicalActivityContract, Lif
      * @return static
      *
      * @see https://schema.org/pathophysiology
-     * @see http://health-lifesci.schema.org
+     * @see https://health-lifesci.schema.org
      */
     public function pathophysiology($pathophysiology)
     {
@@ -296,7 +296,7 @@ class PhysicalActivity extends BaseType implements PhysicalActivityContract, Lif
      * @return static
      *
      * @see https://schema.org/recognizingAuthority
-     * @see http://health-lifesci.schema.org
+     * @see https://health-lifesci.schema.org
      */
     public function recognizingAuthority($recognizingAuthority)
     {
@@ -311,7 +311,7 @@ class PhysicalActivity extends BaseType implements PhysicalActivityContract, Lif
      * @return static
      *
      * @see https://schema.org/relevantSpecialty
-     * @see http://health-lifesci.schema.org
+     * @see https://health-lifesci.schema.org
      */
     public function relevantSpecialty($relevantSpecialty)
     {
@@ -342,7 +342,7 @@ class PhysicalActivity extends BaseType implements PhysicalActivityContract, Lif
      * @return static
      *
      * @see https://schema.org/study
-     * @see http://health-lifesci.schema.org
+     * @see https://health-lifesci.schema.org
      */
     public function study($study)
     {

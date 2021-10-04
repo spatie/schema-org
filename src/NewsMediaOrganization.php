@@ -10,7 +10,7 @@ use \Spatie\SchemaOrg\Contracts\ThingContract;
  * A News/Media organization such as a newspaper or TV station.
  *
  * @see https://schema.org/NewsMediaOrganization
- * @see http://pending.schema.org
+ * @see https://pending.schema.org
  *
  */
 class NewsMediaOrganization extends BaseType implements NewsMediaOrganizationContract, OrganizationContract, ThingContract
@@ -26,7 +26,7 @@ class NewsMediaOrganization extends BaseType implements NewsMediaOrganizationCon
      * @return static
      *
      * @see https://schema.org/actionableFeedbackPolicy
-     * @see http://pending.schema.org
+     * @see https://pending.schema.org
      */
     public function actionableFeedbackPolicy($actionableFeedbackPolicy)
     {
@@ -204,7 +204,7 @@ class NewsMediaOrganization extends BaseType implements NewsMediaOrganizationCon
      * @return static
      *
      * @see https://schema.org/correctionsPolicy
-     * @see http://pending.schema.org
+     * @see https://pending.schema.org
      */
     public function correctionsPolicy($correctionsPolicy)
     {
@@ -284,7 +284,7 @@ class NewsMediaOrganization extends BaseType implements NewsMediaOrganizationCon
      * @return static
      *
      * @see https://schema.org/diversityPolicy
-     * @see http://pending.schema.org
+     * @see https://pending.schema.org
      */
     public function diversityPolicy($diversityPolicy)
     {
@@ -302,7 +302,7 @@ class NewsMediaOrganization extends BaseType implements NewsMediaOrganizationCon
      * @return static
      *
      * @see https://schema.org/diversityStaffingReport
-     * @see http://pending.schema.org
+     * @see https://pending.schema.org
      */
     public function diversityStaffingReport($diversityStaffingReport)
     {
@@ -380,7 +380,7 @@ class NewsMediaOrganization extends BaseType implements NewsMediaOrganizationCon
      * @return static
      *
      * @see https://schema.org/ethicsPolicy
-     * @see http://pending.schema.org
+     * @see https://pending.schema.org
      * @link https://github.com/schemaorg/schemaorg/issues/1525
      */
     public function ethicsPolicy($ethicsPolicy)
@@ -528,7 +528,7 @@ class NewsMediaOrganization extends BaseType implements NewsMediaOrganizationCon
      * @return static
      *
      * @see https://schema.org/hasCredential
-     * @see http://pending.schema.org
+     * @see https://pending.schema.org
      * @link https://github.com/schemaorg/schemaorg/issues/2289
      */
     public function hasCredential($hasCredential)
@@ -544,7 +544,7 @@ class NewsMediaOrganization extends BaseType implements NewsMediaOrganizationCon
      * @return static
      *
      * @see https://schema.org/hasMerchantReturnPolicy
-     * @see http://pending.schema.org
+     * @see https://pending.schema.org
      * @link https://github.com/schemaorg/schemaorg/issues/2288
      */
     public function hasMerchantReturnPolicy($hasMerchantReturnPolicy)
@@ -590,7 +590,7 @@ class NewsMediaOrganization extends BaseType implements NewsMediaOrganizationCon
      * @return static
      *
      * @see https://schema.org/hasProductReturnPolicy
-     * @see http://attic.schema.org
+     * @see https://attic.schema.org
      * @link https://github.com/schemaorg/schemaorg/issues/2288
      */
     public function hasProductReturnPolicy($hasProductReturnPolicy)
@@ -676,7 +676,7 @@ class NewsMediaOrganization extends BaseType implements NewsMediaOrganizationCon
      * @return static
      *
      * @see https://schema.org/knowsAbout
-     * @see http://pending.schema.org
+     * @see https://pending.schema.org
      */
     public function knowsAbout($knowsAbout)
     {
@@ -694,7 +694,7 @@ class NewsMediaOrganization extends BaseType implements NewsMediaOrganizationCon
      * @return static
      *
      * @see https://schema.org/knowsLanguage
-     * @see http://pending.schema.org
+     * @see https://pending.schema.org
      */
     public function knowsLanguage($knowsLanguage)
     {
@@ -801,7 +801,7 @@ class NewsMediaOrganization extends BaseType implements NewsMediaOrganizationCon
      * @return static
      *
      * @see https://schema.org/masthead
-     * @see http://pending.schema.org
+     * @see https://pending.schema.org
      */
     public function masthead($masthead)
     {
@@ -861,7 +861,7 @@ class NewsMediaOrganization extends BaseType implements NewsMediaOrganizationCon
      * @return static
      *
      * @see https://schema.org/missionCoveragePrioritiesPolicy
-     * @see http://pending.schema.org
+     * @see https://pending.schema.org
      */
     public function missionCoveragePrioritiesPolicy($missionCoveragePrioritiesPolicy)
     {
@@ -907,7 +907,7 @@ class NewsMediaOrganization extends BaseType implements NewsMediaOrganizationCon
      * @return static
      *
      * @see https://schema.org/noBylinesPolicy
-     * @see http://pending.schema.org
+     * @see https://pending.schema.org
      */
     public function noBylinesPolicy($noBylinesPolicy)
     {
@@ -923,7 +923,7 @@ class NewsMediaOrganization extends BaseType implements NewsMediaOrganizationCon
      * @return static
      *
      * @see https://schema.org/nonprofitStatus
-     * @see http://pending.schema.org
+     * @see https://pending.schema.org
      * @link https://github.com/schemaorg/schemaorg/issues/2543
      */
     public function nonprofitStatus($nonprofitStatus)
@@ -958,7 +958,7 @@ class NewsMediaOrganization extends BaseType implements NewsMediaOrganizationCon
      * @return static
      *
      * @see https://schema.org/ownershipFundingInfo
-     * @see http://pending.schema.org
+     * @see https://pending.schema.org
      */
     public function ownershipFundingInfo($ownershipFundingInfo)
     {
@@ -1209,7 +1209,7 @@ class NewsMediaOrganization extends BaseType implements NewsMediaOrganizationCon
      * @return static
      *
      * @see https://schema.org/unnamedSourcesPolicy
-     * @see http://pending.schema.org
+     * @see https://pending.schema.org
      */
     public function unnamedSourcesPolicy($unnamedSourcesPolicy)
     {
@@ -1254,7 +1254,7 @@ class NewsMediaOrganization extends BaseType implements NewsMediaOrganizationCon
      * @return static
      *
      * @see https://schema.org/verificationFactCheckingPolicy
-     * @see http://pending.schema.org
+     * @see https://pending.schema.org
      */
     public function verificationFactCheckingPolicy($verificationFactCheckingPolicy)
     {

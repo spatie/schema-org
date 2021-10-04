@@ -25,7 +25,7 @@ use \Spatie\SchemaOrg\Contracts\ThingContract;
  * or Fast and expensive: $15 in 1-2 days
  *
  * @see https://schema.org/OfferShippingDetails
- * @see http://pending.schema.org
+ * @see https://pending.schema.org
  * @link https://github.com/schemaorg/schemaorg/issues/2506
  *
  */
@@ -73,7 +73,7 @@ class OfferShippingDetails extends BaseType implements OfferShippingDetailsContr
      * @return static
      *
      * @see https://schema.org/deliveryTime
-     * @see http://pending.schema.org
+     * @see https://pending.schema.org
      * @link https://github.com/schemaorg/schemaorg/issues/2506
      */
     public function deliveryTime($deliveryTime)
@@ -121,7 +121,7 @@ class OfferShippingDetails extends BaseType implements OfferShippingDetailsContr
      * @return static
      *
      * @see https://schema.org/doesNotShip
-     * @see http://pending.schema.org
+     * @see https://pending.schema.org
      * @link https://github.com/schemaorg/schemaorg/issues/2506
      */
     public function doesNotShip($doesNotShip)
@@ -232,7 +232,7 @@ class OfferShippingDetails extends BaseType implements OfferShippingDetailsContr
      * @return static
      *
      * @see https://schema.org/shippingDestination
-     * @see http://pending.schema.org
+     * @see https://pending.schema.org
      * @link https://github.com/schemaorg/schemaorg/issues/2506
      */
     public function shippingDestination($shippingDestination)
@@ -250,7 +250,7 @@ class OfferShippingDetails extends BaseType implements OfferShippingDetailsContr
      * @return static
      *
      * @see https://schema.org/shippingLabel
-     * @see http://pending.schema.org
+     * @see https://pending.schema.org
      * @link https://github.com/schemaorg/schemaorg/issues/2506
      */
     public function shippingLabel($shippingLabel)
@@ -268,7 +268,7 @@ class OfferShippingDetails extends BaseType implements OfferShippingDetailsContr
      * @return static
      *
      * @see https://schema.org/shippingRate
-     * @see http://pending.schema.org
+     * @see https://pending.schema.org
      * @link https://github.com/schemaorg/schemaorg/issues/2506
      */
     public function shippingRate($shippingRate)
@@ -285,7 +285,7 @@ class OfferShippingDetails extends BaseType implements OfferShippingDetailsContr
      * @return static
      *
      * @see https://schema.org/shippingSettingsLink
-     * @see http://pending.schema.org
+     * @see https://pending.schema.org
      * @link https://github.com/schemaorg/schemaorg/issues/2506
      */
     public function shippingSettingsLink($shippingSettingsLink)
@@ -318,7 +318,7 @@ class OfferShippingDetails extends BaseType implements OfferShippingDetailsContr
      * @return static
      *
      * @see https://schema.org/transitTimeLabel
-     * @see http://pending.schema.org
+     * @see https://pending.schema.org
      * @link https://github.com/schemaorg/schemaorg/issues/2506
      */
     public function transitTimeLabel($transitTimeLabel)

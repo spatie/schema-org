@@ -196,7 +196,7 @@ class ProgramMembership extends BaseType implements ProgramMembershipContract, I
      * @return static
      *
      * @see https://schema.org/membershipPointsEarned
-     * @see http://pending.schema.org
+     * @see https://pending.schema.org
      * @link https://github.com/schemaorg/schemaorg/issues/2085
      */
     public function membershipPointsEarned($membershipPointsEarned)

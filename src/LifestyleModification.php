@@ -11,7 +11,7 @@ use \Spatie\SchemaOrg\Contracts\ThingContract;
  * other lifestyle changes aimed at improving a health condition.
  *
  * @see https://schema.org/LifestyleModification
- * @see http://health-lifesci.schema.org
+ * @see https://health-lifesci.schema.org
  *
  */
 class LifestyleModification extends BaseType implements LifestyleModificationContract, MedicalEntityContract, ThingContract
@@ -58,7 +58,7 @@ class LifestyleModification extends BaseType implements LifestyleModificationCon
      * @return static
      *
      * @see https://schema.org/code
-     * @see http://health-lifesci.schema.org
+     * @see https://health-lifesci.schema.org
      */
     public function code($code)
     {
@@ -104,7 +104,7 @@ class LifestyleModification extends BaseType implements LifestyleModificationCon
      * @return static
      *
      * @see https://schema.org/guideline
-     * @see http://health-lifesci.schema.org
+     * @see https://health-lifesci.schema.org
      */
     public function guideline($guideline)
     {
@@ -153,7 +153,7 @@ class LifestyleModification extends BaseType implements LifestyleModificationCon
      * @return static
      *
      * @see https://schema.org/legalStatus
-     * @see http://health-lifesci.schema.org
+     * @see https://health-lifesci.schema.org
      */
     public function legalStatus($legalStatus)
     {
@@ -185,7 +185,7 @@ class LifestyleModification extends BaseType implements LifestyleModificationCon
      * @return static
      *
      * @see https://schema.org/medicineSystem
-     * @see http://health-lifesci.schema.org
+     * @see https://health-lifesci.schema.org
      */
     public function medicineSystem($medicineSystem)
     {
@@ -230,7 +230,7 @@ class LifestyleModification extends BaseType implements LifestyleModificationCon
      * @return static
      *
      * @see https://schema.org/recognizingAuthority
-     * @see http://health-lifesci.schema.org
+     * @see https://health-lifesci.schema.org
      */
     public function recognizingAuthority($recognizingAuthority)
     {
@@ -245,7 +245,7 @@ class LifestyleModification extends BaseType implements LifestyleModificationCon
      * @return static
      *
      * @see https://schema.org/relevantSpecialty
-     * @see http://health-lifesci.schema.org
+     * @see https://health-lifesci.schema.org
      */
     public function relevantSpecialty($relevantSpecialty)
     {
@@ -276,7 +276,7 @@ class LifestyleModification extends BaseType implements LifestyleModificationCon
      * @return static
      *
      * @see https://schema.org/study
-     * @see http://health-lifesci.schema.org
+     * @see https://health-lifesci.schema.org
      */
     public function study($study)
     {

@@ -16,7 +16,7 @@ use \Spatie\SchemaOrg\Contracts\ThingContract;
  * [[transitTimeLabel]].
  *
  * @see https://schema.org/DeliveryTimeSettings
- * @see http://pending.schema.org
+ * @see https://pending.schema.org
  * @link https://github.com/schemaorg/schemaorg/issues/2506
  *
  */
@@ -64,7 +64,7 @@ class DeliveryTimeSettings extends BaseType implements DeliveryTimeSettingsContr
      * @return static
      *
      * @see https://schema.org/deliveryTime
-     * @see http://pending.schema.org
+     * @see https://pending.schema.org
      * @link https://github.com/schemaorg/schemaorg/issues/2506
      */
     public function deliveryTime($deliveryTime)
@@ -151,7 +151,7 @@ class DeliveryTimeSettings extends BaseType implements DeliveryTimeSettingsContr
      * @return static
      *
      * @see https://schema.org/isUnlabelledFallback
-     * @see http://pending.schema.org
+     * @see https://pending.schema.org
      * @link https://github.com/schemaorg/schemaorg/issues/2506
      */
     public function isUnlabelledFallback($isUnlabelledFallback)
@@ -229,7 +229,7 @@ class DeliveryTimeSettings extends BaseType implements DeliveryTimeSettingsContr
      * @return static
      *
      * @see https://schema.org/shippingDestination
-     * @see http://pending.schema.org
+     * @see https://pending.schema.org
      * @link https://github.com/schemaorg/schemaorg/issues/2506
      */
     public function shippingDestination($shippingDestination)
@@ -262,7 +262,7 @@ class DeliveryTimeSettings extends BaseType implements DeliveryTimeSettingsContr
      * @return static
      *
      * @see https://schema.org/transitTimeLabel
-     * @see http://pending.schema.org
+     * @see https://pending.schema.org
      * @link https://github.com/schemaorg/schemaorg/issues/2506
      */
     public function transitTimeLabel($transitTimeLabel)

@@ -210,7 +210,7 @@ class CreditCard extends BaseType implements CreditCardContract, EnumerationCont
      * @return static
      *
      * @see https://schema.org/cashBack
-     * @see http://pending.schema.org
+     * @see https://pending.schema.org
      */
     public function cashBack($cashBack)
     {
@@ -241,7 +241,7 @@ class CreditCard extends BaseType implements CreditCardContract, EnumerationCont
      * @return static
      *
      * @see https://schema.org/contactlessPayment
-     * @see http://pending.schema.org
+     * @see https://pending.schema.org
      */
     public function contactlessPayment($contactlessPayment)
     {
@@ -327,7 +327,7 @@ class CreditCard extends BaseType implements CreditCardContract, EnumerationCont
      * @return static
      *
      * @see https://schema.org/floorLimit
-     * @see http://pending.schema.org
+     * @see https://pending.schema.org
      */
     public function floorLimit($floorLimit)
     {
@@ -343,7 +343,7 @@ class CreditCard extends BaseType implements CreditCardContract, EnumerationCont
      * @return static
      *
      * @see https://schema.org/gracePeriod
-     * @see http://pending.schema.org
+     * @see https://pending.schema.org
      */
     public function gracePeriod($gracePeriod)
     {
@@ -469,7 +469,7 @@ class CreditCard extends BaseType implements CreditCardContract, EnumerationCont
      * @return static
      *
      * @see https://schema.org/loanRepaymentForm
-     * @see http://pending.schema.org
+     * @see https://pending.schema.org
      */
     public function loanRepaymentForm($loanRepaymentForm)
     {
@@ -499,7 +499,7 @@ class CreditCard extends BaseType implements CreditCardContract, EnumerationCont
      * @return static
      *
      * @see https://schema.org/loanType
-     * @see http://pending.schema.org
+     * @see https://pending.schema.org
      */
     public function loanType($loanType)
     {
@@ -546,7 +546,7 @@ class CreditCard extends BaseType implements CreditCardContract, EnumerationCont
      * @return static
      *
      * @see https://schema.org/monthlyMinimumRepaymentAmount
-     * @see http://pending.schema.org
+     * @see https://pending.schema.org
      */
     public function monthlyMinimumRepaymentAmount($monthlyMinimumRepaymentAmount)
     {
@@ -660,7 +660,7 @@ class CreditCard extends BaseType implements CreditCardContract, EnumerationCont
      * @return static
      *
      * @see https://schema.org/recourseLoan
-     * @see http://pending.schema.org
+     * @see https://pending.schema.org
      */
     public function recourseLoan($recourseLoan)
     {
@@ -676,7 +676,7 @@ class CreditCard extends BaseType implements CreditCardContract, EnumerationCont
      * @return static
      *
      * @see https://schema.org/renegotiableLoan
-     * @see http://pending.schema.org
+     * @see https://pending.schema.org
      */
     public function renegotiableLoan($renegotiableLoan)
     {
@@ -824,7 +824,7 @@ class CreditCard extends BaseType implements CreditCardContract, EnumerationCont
      * @return static
      *
      * @see https://schema.org/termsOfService
-     * @see http://pending.schema.org
+     * @see https://pending.schema.org
      * @link https://github.com/schemaorg/schemaorg/issues/1423
      */
     public function termsOfService($termsOfService)

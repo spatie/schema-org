@@ -13,7 +13,7 @@ use \Spatie\SchemaOrg\Contracts\ThingContract;
  * online calculators.
  *
  * @see https://schema.org/MedicalRiskCalculator
- * @see http://health-lifesci.schema.org
+ * @see https://health-lifesci.schema.org
  *
  */
 class MedicalRiskCalculator extends BaseType implements MedicalRiskCalculatorContract, MedicalEntityContract, MedicalRiskEstimatorContract, ThingContract
@@ -60,7 +60,7 @@ class MedicalRiskCalculator extends BaseType implements MedicalRiskCalculatorCon
      * @return static
      *
      * @see https://schema.org/code
-     * @see http://health-lifesci.schema.org
+     * @see https://health-lifesci.schema.org
      */
     public function code($code)
     {
@@ -106,7 +106,7 @@ class MedicalRiskCalculator extends BaseType implements MedicalRiskCalculatorCon
      * @return static
      *
      * @see https://schema.org/estimatesRiskOf
-     * @see http://health-lifesci.schema.org
+     * @see https://health-lifesci.schema.org
      */
     public function estimatesRiskOf($estimatesRiskOf)
     {
@@ -121,7 +121,7 @@ class MedicalRiskCalculator extends BaseType implements MedicalRiskCalculatorCon
      * @return static
      *
      * @see https://schema.org/guideline
-     * @see http://health-lifesci.schema.org
+     * @see https://health-lifesci.schema.org
      */
     public function guideline($guideline)
     {
@@ -170,7 +170,7 @@ class MedicalRiskCalculator extends BaseType implements MedicalRiskCalculatorCon
      * @return static
      *
      * @see https://schema.org/includedRiskFactor
-     * @see http://health-lifesci.schema.org
+     * @see https://health-lifesci.schema.org
      */
     public function includedRiskFactor($includedRiskFactor)
     {
@@ -186,7 +186,7 @@ class MedicalRiskCalculator extends BaseType implements MedicalRiskCalculatorCon
      * @return static
      *
      * @see https://schema.org/legalStatus
-     * @see http://health-lifesci.schema.org
+     * @see https://health-lifesci.schema.org
      */
     public function legalStatus($legalStatus)
     {
@@ -218,7 +218,7 @@ class MedicalRiskCalculator extends BaseType implements MedicalRiskCalculatorCon
      * @return static
      *
      * @see https://schema.org/medicineSystem
-     * @see http://health-lifesci.schema.org
+     * @see https://health-lifesci.schema.org
      */
     public function medicineSystem($medicineSystem)
     {
@@ -263,7 +263,7 @@ class MedicalRiskCalculator extends BaseType implements MedicalRiskCalculatorCon
      * @return static
      *
      * @see https://schema.org/recognizingAuthority
-     * @see http://health-lifesci.schema.org
+     * @see https://health-lifesci.schema.org
      */
     public function recognizingAuthority($recognizingAuthority)
     {
@@ -278,7 +278,7 @@ class MedicalRiskCalculator extends BaseType implements MedicalRiskCalculatorCon
      * @return static
      *
      * @see https://schema.org/relevantSpecialty
-     * @see http://health-lifesci.schema.org
+     * @see https://health-lifesci.schema.org
      */
     public function relevantSpecialty($relevantSpecialty)
     {
@@ -309,7 +309,7 @@ class MedicalRiskCalculator extends BaseType implements MedicalRiskCalculatorCon
      * @return static
      *
      * @see https://schema.org/study
-     * @see http://health-lifesci.schema.org
+     * @see https://health-lifesci.schema.org
      */
     public function study($study)
     {

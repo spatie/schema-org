@@ -12,7 +12,7 @@ use \Spatie\SchemaOrg\Contracts\ThingContract;
  * Note that this structure may not capture all aspects of the policy.
  *
  * @see https://schema.org/ProductReturnEnumeration
- * @see http://attic.schema.org
+ * @see https://attic.schema.org
  * @link https://github.com/schemaorg/schemaorg/issues/2288
  *
  * @method static supersededBy($supersededBy) The value should be instance of pending types Class|Class[]|Enumeration|Enumeration[]|Property|Property[]
@@ -24,7 +24,7 @@ class ProductReturnEnumeration extends BaseType implements ProductReturnEnumerat
      * returns.
      *
      * @see https://schema.org/ProductReturnFiniteReturnWindow
-     * @see http://attic.schema.org
+     * @see https://attic.schema.org
      * @link https://github.com/schemaorg/schemaorg/issues/2288
      */
      const ProductReturnFiniteReturnWindow = 'https://schema.org/ProductReturnFiniteReturnWindow';
@@ -33,7 +33,7 @@ class ProductReturnEnumeration extends BaseType implements ProductReturnEnumerat
      * ProductReturnNotPermitted: product returns are not permitted.
      *
      * @see https://schema.org/ProductReturnNotPermitted
-     * @see http://attic.schema.org
+     * @see https://attic.schema.org
      * @link https://github.com/schemaorg/schemaorg/issues/2288
      */
      const ProductReturnNotPermitted = 'https://schema.org/ProductReturnNotPermitted';
@@ -43,7 +43,7 @@ class ProductReturnEnumeration extends BaseType implements ProductReturnEnumerat
      * returns.
      *
      * @see https://schema.org/ProductReturnUnlimitedWindow
-     * @see http://attic.schema.org
+     * @see https://attic.schema.org
      * @link https://github.com/schemaorg/schemaorg/issues/2288
      */
      const ProductReturnUnlimitedWindow = 'https://schema.org/ProductReturnUnlimitedWindow';
@@ -52,7 +52,7 @@ class ProductReturnEnumeration extends BaseType implements ProductReturnEnumerat
      * ProductReturnUnspecified: a product return policy is not specified here.
      *
      * @see https://schema.org/ProductReturnUnspecified
-     * @see http://attic.schema.org
+     * @see https://attic.schema.org
      * @link https://github.com/schemaorg/schemaorg/issues/2288
      */
      const ProductReturnUnspecified = 'https://schema.org/ProductReturnUnspecified';

@@ -12,7 +12,7 @@ use \Spatie\SchemaOrg\Contracts\ThingContract;
  * Indicates whether this drug is available by prescription or over-the-counter.
  *
  * @see https://schema.org/DrugPrescriptionStatus
- * @see http://health-lifesci.schema.org
+ * @see https://health-lifesci.schema.org
  *
  * @method static supersededBy($supersededBy) The value should be instance of pending types Class|Class[]|Enumeration|Enumeration[]|Property|Property[]
  */
@@ -23,7 +23,7 @@ class DrugPrescriptionStatus extends BaseType implements DrugPrescriptionStatusC
      * available over the counter or not.
      *
      * @see https://schema.org/OTC
-     * @see http://health-lifesci.schema.org
+     * @see https://health-lifesci.schema.org
      */
      const OTC = 'https://schema.org/OTC';
 
@@ -31,7 +31,7 @@ class DrugPrescriptionStatus extends BaseType implements DrugPrescriptionStatusC
      * Available by prescription only.
      *
      * @see https://schema.org/PrescriptionOnly
-     * @see http://health-lifesci.schema.org
+     * @see https://health-lifesci.schema.org
      */
      const PrescriptionOnly = 'https://schema.org/PrescriptionOnly';
 

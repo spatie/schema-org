@@ -11,7 +11,7 @@ use \Spatie\SchemaOrg\Contracts\ThingContract;
  * or contracting a disease, medical condition, or complication.
  *
  * @see https://schema.org/MedicalRiskFactor
- * @see http://health-lifesci.schema.org
+ * @see https://health-lifesci.schema.org
  *
  */
 class MedicalRiskFactor extends BaseType implements MedicalRiskFactorContract, MedicalEntityContract, ThingContract
@@ -58,7 +58,7 @@ class MedicalRiskFactor extends BaseType implements MedicalRiskFactorContract, M
      * @return static
      *
      * @see https://schema.org/code
-     * @see http://health-lifesci.schema.org
+     * @see https://health-lifesci.schema.org
      */
     public function code($code)
     {
@@ -104,7 +104,7 @@ class MedicalRiskFactor extends BaseType implements MedicalRiskFactorContract, M
      * @return static
      *
      * @see https://schema.org/guideline
-     * @see http://health-lifesci.schema.org
+     * @see https://health-lifesci.schema.org
      */
     public function guideline($guideline)
     {
@@ -152,7 +152,7 @@ class MedicalRiskFactor extends BaseType implements MedicalRiskFactorContract, M
      * @return static
      *
      * @see https://schema.org/increasesRiskOf
-     * @see http://health-lifesci.schema.org
+     * @see https://health-lifesci.schema.org
      */
     public function increasesRiskOf($increasesRiskOf)
     {
@@ -168,7 +168,7 @@ class MedicalRiskFactor extends BaseType implements MedicalRiskFactorContract, M
      * @return static
      *
      * @see https://schema.org/legalStatus
-     * @see http://health-lifesci.schema.org
+     * @see https://health-lifesci.schema.org
      */
     public function legalStatus($legalStatus)
     {
@@ -200,7 +200,7 @@ class MedicalRiskFactor extends BaseType implements MedicalRiskFactorContract, M
      * @return static
      *
      * @see https://schema.org/medicineSystem
-     * @see http://health-lifesci.schema.org
+     * @see https://health-lifesci.schema.org
      */
     public function medicineSystem($medicineSystem)
     {
@@ -245,7 +245,7 @@ class MedicalRiskFactor extends BaseType implements MedicalRiskFactorContract, M
      * @return static
      *
      * @see https://schema.org/recognizingAuthority
-     * @see http://health-lifesci.schema.org
+     * @see https://health-lifesci.schema.org
      */
     public function recognizingAuthority($recognizingAuthority)
     {
@@ -260,7 +260,7 @@ class MedicalRiskFactor extends BaseType implements MedicalRiskFactorContract, M
      * @return static
      *
      * @see https://schema.org/relevantSpecialty
-     * @see http://health-lifesci.schema.org
+     * @see https://health-lifesci.schema.org
      */
     public function relevantSpecialty($relevantSpecialty)
     {
@@ -291,7 +291,7 @@ class MedicalRiskFactor extends BaseType implements MedicalRiskFactorContract, M
      * @return static
      *
      * @see https://schema.org/study
-     * @see http://health-lifesci.schema.org
+     * @see https://health-lifesci.schema.org
      */
     public function study($study)
     {

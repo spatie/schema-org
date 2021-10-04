@@ -11,7 +11,7 @@ use \Spatie\SchemaOrg\Contracts\ThingContract;
  * A monetary grant.
  *
  * @see https://schema.org/MonetaryGrant
- * @see http://pending.schema.org
+ * @see https://pending.schema.org
  * @link https://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#FundInfoCollab
  *
  */
@@ -103,7 +103,7 @@ class MonetaryGrant extends BaseType implements MonetaryGrantContract, GrantCont
      * @return static
      *
      * @see https://schema.org/fundedItem
-     * @see http://pending.schema.org
+     * @see https://pending.schema.org
      */
     public function fundedItem($fundedItem)
     {

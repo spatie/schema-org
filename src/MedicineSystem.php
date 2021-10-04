@@ -12,7 +12,7 @@ use \Spatie\SchemaOrg\Contracts\ThingContract;
  * Systems of medical practice.
  *
  * @see https://schema.org/MedicineSystem
- * @see http://health-lifesci.schema.org
+ * @see https://health-lifesci.schema.org
  *
  * @method static supersededBy($supersededBy) The value should be instance of pending types Class|Class[]|Enumeration|Enumeration[]|Property|Property[]
  */
@@ -23,7 +23,7 @@ class MedicineSystem extends BaseType implements MedicineSystemContract, Enumera
      * that focuses on integrating and balancing the body, mind, and spirit.
      *
      * @see https://schema.org/Ayurvedic
-     * @see http://health-lifesci.schema.org
+     * @see https://health-lifesci.schema.org
      */
      const Ayurvedic = 'https://schema.org/Ayurvedic';
 
@@ -32,7 +32,7 @@ class MedicineSystem extends BaseType implements MedicineSystemContract, Enumera
      * structure, mainly the spine, and its functioning.
      *
      * @see https://schema.org/Chiropractic
-     * @see http://health-lifesci.schema.org
+     * @see https://health-lifesci.schema.org
      */
      const Chiropractic = 'https://schema.org/Chiropractic';
 
@@ -41,7 +41,7 @@ class MedicineSystem extends BaseType implements MedicineSystemContract, Enumera
      * by a substance that produces similar symptoms in healthy people.
      *
      * @see https://schema.org/Homeopathic
-     * @see http://health-lifesci.schema.org
+     * @see https://health-lifesci.schema.org
      */
      const Homeopathic = 'https://schema.org/Homeopathic';
 
@@ -50,7 +50,7 @@ class MedicineSystem extends BaseType implements MedicineSystemContract, Enumera
      * heal itself.
      *
      * @see https://schema.org/Osteopathic
-     * @see http://health-lifesci.schema.org
+     * @see https://health-lifesci.schema.org
      */
      const Osteopathic = 'https://schema.org/Osteopathic';
 
@@ -61,7 +61,7 @@ class MedicineSystem extends BaseType implements MedicineSystemContract, Enumera
      * treat a wide range of conditions.
      *
      * @see https://schema.org/TraditionalChinese
-     * @see http://health-lifesci.schema.org
+     * @see https://health-lifesci.schema.org
      */
      const TraditionalChinese = 'https://schema.org/TraditionalChinese';
 
@@ -71,7 +71,7 @@ class MedicineSystem extends BaseType implements MedicineSystemContract, Enumera
      * making. Also known as conventional or Western medicine.
      *
      * @see https://schema.org/WesternConventional
-     * @see http://health-lifesci.schema.org
+     * @see https://health-lifesci.schema.org
      */
      const WesternConventional = 'https://schema.org/WesternConventional';
 

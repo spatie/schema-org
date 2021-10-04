@@ -13,7 +13,7 @@ use \Spatie\SchemaOrg\Contracts\ThingContract;
  * listed together e.g. in an [[Offer]].
  *
  * @see https://schema.org/ProductCollection
- * @see http://pending.schema.org
+ * @see https://pending.schema.org
  * @link https://github.com/schemaorg/schemaorg/issues/2597
  *
  */
@@ -42,7 +42,7 @@ class ProductCollection extends BaseType implements ProductCollectionContract, C
      * @return static
      *
      * @see https://schema.org/abstract
-     * @see http://pending.schema.org
+     * @see https://pending.schema.org
      * @link https://github.com/schemaorg/schemaorg/issues/276
      */
     public function abstract($abstract)
@@ -192,7 +192,7 @@ class ProductCollection extends BaseType implements ProductCollectionContract, C
      * @return static
      *
      * @see https://schema.org/acquireLicensePage
-     * @see http://pending.schema.org
+     * @see https://pending.schema.org
      * @link https://github.com/schemaorg/schemaorg/issues/2454
      */
     public function acquireLicensePage($acquireLicensePage)
@@ -293,7 +293,7 @@ class ProductCollection extends BaseType implements ProductCollectionContract, C
      * @return static
      *
      * @see https://schema.org/assesses
-     * @see http://pending.schema.org
+     * @see https://pending.schema.org
      * @link https://github.com/schemaorg/schemaorg/issues/2427
      */
     public function assesses($assesses)
@@ -456,7 +456,7 @@ class ProductCollection extends BaseType implements ProductCollectionContract, C
      * @return static
      *
      * @see https://schema.org/collectionSize
-     * @see http://pending.schema.org
+     * @see https://pending.schema.org
      * @link https://github.com/schemaorg/schemaorg/issues/1759
      */
     public function collectionSize($collectionSize)
@@ -524,7 +524,7 @@ class ProductCollection extends BaseType implements ProductCollectionContract, C
      * @return static
      *
      * @see https://schema.org/conditionsOfAccess
-     * @see http://pending.schema.org
+     * @see https://pending.schema.org
      * @link https://github.com/schemaorg/schemaorg/issues/2173
      */
     public function conditionsOfAccess($conditionsOfAccess)
@@ -570,7 +570,7 @@ class ProductCollection extends BaseType implements ProductCollectionContract, C
      * @return static
      *
      * @see https://schema.org/contentReferenceTime
-     * @see http://pending.schema.org
+     * @see https://pending.schema.org
      * @link https://github.com/schemaorg/schemaorg/issues/1050
      */
     public function contentReferenceTime($contentReferenceTime)
@@ -630,7 +630,7 @@ class ProductCollection extends BaseType implements ProductCollectionContract, C
      * @return static
      *
      * @see https://schema.org/correction
-     * @see http://pending.schema.org
+     * @see https://pending.schema.org
      */
     public function correction($correction)
     {
@@ -648,7 +648,7 @@ class ProductCollection extends BaseType implements ProductCollectionContract, C
      * @return static
      *
      * @see https://schema.org/creativeWorkStatus
-     * @see http://pending.schema.org
+     * @see https://pending.schema.org
      * @link https://github.com/schemaorg/schemaorg/issues/987
      */
     public function creativeWorkStatus($creativeWorkStatus)
@@ -795,7 +795,7 @@ class ProductCollection extends BaseType implements ProductCollectionContract, C
      * @return static
      *
      * @see https://schema.org/editEIDR
-     * @see http://pending.schema.org
+     * @see https://pending.schema.org
      * @link https://github.com/schemaorg/schemaorg/issues/2469
      */
     public function editEIDR($editEIDR)
@@ -845,7 +845,7 @@ class ProductCollection extends BaseType implements ProductCollectionContract, C
      * @return static
      *
      * @see https://schema.org/educationalLevel
-     * @see http://pending.schema.org
+     * @see https://pending.schema.org
      * @link https://github.com/schemaorg/schemaorg/issues/1779
      */
     public function educationalLevel($educationalLevel)
@@ -1036,7 +1036,7 @@ class ProductCollection extends BaseType implements ProductCollectionContract, C
      * @return static
      *
      * @see https://schema.org/gtin
-     * @see http://pending.schema.org
+     * @see https://pending.schema.org
      * @link https://github.com/schemaorg/schemaorg/issues/2288
      */
     public function gtin($gtin)
@@ -1121,6 +1121,23 @@ class ProductCollection extends BaseType implements ProductCollectionContract, C
     }
 
     /**
+     * Defines the energy efficiency Category (also known as "class" or
+     * "rating") for a product according to an international energy efficiency
+     * standard
+     *
+     * @param \Spatie\SchemaOrg\Contracts\EnergyConsumptionDetailsContract|\Spatie\SchemaOrg\Contracts\EnergyConsumptionDetailsContract[] $hasEnergyConsumptionDetails
+     *
+     * @return static
+     *
+     * @see https://schema.org/hasEnergyConsumptionDetails
+     * @link https://github.com/schemaorg/schemaorg/issues/2670
+     */
+    public function hasEnergyConsumptionDetails($hasEnergyConsumptionDetails)
+    {
+        return $this->setProperty('hasEnergyConsumptionDetails', $hasEnergyConsumptionDetails);
+    }
+
+    /**
      * Indicates a MerchantReturnPolicy that may be applicable.
      *
      * @param \Spatie\SchemaOrg\Contracts\MerchantReturnPolicyContract|\Spatie\SchemaOrg\Contracts\MerchantReturnPolicyContract[] $hasMerchantReturnPolicy
@@ -1128,7 +1145,7 @@ class ProductCollection extends BaseType implements ProductCollectionContract, C
      * @return static
      *
      * @see https://schema.org/hasMerchantReturnPolicy
-     * @see http://pending.schema.org
+     * @see https://pending.schema.org
      * @link https://github.com/schemaorg/schemaorg/issues/2288
      */
     public function hasMerchantReturnPolicy($hasMerchantReturnPolicy)
@@ -1160,7 +1177,7 @@ class ProductCollection extends BaseType implements ProductCollectionContract, C
      * @return static
      *
      * @see https://schema.org/hasProductReturnPolicy
-     * @see http://attic.schema.org
+     * @see https://attic.schema.org
      * @link https://github.com/schemaorg/schemaorg/issues/2288
      */
     public function hasProductReturnPolicy($hasProductReturnPolicy)
@@ -1256,7 +1273,7 @@ class ProductCollection extends BaseType implements ProductCollectionContract, C
      * @return static
      *
      * @see https://schema.org/inProductGroupWithID
-     * @see http://pending.schema.org
+     * @see https://pending.schema.org
      * @link https://github.com/schemaorg/schemaorg/issues/1797
      */
     public function inProductGroupWithID($inProductGroupWithID)
@@ -1494,7 +1511,7 @@ class ProductCollection extends BaseType implements ProductCollectionContract, C
      * Keywords or tags used to describe this content. Multiple entries in a
      * keywords list are typically delimited by commas.
      *
-     * @param string|string[] $keywords
+     * @param \Spatie\SchemaOrg\Contracts\DefinedTermContract|\Spatie\SchemaOrg\Contracts\DefinedTermContract[]|string|string[] $keywords
      *
      * @return static
      *
@@ -1616,7 +1633,7 @@ class ProductCollection extends BaseType implements ProductCollectionContract, C
      * @return static
      *
      * @see https://schema.org/maintainer
-     * @see http://pending.schema.org
+     * @see https://pending.schema.org
      * @link https://github.com/schemaorg/schemaorg/issues/2311
      */
     public function maintainer($maintainer)
@@ -1662,7 +1679,7 @@ class ProductCollection extends BaseType implements ProductCollectionContract, C
      * @return static
      *
      * @see https://schema.org/materialExtent
-     * @see http://pending.schema.org
+     * @see https://pending.schema.org
      * @link https://github.com/schemaorg/schemaorg/issues/1759
      */
     public function materialExtent($materialExtent)
@@ -1743,7 +1760,7 @@ class ProductCollection extends BaseType implements ProductCollectionContract, C
      * @return static
      *
      * @see https://schema.org/nsn
-     * @see http://pending.schema.org
+     * @see https://pending.schema.org
      * @link https://github.com/schemaorg/schemaorg/issues/2126
      */
     public function nsn($nsn)
@@ -1783,7 +1800,7 @@ class ProductCollection extends BaseType implements ProductCollectionContract, C
      * @return static
      *
      * @see https://schema.org/pattern
-     * @see http://pending.schema.org
+     * @see https://pending.schema.org
      * @link https://github.com/schemaorg/schemaorg/issues/1797
      */
     public function pattern($pattern)
@@ -1918,7 +1935,7 @@ class ProductCollection extends BaseType implements ProductCollectionContract, C
      * @return static
      *
      * @see https://schema.org/publisherImprint
-     * @see http://bib.schema.org
+     * @see https://bib.schema.org
      */
     public function publisherImprint($publisherImprint)
     {
@@ -2080,7 +2097,7 @@ class ProductCollection extends BaseType implements ProductCollectionContract, C
      * @return static
      *
      * @see https://schema.org/sdDatePublished
-     * @see http://pending.schema.org
+     * @see https://pending.schema.org
      * @link https://github.com/schemaorg/schemaorg/issues/1886
      */
     public function sdDatePublished($sdDatePublished)
@@ -2097,7 +2114,7 @@ class ProductCollection extends BaseType implements ProductCollectionContract, C
      * @return static
      *
      * @see https://schema.org/sdLicense
-     * @see http://pending.schema.org
+     * @see https://pending.schema.org
      * @link https://github.com/schemaorg/schemaorg/issues/1886
      */
     public function sdLicense($sdLicense)
@@ -2119,7 +2136,7 @@ class ProductCollection extends BaseType implements ProductCollectionContract, C
      * @return static
      *
      * @see https://schema.org/sdPublisher
-     * @see http://pending.schema.org
+     * @see https://pending.schema.org
      * @link https://github.com/schemaorg/schemaorg/issues/1886
      */
     public function sdPublisher($sdPublisher)
@@ -2140,7 +2157,7 @@ class ProductCollection extends BaseType implements ProductCollectionContract, C
      * @return static
      *
      * @see https://schema.org/size
-     * @see http://pending.schema.org
+     * @see https://pending.schema.org
      * @link https://github.com/schemaorg/schemaorg/issues/1797
      */
     public function size($size)
@@ -2267,7 +2284,7 @@ class ProductCollection extends BaseType implements ProductCollectionContract, C
      * @return static
      *
      * @see https://schema.org/teaches
-     * @see http://pending.schema.org
+     * @see https://pending.schema.org
      * @link https://github.com/schemaorg/schemaorg/issues/2427
      */
     public function teaches($teaches)
@@ -2375,7 +2392,7 @@ class ProductCollection extends BaseType implements ProductCollectionContract, C
      * @return static
      *
      * @see https://schema.org/translationOfWork
-     * @see http://bib.schema.org
+     * @see https://bib.schema.org
      */
     public function translationOfWork($translationOfWork)
     {
@@ -2446,7 +2463,7 @@ class ProductCollection extends BaseType implements ProductCollectionContract, C
      * @return static
      *
      * @see https://schema.org/usageInfo
-     * @see http://pending.schema.org
+     * @see https://pending.schema.org
      * @link https://github.com/schemaorg/schemaorg/issues/2454
      */
     public function usageInfo($usageInfo)
@@ -2538,7 +2555,7 @@ class ProductCollection extends BaseType implements ProductCollectionContract, C
      * @return static
      *
      * @see https://schema.org/workTranslation
-     * @see http://bib.schema.org
+     * @see https://bib.schema.org
      */
     public function workTranslation($workTranslation)
     {

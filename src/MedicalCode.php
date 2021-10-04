@@ -14,7 +14,7 @@ use \Spatie\SchemaOrg\Contracts\ThingContract;
  * A code for a medical entity.
  *
  * @see https://schema.org/MedicalCode
- * @see http://health-lifesci.schema.org
+ * @see https://health-lifesci.schema.org
  *
  */
 class MedicalCode extends BaseType implements MedicalCodeContract, CategoryCodeContract, DefinedTermContract, IntangibleContract, MedicalEntityContract, MedicalIntangibleContract, ThingContract
@@ -61,7 +61,7 @@ class MedicalCode extends BaseType implements MedicalCodeContract, CategoryCodeC
      * @return static
      *
      * @see https://schema.org/code
-     * @see http://health-lifesci.schema.org
+     * @see https://health-lifesci.schema.org
      */
     public function code($code)
     {
@@ -76,7 +76,7 @@ class MedicalCode extends BaseType implements MedicalCodeContract, CategoryCodeC
      * @return static
      *
      * @see https://schema.org/codeValue
-     * @see http://pending.schema.org
+     * @see https://pending.schema.org
      * @link https://github.com/schemaorg/schemaorg/issues/894
      */
     public function codeValue($codeValue)
@@ -92,7 +92,7 @@ class MedicalCode extends BaseType implements MedicalCodeContract, CategoryCodeC
      * @return static
      *
      * @see https://schema.org/codingSystem
-     * @see http://health-lifesci.schema.org
+     * @see https://health-lifesci.schema.org
      */
     public function codingSystem($codingSystem)
     {
@@ -138,7 +138,7 @@ class MedicalCode extends BaseType implements MedicalCodeContract, CategoryCodeC
      * @return static
      *
      * @see https://schema.org/guideline
-     * @see http://health-lifesci.schema.org
+     * @see https://health-lifesci.schema.org
      */
     public function guideline($guideline)
     {
@@ -186,7 +186,7 @@ class MedicalCode extends BaseType implements MedicalCodeContract, CategoryCodeC
      * @return static
      *
      * @see https://schema.org/inCodeSet
-     * @see http://pending.schema.org
+     * @see https://pending.schema.org
      * @link https://github.com/schemaorg/schemaorg/issues/894
      */
     public function inCodeSet($inCodeSet)
@@ -202,7 +202,7 @@ class MedicalCode extends BaseType implements MedicalCodeContract, CategoryCodeC
      * @return static
      *
      * @see https://schema.org/inDefinedTermSet
-     * @see http://pending.schema.org
+     * @see https://pending.schema.org
      * @link https://github.com/schemaorg/schemaorg/issues/894
      */
     public function inDefinedTermSet($inDefinedTermSet)
@@ -219,7 +219,7 @@ class MedicalCode extends BaseType implements MedicalCodeContract, CategoryCodeC
      * @return static
      *
      * @see https://schema.org/legalStatus
-     * @see http://health-lifesci.schema.org
+     * @see https://health-lifesci.schema.org
      */
     public function legalStatus($legalStatus)
     {
@@ -251,7 +251,7 @@ class MedicalCode extends BaseType implements MedicalCodeContract, CategoryCodeC
      * @return static
      *
      * @see https://schema.org/medicineSystem
-     * @see http://health-lifesci.schema.org
+     * @see https://health-lifesci.schema.org
      */
     public function medicineSystem($medicineSystem)
     {
@@ -296,7 +296,7 @@ class MedicalCode extends BaseType implements MedicalCodeContract, CategoryCodeC
      * @return static
      *
      * @see https://schema.org/recognizingAuthority
-     * @see http://health-lifesci.schema.org
+     * @see https://health-lifesci.schema.org
      */
     public function recognizingAuthority($recognizingAuthority)
     {
@@ -311,7 +311,7 @@ class MedicalCode extends BaseType implements MedicalCodeContract, CategoryCodeC
      * @return static
      *
      * @see https://schema.org/relevantSpecialty
-     * @see http://health-lifesci.schema.org
+     * @see https://health-lifesci.schema.org
      */
     public function relevantSpecialty($relevantSpecialty)
     {
@@ -342,7 +342,7 @@ class MedicalCode extends BaseType implements MedicalCodeContract, CategoryCodeC
      * @return static
      *
      * @see https://schema.org/study
-     * @see http://health-lifesci.schema.org
+     * @see https://health-lifesci.schema.org
      */
     public function study($study)
     {
@@ -372,7 +372,7 @@ class MedicalCode extends BaseType implements MedicalCodeContract, CategoryCodeC
      * @return static
      *
      * @see https://schema.org/termCode
-     * @see http://pending.schema.org
+     * @see https://pending.schema.org
      * @link https://github.com/schemaorg/schemaorg/issues/894
      */
     public function termCode($termCode)

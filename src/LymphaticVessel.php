@@ -13,7 +13,7 @@ use \Spatie\SchemaOrg\Contracts\VesselContract;
  * toward the heart.
  *
  * @see https://schema.org/LymphaticVessel
- * @see http://health-lifesci.schema.org
+ * @see https://health-lifesci.schema.org
  *
  */
 class LymphaticVessel extends BaseType implements LymphaticVesselContract, AnatomicalStructureContract, MedicalEntityContract, ThingContract, VesselContract
@@ -61,7 +61,7 @@ class LymphaticVessel extends BaseType implements LymphaticVesselContract, Anato
      * @return static
      *
      * @see https://schema.org/associatedPathophysiology
-     * @see http://health-lifesci.schema.org
+     * @see https://health-lifesci.schema.org
      */
     public function associatedPathophysiology($associatedPathophysiology)
     {
@@ -76,7 +76,7 @@ class LymphaticVessel extends BaseType implements LymphaticVesselContract, Anato
      * @return static
      *
      * @see https://schema.org/bodyLocation
-     * @see http://health-lifesci.schema.org
+     * @see https://health-lifesci.schema.org
      */
     public function bodyLocation($bodyLocation)
     {
@@ -92,7 +92,7 @@ class LymphaticVessel extends BaseType implements LymphaticVesselContract, Anato
      * @return static
      *
      * @see https://schema.org/code
-     * @see http://health-lifesci.schema.org
+     * @see https://health-lifesci.schema.org
      */
     public function code($code)
     {
@@ -107,7 +107,7 @@ class LymphaticVessel extends BaseType implements LymphaticVesselContract, Anato
      * @return static
      *
      * @see https://schema.org/connectedTo
-     * @see http://health-lifesci.schema.org
+     * @see https://health-lifesci.schema.org
      */
     public function connectedTo($connectedTo)
     {
@@ -137,7 +137,7 @@ class LymphaticVessel extends BaseType implements LymphaticVesselContract, Anato
      * @return static
      *
      * @see https://schema.org/diagram
-     * @see http://health-lifesci.schema.org
+     * @see https://health-lifesci.schema.org
      */
     public function diagram($diagram)
     {
@@ -169,7 +169,7 @@ class LymphaticVessel extends BaseType implements LymphaticVesselContract, Anato
      * @return static
      *
      * @see https://schema.org/guideline
-     * @see http://health-lifesci.schema.org
+     * @see https://health-lifesci.schema.org
      */
     public function guideline($guideline)
     {
@@ -218,7 +218,7 @@ class LymphaticVessel extends BaseType implements LymphaticVesselContract, Anato
      * @return static
      *
      * @see https://schema.org/legalStatus
-     * @see http://health-lifesci.schema.org
+     * @see https://health-lifesci.schema.org
      */
     public function legalStatus($legalStatus)
     {
@@ -250,7 +250,7 @@ class LymphaticVessel extends BaseType implements LymphaticVesselContract, Anato
      * @return static
      *
      * @see https://schema.org/medicineSystem
-     * @see http://health-lifesci.schema.org
+     * @see https://health-lifesci.schema.org
      */
     public function medicineSystem($medicineSystem)
     {
@@ -279,7 +279,7 @@ class LymphaticVessel extends BaseType implements LymphaticVesselContract, Anato
      * @return static
      *
      * @see https://schema.org/originatesFrom
-     * @see http://health-lifesci.schema.org
+     * @see https://health-lifesci.schema.org
      */
     public function originatesFrom($originatesFrom)
     {
@@ -294,7 +294,7 @@ class LymphaticVessel extends BaseType implements LymphaticVesselContract, Anato
      * @return static
      *
      * @see https://schema.org/partOfSystem
-     * @see http://health-lifesci.schema.org
+     * @see https://health-lifesci.schema.org
      */
     public function partOfSystem($partOfSystem)
     {
@@ -325,7 +325,7 @@ class LymphaticVessel extends BaseType implements LymphaticVesselContract, Anato
      * @return static
      *
      * @see https://schema.org/recognizingAuthority
-     * @see http://health-lifesci.schema.org
+     * @see https://health-lifesci.schema.org
      */
     public function recognizingAuthority($recognizingAuthority)
     {
@@ -341,7 +341,7 @@ class LymphaticVessel extends BaseType implements LymphaticVesselContract, Anato
      * @return static
      *
      * @see https://schema.org/regionDrained
-     * @see http://health-lifesci.schema.org
+     * @see https://health-lifesci.schema.org
      */
     public function regionDrained($regionDrained)
     {
@@ -356,7 +356,7 @@ class LymphaticVessel extends BaseType implements LymphaticVesselContract, Anato
      * @return static
      *
      * @see https://schema.org/relatedCondition
-     * @see http://health-lifesci.schema.org
+     * @see https://health-lifesci.schema.org
      */
     public function relatedCondition($relatedCondition)
     {
@@ -371,7 +371,7 @@ class LymphaticVessel extends BaseType implements LymphaticVesselContract, Anato
      * @return static
      *
      * @see https://schema.org/relatedTherapy
-     * @see http://health-lifesci.schema.org
+     * @see https://health-lifesci.schema.org
      */
     public function relatedTherapy($relatedTherapy)
     {
@@ -386,7 +386,7 @@ class LymphaticVessel extends BaseType implements LymphaticVesselContract, Anato
      * @return static
      *
      * @see https://schema.org/relevantSpecialty
-     * @see http://health-lifesci.schema.org
+     * @see https://health-lifesci.schema.org
      */
     public function relevantSpecialty($relevantSpecialty)
     {
@@ -401,7 +401,7 @@ class LymphaticVessel extends BaseType implements LymphaticVesselContract, Anato
      * @return static
      *
      * @see https://schema.org/runsTo
-     * @see http://health-lifesci.schema.org
+     * @see https://health-lifesci.schema.org
      */
     public function runsTo($runsTo)
     {
@@ -432,7 +432,7 @@ class LymphaticVessel extends BaseType implements LymphaticVesselContract, Anato
      * @return static
      *
      * @see https://schema.org/study
-     * @see http://health-lifesci.schema.org
+     * @see https://health-lifesci.schema.org
      */
     public function study($study)
     {
@@ -447,7 +447,7 @@ class LymphaticVessel extends BaseType implements LymphaticVesselContract, Anato
      * @return static
      *
      * @see https://schema.org/subStructure
-     * @see http://health-lifesci.schema.org
+     * @see https://health-lifesci.schema.org
      */
     public function subStructure($subStructure)
     {

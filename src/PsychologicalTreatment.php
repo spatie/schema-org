@@ -13,7 +13,7 @@ use \Spatie\SchemaOrg\Contracts\ThingContract;
  * at improving a mental health condition without use of drugs.
  *
  * @see https://schema.org/PsychologicalTreatment
- * @see http://health-lifesci.schema.org
+ * @see https://health-lifesci.schema.org
  *
  */
 class PsychologicalTreatment extends BaseType implements PsychologicalTreatmentContract, MedicalEntityContract, MedicalProcedureContract, TherapeuticProcedureContract, ThingContract
@@ -49,7 +49,7 @@ class PsychologicalTreatment extends BaseType implements PsychologicalTreatmentC
      * @return static
      *
      * @see https://schema.org/adverseOutcome
-     * @see http://health-lifesci.schema.org
+     * @see https://health-lifesci.schema.org
      */
     public function adverseOutcome($adverseOutcome)
     {
@@ -78,7 +78,7 @@ class PsychologicalTreatment extends BaseType implements PsychologicalTreatmentC
      * @return static
      *
      * @see https://schema.org/bodyLocation
-     * @see http://health-lifesci.schema.org
+     * @see https://health-lifesci.schema.org
      */
     public function bodyLocation($bodyLocation)
     {
@@ -94,7 +94,7 @@ class PsychologicalTreatment extends BaseType implements PsychologicalTreatmentC
      * @return static
      *
      * @see https://schema.org/code
-     * @see http://health-lifesci.schema.org
+     * @see https://health-lifesci.schema.org
      */
     public function code($code)
     {
@@ -141,7 +141,7 @@ class PsychologicalTreatment extends BaseType implements PsychologicalTreatmentC
      * @return static
      *
      * @see https://schema.org/doseSchedule
-     * @see http://health-lifesci.schema.org
+     * @see https://health-lifesci.schema.org
      */
     public function doseSchedule($doseSchedule)
     {
@@ -156,7 +156,7 @@ class PsychologicalTreatment extends BaseType implements PsychologicalTreatmentC
      * @return static
      *
      * @see https://schema.org/drug
-     * @see http://health-lifesci.schema.org
+     * @see https://health-lifesci.schema.org
      */
     public function drug($drug)
     {
@@ -171,7 +171,7 @@ class PsychologicalTreatment extends BaseType implements PsychologicalTreatmentC
      * @return static
      *
      * @see https://schema.org/followup
-     * @see http://health-lifesci.schema.org
+     * @see https://health-lifesci.schema.org
      */
     public function followup($followup)
     {
@@ -186,7 +186,7 @@ class PsychologicalTreatment extends BaseType implements PsychologicalTreatmentC
      * @return static
      *
      * @see https://schema.org/guideline
-     * @see http://health-lifesci.schema.org
+     * @see https://health-lifesci.schema.org
      */
     public function guideline($guideline)
     {
@@ -201,7 +201,7 @@ class PsychologicalTreatment extends BaseType implements PsychologicalTreatmentC
      * @return static
      *
      * @see https://schema.org/howPerformed
-     * @see http://health-lifesci.schema.org
+     * @see https://health-lifesci.schema.org
      */
     public function howPerformed($howPerformed)
     {
@@ -250,7 +250,7 @@ class PsychologicalTreatment extends BaseType implements PsychologicalTreatmentC
      * @return static
      *
      * @see https://schema.org/legalStatus
-     * @see http://health-lifesci.schema.org
+     * @see https://health-lifesci.schema.org
      */
     public function legalStatus($legalStatus)
     {
@@ -282,7 +282,7 @@ class PsychologicalTreatment extends BaseType implements PsychologicalTreatmentC
      * @return static
      *
      * @see https://schema.org/medicineSystem
-     * @see http://health-lifesci.schema.org
+     * @see https://health-lifesci.schema.org
      */
     public function medicineSystem($medicineSystem)
     {
@@ -327,7 +327,7 @@ class PsychologicalTreatment extends BaseType implements PsychologicalTreatmentC
      * @return static
      *
      * @see https://schema.org/preparation
-     * @see http://health-lifesci.schema.org
+     * @see https://health-lifesci.schema.org
      */
     public function preparation($preparation)
     {
@@ -343,7 +343,7 @@ class PsychologicalTreatment extends BaseType implements PsychologicalTreatmentC
      * @return static
      *
      * @see https://schema.org/procedureType
-     * @see http://health-lifesci.schema.org
+     * @see https://health-lifesci.schema.org
      */
     public function procedureType($procedureType)
     {
@@ -359,7 +359,7 @@ class PsychologicalTreatment extends BaseType implements PsychologicalTreatmentC
      * @return static
      *
      * @see https://schema.org/recognizingAuthority
-     * @see http://health-lifesci.schema.org
+     * @see https://health-lifesci.schema.org
      */
     public function recognizingAuthority($recognizingAuthority)
     {
@@ -374,7 +374,7 @@ class PsychologicalTreatment extends BaseType implements PsychologicalTreatmentC
      * @return static
      *
      * @see https://schema.org/relevantSpecialty
-     * @see http://health-lifesci.schema.org
+     * @see https://health-lifesci.schema.org
      */
     public function relevantSpecialty($relevantSpecialty)
     {
@@ -405,7 +405,7 @@ class PsychologicalTreatment extends BaseType implements PsychologicalTreatmentC
      * @return static
      *
      * @see https://schema.org/status
-     * @see http://health-lifesci.schema.org
+     * @see https://health-lifesci.schema.org
      */
     public function status($status)
     {
@@ -420,7 +420,7 @@ class PsychologicalTreatment extends BaseType implements PsychologicalTreatmentC
      * @return static
      *
      * @see https://schema.org/study
-     * @see http://health-lifesci.schema.org
+     * @see https://health-lifesci.schema.org
      */
     public function study($study)
     {

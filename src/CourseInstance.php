@@ -196,7 +196,7 @@ class CourseInstance extends BaseType implements CourseInstanceContract, EventCo
      * @return static
      *
      * @see https://schema.org/courseWorkload
-     * @see http://pending.schema.org
+     * @see https://pending.schema.org
      * @link https://github.com/schemaorg/schemaorg/issues/1909
      */
     public function courseWorkload($courseWorkload)
@@ -305,7 +305,7 @@ class CourseInstance extends BaseType implements CourseInstanceContract, EventCo
      * @return static
      *
      * @see https://schema.org/eventAttendanceMode
-     * @see http://pending.schema.org
+     * @see https://pending.schema.org
      * @link https://github.com/schemaorg/schemaorg/issues/1842
      */
     public function eventAttendanceMode($eventAttendanceMode)
@@ -335,7 +335,7 @@ class CourseInstance extends BaseType implements CourseInstanceContract, EventCo
      * @return static
      *
      * @see https://schema.org/eventSchedule
-     * @see http://pending.schema.org
+     * @see https://pending.schema.org
      * @link https://github.com/schemaorg/schemaorg/issues/1457
      */
     public function eventSchedule($eventSchedule)
@@ -508,7 +508,7 @@ class CourseInstance extends BaseType implements CourseInstanceContract, EventCo
      * @return static
      *
      * @see https://schema.org/maximumPhysicalAttendeeCapacity
-     * @see http://pending.schema.org
+     * @see https://pending.schema.org
      * @link https://github.com/schemaorg/schemaorg/issues/1842
      */
     public function maximumPhysicalAttendeeCapacity($maximumPhysicalAttendeeCapacity)
@@ -526,7 +526,7 @@ class CourseInstance extends BaseType implements CourseInstanceContract, EventCo
      * @return static
      *
      * @see https://schema.org/maximumVirtualAttendeeCapacity
-     * @see http://pending.schema.org
+     * @see https://pending.schema.org
      * @link https://github.com/schemaorg/schemaorg/issues/1842
      */
     public function maximumVirtualAttendeeCapacity($maximumVirtualAttendeeCapacity)

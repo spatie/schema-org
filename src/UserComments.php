@@ -327,7 +327,7 @@ class UserComments extends BaseType implements UserCommentsContract, EventContra
      * @return static
      *
      * @see https://schema.org/eventAttendanceMode
-     * @see http://pending.schema.org
+     * @see https://pending.schema.org
      * @link https://github.com/schemaorg/schemaorg/issues/1842
      */
     public function eventAttendanceMode($eventAttendanceMode)
@@ -357,7 +357,7 @@ class UserComments extends BaseType implements UserCommentsContract, EventContra
      * @return static
      *
      * @see https://schema.org/eventSchedule
-     * @see http://pending.schema.org
+     * @see https://pending.schema.org
      * @link https://github.com/schemaorg/schemaorg/issues/1457
      */
     public function eventSchedule($eventSchedule)
@@ -515,7 +515,7 @@ class UserComments extends BaseType implements UserCommentsContract, EventContra
      * @return static
      *
      * @see https://schema.org/maximumPhysicalAttendeeCapacity
-     * @see http://pending.schema.org
+     * @see https://pending.schema.org
      * @link https://github.com/schemaorg/schemaorg/issues/1842
      */
     public function maximumPhysicalAttendeeCapacity($maximumPhysicalAttendeeCapacity)
@@ -533,7 +533,7 @@ class UserComments extends BaseType implements UserCommentsContract, EventContra
      * @return static
      *
      * @see https://schema.org/maximumVirtualAttendeeCapacity
-     * @see http://pending.schema.org
+     * @see https://pending.schema.org
      * @link https://github.com/schemaorg/schemaorg/issues/1842
      */
     public function maximumVirtualAttendeeCapacity($maximumVirtualAttendeeCapacity)

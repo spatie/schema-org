@@ -11,7 +11,7 @@ use \Spatie\SchemaOrg\Contracts\ThingContract;
  * The legal availability status of a medical drug.
  *
  * @see https://schema.org/DrugLegalStatus
- * @see http://health-lifesci.schema.org
+ * @see https://health-lifesci.schema.org
  *
  */
 class DrugLegalStatus extends BaseType implements DrugLegalStatusContract, MedicalEntityContract, MedicalIntangibleContract, ThingContract
@@ -57,7 +57,7 @@ class DrugLegalStatus extends BaseType implements DrugLegalStatusContract, Medic
      * @return static
      *
      * @see https://schema.org/applicableLocation
-     * @see http://health-lifesci.schema.org
+     * @see https://health-lifesci.schema.org
      */
     public function applicableLocation($applicableLocation)
     {
@@ -73,7 +73,7 @@ class DrugLegalStatus extends BaseType implements DrugLegalStatusContract, Medic
      * @return static
      *
      * @see https://schema.org/code
-     * @see http://health-lifesci.schema.org
+     * @see https://health-lifesci.schema.org
      */
     public function code($code)
     {
@@ -119,7 +119,7 @@ class DrugLegalStatus extends BaseType implements DrugLegalStatusContract, Medic
      * @return static
      *
      * @see https://schema.org/guideline
-     * @see http://health-lifesci.schema.org
+     * @see https://health-lifesci.schema.org
      */
     public function guideline($guideline)
     {
@@ -168,7 +168,7 @@ class DrugLegalStatus extends BaseType implements DrugLegalStatusContract, Medic
      * @return static
      *
      * @see https://schema.org/legalStatus
-     * @see http://health-lifesci.schema.org
+     * @see https://health-lifesci.schema.org
      */
     public function legalStatus($legalStatus)
     {
@@ -200,7 +200,7 @@ class DrugLegalStatus extends BaseType implements DrugLegalStatusContract, Medic
      * @return static
      *
      * @see https://schema.org/medicineSystem
-     * @see http://health-lifesci.schema.org
+     * @see https://health-lifesci.schema.org
      */
     public function medicineSystem($medicineSystem)
     {
@@ -245,7 +245,7 @@ class DrugLegalStatus extends BaseType implements DrugLegalStatusContract, Medic
      * @return static
      *
      * @see https://schema.org/recognizingAuthority
-     * @see http://health-lifesci.schema.org
+     * @see https://health-lifesci.schema.org
      */
     public function recognizingAuthority($recognizingAuthority)
     {
@@ -260,7 +260,7 @@ class DrugLegalStatus extends BaseType implements DrugLegalStatusContract, Medic
      * @return static
      *
      * @see https://schema.org/relevantSpecialty
-     * @see http://health-lifesci.schema.org
+     * @see https://health-lifesci.schema.org
      */
     public function relevantSpecialty($relevantSpecialty)
     {
@@ -291,7 +291,7 @@ class DrugLegalStatus extends BaseType implements DrugLegalStatusContract, Medic
      * @return static
      *
      * @see https://schema.org/study
-     * @see http://health-lifesci.schema.org
+     * @see https://health-lifesci.schema.org
      */
     public function study($study)
     {

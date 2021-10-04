@@ -15,7 +15,7 @@ use \Spatie\SchemaOrg\Contracts\ThingContract;
  * problems.
  *
  * @see https://schema.org/OccupationalTherapy
- * @see http://health-lifesci.schema.org
+ * @see https://health-lifesci.schema.org
  *
  */
 class OccupationalTherapy extends BaseType implements OccupationalTherapyContract, MedicalEntityContract, MedicalProcedureContract, MedicalTherapyContract, TherapeuticProcedureContract, ThingContract
@@ -51,7 +51,7 @@ class OccupationalTherapy extends BaseType implements OccupationalTherapyContrac
      * @return static
      *
      * @see https://schema.org/adverseOutcome
-     * @see http://health-lifesci.schema.org
+     * @see https://health-lifesci.schema.org
      */
     public function adverseOutcome($adverseOutcome)
     {
@@ -80,7 +80,7 @@ class OccupationalTherapy extends BaseType implements OccupationalTherapyContrac
      * @return static
      *
      * @see https://schema.org/bodyLocation
-     * @see http://health-lifesci.schema.org
+     * @see https://health-lifesci.schema.org
      */
     public function bodyLocation($bodyLocation)
     {
@@ -96,7 +96,7 @@ class OccupationalTherapy extends BaseType implements OccupationalTherapyContrac
      * @return static
      *
      * @see https://schema.org/code
-     * @see http://health-lifesci.schema.org
+     * @see https://health-lifesci.schema.org
      */
     public function code($code)
     {
@@ -111,7 +111,7 @@ class OccupationalTherapy extends BaseType implements OccupationalTherapyContrac
      * @return static
      *
      * @see https://schema.org/contraindication
-     * @see http://health-lifesci.schema.org
+     * @see https://health-lifesci.schema.org
      */
     public function contraindication($contraindication)
     {
@@ -158,7 +158,7 @@ class OccupationalTherapy extends BaseType implements OccupationalTherapyContrac
      * @return static
      *
      * @see https://schema.org/doseSchedule
-     * @see http://health-lifesci.schema.org
+     * @see https://health-lifesci.schema.org
      */
     public function doseSchedule($doseSchedule)
     {
@@ -173,7 +173,7 @@ class OccupationalTherapy extends BaseType implements OccupationalTherapyContrac
      * @return static
      *
      * @see https://schema.org/drug
-     * @see http://health-lifesci.schema.org
+     * @see https://health-lifesci.schema.org
      */
     public function drug($drug)
     {
@@ -188,7 +188,7 @@ class OccupationalTherapy extends BaseType implements OccupationalTherapyContrac
      * @return static
      *
      * @see https://schema.org/duplicateTherapy
-     * @see http://health-lifesci.schema.org
+     * @see https://health-lifesci.schema.org
      */
     public function duplicateTherapy($duplicateTherapy)
     {
@@ -203,7 +203,7 @@ class OccupationalTherapy extends BaseType implements OccupationalTherapyContrac
      * @return static
      *
      * @see https://schema.org/followup
-     * @see http://health-lifesci.schema.org
+     * @see https://health-lifesci.schema.org
      */
     public function followup($followup)
     {
@@ -218,7 +218,7 @@ class OccupationalTherapy extends BaseType implements OccupationalTherapyContrac
      * @return static
      *
      * @see https://schema.org/guideline
-     * @see http://health-lifesci.schema.org
+     * @see https://health-lifesci.schema.org
      */
     public function guideline($guideline)
     {
@@ -233,7 +233,7 @@ class OccupationalTherapy extends BaseType implements OccupationalTherapyContrac
      * @return static
      *
      * @see https://schema.org/howPerformed
-     * @see http://health-lifesci.schema.org
+     * @see https://health-lifesci.schema.org
      */
     public function howPerformed($howPerformed)
     {
@@ -282,7 +282,7 @@ class OccupationalTherapy extends BaseType implements OccupationalTherapyContrac
      * @return static
      *
      * @see https://schema.org/legalStatus
-     * @see http://health-lifesci.schema.org
+     * @see https://health-lifesci.schema.org
      */
     public function legalStatus($legalStatus)
     {
@@ -314,7 +314,7 @@ class OccupationalTherapy extends BaseType implements OccupationalTherapyContrac
      * @return static
      *
      * @see https://schema.org/medicineSystem
-     * @see http://health-lifesci.schema.org
+     * @see https://health-lifesci.schema.org
      */
     public function medicineSystem($medicineSystem)
     {
@@ -359,7 +359,7 @@ class OccupationalTherapy extends BaseType implements OccupationalTherapyContrac
      * @return static
      *
      * @see https://schema.org/preparation
-     * @see http://health-lifesci.schema.org
+     * @see https://health-lifesci.schema.org
      */
     public function preparation($preparation)
     {
@@ -375,7 +375,7 @@ class OccupationalTherapy extends BaseType implements OccupationalTherapyContrac
      * @return static
      *
      * @see https://schema.org/procedureType
-     * @see http://health-lifesci.schema.org
+     * @see https://health-lifesci.schema.org
      */
     public function procedureType($procedureType)
     {
@@ -391,7 +391,7 @@ class OccupationalTherapy extends BaseType implements OccupationalTherapyContrac
      * @return static
      *
      * @see https://schema.org/recognizingAuthority
-     * @see http://health-lifesci.schema.org
+     * @see https://health-lifesci.schema.org
      */
     public function recognizingAuthority($recognizingAuthority)
     {
@@ -406,7 +406,7 @@ class OccupationalTherapy extends BaseType implements OccupationalTherapyContrac
      * @return static
      *
      * @see https://schema.org/relevantSpecialty
-     * @see http://health-lifesci.schema.org
+     * @see https://health-lifesci.schema.org
      */
     public function relevantSpecialty($relevantSpecialty)
     {
@@ -443,7 +443,7 @@ class OccupationalTherapy extends BaseType implements OccupationalTherapyContrac
      * @return static
      *
      * @see https://schema.org/seriousAdverseOutcome
-     * @see http://health-lifesci.schema.org
+     * @see https://health-lifesci.schema.org
      */
     public function seriousAdverseOutcome($seriousAdverseOutcome)
     {
@@ -458,7 +458,7 @@ class OccupationalTherapy extends BaseType implements OccupationalTherapyContrac
      * @return static
      *
      * @see https://schema.org/status
-     * @see http://health-lifesci.schema.org
+     * @see https://health-lifesci.schema.org
      */
     public function status($status)
     {
@@ -473,7 +473,7 @@ class OccupationalTherapy extends BaseType implements OccupationalTherapyContrac
      * @return static
      *
      * @see https://schema.org/study
-     * @see http://health-lifesci.schema.org
+     * @see https://health-lifesci.schema.org
      */
     public function study($study)
     {

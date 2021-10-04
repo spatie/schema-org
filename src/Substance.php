@@ -11,7 +11,7 @@ use \Spatie\SchemaOrg\Contracts\ThingContract;
  * may be biological, mineral or chemical.
  *
  * @see https://schema.org/Substance
- * @see http://health-lifesci.schema.org
+ * @see https://health-lifesci.schema.org
  *
  */
 class Substance extends BaseType implements SubstanceContract, MedicalEntityContract, ThingContract
@@ -25,7 +25,7 @@ class Substance extends BaseType implements SubstanceContract, MedicalEntityCont
      * @return static
      *
      * @see https://schema.org/activeIngredient
-     * @see http://health-lifesci.schema.org
+     * @see https://health-lifesci.schema.org
      */
     public function activeIngredient($activeIngredient)
     {
@@ -74,7 +74,7 @@ class Substance extends BaseType implements SubstanceContract, MedicalEntityCont
      * @return static
      *
      * @see https://schema.org/code
-     * @see http://health-lifesci.schema.org
+     * @see https://health-lifesci.schema.org
      */
     public function code($code)
     {
@@ -120,7 +120,7 @@ class Substance extends BaseType implements SubstanceContract, MedicalEntityCont
      * @return static
      *
      * @see https://schema.org/guideline
-     * @see http://health-lifesci.schema.org
+     * @see https://health-lifesci.schema.org
      */
     public function guideline($guideline)
     {
@@ -169,7 +169,7 @@ class Substance extends BaseType implements SubstanceContract, MedicalEntityCont
      * @return static
      *
      * @see https://schema.org/legalStatus
-     * @see http://health-lifesci.schema.org
+     * @see https://health-lifesci.schema.org
      */
     public function legalStatus($legalStatus)
     {
@@ -201,7 +201,7 @@ class Substance extends BaseType implements SubstanceContract, MedicalEntityCont
      * @return static
      *
      * @see https://schema.org/maximumIntake
-     * @see http://health-lifesci.schema.org
+     * @see https://health-lifesci.schema.org
      */
     public function maximumIntake($maximumIntake)
     {
@@ -217,7 +217,7 @@ class Substance extends BaseType implements SubstanceContract, MedicalEntityCont
      * @return static
      *
      * @see https://schema.org/medicineSystem
-     * @see http://health-lifesci.schema.org
+     * @see https://health-lifesci.schema.org
      */
     public function medicineSystem($medicineSystem)
     {
@@ -262,7 +262,7 @@ class Substance extends BaseType implements SubstanceContract, MedicalEntityCont
      * @return static
      *
      * @see https://schema.org/recognizingAuthority
-     * @see http://health-lifesci.schema.org
+     * @see https://health-lifesci.schema.org
      */
     public function recognizingAuthority($recognizingAuthority)
     {
@@ -277,7 +277,7 @@ class Substance extends BaseType implements SubstanceContract, MedicalEntityCont
      * @return static
      *
      * @see https://schema.org/relevantSpecialty
-     * @see http://health-lifesci.schema.org
+     * @see https://health-lifesci.schema.org
      */
     public function relevantSpecialty($relevantSpecialty)
     {
@@ -308,7 +308,7 @@ class Substance extends BaseType implements SubstanceContract, MedicalEntityCont
      * @return static
      *
      * @see https://schema.org/study
-     * @see http://health-lifesci.schema.org
+     * @see https://health-lifesci.schema.org
      */
     public function study($study)
     {

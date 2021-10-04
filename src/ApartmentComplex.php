@@ -23,7 +23,7 @@ class ApartmentComplex extends BaseType implements ApartmentComplexContract, Pla
      * @return static
      *
      * @see https://schema.org/accommodationFloorPlan
-     * @see http://pending.schema.org
+     * @see https://pending.schema.org
      * @link https://github.com/schemaorg/schemaorg/issues/2373
      */
     public function accommodationFloorPlan($accommodationFloorPlan)
@@ -486,7 +486,7 @@ class ApartmentComplex extends BaseType implements ApartmentComplexContract, Pla
      * @return static
      *
      * @see https://schema.org/hasDriveThroughService
-     * @see http://pending.schema.org
+     * @see https://pending.schema.org
      * @link https://github.com/schemaorg/schemaorg/issues/2490
      */
     public function hasDriveThroughService($hasDriveThroughService)
@@ -700,7 +700,7 @@ class ApartmentComplex extends BaseType implements ApartmentComplexContract, Pla
      * @return static
      *
      * @see https://schema.org/numberOfAccommodationUnits
-     * @see http://pending.schema.org
+     * @see https://pending.schema.org
      * @link https://github.com/schemaorg/schemaorg/issues/2373
      */
     public function numberOfAccommodationUnits($numberOfAccommodationUnits)
@@ -719,7 +719,7 @@ class ApartmentComplex extends BaseType implements ApartmentComplexContract, Pla
      * @return static
      *
      * @see https://schema.org/numberOfAvailableAccommodationUnits
-     * @see http://pending.schema.org
+     * @see https://pending.schema.org
      * @link https://github.com/schemaorg/schemaorg/issues/2373
      */
     public function numberOfAvailableAccommodationUnits($numberOfAvailableAccommodationUnits)
@@ -736,7 +736,7 @@ class ApartmentComplex extends BaseType implements ApartmentComplexContract, Pla
      * @return static
      *
      * @see https://schema.org/numberOfBedrooms
-     * @see http://pending.schema.org
+     * @see https://pending.schema.org
      * @link https://github.com/schemaorg/schemaorg/issues/2373
      */
     public function numberOfBedrooms($numberOfBedrooms)
@@ -963,7 +963,7 @@ class ApartmentComplex extends BaseType implements ApartmentComplexContract, Pla
      * @return static
      *
      * @see https://schema.org/tourBookingPage
-     * @see http://pending.schema.org
+     * @see https://pending.schema.org
      * @link https://github.com/schemaorg/schemaorg/issues/2373
      */
     public function tourBookingPage($tourBookingPage)

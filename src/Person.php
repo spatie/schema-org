@@ -185,7 +185,7 @@ class Person extends BaseType implements PersonContract, ThingContract
      * @return static
      *
      * @see https://schema.org/callSign
-     * @see http://pending.schema.org
+     * @see https://pending.schema.org
      * @link https://github.com/schemaorg/schemaorg/issues/2109
      */
     public function callSign($callSign)
@@ -353,8 +353,7 @@ class Person extends BaseType implements PersonContract, ThingContract
     }
 
     /**
-     * Family name. In the U.S., the last name of an Person. This can be used
-     * along with givenName instead of the name property.
+     * Family name. In the U.S., the last name of a Person.
      *
      * @param string|string[] $familyName
      *
@@ -425,7 +424,7 @@ class Person extends BaseType implements PersonContract, ThingContract
      * @return static
      *
      * @see https://schema.org/gender
-     * @see http://pending.schema.org
+     * @see https://pending.schema.org
      * @link https://github.com/schemaorg/schemaorg/issues/2341
      */
     public function gender($gender)
@@ -434,8 +433,7 @@ class Person extends BaseType implements PersonContract, ThingContract
     }
 
     /**
-     * Given name. In the U.S., the first name of a Person. This can be used
-     * along with familyName instead of the name property.
+     * Given name. In the U.S., the first name of a Person.
      *
      * @param string|string[] $givenName
      *
@@ -474,7 +472,7 @@ class Person extends BaseType implements PersonContract, ThingContract
      * @return static
      *
      * @see https://schema.org/hasCredential
-     * @see http://pending.schema.org
+     * @see https://pending.schema.org
      * @link https://github.com/schemaorg/schemaorg/issues/2289
      */
     public function hasCredential($hasCredential)
@@ -571,7 +569,7 @@ class Person extends BaseType implements PersonContract, ThingContract
     }
 
     /**
-     * An honorific suffix preceding a Person's name such as M.D. /PhD/MSCSW.
+     * An honorific suffix following a Person's name such as M.D. /PhD/MSCSW.
      *
      * @param string|string[] $honorificSuffix
      *
@@ -659,7 +657,7 @@ class Person extends BaseType implements PersonContract, ThingContract
      * @return static
      *
      * @see https://schema.org/jobTitle
-     * @see http://pending.schema.org
+     * @see https://pending.schema.org
      * @link https://github.com/schemaorg/schemaorg/issues/2192
      */
     public function jobTitle($jobTitle)
@@ -692,7 +690,7 @@ class Person extends BaseType implements PersonContract, ThingContract
      * @return static
      *
      * @see https://schema.org/knowsAbout
-     * @see http://pending.schema.org
+     * @see https://pending.schema.org
      */
     public function knowsAbout($knowsAbout)
     {
@@ -710,7 +708,7 @@ class Person extends BaseType implements PersonContract, ThingContract
      * @return static
      *
      * @see https://schema.org/knowsLanguage
-     * @see http://pending.schema.org
+     * @see https://pending.schema.org
      */
     public function knowsLanguage($knowsLanguage)
     {

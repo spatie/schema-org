@@ -13,7 +13,7 @@ use \Spatie\SchemaOrg\Contracts\ThingContract;
  * drug or pharmaceutical used as directed by the mother during pregnancy.
  *
  * @see https://schema.org/DrugPregnancyCategory
- * @see http://health-lifesci.schema.org
+ * @see https://health-lifesci.schema.org
  *
  * @method static supersededBy($supersededBy) The value should be instance of pending types Class|Class[]|Enumeration|Enumeration[]|Property|Property[]
  */
@@ -26,7 +26,7 @@ class DrugPregnancyCategory extends BaseType implements DrugPregnancyCategoryCon
      * trimesters).
      *
      * @see https://schema.org/FDAcategoryA
-     * @see http://health-lifesci.schema.org
+     * @see https://health-lifesci.schema.org
      */
      const FDAcategoryA = 'https://schema.org/FDAcategoryA';
 
@@ -36,7 +36,7 @@ class DrugPregnancyCategory extends BaseType implements DrugPregnancyCategoryCon
      * and well-controlled studies in pregnant women.
      *
      * @see https://schema.org/FDAcategoryB
-     * @see http://health-lifesci.schema.org
+     * @see https://health-lifesci.schema.org
      */
      const FDAcategoryB = 'https://schema.org/FDAcategoryB';
 
@@ -47,7 +47,7 @@ class DrugPregnancyCategory extends BaseType implements DrugPregnancyCategoryCon
      * of the drug in pregnant women despite potential risks.
      *
      * @see https://schema.org/FDAcategoryC
-     * @see http://health-lifesci.schema.org
+     * @see https://health-lifesci.schema.org
      */
      const FDAcategoryC = 'https://schema.org/FDAcategoryC';
 
@@ -58,7 +58,7 @@ class DrugPregnancyCategory extends BaseType implements DrugPregnancyCategoryCon
      * warrant use of the drug in pregnant women despite potential risks.
      *
      * @see https://schema.org/FDAcategoryD
-     * @see http://health-lifesci.schema.org
+     * @see https://health-lifesci.schema.org
      */
      const FDAcategoryD = 'https://schema.org/FDAcategoryD';
 
@@ -70,7 +70,7 @@ class DrugPregnancyCategory extends BaseType implements DrugPregnancyCategoryCon
      * pregnant women clearly outweigh potential benefits.
      *
      * @see https://schema.org/FDAcategoryX
-     * @see http://health-lifesci.schema.org
+     * @see https://health-lifesci.schema.org
      */
      const FDAcategoryX = 'https://schema.org/FDAcategoryX';
 
@@ -79,7 +79,7 @@ class DrugPregnancyCategory extends BaseType implements DrugPregnancyCategoryCon
      * category designation by the US FDA.
      *
      * @see https://schema.org/FDAnotEvaluated
-     * @see http://health-lifesci.schema.org
+     * @see https://health-lifesci.schema.org
      */
      const FDAnotEvaluated = 'https://schema.org/FDAnotEvaluated';
 

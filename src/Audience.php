@@ -15,13 +15,6 @@ use \Spatie\SchemaOrg\Contracts\ThingContract;
 class Audience extends BaseType implements AudienceContract, IntangibleContract, ThingContract
 {
     /**
-     * Researchers.
-     *
-     * @see https://schema.org/Researcher
-     */
-     const Researcher = 'https://schema.org/Researcher';
-
-    /**
      * An additional type for the item, typically used for adding more specific
      * types from external vocabularies in microdata syntax. This is a
      * relationship between something and a class that the thing is in. In RDFa

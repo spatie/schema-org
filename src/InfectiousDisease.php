@@ -15,7 +15,7 @@ use \Spatie\SchemaOrg\Contracts\ThingContract;
  * cause this disease.
  *
  * @see https://schema.org/InfectiousDisease
- * @see http://health-lifesci.schema.org
+ * @see https://health-lifesci.schema.org
  *
  */
 class InfectiousDisease extends BaseType implements InfectiousDiseaseContract, MedicalConditionContract, MedicalEntityContract, ThingContract
@@ -62,7 +62,7 @@ class InfectiousDisease extends BaseType implements InfectiousDiseaseContract, M
      * @return static
      *
      * @see https://schema.org/associatedAnatomy
-     * @see http://health-lifesci.schema.org
+     * @see https://health-lifesci.schema.org
      */
     public function associatedAnatomy($associatedAnatomy)
     {
@@ -78,7 +78,7 @@ class InfectiousDisease extends BaseType implements InfectiousDiseaseContract, M
      * @return static
      *
      * @see https://schema.org/code
-     * @see http://health-lifesci.schema.org
+     * @see https://health-lifesci.schema.org
      */
     public function code($code)
     {
@@ -112,7 +112,7 @@ class InfectiousDisease extends BaseType implements InfectiousDiseaseContract, M
      * @return static
      *
      * @see https://schema.org/differentialDiagnosis
-     * @see http://health-lifesci.schema.org
+     * @see https://health-lifesci.schema.org
      */
     public function differentialDiagnosis($differentialDiagnosis)
     {
@@ -144,7 +144,7 @@ class InfectiousDisease extends BaseType implements InfectiousDiseaseContract, M
      * @return static
      *
      * @see https://schema.org/drug
-     * @see http://health-lifesci.schema.org
+     * @see https://health-lifesci.schema.org
      */
     public function drug($drug)
     {
@@ -160,7 +160,7 @@ class InfectiousDisease extends BaseType implements InfectiousDiseaseContract, M
      * @return static
      *
      * @see https://schema.org/epidemiology
-     * @see http://health-lifesci.schema.org
+     * @see https://health-lifesci.schema.org
      */
     public function epidemiology($epidemiology)
     {
@@ -176,7 +176,7 @@ class InfectiousDisease extends BaseType implements InfectiousDiseaseContract, M
      * @return static
      *
      * @see https://schema.org/expectedPrognosis
-     * @see http://health-lifesci.schema.org
+     * @see https://health-lifesci.schema.org
      */
     public function expectedPrognosis($expectedPrognosis)
     {
@@ -191,7 +191,7 @@ class InfectiousDisease extends BaseType implements InfectiousDiseaseContract, M
      * @return static
      *
      * @see https://schema.org/guideline
-     * @see http://health-lifesci.schema.org
+     * @see https://health-lifesci.schema.org
      */
     public function guideline($guideline)
     {
@@ -239,7 +239,7 @@ class InfectiousDisease extends BaseType implements InfectiousDiseaseContract, M
      * @return static
      *
      * @see https://schema.org/infectiousAgent
-     * @see http://health-lifesci.schema.org
+     * @see https://health-lifesci.schema.org
      */
     public function infectiousAgent($infectiousAgent)
     {
@@ -255,7 +255,7 @@ class InfectiousDisease extends BaseType implements InfectiousDiseaseContract, M
      * @return static
      *
      * @see https://schema.org/infectiousAgentClass
-     * @see http://health-lifesci.schema.org
+     * @see https://health-lifesci.schema.org
      */
     public function infectiousAgentClass($infectiousAgentClass)
     {
@@ -271,7 +271,7 @@ class InfectiousDisease extends BaseType implements InfectiousDiseaseContract, M
      * @return static
      *
      * @see https://schema.org/legalStatus
-     * @see http://health-lifesci.schema.org
+     * @see https://health-lifesci.schema.org
      */
     public function legalStatus($legalStatus)
     {
@@ -303,7 +303,7 @@ class InfectiousDisease extends BaseType implements InfectiousDiseaseContract, M
      * @return static
      *
      * @see https://schema.org/medicineSystem
-     * @see http://health-lifesci.schema.org
+     * @see https://health-lifesci.schema.org
      */
     public function medicineSystem($medicineSystem)
     {
@@ -333,7 +333,7 @@ class InfectiousDisease extends BaseType implements InfectiousDiseaseContract, M
      * @return static
      *
      * @see https://schema.org/naturalProgression
-     * @see http://health-lifesci.schema.org
+     * @see https://health-lifesci.schema.org
      */
     public function naturalProgression($naturalProgression)
     {
@@ -349,7 +349,7 @@ class InfectiousDisease extends BaseType implements InfectiousDiseaseContract, M
      * @return static
      *
      * @see https://schema.org/pathophysiology
-     * @see http://health-lifesci.schema.org
+     * @see https://health-lifesci.schema.org
      */
     public function pathophysiology($pathophysiology)
     {
@@ -366,7 +366,7 @@ class InfectiousDisease extends BaseType implements InfectiousDiseaseContract, M
      * @return static
      *
      * @see https://schema.org/possibleComplication
-     * @see http://health-lifesci.schema.org
+     * @see https://health-lifesci.schema.org
      */
     public function possibleComplication($possibleComplication)
     {
@@ -381,7 +381,7 @@ class InfectiousDisease extends BaseType implements InfectiousDiseaseContract, M
      * @return static
      *
      * @see https://schema.org/possibleTreatment
-     * @see http://health-lifesci.schema.org
+     * @see https://health-lifesci.schema.org
      */
     public function possibleTreatment($possibleTreatment)
     {
@@ -412,7 +412,7 @@ class InfectiousDisease extends BaseType implements InfectiousDiseaseContract, M
      * @return static
      *
      * @see https://schema.org/primaryPrevention
-     * @see http://health-lifesci.schema.org
+     * @see https://health-lifesci.schema.org
      */
     public function primaryPrevention($primaryPrevention)
     {
@@ -428,7 +428,7 @@ class InfectiousDisease extends BaseType implements InfectiousDiseaseContract, M
      * @return static
      *
      * @see https://schema.org/recognizingAuthority
-     * @see http://health-lifesci.schema.org
+     * @see https://health-lifesci.schema.org
      */
     public function recognizingAuthority($recognizingAuthority)
     {
@@ -443,7 +443,7 @@ class InfectiousDisease extends BaseType implements InfectiousDiseaseContract, M
      * @return static
      *
      * @see https://schema.org/relevantSpecialty
-     * @see http://health-lifesci.schema.org
+     * @see https://health-lifesci.schema.org
      */
     public function relevantSpecialty($relevantSpecialty)
     {
@@ -459,7 +459,7 @@ class InfectiousDisease extends BaseType implements InfectiousDiseaseContract, M
      * @return static
      *
      * @see https://schema.org/riskFactor
-     * @see http://health-lifesci.schema.org
+     * @see https://health-lifesci.schema.org
      */
     public function riskFactor($riskFactor)
     {
@@ -491,7 +491,7 @@ class InfectiousDisease extends BaseType implements InfectiousDiseaseContract, M
      * @return static
      *
      * @see https://schema.org/secondaryPrevention
-     * @see http://health-lifesci.schema.org
+     * @see https://health-lifesci.schema.org
      */
     public function secondaryPrevention($secondaryPrevention)
     {
@@ -508,7 +508,7 @@ class InfectiousDisease extends BaseType implements InfectiousDiseaseContract, M
      * @return static
      *
      * @see https://schema.org/signOrSymptom
-     * @see http://health-lifesci.schema.org
+     * @see https://health-lifesci.schema.org
      */
     public function signOrSymptom($signOrSymptom)
     {
@@ -523,7 +523,7 @@ class InfectiousDisease extends BaseType implements InfectiousDiseaseContract, M
      * @return static
      *
      * @see https://schema.org/stage
-     * @see http://health-lifesci.schema.org
+     * @see https://health-lifesci.schema.org
      */
     public function stage($stage)
     {
@@ -538,7 +538,7 @@ class InfectiousDisease extends BaseType implements InfectiousDiseaseContract, M
      * @return static
      *
      * @see https://schema.org/status
-     * @see http://health-lifesci.schema.org
+     * @see https://health-lifesci.schema.org
      */
     public function status($status)
     {
@@ -553,7 +553,7 @@ class InfectiousDisease extends BaseType implements InfectiousDiseaseContract, M
      * @return static
      *
      * @see https://schema.org/study
-     * @see http://health-lifesci.schema.org
+     * @see https://health-lifesci.schema.org
      */
     public function study($study)
     {
@@ -584,7 +584,7 @@ class InfectiousDisease extends BaseType implements InfectiousDiseaseContract, M
      * @return static
      *
      * @see https://schema.org/transmissionMethod
-     * @see http://health-lifesci.schema.org
+     * @see https://health-lifesci.schema.org
      */
     public function transmissionMethod($transmissionMethod)
     {
@@ -599,7 +599,7 @@ class InfectiousDisease extends BaseType implements InfectiousDiseaseContract, M
      * @return static
      *
      * @see https://schema.org/typicalTest
-     * @see http://health-lifesci.schema.org
+     * @see https://health-lifesci.schema.org
      */
     public function typicalTest($typicalTest)
     {

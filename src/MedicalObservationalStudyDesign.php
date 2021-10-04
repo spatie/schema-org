@@ -12,7 +12,7 @@ use \Spatie\SchemaOrg\Contracts\ThingContract;
  * Design models for observational medical studies. Enumerated type.
  *
  * @see https://schema.org/MedicalObservationalStudyDesign
- * @see http://health-lifesci.schema.org
+ * @see https://health-lifesci.schema.org
  *
  * @method static supersededBy($supersededBy) The value should be instance of pending types Class|Class[]|Enumeration|Enumeration[]|Property|Property[]
  */
@@ -29,7 +29,7 @@ class MedicalObservationalStudyDesign extends BaseType implements MedicalObserva
      * period of time were included, or only a selection.
      *
      * @see https://schema.org/CaseSeries
-     * @see http://health-lifesci.schema.org
+     * @see https://health-lifesci.schema.org
      */
      const CaseSeries = 'https://schema.org/CaseSeries';
 
@@ -46,7 +46,7 @@ class MedicalObservationalStudyDesign extends BaseType implements MedicalObserva
      * cohort may be compared with each other.
      *
      * @see https://schema.org/CohortStudy
-     * @see http://health-lifesci.schema.org
+     * @see https://health-lifesci.schema.org
      */
      const CohortStudy = 'https://schema.org/CohortStudy';
 
@@ -56,7 +56,7 @@ class MedicalObservationalStudyDesign extends BaseType implements MedicalObserva
      * Prevalence Studies.
      *
      * @see https://schema.org/CrossSectional
-     * @see http://health-lifesci.schema.org
+     * @see https://health-lifesci.schema.org
      */
      const CrossSectional = 'https://schema.org/CrossSectional';
 
@@ -68,7 +68,7 @@ class MedicalObservationalStudyDesign extends BaseType implements MedicalObserva
      * certain diseases.
      *
      * @see https://schema.org/Longitudinal
-     * @see http://health-lifesci.schema.org
+     * @see https://health-lifesci.schema.org
      */
      const Longitudinal = 'https://schema.org/Longitudinal';
 
@@ -76,7 +76,7 @@ class MedicalObservationalStudyDesign extends BaseType implements MedicalObserva
      * An observational study design.
      *
      * @see https://schema.org/Observational
-     * @see http://health-lifesci.schema.org
+     * @see https://health-lifesci.schema.org
      */
      const Observational = 'https://schema.org/Observational';
 
@@ -84,7 +84,7 @@ class MedicalObservationalStudyDesign extends BaseType implements MedicalObserva
      * A registry-based study design.
      *
      * @see https://schema.org/Registry
-     * @see http://health-lifesci.schema.org
+     * @see https://health-lifesci.schema.org
      */
      const Registry = 'https://schema.org/Registry';
 

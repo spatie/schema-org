@@ -14,7 +14,7 @@ use \Spatie\SchemaOrg\Contracts\ThingContract;
  * A type of physical examination of a patient performed by a physician.
  *
  * @see https://schema.org/PhysicalExam
- * @see http://health-lifesci.schema.org
+ * @see https://health-lifesci.schema.org
  *
  * @method static supersededBy($supersededBy) The value should be instance of pending types Class|Class[]|Enumeration|Enumeration[]|Property|Property[]
  */
@@ -24,7 +24,7 @@ class PhysicalExam extends BaseType implements PhysicalExamContract, Enumeration
      * Abdomen clinical examination.
      *
      * @see https://schema.org/Abdomen
-     * @see http://health-lifesci.schema.org
+     * @see https://health-lifesci.schema.org
      */
      const Abdomen = 'https://schema.org/Abdomen';
 
@@ -32,7 +32,7 @@ class PhysicalExam extends BaseType implements PhysicalExamContract, Enumeration
      * Appearance assessment with clinical examination.
      *
      * @see https://schema.org/Appearance
-     * @see http://health-lifesci.schema.org
+     * @see https://health-lifesci.schema.org
      */
      const Appearance = 'https://schema.org/Appearance';
 
@@ -40,7 +40,7 @@ class PhysicalExam extends BaseType implements PhysicalExamContract, Enumeration
      * Cardiovascular system assessment withclinical examination.
      *
      * @see https://schema.org/CardiovascularExam
-     * @see http://health-lifesci.schema.org
+     * @see https://health-lifesci.schema.org
      */
      const CardiovascularExam = 'https://schema.org/CardiovascularExam';
 
@@ -48,7 +48,7 @@ class PhysicalExam extends BaseType implements PhysicalExamContract, Enumeration
      * Ear function assessment with clinical examination.
      *
      * @see https://schema.org/Ear
-     * @see http://health-lifesci.schema.org
+     * @see https://health-lifesci.schema.org
      */
      const Ear = 'https://schema.org/Ear';
 
@@ -56,7 +56,7 @@ class PhysicalExam extends BaseType implements PhysicalExamContract, Enumeration
      * Eye or ophtalmological function assessment with clinical examination.
      *
      * @see https://schema.org/Eye
-     * @see http://health-lifesci.schema.org
+     * @see https://health-lifesci.schema.org
      */
      const Eye = 'https://schema.org/Eye';
 
@@ -64,7 +64,7 @@ class PhysicalExam extends BaseType implements PhysicalExamContract, Enumeration
      * Genitourinary system function assessment with clinical examination.
      *
      * @see https://schema.org/Genitourinary
-     * @see http://health-lifesci.schema.org
+     * @see https://health-lifesci.schema.org
      */
      const Genitourinary = 'https://schema.org/Genitourinary';
 
@@ -72,7 +72,7 @@ class PhysicalExam extends BaseType implements PhysicalExamContract, Enumeration
      * Head assessment with clinical examination.
      *
      * @see https://schema.org/Head
-     * @see http://health-lifesci.schema.org
+     * @see https://health-lifesci.schema.org
      */
      const Head = 'https://schema.org/Head';
 
@@ -80,7 +80,7 @@ class PhysicalExam extends BaseType implements PhysicalExamContract, Enumeration
      * Lung and respiratory system clinical examination.
      *
      * @see https://schema.org/Lung
-     * @see http://health-lifesci.schema.org
+     * @see https://health-lifesci.schema.org
      */
      const Lung = 'https://schema.org/Lung';
 
@@ -88,7 +88,7 @@ class PhysicalExam extends BaseType implements PhysicalExamContract, Enumeration
      * Musculoskeletal system clinical examination.
      *
      * @see https://schema.org/MusculoskeletalExam
-     * @see http://health-lifesci.schema.org
+     * @see https://health-lifesci.schema.org
      */
      const MusculoskeletalExam = 'https://schema.org/MusculoskeletalExam';
 
@@ -96,7 +96,7 @@ class PhysicalExam extends BaseType implements PhysicalExamContract, Enumeration
      * Neck assessment with clinical examination.
      *
      * @see https://schema.org/Neck
-     * @see http://health-lifesci.schema.org
+     * @see https://health-lifesci.schema.org
      */
      const Neck = 'https://schema.org/Neck';
 
@@ -104,7 +104,7 @@ class PhysicalExam extends BaseType implements PhysicalExamContract, Enumeration
      * Neurological system clinical examination.
      *
      * @see https://schema.org/Neuro
-     * @see http://health-lifesci.schema.org
+     * @see https://health-lifesci.schema.org
      */
      const Neuro = 'https://schema.org/Neuro';
 
@@ -112,7 +112,7 @@ class PhysicalExam extends BaseType implements PhysicalExamContract, Enumeration
      * Nose function assessment with clinical examination.
      *
      * @see https://schema.org/Nose
-     * @see http://health-lifesci.schema.org
+     * @see https://health-lifesci.schema.org
      */
      const Nose = 'https://schema.org/Nose';
 
@@ -120,7 +120,7 @@ class PhysicalExam extends BaseType implements PhysicalExamContract, Enumeration
      * Skin assessment with clinical examination.
      *
      * @see https://schema.org/Skin
-     * @see http://health-lifesci.schema.org
+     * @see https://health-lifesci.schema.org
      */
      const Skin = 'https://schema.org/Skin';
 
@@ -128,7 +128,7 @@ class PhysicalExam extends BaseType implements PhysicalExamContract, Enumeration
      * Throat assessment with  clinical examination.
      *
      * @see https://schema.org/Throat
-     * @see http://health-lifesci.schema.org
+     * @see https://health-lifesci.schema.org
      */
      const Throat = 'https://schema.org/Throat';
 
@@ -173,7 +173,7 @@ class PhysicalExam extends BaseType implements PhysicalExamContract, Enumeration
      * @return static
      *
      * @see https://schema.org/bodyLocation
-     * @see http://health-lifesci.schema.org
+     * @see https://health-lifesci.schema.org
      */
     public function bodyLocation($bodyLocation)
     {
@@ -189,7 +189,7 @@ class PhysicalExam extends BaseType implements PhysicalExamContract, Enumeration
      * @return static
      *
      * @see https://schema.org/code
-     * @see http://health-lifesci.schema.org
+     * @see https://health-lifesci.schema.org
      */
     public function code($code)
     {
@@ -235,7 +235,7 @@ class PhysicalExam extends BaseType implements PhysicalExamContract, Enumeration
      * @return static
      *
      * @see https://schema.org/followup
-     * @see http://health-lifesci.schema.org
+     * @see https://health-lifesci.schema.org
      */
     public function followup($followup)
     {
@@ -250,7 +250,7 @@ class PhysicalExam extends BaseType implements PhysicalExamContract, Enumeration
      * @return static
      *
      * @see https://schema.org/guideline
-     * @see http://health-lifesci.schema.org
+     * @see https://health-lifesci.schema.org
      */
     public function guideline($guideline)
     {
@@ -265,7 +265,7 @@ class PhysicalExam extends BaseType implements PhysicalExamContract, Enumeration
      * @return static
      *
      * @see https://schema.org/howPerformed
-     * @see http://health-lifesci.schema.org
+     * @see https://health-lifesci.schema.org
      */
     public function howPerformed($howPerformed)
     {
@@ -314,7 +314,7 @@ class PhysicalExam extends BaseType implements PhysicalExamContract, Enumeration
      * @return static
      *
      * @see https://schema.org/legalStatus
-     * @see http://health-lifesci.schema.org
+     * @see https://health-lifesci.schema.org
      */
     public function legalStatus($legalStatus)
     {
@@ -346,7 +346,7 @@ class PhysicalExam extends BaseType implements PhysicalExamContract, Enumeration
      * @return static
      *
      * @see https://schema.org/medicineSystem
-     * @see http://health-lifesci.schema.org
+     * @see https://health-lifesci.schema.org
      */
     public function medicineSystem($medicineSystem)
     {
@@ -391,7 +391,7 @@ class PhysicalExam extends BaseType implements PhysicalExamContract, Enumeration
      * @return static
      *
      * @see https://schema.org/preparation
-     * @see http://health-lifesci.schema.org
+     * @see https://health-lifesci.schema.org
      */
     public function preparation($preparation)
     {
@@ -407,7 +407,7 @@ class PhysicalExam extends BaseType implements PhysicalExamContract, Enumeration
      * @return static
      *
      * @see https://schema.org/procedureType
-     * @see http://health-lifesci.schema.org
+     * @see https://health-lifesci.schema.org
      */
     public function procedureType($procedureType)
     {
@@ -423,7 +423,7 @@ class PhysicalExam extends BaseType implements PhysicalExamContract, Enumeration
      * @return static
      *
      * @see https://schema.org/recognizingAuthority
-     * @see http://health-lifesci.schema.org
+     * @see https://health-lifesci.schema.org
      */
     public function recognizingAuthority($recognizingAuthority)
     {
@@ -438,7 +438,7 @@ class PhysicalExam extends BaseType implements PhysicalExamContract, Enumeration
      * @return static
      *
      * @see https://schema.org/relevantSpecialty
-     * @see http://health-lifesci.schema.org
+     * @see https://health-lifesci.schema.org
      */
     public function relevantSpecialty($relevantSpecialty)
     {
@@ -469,7 +469,7 @@ class PhysicalExam extends BaseType implements PhysicalExamContract, Enumeration
      * @return static
      *
      * @see https://schema.org/status
-     * @see http://health-lifesci.schema.org
+     * @see https://health-lifesci.schema.org
      */
     public function status($status)
     {
@@ -484,7 +484,7 @@ class PhysicalExam extends BaseType implements PhysicalExamContract, Enumeration
      * @return static
      *
      * @see https://schema.org/study
-     * @see http://health-lifesci.schema.org
+     * @see https://health-lifesci.schema.org
      */
     public function study($study)
     {

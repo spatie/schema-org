@@ -14,7 +14,7 @@ use \Spatie\SchemaOrg\Contracts\ThingContract;
  * other considerations or mitigated by other measures).
  *
  * @see https://schema.org/MedicalContraindication
- * @see http://health-lifesci.schema.org
+ * @see https://health-lifesci.schema.org
  *
  */
 class MedicalContraindication extends BaseType implements MedicalContraindicationContract, MedicalEntityContract, ThingContract
@@ -61,7 +61,7 @@ class MedicalContraindication extends BaseType implements MedicalContraindicatio
      * @return static
      *
      * @see https://schema.org/code
-     * @see http://health-lifesci.schema.org
+     * @see https://health-lifesci.schema.org
      */
     public function code($code)
     {
@@ -107,7 +107,7 @@ class MedicalContraindication extends BaseType implements MedicalContraindicatio
      * @return static
      *
      * @see https://schema.org/guideline
-     * @see http://health-lifesci.schema.org
+     * @see https://health-lifesci.schema.org
      */
     public function guideline($guideline)
     {
@@ -156,7 +156,7 @@ class MedicalContraindication extends BaseType implements MedicalContraindicatio
      * @return static
      *
      * @see https://schema.org/legalStatus
-     * @see http://health-lifesci.schema.org
+     * @see https://health-lifesci.schema.org
      */
     public function legalStatus($legalStatus)
     {
@@ -188,7 +188,7 @@ class MedicalContraindication extends BaseType implements MedicalContraindicatio
      * @return static
      *
      * @see https://schema.org/medicineSystem
-     * @see http://health-lifesci.schema.org
+     * @see https://health-lifesci.schema.org
      */
     public function medicineSystem($medicineSystem)
     {
@@ -233,7 +233,7 @@ class MedicalContraindication extends BaseType implements MedicalContraindicatio
      * @return static
      *
      * @see https://schema.org/recognizingAuthority
-     * @see http://health-lifesci.schema.org
+     * @see https://health-lifesci.schema.org
      */
     public function recognizingAuthority($recognizingAuthority)
     {
@@ -248,7 +248,7 @@ class MedicalContraindication extends BaseType implements MedicalContraindicatio
      * @return static
      *
      * @see https://schema.org/relevantSpecialty
-     * @see http://health-lifesci.schema.org
+     * @see https://health-lifesci.schema.org
      */
     public function relevantSpecialty($relevantSpecialty)
     {
@@ -279,7 +279,7 @@ class MedicalContraindication extends BaseType implements MedicalContraindicatio
      * @return static
      *
      * @see https://schema.org/study
-     * @see http://health-lifesci.schema.org
+     * @see https://health-lifesci.schema.org
      */
     public function study($study)
     {

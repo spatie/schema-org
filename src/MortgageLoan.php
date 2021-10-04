@@ -14,7 +14,7 @@ use \Spatie\SchemaOrg\Contracts\ThingContract;
  * securitized against some real estate.)
  *
  * @see https://schema.org/MortgageLoan
- * @see http://pending.schema.org
+ * @see https://pending.schema.org
  *
  */
 class MortgageLoan extends BaseType implements MortgageLoanContract, FinancialProductContract, IntangibleContract, LoanOrCreditContract, ServiceContract, ThingContract
@@ -266,7 +266,7 @@ class MortgageLoan extends BaseType implements MortgageLoanContract, FinancialPr
      * @return static
      *
      * @see https://schema.org/domiciledMortgage
-     * @see http://pending.schema.org
+     * @see https://pending.schema.org
      */
     public function domiciledMortgage($domiciledMortgage)
     {
@@ -298,7 +298,7 @@ class MortgageLoan extends BaseType implements MortgageLoanContract, FinancialPr
      * @return static
      *
      * @see https://schema.org/gracePeriod
-     * @see http://pending.schema.org
+     * @see https://pending.schema.org
      */
     public function gracePeriod($gracePeriod)
     {
@@ -423,7 +423,7 @@ class MortgageLoan extends BaseType implements MortgageLoanContract, FinancialPr
      * @return static
      *
      * @see https://schema.org/loanMortgageMandateAmount
-     * @see http://pending.schema.org
+     * @see https://pending.schema.org
      */
     public function loanMortgageMandateAmount($loanMortgageMandateAmount)
     {
@@ -440,7 +440,7 @@ class MortgageLoan extends BaseType implements MortgageLoanContract, FinancialPr
      * @return static
      *
      * @see https://schema.org/loanRepaymentForm
-     * @see http://pending.schema.org
+     * @see https://pending.schema.org
      */
     public function loanRepaymentForm($loanRepaymentForm)
     {
@@ -470,7 +470,7 @@ class MortgageLoan extends BaseType implements MortgageLoanContract, FinancialPr
      * @return static
      *
      * @see https://schema.org/loanType
-     * @see http://pending.schema.org
+     * @see https://pending.schema.org
      */
     public function loanType($loanType)
     {
@@ -615,7 +615,7 @@ class MortgageLoan extends BaseType implements MortgageLoanContract, FinancialPr
      * @return static
      *
      * @see https://schema.org/recourseLoan
-     * @see http://pending.schema.org
+     * @see https://pending.schema.org
      */
     public function recourseLoan($recourseLoan)
     {
@@ -631,7 +631,7 @@ class MortgageLoan extends BaseType implements MortgageLoanContract, FinancialPr
      * @return static
      *
      * @see https://schema.org/renegotiableLoan
-     * @see http://pending.schema.org
+     * @see https://pending.schema.org
      */
     public function renegotiableLoan($renegotiableLoan)
     {
@@ -779,7 +779,7 @@ class MortgageLoan extends BaseType implements MortgageLoanContract, FinancialPr
      * @return static
      *
      * @see https://schema.org/termsOfService
-     * @see http://pending.schema.org
+     * @see https://pending.schema.org
      * @link https://github.com/schemaorg/schemaorg/issues/1423
      */
     public function termsOfService($termsOfService)

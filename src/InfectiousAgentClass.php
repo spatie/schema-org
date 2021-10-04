@@ -13,7 +13,7 @@ use \Spatie\SchemaOrg\Contracts\ThingContract;
  * type.
  *
  * @see https://schema.org/InfectiousAgentClass
- * @see http://health-lifesci.schema.org
+ * @see https://health-lifesci.schema.org
  *
  * @method static supersededBy($supersededBy) The value should be instance of pending types Class|Class[]|Enumeration|Enumeration[]|Property|Property[]
  */
@@ -23,7 +23,7 @@ class InfectiousAgentClass extends BaseType implements InfectiousAgentClassContr
      * Pathogenic bacteria that cause bacterial infection.
      *
      * @see https://schema.org/Bacteria
-     * @see http://health-lifesci.schema.org
+     * @see https://health-lifesci.schema.org
      */
      const Bacteria = 'https://schema.org/Bacteria';
 
@@ -31,7 +31,7 @@ class InfectiousAgentClass extends BaseType implements InfectiousAgentClassContr
      * Pathogenic fungus.
      *
      * @see https://schema.org/Fungus
-     * @see http://health-lifesci.schema.org
+     * @see https://health-lifesci.schema.org
      */
      const Fungus = 'https://schema.org/Fungus';
 
@@ -39,7 +39,7 @@ class InfectiousAgentClass extends BaseType implements InfectiousAgentClassContr
      * Multicellular parasite that causes an infection.
      *
      * @see https://schema.org/MulticellularParasite
-     * @see http://health-lifesci.schema.org
+     * @see https://health-lifesci.schema.org
      */
      const MulticellularParasite = 'https://schema.org/MulticellularParasite';
 
@@ -47,7 +47,7 @@ class InfectiousAgentClass extends BaseType implements InfectiousAgentClassContr
      * A prion is an infectious agent composed of protein in a misfolded form.
      *
      * @see https://schema.org/Prion
-     * @see http://health-lifesci.schema.org
+     * @see https://health-lifesci.schema.org
      */
      const Prion = 'https://schema.org/Prion';
 
@@ -55,7 +55,7 @@ class InfectiousAgentClass extends BaseType implements InfectiousAgentClassContr
      * Single-celled organism that causes an infection.
      *
      * @see https://schema.org/Protozoa
-     * @see http://health-lifesci.schema.org
+     * @see https://health-lifesci.schema.org
      */
      const Protozoa = 'https://schema.org/Protozoa';
 
@@ -63,7 +63,7 @@ class InfectiousAgentClass extends BaseType implements InfectiousAgentClassContr
      * Pathogenic virus that causes viral infection.
      *
      * @see https://schema.org/Virus
-     * @see http://health-lifesci.schema.org
+     * @see https://health-lifesci.schema.org
      */
      const Virus = 'https://schema.org/Virus';
 

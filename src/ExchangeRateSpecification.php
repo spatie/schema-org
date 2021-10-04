@@ -11,7 +11,7 @@ use \Spatie\SchemaOrg\Contracts\ThingContract;
  * A structured value representing exchange rate.
  *
  * @see https://schema.org/ExchangeRateSpecification
- * @see http://pending.schema.org
+ * @see https://pending.schema.org
  *
  */
 class ExchangeRateSpecification extends BaseType implements ExchangeRateSpecificationContract, IntangibleContract, StructuredValueContract, ThingContract
@@ -80,7 +80,7 @@ class ExchangeRateSpecification extends BaseType implements ExchangeRateSpecific
      * @return static
      *
      * @see https://schema.org/currentExchangeRate
-     * @see http://pending.schema.org
+     * @see https://pending.schema.org
      */
     public function currentExchangeRate($currentExchangeRate)
     {
@@ -127,7 +127,7 @@ class ExchangeRateSpecification extends BaseType implements ExchangeRateSpecific
      * @return static
      *
      * @see https://schema.org/exchangeRateSpread
-     * @see http://pending.schema.org
+     * @see https://pending.schema.org
      */
     public function exchangeRateSpread($exchangeRateSpread)
     {

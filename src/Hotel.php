@@ -34,7 +34,7 @@ class Hotel extends BaseType implements HotelContract, LocalBusinessContract, Lo
      * @return static
      *
      * @see https://schema.org/actionableFeedbackPolicy
-     * @see http://pending.schema.org
+     * @see https://pending.schema.org
      */
     public function actionableFeedbackPolicy($actionableFeedbackPolicy)
     {
@@ -388,7 +388,7 @@ class Hotel extends BaseType implements HotelContract, LocalBusinessContract, Lo
      * @return static
      *
      * @see https://schema.org/correctionsPolicy
-     * @see http://pending.schema.org
+     * @see https://pending.schema.org
      */
     public function correctionsPolicy($correctionsPolicy)
     {
@@ -490,7 +490,7 @@ class Hotel extends BaseType implements HotelContract, LocalBusinessContract, Lo
      * @return static
      *
      * @see https://schema.org/diversityPolicy
-     * @see http://pending.schema.org
+     * @see https://pending.schema.org
      */
     public function diversityPolicy($diversityPolicy)
     {
@@ -508,7 +508,7 @@ class Hotel extends BaseType implements HotelContract, LocalBusinessContract, Lo
      * @return static
      *
      * @see https://schema.org/diversityStaffingReport
-     * @see http://pending.schema.org
+     * @see https://pending.schema.org
      */
     public function diversityStaffingReport($diversityStaffingReport)
     {
@@ -586,7 +586,7 @@ class Hotel extends BaseType implements HotelContract, LocalBusinessContract, Lo
      * @return static
      *
      * @see https://schema.org/ethicsPolicy
-     * @see http://pending.schema.org
+     * @see https://pending.schema.org
      * @link https://github.com/schemaorg/schemaorg/issues/1525
      */
     public function ethicsPolicy($ethicsPolicy)
@@ -920,7 +920,7 @@ class Hotel extends BaseType implements HotelContract, LocalBusinessContract, Lo
      * @return static
      *
      * @see https://schema.org/hasCredential
-     * @see http://pending.schema.org
+     * @see https://pending.schema.org
      * @link https://github.com/schemaorg/schemaorg/issues/2289
      */
     public function hasCredential($hasCredential)
@@ -940,7 +940,7 @@ class Hotel extends BaseType implements HotelContract, LocalBusinessContract, Lo
      * @return static
      *
      * @see https://schema.org/hasDriveThroughService
-     * @see http://pending.schema.org
+     * @see https://pending.schema.org
      * @link https://github.com/schemaorg/schemaorg/issues/2490
      */
     public function hasDriveThroughService($hasDriveThroughService)
@@ -970,7 +970,7 @@ class Hotel extends BaseType implements HotelContract, LocalBusinessContract, Lo
      * @return static
      *
      * @see https://schema.org/hasMerchantReturnPolicy
-     * @see http://pending.schema.org
+     * @see https://pending.schema.org
      * @link https://github.com/schemaorg/schemaorg/issues/2288
      */
     public function hasMerchantReturnPolicy($hasMerchantReturnPolicy)
@@ -1016,7 +1016,7 @@ class Hotel extends BaseType implements HotelContract, LocalBusinessContract, Lo
      * @return static
      *
      * @see https://schema.org/hasProductReturnPolicy
-     * @see http://attic.schema.org
+     * @see https://attic.schema.org
      * @link https://github.com/schemaorg/schemaorg/issues/2288
      */
     public function hasProductReturnPolicy($hasProductReturnPolicy)
@@ -1116,7 +1116,7 @@ class Hotel extends BaseType implements HotelContract, LocalBusinessContract, Lo
      * @return static
      *
      * @see https://schema.org/knowsAbout
-     * @see http://pending.schema.org
+     * @see https://pending.schema.org
      */
     public function knowsAbout($knowsAbout)
     {
@@ -1134,7 +1134,7 @@ class Hotel extends BaseType implements HotelContract, LocalBusinessContract, Lo
      * @return static
      *
      * @see https://schema.org/knowsLanguage
-     * @see http://pending.schema.org
+     * @see https://pending.schema.org
      */
     public function knowsLanguage($knowsLanguage)
     {
@@ -1387,7 +1387,7 @@ class Hotel extends BaseType implements HotelContract, LocalBusinessContract, Lo
      * @return static
      *
      * @see https://schema.org/nonprofitStatus
-     * @see http://pending.schema.org
+     * @see https://pending.schema.org
      * @link https://github.com/schemaorg/schemaorg/issues/2543
      */
     public function nonprofitStatus($nonprofitStatus)
@@ -1482,7 +1482,7 @@ class Hotel extends BaseType implements HotelContract, LocalBusinessContract, Lo
      * @return static
      *
      * @see https://schema.org/ownershipFundingInfo
-     * @see http://pending.schema.org
+     * @see https://pending.schema.org
      */
     public function ownershipFundingInfo($ownershipFundingInfo)
     {
@@ -1871,7 +1871,7 @@ class Hotel extends BaseType implements HotelContract, LocalBusinessContract, Lo
      * @return static
      *
      * @see https://schema.org/tourBookingPage
-     * @see http://pending.schema.org
+     * @see https://pending.schema.org
      * @link https://github.com/schemaorg/schemaorg/issues/2373
      */
     public function tourBookingPage($tourBookingPage)
@@ -1889,7 +1889,7 @@ class Hotel extends BaseType implements HotelContract, LocalBusinessContract, Lo
      * @return static
      *
      * @see https://schema.org/unnamedSourcesPolicy
-     * @see http://pending.schema.org
+     * @see https://pending.schema.org
      */
     public function unnamedSourcesPolicy($unnamedSourcesPolicy)
     {

@@ -118,7 +118,7 @@ class PeopleAudience extends BaseType implements PeopleAudienceContract, Audienc
      * @return static
      *
      * @see https://schema.org/healthCondition
-     * @see http://health-lifesci.schema.org
+     * @see https://health-lifesci.schema.org
      */
     public function healthCondition($healthCondition)
     {

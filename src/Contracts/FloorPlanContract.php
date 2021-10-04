@@ -22,6 +22,8 @@ interface FloorPlanContract
 
     public function isPlanForApartment($isPlanForApartment);
 
+    public function layoutImage($layoutImage);
+
     public function mainEntityOfPage($mainEntityOfPage);
 
     public function name($name);

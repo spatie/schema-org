@@ -16,7 +16,7 @@ use \Spatie\SchemaOrg\Contracts\ThingContract;
  * Enumerated type.
  *
  * @see https://schema.org/MedicalSpecialty
- * @see http://health-lifesci.schema.org
+ * @see https://health-lifesci.schema.org
  *
  * @method static supersededBy($supersededBy) The value should be instance of pending types Class|Class[]|Enumeration|Enumeration[]|Property|Property[]
  */
@@ -27,7 +27,7 @@ class MedicalSpecialty extends BaseType implements MedicalSpecialtyContract, Enu
      * anesthetics and their application.
      *
      * @see https://schema.org/Anesthesia
-     * @see http://health-lifesci.schema.org
+     * @see https://health-lifesci.schema.org
      */
      const Anesthesia = 'https://schema.org/Anesthesia';
 
@@ -36,7 +36,7 @@ class MedicalSpecialty extends BaseType implements MedicalSpecialtyContract, Enu
      * treatment of disorders of heart and vasculature.
      *
      * @see https://schema.org/Cardiovascular
-     * @see http://health-lifesci.schema.org
+     * @see https://health-lifesci.schema.org
      */
      const Cardiovascular = 'https://schema.org/Cardiovascular';
 
@@ -46,7 +46,7 @@ class MedicalSpecialty extends BaseType implements MedicalSpecialtyContract, Enu
      * areas
      *
      * @see https://schema.org/CommunityHealth
-     * @see http://health-lifesci.schema.org
+     * @see https://health-lifesci.schema.org
      */
      const CommunityHealth = 'https://schema.org/CommunityHealth';
 
@@ -54,7 +54,7 @@ class MedicalSpecialty extends BaseType implements MedicalSpecialtyContract, Enu
      * A branch of medicine that is involved in the dental care.
      *
      * @see https://schema.org/Dentistry
-     * @see http://health-lifesci.schema.org
+     * @see https://health-lifesci.schema.org
      */
      const Dentistry = 'https://schema.org/Dentistry';
 
@@ -62,7 +62,7 @@ class MedicalSpecialty extends BaseType implements MedicalSpecialtyContract, Enu
      * Something relating to or practicing dermatology
      *
      * @see https://schema.org/Dermatologic
-     * @see http://health-lifesci.schema.org
+     * @see https://health-lifesci.schema.org
      */
      const Dermatologic = 'https://schema.org/Dermatologic';
 
@@ -71,7 +71,7 @@ class MedicalSpecialty extends BaseType implements MedicalSpecialtyContract, Enu
      * treatment of disorders of skin.
      *
      * @see https://schema.org/Dermatology
-     * @see http://health-lifesci.schema.org
+     * @see https://health-lifesci.schema.org
      */
      const Dermatology = 'https://schema.org/Dermatology';
 
@@ -79,7 +79,7 @@ class MedicalSpecialty extends BaseType implements MedicalSpecialtyContract, Enu
      * Dietetic and nutrition as a medical speciality.
      *
      * @see https://schema.org/DietNutrition
-     * @see http://health-lifesci.schema.org
+     * @see https://health-lifesci.schema.org
      */
      const DietNutrition = 'https://schema.org/DietNutrition';
 
@@ -89,7 +89,7 @@ class MedicalSpecialty extends BaseType implements MedicalSpecialtyContract, Enu
      * illness.
      *
      * @see https://schema.org/Emergency
-     * @see http://health-lifesci.schema.org
+     * @see https://health-lifesci.schema.org
      */
      const Emergency = 'https://schema.org/Emergency';
 
@@ -98,7 +98,7 @@ class MedicalSpecialty extends BaseType implements MedicalSpecialtyContract, Enu
      * treatment of disorders of endocrine glands and their secretions.
      *
      * @see https://schema.org/Endocrine
-     * @see http://health-lifesci.schema.org
+     * @see https://health-lifesci.schema.org
      */
      const Endocrine = 'https://schema.org/Endocrine';
 
@@ -107,7 +107,7 @@ class MedicalSpecialty extends BaseType implements MedicalSpecialtyContract, Enu
      * treatment of disorders of digestive system.
      *
      * @see https://schema.org/Gastroenterologic
-     * @see http://health-lifesci.schema.org
+     * @see https://health-lifesci.schema.org
      */
      const Gastroenterologic = 'https://schema.org/Gastroenterologic';
 
@@ -117,7 +117,7 @@ class MedicalSpecialty extends BaseType implements MedicalSpecialtyContract, Enu
      * disorders.
      *
      * @see https://schema.org/Genetic
-     * @see http://health-lifesci.schema.org
+     * @see https://health-lifesci.schema.org
      */
      const Genetic = 'https://schema.org/Genetic';
 
@@ -126,7 +126,7 @@ class MedicalSpecialty extends BaseType implements MedicalSpecialtyContract, Enu
      * and treatment of diseases, debilities and provision of care to the aged.
      *
      * @see https://schema.org/Geriatric
-     * @see http://health-lifesci.schema.org
+     * @see https://health-lifesci.schema.org
      */
      const Geriatric = 'https://schema.org/Geriatric';
 
@@ -136,7 +136,7 @@ class MedicalSpecialty extends BaseType implements MedicalSpecialtyContract, Enu
      * the female reproductive system.
      *
      * @see https://schema.org/Gynecologic
-     * @see http://health-lifesci.schema.org
+     * @see https://health-lifesci.schema.org
      */
      const Gynecologic = 'https://schema.org/Gynecologic';
 
@@ -145,7 +145,7 @@ class MedicalSpecialty extends BaseType implements MedicalSpecialtyContract, Enu
      * treatment of disorders of blood and blood producing organs.
      *
      * @see https://schema.org/Hematologic
-     * @see http://health-lifesci.schema.org
+     * @see https://health-lifesci.schema.org
      */
      const Hematologic = 'https://schema.org/Hematologic';
 
@@ -154,7 +154,7 @@ class MedicalSpecialty extends BaseType implements MedicalSpecialtyContract, Enu
      * caused by bacterial, viral, fungal or parasitic infections.
      *
      * @see https://schema.org/Infectious
-     * @see http://health-lifesci.schema.org
+     * @see https://health-lifesci.schema.org
      */
      const Infectious = 'https://schema.org/Infectious';
 
@@ -163,7 +163,7 @@ class MedicalSpecialty extends BaseType implements MedicalSpecialtyContract, Enu
      * microscopic, or bacteriological diagnostic analyses or research
      *
      * @see https://schema.org/LaboratoryScience
-     * @see http://health-lifesci.schema.org
+     * @see https://health-lifesci.schema.org
      */
      const LaboratoryScience = 'https://schema.org/LaboratoryScience';
 
@@ -173,7 +173,7 @@ class MedicalSpecialty extends BaseType implements MedicalSpecialtyContract, Enu
      * reproductive health of women throughout their lives.
      *
      * @see https://schema.org/Midwifery
-     * @see http://health-lifesci.schema.org
+     * @see https://health-lifesci.schema.org
      */
      const Midwifery = 'https://schema.org/Midwifery';
 
@@ -182,7 +182,7 @@ class MedicalSpecialty extends BaseType implements MedicalSpecialtyContract, Enu
      * treatment of disorders of muscles, ligaments and skeletal system.
      *
      * @see https://schema.org/Musculoskeletal
-     * @see http://health-lifesci.schema.org
+     * @see https://health-lifesci.schema.org
      */
      const Musculoskeletal = 'https://schema.org/Musculoskeletal';
 
@@ -191,7 +191,7 @@ class MedicalSpecialty extends BaseType implements MedicalSpecialtyContract, Enu
      * system and its respective disease states.
      *
      * @see https://schema.org/Neurologic
-     * @see http://health-lifesci.schema.org
+     * @see https://health-lifesci.schema.org
      */
      const Neurologic = 'https://schema.org/Neurologic';
 
@@ -200,7 +200,7 @@ class MedicalSpecialty extends BaseType implements MedicalSpecialtyContract, Enu
      * of the sick or infirm person.
      *
      * @see https://schema.org/Nursing
-     * @see http://health-lifesci.schema.org
+     * @see https://health-lifesci.schema.org
      */
      const Nursing = 'https://schema.org/Nursing';
 
@@ -210,7 +210,7 @@ class MedicalSpecialty extends BaseType implements MedicalSpecialtyContract, Enu
      * child.
      *
      * @see https://schema.org/Obstetric
-     * @see http://health-lifesci.schema.org
+     * @see https://health-lifesci.schema.org
      */
      const Obstetric = 'https://schema.org/Obstetric';
 
@@ -220,7 +220,7 @@ class MedicalSpecialty extends BaseType implements MedicalSpecialtyContract, Enu
      * and prevention.
      *
      * @see https://schema.org/Oncologic
-     * @see http://health-lifesci.schema.org
+     * @see https://health-lifesci.schema.org
      */
      const Oncologic = 'https://schema.org/Oncologic';
 
@@ -229,7 +229,7 @@ class MedicalSpecialty extends BaseType implements MedicalSpecialtyContract, Enu
      * corrective lenses.
      *
      * @see https://schema.org/Optometric
-     * @see http://health-lifesci.schema.org
+     * @see https://health-lifesci.schema.org
      */
      const Optometric = 'https://schema.org/Optometric';
 
@@ -238,7 +238,7 @@ class MedicalSpecialty extends BaseType implements MedicalSpecialtyContract, Enu
      * and throat and their respective disease states.
      *
      * @see https://schema.org/Otolaryngologic
-     * @see http://health-lifesci.schema.org
+     * @see https://health-lifesci.schema.org
      */
      const Otolaryngologic = 'https://schema.org/Otolaryngologic';
 
@@ -250,7 +250,7 @@ class MedicalSpecialty extends BaseType implements MedicalSpecialtyContract, Enu
      * tests to diagnose and determine the prognostic significance of illness.
      *
      * @see https://schema.org/Pathology
-     * @see http://health-lifesci.schema.org
+     * @see https://health-lifesci.schema.org
      */
      const Pathology = 'https://schema.org/Pathology';
 
@@ -259,7 +259,7 @@ class MedicalSpecialty extends BaseType implements MedicalSpecialtyContract, Enu
      * infants, children and adolescents.
      *
      * @see https://schema.org/Pediatric
-     * @see http://health-lifesci.schema.org
+     * @see https://health-lifesci.schema.org
      */
      const Pediatric = 'https://schema.org/Pediatric';
 
@@ -268,7 +268,7 @@ class MedicalSpecialty extends BaseType implements MedicalSpecialtyContract, Enu
      * medicines.
      *
      * @see https://schema.org/PharmacySpecialty
-     * @see http://health-lifesci.schema.org
+     * @see https://health-lifesci.schema.org
      */
      const PharmacySpecialty = 'https://schema.org/PharmacySpecialty';
 
@@ -278,7 +278,7 @@ class MedicalSpecialty extends BaseType implements MedicalSpecialtyContract, Enu
      * drugs or surgery..
      *
      * @see https://schema.org/Physiotherapy
-     * @see http://health-lifesci.schema.org
+     * @see https://health-lifesci.schema.org
      */
      const Physiotherapy = 'https://schema.org/Physiotherapy';
 
@@ -288,7 +288,7 @@ class MedicalSpecialty extends BaseType implements MedicalSpecialtyContract, Enu
      * or body parts by manual and instrumental means.
      *
      * @see https://schema.org/PlasticSurgery
-     * @see http://health-lifesci.schema.org
+     * @see https://health-lifesci.schema.org
      */
      const PlasticSurgery = 'https://schema.org/PlasticSurgery';
 
@@ -297,7 +297,7 @@ class MedicalSpecialty extends BaseType implements MedicalSpecialtyContract, Enu
      * treatment of foot disorders.
      *
      * @see https://schema.org/Podiatric
-     * @see http://health-lifesci.schema.org
+     * @see https://health-lifesci.schema.org
      */
      const Podiatric = 'https://schema.org/Podiatric';
 
@@ -307,7 +307,7 @@ class MedicalSpecialty extends BaseType implements MedicalSpecialtyContract, Enu
      * recommend a specialist if necessary.
      *
      * @see https://schema.org/PrimaryCare
-     * @see http://health-lifesci.schema.org
+     * @see https://health-lifesci.schema.org
      */
      const PrimaryCare = 'https://schema.org/PrimaryCare';
 
@@ -317,7 +317,7 @@ class MedicalSpecialty extends BaseType implements MedicalSpecialtyContract, Enu
      * psychological therapies.
      *
      * @see https://schema.org/Psychiatric
-     * @see http://health-lifesci.schema.org
+     * @see https://health-lifesci.schema.org
      */
      const Psychiatric = 'https://schema.org/Psychiatric';
 
@@ -327,7 +327,7 @@ class MedicalSpecialty extends BaseType implements MedicalSpecialtyContract, Enu
      * immunization, and preventive medicine.
      *
      * @see https://schema.org/PublicHealth
-     * @see http://health-lifesci.schema.org
+     * @see https://health-lifesci.schema.org
      */
      const PublicHealth = 'https://schema.org/PublicHealth';
 
@@ -336,7 +336,7 @@ class MedicalSpecialty extends BaseType implements MedicalSpecialtyContract, Enu
      * respiratory system and its respective disease states.
      *
      * @see https://schema.org/Pulmonary
-     * @see http://health-lifesci.schema.org
+     * @see https://health-lifesci.schema.org
      */
      const Pulmonary = 'https://schema.org/Pulmonary';
 
@@ -345,7 +345,7 @@ class MedicalSpecialty extends BaseType implements MedicalSpecialtyContract, Enu
      * kidneys and its respective disease states.
      *
      * @see https://schema.org/Renal
-     * @see http://health-lifesci.schema.org
+     * @see https://health-lifesci.schema.org
      */
      const Renal = 'https://schema.org/Renal';
 
@@ -354,7 +354,7 @@ class MedicalSpecialty extends BaseType implements MedicalSpecialtyContract, Enu
      * respiratory function (as in patients with pulmonary disease).
      *
      * @see https://schema.org/RespiratoryTherapy
-     * @see http://health-lifesci.schema.org
+     * @see https://health-lifesci.schema.org
      */
      const RespiratoryTherapy = 'https://schema.org/RespiratoryTherapy';
 
@@ -363,7 +363,7 @@ class MedicalSpecialty extends BaseType implements MedicalSpecialtyContract, Enu
      * treatment of rheumatic, autoimmune or joint diseases.
      *
      * @see https://schema.org/Rheumatologic
-     * @see http://health-lifesci.schema.org
+     * @see https://health-lifesci.schema.org
      */
      const Rheumatologic = 'https://schema.org/Rheumatologic';
 
@@ -373,7 +373,7 @@ class MedicalSpecialty extends BaseType implements MedicalSpecialtyContract, Enu
      * of language disturbances, as aphasia or delayed language acquisition.
      *
      * @see https://schema.org/SpeechPathology
-     * @see http://health-lifesci.schema.org
+     * @see https://health-lifesci.schema.org
      */
      const SpeechPathology = 'https://schema.org/SpeechPathology';
 
@@ -382,7 +382,7 @@ class MedicalSpecialty extends BaseType implements MedicalSpecialtyContract, Enu
      * injuries and deformities by manual and instrumental means.
      *
      * @see https://schema.org/Surgical
-     * @see http://health-lifesci.schema.org
+     * @see https://health-lifesci.schema.org
      */
      const Surgical = 'https://schema.org/Surgical';
 
@@ -392,7 +392,7 @@ class MedicalSpecialty extends BaseType implements MedicalSpecialtyContract, Enu
      * poisoning.
      *
      * @see https://schema.org/Toxicologic
-     * @see http://health-lifesci.schema.org
+     * @see https://health-lifesci.schema.org
      */
      const Toxicologic = 'https://schema.org/Toxicologic';
 
@@ -402,7 +402,7 @@ class MedicalSpecialty extends BaseType implements MedicalSpecialtyContract, Enu
      * urogenital system.
      *
      * @see https://schema.org/Urologic
-     * @see http://health-lifesci.schema.org
+     * @see https://health-lifesci.schema.org
      */
      const Urologic = 'https://schema.org/Urologic';
 

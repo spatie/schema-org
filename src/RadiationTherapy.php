@@ -13,7 +13,7 @@ use \Spatie\SchemaOrg\Contracts\ThingContract;
  * A process of care using radiation aimed at improving a health condition.
  *
  * @see https://schema.org/RadiationTherapy
- * @see http://health-lifesci.schema.org
+ * @see https://health-lifesci.schema.org
  *
  */
 class RadiationTherapy extends BaseType implements RadiationTherapyContract, MedicalEntityContract, MedicalProcedureContract, MedicalTherapyContract, TherapeuticProcedureContract, ThingContract
@@ -49,7 +49,7 @@ class RadiationTherapy extends BaseType implements RadiationTherapyContract, Med
      * @return static
      *
      * @see https://schema.org/adverseOutcome
-     * @see http://health-lifesci.schema.org
+     * @see https://health-lifesci.schema.org
      */
     public function adverseOutcome($adverseOutcome)
     {
@@ -78,7 +78,7 @@ class RadiationTherapy extends BaseType implements RadiationTherapyContract, Med
      * @return static
      *
      * @see https://schema.org/bodyLocation
-     * @see http://health-lifesci.schema.org
+     * @see https://health-lifesci.schema.org
      */
     public function bodyLocation($bodyLocation)
     {
@@ -94,7 +94,7 @@ class RadiationTherapy extends BaseType implements RadiationTherapyContract, Med
      * @return static
      *
      * @see https://schema.org/code
-     * @see http://health-lifesci.schema.org
+     * @see https://health-lifesci.schema.org
      */
     public function code($code)
     {
@@ -109,7 +109,7 @@ class RadiationTherapy extends BaseType implements RadiationTherapyContract, Med
      * @return static
      *
      * @see https://schema.org/contraindication
-     * @see http://health-lifesci.schema.org
+     * @see https://health-lifesci.schema.org
      */
     public function contraindication($contraindication)
     {
@@ -156,7 +156,7 @@ class RadiationTherapy extends BaseType implements RadiationTherapyContract, Med
      * @return static
      *
      * @see https://schema.org/doseSchedule
-     * @see http://health-lifesci.schema.org
+     * @see https://health-lifesci.schema.org
      */
     public function doseSchedule($doseSchedule)
     {
@@ -171,7 +171,7 @@ class RadiationTherapy extends BaseType implements RadiationTherapyContract, Med
      * @return static
      *
      * @see https://schema.org/drug
-     * @see http://health-lifesci.schema.org
+     * @see https://health-lifesci.schema.org
      */
     public function drug($drug)
     {
@@ -186,7 +186,7 @@ class RadiationTherapy extends BaseType implements RadiationTherapyContract, Med
      * @return static
      *
      * @see https://schema.org/duplicateTherapy
-     * @see http://health-lifesci.schema.org
+     * @see https://health-lifesci.schema.org
      */
     public function duplicateTherapy($duplicateTherapy)
     {
@@ -201,7 +201,7 @@ class RadiationTherapy extends BaseType implements RadiationTherapyContract, Med
      * @return static
      *
      * @see https://schema.org/followup
-     * @see http://health-lifesci.schema.org
+     * @see https://health-lifesci.schema.org
      */
     public function followup($followup)
     {
@@ -216,7 +216,7 @@ class RadiationTherapy extends BaseType implements RadiationTherapyContract, Med
      * @return static
      *
      * @see https://schema.org/guideline
-     * @see http://health-lifesci.schema.org
+     * @see https://health-lifesci.schema.org
      */
     public function guideline($guideline)
     {
@@ -231,7 +231,7 @@ class RadiationTherapy extends BaseType implements RadiationTherapyContract, Med
      * @return static
      *
      * @see https://schema.org/howPerformed
-     * @see http://health-lifesci.schema.org
+     * @see https://health-lifesci.schema.org
      */
     public function howPerformed($howPerformed)
     {
@@ -280,7 +280,7 @@ class RadiationTherapy extends BaseType implements RadiationTherapyContract, Med
      * @return static
      *
      * @see https://schema.org/legalStatus
-     * @see http://health-lifesci.schema.org
+     * @see https://health-lifesci.schema.org
      */
     public function legalStatus($legalStatus)
     {
@@ -312,7 +312,7 @@ class RadiationTherapy extends BaseType implements RadiationTherapyContract, Med
      * @return static
      *
      * @see https://schema.org/medicineSystem
-     * @see http://health-lifesci.schema.org
+     * @see https://health-lifesci.schema.org
      */
     public function medicineSystem($medicineSystem)
     {
@@ -357,7 +357,7 @@ class RadiationTherapy extends BaseType implements RadiationTherapyContract, Med
      * @return static
      *
      * @see https://schema.org/preparation
-     * @see http://health-lifesci.schema.org
+     * @see https://health-lifesci.schema.org
      */
     public function preparation($preparation)
     {
@@ -373,7 +373,7 @@ class RadiationTherapy extends BaseType implements RadiationTherapyContract, Med
      * @return static
      *
      * @see https://schema.org/procedureType
-     * @see http://health-lifesci.schema.org
+     * @see https://health-lifesci.schema.org
      */
     public function procedureType($procedureType)
     {
@@ -389,7 +389,7 @@ class RadiationTherapy extends BaseType implements RadiationTherapyContract, Med
      * @return static
      *
      * @see https://schema.org/recognizingAuthority
-     * @see http://health-lifesci.schema.org
+     * @see https://health-lifesci.schema.org
      */
     public function recognizingAuthority($recognizingAuthority)
     {
@@ -404,7 +404,7 @@ class RadiationTherapy extends BaseType implements RadiationTherapyContract, Med
      * @return static
      *
      * @see https://schema.org/relevantSpecialty
-     * @see http://health-lifesci.schema.org
+     * @see https://health-lifesci.schema.org
      */
     public function relevantSpecialty($relevantSpecialty)
     {
@@ -441,7 +441,7 @@ class RadiationTherapy extends BaseType implements RadiationTherapyContract, Med
      * @return static
      *
      * @see https://schema.org/seriousAdverseOutcome
-     * @see http://health-lifesci.schema.org
+     * @see https://health-lifesci.schema.org
      */
     public function seriousAdverseOutcome($seriousAdverseOutcome)
     {
@@ -456,7 +456,7 @@ class RadiationTherapy extends BaseType implements RadiationTherapyContract, Med
      * @return static
      *
      * @see https://schema.org/status
-     * @see http://health-lifesci.schema.org
+     * @see https://health-lifesci.schema.org
      */
     public function status($status)
     {
@@ -471,7 +471,7 @@ class RadiationTherapy extends BaseType implements RadiationTherapyContract, Med
      * @return static
      *
      * @see https://schema.org/study
-     * @see http://health-lifesci.schema.org
+     * @see https://health-lifesci.schema.org
      */
     public function study($study)
     {

@@ -11,7 +11,7 @@ use \Spatie\SchemaOrg\Contracts\ThingContract;
  * A list of possible levels for the legal validity of a legislation.
  *
  * @see https://schema.org/LegalValueLevel
- * @see http://pending.schema.org
+ * @see https://pending.schema.org
  *
  * @method static supersededBy($supersededBy) The value should be instance of pending types Class|Class[]|Enumeration|Enumeration[]|Property|Property[]
  */
@@ -25,7 +25,7 @@ class LegalValueLevel extends BaseType implements LegalValueLevelContract, Enume
      * [[OfficialLegalValue]]".
      *
      * @see https://schema.org/AuthoritativeLegalValue
-     * @see http://pending.schema.org
+     * @see https://pending.schema.org
      */
      const AuthoritativeLegalValue = 'https://schema.org/AuthoritativeLegalValue';
 
@@ -37,7 +37,7 @@ class LegalValueLevel extends BaseType implements LegalValueLevelContract, Enume
      * [[AuthoritativeLegalValue]].
      *
      * @see https://schema.org/DefinitiveLegalValue
-     * @see http://pending.schema.org
+     * @see https://pending.schema.org
      */
      const DefinitiveLegalValue = 'https://schema.org/DefinitiveLegalValue';
 
@@ -49,7 +49,7 @@ class LegalValueLevel extends BaseType implements LegalValueLevelContract, Enume
      * the EU Office of Publications).
      *
      * @see https://schema.org/OfficialLegalValue
-     * @see http://pending.schema.org
+     * @see https://pending.schema.org
      */
      const OfficialLegalValue = 'https://schema.org/OfficialLegalValue';
 
@@ -58,7 +58,7 @@ class LegalValueLevel extends BaseType implements LegalValueLevelContract, Enume
      * republication of a law by a private publisher).
      *
      * @see https://schema.org/UnofficialLegalValue
-     * @see http://pending.schema.org
+     * @see https://pending.schema.org
      */
      const UnofficialLegalValue = 'https://schema.org/UnofficialLegalValue';
 

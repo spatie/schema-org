@@ -3,6 +3,7 @@
 namespace Spatie\SchemaOrg;
 
 use \Spatie\SchemaOrg\Contracts\QuestionContract;
+use \Spatie\SchemaOrg\Contracts\CommentContract;
 use \Spatie\SchemaOrg\Contracts\CreativeWorkContract;
 use \Spatie\SchemaOrg\Contracts\ThingContract;
 
@@ -14,7 +15,7 @@ use \Spatie\SchemaOrg\Contracts\ThingContract;
  * @link http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#source_QAStackExchange
  *
  */
-class Question extends BaseType implements QuestionContract, CreativeWorkContract, ThingContract
+class Question extends BaseType implements QuestionContract, CommentContract, CreativeWorkContract, ThingContract
 {
     /**
      * The subject matter of the content.
@@ -39,7 +40,7 @@ class Question extends BaseType implements QuestionContract, CreativeWorkContrac
      * @return static
      *
      * @see https://schema.org/abstract
-     * @see http://pending.schema.org
+     * @see https://pending.schema.org
      * @link https://github.com/schemaorg/schemaorg/issues/276
      */
     public function abstract($abstract)
@@ -205,7 +206,7 @@ class Question extends BaseType implements QuestionContract, CreativeWorkContrac
      * @return static
      *
      * @see https://schema.org/acquireLicensePage
-     * @see http://pending.schema.org
+     * @see https://pending.schema.org
      * @link https://github.com/schemaorg/schemaorg/issues/2454
      */
     public function acquireLicensePage($acquireLicensePage)
@@ -298,7 +299,7 @@ class Question extends BaseType implements QuestionContract, CreativeWorkContrac
      * @return static
      *
      * @see https://schema.org/assesses
-     * @see http://pending.schema.org
+     * @see https://pending.schema.org
      * @link https://github.com/schemaorg/schemaorg/issues/2427
      */
     public function assesses($assesses)
@@ -468,7 +469,7 @@ class Question extends BaseType implements QuestionContract, CreativeWorkContrac
      * @return static
      *
      * @see https://schema.org/conditionsOfAccess
-     * @see http://pending.schema.org
+     * @see https://pending.schema.org
      * @link https://github.com/schemaorg/schemaorg/issues/2173
      */
     public function conditionsOfAccess($conditionsOfAccess)
@@ -514,7 +515,7 @@ class Question extends BaseType implements QuestionContract, CreativeWorkContrac
      * @return static
      *
      * @see https://schema.org/contentReferenceTime
-     * @see http://pending.schema.org
+     * @see https://pending.schema.org
      * @link https://github.com/schemaorg/schemaorg/issues/1050
      */
     public function contentReferenceTime($contentReferenceTime)
@@ -574,7 +575,7 @@ class Question extends BaseType implements QuestionContract, CreativeWorkContrac
      * @return static
      *
      * @see https://schema.org/correction
-     * @see http://pending.schema.org
+     * @see https://pending.schema.org
      */
     public function correction($correction)
     {
@@ -592,7 +593,7 @@ class Question extends BaseType implements QuestionContract, CreativeWorkContrac
      * @return static
      *
      * @see https://schema.org/creativeWorkStatus
-     * @see http://pending.schema.org
+     * @see https://pending.schema.org
      * @link https://github.com/schemaorg/schemaorg/issues/987
      */
     public function creativeWorkStatus($creativeWorkStatus)
@@ -739,7 +740,7 @@ class Question extends BaseType implements QuestionContract, CreativeWorkContrac
      * @return static
      *
      * @see https://schema.org/editEIDR
-     * @see http://pending.schema.org
+     * @see https://pending.schema.org
      * @link https://github.com/schemaorg/schemaorg/issues/2469
      */
     public function editEIDR($editEIDR)
@@ -759,6 +760,24 @@ class Question extends BaseType implements QuestionContract, CreativeWorkContrac
     public function editor($editor)
     {
         return $this->setProperty('editor', $editor);
+    }
+
+    /**
+     * For questions that are part of learning resources (e.g. Quiz),
+     * eduQuestionType indicates the format of question being given. Example:
+     * "Multiple choice", "Open ended", "Flashcard".
+     *
+     * @param string|string[] $eduQuestionType
+     *
+     * @return static
+     *
+     * @see https://schema.org/eduQuestionType
+     * @see https://pending.schema.org
+     * @link https://github.com/schemaorg/schemaorg/issues/2636
+     */
+    public function eduQuestionType($eduQuestionType)
+    {
+        return $this->setProperty('eduQuestionType', $eduQuestionType);
     }
 
     /**
@@ -789,7 +808,7 @@ class Question extends BaseType implements QuestionContract, CreativeWorkContrac
      * @return static
      *
      * @see https://schema.org/educationalLevel
-     * @see http://pending.schema.org
+     * @see https://pending.schema.org
      * @link https://github.com/schemaorg/schemaorg/issues/1779
      */
     public function educationalLevel($educationalLevel)
@@ -1143,7 +1162,7 @@ class Question extends BaseType implements QuestionContract, CreativeWorkContrac
      * Keywords or tags used to describe this content. Multiple entries in a
      * keywords list are typically delimited by commas.
      *
-     * @param string|string[] $keywords
+     * @param \Spatie\SchemaOrg\Contracts\DefinedTermContract|\Spatie\SchemaOrg\Contracts\DefinedTermContract[]|string|string[] $keywords
      *
      * @return static
      *
@@ -1250,7 +1269,7 @@ class Question extends BaseType implements QuestionContract, CreativeWorkContrac
      * @return static
      *
      * @see https://schema.org/maintainer
-     * @see http://pending.schema.org
+     * @see https://pending.schema.org
      * @link https://github.com/schemaorg/schemaorg/issues/2311
      */
     public function maintainer($maintainer)
@@ -1282,7 +1301,7 @@ class Question extends BaseType implements QuestionContract, CreativeWorkContrac
      * @return static
      *
      * @see https://schema.org/materialExtent
-     * @see http://pending.schema.org
+     * @see https://pending.schema.org
      * @link https://github.com/schemaorg/schemaorg/issues/1759
      */
     public function materialExtent($materialExtent)
@@ -1342,6 +1361,20 @@ class Question extends BaseType implements QuestionContract, CreativeWorkContrac
     }
 
     /**
+     * The parent of a question, answer or item in general.
+     *
+     * @param \Spatie\SchemaOrg\Contracts\CommentContract|\Spatie\SchemaOrg\Contracts\CommentContract[] $parentItem
+     *
+     * @return static
+     *
+     * @see https://schema.org/parentItem
+     */
+    public function parentItem($parentItem)
+    {
+        return $this->setProperty('parentItem', $parentItem);
+    }
+
+    /**
      * A pattern that something has, for example 'polka dot', 'striped',
      * 'Canadian flag'. Values are typically expressed as text, although links
      * to controlled value schemes are also supported.
@@ -1351,7 +1384,7 @@ class Question extends BaseType implements QuestionContract, CreativeWorkContrac
      * @return static
      *
      * @see https://schema.org/pattern
-     * @see http://pending.schema.org
+     * @see https://pending.schema.org
      * @link https://github.com/schemaorg/schemaorg/issues/1797
      */
     public function pattern($pattern)
@@ -1456,7 +1489,7 @@ class Question extends BaseType implements QuestionContract, CreativeWorkContrac
      * @return static
      *
      * @see https://schema.org/publisherImprint
-     * @see http://bib.schema.org
+     * @see https://bib.schema.org
      */
     public function publisherImprint($publisherImprint)
     {
@@ -1587,7 +1620,7 @@ class Question extends BaseType implements QuestionContract, CreativeWorkContrac
      * @return static
      *
      * @see https://schema.org/sdDatePublished
-     * @see http://pending.schema.org
+     * @see https://pending.schema.org
      * @link https://github.com/schemaorg/schemaorg/issues/1886
      */
     public function sdDatePublished($sdDatePublished)
@@ -1604,7 +1637,7 @@ class Question extends BaseType implements QuestionContract, CreativeWorkContrac
      * @return static
      *
      * @see https://schema.org/sdLicense
-     * @see http://pending.schema.org
+     * @see https://pending.schema.org
      * @link https://github.com/schemaorg/schemaorg/issues/1886
      */
     public function sdLicense($sdLicense)
@@ -1626,7 +1659,7 @@ class Question extends BaseType implements QuestionContract, CreativeWorkContrac
      * @return static
      *
      * @see https://schema.org/sdPublisher
-     * @see http://pending.schema.org
+     * @see https://pending.schema.org
      * @link https://github.com/schemaorg/schemaorg/issues/1886
      */
     public function sdPublisher($sdPublisher)
@@ -1647,7 +1680,7 @@ class Question extends BaseType implements QuestionContract, CreativeWorkContrac
      * @return static
      *
      * @see https://schema.org/size
-     * @see http://pending.schema.org
+     * @see https://pending.schema.org
      * @link https://github.com/schemaorg/schemaorg/issues/1797
      */
     public function size($size)
@@ -1759,7 +1792,7 @@ class Question extends BaseType implements QuestionContract, CreativeWorkContrac
      * @return static
      *
      * @see https://schema.org/teaches
-     * @see http://pending.schema.org
+     * @see https://pending.schema.org
      * @link https://github.com/schemaorg/schemaorg/issues/2427
      */
     public function teaches($teaches)
@@ -1867,7 +1900,7 @@ class Question extends BaseType implements QuestionContract, CreativeWorkContrac
      * @return static
      *
      * @see https://schema.org/translationOfWork
-     * @see http://bib.schema.org
+     * @see https://bib.schema.org
      */
     public function translationOfWork($translationOfWork)
     {
@@ -1953,7 +1986,7 @@ class Question extends BaseType implements QuestionContract, CreativeWorkContrac
      * @return static
      *
      * @see https://schema.org/usageInfo
-     * @see http://pending.schema.org
+     * @see https://pending.schema.org
      * @link https://github.com/schemaorg/schemaorg/issues/2454
      */
     public function usageInfo($usageInfo)
@@ -2016,7 +2049,7 @@ class Question extends BaseType implements QuestionContract, CreativeWorkContrac
      * @return static
      *
      * @see https://schema.org/workTranslation
-     * @see http://bib.schema.org
+     * @see https://bib.schema.org
      */
     public function workTranslation($workTranslation)
     {

@@ -205,7 +205,7 @@ class ActionAccessSpecification extends BaseType implements ActionAccessSpecific
      * @return static
      *
      * @see https://schema.org/ineligibleRegion
-     * @see http://pending.schema.org
+     * @see https://pending.schema.org
      * @link https://github.com/schemaorg/schemaorg/issues/2242
      */
     public function ineligibleRegion($ineligibleRegion)

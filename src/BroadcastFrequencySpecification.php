@@ -72,7 +72,7 @@ class BroadcastFrequencySpecification extends BaseType implements BroadcastFrequ
      * @return static
      *
      * @see https://schema.org/broadcastSignalModulation
-     * @see http://pending.schema.org
+     * @see https://pending.schema.org
      * @link https://github.com/schemaorg/schemaorg/issues/2111
      */
     public function broadcastSignalModulation($broadcastSignalModulation)
@@ -88,7 +88,7 @@ class BroadcastFrequencySpecification extends BaseType implements BroadcastFrequ
      * @return static
      *
      * @see https://schema.org/broadcastSubChannel
-     * @see http://pending.schema.org
+     * @see https://pending.schema.org
      * @link https://github.com/schemaorg/schemaorg/issues/2111
      */
     public function broadcastSubChannel($broadcastSubChannel)

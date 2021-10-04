@@ -15,7 +15,7 @@ use \Spatie\SchemaOrg\Contracts\ThingContract;
  * reservations. For offers of tickets, use [[Offer]].
  *
  * @see https://schema.org/BoatReservation
- * @see http://pending.schema.org
+ * @see https://pending.schema.org
  * @link https://github.com/schemaorg/schemaorg/issues/1755
  *
  */

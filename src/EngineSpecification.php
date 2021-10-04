@@ -96,7 +96,7 @@ class EngineSpecification extends BaseType implements EngineSpecificationContrac
      * @return static
      *
      * @see https://schema.org/engineDisplacement
-     * @see http://auto.schema.org
+     * @see https://auto.schema.org
      * @link http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#Automotive_Ontology_Working_Group
      */
     public function engineDisplacement($engineDisplacement)
@@ -121,7 +121,7 @@ class EngineSpecification extends BaseType implements EngineSpecificationContrac
      * @return static
      *
      * @see https://schema.org/enginePower
-     * @see http://auto.schema.org
+     * @see https://auto.schema.org
      * @link http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#Automotive_Ontology_Working_Group
      */
     public function enginePower($enginePower)
@@ -137,7 +137,7 @@ class EngineSpecification extends BaseType implements EngineSpecificationContrac
      * @return static
      *
      * @see https://schema.org/engineType
-     * @see http://auto.schema.org
+     * @see https://auto.schema.org
      * @link http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#Automotive_Ontology_Working_Group
      */
     public function engineType($engineType)
@@ -286,7 +286,7 @@ class EngineSpecification extends BaseType implements EngineSpecificationContrac
      * @return static
      *
      * @see https://schema.org/torque
-     * @see http://auto.schema.org
+     * @see https://auto.schema.org
      * @link http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#Automotive_Ontology_Working_Group
      */
     public function torque($torque)

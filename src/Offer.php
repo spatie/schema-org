@@ -406,7 +406,7 @@ class Offer extends BaseType implements OfferContract, IntangibleContract, Thing
      * @return static
      *
      * @see https://schema.org/gtin
-     * @see http://pending.schema.org
+     * @see https://pending.schema.org
      * @link https://github.com/schemaorg/schemaorg/issues/2288
      */
     public function gtin($gtin)
@@ -552,7 +552,7 @@ class Offer extends BaseType implements OfferContract, IntangibleContract, Thing
      * @return static
      *
      * @see https://schema.org/ineligibleRegion
-     * @see http://pending.schema.org
+     * @see https://pending.schema.org
      * @link https://github.com/schemaorg/schemaorg/issues/2242
      */
     public function ineligibleRegion($ineligibleRegion)
@@ -618,7 +618,7 @@ class Offer extends BaseType implements OfferContract, IntangibleContract, Thing
      * @return static
      *
      * @see https://schema.org/leaseLength
-     * @see http://pending.schema.org
+     * @see https://pending.schema.org
      * @link https://github.com/schemaorg/schemaorg/issues/2373
      */
     public function leaseLength($leaseLength)
@@ -876,7 +876,7 @@ class Offer extends BaseType implements OfferContract, IntangibleContract, Thing
      * @return static
      *
      * @see https://schema.org/shippingDetails
-     * @see http://pending.schema.org
+     * @see https://pending.schema.org
      * @link https://github.com/schemaorg/schemaorg/issues/2506
      */
     public function shippingDetails($shippingDetails)

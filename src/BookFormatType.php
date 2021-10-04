@@ -37,7 +37,7 @@ class BookFormatType extends BaseType implements BookFormatTypeContract, Enumera
      * instances.
      *
      * @see https://schema.org/GraphicNovel
-     * @see http://bib.schema.org
+     * @see https://bib.schema.org
      */
      const GraphicNovel = 'https://schema.org/GraphicNovel';
 

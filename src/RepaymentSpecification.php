@@ -11,7 +11,7 @@ use \Spatie\SchemaOrg\Contracts\ThingContract;
  * A structured value representing repayment.
  *
  * @see https://schema.org/RepaymentSpecification
- * @see http://pending.schema.org
+ * @see https://pending.schema.org
  *
  */
 class RepaymentSpecification extends BaseType implements RepaymentSpecificationContract, IntangibleContract, StructuredValueContract, ThingContract
@@ -90,7 +90,7 @@ class RepaymentSpecification extends BaseType implements RepaymentSpecificationC
      * @return static
      *
      * @see https://schema.org/downPayment
-     * @see http://pending.schema.org
+     * @see https://pending.schema.org
      */
     public function downPayment($downPayment)
     {
@@ -106,7 +106,7 @@ class RepaymentSpecification extends BaseType implements RepaymentSpecificationC
      * @return static
      *
      * @see https://schema.org/earlyPrepaymentPenalty
-     * @see http://pending.schema.org
+     * @see https://pending.schema.org
      */
     public function earlyPrepaymentPenalty($earlyPrepaymentPenalty)
     {
@@ -154,7 +154,7 @@ class RepaymentSpecification extends BaseType implements RepaymentSpecificationC
      * @return static
      *
      * @see https://schema.org/loanPaymentAmount
-     * @see http://pending.schema.org
+     * @see https://pending.schema.org
      */
     public function loanPaymentAmount($loanPaymentAmount)
     {
@@ -170,7 +170,7 @@ class RepaymentSpecification extends BaseType implements RepaymentSpecificationC
      * @return static
      *
      * @see https://schema.org/loanPaymentFrequency
-     * @see http://pending.schema.org
+     * @see https://pending.schema.org
      */
     public function loanPaymentFrequency($loanPaymentFrequency)
     {
@@ -217,7 +217,7 @@ class RepaymentSpecification extends BaseType implements RepaymentSpecificationC
      * @return static
      *
      * @see https://schema.org/numberOfLoanPayments
-     * @see http://pending.schema.org
+     * @see https://pending.schema.org
      */
     public function numberOfLoanPayments($numberOfLoanPayments)
     {

@@ -87,7 +87,7 @@ class Occupation extends BaseType implements OccupationContract, IntangibleContr
      * @return static
      *
      * @see https://schema.org/educationRequirements
-     * @see http://pending.schema.org
+     * @see https://pending.schema.org
      */
     public function educationRequirements($educationRequirements)
     {
@@ -226,7 +226,7 @@ class Occupation extends BaseType implements OccupationContract, IntangibleContr
      * @return static
      *
      * @see https://schema.org/occupationalCategory
-     * @see http://pending.schema.org
+     * @see https://pending.schema.org
      */
     public function occupationalCategory($occupationalCategory)
     {
@@ -256,7 +256,7 @@ class Occupation extends BaseType implements OccupationContract, IntangibleContr
      * @return static
      *
      * @see https://schema.org/qualifications
-     * @see http://pending.schema.org
+     * @see https://pending.schema.org
      */
     public function qualifications($qualifications)
     {

@@ -12,7 +12,7 @@ use \Spatie\SchemaOrg\Contracts\ThingContract;
  * Target audiences types for medical web pages. Enumerated type.
  *
  * @see https://schema.org/MedicalAudienceType
- * @see http://health-lifesci.schema.org
+ * @see https://health-lifesci.schema.org
  *
  * @method static supersededBy($supersededBy) The value should be instance of pending types Class|Class[]|Enumeration|Enumeration[]|Property|Property[]
  */
@@ -23,7 +23,7 @@ class MedicalAudienceType extends BaseType implements MedicalAudienceTypeContrac
      * professionals involved in clinical practice.
      *
      * @see https://schema.org/Clinician
-     * @see http://health-lifesci.schema.org
+     * @see https://health-lifesci.schema.org
      */
      const Clinician = 'https://schema.org/Clinician';
 
@@ -31,7 +31,7 @@ class MedicalAudienceType extends BaseType implements MedicalAudienceTypeContrac
      * Medical researchers.
      *
      * @see https://schema.org/MedicalResearcher
-     * @see http://health-lifesci.schema.org
+     * @see https://health-lifesci.schema.org
      */
      const MedicalResearcher = 'https://schema.org/MedicalResearcher';
 

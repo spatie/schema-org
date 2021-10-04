@@ -12,7 +12,7 @@ use \Spatie\SchemaOrg\Contracts\ThingContract;
  * quality of the data supporting the contraindication is sound.
  *
  * @see https://schema.org/MedicalGuidelineContraindication
- * @see http://health-lifesci.schema.org
+ * @see https://health-lifesci.schema.org
  *
  */
 class MedicalGuidelineContraindication extends BaseType implements MedicalGuidelineContraindicationContract, MedicalEntityContract, MedicalGuidelineContract, ThingContract
@@ -59,7 +59,7 @@ class MedicalGuidelineContraindication extends BaseType implements MedicalGuidel
      * @return static
      *
      * @see https://schema.org/code
-     * @see http://health-lifesci.schema.org
+     * @see https://health-lifesci.schema.org
      */
     public function code($code)
     {
@@ -106,7 +106,7 @@ class MedicalGuidelineContraindication extends BaseType implements MedicalGuidel
      * @return static
      *
      * @see https://schema.org/evidenceLevel
-     * @see http://health-lifesci.schema.org
+     * @see https://health-lifesci.schema.org
      */
     public function evidenceLevel($evidenceLevel)
     {
@@ -122,7 +122,7 @@ class MedicalGuidelineContraindication extends BaseType implements MedicalGuidel
      * @return static
      *
      * @see https://schema.org/evidenceOrigin
-     * @see http://health-lifesci.schema.org
+     * @see https://health-lifesci.schema.org
      */
     public function evidenceOrigin($evidenceOrigin)
     {
@@ -137,7 +137,7 @@ class MedicalGuidelineContraindication extends BaseType implements MedicalGuidel
      * @return static
      *
      * @see https://schema.org/guideline
-     * @see http://health-lifesci.schema.org
+     * @see https://health-lifesci.schema.org
      */
     public function guideline($guideline)
     {
@@ -152,7 +152,7 @@ class MedicalGuidelineContraindication extends BaseType implements MedicalGuidel
      * @return static
      *
      * @see https://schema.org/guidelineDate
-     * @see http://health-lifesci.schema.org
+     * @see https://health-lifesci.schema.org
      */
     public function guidelineDate($guidelineDate)
     {
@@ -168,7 +168,7 @@ class MedicalGuidelineContraindication extends BaseType implements MedicalGuidel
      * @return static
      *
      * @see https://schema.org/guidelineSubject
-     * @see http://health-lifesci.schema.org
+     * @see https://health-lifesci.schema.org
      */
     public function guidelineSubject($guidelineSubject)
     {
@@ -217,7 +217,7 @@ class MedicalGuidelineContraindication extends BaseType implements MedicalGuidel
      * @return static
      *
      * @see https://schema.org/legalStatus
-     * @see http://health-lifesci.schema.org
+     * @see https://health-lifesci.schema.org
      */
     public function legalStatus($legalStatus)
     {
@@ -249,7 +249,7 @@ class MedicalGuidelineContraindication extends BaseType implements MedicalGuidel
      * @return static
      *
      * @see https://schema.org/medicineSystem
-     * @see http://health-lifesci.schema.org
+     * @see https://health-lifesci.schema.org
      */
     public function medicineSystem($medicineSystem)
     {
@@ -294,7 +294,7 @@ class MedicalGuidelineContraindication extends BaseType implements MedicalGuidel
      * @return static
      *
      * @see https://schema.org/recognizingAuthority
-     * @see http://health-lifesci.schema.org
+     * @see https://health-lifesci.schema.org
      */
     public function recognizingAuthority($recognizingAuthority)
     {
@@ -309,7 +309,7 @@ class MedicalGuidelineContraindication extends BaseType implements MedicalGuidel
      * @return static
      *
      * @see https://schema.org/relevantSpecialty
-     * @see http://health-lifesci.schema.org
+     * @see https://health-lifesci.schema.org
      */
     public function relevantSpecialty($relevantSpecialty)
     {
@@ -340,7 +340,7 @@ class MedicalGuidelineContraindication extends BaseType implements MedicalGuidel
      * @return static
      *
      * @see https://schema.org/study
-     * @see http://health-lifesci.schema.org
+     * @see https://health-lifesci.schema.org
      */
     public function study($study)
     {

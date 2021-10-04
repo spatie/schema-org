@@ -20,7 +20,7 @@ use \Spatie\SchemaOrg\Contracts\ThingContract;
  * specific properties [[variesBy]], [[hasVariant]], [[url]].
  *
  * @see https://schema.org/ProductGroup
- * @see http://pending.schema.org
+ * @see https://pending.schema.org
  * @link https://github.com/schemaorg/schemaorg/issues/2597
  *
  */
@@ -257,7 +257,7 @@ class ProductGroup extends BaseType implements ProductGroupContract, ProductCont
      * @return static
      *
      * @see https://schema.org/gtin
-     * @see http://pending.schema.org
+     * @see https://pending.schema.org
      * @link https://github.com/schemaorg/schemaorg/issues/2288
      */
     public function gtin($gtin)
@@ -342,6 +342,23 @@ class ProductGroup extends BaseType implements ProductGroupContract, ProductCont
     }
 
     /**
+     * Defines the energy efficiency Category (also known as "class" or
+     * "rating") for a product according to an international energy efficiency
+     * standard
+     *
+     * @param \Spatie\SchemaOrg\Contracts\EnergyConsumptionDetailsContract|\Spatie\SchemaOrg\Contracts\EnergyConsumptionDetailsContract[] $hasEnergyConsumptionDetails
+     *
+     * @return static
+     *
+     * @see https://schema.org/hasEnergyConsumptionDetails
+     * @link https://github.com/schemaorg/schemaorg/issues/2670
+     */
+    public function hasEnergyConsumptionDetails($hasEnergyConsumptionDetails)
+    {
+        return $this->setProperty('hasEnergyConsumptionDetails', $hasEnergyConsumptionDetails);
+    }
+
+    /**
      * Indicates a MerchantReturnPolicy that may be applicable.
      *
      * @param \Spatie\SchemaOrg\Contracts\MerchantReturnPolicyContract|\Spatie\SchemaOrg\Contracts\MerchantReturnPolicyContract[] $hasMerchantReturnPolicy
@@ -349,7 +366,7 @@ class ProductGroup extends BaseType implements ProductGroupContract, ProductCont
      * @return static
      *
      * @see https://schema.org/hasMerchantReturnPolicy
-     * @see http://pending.schema.org
+     * @see https://pending.schema.org
      * @link https://github.com/schemaorg/schemaorg/issues/2288
      */
     public function hasMerchantReturnPolicy($hasMerchantReturnPolicy)
@@ -365,7 +382,7 @@ class ProductGroup extends BaseType implements ProductGroupContract, ProductCont
      * @return static
      *
      * @see https://schema.org/hasProductReturnPolicy
-     * @see http://attic.schema.org
+     * @see https://attic.schema.org
      * @link https://github.com/schemaorg/schemaorg/issues/2288
      */
     public function hasProductReturnPolicy($hasProductReturnPolicy)
@@ -382,7 +399,7 @@ class ProductGroup extends BaseType implements ProductGroupContract, ProductCont
      * @return static
      *
      * @see https://schema.org/hasVariant
-     * @see http://pending.schema.org
+     * @see https://pending.schema.org
      * @link https://github.com/schemaorg/schemaorg/issues/1797
      */
     public function hasVariant($hasVariant)
@@ -446,7 +463,7 @@ class ProductGroup extends BaseType implements ProductGroupContract, ProductCont
      * @return static
      *
      * @see https://schema.org/inProductGroupWithID
-     * @see http://pending.schema.org
+     * @see https://pending.schema.org
      * @link https://github.com/schemaorg/schemaorg/issues/1797
      */
     public function inProductGroupWithID($inProductGroupWithID)
@@ -676,7 +693,7 @@ class ProductGroup extends BaseType implements ProductGroupContract, ProductCont
      * @return static
      *
      * @see https://schema.org/nsn
-     * @see http://pending.schema.org
+     * @see https://pending.schema.org
      * @link https://github.com/schemaorg/schemaorg/issues/2126
      */
     public function nsn($nsn)
@@ -716,7 +733,7 @@ class ProductGroup extends BaseType implements ProductGroupContract, ProductCont
      * @return static
      *
      * @see https://schema.org/pattern
-     * @see http://pending.schema.org
+     * @see https://pending.schema.org
      * @link https://github.com/schemaorg/schemaorg/issues/1797
      */
     public function pattern($pattern)
@@ -747,7 +764,7 @@ class ProductGroup extends BaseType implements ProductGroupContract, ProductCont
      * @return static
      *
      * @see https://schema.org/productGroupID
-     * @see http://pending.schema.org
+     * @see https://pending.schema.org
      * @link https://github.com/schemaorg/schemaorg/issues/1797
      */
     public function productGroupID($productGroupID)
@@ -873,7 +890,7 @@ class ProductGroup extends BaseType implements ProductGroupContract, ProductCont
      * @return static
      *
      * @see https://schema.org/size
-     * @see http://pending.schema.org
+     * @see https://pending.schema.org
      * @link https://github.com/schemaorg/schemaorg/issues/1797
      */
     public function size($size)
@@ -951,7 +968,7 @@ class ProductGroup extends BaseType implements ProductGroupContract, ProductCont
      * @return static
      *
      * @see https://schema.org/variesBy
-     * @see http://pending.schema.org
+     * @see https://pending.schema.org
      * @link https://github.com/schemaorg/schemaorg/issues/1797
      */
     public function variesBy($variesBy)

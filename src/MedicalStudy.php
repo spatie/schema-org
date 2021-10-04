@@ -18,7 +18,7 @@ use \Spatie\SchemaOrg\Contracts\ThingContract;
  * clinicaltrials.gov ID.
  *
  * @see https://schema.org/MedicalStudy
- * @see http://health-lifesci.schema.org
+ * @see https://health-lifesci.schema.org
  *
  */
 class MedicalStudy extends BaseType implements MedicalStudyContract, MedicalEntityContract, ThingContract
@@ -65,7 +65,7 @@ class MedicalStudy extends BaseType implements MedicalStudyContract, MedicalEnti
      * @return static
      *
      * @see https://schema.org/code
-     * @see http://health-lifesci.schema.org
+     * @see https://health-lifesci.schema.org
      */
     public function code($code)
     {
@@ -111,7 +111,7 @@ class MedicalStudy extends BaseType implements MedicalStudyContract, MedicalEnti
      * @return static
      *
      * @see https://schema.org/guideline
-     * @see http://health-lifesci.schema.org
+     * @see https://health-lifesci.schema.org
      */
     public function guideline($guideline)
     {
@@ -127,7 +127,7 @@ class MedicalStudy extends BaseType implements MedicalStudyContract, MedicalEnti
      * @return static
      *
      * @see https://schema.org/healthCondition
-     * @see http://health-lifesci.schema.org
+     * @see https://health-lifesci.schema.org
      */
     public function healthCondition($healthCondition)
     {
@@ -176,7 +176,7 @@ class MedicalStudy extends BaseType implements MedicalStudyContract, MedicalEnti
      * @return static
      *
      * @see https://schema.org/legalStatus
-     * @see http://health-lifesci.schema.org
+     * @see https://health-lifesci.schema.org
      */
     public function legalStatus($legalStatus)
     {
@@ -208,7 +208,7 @@ class MedicalStudy extends BaseType implements MedicalStudyContract, MedicalEnti
      * @return static
      *
      * @see https://schema.org/medicineSystem
-     * @see http://health-lifesci.schema.org
+     * @see https://health-lifesci.schema.org
      */
     public function medicineSystem($medicineSystem)
     {
@@ -253,7 +253,7 @@ class MedicalStudy extends BaseType implements MedicalStudyContract, MedicalEnti
      * @return static
      *
      * @see https://schema.org/recognizingAuthority
-     * @see http://health-lifesci.schema.org
+     * @see https://health-lifesci.schema.org
      */
     public function recognizingAuthority($recognizingAuthority)
     {
@@ -268,7 +268,7 @@ class MedicalStudy extends BaseType implements MedicalStudyContract, MedicalEnti
      * @return static
      *
      * @see https://schema.org/relevantSpecialty
-     * @see http://health-lifesci.schema.org
+     * @see https://health-lifesci.schema.org
      */
     public function relevantSpecialty($relevantSpecialty)
     {
@@ -315,7 +315,7 @@ class MedicalStudy extends BaseType implements MedicalStudyContract, MedicalEnti
      * @return static
      *
      * @see https://schema.org/status
-     * @see http://health-lifesci.schema.org
+     * @see https://health-lifesci.schema.org
      */
     public function status($status)
     {
@@ -330,7 +330,7 @@ class MedicalStudy extends BaseType implements MedicalStudyContract, MedicalEnti
      * @return static
      *
      * @see https://schema.org/study
-     * @see http://health-lifesci.schema.org
+     * @see https://health-lifesci.schema.org
      */
     public function study($study)
     {
@@ -345,7 +345,7 @@ class MedicalStudy extends BaseType implements MedicalStudyContract, MedicalEnti
      * @return static
      *
      * @see https://schema.org/studyLocation
-     * @see http://health-lifesci.schema.org
+     * @see https://health-lifesci.schema.org
      */
     public function studyLocation($studyLocation)
     {
@@ -361,7 +361,7 @@ class MedicalStudy extends BaseType implements MedicalStudyContract, MedicalEnti
      * @return static
      *
      * @see https://schema.org/studySubject
-     * @see http://health-lifesci.schema.org
+     * @see https://health-lifesci.schema.org
      */
     public function studySubject($studySubject)
     {
