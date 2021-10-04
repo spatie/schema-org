@@ -20,9 +20,9 @@ class ParseConstant extends Task
 
         $constant->value = $this->getResource();
 
-        $constant->partOf = $this->definition['https://schema.org/isPartOf']['@id'] ?? null;
+        $constant->partOf = $this->definition['schema:isPartOf']['@id'] ?? null;
 
-        $constant->source = $this->definition['https://schema.org/source']['@id'] ?? null;
+        $constant->source = $this->definition['schema:source']['@id'] ?? null;
 
         return $constant;
     }

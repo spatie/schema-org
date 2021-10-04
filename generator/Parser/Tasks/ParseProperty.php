@@ -20,21 +20,21 @@ class ParseProperty extends Task
 
         $property->resource = $this->getResource();
 
-        $this->getWrappedDefinitionProperty('https://schema.org/domainIncludes')
+        $this->getWrappedDefinitionProperty('schema:domainIncludes')
             ->each(function (array $domain) use ($property): void {
                 $property->addType($this->getResourceName($domain));
             });
 
-        $this->getWrappedDefinitionProperty('https://schema.org/rangeIncludes')
+        $this->getWrappedDefinitionProperty('schema:rangeIncludes')
             ->each(function (array $range) use ($property): void {
                 $property->addRanges(
                     $this->castRangesToTypes($this->getResourceName($range))
                 );
             });
 
-        $property->partOf = $this->definition['https://schema.org/isPartOf']['@id'] ?? null;
+        $property->partOf = $this->definition['schema:isPartOf']['@id'] ?? null;
 
-        $property->source = $this->definition['https://schema.org/source']['@id'] ?? null;
+        $property->source = $this->definition['schema:source']['@id'] ?? null;
 
         return $property;
     }
