@@ -2,8 +2,8 @@
 
 namespace Spatie\SchemaOrg\Generator\Writer;
 
-use League\Flysystem\Local\LocalFilesystemAdapter;
 use League\Flysystem\Filesystem as Flysystem;
+use League\Flysystem\Local\LocalFilesystemAdapter;
 use Spatie\SchemaOrg\Generator\Type;
 use Spatie\SchemaOrg\Generator\TypeCollection;
 
