@@ -42,7 +42,7 @@ class Filesystem
     public function clear()
     {
         $this->flysystem->deleteDirectory('src');
-        $this->flysystem->deleteDirectory('src');
+        $this->flysystem->createDirectory('src');
     }
 
     public function cloneStaticFiles()
