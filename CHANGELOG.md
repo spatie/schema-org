@@ -2,6 +2,9 @@
 
 All Notable changes to `schema-org` will be documented in this file.
 
+## 3.8.0 - 2021-10-05
+- Upgrade to schema.org:v13.0
+
 ## 3.7.0 - 2021-10-05
 - Upgrade to schema.org:v12.0
 
