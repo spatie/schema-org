@@ -69,10 +69,6 @@ class JsonLdParser
         });
     }
 
-    /**
-     * @param string $attributeValue
-     * @return string
-     */
     private function replaceSchemaPrefix(string $attributeValue): string
     {
         return str_replace('schema:', $this->schemaPrefix, $attributeValue);
