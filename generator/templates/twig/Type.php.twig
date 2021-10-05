@@ -30,7 +30,7 @@ class {{ type.className }} extends BaseType implements {{ type.className }}Contr
     /**
      * {{ constant.description | doc(1) }}
      *
-     * @see {{ constant.value }}
+     * @see {{ constant.value | fixLink }}
 {% if constant.partOf is not empty %}
      * @see {{ constant.partOf | fixLink }}
 {% endif %}
