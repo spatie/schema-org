@@ -2,6 +2,11 @@
 
 All Notable changes to `schema-org` will be documented in this file.
 
+## 4.0.0 - 2021-10-?
+- Upgrade to schema.org:v10
+- Drop support for EOL PHP 7.3
+- Add support for PHP 8.1
+
 ## 3.4.0 - 2021-05-10
 
 - add custom `\Spatie\SchemaOrg\Graph` context support - [#160](https://github.com/spatie/schema-org/pull/160)
