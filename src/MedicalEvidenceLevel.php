@@ -21,7 +21,7 @@ class MedicalEvidenceLevel extends BaseType implements MedicalEvidenceLevelContr
     /**
      * Data derived from multiple randomized clinical trials or meta-analyses.
      *
-     * @see schema:EvidenceLevelA
+     * @see https://schema.org/EvidenceLevelA
      * @see https://health-lifesci.schema.org
      */
      const EvidenceLevelA = 'https://schema.org/EvidenceLevelA';
@@ -29,7 +29,7 @@ class MedicalEvidenceLevel extends BaseType implements MedicalEvidenceLevelContr
     /**
      * Data derived from a single randomized trial, or nonrandomized studies.
      *
-     * @see schema:EvidenceLevelB
+     * @see https://schema.org/EvidenceLevelB
      * @see https://health-lifesci.schema.org
      */
      const EvidenceLevelB = 'https://schema.org/EvidenceLevelB';
@@ -37,7 +37,7 @@ class MedicalEvidenceLevel extends BaseType implements MedicalEvidenceLevelContr
     /**
      * Only consensus opinion of experts, case studies, or standard-of-care.
      *
-     * @see schema:EvidenceLevelC
+     * @see https://schema.org/EvidenceLevelC
      * @see https://health-lifesci.schema.org
      */
      const EvidenceLevelC = 'https://schema.org/EvidenceLevelC';

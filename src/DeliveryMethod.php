@@ -35,7 +35,7 @@ class DeliveryMethod extends BaseType implements DeliveryMethodContract, Enumera
     /**
      * A DeliveryMethod in which an item is made available via locker.
      *
-     * @see schema:LockerDelivery
+     * @see https://schema.org/LockerDelivery
      */
      const LockerDelivery = 'https://schema.org/LockerDelivery';
 
@@ -43,7 +43,7 @@ class DeliveryMethod extends BaseType implements DeliveryMethodContract, Enumera
      * A DeliveryMethod in which an item is collected on site, e.g. in a store
      * or at a box office.
      *
-     * @see schema:OnSitePickup
+     * @see https://schema.org/OnSitePickup
      */
      const OnSitePickup = 'https://schema.org/OnSitePickup';
 
@@ -57,7 +57,7 @@ class DeliveryMethod extends BaseType implements DeliveryMethodContract, Enumera
      * * http://purl.org/goodrelations/v1#FederalExpress
      * * http://purl.org/goodrelations/v1#UPS
      *
-     * @see schema:ParcelService
+     * @see https://schema.org/ParcelService
      * @link http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#source_GoodRelationsClass
      */
      const ParcelService = 'https://schema.org/ParcelService';

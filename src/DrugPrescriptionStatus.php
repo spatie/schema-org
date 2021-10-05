@@ -22,7 +22,7 @@ class DrugPrescriptionStatus extends BaseType implements DrugPrescriptionStatusC
      * The character of a medical substance, typically a medicine, of being
      * available over the counter or not.
      *
-     * @see schema:OTC
+     * @see https://schema.org/OTC
      * @see https://health-lifesci.schema.org
      */
      const OTC = 'https://schema.org/OTC';
@@ -30,7 +30,7 @@ class DrugPrescriptionStatus extends BaseType implements DrugPrescriptionStatusC
     /**
      * Available by prescription only.
      *
-     * @see schema:PrescriptionOnly
+     * @see https://schema.org/PrescriptionOnly
      * @see https://health-lifesci.schema.org
      */
      const PrescriptionOnly = 'https://schema.org/PrescriptionOnly';

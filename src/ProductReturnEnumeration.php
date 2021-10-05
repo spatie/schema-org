@@ -23,7 +23,7 @@ class ProductReturnEnumeration extends BaseType implements ProductReturnEnumerat
      * ProductReturnFiniteReturnWindow: there is a finite window for product
      * returns.
      *
-     * @see schema:ProductReturnFiniteReturnWindow
+     * @see https://schema.org/ProductReturnFiniteReturnWindow
      * @see https://attic.schema.org
      * @link https://github.com/schemaorg/schemaorg/issues/2288
      */
@@ -32,7 +32,7 @@ class ProductReturnEnumeration extends BaseType implements ProductReturnEnumerat
     /**
      * ProductReturnNotPermitted: product returns are not permitted.
      *
-     * @see schema:ProductReturnNotPermitted
+     * @see https://schema.org/ProductReturnNotPermitted
      * @see https://attic.schema.org
      * @link https://github.com/schemaorg/schemaorg/issues/2288
      */
@@ -42,7 +42,7 @@ class ProductReturnEnumeration extends BaseType implements ProductReturnEnumerat
      * ProductReturnUnlimitedWindow: there is an unlimited window for product
      * returns.
      *
-     * @see schema:ProductReturnUnlimitedWindow
+     * @see https://schema.org/ProductReturnUnlimitedWindow
      * @see https://attic.schema.org
      * @link https://github.com/schemaorg/schemaorg/issues/2288
      */
@@ -51,7 +51,7 @@ class ProductReturnEnumeration extends BaseType implements ProductReturnEnumerat
     /**
      * ProductReturnUnspecified: a product return policy is not specified here.
      *
-     * @see schema:ProductReturnUnspecified
+     * @see https://schema.org/ProductReturnUnspecified
      * @see https://attic.schema.org
      * @link https://github.com/schemaorg/schemaorg/issues/2288
      */

@@ -21,7 +21,7 @@ class MusicReleaseFormatType extends BaseType implements MusicReleaseFormatTypeC
     /**
      * CDFormat.
      *
-     * @see schema:CDFormat
+     * @see https://schema.org/CDFormat
      * @link http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#MBZ
      */
      const CDFormat = 'https://schema.org/CDFormat';
@@ -29,7 +29,7 @@ class MusicReleaseFormatType extends BaseType implements MusicReleaseFormatTypeC
     /**
      * CassetteFormat.
      *
-     * @see schema:CassetteFormat
+     * @see https://schema.org/CassetteFormat
      * @link http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#MBZ
      */
      const CassetteFormat = 'https://schema.org/CassetteFormat';
@@ -37,7 +37,7 @@ class MusicReleaseFormatType extends BaseType implements MusicReleaseFormatTypeC
     /**
      * DVDFormat.
      *
-     * @see schema:DVDFormat
+     * @see https://schema.org/DVDFormat
      * @link http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#MBZ
      */
      const DVDFormat = 'https://schema.org/DVDFormat';
@@ -45,7 +45,7 @@ class MusicReleaseFormatType extends BaseType implements MusicReleaseFormatTypeC
     /**
      * DigitalAudioTapeFormat.
      *
-     * @see schema:DigitalAudioTapeFormat
+     * @see https://schema.org/DigitalAudioTapeFormat
      * @link http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#MBZ
      */
      const DigitalAudioTapeFormat = 'https://schema.org/DigitalAudioTapeFormat';
@@ -53,7 +53,7 @@ class MusicReleaseFormatType extends BaseType implements MusicReleaseFormatTypeC
     /**
      * DigitalFormat.
      *
-     * @see schema:DigitalFormat
+     * @see https://schema.org/DigitalFormat
      * @link http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#MBZ
      */
      const DigitalFormat = 'https://schema.org/DigitalFormat';
@@ -61,7 +61,7 @@ class MusicReleaseFormatType extends BaseType implements MusicReleaseFormatTypeC
     /**
      * LaserDiscFormat.
      *
-     * @see schema:LaserDiscFormat
+     * @see https://schema.org/LaserDiscFormat
      * @link http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#MBZ
      */
      const LaserDiscFormat = 'https://schema.org/LaserDiscFormat';
@@ -69,7 +69,7 @@ class MusicReleaseFormatType extends BaseType implements MusicReleaseFormatTypeC
     /**
      * VinylFormat.
      *
-     * @see schema:VinylFormat
+     * @see https://schema.org/VinylFormat
      * @link http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#MBZ
      */
      const VinylFormat = 'https://schema.org/VinylFormat';

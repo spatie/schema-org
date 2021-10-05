@@ -25,7 +25,7 @@ class DrugPregnancyCategory extends BaseType implements DrugPregnancyCategoryCon
      * trimester of pregnancy (and there is no evidence of risk in later
      * trimesters).
      *
-     * @see schema:FDAcategoryA
+     * @see https://schema.org/FDAcategoryA
      * @see https://health-lifesci.schema.org
      */
      const FDAcategoryA = 'https://schema.org/FDAcategoryA';
@@ -35,7 +35,7 @@ class DrugPregnancyCategory extends BaseType implements DrugPregnancyCategoryCon
      * have failed to demonstrate a risk to the fetus and there are no adequate
      * and well-controlled studies in pregnant women.
      *
-     * @see schema:FDAcategoryB
+     * @see https://schema.org/FDAcategoryB
      * @see https://health-lifesci.schema.org
      */
      const FDAcategoryB = 'https://schema.org/FDAcategoryB';
@@ -46,7 +46,7 @@ class DrugPregnancyCategory extends BaseType implements DrugPregnancyCategoryCon
      * well-controlled studies in humans, but potential benefits may warrant use
      * of the drug in pregnant women despite potential risks.
      *
-     * @see schema:FDAcategoryC
+     * @see https://schema.org/FDAcategoryC
      * @see https://health-lifesci.schema.org
      */
      const FDAcategoryC = 'https://schema.org/FDAcategoryC';
@@ -57,7 +57,7 @@ class DrugPregnancyCategory extends BaseType implements DrugPregnancyCategoryCon
      * marketing experience or studies in humans, but potential benefits may
      * warrant use of the drug in pregnant women despite potential risks.
      *
-     * @see schema:FDAcategoryD
+     * @see https://schema.org/FDAcategoryD
      * @see https://health-lifesci.schema.org
      */
      const FDAcategoryD = 'https://schema.org/FDAcategoryD';
@@ -69,7 +69,7 @@ class DrugPregnancyCategory extends BaseType implements DrugPregnancyCategoryCon
      * or marketing experience, and the risks involved in use of the drug in
      * pregnant women clearly outweigh potential benefits.
      *
-     * @see schema:FDAcategoryX
+     * @see https://schema.org/FDAcategoryX
      * @see https://health-lifesci.schema.org
      */
      const FDAcategoryX = 'https://schema.org/FDAcategoryX';
@@ -78,7 +78,7 @@ class DrugPregnancyCategory extends BaseType implements DrugPregnancyCategoryCon
      * A designation that the drug in question has not been assigned a pregnancy
      * category designation by the US FDA.
      *
-     * @see schema:FDAnotEvaluated
+     * @see https://schema.org/FDAnotEvaluated
      * @see https://health-lifesci.schema.org
      */
      const FDAnotEvaluated = 'https://schema.org/FDAnotEvaluated';

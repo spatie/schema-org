@@ -23,7 +23,7 @@ class EventStatusType extends BaseType implements EventStatusTypeContract, Enume
      * all are assumed to be cancelled. Either startDate or previousStartDate
      * may be used to specify the event's cancelled date(s).
      *
-     * @see schema:EventCancelled
+     * @see https://schema.org/EventCancelled
      */
      const EventCancelled = 'https://schema.org/EventCancelled';
 
@@ -32,7 +32,7 @@ class EventStatusType extends BaseType implements EventStatusTypeContract, Enume
      * [[eventAttendanceMode]] for specifics of whether it is now fully or
      * partially online.
      *
-     * @see schema:EventMovedOnline
+     * @see https://schema.org/EventMovedOnline
      */
      const EventMovedOnline = 'https://schema.org/EventMovedOnline';
 
@@ -40,7 +40,7 @@ class EventStatusType extends BaseType implements EventStatusTypeContract, Enume
      * The event has been postponed and no new date has been set. The event's
      * previousStartDate should be set.
      *
-     * @see schema:EventPostponed
+     * @see https://schema.org/EventPostponed
      */
      const EventPostponed = 'https://schema.org/EventPostponed';
 
@@ -50,7 +50,7 @@ class EventStatusType extends BaseType implements EventStatusTypeContract, Enume
      * date. (If the event has been rescheduled multiple times, the
      * previousStartDate property may be repeated).
      *
-     * @see schema:EventRescheduled
+     * @see https://schema.org/EventRescheduled
      */
      const EventRescheduled = 'https://schema.org/EventRescheduled';
 
@@ -58,7 +58,7 @@ class EventStatusType extends BaseType implements EventStatusTypeContract, Enume
      * The event is taking place or has taken place on the startDate as
      * scheduled. Use of this value is optional, as it is assumed by default.
      *
-     * @see schema:EventScheduled
+     * @see https://schema.org/EventScheduled
      */
      const EventScheduled = 'https://schema.org/EventScheduled';
 

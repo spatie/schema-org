@@ -24,7 +24,7 @@ class UKNonprofitType extends BaseType implements UKNonprofitTypeContract, Enume
      * CharitableIncorporatedOrganization: Non-profit type referring to a
      * Charitable Incorporated Organization (UK).
      *
-     * @see schema:CharitableIncorporatedOrganization
+     * @see https://schema.org/CharitableIncorporatedOrganization
      * @see https://pending.schema.org
      * @link https://github.com/schemaorg/schemaorg/issues/2543
      */
@@ -34,7 +34,7 @@ class UKNonprofitType extends BaseType implements UKNonprofitTypeContract, Enume
      * LimitedByGuaranteeCharity: Non-profit type referring to a charitable
      * company that is limited by guarantee (UK).
      *
-     * @see schema:LimitedByGuaranteeCharity
+     * @see https://schema.org/LimitedByGuaranteeCharity
      * @see https://pending.schema.org
      * @link https://github.com/schemaorg/schemaorg/issues/2543
      */
@@ -43,7 +43,7 @@ class UKNonprofitType extends BaseType implements UKNonprofitTypeContract, Enume
     /**
      * UKTrust: Non-profit type referring to a UK trust.
      *
-     * @see schema:UKTrust
+     * @see https://schema.org/UKTrust
      * @see https://pending.schema.org
      * @link https://github.com/schemaorg/schemaorg/issues/2543
      */
@@ -53,7 +53,7 @@ class UKNonprofitType extends BaseType implements UKNonprofitTypeContract, Enume
      * UnincorporatedAssociationCharity: Non-profit type referring to a
      * charitable company that is not incorporated (UK).
      *
-     * @see schema:UnincorporatedAssociationCharity
+     * @see https://schema.org/UnincorporatedAssociationCharity
      * @see https://pending.schema.org
      * @link https://github.com/schemaorg/schemaorg/issues/2543
      */

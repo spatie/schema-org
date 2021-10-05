@@ -19,28 +19,28 @@ class OfferItemCondition extends BaseType implements OfferItemConditionContract,
     /**
      * Indicates that the item is damaged.
      *
-     * @see schema:DamagedCondition
+     * @see https://schema.org/DamagedCondition
      */
      const DamagedCondition = 'https://schema.org/DamagedCondition';
 
     /**
      * Indicates that the item is new.
      *
-     * @see schema:NewCondition
+     * @see https://schema.org/NewCondition
      */
      const NewCondition = 'https://schema.org/NewCondition';
 
     /**
      * Indicates that the item is refurbished.
      *
-     * @see schema:RefurbishedCondition
+     * @see https://schema.org/RefurbishedCondition
      */
      const RefurbishedCondition = 'https://schema.org/RefurbishedCondition';
 
     /**
      * Indicates that the item is used.
      *
-     * @see schema:UsedCondition
+     * @see https://schema.org/UsedCondition
      */
      const UsedCondition = 'https://schema.org/UsedCondition';
 

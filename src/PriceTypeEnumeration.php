@@ -22,7 +22,7 @@ class PriceTypeEnumeration extends BaseType implements PriceTypeEnumerationContr
     /**
      * Represents the invoice price of an offered product.
      *
-     * @see schema:InvoicePrice
+     * @see https://schema.org/InvoicePrice
      * @see https://pending.schema.org
      * @link https://github.com/schemaorg/schemaorg/issues/2712
      */
@@ -32,7 +32,7 @@ class PriceTypeEnumeration extends BaseType implements PriceTypeEnumerationContr
      * Represents the list price (the price a product is actually advertised
      * for) of an offered product.
      *
-     * @see schema:ListPrice
+     * @see https://schema.org/ListPrice
      * @see https://pending.schema.org
      * @link https://github.com/schemaorg/schemaorg/issues/2712
      */
@@ -42,7 +42,7 @@ class PriceTypeEnumeration extends BaseType implements PriceTypeEnumerationContr
      * Represents the manufacturer suggested retail price ("MSRP") of an offered
      * product.
      *
-     * @see schema:MSRP
+     * @see https://schema.org/MSRP
      * @see https://pending.schema.org
      * @link https://github.com/schemaorg/schemaorg/issues/2712
      */
@@ -52,7 +52,7 @@ class PriceTypeEnumeration extends BaseType implements PriceTypeEnumerationContr
      * Represents the minimum advertised price ("MAP") (as dictated by the
      * manufacturer) of an offered product.
      *
-     * @see schema:MinimumAdvertisedPrice
+     * @see https://schema.org/MinimumAdvertisedPrice
      * @see https://pending.schema.org
      * @link https://github.com/schemaorg/schemaorg/issues/2712
      */
@@ -61,7 +61,7 @@ class PriceTypeEnumeration extends BaseType implements PriceTypeEnumerationContr
     /**
      * Represents the suggested retail price ("SRP") of an offered product.
      *
-     * @see schema:SRP
+     * @see https://schema.org/SRP
      * @see https://pending.schema.org
      * @link https://github.com/schemaorg/schemaorg/issues/2712
      */
@@ -71,7 +71,7 @@ class PriceTypeEnumeration extends BaseType implements PriceTypeEnumerationContr
      * Represents a sale price (usually active for a limited period) of an
      * offered product.
      *
-     * @see schema:SalePrice
+     * @see https://schema.org/SalePrice
      * @see https://pending.schema.org
      * @link https://github.com/schemaorg/schemaorg/issues/2712
      */

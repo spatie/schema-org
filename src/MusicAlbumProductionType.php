@@ -21,7 +21,7 @@ class MusicAlbumProductionType extends BaseType implements MusicAlbumProductionT
     /**
      * CompilationAlbum.
      *
-     * @see schema:CompilationAlbum
+     * @see https://schema.org/CompilationAlbum
      * @link http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#MBZ
      */
      const CompilationAlbum = 'https://schema.org/CompilationAlbum';
@@ -29,7 +29,7 @@ class MusicAlbumProductionType extends BaseType implements MusicAlbumProductionT
     /**
      * DJMixAlbum.
      *
-     * @see schema:DJMixAlbum
+     * @see https://schema.org/DJMixAlbum
      * @link http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#MBZ
      */
      const DJMixAlbum = 'https://schema.org/DJMixAlbum';
@@ -37,7 +37,7 @@ class MusicAlbumProductionType extends BaseType implements MusicAlbumProductionT
     /**
      * DemoAlbum.
      *
-     * @see schema:DemoAlbum
+     * @see https://schema.org/DemoAlbum
      * @link http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#MBZ
      */
      const DemoAlbum = 'https://schema.org/DemoAlbum';
@@ -45,7 +45,7 @@ class MusicAlbumProductionType extends BaseType implements MusicAlbumProductionT
     /**
      * LiveAlbum.
      *
-     * @see schema:LiveAlbum
+     * @see https://schema.org/LiveAlbum
      * @link http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#MBZ
      */
      const LiveAlbum = 'https://schema.org/LiveAlbum';
@@ -53,7 +53,7 @@ class MusicAlbumProductionType extends BaseType implements MusicAlbumProductionT
     /**
      * MixtapeAlbum.
      *
-     * @see schema:MixtapeAlbum
+     * @see https://schema.org/MixtapeAlbum
      * @link http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#MBZ
      */
      const MixtapeAlbum = 'https://schema.org/MixtapeAlbum';
@@ -61,7 +61,7 @@ class MusicAlbumProductionType extends BaseType implements MusicAlbumProductionT
     /**
      * RemixAlbum.
      *
-     * @see schema:RemixAlbum
+     * @see https://schema.org/RemixAlbum
      * @link http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#MBZ
      */
      const RemixAlbum = 'https://schema.org/RemixAlbum';
@@ -69,7 +69,7 @@ class MusicAlbumProductionType extends BaseType implements MusicAlbumProductionT
     /**
      * SoundtrackAlbum.
      *
-     * @see schema:SoundtrackAlbum
+     * @see https://schema.org/SoundtrackAlbum
      * @link http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#MBZ
      */
      const SoundtrackAlbum = 'https://schema.org/SoundtrackAlbum';
@@ -77,7 +77,7 @@ class MusicAlbumProductionType extends BaseType implements MusicAlbumProductionT
     /**
      * SpokenWordAlbum.
      *
-     * @see schema:SpokenWordAlbum
+     * @see https://schema.org/SpokenWordAlbum
      * @link http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#MBZ
      */
      const SpokenWordAlbum = 'https://schema.org/SpokenWordAlbum';
@@ -85,7 +85,7 @@ class MusicAlbumProductionType extends BaseType implements MusicAlbumProductionT
     /**
      * StudioAlbum.
      *
-     * @see schema:StudioAlbum
+     * @see https://schema.org/StudioAlbum
      * @link http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#MBZ
      */
      const StudioAlbum = 'https://schema.org/StudioAlbum';

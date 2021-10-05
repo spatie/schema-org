@@ -24,7 +24,7 @@ class NLNonprofitType extends BaseType implements NLNonprofitTypeContract, Enume
      * NonprofitANBI: Non-profit type referring to a Public Benefit Organization
      * (NL).
      *
-     * @see schema:NonprofitANBI
+     * @see https://schema.org/NonprofitANBI
      * @see https://pending.schema.org
      * @link https://github.com/schemaorg/schemaorg/issues/2543
      */
@@ -34,7 +34,7 @@ class NLNonprofitType extends BaseType implements NLNonprofitTypeContract, Enume
      * NonprofitSBBI: Non-profit type referring to a Social Interest Promoting
      * Institution (NL).
      *
-     * @see schema:NonprofitSBBI
+     * @see https://schema.org/NonprofitSBBI
      * @see https://pending.schema.org
      * @link https://github.com/schemaorg/schemaorg/issues/2543
      */

@@ -21,7 +21,7 @@ class GameServerStatus extends BaseType implements GameServerStatusContract, Enu
      * Game server status: OfflinePermanently. Server is offline and not
      * available.
      *
-     * @see schema:OfflinePermanently
+     * @see https://schema.org/OfflinePermanently
      */
      const OfflinePermanently = 'https://schema.org/OfflinePermanently';
 
@@ -29,14 +29,14 @@ class GameServerStatus extends BaseType implements GameServerStatusContract, Enu
      * Game server status: OfflineTemporarily. Server is offline now but it can
      * be online soon.
      *
-     * @see schema:OfflineTemporarily
+     * @see https://schema.org/OfflineTemporarily
      */
      const OfflineTemporarily = 'https://schema.org/OfflineTemporarily';
 
     /**
      * Game server status: Online. Server is available.
      *
-     * @see schema:Online
+     * @see https://schema.org/Online
      */
      const Online = 'https://schema.org/Online';
 
@@ -44,7 +44,7 @@ class GameServerStatus extends BaseType implements GameServerStatusContract, Enu
      * Game server status: OnlineFull. Server is online but unavailable. The
      * maximum number of players has reached.
      *
-     * @see schema:OnlineFull
+     * @see https://schema.org/OnlineFull
      */
      const OnlineFull = 'https://schema.org/OnlineFull';
 

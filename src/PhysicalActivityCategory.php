@@ -22,7 +22,7 @@ class PhysicalActivityCategory extends BaseType implements PhysicalActivityCateg
      * the aerobic energy-generating process; during activity, the aerobic
      * metabolism uses oxygen to adequately meet energy demands during exercise.
      *
-     * @see schema:AerobicActivity
+     * @see https://schema.org/AerobicActivity
      * @see https://health-lifesci.schema.org
      */
      const AerobicActivity = 'https://schema.org/AerobicActivity';
@@ -31,7 +31,7 @@ class PhysicalActivityCategory extends BaseType implements PhysicalActivityCateg
      * Physical activity that is of high-intensity which utilizes the anaerobic
      * metabolism of the body.
      *
-     * @see schema:AnaerobicActivity
+     * @see https://schema.org/AnaerobicActivity
      * @see https://health-lifesci.schema.org
      */
      const AnaerobicActivity = 'https://schema.org/AnaerobicActivity';
@@ -39,7 +39,7 @@ class PhysicalActivityCategory extends BaseType implements PhysicalActivityCateg
     /**
      * Physical activity that is engaged to help maintain posture and balance.
      *
-     * @see schema:Balance
+     * @see https://schema.org/Balance
      * @see https://health-lifesci.schema.org
      */
      const Balance = 'https://schema.org/Balance';
@@ -48,7 +48,7 @@ class PhysicalActivityCategory extends BaseType implements PhysicalActivityCateg
      * Physical activity that is engaged in to improve joint and muscle
      * flexibility.
      *
-     * @see schema:Flexibility
+     * @see https://schema.org/Flexibility
      * @see https://health-lifesci.schema.org
      */
      const Flexibility = 'https://schema.org/Flexibility';
@@ -57,7 +57,7 @@ class PhysicalActivityCategory extends BaseType implements PhysicalActivityCateg
      * Any physical activity engaged in for recreational purposes. Examples may
      * include ballroom dancing, roller skating, canoeing, fishing, etc.
      *
-     * @see schema:LeisureTimeActivity
+     * @see https://schema.org/LeisureTimeActivity
      * @see https://health-lifesci.schema.org
      */
      const LeisureTimeActivity = 'https://schema.org/LeisureTimeActivity';
@@ -67,7 +67,7 @@ class PhysicalActivityCategory extends BaseType implements PhysicalActivityCateg
      * include waiting tables, maid service, carrying a mailbag, picking fruits
      * or vegetables, construction work, etc.
      *
-     * @see schema:OccupationalActivity
+     * @see https://schema.org/OccupationalActivity
      * @see https://health-lifesci.schema.org
      */
      const OccupationalActivity = 'https://schema.org/OccupationalActivity';
@@ -76,7 +76,7 @@ class PhysicalActivityCategory extends BaseType implements PhysicalActivityCateg
      * Physical activity that is engaged in to improve muscle and bone strength.
      * Also referred to as resistance training.
      *
-     * @see schema:StrengthTraining
+     * @see https://schema.org/StrengthTraining
      * @see https://health-lifesci.schema.org
      */
      const StrengthTraining = 'https://schema.org/StrengthTraining';

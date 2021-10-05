@@ -22,7 +22,7 @@ class RefundTypeEnumeration extends BaseType implements RefundTypeEnumerationCon
     /**
      * A ExchangeRefund ...
      *
-     * @see schema:ExchangeRefund
+     * @see https://schema.org/ExchangeRefund
      * @see https://pending.schema.org
      * @link https://github.com/schemaorg/schemaorg/issues/2288
      */
@@ -31,7 +31,7 @@ class RefundTypeEnumeration extends BaseType implements RefundTypeEnumerationCon
     /**
      * A FullRefund ...
      *
-     * @see schema:FullRefund
+     * @see https://schema.org/FullRefund
      * @see https://pending.schema.org
      * @link https://github.com/schemaorg/schemaorg/issues/2288
      */
@@ -40,7 +40,7 @@ class RefundTypeEnumeration extends BaseType implements RefundTypeEnumerationCon
     /**
      * A StoreCreditRefund ...
      *
-     * @see schema:StoreCreditRefund
+     * @see https://schema.org/StoreCreditRefund
      * @see https://pending.schema.org
      * @link https://github.com/schemaorg/schemaorg/issues/2288
      */

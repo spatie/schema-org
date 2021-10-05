@@ -22,7 +22,7 @@ class EnergyStarEnergyEfficiencyEnumeration extends BaseType implements EnergySt
     /**
      * Represents EnergyStar certification
      *
-     * @see schema:EnergyStarCertified
+     * @see https://schema.org/EnergyStarCertified
      * @see https://pending.schema.org
      * @link https://github.com/schemaorg/schemaorg/issues/2670
      */

@@ -21,7 +21,7 @@ class MedicalProcedureType extends BaseType implements MedicalProcedureTypeContr
     /**
      * A type of medical procedure that involves noninvasive techniques.
      *
-     * @see schema:NoninvasiveProcedure
+     * @see https://schema.org/NoninvasiveProcedure
      * @see https://health-lifesci.schema.org
      */
      const NoninvasiveProcedure = 'https://schema.org/NoninvasiveProcedure';
@@ -31,7 +31,7 @@ class MedicalProcedureType extends BaseType implements MedicalProcedureTypeContr
      * access to organs or tissue is achieved via needle-puncture of the skin.
      * For example, catheter-based procedures like stent delivery.
      *
-     * @see schema:PercutaneousProcedure
+     * @see https://schema.org/PercutaneousProcedure
      * @see https://health-lifesci.schema.org
      */
      const PercutaneousProcedure = 'https://schema.org/PercutaneousProcedure';

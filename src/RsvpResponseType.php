@@ -20,21 +20,21 @@ class RsvpResponseType extends BaseType implements RsvpResponseTypeContract, Enu
     /**
      * The invitee may or may not attend.
      *
-     * @see schema:RsvpResponseMaybe
+     * @see https://schema.org/RsvpResponseMaybe
      */
      const RsvpResponseMaybe = 'https://schema.org/RsvpResponseMaybe';
 
     /**
      * The invitee will not attend.
      *
-     * @see schema:RsvpResponseNo
+     * @see https://schema.org/RsvpResponseNo
      */
      const RsvpResponseNo = 'https://schema.org/RsvpResponseNo';
 
     /**
      * The invitee will attend.
      *
-     * @see schema:RsvpResponseYes
+     * @see https://schema.org/RsvpResponseYes
      */
      const RsvpResponseYes = 'https://schema.org/RsvpResponseYes';
 

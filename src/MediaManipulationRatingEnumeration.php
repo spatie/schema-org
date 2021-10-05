@@ -25,7 +25,7 @@ class MediaManipulationRatingEnumeration extends BaseType implements MediaManipu
      * AuthenticMediaObject: An unaltered image that is presented in an accurate
      * way.
      *
-     * @see schema:AuthenticContent
+     * @see https://schema.org/AuthenticContent
      * @see https://pending.schema.org
      * @link https://github.com/schemaorg/schemaorg/issues/2450
      */
@@ -34,7 +34,7 @@ class MediaManipulationRatingEnumeration extends BaseType implements MediaManipu
     /**
      * MissingContext: ...
      *
-     * @see schema:MissingContext
+     * @see https://schema.org/MissingContext
      * @see https://pending.schema.org
      * @link https://github.com/schemaorg/schemaorg/issues/2450
      */

@@ -23,7 +23,7 @@ class MerchantReturnEnumeration extends BaseType implements MerchantReturnEnumer
      * MerchantReturnFiniteReturnWindow: there is a finite window for product
      * returns.
      *
-     * @see schema:MerchantReturnFiniteReturnWindow
+     * @see https://schema.org/MerchantReturnFiniteReturnWindow
      * @see https://pending.schema.org
      * @link https://github.com/schemaorg/schemaorg/issues/2288
      */
@@ -32,7 +32,7 @@ class MerchantReturnEnumeration extends BaseType implements MerchantReturnEnumer
     /**
      * MerchantReturnNotPermitted: product returns are not permitted.
      *
-     * @see schema:MerchantReturnNotPermitted
+     * @see https://schema.org/MerchantReturnNotPermitted
      * @see https://pending.schema.org
      * @link https://github.com/schemaorg/schemaorg/issues/2288
      */
@@ -42,7 +42,7 @@ class MerchantReturnEnumeration extends BaseType implements MerchantReturnEnumer
      * MerchantReturnUnlimitedWindow: there is an unlimited window for product
      * returns.
      *
-     * @see schema:MerchantReturnUnlimitedWindow
+     * @see https://schema.org/MerchantReturnUnlimitedWindow
      * @see https://pending.schema.org
      * @link https://github.com/schemaorg/schemaorg/issues/2288
      */
@@ -51,7 +51,7 @@ class MerchantReturnEnumeration extends BaseType implements MerchantReturnEnumer
     /**
      * MerchantReturnUnspecified: a product return policy is not specified here.
      *
-     * @see schema:MerchantReturnUnspecified
+     * @see https://schema.org/MerchantReturnUnspecified
      * @see https://pending.schema.org
      * @link https://github.com/schemaorg/schemaorg/issues/2288
      */

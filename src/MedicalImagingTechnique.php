@@ -22,7 +22,7 @@ class MedicalImagingTechnique extends BaseType implements MedicalImagingTechniqu
     /**
      * X-ray computed tomography imaging.
      *
-     * @see schema:CT
+     * @see https://schema.org/CT
      * @see https://health-lifesci.schema.org
      */
      const CT = 'https://schema.org/CT';
@@ -30,7 +30,7 @@ class MedicalImagingTechnique extends BaseType implements MedicalImagingTechniqu
     /**
      * Magnetic resonance imaging.
      *
-     * @see schema:MRI
+     * @see https://schema.org/MRI
      * @see https://health-lifesci.schema.org
      */
      const MRI = 'https://schema.org/MRI';
@@ -38,7 +38,7 @@ class MedicalImagingTechnique extends BaseType implements MedicalImagingTechniqu
     /**
      * Positron emission tomography imaging.
      *
-     * @see schema:PET
+     * @see https://schema.org/PET
      * @see https://health-lifesci.schema.org
      */
      const PET = 'https://schema.org/PET';
@@ -46,7 +46,7 @@ class MedicalImagingTechnique extends BaseType implements MedicalImagingTechniqu
     /**
      * Ultrasound imaging.
      *
-     * @see schema:Ultrasound
+     * @see https://schema.org/Ultrasound
      * @see https://health-lifesci.schema.org
      */
      const Ultrasound = 'https://schema.org/Ultrasound';
@@ -54,7 +54,7 @@ class MedicalImagingTechnique extends BaseType implements MedicalImagingTechniqu
     /**
      * X-ray imaging.
      *
-     * @see schema:XRay
+     * @see https://schema.org/XRay
      * @see https://health-lifesci.schema.org
      */
      const XRay = 'https://schema.org/XRay';

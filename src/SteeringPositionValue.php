@@ -22,7 +22,7 @@ class SteeringPositionValue extends BaseType implements SteeringPositionValueCon
      * The steering position is on the left side of the vehicle (viewed from the
      * main direction of driving).
      *
-     * @see schema:LeftHandDriving
+     * @see https://schema.org/LeftHandDriving
      * @link http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#Automotive_Ontology_Working_Group
      */
      const LeftHandDriving = 'https://schema.org/LeftHandDriving';
@@ -31,7 +31,7 @@ class SteeringPositionValue extends BaseType implements SteeringPositionValueCon
      * The steering position is on the right side of the vehicle (viewed from
      * the main direction of driving).
      *
-     * @see schema:RightHandDriving
+     * @see https://schema.org/RightHandDriving
      * @link http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#Automotive_Ontology_Working_Group
      */
      const RightHandDriving = 'https://schema.org/RightHandDriving';

@@ -21,14 +21,14 @@ class ActionStatusType extends BaseType implements ActionStatusTypeContract, Enu
      * An in-progress action (e.g, while watching the movie, or driving to a
      * location).
      *
-     * @see schema:ActiveActionStatus
+     * @see https://schema.org/ActiveActionStatus
      */
      const ActiveActionStatus = 'https://schema.org/ActiveActionStatus';
 
     /**
      * An action that has already taken place.
      *
-     * @see schema:CompletedActionStatus
+     * @see https://schema.org/CompletedActionStatus
      */
      const CompletedActionStatus = 'https://schema.org/CompletedActionStatus';
 
@@ -36,14 +36,14 @@ class ActionStatusType extends BaseType implements ActionStatusTypeContract, Enu
      * An action that failed to complete. The action's error property and the
      * HTTP return code contain more information about the failure.
      *
-     * @see schema:FailedActionStatus
+     * @see https://schema.org/FailedActionStatus
      */
      const FailedActionStatus = 'https://schema.org/FailedActionStatus';
 
     /**
      * A description of an action that is supported.
      *
-     * @see schema:PotentialActionStatus
+     * @see https://schema.org/PotentialActionStatus
      */
      const PotentialActionStatus = 'https://schema.org/PotentialActionStatus';
 

@@ -22,7 +22,7 @@ class DriveWheelConfigurationValue extends BaseType implements DriveWheelConfigu
      * All-wheel Drive is a transmission layout where the engine drives all four
      * wheels.
      *
-     * @see schema:AllWheelDriveConfiguration
+     * @see https://schema.org/AllWheelDriveConfiguration
      * @link http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#Automotive_Ontology_Working_Group
      */
      const AllWheelDriveConfiguration = 'https://schema.org/AllWheelDriveConfiguration';
@@ -31,7 +31,7 @@ class DriveWheelConfigurationValue extends BaseType implements DriveWheelConfigu
      * Four-wheel drive is a transmission layout where the engine primarily
      * drives two wheels with a part-time four-wheel drive capability.
      *
-     * @see schema:FourWheelDriveConfiguration
+     * @see https://schema.org/FourWheelDriveConfiguration
      * @link http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#Automotive_Ontology_Working_Group
      */
      const FourWheelDriveConfiguration = 'https://schema.org/FourWheelDriveConfiguration';
@@ -40,7 +40,7 @@ class DriveWheelConfigurationValue extends BaseType implements DriveWheelConfigu
      * Front-wheel drive is a transmission layout where the engine drives the
      * front wheels.
      *
-     * @see schema:FrontWheelDriveConfiguration
+     * @see https://schema.org/FrontWheelDriveConfiguration
      * @link http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#Automotive_Ontology_Working_Group
      */
      const FrontWheelDriveConfiguration = 'https://schema.org/FrontWheelDriveConfiguration';
@@ -49,7 +49,7 @@ class DriveWheelConfigurationValue extends BaseType implements DriveWheelConfigu
      * Real-wheel drive is a transmission layout where the engine drives the
      * rear wheels.
      *
-     * @see schema:RearWheelDriveConfiguration
+     * @see https://schema.org/RearWheelDriveConfiguration
      * @link http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#Automotive_Ontology_Working_Group
      */
      const RearWheelDriveConfiguration = 'https://schema.org/RearWheelDriveConfiguration';

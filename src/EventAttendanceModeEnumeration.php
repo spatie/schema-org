@@ -23,7 +23,7 @@ class EventAttendanceModeEnumeration extends BaseType implements EventAttendance
      * MixedEventAttendanceMode - an event that is conducted as a combination of
      * both offline and online modes.
      *
-     * @see schema:MixedEventAttendanceMode
+     * @see https://schema.org/MixedEventAttendanceMode
      * @see https://pending.schema.org
      * @link https://github.com/schemaorg/schemaorg/issues/1842
      */
@@ -33,7 +33,7 @@ class EventAttendanceModeEnumeration extends BaseType implements EventAttendance
      * OfflineEventAttendanceMode - an event that is primarily conducted
      * offline.
      *
-     * @see schema:OfflineEventAttendanceMode
+     * @see https://schema.org/OfflineEventAttendanceMode
      * @see https://pending.schema.org
      * @link https://github.com/schemaorg/schemaorg/issues/1842
      */
@@ -42,7 +42,7 @@ class EventAttendanceModeEnumeration extends BaseType implements EventAttendance
     /**
      * OnlineEventAttendanceMode - an event that is primarily conducted online.
      *
-     * @see schema:OnlineEventAttendanceMode
+     * @see https://schema.org/OnlineEventAttendanceMode
      * @see https://pending.schema.org
      * @link https://github.com/schemaorg/schemaorg/issues/1842
      */

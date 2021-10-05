@@ -20,35 +20,35 @@ class PaymentStatusType extends BaseType implements PaymentStatusTypeContract, E
     /**
      * An automatic payment system is in place and will be used.
      *
-     * @see schema:PaymentAutomaticallyApplied
+     * @see https://schema.org/PaymentAutomaticallyApplied
      */
      const PaymentAutomaticallyApplied = 'https://schema.org/PaymentAutomaticallyApplied';
 
     /**
      * The payment has been received and processed.
      *
-     * @see schema:PaymentComplete
+     * @see https://schema.org/PaymentComplete
      */
      const PaymentComplete = 'https://schema.org/PaymentComplete';
 
     /**
      * The payee received the payment, but it was declined for some reason.
      *
-     * @see schema:PaymentDeclined
+     * @see https://schema.org/PaymentDeclined
      */
      const PaymentDeclined = 'https://schema.org/PaymentDeclined';
 
     /**
      * The payment is due, but still within an acceptable time to be received.
      *
-     * @see schema:PaymentDue
+     * @see https://schema.org/PaymentDue
      */
      const PaymentDue = 'https://schema.org/PaymentDue';
 
     /**
      * The payment is due and considered late.
      *
-     * @see schema:PaymentPastDue
+     * @see https://schema.org/PaymentPastDue
      */
      const PaymentPastDue = 'https://schema.org/PaymentPastDue';
 

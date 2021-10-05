@@ -21,7 +21,7 @@ class LegalForceStatus extends BaseType implements LegalForceStatusContract, Enu
     /**
      * Indicates that a legislation is in force.
      *
-     * @see schema:InForce
+     * @see https://schema.org/InForce
      * @see https://pending.schema.org
      */
      const InForce = 'https://schema.org/InForce';
@@ -29,7 +29,7 @@ class LegalForceStatus extends BaseType implements LegalForceStatusContract, Enu
     /**
      * Indicates that a legislation is currently not in force.
      *
-     * @see schema:NotInForce
+     * @see https://schema.org/NotInForce
      * @see https://pending.schema.org
      */
      const NotInForce = 'https://schema.org/NotInForce';
@@ -37,7 +37,7 @@ class LegalForceStatus extends BaseType implements LegalForceStatusContract, Enu
     /**
      * Indicates that parts of the legislation are in force, and parts are not.
      *
-     * @see schema:PartiallyInForce
+     * @see https://schema.org/PartiallyInForce
      * @see https://pending.schema.org
      */
      const PartiallyInForce = 'https://schema.org/PartiallyInForce';

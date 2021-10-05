@@ -19,14 +19,14 @@ class ContactPointOption extends BaseType implements ContactPointOptionContract,
     /**
      * Uses devices to support users with hearing impairments.
      *
-     * @see schema:HearingImpairedSupported
+     * @see https://schema.org/HearingImpairedSupported
      */
      const HearingImpairedSupported = 'https://schema.org/HearingImpairedSupported';
 
     /**
      * The associated telephone number is toll free.
      *
-     * @see schema:TollFree
+     * @see https://schema.org/TollFree
      */
      const TollFree = 'https://schema.org/TollFree';
 

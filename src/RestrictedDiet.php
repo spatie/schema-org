@@ -20,77 +20,77 @@ class RestrictedDiet extends BaseType implements RestrictedDietContract, Enumera
     /**
      * A diet appropriate for people with diabetes.
      *
-     * @see schema:DiabeticDiet
+     * @see https://schema.org/DiabeticDiet
      */
      const DiabeticDiet = 'https://schema.org/DiabeticDiet';
 
     /**
      * A diet exclusive of gluten.
      *
-     * @see schema:GlutenFreeDiet
+     * @see https://schema.org/GlutenFreeDiet
      */
      const GlutenFreeDiet = 'https://schema.org/GlutenFreeDiet';
 
     /**
      * A diet conforming to Islamic dietary practices.
      *
-     * @see schema:HalalDiet
+     * @see https://schema.org/HalalDiet
      */
      const HalalDiet = 'https://schema.org/HalalDiet';
 
     /**
      * A diet conforming to Hindu dietary practices, in particular, beef-free.
      *
-     * @see schema:HinduDiet
+     * @see https://schema.org/HinduDiet
      */
      const HinduDiet = 'https://schema.org/HinduDiet';
 
     /**
      * A diet conforming to Jewish dietary practices.
      *
-     * @see schema:KosherDiet
+     * @see https://schema.org/KosherDiet
      */
      const KosherDiet = 'https://schema.org/KosherDiet';
 
     /**
      * A diet focused on reduced calorie intake.
      *
-     * @see schema:LowCalorieDiet
+     * @see https://schema.org/LowCalorieDiet
      */
      const LowCalorieDiet = 'https://schema.org/LowCalorieDiet';
 
     /**
      * A diet focused on reduced fat and cholesterol intake.
      *
-     * @see schema:LowFatDiet
+     * @see https://schema.org/LowFatDiet
      */
      const LowFatDiet = 'https://schema.org/LowFatDiet';
 
     /**
      * A diet appropriate for people with lactose intolerance.
      *
-     * @see schema:LowLactoseDiet
+     * @see https://schema.org/LowLactoseDiet
      */
      const LowLactoseDiet = 'https://schema.org/LowLactoseDiet';
 
     /**
      * A diet focused on reduced sodium intake.
      *
-     * @see schema:LowSaltDiet
+     * @see https://schema.org/LowSaltDiet
      */
      const LowSaltDiet = 'https://schema.org/LowSaltDiet';
 
     /**
      * A diet exclusive of all animal products.
      *
-     * @see schema:VeganDiet
+     * @see https://schema.org/VeganDiet
      */
      const VeganDiet = 'https://schema.org/VeganDiet';
 
     /**
      * A diet exclusive of animal meat.
      *
-     * @see schema:VegetarianDiet
+     * @see https://schema.org/VegetarianDiet
      */
      const VegetarianDiet = 'https://schema.org/VegetarianDiet';
 

@@ -24,7 +24,7 @@ class LegalValueLevel extends BaseType implements LegalValueLevelContract, Enume
      * Publications). Something "Authoritative" is considered to be also
      * [[OfficialLegalValue]]".
      *
-     * @see schema:AuthoritativeLegalValue
+     * @see https://schema.org/AuthoritativeLegalValue
      * @see https://pending.schema.org
      */
      const AuthoritativeLegalValue = 'https://schema.org/AuthoritativeLegalValue';
@@ -36,7 +36,7 @@ class LegalValueLevel extends BaseType implements LegalValueLevelContract, Enume
      *   Something "Definitive" is considered to be also
      * [[AuthoritativeLegalValue]].
      *
-     * @see schema:DefinitiveLegalValue
+     * @see https://schema.org/DefinitiveLegalValue
      * @see https://pending.schema.org
      */
      const DefinitiveLegalValue = 'https://schema.org/DefinitiveLegalValue';
@@ -48,7 +48,7 @@ class LegalValueLevel extends BaseType implements LegalValueLevelContract, Enume
      * it available (e.g. a consolidated version of a EU directive published by
      * the EU Office of Publications).
      *
-     * @see schema:OfficialLegalValue
+     * @see https://schema.org/OfficialLegalValue
      * @see https://pending.schema.org
      */
      const OfficialLegalValue = 'https://schema.org/OfficialLegalValue';
@@ -57,7 +57,7 @@ class LegalValueLevel extends BaseType implements LegalValueLevelContract, Enume
      * Indicates that a document has no particular or special standing (e.g. a
      * republication of a law by a private publisher).
      *
-     * @see schema:UnofficialLegalValue
+     * @see https://schema.org/UnofficialLegalValue
      * @see https://pending.schema.org
      */
      const UnofficialLegalValue = 'https://schema.org/UnofficialLegalValue';

@@ -23,7 +23,7 @@ class GovernmentBenefitsType extends BaseType implements GovernmentBenefitsTypeC
     /**
      * BasicIncome: this is a benefit for basic income.
      *
-     * @see schema:BasicIncome
+     * @see https://schema.org/BasicIncome
      * @see https://pending.schema.org
      * @link https://github.com/schemaorg/schemaorg/issues/2534
      */
@@ -32,7 +32,7 @@ class GovernmentBenefitsType extends BaseType implements GovernmentBenefitsTypeC
     /**
      * BusinessSupport: this is a benefit for supporting businesses.
      *
-     * @see schema:BusinessSupport
+     * @see https://schema.org/BusinessSupport
      * @see https://pending.schema.org
      * @link https://github.com/schemaorg/schemaorg/issues/2534
      */
@@ -41,7 +41,7 @@ class GovernmentBenefitsType extends BaseType implements GovernmentBenefitsTypeC
     /**
      * DisabilitySupport: this is a benefit for disability support.
      *
-     * @see schema:DisabilitySupport
+     * @see https://schema.org/DisabilitySupport
      * @see https://pending.schema.org
      * @link https://github.com/schemaorg/schemaorg/issues/2534
      */
@@ -50,7 +50,7 @@ class GovernmentBenefitsType extends BaseType implements GovernmentBenefitsTypeC
     /**
      * HealthCare: this is a benefit for health care.
      *
-     * @see schema:HealthCare
+     * @see https://schema.org/HealthCare
      * @see https://pending.schema.org
      * @link https://github.com/schemaorg/schemaorg/issues/2534
      */
@@ -59,7 +59,7 @@ class GovernmentBenefitsType extends BaseType implements GovernmentBenefitsTypeC
     /**
      * OneTimePayments: this is a benefit for one-time payments for individuals.
      *
-     * @see schema:OneTimePayments
+     * @see https://schema.org/OneTimePayments
      * @see https://pending.schema.org
      * @link https://github.com/schemaorg/schemaorg/issues/2534
      */
@@ -68,7 +68,7 @@ class GovernmentBenefitsType extends BaseType implements GovernmentBenefitsTypeC
     /**
      * PaidLeave: this is a benefit for paid leave.
      *
-     * @see schema:PaidLeave
+     * @see https://schema.org/PaidLeave
      * @see https://pending.schema.org
      * @link https://github.com/schemaorg/schemaorg/issues/2534
      */
@@ -77,7 +77,7 @@ class GovernmentBenefitsType extends BaseType implements GovernmentBenefitsTypeC
     /**
      * ParentalSupport: this is a benefit for parental support.
      *
-     * @see schema:ParentalSupport
+     * @see https://schema.org/ParentalSupport
      * @see https://pending.schema.org
      * @link https://github.com/schemaorg/schemaorg/issues/2534
      */
@@ -86,7 +86,7 @@ class GovernmentBenefitsType extends BaseType implements GovernmentBenefitsTypeC
     /**
      * UnemploymentSupport: this is a benefit for unemployment support.
      *
-     * @see schema:UnemploymentSupport
+     * @see https://schema.org/UnemploymentSupport
      * @see https://pending.schema.org
      * @link https://github.com/schemaorg/schemaorg/issues/2534
      */

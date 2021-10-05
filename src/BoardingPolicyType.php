@@ -19,14 +19,14 @@ class BoardingPolicyType extends BaseType implements BoardingPolicyTypeContract,
     /**
      * The airline boards by groups based on check-in time, priority, etc.
      *
-     * @see schema:GroupBoardingPolicy
+     * @see https://schema.org/GroupBoardingPolicy
      */
      const GroupBoardingPolicy = 'https://schema.org/GroupBoardingPolicy';
 
     /**
      * The airline boards by zones of the plane.
      *
-     * @see schema:ZoneBoardingPolicy
+     * @see https://schema.org/ZoneBoardingPolicy
      */
      const ZoneBoardingPolicy = 'https://schema.org/ZoneBoardingPolicy';
 

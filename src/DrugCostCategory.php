@@ -22,7 +22,7 @@ class DrugCostCategory extends BaseType implements DrugCostCategoryContract, Enu
      * The drug's cost represents the maximum reimbursement paid by an insurer
      * for the drug.
      *
-     * @see schema:ReimbursementCap
+     * @see https://schema.org/ReimbursementCap
      * @see https://health-lifesci.schema.org
      */
      const ReimbursementCap = 'https://schema.org/ReimbursementCap';
@@ -30,7 +30,7 @@ class DrugCostCategory extends BaseType implements DrugCostCategoryContract, Enu
     /**
      * The drug's cost represents the retail cost of the drug.
      *
-     * @see schema:Retail
+     * @see https://schema.org/Retail
      * @see https://health-lifesci.schema.org
      */
      const Retail = 'https://schema.org/Retail';
@@ -38,7 +38,7 @@ class DrugCostCategory extends BaseType implements DrugCostCategoryContract, Enu
     /**
      * The drug's cost represents the wholesale acquisition cost of the drug.
      *
-     * @see schema:Wholesale
+     * @see https://schema.org/Wholesale
      * @see https://health-lifesci.schema.org
      */
      const Wholesale = 'https://schema.org/Wholesale';

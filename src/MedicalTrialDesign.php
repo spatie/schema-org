@@ -23,7 +23,7 @@ class MedicalTrialDesign extends BaseType implements MedicalTrialDesignContract,
      * A trial design in which neither the researcher nor the patient knows the
      * details of the treatment the patient was randomly assigned to.
      *
-     * @see schema:DoubleBlindedTrial
+     * @see https://schema.org/DoubleBlindedTrial
      * @see https://health-lifesci.schema.org
      */
      const DoubleBlindedTrial = 'https://schema.org/DoubleBlindedTrial';
@@ -31,7 +31,7 @@ class MedicalTrialDesign extends BaseType implements MedicalTrialDesignContract,
     /**
      * An international trial.
      *
-     * @see schema:InternationalTrial
+     * @see https://schema.org/InternationalTrial
      * @see https://health-lifesci.schema.org
      */
      const InternationalTrial = 'https://schema.org/InternationalTrial';
@@ -39,7 +39,7 @@ class MedicalTrialDesign extends BaseType implements MedicalTrialDesignContract,
     /**
      * A trial that takes place at multiple centers.
      *
-     * @see schema:MultiCenterTrial
+     * @see https://schema.org/MultiCenterTrial
      * @see https://health-lifesci.schema.org
      */
      const MultiCenterTrial = 'https://schema.org/MultiCenterTrial';
@@ -48,7 +48,7 @@ class MedicalTrialDesign extends BaseType implements MedicalTrialDesignContract,
      * A trial design in which the researcher knows the full details of the
      * treatment, and so does the patient.
      *
-     * @see schema:OpenTrial
+     * @see https://schema.org/OpenTrial
      * @see https://health-lifesci.schema.org
      */
      const OpenTrial = 'https://schema.org/OpenTrial';
@@ -56,7 +56,7 @@ class MedicalTrialDesign extends BaseType implements MedicalTrialDesignContract,
     /**
      * A placebo-controlled trial design.
      *
-     * @see schema:PlaceboControlledTrial
+     * @see https://schema.org/PlaceboControlledTrial
      * @see https://health-lifesci.schema.org
      */
      const PlaceboControlledTrial = 'https://schema.org/PlaceboControlledTrial';
@@ -64,7 +64,7 @@ class MedicalTrialDesign extends BaseType implements MedicalTrialDesignContract,
     /**
      * A randomized trial design.
      *
-     * @see schema:RandomizedTrial
+     * @see https://schema.org/RandomizedTrial
      * @see https://health-lifesci.schema.org
      */
      const RandomizedTrial = 'https://schema.org/RandomizedTrial';
@@ -73,7 +73,7 @@ class MedicalTrialDesign extends BaseType implements MedicalTrialDesignContract,
      * A trial design in which the researcher knows which treatment the patient
      * was randomly assigned to but the patient does not.
      *
-     * @see schema:SingleBlindedTrial
+     * @see https://schema.org/SingleBlindedTrial
      * @see https://health-lifesci.schema.org
      */
      const SingleBlindedTrial = 'https://schema.org/SingleBlindedTrial';
@@ -81,7 +81,7 @@ class MedicalTrialDesign extends BaseType implements MedicalTrialDesignContract,
     /**
      * A trial that takes place at a single center.
      *
-     * @see schema:SingleCenterTrial
+     * @see https://schema.org/SingleCenterTrial
      * @see https://health-lifesci.schema.org
      */
      const SingleCenterTrial = 'https://schema.org/SingleCenterTrial';
@@ -91,7 +91,7 @@ class MedicalTrialDesign extends BaseType implements MedicalTrialDesignContract,
      * the therapy nor the patient knows the details of the treatment the
      * patient was randomly assigned to.
      *
-     * @see schema:TripleBlindedTrial
+     * @see https://schema.org/TripleBlindedTrial
      * @see https://health-lifesci.schema.org
      */
      const TripleBlindedTrial = 'https://schema.org/TripleBlindedTrial';

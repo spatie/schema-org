@@ -21,7 +21,7 @@ class MedicalStudyStatus extends BaseType implements MedicalStudyStatusContract,
     /**
      * Active, but not recruiting new participants.
      *
-     * @see schema:ActiveNotRecruiting
+     * @see https://schema.org/ActiveNotRecruiting
      * @see https://health-lifesci.schema.org
      */
      const ActiveNotRecruiting = 'https://schema.org/ActiveNotRecruiting';
@@ -29,7 +29,7 @@ class MedicalStudyStatus extends BaseType implements MedicalStudyStatusContract,
     /**
      * Completed.
      *
-     * @see schema:Completed
+     * @see https://schema.org/Completed
      * @see https://health-lifesci.schema.org
      */
      const Completed = 'https://schema.org/Completed';
@@ -37,7 +37,7 @@ class MedicalStudyStatus extends BaseType implements MedicalStudyStatusContract,
     /**
      * Enrolling participants by invitation only.
      *
-     * @see schema:EnrollingByInvitation
+     * @see https://schema.org/EnrollingByInvitation
      * @see https://health-lifesci.schema.org
      */
      const EnrollingByInvitation = 'https://schema.org/EnrollingByInvitation';
@@ -45,7 +45,7 @@ class MedicalStudyStatus extends BaseType implements MedicalStudyStatusContract,
     /**
      * Not yet recruiting.
      *
-     * @see schema:NotYetRecruiting
+     * @see https://schema.org/NotYetRecruiting
      * @see https://health-lifesci.schema.org
      */
      const NotYetRecruiting = 'https://schema.org/NotYetRecruiting';
@@ -53,7 +53,7 @@ class MedicalStudyStatus extends BaseType implements MedicalStudyStatusContract,
     /**
      * Recruiting participants.
      *
-     * @see schema:Recruiting
+     * @see https://schema.org/Recruiting
      * @see https://health-lifesci.schema.org
      */
      const Recruiting = 'https://schema.org/Recruiting';
@@ -61,7 +61,7 @@ class MedicalStudyStatus extends BaseType implements MedicalStudyStatusContract,
     /**
      * Results are available.
      *
-     * @see schema:ResultsAvailable
+     * @see https://schema.org/ResultsAvailable
      * @see https://health-lifesci.schema.org
      */
      const ResultsAvailable = 'https://schema.org/ResultsAvailable';
@@ -69,7 +69,7 @@ class MedicalStudyStatus extends BaseType implements MedicalStudyStatusContract,
     /**
      * Results are not available.
      *
-     * @see schema:ResultsNotAvailable
+     * @see https://schema.org/ResultsNotAvailable
      * @see https://health-lifesci.schema.org
      */
      const ResultsNotAvailable = 'https://schema.org/ResultsNotAvailable';
@@ -77,7 +77,7 @@ class MedicalStudyStatus extends BaseType implements MedicalStudyStatusContract,
     /**
      * Suspended.
      *
-     * @see schema:Suspended
+     * @see https://schema.org/Suspended
      * @see https://health-lifesci.schema.org
      */
      const Suspended = 'https://schema.org/Suspended';
@@ -85,7 +85,7 @@ class MedicalStudyStatus extends BaseType implements MedicalStudyStatusContract,
     /**
      * Terminated.
      *
-     * @see schema:Terminated
+     * @see https://schema.org/Terminated
      * @see https://health-lifesci.schema.org
      */
      const Terminated = 'https://schema.org/Terminated';
@@ -93,7 +93,7 @@ class MedicalStudyStatus extends BaseType implements MedicalStudyStatusContract,
     /**
      * Withdrawn.
      *
-     * @see schema:Withdrawn
+     * @see https://schema.org/Withdrawn
      * @see https://health-lifesci.schema.org
      */
      const Withdrawn = 'https://schema.org/Withdrawn';

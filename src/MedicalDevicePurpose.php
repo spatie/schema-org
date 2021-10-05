@@ -22,7 +22,7 @@ class MedicalDevicePurpose extends BaseType implements MedicalDevicePurposeContr
     /**
      * A medical device used for diagnostic purposes.
      *
-     * @see schema:Diagnostic
+     * @see https://schema.org/Diagnostic
      * @see https://health-lifesci.schema.org
      */
      const Diagnostic = 'https://schema.org/Diagnostic';
@@ -30,7 +30,7 @@ class MedicalDevicePurpose extends BaseType implements MedicalDevicePurposeContr
     /**
      * A medical device used for therapeutic purposes.
      *
-     * @see schema:Therapeutic
+     * @see https://schema.org/Therapeutic
      * @see https://health-lifesci.schema.org
      */
      const Therapeutic = 'https://schema.org/Therapeutic';

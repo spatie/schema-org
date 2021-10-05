@@ -19,49 +19,49 @@ class ItemAvailability extends BaseType implements ItemAvailabilityContract, Enu
     /**
      * Indicates that the item has been discontinued.
      *
-     * @see schema:Discontinued
+     * @see https://schema.org/Discontinued
      */
      const Discontinued = 'https://schema.org/Discontinued';
 
     /**
      * Indicates that the item is in stock.
      *
-     * @see schema:InStock
+     * @see https://schema.org/InStock
      */
      const InStock = 'https://schema.org/InStock';
 
     /**
      * Indicates that the item is available only at physical locations.
      *
-     * @see schema:InStoreOnly
+     * @see https://schema.org/InStoreOnly
      */
      const InStoreOnly = 'https://schema.org/InStoreOnly';
 
     /**
      * Indicates that the item has limited availability.
      *
-     * @see schema:LimitedAvailability
+     * @see https://schema.org/LimitedAvailability
      */
      const LimitedAvailability = 'https://schema.org/LimitedAvailability';
 
     /**
      * Indicates that the item is available only online.
      *
-     * @see schema:OnlineOnly
+     * @see https://schema.org/OnlineOnly
      */
      const OnlineOnly = 'https://schema.org/OnlineOnly';
 
     /**
      * Indicates that the item is out of stock.
      *
-     * @see schema:OutOfStock
+     * @see https://schema.org/OutOfStock
      */
      const OutOfStock = 'https://schema.org/OutOfStock';
 
     /**
      * Indicates that the item is available for pre-order.
      *
-     * @see schema:PreOrder
+     * @see https://schema.org/PreOrder
      */
      const PreOrder = 'https://schema.org/PreOrder';
 
@@ -69,14 +69,14 @@ class ItemAvailability extends BaseType implements ItemAvailabilityContract, Enu
      * Indicates that the item is available for ordering and delivery before
      * general availability.
      *
-     * @see schema:PreSale
+     * @see https://schema.org/PreSale
      */
      const PreSale = 'https://schema.org/PreSale';
 
     /**
      * Indicates that the item has sold out.
      *
-     * @see schema:SoldOut
+     * @see https://schema.org/SoldOut
      */
      const SoldOut = 'https://schema.org/SoldOut';
 

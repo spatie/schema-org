@@ -20,56 +20,56 @@ class OrderStatus extends BaseType implements OrderStatusContract, EnumerationCo
     /**
      * OrderStatus representing cancellation of an order.
      *
-     * @see schema:OrderCancelled
+     * @see https://schema.org/OrderCancelled
      */
      const OrderCancelled = 'https://schema.org/OrderCancelled';
 
     /**
      * OrderStatus representing successful delivery of an order.
      *
-     * @see schema:OrderDelivered
+     * @see https://schema.org/OrderDelivered
      */
      const OrderDelivered = 'https://schema.org/OrderDelivered';
 
     /**
      * OrderStatus representing that an order is in transit.
      *
-     * @see schema:OrderInTransit
+     * @see https://schema.org/OrderInTransit
      */
      const OrderInTransit = 'https://schema.org/OrderInTransit';
 
     /**
      * OrderStatus representing that payment is due on an order.
      *
-     * @see schema:OrderPaymentDue
+     * @see https://schema.org/OrderPaymentDue
      */
      const OrderPaymentDue = 'https://schema.org/OrderPaymentDue';
 
     /**
      * OrderStatus representing availability of an order for pickup.
      *
-     * @see schema:OrderPickupAvailable
+     * @see https://schema.org/OrderPickupAvailable
      */
      const OrderPickupAvailable = 'https://schema.org/OrderPickupAvailable';
 
     /**
      * OrderStatus representing that there is a problem with the order.
      *
-     * @see schema:OrderProblem
+     * @see https://schema.org/OrderProblem
      */
      const OrderProblem = 'https://schema.org/OrderProblem';
 
     /**
      * OrderStatus representing that an order is being processed.
      *
-     * @see schema:OrderProcessing
+     * @see https://schema.org/OrderProcessing
      */
      const OrderProcessing = 'https://schema.org/OrderProcessing';
 
     /**
      * OrderStatus representing that an order has been returned.
      *
-     * @see schema:OrderReturned
+     * @see https://schema.org/OrderReturned
      */
      const OrderReturned = 'https://schema.org/OrderReturned';
 

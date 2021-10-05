@@ -23,7 +23,7 @@ class PriceComponentTypeEnumeration extends BaseType implements PriceComponentTy
      * Represents the activation fee part of the total price for an offered
      * product, for example a cellphone contract
      *
-     * @see schema:ActivationFee
+     * @see https://schema.org/ActivationFee
      * @see https://pending.schema.org
      * @link https://github.com/schemaorg/schemaorg/issues/2689
      */
@@ -33,7 +33,7 @@ class PriceComponentTypeEnumeration extends BaseType implements PriceComponentTy
      * Represents the cleaning fee part of the total price for an offered
      * product, for example a vacation rental
      *
-     * @see schema:CleaningFee
+     * @see https://schema.org/CleaningFee
      * @see https://pending.schema.org
      * @link https://github.com/schemaorg/schemaorg/issues/2689
      */
@@ -43,7 +43,7 @@ class PriceComponentTypeEnumeration extends BaseType implements PriceComponentTy
      * Represents the distance fee (e.g., price per km or mile) part of the
      * total price for an offered product, for example a car rental
      *
-     * @see schema:DistanceFee
+     * @see https://schema.org/DistanceFee
      * @see https://pending.schema.org
      * @link https://github.com/schemaorg/schemaorg/issues/2689
      */
@@ -54,7 +54,7 @@ class PriceComponentTypeEnumeration extends BaseType implements PriceComponentTy
      * total price for an offered product that has additional installment
      * payments
      *
-     * @see schema:Downpayment
+     * @see https://schema.org/Downpayment
      * @see https://pending.schema.org
      * @link https://github.com/schemaorg/schemaorg/issues/2689
      */
@@ -64,7 +64,7 @@ class PriceComponentTypeEnumeration extends BaseType implements PriceComponentTy
      * Represents the installment pricing component of the total price for an
      * offered product
      *
-     * @see schema:Installment
+     * @see https://schema.org/Installment
      * @see https://pending.schema.org
      * @link https://github.com/schemaorg/schemaorg/issues/2689
      */
@@ -74,7 +74,7 @@ class PriceComponentTypeEnumeration extends BaseType implements PriceComponentTy
      * Represents the subscription pricing component of the total price for an
      * offered product
      *
-     * @see schema:Subscription
+     * @see https://schema.org/Subscription
      * @see https://pending.schema.org
      * @link https://github.com/schemaorg/schemaorg/issues/2689
      */

@@ -21,14 +21,14 @@ class BookFormatType extends BaseType implements BookFormatTypeContract, Enumera
      * bookFormat property. There is also a type 'Audiobook' in the bib
      * extension which includes Audiobook specific properties.
      *
-     * @see schema:AudiobookFormat
+     * @see https://schema.org/AudiobookFormat
      */
      const AudiobookFormat = 'https://schema.org/AudiobookFormat';
 
     /**
      * Book format: Ebook.
      *
-     * @see schema:EBook
+     * @see https://schema.org/EBook
      */
      const EBook = 'https://schema.org/EBook';
 
@@ -36,7 +36,7 @@ class BookFormatType extends BaseType implements BookFormatTypeContract, Enumera
      * Book format: GraphicNovel. May represent a bound collection of ComicIssue
      * instances.
      *
-     * @see schema:GraphicNovel
+     * @see https://schema.org/GraphicNovel
      * @see https://bib.schema.org
      */
      const GraphicNovel = 'https://schema.org/GraphicNovel';
@@ -44,14 +44,14 @@ class BookFormatType extends BaseType implements BookFormatTypeContract, Enumera
     /**
      * Book format: Hardcover.
      *
-     * @see schema:Hardcover
+     * @see https://schema.org/Hardcover
      */
      const Hardcover = 'https://schema.org/Hardcover';
 
     /**
      * Book format: Paperback.
      *
-     * @see schema:Paperback
+     * @see https://schema.org/Paperback
      */
      const Paperback = 'https://schema.org/Paperback';
 

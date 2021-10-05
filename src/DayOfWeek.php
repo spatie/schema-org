@@ -26,14 +26,14 @@ class DayOfWeek extends BaseType implements DayOfWeekContract, EnumerationContra
     /**
      * The day of the week between Thursday and Saturday.
      *
-     * @see schema:Friday
+     * @see https://schema.org/Friday
      */
      const Friday = 'https://schema.org/Friday';
 
     /**
      * The day of the week between Sunday and Tuesday.
      *
-     * @see schema:Monday
+     * @see https://schema.org/Monday
      */
      const Monday = 'https://schema.org/Monday';
 
@@ -46,7 +46,7 @@ class DayOfWeek extends BaseType implements DayOfWeekContract, EnumerationContra
      * holidays, overriding general opening hours for the day of the week on
      * which a public holiday occurs.
      *
-     * @see schema:PublicHolidays
+     * @see https://schema.org/PublicHolidays
      * @link http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#source_GoodRelationsClass
      */
      const PublicHolidays = 'https://schema.org/PublicHolidays';
@@ -54,35 +54,35 @@ class DayOfWeek extends BaseType implements DayOfWeekContract, EnumerationContra
     /**
      * The day of the week between Friday and Sunday.
      *
-     * @see schema:Saturday
+     * @see https://schema.org/Saturday
      */
      const Saturday = 'https://schema.org/Saturday';
 
     /**
      * The day of the week between Saturday and Monday.
      *
-     * @see schema:Sunday
+     * @see https://schema.org/Sunday
      */
      const Sunday = 'https://schema.org/Sunday';
 
     /**
      * The day of the week between Wednesday and Friday.
      *
-     * @see schema:Thursday
+     * @see https://schema.org/Thursday
      */
      const Thursday = 'https://schema.org/Thursday';
 
     /**
      * The day of the week between Monday and Wednesday.
      *
-     * @see schema:Tuesday
+     * @see https://schema.org/Tuesday
      */
      const Tuesday = 'https://schema.org/Tuesday';
 
     /**
      * The day of the week between Tuesday and Thursday.
      *
-     * @see schema:Wednesday
+     * @see https://schema.org/Wednesday
      */
      const Wednesday = 'https://schema.org/Wednesday';
 

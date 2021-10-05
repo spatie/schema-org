@@ -19,14 +19,14 @@ class GenderType extends BaseType implements GenderTypeContract, EnumerationCont
     /**
      * The female gender.
      *
-     * @see schema:Female
+     * @see https://schema.org/Female
      */
      const Female = 'https://schema.org/Female';
 
     /**
      * The male gender.
      *
-     * @see schema:Male
+     * @see https://schema.org/Male
      */
      const Male = 'https://schema.org/Male';
 

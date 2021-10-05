@@ -19,28 +19,28 @@ class MapCategoryType extends BaseType implements MapCategoryTypeContract, Enume
     /**
      * A parking map.
      *
-     * @see schema:ParkingMap
+     * @see https://schema.org/ParkingMap
      */
      const ParkingMap = 'https://schema.org/ParkingMap';
 
     /**
      * A seating map.
      *
-     * @see schema:SeatingMap
+     * @see https://schema.org/SeatingMap
      */
      const SeatingMap = 'https://schema.org/SeatingMap';
 
     /**
      * A transit map.
      *
-     * @see schema:TransitMap
+     * @see https://schema.org/TransitMap
      */
      const TransitMap = 'https://schema.org/TransitMap';
 
     /**
      * A venue map (e.g. for malls, auditoriums, museums, etc.).
      *
-     * @see schema:VenueMap
+     * @see https://schema.org/VenueMap
      */
      const VenueMap = 'https://schema.org/VenueMap';
 

@@ -20,7 +20,7 @@ class MusicAlbumReleaseType extends BaseType implements MusicAlbumReleaseTypeCon
     /**
      * AlbumRelease.
      *
-     * @see schema:AlbumRelease
+     * @see https://schema.org/AlbumRelease
      * @link http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#MBZ
      */
      const AlbumRelease = 'https://schema.org/AlbumRelease';
@@ -28,7 +28,7 @@ class MusicAlbumReleaseType extends BaseType implements MusicAlbumReleaseTypeCon
     /**
      * BroadcastRelease.
      *
-     * @see schema:BroadcastRelease
+     * @see https://schema.org/BroadcastRelease
      * @link http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#MBZ
      */
      const BroadcastRelease = 'https://schema.org/BroadcastRelease';
@@ -36,7 +36,7 @@ class MusicAlbumReleaseType extends BaseType implements MusicAlbumReleaseTypeCon
     /**
      * EPRelease.
      *
-     * @see schema:EPRelease
+     * @see https://schema.org/EPRelease
      * @link http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#MBZ
      */
      const EPRelease = 'https://schema.org/EPRelease';
@@ -44,7 +44,7 @@ class MusicAlbumReleaseType extends BaseType implements MusicAlbumReleaseTypeCon
     /**
      * SingleRelease.
      *
-     * @see schema:SingleRelease
+     * @see https://schema.org/SingleRelease
      * @link http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#MBZ
      */
      const SingleRelease = 'https://schema.org/SingleRelease';

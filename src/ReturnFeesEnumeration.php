@@ -21,7 +21,7 @@ class ReturnFeesEnumeration extends BaseType implements ReturnFeesEnumerationCon
     /**
      * OriginalShippingFees ...
      *
-     * @see schema:OriginalShippingFees
+     * @see https://schema.org/OriginalShippingFees
      * @see https://pending.schema.org
      * @link https://github.com/schemaorg/schemaorg/issues/2288
      */
@@ -30,7 +30,7 @@ class ReturnFeesEnumeration extends BaseType implements ReturnFeesEnumerationCon
     /**
      * RestockingFees ...
      *
-     * @see schema:RestockingFees
+     * @see https://schema.org/RestockingFees
      * @see https://pending.schema.org
      * @link https://github.com/schemaorg/schemaorg/issues/2288
      */
@@ -39,7 +39,7 @@ class ReturnFeesEnumeration extends BaseType implements ReturnFeesEnumerationCon
     /**
      * ReturnShippingFees ...
      *
-     * @see schema:ReturnShippingFees
+     * @see https://schema.org/ReturnShippingFees
      * @see https://pending.schema.org
      * @link https://github.com/schemaorg/schemaorg/issues/2288
      */

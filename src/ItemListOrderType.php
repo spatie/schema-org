@@ -20,21 +20,21 @@ class ItemListOrderType extends BaseType implements ItemListOrderTypeContract, E
     /**
      * An ItemList ordered with lower values listed first.
      *
-     * @see schema:ItemListOrderAscending
+     * @see https://schema.org/ItemListOrderAscending
      */
      const ItemListOrderAscending = 'https://schema.org/ItemListOrderAscending';
 
     /**
      * An ItemList ordered with higher values listed first.
      *
-     * @see schema:ItemListOrderDescending
+     * @see https://schema.org/ItemListOrderDescending
      */
      const ItemListOrderDescending = 'https://schema.org/ItemListOrderDescending';
 
     /**
      * An ItemList ordered with no explicit order.
      *
-     * @see schema:ItemListUnordered
+     * @see https://schema.org/ItemListUnordered
      */
      const ItemListUnordered = 'https://schema.org/ItemListUnordered';
 

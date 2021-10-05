@@ -24,7 +24,7 @@ class HealthAspectEnumeration extends BaseType implements HealthAspectEnumeratio
      * Content about the benefits and advantages of usage or utilization of
      * topic.
      *
-     * @see schema:BenefitsHealthAspect
+     * @see https://schema.org/BenefitsHealthAspect
      * @see https://pending.schema.org
      * @link https://github.com/schemaorg/schemaorg/issues/2374
      */
@@ -34,7 +34,7 @@ class HealthAspectEnumeration extends BaseType implements HealthAspectEnumeratio
      * Information about the causes and main actions that gave rise to the
      * topic.
      *
-     * @see schema:CausesHealthAspect
+     * @see https://schema.org/CausesHealthAspect
      * @see https://pending.schema.org
      * @link https://github.com/schemaorg/schemaorg/issues/2374
      */
@@ -44,7 +44,7 @@ class HealthAspectEnumeration extends BaseType implements HealthAspectEnumeratio
      * Content about contagion mechanisms and contagiousness information over
      * the topic.
      *
-     * @see schema:ContagiousnessHealthAspect
+     * @see https://schema.org/ContagiousnessHealthAspect
      * @see https://pending.schema.org
      * @link https://github.com/schemaorg/schemaorg/issues/2374
      */
@@ -55,7 +55,7 @@ class HealthAspectEnumeration extends BaseType implements HealthAspectEnumeratio
      * data that can be used for where to look for help if the topic is
      * observed.
      *
-     * @see schema:HowOrWhereHealthAspect
+     * @see https://schema.org/HowOrWhereHealthAspect
      * @see https://pending.schema.org
      * @link https://github.com/schemaorg/schemaorg/issues/2374
      */
@@ -64,7 +64,7 @@ class HealthAspectEnumeration extends BaseType implements HealthAspectEnumeratio
     /**
      * Information about coping or life related to the topic.
      *
-     * @see schema:LivingWithHealthAspect
+     * @see https://schema.org/LivingWithHealthAspect
      * @see https://pending.schema.org
      * @link https://github.com/schemaorg/schemaorg/issues/2374
      */
@@ -73,7 +73,7 @@ class HealthAspectEnumeration extends BaseType implements HealthAspectEnumeratio
     /**
      * Related topics may be treated by a Topic.
      *
-     * @see schema:MayTreatHealthAspect
+     * @see https://schema.org/MayTreatHealthAspect
      * @see https://pending.schema.org
      * @link https://github.com/schemaorg/schemaorg/issues/2374
      */
@@ -83,7 +83,7 @@ class HealthAspectEnumeration extends BaseType implements HealthAspectEnumeratio
      * Content about common misconceptions and myths that are related to a
      * topic.
      *
-     * @see schema:MisconceptionsHealthAspect
+     * @see https://schema.org/MisconceptionsHealthAspect
      * @see https://pending.schema.org
      * @link https://github.com/schemaorg/schemaorg/issues/2374
      */
@@ -93,7 +93,7 @@ class HealthAspectEnumeration extends BaseType implements HealthAspectEnumeratio
      * Overview of the content. Contains a summarized view of the topic with the
      * most relevant information for an introduction.
      *
-     * @see schema:OverviewHealthAspect
+     * @see https://schema.org/OverviewHealthAspect
      * @see https://pending.schema.org
      * @link https://github.com/schemaorg/schemaorg/issues/2374
      */
@@ -104,7 +104,7 @@ class HealthAspectEnumeration extends BaseType implements HealthAspectEnumeratio
      * lived a similar experience about the topic. May be forums, topics,
      * Q-and-A and related material.
      *
-     * @see schema:PatientExperienceHealthAspect
+     * @see https://schema.org/PatientExperienceHealthAspect
      * @see https://pending.schema.org
      * @link https://github.com/schemaorg/schemaorg/issues/2374
      */
@@ -114,7 +114,7 @@ class HealthAspectEnumeration extends BaseType implements HealthAspectEnumeratio
      * Information about actions or measures that can be taken to avoid getting
      * the topic or reaching a critical situation related to the topic.
      *
-     * @see schema:PreventionHealthAspect
+     * @see https://schema.org/PreventionHealthAspect
      * @see https://pending.schema.org
      * @link https://github.com/schemaorg/schemaorg/issues/2374
      */
@@ -123,7 +123,7 @@ class HealthAspectEnumeration extends BaseType implements HealthAspectEnumeratio
     /**
      * Typical progression and happenings of life course of the topic.
      *
-     * @see schema:PrognosisHealthAspect
+     * @see https://schema.org/PrognosisHealthAspect
      * @see https://pending.schema.org
      * @link https://github.com/schemaorg/schemaorg/issues/2374
      */
@@ -132,7 +132,7 @@ class HealthAspectEnumeration extends BaseType implements HealthAspectEnumeratio
     /**
      * Other prominent or relevant topics tied to the main topic.
      *
-     * @see schema:RelatedTopicsHealthAspect
+     * @see https://schema.org/RelatedTopicsHealthAspect
      * @see https://pending.schema.org
      * @link https://github.com/schemaorg/schemaorg/issues/2374
      */
@@ -142,7 +142,7 @@ class HealthAspectEnumeration extends BaseType implements HealthAspectEnumeratio
      * Information about the risk factors and possible complications that may
      * follow a topic.
      *
-     * @see schema:RisksOrComplicationsHealthAspect
+     * @see https://schema.org/RisksOrComplicationsHealthAspect
      * @see https://pending.schema.org
      * @link https://github.com/schemaorg/schemaorg/issues/2374
      */
@@ -151,7 +151,7 @@ class HealthAspectEnumeration extends BaseType implements HealthAspectEnumeratio
     /**
      * Content about how to screen or further filter a topic.
      *
-     * @see schema:ScreeningHealthAspect
+     * @see https://schema.org/ScreeningHealthAspect
      * @see https://pending.schema.org
      * @link https://github.com/schemaorg/schemaorg/issues/2374
      */
@@ -162,7 +162,7 @@ class HealthAspectEnumeration extends BaseType implements HealthAspectEnumeratio
      * professional, measures before seeing a doctor or content about the first
      * consultation.
      *
-     * @see schema:SeeDoctorHealthAspect
+     * @see https://schema.org/SeeDoctorHealthAspect
      * @see https://pending.schema.org
      * @link https://github.com/schemaorg/schemaorg/issues/2374
      */
@@ -173,7 +173,7 @@ class HealthAspectEnumeration extends BaseType implements HealthAspectEnumeratio
      * a topic. This may be carried at home and can be carried/managed by the
      * person itself.
      *
-     * @see schema:SelfCareHealthAspect
+     * @see https://schema.org/SelfCareHealthAspect
      * @see https://pending.schema.org
      * @link https://github.com/schemaorg/schemaorg/issues/2374
      */
@@ -182,7 +182,7 @@ class HealthAspectEnumeration extends BaseType implements HealthAspectEnumeratio
     /**
      * Side effects that can be observed from the usage of the topic.
      *
-     * @see schema:SideEffectsHealthAspect
+     * @see https://schema.org/SideEffectsHealthAspect
      * @see https://pending.schema.org
      * @link https://github.com/schemaorg/schemaorg/issues/2374
      */
@@ -191,7 +191,7 @@ class HealthAspectEnumeration extends BaseType implements HealthAspectEnumeratio
     /**
      * Stages that can be observed from a topic.
      *
-     * @see schema:StagesHealthAspect
+     * @see https://schema.org/StagesHealthAspect
      * @see https://pending.schema.org
      * @link https://github.com/schemaorg/schemaorg/issues/2374
      */
@@ -200,7 +200,7 @@ class HealthAspectEnumeration extends BaseType implements HealthAspectEnumeratio
     /**
      * Symptoms or related symptoms of a Topic.
      *
-     * @see schema:SymptomsHealthAspect
+     * @see https://schema.org/SymptomsHealthAspect
      * @see https://pending.schema.org
      * @link https://github.com/schemaorg/schemaorg/issues/2374
      */
@@ -209,7 +209,7 @@ class HealthAspectEnumeration extends BaseType implements HealthAspectEnumeratio
     /**
      * Treatments or related therapies for a Topic.
      *
-     * @see schema:TreatmentsHealthAspect
+     * @see https://schema.org/TreatmentsHealthAspect
      * @see https://pending.schema.org
      * @link https://github.com/schemaorg/schemaorg/issues/2374
      */
@@ -218,7 +218,7 @@ class HealthAspectEnumeration extends BaseType implements HealthAspectEnumeratio
     /**
      * Categorization and other types related to a topic.
      *
-     * @see schema:TypesHealthAspect
+     * @see https://schema.org/TypesHealthAspect
      * @see https://pending.schema.org
      * @link https://github.com/schemaorg/schemaorg/issues/2374
      */
@@ -227,7 +227,7 @@ class HealthAspectEnumeration extends BaseType implements HealthAspectEnumeratio
     /**
      * Content about how, when, frequency and dosage of a topic.
      *
-     * @see schema:UsageOrScheduleHealthAspect
+     * @see https://schema.org/UsageOrScheduleHealthAspect
      * @see https://pending.schema.org
      * @link https://github.com/schemaorg/schemaorg/issues/2374
      */

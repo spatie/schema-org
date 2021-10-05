@@ -28,7 +28,7 @@ class MedicalObservationalStudyDesign extends BaseType implements MedicalObserva
      * depending on whether all cases presenting to the reporting authors over a
      * period of time were included, or only a selection.
      *
-     * @see schema:CaseSeries
+     * @see https://schema.org/CaseSeries
      * @see https://health-lifesci.schema.org
      */
      const CaseSeries = 'https://schema.org/CaseSeries';
@@ -45,7 +45,7 @@ class MedicalObservationalStudyDesign extends BaseType implements MedicalObserva
      * investigation, but otherwise similar. Alternatively, subgroups within the
      * cohort may be compared with each other.
      *
-     * @see schema:CohortStudy
+     * @see https://schema.org/CohortStudy
      * @see https://health-lifesci.schema.org
      */
      const CohortStudy = 'https://schema.org/CohortStudy';
@@ -55,7 +55,7 @@ class MedicalObservationalStudyDesign extends BaseType implements MedicalObserva
      * surveys), such as that collected by the Census Bureau. Sometimes called
      * Prevalence Studies.
      *
-     * @see schema:CrossSectional
+     * @see https://schema.org/CrossSectional
      * @see https://health-lifesci.schema.org
      */
      const CrossSectional = 'https://schema.org/CrossSectional';
@@ -67,7 +67,7 @@ class MedicalObservationalStudyDesign extends BaseType implements MedicalObserva
      * Longitudinal studies are also used in medicine to uncover predictors of
      * certain diseases.
      *
-     * @see schema:Longitudinal
+     * @see https://schema.org/Longitudinal
      * @see https://health-lifesci.schema.org
      */
      const Longitudinal = 'https://schema.org/Longitudinal';
@@ -75,7 +75,7 @@ class MedicalObservationalStudyDesign extends BaseType implements MedicalObserva
     /**
      * An observational study design.
      *
-     * @see schema:Observational
+     * @see https://schema.org/Observational
      * @see https://health-lifesci.schema.org
      */
      const Observational = 'https://schema.org/Observational';
@@ -83,7 +83,7 @@ class MedicalObservationalStudyDesign extends BaseType implements MedicalObserva
     /**
      * A registry-based study design.
      *
-     * @see schema:Registry
+     * @see https://schema.org/Registry
      * @see https://health-lifesci.schema.org
      */
      const Registry = 'https://schema.org/Registry';

@@ -22,7 +22,7 @@ class MedicalAudienceType extends BaseType implements MedicalAudienceTypeContrac
      * Medical clinicians, including practicing physicians and other medical
      * professionals involved in clinical practice.
      *
-     * @see schema:Clinician
+     * @see https://schema.org/Clinician
      * @see https://health-lifesci.schema.org
      */
      const Clinician = 'https://schema.org/Clinician';
@@ -30,7 +30,7 @@ class MedicalAudienceType extends BaseType implements MedicalAudienceTypeContrac
     /**
      * Medical researchers.
      *
-     * @see schema:MedicalResearcher
+     * @see https://schema.org/MedicalResearcher
      * @see https://health-lifesci.schema.org
      */
      const MedicalResearcher = 'https://schema.org/MedicalResearcher';

@@ -22,7 +22,7 @@ class CarUsageType extends BaseType implements CarUsageTypeContract, Enumeration
     /**
      * Indicates the usage of the vehicle for driving school.
      *
-     * @see schema:DrivingSchoolVehicleUsage
+     * @see https://schema.org/DrivingSchoolVehicleUsage
      * @see https://auto.schema.org
      * @link http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#Automotive_Ontology_Working_Group
      */
@@ -31,7 +31,7 @@ class CarUsageType extends BaseType implements CarUsageTypeContract, Enumeration
     /**
      * Indicates the usage of the vehicle as a rental car.
      *
-     * @see schema:RentalVehicleUsage
+     * @see https://schema.org/RentalVehicleUsage
      * @see https://auto.schema.org
      * @link http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#Automotive_Ontology_Working_Group
      */
@@ -40,7 +40,7 @@ class CarUsageType extends BaseType implements CarUsageTypeContract, Enumeration
     /**
      * Indicates the usage of the car as a taxi.
      *
-     * @see schema:TaxiVehicleUsage
+     * @see https://schema.org/TaxiVehicleUsage
      * @see https://auto.schema.org
      * @link http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#Automotive_Ontology_Working_Group
      */

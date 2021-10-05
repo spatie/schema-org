@@ -19,21 +19,21 @@ class DigitalDocumentPermissionType extends BaseType implements DigitalDocumentP
     /**
      * Permission to add comments to the document.
      *
-     * @see schema:CommentPermission
+     * @see https://schema.org/CommentPermission
      */
      const CommentPermission = 'https://schema.org/CommentPermission';
 
     /**
      * Permission to read or view the document.
      *
-     * @see schema:ReadPermission
+     * @see https://schema.org/ReadPermission
      */
      const ReadPermission = 'https://schema.org/ReadPermission';
 
     /**
      * Permission to write or edit the document.
      *
-     * @see schema:WritePermission
+     * @see https://schema.org/WritePermission
      */
      const WritePermission = 'https://schema.org/WritePermission';
 

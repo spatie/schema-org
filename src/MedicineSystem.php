@@ -22,7 +22,7 @@ class MedicineSystem extends BaseType implements MedicineSystemContract, Enumera
      * A system of medicine that originated in India over thousands of years and
      * that focuses on integrating and balancing the body, mind, and spirit.
      *
-     * @see schema:Ayurvedic
+     * @see https://schema.org/Ayurvedic
      * @see https://health-lifesci.schema.org
      */
      const Ayurvedic = 'https://schema.org/Ayurvedic';
@@ -31,7 +31,7 @@ class MedicineSystem extends BaseType implements MedicineSystemContract, Enumera
      * A system of medicine focused on the relationship between the body's
      * structure, mainly the spine, and its functioning.
      *
-     * @see schema:Chiropractic
+     * @see https://schema.org/Chiropractic
      * @see https://health-lifesci.schema.org
      */
      const Chiropractic = 'https://schema.org/Chiropractic';
@@ -40,7 +40,7 @@ class MedicineSystem extends BaseType implements MedicineSystemContract, Enumera
      * A system of medicine based on the principle that a disease can be cured
      * by a substance that produces similar symptoms in healthy people.
      *
-     * @see schema:Homeopathic
+     * @see https://schema.org/Homeopathic
      * @see https://health-lifesci.schema.org
      */
      const Homeopathic = 'https://schema.org/Homeopathic';
@@ -49,7 +49,7 @@ class MedicineSystem extends BaseType implements MedicineSystemContract, Enumera
      * A system of medicine focused on promoting the body's innate ability to
      * heal itself.
      *
-     * @see schema:Osteopathic
+     * @see https://schema.org/Osteopathic
      * @see https://health-lifesci.schema.org
      */
      const Osteopathic = 'https://schema.org/Osteopathic';
@@ -60,7 +60,7 @@ class MedicineSystem extends BaseType implements MedicineSystemContract, Enumera
      * acupuncture, exercise, massage, dietary therapy, and other methods to
      * treat a wide range of conditions.
      *
-     * @see schema:TraditionalChinese
+     * @see https://schema.org/TraditionalChinese
      * @see https://health-lifesci.schema.org
      */
      const TraditionalChinese = 'https://schema.org/TraditionalChinese';
@@ -70,7 +70,7 @@ class MedicineSystem extends BaseType implements MedicineSystemContract, Enumera
      * available evidence gained from the scientific method to clinical decision
      * making. Also known as conventional or Western medicine.
      *
-     * @see schema:WesternConventional
+     * @see https://schema.org/WesternConventional
      * @see https://health-lifesci.schema.org
      */
      const WesternConventional = 'https://schema.org/WesternConventional';

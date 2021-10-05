@@ -22,7 +22,7 @@ class InfectiousAgentClass extends BaseType implements InfectiousAgentClassContr
     /**
      * Pathogenic bacteria that cause bacterial infection.
      *
-     * @see schema:Bacteria
+     * @see https://schema.org/Bacteria
      * @see https://health-lifesci.schema.org
      */
      const Bacteria = 'https://schema.org/Bacteria';
@@ -30,7 +30,7 @@ class InfectiousAgentClass extends BaseType implements InfectiousAgentClassContr
     /**
      * Pathogenic fungus.
      *
-     * @see schema:Fungus
+     * @see https://schema.org/Fungus
      * @see https://health-lifesci.schema.org
      */
      const Fungus = 'https://schema.org/Fungus';
@@ -38,7 +38,7 @@ class InfectiousAgentClass extends BaseType implements InfectiousAgentClassContr
     /**
      * Multicellular parasite that causes an infection.
      *
-     * @see schema:MulticellularParasite
+     * @see https://schema.org/MulticellularParasite
      * @see https://health-lifesci.schema.org
      */
      const MulticellularParasite = 'https://schema.org/MulticellularParasite';
@@ -46,7 +46,7 @@ class InfectiousAgentClass extends BaseType implements InfectiousAgentClassContr
     /**
      * A prion is an infectious agent composed of protein in a misfolded form.
      *
-     * @see schema:Prion
+     * @see https://schema.org/Prion
      * @see https://health-lifesci.schema.org
      */
      const Prion = 'https://schema.org/Prion';
@@ -54,7 +54,7 @@ class InfectiousAgentClass extends BaseType implements InfectiousAgentClassContr
     /**
      * Single-celled organism that causes an infection.
      *
-     * @see schema:Protozoa
+     * @see https://schema.org/Protozoa
      * @see https://health-lifesci.schema.org
      */
      const Protozoa = 'https://schema.org/Protozoa';
@@ -62,7 +62,7 @@ class InfectiousAgentClass extends BaseType implements InfectiousAgentClassContr
     /**
      * Pathogenic virus that causes viral infection.
      *
-     * @see schema:Virus
+     * @see https://schema.org/Virus
      * @see https://health-lifesci.schema.org
      */
      const Virus = 'https://schema.org/Virus';

@@ -20,7 +20,7 @@ class GamePlayMode extends BaseType implements GamePlayModeContract, Enumeration
      * Play mode: CoOp. Co-operative games, where you play on the same team with
      * friends.
      *
-     * @see schema:CoOp
+     * @see https://schema.org/CoOp
      */
      const CoOp = 'https://schema.org/CoOp';
 
@@ -28,14 +28,14 @@ class GamePlayMode extends BaseType implements GamePlayModeContract, Enumeration
      * Play mode: MultiPlayer. Requiring or allowing multiple human players to
      * play simultaneously.
      *
-     * @see schema:MultiPlayer
+     * @see https://schema.org/MultiPlayer
      */
      const MultiPlayer = 'https://schema.org/MultiPlayer';
 
     /**
      * Play mode: SinglePlayer. Which is played by a lone player.
      *
-     * @see schema:SinglePlayer
+     * @see https://schema.org/SinglePlayer
      */
      const SinglePlayer = 'https://schema.org/SinglePlayer';
 
