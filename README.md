@@ -50,13 +50,6 @@ You can install the package via composer:
 composer require spatie/schema-org
 ```
 
-### Supported Schema Versions
-| Package Version | Schema Version |
-|-----------------|----------------|
-| 3.x.x           | V9             |
-| 4.x.x           | V10            |
-
-Note: Only lists _current_ versions of the spatie/schema-org package.
 ## Usage
 
 All types can be instantiated through the `Spatie\SchemaOrg\Schema` factory class, or with the `new` keyword.
