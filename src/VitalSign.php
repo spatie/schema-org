@@ -14,7 +14,7 @@ use \Spatie\SchemaOrg\Contracts\ThingContract;
  * assess the most basic body functions.
  *
  * @see https://schema.org/VitalSign
- * @see http://health-lifesci.schema.org
+ * @see https://health-lifesci.schema.org
  *
  */
 class VitalSign extends BaseType implements VitalSignContract, MedicalConditionContract, MedicalEntityContract, MedicalSignContract, MedicalSignOrSymptomContract, ThingContract
@@ -61,7 +61,7 @@ class VitalSign extends BaseType implements VitalSignContract, MedicalConditionC
      * @return static
      *
      * @see https://schema.org/associatedAnatomy
-     * @see http://health-lifesci.schema.org
+     * @see https://health-lifesci.schema.org
      */
     public function associatedAnatomy($associatedAnatomy)
     {
@@ -77,7 +77,7 @@ class VitalSign extends BaseType implements VitalSignContract, MedicalConditionC
      * @return static
      *
      * @see https://schema.org/code
-     * @see http://health-lifesci.schema.org
+     * @see https://health-lifesci.schema.org
      */
     public function code($code)
     {
@@ -111,7 +111,7 @@ class VitalSign extends BaseType implements VitalSignContract, MedicalConditionC
      * @return static
      *
      * @see https://schema.org/differentialDiagnosis
-     * @see http://health-lifesci.schema.org
+     * @see https://health-lifesci.schema.org
      */
     public function differentialDiagnosis($differentialDiagnosis)
     {
@@ -143,7 +143,7 @@ class VitalSign extends BaseType implements VitalSignContract, MedicalConditionC
      * @return static
      *
      * @see https://schema.org/drug
-     * @see http://health-lifesci.schema.org
+     * @see https://health-lifesci.schema.org
      */
     public function drug($drug)
     {
@@ -159,7 +159,7 @@ class VitalSign extends BaseType implements VitalSignContract, MedicalConditionC
      * @return static
      *
      * @see https://schema.org/epidemiology
-     * @see http://health-lifesci.schema.org
+     * @see https://health-lifesci.schema.org
      */
     public function epidemiology($epidemiology)
     {
@@ -175,7 +175,7 @@ class VitalSign extends BaseType implements VitalSignContract, MedicalConditionC
      * @return static
      *
      * @see https://schema.org/expectedPrognosis
-     * @see http://health-lifesci.schema.org
+     * @see https://health-lifesci.schema.org
      */
     public function expectedPrognosis($expectedPrognosis)
     {
@@ -190,7 +190,7 @@ class VitalSign extends BaseType implements VitalSignContract, MedicalConditionC
      * @return static
      *
      * @see https://schema.org/guideline
-     * @see http://health-lifesci.schema.org
+     * @see https://health-lifesci.schema.org
      */
     public function guideline($guideline)
     {
@@ -223,7 +223,7 @@ class VitalSign extends BaseType implements VitalSignContract, MedicalConditionC
      * @return static
      *
      * @see https://schema.org/identifyingExam
-     * @see http://health-lifesci.schema.org
+     * @see https://health-lifesci.schema.org
      */
     public function identifyingExam($identifyingExam)
     {
@@ -238,7 +238,7 @@ class VitalSign extends BaseType implements VitalSignContract, MedicalConditionC
      * @return static
      *
      * @see https://schema.org/identifyingTest
-     * @see http://health-lifesci.schema.org
+     * @see https://health-lifesci.schema.org
      */
     public function identifyingTest($identifyingTest)
     {
@@ -269,7 +269,7 @@ class VitalSign extends BaseType implements VitalSignContract, MedicalConditionC
      * @return static
      *
      * @see https://schema.org/legalStatus
-     * @see http://health-lifesci.schema.org
+     * @see https://health-lifesci.schema.org
      */
     public function legalStatus($legalStatus)
     {
@@ -301,7 +301,7 @@ class VitalSign extends BaseType implements VitalSignContract, MedicalConditionC
      * @return static
      *
      * @see https://schema.org/medicineSystem
-     * @see http://health-lifesci.schema.org
+     * @see https://health-lifesci.schema.org
      */
     public function medicineSystem($medicineSystem)
     {
@@ -331,7 +331,7 @@ class VitalSign extends BaseType implements VitalSignContract, MedicalConditionC
      * @return static
      *
      * @see https://schema.org/naturalProgression
-     * @see http://health-lifesci.schema.org
+     * @see https://health-lifesci.schema.org
      */
     public function naturalProgression($naturalProgression)
     {
@@ -347,7 +347,7 @@ class VitalSign extends BaseType implements VitalSignContract, MedicalConditionC
      * @return static
      *
      * @see https://schema.org/pathophysiology
-     * @see http://health-lifesci.schema.org
+     * @see https://health-lifesci.schema.org
      */
     public function pathophysiology($pathophysiology)
     {
@@ -364,7 +364,7 @@ class VitalSign extends BaseType implements VitalSignContract, MedicalConditionC
      * @return static
      *
      * @see https://schema.org/possibleComplication
-     * @see http://health-lifesci.schema.org
+     * @see https://health-lifesci.schema.org
      */
     public function possibleComplication($possibleComplication)
     {
@@ -379,7 +379,7 @@ class VitalSign extends BaseType implements VitalSignContract, MedicalConditionC
      * @return static
      *
      * @see https://schema.org/possibleTreatment
-     * @see http://health-lifesci.schema.org
+     * @see https://health-lifesci.schema.org
      */
     public function possibleTreatment($possibleTreatment)
     {
@@ -410,7 +410,7 @@ class VitalSign extends BaseType implements VitalSignContract, MedicalConditionC
      * @return static
      *
      * @see https://schema.org/primaryPrevention
-     * @see http://health-lifesci.schema.org
+     * @see https://health-lifesci.schema.org
      */
     public function primaryPrevention($primaryPrevention)
     {
@@ -426,7 +426,7 @@ class VitalSign extends BaseType implements VitalSignContract, MedicalConditionC
      * @return static
      *
      * @see https://schema.org/recognizingAuthority
-     * @see http://health-lifesci.schema.org
+     * @see https://health-lifesci.schema.org
      */
     public function recognizingAuthority($recognizingAuthority)
     {
@@ -441,7 +441,7 @@ class VitalSign extends BaseType implements VitalSignContract, MedicalConditionC
      * @return static
      *
      * @see https://schema.org/relevantSpecialty
-     * @see http://health-lifesci.schema.org
+     * @see https://health-lifesci.schema.org
      */
     public function relevantSpecialty($relevantSpecialty)
     {
@@ -457,7 +457,7 @@ class VitalSign extends BaseType implements VitalSignContract, MedicalConditionC
      * @return static
      *
      * @see https://schema.org/riskFactor
-     * @see http://health-lifesci.schema.org
+     * @see https://health-lifesci.schema.org
      */
     public function riskFactor($riskFactor)
     {
@@ -489,7 +489,7 @@ class VitalSign extends BaseType implements VitalSignContract, MedicalConditionC
      * @return static
      *
      * @see https://schema.org/secondaryPrevention
-     * @see http://health-lifesci.schema.org
+     * @see https://health-lifesci.schema.org
      */
     public function secondaryPrevention($secondaryPrevention)
     {
@@ -506,7 +506,7 @@ class VitalSign extends BaseType implements VitalSignContract, MedicalConditionC
      * @return static
      *
      * @see https://schema.org/signOrSymptom
-     * @see http://health-lifesci.schema.org
+     * @see https://health-lifesci.schema.org
      */
     public function signOrSymptom($signOrSymptom)
     {
@@ -521,7 +521,7 @@ class VitalSign extends BaseType implements VitalSignContract, MedicalConditionC
      * @return static
      *
      * @see https://schema.org/stage
-     * @see http://health-lifesci.schema.org
+     * @see https://health-lifesci.schema.org
      */
     public function stage($stage)
     {
@@ -536,7 +536,7 @@ class VitalSign extends BaseType implements VitalSignContract, MedicalConditionC
      * @return static
      *
      * @see https://schema.org/status
-     * @see http://health-lifesci.schema.org
+     * @see https://health-lifesci.schema.org
      */
     public function status($status)
     {
@@ -551,7 +551,7 @@ class VitalSign extends BaseType implements VitalSignContract, MedicalConditionC
      * @return static
      *
      * @see https://schema.org/study
-     * @see http://health-lifesci.schema.org
+     * @see https://health-lifesci.schema.org
      */
     public function study($study)
     {
@@ -581,7 +581,7 @@ class VitalSign extends BaseType implements VitalSignContract, MedicalConditionC
      * @return static
      *
      * @see https://schema.org/typicalTest
-     * @see http://health-lifesci.schema.org
+     * @see https://health-lifesci.schema.org
      */
     public function typicalTest($typicalTest)
     {

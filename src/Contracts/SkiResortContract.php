@@ -22,6 +22,10 @@ interface SkiResortContract
 
     public function areaServed($areaServed);
 
+    public function audience($audience);
+
+    public function availableLanguage($availableLanguage);
+
     public function award($award);
 
     public function awards($awards);
@@ -31,6 +35,10 @@ interface SkiResortContract
     public function branchOf($branchOf);
 
     public function brand($brand);
+
+    public function checkinTime($checkinTime);
+
+    public function checkoutTime($checkoutTime);
 
     public function contactPoint($contactPoint);
 
@@ -172,6 +180,8 @@ interface SkiResortContract
 
     public function numberOfEmployees($numberOfEmployees);
 
+    public function numberOfRooms($numberOfRooms);
+
     public function openingHours($openingHours);
 
     public function openingHoursSpecification($openingHoursSpecification);
@@ -183,6 +193,8 @@ interface SkiResortContract
     public function parentOrganization($parentOrganization);
 
     public function paymentAccepted($paymentAccepted);
+
+    public function petsAllowed($petsAllowed);
 
     public function photo($photo);
 
@@ -213,6 +225,8 @@ interface SkiResortContract
     public function specialOpeningHoursSpecification($specialOpeningHoursSpecification);
 
     public function sponsor($sponsor);
+
+    public function starRating($starRating);
 
     public function subOrganization($subOrganization);
 

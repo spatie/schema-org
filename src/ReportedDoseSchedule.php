@@ -12,7 +12,7 @@ use \Spatie\SchemaOrg\Contracts\ThingContract;
  * A patient-reported or observed dosing schedule for a drug or supplement.
  *
  * @see https://schema.org/ReportedDoseSchedule
- * @see http://health-lifesci.schema.org
+ * @see https://health-lifesci.schema.org
  *
  */
 class ReportedDoseSchedule extends BaseType implements ReportedDoseScheduleContract, DoseScheduleContract, MedicalEntityContract, MedicalIntangibleContract, ThingContract
@@ -59,7 +59,7 @@ class ReportedDoseSchedule extends BaseType implements ReportedDoseScheduleContr
      * @return static
      *
      * @see https://schema.org/code
-     * @see http://health-lifesci.schema.org
+     * @see https://health-lifesci.schema.org
      */
     public function code($code)
     {
@@ -105,7 +105,7 @@ class ReportedDoseSchedule extends BaseType implements ReportedDoseScheduleContr
      * @return static
      *
      * @see https://schema.org/doseUnit
-     * @see http://health-lifesci.schema.org
+     * @see https://health-lifesci.schema.org
      */
     public function doseUnit($doseUnit)
     {
@@ -120,7 +120,7 @@ class ReportedDoseSchedule extends BaseType implements ReportedDoseScheduleContr
      * @return static
      *
      * @see https://schema.org/doseValue
-     * @see http://health-lifesci.schema.org
+     * @see https://health-lifesci.schema.org
      */
     public function doseValue($doseValue)
     {
@@ -135,7 +135,7 @@ class ReportedDoseSchedule extends BaseType implements ReportedDoseScheduleContr
      * @return static
      *
      * @see https://schema.org/frequency
-     * @see http://health-lifesci.schema.org
+     * @see https://health-lifesci.schema.org
      */
     public function frequency($frequency)
     {
@@ -150,7 +150,7 @@ class ReportedDoseSchedule extends BaseType implements ReportedDoseScheduleContr
      * @return static
      *
      * @see https://schema.org/guideline
-     * @see http://health-lifesci.schema.org
+     * @see https://health-lifesci.schema.org
      */
     public function guideline($guideline)
     {
@@ -199,7 +199,7 @@ class ReportedDoseSchedule extends BaseType implements ReportedDoseScheduleContr
      * @return static
      *
      * @see https://schema.org/legalStatus
-     * @see http://health-lifesci.schema.org
+     * @see https://health-lifesci.schema.org
      */
     public function legalStatus($legalStatus)
     {
@@ -231,7 +231,7 @@ class ReportedDoseSchedule extends BaseType implements ReportedDoseScheduleContr
      * @return static
      *
      * @see https://schema.org/medicineSystem
-     * @see http://health-lifesci.schema.org
+     * @see https://health-lifesci.schema.org
      */
     public function medicineSystem($medicineSystem)
     {
@@ -276,7 +276,7 @@ class ReportedDoseSchedule extends BaseType implements ReportedDoseScheduleContr
      * @return static
      *
      * @see https://schema.org/recognizingAuthority
-     * @see http://health-lifesci.schema.org
+     * @see https://health-lifesci.schema.org
      */
     public function recognizingAuthority($recognizingAuthority)
     {
@@ -291,7 +291,7 @@ class ReportedDoseSchedule extends BaseType implements ReportedDoseScheduleContr
      * @return static
      *
      * @see https://schema.org/relevantSpecialty
-     * @see http://health-lifesci.schema.org
+     * @see https://health-lifesci.schema.org
      */
     public function relevantSpecialty($relevantSpecialty)
     {
@@ -322,7 +322,7 @@ class ReportedDoseSchedule extends BaseType implements ReportedDoseScheduleContr
      * @return static
      *
      * @see https://schema.org/study
-     * @see http://health-lifesci.schema.org
+     * @see https://health-lifesci.schema.org
      */
     public function study($study)
     {
@@ -353,7 +353,7 @@ class ReportedDoseSchedule extends BaseType implements ReportedDoseScheduleContr
      * @return static
      *
      * @see https://schema.org/targetPopulation
-     * @see http://health-lifesci.schema.org
+     * @see https://health-lifesci.schema.org
      */
     public function targetPopulation($targetPopulation)
     {

@@ -185,7 +185,7 @@ class PaymentCard extends BaseType implements PaymentCardContract, EnumerationCo
      * @return static
      *
      * @see https://schema.org/cashBack
-     * @see http://pending.schema.org
+     * @see https://pending.schema.org
      */
     public function cashBack($cashBack)
     {
@@ -216,7 +216,7 @@ class PaymentCard extends BaseType implements PaymentCardContract, EnumerationCo
      * @return static
      *
      * @see https://schema.org/contactlessPayment
-     * @see http://pending.schema.org
+     * @see https://pending.schema.org
      */
     public function contactlessPayment($contactlessPayment)
     {
@@ -279,7 +279,7 @@ class PaymentCard extends BaseType implements PaymentCardContract, EnumerationCo
      * @return static
      *
      * @see https://schema.org/floorLimit
-     * @see http://pending.schema.org
+     * @see https://pending.schema.org
      */
     public function floorLimit($floorLimit)
     {
@@ -435,7 +435,7 @@ class PaymentCard extends BaseType implements PaymentCardContract, EnumerationCo
      * @return static
      *
      * @see https://schema.org/monthlyMinimumRepaymentAmount
-     * @see http://pending.schema.org
+     * @see https://pending.schema.org
      */
     public function monthlyMinimumRepaymentAmount($monthlyMinimumRepaymentAmount)
     {
@@ -664,7 +664,7 @@ class PaymentCard extends BaseType implements PaymentCardContract, EnumerationCo
      * @return static
      *
      * @see https://schema.org/termsOfService
-     * @see http://pending.schema.org
+     * @see https://pending.schema.org
      * @link https://github.com/schemaorg/schemaorg/issues/1423
      */
     public function termsOfService($termsOfService)

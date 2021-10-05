@@ -11,7 +11,7 @@ use \Spatie\SchemaOrg\Contracts\ThingContract;
  * A [[comment]] that corrects [[CreativeWork]].
  *
  * @see https://schema.org/CorrectionComment
- * @see http://pending.schema.org
+ * @see https://pending.schema.org
  * @link https://github.com/schemaorg/schemaorg/issues/1950
  *
  */
@@ -40,7 +40,7 @@ class CorrectionComment extends BaseType implements CorrectionCommentContract, C
      * @return static
      *
      * @see https://schema.org/abstract
-     * @see http://pending.schema.org
+     * @see https://pending.schema.org
      * @link https://github.com/schemaorg/schemaorg/issues/276
      */
     public function abstract($abstract)
@@ -190,7 +190,7 @@ class CorrectionComment extends BaseType implements CorrectionCommentContract, C
      * @return static
      *
      * @see https://schema.org/acquireLicensePage
-     * @see http://pending.schema.org
+     * @see https://pending.schema.org
      * @link https://github.com/schemaorg/schemaorg/issues/2454
      */
     public function acquireLicensePage($acquireLicensePage)
@@ -269,7 +269,7 @@ class CorrectionComment extends BaseType implements CorrectionCommentContract, C
      * @return static
      *
      * @see https://schema.org/assesses
-     * @see http://pending.schema.org
+     * @see https://pending.schema.org
      * @link https://github.com/schemaorg/schemaorg/issues/2427
      */
     public function assesses($assesses)
@@ -439,7 +439,7 @@ class CorrectionComment extends BaseType implements CorrectionCommentContract, C
      * @return static
      *
      * @see https://schema.org/conditionsOfAccess
-     * @see http://pending.schema.org
+     * @see https://pending.schema.org
      * @link https://github.com/schemaorg/schemaorg/issues/2173
      */
     public function conditionsOfAccess($conditionsOfAccess)
@@ -485,7 +485,7 @@ class CorrectionComment extends BaseType implements CorrectionCommentContract, C
      * @return static
      *
      * @see https://schema.org/contentReferenceTime
-     * @see http://pending.schema.org
+     * @see https://pending.schema.org
      * @link https://github.com/schemaorg/schemaorg/issues/1050
      */
     public function contentReferenceTime($contentReferenceTime)
@@ -545,7 +545,7 @@ class CorrectionComment extends BaseType implements CorrectionCommentContract, C
      * @return static
      *
      * @see https://schema.org/correction
-     * @see http://pending.schema.org
+     * @see https://pending.schema.org
      */
     public function correction($correction)
     {
@@ -563,7 +563,7 @@ class CorrectionComment extends BaseType implements CorrectionCommentContract, C
      * @return static
      *
      * @see https://schema.org/creativeWorkStatus
-     * @see http://pending.schema.org
+     * @see https://pending.schema.org
      * @link https://github.com/schemaorg/schemaorg/issues/987
      */
     public function creativeWorkStatus($creativeWorkStatus)
@@ -710,7 +710,7 @@ class CorrectionComment extends BaseType implements CorrectionCommentContract, C
      * @return static
      *
      * @see https://schema.org/editEIDR
-     * @see http://pending.schema.org
+     * @see https://pending.schema.org
      * @link https://github.com/schemaorg/schemaorg/issues/2469
      */
     public function editEIDR($editEIDR)
@@ -760,7 +760,7 @@ class CorrectionComment extends BaseType implements CorrectionCommentContract, C
      * @return static
      *
      * @see https://schema.org/educationalLevel
-     * @see http://pending.schema.org
+     * @see https://pending.schema.org
      * @link https://github.com/schemaorg/schemaorg/issues/1779
      */
     public function educationalLevel($educationalLevel)
@@ -1114,7 +1114,7 @@ class CorrectionComment extends BaseType implements CorrectionCommentContract, C
      * Keywords or tags used to describe this content. Multiple entries in a
      * keywords list are typically delimited by commas.
      *
-     * @param string|string[] $keywords
+     * @param \Spatie\SchemaOrg\Contracts\DefinedTermContract|\Spatie\SchemaOrg\Contracts\DefinedTermContract[]|string|string[] $keywords
      *
      * @return static
      *
@@ -1221,7 +1221,7 @@ class CorrectionComment extends BaseType implements CorrectionCommentContract, C
      * @return static
      *
      * @see https://schema.org/maintainer
-     * @see http://pending.schema.org
+     * @see https://pending.schema.org
      * @link https://github.com/schemaorg/schemaorg/issues/2311
      */
     public function maintainer($maintainer)
@@ -1253,7 +1253,7 @@ class CorrectionComment extends BaseType implements CorrectionCommentContract, C
      * @return static
      *
      * @see https://schema.org/materialExtent
-     * @see http://pending.schema.org
+     * @see https://pending.schema.org
      * @link https://github.com/schemaorg/schemaorg/issues/1759
      */
     public function materialExtent($materialExtent)
@@ -1315,7 +1315,7 @@ class CorrectionComment extends BaseType implements CorrectionCommentContract, C
     /**
      * The parent of a question, answer or item in general.
      *
-     * @param \Spatie\SchemaOrg\Contracts\QuestionContract|\Spatie\SchemaOrg\Contracts\QuestionContract[] $parentItem
+     * @param \Spatie\SchemaOrg\Contracts\CommentContract|\Spatie\SchemaOrg\Contracts\CommentContract[] $parentItem
      *
      * @return static
      *
@@ -1336,7 +1336,7 @@ class CorrectionComment extends BaseType implements CorrectionCommentContract, C
      * @return static
      *
      * @see https://schema.org/pattern
-     * @see http://pending.schema.org
+     * @see https://pending.schema.org
      * @link https://github.com/schemaorg/schemaorg/issues/1797
      */
     public function pattern($pattern)
@@ -1441,7 +1441,7 @@ class CorrectionComment extends BaseType implements CorrectionCommentContract, C
      * @return static
      *
      * @see https://schema.org/publisherImprint
-     * @see http://bib.schema.org
+     * @see https://bib.schema.org
      */
     public function publisherImprint($publisherImprint)
     {
@@ -1572,7 +1572,7 @@ class CorrectionComment extends BaseType implements CorrectionCommentContract, C
      * @return static
      *
      * @see https://schema.org/sdDatePublished
-     * @see http://pending.schema.org
+     * @see https://pending.schema.org
      * @link https://github.com/schemaorg/schemaorg/issues/1886
      */
     public function sdDatePublished($sdDatePublished)
@@ -1589,7 +1589,7 @@ class CorrectionComment extends BaseType implements CorrectionCommentContract, C
      * @return static
      *
      * @see https://schema.org/sdLicense
-     * @see http://pending.schema.org
+     * @see https://pending.schema.org
      * @link https://github.com/schemaorg/schemaorg/issues/1886
      */
     public function sdLicense($sdLicense)
@@ -1611,7 +1611,7 @@ class CorrectionComment extends BaseType implements CorrectionCommentContract, C
      * @return static
      *
      * @see https://schema.org/sdPublisher
-     * @see http://pending.schema.org
+     * @see https://pending.schema.org
      * @link https://github.com/schemaorg/schemaorg/issues/1886
      */
     public function sdPublisher($sdPublisher)
@@ -1632,7 +1632,7 @@ class CorrectionComment extends BaseType implements CorrectionCommentContract, C
      * @return static
      *
      * @see https://schema.org/size
-     * @see http://pending.schema.org
+     * @see https://pending.schema.org
      * @link https://github.com/schemaorg/schemaorg/issues/1797
      */
     public function size($size)
@@ -1729,7 +1729,7 @@ class CorrectionComment extends BaseType implements CorrectionCommentContract, C
      * @return static
      *
      * @see https://schema.org/teaches
-     * @see http://pending.schema.org
+     * @see https://pending.schema.org
      * @link https://github.com/schemaorg/schemaorg/issues/2427
      */
     public function teaches($teaches)
@@ -1837,7 +1837,7 @@ class CorrectionComment extends BaseType implements CorrectionCommentContract, C
      * @return static
      *
      * @see https://schema.org/translationOfWork
-     * @see http://bib.schema.org
+     * @see https://bib.schema.org
      */
     public function translationOfWork($translationOfWork)
     {
@@ -1923,7 +1923,7 @@ class CorrectionComment extends BaseType implements CorrectionCommentContract, C
      * @return static
      *
      * @see https://schema.org/usageInfo
-     * @see http://pending.schema.org
+     * @see https://pending.schema.org
      * @link https://github.com/schemaorg/schemaorg/issues/2454
      */
     public function usageInfo($usageInfo)
@@ -1986,7 +1986,7 @@ class CorrectionComment extends BaseType implements CorrectionCommentContract, C
      * @return static
      *
      * @see https://schema.org/workTranslation
-     * @see http://bib.schema.org
+     * @see https://bib.schema.org
      */
     public function workTranslation($workTranslation)
     {

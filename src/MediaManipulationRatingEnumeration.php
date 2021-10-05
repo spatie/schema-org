@@ -14,7 +14,7 @@ use \Spatie\SchemaOrg\Contracts\ThingContract;
  * context within which they are published or presented.
  *
  * @see https://schema.org/MediaManipulationRatingEnumeration
- * @see http://pending.schema.org
+ * @see https://pending.schema.org
  * @link https://github.com/schemaorg/schemaorg/issues/2450
  *
  * @method static supersededBy($supersededBy) The value should be instance of pending types Class|Class[]|Enumeration|Enumeration[]|Property|Property[]
@@ -26,7 +26,7 @@ class MediaManipulationRatingEnumeration extends BaseType implements MediaManipu
      * way.
      *
      * @see https://schema.org/AuthenticContent
-     * @see http://pending.schema.org
+     * @see https://pending.schema.org
      * @link https://github.com/schemaorg/schemaorg/issues/2450
      */
      const AuthenticContent = 'https://schema.org/AuthenticContent';
@@ -35,7 +35,7 @@ class MediaManipulationRatingEnumeration extends BaseType implements MediaManipu
      * MissingContext: ...
      *
      * @see https://schema.org/MissingContext
-     * @see http://pending.schema.org
+     * @see https://pending.schema.org
      * @link https://github.com/schemaorg/schemaorg/issues/2450
      */
      const MissingContext = 'https://schema.org/MissingContext';

@@ -12,7 +12,7 @@ use \Spatie\SchemaOrg\Contracts\ThingContract;
  * between [[postalCodeBegin]] and [[postalCodeEnd]], inclusively.
  *
  * @see https://schema.org/PostalCodeRangeSpecification
- * @see http://pending.schema.org
+ * @see https://pending.schema.org
  * @link https://github.com/schemaorg/schemaorg/issues/2506
  *
  */
@@ -153,7 +153,7 @@ class PostalCodeRangeSpecification extends BaseType implements PostalCodeRangeSp
      * @return static
      *
      * @see https://schema.org/postalCodeBegin
-     * @see http://pending.schema.org
+     * @see https://pending.schema.org
      * @link https://github.com/schemaorg/schemaorg/issues/2506
      */
     public function postalCodeBegin($postalCodeBegin)
@@ -170,7 +170,7 @@ class PostalCodeRangeSpecification extends BaseType implements PostalCodeRangeSp
      * @return static
      *
      * @see https://schema.org/postalCodeEnd
-     * @see http://pending.schema.org
+     * @see https://pending.schema.org
      * @link https://github.com/schemaorg/schemaorg/issues/2506
      */
     public function postalCodeEnd($postalCodeEnd)

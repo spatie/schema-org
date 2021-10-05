@@ -13,7 +13,7 @@ use \Spatie\SchemaOrg\Contracts\ThingContract;
  * the US FDA approves indications for most drugs in the US.
  *
  * @see https://schema.org/ApprovedIndication
- * @see http://health-lifesci.schema.org
+ * @see https://health-lifesci.schema.org
  *
  */
 class ApprovedIndication extends BaseType implements ApprovedIndicationContract, MedicalEntityContract, MedicalIndicationContract, ThingContract
@@ -60,7 +60,7 @@ class ApprovedIndication extends BaseType implements ApprovedIndicationContract,
      * @return static
      *
      * @see https://schema.org/code
-     * @see http://health-lifesci.schema.org
+     * @see https://health-lifesci.schema.org
      */
     public function code($code)
     {
@@ -106,7 +106,7 @@ class ApprovedIndication extends BaseType implements ApprovedIndicationContract,
      * @return static
      *
      * @see https://schema.org/guideline
-     * @see http://health-lifesci.schema.org
+     * @see https://health-lifesci.schema.org
      */
     public function guideline($guideline)
     {
@@ -155,7 +155,7 @@ class ApprovedIndication extends BaseType implements ApprovedIndicationContract,
      * @return static
      *
      * @see https://schema.org/legalStatus
-     * @see http://health-lifesci.schema.org
+     * @see https://health-lifesci.schema.org
      */
     public function legalStatus($legalStatus)
     {
@@ -187,7 +187,7 @@ class ApprovedIndication extends BaseType implements ApprovedIndicationContract,
      * @return static
      *
      * @see https://schema.org/medicineSystem
-     * @see http://health-lifesci.schema.org
+     * @see https://health-lifesci.schema.org
      */
     public function medicineSystem($medicineSystem)
     {
@@ -232,7 +232,7 @@ class ApprovedIndication extends BaseType implements ApprovedIndicationContract,
      * @return static
      *
      * @see https://schema.org/recognizingAuthority
-     * @see http://health-lifesci.schema.org
+     * @see https://health-lifesci.schema.org
      */
     public function recognizingAuthority($recognizingAuthority)
     {
@@ -247,7 +247,7 @@ class ApprovedIndication extends BaseType implements ApprovedIndicationContract,
      * @return static
      *
      * @see https://schema.org/relevantSpecialty
-     * @see http://health-lifesci.schema.org
+     * @see https://health-lifesci.schema.org
      */
     public function relevantSpecialty($relevantSpecialty)
     {
@@ -278,7 +278,7 @@ class ApprovedIndication extends BaseType implements ApprovedIndicationContract,
      * @return static
      *
      * @see https://schema.org/study
-     * @see http://health-lifesci.schema.org
+     * @see https://health-lifesci.schema.org
      */
     public function study($study)
     {

@@ -14,7 +14,7 @@ use \Spatie\SchemaOrg\Contracts\ThingContract;
  * allocated at random to the different treatment and/or control groups.
  *
  * @see https://schema.org/MedicalTrial
- * @see http://health-lifesci.schema.org
+ * @see https://health-lifesci.schema.org
  *
  */
 class MedicalTrial extends BaseType implements MedicalTrialContract, MedicalEntityContract, MedicalStudyContract, ThingContract
@@ -61,7 +61,7 @@ class MedicalTrial extends BaseType implements MedicalTrialContract, MedicalEnti
      * @return static
      *
      * @see https://schema.org/code
-     * @see http://health-lifesci.schema.org
+     * @see https://health-lifesci.schema.org
      */
     public function code($code)
     {
@@ -107,7 +107,7 @@ class MedicalTrial extends BaseType implements MedicalTrialContract, MedicalEnti
      * @return static
      *
      * @see https://schema.org/guideline
-     * @see http://health-lifesci.schema.org
+     * @see https://health-lifesci.schema.org
      */
     public function guideline($guideline)
     {
@@ -123,7 +123,7 @@ class MedicalTrial extends BaseType implements MedicalTrialContract, MedicalEnti
      * @return static
      *
      * @see https://schema.org/healthCondition
-     * @see http://health-lifesci.schema.org
+     * @see https://health-lifesci.schema.org
      */
     public function healthCondition($healthCondition)
     {
@@ -172,7 +172,7 @@ class MedicalTrial extends BaseType implements MedicalTrialContract, MedicalEnti
      * @return static
      *
      * @see https://schema.org/legalStatus
-     * @see http://health-lifesci.schema.org
+     * @see https://health-lifesci.schema.org
      */
     public function legalStatus($legalStatus)
     {
@@ -204,7 +204,7 @@ class MedicalTrial extends BaseType implements MedicalTrialContract, MedicalEnti
      * @return static
      *
      * @see https://schema.org/medicineSystem
-     * @see http://health-lifesci.schema.org
+     * @see https://health-lifesci.schema.org
      */
     public function medicineSystem($medicineSystem)
     {
@@ -249,7 +249,7 @@ class MedicalTrial extends BaseType implements MedicalTrialContract, MedicalEnti
      * @return static
      *
      * @see https://schema.org/recognizingAuthority
-     * @see http://health-lifesci.schema.org
+     * @see https://health-lifesci.schema.org
      */
     public function recognizingAuthority($recognizingAuthority)
     {
@@ -264,7 +264,7 @@ class MedicalTrial extends BaseType implements MedicalTrialContract, MedicalEnti
      * @return static
      *
      * @see https://schema.org/relevantSpecialty
-     * @see http://health-lifesci.schema.org
+     * @see https://health-lifesci.schema.org
      */
     public function relevantSpecialty($relevantSpecialty)
     {
@@ -311,7 +311,7 @@ class MedicalTrial extends BaseType implements MedicalTrialContract, MedicalEnti
      * @return static
      *
      * @see https://schema.org/status
-     * @see http://health-lifesci.schema.org
+     * @see https://health-lifesci.schema.org
      */
     public function status($status)
     {
@@ -326,7 +326,7 @@ class MedicalTrial extends BaseType implements MedicalTrialContract, MedicalEnti
      * @return static
      *
      * @see https://schema.org/study
-     * @see http://health-lifesci.schema.org
+     * @see https://health-lifesci.schema.org
      */
     public function study($study)
     {
@@ -341,7 +341,7 @@ class MedicalTrial extends BaseType implements MedicalTrialContract, MedicalEnti
      * @return static
      *
      * @see https://schema.org/studyLocation
-     * @see http://health-lifesci.schema.org
+     * @see https://health-lifesci.schema.org
      */
     public function studyLocation($studyLocation)
     {
@@ -357,7 +357,7 @@ class MedicalTrial extends BaseType implements MedicalTrialContract, MedicalEnti
      * @return static
      *
      * @see https://schema.org/studySubject
-     * @see http://health-lifesci.schema.org
+     * @see https://health-lifesci.schema.org
      */
     public function studySubject($studySubject)
     {
@@ -387,7 +387,7 @@ class MedicalTrial extends BaseType implements MedicalTrialContract, MedicalEnti
      * @return static
      *
      * @see https://schema.org/trialDesign
-     * @see http://health-lifesci.schema.org
+     * @see https://health-lifesci.schema.org
      */
     public function trialDesign($trialDesign)
     {

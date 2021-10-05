@@ -18,7 +18,7 @@ use \Spatie\SchemaOrg\Contracts\ThingContract;
  * [[image]].
  *
  * @see https://schema.org/FloorPlan
- * @see http://pending.schema.org
+ * @see https://pending.schema.org
  * @link https://github.com/schemaorg/schemaorg/issues/2373
  *
  */
@@ -164,12 +164,28 @@ class FloorPlan extends BaseType implements FloorPlanContract, IntangibleContrac
      * @return static
      *
      * @see https://schema.org/isPlanForApartment
-     * @see http://pending.schema.org
+     * @see https://pending.schema.org
      * @link https://github.com/schemaorg/schemaorg/issues/2373
      */
     public function isPlanForApartment($isPlanForApartment)
     {
         return $this->setProperty('isPlanForApartment', $isPlanForApartment);
+    }
+
+    /**
+     * A schematic image showing the floorplan layout.
+     *
+     * @param \Spatie\SchemaOrg\Contracts\ImageObjectContract|\Spatie\SchemaOrg\Contracts\ImageObjectContract[]|string|string[] $layoutImage
+     *
+     * @return static
+     *
+     * @see https://schema.org/layoutImage
+     * @see https://pending.schema.org
+     * @link https://github.com/schemaorg/schemaorg/issues/2690
+     */
+    public function layoutImage($layoutImage)
+    {
+        return $this->setProperty('layoutImage', $layoutImage);
     }
 
     /**
@@ -213,7 +229,7 @@ class FloorPlan extends BaseType implements FloorPlanContract, IntangibleContrac
      * @return static
      *
      * @see https://schema.org/numberOfAccommodationUnits
-     * @see http://pending.schema.org
+     * @see https://pending.schema.org
      * @link https://github.com/schemaorg/schemaorg/issues/2373
      */
     public function numberOfAccommodationUnits($numberOfAccommodationUnits)
@@ -232,7 +248,7 @@ class FloorPlan extends BaseType implements FloorPlanContract, IntangibleContrac
      * @return static
      *
      * @see https://schema.org/numberOfAvailableAccommodationUnits
-     * @see http://pending.schema.org
+     * @see https://pending.schema.org
      * @link https://github.com/schemaorg/schemaorg/issues/2373
      */
     public function numberOfAvailableAccommodationUnits($numberOfAvailableAccommodationUnits)
@@ -253,7 +269,7 @@ class FloorPlan extends BaseType implements FloorPlanContract, IntangibleContrac
      * @return static
      *
      * @see https://schema.org/numberOfBathroomsTotal
-     * @see http://pending.schema.org
+     * @see https://pending.schema.org
      * @link https://github.com/schemaorg/schemaorg/issues/2373
      */
     public function numberOfBathroomsTotal($numberOfBathroomsTotal)
@@ -270,7 +286,7 @@ class FloorPlan extends BaseType implements FloorPlanContract, IntangibleContrac
      * @return static
      *
      * @see https://schema.org/numberOfBedrooms
-     * @see http://pending.schema.org
+     * @see https://pending.schema.org
      * @link https://github.com/schemaorg/schemaorg/issues/2373
      */
     public function numberOfBedrooms($numberOfBedrooms)
@@ -288,7 +304,7 @@ class FloorPlan extends BaseType implements FloorPlanContract, IntangibleContrac
      * @return static
      *
      * @see https://schema.org/numberOfFullBathrooms
-     * @see http://pending.schema.org
+     * @see https://pending.schema.org
      * @link https://github.com/schemaorg/schemaorg/issues/2373
      */
     public function numberOfFullBathrooms($numberOfFullBathrooms)
@@ -306,7 +322,7 @@ class FloorPlan extends BaseType implements FloorPlanContract, IntangibleContrac
      * @return static
      *
      * @see https://schema.org/numberOfPartialBathrooms
-     * @see http://pending.schema.org
+     * @see https://pending.schema.org
      * @link https://github.com/schemaorg/schemaorg/issues/2373
      */
     public function numberOfPartialBathrooms($numberOfPartialBathrooms)

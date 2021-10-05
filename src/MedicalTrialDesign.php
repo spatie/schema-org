@@ -12,7 +12,7 @@ use \Spatie\SchemaOrg\Contracts\ThingContract;
  * Design models for medical trials. Enumerated type.
  *
  * @see https://schema.org/MedicalTrialDesign
- * @see http://health-lifesci.schema.org
+ * @see https://health-lifesci.schema.org
  * @link http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#source_WikiDoc
  *
  * @method static supersededBy($supersededBy) The value should be instance of pending types Class|Class[]|Enumeration|Enumeration[]|Property|Property[]
@@ -24,7 +24,7 @@ class MedicalTrialDesign extends BaseType implements MedicalTrialDesignContract,
      * details of the treatment the patient was randomly assigned to.
      *
      * @see https://schema.org/DoubleBlindedTrial
-     * @see http://health-lifesci.schema.org
+     * @see https://health-lifesci.schema.org
      */
      const DoubleBlindedTrial = 'https://schema.org/DoubleBlindedTrial';
 
@@ -32,7 +32,7 @@ class MedicalTrialDesign extends BaseType implements MedicalTrialDesignContract,
      * An international trial.
      *
      * @see https://schema.org/InternationalTrial
-     * @see http://health-lifesci.schema.org
+     * @see https://health-lifesci.schema.org
      */
      const InternationalTrial = 'https://schema.org/InternationalTrial';
 
@@ -40,7 +40,7 @@ class MedicalTrialDesign extends BaseType implements MedicalTrialDesignContract,
      * A trial that takes place at multiple centers.
      *
      * @see https://schema.org/MultiCenterTrial
-     * @see http://health-lifesci.schema.org
+     * @see https://health-lifesci.schema.org
      */
      const MultiCenterTrial = 'https://schema.org/MultiCenterTrial';
 
@@ -49,7 +49,7 @@ class MedicalTrialDesign extends BaseType implements MedicalTrialDesignContract,
      * treatment, and so does the patient.
      *
      * @see https://schema.org/OpenTrial
-     * @see http://health-lifesci.schema.org
+     * @see https://health-lifesci.schema.org
      */
      const OpenTrial = 'https://schema.org/OpenTrial';
 
@@ -57,7 +57,7 @@ class MedicalTrialDesign extends BaseType implements MedicalTrialDesignContract,
      * A placebo-controlled trial design.
      *
      * @see https://schema.org/PlaceboControlledTrial
-     * @see http://health-lifesci.schema.org
+     * @see https://health-lifesci.schema.org
      */
      const PlaceboControlledTrial = 'https://schema.org/PlaceboControlledTrial';
 
@@ -65,7 +65,7 @@ class MedicalTrialDesign extends BaseType implements MedicalTrialDesignContract,
      * A randomized trial design.
      *
      * @see https://schema.org/RandomizedTrial
-     * @see http://health-lifesci.schema.org
+     * @see https://health-lifesci.schema.org
      */
      const RandomizedTrial = 'https://schema.org/RandomizedTrial';
 
@@ -74,7 +74,7 @@ class MedicalTrialDesign extends BaseType implements MedicalTrialDesignContract,
      * was randomly assigned to but the patient does not.
      *
      * @see https://schema.org/SingleBlindedTrial
-     * @see http://health-lifesci.schema.org
+     * @see https://health-lifesci.schema.org
      */
      const SingleBlindedTrial = 'https://schema.org/SingleBlindedTrial';
 
@@ -82,7 +82,7 @@ class MedicalTrialDesign extends BaseType implements MedicalTrialDesignContract,
      * A trial that takes place at a single center.
      *
      * @see https://schema.org/SingleCenterTrial
-     * @see http://health-lifesci.schema.org
+     * @see https://health-lifesci.schema.org
      */
      const SingleCenterTrial = 'https://schema.org/SingleCenterTrial';
 
@@ -92,7 +92,7 @@ class MedicalTrialDesign extends BaseType implements MedicalTrialDesignContract,
      * patient was randomly assigned to.
      *
      * @see https://schema.org/TripleBlindedTrial
-     * @see http://health-lifesci.schema.org
+     * @see https://health-lifesci.schema.org
      */
      const TripleBlindedTrial = 'https://schema.org/TripleBlindedTrial';
 

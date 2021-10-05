@@ -187,7 +187,7 @@ class LocationFeatureSpecification extends BaseType implements LocationFeatureSp
      * @return static
      *
      * @see https://schema.org/measurementTechnique
-     * @see http://pending.schema.org
+     * @see https://pending.schema.org
      * @link https://github.com/schemaorg/schemaorg/issues/1425
      */
     public function measurementTechnique($measurementTechnique)

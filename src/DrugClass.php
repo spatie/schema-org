@@ -12,7 +12,7 @@ use \Spatie\SchemaOrg\Contracts\ThingContract;
  * effects, etc.
  *
  * @see https://schema.org/DrugClass
- * @see http://health-lifesci.schema.org
+ * @see https://health-lifesci.schema.org
  *
  */
 class DrugClass extends BaseType implements DrugClassContract, MedicalEntityContract, ThingContract
@@ -59,7 +59,7 @@ class DrugClass extends BaseType implements DrugClassContract, MedicalEntityCont
      * @return static
      *
      * @see https://schema.org/code
-     * @see http://health-lifesci.schema.org
+     * @see https://health-lifesci.schema.org
      */
     public function code($code)
     {
@@ -105,7 +105,7 @@ class DrugClass extends BaseType implements DrugClassContract, MedicalEntityCont
      * @return static
      *
      * @see https://schema.org/drug
-     * @see http://health-lifesci.schema.org
+     * @see https://health-lifesci.schema.org
      */
     public function drug($drug)
     {
@@ -120,7 +120,7 @@ class DrugClass extends BaseType implements DrugClassContract, MedicalEntityCont
      * @return static
      *
      * @see https://schema.org/guideline
-     * @see http://health-lifesci.schema.org
+     * @see https://health-lifesci.schema.org
      */
     public function guideline($guideline)
     {
@@ -169,7 +169,7 @@ class DrugClass extends BaseType implements DrugClassContract, MedicalEntityCont
      * @return static
      *
      * @see https://schema.org/legalStatus
-     * @see http://health-lifesci.schema.org
+     * @see https://health-lifesci.schema.org
      */
     public function legalStatus($legalStatus)
     {
@@ -201,7 +201,7 @@ class DrugClass extends BaseType implements DrugClassContract, MedicalEntityCont
      * @return static
      *
      * @see https://schema.org/medicineSystem
-     * @see http://health-lifesci.schema.org
+     * @see https://health-lifesci.schema.org
      */
     public function medicineSystem($medicineSystem)
     {
@@ -246,7 +246,7 @@ class DrugClass extends BaseType implements DrugClassContract, MedicalEntityCont
      * @return static
      *
      * @see https://schema.org/recognizingAuthority
-     * @see http://health-lifesci.schema.org
+     * @see https://health-lifesci.schema.org
      */
     public function recognizingAuthority($recognizingAuthority)
     {
@@ -261,7 +261,7 @@ class DrugClass extends BaseType implements DrugClassContract, MedicalEntityCont
      * @return static
      *
      * @see https://schema.org/relevantSpecialty
-     * @see http://health-lifesci.schema.org
+     * @see https://health-lifesci.schema.org
      */
     public function relevantSpecialty($relevantSpecialty)
     {
@@ -292,7 +292,7 @@ class DrugClass extends BaseType implements DrugClassContract, MedicalEntityCont
      * @return static
      *
      * @see https://schema.org/study
-     * @see http://health-lifesci.schema.org
+     * @see https://health-lifesci.schema.org
      */
     public function study($study)
     {

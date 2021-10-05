@@ -13,7 +13,7 @@ use \Spatie\SchemaOrg\Contracts\ThingContract;
  * [[HealthTopicContent]].
  *
  * @see https://schema.org/HealthAspectEnumeration
- * @see http://pending.schema.org
+ * @see https://pending.schema.org
  * @link https://github.com/schemaorg/schemaorg/issues/2374
  *
  * @method static supersededBy($supersededBy) The value should be instance of pending types Class|Class[]|Enumeration|Enumeration[]|Property|Property[]
@@ -25,7 +25,7 @@ class HealthAspectEnumeration extends BaseType implements HealthAspectEnumeratio
      * topic.
      *
      * @see https://schema.org/BenefitsHealthAspect
-     * @see http://pending.schema.org
+     * @see https://pending.schema.org
      * @link https://github.com/schemaorg/schemaorg/issues/2374
      */
      const BenefitsHealthAspect = 'https://schema.org/BenefitsHealthAspect';
@@ -35,7 +35,7 @@ class HealthAspectEnumeration extends BaseType implements HealthAspectEnumeratio
      * topic.
      *
      * @see https://schema.org/CausesHealthAspect
-     * @see http://pending.schema.org
+     * @see https://pending.schema.org
      * @link https://github.com/schemaorg/schemaorg/issues/2374
      */
      const CausesHealthAspect = 'https://schema.org/CausesHealthAspect';
@@ -45,7 +45,7 @@ class HealthAspectEnumeration extends BaseType implements HealthAspectEnumeratio
      * the topic.
      *
      * @see https://schema.org/ContagiousnessHealthAspect
-     * @see http://pending.schema.org
+     * @see https://pending.schema.org
      * @link https://github.com/schemaorg/schemaorg/issues/2374
      */
      const ContagiousnessHealthAspect = 'https://schema.org/ContagiousnessHealthAspect';
@@ -56,7 +56,7 @@ class HealthAspectEnumeration extends BaseType implements HealthAspectEnumeratio
      * observed.
      *
      * @see https://schema.org/HowOrWhereHealthAspect
-     * @see http://pending.schema.org
+     * @see https://pending.schema.org
      * @link https://github.com/schemaorg/schemaorg/issues/2374
      */
      const HowOrWhereHealthAspect = 'https://schema.org/HowOrWhereHealthAspect';
@@ -65,7 +65,7 @@ class HealthAspectEnumeration extends BaseType implements HealthAspectEnumeratio
      * Information about coping or life related to the topic.
      *
      * @see https://schema.org/LivingWithHealthAspect
-     * @see http://pending.schema.org
+     * @see https://pending.schema.org
      * @link https://github.com/schemaorg/schemaorg/issues/2374
      */
      const LivingWithHealthAspect = 'https://schema.org/LivingWithHealthAspect';
@@ -74,7 +74,7 @@ class HealthAspectEnumeration extends BaseType implements HealthAspectEnumeratio
      * Related topics may be treated by a Topic.
      *
      * @see https://schema.org/MayTreatHealthAspect
-     * @see http://pending.schema.org
+     * @see https://pending.schema.org
      * @link https://github.com/schemaorg/schemaorg/issues/2374
      */
      const MayTreatHealthAspect = 'https://schema.org/MayTreatHealthAspect';
@@ -84,7 +84,7 @@ class HealthAspectEnumeration extends BaseType implements HealthAspectEnumeratio
      * topic.
      *
      * @see https://schema.org/MisconceptionsHealthAspect
-     * @see http://pending.schema.org
+     * @see https://pending.schema.org
      * @link https://github.com/schemaorg/schemaorg/issues/2374
      */
      const MisconceptionsHealthAspect = 'https://schema.org/MisconceptionsHealthAspect';
@@ -94,7 +94,7 @@ class HealthAspectEnumeration extends BaseType implements HealthAspectEnumeratio
      * most relevant information for an introduction.
      *
      * @see https://schema.org/OverviewHealthAspect
-     * @see http://pending.schema.org
+     * @see https://pending.schema.org
      * @link https://github.com/schemaorg/schemaorg/issues/2374
      */
      const OverviewHealthAspect = 'https://schema.org/OverviewHealthAspect';
@@ -105,7 +105,7 @@ class HealthAspectEnumeration extends BaseType implements HealthAspectEnumeratio
      * Q-and-A and related material.
      *
      * @see https://schema.org/PatientExperienceHealthAspect
-     * @see http://pending.schema.org
+     * @see https://pending.schema.org
      * @link https://github.com/schemaorg/schemaorg/issues/2374
      */
      const PatientExperienceHealthAspect = 'https://schema.org/PatientExperienceHealthAspect';
@@ -115,7 +115,7 @@ class HealthAspectEnumeration extends BaseType implements HealthAspectEnumeratio
      * the topic or reaching a critical situation related to the topic.
      *
      * @see https://schema.org/PreventionHealthAspect
-     * @see http://pending.schema.org
+     * @see https://pending.schema.org
      * @link https://github.com/schemaorg/schemaorg/issues/2374
      */
      const PreventionHealthAspect = 'https://schema.org/PreventionHealthAspect';
@@ -124,7 +124,7 @@ class HealthAspectEnumeration extends BaseType implements HealthAspectEnumeratio
      * Typical progression and happenings of life course of the topic.
      *
      * @see https://schema.org/PrognosisHealthAspect
-     * @see http://pending.schema.org
+     * @see https://pending.schema.org
      * @link https://github.com/schemaorg/schemaorg/issues/2374
      */
      const PrognosisHealthAspect = 'https://schema.org/PrognosisHealthAspect';
@@ -133,7 +133,7 @@ class HealthAspectEnumeration extends BaseType implements HealthAspectEnumeratio
      * Other prominent or relevant topics tied to the main topic.
      *
      * @see https://schema.org/RelatedTopicsHealthAspect
-     * @see http://pending.schema.org
+     * @see https://pending.schema.org
      * @link https://github.com/schemaorg/schemaorg/issues/2374
      */
      const RelatedTopicsHealthAspect = 'https://schema.org/RelatedTopicsHealthAspect';
@@ -143,7 +143,7 @@ class HealthAspectEnumeration extends BaseType implements HealthAspectEnumeratio
      * follow a topic.
      *
      * @see https://schema.org/RisksOrComplicationsHealthAspect
-     * @see http://pending.schema.org
+     * @see https://pending.schema.org
      * @link https://github.com/schemaorg/schemaorg/issues/2374
      */
      const RisksOrComplicationsHealthAspect = 'https://schema.org/RisksOrComplicationsHealthAspect';
@@ -152,7 +152,7 @@ class HealthAspectEnumeration extends BaseType implements HealthAspectEnumeratio
      * Content about how to screen or further filter a topic.
      *
      * @see https://schema.org/ScreeningHealthAspect
-     * @see http://pending.schema.org
+     * @see https://pending.schema.org
      * @link https://github.com/schemaorg/schemaorg/issues/2374
      */
      const ScreeningHealthAspect = 'https://schema.org/ScreeningHealthAspect';
@@ -163,7 +163,7 @@ class HealthAspectEnumeration extends BaseType implements HealthAspectEnumeratio
      * consultation.
      *
      * @see https://schema.org/SeeDoctorHealthAspect
-     * @see http://pending.schema.org
+     * @see https://pending.schema.org
      * @link https://github.com/schemaorg/schemaorg/issues/2374
      */
      const SeeDoctorHealthAspect = 'https://schema.org/SeeDoctorHealthAspect';
@@ -174,7 +174,7 @@ class HealthAspectEnumeration extends BaseType implements HealthAspectEnumeratio
      * person itself.
      *
      * @see https://schema.org/SelfCareHealthAspect
-     * @see http://pending.schema.org
+     * @see https://pending.schema.org
      * @link https://github.com/schemaorg/schemaorg/issues/2374
      */
      const SelfCareHealthAspect = 'https://schema.org/SelfCareHealthAspect';
@@ -183,7 +183,7 @@ class HealthAspectEnumeration extends BaseType implements HealthAspectEnumeratio
      * Side effects that can be observed from the usage of the topic.
      *
      * @see https://schema.org/SideEffectsHealthAspect
-     * @see http://pending.schema.org
+     * @see https://pending.schema.org
      * @link https://github.com/schemaorg/schemaorg/issues/2374
      */
      const SideEffectsHealthAspect = 'https://schema.org/SideEffectsHealthAspect';
@@ -192,7 +192,7 @@ class HealthAspectEnumeration extends BaseType implements HealthAspectEnumeratio
      * Stages that can be observed from a topic.
      *
      * @see https://schema.org/StagesHealthAspect
-     * @see http://pending.schema.org
+     * @see https://pending.schema.org
      * @link https://github.com/schemaorg/schemaorg/issues/2374
      */
      const StagesHealthAspect = 'https://schema.org/StagesHealthAspect';
@@ -201,7 +201,7 @@ class HealthAspectEnumeration extends BaseType implements HealthAspectEnumeratio
      * Symptoms or related symptoms of a Topic.
      *
      * @see https://schema.org/SymptomsHealthAspect
-     * @see http://pending.schema.org
+     * @see https://pending.schema.org
      * @link https://github.com/schemaorg/schemaorg/issues/2374
      */
      const SymptomsHealthAspect = 'https://schema.org/SymptomsHealthAspect';
@@ -210,7 +210,7 @@ class HealthAspectEnumeration extends BaseType implements HealthAspectEnumeratio
      * Treatments or related therapies for a Topic.
      *
      * @see https://schema.org/TreatmentsHealthAspect
-     * @see http://pending.schema.org
+     * @see https://pending.schema.org
      * @link https://github.com/schemaorg/schemaorg/issues/2374
      */
      const TreatmentsHealthAspect = 'https://schema.org/TreatmentsHealthAspect';
@@ -219,7 +219,7 @@ class HealthAspectEnumeration extends BaseType implements HealthAspectEnumeratio
      * Categorization and other types related to a topic.
      *
      * @see https://schema.org/TypesHealthAspect
-     * @see http://pending.schema.org
+     * @see https://pending.schema.org
      * @link https://github.com/schemaorg/schemaorg/issues/2374
      */
      const TypesHealthAspect = 'https://schema.org/TypesHealthAspect';
@@ -228,7 +228,7 @@ class HealthAspectEnumeration extends BaseType implements HealthAspectEnumeratio
      * Content about how, when, frequency and dosage of a topic.
      *
      * @see https://schema.org/UsageOrScheduleHealthAspect
-     * @see http://pending.schema.org
+     * @see https://pending.schema.org
      * @link https://github.com/schemaorg/schemaorg/issues/2374
      */
      const UsageOrScheduleHealthAspect = 'https://schema.org/UsageOrScheduleHealthAspect';

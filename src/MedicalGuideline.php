@@ -16,7 +16,7 @@ use \Spatie\SchemaOrg\Contracts\ThingContract;
  * recognizingAuthority base property of MedicalEntity.
  *
  * @see https://schema.org/MedicalGuideline
- * @see http://health-lifesci.schema.org
+ * @see https://health-lifesci.schema.org
  *
  */
 class MedicalGuideline extends BaseType implements MedicalGuidelineContract, MedicalEntityContract, ThingContract
@@ -63,7 +63,7 @@ class MedicalGuideline extends BaseType implements MedicalGuidelineContract, Med
      * @return static
      *
      * @see https://schema.org/code
-     * @see http://health-lifesci.schema.org
+     * @see https://health-lifesci.schema.org
      */
     public function code($code)
     {
@@ -110,7 +110,7 @@ class MedicalGuideline extends BaseType implements MedicalGuidelineContract, Med
      * @return static
      *
      * @see https://schema.org/evidenceLevel
-     * @see http://health-lifesci.schema.org
+     * @see https://health-lifesci.schema.org
      */
     public function evidenceLevel($evidenceLevel)
     {
@@ -126,7 +126,7 @@ class MedicalGuideline extends BaseType implements MedicalGuidelineContract, Med
      * @return static
      *
      * @see https://schema.org/evidenceOrigin
-     * @see http://health-lifesci.schema.org
+     * @see https://health-lifesci.schema.org
      */
     public function evidenceOrigin($evidenceOrigin)
     {
@@ -141,7 +141,7 @@ class MedicalGuideline extends BaseType implements MedicalGuidelineContract, Med
      * @return static
      *
      * @see https://schema.org/guideline
-     * @see http://health-lifesci.schema.org
+     * @see https://health-lifesci.schema.org
      */
     public function guideline($guideline)
     {
@@ -156,7 +156,7 @@ class MedicalGuideline extends BaseType implements MedicalGuidelineContract, Med
      * @return static
      *
      * @see https://schema.org/guidelineDate
-     * @see http://health-lifesci.schema.org
+     * @see https://health-lifesci.schema.org
      */
     public function guidelineDate($guidelineDate)
     {
@@ -172,7 +172,7 @@ class MedicalGuideline extends BaseType implements MedicalGuidelineContract, Med
      * @return static
      *
      * @see https://schema.org/guidelineSubject
-     * @see http://health-lifesci.schema.org
+     * @see https://health-lifesci.schema.org
      */
     public function guidelineSubject($guidelineSubject)
     {
@@ -221,7 +221,7 @@ class MedicalGuideline extends BaseType implements MedicalGuidelineContract, Med
      * @return static
      *
      * @see https://schema.org/legalStatus
-     * @see http://health-lifesci.schema.org
+     * @see https://health-lifesci.schema.org
      */
     public function legalStatus($legalStatus)
     {
@@ -253,7 +253,7 @@ class MedicalGuideline extends BaseType implements MedicalGuidelineContract, Med
      * @return static
      *
      * @see https://schema.org/medicineSystem
-     * @see http://health-lifesci.schema.org
+     * @see https://health-lifesci.schema.org
      */
     public function medicineSystem($medicineSystem)
     {
@@ -298,7 +298,7 @@ class MedicalGuideline extends BaseType implements MedicalGuidelineContract, Med
      * @return static
      *
      * @see https://schema.org/recognizingAuthority
-     * @see http://health-lifesci.schema.org
+     * @see https://health-lifesci.schema.org
      */
     public function recognizingAuthority($recognizingAuthority)
     {
@@ -313,7 +313,7 @@ class MedicalGuideline extends BaseType implements MedicalGuidelineContract, Med
      * @return static
      *
      * @see https://schema.org/relevantSpecialty
-     * @see http://health-lifesci.schema.org
+     * @see https://health-lifesci.schema.org
      */
     public function relevantSpecialty($relevantSpecialty)
     {
@@ -344,7 +344,7 @@ class MedicalGuideline extends BaseType implements MedicalGuidelineContract, Med
      * @return static
      *
      * @see https://schema.org/study
-     * @see http://health-lifesci.schema.org
+     * @see https://health-lifesci.schema.org
      */
     public function study($study)
     {

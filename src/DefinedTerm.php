@@ -14,7 +14,7 @@ use \Spatie\SchemaOrg\Contracts\ThingContract;
  * allocated, use description to provide the definition of the term.
  *
  * @see https://schema.org/DefinedTerm
- * @see http://pending.schema.org
+ * @see https://pending.schema.org
  * @link https://github.com/schemaorg/schemaorg/issues/894
  *
  */
@@ -125,7 +125,7 @@ class DefinedTerm extends BaseType implements DefinedTermContract, IntangibleCon
      * @return static
      *
      * @see https://schema.org/inDefinedTermSet
-     * @see http://pending.schema.org
+     * @see https://pending.schema.org
      * @link https://github.com/schemaorg/schemaorg/issues/894
      */
     public function inDefinedTermSet($inDefinedTermSet)
@@ -217,7 +217,7 @@ class DefinedTerm extends BaseType implements DefinedTermContract, IntangibleCon
      * @return static
      *
      * @see https://schema.org/termCode
-     * @see http://pending.schema.org
+     * @see https://pending.schema.org
      * @link https://github.com/schemaorg/schemaorg/issues/894
      */
     public function termCode($termCode)

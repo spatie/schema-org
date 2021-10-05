@@ -58,7 +58,7 @@ class JobPosting extends BaseType implements JobPostingContract, IntangibleContr
      * @return static
      *
      * @see https://schema.org/applicantLocationRequirements
-     * @see http://pending.schema.org
+     * @see https://pending.schema.org
      * @link https://github.com/schemaorg/schemaorg/issues/2083
      */
     public function applicantLocationRequirements($applicantLocationRequirements)
@@ -74,7 +74,7 @@ class JobPosting extends BaseType implements JobPostingContract, IntangibleContr
      * @return static
      *
      * @see https://schema.org/applicationContact
-     * @see http://pending.schema.org
+     * @see https://pending.schema.org
      * @link https://github.com/schemaorg/schemaorg/issues/2396
      */
     public function applicationContact($applicationContact)
@@ -163,7 +163,7 @@ class JobPosting extends BaseType implements JobPostingContract, IntangibleContr
      * @return static
      *
      * @see https://schema.org/educationRequirements
-     * @see http://pending.schema.org
+     * @see https://pending.schema.org
      */
     public function educationRequirements($educationRequirements)
     {
@@ -179,7 +179,7 @@ class JobPosting extends BaseType implements JobPostingContract, IntangibleContr
      * @return static
      *
      * @see https://schema.org/eligibilityToWorkRequirement
-     * @see http://pending.schema.org
+     * @see https://pending.schema.org
      * @link https://github.com/schemaorg/schemaorg/issues/2384
      */
     public function eligibilityToWorkRequirement($eligibilityToWorkRequirement)
@@ -196,7 +196,7 @@ class JobPosting extends BaseType implements JobPostingContract, IntangibleContr
      * @return static
      *
      * @see https://schema.org/employerOverview
-     * @see http://pending.schema.org
+     * @see https://pending.schema.org
      * @link https://github.com/schemaorg/schemaorg/issues/2396
      */
     public function employerOverview($employerOverview)
@@ -228,7 +228,7 @@ class JobPosting extends BaseType implements JobPostingContract, IntangibleContr
      * @return static
      *
      * @see https://schema.org/employmentUnit
-     * @see http://pending.schema.org
+     * @see https://pending.schema.org
      * @link https://github.com/schemaorg/schemaorg/issues/2296
      */
     public function employmentUnit($employmentUnit)
@@ -383,7 +383,7 @@ class JobPosting extends BaseType implements JobPostingContract, IntangibleContr
      * @return static
      *
      * @see https://schema.org/jobImmediateStart
-     * @see http://pending.schema.org
+     * @see https://pending.schema.org
      * @link https://github.com/schemaorg/schemaorg/issues/2244
      */
     public function jobImmediateStart($jobImmediateStart)
@@ -414,7 +414,7 @@ class JobPosting extends BaseType implements JobPostingContract, IntangibleContr
      * @return static
      *
      * @see https://schema.org/jobLocationType
-     * @see http://pending.schema.org
+     * @see https://pending.schema.org
      * @link https://github.com/schemaorg/schemaorg/issues/1591
      */
     public function jobLocationType($jobLocationType)
@@ -433,7 +433,7 @@ class JobPosting extends BaseType implements JobPostingContract, IntangibleContr
      * @return static
      *
      * @see https://schema.org/jobStartDate
-     * @see http://pending.schema.org
+     * @see https://pending.schema.org
      * @link https://github.com/schemaorg/schemaorg/issues/2244
      */
     public function jobStartDate($jobStartDate)
@@ -488,7 +488,7 @@ class JobPosting extends BaseType implements JobPostingContract, IntangibleContr
      * @return static
      *
      * @see https://schema.org/occupationalCategory
-     * @see http://pending.schema.org
+     * @see https://pending.schema.org
      */
     public function occupationalCategory($occupationalCategory)
     {
@@ -506,7 +506,7 @@ class JobPosting extends BaseType implements JobPostingContract, IntangibleContr
      * @return static
      *
      * @see https://schema.org/physicalRequirement
-     * @see http://pending.schema.org
+     * @see https://pending.schema.org
      * @link https://github.com/schemaorg/schemaorg/issues/2384
      */
     public function physicalRequirement($physicalRequirement)
@@ -537,7 +537,7 @@ class JobPosting extends BaseType implements JobPostingContract, IntangibleContr
      * @return static
      *
      * @see https://schema.org/qualifications
-     * @see http://pending.schema.org
+     * @see https://pending.schema.org
      */
     public function qualifications($qualifications)
     {
@@ -614,7 +614,7 @@ class JobPosting extends BaseType implements JobPostingContract, IntangibleContr
      * @return static
      *
      * @see https://schema.org/securityClearanceRequirement
-     * @see http://pending.schema.org
+     * @see https://pending.schema.org
      * @link https://github.com/schemaorg/schemaorg/issues/2384
      */
     public function securityClearanceRequirement($securityClearanceRequirement)
@@ -633,7 +633,7 @@ class JobPosting extends BaseType implements JobPostingContract, IntangibleContr
      * @return static
      *
      * @see https://schema.org/sensoryRequirement
-     * @see http://pending.schema.org
+     * @see https://pending.schema.org
      * @link https://github.com/schemaorg/schemaorg/issues/2384
      */
     public function sensoryRequirement($sensoryRequirement)
@@ -710,7 +710,7 @@ class JobPosting extends BaseType implements JobPostingContract, IntangibleContr
      * @return static
      *
      * @see https://schema.org/totalJobOpenings
-     * @see http://pending.schema.org
+     * @see https://pending.schema.org
      * @link https://github.com/schemaorg/schemaorg/issues/2329
      */
     public function totalJobOpenings($totalJobOpenings)

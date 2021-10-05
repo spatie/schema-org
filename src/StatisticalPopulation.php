@@ -25,7 +25,7 @@ use \Spatie\SchemaOrg\Contracts\ThingContract;
  * datasets](/docs/data-and-datasets.html) overview for more details.
  *
  * @see https://schema.org/StatisticalPopulation
- * @see http://pending.schema.org
+ * @see https://pending.schema.org
  * @link https://github.com/schemaorg/schemaorg/issues/2291
  *
  * @method static populationType($populationType) The value should be instance of pending types Class|Class[]
@@ -75,7 +75,7 @@ class StatisticalPopulation extends BaseType implements StatisticalPopulationCon
      * @return static
      *
      * @see https://schema.org/constrainingProperty
-     * @see http://pending.schema.org
+     * @see https://pending.schema.org
      * @link https://github.com/schemaorg/schemaorg/issues/2291
      */
     public function constrainingProperty($constrainingProperty)
@@ -188,7 +188,7 @@ class StatisticalPopulation extends BaseType implements StatisticalPopulationCon
      * @return static
      *
      * @see https://schema.org/numConstraints
-     * @see http://pending.schema.org
+     * @see https://pending.schema.org
      * @link https://github.com/schemaorg/schemaorg/issues/2291
      */
     public function numConstraints($numConstraints)

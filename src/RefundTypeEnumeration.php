@@ -12,7 +12,7 @@ use \Spatie\SchemaOrg\Contracts\ThingContract;
  * types.
  *
  * @see https://schema.org/RefundTypeEnumeration
- * @see http://pending.schema.org
+ * @see https://pending.schema.org
  * @link https://github.com/schemaorg/schemaorg/issues/2288
  *
  * @method static supersededBy($supersededBy) The value should be instance of pending types Class|Class[]|Enumeration|Enumeration[]|Property|Property[]
@@ -23,7 +23,7 @@ class RefundTypeEnumeration extends BaseType implements RefundTypeEnumerationCon
      * A ExchangeRefund ...
      *
      * @see https://schema.org/ExchangeRefund
-     * @see http://pending.schema.org
+     * @see https://pending.schema.org
      * @link https://github.com/schemaorg/schemaorg/issues/2288
      */
      const ExchangeRefund = 'https://schema.org/ExchangeRefund';
@@ -32,7 +32,7 @@ class RefundTypeEnumeration extends BaseType implements RefundTypeEnumerationCon
      * A FullRefund ...
      *
      * @see https://schema.org/FullRefund
-     * @see http://pending.schema.org
+     * @see https://pending.schema.org
      * @link https://github.com/schemaorg/schemaorg/issues/2288
      */
      const FullRefund = 'https://schema.org/FullRefund';
@@ -41,7 +41,7 @@ class RefundTypeEnumeration extends BaseType implements RefundTypeEnumerationCon
      * A StoreCreditRefund ...
      *
      * @see https://schema.org/StoreCreditRefund
-     * @see http://pending.schema.org
+     * @see https://pending.schema.org
      * @link https://github.com/schemaorg/schemaorg/issues/2288
      */
      const StoreCreditRefund = 'https://schema.org/StoreCreditRefund';

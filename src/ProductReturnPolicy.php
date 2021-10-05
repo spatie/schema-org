@@ -11,7 +11,7 @@ use \Spatie\SchemaOrg\Contracts\ThingContract;
  * associated with an [[Organization]] or [[Product]].
  *
  * @see https://schema.org/ProductReturnPolicy
- * @see http://attic.schema.org
+ * @see https://attic.schema.org
  * @link https://github.com/schemaorg/schemaorg/issues/2288
  *
  */
@@ -168,7 +168,7 @@ class ProductReturnPolicy extends BaseType implements ProductReturnPolicyContrac
      * @return static
      *
      * @see https://schema.org/productReturnDays
-     * @see http://attic.schema.org
+     * @see https://attic.schema.org
      * @link https://github.com/schemaorg/schemaorg/issues/2288
      */
     public function productReturnDays($productReturnDays)
@@ -184,7 +184,7 @@ class ProductReturnPolicy extends BaseType implements ProductReturnPolicyContrac
      * @return static
      *
      * @see https://schema.org/productReturnLink
-     * @see http://attic.schema.org
+     * @see https://attic.schema.org
      * @link https://github.com/schemaorg/schemaorg/issues/2288
      */
     public function productReturnLink($productReturnLink)

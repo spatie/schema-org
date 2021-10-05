@@ -14,7 +14,7 @@ use \Spatie\SchemaOrg\Contracts\ThingContract;
  * orders with a licensed broker or brokerage firm.
  *
  * @see https://schema.org/BrokerageAccount
- * @see http://pending.schema.org
+ * @see https://pending.schema.org
  *
  */
 class BrokerageAccount extends BaseType implements BrokerageAccountContract, FinancialProductContract, IntangibleContract, InvestmentOrDepositContract, ServiceContract, ThingContract
@@ -612,7 +612,7 @@ class BrokerageAccount extends BaseType implements BrokerageAccountContract, Fin
      * @return static
      *
      * @see https://schema.org/termsOfService
-     * @see http://pending.schema.org
+     * @see https://pending.schema.org
      * @link https://github.com/schemaorg/schemaorg/issues/1423
      */
     public function termsOfService($termsOfService)

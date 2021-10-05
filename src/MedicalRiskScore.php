@@ -12,7 +12,7 @@ use \Spatie\SchemaOrg\Contracts\ThingContract;
  * is associated with prognosis, e.g. CHAD score, TIMI risk score.
  *
  * @see https://schema.org/MedicalRiskScore
- * @see http://health-lifesci.schema.org
+ * @see https://health-lifesci.schema.org
  *
  */
 class MedicalRiskScore extends BaseType implements MedicalRiskScoreContract, MedicalEntityContract, MedicalRiskEstimatorContract, ThingContract
@@ -44,7 +44,7 @@ class MedicalRiskScore extends BaseType implements MedicalRiskScoreContract, Med
      * @return static
      *
      * @see https://schema.org/algorithm
-     * @see http://health-lifesci.schema.org
+     * @see https://health-lifesci.schema.org
      */
     public function algorithm($algorithm)
     {
@@ -74,7 +74,7 @@ class MedicalRiskScore extends BaseType implements MedicalRiskScoreContract, Med
      * @return static
      *
      * @see https://schema.org/code
-     * @see http://health-lifesci.schema.org
+     * @see https://health-lifesci.schema.org
      */
     public function code($code)
     {
@@ -120,7 +120,7 @@ class MedicalRiskScore extends BaseType implements MedicalRiskScoreContract, Med
      * @return static
      *
      * @see https://schema.org/estimatesRiskOf
-     * @see http://health-lifesci.schema.org
+     * @see https://health-lifesci.schema.org
      */
     public function estimatesRiskOf($estimatesRiskOf)
     {
@@ -135,7 +135,7 @@ class MedicalRiskScore extends BaseType implements MedicalRiskScoreContract, Med
      * @return static
      *
      * @see https://schema.org/guideline
-     * @see http://health-lifesci.schema.org
+     * @see https://health-lifesci.schema.org
      */
     public function guideline($guideline)
     {
@@ -184,7 +184,7 @@ class MedicalRiskScore extends BaseType implements MedicalRiskScoreContract, Med
      * @return static
      *
      * @see https://schema.org/includedRiskFactor
-     * @see http://health-lifesci.schema.org
+     * @see https://health-lifesci.schema.org
      */
     public function includedRiskFactor($includedRiskFactor)
     {
@@ -200,7 +200,7 @@ class MedicalRiskScore extends BaseType implements MedicalRiskScoreContract, Med
      * @return static
      *
      * @see https://schema.org/legalStatus
-     * @see http://health-lifesci.schema.org
+     * @see https://health-lifesci.schema.org
      */
     public function legalStatus($legalStatus)
     {
@@ -232,7 +232,7 @@ class MedicalRiskScore extends BaseType implements MedicalRiskScoreContract, Med
      * @return static
      *
      * @see https://schema.org/medicineSystem
-     * @see http://health-lifesci.schema.org
+     * @see https://health-lifesci.schema.org
      */
     public function medicineSystem($medicineSystem)
     {
@@ -277,7 +277,7 @@ class MedicalRiskScore extends BaseType implements MedicalRiskScoreContract, Med
      * @return static
      *
      * @see https://schema.org/recognizingAuthority
-     * @see http://health-lifesci.schema.org
+     * @see https://health-lifesci.schema.org
      */
     public function recognizingAuthority($recognizingAuthority)
     {
@@ -292,7 +292,7 @@ class MedicalRiskScore extends BaseType implements MedicalRiskScoreContract, Med
      * @return static
      *
      * @see https://schema.org/relevantSpecialty
-     * @see http://health-lifesci.schema.org
+     * @see https://health-lifesci.schema.org
      */
     public function relevantSpecialty($relevantSpecialty)
     {
@@ -323,7 +323,7 @@ class MedicalRiskScore extends BaseType implements MedicalRiskScoreContract, Med
      * @return static
      *
      * @see https://schema.org/study
-     * @see http://health-lifesci.schema.org
+     * @see https://health-lifesci.schema.org
      */
     public function study($study)
     {

@@ -98,6 +98,8 @@ interface QuestionContract
 
     public function editor($editor);
 
+    public function eduQuestionType($eduQuestionType);
+
     public function educationalAlignment($educationalAlignment);
 
     public function educationalLevel($educationalLevel);
@@ -167,6 +169,8 @@ interface QuestionContract
     public function name($name);
 
     public function offers($offers);
+
+    public function parentItem($parentItem);
 
     public function pattern($pattern);
 

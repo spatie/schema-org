@@ -544,7 +544,7 @@ class Taxi extends BaseType implements TaxiContract, IntangibleContract, Service
      * @return static
      *
      * @see https://schema.org/termsOfService
-     * @see http://pending.schema.org
+     * @see https://pending.schema.org
      * @link https://github.com/schemaorg/schemaorg/issues/1423
      */
     public function termsOfService($termsOfService)

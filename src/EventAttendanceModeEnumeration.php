@@ -12,7 +12,7 @@ use \Spatie\SchemaOrg\Contracts\ThingContract;
  * of organising an event, relating to whether it is online or offline.
  *
  * @see https://schema.org/EventAttendanceModeEnumeration
- * @see http://pending.schema.org
+ * @see https://pending.schema.org
  * @link https://github.com/schemaorg/schemaorg/issues/1842
  *
  * @method static supersededBy($supersededBy) The value should be instance of pending types Class|Class[]|Enumeration|Enumeration[]|Property|Property[]
@@ -24,7 +24,7 @@ class EventAttendanceModeEnumeration extends BaseType implements EventAttendance
      * both offline and online modes.
      *
      * @see https://schema.org/MixedEventAttendanceMode
-     * @see http://pending.schema.org
+     * @see https://pending.schema.org
      * @link https://github.com/schemaorg/schemaorg/issues/1842
      */
      const MixedEventAttendanceMode = 'https://schema.org/MixedEventAttendanceMode';
@@ -34,7 +34,7 @@ class EventAttendanceModeEnumeration extends BaseType implements EventAttendance
      * offline.
      *
      * @see https://schema.org/OfflineEventAttendanceMode
-     * @see http://pending.schema.org
+     * @see https://pending.schema.org
      * @link https://github.com/schemaorg/schemaorg/issues/1842
      */
      const OfflineEventAttendanceMode = 'https://schema.org/OfflineEventAttendanceMode';
@@ -43,7 +43,7 @@ class EventAttendanceModeEnumeration extends BaseType implements EventAttendance
      * OnlineEventAttendanceMode - an event that is primarily conducted online.
      *
      * @see https://schema.org/OnlineEventAttendanceMode
-     * @see http://pending.schema.org
+     * @see https://pending.schema.org
      * @link https://github.com/schemaorg/schemaorg/issues/1842
      */
      const OnlineEventAttendanceMode = 'https://schema.org/OnlineEventAttendanceMode';

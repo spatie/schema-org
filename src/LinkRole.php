@@ -15,7 +15,7 @@ use \Spatie\SchemaOrg\Contracts\ThingContract;
  * be represented outside of HTML, e.g. in JSON-LD feeds.
  *
  * @see https://schema.org/LinkRole
- * @see http://pending.schema.org
+ * @see https://pending.schema.org
  * @link https://github.com/schemaorg/schemaorg/issues/1045
  *
  */
@@ -160,7 +160,7 @@ class LinkRole extends BaseType implements LinkRoleContract, IntangibleContract,
      * @return static
      *
      * @see https://schema.org/linkRelationship
-     * @see http://pending.schema.org
+     * @see https://pending.schema.org
      * @link https://github.com/schemaorg/schemaorg/issues/1045
      */
     public function linkRelationship($linkRelationship)

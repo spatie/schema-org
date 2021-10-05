@@ -11,7 +11,7 @@ use \Spatie\SchemaOrg\Contracts\ThingContract;
  * Categories of physical activity, organized by physiologic classification.
  *
  * @see https://schema.org/PhysicalActivityCategory
- * @see http://health-lifesci.schema.org
+ * @see https://health-lifesci.schema.org
  *
  * @method static supersededBy($supersededBy) The value should be instance of pending types Class|Class[]|Enumeration|Enumeration[]|Property|Property[]
  */
@@ -23,7 +23,7 @@ class PhysicalActivityCategory extends BaseType implements PhysicalActivityCateg
      * metabolism uses oxygen to adequately meet energy demands during exercise.
      *
      * @see https://schema.org/AerobicActivity
-     * @see http://health-lifesci.schema.org
+     * @see https://health-lifesci.schema.org
      */
      const AerobicActivity = 'https://schema.org/AerobicActivity';
 
@@ -32,7 +32,7 @@ class PhysicalActivityCategory extends BaseType implements PhysicalActivityCateg
      * metabolism of the body.
      *
      * @see https://schema.org/AnaerobicActivity
-     * @see http://health-lifesci.schema.org
+     * @see https://health-lifesci.schema.org
      */
      const AnaerobicActivity = 'https://schema.org/AnaerobicActivity';
 
@@ -40,7 +40,7 @@ class PhysicalActivityCategory extends BaseType implements PhysicalActivityCateg
      * Physical activity that is engaged to help maintain posture and balance.
      *
      * @see https://schema.org/Balance
-     * @see http://health-lifesci.schema.org
+     * @see https://health-lifesci.schema.org
      */
      const Balance = 'https://schema.org/Balance';
 
@@ -49,7 +49,7 @@ class PhysicalActivityCategory extends BaseType implements PhysicalActivityCateg
      * flexibility.
      *
      * @see https://schema.org/Flexibility
-     * @see http://health-lifesci.schema.org
+     * @see https://health-lifesci.schema.org
      */
      const Flexibility = 'https://schema.org/Flexibility';
 
@@ -58,7 +58,7 @@ class PhysicalActivityCategory extends BaseType implements PhysicalActivityCateg
      * include ballroom dancing, roller skating, canoeing, fishing, etc.
      *
      * @see https://schema.org/LeisureTimeActivity
-     * @see http://health-lifesci.schema.org
+     * @see https://health-lifesci.schema.org
      */
      const LeisureTimeActivity = 'https://schema.org/LeisureTimeActivity';
 
@@ -68,7 +68,7 @@ class PhysicalActivityCategory extends BaseType implements PhysicalActivityCateg
      * or vegetables, construction work, etc.
      *
      * @see https://schema.org/OccupationalActivity
-     * @see http://health-lifesci.schema.org
+     * @see https://health-lifesci.schema.org
      */
      const OccupationalActivity = 'https://schema.org/OccupationalActivity';
 
@@ -77,7 +77,7 @@ class PhysicalActivityCategory extends BaseType implements PhysicalActivityCateg
      * Also referred to as resistance training.
      *
      * @see https://schema.org/StrengthTraining
-     * @see http://health-lifesci.schema.org
+     * @see https://health-lifesci.schema.org
      */
      const StrengthTraining = 'https://schema.org/StrengthTraining';
 

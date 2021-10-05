@@ -13,7 +13,7 @@ use \Spatie\SchemaOrg\Contracts\ThingContract;
  * the device.
  *
  * @see https://schema.org/MedicalDevicePurpose
- * @see http://health-lifesci.schema.org
+ * @see https://health-lifesci.schema.org
  *
  * @method static supersededBy($supersededBy) The value should be instance of pending types Class|Class[]|Enumeration|Enumeration[]|Property|Property[]
  */
@@ -23,7 +23,7 @@ class MedicalDevicePurpose extends BaseType implements MedicalDevicePurposeContr
      * A medical device used for diagnostic purposes.
      *
      * @see https://schema.org/Diagnostic
-     * @see http://health-lifesci.schema.org
+     * @see https://health-lifesci.schema.org
      */
      const Diagnostic = 'https://schema.org/Diagnostic';
 
@@ -31,7 +31,7 @@ class MedicalDevicePurpose extends BaseType implements MedicalDevicePurposeContr
      * A medical device used for therapeutic purposes.
      *
      * @see https://schema.org/Therapeutic
-     * @see http://health-lifesci.schema.org
+     * @see https://health-lifesci.schema.org
      */
      const Therapeutic = 'https://schema.org/Therapeutic';
 

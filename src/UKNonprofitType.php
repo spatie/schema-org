@@ -13,7 +13,7 @@ use \Spatie\SchemaOrg\Contracts\ThingContract;
  * Kingdom.
  *
  * @see https://schema.org/UKNonprofitType
- * @see http://pending.schema.org
+ * @see https://pending.schema.org
  * @link https://github.com/schemaorg/schemaorg/issues/2543
  *
  * @method static supersededBy($supersededBy) The value should be instance of pending types Class|Class[]|Enumeration|Enumeration[]|Property|Property[]
@@ -25,7 +25,7 @@ class UKNonprofitType extends BaseType implements UKNonprofitTypeContract, Enume
      * Charitable Incorporated Organization (UK).
      *
      * @see https://schema.org/CharitableIncorporatedOrganization
-     * @see http://pending.schema.org
+     * @see https://pending.schema.org
      * @link https://github.com/schemaorg/schemaorg/issues/2543
      */
      const CharitableIncorporatedOrganization = 'https://schema.org/CharitableIncorporatedOrganization';
@@ -35,7 +35,7 @@ class UKNonprofitType extends BaseType implements UKNonprofitTypeContract, Enume
      * company that is limited by guarantee (UK).
      *
      * @see https://schema.org/LimitedByGuaranteeCharity
-     * @see http://pending.schema.org
+     * @see https://pending.schema.org
      * @link https://github.com/schemaorg/schemaorg/issues/2543
      */
      const LimitedByGuaranteeCharity = 'https://schema.org/LimitedByGuaranteeCharity';
@@ -44,7 +44,7 @@ class UKNonprofitType extends BaseType implements UKNonprofitTypeContract, Enume
      * UKTrust: Non-profit type referring to a UK trust.
      *
      * @see https://schema.org/UKTrust
-     * @see http://pending.schema.org
+     * @see https://pending.schema.org
      * @link https://github.com/schemaorg/schemaorg/issues/2543
      */
      const UKTrust = 'https://schema.org/UKTrust';
@@ -54,7 +54,7 @@ class UKNonprofitType extends BaseType implements UKNonprofitTypeContract, Enume
      * charitable company that is not incorporated (UK).
      *
      * @see https://schema.org/UnincorporatedAssociationCharity
-     * @see http://pending.schema.org
+     * @see https://pending.schema.org
      * @link https://github.com/schemaorg/schemaorg/issues/2543
      */
      const UnincorporatedAssociationCharity = 'https://schema.org/UnincorporatedAssociationCharity';

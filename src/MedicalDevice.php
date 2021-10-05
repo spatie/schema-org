@@ -11,7 +11,7 @@ use \Spatie\SchemaOrg\Contracts\ThingContract;
  * patient.
  *
  * @see https://schema.org/MedicalDevice
- * @see http://health-lifesci.schema.org
+ * @see https://health-lifesci.schema.org
  *
  */
 class MedicalDevice extends BaseType implements MedicalDeviceContract, MedicalEntityContract, ThingContract
@@ -47,7 +47,7 @@ class MedicalDevice extends BaseType implements MedicalDeviceContract, MedicalEn
      * @return static
      *
      * @see https://schema.org/adverseOutcome
-     * @see http://health-lifesci.schema.org
+     * @see https://health-lifesci.schema.org
      */
     public function adverseOutcome($adverseOutcome)
     {
@@ -77,7 +77,7 @@ class MedicalDevice extends BaseType implements MedicalDeviceContract, MedicalEn
      * @return static
      *
      * @see https://schema.org/code
-     * @see http://health-lifesci.schema.org
+     * @see https://health-lifesci.schema.org
      */
     public function code($code)
     {
@@ -92,7 +92,7 @@ class MedicalDevice extends BaseType implements MedicalDeviceContract, MedicalEn
      * @return static
      *
      * @see https://schema.org/contraindication
-     * @see http://health-lifesci.schema.org
+     * @see https://health-lifesci.schema.org
      */
     public function contraindication($contraindication)
     {
@@ -138,7 +138,7 @@ class MedicalDevice extends BaseType implements MedicalDeviceContract, MedicalEn
      * @return static
      *
      * @see https://schema.org/guideline
-     * @see http://health-lifesci.schema.org
+     * @see https://health-lifesci.schema.org
      */
     public function guideline($guideline)
     {
@@ -187,7 +187,7 @@ class MedicalDevice extends BaseType implements MedicalDeviceContract, MedicalEn
      * @return static
      *
      * @see https://schema.org/legalStatus
-     * @see http://health-lifesci.schema.org
+     * @see https://health-lifesci.schema.org
      */
     public function legalStatus($legalStatus)
     {
@@ -219,7 +219,7 @@ class MedicalDevice extends BaseType implements MedicalDeviceContract, MedicalEn
      * @return static
      *
      * @see https://schema.org/medicineSystem
-     * @see http://health-lifesci.schema.org
+     * @see https://health-lifesci.schema.org
      */
     public function medicineSystem($medicineSystem)
     {
@@ -249,7 +249,7 @@ class MedicalDevice extends BaseType implements MedicalDeviceContract, MedicalEn
      * @return static
      *
      * @see https://schema.org/postOp
-     * @see http://health-lifesci.schema.org
+     * @see https://health-lifesci.schema.org
      */
     public function postOp($postOp)
     {
@@ -280,7 +280,7 @@ class MedicalDevice extends BaseType implements MedicalDeviceContract, MedicalEn
      * @return static
      *
      * @see https://schema.org/preOp
-     * @see http://health-lifesci.schema.org
+     * @see https://health-lifesci.schema.org
      */
     public function preOp($preOp)
     {
@@ -296,7 +296,7 @@ class MedicalDevice extends BaseType implements MedicalDeviceContract, MedicalEn
      * @return static
      *
      * @see https://schema.org/procedure
-     * @see http://health-lifesci.schema.org
+     * @see https://health-lifesci.schema.org
      */
     public function procedure($procedure)
     {
@@ -312,7 +312,7 @@ class MedicalDevice extends BaseType implements MedicalDeviceContract, MedicalEn
      * @return static
      *
      * @see https://schema.org/recognizingAuthority
-     * @see http://health-lifesci.schema.org
+     * @see https://health-lifesci.schema.org
      */
     public function recognizingAuthority($recognizingAuthority)
     {
@@ -327,7 +327,7 @@ class MedicalDevice extends BaseType implements MedicalDeviceContract, MedicalEn
      * @return static
      *
      * @see https://schema.org/relevantSpecialty
-     * @see http://health-lifesci.schema.org
+     * @see https://health-lifesci.schema.org
      */
     public function relevantSpecialty($relevantSpecialty)
     {
@@ -364,7 +364,7 @@ class MedicalDevice extends BaseType implements MedicalDeviceContract, MedicalEn
      * @return static
      *
      * @see https://schema.org/seriousAdverseOutcome
-     * @see http://health-lifesci.schema.org
+     * @see https://health-lifesci.schema.org
      */
     public function seriousAdverseOutcome($seriousAdverseOutcome)
     {
@@ -379,7 +379,7 @@ class MedicalDevice extends BaseType implements MedicalDeviceContract, MedicalEn
      * @return static
      *
      * @see https://schema.org/study
-     * @see http://health-lifesci.schema.org
+     * @see https://health-lifesci.schema.org
      */
     public function study($study)
     {

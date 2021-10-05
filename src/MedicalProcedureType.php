@@ -12,7 +12,7 @@ use \Spatie\SchemaOrg\Contracts\ThingContract;
  * An enumeration that describes different types of medical procedures.
  *
  * @see https://schema.org/MedicalProcedureType
- * @see http://health-lifesci.schema.org
+ * @see https://health-lifesci.schema.org
  *
  * @method static supersededBy($supersededBy) The value should be instance of pending types Class|Class[]|Enumeration|Enumeration[]|Property|Property[]
  */
@@ -22,7 +22,7 @@ class MedicalProcedureType extends BaseType implements MedicalProcedureTypeContr
      * A type of medical procedure that involves noninvasive techniques.
      *
      * @see https://schema.org/NoninvasiveProcedure
-     * @see http://health-lifesci.schema.org
+     * @see https://health-lifesci.schema.org
      */
      const NoninvasiveProcedure = 'https://schema.org/NoninvasiveProcedure';
 
@@ -32,7 +32,7 @@ class MedicalProcedureType extends BaseType implements MedicalProcedureTypeContr
      * For example, catheter-based procedures like stent delivery.
      *
      * @see https://schema.org/PercutaneousProcedure
-     * @see http://health-lifesci.schema.org
+     * @see https://health-lifesci.schema.org
      */
      const PercutaneousProcedure = 'https://schema.org/PercutaneousProcedure';
 

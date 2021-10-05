@@ -12,7 +12,7 @@ use \Spatie\SchemaOrg\Contracts\ThingContract;
  * Enumerated categories of medical drug costs.
  *
  * @see https://schema.org/DrugCostCategory
- * @see http://health-lifesci.schema.org
+ * @see https://health-lifesci.schema.org
  *
  * @method static supersededBy($supersededBy) The value should be instance of pending types Class|Class[]|Enumeration|Enumeration[]|Property|Property[]
  */
@@ -23,7 +23,7 @@ class DrugCostCategory extends BaseType implements DrugCostCategoryContract, Enu
      * for the drug.
      *
      * @see https://schema.org/ReimbursementCap
-     * @see http://health-lifesci.schema.org
+     * @see https://health-lifesci.schema.org
      */
      const ReimbursementCap = 'https://schema.org/ReimbursementCap';
 
@@ -31,7 +31,7 @@ class DrugCostCategory extends BaseType implements DrugCostCategoryContract, Enu
      * The drug's cost represents the retail cost of the drug.
      *
      * @see https://schema.org/Retail
-     * @see http://health-lifesci.schema.org
+     * @see https://health-lifesci.schema.org
      */
      const Retail = 'https://schema.org/Retail';
 
@@ -39,7 +39,7 @@ class DrugCostCategory extends BaseType implements DrugCostCategoryContract, Enu
      * The drug's cost represents the wholesale acquisition cost of the drug.
      *
      * @see https://schema.org/Wholesale
-     * @see http://health-lifesci.schema.org
+     * @see https://health-lifesci.schema.org
      */
      const Wholesale = 'https://schema.org/Wholesale';
 

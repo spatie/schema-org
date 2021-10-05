@@ -14,7 +14,7 @@ use \Spatie\SchemaOrg\Contracts\ThingContract;
  * clear difference between them.
  *
  * @see https://schema.org/Drug
- * @see http://health-lifesci.schema.org
+ * @see https://health-lifesci.schema.org
  *
  */
 class Drug extends BaseType implements DrugContract, MedicalEntityContract, SubstanceContract, ThingContract
@@ -28,7 +28,7 @@ class Drug extends BaseType implements DrugContract, MedicalEntityContract, Subs
      * @return static
      *
      * @see https://schema.org/activeIngredient
-     * @see http://health-lifesci.schema.org
+     * @see https://health-lifesci.schema.org
      */
     public function activeIngredient($activeIngredient)
     {
@@ -62,7 +62,7 @@ class Drug extends BaseType implements DrugContract, MedicalEntityContract, Subs
      * @return static
      *
      * @see https://schema.org/administrationRoute
-     * @see http://health-lifesci.schema.org
+     * @see https://health-lifesci.schema.org
      */
     public function administrationRoute($administrationRoute)
     {
@@ -78,7 +78,7 @@ class Drug extends BaseType implements DrugContract, MedicalEntityContract, Subs
      * @return static
      *
      * @see https://schema.org/alcoholWarning
-     * @see http://health-lifesci.schema.org
+     * @see https://health-lifesci.schema.org
      */
     public function alcoholWarning($alcoholWarning)
     {
@@ -107,7 +107,7 @@ class Drug extends BaseType implements DrugContract, MedicalEntityContract, Subs
      * @return static
      *
      * @see https://schema.org/availableStrength
-     * @see http://health-lifesci.schema.org
+     * @see https://health-lifesci.schema.org
      */
     public function availableStrength($availableStrength)
     {
@@ -123,7 +123,7 @@ class Drug extends BaseType implements DrugContract, MedicalEntityContract, Subs
      * @return static
      *
      * @see https://schema.org/breastfeedingWarning
-     * @see http://health-lifesci.schema.org
+     * @see https://health-lifesci.schema.org
      */
     public function breastfeedingWarning($breastfeedingWarning)
     {
@@ -140,7 +140,7 @@ class Drug extends BaseType implements DrugContract, MedicalEntityContract, Subs
      * @return static
      *
      * @see https://schema.org/clincalPharmacology
-     * @see http://health-lifesci.schema.org
+     * @see https://health-lifesci.schema.org
      */
     public function clincalPharmacology($clincalPharmacology)
     {
@@ -157,7 +157,7 @@ class Drug extends BaseType implements DrugContract, MedicalEntityContract, Subs
      * @return static
      *
      * @see https://schema.org/clinicalPharmacology
-     * @see http://health-lifesci.schema.org
+     * @see https://health-lifesci.schema.org
      */
     public function clinicalPharmacology($clinicalPharmacology)
     {
@@ -173,7 +173,7 @@ class Drug extends BaseType implements DrugContract, MedicalEntityContract, Subs
      * @return static
      *
      * @see https://schema.org/code
-     * @see http://health-lifesci.schema.org
+     * @see https://health-lifesci.schema.org
      */
     public function code($code)
     {
@@ -220,7 +220,7 @@ class Drug extends BaseType implements DrugContract, MedicalEntityContract, Subs
      * @return static
      *
      * @see https://schema.org/dosageForm
-     * @see http://health-lifesci.schema.org
+     * @see https://health-lifesci.schema.org
      */
     public function dosageForm($dosageForm)
     {
@@ -236,7 +236,7 @@ class Drug extends BaseType implements DrugContract, MedicalEntityContract, Subs
      * @return static
      *
      * @see https://schema.org/doseSchedule
-     * @see http://health-lifesci.schema.org
+     * @see https://health-lifesci.schema.org
      */
     public function doseSchedule($doseSchedule)
     {
@@ -251,7 +251,7 @@ class Drug extends BaseType implements DrugContract, MedicalEntityContract, Subs
      * @return static
      *
      * @see https://schema.org/drugClass
-     * @see http://health-lifesci.schema.org
+     * @see https://health-lifesci.schema.org
      */
     public function drugClass($drugClass)
     {
@@ -266,7 +266,7 @@ class Drug extends BaseType implements DrugContract, MedicalEntityContract, Subs
      * @return static
      *
      * @see https://schema.org/drugUnit
-     * @see http://health-lifesci.schema.org
+     * @see https://health-lifesci.schema.org
      */
     public function drugUnit($drugUnit)
     {
@@ -282,7 +282,7 @@ class Drug extends BaseType implements DrugContract, MedicalEntityContract, Subs
      * @return static
      *
      * @see https://schema.org/foodWarning
-     * @see http://health-lifesci.schema.org
+     * @see https://health-lifesci.schema.org
      */
     public function foodWarning($foodWarning)
     {
@@ -297,7 +297,7 @@ class Drug extends BaseType implements DrugContract, MedicalEntityContract, Subs
      * @return static
      *
      * @see https://schema.org/guideline
-     * @see http://health-lifesci.schema.org
+     * @see https://health-lifesci.schema.org
      */
     public function guideline($guideline)
     {
@@ -345,7 +345,7 @@ class Drug extends BaseType implements DrugContract, MedicalEntityContract, Subs
      * @return static
      *
      * @see https://schema.org/includedInHealthInsurancePlan
-     * @see http://pending.schema.org
+     * @see https://pending.schema.org
      * @link https://github.com/schemaorg/schemaorg/issues/1062
      */
     public function includedInHealthInsurancePlan($includedInHealthInsurancePlan)
@@ -363,7 +363,7 @@ class Drug extends BaseType implements DrugContract, MedicalEntityContract, Subs
      * @return static
      *
      * @see https://schema.org/interactingDrug
-     * @see http://health-lifesci.schema.org
+     * @see https://health-lifesci.schema.org
      */
     public function interactingDrug($interactingDrug)
     {
@@ -378,7 +378,7 @@ class Drug extends BaseType implements DrugContract, MedicalEntityContract, Subs
      * @return static
      *
      * @see https://schema.org/isAvailableGenerically
-     * @see http://health-lifesci.schema.org
+     * @see https://health-lifesci.schema.org
      */
     public function isAvailableGenerically($isAvailableGenerically)
     {
@@ -393,7 +393,7 @@ class Drug extends BaseType implements DrugContract, MedicalEntityContract, Subs
      * @return static
      *
      * @see https://schema.org/isProprietary
-     * @see http://health-lifesci.schema.org
+     * @see https://health-lifesci.schema.org
      */
     public function isProprietary($isProprietary)
     {
@@ -408,7 +408,7 @@ class Drug extends BaseType implements DrugContract, MedicalEntityContract, Subs
      * @return static
      *
      * @see https://schema.org/labelDetails
-     * @see http://health-lifesci.schema.org
+     * @see https://health-lifesci.schema.org
      */
     public function labelDetails($labelDetails)
     {
@@ -424,7 +424,7 @@ class Drug extends BaseType implements DrugContract, MedicalEntityContract, Subs
      * @return static
      *
      * @see https://schema.org/legalStatus
-     * @see http://health-lifesci.schema.org
+     * @see https://health-lifesci.schema.org
      */
     public function legalStatus($legalStatus)
     {
@@ -470,7 +470,7 @@ class Drug extends BaseType implements DrugContract, MedicalEntityContract, Subs
      * @return static
      *
      * @see https://schema.org/maximumIntake
-     * @see http://health-lifesci.schema.org
+     * @see https://health-lifesci.schema.org
      */
     public function maximumIntake($maximumIntake)
     {
@@ -486,7 +486,7 @@ class Drug extends BaseType implements DrugContract, MedicalEntityContract, Subs
      * @return static
      *
      * @see https://schema.org/mechanismOfAction
-     * @see http://health-lifesci.schema.org
+     * @see https://health-lifesci.schema.org
      */
     public function mechanismOfAction($mechanismOfAction)
     {
@@ -502,7 +502,7 @@ class Drug extends BaseType implements DrugContract, MedicalEntityContract, Subs
      * @return static
      *
      * @see https://schema.org/medicineSystem
-     * @see http://health-lifesci.schema.org
+     * @see https://health-lifesci.schema.org
      */
     public function medicineSystem($medicineSystem)
     {
@@ -531,7 +531,7 @@ class Drug extends BaseType implements DrugContract, MedicalEntityContract, Subs
      * @return static
      *
      * @see https://schema.org/nonProprietaryName
-     * @see http://health-lifesci.schema.org
+     * @see https://health-lifesci.schema.org
      */
     public function nonProprietaryName($nonProprietaryName)
     {
@@ -547,7 +547,7 @@ class Drug extends BaseType implements DrugContract, MedicalEntityContract, Subs
      * @return static
      *
      * @see https://schema.org/overdosage
-     * @see http://health-lifesci.schema.org
+     * @see https://health-lifesci.schema.org
      */
     public function overdosage($overdosage)
     {
@@ -577,7 +577,7 @@ class Drug extends BaseType implements DrugContract, MedicalEntityContract, Subs
      * @return static
      *
      * @see https://schema.org/pregnancyCategory
-     * @see http://health-lifesci.schema.org
+     * @see https://health-lifesci.schema.org
      */
     public function pregnancyCategory($pregnancyCategory)
     {
@@ -593,7 +593,7 @@ class Drug extends BaseType implements DrugContract, MedicalEntityContract, Subs
      * @return static
      *
      * @see https://schema.org/pregnancyWarning
-     * @see http://health-lifesci.schema.org
+     * @see https://health-lifesci.schema.org
      */
     public function pregnancyWarning($pregnancyWarning)
     {
@@ -608,7 +608,7 @@ class Drug extends BaseType implements DrugContract, MedicalEntityContract, Subs
      * @return static
      *
      * @see https://schema.org/prescribingInfo
-     * @see http://health-lifesci.schema.org
+     * @see https://health-lifesci.schema.org
      */
     public function prescribingInfo($prescribingInfo)
     {
@@ -625,7 +625,7 @@ class Drug extends BaseType implements DrugContract, MedicalEntityContract, Subs
      * @return static
      *
      * @see https://schema.org/prescriptionStatus
-     * @see http://health-lifesci.schema.org
+     * @see https://health-lifesci.schema.org
      */
     public function prescriptionStatus($prescriptionStatus)
     {
@@ -641,7 +641,7 @@ class Drug extends BaseType implements DrugContract, MedicalEntityContract, Subs
      * @return static
      *
      * @see https://schema.org/proprietaryName
-     * @see http://health-lifesci.schema.org
+     * @see https://health-lifesci.schema.org
      */
     public function proprietaryName($proprietaryName)
     {
@@ -657,7 +657,7 @@ class Drug extends BaseType implements DrugContract, MedicalEntityContract, Subs
      * @return static
      *
      * @see https://schema.org/recognizingAuthority
-     * @see http://health-lifesci.schema.org
+     * @see https://health-lifesci.schema.org
      */
     public function recognizingAuthority($recognizingAuthority)
     {
@@ -673,7 +673,7 @@ class Drug extends BaseType implements DrugContract, MedicalEntityContract, Subs
      * @return static
      *
      * @see https://schema.org/relatedDrug
-     * @see http://health-lifesci.schema.org
+     * @see https://health-lifesci.schema.org
      */
     public function relatedDrug($relatedDrug)
     {
@@ -688,7 +688,7 @@ class Drug extends BaseType implements DrugContract, MedicalEntityContract, Subs
      * @return static
      *
      * @see https://schema.org/relevantSpecialty
-     * @see http://health-lifesci.schema.org
+     * @see https://health-lifesci.schema.org
      */
     public function relevantSpecialty($relevantSpecialty)
     {
@@ -703,7 +703,7 @@ class Drug extends BaseType implements DrugContract, MedicalEntityContract, Subs
      * @return static
      *
      * @see https://schema.org/rxcui
-     * @see http://pending.schema.org
+     * @see https://pending.schema.org
      * @link https://github.com/schemaorg/schemaorg/issues/1062
      */
     public function rxcui($rxcui)
@@ -735,7 +735,7 @@ class Drug extends BaseType implements DrugContract, MedicalEntityContract, Subs
      * @return static
      *
      * @see https://schema.org/study
-     * @see http://health-lifesci.schema.org
+     * @see https://health-lifesci.schema.org
      */
     public function study($study)
     {
@@ -779,7 +779,7 @@ class Drug extends BaseType implements DrugContract, MedicalEntityContract, Subs
      * @return static
      *
      * @see https://schema.org/warning
-     * @see http://health-lifesci.schema.org
+     * @see https://health-lifesci.schema.org
      */
     public function warning($warning)
     {

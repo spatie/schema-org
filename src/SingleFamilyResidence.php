@@ -29,7 +29,7 @@ class SingleFamilyResidence extends BaseType implements SingleFamilyResidenceCon
      * @return static
      *
      * @see https://schema.org/accommodationCategory
-     * @see http://pending.schema.org
+     * @see https://pending.schema.org
      * @link https://github.com/schemaorg/schemaorg/issues/2373
      */
     public function accommodationCategory($accommodationCategory)
@@ -45,7 +45,7 @@ class SingleFamilyResidence extends BaseType implements SingleFamilyResidenceCon
      * @return static
      *
      * @see https://schema.org/accommodationFloorPlan
-     * @see http://pending.schema.org
+     * @see https://pending.schema.org
      * @link https://github.com/schemaorg/schemaorg/issues/2373
      */
     public function accommodationFloorPlan($accommodationFloorPlan)
@@ -304,7 +304,7 @@ class SingleFamilyResidence extends BaseType implements SingleFamilyResidenceCon
      * @return static
      *
      * @see https://schema.org/floorLevel
-     * @see http://pending.schema.org
+     * @see https://pending.schema.org
      * @link https://github.com/schemaorg/schemaorg/issues/2373
      */
     public function floorLevel($floorLevel)
@@ -545,7 +545,7 @@ class SingleFamilyResidence extends BaseType implements SingleFamilyResidenceCon
      * @return static
      *
      * @see https://schema.org/hasDriveThroughService
-     * @see http://pending.schema.org
+     * @see https://pending.schema.org
      * @link https://github.com/schemaorg/schemaorg/issues/2490
      */
     public function hasDriveThroughService($hasDriveThroughService)
@@ -655,7 +655,7 @@ class SingleFamilyResidence extends BaseType implements SingleFamilyResidenceCon
      * @return static
      *
      * @see https://schema.org/leaseLength
-     * @see http://pending.schema.org
+     * @see https://pending.schema.org
      * @link https://github.com/schemaorg/schemaorg/issues/2373
      */
     public function leaseLength($leaseLength)
@@ -778,7 +778,7 @@ class SingleFamilyResidence extends BaseType implements SingleFamilyResidenceCon
      * @return static
      *
      * @see https://schema.org/numberOfBathroomsTotal
-     * @see http://pending.schema.org
+     * @see https://pending.schema.org
      * @link https://github.com/schemaorg/schemaorg/issues/2373
      */
     public function numberOfBathroomsTotal($numberOfBathroomsTotal)
@@ -795,7 +795,7 @@ class SingleFamilyResidence extends BaseType implements SingleFamilyResidenceCon
      * @return static
      *
      * @see https://schema.org/numberOfBedrooms
-     * @see http://pending.schema.org
+     * @see https://pending.schema.org
      * @link https://github.com/schemaorg/schemaorg/issues/2373
      */
     public function numberOfBedrooms($numberOfBedrooms)
@@ -813,7 +813,7 @@ class SingleFamilyResidence extends BaseType implements SingleFamilyResidenceCon
      * @return static
      *
      * @see https://schema.org/numberOfFullBathrooms
-     * @see http://pending.schema.org
+     * @see https://pending.schema.org
      * @link https://github.com/schemaorg/schemaorg/issues/2373
      */
     public function numberOfFullBathrooms($numberOfFullBathrooms)
@@ -831,7 +831,7 @@ class SingleFamilyResidence extends BaseType implements SingleFamilyResidenceCon
      * @return static
      *
      * @see https://schema.org/numberOfPartialBathrooms
-     * @see http://pending.schema.org
+     * @see https://pending.schema.org
      * @link https://github.com/schemaorg/schemaorg/issues/2373
      */
     public function numberOfPartialBathrooms($numberOfPartialBathrooms)
@@ -1110,7 +1110,7 @@ class SingleFamilyResidence extends BaseType implements SingleFamilyResidenceCon
      * @return static
      *
      * @see https://schema.org/tourBookingPage
-     * @see http://pending.schema.org
+     * @see https://pending.schema.org
      * @link https://github.com/schemaorg/schemaorg/issues/2373
      */
     public function tourBookingPage($tourBookingPage)
@@ -1142,7 +1142,7 @@ class SingleFamilyResidence extends BaseType implements SingleFamilyResidenceCon
      * @return static
      *
      * @see https://schema.org/yearBuilt
-     * @see http://pending.schema.org
+     * @see https://pending.schema.org
      * @link https://github.com/schemaorg/schemaorg/issues/2373
      */
     public function yearBuilt($yearBuilt)

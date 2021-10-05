@@ -4,8 +4,10 @@ namespace Spatie\SchemaOrg;
 
 use \Spatie\SchemaOrg\Contracts\SkiResortContract;
 use \Spatie\SchemaOrg\Contracts\LocalBusinessContract;
+use \Spatie\SchemaOrg\Contracts\LodgingBusinessContract;
 use \Spatie\SchemaOrg\Contracts\OrganizationContract;
 use \Spatie\SchemaOrg\Contracts\PlaceContract;
+use \Spatie\SchemaOrg\Contracts\ResortContract;
 use \Spatie\SchemaOrg\Contracts\SportsActivityLocationContract;
 use \Spatie\SchemaOrg\Contracts\ThingContract;
 
@@ -15,7 +17,7 @@ use \Spatie\SchemaOrg\Contracts\ThingContract;
  * @see https://schema.org/SkiResort
  *
  */
-class SkiResort extends BaseType implements SkiResortContract, LocalBusinessContract, OrganizationContract, PlaceContract, SportsActivityLocationContract, ThingContract
+class SkiResort extends BaseType implements SkiResortContract, LocalBusinessContract, LodgingBusinessContract, OrganizationContract, PlaceContract, ResortContract, SportsActivityLocationContract, ThingContract
 {
     /**
      * For a [[NewsMediaOrganization]] or other news-related [[Organization]], a
@@ -28,7 +30,7 @@ class SkiResort extends BaseType implements SkiResortContract, LocalBusinessCont
      * @return static
      *
      * @see https://schema.org/actionableFeedbackPolicy
-     * @see http://pending.schema.org
+     * @see https://pending.schema.org
      */
     public function actionableFeedbackPolicy($actionableFeedbackPolicy)
     {
@@ -166,6 +168,36 @@ class SkiResort extends BaseType implements SkiResortContract, LocalBusinessCont
     }
 
     /**
+     * An intended audience, i.e. a group for whom something was created.
+     *
+     * @param \Spatie\SchemaOrg\Contracts\AudienceContract|\Spatie\SchemaOrg\Contracts\AudienceContract[] $audience
+     *
+     * @return static
+     *
+     * @see https://schema.org/audience
+     */
+    public function audience($audience)
+    {
+        return $this->setProperty('audience', $audience);
+    }
+
+    /**
+     * A language someone may use with or at the item, service or place. Please
+     * use one of the language codes from the [IETF BCP 47
+     * standard](http://tools.ietf.org/html/bcp47). See also [[inLanguage]]
+     *
+     * @param \Spatie\SchemaOrg\Contracts\LanguageContract|\Spatie\SchemaOrg\Contracts\LanguageContract[]|string|string[] $availableLanguage
+     *
+     * @return static
+     *
+     * @see https://schema.org/availableLanguage
+     */
+    public function availableLanguage($availableLanguage)
+    {
+        return $this->setProperty('availableLanguage', $availableLanguage);
+    }
+
+    /**
      * An award won by or for this item.
      *
      * @param string|string[] $award
@@ -241,6 +273,34 @@ class SkiResort extends BaseType implements SkiResortContract, LocalBusinessCont
     public function brand($brand)
     {
         return $this->setProperty('brand', $brand);
+    }
+
+    /**
+     * The earliest someone may check into a lodging establishment.
+     *
+     * @param \DateTimeInterface|\DateTimeInterface[] $checkinTime
+     *
+     * @return static
+     *
+     * @see https://schema.org/checkinTime
+     */
+    public function checkinTime($checkinTime)
+    {
+        return $this->setProperty('checkinTime', $checkinTime);
+    }
+
+    /**
+     * The latest someone may check out of a lodging establishment.
+     *
+     * @param \DateTimeInterface|\DateTimeInterface[] $checkoutTime
+     *
+     * @return static
+     *
+     * @see https://schema.org/checkoutTime
+     */
+    public function checkoutTime($checkoutTime)
+    {
+        return $this->setProperty('checkoutTime', $checkoutTime);
     }
 
     /**
@@ -324,7 +384,7 @@ class SkiResort extends BaseType implements SkiResortContract, LocalBusinessCont
      * @return static
      *
      * @see https://schema.org/correctionsPolicy
-     * @see http://pending.schema.org
+     * @see https://pending.schema.org
      */
     public function correctionsPolicy($correctionsPolicy)
     {
@@ -426,7 +486,7 @@ class SkiResort extends BaseType implements SkiResortContract, LocalBusinessCont
      * @return static
      *
      * @see https://schema.org/diversityPolicy
-     * @see http://pending.schema.org
+     * @see https://pending.schema.org
      */
     public function diversityPolicy($diversityPolicy)
     {
@@ -444,7 +504,7 @@ class SkiResort extends BaseType implements SkiResortContract, LocalBusinessCont
      * @return static
      *
      * @see https://schema.org/diversityStaffingReport
-     * @see http://pending.schema.org
+     * @see https://pending.schema.org
      */
     public function diversityStaffingReport($diversityStaffingReport)
     {
@@ -522,7 +582,7 @@ class SkiResort extends BaseType implements SkiResortContract, LocalBusinessCont
      * @return static
      *
      * @see https://schema.org/ethicsPolicy
-     * @see http://pending.schema.org
+     * @see https://pending.schema.org
      * @link https://github.com/schemaorg/schemaorg/issues/1525
      */
     public function ethicsPolicy($ethicsPolicy)
@@ -856,7 +916,7 @@ class SkiResort extends BaseType implements SkiResortContract, LocalBusinessCont
      * @return static
      *
      * @see https://schema.org/hasCredential
-     * @see http://pending.schema.org
+     * @see https://pending.schema.org
      * @link https://github.com/schemaorg/schemaorg/issues/2289
      */
     public function hasCredential($hasCredential)
@@ -876,7 +936,7 @@ class SkiResort extends BaseType implements SkiResortContract, LocalBusinessCont
      * @return static
      *
      * @see https://schema.org/hasDriveThroughService
-     * @see http://pending.schema.org
+     * @see https://pending.schema.org
      * @link https://github.com/schemaorg/schemaorg/issues/2490
      */
     public function hasDriveThroughService($hasDriveThroughService)
@@ -906,7 +966,7 @@ class SkiResort extends BaseType implements SkiResortContract, LocalBusinessCont
      * @return static
      *
      * @see https://schema.org/hasMerchantReturnPolicy
-     * @see http://pending.schema.org
+     * @see https://pending.schema.org
      * @link https://github.com/schemaorg/schemaorg/issues/2288
      */
     public function hasMerchantReturnPolicy($hasMerchantReturnPolicy)
@@ -952,7 +1012,7 @@ class SkiResort extends BaseType implements SkiResortContract, LocalBusinessCont
      * @return static
      *
      * @see https://schema.org/hasProductReturnPolicy
-     * @see http://attic.schema.org
+     * @see https://attic.schema.org
      * @link https://github.com/schemaorg/schemaorg/issues/2288
      */
     public function hasProductReturnPolicy($hasProductReturnPolicy)
@@ -1052,7 +1112,7 @@ class SkiResort extends BaseType implements SkiResortContract, LocalBusinessCont
      * @return static
      *
      * @see https://schema.org/knowsAbout
-     * @see http://pending.schema.org
+     * @see https://pending.schema.org
      */
     public function knowsAbout($knowsAbout)
     {
@@ -1070,7 +1130,7 @@ class SkiResort extends BaseType implements SkiResortContract, LocalBusinessCont
      * @return static
      *
      * @see https://schema.org/knowsLanguage
-     * @see http://pending.schema.org
+     * @see https://pending.schema.org
      */
     public function knowsLanguage($knowsLanguage)
     {
@@ -1323,7 +1383,7 @@ class SkiResort extends BaseType implements SkiResortContract, LocalBusinessCont
      * @return static
      *
      * @see https://schema.org/nonprofitStatus
-     * @see http://pending.schema.org
+     * @see https://pending.schema.org
      * @link https://github.com/schemaorg/schemaorg/issues/2543
      */
     public function nonprofitStatus($nonprofitStatus)
@@ -1343,6 +1403,24 @@ class SkiResort extends BaseType implements SkiResortContract, LocalBusinessCont
     public function numberOfEmployees($numberOfEmployees)
     {
         return $this->setProperty('numberOfEmployees', $numberOfEmployees);
+    }
+
+    /**
+     * The number of rooms (excluding bathrooms and closets) of the
+     * accommodation or lodging business.
+     * Typical unit code(s): ROM for room or C62 for no unit. The type of room
+     * can be put in the unitText property of the QuantitativeValue.
+     *
+     * @param \Spatie\SchemaOrg\Contracts\QuantitativeValueContract|\Spatie\SchemaOrg\Contracts\QuantitativeValueContract[]|float|float[]|int|int[] $numberOfRooms
+     *
+     * @return static
+     *
+     * @see https://schema.org/numberOfRooms
+     * @link https://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#STI_Accommodation_Ontology
+     */
+    public function numberOfRooms($numberOfRooms)
+    {
+        return $this->setProperty('numberOfRooms', $numberOfRooms);
     }
 
     /**
@@ -1400,7 +1478,7 @@ class SkiResort extends BaseType implements SkiResortContract, LocalBusinessCont
      * @return static
      *
      * @see https://schema.org/ownershipFundingInfo
-     * @see http://pending.schema.org
+     * @see https://pending.schema.org
      */
     public function ownershipFundingInfo($ownershipFundingInfo)
     {
@@ -1449,6 +1527,22 @@ class SkiResort extends BaseType implements SkiResortContract, LocalBusinessCont
     public function paymentAccepted($paymentAccepted)
     {
         return $this->setProperty('paymentAccepted', $paymentAccepted);
+    }
+
+    /**
+     * Indicates whether pets are allowed to enter the accommodation or lodging
+     * business. More detailed information can be put in a text value.
+     *
+     * @param bool|bool[]|string|string[] $petsAllowed
+     *
+     * @return static
+     *
+     * @see https://schema.org/petsAllowed
+     * @link https://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#STI_Accommodation_Ontology
+     */
+    public function petsAllowed($petsAllowed)
+    {
+        return $this->setProperty('petsAllowed', $petsAllowed);
     }
 
     /**
@@ -1685,6 +1779,24 @@ class SkiResort extends BaseType implements SkiResortContract, LocalBusinessCont
     }
 
     /**
+     * An official rating for a lodging business or food establishment, e.g.
+     * from national associations or standards bodies. Use the author property
+     * to indicate the rating organization, e.g. as an Organization with name
+     * such as (e.g. HOTREC, DEHOGA, WHR, or Hotelstars).
+     *
+     * @param \Spatie\SchemaOrg\Contracts\RatingContract|\Spatie\SchemaOrg\Contracts\RatingContract[] $starRating
+     *
+     * @return static
+     *
+     * @see https://schema.org/starRating
+     * @link https://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#STI_Accommodation_Ontology
+     */
+    public function starRating($starRating)
+    {
+        return $this->setProperty('starRating', $starRating);
+    }
+
+    /**
      * A relationship between two organizations where the first includes the
      * second, e.g., as a subsidiary. See also: the more specific 'department'
      * property.
@@ -1755,7 +1867,7 @@ class SkiResort extends BaseType implements SkiResortContract, LocalBusinessCont
      * @return static
      *
      * @see https://schema.org/tourBookingPage
-     * @see http://pending.schema.org
+     * @see https://pending.schema.org
      * @link https://github.com/schemaorg/schemaorg/issues/2373
      */
     public function tourBookingPage($tourBookingPage)
@@ -1773,7 +1885,7 @@ class SkiResort extends BaseType implements SkiResortContract, LocalBusinessCont
      * @return static
      *
      * @see https://schema.org/unnamedSourcesPolicy
-     * @see http://pending.schema.org
+     * @see https://pending.schema.org
      */
     public function unnamedSourcesPolicy($unnamedSourcesPolicy)
     {

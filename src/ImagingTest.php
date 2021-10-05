@@ -11,7 +11,7 @@ use \Spatie\SchemaOrg\Contracts\ThingContract;
  * Any medical imaging modality typically used for diagnostic purposes.
  *
  * @see https://schema.org/ImagingTest
- * @see http://health-lifesci.schema.org
+ * @see https://health-lifesci.schema.org
  *
  */
 class ImagingTest extends BaseType implements ImagingTestContract, MedicalEntityContract, MedicalTestContract, ThingContract
@@ -43,7 +43,7 @@ class ImagingTest extends BaseType implements ImagingTestContract, MedicalEntity
      * @return static
      *
      * @see https://schema.org/affectedBy
-     * @see http://health-lifesci.schema.org
+     * @see https://health-lifesci.schema.org
      */
     public function affectedBy($affectedBy)
     {
@@ -73,7 +73,7 @@ class ImagingTest extends BaseType implements ImagingTestContract, MedicalEntity
      * @return static
      *
      * @see https://schema.org/code
-     * @see http://health-lifesci.schema.org
+     * @see https://health-lifesci.schema.org
      */
     public function code($code)
     {
@@ -119,7 +119,7 @@ class ImagingTest extends BaseType implements ImagingTestContract, MedicalEntity
      * @return static
      *
      * @see https://schema.org/guideline
-     * @see http://health-lifesci.schema.org
+     * @see https://health-lifesci.schema.org
      */
     public function guideline($guideline)
     {
@@ -167,7 +167,7 @@ class ImagingTest extends BaseType implements ImagingTestContract, MedicalEntity
      * @return static
      *
      * @see https://schema.org/imagingTechnique
-     * @see http://health-lifesci.schema.org
+     * @see https://health-lifesci.schema.org
      */
     public function imagingTechnique($imagingTechnique)
     {
@@ -183,7 +183,7 @@ class ImagingTest extends BaseType implements ImagingTestContract, MedicalEntity
      * @return static
      *
      * @see https://schema.org/legalStatus
-     * @see http://health-lifesci.schema.org
+     * @see https://health-lifesci.schema.org
      */
     public function legalStatus($legalStatus)
     {
@@ -215,7 +215,7 @@ class ImagingTest extends BaseType implements ImagingTestContract, MedicalEntity
      * @return static
      *
      * @see https://schema.org/medicineSystem
-     * @see http://health-lifesci.schema.org
+     * @see https://health-lifesci.schema.org
      */
     public function medicineSystem($medicineSystem)
     {
@@ -244,7 +244,7 @@ class ImagingTest extends BaseType implements ImagingTestContract, MedicalEntity
      * @return static
      *
      * @see https://schema.org/normalRange
-     * @see http://health-lifesci.schema.org
+     * @see https://health-lifesci.schema.org
      */
     public function normalRange($normalRange)
     {
@@ -275,7 +275,7 @@ class ImagingTest extends BaseType implements ImagingTestContract, MedicalEntity
      * @return static
      *
      * @see https://schema.org/recognizingAuthority
-     * @see http://health-lifesci.schema.org
+     * @see https://health-lifesci.schema.org
      */
     public function recognizingAuthority($recognizingAuthority)
     {
@@ -290,7 +290,7 @@ class ImagingTest extends BaseType implements ImagingTestContract, MedicalEntity
      * @return static
      *
      * @see https://schema.org/relevantSpecialty
-     * @see http://health-lifesci.schema.org
+     * @see https://health-lifesci.schema.org
      */
     public function relevantSpecialty($relevantSpecialty)
     {
@@ -321,7 +321,7 @@ class ImagingTest extends BaseType implements ImagingTestContract, MedicalEntity
      * @return static
      *
      * @see https://schema.org/signDetected
-     * @see http://health-lifesci.schema.org
+     * @see https://health-lifesci.schema.org
      */
     public function signDetected($signDetected)
     {
@@ -336,7 +336,7 @@ class ImagingTest extends BaseType implements ImagingTestContract, MedicalEntity
      * @return static
      *
      * @see https://schema.org/study
-     * @see http://health-lifesci.schema.org
+     * @see https://health-lifesci.schema.org
      */
     public function study($study)
     {
@@ -380,7 +380,7 @@ class ImagingTest extends BaseType implements ImagingTestContract, MedicalEntity
      * @return static
      *
      * @see https://schema.org/usedToDiagnose
-     * @see http://health-lifesci.schema.org
+     * @see https://health-lifesci.schema.org
      */
     public function usedToDiagnose($usedToDiagnose)
     {
@@ -395,7 +395,7 @@ class ImagingTest extends BaseType implements ImagingTestContract, MedicalEntity
      * @return static
      *
      * @see https://schema.org/usesDevice
-     * @see http://health-lifesci.schema.org
+     * @see https://health-lifesci.schema.org
      */
     public function usesDevice($usesDevice)
     {

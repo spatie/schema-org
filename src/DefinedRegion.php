@@ -26,7 +26,7 @@ use \Spatie\SchemaOrg\Contracts\ThingContract;
  * Region = state, canton, prefecture, autonomous community...
  *
  * @see https://schema.org/DefinedRegion
- * @see http://pending.schema.org
+ * @see https://pending.schema.org
  * @link https://github.com/schemaorg/schemaorg/issues/2506
  *
  */
@@ -216,7 +216,7 @@ class DefinedRegion extends BaseType implements DefinedRegionContract, Intangibl
      * @return static
      *
      * @see https://schema.org/postalCodePrefix
-     * @see http://pending.schema.org
+     * @see https://pending.schema.org
      * @link https://github.com/schemaorg/schemaorg/issues/2506
      */
     public function postalCodePrefix($postalCodePrefix)
@@ -232,7 +232,7 @@ class DefinedRegion extends BaseType implements DefinedRegionContract, Intangibl
      * @return static
      *
      * @see https://schema.org/postalCodeRange
-     * @see http://pending.schema.org
+     * @see https://pending.schema.org
      * @link https://github.com/schemaorg/schemaorg/issues/2506
      */
     public function postalCodeRange($postalCodeRange)

@@ -26,6 +26,8 @@ interface WorkBasedProgramContract
 
     public function financialAidEligible($financialAidEligible);
 
+    public function hasCourse($hasCourse);
+
     public function identifier($identifier);
 
     public function image($image);

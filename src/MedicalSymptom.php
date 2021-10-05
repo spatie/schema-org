@@ -13,7 +13,7 @@ use \Spatie\SchemaOrg\Contracts\ThingContract;
  * subjective)  like stomachache, lower-back pain, or fatigue.
  *
  * @see https://schema.org/MedicalSymptom
- * @see http://health-lifesci.schema.org
+ * @see https://health-lifesci.schema.org
  *
  */
 class MedicalSymptom extends BaseType implements MedicalSymptomContract, MedicalConditionContract, MedicalEntityContract, MedicalSignOrSymptomContract, ThingContract
@@ -60,7 +60,7 @@ class MedicalSymptom extends BaseType implements MedicalSymptomContract, Medical
      * @return static
      *
      * @see https://schema.org/associatedAnatomy
-     * @see http://health-lifesci.schema.org
+     * @see https://health-lifesci.schema.org
      */
     public function associatedAnatomy($associatedAnatomy)
     {
@@ -76,7 +76,7 @@ class MedicalSymptom extends BaseType implements MedicalSymptomContract, Medical
      * @return static
      *
      * @see https://schema.org/code
-     * @see http://health-lifesci.schema.org
+     * @see https://health-lifesci.schema.org
      */
     public function code($code)
     {
@@ -110,7 +110,7 @@ class MedicalSymptom extends BaseType implements MedicalSymptomContract, Medical
      * @return static
      *
      * @see https://schema.org/differentialDiagnosis
-     * @see http://health-lifesci.schema.org
+     * @see https://health-lifesci.schema.org
      */
     public function differentialDiagnosis($differentialDiagnosis)
     {
@@ -142,7 +142,7 @@ class MedicalSymptom extends BaseType implements MedicalSymptomContract, Medical
      * @return static
      *
      * @see https://schema.org/drug
-     * @see http://health-lifesci.schema.org
+     * @see https://health-lifesci.schema.org
      */
     public function drug($drug)
     {
@@ -158,7 +158,7 @@ class MedicalSymptom extends BaseType implements MedicalSymptomContract, Medical
      * @return static
      *
      * @see https://schema.org/epidemiology
-     * @see http://health-lifesci.schema.org
+     * @see https://health-lifesci.schema.org
      */
     public function epidemiology($epidemiology)
     {
@@ -174,7 +174,7 @@ class MedicalSymptom extends BaseType implements MedicalSymptomContract, Medical
      * @return static
      *
      * @see https://schema.org/expectedPrognosis
-     * @see http://health-lifesci.schema.org
+     * @see https://health-lifesci.schema.org
      */
     public function expectedPrognosis($expectedPrognosis)
     {
@@ -189,7 +189,7 @@ class MedicalSymptom extends BaseType implements MedicalSymptomContract, Medical
      * @return static
      *
      * @see https://schema.org/guideline
-     * @see http://health-lifesci.schema.org
+     * @see https://health-lifesci.schema.org
      */
     public function guideline($guideline)
     {
@@ -238,7 +238,7 @@ class MedicalSymptom extends BaseType implements MedicalSymptomContract, Medical
      * @return static
      *
      * @see https://schema.org/legalStatus
-     * @see http://health-lifesci.schema.org
+     * @see https://health-lifesci.schema.org
      */
     public function legalStatus($legalStatus)
     {
@@ -270,7 +270,7 @@ class MedicalSymptom extends BaseType implements MedicalSymptomContract, Medical
      * @return static
      *
      * @see https://schema.org/medicineSystem
-     * @see http://health-lifesci.schema.org
+     * @see https://health-lifesci.schema.org
      */
     public function medicineSystem($medicineSystem)
     {
@@ -300,7 +300,7 @@ class MedicalSymptom extends BaseType implements MedicalSymptomContract, Medical
      * @return static
      *
      * @see https://schema.org/naturalProgression
-     * @see http://health-lifesci.schema.org
+     * @see https://health-lifesci.schema.org
      */
     public function naturalProgression($naturalProgression)
     {
@@ -316,7 +316,7 @@ class MedicalSymptom extends BaseType implements MedicalSymptomContract, Medical
      * @return static
      *
      * @see https://schema.org/pathophysiology
-     * @see http://health-lifesci.schema.org
+     * @see https://health-lifesci.schema.org
      */
     public function pathophysiology($pathophysiology)
     {
@@ -333,7 +333,7 @@ class MedicalSymptom extends BaseType implements MedicalSymptomContract, Medical
      * @return static
      *
      * @see https://schema.org/possibleComplication
-     * @see http://health-lifesci.schema.org
+     * @see https://health-lifesci.schema.org
      */
     public function possibleComplication($possibleComplication)
     {
@@ -348,7 +348,7 @@ class MedicalSymptom extends BaseType implements MedicalSymptomContract, Medical
      * @return static
      *
      * @see https://schema.org/possibleTreatment
-     * @see http://health-lifesci.schema.org
+     * @see https://health-lifesci.schema.org
      */
     public function possibleTreatment($possibleTreatment)
     {
@@ -379,7 +379,7 @@ class MedicalSymptom extends BaseType implements MedicalSymptomContract, Medical
      * @return static
      *
      * @see https://schema.org/primaryPrevention
-     * @see http://health-lifesci.schema.org
+     * @see https://health-lifesci.schema.org
      */
     public function primaryPrevention($primaryPrevention)
     {
@@ -395,7 +395,7 @@ class MedicalSymptom extends BaseType implements MedicalSymptomContract, Medical
      * @return static
      *
      * @see https://schema.org/recognizingAuthority
-     * @see http://health-lifesci.schema.org
+     * @see https://health-lifesci.schema.org
      */
     public function recognizingAuthority($recognizingAuthority)
     {
@@ -410,7 +410,7 @@ class MedicalSymptom extends BaseType implements MedicalSymptomContract, Medical
      * @return static
      *
      * @see https://schema.org/relevantSpecialty
-     * @see http://health-lifesci.schema.org
+     * @see https://health-lifesci.schema.org
      */
     public function relevantSpecialty($relevantSpecialty)
     {
@@ -426,7 +426,7 @@ class MedicalSymptom extends BaseType implements MedicalSymptomContract, Medical
      * @return static
      *
      * @see https://schema.org/riskFactor
-     * @see http://health-lifesci.schema.org
+     * @see https://health-lifesci.schema.org
      */
     public function riskFactor($riskFactor)
     {
@@ -458,7 +458,7 @@ class MedicalSymptom extends BaseType implements MedicalSymptomContract, Medical
      * @return static
      *
      * @see https://schema.org/secondaryPrevention
-     * @see http://health-lifesci.schema.org
+     * @see https://health-lifesci.schema.org
      */
     public function secondaryPrevention($secondaryPrevention)
     {
@@ -475,7 +475,7 @@ class MedicalSymptom extends BaseType implements MedicalSymptomContract, Medical
      * @return static
      *
      * @see https://schema.org/signOrSymptom
-     * @see http://health-lifesci.schema.org
+     * @see https://health-lifesci.schema.org
      */
     public function signOrSymptom($signOrSymptom)
     {
@@ -490,7 +490,7 @@ class MedicalSymptom extends BaseType implements MedicalSymptomContract, Medical
      * @return static
      *
      * @see https://schema.org/stage
-     * @see http://health-lifesci.schema.org
+     * @see https://health-lifesci.schema.org
      */
     public function stage($stage)
     {
@@ -505,7 +505,7 @@ class MedicalSymptom extends BaseType implements MedicalSymptomContract, Medical
      * @return static
      *
      * @see https://schema.org/status
-     * @see http://health-lifesci.schema.org
+     * @see https://health-lifesci.schema.org
      */
     public function status($status)
     {
@@ -520,7 +520,7 @@ class MedicalSymptom extends BaseType implements MedicalSymptomContract, Medical
      * @return static
      *
      * @see https://schema.org/study
-     * @see http://health-lifesci.schema.org
+     * @see https://health-lifesci.schema.org
      */
     public function study($study)
     {
@@ -550,7 +550,7 @@ class MedicalSymptom extends BaseType implements MedicalSymptomContract, Medical
      * @return static
      *
      * @see https://schema.org/typicalTest
-     * @see http://health-lifesci.schema.org
+     * @see https://health-lifesci.schema.org
      */
     public function typicalTest($typicalTest)
     {

@@ -128,7 +128,7 @@ class ExerciseAction extends BaseType implements ExerciseActionContract, ActionC
      * @return static
      *
      * @see https://schema.org/diet
-     * @see http://health-lifesci.schema.org
+     * @see https://health-lifesci.schema.org
      */
     public function diet($diet)
     {
@@ -241,7 +241,7 @@ class ExerciseAction extends BaseType implements ExerciseActionContract, ActionC
      * @return static
      *
      * @see https://schema.org/exercisePlan
-     * @see http://health-lifesci.schema.org
+     * @see https://health-lifesci.schema.org
      */
     public function exercisePlan($exercisePlan)
     {
@@ -256,7 +256,7 @@ class ExerciseAction extends BaseType implements ExerciseActionContract, ActionC
      * @return static
      *
      * @see https://schema.org/exerciseRelatedDiet
-     * @see http://health-lifesci.schema.org
+     * @see https://health-lifesci.schema.org
      */
     public function exerciseRelatedDiet($exerciseRelatedDiet)
     {
@@ -272,7 +272,7 @@ class ExerciseAction extends BaseType implements ExerciseActionContract, ActionC
      * @return static
      *
      * @see https://schema.org/exerciseType
-     * @see http://health-lifesci.schema.org
+     * @see https://health-lifesci.schema.org
      */
     public function exerciseType($exerciseType)
     {

@@ -12,7 +12,7 @@ use \Spatie\SchemaOrg\Contracts\ThingContract;
  * Level of evidence for a medical guideline. Enumerated type.
  *
  * @see https://schema.org/MedicalEvidenceLevel
- * @see http://health-lifesci.schema.org
+ * @see https://health-lifesci.schema.org
  *
  * @method static supersededBy($supersededBy) The value should be instance of pending types Class|Class[]|Enumeration|Enumeration[]|Property|Property[]
  */
@@ -22,7 +22,7 @@ class MedicalEvidenceLevel extends BaseType implements MedicalEvidenceLevelContr
      * Data derived from multiple randomized clinical trials or meta-analyses.
      *
      * @see https://schema.org/EvidenceLevelA
-     * @see http://health-lifesci.schema.org
+     * @see https://health-lifesci.schema.org
      */
      const EvidenceLevelA = 'https://schema.org/EvidenceLevelA';
 
@@ -30,7 +30,7 @@ class MedicalEvidenceLevel extends BaseType implements MedicalEvidenceLevelContr
      * Data derived from a single randomized trial, or nonrandomized studies.
      *
      * @see https://schema.org/EvidenceLevelB
-     * @see http://health-lifesci.schema.org
+     * @see https://health-lifesci.schema.org
      */
      const EvidenceLevelB = 'https://schema.org/EvidenceLevelB';
 
@@ -38,7 +38,7 @@ class MedicalEvidenceLevel extends BaseType implements MedicalEvidenceLevelContr
      * Only consensus opinion of experts, case studies, or standard-of-care.
      *
      * @see https://schema.org/EvidenceLevelC
-     * @see http://health-lifesci.schema.org
+     * @see https://health-lifesci.schema.org
      */
      const EvidenceLevelC = 'https://schema.org/EvidenceLevelC';
 

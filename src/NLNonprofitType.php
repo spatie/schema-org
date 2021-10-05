@@ -13,7 +13,7 @@ use \Spatie\SchemaOrg\Contracts\ThingContract;
  * Netherlands.
  *
  * @see https://schema.org/NLNonprofitType
- * @see http://pending.schema.org
+ * @see https://pending.schema.org
  * @link https://github.com/schemaorg/schemaorg/issues/2543
  *
  * @method static supersededBy($supersededBy) The value should be instance of pending types Class|Class[]|Enumeration|Enumeration[]|Property|Property[]
@@ -25,7 +25,7 @@ class NLNonprofitType extends BaseType implements NLNonprofitTypeContract, Enume
      * (NL).
      *
      * @see https://schema.org/NonprofitANBI
-     * @see http://pending.schema.org
+     * @see https://pending.schema.org
      * @link https://github.com/schemaorg/schemaorg/issues/2543
      */
      const NonprofitANBI = 'https://schema.org/NonprofitANBI';
@@ -35,7 +35,7 @@ class NLNonprofitType extends BaseType implements NLNonprofitTypeContract, Enume
      * Institution (NL).
      *
      * @see https://schema.org/NonprofitSBBI
-     * @see http://pending.schema.org
+     * @see https://pending.schema.org
      * @link https://github.com/schemaorg/schemaorg/issues/2543
      */
      const NonprofitSBBI = 'https://schema.org/NonprofitSBBI';

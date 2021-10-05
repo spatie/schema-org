@@ -12,7 +12,7 @@ use \Spatie\SchemaOrg\Contracts\VesselContract;
  * A type of blood vessel that specifically carries blood away from the heart.
  *
  * @see https://schema.org/Artery
- * @see http://health-lifesci.schema.org
+ * @see https://health-lifesci.schema.org
  *
  */
 class Artery extends BaseType implements ArteryContract, AnatomicalStructureContract, MedicalEntityContract, ThingContract, VesselContract
@@ -58,7 +58,7 @@ class Artery extends BaseType implements ArteryContract, AnatomicalStructureCont
      * @return static
      *
      * @see https://schema.org/arterialBranch
-     * @see http://health-lifesci.schema.org
+     * @see https://health-lifesci.schema.org
      */
     public function arterialBranch($arterialBranch)
     {
@@ -75,7 +75,7 @@ class Artery extends BaseType implements ArteryContract, AnatomicalStructureCont
      * @return static
      *
      * @see https://schema.org/associatedPathophysiology
-     * @see http://health-lifesci.schema.org
+     * @see https://health-lifesci.schema.org
      */
     public function associatedPathophysiology($associatedPathophysiology)
     {
@@ -90,7 +90,7 @@ class Artery extends BaseType implements ArteryContract, AnatomicalStructureCont
      * @return static
      *
      * @see https://schema.org/bodyLocation
-     * @see http://health-lifesci.schema.org
+     * @see https://health-lifesci.schema.org
      */
     public function bodyLocation($bodyLocation)
     {
@@ -106,7 +106,7 @@ class Artery extends BaseType implements ArteryContract, AnatomicalStructureCont
      * @return static
      *
      * @see https://schema.org/code
-     * @see http://health-lifesci.schema.org
+     * @see https://health-lifesci.schema.org
      */
     public function code($code)
     {
@@ -121,7 +121,7 @@ class Artery extends BaseType implements ArteryContract, AnatomicalStructureCont
      * @return static
      *
      * @see https://schema.org/connectedTo
-     * @see http://health-lifesci.schema.org
+     * @see https://health-lifesci.schema.org
      */
     public function connectedTo($connectedTo)
     {
@@ -151,7 +151,7 @@ class Artery extends BaseType implements ArteryContract, AnatomicalStructureCont
      * @return static
      *
      * @see https://schema.org/diagram
-     * @see http://health-lifesci.schema.org
+     * @see https://health-lifesci.schema.org
      */
     public function diagram($diagram)
     {
@@ -183,7 +183,7 @@ class Artery extends BaseType implements ArteryContract, AnatomicalStructureCont
      * @return static
      *
      * @see https://schema.org/guideline
-     * @see http://health-lifesci.schema.org
+     * @see https://health-lifesci.schema.org
      */
     public function guideline($guideline)
     {
@@ -232,7 +232,7 @@ class Artery extends BaseType implements ArteryContract, AnatomicalStructureCont
      * @return static
      *
      * @see https://schema.org/legalStatus
-     * @see http://health-lifesci.schema.org
+     * @see https://health-lifesci.schema.org
      */
     public function legalStatus($legalStatus)
     {
@@ -264,7 +264,7 @@ class Artery extends BaseType implements ArteryContract, AnatomicalStructureCont
      * @return static
      *
      * @see https://schema.org/medicineSystem
-     * @see http://health-lifesci.schema.org
+     * @see https://health-lifesci.schema.org
      */
     public function medicineSystem($medicineSystem)
     {
@@ -293,7 +293,7 @@ class Artery extends BaseType implements ArteryContract, AnatomicalStructureCont
      * @return static
      *
      * @see https://schema.org/partOfSystem
-     * @see http://health-lifesci.schema.org
+     * @see https://health-lifesci.schema.org
      */
     public function partOfSystem($partOfSystem)
     {
@@ -324,7 +324,7 @@ class Artery extends BaseType implements ArteryContract, AnatomicalStructureCont
      * @return static
      *
      * @see https://schema.org/recognizingAuthority
-     * @see http://health-lifesci.schema.org
+     * @see https://health-lifesci.schema.org
      */
     public function recognizingAuthority($recognizingAuthority)
     {
@@ -339,7 +339,7 @@ class Artery extends BaseType implements ArteryContract, AnatomicalStructureCont
      * @return static
      *
      * @see https://schema.org/relatedCondition
-     * @see http://health-lifesci.schema.org
+     * @see https://health-lifesci.schema.org
      */
     public function relatedCondition($relatedCondition)
     {
@@ -354,7 +354,7 @@ class Artery extends BaseType implements ArteryContract, AnatomicalStructureCont
      * @return static
      *
      * @see https://schema.org/relatedTherapy
-     * @see http://health-lifesci.schema.org
+     * @see https://health-lifesci.schema.org
      */
     public function relatedTherapy($relatedTherapy)
     {
@@ -369,7 +369,7 @@ class Artery extends BaseType implements ArteryContract, AnatomicalStructureCont
      * @return static
      *
      * @see https://schema.org/relevantSpecialty
-     * @see http://health-lifesci.schema.org
+     * @see https://health-lifesci.schema.org
      */
     public function relevantSpecialty($relevantSpecialty)
     {
@@ -400,7 +400,7 @@ class Artery extends BaseType implements ArteryContract, AnatomicalStructureCont
      * @return static
      *
      * @see https://schema.org/study
-     * @see http://health-lifesci.schema.org
+     * @see https://health-lifesci.schema.org
      */
     public function study($study)
     {
@@ -415,7 +415,7 @@ class Artery extends BaseType implements ArteryContract, AnatomicalStructureCont
      * @return static
      *
      * @see https://schema.org/subStructure
-     * @see http://health-lifesci.schema.org
+     * @see https://health-lifesci.schema.org
      */
     public function subStructure($subStructure)
     {
@@ -445,7 +445,7 @@ class Artery extends BaseType implements ArteryContract, AnatomicalStructureCont
      * @return static
      *
      * @see https://schema.org/supplyTo
-     * @see http://health-lifesci.schema.org
+     * @see https://health-lifesci.schema.org
      */
     public function supplyTo($supplyTo)
     {

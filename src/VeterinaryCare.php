@@ -11,7 +11,7 @@ use \Spatie\SchemaOrg\Contracts\ThingContract;
  * A vet's office.
  *
  * @see https://schema.org/VeterinaryCare
- * @see http://health-lifesci.schema.org
+ * @see https://health-lifesci.schema.org
  *
  */
 class VeterinaryCare extends BaseType implements VeterinaryCareContract, MedicalOrganizationContract, OrganizationContract, ThingContract
@@ -27,7 +27,7 @@ class VeterinaryCare extends BaseType implements VeterinaryCareContract, Medical
      * @return static
      *
      * @see https://schema.org/actionableFeedbackPolicy
-     * @see http://pending.schema.org
+     * @see https://pending.schema.org
      */
     public function actionableFeedbackPolicy($actionableFeedbackPolicy)
     {
@@ -205,7 +205,7 @@ class VeterinaryCare extends BaseType implements VeterinaryCareContract, Medical
      * @return static
      *
      * @see https://schema.org/correctionsPolicy
-     * @see http://pending.schema.org
+     * @see https://pending.schema.org
      */
     public function correctionsPolicy($correctionsPolicy)
     {
@@ -285,7 +285,7 @@ class VeterinaryCare extends BaseType implements VeterinaryCareContract, Medical
      * @return static
      *
      * @see https://schema.org/diversityPolicy
-     * @see http://pending.schema.org
+     * @see https://pending.schema.org
      */
     public function diversityPolicy($diversityPolicy)
     {
@@ -303,7 +303,7 @@ class VeterinaryCare extends BaseType implements VeterinaryCareContract, Medical
      * @return static
      *
      * @see https://schema.org/diversityStaffingReport
-     * @see http://pending.schema.org
+     * @see https://pending.schema.org
      */
     public function diversityStaffingReport($diversityStaffingReport)
     {
@@ -381,7 +381,7 @@ class VeterinaryCare extends BaseType implements VeterinaryCareContract, Medical
      * @return static
      *
      * @see https://schema.org/ethicsPolicy
-     * @see http://pending.schema.org
+     * @see https://pending.schema.org
      * @link https://github.com/schemaorg/schemaorg/issues/1525
      */
     public function ethicsPolicy($ethicsPolicy)
@@ -529,7 +529,7 @@ class VeterinaryCare extends BaseType implements VeterinaryCareContract, Medical
      * @return static
      *
      * @see https://schema.org/hasCredential
-     * @see http://pending.schema.org
+     * @see https://pending.schema.org
      * @link https://github.com/schemaorg/schemaorg/issues/2289
      */
     public function hasCredential($hasCredential)
@@ -545,7 +545,7 @@ class VeterinaryCare extends BaseType implements VeterinaryCareContract, Medical
      * @return static
      *
      * @see https://schema.org/hasMerchantReturnPolicy
-     * @see http://pending.schema.org
+     * @see https://pending.schema.org
      * @link https://github.com/schemaorg/schemaorg/issues/2288
      */
     public function hasMerchantReturnPolicy($hasMerchantReturnPolicy)
@@ -591,7 +591,7 @@ class VeterinaryCare extends BaseType implements VeterinaryCareContract, Medical
      * @return static
      *
      * @see https://schema.org/hasProductReturnPolicy
-     * @see http://attic.schema.org
+     * @see https://attic.schema.org
      * @link https://github.com/schemaorg/schemaorg/issues/2288
      */
     public function hasProductReturnPolicy($hasProductReturnPolicy)
@@ -608,7 +608,7 @@ class VeterinaryCare extends BaseType implements VeterinaryCareContract, Medical
      * @return static
      *
      * @see https://schema.org/healthPlanNetworkId
-     * @see http://pending.schema.org
+     * @see https://pending.schema.org
      * @link https://github.com/schemaorg/schemaorg/issues/1062
      */
     public function healthPlanNetworkId($healthPlanNetworkId)
@@ -674,7 +674,7 @@ class VeterinaryCare extends BaseType implements VeterinaryCareContract, Medical
      * @return static
      *
      * @see https://schema.org/isAcceptingNewPatients
-     * @see http://pending.schema.org
+     * @see https://pending.schema.org
      * @link https://github.com/schemaorg/schemaorg/issues/1062
      */
     public function isAcceptingNewPatients($isAcceptingNewPatients)
@@ -710,7 +710,7 @@ class VeterinaryCare extends BaseType implements VeterinaryCareContract, Medical
      * @return static
      *
      * @see https://schema.org/knowsAbout
-     * @see http://pending.schema.org
+     * @see https://pending.schema.org
      */
     public function knowsAbout($knowsAbout)
     {
@@ -728,7 +728,7 @@ class VeterinaryCare extends BaseType implements VeterinaryCareContract, Medical
      * @return static
      *
      * @see https://schema.org/knowsLanguage
-     * @see http://pending.schema.org
+     * @see https://pending.schema.org
      */
     public function knowsLanguage($knowsLanguage)
     {
@@ -834,7 +834,7 @@ class VeterinaryCare extends BaseType implements VeterinaryCareContract, Medical
      * @return static
      *
      * @see https://schema.org/medicalSpecialty
-     * @see http://health-lifesci.schema.org
+     * @see https://health-lifesci.schema.org
      */
     public function medicalSpecialty($medicalSpecialty)
     {
@@ -924,7 +924,7 @@ class VeterinaryCare extends BaseType implements VeterinaryCareContract, Medical
      * @return static
      *
      * @see https://schema.org/nonprofitStatus
-     * @see http://pending.schema.org
+     * @see https://pending.schema.org
      * @link https://github.com/schemaorg/schemaorg/issues/2543
      */
     public function nonprofitStatus($nonprofitStatus)
@@ -959,7 +959,7 @@ class VeterinaryCare extends BaseType implements VeterinaryCareContract, Medical
      * @return static
      *
      * @see https://schema.org/ownershipFundingInfo
-     * @see http://pending.schema.org
+     * @see https://pending.schema.org
      */
     public function ownershipFundingInfo($ownershipFundingInfo)
     {
@@ -1210,7 +1210,7 @@ class VeterinaryCare extends BaseType implements VeterinaryCareContract, Medical
      * @return static
      *
      * @see https://schema.org/unnamedSourcesPolicy
-     * @see http://pending.schema.org
+     * @see https://pending.schema.org
      */
     public function unnamedSourcesPolicy($unnamedSourcesPolicy)
     {

@@ -11,7 +11,7 @@ use \Spatie\SchemaOrg\Contracts\ThingContract;
  * associated with an [[Organization]] or [[Product]].
  *
  * @see https://schema.org/MerchantReturnPolicy
- * @see http://pending.schema.org
+ * @see https://pending.schema.org
  * @link https://github.com/schemaorg/schemaorg/issues/2288
  *
  */
@@ -122,7 +122,7 @@ class MerchantReturnPolicy extends BaseType implements MerchantReturnPolicyContr
      * @return static
      *
      * @see https://schema.org/inStoreReturnsOffered
-     * @see http://pending.schema.org
+     * @see https://pending.schema.org
      * @link https://github.com/schemaorg/schemaorg/issues/2288
      */
     public function inStoreReturnsOffered($inStoreReturnsOffered)
@@ -155,7 +155,7 @@ class MerchantReturnPolicy extends BaseType implements MerchantReturnPolicyContr
      * @return static
      *
      * @see https://schema.org/merchantReturnDays
-     * @see http://pending.schema.org
+     * @see https://pending.schema.org
      * @link https://github.com/schemaorg/schemaorg/issues/2288
      */
     public function merchantReturnDays($merchantReturnDays)
@@ -171,7 +171,7 @@ class MerchantReturnPolicy extends BaseType implements MerchantReturnPolicyContr
      * @return static
      *
      * @see https://schema.org/merchantReturnLink
-     * @see http://pending.schema.org
+     * @see https://pending.schema.org
      * @link https://github.com/schemaorg/schemaorg/issues/2288
      */
     public function merchantReturnLink($merchantReturnLink)
@@ -216,7 +216,7 @@ class MerchantReturnPolicy extends BaseType implements MerchantReturnPolicyContr
      * @return static
      *
      * @see https://schema.org/refundType
-     * @see http://pending.schema.org
+     * @see https://pending.schema.org
      * @link https://github.com/schemaorg/schemaorg/issues/2288
      */
     public function refundType($refundType)
@@ -233,7 +233,7 @@ class MerchantReturnPolicy extends BaseType implements MerchantReturnPolicyContr
      * @return static
      *
      * @see https://schema.org/returnFees
-     * @see http://pending.schema.org
+     * @see https://pending.schema.org
      * @link https://github.com/schemaorg/schemaorg/issues/2288
      */
     public function returnFees($returnFees)
@@ -250,7 +250,7 @@ class MerchantReturnPolicy extends BaseType implements MerchantReturnPolicyContr
      * @return static
      *
      * @see https://schema.org/returnPolicyCategory
-     * @see http://pending.schema.org
+     * @see https://pending.schema.org
      * @link https://github.com/schemaorg/schemaorg/issues/2288
      */
     public function returnPolicyCategory($returnPolicyCategory)

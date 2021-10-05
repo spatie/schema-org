@@ -12,7 +12,7 @@ use \Spatie\SchemaOrg\Contracts\ThingContract;
  * of a tissue sample by a pathologist.
  *
  * @see https://schema.org/PathologyTest
- * @see http://health-lifesci.schema.org
+ * @see https://health-lifesci.schema.org
  *
  */
 class PathologyTest extends BaseType implements PathologyTestContract, MedicalEntityContract, MedicalTestContract, ThingContract
@@ -44,7 +44,7 @@ class PathologyTest extends BaseType implements PathologyTestContract, MedicalEn
      * @return static
      *
      * @see https://schema.org/affectedBy
-     * @see http://health-lifesci.schema.org
+     * @see https://health-lifesci.schema.org
      */
     public function affectedBy($affectedBy)
     {
@@ -74,7 +74,7 @@ class PathologyTest extends BaseType implements PathologyTestContract, MedicalEn
      * @return static
      *
      * @see https://schema.org/code
-     * @see http://health-lifesci.schema.org
+     * @see https://health-lifesci.schema.org
      */
     public function code($code)
     {
@@ -120,7 +120,7 @@ class PathologyTest extends BaseType implements PathologyTestContract, MedicalEn
      * @return static
      *
      * @see https://schema.org/guideline
-     * @see http://health-lifesci.schema.org
+     * @see https://health-lifesci.schema.org
      */
     public function guideline($guideline)
     {
@@ -169,7 +169,7 @@ class PathologyTest extends BaseType implements PathologyTestContract, MedicalEn
      * @return static
      *
      * @see https://schema.org/legalStatus
-     * @see http://health-lifesci.schema.org
+     * @see https://health-lifesci.schema.org
      */
     public function legalStatus($legalStatus)
     {
@@ -201,7 +201,7 @@ class PathologyTest extends BaseType implements PathologyTestContract, MedicalEn
      * @return static
      *
      * @see https://schema.org/medicineSystem
-     * @see http://health-lifesci.schema.org
+     * @see https://health-lifesci.schema.org
      */
     public function medicineSystem($medicineSystem)
     {
@@ -230,7 +230,7 @@ class PathologyTest extends BaseType implements PathologyTestContract, MedicalEn
      * @return static
      *
      * @see https://schema.org/normalRange
-     * @see http://health-lifesci.schema.org
+     * @see https://health-lifesci.schema.org
      */
     public function normalRange($normalRange)
     {
@@ -261,7 +261,7 @@ class PathologyTest extends BaseType implements PathologyTestContract, MedicalEn
      * @return static
      *
      * @see https://schema.org/recognizingAuthority
-     * @see http://health-lifesci.schema.org
+     * @see https://health-lifesci.schema.org
      */
     public function recognizingAuthority($recognizingAuthority)
     {
@@ -276,7 +276,7 @@ class PathologyTest extends BaseType implements PathologyTestContract, MedicalEn
      * @return static
      *
      * @see https://schema.org/relevantSpecialty
-     * @see http://health-lifesci.schema.org
+     * @see https://health-lifesci.schema.org
      */
     public function relevantSpecialty($relevantSpecialty)
     {
@@ -307,7 +307,7 @@ class PathologyTest extends BaseType implements PathologyTestContract, MedicalEn
      * @return static
      *
      * @see https://schema.org/signDetected
-     * @see http://health-lifesci.schema.org
+     * @see https://health-lifesci.schema.org
      */
     public function signDetected($signDetected)
     {
@@ -322,7 +322,7 @@ class PathologyTest extends BaseType implements PathologyTestContract, MedicalEn
      * @return static
      *
      * @see https://schema.org/study
-     * @see http://health-lifesci.schema.org
+     * @see https://health-lifesci.schema.org
      */
     public function study($study)
     {
@@ -352,7 +352,7 @@ class PathologyTest extends BaseType implements PathologyTestContract, MedicalEn
      * @return static
      *
      * @see https://schema.org/tissueSample
-     * @see http://health-lifesci.schema.org
+     * @see https://health-lifesci.schema.org
      */
     public function tissueSample($tissueSample)
     {
@@ -381,7 +381,7 @@ class PathologyTest extends BaseType implements PathologyTestContract, MedicalEn
      * @return static
      *
      * @see https://schema.org/usedToDiagnose
-     * @see http://health-lifesci.schema.org
+     * @see https://health-lifesci.schema.org
      */
     public function usedToDiagnose($usedToDiagnose)
     {
@@ -396,7 +396,7 @@ class PathologyTest extends BaseType implements PathologyTestContract, MedicalEn
      * @return static
      *
      * @see https://schema.org/usesDevice
-     * @see http://health-lifesci.schema.org
+     * @see https://health-lifesci.schema.org
      */
     public function usesDevice($usesDevice)
     {

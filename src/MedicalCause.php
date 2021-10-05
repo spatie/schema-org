@@ -25,7 +25,7 @@ use \Spatie\SchemaOrg\Contracts\ThingContract;
  * well.
  *
  * @see https://schema.org/MedicalCause
- * @see http://health-lifesci.schema.org
+ * @see https://health-lifesci.schema.org
  *
  */
 class MedicalCause extends BaseType implements MedicalCauseContract, MedicalEntityContract, ThingContract
@@ -71,7 +71,7 @@ class MedicalCause extends BaseType implements MedicalCauseContract, MedicalEnti
      * @return static
      *
      * @see https://schema.org/causeOf
-     * @see http://health-lifesci.schema.org
+     * @see https://health-lifesci.schema.org
      */
     public function causeOf($causeOf)
     {
@@ -87,7 +87,7 @@ class MedicalCause extends BaseType implements MedicalCauseContract, MedicalEnti
      * @return static
      *
      * @see https://schema.org/code
-     * @see http://health-lifesci.schema.org
+     * @see https://health-lifesci.schema.org
      */
     public function code($code)
     {
@@ -133,7 +133,7 @@ class MedicalCause extends BaseType implements MedicalCauseContract, MedicalEnti
      * @return static
      *
      * @see https://schema.org/guideline
-     * @see http://health-lifesci.schema.org
+     * @see https://health-lifesci.schema.org
      */
     public function guideline($guideline)
     {
@@ -182,7 +182,7 @@ class MedicalCause extends BaseType implements MedicalCauseContract, MedicalEnti
      * @return static
      *
      * @see https://schema.org/legalStatus
-     * @see http://health-lifesci.schema.org
+     * @see https://health-lifesci.schema.org
      */
     public function legalStatus($legalStatus)
     {
@@ -214,7 +214,7 @@ class MedicalCause extends BaseType implements MedicalCauseContract, MedicalEnti
      * @return static
      *
      * @see https://schema.org/medicineSystem
-     * @see http://health-lifesci.schema.org
+     * @see https://health-lifesci.schema.org
      */
     public function medicineSystem($medicineSystem)
     {
@@ -259,7 +259,7 @@ class MedicalCause extends BaseType implements MedicalCauseContract, MedicalEnti
      * @return static
      *
      * @see https://schema.org/recognizingAuthority
-     * @see http://health-lifesci.schema.org
+     * @see https://health-lifesci.schema.org
      */
     public function recognizingAuthority($recognizingAuthority)
     {
@@ -274,7 +274,7 @@ class MedicalCause extends BaseType implements MedicalCauseContract, MedicalEnti
      * @return static
      *
      * @see https://schema.org/relevantSpecialty
-     * @see http://health-lifesci.schema.org
+     * @see https://health-lifesci.schema.org
      */
     public function relevantSpecialty($relevantSpecialty)
     {
@@ -305,7 +305,7 @@ class MedicalCause extends BaseType implements MedicalCauseContract, MedicalEnti
      * @return static
      *
      * @see https://schema.org/study
-     * @see http://health-lifesci.schema.org
+     * @see https://health-lifesci.schema.org
      */
     public function study($study)
     {

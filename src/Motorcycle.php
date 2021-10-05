@@ -11,7 +11,7 @@ use \Spatie\SchemaOrg\Contracts\VehicleContract;
  * A motorcycle or motorbike is a single-track, two-wheeled motor vehicle.
  *
  * @see https://schema.org/Motorcycle
- * @see http://auto.schema.org
+ * @see https://auto.schema.org
  * @link http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#Automotive_Ontology_Working_Group
  *
  */
@@ -34,7 +34,7 @@ class Motorcycle extends BaseType implements MotorcycleContract, ProductContract
      * @return static
      *
      * @see https://schema.org/accelerationTime
-     * @see http://auto.schema.org
+     * @see https://auto.schema.org
      * @link http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#Automotive_Ontology_Working_Group
      */
     public function accelerationTime($accelerationTime)
@@ -163,7 +163,7 @@ class Motorcycle extends BaseType implements MotorcycleContract, ProductContract
      * @return static
      *
      * @see https://schema.org/bodyType
-     * @see http://auto.schema.org
+     * @see https://auto.schema.org
      * @link http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#Automotive_Ontology_Working_Group
      */
     public function bodyType($bodyType)
@@ -196,7 +196,7 @@ class Motorcycle extends BaseType implements MotorcycleContract, ProductContract
      * @return static
      *
      * @see https://schema.org/callSign
-     * @see http://pending.schema.org
+     * @see https://pending.schema.org
      * @link https://github.com/schemaorg/schemaorg/issues/2109
      */
     public function callSign($callSign)
@@ -342,7 +342,7 @@ class Motorcycle extends BaseType implements MotorcycleContract, ProductContract
      * @return static
      *
      * @see https://schema.org/emissionsCO2
-     * @see http://auto.schema.org
+     * @see https://auto.schema.org
      * @link http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#Automotive_Ontology_Working_Group
      */
     public function emissionsCO2($emissionsCO2)
@@ -363,7 +363,7 @@ class Motorcycle extends BaseType implements MotorcycleContract, ProductContract
      * @return static
      *
      * @see https://schema.org/fuelCapacity
-     * @see http://auto.schema.org
+     * @see https://auto.schema.org
      * @link http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#Automotive_Ontology_Working_Group
      */
     public function fuelCapacity($fuelCapacity)
@@ -470,7 +470,7 @@ class Motorcycle extends BaseType implements MotorcycleContract, ProductContract
      * @return static
      *
      * @see https://schema.org/gtin
-     * @see http://pending.schema.org
+     * @see https://pending.schema.org
      * @link https://github.com/schemaorg/schemaorg/issues/2288
      */
     public function gtin($gtin)
@@ -555,6 +555,23 @@ class Motorcycle extends BaseType implements MotorcycleContract, ProductContract
     }
 
     /**
+     * Defines the energy efficiency Category (also known as "class" or
+     * "rating") for a product according to an international energy efficiency
+     * standard
+     *
+     * @param \Spatie\SchemaOrg\Contracts\EnergyConsumptionDetailsContract|\Spatie\SchemaOrg\Contracts\EnergyConsumptionDetailsContract[] $hasEnergyConsumptionDetails
+     *
+     * @return static
+     *
+     * @see https://schema.org/hasEnergyConsumptionDetails
+     * @link https://github.com/schemaorg/schemaorg/issues/2670
+     */
+    public function hasEnergyConsumptionDetails($hasEnergyConsumptionDetails)
+    {
+        return $this->setProperty('hasEnergyConsumptionDetails', $hasEnergyConsumptionDetails);
+    }
+
+    /**
      * Indicates a MerchantReturnPolicy that may be applicable.
      *
      * @param \Spatie\SchemaOrg\Contracts\MerchantReturnPolicyContract|\Spatie\SchemaOrg\Contracts\MerchantReturnPolicyContract[] $hasMerchantReturnPolicy
@@ -562,7 +579,7 @@ class Motorcycle extends BaseType implements MotorcycleContract, ProductContract
      * @return static
      *
      * @see https://schema.org/hasMerchantReturnPolicy
-     * @see http://pending.schema.org
+     * @see https://pending.schema.org
      * @link https://github.com/schemaorg/schemaorg/issues/2288
      */
     public function hasMerchantReturnPolicy($hasMerchantReturnPolicy)
@@ -578,7 +595,7 @@ class Motorcycle extends BaseType implements MotorcycleContract, ProductContract
      * @return static
      *
      * @see https://schema.org/hasProductReturnPolicy
-     * @see http://attic.schema.org
+     * @see https://attic.schema.org
      * @link https://github.com/schemaorg/schemaorg/issues/2288
      */
     public function hasProductReturnPolicy($hasProductReturnPolicy)
@@ -642,7 +659,7 @@ class Motorcycle extends BaseType implements MotorcycleContract, ProductContract
      * @return static
      *
      * @see https://schema.org/inProductGroupWithID
-     * @see http://pending.schema.org
+     * @see https://pending.schema.org
      * @link https://github.com/schemaorg/schemaorg/issues/1797
      */
     public function inProductGroupWithID($inProductGroupWithID)
@@ -837,7 +854,7 @@ class Motorcycle extends BaseType implements MotorcycleContract, ProductContract
      * @return static
      *
      * @see https://schema.org/meetsEmissionStandard
-     * @see http://auto.schema.org
+     * @see https://auto.schema.org
      * @link http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#Automotive_Ontology_Working_Group
      */
     public function meetsEmissionStandard($meetsEmissionStandard)
@@ -890,7 +907,7 @@ class Motorcycle extends BaseType implements MotorcycleContract, ProductContract
      * @return static
      *
      * @see https://schema.org/modelDate
-     * @see http://auto.schema.org
+     * @see https://auto.schema.org
      * @link http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#Automotive_Ontology_Working_Group
      */
     public function modelDate($modelDate)
@@ -938,7 +955,7 @@ class Motorcycle extends BaseType implements MotorcycleContract, ProductContract
      * @return static
      *
      * @see https://schema.org/nsn
-     * @see http://pending.schema.org
+     * @see https://pending.schema.org
      * @link https://github.com/schemaorg/schemaorg/issues/2126
      */
     public function nsn($nsn)
@@ -1062,7 +1079,7 @@ class Motorcycle extends BaseType implements MotorcycleContract, ProductContract
      * @return static
      *
      * @see https://schema.org/pattern
-     * @see http://pending.schema.org
+     * @see https://pending.schema.org
      * @link https://github.com/schemaorg/schemaorg/issues/1797
      */
     public function pattern($pattern)
@@ -1090,7 +1107,7 @@ class Motorcycle extends BaseType implements MotorcycleContract, ProductContract
      * @return static
      *
      * @see https://schema.org/payload
-     * @see http://auto.schema.org
+     * @see https://auto.schema.org
      * @link http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#Automotive_Ontology_Working_Group
      */
     public function payload($payload)
@@ -1230,7 +1247,7 @@ class Motorcycle extends BaseType implements MotorcycleContract, ProductContract
      * @return static
      *
      * @see https://schema.org/seatingCapacity
-     * @see http://auto.schema.org
+     * @see https://auto.schema.org
      * @link http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#Automotive_Ontology_Working_Group
      */
     public function seatingCapacity($seatingCapacity)
@@ -1251,7 +1268,7 @@ class Motorcycle extends BaseType implements MotorcycleContract, ProductContract
      * @return static
      *
      * @see https://schema.org/size
-     * @see http://pending.schema.org
+     * @see https://pending.schema.org
      * @link https://github.com/schemaorg/schemaorg/issues/1797
      */
     public function size($size)
@@ -1308,7 +1325,7 @@ class Motorcycle extends BaseType implements MotorcycleContract, ProductContract
      * @return static
      *
      * @see https://schema.org/speed
-     * @see http://auto.schema.org
+     * @see https://auto.schema.org
      * @link http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#Automotive_Ontology_Working_Group
      */
     public function speed($speed)
@@ -1339,7 +1356,7 @@ class Motorcycle extends BaseType implements MotorcycleContract, ProductContract
      * @return static
      *
      * @see https://schema.org/stupidProperty
-     * @see http://attic.schema.org
+     * @see https://attic.schema.org
      */
     public function stupidProperty($stupidProperty)
     {
@@ -1380,7 +1397,7 @@ class Motorcycle extends BaseType implements MotorcycleContract, ProductContract
      * @return static
      *
      * @see https://schema.org/tongueWeight
-     * @see http://auto.schema.org
+     * @see https://auto.schema.org
      * @link http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#Automotive_Ontology_Working_Group
      */
     public function tongueWeight($tongueWeight)
@@ -1404,7 +1421,7 @@ class Motorcycle extends BaseType implements MotorcycleContract, ProductContract
      * @return static
      *
      * @see https://schema.org/trailerWeight
-     * @see http://auto.schema.org
+     * @see https://auto.schema.org
      * @link http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#Automotive_Ontology_Working_Group
      */
     public function trailerWeight($trailerWeight)
@@ -1551,7 +1568,7 @@ class Motorcycle extends BaseType implements MotorcycleContract, ProductContract
      * @return static
      *
      * @see https://schema.org/vehicleSpecialUsage
-     * @see http://auto.schema.org
+     * @see https://auto.schema.org
      * @link http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#Automotive_Ontology_Working_Group
      */
     public function vehicleSpecialUsage($vehicleSpecialUsage)
@@ -1609,7 +1626,7 @@ class Motorcycle extends BaseType implements MotorcycleContract, ProductContract
      * @return static
      *
      * @see https://schema.org/weightTotal
-     * @see http://auto.schema.org
+     * @see https://auto.schema.org
      * @link http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#Automotive_Ontology_Working_Group
      */
     public function weightTotal($weightTotal)
@@ -1628,7 +1645,7 @@ class Motorcycle extends BaseType implements MotorcycleContract, ProductContract
      * @return static
      *
      * @see https://schema.org/wheelbase
-     * @see http://auto.schema.org
+     * @see https://auto.schema.org
      * @link http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#Automotive_Ontology_Working_Group
      */
     public function wheelbase($wheelbase)

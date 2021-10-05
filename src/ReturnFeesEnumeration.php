@@ -11,7 +11,7 @@ use \Spatie\SchemaOrg\Contracts\ThingContract;
  * ReturnFeesEnumeration expresses policies for return fees.
  *
  * @see https://schema.org/ReturnFeesEnumeration
- * @see http://pending.schema.org
+ * @see https://pending.schema.org
  * @link https://github.com/schemaorg/schemaorg/issues/2288
  *
  * @method static supersededBy($supersededBy) The value should be instance of pending types Class|Class[]|Enumeration|Enumeration[]|Property|Property[]
@@ -22,7 +22,7 @@ class ReturnFeesEnumeration extends BaseType implements ReturnFeesEnumerationCon
      * OriginalShippingFees ...
      *
      * @see https://schema.org/OriginalShippingFees
-     * @see http://pending.schema.org
+     * @see https://pending.schema.org
      * @link https://github.com/schemaorg/schemaorg/issues/2288
      */
      const OriginalShippingFees = 'https://schema.org/OriginalShippingFees';
@@ -31,7 +31,7 @@ class ReturnFeesEnumeration extends BaseType implements ReturnFeesEnumerationCon
      * RestockingFees ...
      *
      * @see https://schema.org/RestockingFees
-     * @see http://pending.schema.org
+     * @see https://pending.schema.org
      * @link https://github.com/schemaorg/schemaorg/issues/2288
      */
      const RestockingFees = 'https://schema.org/RestockingFees';
@@ -40,7 +40,7 @@ class ReturnFeesEnumeration extends BaseType implements ReturnFeesEnumerationCon
      * ReturnShippingFees ...
      *
      * @see https://schema.org/ReturnShippingFees
-     * @see http://pending.schema.org
+     * @see https://pending.schema.org
      * @link https://github.com/schemaorg/schemaorg/issues/2288
      */
      const ReturnShippingFees = 'https://schema.org/ReturnShippingFees';

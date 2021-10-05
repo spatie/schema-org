@@ -13,7 +13,7 @@ use \Spatie\SchemaOrg\Contracts\ThingContract;
  * benefits offered.
  *
  * @see https://schema.org/GovernmentBenefitsType
- * @see http://pending.schema.org
+ * @see https://pending.schema.org
  * @link https://github.com/schemaorg/schemaorg/issues/2534
  *
  * @method static supersededBy($supersededBy) The value should be instance of pending types Class|Class[]|Enumeration|Enumeration[]|Property|Property[]
@@ -24,7 +24,7 @@ class GovernmentBenefitsType extends BaseType implements GovernmentBenefitsTypeC
      * BasicIncome: this is a benefit for basic income.
      *
      * @see https://schema.org/BasicIncome
-     * @see http://pending.schema.org
+     * @see https://pending.schema.org
      * @link https://github.com/schemaorg/schemaorg/issues/2534
      */
      const BasicIncome = 'https://schema.org/BasicIncome';
@@ -33,7 +33,7 @@ class GovernmentBenefitsType extends BaseType implements GovernmentBenefitsTypeC
      * BusinessSupport: this is a benefit for supporting businesses.
      *
      * @see https://schema.org/BusinessSupport
-     * @see http://pending.schema.org
+     * @see https://pending.schema.org
      * @link https://github.com/schemaorg/schemaorg/issues/2534
      */
      const BusinessSupport = 'https://schema.org/BusinessSupport';
@@ -42,7 +42,7 @@ class GovernmentBenefitsType extends BaseType implements GovernmentBenefitsTypeC
      * DisabilitySupport: this is a benefit for disability support.
      *
      * @see https://schema.org/DisabilitySupport
-     * @see http://pending.schema.org
+     * @see https://pending.schema.org
      * @link https://github.com/schemaorg/schemaorg/issues/2534
      */
      const DisabilitySupport = 'https://schema.org/DisabilitySupport';
@@ -51,7 +51,7 @@ class GovernmentBenefitsType extends BaseType implements GovernmentBenefitsTypeC
      * HealthCare: this is a benefit for health care.
      *
      * @see https://schema.org/HealthCare
-     * @see http://pending.schema.org
+     * @see https://pending.schema.org
      * @link https://github.com/schemaorg/schemaorg/issues/2534
      */
      const HealthCare = 'https://schema.org/HealthCare';
@@ -60,7 +60,7 @@ class GovernmentBenefitsType extends BaseType implements GovernmentBenefitsTypeC
      * OneTimePayments: this is a benefit for one-time payments for individuals.
      *
      * @see https://schema.org/OneTimePayments
-     * @see http://pending.schema.org
+     * @see https://pending.schema.org
      * @link https://github.com/schemaorg/schemaorg/issues/2534
      */
      const OneTimePayments = 'https://schema.org/OneTimePayments';
@@ -69,7 +69,7 @@ class GovernmentBenefitsType extends BaseType implements GovernmentBenefitsTypeC
      * PaidLeave: this is a benefit for paid leave.
      *
      * @see https://schema.org/PaidLeave
-     * @see http://pending.schema.org
+     * @see https://pending.schema.org
      * @link https://github.com/schemaorg/schemaorg/issues/2534
      */
      const PaidLeave = 'https://schema.org/PaidLeave';
@@ -78,7 +78,7 @@ class GovernmentBenefitsType extends BaseType implements GovernmentBenefitsTypeC
      * ParentalSupport: this is a benefit for parental support.
      *
      * @see https://schema.org/ParentalSupport
-     * @see http://pending.schema.org
+     * @see https://pending.schema.org
      * @link https://github.com/schemaorg/schemaorg/issues/2534
      */
      const ParentalSupport = 'https://schema.org/ParentalSupport';
@@ -87,7 +87,7 @@ class GovernmentBenefitsType extends BaseType implements GovernmentBenefitsTypeC
      * UnemploymentSupport: this is a benefit for unemployment support.
      *
      * @see https://schema.org/UnemploymentSupport
-     * @see http://pending.schema.org
+     * @see https://pending.schema.org
      * @link https://github.com/schemaorg/schemaorg/issues/2534
      */
      const UnemploymentSupport = 'https://schema.org/UnemploymentSupport';

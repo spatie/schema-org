@@ -34,6 +34,8 @@ interface AnswerContract
 
     public function alternativeHeadline($alternativeHeadline);
 
+    public function answerExplanation($answerExplanation);
+
     public function assesses($assesses);
 
     public function associatedMedia($associatedMedia);

@@ -11,7 +11,7 @@ use \Spatie\SchemaOrg\Contracts\ThingContract;
  * of prescription drugs.
  *
  * @see https://schema.org/HealthPlanFormulary
- * @see http://pending.schema.org
+ * @see https://pending.schema.org
  * @link https://github.com/schemaorg/schemaorg/issues/1062
  *
  */
@@ -90,7 +90,7 @@ class HealthPlanFormulary extends BaseType implements HealthPlanFormularyContrac
      * @return static
      *
      * @see https://schema.org/healthPlanCostSharing
-     * @see http://pending.schema.org
+     * @see https://pending.schema.org
      * @link https://github.com/schemaorg/schemaorg/issues/1062
      */
     public function healthPlanCostSharing($healthPlanCostSharing)
@@ -106,7 +106,7 @@ class HealthPlanFormulary extends BaseType implements HealthPlanFormularyContrac
      * @return static
      *
      * @see https://schema.org/healthPlanDrugTier
-     * @see http://pending.schema.org
+     * @see https://pending.schema.org
      * @link https://github.com/schemaorg/schemaorg/issues/1062
      */
     public function healthPlanDrugTier($healthPlanDrugTier)
@@ -185,7 +185,7 @@ class HealthPlanFormulary extends BaseType implements HealthPlanFormularyContrac
      * @return static
      *
      * @see https://schema.org/offersPrescriptionByMail
-     * @see http://pending.schema.org
+     * @see https://pending.schema.org
      * @link https://github.com/schemaorg/schemaorg/issues/1062
      */
     public function offersPrescriptionByMail($offersPrescriptionByMail)

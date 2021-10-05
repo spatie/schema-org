@@ -1207,6 +1207,11 @@ class Schema
         return new Duration();
     }
 
+    public static function eUEnergyEfficiencyEnumeration(): EUEnergyEfficiencyEnumeration
+    {
+        return new EUEnergyEfficiencyEnumeration();
+    }
+
     public static function eatAction(): EatAction
     {
         return new EatAction();
@@ -1300,6 +1305,21 @@ class Schema
     public static function energy(): Energy
     {
         return new Energy();
+    }
+
+    public static function energyConsumptionDetails(): EnergyConsumptionDetails
+    {
+        return new EnergyConsumptionDetails();
+    }
+
+    public static function energyEfficiencyEnumeration(): EnergyEfficiencyEnumeration
+    {
+        return new EnergyEfficiencyEnumeration();
+    }
+
+    public static function energyStarEnergyEfficiencyEnumeration(): EnergyStarEnergyEfficiencyEnumeration
+    {
+        return new EnergyStarEnergyEfficiencyEnumeration();
     }
 
     public static function engineSpecification(): EngineSpecification
@@ -3310,6 +3330,11 @@ class Schema
     public static function researchProject(): ResearchProject
     {
         return new ResearchProject();
+    }
+
+    public static function researcher(): Researcher
+    {
+        return new Researcher();
     }
 
     public static function reservation(): Reservation

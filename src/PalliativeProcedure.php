@@ -14,7 +14,7 @@ use \Spatie\SchemaOrg\Contracts\ThingContract;
  * relieving the symptoms of an underlying health condition.
  *
  * @see https://schema.org/PalliativeProcedure
- * @see http://health-lifesci.schema.org
+ * @see https://health-lifesci.schema.org
  *
  */
 class PalliativeProcedure extends BaseType implements PalliativeProcedureContract, MedicalEntityContract, MedicalProcedureContract, MedicalTherapyContract, TherapeuticProcedureContract, ThingContract
@@ -50,7 +50,7 @@ class PalliativeProcedure extends BaseType implements PalliativeProcedureContrac
      * @return static
      *
      * @see https://schema.org/adverseOutcome
-     * @see http://health-lifesci.schema.org
+     * @see https://health-lifesci.schema.org
      */
     public function adverseOutcome($adverseOutcome)
     {
@@ -79,7 +79,7 @@ class PalliativeProcedure extends BaseType implements PalliativeProcedureContrac
      * @return static
      *
      * @see https://schema.org/bodyLocation
-     * @see http://health-lifesci.schema.org
+     * @see https://health-lifesci.schema.org
      */
     public function bodyLocation($bodyLocation)
     {
@@ -95,7 +95,7 @@ class PalliativeProcedure extends BaseType implements PalliativeProcedureContrac
      * @return static
      *
      * @see https://schema.org/code
-     * @see http://health-lifesci.schema.org
+     * @see https://health-lifesci.schema.org
      */
     public function code($code)
     {
@@ -110,7 +110,7 @@ class PalliativeProcedure extends BaseType implements PalliativeProcedureContrac
      * @return static
      *
      * @see https://schema.org/contraindication
-     * @see http://health-lifesci.schema.org
+     * @see https://health-lifesci.schema.org
      */
     public function contraindication($contraindication)
     {
@@ -157,7 +157,7 @@ class PalliativeProcedure extends BaseType implements PalliativeProcedureContrac
      * @return static
      *
      * @see https://schema.org/doseSchedule
-     * @see http://health-lifesci.schema.org
+     * @see https://health-lifesci.schema.org
      */
     public function doseSchedule($doseSchedule)
     {
@@ -172,7 +172,7 @@ class PalliativeProcedure extends BaseType implements PalliativeProcedureContrac
      * @return static
      *
      * @see https://schema.org/drug
-     * @see http://health-lifesci.schema.org
+     * @see https://health-lifesci.schema.org
      */
     public function drug($drug)
     {
@@ -187,7 +187,7 @@ class PalliativeProcedure extends BaseType implements PalliativeProcedureContrac
      * @return static
      *
      * @see https://schema.org/duplicateTherapy
-     * @see http://health-lifesci.schema.org
+     * @see https://health-lifesci.schema.org
      */
     public function duplicateTherapy($duplicateTherapy)
     {
@@ -202,7 +202,7 @@ class PalliativeProcedure extends BaseType implements PalliativeProcedureContrac
      * @return static
      *
      * @see https://schema.org/followup
-     * @see http://health-lifesci.schema.org
+     * @see https://health-lifesci.schema.org
      */
     public function followup($followup)
     {
@@ -217,7 +217,7 @@ class PalliativeProcedure extends BaseType implements PalliativeProcedureContrac
      * @return static
      *
      * @see https://schema.org/guideline
-     * @see http://health-lifesci.schema.org
+     * @see https://health-lifesci.schema.org
      */
     public function guideline($guideline)
     {
@@ -232,7 +232,7 @@ class PalliativeProcedure extends BaseType implements PalliativeProcedureContrac
      * @return static
      *
      * @see https://schema.org/howPerformed
-     * @see http://health-lifesci.schema.org
+     * @see https://health-lifesci.schema.org
      */
     public function howPerformed($howPerformed)
     {
@@ -281,7 +281,7 @@ class PalliativeProcedure extends BaseType implements PalliativeProcedureContrac
      * @return static
      *
      * @see https://schema.org/legalStatus
-     * @see http://health-lifesci.schema.org
+     * @see https://health-lifesci.schema.org
      */
     public function legalStatus($legalStatus)
     {
@@ -313,7 +313,7 @@ class PalliativeProcedure extends BaseType implements PalliativeProcedureContrac
      * @return static
      *
      * @see https://schema.org/medicineSystem
-     * @see http://health-lifesci.schema.org
+     * @see https://health-lifesci.schema.org
      */
     public function medicineSystem($medicineSystem)
     {
@@ -358,7 +358,7 @@ class PalliativeProcedure extends BaseType implements PalliativeProcedureContrac
      * @return static
      *
      * @see https://schema.org/preparation
-     * @see http://health-lifesci.schema.org
+     * @see https://health-lifesci.schema.org
      */
     public function preparation($preparation)
     {
@@ -374,7 +374,7 @@ class PalliativeProcedure extends BaseType implements PalliativeProcedureContrac
      * @return static
      *
      * @see https://schema.org/procedureType
-     * @see http://health-lifesci.schema.org
+     * @see https://health-lifesci.schema.org
      */
     public function procedureType($procedureType)
     {
@@ -390,7 +390,7 @@ class PalliativeProcedure extends BaseType implements PalliativeProcedureContrac
      * @return static
      *
      * @see https://schema.org/recognizingAuthority
-     * @see http://health-lifesci.schema.org
+     * @see https://health-lifesci.schema.org
      */
     public function recognizingAuthority($recognizingAuthority)
     {
@@ -405,7 +405,7 @@ class PalliativeProcedure extends BaseType implements PalliativeProcedureContrac
      * @return static
      *
      * @see https://schema.org/relevantSpecialty
-     * @see http://health-lifesci.schema.org
+     * @see https://health-lifesci.schema.org
      */
     public function relevantSpecialty($relevantSpecialty)
     {
@@ -442,7 +442,7 @@ class PalliativeProcedure extends BaseType implements PalliativeProcedureContrac
      * @return static
      *
      * @see https://schema.org/seriousAdverseOutcome
-     * @see http://health-lifesci.schema.org
+     * @see https://health-lifesci.schema.org
      */
     public function seriousAdverseOutcome($seriousAdverseOutcome)
     {
@@ -457,7 +457,7 @@ class PalliativeProcedure extends BaseType implements PalliativeProcedureContrac
      * @return static
      *
      * @see https://schema.org/status
-     * @see http://health-lifesci.schema.org
+     * @see https://health-lifesci.schema.org
      */
     public function status($status)
     {
@@ -472,7 +472,7 @@ class PalliativeProcedure extends BaseType implements PalliativeProcedureContrac
      * @return static
      *
      * @see https://schema.org/study
-     * @see http://health-lifesci.schema.org
+     * @see https://health-lifesci.schema.org
      */
     public function study($study)
     {

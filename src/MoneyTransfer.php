@@ -12,7 +12,7 @@ use \Spatie\SchemaOrg\Contracts\TransferActionContract;
  * electronically or physically.
  *
  * @see https://schema.org/MoneyTransfer
- * @see http://pending.schema.org
+ * @see https://pending.schema.org
  *
  */
 class MoneyTransfer extends BaseType implements MoneyTransferContract, ActionContract, ThingContract, TransferActionContract
@@ -103,7 +103,7 @@ class MoneyTransfer extends BaseType implements MoneyTransferContract, ActionCon
      * @return static
      *
      * @see https://schema.org/beneficiaryBank
-     * @see http://pending.schema.org
+     * @see https://pending.schema.org
      */
     public function beneficiaryBank($beneficiaryBank)
     {

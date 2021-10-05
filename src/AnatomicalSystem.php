@@ -14,7 +14,7 @@ use \Spatie\SchemaOrg\Contracts\ThingContract;
  * respiratory, skeletal, urinary, vestibular, and other systems.
  *
  * @see https://schema.org/AnatomicalSystem
- * @see http://health-lifesci.schema.org
+ * @see https://health-lifesci.schema.org
  *
  */
 class AnatomicalSystem extends BaseType implements AnatomicalSystemContract, MedicalEntityContract, ThingContract
@@ -62,7 +62,7 @@ class AnatomicalSystem extends BaseType implements AnatomicalSystemContract, Med
      * @return static
      *
      * @see https://schema.org/associatedPathophysiology
-     * @see http://health-lifesci.schema.org
+     * @see https://health-lifesci.schema.org
      */
     public function associatedPathophysiology($associatedPathophysiology)
     {
@@ -78,7 +78,7 @@ class AnatomicalSystem extends BaseType implements AnatomicalSystemContract, Med
      * @return static
      *
      * @see https://schema.org/code
-     * @see http://health-lifesci.schema.org
+     * @see https://health-lifesci.schema.org
      */
     public function code($code)
     {
@@ -95,7 +95,7 @@ class AnatomicalSystem extends BaseType implements AnatomicalSystemContract, Med
      * @return static
      *
      * @see https://schema.org/comprisedOf
-     * @see http://health-lifesci.schema.org
+     * @see https://health-lifesci.schema.org
      */
     public function comprisedOf($comprisedOf)
     {
@@ -141,7 +141,7 @@ class AnatomicalSystem extends BaseType implements AnatomicalSystemContract, Med
      * @return static
      *
      * @see https://schema.org/guideline
-     * @see http://health-lifesci.schema.org
+     * @see https://health-lifesci.schema.org
      */
     public function guideline($guideline)
     {
@@ -190,7 +190,7 @@ class AnatomicalSystem extends BaseType implements AnatomicalSystemContract, Med
      * @return static
      *
      * @see https://schema.org/legalStatus
-     * @see http://health-lifesci.schema.org
+     * @see https://health-lifesci.schema.org
      */
     public function legalStatus($legalStatus)
     {
@@ -222,7 +222,7 @@ class AnatomicalSystem extends BaseType implements AnatomicalSystemContract, Med
      * @return static
      *
      * @see https://schema.org/medicineSystem
-     * @see http://health-lifesci.schema.org
+     * @see https://health-lifesci.schema.org
      */
     public function medicineSystem($medicineSystem)
     {
@@ -267,7 +267,7 @@ class AnatomicalSystem extends BaseType implements AnatomicalSystemContract, Med
      * @return static
      *
      * @see https://schema.org/recognizingAuthority
-     * @see http://health-lifesci.schema.org
+     * @see https://health-lifesci.schema.org
      */
     public function recognizingAuthority($recognizingAuthority)
     {
@@ -282,7 +282,7 @@ class AnatomicalSystem extends BaseType implements AnatomicalSystemContract, Med
      * @return static
      *
      * @see https://schema.org/relatedCondition
-     * @see http://health-lifesci.schema.org
+     * @see https://health-lifesci.schema.org
      */
     public function relatedCondition($relatedCondition)
     {
@@ -299,7 +299,7 @@ class AnatomicalSystem extends BaseType implements AnatomicalSystemContract, Med
      * @return static
      *
      * @see https://schema.org/relatedStructure
-     * @see http://health-lifesci.schema.org
+     * @see https://health-lifesci.schema.org
      */
     public function relatedStructure($relatedStructure)
     {
@@ -314,7 +314,7 @@ class AnatomicalSystem extends BaseType implements AnatomicalSystemContract, Med
      * @return static
      *
      * @see https://schema.org/relatedTherapy
-     * @see http://health-lifesci.schema.org
+     * @see https://health-lifesci.schema.org
      */
     public function relatedTherapy($relatedTherapy)
     {
@@ -329,7 +329,7 @@ class AnatomicalSystem extends BaseType implements AnatomicalSystemContract, Med
      * @return static
      *
      * @see https://schema.org/relevantSpecialty
-     * @see http://health-lifesci.schema.org
+     * @see https://health-lifesci.schema.org
      */
     public function relevantSpecialty($relevantSpecialty)
     {
@@ -360,7 +360,7 @@ class AnatomicalSystem extends BaseType implements AnatomicalSystemContract, Med
      * @return static
      *
      * @see https://schema.org/study
-     * @see http://health-lifesci.schema.org
+     * @see https://health-lifesci.schema.org
      */
     public function study($study)
     {

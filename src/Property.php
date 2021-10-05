@@ -11,7 +11,7 @@ use \Spatie\SchemaOrg\Contracts\ThingContract;
  * equivalent to rdf:Property.
  *
  * @see https://schema.org/Property
- * @see http://meta.schema.org
+ * @see https://meta.schema.org
  *
  * @method static domainIncludes($domainIncludes) The value should be instance of pending types Class|Class[]
  * @method static rangeIncludes($rangeIncludes) The value should be instance of pending types Class|Class[]
@@ -128,7 +128,7 @@ class Property extends BaseType implements PropertyContract, IntangibleContract,
      * @return static
      *
      * @see https://schema.org/inverseOf
-     * @see http://meta.schema.org
+     * @see https://meta.schema.org
      */
     public function inverseOf($inverseOf)
     {

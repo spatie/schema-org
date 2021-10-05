@@ -10,7 +10,7 @@ use \Spatie\SchemaOrg\Contracts\ThingContract;
  * A US-style health insurance plan network.
  *
  * @see https://schema.org/HealthPlanNetwork
- * @see http://pending.schema.org
+ * @see https://pending.schema.org
  * @link https://github.com/schemaorg/schemaorg/issues/1062
  *
  */
@@ -89,7 +89,7 @@ class HealthPlanNetwork extends BaseType implements HealthPlanNetworkContract, I
      * @return static
      *
      * @see https://schema.org/healthPlanCostSharing
-     * @see http://pending.schema.org
+     * @see https://pending.schema.org
      * @link https://github.com/schemaorg/schemaorg/issues/1062
      */
     public function healthPlanCostSharing($healthPlanCostSharing)
@@ -106,7 +106,7 @@ class HealthPlanNetwork extends BaseType implements HealthPlanNetworkContract, I
      * @return static
      *
      * @see https://schema.org/healthPlanNetworkId
-     * @see http://pending.schema.org
+     * @see https://pending.schema.org
      * @link https://github.com/schemaorg/schemaorg/issues/1062
      */
     public function healthPlanNetworkId($healthPlanNetworkId)
@@ -122,7 +122,7 @@ class HealthPlanNetwork extends BaseType implements HealthPlanNetworkContract, I
      * @return static
      *
      * @see https://schema.org/healthPlanNetworkTier
-     * @see http://pending.schema.org
+     * @see https://pending.schema.org
      * @link https://github.com/schemaorg/schemaorg/issues/1062
      */
     public function healthPlanNetworkTier($healthPlanNetworkTier)

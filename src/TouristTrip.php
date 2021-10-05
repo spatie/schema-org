@@ -16,7 +16,7 @@ use \Spatie\SchemaOrg\Contracts\TripContract;
  *   (See examples below).
  *
  * @see https://schema.org/TouristTrip
- * @see http://pending.schema.org
+ * @see https://pending.schema.org
  *
  */
 class TouristTrip extends BaseType implements TouristTripContract, IntangibleContract, ThingContract, TripContract
@@ -156,7 +156,7 @@ class TouristTrip extends BaseType implements TouristTripContract, IntangibleCon
      * @return static
      *
      * @see https://schema.org/itinerary
-     * @see http://pending.schema.org
+     * @see https://pending.schema.org
      * @link http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#Tourism
      */
     public function itinerary($itinerary)
@@ -225,7 +225,7 @@ class TouristTrip extends BaseType implements TouristTripContract, IntangibleCon
      * @return static
      *
      * @see https://schema.org/partOfTrip
-     * @see http://pending.schema.org
+     * @see https://pending.schema.org
      * @link http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#Tourism
      */
     public function partOfTrip($partOfTrip)
@@ -290,7 +290,7 @@ class TouristTrip extends BaseType implements TouristTripContract, IntangibleCon
      * @return static
      *
      * @see https://schema.org/subTrip
-     * @see http://pending.schema.org
+     * @see https://pending.schema.org
      * @link http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#Tourism
      */
     public function subTrip($subTrip)

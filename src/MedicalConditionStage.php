@@ -11,7 +11,7 @@ use \Spatie\SchemaOrg\Contracts\ThingContract;
  * A stage of a medical condition, such as 'Stage IIIa'.
  *
  * @see https://schema.org/MedicalConditionStage
- * @see http://health-lifesci.schema.org
+ * @see https://health-lifesci.schema.org
  *
  */
 class MedicalConditionStage extends BaseType implements MedicalConditionStageContract, MedicalEntityContract, MedicalIntangibleContract, ThingContract
@@ -58,7 +58,7 @@ class MedicalConditionStage extends BaseType implements MedicalConditionStageCon
      * @return static
      *
      * @see https://schema.org/code
-     * @see http://health-lifesci.schema.org
+     * @see https://health-lifesci.schema.org
      */
     public function code($code)
     {
@@ -104,7 +104,7 @@ class MedicalConditionStage extends BaseType implements MedicalConditionStageCon
      * @return static
      *
      * @see https://schema.org/guideline
-     * @see http://health-lifesci.schema.org
+     * @see https://health-lifesci.schema.org
      */
     public function guideline($guideline)
     {
@@ -153,7 +153,7 @@ class MedicalConditionStage extends BaseType implements MedicalConditionStageCon
      * @return static
      *
      * @see https://schema.org/legalStatus
-     * @see http://health-lifesci.schema.org
+     * @see https://health-lifesci.schema.org
      */
     public function legalStatus($legalStatus)
     {
@@ -185,7 +185,7 @@ class MedicalConditionStage extends BaseType implements MedicalConditionStageCon
      * @return static
      *
      * @see https://schema.org/medicineSystem
-     * @see http://health-lifesci.schema.org
+     * @see https://health-lifesci.schema.org
      */
     public function medicineSystem($medicineSystem)
     {
@@ -230,7 +230,7 @@ class MedicalConditionStage extends BaseType implements MedicalConditionStageCon
      * @return static
      *
      * @see https://schema.org/recognizingAuthority
-     * @see http://health-lifesci.schema.org
+     * @see https://health-lifesci.schema.org
      */
     public function recognizingAuthority($recognizingAuthority)
     {
@@ -245,7 +245,7 @@ class MedicalConditionStage extends BaseType implements MedicalConditionStageCon
      * @return static
      *
      * @see https://schema.org/relevantSpecialty
-     * @see http://health-lifesci.schema.org
+     * @see https://health-lifesci.schema.org
      */
     public function relevantSpecialty($relevantSpecialty)
     {
@@ -276,7 +276,7 @@ class MedicalConditionStage extends BaseType implements MedicalConditionStageCon
      * @return static
      *
      * @see https://schema.org/stageAsNumber
-     * @see http://health-lifesci.schema.org
+     * @see https://health-lifesci.schema.org
      */
     public function stageAsNumber($stageAsNumber)
     {
@@ -291,7 +291,7 @@ class MedicalConditionStage extends BaseType implements MedicalConditionStageCon
      * @return static
      *
      * @see https://schema.org/study
-     * @see http://health-lifesci.schema.org
+     * @see https://health-lifesci.schema.org
      */
     public function study($study)
     {
@@ -306,7 +306,7 @@ class MedicalConditionStage extends BaseType implements MedicalConditionStageCon
      * @return static
      *
      * @see https://schema.org/subStageSuffix
-     * @see http://health-lifesci.schema.org
+     * @see https://health-lifesci.schema.org
      */
     public function subStageSuffix($subStageSuffix)
     {

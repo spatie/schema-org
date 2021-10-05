@@ -212,7 +212,7 @@ class EndorsementRating extends BaseType implements EndorsementRatingContract, I
      * @return static
      *
      * @see https://schema.org/ratingExplanation
-     * @see http://pending.schema.org
+     * @see https://pending.schema.org
      * @link https://github.com/schemaorg/schemaorg/issues/2300
      */
     public function ratingExplanation($ratingExplanation)

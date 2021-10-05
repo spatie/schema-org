@@ -12,7 +12,7 @@ use \Spatie\SchemaOrg\Contracts\ThingContract;
  * along each of the axons.
  *
  * @see https://schema.org/Nerve
- * @see http://health-lifesci.schema.org
+ * @see https://health-lifesci.schema.org
  *
  */
 class Nerve extends BaseType implements NerveContract, AnatomicalStructureContract, MedicalEntityContract, ThingContract
@@ -60,7 +60,7 @@ class Nerve extends BaseType implements NerveContract, AnatomicalStructureContra
      * @return static
      *
      * @see https://schema.org/associatedPathophysiology
-     * @see http://health-lifesci.schema.org
+     * @see https://health-lifesci.schema.org
      */
     public function associatedPathophysiology($associatedPathophysiology)
     {
@@ -75,7 +75,7 @@ class Nerve extends BaseType implements NerveContract, AnatomicalStructureContra
      * @return static
      *
      * @see https://schema.org/bodyLocation
-     * @see http://health-lifesci.schema.org
+     * @see https://health-lifesci.schema.org
      */
     public function bodyLocation($bodyLocation)
     {
@@ -91,7 +91,7 @@ class Nerve extends BaseType implements NerveContract, AnatomicalStructureContra
      * @return static
      *
      * @see https://schema.org/branch
-     * @see http://health-lifesci.schema.org
+     * @see https://health-lifesci.schema.org
      */
     public function branch($branch)
     {
@@ -107,7 +107,7 @@ class Nerve extends BaseType implements NerveContract, AnatomicalStructureContra
      * @return static
      *
      * @see https://schema.org/code
-     * @see http://health-lifesci.schema.org
+     * @see https://health-lifesci.schema.org
      */
     public function code($code)
     {
@@ -122,7 +122,7 @@ class Nerve extends BaseType implements NerveContract, AnatomicalStructureContra
      * @return static
      *
      * @see https://schema.org/connectedTo
-     * @see http://health-lifesci.schema.org
+     * @see https://health-lifesci.schema.org
      */
     public function connectedTo($connectedTo)
     {
@@ -152,7 +152,7 @@ class Nerve extends BaseType implements NerveContract, AnatomicalStructureContra
      * @return static
      *
      * @see https://schema.org/diagram
-     * @see http://health-lifesci.schema.org
+     * @see https://health-lifesci.schema.org
      */
     public function diagram($diagram)
     {
@@ -184,7 +184,7 @@ class Nerve extends BaseType implements NerveContract, AnatomicalStructureContra
      * @return static
      *
      * @see https://schema.org/guideline
-     * @see http://health-lifesci.schema.org
+     * @see https://health-lifesci.schema.org
      */
     public function guideline($guideline)
     {
@@ -233,7 +233,7 @@ class Nerve extends BaseType implements NerveContract, AnatomicalStructureContra
      * @return static
      *
      * @see https://schema.org/legalStatus
-     * @see http://health-lifesci.schema.org
+     * @see https://health-lifesci.schema.org
      */
     public function legalStatus($legalStatus)
     {
@@ -265,7 +265,7 @@ class Nerve extends BaseType implements NerveContract, AnatomicalStructureContra
      * @return static
      *
      * @see https://schema.org/medicineSystem
-     * @see http://health-lifesci.schema.org
+     * @see https://health-lifesci.schema.org
      */
     public function medicineSystem($medicineSystem)
     {
@@ -294,7 +294,7 @@ class Nerve extends BaseType implements NerveContract, AnatomicalStructureContra
      * @return static
      *
      * @see https://schema.org/nerveMotor
-     * @see http://health-lifesci.schema.org
+     * @see https://health-lifesci.schema.org
      */
     public function nerveMotor($nerveMotor)
     {
@@ -309,7 +309,7 @@ class Nerve extends BaseType implements NerveContract, AnatomicalStructureContra
      * @return static
      *
      * @see https://schema.org/partOfSystem
-     * @see http://health-lifesci.schema.org
+     * @see https://health-lifesci.schema.org
      */
     public function partOfSystem($partOfSystem)
     {
@@ -340,7 +340,7 @@ class Nerve extends BaseType implements NerveContract, AnatomicalStructureContra
      * @return static
      *
      * @see https://schema.org/recognizingAuthority
-     * @see http://health-lifesci.schema.org
+     * @see https://health-lifesci.schema.org
      */
     public function recognizingAuthority($recognizingAuthority)
     {
@@ -355,7 +355,7 @@ class Nerve extends BaseType implements NerveContract, AnatomicalStructureContra
      * @return static
      *
      * @see https://schema.org/relatedCondition
-     * @see http://health-lifesci.schema.org
+     * @see https://health-lifesci.schema.org
      */
     public function relatedCondition($relatedCondition)
     {
@@ -370,7 +370,7 @@ class Nerve extends BaseType implements NerveContract, AnatomicalStructureContra
      * @return static
      *
      * @see https://schema.org/relatedTherapy
-     * @see http://health-lifesci.schema.org
+     * @see https://health-lifesci.schema.org
      */
     public function relatedTherapy($relatedTherapy)
     {
@@ -385,7 +385,7 @@ class Nerve extends BaseType implements NerveContract, AnatomicalStructureContra
      * @return static
      *
      * @see https://schema.org/relevantSpecialty
-     * @see http://health-lifesci.schema.org
+     * @see https://health-lifesci.schema.org
      */
     public function relevantSpecialty($relevantSpecialty)
     {
@@ -417,7 +417,7 @@ class Nerve extends BaseType implements NerveContract, AnatomicalStructureContra
      * @return static
      *
      * @see https://schema.org/sensoryUnit
-     * @see http://health-lifesci.schema.org
+     * @see https://health-lifesci.schema.org
      */
     public function sensoryUnit($sensoryUnit)
     {
@@ -432,7 +432,7 @@ class Nerve extends BaseType implements NerveContract, AnatomicalStructureContra
      * @return static
      *
      * @see https://schema.org/sourcedFrom
-     * @see http://health-lifesci.schema.org
+     * @see https://health-lifesci.schema.org
      */
     public function sourcedFrom($sourcedFrom)
     {
@@ -447,7 +447,7 @@ class Nerve extends BaseType implements NerveContract, AnatomicalStructureContra
      * @return static
      *
      * @see https://schema.org/study
-     * @see http://health-lifesci.schema.org
+     * @see https://health-lifesci.schema.org
      */
     public function study($study)
     {
@@ -462,7 +462,7 @@ class Nerve extends BaseType implements NerveContract, AnatomicalStructureContra
      * @return static
      *
      * @see https://schema.org/subStructure
-     * @see http://health-lifesci.schema.org
+     * @see https://health-lifesci.schema.org
      */
     public function subStructure($subStructure)
     {

@@ -12,7 +12,7 @@ use \Spatie\SchemaOrg\Contracts\ThingContract;
  * country.
  *
  * @see https://schema.org/DrugStrength
- * @see http://health-lifesci.schema.org
+ * @see https://health-lifesci.schema.org
  *
  */
 class DrugStrength extends BaseType implements DrugStrengthContract, MedicalEntityContract, MedicalIntangibleContract, ThingContract
@@ -26,7 +26,7 @@ class DrugStrength extends BaseType implements DrugStrengthContract, MedicalEnti
      * @return static
      *
      * @see https://schema.org/activeIngredient
-     * @see http://health-lifesci.schema.org
+     * @see https://health-lifesci.schema.org
      */
     public function activeIngredient($activeIngredient)
     {
@@ -74,7 +74,7 @@ class DrugStrength extends BaseType implements DrugStrengthContract, MedicalEnti
      * @return static
      *
      * @see https://schema.org/availableIn
-     * @see http://health-lifesci.schema.org
+     * @see https://health-lifesci.schema.org
      */
     public function availableIn($availableIn)
     {
@@ -90,7 +90,7 @@ class DrugStrength extends BaseType implements DrugStrengthContract, MedicalEnti
      * @return static
      *
      * @see https://schema.org/code
-     * @see http://health-lifesci.schema.org
+     * @see https://health-lifesci.schema.org
      */
     public function code($code)
     {
@@ -136,7 +136,7 @@ class DrugStrength extends BaseType implements DrugStrengthContract, MedicalEnti
      * @return static
      *
      * @see https://schema.org/guideline
-     * @see http://health-lifesci.schema.org
+     * @see https://health-lifesci.schema.org
      */
     public function guideline($guideline)
     {
@@ -185,7 +185,7 @@ class DrugStrength extends BaseType implements DrugStrengthContract, MedicalEnti
      * @return static
      *
      * @see https://schema.org/legalStatus
-     * @see http://health-lifesci.schema.org
+     * @see https://health-lifesci.schema.org
      */
     public function legalStatus($legalStatus)
     {
@@ -217,7 +217,7 @@ class DrugStrength extends BaseType implements DrugStrengthContract, MedicalEnti
      * @return static
      *
      * @see https://schema.org/maximumIntake
-     * @see http://health-lifesci.schema.org
+     * @see https://health-lifesci.schema.org
      */
     public function maximumIntake($maximumIntake)
     {
@@ -233,7 +233,7 @@ class DrugStrength extends BaseType implements DrugStrengthContract, MedicalEnti
      * @return static
      *
      * @see https://schema.org/medicineSystem
-     * @see http://health-lifesci.schema.org
+     * @see https://health-lifesci.schema.org
      */
     public function medicineSystem($medicineSystem)
     {
@@ -278,7 +278,7 @@ class DrugStrength extends BaseType implements DrugStrengthContract, MedicalEnti
      * @return static
      *
      * @see https://schema.org/recognizingAuthority
-     * @see http://health-lifesci.schema.org
+     * @see https://health-lifesci.schema.org
      */
     public function recognizingAuthority($recognizingAuthority)
     {
@@ -293,7 +293,7 @@ class DrugStrength extends BaseType implements DrugStrengthContract, MedicalEnti
      * @return static
      *
      * @see https://schema.org/relevantSpecialty
-     * @see http://health-lifesci.schema.org
+     * @see https://health-lifesci.schema.org
      */
     public function relevantSpecialty($relevantSpecialty)
     {
@@ -324,7 +324,7 @@ class DrugStrength extends BaseType implements DrugStrengthContract, MedicalEnti
      * @return static
      *
      * @see https://schema.org/strengthUnit
-     * @see http://health-lifesci.schema.org
+     * @see https://health-lifesci.schema.org
      */
     public function strengthUnit($strengthUnit)
     {
@@ -339,7 +339,7 @@ class DrugStrength extends BaseType implements DrugStrengthContract, MedicalEnti
      * @return static
      *
      * @see https://schema.org/strengthValue
-     * @see http://health-lifesci.schema.org
+     * @see https://health-lifesci.schema.org
      */
     public function strengthValue($strengthValue)
     {
@@ -354,7 +354,7 @@ class DrugStrength extends BaseType implements DrugStrengthContract, MedicalEnti
      * @return static
      *
      * @see https://schema.org/study
-     * @see http://health-lifesci.schema.org
+     * @see https://health-lifesci.schema.org
      */
     public function study($study)
     {

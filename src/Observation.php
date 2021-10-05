@@ -19,7 +19,7 @@ use \Spatie\SchemaOrg\Contracts\ThingContract;
  * datasets](/docs/data-and-datasets.html) overview for more details.
  *
  * @see https://schema.org/Observation
- * @see http://pending.schema.org
+ * @see https://pending.schema.org
  * @link https://github.com/schemaorg/schemaorg/issues/2291
  *
  * @method static measuredValue($measuredValue) The value should be instance of pending types DataType|DataType[]
@@ -147,7 +147,7 @@ class Observation extends BaseType implements ObservationContract, IntangibleCon
      * @return static
      *
      * @see https://schema.org/marginOfError
-     * @see http://pending.schema.org
+     * @see https://pending.schema.org
      * @link https://github.com/schemaorg/schemaorg/issues/2291
      */
     public function marginOfError($marginOfError)
@@ -166,7 +166,7 @@ class Observation extends BaseType implements ObservationContract, IntangibleCon
      * @return static
      *
      * @see https://schema.org/measuredProperty
-     * @see http://pending.schema.org
+     * @see https://pending.schema.org
      * @link https://github.com/schemaorg/schemaorg/issues/2291
      */
     public function measuredProperty($measuredProperty)
@@ -196,7 +196,7 @@ class Observation extends BaseType implements ObservationContract, IntangibleCon
      * @return static
      *
      * @see https://schema.org/observationDate
-     * @see http://pending.schema.org
+     * @see https://pending.schema.org
      * @link https://github.com/schemaorg/schemaorg/issues/2291
      */
     public function observationDate($observationDate)
@@ -213,7 +213,7 @@ class Observation extends BaseType implements ObservationContract, IntangibleCon
      * @return static
      *
      * @see https://schema.org/observedNode
-     * @see http://pending.schema.org
+     * @see https://pending.schema.org
      * @link https://github.com/schemaorg/schemaorg/issues/2291
      */
     public function observedNode($observedNode)

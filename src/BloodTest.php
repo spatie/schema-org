@@ -11,7 +11,7 @@ use \Spatie\SchemaOrg\Contracts\ThingContract;
  * A medical test performed on a sample of a patient's blood.
  *
  * @see https://schema.org/BloodTest
- * @see http://health-lifesci.schema.org
+ * @see https://health-lifesci.schema.org
  *
  */
 class BloodTest extends BaseType implements BloodTestContract, MedicalEntityContract, MedicalTestContract, ThingContract
@@ -43,7 +43,7 @@ class BloodTest extends BaseType implements BloodTestContract, MedicalEntityCont
      * @return static
      *
      * @see https://schema.org/affectedBy
-     * @see http://health-lifesci.schema.org
+     * @see https://health-lifesci.schema.org
      */
     public function affectedBy($affectedBy)
     {
@@ -73,7 +73,7 @@ class BloodTest extends BaseType implements BloodTestContract, MedicalEntityCont
      * @return static
      *
      * @see https://schema.org/code
-     * @see http://health-lifesci.schema.org
+     * @see https://health-lifesci.schema.org
      */
     public function code($code)
     {
@@ -119,7 +119,7 @@ class BloodTest extends BaseType implements BloodTestContract, MedicalEntityCont
      * @return static
      *
      * @see https://schema.org/guideline
-     * @see http://health-lifesci.schema.org
+     * @see https://health-lifesci.schema.org
      */
     public function guideline($guideline)
     {
@@ -168,7 +168,7 @@ class BloodTest extends BaseType implements BloodTestContract, MedicalEntityCont
      * @return static
      *
      * @see https://schema.org/legalStatus
-     * @see http://health-lifesci.schema.org
+     * @see https://health-lifesci.schema.org
      */
     public function legalStatus($legalStatus)
     {
@@ -200,7 +200,7 @@ class BloodTest extends BaseType implements BloodTestContract, MedicalEntityCont
      * @return static
      *
      * @see https://schema.org/medicineSystem
-     * @see http://health-lifesci.schema.org
+     * @see https://health-lifesci.schema.org
      */
     public function medicineSystem($medicineSystem)
     {
@@ -229,7 +229,7 @@ class BloodTest extends BaseType implements BloodTestContract, MedicalEntityCont
      * @return static
      *
      * @see https://schema.org/normalRange
-     * @see http://health-lifesci.schema.org
+     * @see https://health-lifesci.schema.org
      */
     public function normalRange($normalRange)
     {
@@ -260,7 +260,7 @@ class BloodTest extends BaseType implements BloodTestContract, MedicalEntityCont
      * @return static
      *
      * @see https://schema.org/recognizingAuthority
-     * @see http://health-lifesci.schema.org
+     * @see https://health-lifesci.schema.org
      */
     public function recognizingAuthority($recognizingAuthority)
     {
@@ -275,7 +275,7 @@ class BloodTest extends BaseType implements BloodTestContract, MedicalEntityCont
      * @return static
      *
      * @see https://schema.org/relevantSpecialty
-     * @see http://health-lifesci.schema.org
+     * @see https://health-lifesci.schema.org
      */
     public function relevantSpecialty($relevantSpecialty)
     {
@@ -306,7 +306,7 @@ class BloodTest extends BaseType implements BloodTestContract, MedicalEntityCont
      * @return static
      *
      * @see https://schema.org/signDetected
-     * @see http://health-lifesci.schema.org
+     * @see https://health-lifesci.schema.org
      */
     public function signDetected($signDetected)
     {
@@ -321,7 +321,7 @@ class BloodTest extends BaseType implements BloodTestContract, MedicalEntityCont
      * @return static
      *
      * @see https://schema.org/study
-     * @see http://health-lifesci.schema.org
+     * @see https://health-lifesci.schema.org
      */
     public function study($study)
     {
@@ -365,7 +365,7 @@ class BloodTest extends BaseType implements BloodTestContract, MedicalEntityCont
      * @return static
      *
      * @see https://schema.org/usedToDiagnose
-     * @see http://health-lifesci.schema.org
+     * @see https://health-lifesci.schema.org
      */
     public function usedToDiagnose($usedToDiagnose)
     {
@@ -380,7 +380,7 @@ class BloodTest extends BaseType implements BloodTestContract, MedicalEntityCont
      * @return static
      *
      * @see https://schema.org/usesDevice
-     * @see http://health-lifesci.schema.org
+     * @see https://health-lifesci.schema.org
      */
     public function usesDevice($usesDevice)
     {

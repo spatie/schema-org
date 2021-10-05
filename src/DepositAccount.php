@@ -28,7 +28,7 @@ class DepositAccount extends BaseType implements DepositAccountContract, BankAcc
      * @return static
      *
      * @see https://schema.org/accountMinimumInflow
-     * @see http://pending.schema.org
+     * @see https://pending.schema.org
      */
     public function accountMinimumInflow($accountMinimumInflow)
     {
@@ -46,7 +46,7 @@ class DepositAccount extends BaseType implements DepositAccountContract, BankAcc
      * @return static
      *
      * @see https://schema.org/accountOverdraftLimit
-     * @see http://pending.schema.org
+     * @see https://pending.schema.org
      */
     public function accountOverdraftLimit($accountOverdraftLimit)
     {
@@ -198,7 +198,7 @@ class DepositAccount extends BaseType implements DepositAccountContract, BankAcc
      * @return static
      *
      * @see https://schema.org/bankAccountType
-     * @see http://pending.schema.org
+     * @see https://pending.schema.org
      */
     public function bankAccountType($bankAccountType)
     {
@@ -661,7 +661,7 @@ class DepositAccount extends BaseType implements DepositAccountContract, BankAcc
      * @return static
      *
      * @see https://schema.org/termsOfService
-     * @see http://pending.schema.org
+     * @see https://pending.schema.org
      * @link https://github.com/schemaorg/schemaorg/issues/1423
      */
     public function termsOfService($termsOfService)

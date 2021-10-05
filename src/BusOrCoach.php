@@ -13,7 +13,7 @@ use \Spatie\SchemaOrg\Contracts\VehicleContract;
  * travel.
  *
  * @see https://schema.org/BusOrCoach
- * @see http://auto.schema.org
+ * @see https://auto.schema.org
  * @link http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#Automotive_Ontology_Working_Group
  *
  */
@@ -36,7 +36,7 @@ class BusOrCoach extends BaseType implements BusOrCoachContract, ProductContract
      * @return static
      *
      * @see https://schema.org/accelerationTime
-     * @see http://auto.schema.org
+     * @see https://auto.schema.org
      * @link http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#Automotive_Ontology_Working_Group
      */
     public function accelerationTime($accelerationTime)
@@ -54,7 +54,7 @@ class BusOrCoach extends BaseType implements BusOrCoachContract, ProductContract
      * @return static
      *
      * @see https://schema.org/acrissCode
-     * @see http://auto.schema.org
+     * @see https://auto.schema.org
      * @link http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#Automotive_Ontology_Working_Group
      */
     public function acrissCode($acrissCode)
@@ -183,7 +183,7 @@ class BusOrCoach extends BaseType implements BusOrCoachContract, ProductContract
      * @return static
      *
      * @see https://schema.org/bodyType
-     * @see http://auto.schema.org
+     * @see https://auto.schema.org
      * @link http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#Automotive_Ontology_Working_Group
      */
     public function bodyType($bodyType)
@@ -216,7 +216,7 @@ class BusOrCoach extends BaseType implements BusOrCoachContract, ProductContract
      * @return static
      *
      * @see https://schema.org/callSign
-     * @see http://pending.schema.org
+     * @see https://pending.schema.org
      * @link https://github.com/schemaorg/schemaorg/issues/2109
      */
     public function callSign($callSign)
@@ -362,7 +362,7 @@ class BusOrCoach extends BaseType implements BusOrCoachContract, ProductContract
      * @return static
      *
      * @see https://schema.org/emissionsCO2
-     * @see http://auto.schema.org
+     * @see https://auto.schema.org
      * @link http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#Automotive_Ontology_Working_Group
      */
     public function emissionsCO2($emissionsCO2)
@@ -383,7 +383,7 @@ class BusOrCoach extends BaseType implements BusOrCoachContract, ProductContract
      * @return static
      *
      * @see https://schema.org/fuelCapacity
-     * @see http://auto.schema.org
+     * @see https://auto.schema.org
      * @link http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#Automotive_Ontology_Working_Group
      */
     public function fuelCapacity($fuelCapacity)
@@ -490,7 +490,7 @@ class BusOrCoach extends BaseType implements BusOrCoachContract, ProductContract
      * @return static
      *
      * @see https://schema.org/gtin
-     * @see http://pending.schema.org
+     * @see https://pending.schema.org
      * @link https://github.com/schemaorg/schemaorg/issues/2288
      */
     public function gtin($gtin)
@@ -575,6 +575,23 @@ class BusOrCoach extends BaseType implements BusOrCoachContract, ProductContract
     }
 
     /**
+     * Defines the energy efficiency Category (also known as "class" or
+     * "rating") for a product according to an international energy efficiency
+     * standard
+     *
+     * @param \Spatie\SchemaOrg\Contracts\EnergyConsumptionDetailsContract|\Spatie\SchemaOrg\Contracts\EnergyConsumptionDetailsContract[] $hasEnergyConsumptionDetails
+     *
+     * @return static
+     *
+     * @see https://schema.org/hasEnergyConsumptionDetails
+     * @link https://github.com/schemaorg/schemaorg/issues/2670
+     */
+    public function hasEnergyConsumptionDetails($hasEnergyConsumptionDetails)
+    {
+        return $this->setProperty('hasEnergyConsumptionDetails', $hasEnergyConsumptionDetails);
+    }
+
+    /**
      * Indicates a MerchantReturnPolicy that may be applicable.
      *
      * @param \Spatie\SchemaOrg\Contracts\MerchantReturnPolicyContract|\Spatie\SchemaOrg\Contracts\MerchantReturnPolicyContract[] $hasMerchantReturnPolicy
@@ -582,7 +599,7 @@ class BusOrCoach extends BaseType implements BusOrCoachContract, ProductContract
      * @return static
      *
      * @see https://schema.org/hasMerchantReturnPolicy
-     * @see http://pending.schema.org
+     * @see https://pending.schema.org
      * @link https://github.com/schemaorg/schemaorg/issues/2288
      */
     public function hasMerchantReturnPolicy($hasMerchantReturnPolicy)
@@ -598,7 +615,7 @@ class BusOrCoach extends BaseType implements BusOrCoachContract, ProductContract
      * @return static
      *
      * @see https://schema.org/hasProductReturnPolicy
-     * @see http://attic.schema.org
+     * @see https://attic.schema.org
      * @link https://github.com/schemaorg/schemaorg/issues/2288
      */
     public function hasProductReturnPolicy($hasProductReturnPolicy)
@@ -662,7 +679,7 @@ class BusOrCoach extends BaseType implements BusOrCoachContract, ProductContract
      * @return static
      *
      * @see https://schema.org/inProductGroupWithID
-     * @see http://pending.schema.org
+     * @see https://pending.schema.org
      * @link https://github.com/schemaorg/schemaorg/issues/1797
      */
     public function inProductGroupWithID($inProductGroupWithID)
@@ -857,7 +874,7 @@ class BusOrCoach extends BaseType implements BusOrCoachContract, ProductContract
      * @return static
      *
      * @see https://schema.org/meetsEmissionStandard
-     * @see http://auto.schema.org
+     * @see https://auto.schema.org
      * @link http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#Automotive_Ontology_Working_Group
      */
     public function meetsEmissionStandard($meetsEmissionStandard)
@@ -910,7 +927,7 @@ class BusOrCoach extends BaseType implements BusOrCoachContract, ProductContract
      * @return static
      *
      * @see https://schema.org/modelDate
-     * @see http://auto.schema.org
+     * @see https://auto.schema.org
      * @link http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#Automotive_Ontology_Working_Group
      */
     public function modelDate($modelDate)
@@ -958,7 +975,7 @@ class BusOrCoach extends BaseType implements BusOrCoachContract, ProductContract
      * @return static
      *
      * @see https://schema.org/nsn
-     * @see http://pending.schema.org
+     * @see https://pending.schema.org
      * @link https://github.com/schemaorg/schemaorg/issues/2126
      */
     public function nsn($nsn)
@@ -1082,7 +1099,7 @@ class BusOrCoach extends BaseType implements BusOrCoachContract, ProductContract
      * @return static
      *
      * @see https://schema.org/pattern
-     * @see http://pending.schema.org
+     * @see https://pending.schema.org
      * @link https://github.com/schemaorg/schemaorg/issues/1797
      */
     public function pattern($pattern)
@@ -1110,7 +1127,7 @@ class BusOrCoach extends BaseType implements BusOrCoachContract, ProductContract
      * @return static
      *
      * @see https://schema.org/payload
-     * @see http://auto.schema.org
+     * @see https://auto.schema.org
      * @link http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#Automotive_Ontology_Working_Group
      */
     public function payload($payload)
@@ -1240,7 +1257,7 @@ class BusOrCoach extends BaseType implements BusOrCoachContract, ProductContract
      * @return static
      *
      * @see https://schema.org/roofLoad
-     * @see http://auto.schema.org
+     * @see https://auto.schema.org
      * @link http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#Automotive_Ontology_Working_Group
      */
     public function roofLoad($roofLoad)
@@ -1276,7 +1293,7 @@ class BusOrCoach extends BaseType implements BusOrCoachContract, ProductContract
      * @return static
      *
      * @see https://schema.org/seatingCapacity
-     * @see http://auto.schema.org
+     * @see https://auto.schema.org
      * @link http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#Automotive_Ontology_Working_Group
      */
     public function seatingCapacity($seatingCapacity)
@@ -1297,7 +1314,7 @@ class BusOrCoach extends BaseType implements BusOrCoachContract, ProductContract
      * @return static
      *
      * @see https://schema.org/size
-     * @see http://pending.schema.org
+     * @see https://pending.schema.org
      * @link https://github.com/schemaorg/schemaorg/issues/1797
      */
     public function size($size)
@@ -1354,7 +1371,7 @@ class BusOrCoach extends BaseType implements BusOrCoachContract, ProductContract
      * @return static
      *
      * @see https://schema.org/speed
-     * @see http://auto.schema.org
+     * @see https://auto.schema.org
      * @link http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#Automotive_Ontology_Working_Group
      */
     public function speed($speed)
@@ -1385,7 +1402,7 @@ class BusOrCoach extends BaseType implements BusOrCoachContract, ProductContract
      * @return static
      *
      * @see https://schema.org/stupidProperty
-     * @see http://attic.schema.org
+     * @see https://attic.schema.org
      */
     public function stupidProperty($stupidProperty)
     {
@@ -1426,7 +1443,7 @@ class BusOrCoach extends BaseType implements BusOrCoachContract, ProductContract
      * @return static
      *
      * @see https://schema.org/tongueWeight
-     * @see http://auto.schema.org
+     * @see https://auto.schema.org
      * @link http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#Automotive_Ontology_Working_Group
      */
     public function tongueWeight($tongueWeight)
@@ -1450,7 +1467,7 @@ class BusOrCoach extends BaseType implements BusOrCoachContract, ProductContract
      * @return static
      *
      * @see https://schema.org/trailerWeight
-     * @see http://auto.schema.org
+     * @see https://auto.schema.org
      * @link http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#Automotive_Ontology_Working_Group
      */
     public function trailerWeight($trailerWeight)
@@ -1597,7 +1614,7 @@ class BusOrCoach extends BaseType implements BusOrCoachContract, ProductContract
      * @return static
      *
      * @see https://schema.org/vehicleSpecialUsage
-     * @see http://auto.schema.org
+     * @see https://auto.schema.org
      * @link http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#Automotive_Ontology_Working_Group
      */
     public function vehicleSpecialUsage($vehicleSpecialUsage)
@@ -1655,7 +1672,7 @@ class BusOrCoach extends BaseType implements BusOrCoachContract, ProductContract
      * @return static
      *
      * @see https://schema.org/weightTotal
-     * @see http://auto.schema.org
+     * @see https://auto.schema.org
      * @link http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#Automotive_Ontology_Working_Group
      */
     public function weightTotal($weightTotal)
@@ -1674,7 +1691,7 @@ class BusOrCoach extends BaseType implements BusOrCoachContract, ProductContract
      * @return static
      *
      * @see https://schema.org/wheelbase
-     * @see http://auto.schema.org
+     * @see https://auto.schema.org
      * @link http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#Automotive_Ontology_Working_Group
      */
     public function wheelbase($wheelbase)

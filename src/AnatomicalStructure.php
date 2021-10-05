@@ -11,7 +11,7 @@ use \Spatie\SchemaOrg\Contracts\ThingContract;
  * Organs, tissues, and cells are all anatomical structures.
  *
  * @see https://schema.org/AnatomicalStructure
- * @see http://health-lifesci.schema.org
+ * @see https://health-lifesci.schema.org
  *
  */
 class AnatomicalStructure extends BaseType implements AnatomicalStructureContract, MedicalEntityContract, ThingContract
@@ -59,7 +59,7 @@ class AnatomicalStructure extends BaseType implements AnatomicalStructureContrac
      * @return static
      *
      * @see https://schema.org/associatedPathophysiology
-     * @see http://health-lifesci.schema.org
+     * @see https://health-lifesci.schema.org
      */
     public function associatedPathophysiology($associatedPathophysiology)
     {
@@ -74,7 +74,7 @@ class AnatomicalStructure extends BaseType implements AnatomicalStructureContrac
      * @return static
      *
      * @see https://schema.org/bodyLocation
-     * @see http://health-lifesci.schema.org
+     * @see https://health-lifesci.schema.org
      */
     public function bodyLocation($bodyLocation)
     {
@@ -90,7 +90,7 @@ class AnatomicalStructure extends BaseType implements AnatomicalStructureContrac
      * @return static
      *
      * @see https://schema.org/code
-     * @see http://health-lifesci.schema.org
+     * @see https://health-lifesci.schema.org
      */
     public function code($code)
     {
@@ -105,7 +105,7 @@ class AnatomicalStructure extends BaseType implements AnatomicalStructureContrac
      * @return static
      *
      * @see https://schema.org/connectedTo
-     * @see http://health-lifesci.schema.org
+     * @see https://health-lifesci.schema.org
      */
     public function connectedTo($connectedTo)
     {
@@ -135,7 +135,7 @@ class AnatomicalStructure extends BaseType implements AnatomicalStructureContrac
      * @return static
      *
      * @see https://schema.org/diagram
-     * @see http://health-lifesci.schema.org
+     * @see https://health-lifesci.schema.org
      */
     public function diagram($diagram)
     {
@@ -167,7 +167,7 @@ class AnatomicalStructure extends BaseType implements AnatomicalStructureContrac
      * @return static
      *
      * @see https://schema.org/guideline
-     * @see http://health-lifesci.schema.org
+     * @see https://health-lifesci.schema.org
      */
     public function guideline($guideline)
     {
@@ -216,7 +216,7 @@ class AnatomicalStructure extends BaseType implements AnatomicalStructureContrac
      * @return static
      *
      * @see https://schema.org/legalStatus
-     * @see http://health-lifesci.schema.org
+     * @see https://health-lifesci.schema.org
      */
     public function legalStatus($legalStatus)
     {
@@ -248,7 +248,7 @@ class AnatomicalStructure extends BaseType implements AnatomicalStructureContrac
      * @return static
      *
      * @see https://schema.org/medicineSystem
-     * @see http://health-lifesci.schema.org
+     * @see https://health-lifesci.schema.org
      */
     public function medicineSystem($medicineSystem)
     {
@@ -277,7 +277,7 @@ class AnatomicalStructure extends BaseType implements AnatomicalStructureContrac
      * @return static
      *
      * @see https://schema.org/partOfSystem
-     * @see http://health-lifesci.schema.org
+     * @see https://health-lifesci.schema.org
      */
     public function partOfSystem($partOfSystem)
     {
@@ -308,7 +308,7 @@ class AnatomicalStructure extends BaseType implements AnatomicalStructureContrac
      * @return static
      *
      * @see https://schema.org/recognizingAuthority
-     * @see http://health-lifesci.schema.org
+     * @see https://health-lifesci.schema.org
      */
     public function recognizingAuthority($recognizingAuthority)
     {
@@ -323,7 +323,7 @@ class AnatomicalStructure extends BaseType implements AnatomicalStructureContrac
      * @return static
      *
      * @see https://schema.org/relatedCondition
-     * @see http://health-lifesci.schema.org
+     * @see https://health-lifesci.schema.org
      */
     public function relatedCondition($relatedCondition)
     {
@@ -338,7 +338,7 @@ class AnatomicalStructure extends BaseType implements AnatomicalStructureContrac
      * @return static
      *
      * @see https://schema.org/relatedTherapy
-     * @see http://health-lifesci.schema.org
+     * @see https://health-lifesci.schema.org
      */
     public function relatedTherapy($relatedTherapy)
     {
@@ -353,7 +353,7 @@ class AnatomicalStructure extends BaseType implements AnatomicalStructureContrac
      * @return static
      *
      * @see https://schema.org/relevantSpecialty
-     * @see http://health-lifesci.schema.org
+     * @see https://health-lifesci.schema.org
      */
     public function relevantSpecialty($relevantSpecialty)
     {
@@ -384,7 +384,7 @@ class AnatomicalStructure extends BaseType implements AnatomicalStructureContrac
      * @return static
      *
      * @see https://schema.org/study
-     * @see http://health-lifesci.schema.org
+     * @see https://health-lifesci.schema.org
      */
     public function study($study)
     {
@@ -399,7 +399,7 @@ class AnatomicalStructure extends BaseType implements AnatomicalStructureContrac
      * @return static
      *
      * @see https://schema.org/subStructure
-     * @see http://health-lifesci.schema.org
+     * @see https://health-lifesci.schema.org
      */
     public function subStructure($subStructure)
     {

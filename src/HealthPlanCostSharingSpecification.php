@@ -10,7 +10,7 @@ use \Spatie\SchemaOrg\Contracts\ThingContract;
  * A description of costs to the patient under a given network or formulary.
  *
  * @see https://schema.org/HealthPlanCostSharingSpecification
- * @see http://pending.schema.org
+ * @see https://pending.schema.org
  * @link https://github.com/schemaorg/schemaorg/issues/1062
  *
  */
@@ -89,7 +89,7 @@ class HealthPlanCostSharingSpecification extends BaseType implements HealthPlanC
      * @return static
      *
      * @see https://schema.org/healthPlanCoinsuranceOption
-     * @see http://pending.schema.org
+     * @see https://pending.schema.org
      * @link https://github.com/schemaorg/schemaorg/issues/1062
      */
     public function healthPlanCoinsuranceOption($healthPlanCoinsuranceOption)
@@ -106,7 +106,7 @@ class HealthPlanCostSharingSpecification extends BaseType implements HealthPlanC
      * @return static
      *
      * @see https://schema.org/healthPlanCoinsuranceRate
-     * @see http://pending.schema.org
+     * @see https://pending.schema.org
      * @link https://github.com/schemaorg/schemaorg/issues/1062
      */
     public function healthPlanCoinsuranceRate($healthPlanCoinsuranceRate)
@@ -122,7 +122,7 @@ class HealthPlanCostSharingSpecification extends BaseType implements HealthPlanC
      * @return static
      *
      * @see https://schema.org/healthPlanCopay
-     * @see http://pending.schema.org
+     * @see https://pending.schema.org
      * @link https://github.com/schemaorg/schemaorg/issues/1062
      */
     public function healthPlanCopay($healthPlanCopay)
@@ -139,7 +139,7 @@ class HealthPlanCostSharingSpecification extends BaseType implements HealthPlanC
      * @return static
      *
      * @see https://schema.org/healthPlanCopayOption
-     * @see http://pending.schema.org
+     * @see https://pending.schema.org
      * @link https://github.com/schemaorg/schemaorg/issues/1062
      */
     public function healthPlanCopayOption($healthPlanCopayOption)
@@ -155,7 +155,7 @@ class HealthPlanCostSharingSpecification extends BaseType implements HealthPlanC
      * @return static
      *
      * @see https://schema.org/healthPlanPharmacyCategory
-     * @see http://pending.schema.org
+     * @see https://pending.schema.org
      * @link https://github.com/schemaorg/schemaorg/issues/1062
      */
     public function healthPlanPharmacyCategory($healthPlanPharmacyCategory)

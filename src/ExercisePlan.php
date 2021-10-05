@@ -15,7 +15,7 @@ use \Spatie\SchemaOrg\Contracts\ThingContract;
  * clinician.
  *
  * @see https://schema.org/ExercisePlan
- * @see http://health-lifesci.schema.org
+ * @see https://health-lifesci.schema.org
  *
  */
 class ExercisePlan extends BaseType implements ExercisePlanContract, CreativeWorkContract, LifestyleModificationContract, MedicalEntityContract, PhysicalActivityContract, ThingContract
@@ -43,7 +43,7 @@ class ExercisePlan extends BaseType implements ExercisePlanContract, CreativeWor
      * @return static
      *
      * @see https://schema.org/abstract
-     * @see http://pending.schema.org
+     * @see https://pending.schema.org
      * @link https://github.com/schemaorg/schemaorg/issues/276
      */
     public function abstract($abstract)
@@ -193,7 +193,7 @@ class ExercisePlan extends BaseType implements ExercisePlanContract, CreativeWor
      * @return static
      *
      * @see https://schema.org/acquireLicensePage
-     * @see http://pending.schema.org
+     * @see https://pending.schema.org
      * @link https://github.com/schemaorg/schemaorg/issues/2454
      */
     public function acquireLicensePage($acquireLicensePage)
@@ -209,7 +209,7 @@ class ExercisePlan extends BaseType implements ExercisePlanContract, CreativeWor
      * @return static
      *
      * @see https://schema.org/activityDuration
-     * @see http://health-lifesci.schema.org
+     * @see https://health-lifesci.schema.org
      */
     public function activityDuration($activityDuration)
     {
@@ -224,7 +224,7 @@ class ExercisePlan extends BaseType implements ExercisePlanContract, CreativeWor
      * @return static
      *
      * @see https://schema.org/activityFrequency
-     * @see http://health-lifesci.schema.org
+     * @see https://health-lifesci.schema.org
      */
     public function activityFrequency($activityFrequency)
     {
@@ -261,7 +261,7 @@ class ExercisePlan extends BaseType implements ExercisePlanContract, CreativeWor
      * @return static
      *
      * @see https://schema.org/additionalVariable
-     * @see http://health-lifesci.schema.org
+     * @see https://health-lifesci.schema.org
      */
     public function additionalVariable($additionalVariable)
     {
@@ -320,7 +320,7 @@ class ExercisePlan extends BaseType implements ExercisePlanContract, CreativeWor
      * @return static
      *
      * @see https://schema.org/assesses
-     * @see http://pending.schema.org
+     * @see https://pending.schema.org
      * @link https://github.com/schemaorg/schemaorg/issues/2427
      */
     public function assesses($assesses)
@@ -337,7 +337,7 @@ class ExercisePlan extends BaseType implements ExercisePlanContract, CreativeWor
      * @return static
      *
      * @see https://schema.org/associatedAnatomy
-     * @see http://health-lifesci.schema.org
+     * @see https://health-lifesci.schema.org
      */
     public function associatedAnatomy($associatedAnatomy)
     {
@@ -485,7 +485,7 @@ class ExercisePlan extends BaseType implements ExercisePlanContract, CreativeWor
      * @return static
      *
      * @see https://schema.org/code
-     * @see http://health-lifesci.schema.org
+     * @see https://health-lifesci.schema.org
      */
     public function code($code)
     {
@@ -537,7 +537,7 @@ class ExercisePlan extends BaseType implements ExercisePlanContract, CreativeWor
      * @return static
      *
      * @see https://schema.org/conditionsOfAccess
-     * @see http://pending.schema.org
+     * @see https://pending.schema.org
      * @link https://github.com/schemaorg/schemaorg/issues/2173
      */
     public function conditionsOfAccess($conditionsOfAccess)
@@ -583,7 +583,7 @@ class ExercisePlan extends BaseType implements ExercisePlanContract, CreativeWor
      * @return static
      *
      * @see https://schema.org/contentReferenceTime
-     * @see http://pending.schema.org
+     * @see https://pending.schema.org
      * @link https://github.com/schemaorg/schemaorg/issues/1050
      */
     public function contentReferenceTime($contentReferenceTime)
@@ -643,7 +643,7 @@ class ExercisePlan extends BaseType implements ExercisePlanContract, CreativeWor
      * @return static
      *
      * @see https://schema.org/correction
-     * @see http://pending.schema.org
+     * @see https://pending.schema.org
      */
     public function correction($correction)
     {
@@ -661,7 +661,7 @@ class ExercisePlan extends BaseType implements ExercisePlanContract, CreativeWor
      * @return static
      *
      * @see https://schema.org/creativeWorkStatus
-     * @see http://pending.schema.org
+     * @see https://pending.schema.org
      * @link https://github.com/schemaorg/schemaorg/issues/987
      */
     public function creativeWorkStatus($creativeWorkStatus)
@@ -793,7 +793,7 @@ class ExercisePlan extends BaseType implements ExercisePlanContract, CreativeWor
      * @return static
      *
      * @see https://schema.org/editEIDR
-     * @see http://pending.schema.org
+     * @see https://pending.schema.org
      * @link https://github.com/schemaorg/schemaorg/issues/2469
      */
     public function editEIDR($editEIDR)
@@ -843,7 +843,7 @@ class ExercisePlan extends BaseType implements ExercisePlanContract, CreativeWor
      * @return static
      *
      * @see https://schema.org/educationalLevel
-     * @see http://pending.schema.org
+     * @see https://pending.schema.org
      * @link https://github.com/schemaorg/schemaorg/issues/1779
      */
     public function educationalLevel($educationalLevel)
@@ -931,7 +931,7 @@ class ExercisePlan extends BaseType implements ExercisePlanContract, CreativeWor
      * @return static
      *
      * @see https://schema.org/epidemiology
-     * @see http://health-lifesci.schema.org
+     * @see https://health-lifesci.schema.org
      */
     public function epidemiology($epidemiology)
     {
@@ -963,7 +963,7 @@ class ExercisePlan extends BaseType implements ExercisePlanContract, CreativeWor
      * @return static
      *
      * @see https://schema.org/exerciseType
-     * @see http://health-lifesci.schema.org
+     * @see https://health-lifesci.schema.org
      */
     public function exerciseType($exerciseType)
     {
@@ -1046,7 +1046,7 @@ class ExercisePlan extends BaseType implements ExercisePlanContract, CreativeWor
      * @return static
      *
      * @see https://schema.org/guideline
-     * @see http://health-lifesci.schema.org
+     * @see https://health-lifesci.schema.org
      */
     public function guideline($guideline)
     {
@@ -1144,7 +1144,7 @@ class ExercisePlan extends BaseType implements ExercisePlanContract, CreativeWor
      * @return static
      *
      * @see https://schema.org/intensity
-     * @see http://health-lifesci.schema.org
+     * @see https://health-lifesci.schema.org
      */
     public function intensity($intensity)
     {
@@ -1261,7 +1261,7 @@ class ExercisePlan extends BaseType implements ExercisePlanContract, CreativeWor
      * Keywords or tags used to describe this content. Multiple entries in a
      * keywords list are typically delimited by commas.
      *
-     * @param string|string[] $keywords
+     * @param \Spatie\SchemaOrg\Contracts\DefinedTermContract|\Spatie\SchemaOrg\Contracts\DefinedTermContract[]|string|string[] $keywords
      *
      * @return static
      *
@@ -1296,7 +1296,7 @@ class ExercisePlan extends BaseType implements ExercisePlanContract, CreativeWor
      * @return static
      *
      * @see https://schema.org/legalStatus
-     * @see http://health-lifesci.schema.org
+     * @see https://health-lifesci.schema.org
      */
     public function legalStatus($legalStatus)
     {
@@ -1384,7 +1384,7 @@ class ExercisePlan extends BaseType implements ExercisePlanContract, CreativeWor
      * @return static
      *
      * @see https://schema.org/maintainer
-     * @see http://pending.schema.org
+     * @see https://pending.schema.org
      * @link https://github.com/schemaorg/schemaorg/issues/2311
      */
     public function maintainer($maintainer)
@@ -1416,7 +1416,7 @@ class ExercisePlan extends BaseType implements ExercisePlanContract, CreativeWor
      * @return static
      *
      * @see https://schema.org/materialExtent
-     * @see http://pending.schema.org
+     * @see https://pending.schema.org
      * @link https://github.com/schemaorg/schemaorg/issues/1759
      */
     public function materialExtent($materialExtent)
@@ -1433,7 +1433,7 @@ class ExercisePlan extends BaseType implements ExercisePlanContract, CreativeWor
      * @return static
      *
      * @see https://schema.org/medicineSystem
-     * @see http://health-lifesci.schema.org
+     * @see https://health-lifesci.schema.org
      */
     public function medicineSystem($medicineSystem)
     {
@@ -1500,7 +1500,7 @@ class ExercisePlan extends BaseType implements ExercisePlanContract, CreativeWor
      * @return static
      *
      * @see https://schema.org/pathophysiology
-     * @see http://health-lifesci.schema.org
+     * @see https://health-lifesci.schema.org
      */
     public function pathophysiology($pathophysiology)
     {
@@ -1517,7 +1517,7 @@ class ExercisePlan extends BaseType implements ExercisePlanContract, CreativeWor
      * @return static
      *
      * @see https://schema.org/pattern
-     * @see http://pending.schema.org
+     * @see https://pending.schema.org
      * @link https://github.com/schemaorg/schemaorg/issues/1797
      */
     public function pattern($pattern)
@@ -1622,7 +1622,7 @@ class ExercisePlan extends BaseType implements ExercisePlanContract, CreativeWor
      * @return static
      *
      * @see https://schema.org/publisherImprint
-     * @see http://bib.schema.org
+     * @see https://bib.schema.org
      */
     public function publisherImprint($publisherImprint)
     {
@@ -1662,7 +1662,7 @@ class ExercisePlan extends BaseType implements ExercisePlanContract, CreativeWor
      * @return static
      *
      * @see https://schema.org/recognizingAuthority
-     * @see http://health-lifesci.schema.org
+     * @see https://health-lifesci.schema.org
      */
     public function recognizingAuthority($recognizingAuthority)
     {
@@ -1707,7 +1707,7 @@ class ExercisePlan extends BaseType implements ExercisePlanContract, CreativeWor
      * @return static
      *
      * @see https://schema.org/relevantSpecialty
-     * @see http://health-lifesci.schema.org
+     * @see https://health-lifesci.schema.org
      */
     public function relevantSpecialty($relevantSpecialty)
     {
@@ -1722,7 +1722,7 @@ class ExercisePlan extends BaseType implements ExercisePlanContract, CreativeWor
      * @return static
      *
      * @see https://schema.org/repetitions
-     * @see http://health-lifesci.schema.org
+     * @see https://health-lifesci.schema.org
      */
     public function repetitions($repetitions)
     {
@@ -1737,7 +1737,7 @@ class ExercisePlan extends BaseType implements ExercisePlanContract, CreativeWor
      * @return static
      *
      * @see https://schema.org/restPeriods
-     * @see http://health-lifesci.schema.org
+     * @see https://health-lifesci.schema.org
      */
     public function restPeriods($restPeriods)
     {
@@ -1814,7 +1814,7 @@ class ExercisePlan extends BaseType implements ExercisePlanContract, CreativeWor
      * @return static
      *
      * @see https://schema.org/sdDatePublished
-     * @see http://pending.schema.org
+     * @see https://pending.schema.org
      * @link https://github.com/schemaorg/schemaorg/issues/1886
      */
     public function sdDatePublished($sdDatePublished)
@@ -1831,7 +1831,7 @@ class ExercisePlan extends BaseType implements ExercisePlanContract, CreativeWor
      * @return static
      *
      * @see https://schema.org/sdLicense
-     * @see http://pending.schema.org
+     * @see https://pending.schema.org
      * @link https://github.com/schemaorg/schemaorg/issues/1886
      */
     public function sdLicense($sdLicense)
@@ -1853,7 +1853,7 @@ class ExercisePlan extends BaseType implements ExercisePlanContract, CreativeWor
      * @return static
      *
      * @see https://schema.org/sdPublisher
-     * @see http://pending.schema.org
+     * @see https://pending.schema.org
      * @link https://github.com/schemaorg/schemaorg/issues/1886
      */
     public function sdPublisher($sdPublisher)
@@ -1874,7 +1874,7 @@ class ExercisePlan extends BaseType implements ExercisePlanContract, CreativeWor
      * @return static
      *
      * @see https://schema.org/size
-     * @see http://pending.schema.org
+     * @see https://pending.schema.org
      * @link https://github.com/schemaorg/schemaorg/issues/1797
      */
     public function size($size)
@@ -1955,7 +1955,7 @@ class ExercisePlan extends BaseType implements ExercisePlanContract, CreativeWor
      * @return static
      *
      * @see https://schema.org/study
-     * @see http://health-lifesci.schema.org
+     * @see https://health-lifesci.schema.org
      */
     public function study($study)
     {
@@ -1986,7 +1986,7 @@ class ExercisePlan extends BaseType implements ExercisePlanContract, CreativeWor
      * @return static
      *
      * @see https://schema.org/teaches
-     * @see http://pending.schema.org
+     * @see https://pending.schema.org
      * @link https://github.com/schemaorg/schemaorg/issues/2427
      */
     public function teaches($teaches)
@@ -2094,7 +2094,7 @@ class ExercisePlan extends BaseType implements ExercisePlanContract, CreativeWor
      * @return static
      *
      * @see https://schema.org/translationOfWork
-     * @see http://bib.schema.org
+     * @see https://bib.schema.org
      */
     public function translationOfWork($translationOfWork)
     {
@@ -2165,7 +2165,7 @@ class ExercisePlan extends BaseType implements ExercisePlanContract, CreativeWor
      * @return static
      *
      * @see https://schema.org/usageInfo
-     * @see http://pending.schema.org
+     * @see https://pending.schema.org
      * @link https://github.com/schemaorg/schemaorg/issues/2454
      */
     public function usageInfo($usageInfo)
@@ -2228,7 +2228,7 @@ class ExercisePlan extends BaseType implements ExercisePlanContract, CreativeWor
      * @return static
      *
      * @see https://schema.org/workTranslation
-     * @see http://bib.schema.org
+     * @see https://bib.schema.org
      */
     public function workTranslation($workTranslation)
     {
@@ -2244,7 +2244,7 @@ class ExercisePlan extends BaseType implements ExercisePlanContract, CreativeWor
      * @return static
      *
      * @see https://schema.org/workload
-     * @see http://health-lifesci.schema.org
+     * @see https://health-lifesci.schema.org
      */
     public function workload($workload)
     {

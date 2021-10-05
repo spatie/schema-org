@@ -11,7 +11,7 @@ use \Spatie\SchemaOrg\Contracts\ThingContract;
  * definitions from Geo-Spatial best practices.
  *
  * @see https://schema.org/GeospatialGeometry
- * @see http://pending.schema.org
+ * @see https://pending.schema.org
  * @link https://github.com/schemaorg/schemaorg/issues/1375
  *
  */

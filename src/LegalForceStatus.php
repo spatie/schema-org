@@ -12,7 +12,7 @@ use \Spatie\SchemaOrg\Contracts\ThingContract;
  * A list of possible statuses for the legal force of a legislation.
  *
  * @see https://schema.org/LegalForceStatus
- * @see http://pending.schema.org
+ * @see https://pending.schema.org
  *
  * @method static supersededBy($supersededBy) The value should be instance of pending types Class|Class[]|Enumeration|Enumeration[]|Property|Property[]
  */
@@ -22,7 +22,7 @@ class LegalForceStatus extends BaseType implements LegalForceStatusContract, Enu
      * Indicates that a legislation is in force.
      *
      * @see https://schema.org/InForce
-     * @see http://pending.schema.org
+     * @see https://pending.schema.org
      */
      const InForce = 'https://schema.org/InForce';
 
@@ -30,7 +30,7 @@ class LegalForceStatus extends BaseType implements LegalForceStatusContract, Enu
      * Indicates that a legislation is currently not in force.
      *
      * @see https://schema.org/NotInForce
-     * @see http://pending.schema.org
+     * @see https://pending.schema.org
      */
      const NotInForce = 'https://schema.org/NotInForce';
 
@@ -38,7 +38,7 @@ class LegalForceStatus extends BaseType implements LegalForceStatusContract, Enu
      * Indicates that parts of the legislation are in force, and parts are not.
      *
      * @see https://schema.org/PartiallyInForce
-     * @see http://pending.schema.org
+     * @see https://pending.schema.org
      */
      const PartiallyInForce = 'https://schema.org/PartiallyInForce';
 

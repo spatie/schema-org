@@ -23,7 +23,7 @@ class GatedResidenceCommunity extends BaseType implements GatedResidenceCommunit
      * @return static
      *
      * @see https://schema.org/accommodationFloorPlan
-     * @see http://pending.schema.org
+     * @see https://pending.schema.org
      * @link https://github.com/schemaorg/schemaorg/issues/2373
      */
     public function accommodationFloorPlan($accommodationFloorPlan)
@@ -486,7 +486,7 @@ class GatedResidenceCommunity extends BaseType implements GatedResidenceCommunit
      * @return static
      *
      * @see https://schema.org/hasDriveThroughService
-     * @see http://pending.schema.org
+     * @see https://pending.schema.org
      * @link https://github.com/schemaorg/schemaorg/issues/2490
      */
     public function hasDriveThroughService($hasDriveThroughService)
@@ -892,7 +892,7 @@ class GatedResidenceCommunity extends BaseType implements GatedResidenceCommunit
      * @return static
      *
      * @see https://schema.org/tourBookingPage
-     * @see http://pending.schema.org
+     * @see https://pending.schema.org
      * @link https://github.com/schemaorg/schemaorg/issues/2373
      */
     public function tourBookingPage($tourBookingPage)
