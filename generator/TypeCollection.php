@@ -12,9 +12,9 @@ class TypeCollection
     private $types = [];
 
     /**
-     * @param iterable|Type[] $types
-     * @param iterable|Property[] $properties
-     * @param iterable|Constant[] $constants
+     * @param  iterable|Type[]  $types
+     * @param  iterable|Property[]  $properties
+     * @param  iterable|Constant[]  $constants
      */
     public function __construct(iterable $types, iterable $properties, iterable $constants)
     {
