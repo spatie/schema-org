@@ -21,26 +21,6 @@ use \Spatie\SchemaOrg\Contracts\ThingContract;
 class NLNonprofitType extends BaseType implements NLNonprofitTypeContract, EnumerationContract, IntangibleContract, NonprofitTypeContract, ThingContract
 {
     /**
-     * NonprofitANBI: Non-profit type referring to a Public Benefit Organization
-     * (NL).
-     *
-     * @see https://schema.org/NonprofitANBI
-     * @see https://pending.schema.org
-     * @link https://github.com/schemaorg/schemaorg/issues/2543
-     */
-     const NonprofitANBI = 'https://schema.org/NonprofitANBI';
-
-    /**
-     * NonprofitSBBI: Non-profit type referring to a Social Interest Promoting
-     * Institution (NL).
-     *
-     * @see https://schema.org/NonprofitSBBI
-     * @see https://pending.schema.org
-     * @link https://github.com/schemaorg/schemaorg/issues/2543
-     */
-     const NonprofitSBBI = 'https://schema.org/NonprofitSBBI';
-
-    /**
      * An additional type for the item, typically used for adding more specific
      * types from external vocabularies in microdata syntax. This is a
      * relationship between something and a class that the thing is in. In RDFa

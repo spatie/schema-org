@@ -19,33 +19,6 @@ use \Spatie\SchemaOrg\Contracts\ThingContract;
 class ReturnFeesEnumeration extends BaseType implements ReturnFeesEnumerationContract, EnumerationContract, IntangibleContract, ThingContract
 {
     /**
-     * OriginalShippingFees ...
-     *
-     * @see https://schema.org/OriginalShippingFees
-     * @see https://pending.schema.org
-     * @link https://github.com/schemaorg/schemaorg/issues/2288
-     */
-     const OriginalShippingFees = 'https://schema.org/OriginalShippingFees';
-
-    /**
-     * RestockingFees ...
-     *
-     * @see https://schema.org/RestockingFees
-     * @see https://pending.schema.org
-     * @link https://github.com/schemaorg/schemaorg/issues/2288
-     */
-     const RestockingFees = 'https://schema.org/RestockingFees';
-
-    /**
-     * ReturnShippingFees ...
-     *
-     * @see https://schema.org/ReturnShippingFees
-     * @see https://pending.schema.org
-     * @link https://github.com/schemaorg/schemaorg/issues/2288
-     */
-     const ReturnShippingFees = 'https://schema.org/ReturnShippingFees';
-
-    /**
      * An additional type for the item, typically used for adding more specific
      * types from external vocabularies in microdata syntax. This is a
      * relationship between something and a class that the thing is in. In RDFa

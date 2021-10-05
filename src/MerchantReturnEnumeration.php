@@ -20,44 +20,6 @@ use \Spatie\SchemaOrg\Contracts\ThingContract;
 class MerchantReturnEnumeration extends BaseType implements MerchantReturnEnumerationContract, EnumerationContract, IntangibleContract, ThingContract
 {
     /**
-     * MerchantReturnFiniteReturnWindow: there is a finite window for product
-     * returns.
-     *
-     * @see https://schema.org/MerchantReturnFiniteReturnWindow
-     * @see https://pending.schema.org
-     * @link https://github.com/schemaorg/schemaorg/issues/2288
-     */
-     const MerchantReturnFiniteReturnWindow = 'https://schema.org/MerchantReturnFiniteReturnWindow';
-
-    /**
-     * MerchantReturnNotPermitted: product returns are not permitted.
-     *
-     * @see https://schema.org/MerchantReturnNotPermitted
-     * @see https://pending.schema.org
-     * @link https://github.com/schemaorg/schemaorg/issues/2288
-     */
-     const MerchantReturnNotPermitted = 'https://schema.org/MerchantReturnNotPermitted';
-
-    /**
-     * MerchantReturnUnlimitedWindow: there is an unlimited window for product
-     * returns.
-     *
-     * @see https://schema.org/MerchantReturnUnlimitedWindow
-     * @see https://pending.schema.org
-     * @link https://github.com/schemaorg/schemaorg/issues/2288
-     */
-     const MerchantReturnUnlimitedWindow = 'https://schema.org/MerchantReturnUnlimitedWindow';
-
-    /**
-     * MerchantReturnUnspecified: a product return policy is not specified here.
-     *
-     * @see https://schema.org/MerchantReturnUnspecified
-     * @see https://pending.schema.org
-     * @link https://github.com/schemaorg/schemaorg/issues/2288
-     */
-     const MerchantReturnUnspecified = 'https://schema.org/MerchantReturnUnspecified';
-
-    /**
      * An additional type for the item, typically used for adding more specific
      * types from external vocabularies in microdata syntax. This is a
      * relationship between something and a class that the thing is in. In RDFa

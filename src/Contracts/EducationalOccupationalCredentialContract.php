@@ -70,6 +70,8 @@ interface EducationalOccupationalCredentialContract
 
     public function copyrightHolder($copyrightHolder);
 
+    public function copyrightNotice($copyrightNotice);
+
     public function copyrightYear($copyrightYear);
 
     public function correction($correction);
@@ -79,6 +81,8 @@ interface EducationalOccupationalCredentialContract
     public function creator($creator);
 
     public function credentialCategory($credentialCategory);
+
+    public function creditText($creditText);
 
     public function dateCreated($dateCreated);
 

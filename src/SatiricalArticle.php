@@ -8,11 +8,10 @@ use \Spatie\SchemaOrg\Contracts\CreativeWorkContract;
 use \Spatie\SchemaOrg\Contracts\ThingContract;
 
 /**
- * An [[Article]] whose content is primarily <a
- * href="https://en.wikipedia.org/wiki/Satire">[satirical]</a> in nature, i.e.
- * unlikely to be literally true. A satirical article is sometimes but not
- * necessarily also a [[NewsArticle]]. [[ScholarlyArticle]]s are also sometimes
- * satirized.
+ * An [[Article]] whose content is primarily
+ * [[satirical]](https://en.wikipedia.org/wiki/Satire) in nature, i.e. unlikely
+ * to be literally true. A satirical article is sometimes but not necessarily
+ * also a [[NewsArticle]]. [[ScholarlyArticle]]s are also sometimes satirized.
  *
  * @see https://schema.org/SatiricalArticle
  * @see https://pending.schema.org
@@ -573,6 +572,24 @@ class SatiricalArticle extends BaseType implements SatiricalArticleContract, Art
     }
 
     /**
+     * Text of a notice appropriate for describing the copyright aspects of this
+     * Creative Work, ideally indicating the owner of the copyright for the
+     * Work.
+     *
+     * @param string|string[] $copyrightNotice
+     *
+     * @return static
+     *
+     * @see https://schema.org/copyrightNotice
+     * @see https://pending.schema.org
+     * @link https://github.com/schemaorg/schemaorg/issues/2659
+     */
+    public function copyrightNotice($copyrightNotice)
+    {
+        return $this->setProperty('copyrightNotice', $copyrightNotice);
+    }
+
+    /**
      * The year during which the claimed copyright for the CreativeWork was
      * first asserted.
      *
@@ -635,6 +652,23 @@ class SatiricalArticle extends BaseType implements SatiricalArticleContract, Art
     public function creator($creator)
     {
         return $this->setProperty('creator', $creator);
+    }
+
+    /**
+     * Text that can be used to credit person(s) and/or organization(s)
+     * associated with a published Creative Work.
+     *
+     * @param string|string[] $creditText
+     *
+     * @return static
+     *
+     * @see https://schema.org/creditText
+     * @see https://pending.schema.org
+     * @link https://github.com/schemaorg/schemaorg/issues/2659
+     */
+    public function creditText($creditText)
+    {
+        return $this->setProperty('creditText', $creditText);
     }
 
     /**
@@ -808,7 +842,7 @@ class SatiricalArticle extends BaseType implements SatiricalArticleContract, Art
      * The purpose of a work in the context of education; for example,
      * 'assignment', 'group work'.
      *
-     * @param string|string[] $educationalUse
+     * @param \Spatie\SchemaOrg\Contracts\DefinedTermContract|\Spatie\SchemaOrg\Contracts\DefinedTermContract[]|string|string[] $educationalUse
      *
      * @return static
      *
@@ -1165,7 +1199,7 @@ class SatiricalArticle extends BaseType implements SatiricalArticleContract, Art
      * The predominant type or kind characterizing the learning resource. For
      * example, 'presentation', 'handout'.
      *
-     * @param string|string[] $learningResourceType
+     * @param \Spatie\SchemaOrg\Contracts\DefinedTermContract|\Spatie\SchemaOrg\Contracts\DefinedTermContract[]|string|string[] $learningResourceType
      *
      * @return static
      *
@@ -1777,6 +1811,7 @@ class SatiricalArticle extends BaseType implements SatiricalArticleContract, Art
      * 
      * 3.)  XPaths - addresses content via XPaths (assuming an XML view of the
      * content). Use the [[xpath]] property.
+     * 
      * 
      * For more sophisticated markup of speakable sections beyond simple ID
      * references, either CSS selectors or XPath expressions to pick out

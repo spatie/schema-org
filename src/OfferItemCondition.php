@@ -17,34 +17,6 @@ use \Spatie\SchemaOrg\Contracts\ThingContract;
 class OfferItemCondition extends BaseType implements OfferItemConditionContract, EnumerationContract, IntangibleContract, ThingContract
 {
     /**
-     * Indicates that the item is damaged.
-     *
-     * @see https://schema.org/DamagedCondition
-     */
-     const DamagedCondition = 'https://schema.org/DamagedCondition';
-
-    /**
-     * Indicates that the item is new.
-     *
-     * @see https://schema.org/NewCondition
-     */
-     const NewCondition = 'https://schema.org/NewCondition';
-
-    /**
-     * Indicates that the item is refurbished.
-     *
-     * @see https://schema.org/RefurbishedCondition
-     */
-     const RefurbishedCondition = 'https://schema.org/RefurbishedCondition';
-
-    /**
-     * Indicates that the item is used.
-     *
-     * @see https://schema.org/UsedCondition
-     */
-     const UsedCondition = 'https://schema.org/UsedCondition';
-
-    /**
      * An additional type for the item, typically used for adding more specific
      * types from external vocabularies in microdata syntax. This is a
      * relationship between something and a class that the thing is in. In RDFa

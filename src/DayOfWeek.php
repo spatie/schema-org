@@ -24,69 +24,6 @@ use \Spatie\SchemaOrg\Contracts\ThingContract;
 class DayOfWeek extends BaseType implements DayOfWeekContract, EnumerationContract, IntangibleContract, ThingContract
 {
     /**
-     * The day of the week between Thursday and Saturday.
-     *
-     * @see https://schema.org/Friday
-     */
-     const Friday = 'https://schema.org/Friday';
-
-    /**
-     * The day of the week between Sunday and Tuesday.
-     *
-     * @see https://schema.org/Monday
-     */
-     const Monday = 'https://schema.org/Monday';
-
-    /**
-     * This stands for any day that is a public holiday; it is a placeholder for
-     * all official public holidays in some particular location. While not
-     * technically a "day of the week", it can be used with
-     * [[OpeningHoursSpecification]]. In the context of an opening hours
-     * specification it can be used to indicate opening hours on public
-     * holidays, overriding general opening hours for the day of the week on
-     * which a public holiday occurs.
-     *
-     * @see https://schema.org/PublicHolidays
-     * @link http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#source_GoodRelationsClass
-     */
-     const PublicHolidays = 'https://schema.org/PublicHolidays';
-
-    /**
-     * The day of the week between Friday and Sunday.
-     *
-     * @see https://schema.org/Saturday
-     */
-     const Saturday = 'https://schema.org/Saturday';
-
-    /**
-     * The day of the week between Saturday and Monday.
-     *
-     * @see https://schema.org/Sunday
-     */
-     const Sunday = 'https://schema.org/Sunday';
-
-    /**
-     * The day of the week between Wednesday and Friday.
-     *
-     * @see https://schema.org/Thursday
-     */
-     const Thursday = 'https://schema.org/Thursday';
-
-    /**
-     * The day of the week between Monday and Wednesday.
-     *
-     * @see https://schema.org/Tuesday
-     */
-     const Tuesday = 'https://schema.org/Tuesday';
-
-    /**
-     * The day of the week between Tuesday and Thursday.
-     *
-     * @see https://schema.org/Wednesday
-     */
-     const Wednesday = 'https://schema.org/Wednesday';
-
-    /**
      * An additional type for the item, typically used for adding more specific
      * types from external vocabularies in microdata syntax. This is a
      * relationship between something and a class that the thing is in. In RDFa

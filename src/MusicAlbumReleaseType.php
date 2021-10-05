@@ -18,38 +18,6 @@ use \Spatie\SchemaOrg\Contracts\ThingContract;
 class MusicAlbumReleaseType extends BaseType implements MusicAlbumReleaseTypeContract, EnumerationContract, IntangibleContract, ThingContract
 {
     /**
-     * AlbumRelease.
-     *
-     * @see https://schema.org/AlbumRelease
-     * @link http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#MBZ
-     */
-     const AlbumRelease = 'https://schema.org/AlbumRelease';
-
-    /**
-     * BroadcastRelease.
-     *
-     * @see https://schema.org/BroadcastRelease
-     * @link http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#MBZ
-     */
-     const BroadcastRelease = 'https://schema.org/BroadcastRelease';
-
-    /**
-     * EPRelease.
-     *
-     * @see https://schema.org/EPRelease
-     * @link http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#MBZ
-     */
-     const EPRelease = 'https://schema.org/EPRelease';
-
-    /**
-     * SingleRelease.
-     *
-     * @see https://schema.org/SingleRelease
-     * @link http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#MBZ
-     */
-     const SingleRelease = 'https://schema.org/SingleRelease';
-
-    /**
      * An additional type for the item, typically used for adding more specific
      * types from external vocabularies in microdata syntax. This is a
      * relationship between something and a class that the thing is in. In RDFa

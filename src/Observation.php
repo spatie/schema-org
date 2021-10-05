@@ -158,8 +158,8 @@ class Observation extends BaseType implements ObservationContract, IntangibleCon
     /**
      * The measuredProperty of an [[Observation]], either a schema.org property,
      * a property from other RDF-compatible systems e.g. W3C RDF Data Cube, or
-     * schema.org extensions such as <a
-     * href="https://www.gs1.org/voc/?show=properties">GS1's</a>.
+     * schema.org extensions such as
+     * [GS1's](https://www.gs1.org/voc/?show=properties).
      *
      * @param \Spatie\SchemaOrg\Contracts\PropertyContract|\Spatie\SchemaOrg\Contracts\PropertyContract[] $measuredProperty
      *

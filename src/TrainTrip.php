@@ -207,7 +207,6 @@ class TrainTrip extends BaseType implements TrainTripContract, IntangibleContrac
      *
      * @see https://schema.org/itinerary
      * @see https://pending.schema.org
-     * @link http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#Tourism
      */
     public function itinerary($itinerary)
     {
@@ -276,7 +275,6 @@ class TrainTrip extends BaseType implements TrainTripContract, IntangibleContrac
      *
      * @see https://schema.org/partOfTrip
      * @see https://pending.schema.org
-     * @link http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#Tourism
      */
     public function partOfTrip($partOfTrip)
     {
@@ -341,7 +339,6 @@ class TrainTrip extends BaseType implements TrainTripContract, IntangibleContrac
      *
      * @see https://schema.org/subTrip
      * @see https://pending.schema.org
-     * @link http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#Tourism
      */
     public function subTrip($subTrip)
     {

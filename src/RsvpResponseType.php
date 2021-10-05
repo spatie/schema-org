@@ -18,27 +18,6 @@ use \Spatie\SchemaOrg\Contracts\ThingContract;
 class RsvpResponseType extends BaseType implements RsvpResponseTypeContract, EnumerationContract, IntangibleContract, ThingContract
 {
     /**
-     * The invitee may or may not attend.
-     *
-     * @see https://schema.org/RsvpResponseMaybe
-     */
-     const RsvpResponseMaybe = 'https://schema.org/RsvpResponseMaybe';
-
-    /**
-     * The invitee will not attend.
-     *
-     * @see https://schema.org/RsvpResponseNo
-     */
-     const RsvpResponseNo = 'https://schema.org/RsvpResponseNo';
-
-    /**
-     * The invitee will attend.
-     *
-     * @see https://schema.org/RsvpResponseYes
-     */
-     const RsvpResponseYes = 'https://schema.org/RsvpResponseYes';
-
-    /**
      * An additional type for the item, typically used for adding more specific
      * types from external vocabularies in microdata syntax. This is a
      * relationship between something and a class that the thing is in. In RDFa

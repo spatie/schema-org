@@ -17,34 +17,6 @@ use \Spatie\SchemaOrg\Contracts\ThingContract;
 class MapCategoryType extends BaseType implements MapCategoryTypeContract, EnumerationContract, IntangibleContract, ThingContract
 {
     /**
-     * A parking map.
-     *
-     * @see https://schema.org/ParkingMap
-     */
-     const ParkingMap = 'https://schema.org/ParkingMap';
-
-    /**
-     * A seating map.
-     *
-     * @see https://schema.org/SeatingMap
-     */
-     const SeatingMap = 'https://schema.org/SeatingMap';
-
-    /**
-     * A transit map.
-     *
-     * @see https://schema.org/TransitMap
-     */
-     const TransitMap = 'https://schema.org/TransitMap';
-
-    /**
-     * A venue map (e.g. for malls, auditoriums, museums, etc.).
-     *
-     * @see https://schema.org/VenueMap
-     */
-     const VenueMap = 'https://schema.org/VenueMap';
-
-    /**
      * An additional type for the item, typically used for adding more specific
      * types from external vocabularies in microdata syntax. This is a
      * relationship between something and a class that the thing is in. In RDFa

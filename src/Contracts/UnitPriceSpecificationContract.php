@@ -8,7 +8,11 @@ interface UnitPriceSpecificationContract
 
     public function alternateName($alternateName);
 
+    public function billingDuration($billingDuration);
+
     public function billingIncrement($billingIncrement);
+
+    public function billingStart($billingStart);
 
     public function description($description);
 
@@ -33,6 +37,8 @@ interface UnitPriceSpecificationContract
     public function potentialAction($potentialAction);
 
     public function price($price);
+
+    public function priceComponentType($priceComponentType);
 
     public function priceCurrency($priceCurrency);
 

@@ -425,6 +425,24 @@ class Quiz extends BaseType implements QuizContract, CreativeWorkContract, Learn
     }
 
     /**
+     * Knowledge, skill, ability or personal attribute that must be demonstrated
+     * by a person or other entity in order to do something such as earn an
+     * Educational Occupational Credential or understand a LearningResource.
+     *
+     * @param \Spatie\SchemaOrg\Contracts\DefinedTermContract|\Spatie\SchemaOrg\Contracts\DefinedTermContract[]|string|string[] $competencyRequired
+     *
+     * @return static
+     *
+     * @see https://schema.org/competencyRequired
+     * @see https://pending.schema.org
+     * @link https://github.com/schemaorg/schemaorg/issues/1779
+     */
+    public function competencyRequired($competencyRequired)
+    {
+        return $this->setProperty('competencyRequired', $competencyRequired);
+    }
+
+    /**
      * Conditions that affect the availability of, or method(s) of access to, an
      * item. Typically used for real world items such as an [[ArchiveComponent]]
      * held by an [[ArchiveOrganization]]. This property is not suitable for use
@@ -522,6 +540,24 @@ class Quiz extends BaseType implements QuizContract, CreativeWorkContract, Learn
     }
 
     /**
+     * Text of a notice appropriate for describing the copyright aspects of this
+     * Creative Work, ideally indicating the owner of the copyright for the
+     * Work.
+     *
+     * @param string|string[] $copyrightNotice
+     *
+     * @return static
+     *
+     * @see https://schema.org/copyrightNotice
+     * @see https://pending.schema.org
+     * @link https://github.com/schemaorg/schemaorg/issues/2659
+     */
+    public function copyrightNotice($copyrightNotice)
+    {
+        return $this->setProperty('copyrightNotice', $copyrightNotice);
+    }
+
+    /**
      * The year during which the claimed copyright for the CreativeWork was
      * first asserted.
      *
@@ -584,6 +620,23 @@ class Quiz extends BaseType implements QuizContract, CreativeWorkContract, Learn
     public function creator($creator)
     {
         return $this->setProperty('creator', $creator);
+    }
+
+    /**
+     * Text that can be used to credit person(s) and/or organization(s)
+     * associated with a published Creative Work.
+     *
+     * @param string|string[] $creditText
+     *
+     * @return static
+     *
+     * @see https://schema.org/creditText
+     * @see https://pending.schema.org
+     * @link https://github.com/schemaorg/schemaorg/issues/2659
+     */
+    public function creditText($creditText)
+    {
+        return $this->setProperty('creditText', $creditText);
     }
 
     /**
@@ -757,7 +810,7 @@ class Quiz extends BaseType implements QuizContract, CreativeWorkContract, Learn
      * The purpose of a work in the context of education; for example,
      * 'assignment', 'group work'.
      *
-     * @param string|string[] $educationalUse
+     * @param \Spatie\SchemaOrg\Contracts\DefinedTermContract|\Spatie\SchemaOrg\Contracts\DefinedTermContract[]|string|string[] $educationalUse
      *
      * @return static
      *
@@ -1114,7 +1167,7 @@ class Quiz extends BaseType implements QuizContract, CreativeWorkContract, Learn
      * The predominant type or kind characterizing the learning resource. For
      * example, 'presentation', 'handout'.
      *
-     * @param string|string[] $learningResourceType
+     * @param \Spatie\SchemaOrg\Contracts\DefinedTermContract|\Spatie\SchemaOrg\Contracts\DefinedTermContract[]|string|string[] $learningResourceType
      *
      * @return static
      *

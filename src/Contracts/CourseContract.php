@@ -56,6 +56,8 @@ interface CourseContract
 
     public function commentCount($commentCount);
 
+    public function competencyRequired($competencyRequired);
+
     public function conditionsOfAccess($conditionsOfAccess);
 
     public function contentLocation($contentLocation);
@@ -68,6 +70,8 @@ interface CourseContract
 
     public function copyrightHolder($copyrightHolder);
 
+    public function copyrightNotice($copyrightNotice);
+
     public function copyrightYear($copyrightYear);
 
     public function correction($correction);
@@ -79,6 +83,8 @@ interface CourseContract
     public function creativeWorkStatus($creativeWorkStatus);
 
     public function creator($creator);
+
+    public function creditText($creditText);
 
     public function dateCreated($dateCreated);
 

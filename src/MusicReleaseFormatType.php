@@ -19,62 +19,6 @@ use \Spatie\SchemaOrg\Contracts\ThingContract;
 class MusicReleaseFormatType extends BaseType implements MusicReleaseFormatTypeContract, EnumerationContract, IntangibleContract, ThingContract
 {
     /**
-     * CDFormat.
-     *
-     * @see https://schema.org/CDFormat
-     * @link http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#MBZ
-     */
-     const CDFormat = 'https://schema.org/CDFormat';
-
-    /**
-     * CassetteFormat.
-     *
-     * @see https://schema.org/CassetteFormat
-     * @link http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#MBZ
-     */
-     const CassetteFormat = 'https://schema.org/CassetteFormat';
-
-    /**
-     * DVDFormat.
-     *
-     * @see https://schema.org/DVDFormat
-     * @link http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#MBZ
-     */
-     const DVDFormat = 'https://schema.org/DVDFormat';
-
-    /**
-     * DigitalAudioTapeFormat.
-     *
-     * @see https://schema.org/DigitalAudioTapeFormat
-     * @link http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#MBZ
-     */
-     const DigitalAudioTapeFormat = 'https://schema.org/DigitalAudioTapeFormat';
-
-    /**
-     * DigitalFormat.
-     *
-     * @see https://schema.org/DigitalFormat
-     * @link http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#MBZ
-     */
-     const DigitalFormat = 'https://schema.org/DigitalFormat';
-
-    /**
-     * LaserDiscFormat.
-     *
-     * @see https://schema.org/LaserDiscFormat
-     * @link http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#MBZ
-     */
-     const LaserDiscFormat = 'https://schema.org/LaserDiscFormat';
-
-    /**
-     * VinylFormat.
-     *
-     * @see https://schema.org/VinylFormat
-     * @link http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#MBZ
-     */
-     const VinylFormat = 'https://schema.org/VinylFormat';
-
-    /**
      * An additional type for the item, typically used for adding more specific
      * types from external vocabularies in microdata syntax. This is a
      * relationship between something and a class that the thing is in. In RDFa

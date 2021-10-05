@@ -19,30 +19,6 @@ use \Spatie\SchemaOrg\Contracts\ThingContract;
 class MedicalEvidenceLevel extends BaseType implements MedicalEvidenceLevelContract, EnumerationContract, IntangibleContract, MedicalEnumerationContract, ThingContract
 {
     /**
-     * Data derived from multiple randomized clinical trials or meta-analyses.
-     *
-     * @see https://schema.org/EvidenceLevelA
-     * @see https://health-lifesci.schema.org
-     */
-     const EvidenceLevelA = 'https://schema.org/EvidenceLevelA';
-
-    /**
-     * Data derived from a single randomized trial, or nonrandomized studies.
-     *
-     * @see https://schema.org/EvidenceLevelB
-     * @see https://health-lifesci.schema.org
-     */
-     const EvidenceLevelB = 'https://schema.org/EvidenceLevelB';
-
-    /**
-     * Only consensus opinion of experts, case studies, or standard-of-care.
-     *
-     * @see https://schema.org/EvidenceLevelC
-     * @see https://health-lifesci.schema.org
-     */
-     const EvidenceLevelC = 'https://schema.org/EvidenceLevelC';
-
-    /**
      * An additional type for the item, typically used for adding more specific
      * types from external vocabularies in microdata syntax. This is a
      * relationship between something and a class that the thing is in. In RDFa

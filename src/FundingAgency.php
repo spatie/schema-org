@@ -13,14 +13,12 @@ use \Spatie\SchemaOrg\Contracts\ThingContract;
  *     the granting process (via [[Grant]]s, typically [[MonetaryGrant]]s).
  *     A funding agency is not always required for grant funding, e.g.
  * philanthropic giving, corporate sponsorship etc.
- * 
- * <pre>```Examples of funding agencies include ERC, REA, NIH, Bill and Melinda
- * Gates Foundation...
- * ```</pre>
+ *     
+ * Examples of funding agencies include ERC, REA, NIH, Bill and Melinda Gates
+ * Foundation...
  *
  * @see https://schema.org/FundingAgency
  * @see https://pending.schema.org
- * @link https://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#FundInfoCollab
  *
  */
 class FundingAgency extends BaseType implements FundingAgencyContract, OrganizationContract, ProjectContract, ThingContract
@@ -742,8 +740,8 @@ class FundingAgency extends BaseType implements FundingAgencyContract, Organizat
     }
 
     /**
-     * The location of for example where the event is happening, an organization
-     * is located, or where an action takes place.
+     * The location of, for example, where an event is happening, where an
+     * organization is located, or where an action takes place.
      *
      * @param \Spatie\SchemaOrg\Contracts\PlaceContract|\Spatie\SchemaOrg\Contracts\PlaceContract[]|\Spatie\SchemaOrg\Contracts\PostalAddressContract|\Spatie\SchemaOrg\Contracts\PostalAddressContract[]|\Spatie\SchemaOrg\Contracts\VirtualLocationContract|\Spatie\SchemaOrg\Contracts\VirtualLocationContract[]|string|string[] $location
      *

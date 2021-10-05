@@ -8,7 +8,7 @@ use \Spatie\SchemaOrg\Contracts\ThingContract;
 use \Spatie\SchemaOrg\Contracts\TransferActionContract;
 
 /**
- * The act of physically/electronically taking delivery of an object thathas
+ * The act of physically/electronically taking delivery of an object that has
  * been transferred from an origin to a destination. Reciprocal of SendAction.
  * 
  * Related actions:
@@ -232,8 +232,8 @@ class ReceiveAction extends BaseType implements ReceiveActionContract, ActionCon
     }
 
     /**
-     * The location of for example where the event is happening, an organization
-     * is located, or where an action takes place.
+     * The location of, for example, where an event is happening, where an
+     * organization is located, or where an action takes place.
      *
      * @param \Spatie\SchemaOrg\Contracts\PlaceContract|\Spatie\SchemaOrg\Contracts\PlaceContract[]|\Spatie\SchemaOrg\Contracts\PostalAddressContract|\Spatie\SchemaOrg\Contracts\PostalAddressContract[]|\Spatie\SchemaOrg\Contracts\VirtualLocationContract|\Spatie\SchemaOrg\Contracts\VirtualLocationContract[]|string|string[] $location
      *

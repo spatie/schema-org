@@ -7,8 +7,9 @@ use \Spatie\SchemaOrg\Contracts\IntangibleContract;
 use \Spatie\SchemaOrg\Contracts\ThingContract;
 
 /**
- * A Series in schema.org is a group of related items, typically but not
- * necessarily of the same kind. See also [[CreativeWorkSeries]],
+ * 
+ *           A Series in schema.org is a group of related items, typically but
+ * not necessarily of the same kind. See also [[CreativeWorkSeries]],
  * [[EventSeries]].
  *
  * @see https://schema.org/Series

@@ -19,23 +19,6 @@ use \Spatie\SchemaOrg\Contracts\ThingContract;
 class DrugPrescriptionStatus extends BaseType implements DrugPrescriptionStatusContract, EnumerationContract, IntangibleContract, MedicalEnumerationContract, ThingContract
 {
     /**
-     * The character of a medical substance, typically a medicine, of being
-     * available over the counter or not.
-     *
-     * @see https://schema.org/OTC
-     * @see https://health-lifesci.schema.org
-     */
-     const OTC = 'https://schema.org/OTC';
-
-    /**
-     * Available by prescription only.
-     *
-     * @see https://schema.org/PrescriptionOnly
-     * @see https://health-lifesci.schema.org
-     */
-     const PrescriptionOnly = 'https://schema.org/PrescriptionOnly';
-
-    /**
      * An additional type for the item, typically used for adding more specific
      * types from external vocabularies in microdata syntax. This is a
      * relationship between something and a class that the thing is in. In RDFa

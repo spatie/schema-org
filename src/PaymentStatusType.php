@@ -18,41 +18,6 @@ use \Spatie\SchemaOrg\Contracts\ThingContract;
 class PaymentStatusType extends BaseType implements PaymentStatusTypeContract, EnumerationContract, IntangibleContract, StatusEnumerationContract, ThingContract
 {
     /**
-     * An automatic payment system is in place and will be used.
-     *
-     * @see https://schema.org/PaymentAutomaticallyApplied
-     */
-     const PaymentAutomaticallyApplied = 'https://schema.org/PaymentAutomaticallyApplied';
-
-    /**
-     * The payment has been received and processed.
-     *
-     * @see https://schema.org/PaymentComplete
-     */
-     const PaymentComplete = 'https://schema.org/PaymentComplete';
-
-    /**
-     * The payee received the payment, but it was declined for some reason.
-     *
-     * @see https://schema.org/PaymentDeclined
-     */
-     const PaymentDeclined = 'https://schema.org/PaymentDeclined';
-
-    /**
-     * The payment is due, but still within an acceptable time to be received.
-     *
-     * @see https://schema.org/PaymentDue
-     */
-     const PaymentDue = 'https://schema.org/PaymentDue';
-
-    /**
-     * The payment is due and considered late.
-     *
-     * @see https://schema.org/PaymentPastDue
-     */
-     const PaymentPastDue = 'https://schema.org/PaymentPastDue';
-
-    /**
      * An additional type for the item, typically used for adding more specific
      * types from external vocabularies in microdata syntax. This is a
      * relationship between something and a class that the thing is in. In RDFa

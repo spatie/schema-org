@@ -33,36 +33,6 @@ use \Spatie\SchemaOrg\Contracts\ThingContract;
 class DeliveryMethod extends BaseType implements DeliveryMethodContract, EnumerationContract, IntangibleContract, ThingContract
 {
     /**
-     * A DeliveryMethod in which an item is made available via locker.
-     *
-     * @see https://schema.org/LockerDelivery
-     */
-     const LockerDelivery = 'https://schema.org/LockerDelivery';
-
-    /**
-     * A DeliveryMethod in which an item is collected on site, e.g. in a store
-     * or at a box office.
-     *
-     * @see https://schema.org/OnSitePickup
-     */
-     const OnSitePickup = 'https://schema.org/OnSitePickup';
-
-    /**
-     * A private parcel service as the delivery mode available for a certain
-     * offer.
-     * 
-     * Commonly used values:
-     * 
-     * * http://purl.org/goodrelations/v1#DHL
-     * * http://purl.org/goodrelations/v1#FederalExpress
-     * * http://purl.org/goodrelations/v1#UPS
-     *
-     * @see https://schema.org/ParcelService
-     * @link http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#source_GoodRelationsClass
-     */
-     const ParcelService = 'https://schema.org/ParcelService';
-
-    /**
      * An additional type for the item, typically used for adding more specific
      * types from external vocabularies in microdata syntax. This is a
      * relationship between something and a class that the thing is in. In RDFa

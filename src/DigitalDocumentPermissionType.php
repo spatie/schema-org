@@ -17,27 +17,6 @@ use \Spatie\SchemaOrg\Contracts\ThingContract;
 class DigitalDocumentPermissionType extends BaseType implements DigitalDocumentPermissionTypeContract, EnumerationContract, IntangibleContract, ThingContract
 {
     /**
-     * Permission to add comments to the document.
-     *
-     * @see https://schema.org/CommentPermission
-     */
-     const CommentPermission = 'https://schema.org/CommentPermission';
-
-    /**
-     * Permission to read or view the document.
-     *
-     * @see https://schema.org/ReadPermission
-     */
-     const ReadPermission = 'https://schema.org/ReadPermission';
-
-    /**
-     * Permission to write or edit the document.
-     *
-     * @see https://schema.org/WritePermission
-     */
-     const WritePermission = 'https://schema.org/WritePermission';
-
-    /**
      * An additional type for the item, typically used for adding more specific
      * types from external vocabularies in microdata syntax. This is a
      * relationship between something and a class that the thing is in. In RDFa

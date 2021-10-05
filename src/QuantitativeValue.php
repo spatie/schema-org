@@ -8,7 +8,7 @@ use \Spatie\SchemaOrg\Contracts\StructuredValueContract;
 use \Spatie\SchemaOrg\Contracts\ThingContract;
 
 /**
- * A point value or interval for product characteristics and other purposes.
+ *  A point value or interval for product characteristics and other purposes.
  *
  * @see https://schema.org/QuantitativeValue
  * @link http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#source_GoodRelationsClass

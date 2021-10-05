@@ -19,30 +19,6 @@ use \Spatie\SchemaOrg\Contracts\ThingContract;
 class LegalForceStatus extends BaseType implements LegalForceStatusContract, EnumerationContract, IntangibleContract, StatusEnumerationContract, ThingContract
 {
     /**
-     * Indicates that a legislation is in force.
-     *
-     * @see https://schema.org/InForce
-     * @see https://pending.schema.org
-     */
-     const InForce = 'https://schema.org/InForce';
-
-    /**
-     * Indicates that a legislation is currently not in force.
-     *
-     * @see https://schema.org/NotInForce
-     * @see https://pending.schema.org
-     */
-     const NotInForce = 'https://schema.org/NotInForce';
-
-    /**
-     * Indicates that parts of the legislation are in force, and parts are not.
-     *
-     * @see https://schema.org/PartiallyInForce
-     * @see https://pending.schema.org
-     */
-     const PartiallyInForce = 'https://schema.org/PartiallyInForce';
-
-    /**
      * An additional type for the item, typically used for adding more specific
      * types from external vocabularies in microdata syntax. This is a
      * relationship between something and a class that the thing is in. In RDFa

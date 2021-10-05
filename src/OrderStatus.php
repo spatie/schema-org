@@ -18,62 +18,6 @@ use \Spatie\SchemaOrg\Contracts\ThingContract;
 class OrderStatus extends BaseType implements OrderStatusContract, EnumerationContract, IntangibleContract, StatusEnumerationContract, ThingContract
 {
     /**
-     * OrderStatus representing cancellation of an order.
-     *
-     * @see https://schema.org/OrderCancelled
-     */
-     const OrderCancelled = 'https://schema.org/OrderCancelled';
-
-    /**
-     * OrderStatus representing successful delivery of an order.
-     *
-     * @see https://schema.org/OrderDelivered
-     */
-     const OrderDelivered = 'https://schema.org/OrderDelivered';
-
-    /**
-     * OrderStatus representing that an order is in transit.
-     *
-     * @see https://schema.org/OrderInTransit
-     */
-     const OrderInTransit = 'https://schema.org/OrderInTransit';
-
-    /**
-     * OrderStatus representing that payment is due on an order.
-     *
-     * @see https://schema.org/OrderPaymentDue
-     */
-     const OrderPaymentDue = 'https://schema.org/OrderPaymentDue';
-
-    /**
-     * OrderStatus representing availability of an order for pickup.
-     *
-     * @see https://schema.org/OrderPickupAvailable
-     */
-     const OrderPickupAvailable = 'https://schema.org/OrderPickupAvailable';
-
-    /**
-     * OrderStatus representing that there is a problem with the order.
-     *
-     * @see https://schema.org/OrderProblem
-     */
-     const OrderProblem = 'https://schema.org/OrderProblem';
-
-    /**
-     * OrderStatus representing that an order is being processed.
-     *
-     * @see https://schema.org/OrderProcessing
-     */
-     const OrderProcessing = 'https://schema.org/OrderProcessing';
-
-    /**
-     * OrderStatus representing that an order has been returned.
-     *
-     * @see https://schema.org/OrderReturned
-     */
-     const OrderReturned = 'https://schema.org/OrderReturned';
-
-    /**
      * An additional type for the item, typically used for adding more specific
      * types from external vocabularies in microdata syntax. This is a
      * relationship between something and a class that the thing is in. In RDFa

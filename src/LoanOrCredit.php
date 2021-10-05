@@ -9,8 +9,8 @@ use \Spatie\SchemaOrg\Contracts\ServiceContract;
 use \Spatie\SchemaOrg\Contracts\ThingContract;
 
 /**
- * A financial product for the loaning of an amount of money under agreed terms
- * and charges.
+ * A financial product for the loaning of an amount of money, or line of credit,
+ * under agreed terms and charges.
  *
  * @see https://schema.org/LoanOrCredit
  * @link http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#FIBO

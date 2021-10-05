@@ -17,20 +17,6 @@ use \Spatie\SchemaOrg\Contracts\ThingContract;
 class BoardingPolicyType extends BaseType implements BoardingPolicyTypeContract, EnumerationContract, IntangibleContract, ThingContract
 {
     /**
-     * The airline boards by groups based on check-in time, priority, etc.
-     *
-     * @see https://schema.org/GroupBoardingPolicy
-     */
-     const GroupBoardingPolicy = 'https://schema.org/GroupBoardingPolicy';
-
-    /**
-     * The airline boards by zones of the plane.
-     *
-     * @see https://schema.org/ZoneBoardingPolicy
-     */
-     const ZoneBoardingPolicy = 'https://schema.org/ZoneBoardingPolicy';
-
-    /**
      * An additional type for the item, typically used for adding more specific
      * types from external vocabularies in microdata syntax. This is a
      * relationship between something and a class that the thing is in. In RDFa

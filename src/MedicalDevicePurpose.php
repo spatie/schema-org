@@ -20,22 +20,6 @@ use \Spatie\SchemaOrg\Contracts\ThingContract;
 class MedicalDevicePurpose extends BaseType implements MedicalDevicePurposeContract, EnumerationContract, IntangibleContract, MedicalEnumerationContract, ThingContract
 {
     /**
-     * A medical device used for diagnostic purposes.
-     *
-     * @see https://schema.org/Diagnostic
-     * @see https://health-lifesci.schema.org
-     */
-     const Diagnostic = 'https://schema.org/Diagnostic';
-
-    /**
-     * A medical device used for therapeutic purposes.
-     *
-     * @see https://schema.org/Therapeutic
-     * @see https://health-lifesci.schema.org
-     */
-     const Therapeutic = 'https://schema.org/Therapeutic';
-
-    /**
      * An additional type for the item, typically used for adding more specific
      * types from external vocabularies in microdata syntax. This is a
      * relationship between something and a class that the thing is in. In RDFa

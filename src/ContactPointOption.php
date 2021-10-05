@@ -17,20 +17,6 @@ use \Spatie\SchemaOrg\Contracts\ThingContract;
 class ContactPointOption extends BaseType implements ContactPointOptionContract, EnumerationContract, IntangibleContract, ThingContract
 {
     /**
-     * Uses devices to support users with hearing impairments.
-     *
-     * @see https://schema.org/HearingImpairedSupported
-     */
-     const HearingImpairedSupported = 'https://schema.org/HearingImpairedSupported';
-
-    /**
-     * The associated telephone number is toll free.
-     *
-     * @see https://schema.org/TollFree
-     */
-     const TollFree = 'https://schema.org/TollFree';
-
-    /**
      * An additional type for the item, typically used for adding more specific
      * types from external vocabularies in microdata syntax. This is a
      * relationship between something and a class that the thing is in. In RDFa

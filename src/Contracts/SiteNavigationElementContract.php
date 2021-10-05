@@ -68,6 +68,8 @@ interface SiteNavigationElementContract
 
     public function copyrightHolder($copyrightHolder);
 
+    public function copyrightNotice($copyrightNotice);
+
     public function copyrightYear($copyrightYear);
 
     public function correction($correction);
@@ -75,6 +77,8 @@ interface SiteNavigationElementContract
     public function creativeWorkStatus($creativeWorkStatus);
 
     public function creator($creator);
+
+    public function creditText($creditText);
 
     public function cssSelector($cssSelector);
 
