@@ -20,6 +20,54 @@ use \Spatie\SchemaOrg\Contracts\ThingContract;
 class InfectiousAgentClass extends BaseType implements InfectiousAgentClassContract, EnumerationContract, IntangibleContract, MedicalEnumerationContract, ThingContract
 {
     /**
+     * Pathogenic bacteria that cause bacterial infection.
+     *
+     * @see schema:Bacteria
+     * @see https://health-lifesci.schema.org
+     */
+     const Bacteria = 'https://schema.org/Bacteria';
+
+    /**
+     * Pathogenic fungus.
+     *
+     * @see schema:Fungus
+     * @see https://health-lifesci.schema.org
+     */
+     const Fungus = 'https://schema.org/Fungus';
+
+    /**
+     * Multicellular parasite that causes an infection.
+     *
+     * @see schema:MulticellularParasite
+     * @see https://health-lifesci.schema.org
+     */
+     const MulticellularParasite = 'https://schema.org/MulticellularParasite';
+
+    /**
+     * A prion is an infectious agent composed of protein in a misfolded form.
+     *
+     * @see schema:Prion
+     * @see https://health-lifesci.schema.org
+     */
+     const Prion = 'https://schema.org/Prion';
+
+    /**
+     * Single-celled organism that causes an infection.
+     *
+     * @see schema:Protozoa
+     * @see https://health-lifesci.schema.org
+     */
+     const Protozoa = 'https://schema.org/Protozoa';
+
+    /**
+     * Pathogenic virus that causes viral infection.
+     *
+     * @see schema:Virus
+     * @see https://health-lifesci.schema.org
+     */
+     const Virus = 'https://schema.org/Virus';
+
+    /**
      * An additional type for the item, typically used for adding more specific
      * types from external vocabularies in microdata syntax. This is a
      * relationship between something and a class that the thing is in. In RDFa

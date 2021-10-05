@@ -22,6 +22,25 @@ use \Spatie\SchemaOrg\Contracts\ThingContract;
 class MediaManipulationRatingEnumeration extends BaseType implements MediaManipulationRatingEnumerationContract, EnumerationContract, IntangibleContract, ThingContract
 {
     /**
+     * AuthenticMediaObject: An unaltered image that is presented in an accurate
+     * way.
+     *
+     * @see schema:AuthenticContent
+     * @see https://pending.schema.org
+     * @link https://github.com/schemaorg/schemaorg/issues/2450
+     */
+     const AuthenticContent = 'https://schema.org/AuthenticContent';
+
+    /**
+     * MissingContext: ...
+     *
+     * @see schema:MissingContext
+     * @see https://pending.schema.org
+     * @link https://github.com/schemaorg/schemaorg/issues/2450
+     */
+     const MissingContext = 'https://schema.org/MissingContext';
+
+    /**
      * An additional type for the item, typically used for adding more specific
      * types from external vocabularies in microdata syntax. This is a
      * relationship between something and a class that the thing is in. In RDFa

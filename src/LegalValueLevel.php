@@ -18,6 +18,51 @@ use \Spatie\SchemaOrg\Contracts\ThingContract;
 class LegalValueLevel extends BaseType implements LegalValueLevelContract, EnumerationContract, IntangibleContract, ThingContract
 {
     /**
+     * Indicates that the publisher gives some special status to the publication
+     * of the document. ("The Queens Printer" version of a UK Act of Parliament,
+     * or the PDF version of a Directive published by the EU Office of
+     * Publications). Something "Authoritative" is considered to be also
+     * [[OfficialLegalValue]]".
+     *
+     * @see schema:AuthoritativeLegalValue
+     * @see https://pending.schema.org
+     */
+     const AuthoritativeLegalValue = 'https://schema.org/AuthoritativeLegalValue';
+
+    /**
+     * Indicates a document for which the text is conclusively what the law says
+     * and is legally binding. (e.g. The digitally signed version of an Official
+     * Journal.)
+     *   Something "Definitive" is considered to be also
+     * [[AuthoritativeLegalValue]].
+     *
+     * @see schema:DefinitiveLegalValue
+     * @see https://pending.schema.org
+     */
+     const DefinitiveLegalValue = 'https://schema.org/DefinitiveLegalValue';
+
+    /**
+     * All the documents published by an official publisher should have at least
+     * the legal value level "OfficialLegalValue". This indicates that the
+     * document was published by an organisation with the public task of making
+     * it available (e.g. a consolidated version of a EU directive published by
+     * the EU Office of Publications).
+     *
+     * @see schema:OfficialLegalValue
+     * @see https://pending.schema.org
+     */
+     const OfficialLegalValue = 'https://schema.org/OfficialLegalValue';
+
+    /**
+     * Indicates that a document has no particular or special standing (e.g. a
+     * republication of a law by a private publisher).
+     *
+     * @see schema:UnofficialLegalValue
+     * @see https://pending.schema.org
+     */
+     const UnofficialLegalValue = 'https://schema.org/UnofficialLegalValue';
+
+    /**
      * An additional type for the item, typically used for adding more specific
      * types from external vocabularies in microdata syntax. This is a
      * relationship between something and a class that the thing is in. In RDFa

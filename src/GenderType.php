@@ -17,6 +17,20 @@ use \Spatie\SchemaOrg\Contracts\ThingContract;
 class GenderType extends BaseType implements GenderTypeContract, EnumerationContract, IntangibleContract, ThingContract
 {
     /**
+     * The female gender.
+     *
+     * @see schema:Female
+     */
+     const Female = 'https://schema.org/Female';
+
+    /**
+     * The male gender.
+     *
+     * @see schema:Male
+     */
+     const Male = 'https://schema.org/Male';
+
+    /**
      * An additional type for the item, typically used for adding more specific
      * types from external vocabularies in microdata syntax. This is a
      * relationship between something and a class that the thing is in. In RDFa

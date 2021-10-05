@@ -18,6 +18,36 @@ use \Spatie\SchemaOrg\Contracts\ThingContract;
 class ActionStatusType extends BaseType implements ActionStatusTypeContract, EnumerationContract, IntangibleContract, StatusEnumerationContract, ThingContract
 {
     /**
+     * An in-progress action (e.g, while watching the movie, or driving to a
+     * location).
+     *
+     * @see schema:ActiveActionStatus
+     */
+     const ActiveActionStatus = 'https://schema.org/ActiveActionStatus';
+
+    /**
+     * An action that has already taken place.
+     *
+     * @see schema:CompletedActionStatus
+     */
+     const CompletedActionStatus = 'https://schema.org/CompletedActionStatus';
+
+    /**
+     * An action that failed to complete. The action's error property and the
+     * HTTP return code contain more information about the failure.
+     *
+     * @see schema:FailedActionStatus
+     */
+     const FailedActionStatus = 'https://schema.org/FailedActionStatus';
+
+    /**
+     * A description of an action that is supported.
+     *
+     * @see schema:PotentialActionStatus
+     */
+     const PotentialActionStatus = 'https://schema.org/PotentialActionStatus';
+
+    /**
      * An additional type for the item, typically used for adding more specific
      * types from external vocabularies in microdata syntax. This is a
      * relationship between something and a class that the thing is in. In RDFa

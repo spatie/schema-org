@@ -20,6 +20,83 @@ use \Spatie\SchemaOrg\Contracts\ThingContract;
 class MedicalTrialDesign extends BaseType implements MedicalTrialDesignContract, EnumerationContract, IntangibleContract, MedicalEnumerationContract, ThingContract
 {
     /**
+     * A trial design in which neither the researcher nor the patient knows the
+     * details of the treatment the patient was randomly assigned to.
+     *
+     * @see schema:DoubleBlindedTrial
+     * @see https://health-lifesci.schema.org
+     */
+     const DoubleBlindedTrial = 'https://schema.org/DoubleBlindedTrial';
+
+    /**
+     * An international trial.
+     *
+     * @see schema:InternationalTrial
+     * @see https://health-lifesci.schema.org
+     */
+     const InternationalTrial = 'https://schema.org/InternationalTrial';
+
+    /**
+     * A trial that takes place at multiple centers.
+     *
+     * @see schema:MultiCenterTrial
+     * @see https://health-lifesci.schema.org
+     */
+     const MultiCenterTrial = 'https://schema.org/MultiCenterTrial';
+
+    /**
+     * A trial design in which the researcher knows the full details of the
+     * treatment, and so does the patient.
+     *
+     * @see schema:OpenTrial
+     * @see https://health-lifesci.schema.org
+     */
+     const OpenTrial = 'https://schema.org/OpenTrial';
+
+    /**
+     * A placebo-controlled trial design.
+     *
+     * @see schema:PlaceboControlledTrial
+     * @see https://health-lifesci.schema.org
+     */
+     const PlaceboControlledTrial = 'https://schema.org/PlaceboControlledTrial';
+
+    /**
+     * A randomized trial design.
+     *
+     * @see schema:RandomizedTrial
+     * @see https://health-lifesci.schema.org
+     */
+     const RandomizedTrial = 'https://schema.org/RandomizedTrial';
+
+    /**
+     * A trial design in which the researcher knows which treatment the patient
+     * was randomly assigned to but the patient does not.
+     *
+     * @see schema:SingleBlindedTrial
+     * @see https://health-lifesci.schema.org
+     */
+     const SingleBlindedTrial = 'https://schema.org/SingleBlindedTrial';
+
+    /**
+     * A trial that takes place at a single center.
+     *
+     * @see schema:SingleCenterTrial
+     * @see https://health-lifesci.schema.org
+     */
+     const SingleCenterTrial = 'https://schema.org/SingleCenterTrial';
+
+    /**
+     * A trial design in which neither the researcher, the person administering
+     * the therapy nor the patient knows the details of the treatment the
+     * patient was randomly assigned to.
+     *
+     * @see schema:TripleBlindedTrial
+     * @see https://health-lifesci.schema.org
+     */
+     const TripleBlindedTrial = 'https://schema.org/TripleBlindedTrial';
+
+    /**
      * An additional type for the item, typically used for adding more specific
      * types from external vocabularies in microdata syntax. This is a
      * relationship between something and a class that the thing is in. In RDFa

@@ -19,6 +19,31 @@ use \Spatie\SchemaOrg\Contracts\ThingContract;
 class DrugCostCategory extends BaseType implements DrugCostCategoryContract, EnumerationContract, IntangibleContract, MedicalEnumerationContract, ThingContract
 {
     /**
+     * The drug's cost represents the maximum reimbursement paid by an insurer
+     * for the drug.
+     *
+     * @see schema:ReimbursementCap
+     * @see https://health-lifesci.schema.org
+     */
+     const ReimbursementCap = 'https://schema.org/ReimbursementCap';
+
+    /**
+     * The drug's cost represents the retail cost of the drug.
+     *
+     * @see schema:Retail
+     * @see https://health-lifesci.schema.org
+     */
+     const Retail = 'https://schema.org/Retail';
+
+    /**
+     * The drug's cost represents the wholesale acquisition cost of the drug.
+     *
+     * @see schema:Wholesale
+     * @see https://health-lifesci.schema.org
+     */
+     const Wholesale = 'https://schema.org/Wholesale';
+
+    /**
      * An additional type for the item, typically used for adding more specific
      * types from external vocabularies in microdata syntax. This is a
      * relationship between something and a class that the thing is in. In RDFa

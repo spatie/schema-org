@@ -19,6 +19,78 @@ use \Spatie\SchemaOrg\Contracts\ThingContract;
 class MusicAlbumProductionType extends BaseType implements MusicAlbumProductionTypeContract, EnumerationContract, IntangibleContract, ThingContract
 {
     /**
+     * CompilationAlbum.
+     *
+     * @see schema:CompilationAlbum
+     * @link http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#MBZ
+     */
+     const CompilationAlbum = 'https://schema.org/CompilationAlbum';
+
+    /**
+     * DJMixAlbum.
+     *
+     * @see schema:DJMixAlbum
+     * @link http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#MBZ
+     */
+     const DJMixAlbum = 'https://schema.org/DJMixAlbum';
+
+    /**
+     * DemoAlbum.
+     *
+     * @see schema:DemoAlbum
+     * @link http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#MBZ
+     */
+     const DemoAlbum = 'https://schema.org/DemoAlbum';
+
+    /**
+     * LiveAlbum.
+     *
+     * @see schema:LiveAlbum
+     * @link http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#MBZ
+     */
+     const LiveAlbum = 'https://schema.org/LiveAlbum';
+
+    /**
+     * MixtapeAlbum.
+     *
+     * @see schema:MixtapeAlbum
+     * @link http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#MBZ
+     */
+     const MixtapeAlbum = 'https://schema.org/MixtapeAlbum';
+
+    /**
+     * RemixAlbum.
+     *
+     * @see schema:RemixAlbum
+     * @link http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#MBZ
+     */
+     const RemixAlbum = 'https://schema.org/RemixAlbum';
+
+    /**
+     * SoundtrackAlbum.
+     *
+     * @see schema:SoundtrackAlbum
+     * @link http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#MBZ
+     */
+     const SoundtrackAlbum = 'https://schema.org/SoundtrackAlbum';
+
+    /**
+     * SpokenWordAlbum.
+     *
+     * @see schema:SpokenWordAlbum
+     * @link http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#MBZ
+     */
+     const SpokenWordAlbum = 'https://schema.org/SpokenWordAlbum';
+
+    /**
+     * StudioAlbum.
+     *
+     * @see schema:StudioAlbum
+     * @link http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#MBZ
+     */
+     const StudioAlbum = 'https://schema.org/StudioAlbum';
+
+    /**
      * An additional type for the item, typically used for adding more specific
      * types from external vocabularies in microdata syntax. This is a
      * relationship between something and a class that the thing is in. In RDFa

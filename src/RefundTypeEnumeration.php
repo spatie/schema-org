@@ -20,6 +20,33 @@ use \Spatie\SchemaOrg\Contracts\ThingContract;
 class RefundTypeEnumeration extends BaseType implements RefundTypeEnumerationContract, EnumerationContract, IntangibleContract, ThingContract
 {
     /**
+     * A ExchangeRefund ...
+     *
+     * @see schema:ExchangeRefund
+     * @see https://pending.schema.org
+     * @link https://github.com/schemaorg/schemaorg/issues/2288
+     */
+     const ExchangeRefund = 'https://schema.org/ExchangeRefund';
+
+    /**
+     * A FullRefund ...
+     *
+     * @see schema:FullRefund
+     * @see https://pending.schema.org
+     * @link https://github.com/schemaorg/schemaorg/issues/2288
+     */
+     const FullRefund = 'https://schema.org/FullRefund';
+
+    /**
+     * A StoreCreditRefund ...
+     *
+     * @see schema:StoreCreditRefund
+     * @see https://pending.schema.org
+     * @link https://github.com/schemaorg/schemaorg/issues/2288
+     */
+     const StoreCreditRefund = 'https://schema.org/StoreCreditRefund';
+
+    /**
      * An additional type for the item, typically used for adding more specific
      * types from external vocabularies in microdata syntax. This is a
      * relationship between something and a class that the thing is in. In RDFa

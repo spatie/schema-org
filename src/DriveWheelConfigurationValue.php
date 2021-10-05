@@ -19,6 +19,42 @@ use \Spatie\SchemaOrg\Contracts\ThingContract;
 class DriveWheelConfigurationValue extends BaseType implements DriveWheelConfigurationValueContract, EnumerationContract, IntangibleContract, QualitativeValueContract, ThingContract
 {
     /**
+     * All-wheel Drive is a transmission layout where the engine drives all four
+     * wheels.
+     *
+     * @see schema:AllWheelDriveConfiguration
+     * @link http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#Automotive_Ontology_Working_Group
+     */
+     const AllWheelDriveConfiguration = 'https://schema.org/AllWheelDriveConfiguration';
+
+    /**
+     * Four-wheel drive is a transmission layout where the engine primarily
+     * drives two wheels with a part-time four-wheel drive capability.
+     *
+     * @see schema:FourWheelDriveConfiguration
+     * @link http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#Automotive_Ontology_Working_Group
+     */
+     const FourWheelDriveConfiguration = 'https://schema.org/FourWheelDriveConfiguration';
+
+    /**
+     * Front-wheel drive is a transmission layout where the engine drives the
+     * front wheels.
+     *
+     * @see schema:FrontWheelDriveConfiguration
+     * @link http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#Automotive_Ontology_Working_Group
+     */
+     const FrontWheelDriveConfiguration = 'https://schema.org/FrontWheelDriveConfiguration';
+
+    /**
+     * Real-wheel drive is a transmission layout where the engine drives the
+     * rear wheels.
+     *
+     * @see schema:RearWheelDriveConfiguration
+     * @link http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#Automotive_Ontology_Working_Group
+     */
+     const RearWheelDriveConfiguration = 'https://schema.org/RearWheelDriveConfiguration';
+
+    /**
      * A property-value pair representing an additional characteristics of the
      * entitity, e.g. a product feature or another characteristic for which
      * there is no matching property in schema.org.

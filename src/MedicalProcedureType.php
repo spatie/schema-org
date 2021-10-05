@@ -19,6 +19,24 @@ use \Spatie\SchemaOrg\Contracts\ThingContract;
 class MedicalProcedureType extends BaseType implements MedicalProcedureTypeContract, EnumerationContract, IntangibleContract, MedicalEnumerationContract, ThingContract
 {
     /**
+     * A type of medical procedure that involves noninvasive techniques.
+     *
+     * @see schema:NoninvasiveProcedure
+     * @see https://health-lifesci.schema.org
+     */
+     const NoninvasiveProcedure = 'https://schema.org/NoninvasiveProcedure';
+
+    /**
+     * A type of medical procedure that involves percutaneous techniques, where
+     * access to organs or tissue is achieved via needle-puncture of the skin.
+     * For example, catheter-based procedures like stent delivery.
+     *
+     * @see schema:PercutaneousProcedure
+     * @see https://health-lifesci.schema.org
+     */
+     const PercutaneousProcedure = 'https://schema.org/PercutaneousProcedure';
+
+    /**
      * An additional type for the item, typically used for adding more specific
      * types from external vocabularies in microdata syntax. This is a
      * relationship between something and a class that the thing is in. In RDFa

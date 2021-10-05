@@ -21,6 +21,106 @@ use \Spatie\SchemaOrg\Contracts\ThingContract;
 class EUEnergyEfficiencyEnumeration extends BaseType implements EUEnergyEfficiencyEnumerationContract, EnergyEfficiencyEnumerationContract, EnumerationContract, IntangibleContract, ThingContract
 {
     /**
+     * Represents EU Energy Efficiency Class A as defined in EU energy labeling
+     * regulations
+     *
+     * @see schema:EUEnergyEfficiencyCategoryA
+     * @see https://pending.schema.org
+     * @link https://github.com/schemaorg/schemaorg/issues/2670
+     */
+     const EUEnergyEfficiencyCategoryA = 'https://schema.org/EUEnergyEfficiencyCategoryA';
+
+    /**
+     * Represents EU Energy Efficiency Class A+ as defined in EU energy labeling
+     * regulations
+     *
+     * @see schema:EUEnergyEfficiencyCategoryA1Plus
+     * @see https://pending.schema.org
+     * @link https://github.com/schemaorg/schemaorg/issues/2670
+     */
+     const EUEnergyEfficiencyCategoryA1Plus = 'https://schema.org/EUEnergyEfficiencyCategoryA1Plus';
+
+    /**
+     * Represents EU Energy Efficiency Class A++ as defined in EU energy
+     * labeling regulations
+     *
+     * @see schema:EUEnergyEfficiencyCategoryA2Plus
+     * @see https://pending.schema.org
+     * @link https://github.com/schemaorg/schemaorg/issues/2670
+     */
+     const EUEnergyEfficiencyCategoryA2Plus = 'https://schema.org/EUEnergyEfficiencyCategoryA2Plus';
+
+    /**
+     * Represents EU Energy Efficiency Class A+++ as defined in EU energy
+     * labeling regulations
+     *
+     * @see schema:EUEnergyEfficiencyCategoryA3Plus
+     * @see https://pending.schema.org
+     * @link https://github.com/schemaorg/schemaorg/issues/2670
+     */
+     const EUEnergyEfficiencyCategoryA3Plus = 'https://schema.org/EUEnergyEfficiencyCategoryA3Plus';
+
+    /**
+     * Represents EU Energy Efficiency Class B as defined in EU energy labeling
+     * regulations
+     *
+     * @see schema:EUEnergyEfficiencyCategoryB
+     * @see https://pending.schema.org
+     * @link https://github.com/schemaorg/schemaorg/issues/2670
+     */
+     const EUEnergyEfficiencyCategoryB = 'https://schema.org/EUEnergyEfficiencyCategoryB';
+
+    /**
+     * Represents EU Energy Efficiency Class C as defined in EU energy labeling
+     * regulations
+     *
+     * @see schema:EUEnergyEfficiencyCategoryC
+     * @see https://pending.schema.org
+     * @link https://github.com/schemaorg/schemaorg/issues/2670
+     */
+     const EUEnergyEfficiencyCategoryC = 'https://schema.org/EUEnergyEfficiencyCategoryC';
+
+    /**
+     * Represents EU Energy Efficiency Class D as defined in EU energy labeling
+     * regulations
+     *
+     * @see schema:EUEnergyEfficiencyCategoryD
+     * @see https://pending.schema.org
+     * @link https://github.com/schemaorg/schemaorg/issues/2670
+     */
+     const EUEnergyEfficiencyCategoryD = 'https://schema.org/EUEnergyEfficiencyCategoryD';
+
+    /**
+     * Represents EU Energy Efficiency Class E as defined in EU energy labeling
+     * regulations
+     *
+     * @see schema:EUEnergyEfficiencyCategoryE
+     * @see https://pending.schema.org
+     * @link https://github.com/schemaorg/schemaorg/issues/2670
+     */
+     const EUEnergyEfficiencyCategoryE = 'https://schema.org/EUEnergyEfficiencyCategoryE';
+
+    /**
+     * Represents EU Energy Efficiency Class F as defined in EU energy labeling
+     * regulations
+     *
+     * @see schema:EUEnergyEfficiencyCategoryF
+     * @see https://pending.schema.org
+     * @link https://github.com/schemaorg/schemaorg/issues/2670
+     */
+     const EUEnergyEfficiencyCategoryF = 'https://schema.org/EUEnergyEfficiencyCategoryF';
+
+    /**
+     * Represents EU Energy Efficiency Class G as defined in EU energy labeling
+     * regulations
+     *
+     * @see schema:EUEnergyEfficiencyCategoryG
+     * @see https://pending.schema.org
+     * @link https://github.com/schemaorg/schemaorg/issues/2670
+     */
+     const EUEnergyEfficiencyCategoryG = 'https://schema.org/EUEnergyEfficiencyCategoryG';
+
+    /**
      * An additional type for the item, typically used for adding more specific
      * types from external vocabularies in microdata syntax. This is a
      * relationship between something and a class that the thing is in. In RDFa

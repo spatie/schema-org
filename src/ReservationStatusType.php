@@ -18,6 +18,36 @@ use \Spatie\SchemaOrg\Contracts\ThingContract;
 class ReservationStatusType extends BaseType implements ReservationStatusTypeContract, EnumerationContract, IntangibleContract, StatusEnumerationContract, ThingContract
 {
     /**
+     * The status for a previously confirmed reservation that is now cancelled.
+     *
+     * @see schema:ReservationCancelled
+     */
+     const ReservationCancelled = 'https://schema.org/ReservationCancelled';
+
+    /**
+     * The status of a confirmed reservation.
+     *
+     * @see schema:ReservationConfirmed
+     */
+     const ReservationConfirmed = 'https://schema.org/ReservationConfirmed';
+
+    /**
+     * The status of a reservation on hold pending an update like credit card
+     * number or flight changes.
+     *
+     * @see schema:ReservationHold
+     */
+     const ReservationHold = 'https://schema.org/ReservationHold';
+
+    /**
+     * The status of a reservation when a request has been sent, but not
+     * confirmed.
+     *
+     * @see schema:ReservationPending
+     */
+     const ReservationPending = 'https://schema.org/ReservationPending';
+
+    /**
      * An additional type for the item, typically used for adding more specific
      * types from external vocabularies in microdata syntax. This is a
      * relationship between something and a class that the thing is in. In RDFa

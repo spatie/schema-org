@@ -20,6 +20,44 @@ use \Spatie\SchemaOrg\Contracts\ThingContract;
 class ProductReturnEnumeration extends BaseType implements ProductReturnEnumerationContract, EnumerationContract, IntangibleContract, ThingContract
 {
     /**
+     * ProductReturnFiniteReturnWindow: there is a finite window for product
+     * returns.
+     *
+     * @see schema:ProductReturnFiniteReturnWindow
+     * @see https://attic.schema.org
+     * @link https://github.com/schemaorg/schemaorg/issues/2288
+     */
+     const ProductReturnFiniteReturnWindow = 'https://schema.org/ProductReturnFiniteReturnWindow';
+
+    /**
+     * ProductReturnNotPermitted: product returns are not permitted.
+     *
+     * @see schema:ProductReturnNotPermitted
+     * @see https://attic.schema.org
+     * @link https://github.com/schemaorg/schemaorg/issues/2288
+     */
+     const ProductReturnNotPermitted = 'https://schema.org/ProductReturnNotPermitted';
+
+    /**
+     * ProductReturnUnlimitedWindow: there is an unlimited window for product
+     * returns.
+     *
+     * @see schema:ProductReturnUnlimitedWindow
+     * @see https://attic.schema.org
+     * @link https://github.com/schemaorg/schemaorg/issues/2288
+     */
+     const ProductReturnUnlimitedWindow = 'https://schema.org/ProductReturnUnlimitedWindow';
+
+    /**
+     * ProductReturnUnspecified: a product return policy is not specified here.
+     *
+     * @see schema:ProductReturnUnspecified
+     * @see https://attic.schema.org
+     * @link https://github.com/schemaorg/schemaorg/issues/2288
+     */
+     const ProductReturnUnspecified = 'https://schema.org/ProductReturnUnspecified';
+
+    /**
      * An additional type for the item, typically used for adding more specific
      * types from external vocabularies in microdata syntax. This is a
      * relationship between something and a class that the thing is in. In RDFa

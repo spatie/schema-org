@@ -21,6 +21,45 @@ use \Spatie\SchemaOrg\Contracts\ThingContract;
 class UKNonprofitType extends BaseType implements UKNonprofitTypeContract, EnumerationContract, IntangibleContract, NonprofitTypeContract, ThingContract
 {
     /**
+     * CharitableIncorporatedOrganization: Non-profit type referring to a
+     * Charitable Incorporated Organization (UK).
+     *
+     * @see schema:CharitableIncorporatedOrganization
+     * @see https://pending.schema.org
+     * @link https://github.com/schemaorg/schemaorg/issues/2543
+     */
+     const CharitableIncorporatedOrganization = 'https://schema.org/CharitableIncorporatedOrganization';
+
+    /**
+     * LimitedByGuaranteeCharity: Non-profit type referring to a charitable
+     * company that is limited by guarantee (UK).
+     *
+     * @see schema:LimitedByGuaranteeCharity
+     * @see https://pending.schema.org
+     * @link https://github.com/schemaorg/schemaorg/issues/2543
+     */
+     const LimitedByGuaranteeCharity = 'https://schema.org/LimitedByGuaranteeCharity';
+
+    /**
+     * UKTrust: Non-profit type referring to a UK trust.
+     *
+     * @see schema:UKTrust
+     * @see https://pending.schema.org
+     * @link https://github.com/schemaorg/schemaorg/issues/2543
+     */
+     const UKTrust = 'https://schema.org/UKTrust';
+
+    /**
+     * UnincorporatedAssociationCharity: Non-profit type referring to a
+     * charitable company that is not incorporated (UK).
+     *
+     * @see schema:UnincorporatedAssociationCharity
+     * @see https://pending.schema.org
+     * @link https://github.com/schemaorg/schemaorg/issues/2543
+     */
+     const UnincorporatedAssociationCharity = 'https://schema.org/UnincorporatedAssociationCharity';
+
+    /**
      * An additional type for the item, typically used for adding more specific
      * types from external vocabularies in microdata syntax. This is a
      * relationship between something and a class that the thing is in. In RDFa

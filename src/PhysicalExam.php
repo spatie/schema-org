@@ -21,6 +21,118 @@ use \Spatie\SchemaOrg\Contracts\ThingContract;
 class PhysicalExam extends BaseType implements PhysicalExamContract, EnumerationContract, IntangibleContract, MedicalEntityContract, MedicalEnumerationContract, MedicalProcedureContract, ThingContract
 {
     /**
+     * Abdomen clinical examination.
+     *
+     * @see schema:Abdomen
+     * @see https://health-lifesci.schema.org
+     */
+     const Abdomen = 'https://schema.org/Abdomen';
+
+    /**
+     * Appearance assessment with clinical examination.
+     *
+     * @see schema:Appearance
+     * @see https://health-lifesci.schema.org
+     */
+     const Appearance = 'https://schema.org/Appearance';
+
+    /**
+     * Cardiovascular system assessment withclinical examination.
+     *
+     * @see schema:CardiovascularExam
+     * @see https://health-lifesci.schema.org
+     */
+     const CardiovascularExam = 'https://schema.org/CardiovascularExam';
+
+    /**
+     * Ear function assessment with clinical examination.
+     *
+     * @see schema:Ear
+     * @see https://health-lifesci.schema.org
+     */
+     const Ear = 'https://schema.org/Ear';
+
+    /**
+     * Eye or ophtalmological function assessment with clinical examination.
+     *
+     * @see schema:Eye
+     * @see https://health-lifesci.schema.org
+     */
+     const Eye = 'https://schema.org/Eye';
+
+    /**
+     * Genitourinary system function assessment with clinical examination.
+     *
+     * @see schema:Genitourinary
+     * @see https://health-lifesci.schema.org
+     */
+     const Genitourinary = 'https://schema.org/Genitourinary';
+
+    /**
+     * Head assessment with clinical examination.
+     *
+     * @see schema:Head
+     * @see https://health-lifesci.schema.org
+     */
+     const Head = 'https://schema.org/Head';
+
+    /**
+     * Lung and respiratory system clinical examination.
+     *
+     * @see schema:Lung
+     * @see https://health-lifesci.schema.org
+     */
+     const Lung = 'https://schema.org/Lung';
+
+    /**
+     * Musculoskeletal system clinical examination.
+     *
+     * @see schema:MusculoskeletalExam
+     * @see https://health-lifesci.schema.org
+     */
+     const MusculoskeletalExam = 'https://schema.org/MusculoskeletalExam';
+
+    /**
+     * Neck assessment with clinical examination.
+     *
+     * @see schema:Neck
+     * @see https://health-lifesci.schema.org
+     */
+     const Neck = 'https://schema.org/Neck';
+
+    /**
+     * Neurological system clinical examination.
+     *
+     * @see schema:Neuro
+     * @see https://health-lifesci.schema.org
+     */
+     const Neuro = 'https://schema.org/Neuro';
+
+    /**
+     * Nose function assessment with clinical examination.
+     *
+     * @see schema:Nose
+     * @see https://health-lifesci.schema.org
+     */
+     const Nose = 'https://schema.org/Nose';
+
+    /**
+     * Skin assessment with clinical examination.
+     *
+     * @see schema:Skin
+     * @see https://health-lifesci.schema.org
+     */
+     const Skin = 'https://schema.org/Skin';
+
+    /**
+     * Throat assessment with  clinical examination.
+     *
+     * @see schema:Throat
+     * @see https://health-lifesci.schema.org
+     */
+     const Throat = 'https://schema.org/Throat';
+
+    /**
      * An additional type for the item, typically used for adding more specific
      * types from external vocabularies in microdata syntax. This is a
      * relationship between something and a class that the thing is in. In RDFa

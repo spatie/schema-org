@@ -18,6 +18,62 @@ use \Spatie\SchemaOrg\Contracts\ThingContract;
 class OrderStatus extends BaseType implements OrderStatusContract, EnumerationContract, IntangibleContract, StatusEnumerationContract, ThingContract
 {
     /**
+     * OrderStatus representing cancellation of an order.
+     *
+     * @see schema:OrderCancelled
+     */
+     const OrderCancelled = 'https://schema.org/OrderCancelled';
+
+    /**
+     * OrderStatus representing successful delivery of an order.
+     *
+     * @see schema:OrderDelivered
+     */
+     const OrderDelivered = 'https://schema.org/OrderDelivered';
+
+    /**
+     * OrderStatus representing that an order is in transit.
+     *
+     * @see schema:OrderInTransit
+     */
+     const OrderInTransit = 'https://schema.org/OrderInTransit';
+
+    /**
+     * OrderStatus representing that payment is due on an order.
+     *
+     * @see schema:OrderPaymentDue
+     */
+     const OrderPaymentDue = 'https://schema.org/OrderPaymentDue';
+
+    /**
+     * OrderStatus representing availability of an order for pickup.
+     *
+     * @see schema:OrderPickupAvailable
+     */
+     const OrderPickupAvailable = 'https://schema.org/OrderPickupAvailable';
+
+    /**
+     * OrderStatus representing that there is a problem with the order.
+     *
+     * @see schema:OrderProblem
+     */
+     const OrderProblem = 'https://schema.org/OrderProblem';
+
+    /**
+     * OrderStatus representing that an order is being processed.
+     *
+     * @see schema:OrderProcessing
+     */
+     const OrderProcessing = 'https://schema.org/OrderProcessing';
+
+    /**
+     * OrderStatus representing that an order has been returned.
+     *
+     * @see schema:OrderReturned
+     */
+     const OrderReturned = 'https://schema.org/OrderReturned';
+
+    /**
      * An additional type for the item, typically used for adding more specific
      * types from external vocabularies in microdata syntax. This is a
      * relationship between something and a class that the thing is in. In RDFa

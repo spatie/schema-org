@@ -19,6 +19,86 @@ use \Spatie\SchemaOrg\Contracts\ThingContract;
 class MedicalStudyStatus extends BaseType implements MedicalStudyStatusContract, EnumerationContract, IntangibleContract, MedicalEnumerationContract, ThingContract
 {
     /**
+     * Active, but not recruiting new participants.
+     *
+     * @see schema:ActiveNotRecruiting
+     * @see https://health-lifesci.schema.org
+     */
+     const ActiveNotRecruiting = 'https://schema.org/ActiveNotRecruiting';
+
+    /**
+     * Completed.
+     *
+     * @see schema:Completed
+     * @see https://health-lifesci.schema.org
+     */
+     const Completed = 'https://schema.org/Completed';
+
+    /**
+     * Enrolling participants by invitation only.
+     *
+     * @see schema:EnrollingByInvitation
+     * @see https://health-lifesci.schema.org
+     */
+     const EnrollingByInvitation = 'https://schema.org/EnrollingByInvitation';
+
+    /**
+     * Not yet recruiting.
+     *
+     * @see schema:NotYetRecruiting
+     * @see https://health-lifesci.schema.org
+     */
+     const NotYetRecruiting = 'https://schema.org/NotYetRecruiting';
+
+    /**
+     * Recruiting participants.
+     *
+     * @see schema:Recruiting
+     * @see https://health-lifesci.schema.org
+     */
+     const Recruiting = 'https://schema.org/Recruiting';
+
+    /**
+     * Results are available.
+     *
+     * @see schema:ResultsAvailable
+     * @see https://health-lifesci.schema.org
+     */
+     const ResultsAvailable = 'https://schema.org/ResultsAvailable';
+
+    /**
+     * Results are not available.
+     *
+     * @see schema:ResultsNotAvailable
+     * @see https://health-lifesci.schema.org
+     */
+     const ResultsNotAvailable = 'https://schema.org/ResultsNotAvailable';
+
+    /**
+     * Suspended.
+     *
+     * @see schema:Suspended
+     * @see https://health-lifesci.schema.org
+     */
+     const Suspended = 'https://schema.org/Suspended';
+
+    /**
+     * Terminated.
+     *
+     * @see schema:Terminated
+     * @see https://health-lifesci.schema.org
+     */
+     const Terminated = 'https://schema.org/Terminated';
+
+    /**
+     * Withdrawn.
+     *
+     * @see schema:Withdrawn
+     * @see https://health-lifesci.schema.org
+     */
+     const Withdrawn = 'https://schema.org/Withdrawn';
+
+    /**
      * An additional type for the item, typically used for adding more specific
      * types from external vocabularies in microdata syntax. This is a
      * relationship between something and a class that the thing is in. In RDFa

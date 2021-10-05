@@ -20,6 +20,67 @@ use \Spatie\SchemaOrg\Contracts\ThingContract;
 class PriceComponentTypeEnumeration extends BaseType implements PriceComponentTypeEnumerationContract, EnumerationContract, IntangibleContract, ThingContract
 {
     /**
+     * Represents the activation fee part of the total price for an offered
+     * product, for example a cellphone contract
+     *
+     * @see schema:ActivationFee
+     * @see https://pending.schema.org
+     * @link https://github.com/schemaorg/schemaorg/issues/2689
+     */
+     const ActivationFee = 'https://schema.org/ActivationFee';
+
+    /**
+     * Represents the cleaning fee part of the total price for an offered
+     * product, for example a vacation rental
+     *
+     * @see schema:CleaningFee
+     * @see https://pending.schema.org
+     * @link https://github.com/schemaorg/schemaorg/issues/2689
+     */
+     const CleaningFee = 'https://schema.org/CleaningFee';
+
+    /**
+     * Represents the distance fee (e.g., price per km or mile) part of the
+     * total price for an offered product, for example a car rental
+     *
+     * @see schema:DistanceFee
+     * @see https://pending.schema.org
+     * @link https://github.com/schemaorg/schemaorg/issues/2689
+     */
+     const DistanceFee = 'https://schema.org/DistanceFee';
+
+    /**
+     * Represents the downpayment (up-front payment) price component of the
+     * total price for an offered product that has additional installment
+     * payments
+     *
+     * @see schema:Downpayment
+     * @see https://pending.schema.org
+     * @link https://github.com/schemaorg/schemaorg/issues/2689
+     */
+     const Downpayment = 'https://schema.org/Downpayment';
+
+    /**
+     * Represents the installment pricing component of the total price for an
+     * offered product
+     *
+     * @see schema:Installment
+     * @see https://pending.schema.org
+     * @link https://github.com/schemaorg/schemaorg/issues/2689
+     */
+     const Installment = 'https://schema.org/Installment';
+
+    /**
+     * Represents the subscription pricing component of the total price for an
+     * offered product
+     *
+     * @see schema:Subscription
+     * @see https://pending.schema.org
+     * @link https://github.com/schemaorg/schemaorg/issues/2689
+     */
+     const Subscription = 'https://schema.org/Subscription';
+
+    /**
      * An additional type for the item, typically used for adding more specific
      * types from external vocabularies in microdata syntax. This is a
      * relationship between something and a class that the thing is in. In RDFa

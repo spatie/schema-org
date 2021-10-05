@@ -17,6 +17,45 @@ use \Spatie\SchemaOrg\Contracts\ThingContract;
 class BookFormatType extends BaseType implements BookFormatTypeContract, EnumerationContract, IntangibleContract, ThingContract
 {
     /**
+     * Book format: Audiobook. This is an enumerated value for use with the
+     * bookFormat property. There is also a type 'Audiobook' in the bib
+     * extension which includes Audiobook specific properties.
+     *
+     * @see schema:AudiobookFormat
+     */
+     const AudiobookFormat = 'https://schema.org/AudiobookFormat';
+
+    /**
+     * Book format: Ebook.
+     *
+     * @see schema:EBook
+     */
+     const EBook = 'https://schema.org/EBook';
+
+    /**
+     * Book format: GraphicNovel. May represent a bound collection of ComicIssue
+     * instances.
+     *
+     * @see schema:GraphicNovel
+     * @see https://bib.schema.org
+     */
+     const GraphicNovel = 'https://schema.org/GraphicNovel';
+
+    /**
+     * Book format: Hardcover.
+     *
+     * @see schema:Hardcover
+     */
+     const Hardcover = 'https://schema.org/Hardcover';
+
+    /**
+     * Book format: Paperback.
+     *
+     * @see schema:Paperback
+     */
+     const Paperback = 'https://schema.org/Paperback';
+
+    /**
      * An additional type for the item, typically used for adding more specific
      * types from external vocabularies in microdata syntax. This is a
      * relationship between something and a class that the thing is in. In RDFa

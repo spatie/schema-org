@@ -20,6 +20,35 @@ use \Spatie\SchemaOrg\Contracts\ThingContract;
 class EventAttendanceModeEnumeration extends BaseType implements EventAttendanceModeEnumerationContract, EnumerationContract, IntangibleContract, ThingContract
 {
     /**
+     * MixedEventAttendanceMode - an event that is conducted as a combination of
+     * both offline and online modes.
+     *
+     * @see schema:MixedEventAttendanceMode
+     * @see https://pending.schema.org
+     * @link https://github.com/schemaorg/schemaorg/issues/1842
+     */
+     const MixedEventAttendanceMode = 'https://schema.org/MixedEventAttendanceMode';
+
+    /**
+     * OfflineEventAttendanceMode - an event that is primarily conducted
+     * offline.
+     *
+     * @see schema:OfflineEventAttendanceMode
+     * @see https://pending.schema.org
+     * @link https://github.com/schemaorg/schemaorg/issues/1842
+     */
+     const OfflineEventAttendanceMode = 'https://schema.org/OfflineEventAttendanceMode';
+
+    /**
+     * OnlineEventAttendanceMode - an event that is primarily conducted online.
+     *
+     * @see schema:OnlineEventAttendanceMode
+     * @see https://pending.schema.org
+     * @link https://github.com/schemaorg/schemaorg/issues/1842
+     */
+     const OnlineEventAttendanceMode = 'https://schema.org/OnlineEventAttendanceMode';
+
+    /**
      * An additional type for the item, typically used for adding more specific
      * types from external vocabularies in microdata syntax. This is a
      * relationship between something and a class that the thing is in. In RDFa

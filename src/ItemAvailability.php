@@ -17,6 +17,70 @@ use \Spatie\SchemaOrg\Contracts\ThingContract;
 class ItemAvailability extends BaseType implements ItemAvailabilityContract, EnumerationContract, IntangibleContract, ThingContract
 {
     /**
+     * Indicates that the item has been discontinued.
+     *
+     * @see schema:Discontinued
+     */
+     const Discontinued = 'https://schema.org/Discontinued';
+
+    /**
+     * Indicates that the item is in stock.
+     *
+     * @see schema:InStock
+     */
+     const InStock = 'https://schema.org/InStock';
+
+    /**
+     * Indicates that the item is available only at physical locations.
+     *
+     * @see schema:InStoreOnly
+     */
+     const InStoreOnly = 'https://schema.org/InStoreOnly';
+
+    /**
+     * Indicates that the item has limited availability.
+     *
+     * @see schema:LimitedAvailability
+     */
+     const LimitedAvailability = 'https://schema.org/LimitedAvailability';
+
+    /**
+     * Indicates that the item is available only online.
+     *
+     * @see schema:OnlineOnly
+     */
+     const OnlineOnly = 'https://schema.org/OnlineOnly';
+
+    /**
+     * Indicates that the item is out of stock.
+     *
+     * @see schema:OutOfStock
+     */
+     const OutOfStock = 'https://schema.org/OutOfStock';
+
+    /**
+     * Indicates that the item is available for pre-order.
+     *
+     * @see schema:PreOrder
+     */
+     const PreOrder = 'https://schema.org/PreOrder';
+
+    /**
+     * Indicates that the item is available for ordering and delivery before
+     * general availability.
+     *
+     * @see schema:PreSale
+     */
+     const PreSale = 'https://schema.org/PreSale';
+
+    /**
+     * Indicates that the item has sold out.
+     *
+     * @see schema:SoldOut
+     */
+     const SoldOut = 'https://schema.org/SoldOut';
+
+    /**
      * An additional type for the item, typically used for adding more specific
      * types from external vocabularies in microdata syntax. This is a
      * relationship between something and a class that the thing is in. In RDFa

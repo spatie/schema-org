@@ -19,6 +19,24 @@ use \Spatie\SchemaOrg\Contracts\ThingContract;
 class SteeringPositionValue extends BaseType implements SteeringPositionValueContract, EnumerationContract, IntangibleContract, QualitativeValueContract, ThingContract
 {
     /**
+     * The steering position is on the left side of the vehicle (viewed from the
+     * main direction of driving).
+     *
+     * @see schema:LeftHandDriving
+     * @link http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#Automotive_Ontology_Working_Group
+     */
+     const LeftHandDriving = 'https://schema.org/LeftHandDriving';
+
+    /**
+     * The steering position is on the right side of the vehicle (viewed from
+     * the main direction of driving).
+     *
+     * @see schema:RightHandDriving
+     * @link http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#Automotive_Ontology_Working_Group
+     */
+     const RightHandDriving = 'https://schema.org/RightHandDriving';
+
+    /**
      * A property-value pair representing an additional characteristics of the
      * entitity, e.g. a product feature or another characteristic for which
      * there is no matching property in schema.org.

@@ -20,6 +20,15 @@ use \Spatie\SchemaOrg\Contracts\ThingContract;
 class EnergyStarEnergyEfficiencyEnumeration extends BaseType implements EnergyStarEnergyEfficiencyEnumerationContract, EnergyEfficiencyEnumerationContract, EnumerationContract, IntangibleContract, ThingContract
 {
     /**
+     * Represents EnergyStar certification
+     *
+     * @see schema:EnergyStarCertified
+     * @see https://pending.schema.org
+     * @link https://github.com/schemaorg/schemaorg/issues/2670
+     */
+     const EnergyStarCertified = 'https://schema.org/EnergyStarCertified';
+
+    /**
      * An additional type for the item, typically used for adding more specific
      * types from external vocabularies in microdata syntax. This is a
      * relationship between something and a class that the thing is in. In RDFa

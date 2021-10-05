@@ -19,6 +19,23 @@ use \Spatie\SchemaOrg\Contracts\ThingContract;
 class MedicalAudienceType extends BaseType implements MedicalAudienceTypeContract, EnumerationContract, IntangibleContract, MedicalEnumerationContract, ThingContract
 {
     /**
+     * Medical clinicians, including practicing physicians and other medical
+     * professionals involved in clinical practice.
+     *
+     * @see schema:Clinician
+     * @see https://health-lifesci.schema.org
+     */
+     const Clinician = 'https://schema.org/Clinician';
+
+    /**
+     * Medical researchers.
+     *
+     * @see schema:MedicalResearcher
+     * @see https://health-lifesci.schema.org
+     */
+     const MedicalResearcher = 'https://schema.org/MedicalResearcher';
+
+    /**
      * An additional type for the item, typically used for adding more specific
      * types from external vocabularies in microdata syntax. This is a
      * relationship between something and a class that the thing is in. In RDFa

@@ -18,6 +18,37 @@ use \Spatie\SchemaOrg\Contracts\ThingContract;
 class GameServerStatus extends BaseType implements GameServerStatusContract, EnumerationContract, IntangibleContract, StatusEnumerationContract, ThingContract
 {
     /**
+     * Game server status: OfflinePermanently. Server is offline and not
+     * available.
+     *
+     * @see schema:OfflinePermanently
+     */
+     const OfflinePermanently = 'https://schema.org/OfflinePermanently';
+
+    /**
+     * Game server status: OfflineTemporarily. Server is offline now but it can
+     * be online soon.
+     *
+     * @see schema:OfflineTemporarily
+     */
+     const OfflineTemporarily = 'https://schema.org/OfflineTemporarily';
+
+    /**
+     * Game server status: Online. Server is available.
+     *
+     * @see schema:Online
+     */
+     const Online = 'https://schema.org/Online';
+
+    /**
+     * Game server status: OnlineFull. Server is online but unavailable. The
+     * maximum number of players has reached.
+     *
+     * @see schema:OnlineFull
+     */
+     const OnlineFull = 'https://schema.org/OnlineFull';
+
+    /**
      * An additional type for the item, typically used for adding more specific
      * types from external vocabularies in microdata syntax. This is a
      * relationship between something and a class that the thing is in. In RDFa

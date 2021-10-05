@@ -18,6 +18,27 @@ use \Spatie\SchemaOrg\Contracts\ThingContract;
 class ItemListOrderType extends BaseType implements ItemListOrderTypeContract, EnumerationContract, IntangibleContract, ThingContract
 {
     /**
+     * An ItemList ordered with lower values listed first.
+     *
+     * @see schema:ItemListOrderAscending
+     */
+     const ItemListOrderAscending = 'https://schema.org/ItemListOrderAscending';
+
+    /**
+     * An ItemList ordered with higher values listed first.
+     *
+     * @see schema:ItemListOrderDescending
+     */
+     const ItemListOrderDescending = 'https://schema.org/ItemListOrderDescending';
+
+    /**
+     * An ItemList ordered with no explicit order.
+     *
+     * @see schema:ItemListUnordered
+     */
+     const ItemListUnordered = 'https://schema.org/ItemListUnordered';
+
+    /**
      * An additional type for the item, typically used for adding more specific
      * types from external vocabularies in microdata syntax. This is a
      * relationship between something and a class that the thing is in. In RDFa

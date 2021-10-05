@@ -19,6 +19,62 @@ use \Spatie\SchemaOrg\Contracts\ThingContract;
 class MusicReleaseFormatType extends BaseType implements MusicReleaseFormatTypeContract, EnumerationContract, IntangibleContract, ThingContract
 {
     /**
+     * CDFormat.
+     *
+     * @see schema:CDFormat
+     * @link http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#MBZ
+     */
+     const CDFormat = 'https://schema.org/CDFormat';
+
+    /**
+     * CassetteFormat.
+     *
+     * @see schema:CassetteFormat
+     * @link http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#MBZ
+     */
+     const CassetteFormat = 'https://schema.org/CassetteFormat';
+
+    /**
+     * DVDFormat.
+     *
+     * @see schema:DVDFormat
+     * @link http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#MBZ
+     */
+     const DVDFormat = 'https://schema.org/DVDFormat';
+
+    /**
+     * DigitalAudioTapeFormat.
+     *
+     * @see schema:DigitalAudioTapeFormat
+     * @link http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#MBZ
+     */
+     const DigitalAudioTapeFormat = 'https://schema.org/DigitalAudioTapeFormat';
+
+    /**
+     * DigitalFormat.
+     *
+     * @see schema:DigitalFormat
+     * @link http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#MBZ
+     */
+     const DigitalFormat = 'https://schema.org/DigitalFormat';
+
+    /**
+     * LaserDiscFormat.
+     *
+     * @see schema:LaserDiscFormat
+     * @link http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#MBZ
+     */
+     const LaserDiscFormat = 'https://schema.org/LaserDiscFormat';
+
+    /**
+     * VinylFormat.
+     *
+     * @see schema:VinylFormat
+     * @link http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#MBZ
+     */
+     const VinylFormat = 'https://schema.org/VinylFormat';
+
+    /**
      * An additional type for the item, typically used for adding more specific
      * types from external vocabularies in microdata syntax. This is a
      * relationship between something and a class that the thing is in. In RDFa

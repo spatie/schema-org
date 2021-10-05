@@ -20,6 +20,64 @@ use \Spatie\SchemaOrg\Contracts\ThingContract;
 class PriceTypeEnumeration extends BaseType implements PriceTypeEnumerationContract, EnumerationContract, IntangibleContract, ThingContract
 {
     /**
+     * Represents the invoice price of an offered product.
+     *
+     * @see schema:InvoicePrice
+     * @see https://pending.schema.org
+     * @link https://github.com/schemaorg/schemaorg/issues/2712
+     */
+     const InvoicePrice = 'https://schema.org/InvoicePrice';
+
+    /**
+     * Represents the list price (the price a product is actually advertised
+     * for) of an offered product.
+     *
+     * @see schema:ListPrice
+     * @see https://pending.schema.org
+     * @link https://github.com/schemaorg/schemaorg/issues/2712
+     */
+     const ListPrice = 'https://schema.org/ListPrice';
+
+    /**
+     * Represents the manufacturer suggested retail price ("MSRP") of an offered
+     * product.
+     *
+     * @see schema:MSRP
+     * @see https://pending.schema.org
+     * @link https://github.com/schemaorg/schemaorg/issues/2712
+     */
+     const MSRP = 'https://schema.org/MSRP';
+
+    /**
+     * Represents the minimum advertised price ("MAP") (as dictated by the
+     * manufacturer) of an offered product.
+     *
+     * @see schema:MinimumAdvertisedPrice
+     * @see https://pending.schema.org
+     * @link https://github.com/schemaorg/schemaorg/issues/2712
+     */
+     const MinimumAdvertisedPrice = 'https://schema.org/MinimumAdvertisedPrice';
+
+    /**
+     * Represents the suggested retail price ("SRP") of an offered product.
+     *
+     * @see schema:SRP
+     * @see https://pending.schema.org
+     * @link https://github.com/schemaorg/schemaorg/issues/2712
+     */
+     const SRP = 'https://schema.org/SRP';
+
+    /**
+     * Represents a sale price (usually active for a limited period) of an
+     * offered product.
+     *
+     * @see schema:SalePrice
+     * @see https://pending.schema.org
+     * @link https://github.com/schemaorg/schemaorg/issues/2712
+     */
+     const SalePrice = 'https://schema.org/SalePrice';
+
+    /**
      * An additional type for the item, typically used for adding more specific
      * types from external vocabularies in microdata syntax. This is a
      * relationship between something and a class that the thing is in. In RDFa

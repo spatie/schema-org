@@ -21,6 +21,219 @@ use \Spatie\SchemaOrg\Contracts\ThingContract;
 class HealthAspectEnumeration extends BaseType implements HealthAspectEnumerationContract, EnumerationContract, IntangibleContract, ThingContract
 {
     /**
+     * Content about the benefits and advantages of usage or utilization of
+     * topic.
+     *
+     * @see schema:BenefitsHealthAspect
+     * @see https://pending.schema.org
+     * @link https://github.com/schemaorg/schemaorg/issues/2374
+     */
+     const BenefitsHealthAspect = 'https://schema.org/BenefitsHealthAspect';
+
+    /**
+     * Information about the causes and main actions that gave rise to the
+     * topic.
+     *
+     * @see schema:CausesHealthAspect
+     * @see https://pending.schema.org
+     * @link https://github.com/schemaorg/schemaorg/issues/2374
+     */
+     const CausesHealthAspect = 'https://schema.org/CausesHealthAspect';
+
+    /**
+     * Content about contagion mechanisms and contagiousness information over
+     * the topic.
+     *
+     * @see schema:ContagiousnessHealthAspect
+     * @see https://pending.schema.org
+     * @link https://github.com/schemaorg/schemaorg/issues/2374
+     */
+     const ContagiousnessHealthAspect = 'https://schema.org/ContagiousnessHealthAspect';
+
+    /**
+     * Information about how or where to find a topic. Also may contain location
+     * data that can be used for where to look for help if the topic is
+     * observed.
+     *
+     * @see schema:HowOrWhereHealthAspect
+     * @see https://pending.schema.org
+     * @link https://github.com/schemaorg/schemaorg/issues/2374
+     */
+     const HowOrWhereHealthAspect = 'https://schema.org/HowOrWhereHealthAspect';
+
+    /**
+     * Information about coping or life related to the topic.
+     *
+     * @see schema:LivingWithHealthAspect
+     * @see https://pending.schema.org
+     * @link https://github.com/schemaorg/schemaorg/issues/2374
+     */
+     const LivingWithHealthAspect = 'https://schema.org/LivingWithHealthAspect';
+
+    /**
+     * Related topics may be treated by a Topic.
+     *
+     * @see schema:MayTreatHealthAspect
+     * @see https://pending.schema.org
+     * @link https://github.com/schemaorg/schemaorg/issues/2374
+     */
+     const MayTreatHealthAspect = 'https://schema.org/MayTreatHealthAspect';
+
+    /**
+     * Content about common misconceptions and myths that are related to a
+     * topic.
+     *
+     * @see schema:MisconceptionsHealthAspect
+     * @see https://pending.schema.org
+     * @link https://github.com/schemaorg/schemaorg/issues/2374
+     */
+     const MisconceptionsHealthAspect = 'https://schema.org/MisconceptionsHealthAspect';
+
+    /**
+     * Overview of the content. Contains a summarized view of the topic with the
+     * most relevant information for an introduction.
+     *
+     * @see schema:OverviewHealthAspect
+     * @see https://pending.schema.org
+     * @link https://github.com/schemaorg/schemaorg/issues/2374
+     */
+     const OverviewHealthAspect = 'https://schema.org/OverviewHealthAspect';
+
+    /**
+     * Content about the real life experience of patients or people that have
+     * lived a similar experience about the topic. May be forums, topics,
+     * Q-and-A and related material.
+     *
+     * @see schema:PatientExperienceHealthAspect
+     * @see https://pending.schema.org
+     * @link https://github.com/schemaorg/schemaorg/issues/2374
+     */
+     const PatientExperienceHealthAspect = 'https://schema.org/PatientExperienceHealthAspect';
+
+    /**
+     * Information about actions or measures that can be taken to avoid getting
+     * the topic or reaching a critical situation related to the topic.
+     *
+     * @see schema:PreventionHealthAspect
+     * @see https://pending.schema.org
+     * @link https://github.com/schemaorg/schemaorg/issues/2374
+     */
+     const PreventionHealthAspect = 'https://schema.org/PreventionHealthAspect';
+
+    /**
+     * Typical progression and happenings of life course of the topic.
+     *
+     * @see schema:PrognosisHealthAspect
+     * @see https://pending.schema.org
+     * @link https://github.com/schemaorg/schemaorg/issues/2374
+     */
+     const PrognosisHealthAspect = 'https://schema.org/PrognosisHealthAspect';
+
+    /**
+     * Other prominent or relevant topics tied to the main topic.
+     *
+     * @see schema:RelatedTopicsHealthAspect
+     * @see https://pending.schema.org
+     * @link https://github.com/schemaorg/schemaorg/issues/2374
+     */
+     const RelatedTopicsHealthAspect = 'https://schema.org/RelatedTopicsHealthAspect';
+
+    /**
+     * Information about the risk factors and possible complications that may
+     * follow a topic.
+     *
+     * @see schema:RisksOrComplicationsHealthAspect
+     * @see https://pending.schema.org
+     * @link https://github.com/schemaorg/schemaorg/issues/2374
+     */
+     const RisksOrComplicationsHealthAspect = 'https://schema.org/RisksOrComplicationsHealthAspect';
+
+    /**
+     * Content about how to screen or further filter a topic.
+     *
+     * @see schema:ScreeningHealthAspect
+     * @see https://pending.schema.org
+     * @link https://github.com/schemaorg/schemaorg/issues/2374
+     */
+     const ScreeningHealthAspect = 'https://schema.org/ScreeningHealthAspect';
+
+    /**
+     * Information about questions that may be asked, when to see a
+     * professional, measures before seeing a doctor or content about the first
+     * consultation.
+     *
+     * @see schema:SeeDoctorHealthAspect
+     * @see https://pending.schema.org
+     * @link https://github.com/schemaorg/schemaorg/issues/2374
+     */
+     const SeeDoctorHealthAspect = 'https://schema.org/SeeDoctorHealthAspect';
+
+    /**
+     * Self care actions or measures that can be taken to sooth, health or avoid
+     * a topic. This may be carried at home and can be carried/managed by the
+     * person itself.
+     *
+     * @see schema:SelfCareHealthAspect
+     * @see https://pending.schema.org
+     * @link https://github.com/schemaorg/schemaorg/issues/2374
+     */
+     const SelfCareHealthAspect = 'https://schema.org/SelfCareHealthAspect';
+
+    /**
+     * Side effects that can be observed from the usage of the topic.
+     *
+     * @see schema:SideEffectsHealthAspect
+     * @see https://pending.schema.org
+     * @link https://github.com/schemaorg/schemaorg/issues/2374
+     */
+     const SideEffectsHealthAspect = 'https://schema.org/SideEffectsHealthAspect';
+
+    /**
+     * Stages that can be observed from a topic.
+     *
+     * @see schema:StagesHealthAspect
+     * @see https://pending.schema.org
+     * @link https://github.com/schemaorg/schemaorg/issues/2374
+     */
+     const StagesHealthAspect = 'https://schema.org/StagesHealthAspect';
+
+    /**
+     * Symptoms or related symptoms of a Topic.
+     *
+     * @see schema:SymptomsHealthAspect
+     * @see https://pending.schema.org
+     * @link https://github.com/schemaorg/schemaorg/issues/2374
+     */
+     const SymptomsHealthAspect = 'https://schema.org/SymptomsHealthAspect';
+
+    /**
+     * Treatments or related therapies for a Topic.
+     *
+     * @see schema:TreatmentsHealthAspect
+     * @see https://pending.schema.org
+     * @link https://github.com/schemaorg/schemaorg/issues/2374
+     */
+     const TreatmentsHealthAspect = 'https://schema.org/TreatmentsHealthAspect';
+
+    /**
+     * Categorization and other types related to a topic.
+     *
+     * @see schema:TypesHealthAspect
+     * @see https://pending.schema.org
+     * @link https://github.com/schemaorg/schemaorg/issues/2374
+     */
+     const TypesHealthAspect = 'https://schema.org/TypesHealthAspect';
+
+    /**
+     * Content about how, when, frequency and dosage of a topic.
+     *
+     * @see schema:UsageOrScheduleHealthAspect
+     * @see https://pending.schema.org
+     * @link https://github.com/schemaorg/schemaorg/issues/2374
+     */
+     const UsageOrScheduleHealthAspect = 'https://schema.org/UsageOrScheduleHealthAspect';
+
+    /**
      * An additional type for the item, typically used for adding more specific
      * types from external vocabularies in microdata syntax. This is a
      * relationship between something and a class that the thing is in. In RDFa

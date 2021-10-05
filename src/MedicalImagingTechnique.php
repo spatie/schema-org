@@ -20,6 +20,46 @@ use \Spatie\SchemaOrg\Contracts\ThingContract;
 class MedicalImagingTechnique extends BaseType implements MedicalImagingTechniqueContract, EnumerationContract, IntangibleContract, MedicalEnumerationContract, ThingContract
 {
     /**
+     * X-ray computed tomography imaging.
+     *
+     * @see schema:CT
+     * @see https://health-lifesci.schema.org
+     */
+     const CT = 'https://schema.org/CT';
+
+    /**
+     * Magnetic resonance imaging.
+     *
+     * @see schema:MRI
+     * @see https://health-lifesci.schema.org
+     */
+     const MRI = 'https://schema.org/MRI';
+
+    /**
+     * Positron emission tomography imaging.
+     *
+     * @see schema:PET
+     * @see https://health-lifesci.schema.org
+     */
+     const PET = 'https://schema.org/PET';
+
+    /**
+     * Ultrasound imaging.
+     *
+     * @see schema:Ultrasound
+     * @see https://health-lifesci.schema.org
+     */
+     const Ultrasound = 'https://schema.org/Ultrasound';
+
+    /**
+     * X-ray imaging.
+     *
+     * @see schema:XRay
+     * @see https://health-lifesci.schema.org
+     */
+     const XRay = 'https://schema.org/XRay';
+
+    /**
      * An additional type for the item, typically used for adding more specific
      * types from external vocabularies in microdata syntax. This is a
      * relationship between something and a class that the thing is in. In RDFa

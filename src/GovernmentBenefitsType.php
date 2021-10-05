@@ -21,6 +21,78 @@ use \Spatie\SchemaOrg\Contracts\ThingContract;
 class GovernmentBenefitsType extends BaseType implements GovernmentBenefitsTypeContract, EnumerationContract, IntangibleContract, ThingContract
 {
     /**
+     * BasicIncome: this is a benefit for basic income.
+     *
+     * @see schema:BasicIncome
+     * @see https://pending.schema.org
+     * @link https://github.com/schemaorg/schemaorg/issues/2534
+     */
+     const BasicIncome = 'https://schema.org/BasicIncome';
+
+    /**
+     * BusinessSupport: this is a benefit for supporting businesses.
+     *
+     * @see schema:BusinessSupport
+     * @see https://pending.schema.org
+     * @link https://github.com/schemaorg/schemaorg/issues/2534
+     */
+     const BusinessSupport = 'https://schema.org/BusinessSupport';
+
+    /**
+     * DisabilitySupport: this is a benefit for disability support.
+     *
+     * @see schema:DisabilitySupport
+     * @see https://pending.schema.org
+     * @link https://github.com/schemaorg/schemaorg/issues/2534
+     */
+     const DisabilitySupport = 'https://schema.org/DisabilitySupport';
+
+    /**
+     * HealthCare: this is a benefit for health care.
+     *
+     * @see schema:HealthCare
+     * @see https://pending.schema.org
+     * @link https://github.com/schemaorg/schemaorg/issues/2534
+     */
+     const HealthCare = 'https://schema.org/HealthCare';
+
+    /**
+     * OneTimePayments: this is a benefit for one-time payments for individuals.
+     *
+     * @see schema:OneTimePayments
+     * @see https://pending.schema.org
+     * @link https://github.com/schemaorg/schemaorg/issues/2534
+     */
+     const OneTimePayments = 'https://schema.org/OneTimePayments';
+
+    /**
+     * PaidLeave: this is a benefit for paid leave.
+     *
+     * @see schema:PaidLeave
+     * @see https://pending.schema.org
+     * @link https://github.com/schemaorg/schemaorg/issues/2534
+     */
+     const PaidLeave = 'https://schema.org/PaidLeave';
+
+    /**
+     * ParentalSupport: this is a benefit for parental support.
+     *
+     * @see schema:ParentalSupport
+     * @see https://pending.schema.org
+     * @link https://github.com/schemaorg/schemaorg/issues/2534
+     */
+     const ParentalSupport = 'https://schema.org/ParentalSupport';
+
+    /**
+     * UnemploymentSupport: this is a benefit for unemployment support.
+     *
+     * @see schema:UnemploymentSupport
+     * @see https://pending.schema.org
+     * @link https://github.com/schemaorg/schemaorg/issues/2534
+     */
+     const UnemploymentSupport = 'https://schema.org/UnemploymentSupport';
+
+    /**
      * An additional type for the item, typically used for adding more specific
      * types from external vocabularies in microdata syntax. This is a
      * relationship between something and a class that the thing is in. In RDFa

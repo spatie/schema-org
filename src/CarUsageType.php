@@ -20,6 +20,33 @@ use \Spatie\SchemaOrg\Contracts\ThingContract;
 class CarUsageType extends BaseType implements CarUsageTypeContract, EnumerationContract, IntangibleContract, ThingContract
 {
     /**
+     * Indicates the usage of the vehicle for driving school.
+     *
+     * @see schema:DrivingSchoolVehicleUsage
+     * @see https://auto.schema.org
+     * @link http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#Automotive_Ontology_Working_Group
+     */
+     const DrivingSchoolVehicleUsage = 'https://schema.org/DrivingSchoolVehicleUsage';
+
+    /**
+     * Indicates the usage of the vehicle as a rental car.
+     *
+     * @see schema:RentalVehicleUsage
+     * @see https://auto.schema.org
+     * @link http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#Automotive_Ontology_Working_Group
+     */
+     const RentalVehicleUsage = 'https://schema.org/RentalVehicleUsage';
+
+    /**
+     * Indicates the usage of the car as a taxi.
+     *
+     * @see schema:TaxiVehicleUsage
+     * @see https://auto.schema.org
+     * @link http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#Automotive_Ontology_Working_Group
+     */
+     const TaxiVehicleUsage = 'https://schema.org/TaxiVehicleUsage';
+
+    /**
      * An additional type for the item, typically used for adding more specific
      * types from external vocabularies in microdata syntax. This is a
      * relationship between something and a class that the thing is in. In RDFa

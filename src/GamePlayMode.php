@@ -17,6 +17,29 @@ use \Spatie\SchemaOrg\Contracts\ThingContract;
 class GamePlayMode extends BaseType implements GamePlayModeContract, EnumerationContract, IntangibleContract, ThingContract
 {
     /**
+     * Play mode: CoOp. Co-operative games, where you play on the same team with
+     * friends.
+     *
+     * @see schema:CoOp
+     */
+     const CoOp = 'https://schema.org/CoOp';
+
+    /**
+     * Play mode: MultiPlayer. Requiring or allowing multiple human players to
+     * play simultaneously.
+     *
+     * @see schema:MultiPlayer
+     */
+     const MultiPlayer = 'https://schema.org/MultiPlayer';
+
+    /**
+     * Play mode: SinglePlayer. Which is played by a lone player.
+     *
+     * @see schema:SinglePlayer
+     */
+     const SinglePlayer = 'https://schema.org/SinglePlayer';
+
+    /**
      * An additional type for the item, typically used for adding more specific
      * types from external vocabularies in microdata syntax. This is a
      * relationship between something and a class that the thing is in. In RDFa
