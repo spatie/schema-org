@@ -13,9 +13,8 @@ use \Spatie\SchemaOrg\Contracts\ThingContract;
  * 
  * Related actions:
  * 
- * * [[ScheduleAction]]</a>: Unlike ScheduleAction, ReserveAction reserves
- * concrete objects (e.g. a table, a hotel) towards a time slot / spatial
- * allocation.
+ * * [[ScheduleAction]]: Unlike ScheduleAction, ReserveAction reserves concrete
+ * objects (e.g. a table, a hotel) towards a time slot / spatial allocation.
  *
  * @see https://schema.org/ReserveAction
  *
