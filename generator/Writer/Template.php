@@ -2,14 +2,13 @@
 
 namespace Spatie\SchemaOrg\Generator\Writer;
 
-use Twig_Environment;
-use Twig_Loader_Filesystem;
-use Twig_SimpleFilter;
+use Twig\Environment as TwigEnvironment;
+use Twig\Loader\FilesystemLoader;
+use Twig\TwigFilter;
 
 class Template
 {
-    /** @var \Twig_Environment */
-    protected $twig;
+    protected TwigEnvironment $twig;
 
     /** @var string */
     protected $template;
@@ -27,25 +26,25 @@ class Template
             ->render($context);
     }
 
-    protected function createTwigEnvironment(): Twig_Environment
+    protected function createTwigEnvironment(): TwigEnvironment
     {
-        $loader = new Twig_Loader_Filesystem(__DIR__.'/../templates/twig');
+        $loader = new FilesystemLoader(__DIR__.'/../templates/twig');
 
-        $twig = new Twig_Environment($loader, [
+        $twig = new TwigEnvironment($loader, [
             'cache' => false,
             'autoescape' => false,
         ]);
 
         $twig->addFilter(
-            new Twig_SimpleFilter('doc', [Filters::class, 'doc'], ['is_variadic' => true])
+            new TwigFilter('doc', [Filters::class, 'doc'], ['is_variadic' => true])
         );
 
         $twig->addFilter(
-            new Twig_SimpleFilter('param', [Filters::class, 'param'])
+            new TwigFilter('param', [Filters::class, 'param'])
         );
 
         $twig->addFilter(
-            new Twig_SimpleFilter('lcfirst', [Filters::class, 'lcfirst'])
+            new TwigFilter('lcfirst', [Filters::class, 'lcfirst'])
         );
 
         return $twig;

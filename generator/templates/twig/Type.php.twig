@@ -18,8 +18,10 @@ use \Spatie\SchemaOrg\Contracts\{{ parent }}Contract;
  * @link {{ type.source }}
 {% endif %}
  *
-{% for property in type.properties if property.pending  %}
+{% for property in type.properties %}
+{% if property.pending %}
  * @method static {{ property.name }}(${{ property.name }}) The value should be instance of pending types {{ property.ranges | join('|') }}
+{% endif %}
 {% endfor %}
  */
 class {{ type.className }} extends BaseType implements {{ type.className }}Contract{% if type.parents %}, {% endif %}{{ type.parents|map(parent => "#{parent}Contract")|join(', ') }}
@@ -46,7 +48,8 @@ class {{ type.className }} extends BaseType implements {{ type.className }}Contr
     }
 
 {% endif %}
-{% for property in type.properties if not property.pending  %}
+{% for property in type.properties %}
+{% if not property.pending %}
     /**
      * {{ property.description | doc(1) }}
      *
@@ -67,5 +70,6 @@ class {{ type.className }} extends BaseType implements {{ type.className }}Contr
         return $this->setProperty('{{ property.name }}', ${{ property.name }});
     }
 
+{% endif %}
 {% endfor %}
 }
