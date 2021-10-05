@@ -62,4 +62,13 @@ class Filters
             return "\\Spatie\\SchemaOrg\\Contracts\\{$baseType}Contract".($isArray ? '[]' : '');
         }, $ranges));
     }
+
+    public static function fixLink(string $input): string
+    {
+        if (!str_starts_with($input, 'schema:')) {
+            return $input;
+        }
+
+        return str_replace('schema:', 'https://schema.org/', $input);
+    }
 }

@@ -10,9 +10,9 @@ use \Spatie\SchemaOrg\Contracts\{{ parent }}Contract;
 /**
  * {{ type.description | doc(0) }}
  *
- * @see {{ type.resource }}
+ * @see {{ type.resource | fixLink }}
 {% if type.partOf is not empty %}
- * @see {{ type.partOf }}
+ * @see {{ type.partOf | fixLink }}
 {% endif %}
 {% if type.source is not empty %}
  * @link {{ type.source }}
@@ -32,13 +32,13 @@ class {{ type.className }} extends BaseType implements {{ type.className }}Contr
      *
      * @see {{ constant.value }}
 {% if constant.partOf is not empty %}
-     * @see {{ constant.partOf }}
+     * @see {{ constant.partOf | fixLink }}
 {% endif %}
 {% if constant.source is not empty %}
      * @link {{ constant.source }}
 {% endif %}
      */
-     const {{ constant.name }} = '{{ constant.value }}';
+     const {{ constant.name }} = '{{ constant.value | fixLink }}';
 
 {% endfor %}
 {% if type.name != type.className %}
@@ -57,9 +57,9 @@ class {{ type.className }} extends BaseType implements {{ type.className }}Contr
      *
      * @return static
      *
-     * @see {{ property.resource }}
+     * @see {{ property.resource | fixLink }}
 {% if property.partOf is not empty %}
-     * @see {{ property.partOf }}
+     * @see {{ property.partOf | fixLink }}
 {% endif %}
 {% if property.source is not empty %}
      * @link {{ property.source }}
