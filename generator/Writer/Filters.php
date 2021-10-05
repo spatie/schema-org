@@ -65,7 +65,7 @@ class Filters
 
     public static function fixLink(string $input): string
     {
-        if (!str_starts_with($input, 'schema:')) {
+        if (! str_starts_with($input, 'schema:')) {
             return $input;
         }
 
