@@ -899,7 +899,7 @@ class MotorcycleRepair extends BaseType implements MotorcycleRepairContract, Aut
     }
 
     /**
-     * Indicates a MerchantReturnPolicy that may be applicable.
+     * Specifies a MerchantReturnPolicy that may be applicable.
      *
      * @param \Spatie\SchemaOrg\Contracts\MerchantReturnPolicyContract|\Spatie\SchemaOrg\Contracts\MerchantReturnPolicyContract[] $hasMerchantReturnPolicy
      *

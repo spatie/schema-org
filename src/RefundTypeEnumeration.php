@@ -8,8 +8,7 @@ use \Spatie\SchemaOrg\Contracts\IntangibleContract;
 use \Spatie\SchemaOrg\Contracts\ThingContract;
 
 /**
- * RefundTypeEnumeration enumerates several kinds of product return refund
- * types.
+ * Enumerates several kinds of product return refund types.
  *
  * @see https://schema.org/RefundTypeEnumeration
  * @see https://pending.schema.org
@@ -20,7 +19,7 @@ use \Spatie\SchemaOrg\Contracts\ThingContract;
 class RefundTypeEnumeration extends BaseType implements RefundTypeEnumerationContract, EnumerationContract, IntangibleContract, ThingContract
 {
     /**
-     * A ExchangeRefund ...
+     * Specifies that a refund can be done as an exchange for the same product.
      *
      * @see https://schema.org/ExchangeRefund
      * @see https://pending.schema.org
@@ -29,7 +28,8 @@ class RefundTypeEnumeration extends BaseType implements RefundTypeEnumerationCon
      const ExchangeRefund = 'https://schema.org/ExchangeRefund';
 
     /**
-     * A FullRefund ...
+     * Specifies that a refund can be done in the full amount the customer paid
+     * for the product
      *
      * @see https://schema.org/FullRefund
      * @see https://pending.schema.org
@@ -38,7 +38,8 @@ class RefundTypeEnumeration extends BaseType implements RefundTypeEnumerationCon
      const FullRefund = 'https://schema.org/FullRefund';
 
     /**
-     * A StoreCreditRefund ...
+     * Specifies that the customer receives a store credit as refund when
+     * returning a product
      *
      * @see https://schema.org/StoreCreditRefund
      * @see https://pending.schema.org

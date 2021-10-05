@@ -81,6 +81,30 @@ class InteractionCounter extends BaseType implements InteractionCounterContract,
     }
 
     /**
+     * The endTime of something. For a reserved event or service (e.g.
+     * FoodEstablishmentReservation), the time that it is expected to end. For
+     * actions that span a period of time, when the action was performed. e.g.
+     * John wrote a book from January to *December*. For media, including audio
+     * and video, it's the time offset of the end of a clip within a larger
+     * file.
+     * 
+     * Note that Event uses startDate/endDate instead of startTime/endTime, even
+     * when describing dates with times. This situation may be clarified in
+     * future revisions.
+     *
+     * @param \DateTimeInterface|\DateTimeInterface[] $endTime
+     *
+     * @return static
+     *
+     * @see https://schema.org/endTime
+     * @link https://github.com/schemaorg/schemaorg/issues/2493
+     */
+    public function endTime($endTime)
+    {
+        return $this->setProperty('endTime', $endTime);
+    }
+
+    /**
      * The identifier property represents any kind of identifier for any kind of
      * [[Thing]], such as ISBNs, GTIN codes, UUIDs etc. Schema.org provides
      * dedicated properties for representing many of these, either as textual
@@ -144,6 +168,21 @@ class InteractionCounter extends BaseType implements InteractionCounterContract,
     }
 
     /**
+     * The location of, for example, where an event is happening, where an
+     * organization is located, or where an action takes place.
+     *
+     * @param \Spatie\SchemaOrg\Contracts\PlaceContract|\Spatie\SchemaOrg\Contracts\PlaceContract[]|\Spatie\SchemaOrg\Contracts\PostalAddressContract|\Spatie\SchemaOrg\Contracts\PostalAddressContract[]|\Spatie\SchemaOrg\Contracts\VirtualLocationContract|\Spatie\SchemaOrg\Contracts\VirtualLocationContract[]|string|string[] $location
+     *
+     * @return static
+     *
+     * @see https://schema.org/location
+     */
+    public function location($location)
+    {
+        return $this->setProperty('location', $location);
+    }
+
+    /**
      * Indicates a page (or other CreativeWork) for which this thing is the main
      * entity being described. See [background
      * notes](/docs/datamodel.html#mainEntityBackground) for details.
@@ -202,6 +241,30 @@ class InteractionCounter extends BaseType implements InteractionCounterContract,
     public function sameAs($sameAs)
     {
         return $this->setProperty('sameAs', $sameAs);
+    }
+
+    /**
+     * The startTime of something. For a reserved event or service (e.g.
+     * FoodEstablishmentReservation), the time that it is expected to start. For
+     * actions that span a period of time, when the action was performed. e.g.
+     * John wrote a book from *January* to December. For media, including audio
+     * and video, it's the time offset of the start of a clip within a larger
+     * file.
+     * 
+     * Note that Event uses startDate/endDate instead of startTime/endTime, even
+     * when describing dates with times. This situation may be clarified in
+     * future revisions.
+     *
+     * @param \DateTimeInterface|\DateTimeInterface[] $startTime
+     *
+     * @return static
+     *
+     * @see https://schema.org/startTime
+     * @link https://github.com/schemaorg/schemaorg/issues/2493
+     */
+    public function startTime($startTime)
+    {
+        return $this->setProperty('startTime', $startTime);
     }
 
     /**

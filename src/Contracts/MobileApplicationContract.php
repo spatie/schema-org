@@ -40,6 +40,8 @@ interface MobileApplicationContract
 
     public function applicationSuite($applicationSuite);
 
+    public function archivedAt($archivedAt);
+
     public function assesses($assesses);
 
     public function associatedMedia($associatedMedia);
@@ -87,6 +89,8 @@ interface MobileApplicationContract
     public function countriesNotSupported($countriesNotSupported);
 
     public function countriesSupported($countriesSupported);
+
+    public function countryOfOrigin($countryOfOrigin);
 
     public function creativeWorkStatus($creativeWorkStatus);
 
@@ -155,6 +159,8 @@ interface MobileApplicationContract
     public function interactionStatistic($interactionStatistic);
 
     public function interactivityType($interactivityType);
+
+    public function interpretedAsClaim($interpretedAsClaim);
 
     public function isAccessibleForFree($isAccessibleForFree);
 

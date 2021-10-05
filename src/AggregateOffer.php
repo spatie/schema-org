@@ -497,6 +497,22 @@ class AggregateOffer extends BaseType implements AggregateOfferContract, Intangi
     }
 
     /**
+     * Specifies a MerchantReturnPolicy that may be applicable.
+     *
+     * @param \Spatie\SchemaOrg\Contracts\MerchantReturnPolicyContract|\Spatie\SchemaOrg\Contracts\MerchantReturnPolicyContract[] $hasMerchantReturnPolicy
+     *
+     * @return static
+     *
+     * @see https://schema.org/hasMerchantReturnPolicy
+     * @see https://pending.schema.org
+     * @link https://github.com/schemaorg/schemaorg/issues/2288
+     */
+    public function hasMerchantReturnPolicy($hasMerchantReturnPolicy)
+    {
+        return $this->setProperty('hasMerchantReturnPolicy', $hasMerchantReturnPolicy);
+    }
+
+    /**
      * The highest price of all offers available.
      * 
      * Usage guidelines:
@@ -603,9 +619,10 @@ class AggregateOffer extends BaseType implements AggregateOfferContract, Intangi
     }
 
     /**
-     * A predefined value from OfferItemCondition or a textual description of
-     * the condition of the product or service, or the products or services
-     * included in the offer.
+     * A predefined value from OfferItemCondition specifying the condition of
+     * the product or service, or the products or services included in the
+     * offer. Also used for product return policies to specify the condition of
+     * products accepted for returns.
      *
      * @param \Spatie\SchemaOrg\Contracts\OfferItemConditionContract|\Spatie\SchemaOrg\Contracts\OfferItemConditionContract[] $itemCondition
      *

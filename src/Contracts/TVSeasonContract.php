@@ -36,6 +36,8 @@ interface TVSeasonContract
 
     public function alternativeHeadline($alternativeHeadline);
 
+    public function archivedAt($archivedAt);
+
     public function assesses($assesses);
 
     public function associatedMedia($associatedMedia);
@@ -143,6 +145,8 @@ interface TVSeasonContract
     public function interactionStatistic($interactionStatistic);
 
     public function interactivityType($interactivityType);
+
+    public function interpretedAsClaim($interpretedAsClaim);
 
     public function isAccessibleForFree($isAccessibleForFree);
 

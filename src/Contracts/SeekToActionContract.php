@@ -42,6 +42,8 @@ interface SeekToActionContract
 
     public function sameAs($sameAs);
 
+    public function startOffset($startOffset);
+
     public function startTime($startTime);
 
     public function subjectOf($subjectOf);

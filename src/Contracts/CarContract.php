@@ -34,6 +34,12 @@ interface CarContract
 
     public function color($color);
 
+    public function countryOfAssembly($countryOfAssembly);
+
+    public function countryOfLastProcessing($countryOfLastProcessing);
+
+    public function countryOfOrigin($countryOfOrigin);
+
     public function dateVehicleFirstRegistered($dateVehicleFirstRegistered);
 
     public function depth($depth);

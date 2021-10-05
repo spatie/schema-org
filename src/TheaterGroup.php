@@ -538,7 +538,7 @@ class TheaterGroup extends BaseType implements TheaterGroupContract, Organizatio
     }
 
     /**
-     * Indicates a MerchantReturnPolicy that may be applicable.
+     * Specifies a MerchantReturnPolicy that may be applicable.
      *
      * @param \Spatie\SchemaOrg\Contracts\MerchantReturnPolicyContract|\Spatie\SchemaOrg\Contracts\MerchantReturnPolicyContract[] $hasMerchantReturnPolicy
      *

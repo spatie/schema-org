@@ -24,6 +24,12 @@ interface ProductModelContract
 
     public function color($color);
 
+    public function countryOfAssembly($countryOfAssembly);
+
+    public function countryOfLastProcessing($countryOfLastProcessing);
+
+    public function countryOfOrigin($countryOfOrigin);
+
     public function depth($depth);
 
     public function description($description);

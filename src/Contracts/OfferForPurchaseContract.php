@@ -60,6 +60,8 @@ interface OfferForPurchaseContract
 
     public function hasMeasurement($hasMeasurement);
 
+    public function hasMerchantReturnPolicy($hasMerchantReturnPolicy);
+
     public function identifier($identifier);
 
     public function image($image);

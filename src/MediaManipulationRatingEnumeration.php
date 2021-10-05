@@ -113,8 +113,8 @@ class MediaManipulationRatingEnumeration extends BaseType implements MediaManipu
      const OriginalMediaContent = 'https://schema.org/OriginalMediaContent';
 
     /**
-     * Content coded 'satire or content' in a [[MediaReview]], considered in the
-     * context of how it was published or shared.
+     * Content coded 'satire or parody content' in a [[MediaReview]], considered
+     * in the context of how it was published or shared.
      * 
      * For a [[VideoObject]] to be 'satire or parody content': A video that was
      * created as political or humorous commentary and is presented in that

@@ -38,6 +38,8 @@ interface VideoObjectContract
 
     public function alternativeHeadline($alternativeHeadline);
 
+    public function archivedAt($archivedAt);
+
     public function assesses($assesses);
 
     public function associatedArticle($associatedArticle);
@@ -88,6 +90,8 @@ interface VideoObjectContract
 
     public function correction($correction);
 
+    public function countryOfOrigin($countryOfOrigin);
+
     public function creativeWorkStatus($creativeWorkStatus);
 
     public function creator($creator);
@@ -123,6 +127,8 @@ interface VideoObjectContract
     public function educationalUse($educationalUse);
 
     public function embedUrl($embedUrl);
+
+    public function embeddedTextCaption($embeddedTextCaption);
 
     public function encodesCreativeWork($encodesCreativeWork);
 
@@ -161,6 +167,8 @@ interface VideoObjectContract
     public function interactionStatistic($interactionStatistic);
 
     public function interactivityType($interactivityType);
+
+    public function interpretedAsClaim($interpretedAsClaim);
 
     public function isAccessibleForFree($isAccessibleForFree);
 
@@ -241,6 +249,8 @@ interface VideoObjectContract
     public function sdLicense($sdLicense);
 
     public function sdPublisher($sdPublisher);
+
+    public function sha256($sha256);
 
     public function size($size);
 

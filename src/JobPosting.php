@@ -139,6 +139,29 @@ class JobPosting extends BaseType implements JobPostingContract, IntangibleContr
     }
 
     /**
+     * Indicates whether an [[url]] that is associated with a [[JobPosting]]
+     * enables direct application for the job, via the posting website. A job
+     * posting is considered to have directApply of [[True]] if an application
+     * process for the specified job can be directly initiated via the url(s)
+     * given (noting that e.g. multiple internet domains might nevertheless be
+     * involved at an implementation level). A value of [[False]] is appropriate
+     * if there is no clear path to applying directly online for the specified
+     * job, navigating directly from the JobPosting url(s) supplied.
+     *
+     * @param bool|bool[] $directApply
+     *
+     * @return static
+     *
+     * @see https://schema.org/directApply
+     * @see https://pending.schema.org
+     * @link https://github.com/schemaorg/schemaorg/issues/2907
+     */
+    public function directApply($directApply)
+    {
+        return $this->setProperty('directApply', $directApply);
+    }
+
+    /**
      * A sub property of description. A short description of the item used to
      * disambiguate from other, similar items. Information from other properties
      * (in particular, name) may be necessary for the description to be useful

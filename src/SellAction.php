@@ -83,7 +83,7 @@ class SellAction extends BaseType implements SellActionContract, ActionContract,
      * A sub property of participant. The participant/person/organization that
      * bought the object.
      *
-     * @param \Spatie\SchemaOrg\Contracts\PersonContract|\Spatie\SchemaOrg\Contracts\PersonContract[] $buyer
+     * @param \Spatie\SchemaOrg\Contracts\OrganizationContract|\Spatie\SchemaOrg\Contracts\OrganizationContract[]|\Spatie\SchemaOrg\Contracts\PersonContract|\Spatie\SchemaOrg\Contracts\PersonContract[] $buyer
      *
      * @return static
      *

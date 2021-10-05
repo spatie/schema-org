@@ -34,9 +34,17 @@ interface ReviewContract
 
     public function alternativeHeadline($alternativeHeadline);
 
+    public function archivedAt($archivedAt);
+
     public function assesses($assesses);
 
+    public function associatedClaimReview($associatedClaimReview);
+
     public function associatedMedia($associatedMedia);
+
+    public function associatedMediaReview($associatedMediaReview);
+
+    public function associatedReview($associatedReview);
 
     public function audience($audience);
 
@@ -73,6 +81,8 @@ interface ReviewContract
     public function copyrightYear($copyrightYear);
 
     public function correction($correction);
+
+    public function countryOfOrigin($countryOfOrigin);
 
     public function creativeWorkStatus($creativeWorkStatus);
 
@@ -132,6 +142,8 @@ interface ReviewContract
 
     public function interactivityType($interactivityType);
 
+    public function interpretedAsClaim($interpretedAsClaim);
+
     public function isAccessibleForFree($isAccessibleForFree);
 
     public function isBasedOn($isBasedOn);
@@ -166,11 +178,15 @@ interface ReviewContract
 
     public function name($name);
 
+    public function negativeNotes($negativeNotes);
+
     public function offers($offers);
 
     public function pattern($pattern);
 
     public function position($position);
+
+    public function positiveNotes($positiveNotes);
 
     public function potentialAction($potentialAction);
 

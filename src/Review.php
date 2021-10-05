@@ -258,6 +258,26 @@ class Review extends BaseType implements ReviewContract, CreativeWorkContract, T
     }
 
     /**
+     * Indicates a page or other link involved in archival of a
+     * [[CreativeWork]]. In the case of [[MediaReview]], the items in a
+     * [[MediaReviewItem]] may often become inaccessible, but be archived by
+     * archival, journalistic, activist, or law enforcement organizations. In
+     * such cases, the referenced page may not directly publish the content.
+     *
+     * @param \Spatie\SchemaOrg\Contracts\WebPageContract|\Spatie\SchemaOrg\Contracts\WebPageContract[]|string|string[] $archivedAt
+     *
+     * @return static
+     *
+     * @see https://schema.org/archivedAt
+     * @see https://pending.schema.org
+     * @link https://github.com/schemaorg/schemaorg/issues/2450
+     */
+    public function archivedAt($archivedAt)
+    {
+        return $this->setProperty('archivedAt', $archivedAt);
+    }
+
+    /**
      * The item being described is intended to assess the competency or learning
      * outcome defined by the referenced term.
      *
@@ -275,6 +295,27 @@ class Review extends BaseType implements ReviewContract, CreativeWorkContract, T
     }
 
     /**
+     * An associated [[ClaimReview]], related by specific common content, topic
+     * or claim. The expectation is that this property would be most typically
+     * used in cases where a single activity is conducting both claim reviews
+     * and media reviews, in which case [[relatedMediaReview]] would commonly be
+     * used on a [[ClaimReview]], while [[relatedClaimReview]] would be used on
+     * [[MediaReview]].
+     *
+     * @param \Spatie\SchemaOrg\Contracts\ReviewContract|\Spatie\SchemaOrg\Contracts\ReviewContract[] $associatedClaimReview
+     *
+     * @return static
+     *
+     * @see https://schema.org/associatedClaimReview
+     * @see https://pending.schema.org
+     * @link https://github.com/schemaorg/schemaorg/issues/2450
+     */
+    public function associatedClaimReview($associatedClaimReview)
+    {
+        return $this->setProperty('associatedClaimReview', $associatedClaimReview);
+    }
+
+    /**
      * A media object that encodes this CreativeWork. This property is a synonym
      * for encoding.
      *
@@ -287,6 +328,43 @@ class Review extends BaseType implements ReviewContract, CreativeWorkContract, T
     public function associatedMedia($associatedMedia)
     {
         return $this->setProperty('associatedMedia', $associatedMedia);
+    }
+
+    /**
+     * An associated [[MediaReview]], related by specific common content, topic
+     * or claim. The expectation is that this property would be most typically
+     * used in cases where a single activity is conducting both claim reviews
+     * and media reviews, in which case [[relatedMediaReview]] would commonly be
+     * used on a [[ClaimReview]], while [[relatedClaimReview]] would be used on
+     * [[MediaReview]].
+     *
+     * @param \Spatie\SchemaOrg\Contracts\ReviewContract|\Spatie\SchemaOrg\Contracts\ReviewContract[] $associatedMediaReview
+     *
+     * @return static
+     *
+     * @see https://schema.org/associatedMediaReview
+     * @see https://pending.schema.org
+     * @link https://github.com/schemaorg/schemaorg/issues/2450
+     */
+    public function associatedMediaReview($associatedMediaReview)
+    {
+        return $this->setProperty('associatedMediaReview', $associatedMediaReview);
+    }
+
+    /**
+     * An associated [[Review]].
+     *
+     * @param \Spatie\SchemaOrg\Contracts\ReviewContract|\Spatie\SchemaOrg\Contracts\ReviewContract[] $associatedReview
+     *
+     * @return static
+     *
+     * @see https://schema.org/associatedReview
+     * @see https://pending.schema.org
+     * @link https://github.com/schemaorg/schemaorg/issues/2450
+     */
+    public function associatedReview($associatedReview)
+    {
+        return $this->setProperty('associatedReview', $associatedReview);
     }
 
     /**
@@ -565,6 +643,31 @@ class Review extends BaseType implements ReviewContract, CreativeWorkContract, T
     public function correction($correction)
     {
         return $this->setProperty('correction', $correction);
+    }
+
+    /**
+     * The country of origin of something, including products as well as
+     * creative  works such as movie and TV content.
+     * 
+     * In the case of TV and movie, this would be the country of the principle
+     * offices of the production company or individual responsible for the
+     * movie. For other kinds of [[CreativeWork]] it is difficult to provide
+     * fully general guidance, and properties such as [[contentLocation]] and
+     * [[locationCreated]] may be more applicable.
+     * 
+     * In the case of products, the country of origin of the product. The exact
+     * interpretation of this may vary by context and product type, and cannot
+     * be fully enumerated here.
+     *
+     * @param \Spatie\SchemaOrg\Contracts\CountryContract|\Spatie\SchemaOrg\Contracts\CountryContract[] $countryOfOrigin
+     *
+     * @return static
+     *
+     * @see https://schema.org/countryOfOrigin
+     */
+    public function countryOfOrigin($countryOfOrigin)
+    {
+        return $this->setProperty('countryOfOrigin', $countryOfOrigin);
     }
 
     /**
@@ -1054,6 +1157,24 @@ class Review extends BaseType implements ReviewContract, CreativeWorkContract, T
     }
 
     /**
+     * Used to indicate a specific claim contained, implied, translated or
+     * refined from the content of a [[MediaObject]] or other [[CreativeWork]].
+     * The interpreting party can be indicated using [[claimInterpreter]].
+     *
+     * @param \Spatie\SchemaOrg\Contracts\ClaimContract|\Spatie\SchemaOrg\Contracts\ClaimContract[] $interpretedAsClaim
+     *
+     * @return static
+     *
+     * @see https://schema.org/interpretedAsClaim
+     * @see https://pending.schema.org
+     * @link https://github.com/schemaorg/schemaorg/issues/2450
+     */
+    public function interpretedAsClaim($interpretedAsClaim)
+    {
+        return $this->setProperty('interpretedAsClaim', $interpretedAsClaim);
+    }
+
+    /**
      * A flag to signal that the item, event, or place is accessible for free.
      *
      * @param bool|bool[] $isAccessibleForFree
@@ -1322,6 +1443,24 @@ class Review extends BaseType implements ReviewContract, CreativeWorkContract, T
     }
 
     /**
+     * Indicates, in the context of a [[Review]] (e.g. framed as 'pro' vs 'con'
+     * considerations), negative considerations - either as unstructured text,
+     * or a list.
+     *
+     * @param \Spatie\SchemaOrg\Contracts\ItemListContract|\Spatie\SchemaOrg\Contracts\ItemListContract[]|\Spatie\SchemaOrg\Contracts\ListItemContract|\Spatie\SchemaOrg\Contracts\ListItemContract[]|\Spatie\SchemaOrg\Contracts\WebContentContract|\Spatie\SchemaOrg\Contracts\WebContentContract[]|string|string[] $negativeNotes
+     *
+     * @return static
+     *
+     * @see https://schema.org/negativeNotes
+     * @see https://pending.schema.org
+     * @link https://github.com/schemaorg/schemaorg/issues/2832
+     */
+    public function negativeNotes($negativeNotes)
+    {
+        return $this->setProperty('negativeNotes', $negativeNotes);
+    }
+
+    /**
      * An offer to provide this item&#x2014;for example, an offer to sell a
      * product, rent the DVD of a movie, perform a service, or give away tickets
      * to an event. Use [[businessFunction]] to indicate the kind of transaction
@@ -1373,6 +1512,24 @@ class Review extends BaseType implements ReviewContract, CreativeWorkContract, T
     public function position($position)
     {
         return $this->setProperty('position', $position);
+    }
+
+    /**
+     * Indicates, in the context of a [[Review]] (e.g. framed as 'pro' vs 'con'
+     * considerations), positive considerations - either as unstructured text,
+     * or a list.
+     *
+     * @param \Spatie\SchemaOrg\Contracts\ItemListContract|\Spatie\SchemaOrg\Contracts\ItemListContract[]|\Spatie\SchemaOrg\Contracts\ListItemContract|\Spatie\SchemaOrg\Contracts\ListItemContract[]|\Spatie\SchemaOrg\Contracts\WebContentContract|\Spatie\SchemaOrg\Contracts\WebContentContract[]|string|string[] $positiveNotes
+     *
+     * @return static
+     *
+     * @see https://schema.org/positiveNotes
+     * @see https://pending.schema.org
+     * @link https://github.com/schemaorg/schemaorg/issues/2832
+     */
+    public function positiveNotes($positiveNotes)
+    {
+        return $this->setProperty('positiveNotes', $positiveNotes);
     }
 
     /**
