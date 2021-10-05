@@ -55,6 +55,7 @@ composer require spatie/schema-org
 |-----------------|----------------|
 | 3.x.x           | V9             |
 | 4.x.x           | V10            |
+| 5.x.x           | V11.01         |
 
 Note: Only lists _current_ versions of the spatie/schema-org package.
 ## Usage

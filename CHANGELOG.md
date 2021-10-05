@@ -2,6 +2,9 @@
 
 All Notable changes to `schema-org` will be documented in this file.
 
+## 5.0.0 - 2021-10-?
+- Upgrade to schema.org:v11.01
+
 ## 4.0.0 - 2021-10-?
 - Upgrade to schema.org:v10
 - Drop support for EOL PHP 7.3
