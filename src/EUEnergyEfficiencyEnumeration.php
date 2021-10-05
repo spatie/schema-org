@@ -10,7 +10,7 @@ use \Spatie\SchemaOrg\Contracts\ThingContract;
 
 /**
  * Enumerates the EU energy efficiency classes A-G as well as A+, A++, and A+++
- * as defined in EU directive 2017/1369
+ * as defined in EU directive 2017/1369.
  *
  * @see https://schema.org/EUEnergyEfficiencyEnumeration
  * @see https://pending.schema.org
@@ -22,7 +22,7 @@ class EUEnergyEfficiencyEnumeration extends BaseType implements EUEnergyEfficien
 {
     /**
      * Represents EU Energy Efficiency Class A as defined in EU energy labeling
-     * regulations
+     * regulations.
      *
      * @see https://schema.org/EUEnergyEfficiencyCategoryA
      * @see https://pending.schema.org
@@ -32,7 +32,7 @@ class EUEnergyEfficiencyEnumeration extends BaseType implements EUEnergyEfficien
 
     /**
      * Represents EU Energy Efficiency Class A+ as defined in EU energy labeling
-     * regulations
+     * regulations.
      *
      * @see https://schema.org/EUEnergyEfficiencyCategoryA1Plus
      * @see https://pending.schema.org
@@ -42,7 +42,7 @@ class EUEnergyEfficiencyEnumeration extends BaseType implements EUEnergyEfficien
 
     /**
      * Represents EU Energy Efficiency Class A++ as defined in EU energy
-     * labeling regulations
+     * labeling regulations.
      *
      * @see https://schema.org/EUEnergyEfficiencyCategoryA2Plus
      * @see https://pending.schema.org
@@ -52,7 +52,7 @@ class EUEnergyEfficiencyEnumeration extends BaseType implements EUEnergyEfficien
 
     /**
      * Represents EU Energy Efficiency Class A+++ as defined in EU energy
-     * labeling regulations
+     * labeling regulations.
      *
      * @see https://schema.org/EUEnergyEfficiencyCategoryA3Plus
      * @see https://pending.schema.org
@@ -62,7 +62,7 @@ class EUEnergyEfficiencyEnumeration extends BaseType implements EUEnergyEfficien
 
     /**
      * Represents EU Energy Efficiency Class B as defined in EU energy labeling
-     * regulations
+     * regulations.
      *
      * @see https://schema.org/EUEnergyEfficiencyCategoryB
      * @see https://pending.schema.org
@@ -72,7 +72,7 @@ class EUEnergyEfficiencyEnumeration extends BaseType implements EUEnergyEfficien
 
     /**
      * Represents EU Energy Efficiency Class C as defined in EU energy labeling
-     * regulations
+     * regulations.
      *
      * @see https://schema.org/EUEnergyEfficiencyCategoryC
      * @see https://pending.schema.org
@@ -82,7 +82,7 @@ class EUEnergyEfficiencyEnumeration extends BaseType implements EUEnergyEfficien
 
     /**
      * Represents EU Energy Efficiency Class D as defined in EU energy labeling
-     * regulations
+     * regulations.
      *
      * @see https://schema.org/EUEnergyEfficiencyCategoryD
      * @see https://pending.schema.org
@@ -92,7 +92,7 @@ class EUEnergyEfficiencyEnumeration extends BaseType implements EUEnergyEfficien
 
     /**
      * Represents EU Energy Efficiency Class E as defined in EU energy labeling
-     * regulations
+     * regulations.
      *
      * @see https://schema.org/EUEnergyEfficiencyCategoryE
      * @see https://pending.schema.org
@@ -102,7 +102,7 @@ class EUEnergyEfficiencyEnumeration extends BaseType implements EUEnergyEfficien
 
     /**
      * Represents EU Energy Efficiency Class F as defined in EU energy labeling
-     * regulations
+     * regulations.
      *
      * @see https://schema.org/EUEnergyEfficiencyCategoryF
      * @see https://pending.schema.org
@@ -112,7 +112,7 @@ class EUEnergyEfficiencyEnumeration extends BaseType implements EUEnergyEfficien
 
     /**
      * Represents EU Energy Efficiency Class G as defined in EU energy labeling
-     * regulations
+     * regulations.
      *
      * @see https://schema.org/EUEnergyEfficiencyCategoryG
      * @see https://pending.schema.org

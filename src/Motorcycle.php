@@ -532,9 +532,8 @@ class Motorcycle extends BaseType implements MotorcycleContract, ProductContract
     }
 
     /**
-     * The [GTIN-8](http://apps.gs1.org/GDD/glossary/Pages/GTIN-8.aspx) code of
-     * the product, or the product to which the offer refers. This code is also
-     * known as EAN/UCC-8 or 8-digit EAN. See [GS1 GTIN
+     * The GTIN-8 code of the product, or the product to which the offer refers.
+     * This code is also known as EAN/UCC-8 or 8-digit EAN. See [GS1 GTIN
      * Summary](http://www.gs1.org/barcodes/technical/idkeys/gtin) for more
      * details.
      *
@@ -553,7 +552,7 @@ class Motorcycle extends BaseType implements MotorcycleContract, ProductContract
     /**
      * Defines the energy efficiency Category (also known as "class" or
      * "rating") for a product according to an international energy efficiency
-     * standard
+     * standard.
      *
      * @param \Spatie\SchemaOrg\Contracts\EnergyConsumptionDetailsContract|\Spatie\SchemaOrg\Contracts\EnergyConsumptionDetailsContract[] $hasEnergyConsumptionDetails
      *
@@ -566,6 +565,25 @@ class Motorcycle extends BaseType implements MotorcycleContract, ProductContract
     public function hasEnergyConsumptionDetails($hasEnergyConsumptionDetails)
     {
         return $this->setProperty('hasEnergyConsumptionDetails', $hasEnergyConsumptionDetails);
+    }
+
+    /**
+     * A product measurement, for example the inseam of pants, the wheel size of
+     * a bicycle, or the gauge of a screw. Usually an exact measurement, but can
+     * also be a range of measurements for adjustable products, for example
+     * belts and ski bindings.
+     *
+     * @param \Spatie\SchemaOrg\Contracts\QuantitativeValueContract|\Spatie\SchemaOrg\Contracts\QuantitativeValueContract[] $hasMeasurement
+     *
+     * @return static
+     *
+     * @see https://schema.org/hasMeasurement
+     * @see https://pending.schema.org
+     * @link https://github.com/schemaorg/schemaorg/issues/2811
+     */
+    public function hasMeasurement($hasMeasurement)
+    {
+        return $this->setProperty('hasMeasurement', $hasMeasurement);
     }
 
     /**
@@ -1253,14 +1271,13 @@ class Motorcycle extends BaseType implements MotorcycleContract, ProductContract
     }
 
     /**
-     * A standardized size of a product or creative work, often simplifying
-     * richer information into a simple textual string, either through referring
-     * to named sizes or (in the case of product markup), by adopting
-     * conventional simplifications. Use of QuantitativeValue with a unitCode or
-     * unitText can add more structure; in other cases, the /width, /height,
-     * /depth and /weight properties may be more applicable.
+     * A standardized size of a product or creative work, specified either
+     * through a simple textual string (for example 'XL', '32Wx34L'), a 
+     * QuantitativeValue with a unitCode, or a comprehensive and structured
+     * [[SizeSpecification]]; in other cases, the [[width]], [[height]],
+     * [[depth]] and [[weight]] properties may be more applicable.
      *
-     * @param \Spatie\SchemaOrg\Contracts\DefinedTermContract|\Spatie\SchemaOrg\Contracts\DefinedTermContract[]|\Spatie\SchemaOrg\Contracts\QuantitativeValueContract|\Spatie\SchemaOrg\Contracts\QuantitativeValueContract[]|string|string[] $size
+     * @param \Spatie\SchemaOrg\Contracts\DefinedTermContract|\Spatie\SchemaOrg\Contracts\DefinedTermContract[]|\Spatie\SchemaOrg\Contracts\QuantitativeValueContract|\Spatie\SchemaOrg\Contracts\QuantitativeValueContract[]|\Spatie\SchemaOrg\Contracts\SizeSpecificationContract|\Spatie\SchemaOrg\Contracts\SizeSpecificationContract[]|string|string[] $size
      *
      * @return static
      *

@@ -409,9 +409,8 @@ class Demand extends BaseType implements DemandContract, IntangibleContract, Thi
     }
 
     /**
-     * The [GTIN-8](http://apps.gs1.org/GDD/glossary/Pages/GTIN-8.aspx) code of
-     * the product, or the product to which the offer refers. This code is also
-     * known as EAN/UCC-8 or 8-digit EAN. See [GS1 GTIN
+     * The GTIN-8 code of the product, or the product to which the offer refers.
+     * This code is also known as EAN/UCC-8 or 8-digit EAN. See [GS1 GTIN
      * Summary](http://www.gs1.org/barcodes/technical/idkeys/gtin) for more
      * details.
      *

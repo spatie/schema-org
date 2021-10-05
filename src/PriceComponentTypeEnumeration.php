@@ -21,7 +21,7 @@ class PriceComponentTypeEnumeration extends BaseType implements PriceComponentTy
 {
     /**
      * Represents the activation fee part of the total price for an offered
-     * product, for example a cellphone contract
+     * product, for example a cellphone contract.
      *
      * @see https://schema.org/ActivationFee
      * @see https://pending.schema.org
@@ -31,7 +31,7 @@ class PriceComponentTypeEnumeration extends BaseType implements PriceComponentTy
 
     /**
      * Represents the cleaning fee part of the total price for an offered
-     * product, for example a vacation rental
+     * product, for example a vacation rental.
      *
      * @see https://schema.org/CleaningFee
      * @see https://pending.schema.org
@@ -41,7 +41,7 @@ class PriceComponentTypeEnumeration extends BaseType implements PriceComponentTy
 
     /**
      * Represents the distance fee (e.g., price per km or mile) part of the
-     * total price for an offered product, for example a car rental
+     * total price for an offered product, for example a car rental.
      *
      * @see https://schema.org/DistanceFee
      * @see https://pending.schema.org
@@ -52,7 +52,7 @@ class PriceComponentTypeEnumeration extends BaseType implements PriceComponentTy
     /**
      * Represents the downpayment (up-front payment) price component of the
      * total price for an offered product that has additional installment
-     * payments
+     * payments.
      *
      * @see https://schema.org/Downpayment
      * @see https://pending.schema.org
@@ -62,7 +62,7 @@ class PriceComponentTypeEnumeration extends BaseType implements PriceComponentTy
 
     /**
      * Represents the installment pricing component of the total price for an
-     * offered product
+     * offered product.
      *
      * @see https://schema.org/Installment
      * @see https://pending.schema.org
@@ -72,7 +72,7 @@ class PriceComponentTypeEnumeration extends BaseType implements PriceComponentTy
 
     /**
      * Represents the subscription pricing component of the total price for an
-     * offered product
+     * offered product.
      *
      * @see https://schema.org/Subscription
      * @see https://pending.schema.org

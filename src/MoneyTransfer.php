@@ -96,7 +96,7 @@ class MoneyTransfer extends BaseType implements MoneyTransferContract, ActionCon
     /**
      * A bank or bank’s branch, financial institution or international
      * financial institution operating the beneficiary’s bank account or
-     * releasing funds for the beneficiary
+     * releasing funds for the beneficiary.
      *
      * @param \Spatie\SchemaOrg\Contracts\BankOrCreditUnionContract|\Spatie\SchemaOrg\Contracts\BankOrCreditUnionContract[]|string|string[] $beneficiaryBank
      *

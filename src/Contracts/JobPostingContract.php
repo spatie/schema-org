@@ -34,6 +34,8 @@ interface JobPostingContract
 
     public function estimatedSalary($estimatedSalary);
 
+    public function experienceInPlaceOfEducation($experienceInPlaceOfEducation);
+
     public function experienceRequirements($experienceRequirements);
 
     public function hiringOrganization($hiringOrganization);

@@ -429,7 +429,7 @@ class BroadcastEvent extends BaseType implements BroadcastEventContract, EventCo
     }
 
     /**
-     * True is the broadcast is of a live event.
+     * True if the broadcast is of a live event.
      *
      * @param bool|bool[] $isLiveBroadcast
      *

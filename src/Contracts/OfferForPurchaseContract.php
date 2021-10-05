@@ -58,6 +58,8 @@ interface OfferForPurchaseContract
 
     public function gtin8($gtin8);
 
+    public function hasMeasurement($hasMeasurement);
+
     public function identifier($identifier);
 
     public function image($image);

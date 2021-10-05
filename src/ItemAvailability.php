@@ -17,6 +17,13 @@ use \Spatie\SchemaOrg\Contracts\ThingContract;
 class ItemAvailability extends BaseType implements ItemAvailabilityContract, EnumerationContract, IntangibleContract, ThingContract
 {
     /**
+     * Indicates that the item is available on back order.
+     *
+     * @see https://schema.org/BackOrder
+     */
+     const BackOrder = 'https://schema.org/BackOrder';
+
+    /**
      * Indicates that the item has been discontinued.
      *
      * @see https://schema.org/Discontinued

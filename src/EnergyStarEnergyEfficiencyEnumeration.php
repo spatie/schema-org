@@ -9,7 +9,7 @@ use \Spatie\SchemaOrg\Contracts\IntangibleContract;
 use \Spatie\SchemaOrg\Contracts\ThingContract;
 
 /**
- * Used to indicate whether a product is EnergyStar certified
+ * Used to indicate whether a product is EnergyStar certified.
  *
  * @see https://schema.org/EnergyStarEnergyEfficiencyEnumeration
  * @see https://pending.schema.org
@@ -20,7 +20,7 @@ use \Spatie\SchemaOrg\Contracts\ThingContract;
 class EnergyStarEnergyEfficiencyEnumeration extends BaseType implements EnergyStarEnergyEfficiencyEnumerationContract, EnergyEfficiencyEnumerationContract, EnumerationContract, IntangibleContract, ThingContract
 {
     /**
-     * Represents EnergyStar certification
+     * Represents EnergyStar certification.
      *
      * @see https://schema.org/EnergyStarCertified
      * @see https://pending.schema.org

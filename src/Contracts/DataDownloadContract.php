@@ -146,6 +146,8 @@ interface DataDownloadContract
 
     public function inLanguage($inLanguage);
 
+    public function ineligibleRegion($ineligibleRegion);
+
     public function interactionStatistic($interactionStatistic);
 
     public function interactivityType($interactivityType);

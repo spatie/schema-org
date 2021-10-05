@@ -468,9 +468,8 @@ class Offer extends BaseType implements OfferContract, IntangibleContract, Thing
     }
 
     /**
-     * The [GTIN-8](http://apps.gs1.org/GDD/glossary/Pages/GTIN-8.aspx) code of
-     * the product, or the product to which the offer refers. This code is also
-     * known as EAN/UCC-8 or 8-digit EAN. See [GS1 GTIN
+     * The GTIN-8 code of the product, or the product to which the offer refers.
+     * This code is also known as EAN/UCC-8 or 8-digit EAN. See [GS1 GTIN
      * Summary](http://www.gs1.org/barcodes/technical/idkeys/gtin) for more
      * details.
      *
@@ -484,6 +483,25 @@ class Offer extends BaseType implements OfferContract, IntangibleContract, Thing
     public function gtin8($gtin8)
     {
         return $this->setProperty('gtin8', $gtin8);
+    }
+
+    /**
+     * A product measurement, for example the inseam of pants, the wheel size of
+     * a bicycle, or the gauge of a screw. Usually an exact measurement, but can
+     * also be a range of measurements for adjustable products, for example
+     * belts and ski bindings.
+     *
+     * @param \Spatie\SchemaOrg\Contracts\QuantitativeValueContract|\Spatie\SchemaOrg\Contracts\QuantitativeValueContract[] $hasMeasurement
+     *
+     * @return static
+     *
+     * @see https://schema.org/hasMeasurement
+     * @see https://pending.schema.org
+     * @link https://github.com/schemaorg/schemaorg/issues/2811
+     */
+    public function hasMeasurement($hasMeasurement)
+    {
+        return $this->setProperty('hasMeasurement', $hasMeasurement);
     }
 
     /**

@@ -21,6 +21,15 @@ use \Spatie\SchemaOrg\Contracts\ThingContract;
 class HealthAspectEnumeration extends BaseType implements HealthAspectEnumerationContract, EnumerationContract, IntangibleContract, ThingContract
 {
     /**
+     * Content about the allergy-related aspects of a health topic.
+     *
+     * @see https://schema.org/AllergiesHealthAspect
+     * @see https://pending.schema.org
+     * @link https://github.com/schemaorg/schemaorg/issues/2799
+     */
+     const AllergiesHealthAspect = 'https://schema.org/AllergiesHealthAspect';
+
+    /**
      * Content about the benefits and advantages of usage or utilization of
      * topic.
      *
@@ -51,6 +60,35 @@ class HealthAspectEnumeration extends BaseType implements HealthAspectEnumeratio
      const ContagiousnessHealthAspect = 'https://schema.org/ContagiousnessHealthAspect';
 
     /**
+     * Content about the effectiveness-related aspects of a health topic.
+     *
+     * @see https://schema.org/EffectivenessHealthAspect
+     * @see https://pending.schema.org
+     * @link https://github.com/schemaorg/schemaorg/issues/2799
+     */
+     const EffectivenessHealthAspect = 'https://schema.org/EffectivenessHealthAspect';
+
+    /**
+     * Content that discusses practical and policy aspects for getting access to
+     * specific kinds of healthcare (e.g. distribution mechanisms for vaccines).
+     *
+     * @see https://schema.org/GettingAccessHealthAspect
+     * @see https://pending.schema.org
+     * @link https://github.com/schemaorg/schemaorg/issues/2799
+     */
+     const GettingAccessHealthAspect = 'https://schema.org/GettingAccessHealthAspect';
+
+    /**
+     * Content that discusses and explains how a particular health-related topic
+     * works, e.g. in terms of mechanisms and underlying science.
+     *
+     * @see https://schema.org/HowItWorksHealthAspect
+     * @see https://pending.schema.org
+     * @link https://github.com/schemaorg/schemaorg/issues/2799
+     */
+     const HowItWorksHealthAspect = 'https://schema.org/HowItWorksHealthAspect';
+
+    /**
      * Information about how or where to find a topic. Also may contain location
      * data that can be used for where to look for help if the topic is
      * observed.
@@ -60,6 +98,15 @@ class HealthAspectEnumeration extends BaseType implements HealthAspectEnumeratio
      * @link https://github.com/schemaorg/schemaorg/issues/2374
      */
      const HowOrWhereHealthAspect = 'https://schema.org/HowOrWhereHealthAspect';
+
+    /**
+     * Content discussing ingredients-related aspects of a health topic.
+     *
+     * @see https://schema.org/IngredientsHealthAspect
+     * @see https://pending.schema.org
+     * @link https://github.com/schemaorg/schemaorg/issues/2799
+     */
+     const IngredientsHealthAspect = 'https://schema.org/IngredientsHealthAspect';
 
     /**
      * Information about coping or life related to the topic.
@@ -111,6 +158,15 @@ class HealthAspectEnumeration extends BaseType implements HealthAspectEnumeratio
      const PatientExperienceHealthAspect = 'https://schema.org/PatientExperienceHealthAspect';
 
     /**
+     * Content discussing pregnancy-related aspects of a health topic.
+     *
+     * @see https://schema.org/PregnancyHealthAspect
+     * @see https://pending.schema.org
+     * @link https://github.com/schemaorg/schemaorg/issues/2799
+     */
+     const PregnancyHealthAspect = 'https://schema.org/PregnancyHealthAspect';
+
+    /**
      * Information about actions or measures that can be taken to avoid getting
      * the topic or reaching a critical situation related to the topic.
      *
@@ -147,6 +203,15 @@ class HealthAspectEnumeration extends BaseType implements HealthAspectEnumeratio
      * @link https://github.com/schemaorg/schemaorg/issues/2374
      */
      const RisksOrComplicationsHealthAspect = 'https://schema.org/RisksOrComplicationsHealthAspect';
+
+    /**
+     * Content about the safety-related aspects of a health topic.
+     *
+     * @see https://schema.org/SafetyHealthAspect
+     * @see https://pending.schema.org
+     * @link https://github.com/schemaorg/schemaorg/issues/2799
+     */
+     const SafetyHealthAspect = 'https://schema.org/SafetyHealthAspect';
 
     /**
      * Content about how to screen or further filter a topic.

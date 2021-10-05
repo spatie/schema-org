@@ -13,7 +13,7 @@ use \Spatie\SchemaOrg\Contracts\ThingContract;
  * directive 2017/1369](https://eur-lex.europa.eu/eli/reg/2017/1369/oj) for
  * energy labeling and the [Energy labeling
  * rule](https://www.ftc.gov/enforcement/rules/rulemaking-regulatory-reform-proceedings/energy-water-use-labeling-consumer)
- * under the Energy Policy and Conservation Act (EPCA) in the US
+ * under the Energy Policy and Conservation Act (EPCA) in the US.
  *
  * @see https://schema.org/EnergyConsumptionDetails
  * @see https://pending.schema.org
@@ -127,7 +127,7 @@ class EnergyConsumptionDetails extends BaseType implements EnergyConsumptionDeta
     /**
      * Defines the energy efficiency Category (which could be either a rating
      * out of range of values or a yes/no certification) for a product according
-     * to an international energy efficiency standard
+     * to an international energy efficiency standard.
      *
      * @param \Spatie\SchemaOrg\Contracts\EnergyEfficiencyEnumerationContract|\Spatie\SchemaOrg\Contracts\EnergyEfficiencyEnumerationContract[] $hasEnergyEfficiencyCategory
      *

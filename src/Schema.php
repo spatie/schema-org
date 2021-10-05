@@ -407,6 +407,11 @@ class Schema
         return new BoatTrip();
     }
 
+    public static function bodyMeasurementTypeEnumeration(): BodyMeasurementTypeEnumeration
+    {
+        return new BodyMeasurementTypeEnumeration();
+    }
+
     public static function bodyOfWater(): BodyOfWater
     {
         return new BodyOfWater();
@@ -2132,6 +2137,11 @@ class Schema
         return new MaximumDoseSchedule();
     }
 
+    public static function measurementTypeEnumeration(): MeasurementTypeEnumeration
+    {
+        return new MeasurementTypeEnumeration();
+    }
+
     public static function mediaGallery(): MediaGallery
     {
         return new MediaGallery();
@@ -2665,6 +2675,11 @@ class Schema
     public static function occupation(): Occupation
     {
         return new Occupation();
+    }
+
+    public static function occupationalExperienceRequirements(): OccupationalExperienceRequirements
+    {
+        return new OccupationalExperienceRequirements();
     }
 
     public static function occupationalTherapy(): OccupationalTherapy
@@ -3622,6 +3637,21 @@ class Schema
         return new SiteNavigationElement();
     }
 
+    public static function sizeGroupEnumeration(): SizeGroupEnumeration
+    {
+        return new SizeGroupEnumeration();
+    }
+
+    public static function sizeSpecification(): SizeSpecification
+    {
+        return new SizeSpecification();
+    }
+
+    public static function sizeSystemEnumeration(): SizeSystemEnumeration
+    {
+        return new SizeSystemEnumeration();
+    }
+
     public static function skiResort(): SkiResort
     {
         return new SkiResort();
@@ -4205,6 +4235,21 @@ class Schema
     public static function wearAction(): WearAction
     {
         return new WearAction();
+    }
+
+    public static function wearableMeasurementTypeEnumeration(): WearableMeasurementTypeEnumeration
+    {
+        return new WearableMeasurementTypeEnumeration();
+    }
+
+    public static function wearableSizeGroupEnumeration(): WearableSizeGroupEnumeration
+    {
+        return new WearableSizeGroupEnumeration();
+    }
+
+    public static function wearableSizeSystemEnumeration(): WearableSizeSystemEnumeration
+    {
+        return new WearableSizeSystemEnumeration();
     }
 
     public static function webAPI(): WebAPI
