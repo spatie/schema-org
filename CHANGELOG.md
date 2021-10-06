@@ -4,7 +4,7 @@ All Notable changes to `schema-org` will be documented in this file.
 
 ## 3.7.0 - 2021-10-06
 
-- Upgrade to schema.org:v12.0 - [#170](https://github.com/spatie/schema-org/pull/170)
+-   Upgrade to schema.org:v12.0 - [#170](https://github.com/spatie/schema-org/pull/170)
 
 ## 3.6.0 - 2021-10-06
 
