@@ -2,20 +2,23 @@
 
 All Notable changes to `schema-org` will be documented in this file.
 
-## 3.8.0 - 2021-10-05
-- Upgrade to schema.org:v13.0
+## 3.8.0 - 2021-10-06
 
-## 3.7.0 - 2021-10-05
-- Upgrade to schema.org:v12.0
+- Upgrade to schema.org:v13.0 - [#167](https://github.com/spatie/schema-org/pull/167)
 
-## 3.6.0 - 2021-10-05
-- Upgrade to schema.org:v11.01
+## 3.7.0 - 2021-10-06
+
+-   Upgrade to schema.org:v12.0 - [#170](https://github.com/spatie/schema-org/pull/170)
+
+## 3.6.0 - 2021-10-06
+
+-   Upgrade to schema.org:v11.01 - [#169](https://github.com/spatie/schema-org/pull/169)
 
 ## 3.5.0 - 2021-10-05
 
--   Upgrade to schema.org:v10
--   Drop PHP 7.3 support
--   Add PHP 8.1 support
+-   Upgrade to schema.org:v10 - [#166](https://github.com/spatie/schema-org/pull/166)
+-   Drop PHP 7.3 support - [#165](https://github.com/spatie/schema-org/pull/165)
+-   Add PHP 8.1 support - [#165](https://github.com/spatie/schema-org/pull/165)
 
 ## 3.4.0 - 2021-05-10
 
