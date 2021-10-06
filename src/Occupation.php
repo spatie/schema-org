@@ -117,7 +117,7 @@ class Occupation extends BaseType implements OccupationContract, IntangibleContr
      * Description of skills and experience needed for the position or
      * Occupation.
      *
-     * @param string|string[] $experienceRequirements
+     * @param \Spatie\SchemaOrg\Contracts\OccupationalExperienceRequirementsContract|\Spatie\SchemaOrg\Contracts\OccupationalExperienceRequirementsContract[]|string|string[] $experienceRequirements
      *
      * @return static
      *

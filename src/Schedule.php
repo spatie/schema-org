@@ -60,7 +60,7 @@ class Schedule extends BaseType implements ScheduleContract, IntangibleContract,
     /**
      * Defines the day(s) of the week on which a recurring [[Event]] takes
      * place. May be specified using either [[DayOfWeek]], or alternatively
-     * [[Text]] conforming to iCal's syntax for byDay recurrence rules
+     * [[Text]] conforming to iCal's syntax for byDay recurrence rules.
      *
      * @param \Spatie\SchemaOrg\Contracts\DayOfWeekContract|\Spatie\SchemaOrg\Contracts\DayOfWeekContract[]|string|string[] $byDay
      *
@@ -334,7 +334,7 @@ class Schedule extends BaseType implements ScheduleContract, IntangibleContract,
     }
 
     /**
-     * Defines the frequency at which [[Events]] will occur according to a
+     * Defines the frequency at which [[Event]]s will occur according to a
      * schedule [[Schedule]]. The intervals between
      *       events should be defined as a [[Duration]] of time.
      *

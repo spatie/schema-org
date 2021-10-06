@@ -43,7 +43,7 @@ class MedicalSpecialty extends BaseType implements MedicalSpecialtyContract, Enu
     /**
      * A field of public health focusing on improving health characteristics of
      * a defined population in relation with their geographical or environment
-     * areas
+     * areas.
      *
      * @see https://schema.org/CommunityHealth
      * @see https://health-lifesci.schema.org
@@ -59,7 +59,7 @@ class MedicalSpecialty extends BaseType implements MedicalSpecialtyContract, Enu
      const Dentistry = 'https://schema.org/Dentistry';
 
     /**
-     * Something relating to or practicing dermatology
+     * Something relating to or practicing dermatology.
      *
      * @see https://schema.org/Dermatologic
      * @see https://health-lifesci.schema.org
@@ -76,7 +76,7 @@ class MedicalSpecialty extends BaseType implements MedicalSpecialtyContract, Enu
      const Dermatology = 'https://schema.org/Dermatology';
 
     /**
-     * Dietetic and nutrition as a medical speciality.
+     * Dietetic and nutrition as a medical specialty.
      *
      * @see https://schema.org/DietNutrition
      * @see https://health-lifesci.schema.org
@@ -160,7 +160,7 @@ class MedicalSpecialty extends BaseType implements MedicalSpecialtyContract, Enu
 
     /**
      * A medical science pertaining to chemical, hematological, immunologic,
-     * microscopic, or bacteriological diagnostic analyses or research
+     * microscopic, or bacteriological diagnostic analyses or research.
      *
      * @see https://schema.org/LaboratoryScience
      * @see https://health-lifesci.schema.org

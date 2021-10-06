@@ -142,7 +142,7 @@ class Observation extends BaseType implements ObservationContract, IntangibleCon
     /**
      * A marginOfError for an [[Observation]].
      *
-     * @param \DateTimeInterface|\DateTimeInterface[] $marginOfError
+     * @param \Spatie\SchemaOrg\Contracts\QuantitativeValueContract|\Spatie\SchemaOrg\Contracts\QuantitativeValueContract[] $marginOfError
      *
      * @return static
      *

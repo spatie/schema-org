@@ -168,7 +168,7 @@ class MedicalTherapy extends BaseType implements MedicalTherapyContract, Medical
     }
 
     /**
-     * Specifying a drug or medicine used in a medication procedure
+     * Specifying a drug or medicine used in a medication procedure.
      *
      * @param \Spatie\SchemaOrg\Contracts\DrugContract|\Spatie\SchemaOrg\Contracts\DrugContract[] $drug
      *

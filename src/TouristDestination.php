@@ -8,7 +8,7 @@ use \Spatie\SchemaOrg\Contracts\ThingContract;
 
 /**
  * A tourist destination. In principle any [[Place]] can be a
- * [[TouristDestination]] from a [[City]], [[Region]] or [[Country]] to an
+ * [[TouristDestination]] from a [[City]], Region or [[Country]] to an
  * [[AmusementPark]] or [[Hotel]]. This Type can be used on its own to describe
  * a general [[TouristDestination]], or be used as an [[additionalType]] to add
  * tourist relevant properties to any other [[Place]].  A [[TouristDestination]]

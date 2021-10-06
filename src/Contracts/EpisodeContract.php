@@ -100,6 +100,8 @@ interface EpisodeContract
 
     public function discussionUrl($discussionUrl);
 
+    public function duration($duration);
+
     public function editEIDR($editEIDR);
 
     public function editor($editor);

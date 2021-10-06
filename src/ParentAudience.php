@@ -306,9 +306,27 @@ class ParentAudience extends BaseType implements ParentAudienceContract, Audienc
     }
 
     /**
-     * The gender of the person or audience.
+     * The age or age range for the intended audience or person, for example
+     * 3-12 months for infants, 1-5 years for toddlers.
      *
-     * @param string|string[] $suggestedGender
+     * @param \Spatie\SchemaOrg\Contracts\QuantitativeValueContract|\Spatie\SchemaOrg\Contracts\QuantitativeValueContract[] $suggestedAge
+     *
+     * @return static
+     *
+     * @see https://schema.org/suggestedAge
+     * @see https://pending.schema.org
+     * @link https://github.com/schemaorg/schemaorg/issues/2811
+     */
+    public function suggestedAge($suggestedAge)
+    {
+        return $this->setProperty('suggestedAge', $suggestedAge);
+    }
+
+    /**
+     * The suggested gender of the intended person or audience, for example
+     * "male", "female", or "unisex".
+     *
+     * @param \Spatie\SchemaOrg\Contracts\GenderTypeContract|\Spatie\SchemaOrg\Contracts\GenderTypeContract[]|string|string[] $suggestedGender
      *
      * @return static
      *
@@ -320,7 +338,7 @@ class ParentAudience extends BaseType implements ParentAudienceContract, Audienc
     }
 
     /**
-     * Maximal age recommended for viewing content.
+     * Maximum recommended age in years for the audience or user.
      *
      * @param float|float[]|int|int[] $suggestedMaxAge
      *
@@ -334,7 +352,25 @@ class ParentAudience extends BaseType implements ParentAudienceContract, Audienc
     }
 
     /**
-     * Minimal age recommended for viewing content.
+     * A suggested range of body measurements for the intended audience or
+     * person, for example inseam between 32 and 34 inches or height between 170
+     * and 190 cm. Typically found on a size chart for wearable products.
+     *
+     * @param \Spatie\SchemaOrg\Contracts\QuantitativeValueContract|\Spatie\SchemaOrg\Contracts\QuantitativeValueContract[] $suggestedMeasurement
+     *
+     * @return static
+     *
+     * @see https://schema.org/suggestedMeasurement
+     * @see https://pending.schema.org
+     * @link https://github.com/schemaorg/schemaorg/issues/2811
+     */
+    public function suggestedMeasurement($suggestedMeasurement)
+    {
+        return $this->setProperty('suggestedMeasurement', $suggestedMeasurement);
+    }
+
+    /**
+     * Minimum recommended age in years for the audience or user.
      *
      * @param float|float[]|int|int[] $suggestedMinAge
      *

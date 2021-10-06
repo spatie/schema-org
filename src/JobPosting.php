@@ -256,10 +256,30 @@ class JobPosting extends BaseType implements JobPostingContract, IntangibleContr
     }
 
     /**
+     * Indicates whether a [[JobPosting]] will accept experience (as indicated
+     * by [[OccupationalExperienceRequirements]]) in place of its formal
+     * educational qualifications (as indicated by [[educationRequirements]]).
+     * If true, indicates that satisfying one of these requirements is
+     * sufficient.
+     *
+     * @param bool|bool[] $experienceInPlaceOfEducation
+     *
+     * @return static
+     *
+     * @see https://schema.org/experienceInPlaceOfEducation
+     * @see https://pending.schema.org
+     * @link https://github.com/schemaorg/schemaorg/issues/2681
+     */
+    public function experienceInPlaceOfEducation($experienceInPlaceOfEducation)
+    {
+        return $this->setProperty('experienceInPlaceOfEducation', $experienceInPlaceOfEducation);
+    }
+
+    /**
      * Description of skills and experience needed for the position or
      * Occupation.
      *
-     * @param string|string[] $experienceRequirements
+     * @param \Spatie\SchemaOrg\Contracts\OccupationalExperienceRequirementsContract|\Spatie\SchemaOrg\Contracts\OccupationalExperienceRequirementsContract[]|string|string[] $experienceRequirements
      *
      * @return static
      *

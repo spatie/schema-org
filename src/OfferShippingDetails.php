@@ -22,7 +22,7 @@ use \Spatie\SchemaOrg\Contracts\ThingContract;
  * Two entities that are identical but differ in rate and time:
  * 
  * e.g. Cheaper and slower: $5 in 5-7days
- * or Fast and expensive: $15 in 1-2 days
+ * or Fast and expensive: $15 in 1-2 days.
  *
  * @see https://schema.org/OfferShippingDetails
  * @see https://pending.schema.org

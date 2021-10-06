@@ -11,7 +11,7 @@ use \Spatie\SchemaOrg\Contracts\ThingContract;
 
 /**
  * A loan in which property or real estate is used as collateral. (A loan
- * securitized against some real estate.)
+ * securitized against some real estate).
  *
  * @see https://schema.org/MortgageLoan
  * @see https://pending.schema.org

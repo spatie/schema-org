@@ -55,7 +55,7 @@ class UnitPriceSpecification extends BaseType implements UnitPriceSpecificationC
      * Can be used, for example, to model the contractual duration of a
      * subscription or payment plan. Type can be either a Duration or a Number
      * (in which case the unit of measurement, for example month, is specified
-     * by the unitCode property)
+     * by the unitCode property).
      *
      * @param \Spatie\SchemaOrg\Contracts\DurationContract|\Spatie\SchemaOrg\Contracts\DurationContract[]|\Spatie\SchemaOrg\Contracts\QuantitativeValueContract|\Spatie\SchemaOrg\Contracts\QuantitativeValueContract[]|float|float[]|int|int[] $billingDuration
      *
@@ -91,7 +91,7 @@ class UnitPriceSpecification extends BaseType implements UnitPriceSpecificationC
      * Specifies after how much time this price (or price component) becomes
      * valid and billing starts. Can be used, for example, to model a price
      * increase after the first year of a subscription. The unit of measurement
-     * is specified by the unitCode property
+     * is specified by the unitCode property.
      *
      * @param float|float[]|int|int[] $billingStart
      *

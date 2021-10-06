@@ -65,7 +65,7 @@ class BroadcastFrequencySpecification extends BaseType implements BroadcastFrequ
     }
 
     /**
-     * The modulation (e.g. FM, AM, etc) used by a particular broadcast service
+     * The modulation (e.g. FM, AM, etc) used by a particular broadcast service.
      *
      * @param \Spatie\SchemaOrg\Contracts\QualitativeValueContract|\Spatie\SchemaOrg\Contracts\QualitativeValueContract[]|string|string[] $broadcastSignalModulation
      *
