@@ -9,14 +9,13 @@ use \Spatie\SchemaOrg\Contracts\ThingContract;
 
 /**
  * Individual comic issues are serially published as
- *         part of a larger series. For the sake of consistency, even one-shot
+ *     	part of a larger series. For the sake of consistency, even one-shot
  * issues
- *         belong to a series comprised of a single issue. All comic issues can
- * be
- *         uniquely identified by: the combination of the name and volume number
- * of the
- *         series to which the issue belongs; the issue number; and the variant
- *         description of the issue (if any).
+ *     	belong to a series comprised of a single issue. All comic issues can be
+ *     	uniquely identified by: the combination of the name and volume number of
+ * the
+ *     	series to which the issue belongs; the issue number; and the variant
+ *     	description of the issue (if any).
  *
  * @see https://schema.org/ComicIssue
  * @see https://bib.schema.org
@@ -269,9 +268,9 @@ class ComicIssue extends BaseType implements ComicIssueContract, CreativeWorkCon
 
     /**
      * The primary artist for a work
-     *         in a medium other than pencils or digital line art--for example,
-     * if the
-     *         primary artwork is done in watercolors or digital paints.
+     *     	in a medium other than pencils or digital line art--for example, if
+     * the
+     *     	primary artwork is done in watercolors or digital paints.
      *
      * @param \Spatie\SchemaOrg\Contracts\PersonContract|\Spatie\SchemaOrg\Contracts\PersonContract[] $artist
      *
@@ -562,6 +561,24 @@ class ComicIssue extends BaseType implements ComicIssueContract, CreativeWorkCon
     }
 
     /**
+     * Text of a notice appropriate for describing the copyright aspects of this
+     * Creative Work, ideally indicating the owner of the copyright for the
+     * Work.
+     *
+     * @param string|string[] $copyrightNotice
+     *
+     * @return static
+     *
+     * @see https://schema.org/copyrightNotice
+     * @see https://pending.schema.org
+     * @link https://github.com/schemaorg/schemaorg/issues/2659
+     */
+    public function copyrightNotice($copyrightNotice)
+    {
+        return $this->setProperty('copyrightNotice', $copyrightNotice);
+    }
+
+    /**
      * The year during which the claimed copyright for the CreativeWork was
      * first asserted.
      *
@@ -624,6 +641,23 @@ class ComicIssue extends BaseType implements ComicIssueContract, CreativeWorkCon
     public function creator($creator)
     {
         return $this->setProperty('creator', $creator);
+    }
+
+    /**
+     * Text that can be used to credit person(s) and/or organization(s)
+     * associated with a published Creative Work.
+     *
+     * @param string|string[] $creditText
+     *
+     * @return static
+     *
+     * @see https://schema.org/creditText
+     * @see https://pending.schema.org
+     * @link https://github.com/schemaorg/schemaorg/issues/2659
+     */
+    public function creditText($creditText)
+    {
+        return $this->setProperty('creditText', $creditText);
     }
 
     /**
@@ -797,7 +831,7 @@ class ComicIssue extends BaseType implements ComicIssueContract, CreativeWorkCon
      * The purpose of a work in the context of education; for example,
      * 'assignment', 'group work'.
      *
-     * @param string|string[] $educationalUse
+     * @param \Spatie\SchemaOrg\Contracts\DefinedTermContract|\Spatie\SchemaOrg\Contracts\DefinedTermContract[]|string|string[] $educationalUse
      *
      * @return static
      *
@@ -1185,7 +1219,7 @@ class ComicIssue extends BaseType implements ComicIssueContract, CreativeWorkCon
      * The predominant type or kind characterizing the learning resource. For
      * example, 'presentation', 'handout'.
      *
-     * @param string|string[] $learningResourceType
+     * @param \Spatie\SchemaOrg\Contracts\DefinedTermContract|\Spatie\SchemaOrg\Contracts\DefinedTermContract[]|string|string[] $learningResourceType
      *
      * @return static
      *
@@ -2037,9 +2071,9 @@ class ComicIssue extends BaseType implements ComicIssueContract, CreativeWorkCon
 
     /**
      * A description of the variant cover
-     *         for the issue, if the issue is a variant printing. For example,
+     *     	for the issue, if the issue is a variant printing. For example,
      * "Bryan Hitch
-     *         Variant Cover" or "2nd Printing Variant".
+     *     	Variant Cover" or "2nd Printing Variant".
      *
      * @param string|string[] $variantCover
      *

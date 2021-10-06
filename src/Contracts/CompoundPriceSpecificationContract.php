@@ -36,6 +36,8 @@ interface CompoundPriceSpecificationContract
 
     public function priceCurrency($priceCurrency);
 
+    public function priceType($priceType);
+
     public function sameAs($sameAs);
 
     public function subjectOf($subjectOf);

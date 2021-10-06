@@ -323,7 +323,6 @@ class Flight extends BaseType implements FlightContract, IntangibleContract, Thi
      *
      * @see https://schema.org/itinerary
      * @see https://pending.schema.org
-     * @link http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#Tourism
      */
     public function itinerary($itinerary)
     {
@@ -406,7 +405,6 @@ class Flight extends BaseType implements FlightContract, IntangibleContract, Thi
      *
      * @see https://schema.org/partOfTrip
      * @see https://pending.schema.org
-     * @link http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#Tourism
      */
     public function partOfTrip($partOfTrip)
     {
@@ -486,7 +484,6 @@ class Flight extends BaseType implements FlightContract, IntangibleContract, Thi
      *
      * @see https://schema.org/subTrip
      * @see https://pending.schema.org
-     * @link http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#Tourism
      */
     public function subTrip($subTrip)
     {

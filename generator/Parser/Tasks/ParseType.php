@@ -39,9 +39,9 @@ class ParseType extends Task
 
         $type->resource = $this->getResource();
 
-        $type->partOf = $this->definition['https://schema.org/isPartOf']['@id'] ?? null;
+        $type->partOf = $this->definition['schema:isPartOf']['@id'] ?? null;
 
-        $type->source = $this->definition['https://schema.org/source']['@id'] ?? null;
+        $type->source = $this->definition['schema:source']['@id'] ?? null;
 
         return $type;
     }

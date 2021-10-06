@@ -18,15 +18,15 @@ use \Spatie\SchemaOrg\Contracts\ThingContract;
  * For work in progress guidelines on Coronavirus-related markup see [this
  * doc](https://docs.google.com/document/d/14ikaGCKxo50rRM7nvKSlbUpjyIk2WMQd3IkB1lItlrM/edit#).
  * 
- * The motivating scenario for SpecialAnnouncement is the <a
- * href="https://en.wikipedia.org/wiki/2019%E2%80%9320_coronavirus_pandemic">Coronavirus
- * pandemic</a>, and the initial vocabulary is oriented to this urgent
- * situation. Schema.org
+ * The motivating scenario for SpecialAnnouncement is the [Coronavirus
+ * pandemic](https://en.wikipedia.org/wiki/2019%E2%80%9320_coronavirus_pandemic),
+ * and the initial vocabulary is oriented to this urgent situation. Schema.org
  * expect to improve the markup iteratively as it is deployed and as feedback
  * emerges from use. In addition to our
  * usual [Github entry](https://github.com/schemaorg/schemaorg/issues/2490),
  * feedback comments can also be provided in [this
  * document](https://docs.google.com/document/d/1fpdFFxk8s87CWwACs53SGkYv3aafSxz_DTtOQxMrBJQ/edit#).
+ * 
  * 
  * While this schema is designed to communicate urgent crisis-related
  * information, it is not the same as an emergency warning technology like
@@ -43,8 +43,8 @@ use \Spatie\SchemaOrg\Contracts\ThingContract;
  * where possible, most ideally as a well known
  * URL from Wikipedia or Wikidata. In the case of the 2019-2020 Coronavirus
  * pandemic, this should be
- * "https://en.wikipedia.org/w/index.php?title=2019-20_coronavirus_pandemic" or
- * "https://www.wikidata.org/wiki/Q81068910".
+ * "https://en.wikipedia.org/w/index.php?title=2019-20\_coronavirus\_pandemic"
+ * or "https://www.wikidata.org/wiki/Q81068910".
  * 
  * For many of the possible properties, values can either be simple links or an
  * inline description, depending on whether a summary is available. For a link,
@@ -77,8 +77,8 @@ use \Spatie\SchemaOrg\Contracts\ThingContract;
  * initial design encouraged the use of /about for locations too.
  * 
  * The basic content of [[SpecialAnnouncement]] is similar to that of an
- * [RSS](https://en.wikipedia.org/wiki/RSS) or <a
- * href="https://en.wikipedia.org/wiki/Atom_(Web_standard)">Atom</a> feed. For
+ * [RSS](https://en.wikipedia.org/wiki/RSS) or
+ * [Atom](https://en.wikipedia.org/wiki/Atom_(Web_standard)) feed. For
  * publishers without such feeds, basic feed-like information can be shared by
  * posting
  * [[SpecialAnnouncement]] updates in a page, e.g. using JSON-LD. For sites with
@@ -633,6 +633,24 @@ class SpecialAnnouncement extends BaseType implements SpecialAnnouncementContrac
     }
 
     /**
+     * Text of a notice appropriate for describing the copyright aspects of this
+     * Creative Work, ideally indicating the owner of the copyright for the
+     * Work.
+     *
+     * @param string|string[] $copyrightNotice
+     *
+     * @return static
+     *
+     * @see https://schema.org/copyrightNotice
+     * @see https://pending.schema.org
+     * @link https://github.com/schemaorg/schemaorg/issues/2659
+     */
+    public function copyrightNotice($copyrightNotice)
+    {
+        return $this->setProperty('copyrightNotice', $copyrightNotice);
+    }
+
+    /**
      * The year during which the claimed copyright for the CreativeWork was
      * first asserted.
      *
@@ -695,6 +713,23 @@ class SpecialAnnouncement extends BaseType implements SpecialAnnouncementContrac
     public function creator($creator)
     {
         return $this->setProperty('creator', $creator);
+    }
+
+    /**
+     * Text that can be used to credit person(s) and/or organization(s)
+     * associated with a published Creative Work.
+     *
+     * @param string|string[] $creditText
+     *
+     * @return static
+     *
+     * @see https://schema.org/creditText
+     * @see https://pending.schema.org
+     * @link https://github.com/schemaorg/schemaorg/issues/2659
+     */
+    public function creditText($creditText)
+    {
+        return $this->setProperty('creditText', $creditText);
     }
 
     /**
@@ -918,7 +953,7 @@ class SpecialAnnouncement extends BaseType implements SpecialAnnouncementContrac
      * The purpose of a work in the context of education; for example,
      * 'assignment', 'group work'.
      *
-     * @param string|string[] $educationalUse
+     * @param \Spatie\SchemaOrg\Contracts\DefinedTermContract|\Spatie\SchemaOrg\Contracts\DefinedTermContract[]|string|string[] $educationalUse
      *
      * @return static
      *
@@ -1309,7 +1344,7 @@ class SpecialAnnouncement extends BaseType implements SpecialAnnouncementContrac
      * The predominant type or kind characterizing the learning resource. For
      * example, 'presentation', 'handout'.
      *
-     * @param string|string[] $learningResourceType
+     * @param \Spatie\SchemaOrg\Contracts\DefinedTermContract|\Spatie\SchemaOrg\Contracts\DefinedTermContract[]|string|string[] $learningResourceType
      *
      * @return static
      *

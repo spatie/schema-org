@@ -51,6 +51,26 @@ class UnitPriceSpecification extends BaseType implements UnitPriceSpecificationC
     }
 
     /**
+     * Specifies for how long this price (or price component) will be billed.
+     * Can be used, for example, to model the contractual duration of a
+     * subscription or payment plan. Type can be either a Duration or a Number
+     * (in which case the unit of measurement, for example month, is specified
+     * by the unitCode property)
+     *
+     * @param \Spatie\SchemaOrg\Contracts\DurationContract|\Spatie\SchemaOrg\Contracts\DurationContract[]|\Spatie\SchemaOrg\Contracts\QuantitativeValueContract|\Spatie\SchemaOrg\Contracts\QuantitativeValueContract[]|float|float[]|int|int[] $billingDuration
+     *
+     * @return static
+     *
+     * @see https://schema.org/billingDuration
+     * @see https://pending.schema.org
+     * @link https://github.com/schemaorg/schemaorg/issues/2689
+     */
+    public function billingDuration($billingDuration)
+    {
+        return $this->setProperty('billingDuration', $billingDuration);
+    }
+
+    /**
      * This property specifies the minimal quantity and rounding increment that
      * will be the basis for the billing. The unit of measurement is specified
      * by the unitCode property.
@@ -65,6 +85,25 @@ class UnitPriceSpecification extends BaseType implements UnitPriceSpecificationC
     public function billingIncrement($billingIncrement)
     {
         return $this->setProperty('billingIncrement', $billingIncrement);
+    }
+
+    /**
+     * Specifies after how much time this price (or price component) becomes
+     * valid and billing starts. Can be used, for example, to model a price
+     * increase after the first year of a subscription. The unit of measurement
+     * is specified by the unitCode property
+     *
+     * @param float|float[]|int|int[] $billingStart
+     *
+     * @return static
+     *
+     * @see https://schema.org/billingStart
+     * @see https://pending.schema.org
+     * @link https://github.com/schemaorg/schemaorg/issues/2689
+     */
+    public function billingStart($billingStart)
+    {
+        return $this->setProperty('billingStart', $billingStart);
     }
 
     /**
@@ -279,6 +318,23 @@ class UnitPriceSpecification extends BaseType implements UnitPriceSpecificationC
     }
 
     /**
+     * Identifies a price component (for example, a line item on an invoice),
+     * part of the total price for an offer.
+     *
+     * @param \Spatie\SchemaOrg\Contracts\PriceComponentTypeEnumerationContract|\Spatie\SchemaOrg\Contracts\PriceComponentTypeEnumerationContract[] $priceComponentType
+     *
+     * @return static
+     *
+     * @see https://schema.org/priceComponentType
+     * @see https://pending.schema.org
+     * @link https://github.com/schemaorg/schemaorg/issues/2689
+     */
+    public function priceComponentType($priceComponentType)
+    {
+        return $this->setProperty('priceComponentType', $priceComponentType);
+    }
+
+    /**
      * The currency of the price, or a price component when attached to
      * [[PriceSpecification]] and its subtypes.
      * 
@@ -302,11 +358,15 @@ class UnitPriceSpecification extends BaseType implements UnitPriceSpecificationC
     }
 
     /**
-     * A short text or acronym indicating multiple price specifications for the
-     * same offer, e.g. SRP for the suggested retail price or INVOICE for the
-     * invoice price, mostly used in the car industry.
+     * Defines the type of a price specified for an offered product, for example
+     * a list price, a (temporary) sale price or a manufacturer suggested retail
+     * price. If multiple prices are specified for an offer the [[priceType]]
+     * property can be used to identify the type of each such specified price.
+     * The value of priceType can be specified as a value from enumeration
+     * PriceTypeEnumeration or as a free form text string for price types that
+     * are not already predefined in PriceTypeEnumeration.
      *
-     * @param string|string[] $priceType
+     * @param \Spatie\SchemaOrg\Contracts\PriceTypeEnumerationContract|\Spatie\SchemaOrg\Contracts\PriceTypeEnumerationContract[]|string|string[] $priceType
      *
      * @return static
      *

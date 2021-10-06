@@ -15,17 +15,20 @@ use \Spatie\SchemaOrg\Contracts\ThingContract;
  * stay in the outdoors, typically containing individual [[CampingPitch]]
  * locations. 
  * 
+ * 
  * In British English a campsite is an area, usually divided into a number of
  * pitches, where people can camp overnight using tents or camper vans or
  * caravans; this British English use of the word is synonymous with the
  * American English expression campground. In American English the term campsite
  * generally means an area where an individual, family, group, or military unit
  * can pitch a tent or park a camper; a campground may contain many campsites
- * (Source: Wikipedia see <a
- * href="https://en.wikipedia.org/wiki/Campsite">https://en.wikipedia.org/wiki/Campsite</a>).
+ * (Source: Wikipedia see
+ * [https://en.wikipedia.org/wiki/Campsite](https://en.wikipedia.org/wiki/Campsite)).
  * 
- * See also the dedicated <a href="/docs/hotels.html">document on the use of
- * schema.org for marking up hotels and other forms of accommodations</a>.
+ * 
+ * 
+ * See also the dedicated [document on the use of schema.org for marking up
+ * hotels and other forms of accommodations](/docs/hotels.html).
  *
  * @see https://schema.org/Campground
  * @link https://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#STI_Accommodation_Ontology
@@ -1197,8 +1200,8 @@ class Campground extends BaseType implements CampgroundContract, CivicStructureC
     }
 
     /**
-     * The location of for example where the event is happening, an organization
-     * is located, or where an action takes place.
+     * The location of, for example, where an event is happening, where an
+     * organization is located, or where an action takes place.
      *
      * @param \Spatie\SchemaOrg\Contracts\PlaceContract|\Spatie\SchemaOrg\Contracts\PlaceContract[]|\Spatie\SchemaOrg\Contracts\PostalAddressContract|\Spatie\SchemaOrg\Contracts\PostalAddressContract[]|\Spatie\SchemaOrg\Contracts\VirtualLocationContract|\Spatie\SchemaOrg\Contracts\VirtualLocationContract[]|string|string[] $location
      *
@@ -1445,8 +1448,8 @@ class Campground extends BaseType implements CampgroundContract, CivicStructureC
      * 
      * * Days are specified using the following two-letter combinations:
      * ```Mo```, ```Tu```, ```We```, ```Th```, ```Fr```, ```Sa```, ```Su```.
-     * * Times are specified using 24:00 time. For example, 3pm is specified as
-     * ```15:00```. 
+     * * Times are specified using 24:00 format. For example, 3pm is specified
+     * as ```15:00```, 10am as ```10:00```. 
      * * Here is an example: ```<time itemprop="openingHours" datetime="Tu,Th
      * 16:00-20:00">Tuesdays and Thursdays 4-8pm</time>```.
      * * If a business is open 7 days a week, then it can be specified as

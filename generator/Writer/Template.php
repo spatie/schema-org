@@ -47,6 +47,10 @@ class Template
             new TwigFilter('lcfirst', [Filters::class, 'lcfirst'])
         );
 
+        $twig->addFilter(
+            new TwigFilter('fixLink', [Filters::class, 'fixLink'])
+        );
+
         return $twig;
     }
 }

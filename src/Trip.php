@@ -151,7 +151,6 @@ class Trip extends BaseType implements TripContract, IntangibleContract, ThingCo
      *
      * @see https://schema.org/itinerary
      * @see https://pending.schema.org
-     * @link http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#Tourism
      */
     public function itinerary($itinerary)
     {
@@ -220,7 +219,6 @@ class Trip extends BaseType implements TripContract, IntangibleContract, ThingCo
      *
      * @see https://schema.org/partOfTrip
      * @see https://pending.schema.org
-     * @link http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#Tourism
      */
     public function partOfTrip($partOfTrip)
     {
@@ -285,7 +283,6 @@ class Trip extends BaseType implements TripContract, IntangibleContract, ThingCo
      *
      * @see https://schema.org/subTrip
      * @see https://pending.schema.org
-     * @link http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#Tourism
      */
     public function subTrip($subTrip)
     {

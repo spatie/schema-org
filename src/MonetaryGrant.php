@@ -12,7 +12,6 @@ use \Spatie\SchemaOrg\Contracts\ThingContract;
  *
  * @see https://schema.org/MonetaryGrant
  * @see https://pending.schema.org
- * @link https://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#FundInfoCollab
  *
  */
 class MonetaryGrant extends BaseType implements MonetaryGrantContract, GrantContract, IntangibleContract, ThingContract

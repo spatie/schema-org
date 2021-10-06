@@ -1154,8 +1154,8 @@ class BarOrPub extends BaseType implements BarOrPubContract, FoodEstablishmentCo
     }
 
     /**
-     * The location of for example where the event is happening, an organization
-     * is located, or where an action takes place.
+     * The location of, for example, where an event is happening, where an
+     * organization is located, or where an action takes place.
      *
      * @param \Spatie\SchemaOrg\Contracts\PlaceContract|\Spatie\SchemaOrg\Contracts\PlaceContract[]|\Spatie\SchemaOrg\Contracts\PostalAddressContract|\Spatie\SchemaOrg\Contracts\PostalAddressContract[]|\Spatie\SchemaOrg\Contracts\VirtualLocationContract|\Spatie\SchemaOrg\Contracts\VirtualLocationContract[]|string|string[] $location
      *
@@ -1399,8 +1399,8 @@ class BarOrPub extends BaseType implements BarOrPubContract, FoodEstablishmentCo
      * 
      * * Days are specified using the following two-letter combinations:
      * ```Mo```, ```Tu```, ```We```, ```Th```, ```Fr```, ```Sa```, ```Su```.
-     * * Times are specified using 24:00 time. For example, 3pm is specified as
-     * ```15:00```. 
+     * * Times are specified using 24:00 format. For example, 3pm is specified
+     * as ```15:00```, 10am as ```10:00```. 
      * * Here is an example: ```<time itemprop="openingHours" datetime="Tu,Th
      * 16:00-20:00">Tuesdays and Thursdays 4-8pm</time>```.
      * * If a business is open 7 days a week, then it can be specified as

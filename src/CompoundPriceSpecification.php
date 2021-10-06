@@ -304,6 +304,27 @@ class CompoundPriceSpecification extends BaseType implements CompoundPriceSpecif
     }
 
     /**
+     * Defines the type of a price specified for an offered product, for example
+     * a list price, a (temporary) sale price or a manufacturer suggested retail
+     * price. If multiple prices are specified for an offer the [[priceType]]
+     * property can be used to identify the type of each such specified price.
+     * The value of priceType can be specified as a value from enumeration
+     * PriceTypeEnumeration or as a free form text string for price types that
+     * are not already predefined in PriceTypeEnumeration.
+     *
+     * @param \Spatie\SchemaOrg\Contracts\PriceTypeEnumerationContract|\Spatie\SchemaOrg\Contracts\PriceTypeEnumerationContract[]|string|string[] $priceType
+     *
+     * @return static
+     *
+     * @see https://schema.org/priceType
+     * @link http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#source_GoodRelationsTerms
+     */
+    public function priceType($priceType)
+    {
+        return $this->setProperty('priceType', $priceType);
+    }
+
+    /**
      * URL of a reference Web page that unambiguously indicates the item's
      * identity. E.g. the URL of the item's Wikipedia page, Wikidata entry, or
      * official website.

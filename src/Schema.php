@@ -122,6 +122,11 @@ class Schema
         return new AllocateAction();
     }
 
+    public static function ampStory(): AmpStory
+    {
+        return new AmpStory();
+    }
+
     public static function amusementPark(): AmusementPark
     {
         return new AmusementPark();
@@ -1782,6 +1787,16 @@ class Schema
         return new HowToTool();
     }
 
+    public static function hyperToc(): HyperToc
+    {
+        return new HyperToc();
+    }
+
+    public static function hyperTocEntry(): HyperTocEntry
+    {
+        return new HyperTocEntry();
+    }
+
     public static function iceCreamShop(): IceCreamShop
     {
         return new IceCreamShop();
@@ -2105,6 +2120,11 @@ class Schema
     public static function mass(): Mass
     {
         return new Mass();
+    }
+
+    public static function mathSolver(): MathSolver
+    {
+        return new MathSolver();
     }
 
     public static function maximumDoseSchedule(): MaximumDoseSchedule
@@ -3027,9 +3047,19 @@ class Schema
         return new PreventionIndication();
     }
 
+    public static function priceComponentTypeEnumeration(): PriceComponentTypeEnumeration
+    {
+        return new PriceComponentTypeEnumeration();
+    }
+
     public static function priceSpecification(): PriceSpecification
     {
         return new PriceSpecification();
+    }
+
+    public static function priceTypeEnumeration(): PriceTypeEnumeration
+    {
+        return new PriceTypeEnumeration();
     }
 
     public static function product(): Product
@@ -3512,6 +3542,11 @@ class Schema
         return new Seat();
     }
 
+    public static function seekToAction(): SeekToAction
+    {
+        return new SeekToAction();
+    }
+
     public static function selfStorage(): SelfStorage
     {
         return new SelfStorage();
@@ -3610,6 +3645,11 @@ class Schema
     public static function softwareSourceCode(): SoftwareSourceCode
     {
         return new SoftwareSourceCode();
+    }
+
+    public static function solveMathAction(): SolveMathAction
+    {
+        return new SolveMathAction();
     }
 
     public static function someProducts(): SomeProducts

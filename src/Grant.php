@@ -26,7 +26,6 @@ use \Spatie\SchemaOrg\Contracts\ThingContract;
  *
  * @see https://schema.org/Grant
  * @see https://pending.schema.org
- * @link https://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#FundInfoCollab
  *
  */
 class Grant extends BaseType implements GrantContract, IntangibleContract, ThingContract

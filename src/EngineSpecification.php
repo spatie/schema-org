@@ -110,8 +110,8 @@ class EngineSpecification extends BaseType implements EngineSpecificationContrac
      * for metric horsepower (PS, with 1 PS = 735,49875 W)
      * 
      * * Note 1: There are many different ways of measuring an engine's power.
-     * For an overview, see  <a
-     * href="http://en.wikipedia.org/wiki/Horsepower#Engine_power_test_codes">http://en.wikipedia.org/wiki/Horsepower#Engine*power*test_codes</a>.
+     * For an overview, see 
+     * [http://en.wikipedia.org/wiki/Horsepower#Engine_power_test_codes](http://en.wikipedia.org/wiki/Horsepower#Engine_power_test_codes).
      * * Note 2: You can link to information about how the given value has been
      * determined using the [[valueReference]] property.
      * * Note 3: You can use [[minValue]] and [[maxValue]] to indicate ranges.
