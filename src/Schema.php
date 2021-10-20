@@ -257,6 +257,11 @@ class Schema
         return new AudioObject();
     }
 
+    public static function audioObjectSnapshot(): AudioObjectSnapshot
+    {
+        return new AudioObjectSnapshot();
+    }
+
     public static function audiobook(): Audiobook
     {
         return new Audiobook();
@@ -370,6 +375,11 @@ class Schema
     public static function bikeStore(): BikeStore
     {
         return new BikeStore();
+    }
+
+    public static function bioChemEntity(): BioChemEntity
+    {
+        return new BioChemEntity();
     }
 
     public static function blog(): Blog
@@ -655,6 +665,11 @@ class Schema
     public static function checkoutPage(): CheckoutPage
     {
         return new CheckoutPage();
+    }
+
+    public static function chemicalSubstance(): ChemicalSubstance
+    {
+        return new ChemicalSubstance();
     }
 
     public static function childCare(): ChildCare
@@ -1557,6 +1572,11 @@ class Schema
         return new GenderType();
     }
 
+    public static function gene(): Gene
+    {
+        return new Gene();
+    }
+
     public static function generalContractor(): GeneralContractor
     {
         return new GeneralContractor();
@@ -1820,6 +1840,11 @@ class Schema
     public static function imageObject(): ImageObject
     {
         return new ImageObject();
+    }
+
+    public static function imageObjectSnapshot(): ImageObjectSnapshot
+    {
+        return new ImageObjectSnapshot();
     }
 
     public static function imagingTest(): ImagingTest
@@ -2162,6 +2187,11 @@ class Schema
         return new MediaReview();
     }
 
+    public static function mediaReviewItem(): MediaReviewItem
+    {
+        return new MediaReviewItem();
+    }
+
     public static function mediaSubscription(): MediaSubscription
     {
         return new MediaSubscription();
@@ -2417,6 +2447,11 @@ class Schema
         return new MerchantReturnPolicy();
     }
 
+    public static function merchantReturnPolicySeasonalOverride(): MerchantReturnPolicySeasonalOverride
+    {
+        return new MerchantReturnPolicySeasonalOverride();
+    }
+
     public static function message(): Message
     {
         return new Message();
@@ -2435,6 +2470,11 @@ class Schema
     public static function mobilePhoneStore(): MobilePhoneStore
     {
         return new MobilePhoneStore();
+    }
+
+    public static function molecularEntity(): MolecularEntity
+    {
+        return new MolecularEntity();
     }
 
     public static function monetaryAmount(): MonetaryAmount
@@ -3147,6 +3187,11 @@ class Schema
         return new PropertyValueSpecification();
     }
 
+    public static function protein(): Protein
+    {
+        return new Protein();
+    }
+
     public static function psychologicalTreatment(): PsychologicalTreatment
     {
         return new PsychologicalTreatment();
@@ -3372,6 +3417,11 @@ class Schema
         return new ReportedDoseSchedule();
     }
 
+    public static function researchOrganization(): ResearchOrganization
+    {
+        return new ResearchOrganization();
+    }
+
     public static function researchProject(): ResearchProject
     {
         return new ResearchProject();
@@ -3440,6 +3490,16 @@ class Schema
     public static function returnFeesEnumeration(): ReturnFeesEnumeration
     {
         return new ReturnFeesEnumeration();
+    }
+
+    public static function returnLabelSourceEnumeration(): ReturnLabelSourceEnumeration
+    {
+        return new ReturnLabelSourceEnumeration();
+    }
+
+    public static function returnMethodEnumeration(): ReturnMethodEnumeration
+    {
+        return new ReturnMethodEnumeration();
     }
 
     public static function review(): Review
@@ -3747,6 +3807,11 @@ class Schema
         return new State();
     }
 
+    public static function statement(): Statement
+    {
+        return new Statement();
+    }
+
     public static function statisticalPopulation(): StatisticalPopulation
     {
         return new StatisticalPopulation();
@@ -3870,6 +3935,11 @@ class Schema
     public static function taxiStand(): TaxiStand
     {
         return new TaxiStand();
+    }
+
+    public static function taxon(): Taxon
+    {
+        return new Taxon();
     }
 
     public static function techArticle(): TechArticle
@@ -4150,6 +4220,11 @@ class Schema
     public static function videoObject(): VideoObject
     {
         return new VideoObject();
+    }
+
+    public static function videoObjectSnapshot(): VideoObjectSnapshot
+    {
+        return new VideoObjectSnapshot();
     }
 
     public static function viewAction(): ViewAction

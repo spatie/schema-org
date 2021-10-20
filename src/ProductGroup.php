@@ -184,6 +184,64 @@ class ProductGroup extends BaseType implements ProductGroupContract, ProductCont
     }
 
     /**
+     * The place where the product was assembled.
+     *
+     * @param string|string[] $countryOfAssembly
+     *
+     * @return static
+     *
+     * @see https://schema.org/countryOfAssembly
+     * @see https://pending.schema.org
+     * @link https://github.com/schemaorg/schemaorg/issues/991
+     */
+    public function countryOfAssembly($countryOfAssembly)
+    {
+        return $this->setProperty('countryOfAssembly', $countryOfAssembly);
+    }
+
+    /**
+     * The place where the item (typically [[Product]]) was last processed and
+     * tested before importation.
+     *
+     * @param string|string[] $countryOfLastProcessing
+     *
+     * @return static
+     *
+     * @see https://schema.org/countryOfLastProcessing
+     * @see https://pending.schema.org
+     * @link https://github.com/schemaorg/schemaorg/issues/991
+     */
+    public function countryOfLastProcessing($countryOfLastProcessing)
+    {
+        return $this->setProperty('countryOfLastProcessing', $countryOfLastProcessing);
+    }
+
+    /**
+     * The country of origin of something, including products as well as
+     * creative  works such as movie and TV content.
+     * 
+     * In the case of TV and movie, this would be the country of the principle
+     * offices of the production company or individual responsible for the
+     * movie. For other kinds of [[CreativeWork]] it is difficult to provide
+     * fully general guidance, and properties such as [[contentLocation]] and
+     * [[locationCreated]] may be more applicable.
+     * 
+     * In the case of products, the country of origin of the product. The exact
+     * interpretation of this may vary by context and product type, and cannot
+     * be fully enumerated here.
+     *
+     * @param \Spatie\SchemaOrg\Contracts\CountryContract|\Spatie\SchemaOrg\Contracts\CountryContract[] $countryOfOrigin
+     *
+     * @return static
+     *
+     * @see https://schema.org/countryOfOrigin
+     */
+    public function countryOfOrigin($countryOfOrigin)
+    {
+        return $this->setProperty('countryOfOrigin', $countryOfOrigin);
+    }
+
+    /**
      * The depth of the item.
      *
      * @param \Spatie\SchemaOrg\Contracts\DistanceContract|\Spatie\SchemaOrg\Contracts\DistanceContract[]|\Spatie\SchemaOrg\Contracts\QuantitativeValueContract|\Spatie\SchemaOrg\Contracts\QuantitativeValueContract[] $depth
@@ -374,7 +432,7 @@ class ProductGroup extends BaseType implements ProductGroupContract, ProductCont
     }
 
     /**
-     * Indicates a MerchantReturnPolicy that may be applicable.
+     * Specifies a MerchantReturnPolicy that may be applicable.
      *
      * @param \Spatie\SchemaOrg\Contracts\MerchantReturnPolicyContract|\Spatie\SchemaOrg\Contracts\MerchantReturnPolicyContract[] $hasMerchantReturnPolicy
      *
@@ -575,9 +633,10 @@ class ProductGroup extends BaseType implements ProductGroupContract, ProductCont
     }
 
     /**
-     * A predefined value from OfferItemCondition or a textual description of
-     * the condition of the product or service, or the products or services
-     * included in the offer.
+     * A predefined value from OfferItemCondition specifying the condition of
+     * the product or service, or the products or services included in the
+     * offer. Also used for product return policies to specify the condition of
+     * products accepted for returns.
      *
      * @param \Spatie\SchemaOrg\Contracts\OfferItemConditionContract|\Spatie\SchemaOrg\Contracts\OfferItemConditionContract[] $itemCondition
      *

@@ -60,6 +60,8 @@ interface AggregateOfferContract
 
     public function hasMeasurement($hasMeasurement);
 
+    public function hasMerchantReturnPolicy($hasMerchantReturnPolicy);
+
     public function highPrice($highPrice);
 
     public function identifier($identifier);

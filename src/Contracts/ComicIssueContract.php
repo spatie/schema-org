@@ -34,6 +34,8 @@ interface ComicIssueContract
 
     public function alternativeHeadline($alternativeHeadline);
 
+    public function archivedAt($archivedAt);
+
     public function artist($artist);
 
     public function assesses($assesses);
@@ -77,6 +79,8 @@ interface ComicIssueContract
     public function copyrightYear($copyrightYear);
 
     public function correction($correction);
+
+    public function countryOfOrigin($countryOfOrigin);
 
     public function creativeWorkStatus($creativeWorkStatus);
 
@@ -137,6 +141,8 @@ interface ComicIssueContract
     public function interactionStatistic($interactionStatistic);
 
     public function interactivityType($interactivityType);
+
+    public function interpretedAsClaim($interpretedAsClaim);
 
     public function isAccessibleForFree($isAccessibleForFree);
 

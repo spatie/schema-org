@@ -12,6 +12,8 @@ interface InteractionCounterContract
 
     public function disambiguatingDescription($disambiguatingDescription);
 
+    public function endTime($endTime);
+
     public function identifier($identifier);
 
     public function image($image);
@@ -20,6 +22,8 @@ interface InteractionCounterContract
 
     public function interactionType($interactionType);
 
+    public function location($location);
+
     public function mainEntityOfPage($mainEntityOfPage);
 
     public function name($name);
@@ -27,6 +31,8 @@ interface InteractionCounterContract
     public function potentialAction($potentialAction);
 
     public function sameAs($sameAs);
+
+    public function startTime($startTime);
 
     public function subjectOf($subjectOf);
 

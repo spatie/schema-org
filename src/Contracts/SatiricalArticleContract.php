@@ -34,6 +34,8 @@ interface SatiricalArticleContract
 
     public function alternativeHeadline($alternativeHeadline);
 
+    public function archivedAt($archivedAt);
+
     public function articleBody($articleBody);
 
     public function articleSection($articleSection);
@@ -79,6 +81,8 @@ interface SatiricalArticleContract
     public function copyrightYear($copyrightYear);
 
     public function correction($correction);
+
+    public function countryOfOrigin($countryOfOrigin);
 
     public function creativeWorkStatus($creativeWorkStatus);
 
@@ -137,6 +141,8 @@ interface SatiricalArticleContract
     public function interactionStatistic($interactionStatistic);
 
     public function interactivityType($interactivityType);
+
+    public function interpretedAsClaim($interpretedAsClaim);
 
     public function isAccessibleForFree($isAccessibleForFree);
 

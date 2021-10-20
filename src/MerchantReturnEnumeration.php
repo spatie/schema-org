@@ -8,8 +8,7 @@ use \Spatie\SchemaOrg\Contracts\IntangibleContract;
 use \Spatie\SchemaOrg\Contracts\ThingContract;
 
 /**
- * MerchantReturnEnumeration enumerates several kinds of product return policy.
- * Note that this structure may not capture all aspects of the policy.
+ * Enumerates several kinds of product return policies.
  *
  * @see https://schema.org/MerchantReturnEnumeration
  * @see https://pending.schema.org
@@ -20,8 +19,7 @@ use \Spatie\SchemaOrg\Contracts\ThingContract;
 class MerchantReturnEnumeration extends BaseType implements MerchantReturnEnumerationContract, EnumerationContract, IntangibleContract, ThingContract
 {
     /**
-     * MerchantReturnFiniteReturnWindow: there is a finite window for product
-     * returns.
+     * Specifies that there is a finite window for product returns.
      *
      * @see https://schema.org/MerchantReturnFiniteReturnWindow
      * @see https://pending.schema.org
@@ -30,7 +28,7 @@ class MerchantReturnEnumeration extends BaseType implements MerchantReturnEnumer
      const MerchantReturnFiniteReturnWindow = 'https://schema.org/MerchantReturnFiniteReturnWindow';
 
     /**
-     * MerchantReturnNotPermitted: product returns are not permitted.
+     * Specifies that product returns are not permitted.
      *
      * @see https://schema.org/MerchantReturnNotPermitted
      * @see https://pending.schema.org
@@ -39,8 +37,7 @@ class MerchantReturnEnumeration extends BaseType implements MerchantReturnEnumer
      const MerchantReturnNotPermitted = 'https://schema.org/MerchantReturnNotPermitted';
 
     /**
-     * MerchantReturnUnlimitedWindow: there is an unlimited window for product
-     * returns.
+     * Specifies that there is an unlimited window for product returns.
      *
      * @see https://schema.org/MerchantReturnUnlimitedWindow
      * @see https://pending.schema.org
@@ -49,7 +46,7 @@ class MerchantReturnEnumeration extends BaseType implements MerchantReturnEnumer
      const MerchantReturnUnlimitedWindow = 'https://schema.org/MerchantReturnUnlimitedWindow';
 
     /**
-     * MerchantReturnUnspecified: a product return policy is not specified here.
+     * Specifies that a product return policy is not provided.
      *
      * @see https://schema.org/MerchantReturnUnspecified
      * @see https://pending.schema.org

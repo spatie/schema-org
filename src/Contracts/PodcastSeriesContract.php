@@ -26,6 +26,8 @@ interface PodcastSeriesContract
 
     public function acquireLicensePage($acquireLicensePage);
 
+    public function actor($actor);
+
     public function additionalType($additionalType);
 
     public function aggregateRating($aggregateRating);
@@ -33,6 +35,8 @@ interface PodcastSeriesContract
     public function alternateName($alternateName);
 
     public function alternativeHeadline($alternativeHeadline);
+
+    public function archivedAt($archivedAt);
 
     public function assesses($assesses);
 
@@ -73,6 +77,8 @@ interface PodcastSeriesContract
     public function copyrightYear($copyrightYear);
 
     public function correction($correction);
+
+    public function countryOfOrigin($countryOfOrigin);
 
     public function creativeWorkStatus($creativeWorkStatus);
 
@@ -133,6 +139,8 @@ interface PodcastSeriesContract
     public function interactionStatistic($interactionStatistic);
 
     public function interactivityType($interactivityType);
+
+    public function interpretedAsClaim($interpretedAsClaim);
 
     public function isAccessibleForFree($isAccessibleForFree);
 

@@ -8,7 +8,7 @@ use \Spatie\SchemaOrg\Contracts\ThingContract;
 
 /**
  * A MerchantReturnPolicy provides information about product return policies
- * associated with an [[Organization]] or [[Product]].
+ * associated with an [[Organization]], [[Product]], or [[Offer]].
  *
  * @see https://schema.org/MerchantReturnPolicy
  * @see https://pending.schema.org
@@ -17,6 +17,28 @@ use \Spatie\SchemaOrg\Contracts\ThingContract;
  */
 class MerchantReturnPolicy extends BaseType implements MerchantReturnPolicyContract, IntangibleContract, ThingContract
 {
+    /**
+     * A property-value pair representing an additional characteristics of the
+     * entitity, e.g. a product feature or another characteristic for which
+     * there is no matching property in schema.org.
+     * 
+     * Note: Publishers should be aware that applications designed to use
+     * specific schema.org properties (e.g. https://schema.org/width,
+     * https://schema.org/color, https://schema.org/gtin13, ...) will typically
+     * expect such data to be provided using those properties, rather than using
+     * the generic property/value mechanism.
+     *
+     * @param \Spatie\SchemaOrg\Contracts\PropertyValueContract|\Spatie\SchemaOrg\Contracts\PropertyValueContract[] $additionalProperty
+     *
+     * @return static
+     *
+     * @see https://schema.org/additionalProperty
+     */
+    public function additionalProperty($additionalProperty)
+    {
+        return $this->setProperty('additionalProperty', $additionalProperty);
+    }
+
     /**
      * An additional type for the item, typically used for adding more specific
      * types from external vocabularies in microdata syntax. This is a
@@ -48,6 +70,58 @@ class MerchantReturnPolicy extends BaseType implements MerchantReturnPolicyContr
     public function alternateName($alternateName)
     {
         return $this->setProperty('alternateName', $alternateName);
+    }
+
+    /**
+     * The type of return fees if the product is returned due to customer
+     * remorse.
+     *
+     * @param \Spatie\SchemaOrg\Contracts\ReturnFeesEnumerationContract|\Spatie\SchemaOrg\Contracts\ReturnFeesEnumerationContract[] $customerRemorseReturnFees
+     *
+     * @return static
+     *
+     * @see https://schema.org/customerRemorseReturnFees
+     * @see https://pending.schema.org
+     * @link https://github.com/schemaorg/schemaorg/issues/2880
+     */
+    public function customerRemorseReturnFees($customerRemorseReturnFees)
+    {
+        return $this->setProperty('customerRemorseReturnFees', $customerRemorseReturnFees);
+    }
+
+    /**
+     * The method (from an enumeration) by which the customer obtains a return
+     * shipping label for a product returned due to customer remorse.
+     *
+     * @param \Spatie\SchemaOrg\Contracts\ReturnLabelSourceEnumerationContract|\Spatie\SchemaOrg\Contracts\ReturnLabelSourceEnumerationContract[] $customerRemorseReturnLabelSource
+     *
+     * @return static
+     *
+     * @see https://schema.org/customerRemorseReturnLabelSource
+     * @see https://pending.schema.org
+     * @link https://github.com/schemaorg/schemaorg/issues/2880
+     */
+    public function customerRemorseReturnLabelSource($customerRemorseReturnLabelSource)
+    {
+        return $this->setProperty('customerRemorseReturnLabelSource', $customerRemorseReturnLabelSource);
+    }
+
+    /**
+     * The amount of shipping costs if a product is returned due to customer
+     * remorse. Applicable when property [[customerRemorseReturnFees]] equals
+     * [[ReturnShippingFees]].
+     *
+     * @param \Spatie\SchemaOrg\Contracts\MonetaryAmountContract|\Spatie\SchemaOrg\Contracts\MonetaryAmountContract[] $customerRemorseReturnShippingFeesAmount
+     *
+     * @return static
+     *
+     * @see https://schema.org/customerRemorseReturnShippingFeesAmount
+     * @see https://pending.schema.org
+     * @link https://github.com/schemaorg/schemaorg/issues/2880
+     */
+    public function customerRemorseReturnShippingFeesAmount($customerRemorseReturnShippingFeesAmount)
+    {
+        return $this->setProperty('customerRemorseReturnShippingFeesAmount', $customerRemorseReturnShippingFeesAmount);
     }
 
     /**
@@ -115,7 +189,8 @@ class MerchantReturnPolicy extends BaseType implements MerchantReturnPolicyContr
     }
 
     /**
-     * Are in-store returns offered?
+     * Are in-store returns offered? (for more advanced return methods use the
+     * [[returnMethod]] property)
      *
      * @param bool|bool[] $inStoreReturnsOffered
      *
@@ -128,6 +203,73 @@ class MerchantReturnPolicy extends BaseType implements MerchantReturnPolicyContr
     public function inStoreReturnsOffered($inStoreReturnsOffered)
     {
         return $this->setProperty('inStoreReturnsOffered', $inStoreReturnsOffered);
+    }
+
+    /**
+     * A predefined value from OfferItemCondition specifying the condition of
+     * the product or service, or the products or services included in the
+     * offer. Also used for product return policies to specify the condition of
+     * products accepted for returns.
+     *
+     * @param \Spatie\SchemaOrg\Contracts\OfferItemConditionContract|\Spatie\SchemaOrg\Contracts\OfferItemConditionContract[] $itemCondition
+     *
+     * @return static
+     *
+     * @see https://schema.org/itemCondition
+     */
+    public function itemCondition($itemCondition)
+    {
+        return $this->setProperty('itemCondition', $itemCondition);
+    }
+
+    /**
+     * The type of return fees for returns of defect products.
+     *
+     * @param \Spatie\SchemaOrg\Contracts\ReturnFeesEnumerationContract|\Spatie\SchemaOrg\Contracts\ReturnFeesEnumerationContract[] $itemDefectReturnFees
+     *
+     * @return static
+     *
+     * @see https://schema.org/itemDefectReturnFees
+     * @see https://pending.schema.org
+     * @link https://github.com/schemaorg/schemaorg/issues/2880
+     */
+    public function itemDefectReturnFees($itemDefectReturnFees)
+    {
+        return $this->setProperty('itemDefectReturnFees', $itemDefectReturnFees);
+    }
+
+    /**
+     * The method (from an enumeration) by which the customer obtains a return
+     * shipping label for a defect product.
+     *
+     * @param \Spatie\SchemaOrg\Contracts\ReturnLabelSourceEnumerationContract|\Spatie\SchemaOrg\Contracts\ReturnLabelSourceEnumerationContract[] $itemDefectReturnLabelSource
+     *
+     * @return static
+     *
+     * @see https://schema.org/itemDefectReturnLabelSource
+     * @see https://pending.schema.org
+     * @link https://github.com/schemaorg/schemaorg/issues/2880
+     */
+    public function itemDefectReturnLabelSource($itemDefectReturnLabelSource)
+    {
+        return $this->setProperty('itemDefectReturnLabelSource', $itemDefectReturnLabelSource);
+    }
+
+    /**
+     * Amount of shipping costs for defect product returns. Applicable when
+     * property [[itemDefectReturnFees]] equals [[ReturnShippingFees]].
+     *
+     * @param \Spatie\SchemaOrg\Contracts\MonetaryAmountContract|\Spatie\SchemaOrg\Contracts\MonetaryAmountContract[] $itemDefectReturnShippingFeesAmount
+     *
+     * @return static
+     *
+     * @see https://schema.org/itemDefectReturnShippingFeesAmount
+     * @see https://pending.schema.org
+     * @link https://github.com/schemaorg/schemaorg/issues/2880
+     */
+    public function itemDefectReturnShippingFeesAmount($itemDefectReturnShippingFeesAmount)
+    {
+        return $this->setProperty('itemDefectReturnShippingFeesAmount', $itemDefectReturnShippingFeesAmount);
     }
 
     /**
@@ -147,10 +289,12 @@ class MerchantReturnPolicy extends BaseType implements MerchantReturnPolicyContr
     }
 
     /**
-     * The merchantReturnDays property indicates the number of days (from
-     * purchase) within which relevant merchant return policy is applicable.
+     * Specifies either a fixed return date or the number of days (from the
+     * delivery date) that a product can be returned. Used when the
+     * [[returnPolicyCategory]] property is specified as
+     * [[MerchantReturnFiniteReturnWindow]].
      *
-     * @param int|int[] $merchantReturnDays
+     * @param \DateTimeInterface|\DateTimeInterface[]|int|int[] $merchantReturnDays
      *
      * @return static
      *
@@ -164,7 +308,7 @@ class MerchantReturnPolicy extends BaseType implements MerchantReturnPolicyContr
     }
 
     /**
-     * Indicates a Web page or service by URL, for product return.
+     * Specifies a Web page or service by URL, for product returns.
      *
      * @param string|string[] $merchantReturnLink
      *
@@ -209,7 +353,7 @@ class MerchantReturnPolicy extends BaseType implements MerchantReturnPolicyContr
     }
 
     /**
-     * A refundType, from an enumerated list.
+     * A refund type, from an enumerated list.
      *
      * @param \Spatie\SchemaOrg\Contracts\RefundTypeEnumerationContract|\Spatie\SchemaOrg\Contracts\RefundTypeEnumerationContract[] $refundType
      *
@@ -225,8 +369,25 @@ class MerchantReturnPolicy extends BaseType implements MerchantReturnPolicyContr
     }
 
     /**
-     * Indicates (via enumerated options) the return fees policy for a
-     * MerchantReturnPolicy
+     * Use [[MonetaryAmount]] to specify a fixed restocking fee for product
+     * returns, or use [[Number]] to specify a percentage of the product price
+     * paid by the customer.
+     *
+     * @param \Spatie\SchemaOrg\Contracts\MonetaryAmountContract|\Spatie\SchemaOrg\Contracts\MonetaryAmountContract[]|float|float[]|int|int[] $restockingFee
+     *
+     * @return static
+     *
+     * @see https://schema.org/restockingFee
+     * @see https://pending.schema.org
+     * @link https://github.com/schemaorg/schemaorg/issues/2880
+     */
+    public function restockingFee($restockingFee)
+    {
+        return $this->setProperty('restockingFee', $restockingFee);
+    }
+
+    /**
+     * The type of return fees for purchased products (for any return reason)
      *
      * @param \Spatie\SchemaOrg\Contracts\ReturnFeesEnumerationContract|\Spatie\SchemaOrg\Contracts\ReturnFeesEnumerationContract[] $returnFees
      *
@@ -242,8 +403,40 @@ class MerchantReturnPolicy extends BaseType implements MerchantReturnPolicyContr
     }
 
     /**
-     * A returnPolicyCategory expresses at most one of several enumerated kinds
-     * of return.
+     * The method (from an enumeration) by which the customer obtains a return
+     * shipping label for a product returned for any reason.
+     *
+     * @param \Spatie\SchemaOrg\Contracts\ReturnLabelSourceEnumerationContract|\Spatie\SchemaOrg\Contracts\ReturnLabelSourceEnumerationContract[] $returnLabelSource
+     *
+     * @return static
+     *
+     * @see https://schema.org/returnLabelSource
+     * @see https://pending.schema.org
+     * @link https://github.com/schemaorg/schemaorg/issues/2880
+     */
+    public function returnLabelSource($returnLabelSource)
+    {
+        return $this->setProperty('returnLabelSource', $returnLabelSource);
+    }
+
+    /**
+     * The type of return method offered, specified from an enumeration.
+     *
+     * @param \Spatie\SchemaOrg\Contracts\ReturnMethodEnumerationContract|\Spatie\SchemaOrg\Contracts\ReturnMethodEnumerationContract[] $returnMethod
+     *
+     * @return static
+     *
+     * @see https://schema.org/returnMethod
+     * @see https://pending.schema.org
+     * @link https://github.com/schemaorg/schemaorg/issues/2880
+     */
+    public function returnMethod($returnMethod)
+    {
+        return $this->setProperty('returnMethod', $returnMethod);
+    }
+
+    /**
+     * Specifies an applicable return policy (from an enumeration).
      *
      * @param \Spatie\SchemaOrg\Contracts\MerchantReturnEnumerationContract|\Spatie\SchemaOrg\Contracts\MerchantReturnEnumerationContract[] $returnPolicyCategory
      *
@@ -256,6 +449,60 @@ class MerchantReturnPolicy extends BaseType implements MerchantReturnPolicyContr
     public function returnPolicyCategory($returnPolicyCategory)
     {
         return $this->setProperty('returnPolicyCategory', $returnPolicyCategory);
+    }
+
+    /**
+     * The country where the product has to be sent to for returns, for example
+     * "Ireland" using the [[name]] property of [[Country]]. You can also
+     * provide the two-letter [ISO 3166-1 alpha-2 country
+     * code](http://en.wikipedia.org/wiki/ISO_3166-1). Note that this can be
+     * different from the country where the product was originally shipped from
+     * or sent too.
+     *
+     * @param \Spatie\SchemaOrg\Contracts\CountryContract|\Spatie\SchemaOrg\Contracts\CountryContract[]|string|string[] $returnPolicyCountry
+     *
+     * @return static
+     *
+     * @see https://schema.org/returnPolicyCountry
+     * @see https://pending.schema.org
+     * @link https://github.com/schemaorg/schemaorg/issues/2880
+     */
+    public function returnPolicyCountry($returnPolicyCountry)
+    {
+        return $this->setProperty('returnPolicyCountry', $returnPolicyCountry);
+    }
+
+    /**
+     * Seasonal override of a return policy.
+     *
+     * @param \Spatie\SchemaOrg\Contracts\MerchantReturnPolicySeasonalOverrideContract|\Spatie\SchemaOrg\Contracts\MerchantReturnPolicySeasonalOverrideContract[] $returnPolicySeasonalOverride
+     *
+     * @return static
+     *
+     * @see https://schema.org/returnPolicySeasonalOverride
+     * @see https://pending.schema.org
+     * @link https://github.com/schemaorg/schemaorg/issues/2880
+     */
+    public function returnPolicySeasonalOverride($returnPolicySeasonalOverride)
+    {
+        return $this->setProperty('returnPolicySeasonalOverride', $returnPolicySeasonalOverride);
+    }
+
+    /**
+     * Amount of shipping costs for product returns (for any reason). Applicable
+     * when property [[returnFees]] equals [[ReturnShippingFees]].
+     *
+     * @param \Spatie\SchemaOrg\Contracts\MonetaryAmountContract|\Spatie\SchemaOrg\Contracts\MonetaryAmountContract[] $returnShippingFeesAmount
+     *
+     * @return static
+     *
+     * @see https://schema.org/returnShippingFeesAmount
+     * @see https://pending.schema.org
+     * @link https://github.com/schemaorg/schemaorg/issues/2880
+     */
+    public function returnShippingFeesAmount($returnShippingFeesAmount)
+    {
+        return $this->setProperty('returnShippingFeesAmount', $returnShippingFeesAmount);
     }
 
     /**

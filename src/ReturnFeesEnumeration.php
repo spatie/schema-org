@@ -8,7 +8,7 @@ use \Spatie\SchemaOrg\Contracts\IntangibleContract;
 use \Spatie\SchemaOrg\Contracts\ThingContract;
 
 /**
- * ReturnFeesEnumeration expresses policies for return fees.
+ * Enumerates several kinds of policies for product return fees.
  *
  * @see https://schema.org/ReturnFeesEnumeration
  * @see https://pending.schema.org
@@ -19,7 +19,17 @@ use \Spatie\SchemaOrg\Contracts\ThingContract;
 class ReturnFeesEnumeration extends BaseType implements ReturnFeesEnumerationContract, EnumerationContract, IntangibleContract, ThingContract
 {
     /**
-     * OriginalShippingFees ...
+     * Specifies that product returns are free of charge for the customer.
+     *
+     * @see https://schema.org/FreeReturn
+     * @see https://pending.schema.org
+     * @link https://github.com/schemaorg/schemaorg/issues/2880
+     */
+     const FreeReturn = 'https://schema.org/FreeReturn';
+
+    /**
+     * Specifies that the customer must pay the original shipping costs when
+     * returning a product.
      *
      * @see https://schema.org/OriginalShippingFees
      * @see https://pending.schema.org
@@ -28,7 +38,8 @@ class ReturnFeesEnumeration extends BaseType implements ReturnFeesEnumerationCon
      const OriginalShippingFees = 'https://schema.org/OriginalShippingFees';
 
     /**
-     * RestockingFees ...
+     * Specifies that the customer must pay a restocking fee when returning a
+     * product
      *
      * @see https://schema.org/RestockingFees
      * @see https://pending.schema.org
@@ -37,7 +48,18 @@ class ReturnFeesEnumeration extends BaseType implements ReturnFeesEnumerationCon
      const RestockingFees = 'https://schema.org/RestockingFees';
 
     /**
-     * ReturnShippingFees ...
+     * Specifies that product returns must be paid for, and are the
+     * responsibility of, the customer.
+     *
+     * @see https://schema.org/ReturnFeesCustomerResponsibility
+     * @see https://pending.schema.org
+     * @link https://github.com/schemaorg/schemaorg/issues/2880
+     */
+     const ReturnFeesCustomerResponsibility = 'https://schema.org/ReturnFeesCustomerResponsibility';
+
+    /**
+     * Specifies that the customer must pay the return shipping costs when
+     * returning a product
      *
      * @see https://schema.org/ReturnShippingFees
      * @see https://pending.schema.org

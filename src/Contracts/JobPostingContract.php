@@ -20,6 +20,8 @@ interface JobPostingContract
 
     public function description($description);
 
+    public function directApply($directApply);
+
     public function disambiguatingDescription($disambiguatingDescription);
 
     public function educationRequirements($educationRequirements);

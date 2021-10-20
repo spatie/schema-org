@@ -34,6 +34,8 @@ interface LegislationObjectContract
 
     public function alternativeHeadline($alternativeHeadline);
 
+    public function archivedAt($archivedAt);
+
     public function assesses($assesses);
 
     public function associatedArticle($associatedArticle);
@@ -81,6 +83,8 @@ interface LegislationObjectContract
     public function copyrightYear($copyrightYear);
 
     public function correction($correction);
+
+    public function countryOfOrigin($countryOfOrigin);
 
     public function creativeWorkStatus($creativeWorkStatus);
 
@@ -151,6 +155,8 @@ interface LegislationObjectContract
     public function interactionStatistic($interactionStatistic);
 
     public function interactivityType($interactivityType);
+
+    public function interpretedAsClaim($interpretedAsClaim);
 
     public function isAccessibleForFree($isAccessibleForFree);
 
@@ -257,6 +263,8 @@ interface LegislationObjectContract
     public function sdLicense($sdLicense);
 
     public function sdPublisher($sdPublisher);
+
+    public function sha256($sha256);
 
     public function size($size);
 

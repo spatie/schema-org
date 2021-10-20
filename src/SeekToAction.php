@@ -320,6 +320,23 @@ class SeekToAction extends BaseType implements SeekToActionContract, ActionContr
     }
 
     /**
+     * The start time of the clip expressed as the number of seconds from the
+     * beginning of the work.
+     *
+     * @param \Spatie\SchemaOrg\Contracts\HyperTocEntryContract|\Spatie\SchemaOrg\Contracts\HyperTocEntryContract[]|float|float[]|int|int[] $startOffset
+     *
+     * @return static
+     *
+     * @see https://schema.org/startOffset
+     * @see https://pending.schema.org
+     * @link https://github.com/schemaorg/schemaorg/issues/2021
+     */
+    public function startOffset($startOffset)
+    {
+        return $this->setProperty('startOffset', $startOffset);
+    }
+
+    /**
      * The startTime of something. For a reserved event or service (e.g.
      * FoodEstablishmentReservation), the time that it is expected to start. For
      * actions that span a period of time, when the action was performed. e.g.
