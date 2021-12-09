@@ -1174,21 +1174,21 @@ class Graph implements Type, ArrayAccess, JsonSerializable
         return explode('.', $key);
     }
 
-    public function offsetExists($offset)
+    public function offsetExists(mixed $offset): bool
     {
         [$type, $identifier] = $this->getTypeAndIdentifier($offset);
 
         return $this->has($type, $identifier);
     }
 
-    public function offsetGet($offset)
+    public function offsetGet(mixed $offset): mixed
     {
         [$type, $identifier] = $this->getTypeAndIdentifier($offset);
 
         return $this->get($type, $identifier);
     }
 
-    public function offsetSet($offset, $value)
+    public function offsetSet(mixed $offset, mixed $value): void
     {
         $identifier = $offset;
 
@@ -1199,7 +1199,7 @@ class Graph implements Type, ArrayAccess, JsonSerializable
         $this->set($value, $identifier);
     }
 
-    public function offsetUnset($offset)
+    public function offsetUnset(mixed $offset): void
     {
         [$type, $identifier] = $this->getTypeAndIdentifier($offset);
 
