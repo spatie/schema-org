@@ -69,22 +69,23 @@ abstract class BaseType implements Type, ArrayAccess, JsonSerializable
         return new ReferencedType($this);
     }
 
-    public function offsetExists(mixed $offset): bool
+    public function offsetExists($offset): bool
     {
         return array_key_exists($offset, $this->properties);
     }
 
-    public function offsetGet(mixed $offset): mixed
+    #[\ReturnTypeWillChange]
+    public function offsetGet($offset)
     {
         return $this->getProperty($offset);
     }
 
-    public function offsetSet(mixed $offset, mixed $value): void
+    public function offsetSet($offset, $value): void
     {
         $this->setProperty($offset, $value);
     }
 
-    public function offsetUnset(mixed $offset): void
+    public function offsetUnset($offset): void
     {
         unset($this->properties[$offset]);
     }
@@ -142,7 +143,8 @@ abstract class BaseType implements Type, ArrayAccess, JsonSerializable
         return '<script type="application/ld+json">'.json_encode($this->toArray(), JSON_UNESCAPED_UNICODE).'</script>';
     }
 
-    public function jsonSerialize(): mixed
+    #[\ReturnTypeWillChange]
+    public function jsonSerialize()
     {
         return $this->toArray();
     }

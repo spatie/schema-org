@@ -280,7 +280,8 @@ class Graph implements Type, ArrayAccess, JsonSerializable
         return '<script type="application/ld+json">'.json_encode($this, JSON_UNESCAPED_UNICODE).'</script>';
     }
 
-    public function jsonSerialize(): mixed
+    #[\ReturnTypeWillChange]
+    public function jsonSerialize()
     {
         return $this->toArray();
     }
@@ -299,21 +300,22 @@ class Graph implements Type, ArrayAccess, JsonSerializable
         return explode('.', $key);
     }
 
-    public function offsetExists(mixed $offset): bool
+    public function offsetExists($offset): bool
     {
         [$type, $identifier] = $this->getTypeAndIdentifier($offset);
 
         return $this->has($type, $identifier);
     }
 
-    public function offsetGet(mixed $offset): mixed
+    #[\ReturnTypeWillChange]
+    public function offsetGet($offset)
     {
         [$type, $identifier] = $this->getTypeAndIdentifier($offset);
 
         return $this->get($type, $identifier);
     }
 
-    public function offsetSet(mixed $offset, mixed $value): void
+    public function offsetSet($offset, $value): void
     {
         $identifier = $offset;
 
@@ -324,7 +326,7 @@ class Graph implements Type, ArrayAccess, JsonSerializable
         $this->set($value, $identifier);
     }
 
-    public function offsetUnset(mixed $offset): void
+    public function offsetUnset($offset): void
     {
         [$type, $identifier] = $this->getTypeAndIdentifier($offset);
 
