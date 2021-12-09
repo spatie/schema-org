@@ -1155,7 +1155,7 @@ class Graph implements Type, ArrayAccess, JsonSerializable
         return '<script type="application/ld+json">'.json_encode($this, JSON_UNESCAPED_UNICODE).'</script>';
     }
 
-    public function jsonSerialize()
+    public function jsonSerialize(): mixed
     {
         return $this->toArray();
     }
