@@ -280,8 +280,7 @@ class Graph implements Type, ArrayAccess, JsonSerializable
         return '<script type="application/ld+json">'.json_encode($this, JSON_UNESCAPED_UNICODE).'</script>';
     }
 
-    #[\ReturnTypeWillChange]
-    public function jsonSerialize()
+    public function jsonSerialize(): mixed
     {
         return $this->toArray();
     }
@@ -307,8 +306,7 @@ class Graph implements Type, ArrayAccess, JsonSerializable
         return $this->has($type, $identifier);
     }
 
-    #[\ReturnTypeWillChange]
-    public function offsetGet($offset)
+    public function offsetGet($offset): mixed
     {
         [$type, $identifier] = $this->getTypeAndIdentifier($offset);
 

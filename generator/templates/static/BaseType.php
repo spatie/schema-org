@@ -74,8 +74,7 @@ abstract class BaseType implements Type, ArrayAccess, JsonSerializable
         return array_key_exists($offset, $this->properties);
     }
 
-    #[\ReturnTypeWillChange]
-    public function offsetGet($offset)
+    public function offsetGet($offset): mixed
     {
         return $this->getProperty($offset);
     }
@@ -143,8 +142,7 @@ abstract class BaseType implements Type, ArrayAccess, JsonSerializable
         return '<script type="application/ld+json">'.json_encode($this->toArray(), JSON_UNESCAPED_UNICODE).'</script>';
     }
 
-    #[\ReturnTypeWillChange]
-    public function jsonSerialize()
+    public function jsonSerialize(): mixed
     {
         return $this->toArray();
     }

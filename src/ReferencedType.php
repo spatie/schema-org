@@ -26,8 +26,7 @@ class ReferencedType implements Type, JsonSerializable
         return $this->type->toScript();
     }
 
-    #[\ReturnTypeWillChange]
-    public function jsonSerialize()
+    public function jsonSerialize(): mixed
     {
         return $this->toArray();
     }
