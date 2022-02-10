@@ -28,9 +28,9 @@
     "require-dev": {
         "graham-campbell/analyzer": "^3.0.5",
         "illuminate/collections": "^8.62.0",
-        "league/flysystem": "^2.3.0",
+        "league/flysystem": "^2.3.0 | ^3.0",
         "phpunit/phpunit": "^9.4.3",
-        "symfony/console": "^5.3.7",
+        "symfony/console": "^5.3.7 | 6.0",
         "twig/twig": "^3.3.3"
     },
     "config": {
