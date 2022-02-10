@@ -1,12 +1,11 @@
 {
     "name": "spatie/schema-org",
     "description": "A fluent builder Schema.org types and ld+json generator",
+    "license": "MIT",
     "keywords": [
         "spatie",
         "schema-org"
     ],
-    "homepage": "https://github.com/spatie/schema-org",
-    "license": "MIT",
     "authors": [
         {
             "name": "Sebastian De Deyne",
@@ -21,20 +20,19 @@
             "role": "Developer"
         }
     ],
+    "homepage": "https://github.com/spatie/schema-org",
     "require": {
         "php": "^7.4 || ^8.0",
         "ext-json": "*"
     },
     "require-dev": {
+        "friendsofphp/php-cs-fixer": "^3.6",
         "graham-campbell/analyzer": "^3.0.5",
         "illuminate/collections": "^8.62.0",
-        "league/flysystem": "^2.3.0",
+        "league/flysystem": "^2.3.0 || ^3.0",
         "phpunit/phpunit": "^9.4.3",
-        "symfony/console": "^5.3.7",
+        "symfony/console": "^5.3.7 || 6.0",
         "twig/twig": "^3.3.3"
-    },
-    "config": {
-        "sort-packages": true
     },
     "autoload": {
         "psr-4": {
@@ -46,6 +44,9 @@
             "Spatie\\SchemaOrg\\Generator\\": "generator",
             "Spatie\\SchemaOrg\\Test\\": "tests"
         }
+    },
+    "config": {
+        "sort-packages": true
     },
     "scripts": {
         "generate": "php ./generate.php",
