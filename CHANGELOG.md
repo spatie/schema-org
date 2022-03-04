@@ -2,17 +2,14 @@
 
 All Notable changes to `schema-org` will be documented in this file.
 
+## 3.10.0 - 2022-03-04
+
+- Drop PHP 7.4 Support - [#174](https://github.com/spatie/schema-org/pull/174)
+- Add PHP 8.1 Support - [#174](https://github.com/spatie/schema-org/pull/174)
+
 ## 3.9.0 - 2022-02-10
 
-## What's Changed
-
-- Add support for Laravel 9 by @Nielsvanpach in https://github.com/spatie/schema-org/pull/176
-
-## New Contributors
-
-- @Nielsvanpach made their first contribution in https://github.com/spatie/schema-org/pull/176
-
-**Full Changelog**: https://github.com/spatie/schema-org/compare/3.8.0...3.9.0
+- Add support for Laravel 9 - [#176](https://github.com/spatie/schema-org/pull/176)
 
 ## 3.8.0 - 2021-10-20
 
