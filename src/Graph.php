@@ -1039,6 +1039,10 @@ class Graph implements Type, ArrayAccess, JsonSerializable
 
         // hide single one only if all are not already hidden
         if ($this->hidden[$type] !== true) {
+            if (! is_array($this->hidden[$type])) {
+                $this->hidden[$type] = [];
+            }
+
             $this->hidden[$type][$identifier] = true;
 
             return $this;
