@@ -8,13 +8,13 @@ use Spatie\SchemaOrg\Exceptions\InvalidProperty;
 use Spatie\SchemaOrg\Product;
 use Spatie\SchemaOrg\PropertyValue;
 
-test('It has a default context', function () {
+it('has a default context', function () {
     $type = new DummyType();
 
     expect($type->getContext())->toBe('https://schema.org');
 });
 
-test('It can infer its type name from the class name', function () {
+it('can infer its type name from the class name', function () {
     $type = new DummyType();
 
     expect($type->getType())->toBe('DummyType');
@@ -24,7 +24,7 @@ test('It can infer its type name from the class name', function () {
     expect($anotherType->getType())->toBe('AnotherDummyType');
 });
 
-test('It can set and retrieve a property', function () {
+it('can set and retrieve a property', function () {
     $type = new DummyType();
 
     $type->setProperty('foo', 'bar');
@@ -32,7 +32,7 @@ test('It can set and retrieve a property', function () {
     expect($type->getProperties())->toBe(['foo' => 'bar']);
 });
 
-test('It can not set a null value"', function () {
+it('can not set a null value"', function () {
     $type = new DummyType();
 
     $type->setProperty('foo', null);
@@ -40,7 +40,7 @@ test('It can not set a null value"', function () {
     expect($type->getProperties())->toBe([]);
 });
 
-test('It can conditionally set and retrieve a property', function () {
+it('can conditionally set and retrieve a property', function () {
     $type = new DummyType();
 
     $type->if(true, function (DummyType $type) {
@@ -54,7 +54,7 @@ test('It can conditionally set and retrieve a property', function () {
     expect($type->getProperties())->toBe(['foo' => 'bar']);
 });
 
-test('It can add multiple properties at once', function () {
+it('can add multiple properties at once', function () {
     $type = new DummyType();
 
     $type->addProperties([
@@ -68,7 +68,7 @@ test('It can add multiple properties at once', function () {
     ]);
 });
 
-test('It can create an array that conforms to the ld json spec with primitive properties', function () {
+it('can create an array that conforms to the ld json spec with primitive properties', function () {
     $type = new DummyType();
 
     $type->setProperty('string', 'Hi');
@@ -88,7 +88,7 @@ test('It can create an array that conforms to the ld json spec with primitive pr
     expect($type->toArray())->toBe($expected);
 });
 
-test('It can create an array that conforms to the ld json spec with datetimes', function () {
+it('can create an array that conforms to the ld json spec with datetimes', function () {
     $type = new DummyType();
 
     $type->setProperty('dateCreated', DateTime::createFromFormat(DateTime::ATOM, '2017-01-01T00:00:00+0000'));
@@ -102,7 +102,7 @@ test('It can create an array that conforms to the ld json spec with datetimes', 
     expect($type->toArray())->toBe($expected);
 });
 
-test('It can create an array that conforms to the ld json spec with nested types', function () {
+it('can create an array that conforms to the ld json spec with nested types', function () {
     $type = new DummyType();
     $child = new DummyType();
 
@@ -122,7 +122,7 @@ test('It can create an array that conforms to the ld json spec with nested types
     expect($type->toArray())->toBe($expected);
 });
 
-test('It can create an array that conforms to the ld json spec with an array of types', function () {
+it('can create an array that conforms to the ld json spec with an array of types', function () {
     $type = new DummyType();
 
     $child1 = new DummyType();
@@ -150,7 +150,7 @@ test('It can create an array that conforms to the ld json spec with an array of 
     expect($type->toArray())->toBe($expected);
 });
 
-test('It can create an ld json script tag', function () {
+it('can create an ld json script tag', function () {
     $type = new DummyType();
 
     $type->setProperty('foo', 'bar');
@@ -162,7 +162,7 @@ test('It can create an ld json script tag', function () {
     expect($type->toScript())->toBe($expected);
 });
 
-test('It can set a property via a magic call method', function () {
+it('can set a property via a magic call method', function () {
     $type = new DummyType();
 
     $type->foo('bar');
@@ -170,7 +170,7 @@ test('It can set a property via a magic call method', function () {
     expect($type->getProperties())->toBe(['foo' => 'bar']);
 });
 
-test('It can use array access to set a property', function () {
+it('can use array access to set a property', function () {
     $type = new DummyType();
 
     $type['foo'] = 'bar';
@@ -178,7 +178,7 @@ test('It can use array access to set a property', function () {
     expect($type->getProperties())->toBe(['foo' => 'bar']);
 });
 
-test('It can use array access to unset a property', function () {
+it('can use array access to unset a property', function () {
     $type = new DummyType();
 
     $type->setProperty('foo', 'bar');
@@ -188,7 +188,7 @@ test('It can use array access to unset a property', function () {
     expect($type->getProperties())->toBe(['bar' => 'baz']);
 });
 
-test('It can use array access to determine if a property exists', function () {
+it('can use array access to determine if a property exists', function () {
     $type = new DummyType();
 
     $type->setProperty('foo', 'bar');
@@ -197,7 +197,7 @@ test('It can use array access to determine if a property exists', function () {
     expect(isset($type['bar']))->toBeFalse();
 });
 
-test('It can use array access to get a property', function () {
+it('can use array access to get a property', function () {
     $type = new DummyType();
 
     $type->setProperty('foo', 'bar');
@@ -205,7 +205,7 @@ test('It can use array access to get a property', function () {
     expect($type['foo'])->toBe('bar');
 });
 
-test('It can be json serialized', function () {
+it('can be json serialized', function () {
     $child = new DummyType();
     $child->setProperty('bar', 'baz');
 
@@ -245,7 +245,7 @@ test('It can be json serialized', function () {
     expect(json_encode($type))->toBe(json_encode($expected));
 });
 
-test('It will throw invalid property exception with object property', function () {
+it('will throw invalid property exception with object property', function () {
     $type = new DummyType();
     $type->setProperty('foo', new class () {
     });
@@ -253,7 +253,7 @@ test('It will throw invalid property exception with object property', function (
     $type->jsonSerialize();
 })->throws(InvalidProperty::class);
 
-test('It can be casted to string', function () {
+it('can be casted to string', function () {
     $type = new DummyType();
 
     $type->setProperty('foo', 'bar');
@@ -265,7 +265,7 @@ test('It can be casted to string', function () {
     expect((string) $type)->toBe($expected);
 });
 
-test('It replaces identifier with at id property', function () {
+it('replaces identifier with at id property', function () {
     $type = new DummyType();
 
     $type->setProperty('identifier', 'object#1');
@@ -279,7 +279,7 @@ test('It replaces identifier with at id property', function () {
     expect($type->toArray())->toBe($expected);
 });
 
-test('It can render identifier for typed identifiers', function () {
+it('can render identifier for typed identifiers', function () {
     $productType = new Product();
     $propertyValue = new PropertyValue();
     $propertyValue->identifier('#1');
@@ -297,7 +297,7 @@ test('It can render identifier for typed identifiers', function () {
     expect($productType->toArray())->toBe($expected);
 });
 
-test('It can reference type by identifier', function () {
+it('can reference type by identifier', function () {
     $type1 = new AnotherDummyType();
     $type1->setProperty('identifier', '#1');
     $type1->setProperty('name', 'another-object');

@@ -6,7 +6,7 @@ use Spatie\SchemaOrg\MultiTypedEntity;
 use Spatie\SchemaOrg\Product;
 use Spatie\SchemaOrg\Schema;
 
-test('It can render empty', function () {
+it('can render empty', function () {
     $mte = new MultiTypedEntity();
 
     expect((string) $mte)->toBe(
@@ -14,7 +14,7 @@ test('It can render empty', function () {
     );
 });
 
-test('It can render single item', function () {
+it('can render single item', function () {
     $mte = new MultiTypedEntity();
     $mte->hotelRoom()->name('The Presidential Suite');
 
@@ -23,7 +23,7 @@ test('It can render single item', function () {
     );
 });
 
-test('It can render multiple items', function () {
+it('can render multiple items', function () {
     $mte = new MultiTypedEntity();
     $mte->hotelRoom()->name('The Presidential Suite');
     $mte->product()->offers(

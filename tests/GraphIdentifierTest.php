@@ -6,7 +6,7 @@ use Spatie\SchemaOrg\Graph;
 use Spatie\SchemaOrg\Organization;
 use Spatie\SchemaOrg\Schema;
 
-test('It can manipulate item', function () {
+it('can manipulate item', function () {
     $graph = new Graph();
     $graph->add(Schema::organization());
     $graph->get(Organization::class)->name('My Company');
@@ -17,7 +17,7 @@ test('It can manipulate item', function () {
     );
 });
 
-test('It can get existing or new item', function () {
+it('can get existing or new item', function () {
     $graph = new Graph();
     $graph->getOrCreate(Organization::class)->name('My Company');
     $graph->getOrCreate(Organization::class, Graph::IDENTIFIER_DEFAULT)->email('contact@example.com');
@@ -27,7 +27,7 @@ test('It can get existing or new item', function () {
     );
 });
 
-test('It can link items', function () {
+it('can link items', function () {
     $graph = new Graph();
     $graph->set(Schema::product()->brand($graph->getOrCreate(Organization::class)));
     $graph->getOrCreate(Organization::class, Graph::IDENTIFIER_DEFAULT)->name('My Company')->email('contact@example.com');
@@ -37,7 +37,7 @@ test('It can link items', function () {
     );
 });
 
-test('It can hide single items', function () {
+it('can hide single items', function () {
     $graph = new Graph();
     $graph->organization('spatie')->name('spatie');
     $graph->organization('astrotomic')->name('astrotomic');
@@ -48,7 +48,7 @@ test('It can hide single items', function () {
     );
 });
 
-test('It can hide all items', function () {
+it('can hide all items', function () {
     $graph = new Graph();
     $graph->organization('spatie')->name('spatie');
     $graph->organization('astrotomic')->name('astrotomic');
@@ -60,7 +60,7 @@ test('It can hide all items', function () {
     );
 });
 
-test('It can show all items', function () {
+it('can show all items', function () {
     $graph = new Graph();
     $graph->organization('spatie')->name('spatie');
     $graph->organization('astrotomic')->name('astrotomic');
@@ -73,7 +73,7 @@ test('It can show all items', function () {
     );
 });
 
-test('It can show single item if everything is hidden', function () {
+it('can show single item if everything is hidden', function () {
     $graph = new Graph();
     $graph->organization('spatie')->name('spatie');
     $graph->organization('astrotomic')->name('astrotomic');
@@ -86,7 +86,7 @@ test('It can show single item if everything is hidden', function () {
     );
 });
 
-test('It can hide single item if everything is shown', function () {
+it('can hide single item if everything is shown', function () {
     $graph = new Graph();
     $graph->organization('spatie')->name('spatie');
     $graph->organization('astrotomic')->name('astrotomic');
@@ -99,7 +99,7 @@ test('It can hide single item if everything is shown', function () {
     );
 });
 
-test('It can show single item if everything is shown', function () {
+it('can show single item if everything is shown', function () {
     $graph = new Graph();
     $graph->organization('spatie')->name('spatie');
     $graph->show(Organization::class, null);
@@ -111,7 +111,7 @@ test('It can show single item if everything is shown', function () {
     );
 });
 
-test('It can show single item', function () {
+it('can show single item', function () {
     $graph = new Graph();
     $graph->organization('spatie')->name('spatie');
     $graph->show(Organization::class, 'spatie');
@@ -122,7 +122,7 @@ test('It can show single item', function () {
     );
 });
 
-test('It can show single item before it was created', function () {
+it('can show single item before it was created', function () {
     $graph = new Graph();
     $graph->hide(Organization::class, null);
     $graph->show(Organization::class, 'spatie');
@@ -134,7 +134,7 @@ test('It can show single item before it was created', function () {
     );
 });
 
-test('It can be used as array', function () {
+it('can be used as array', function () {
     $graph = new Graph();
     $graph->organization()->name('organization');
     $graph->organization('spatie')->name('spatie');

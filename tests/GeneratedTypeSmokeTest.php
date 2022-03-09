@@ -6,15 +6,15 @@ use Spatie\SchemaOrg\LocalBusiness;
 use Spatie\SchemaOrg\Schema;
 use Spatie\SchemaOrg\Type;
 
-test('It is initializable', function () {
+it('is initializable', function () {
     expect(new LocalBusiness())->toBeInstanceOf(Type::class);
 });
 
-test('It can be created from a factory method', function () {
+it('can be created from a factory method', function () {
     expect(Schema::localBusiness())->toBeInstanceOf(LocalBusiness::class);
 });
 
-test('It can be rendered with properties', function () {
+it('can be rendered with properties', function () {
     $localBusiness = Schema::localBusiness()
         ->name('Spatie')
         ->email('info@spatie.be');
@@ -26,7 +26,7 @@ test('It can be rendered with properties', function () {
     expect($localBusiness->toScript())->toBe($expected);
 });
 
-test('It can be rendered with child properties', function () {
+it('can be rendered with child properties', function () {
     $localBusiness = Schema::localBusiness()
         ->name('Spatie')
         ->contactPoint(Schema::contactPoint()->areaServed('Worldwide'));

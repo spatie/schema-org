@@ -11,13 +11,13 @@ use Spatie\SchemaOrg\Product;
 use Spatie\SchemaOrg\Schema;
 use Spatie\SchemaOrg\Type;
 
-test('It can render empty', function () {
+it('can render empty', function () {
     $graph = new Graph();
 
     expect((string) $graph)->toBe('<script type="application/ld+json">{"@context":"https:\/\/schema.org","@graph":[]}</script>');
 });
 
-test('It can render single item', function () {
+it('can render single item', function () {
     $graph = new Graph();
     $graph->add(Schema::organization()->name('My Company'));
 
@@ -26,7 +26,7 @@ test('It can render single item', function () {
     );
 });
 
-test('It can render multiple items', function () {
+it('can render multiple items', function () {
     $graph = new Graph();
     $graph->add(Schema::organization()->name('My Company'));
     $graph->add(Schema::product()->name('My Product'));
@@ -36,7 +36,7 @@ test('It can render multiple items', function () {
     );
 });
 
-test('It can manipulate item', function () {
+it('can manipulate item', function () {
     $graph = new Graph();
     $graph->add(Schema::organization()->name('My Company'));
     $graph->get(Organization::class)->email('contact@example.com');
@@ -46,7 +46,7 @@ test('It can manipulate item', function () {
     );
 });
 
-test('It can get existing or new item', function () {
+it('can get existing or new item', function () {
     $graph = new Graph();
     $graph->getOrCreate(Organization::class)->name('My Company');
     $graph->getOrCreate(Organization::class)->email('contact@example.com');
@@ -56,7 +56,7 @@ test('It can get existing or new item', function () {
     );
 });
 
-test('It can link items', function () {
+it('can link items', function () {
     $graph = new Graph();
     $graph->set(Schema::product()->brand($graph->getOrCreate(Organization::class)));
     $graph->getOrCreate(Organization::class)->name('My Company')->email('contact@example.com');
@@ -66,7 +66,7 @@ test('It can link items', function () {
     );
 });
 
-test('It can hide items', function () {
+it('can hide items', function () {
     $graph = new Graph();
     $graph->set(Schema::product()->brand($graph->getOrCreate(Organization::class)));
     $graph->hide(Organization::class);
@@ -77,7 +77,7 @@ test('It can hide items', function () {
     );
 });
 
-test('It can show again hidden items', function () {
+it('can show again hidden items', function () {
     $graph = new Graph();
     $graph->set(Schema::product()->brand($graph->getOrCreate(Organization::class)));
     $graph->hide(Organization::class);
@@ -90,7 +90,7 @@ test('It can show again hidden items', function () {
     );
 });
 
-test('It forces unique items', function () {
+it('forces unique items', function () {
     $graph = new Graph();
     $graph->add(Schema::organization()->name('My Company'));
     $graph->add(Schema::organization()->name('My Company'));
@@ -103,7 +103,7 @@ test('It forces unique items', function () {
     )
 );
 
-test('It throws exception if item does not exist', function () {
+it('throws exception if item does not exist', function () {
     $graph = new Graph();
     $graph->get(Organization::class);
 })->throws(
@@ -115,7 +115,7 @@ test('It throws exception if item does not exist', function () {
     )
 );
 
-test('It forces requested type to be instance of type interface', function () {
+it('forces requested type to be instance of type interface', function () {
     $graph = new Graph();
     $graph->getOrCreate('organization');
 })->throws(
@@ -123,7 +123,7 @@ test('It forces requested type to be instance of type interface', function () {
     sprintf('The given type "%s" is not an instance of "%s".', 'organization', Type::class)
 );
 
-test('It can call overloaded schema methods', function () {
+it('can call overloaded schema methods', function () {
     $graph = new Graph();
     $organization = $graph->organization();
     $organization->name('My Company');
@@ -134,7 +134,7 @@ test('It can call overloaded schema methods', function () {
     );
 });
 
-test('It can call overloaded schema methods with callback', function () {
+it('can call overloaded schema methods with callback', function () {
     $graph = (new Graph())
         ->organization(function (Organization $organization) {
             $organization->name('My Company');
@@ -147,7 +147,7 @@ test('It can call overloaded schema methods with callback', function () {
     );
 });
 
-test('It can call overloaded schema methods with callback multiple times', function () {
+it('can call overloaded schema methods with callback multiple times', function () {
     $graph = (new Graph())
         ->organization(function (Organization $organization) {
             $organization->name('My Company');
@@ -163,7 +163,7 @@ test('It can call overloaded schema methods with callback multiple times', funct
     );
 });
 
-test('It can call overloaded schema methods with callback and access schemas in child', function () {
+it('can call overloaded schema methods with callback and access schemas in child', function () {
     $graph = (new Graph())
         ->product(function (Product $product, Graph $graph) {
             $product
@@ -183,7 +183,7 @@ test('It can call overloaded schema methods with callback and access schemas in 
     );
 });
 
-test('It throws exception if method does not exist', function () {
+it('throws exception if method does not exist', function () {
     $graph = new Graph();
     $graph->foobar();
 })->throws(
@@ -191,7 +191,7 @@ test('It throws exception if method does not exist', function () {
     sprintf('The method "%s" does not exist on class "%s".', 'foobar', Graph::class)
 );
 
-test('It can do things conditionally', function () {
+it('can do things conditionally', function () {
     $graph = new Graph();
     $graph->if(true, function (Graph $graph) {
         $graph->organization()->name('spatie');
@@ -204,7 +204,7 @@ test('It can do things conditionally', function () {
     expect($graph->organization()['name'])->not()->toBe('organization');
 });
 
-test('It can use references', function () {
+it('can use references', function () {
     $graph = new Graph();
 
     $graph->blogPosting()
@@ -221,7 +221,7 @@ test('It can use references', function () {
     );
 });
 
-test('It can be initialized with different context', function () {
+it('can be initialized with different context', function () {
     $graph = new Graph('https://foobar.com');
     expect($graph->getContext())->toBe('https://foobar.com');
 });
