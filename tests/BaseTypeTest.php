@@ -3,375 +3,320 @@
 namespace Spatie\SchemaOrg\Tests;
 
 use DateTime;
-use PHPUnit\Framework\TestCase;
 use Spatie\SchemaOrg\BaseType;
 use Spatie\SchemaOrg\Exceptions\InvalidProperty;
 use Spatie\SchemaOrg\Product;
 use Spatie\SchemaOrg\PropertyValue;
 
-class BaseTypeTest extends TestCase
-{
-    /** @test */
-    public function it_has_a_default_context()
-    {
-        $type = new DummyType();
+it('has a default context', function () {
+    $type = new DummyType();
 
-        $this->assertEquals('https://schema.org', $type->getContext());
-    }
+    expect($type->getContext())->toBe('https://schema.org');
+});
 
-    /** @test */
-    public function it_can_infer_its_type_name_from_the_class_name()
-    {
-        $type = new DummyType();
+it('can infer its type name from the class name', function () {
+    $type = new DummyType();
 
-        $this->assertEquals('DummyType', $type->getType());
+    expect($type->getType())->toBe('DummyType');
 
-        $anotherType = new AnotherDummyType();
+    $anotherType = new AnotherDummyType();
 
-        $this->assertEquals('AnotherDummyType', $anotherType->getType());
-    }
+    expect($anotherType->getType())->toBe('AnotherDummyType');
+});
 
-    /** @test */
-    public function it_can_set_and_retrieve_a_property()
-    {
-        $type = new DummyType();
+it('can set and retrieve a property', function () {
+    $type = new DummyType();
 
+    $type->setProperty('foo', 'bar');
+
+    expect($type->getProperties())->toBe(['foo' => 'bar']);
+});
+
+it('can not set a null value"', function () {
+    $type = new DummyType();
+
+    $type->setProperty('foo', null);
+
+    expect($type->getProperties())->toBe([]);
+});
+
+it('can conditionally set and retrieve a property', function () {
+    $type = new DummyType();
+
+    $type->if(true, function (DummyType $type) {
         $type->setProperty('foo', 'bar');
+    });
 
-        $this->assertEquals(['foo' => 'bar'], $type->getProperties());
-    }
+    $type->if(false, function (DummyType $type) {
+        $type->setProperty('baz', 'qux');
+    });
 
-    /** @test */
-    public function it_can_not_set_a_null_value()
-    {
-        $type = new DummyType();
+    expect($type->getProperties())->toBe(['foo' => 'bar']);
+});
 
-        $type->setProperty('foo', null);
+it('can add multiple properties at once', function () {
+    $type = new DummyType();
 
-        $this->assertEquals([], $type->getProperties());
-    }
+    $type->addProperties([
+        'foo' => 'bar',
+        'baz' => 'qux',
+    ]);
 
-    /** @test */
-    public function it_can_conditionally_set_and_retrieve_a_property()
-    {
-        $type = new DummyType();
+    expect($type->getProperties())->toBe([
+        'foo' => 'bar',
+        'baz' => 'qux',
+    ]);
+});
 
-        $type->if(true, function (DummyType $type) {
-            $type->setProperty('foo', 'bar');
-        });
+it('can create an array that conforms to the ld json spec with primitive properties', function () {
+    $type = new DummyType();
 
-        $type->if(false, function (DummyType $type) {
-            $type->setProperty('baz', 'qux');
-        });
+    $type->setProperty('string', 'Hi');
+    $type->setProperty('array', ['Yo']);
+    $type->setProperty('number', 5);
+    $type->setProperty('boolean', true);
 
-        $this->assertEquals(['foo' => 'bar'], $type->getProperties());
-    }
+    $expected = [
+        '@context' => 'https://schema.org',
+        '@type' => 'DummyType',
+        'string' => 'Hi',
+        'array' => ['Yo'],
+        'number' => 5,
+        'boolean' => true,
+    ];
 
-    /** @test */
-    public function it_can_add_multiple_properties_at_once()
-    {
-        $type = new DummyType();
+    expect($type->toArray())->toBe($expected);
+});
 
-        $type->addProperties([
+it('can create an array that conforms to the ld json spec with datetimes', function () {
+    $type = new DummyType();
+
+    $type->setProperty('dateCreated', DateTime::createFromFormat(DateTime::ATOM, '2017-01-01T00:00:00+0000'));
+
+    $expected = [
+        '@context' => 'https://schema.org',
+        '@type' => 'DummyType',
+        'dateCreated' => '2017-01-01T00:00:00+00:00',
+    ];
+
+    expect($type->toArray())->toBe($expected);
+});
+
+it('can create an array that conforms to the ld json spec with nested types', function () {
+    $type = new DummyType();
+    $child = new DummyType();
+
+    $child->setProperty('foo', 'bar');
+
+    $type->setProperty('child', $child);
+
+    $expected = [
+        '@context' => 'https://schema.org',
+        '@type' => 'DummyType',
+        'child' => [
+            '@type' => 'DummyType',
             'foo' => 'bar',
-            'baz' => 'qux',
-        ]);
+        ],
+    ];
 
-        $this->assertEquals(
+    expect($type->toArray())->toBe($expected);
+});
+
+it('can create an array that conforms to the ld json spec with an array of types', function () {
+    $type = new DummyType();
+
+    $child1 = new DummyType();
+    $child1->setProperty('foo', 'bar');
+
+    $child2 = new DummyType();
+    $child2->setProperty('foo', 'baz');
+
+    $type->setProperty('children', [$child1, $child2]);
+
+    $expected = [
+        '@context' => 'https://schema.org',
+        '@type' => 'DummyType',
+        'children' => [
             [
-                'foo' => 'bar',
-                'baz' => 'qux',
-            ],
-            $type->getProperties()
-        );
-    }
-
-    /** @test */
-    public function it_can_create_an_array_that_conforms_to_the_ld_json_spec_with_primitive_properties()
-    {
-        $type = new DummyType();
-
-        $type->setProperty('string', 'Hi');
-        $type->setProperty('array', ['Yo']);
-        $type->setProperty('number', 5);
-        $type->setProperty('boolean', true);
-
-        $expected = [
-            '@context' => 'https://schema.org',
-            '@type' => 'DummyType',
-            'string' => 'Hi',
-            'array' => ['Yo'],
-            'number' => 5,
-            'boolean' => true,
-        ];
-
-        $this->assertEquals($expected, $type->toArray());
-    }
-
-    /** @test */
-    public function it_can_create_an_array_that_conforms_to_the_ld_json_spec_with_datetimes()
-    {
-        $type = new DummyType();
-
-        $type->setProperty('dateCreated', DateTime::createFromFormat(DateTime::ATOM, '2017-01-01T00:00:00+0000'));
-
-        $expected = [
-            '@context' => 'https://schema.org',
-            '@type' => 'DummyType',
-            'dateCreated' => '2017-01-01T00:00:00+00:00',
-        ];
-
-        $this->assertEquals($expected, $type->toArray());
-    }
-
-    /** @test */
-    public function it_can_create_an_array_that_conforms_to_the_ld_json_spec_with_nested_types()
-    {
-        $type = new DummyType();
-        $child = new DummyType();
-
-        $child->setProperty('foo', 'bar');
-
-        $type->setProperty('child', $child);
-
-        $expected = [
-            '@context' => 'https://schema.org',
-            '@type' => 'DummyType',
-            'child' => [
                 '@type' => 'DummyType',
                 'foo' => 'bar',
+            ], [
+                '@type' => 'DummyType',
+                'foo' => 'baz',
             ],
-        ];
+        ],
+    ];
 
-        $this->assertEquals($expected, $type->toArray());
-    }
+    expect($type->toArray())->toBe($expected);
+});
 
-    /** @test */
-    public function it_can_create_an_array_that_conforms_to_the_ld_json_spec_with_an_array_of_types()
-    {
-        $type = new DummyType();
+it('can create an ld json script tag', function () {
+    $type = new DummyType();
 
-        $child1 = new DummyType();
-        $child1->setProperty('foo', 'bar');
+    $type->setProperty('foo', 'bar');
 
-        $child2 = new DummyType();
-        $child2->setProperty('foo', 'baz');
-
-        $type->setProperty('children', [$child1, $child2]);
-
-        $expected = [
-            '@context' => 'https://schema.org',
-            '@type' => 'DummyType',
-            'children' => [
-                [
-                    '@type' => 'DummyType',
-                    'foo' => 'bar',
-                ], [
-                    '@type' => 'DummyType',
-                    'foo' => 'baz',
-                ],
-            ],
-        ];
-
-        $this->assertEquals($expected, $type->toArray());
-    }
-
-    /** @test */
-    public function it_can_create_an_ld_json_script_tag()
-    {
-        $type = new DummyType();
-
-        $type->setProperty('foo', 'bar');
-
-        $expected = '<script type="application/ld+json">'.
-            '{"@context":"https:\/\/schema.org","@type":"DummyType","foo":"bar"}'.
+    $expected = '<script type="application/ld+json">'.
+        '{"@context":"https:\/\/schema.org","@type":"DummyType","foo":"bar"}'.
         '</script>';
 
-        $this->assertEquals($expected, $type->toScript());
-    }
+    expect($type->toScript())->toBe($expected);
+});
 
-    /** @test */
-    public function it_can_set_a_property_via_a_magic_call_method()
-    {
-        $type = new DummyType();
+it('can set a property via a magic call method', function () {
+    $type = new DummyType();
 
-        $type->foo('bar');
+    $type->foo('bar');
 
-        $this->assertEquals(['foo' => 'bar'], $type->getProperties());
-    }
+    expect($type->getProperties())->toBe(['foo' => 'bar']);
+});
 
-    /** @test */
-    public function it_can_use_array_access_to_set_a_property()
-    {
-        $type = new DummyType();
+it('can use array access to set a property', function () {
+    $type = new DummyType();
 
-        $type['foo'] = 'bar';
+    $type['foo'] = 'bar';
 
-        $this->assertEquals(['foo' => 'bar'], $type->getProperties());
-    }
+    expect($type->getProperties())->toBe(['foo' => 'bar']);
+});
 
-    /** @test */
-    public function it_can_use_array_access_to_unset_a_property()
-    {
-        $type = new DummyType();
+it('can use array access to unset a property', function () {
+    $type = new DummyType();
 
-        $type->setProperty('foo', 'bar');
-        $type->setProperty('bar', 'baz');
-        unset($type['foo']);
+    $type->setProperty('foo', 'bar');
+    $type->setProperty('bar', 'baz');
+    unset($type['foo']);
 
-        $this->assertEquals(['bar' => 'baz'], $type->getProperties());
-    }
+    expect($type->getProperties())->toBe(['bar' => 'baz']);
+});
 
-    /** @test */
-    public function it_can_use_array_access_to_determine_if_a_property_exists()
-    {
-        $type = new DummyType();
+it('can use array access to determine if a property exists', function () {
+    $type = new DummyType();
 
-        $type->setProperty('foo', 'bar');
+    $type->setProperty('foo', 'bar');
 
-        $this->assertTrue(isset($type['foo']));
-        $this->assertFalse(isset($type['bar']));
-    }
+    expect(isset($type['foo']))->toBeTrue();
+    expect(isset($type['bar']))->toBeFalse();
+});
 
-    /** @test */
-    public function it_can_use_array_access_to_get_a_property()
-    {
-        $type = new DummyType();
+it('can use array access to get a property', function () {
+    $type = new DummyType();
 
-        $type->setProperty('foo', 'bar');
+    $type->setProperty('foo', 'bar');
 
-        $this->assertEquals('bar', $type['foo']);
-    }
+    expect($type['foo'])->toBe('bar');
+});
 
-    /** @test */
-    public function it_can_be_json_serialized()
-    {
-        $child = new DummyType();
-        $child->setProperty('bar', 'baz');
+it('can be json serialized', function () {
+    $child = new DummyType();
+    $child->setProperty('bar', 'baz');
 
-        $type = new DummyType();
-        $type->setProperty('foo', 'bar');
-        $type->setProperty('child', $child);
-        $type->setProperty('array', [
-            'child' => $child,
-            'hello' => 'world',
-        ]);
-        $type->setProperty('string', new class()
+    $type = new DummyType();
+    $type->setProperty('foo', 'bar');
+    $type->setProperty('child', $child);
+    $type->setProperty('array', [
+        'child' => $child,
+        'hello' => 'world',
+    ]);
+    $type->setProperty('string', new class () {
+        public function __toString()
         {
-            public function __toString()
-            {
-                return 'lorem ipsum';
-            }
-        });
+            return 'lorem ipsum';
+        }
+    });
 
-        $expected = [
-            '@context' => 'https://schema.org',
+    $expected = [
+        '@context' => 'https://schema.org',
+        '@type' => 'DummyType',
+        'foo' => 'bar',
+        'child' => [
             '@type' => 'DummyType',
-            'foo' => 'bar',
+            'bar' => 'baz',
+        ],
+        'array' => [
             'child' => [
                 '@type' => 'DummyType',
                 'bar' => 'baz',
             ],
-            'array' => [
-                'child' => [
-                    '@type' => 'DummyType',
-                    'bar' => 'baz',
-                ],
-                'hello' => 'world',
-            ],
-            'string' => 'lorem ipsum',
-        ];
+            'hello' => 'world',
+        ],
+        'string' => 'lorem ipsum',
+    ];
 
-        $this->assertEquals($expected, $type->jsonSerialize(), 'Return value of `jsonSerialize` is wrong');
-        $this->assertEquals(json_encode($expected), json_encode($type), 'JSON representation is wrong');
-    }
+    expect($type->jsonSerialize())->toBe($expected);
+    expect(json_encode($type))->toBe(json_encode($expected));
+});
 
-    /** @test */
-    public function it_will_throw_invalid_property_exception_with_object_property()
-    {
-        $this->expectException(InvalidProperty::class);
+it('will throw invalid property exception with object property', function () {
+    $type = new DummyType();
+    $type->setProperty('foo', new class () {
+    });
 
-        $type = new DummyType();
-        $type->setProperty('foo', new class()
-        {
-        });
+    $type->jsonSerialize();
+})->throws(InvalidProperty::class);
 
-        $type->jsonSerialize();
-    }
+it('can be casted to string', function () {
+    $type = new DummyType();
 
-    /** @test */
-    public function it_can_be_casted_to_string()
-    {
-        $type = new DummyType();
+    $type->setProperty('foo', 'bar');
 
-        $type->setProperty('foo', 'bar');
-
-        $expected = '<script type="application/ld+json">'.
-            '{"@context":"https:\/\/schema.org","@type":"DummyType","foo":"bar"}'.
+    $expected = '<script type="application/ld+json">'.
+        '{"@context":"https:\/\/schema.org","@type":"DummyType","foo":"bar"}'.
         '</script>';
 
-        $this->assertEquals($expected, (string) $type);
-    }
+    expect((string) $type)->toBe($expected);
+});
 
-    /** @test */
-    public function it_replaces_identifier_with_at_id_property()
-    {
-        $type = new DummyType();
+it('replaces identifier with at id property', function () {
+    $type = new DummyType();
 
-        $type->setProperty('identifier', 'object#1');
+    $type->setProperty('identifier', 'object#1');
 
-        $expected = [
-            '@context' => 'https://schema.org',
-            '@type' => 'DummyType',
-            '@id' => 'object#1',
-        ];
+    $expected = [
+        '@context' => 'https://schema.org',
+        '@type' => 'DummyType',
+        '@id' => 'object#1',
+    ];
 
-        $this->assertEquals($expected, $type->toArray());
-    }
+    expect($type->toArray())->toBe($expected);
+});
 
-    /** @test */
-    public function it_can_render_identifier_for_typed_identifiers()
-    {
-        $productType = new Product();
-        $propertyValue = new PropertyValue();
-        $propertyValue->identifier('#1');
-        $productType->setProperty('identifier', $propertyValue);
+it('can render identifier for typed identifiers', function () {
+    $productType = new Product();
+    $propertyValue = new PropertyValue();
+    $propertyValue->identifier('#1');
+    $productType->setProperty('identifier', $propertyValue);
 
-        $expected = [
-            '@context' => 'https://schema.org',
-            '@type' => 'Product',
-            'identifier' => [
-                '@type' => 'PropertyValue',
-                '@id' => '#1',
-            ],
-        ];
+    $expected = [
+        '@context' => 'https://schema.org',
+        '@type' => 'Product',
+        'identifier' => [
+            '@type' => 'PropertyValue',
+            '@id' => '#1',
+        ],
+    ];
 
-        $this->assertEquals($expected, $productType->toArray());
-    }
+    expect($productType->toArray())->toBe($expected);
+});
 
-    /** @test */
-    public function it_can_reference_type_by_identifier()
-    {
-        $type1 = new AnotherDummyType();
-        $type1->setProperty('identifier', '#1');
-        $type1->setProperty('name', 'another-object');
-        $type2 = new DummyType();
-        $type2->setProperty('identifier', '#2');
-        $type1->setProperty('name', 'object');
-        $type2->setProperty('referenced', $type1->referenced());
+it('can reference type by identifier', function () {
+    $type1 = new AnotherDummyType();
+    $type1->setProperty('identifier', '#1');
+    $type1->setProperty('name', 'another-object');
+    $type2 = new DummyType();
+    $type2->setProperty('identifier', '#2');
+    $type1->setProperty('name', 'object');
+    $type2->setProperty('referenced', $type1->referenced());
 
-        $expected = [
-            '@context' => 'https://schema.org',
-            '@type' => 'DummyType',
-            '@id' => '#2',
-            'referenced' => [
-                '@id' => '#1',
-            ],
-        ];
+    $expected = [
+        '@context' => 'https://schema.org',
+        '@type' => 'DummyType',
+        'referenced' => [
+            '@id' => '#1',
+        ],
+        '@id' => '#2',
+    ];
 
-        $this->assertEquals($expected, $type2->toArray());
-    }
-}
+    expect($type2->toArray())->toBe($expected);
+});
 
 class DummyType extends BaseType
 {

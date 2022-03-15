@@ -2,51 +2,39 @@
 
 namespace Spatie\SchemaOrg\Tests;
 
-use PHPUnit\Framework\TestCase;
 use Spatie\SchemaOrg\LocalBusiness;
 use Spatie\SchemaOrg\Schema;
 use Spatie\SchemaOrg\Type;
 
-class GeneratedTypeSmokeTest extends TestCase
-{
-    /** @test */
-    public function it_is_initializable()
-    {
-        $this->assertInstanceOf(Type::class, new LocalBusiness());
-    }
+it('is initializable', function () {
+    expect(new LocalBusiness())->toBeInstanceOf(Type::class);
+});
 
-    /** @test */
-    public function it_can_be_created_from_a_factory_method()
-    {
-        $this->assertInstanceOf(LocalBusiness::class, Schema::localBusiness());
-    }
+it('can be created from a factory method', function () {
+    expect(Schema::localBusiness())->toBeInstanceOf(LocalBusiness::class);
+});
 
-    /** @test */
-    public function it_can_be_rendered_with_properties()
-    {
-        $localBusiness = Schema::localBusiness()
-            ->name('Spatie')
-            ->email('info@spatie.be');
+it('can be rendered with properties', function () {
+    $localBusiness = Schema::localBusiness()
+        ->name('Spatie')
+        ->email('info@spatie.be');
 
-        $expected = '<script type="application/ld+json">'.
-                '{"@context":"https:\/\/schema.org","@type":"LocalBusiness","name":"Spatie","email":"info@spatie.be"}'.
-            '</script>';
+    $expected = '<script type="application/ld+json">'.
+        '{"@context":"https:\/\/schema.org","@type":"LocalBusiness","name":"Spatie","email":"info@spatie.be"}'.
+        '</script>';
 
-        $this->assertEquals($expected, $localBusiness->toScript());
-    }
+    expect($localBusiness->toScript())->toBe($expected);
+});
 
-    /** @test */
-    public function it_can_be_rendered_with_child_properties()
-    {
-        $localBusiness = Schema::localBusiness()
-            ->name('Spatie')
-            ->contactPoint(Schema::contactPoint()->areaServed('Worldwide'));
+it('can be rendered with child properties', function () {
+    $localBusiness = Schema::localBusiness()
+        ->name('Spatie')
+        ->contactPoint(Schema::contactPoint()->areaServed('Worldwide'));
 
-        $expected = '<script type="application/ld+json">'.
-                '{"@context":"https:\/\/schema.org","@type":"LocalBusiness","name":"Spatie",'.
-                '"contactPoint":{"@type":"ContactPoint","areaServed":"Worldwide"}}'.
-            '</script>';
+    $expected = '<script type="application/ld+json">'.
+        '{"@context":"https:\/\/schema.org","@type":"LocalBusiness","name":"Spatie",'.
+        '"contactPoint":{"@type":"ContactPoint","areaServed":"Worldwide"}}'.
+        '</script>';
 
-        $this->assertEquals($expected, $localBusiness->toScript());
-    }
-}
+    expect($localBusiness->toScript())->toBe($expected);
+});

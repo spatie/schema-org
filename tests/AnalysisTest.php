@@ -16,3 +16,5 @@ class AnalysisTest extends TestCase
         ];
     }
 }
+
+uses(AnalysisTest::class);

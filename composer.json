@@ -30,7 +30,7 @@
         "graham-campbell/analyzer": "^3.0.5",
         "illuminate/collections": "^8.62.0",
         "league/flysystem": "^2.3.0 || ^3.0",
-        "phpunit/phpunit": "^9.4.3",
+        "pestphp/pest": "^1.21",
         "symfony/console": "^5.3.7 || 6.0",
         "twig/twig": "^3.3.3"
     },
@@ -42,7 +42,7 @@
     "autoload-dev": {
         "psr-4": {
             "Spatie\\SchemaOrg\\Generator\\": "generator",
-            "Spatie\\SchemaOrg\\Test\\": "tests"
+            "Spatie\\SchemaOrg\\Tests\\": "tests"
         }
     },
     "config": {
@@ -50,6 +50,6 @@
     },
     "scripts": {
         "generate": "php ./generate.php",
-        "test": "vendor/bin/phpunit"
+        "test": "vendor/bin/pest"
     }
 }
