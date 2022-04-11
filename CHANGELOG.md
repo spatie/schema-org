@@ -2,6 +2,19 @@
 
 All Notable changes to `schema-org` will be documented in this file.
 
+## 3.11.0 - 2022-04-11
+
+## What's Changed
+
+- Rewrite tests to use pest instead of phpunit by @otsch in https://github.com/spatie/schema-org/pull/179
+- upgrade to schema:v14 by @Gummibeer in https://github.com/spatie/schema-org/pull/181
+
+## New Contributors
+
+- @otsch made their first contribution in https://github.com/spatie/schema-org/pull/179
+
+**Full Changelog**: https://github.com/spatie/schema-org/compare/3.10.0...3.11.0
+
 ## 3.10.0 - 2022-03-04
 
 - Drop PHP 7.4 Support - [#174](https://github.com/spatie/schema-org/pull/174)
