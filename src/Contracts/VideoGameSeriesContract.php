@@ -140,6 +140,8 @@ interface VideoGameSeriesContract
 
     public function funder($funder);
 
+    public function funding($funding);
+
     public function gameItem($gameItem);
 
     public function gameLocation($gameLocation);

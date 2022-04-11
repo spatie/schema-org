@@ -38,6 +38,8 @@ interface AmpStoryContract
 
     public function assesses($assesses);
 
+    public function associatedArticle($associatedArticle);
+
     public function associatedMedia($associatedMedia);
 
     public function audience($audience);
@@ -49,6 +51,8 @@ interface AmpStoryContract
     public function award($award);
 
     public function awards($awards);
+
+    public function bitrate($bitrate);
 
     public function character($character);
 
@@ -65,6 +69,10 @@ interface AmpStoryContract
     public function contentRating($contentRating);
 
     public function contentReferenceTime($contentReferenceTime);
+
+    public function contentSize($contentSize);
+
+    public function contentUrl($contentUrl);
 
     public function contributor($contributor);
 
@@ -96,6 +104,8 @@ interface AmpStoryContract
 
     public function discussionUrl($discussionUrl);
 
+    public function duration($duration);
+
     public function editEIDR($editEIDR);
 
     public function editor($editor);
@@ -106,11 +116,17 @@ interface AmpStoryContract
 
     public function educationalUse($educationalUse);
 
+    public function embedUrl($embedUrl);
+
+    public function encodesCreativeWork($encodesCreativeWork);
+
     public function encoding($encoding);
 
     public function encodingFormat($encodingFormat);
 
     public function encodings($encodings);
+
+    public function endTime($endTime);
 
     public function exampleOfWork($exampleOfWork);
 
@@ -120,17 +136,23 @@ interface AmpStoryContract
 
     public function funder($funder);
 
+    public function funding($funding);
+
     public function genre($genre);
 
     public function hasPart($hasPart);
 
     public function headline($headline);
 
+    public function height($height);
+
     public function identifier($identifier);
 
     public function image($image);
 
     public function inLanguage($inLanguage);
+
+    public function ineligibleRegion($ineligibleRegion);
 
     public function interactionStatistic($interactionStatistic);
 
@@ -174,11 +196,15 @@ interface AmpStoryContract
 
     public function pattern($pattern);
 
+    public function playerType($playerType);
+
     public function position($position);
 
     public function potentialAction($potentialAction);
 
     public function producer($producer);
+
+    public function productionCompany($productionCompany);
 
     public function provider($provider);
 
@@ -192,7 +218,11 @@ interface AmpStoryContract
 
     public function recordedAt($recordedAt);
 
+    public function regionsAllowed($regionsAllowed);
+
     public function releasedEvent($releasedEvent);
+
+    public function requiresSubscription($requiresSubscription);
 
     public function review($review);
 
@@ -208,6 +238,8 @@ interface AmpStoryContract
 
     public function sdPublisher($sdPublisher);
 
+    public function sha256($sha256);
+
     public function size($size);
 
     public function sourceOrganization($sourceOrganization);
@@ -217,6 +249,8 @@ interface AmpStoryContract
     public function spatialCoverage($spatialCoverage);
 
     public function sponsor($sponsor);
+
+    public function startTime($startTime);
 
     public function subjectOf($subjectOf);
 
@@ -238,6 +272,8 @@ interface AmpStoryContract
 
     public function typicalAgeRange($typicalAgeRange);
 
+    public function uploadDate($uploadDate);
+
     public function url($url);
 
     public function usageInfo($usageInfo);
@@ -245,6 +281,8 @@ interface AmpStoryContract
     public function version($version);
 
     public function video($video);
+
+    public function width($width);
 
     public function workExample($workExample);
 

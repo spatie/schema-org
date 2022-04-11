@@ -58,6 +58,8 @@ interface PersonContract
 
     public function funder($funder);
 
+    public function funding($funding);
+
     public function gender($gender);
 
     public function givenName($givenName);

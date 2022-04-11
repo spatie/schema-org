@@ -95,9 +95,10 @@ class Grant extends BaseType implements GrantContract, IntangibleContract, Thing
     }
 
     /**
-     * Indicates an item funded or sponsored through a [[Grant]].
+     * Indicates something directly or indirectly funded or sponsored through a
+     * [[Grant]]. See also [[ownershipFundingInfo]].
      *
-     * @param \Spatie\SchemaOrg\Contracts\ThingContract|\Spatie\SchemaOrg\Contracts\ThingContract[] $fundedItem
+     * @param \Spatie\SchemaOrg\Contracts\BioChemEntityContract|\Spatie\SchemaOrg\Contracts\BioChemEntityContract[]|\Spatie\SchemaOrg\Contracts\CreativeWorkContract|\Spatie\SchemaOrg\Contracts\CreativeWorkContract[]|\Spatie\SchemaOrg\Contracts\EventContract|\Spatie\SchemaOrg\Contracts\EventContract[]|\Spatie\SchemaOrg\Contracts\MedicalEntityContract|\Spatie\SchemaOrg\Contracts\MedicalEntityContract[]|\Spatie\SchemaOrg\Contracts\OrganizationContract|\Spatie\SchemaOrg\Contracts\OrganizationContract[]|\Spatie\SchemaOrg\Contracts\PersonContract|\Spatie\SchemaOrg\Contracts\PersonContract[]|\Spatie\SchemaOrg\Contracts\ProductContract|\Spatie\SchemaOrg\Contracts\ProductContract[] $fundedItem
      *
      * @return static
      *
@@ -107,6 +108,21 @@ class Grant extends BaseType implements GrantContract, IntangibleContract, Thing
     public function fundedItem($fundedItem)
     {
         return $this->setProperty('fundedItem', $fundedItem);
+    }
+
+    /**
+     * A person or organization that supports (sponsors) something through some
+     * kind of financial contribution.
+     *
+     * @param \Spatie\SchemaOrg\Contracts\OrganizationContract|\Spatie\SchemaOrg\Contracts\OrganizationContract[]|\Spatie\SchemaOrg\Contracts\PersonContract|\Spatie\SchemaOrg\Contracts\PersonContract[] $funder
+     *
+     * @return static
+     *
+     * @see https://schema.org/funder
+     */
+    public function funder($funder)
+    {
+        return $this->setProperty('funder', $funder);
     }
 
     /**

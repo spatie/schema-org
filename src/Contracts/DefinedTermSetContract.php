@@ -120,6 +120,8 @@ interface DefinedTermSetContract
 
     public function funder($funder);
 
+    public function funding($funding);
+
     public function genre($genre);
 
     public function hasDefinedTerm($hasDefinedTerm);

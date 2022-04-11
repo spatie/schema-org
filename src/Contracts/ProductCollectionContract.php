@@ -136,6 +136,8 @@ interface ProductCollectionContract
 
     public function funder($funder);
 
+    public function funding($funding);
+
     public function genre($genre);
 
     public function gtin($gtin);
@@ -147,6 +149,8 @@ interface ProductCollectionContract
     public function gtin14($gtin14);
 
     public function gtin8($gtin8);
+
+    public function hasAdultConsideration($hasAdultConsideration);
 
     public function hasEnergyConsumptionDetails($hasEnergyConsumptionDetails);
 

@@ -60,6 +60,8 @@ interface CarContract
 
     public function fuelType($fuelType);
 
+    public function funding($funding);
+
     public function gtin($gtin);
 
     public function gtin12($gtin12);
@@ -69,6 +71,8 @@ interface CarContract
     public function gtin14($gtin14);
 
     public function gtin8($gtin8);
+
+    public function hasAdultConsideration($hasAdultConsideration);
 
     public function hasEnergyConsumptionDetails($hasEnergyConsumptionDetails);
 
@@ -90,6 +94,8 @@ interface CarContract
 
     public function isConsumableFor($isConsumableFor);
 
+    public function isFamilyFriendly($isFamilyFriendly);
+
     public function isRelatedTo($isRelatedTo);
 
     public function isSimilarTo($isSimilarTo);
@@ -97,6 +103,8 @@ interface CarContract
     public function isVariantOf($isVariantOf);
 
     public function itemCondition($itemCondition);
+
+    public function keywords($keywords);
 
     public function knownVehicleDamages($knownVehicleDamages);
 

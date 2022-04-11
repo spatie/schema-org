@@ -44,6 +44,8 @@ interface AskActionContract
 
     public function potentialAction($potentialAction);
 
+    public function provider($provider);
+
     public function question($question);
 
     public function recipient($recipient);

@@ -228,7 +228,7 @@ class Motorcycle extends BaseType implements MotorcycleContract, ProductContract
      * A category for the item. Greater signs or slashes can be used to
      * informally indicate a category hierarchy.
      *
-     * @param \Spatie\SchemaOrg\Contracts\PhysicalActivityCategoryContract|\Spatie\SchemaOrg\Contracts\PhysicalActivityCategoryContract[]|\Spatie\SchemaOrg\Contracts\ThingContract|\Spatie\SchemaOrg\Contracts\ThingContract[]|string|string[] $category
+     * @param \Spatie\SchemaOrg\Contracts\CategoryCodeContract|\Spatie\SchemaOrg\Contracts\CategoryCodeContract[]|\Spatie\SchemaOrg\Contracts\PhysicalActivityCategoryContract|\Spatie\SchemaOrg\Contracts\PhysicalActivityCategoryContract[]|\Spatie\SchemaOrg\Contracts\ThingContract|\Spatie\SchemaOrg\Contracts\ThingContract[]|string|string[] $category
      *
      * @return static
      *
@@ -501,6 +501,22 @@ class Motorcycle extends BaseType implements MotorcycleContract, ProductContract
     }
 
     /**
+     * A [[Grant]] that directly or indirectly provide funding or sponsorship
+     * for this item. See also [[ownershipFundingInfo]].
+     *
+     * @param \Spatie\SchemaOrg\Contracts\GrantContract|\Spatie\SchemaOrg\Contracts\GrantContract[] $funding
+     *
+     * @return static
+     *
+     * @see https://schema.org/funding
+     * @see https://pending.schema.org
+     */
+    public function funding($funding)
+    {
+        return $this->setProperty('funding', $funding);
+    }
+
+    /**
      * A Global Trade Item Number
      * ([GTIN](https://www.gs1.org/standards/id-keys/gtin)). GTINs identify
      * trade items, including products and services, using numeric
@@ -605,6 +621,23 @@ class Motorcycle extends BaseType implements MotorcycleContract, ProductContract
     public function gtin8($gtin8)
     {
         return $this->setProperty('gtin8', $gtin8);
+    }
+
+    /**
+     * Used to tag an item to be intended or suitable for consumption or use by
+     * adults only.
+     *
+     * @param \Spatie\SchemaOrg\Contracts\AdultOrientedEnumerationContract|\Spatie\SchemaOrg\Contracts\AdultOrientedEnumerationContract[] $hasAdultConsideration
+     *
+     * @return static
+     *
+     * @see https://schema.org/hasAdultConsideration
+     * @see https://pending.schema.org
+     * @link https://github.com/schemaorg/schemaorg/issues/2989
+     */
+    public function hasAdultConsideration($hasAdultConsideration)
+    {
+        return $this->setProperty('hasAdultConsideration', $hasAdultConsideration);
     }
 
     /**
@@ -773,6 +806,20 @@ class Motorcycle extends BaseType implements MotorcycleContract, ProductContract
     }
 
     /**
+     * Indicates whether this content is family friendly.
+     *
+     * @param bool|bool[] $isFamilyFriendly
+     *
+     * @return static
+     *
+     * @see https://schema.org/isFamilyFriendly
+     */
+    public function isFamilyFriendly($isFamilyFriendly)
+    {
+        return $this->setProperty('isFamilyFriendly', $isFamilyFriendly);
+    }
+
+    /**
      * A pointer to another, somehow related product (or multiple products).
      *
      * @param \Spatie\SchemaOrg\Contracts\ProductContract|\Spatie\SchemaOrg\Contracts\ProductContract[]|\Spatie\SchemaOrg\Contracts\ServiceContract|\Spatie\SchemaOrg\Contracts\ServiceContract[] $isRelatedTo
@@ -843,6 +890,22 @@ class Motorcycle extends BaseType implements MotorcycleContract, ProductContract
     public function itemCondition($itemCondition)
     {
         return $this->setProperty('itemCondition', $itemCondition);
+    }
+
+    /**
+     * Keywords or tags used to describe some item. Multiple textual entries in
+     * a keywords list are typically delimited by commas, or by repeating the
+     * property.
+     *
+     * @param \Spatie\SchemaOrg\Contracts\DefinedTermContract|\Spatie\SchemaOrg\Contracts\DefinedTermContract[]|string|string[] $keywords
+     *
+     * @return static
+     *
+     * @see https://schema.org/keywords
+     */
+    public function keywords($keywords)
+    {
+        return $this->setProperty('keywords', $keywords);
     }
 
     /**

@@ -36,6 +36,8 @@ interface ProductModelContract
 
     public function disambiguatingDescription($disambiguatingDescription);
 
+    public function funding($funding);
+
     public function gtin($gtin);
 
     public function gtin12($gtin12);
@@ -45,6 +47,8 @@ interface ProductModelContract
     public function gtin14($gtin14);
 
     public function gtin8($gtin8);
+
+    public function hasAdultConsideration($hasAdultConsideration);
 
     public function hasEnergyConsumptionDetails($hasEnergyConsumptionDetails);
 
@@ -66,6 +70,8 @@ interface ProductModelContract
 
     public function isConsumableFor($isConsumableFor);
 
+    public function isFamilyFriendly($isFamilyFriendly);
+
     public function isRelatedTo($isRelatedTo);
 
     public function isSimilarTo($isSimilarTo);
@@ -73,6 +79,8 @@ interface ProductModelContract
     public function isVariantOf($isVariantOf);
 
     public function itemCondition($itemCondition);
+
+    public function keywords($keywords);
 
     public function logo($logo);
 

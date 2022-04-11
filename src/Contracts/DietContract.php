@@ -128,6 +128,8 @@ interface DietContract
 
     public function funder($funder);
 
+    public function funding($funding);
+
     public function genre($genre);
 
     public function guideline($guideline);

@@ -10,6 +10,8 @@ interface MerchantReturnPolicyContract
 
     public function alternateName($alternateName);
 
+    public function applicableCountry($applicableCountry);
+
     public function customerRemorseReturnFees($customerRemorseReturnFees);
 
     public function customerRemorseReturnLabelSource($customerRemorseReturnLabelSource);

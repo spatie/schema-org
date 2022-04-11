@@ -16,6 +16,8 @@ interface MedicalRiskCalculatorContract
 
     public function estimatesRiskOf($estimatesRiskOf);
 
+    public function funding($funding);
+
     public function guideline($guideline);
 
     public function identifier($identifier);

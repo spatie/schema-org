@@ -48,6 +48,8 @@ interface SportsEventContract
 
     public function funder($funder);
 
+    public function funding($funding);
+
     public function homeTeam($homeTeam);
 
     public function identifier($identifier);
@@ -57,6 +59,8 @@ interface SportsEventContract
     public function inLanguage($inLanguage);
 
     public function isAccessibleForFree($isAccessibleForFree);
+
+    public function keywords($keywords);
 
     public function location($location);
 

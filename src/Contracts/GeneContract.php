@@ -26,6 +26,8 @@ interface GeneContract
 
     public function expressedIn($expressedIn);
 
+    public function funding($funding);
+
     public function hasBioChemEntityPart($hasBioChemEntityPart);
 
     public function hasBioPolymerSequence($hasBioPolymerSequence);

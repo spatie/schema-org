@@ -58,6 +58,8 @@ interface OfferContract
 
     public function gtin8($gtin8);
 
+    public function hasAdultConsideration($hasAdultConsideration);
+
     public function hasMeasurement($hasMeasurement);
 
     public function hasMerchantReturnPolicy($hasMerchantReturnPolicy);
@@ -71,6 +73,8 @@ interface OfferContract
     public function ineligibleRegion($ineligibleRegion);
 
     public function inventoryLevel($inventoryLevel);
+
+    public function isFamilyFriendly($isFamilyFriendly);
 
     public function itemCondition($itemCondition);
 

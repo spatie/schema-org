@@ -22,6 +22,8 @@ interface BoneContract
 
     public function disambiguatingDescription($disambiguatingDescription);
 
+    public function funding($funding);
+
     public function guideline($guideline);
 
     public function identifier($identifier);

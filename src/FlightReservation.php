@@ -312,7 +312,7 @@ class FlightReservation extends BaseType implements FlightReservationContract, I
      * @return static
      *
      * @see https://schema.org/provider
-     * @link https://github.com/schemaorg/schemaorg/issues/2289
+     * @see https://pending.schema.org
      */
     public function provider($provider)
     {

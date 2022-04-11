@@ -410,6 +410,22 @@ class Person extends BaseType implements PersonContract, ThingContract
     }
 
     /**
+     * A [[Grant]] that directly or indirectly provide funding or sponsorship
+     * for this item. See also [[ownershipFundingInfo]].
+     *
+     * @param \Spatie\SchemaOrg\Contracts\GrantContract|\Spatie\SchemaOrg\Contracts\GrantContract[] $funding
+     *
+     * @return static
+     *
+     * @see https://schema.org/funding
+     * @see https://pending.schema.org
+     */
+    public function funding($funding)
+    {
+        return $this->setProperty('funding', $funding);
+    }
+
+    /**
      * Gender of something, typically a [[Person]], but possibly also fictional
      * characters, animals, etc. While https://schema.org/Male and
      * https://schema.org/Female may be used, text strings are also acceptable

@@ -26,6 +26,8 @@ interface DrugCostContract
 
     public function drugUnit($drugUnit);
 
+    public function funding($funding);
+
     public function guideline($guideline);
 
     public function identifier($identifier);

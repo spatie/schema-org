@@ -48,6 +48,8 @@ interface EducationEventContract
 
     public function funder($funder);
 
+    public function funding($funding);
+
     public function identifier($identifier);
 
     public function image($image);
@@ -55,6 +57,8 @@ interface EducationEventContract
     public function inLanguage($inLanguage);
 
     public function isAccessibleForFree($isAccessibleForFree);
+
+    public function keywords($keywords);
 
     public function location($location);
 

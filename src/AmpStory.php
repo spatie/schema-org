@@ -4,6 +4,7 @@ namespace Spatie\SchemaOrg;
 
 use \Spatie\SchemaOrg\Contracts\AmpStoryContract;
 use \Spatie\SchemaOrg\Contracts\CreativeWorkContract;
+use \Spatie\SchemaOrg\Contracts\MediaObjectContract;
 use \Spatie\SchemaOrg\Contracts\ThingContract;
 
 /**
@@ -15,7 +16,7 @@ use \Spatie\SchemaOrg\Contracts\ThingContract;
  * @link https://github.com/schemaorg/schemaorg/issues/2646
  *
  */
-class AmpStory extends BaseType implements AmpStoryContract, CreativeWorkContract, ThingContract
+class AmpStory extends BaseType implements AmpStoryContract, CreativeWorkContract, MediaObjectContract, ThingContract
 {
     /**
      * The subject matter of the content.
@@ -50,9 +51,9 @@ class AmpStory extends BaseType implements AmpStoryContract, CreativeWorkContrac
 
     /**
      * The human sensory perceptual system or cognitive faculty through which a
-     * person may process or perceive information. Expected values include:
-     * auditory, tactile, textual, visual, colorDependent, chartOnVisual,
-     * chemOnVisual, diagramOnVisual, mathOnVisual, musicOnVisual, textOnVisual.
+     * person may process or perceive information. Values should be drawn from
+     * the [approved
+     * vocabulary](https://www.w3.org/2021/a11y-discov-vocab/latest/#accessMode-vocabulary).
      *
      * @param string|string[] $accessMode
      *
@@ -68,8 +69,9 @@ class AmpStory extends BaseType implements AmpStoryContract, CreativeWorkContrac
 
     /**
      * A list of single or combined accessModes that are sufficient to
-     * understand all the intellectual content of a resource. Expected values
-     * include:  auditory, tactile, textual, visual.
+     * understand all the intellectual content of a resource. Values should be
+     * drawn from the [approved
+     * vocabulary](https://www.w3.org/2021/a11y-discov-vocab/latest/#accessModeSufficient-vocabulary).
      *
      * @param \Spatie\SchemaOrg\Contracts\ItemListContract|\Spatie\SchemaOrg\Contracts\ItemListContract[] $accessModeSufficient
      *
@@ -85,8 +87,8 @@ class AmpStory extends BaseType implements AmpStoryContract, CreativeWorkContrac
 
     /**
      * Indicates that the resource is compatible with the referenced
-     * accessibility API ([WebSchemas wiki lists possible
-     * values](http://www.w3.org/wiki/WebSchemas/Accessibility)).
+     * accessibility API. Values should be drawn from the [approved
+     * vocabulary](https://www.w3.org/2021/a11y-discov-vocab/latest/#accessibilityAPI-vocabulary).
      *
      * @param string|string[] $accessibilityAPI
      *
@@ -101,8 +103,8 @@ class AmpStory extends BaseType implements AmpStoryContract, CreativeWorkContrac
 
     /**
      * Identifies input methods that are sufficient to fully control the
-     * described resource ([WebSchemas wiki lists possible
-     * values](http://www.w3.org/wiki/WebSchemas/Accessibility)).
+     * described resource. Values should be drawn from the [approved
+     * vocabulary](https://www.w3.org/2021/a11y-discov-vocab/latest/#accessibilityControl-vocabulary).
      *
      * @param string|string[] $accessibilityControl
      *
@@ -117,8 +119,9 @@ class AmpStory extends BaseType implements AmpStoryContract, CreativeWorkContrac
 
     /**
      * Content features of the resource, such as accessible media, alternatives
-     * and supported enhancements for accessibility ([WebSchemas wiki lists
-     * possible values](http://www.w3.org/wiki/WebSchemas/Accessibility)).
+     * and supported enhancements for accessibility. Values should be drawn from
+     * the [approved
+     * vocabulary](https://www.w3.org/2021/a11y-discov-vocab/latest/#accessibilityFeature-vocabulary).
      *
      * @param string|string[] $accessibilityFeature
      *
@@ -133,9 +136,9 @@ class AmpStory extends BaseType implements AmpStoryContract, CreativeWorkContrac
 
     /**
      * A characteristic of the described resource that is physiologically
-     * dangerous to some users. Related to WCAG 2.0 guideline 2.3 ([WebSchemas
-     * wiki lists possible
-     * values](http://www.w3.org/wiki/WebSchemas/Accessibility)).
+     * dangerous to some users. Related to WCAG 2.0 guideline 2.3. Values should
+     * be drawn from the [approved
+     * vocabulary](https://www.w3.org/2021/a11y-discov-vocab/latest/#accessibilityHazard-vocabulary).
      *
      * @param string|string[] $accessibilityHazard
      *
@@ -298,6 +301,20 @@ class AmpStory extends BaseType implements AmpStoryContract, CreativeWorkContrac
     }
 
     /**
+     * A NewsArticle associated with the Media Object.
+     *
+     * @param \Spatie\SchemaOrg\Contracts\NewsArticleContract|\Spatie\SchemaOrg\Contracts\NewsArticleContract[] $associatedArticle
+     *
+     * @return static
+     *
+     * @see https://schema.org/associatedArticle
+     */
+    public function associatedArticle($associatedArticle)
+    {
+        return $this->setProperty('associatedArticle', $associatedArticle);
+    }
+
+    /**
      * A media object that encodes this CreativeWork. This property is a synonym
      * for encoding.
      *
@@ -383,6 +400,20 @@ class AmpStory extends BaseType implements AmpStoryContract, CreativeWorkContrac
     public function awards($awards)
     {
         return $this->setProperty('awards', $awards);
+    }
+
+    /**
+     * The bitrate of the media object.
+     *
+     * @param string|string[] $bitrate
+     *
+     * @return static
+     *
+     * @see https://schema.org/bitrate
+     */
+    public function bitrate($bitrate)
+    {
+        return $this->setProperty('bitrate', $bitrate);
     }
 
     /**
@@ -511,6 +542,35 @@ class AmpStory extends BaseType implements AmpStoryContract, CreativeWorkContrac
     public function contentReferenceTime($contentReferenceTime)
     {
         return $this->setProperty('contentReferenceTime', $contentReferenceTime);
+    }
+
+    /**
+     * File size in (mega/kilo) bytes.
+     *
+     * @param string|string[] $contentSize
+     *
+     * @return static
+     *
+     * @see https://schema.org/contentSize
+     */
+    public function contentSize($contentSize)
+    {
+        return $this->setProperty('contentSize', $contentSize);
+    }
+
+    /**
+     * Actual bytes of the media object, for example the image file or video
+     * file.
+     *
+     * @param string|string[] $contentUrl
+     *
+     * @return static
+     *
+     * @see https://schema.org/contentUrl
+     */
+    public function contentUrl($contentUrl)
+    {
+        return $this->setProperty('contentUrl', $contentUrl);
     }
 
     /**
@@ -756,6 +816,21 @@ class AmpStory extends BaseType implements AmpStoryContract, CreativeWorkContrac
     }
 
     /**
+     * The duration of the item (movie, audio recording, event, etc.) in [ISO
+     * 8601 date format](http://en.wikipedia.org/wiki/ISO_8601).
+     *
+     * @param \Spatie\SchemaOrg\Contracts\DurationContract|\Spatie\SchemaOrg\Contracts\DurationContract[] $duration
+     *
+     * @return static
+     *
+     * @see https://schema.org/duration
+     */
+    public function duration($duration)
+    {
+        return $this->setProperty('duration', $duration);
+    }
+
+    /**
      * An [EIDR](https://eidr.org/) (Entertainment Identifier Registry)
      * [[identifier]] representing a specific edit / edition for a work of film
      * or television.
@@ -849,6 +924,36 @@ class AmpStory extends BaseType implements AmpStoryContract, CreativeWorkContrac
     }
 
     /**
+     * A URL pointing to a player for a specific video. In general, this is the
+     * information in the ```src``` element of an ```embed``` tag and should not
+     * be the same as the content of the ```loc``` tag.
+     *
+     * @param string|string[] $embedUrl
+     *
+     * @return static
+     *
+     * @see https://schema.org/embedUrl
+     */
+    public function embedUrl($embedUrl)
+    {
+        return $this->setProperty('embedUrl', $embedUrl);
+    }
+
+    /**
+     * The CreativeWork encoded by this media object.
+     *
+     * @param \Spatie\SchemaOrg\Contracts\CreativeWorkContract|\Spatie\SchemaOrg\Contracts\CreativeWorkContract[] $encodesCreativeWork
+     *
+     * @return static
+     *
+     * @see https://schema.org/encodesCreativeWork
+     */
+    public function encodesCreativeWork($encodesCreativeWork)
+    {
+        return $this->setProperty('encodesCreativeWork', $encodesCreativeWork);
+    }
+
+    /**
      * A media object that encodes this CreativeWork. This property is a synonym
      * for associatedMedia.
      *
@@ -902,6 +1007,30 @@ class AmpStory extends BaseType implements AmpStoryContract, CreativeWorkContrac
     public function encodings($encodings)
     {
         return $this->setProperty('encodings', $encodings);
+    }
+
+    /**
+     * The endTime of something. For a reserved event or service (e.g.
+     * FoodEstablishmentReservation), the time that it is expected to end. For
+     * actions that span a period of time, when the action was performed. e.g.
+     * John wrote a book from January to *December*. For media, including audio
+     * and video, it's the time offset of the end of a clip within a larger
+     * file.
+     * 
+     * Note that Event uses startDate/endDate instead of startTime/endTime, even
+     * when describing dates with times. This situation may be clarified in
+     * future revisions.
+     *
+     * @param \DateTimeInterface|\DateTimeInterface[] $endTime
+     *
+     * @return static
+     *
+     * @see https://schema.org/endTime
+     * @link https://github.com/schemaorg/schemaorg/issues/2493
+     */
+    public function endTime($endTime)
+    {
+        return $this->setProperty('endTime', $endTime);
     }
 
     /**
@@ -975,6 +1104,22 @@ class AmpStory extends BaseType implements AmpStoryContract, CreativeWorkContrac
     }
 
     /**
+     * A [[Grant]] that directly or indirectly provide funding or sponsorship
+     * for this item. See also [[ownershipFundingInfo]].
+     *
+     * @param \Spatie\SchemaOrg\Contracts\GrantContract|\Spatie\SchemaOrg\Contracts\GrantContract[] $funding
+     *
+     * @return static
+     *
+     * @see https://schema.org/funding
+     * @see https://pending.schema.org
+     */
+    public function funding($funding)
+    {
+        return $this->setProperty('funding', $funding);
+    }
+
+    /**
      * Genre of the creative work, broadcast channel or group.
      *
      * @param string|string[] $genre
@@ -1016,6 +1161,20 @@ class AmpStory extends BaseType implements AmpStoryContract, CreativeWorkContrac
     public function headline($headline)
     {
         return $this->setProperty('headline', $headline);
+    }
+
+    /**
+     * The height of the item.
+     *
+     * @param \Spatie\SchemaOrg\Contracts\DistanceContract|\Spatie\SchemaOrg\Contracts\DistanceContract[]|\Spatie\SchemaOrg\Contracts\QuantitativeValueContract|\Spatie\SchemaOrg\Contracts\QuantitativeValueContract[] $height
+     *
+     * @return static
+     *
+     * @see https://schema.org/height
+     */
+    public function height($height)
+    {
+        return $this->setProperty('height', $height);
     }
 
     /**
@@ -1067,6 +1226,27 @@ class AmpStory extends BaseType implements AmpStoryContract, CreativeWorkContrac
     public function inLanguage($inLanguage)
     {
         return $this->setProperty('inLanguage', $inLanguage);
+    }
+
+    /**
+     * The ISO 3166-1 (ISO 3166-1 alpha-2) or ISO 3166-2 code, the place, or the
+     * GeoShape for the geo-political region(s) for which the offer or delivery
+     * charge specification is not valid, e.g. a region where the transaction is
+     * not allowed.
+     * 
+     * See also [[eligibleRegion]].
+     *
+     * @param \Spatie\SchemaOrg\Contracts\GeoShapeContract|\Spatie\SchemaOrg\Contracts\GeoShapeContract[]|\Spatie\SchemaOrg\Contracts\PlaceContract|\Spatie\SchemaOrg\Contracts\PlaceContract[]|string|string[] $ineligibleRegion
+     *
+     * @return static
+     *
+     * @see https://schema.org/ineligibleRegion
+     * @see https://pending.schema.org
+     * @link https://github.com/schemaorg/schemaorg/issues/2242
+     */
+    public function ineligibleRegion($ineligibleRegion)
+    {
+        return $this->setProperty('ineligibleRegion', $ineligibleRegion);
     }
 
     /**
@@ -1194,8 +1374,9 @@ class AmpStory extends BaseType implements AmpStoryContract, CreativeWorkContrac
     }
 
     /**
-     * Keywords or tags used to describe this content. Multiple entries in a
-     * keywords list are typically delimited by commas.
+     * Keywords or tags used to describe some item. Multiple textual entries in
+     * a keywords list are typically delimited by commas, or by repeating the
+     * property.
      *
      * @param \Spatie\SchemaOrg\Contracts\DefinedTermContract|\Spatie\SchemaOrg\Contracts\DefinedTermContract[]|string|string[] $keywords
      *
@@ -1414,6 +1595,20 @@ class AmpStory extends BaseType implements AmpStoryContract, CreativeWorkContrac
     }
 
     /**
+     * Player type required&#x2014;for example, Flash or Silverlight.
+     *
+     * @param string|string[] $playerType
+     *
+     * @return static
+     *
+     * @see https://schema.org/playerType
+     */
+    public function playerType($playerType)
+    {
+        return $this->setProperty('playerType', $playerType);
+    }
+
+    /**
      * The position of an item in a series or sequence of items.
      *
      * @param int|int[]|string|string[] $position
@@ -1458,6 +1653,21 @@ class AmpStory extends BaseType implements AmpStoryContract, CreativeWorkContrac
     }
 
     /**
+     * The production company or studio responsible for the item e.g. series,
+     * video game, episode etc.
+     *
+     * @param \Spatie\SchemaOrg\Contracts\OrganizationContract|\Spatie\SchemaOrg\Contracts\OrganizationContract[] $productionCompany
+     *
+     * @return static
+     *
+     * @see https://schema.org/productionCompany
+     */
+    public function productionCompany($productionCompany)
+    {
+        return $this->setProperty('productionCompany', $productionCompany);
+    }
+
+    /**
      * The service provider, service operator, or service performer; the goods
      * producer. Another party (a seller) may offer those services or goods on
      * behalf of the provider. A provider may also serve as the seller.
@@ -1467,7 +1677,7 @@ class AmpStory extends BaseType implements AmpStoryContract, CreativeWorkContrac
      * @return static
      *
      * @see https://schema.org/provider
-     * @link https://github.com/schemaorg/schemaorg/issues/2289
+     * @see https://pending.schema.org
      */
     public function provider($provider)
     {
@@ -1557,6 +1767,22 @@ class AmpStory extends BaseType implements AmpStoryContract, CreativeWorkContrac
     }
 
     /**
+     * The regions where the media is allowed. If not specified, then it's
+     * assumed to be allowed everywhere. Specify the countries in [ISO 3166
+     * format](http://en.wikipedia.org/wiki/ISO_3166).
+     *
+     * @param \Spatie\SchemaOrg\Contracts\PlaceContract|\Spatie\SchemaOrg\Contracts\PlaceContract[] $regionsAllowed
+     *
+     * @return static
+     *
+     * @see https://schema.org/regionsAllowed
+     */
+    public function regionsAllowed($regionsAllowed)
+    {
+        return $this->setProperty('regionsAllowed', $regionsAllowed);
+    }
+
+    /**
      * The place and time the release was issued, expressed as a
      * PublicationEvent.
      *
@@ -1569,6 +1795,23 @@ class AmpStory extends BaseType implements AmpStoryContract, CreativeWorkContrac
     public function releasedEvent($releasedEvent)
     {
         return $this->setProperty('releasedEvent', $releasedEvent);
+    }
+
+    /**
+     * Indicates if use of the media require a subscription  (either paid or
+     * free). Allowed values are ```true``` or ```false``` (note that an earlier
+     * version had 'yes', 'no').
+     *
+     * @param \Spatie\SchemaOrg\Contracts\MediaSubscriptionContract|\Spatie\SchemaOrg\Contracts\MediaSubscriptionContract[]|bool|bool[] $requiresSubscription
+     *
+     * @return static
+     *
+     * @see https://schema.org/requiresSubscription
+     * @link https://github.com/schemaorg/schemaorg/issues/1741
+     */
+    public function requiresSubscription($requiresSubscription)
+    {
+        return $this->setProperty('requiresSubscription', $requiresSubscription);
     }
 
     /**
@@ -1694,6 +1937,24 @@ class AmpStory extends BaseType implements AmpStoryContract, CreativeWorkContrac
     }
 
     /**
+     * The [SHA-2](https://en.wikipedia.org/wiki/SHA-2) SHA256 hash of the
+     * content of the item. For example, a zero-length input has value
+     * 'e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855'
+     *
+     * @param string|string[] $sha256
+     *
+     * @return static
+     *
+     * @see https://schema.org/sha256
+     * @see https://pending.schema.org
+     * @link https://github.com/schemaorg/schemaorg/issues/2450
+     */
+    public function sha256($sha256)
+    {
+        return $this->setProperty('sha256', $sha256);
+    }
+
+    /**
      * A standardized size of a product or creative work, specified either
      * through a simple textual string (for example 'XL', '32Wx34L'), a 
      * QuantitativeValue with a unitCode, or a comprehensive and structured
@@ -1776,6 +2037,30 @@ class AmpStory extends BaseType implements AmpStoryContract, CreativeWorkContrac
     public function sponsor($sponsor)
     {
         return $this->setProperty('sponsor', $sponsor);
+    }
+
+    /**
+     * The startTime of something. For a reserved event or service (e.g.
+     * FoodEstablishmentReservation), the time that it is expected to start. For
+     * actions that span a period of time, when the action was performed. e.g.
+     * John wrote a book from *January* to December. For media, including audio
+     * and video, it's the time offset of the start of a clip within a larger
+     * file.
+     * 
+     * Note that Event uses startDate/endDate instead of startTime/endTime, even
+     * when describing dates with times. This situation may be clarified in
+     * future revisions.
+     *
+     * @param \DateTimeInterface|\DateTimeInterface[] $startTime
+     *
+     * @return static
+     *
+     * @see https://schema.org/startTime
+     * @link https://github.com/schemaorg/schemaorg/issues/2493
+     */
+    public function startTime($startTime)
+    {
+        return $this->setProperty('startTime', $startTime);
     }
 
     /**
@@ -1948,6 +2233,20 @@ class AmpStory extends BaseType implements AmpStoryContract, CreativeWorkContrac
     }
 
     /**
+     * Date when this media object was uploaded to this site.
+     *
+     * @param \DateTimeInterface|\DateTimeInterface[] $uploadDate
+     *
+     * @return static
+     *
+     * @see https://schema.org/uploadDate
+     */
+    public function uploadDate($uploadDate)
+    {
+        return $this->setProperty('uploadDate', $uploadDate);
+    }
+
+    /**
      * URL of the item.
      *
      * @param string|string[] $url
@@ -2015,6 +2314,20 @@ class AmpStory extends BaseType implements AmpStoryContract, CreativeWorkContrac
     public function video($video)
     {
         return $this->setProperty('video', $video);
+    }
+
+    /**
+     * The width of the item.
+     *
+     * @param \Spatie\SchemaOrg\Contracts\DistanceContract|\Spatie\SchemaOrg\Contracts\DistanceContract[]|\Spatie\SchemaOrg\Contracts\QuantitativeValueContract|\Spatie\SchemaOrg\Contracts\QuantitativeValueContract[] $width
+     *
+     * @return static
+     *
+     * @see https://schema.org/width
+     */
+    public function width($width)
+    {
+        return $this->setProperty('width', $width);
     }
 
     /**

@@ -48,6 +48,8 @@ interface CourseInstanceContract
 
     public function funder($funder);
 
+    public function funding($funding);
+
     public function identifier($identifier);
 
     public function image($image);
@@ -57,6 +59,8 @@ interface CourseInstanceContract
     public function instructor($instructor);
 
     public function isAccessibleForFree($isAccessibleForFree);
+
+    public function keywords($keywords);
 
     public function location($location);
 

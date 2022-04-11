@@ -40,6 +40,8 @@ interface ReturnActionContract
 
     public function potentialAction($potentialAction);
 
+    public function provider($provider);
+
     public function recipient($recipient);
 
     public function result($result);

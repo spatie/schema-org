@@ -34,7 +34,7 @@ class EntryPoint extends BaseType implements EntryPointContract, IntangibleContr
      * given URL. To specify a specific application or operating system
      * instance, use actionApplication.
      *
-     * @param string|string[] $actionPlatform
+     * @param \Spatie\SchemaOrg\Contracts\DigitalPlatformEnumerationContract|\Spatie\SchemaOrg\Contracts\DigitalPlatformEnumerationContract[]|string|string[] $actionPlatform
      *
      * @return static
      *

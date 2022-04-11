@@ -44,6 +44,8 @@ interface DonateActionContract
 
     public function priceSpecification($priceSpecification);
 
+    public function provider($provider);
+
     public function recipient($recipient);
 
     public function result($result);
