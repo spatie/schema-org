@@ -44,6 +44,8 @@ interface TradeActionContract
 
     public function priceSpecification($priceSpecification);
 
+    public function provider($provider);
+
     public function result($result);
 
     public function sameAs($sameAs);

@@ -364,6 +364,23 @@ class TradeAction extends BaseType implements TradeActionContract, ActionContrac
     }
 
     /**
+     * The service provider, service operator, or service performer; the goods
+     * producer. Another party (a seller) may offer those services or goods on
+     * behalf of the provider. A provider may also serve as the seller.
+     *
+     * @param \Spatie\SchemaOrg\Contracts\OrganizationContract|\Spatie\SchemaOrg\Contracts\OrganizationContract[]|\Spatie\SchemaOrg\Contracts\PersonContract|\Spatie\SchemaOrg\Contracts\PersonContract[] $provider
+     *
+     * @return static
+     *
+     * @see https://schema.org/provider
+     * @see https://pending.schema.org
+     */
+    public function provider($provider)
+    {
+        return $this->setProperty('provider', $provider);
+    }
+
+    /**
      * The result produced in the action. e.g. John wrote *a book*.
      *
      * @param \Spatie\SchemaOrg\Contracts\ThingContract|\Spatie\SchemaOrg\Contracts\ThingContract[] $result

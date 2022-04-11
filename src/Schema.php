@@ -82,6 +82,11 @@ class Schema
         return new AdultEntertainment();
     }
 
+    public static function adultOrientedEnumeration(): AdultOrientedEnumeration
+    {
+        return new AdultOrientedEnumeration();
+    }
+
     public static function advertiserContentArticle(): AdvertiserContentArticle
     {
         return new AdvertiserContentArticle();
@@ -1117,6 +1122,11 @@ class Schema
         return new DigitalDocumentPermissionType();
     }
 
+    public static function digitalPlatformEnumeration(): DigitalPlatformEnumeration
+    {
+        return new DigitalPlatformEnumeration();
+    }
+
     public static function disagreeAction(): DisagreeAction
     {
         return new DisagreeAction();
@@ -1535,6 +1545,11 @@ class Schema
     public static function game(): Game
     {
         return new Game();
+    }
+
+    public static function gameAvailabilityEnumeration(): GameAvailabilityEnumeration
+    {
+        return new GameAvailabilityEnumeration();
     }
 
     public static function gamePlayMode(): GamePlayMode
@@ -2772,6 +2787,16 @@ class Schema
         return new OnDemandEvent();
     }
 
+    public static function onlineBusiness(): OnlineBusiness
+    {
+        return new OnlineBusiness();
+    }
+
+    public static function onlineStore(): OnlineStore
+    {
+        return new OnlineStore();
+    }
+
     public static function openingHoursSpecification(): OpeningHoursSpecification
     {
         return new OpeningHoursSpecification();
@@ -3020,6 +3045,11 @@ class Schema
     public static function playAction(): PlayAction
     {
         return new PlayAction();
+    }
+
+    public static function playGameAction(): PlayGameAction
+    {
+        return new PlayGameAction();
     }
 
     public static function playground(): Playground
@@ -3600,6 +3630,11 @@ class Schema
     public static function searchAction(): SearchAction
     {
         return new SearchAction();
+    }
+
+    public static function searchRescueOrganization(): SearchRescueOrganization
+    {
+        return new SearchRescueOrganization();
     }
 
     public static function searchResultsPage(): SearchResultsPage

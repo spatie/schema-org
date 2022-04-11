@@ -72,6 +72,8 @@ interface MusicGroupContract
 
     public function funder($funder);
 
+    public function funding($funding);
+
     public function genre($genre);
 
     public function globalLocationNumber($globalLocationNumber);
@@ -93,6 +95,10 @@ interface MusicGroupContract
     public function interactionStatistic($interactionStatistic);
 
     public function isicV4($isicV4);
+
+    public function iso6523Code($iso6523Code);
+
+    public function keywords($keywords);
 
     public function knowsAbout($knowsAbout);
 

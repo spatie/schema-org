@@ -20,6 +20,8 @@ interface BioChemEntityContract
 
     public function disambiguatingDescription($disambiguatingDescription);
 
+    public function funding($funding);
+
     public function hasBioChemEntityPart($hasBioChemEntityPart);
 
     public function hasMolecularFunction($hasMolecularFunction);

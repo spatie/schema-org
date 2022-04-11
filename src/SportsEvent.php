@@ -363,6 +363,22 @@ class SportsEvent extends BaseType implements SportsEventContract, EventContract
     }
 
     /**
+     * A [[Grant]] that directly or indirectly provide funding or sponsorship
+     * for this item. See also [[ownershipFundingInfo]].
+     *
+     * @param \Spatie\SchemaOrg\Contracts\GrantContract|\Spatie\SchemaOrg\Contracts\GrantContract[] $funding
+     *
+     * @return static
+     *
+     * @see https://schema.org/funding
+     * @see https://pending.schema.org
+     */
+    public function funding($funding)
+    {
+        return $this->setProperty('funding', $funding);
+    }
+
+    /**
      * The home team in a sports event.
      *
      * @param \Spatie\SchemaOrg\Contracts\PersonContract|\Spatie\SchemaOrg\Contracts\PersonContract[]|\Spatie\SchemaOrg\Contracts\SportsTeamContract|\Spatie\SchemaOrg\Contracts\SportsTeamContract[] $homeTeam
@@ -439,6 +455,22 @@ class SportsEvent extends BaseType implements SportsEventContract, EventContract
     public function isAccessibleForFree($isAccessibleForFree)
     {
         return $this->setProperty('isAccessibleForFree', $isAccessibleForFree);
+    }
+
+    /**
+     * Keywords or tags used to describe some item. Multiple textual entries in
+     * a keywords list are typically delimited by commas, or by repeating the
+     * property.
+     *
+     * @param \Spatie\SchemaOrg\Contracts\DefinedTermContract|\Spatie\SchemaOrg\Contracts\DefinedTermContract[]|string|string[] $keywords
+     *
+     * @return static
+     *
+     * @see https://schema.org/keywords
+     */
+    public function keywords($keywords)
+    {
+        return $this->setProperty('keywords', $keywords);
     }
 
     /**

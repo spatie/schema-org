@@ -14,6 +14,8 @@ interface GrantContract
 
     public function fundedItem($fundedItem);
 
+    public function funder($funder);
+
     public function identifier($identifier);
 
     public function image($image);

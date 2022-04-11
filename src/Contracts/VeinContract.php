@@ -24,6 +24,8 @@ interface VeinContract
 
     public function drainsTo($drainsTo);
 
+    public function funding($funding);
+
     public function guideline($guideline);
 
     public function identifier($identifier);

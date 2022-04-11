@@ -95,9 +95,10 @@ class MonetaryGrant extends BaseType implements MonetaryGrantContract, GrantCont
     }
 
     /**
-     * Indicates an item funded or sponsored through a [[Grant]].
+     * Indicates something directly or indirectly funded or sponsored through a
+     * [[Grant]]. See also [[ownershipFundingInfo]].
      *
-     * @param \Spatie\SchemaOrg\Contracts\ThingContract|\Spatie\SchemaOrg\Contracts\ThingContract[] $fundedItem
+     * @param \Spatie\SchemaOrg\Contracts\BioChemEntityContract|\Spatie\SchemaOrg\Contracts\BioChemEntityContract[]|\Spatie\SchemaOrg\Contracts\CreativeWorkContract|\Spatie\SchemaOrg\Contracts\CreativeWorkContract[]|\Spatie\SchemaOrg\Contracts\EventContract|\Spatie\SchemaOrg\Contracts\EventContract[]|\Spatie\SchemaOrg\Contracts\MedicalEntityContract|\Spatie\SchemaOrg\Contracts\MedicalEntityContract[]|\Spatie\SchemaOrg\Contracts\OrganizationContract|\Spatie\SchemaOrg\Contracts\OrganizationContract[]|\Spatie\SchemaOrg\Contracts\PersonContract|\Spatie\SchemaOrg\Contracts\PersonContract[]|\Spatie\SchemaOrg\Contracts\ProductContract|\Spatie\SchemaOrg\Contracts\ProductContract[] $fundedItem
      *
      * @return static
      *

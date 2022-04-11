@@ -52,9 +52,9 @@ class ProductCollection extends BaseType implements ProductCollectionContract, C
 
     /**
      * The human sensory perceptual system or cognitive faculty through which a
-     * person may process or perceive information. Expected values include:
-     * auditory, tactile, textual, visual, colorDependent, chartOnVisual,
-     * chemOnVisual, diagramOnVisual, mathOnVisual, musicOnVisual, textOnVisual.
+     * person may process or perceive information. Values should be drawn from
+     * the [approved
+     * vocabulary](https://www.w3.org/2021/a11y-discov-vocab/latest/#accessMode-vocabulary).
      *
      * @param string|string[] $accessMode
      *
@@ -70,8 +70,9 @@ class ProductCollection extends BaseType implements ProductCollectionContract, C
 
     /**
      * A list of single or combined accessModes that are sufficient to
-     * understand all the intellectual content of a resource. Expected values
-     * include:  auditory, tactile, textual, visual.
+     * understand all the intellectual content of a resource. Values should be
+     * drawn from the [approved
+     * vocabulary](https://www.w3.org/2021/a11y-discov-vocab/latest/#accessModeSufficient-vocabulary).
      *
      * @param \Spatie\SchemaOrg\Contracts\ItemListContract|\Spatie\SchemaOrg\Contracts\ItemListContract[] $accessModeSufficient
      *
@@ -87,8 +88,8 @@ class ProductCollection extends BaseType implements ProductCollectionContract, C
 
     /**
      * Indicates that the resource is compatible with the referenced
-     * accessibility API ([WebSchemas wiki lists possible
-     * values](http://www.w3.org/wiki/WebSchemas/Accessibility)).
+     * accessibility API. Values should be drawn from the [approved
+     * vocabulary](https://www.w3.org/2021/a11y-discov-vocab/latest/#accessibilityAPI-vocabulary).
      *
      * @param string|string[] $accessibilityAPI
      *
@@ -103,8 +104,8 @@ class ProductCollection extends BaseType implements ProductCollectionContract, C
 
     /**
      * Identifies input methods that are sufficient to fully control the
-     * described resource ([WebSchemas wiki lists possible
-     * values](http://www.w3.org/wiki/WebSchemas/Accessibility)).
+     * described resource. Values should be drawn from the [approved
+     * vocabulary](https://www.w3.org/2021/a11y-discov-vocab/latest/#accessibilityControl-vocabulary).
      *
      * @param string|string[] $accessibilityControl
      *
@@ -119,8 +120,9 @@ class ProductCollection extends BaseType implements ProductCollectionContract, C
 
     /**
      * Content features of the resource, such as accessible media, alternatives
-     * and supported enhancements for accessibility ([WebSchemas wiki lists
-     * possible values](http://www.w3.org/wiki/WebSchemas/Accessibility)).
+     * and supported enhancements for accessibility. Values should be drawn from
+     * the [approved
+     * vocabulary](https://www.w3.org/2021/a11y-discov-vocab/latest/#accessibilityFeature-vocabulary).
      *
      * @param string|string[] $accessibilityFeature
      *
@@ -135,9 +137,9 @@ class ProductCollection extends BaseType implements ProductCollectionContract, C
 
     /**
      * A characteristic of the described resource that is physiologically
-     * dangerous to some users. Related to WCAG 2.0 guideline 2.3 ([WebSchemas
-     * wiki lists possible
-     * values](http://www.w3.org/wiki/WebSchemas/Accessibility)).
+     * dangerous to some users. Related to WCAG 2.0 guideline 2.3. Values should
+     * be drawn from the [approved
+     * vocabulary](https://www.w3.org/2021/a11y-discov-vocab/latest/#accessibilityHazard-vocabulary).
      *
      * @param string|string[] $accessibilityHazard
      *
@@ -428,7 +430,7 @@ class ProductCollection extends BaseType implements ProductCollectionContract, C
      * A category for the item. Greater signs or slashes can be used to
      * informally indicate a category hierarchy.
      *
-     * @param \Spatie\SchemaOrg\Contracts\PhysicalActivityCategoryContract|\Spatie\SchemaOrg\Contracts\PhysicalActivityCategoryContract[]|\Spatie\SchemaOrg\Contracts\ThingContract|\Spatie\SchemaOrg\Contracts\ThingContract[]|string|string[] $category
+     * @param \Spatie\SchemaOrg\Contracts\CategoryCodeContract|\Spatie\SchemaOrg\Contracts\CategoryCodeContract[]|\Spatie\SchemaOrg\Contracts\PhysicalActivityCategoryContract|\Spatie\SchemaOrg\Contracts\PhysicalActivityCategoryContract[]|\Spatie\SchemaOrg\Contracts\ThingContract|\Spatie\SchemaOrg\Contracts\ThingContract[]|string|string[] $category
      *
      * @return static
      *
@@ -1108,6 +1110,22 @@ class ProductCollection extends BaseType implements ProductCollectionContract, C
     }
 
     /**
+     * A [[Grant]] that directly or indirectly provide funding or sponsorship
+     * for this item. See also [[ownershipFundingInfo]].
+     *
+     * @param \Spatie\SchemaOrg\Contracts\GrantContract|\Spatie\SchemaOrg\Contracts\GrantContract[] $funding
+     *
+     * @return static
+     *
+     * @see https://schema.org/funding
+     * @see https://pending.schema.org
+     */
+    public function funding($funding)
+    {
+        return $this->setProperty('funding', $funding);
+    }
+
+    /**
      * Genre of the creative work, broadcast channel or group.
      *
      * @param string|string[] $genre
@@ -1226,6 +1244,23 @@ class ProductCollection extends BaseType implements ProductCollectionContract, C
     public function gtin8($gtin8)
     {
         return $this->setProperty('gtin8', $gtin8);
+    }
+
+    /**
+     * Used to tag an item to be intended or suitable for consumption or use by
+     * adults only.
+     *
+     * @param \Spatie\SchemaOrg\Contracts\AdultOrientedEnumerationContract|\Spatie\SchemaOrg\Contracts\AdultOrientedEnumerationContract[] $hasAdultConsideration
+     *
+     * @return static
+     *
+     * @see https://schema.org/hasAdultConsideration
+     * @see https://pending.schema.org
+     * @link https://github.com/schemaorg/schemaorg/issues/2989
+     */
+    public function hasAdultConsideration($hasAdultConsideration)
+    {
+        return $this->setProperty('hasAdultConsideration', $hasAdultConsideration);
     }
 
     /**
@@ -1655,8 +1690,9 @@ class ProductCollection extends BaseType implements ProductCollectionContract, C
     }
 
     /**
-     * Keywords or tags used to describe this content. Multiple entries in a
-     * keywords list are typically delimited by commas.
+     * Keywords or tags used to describe some item. Multiple textual entries in
+     * a keywords list are typically delimited by commas, or by repeating the
+     * property.
      *
      * @param \Spatie\SchemaOrg\Contracts\DefinedTermContract|\Spatie\SchemaOrg\Contracts\DefinedTermContract[]|string|string[] $keywords
      *
@@ -2039,7 +2075,7 @@ class ProductCollection extends BaseType implements ProductCollectionContract, C
      * @return static
      *
      * @see https://schema.org/provider
-     * @link https://github.com/schemaorg/schemaorg/issues/2289
+     * @see https://pending.schema.org
      */
     public function provider($provider)
     {

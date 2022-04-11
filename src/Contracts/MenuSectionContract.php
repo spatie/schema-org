@@ -120,6 +120,8 @@ interface MenuSectionContract
 
     public function funder($funder);
 
+    public function funding($funding);
+
     public function genre($genre);
 
     public function hasMenuItem($hasMenuItem);

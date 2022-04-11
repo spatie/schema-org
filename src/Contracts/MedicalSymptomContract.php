@@ -24,6 +24,8 @@ interface MedicalSymptomContract
 
     public function expectedPrognosis($expectedPrognosis);
 
+    public function funding($funding);
+
     public function guideline($guideline);
 
     public function identifier($identifier);

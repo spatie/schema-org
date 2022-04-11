@@ -377,6 +377,22 @@ class DeliveryEvent extends BaseType implements DeliveryEventContract, EventCont
     }
 
     /**
+     * A [[Grant]] that directly or indirectly provide funding or sponsorship
+     * for this item. See also [[ownershipFundingInfo]].
+     *
+     * @param \Spatie\SchemaOrg\Contracts\GrantContract|\Spatie\SchemaOrg\Contracts\GrantContract[] $funding
+     *
+     * @return static
+     *
+     * @see https://schema.org/funding
+     * @see https://pending.schema.org
+     */
+    public function funding($funding)
+    {
+        return $this->setProperty('funding', $funding);
+    }
+
+    /**
      * Method used for delivery or shipping.
      *
      * @param \Spatie\SchemaOrg\Contracts\DeliveryMethodContract|\Spatie\SchemaOrg\Contracts\DeliveryMethodContract[] $hasDeliveryMethod
@@ -453,6 +469,22 @@ class DeliveryEvent extends BaseType implements DeliveryEventContract, EventCont
     public function isAccessibleForFree($isAccessibleForFree)
     {
         return $this->setProperty('isAccessibleForFree', $isAccessibleForFree);
+    }
+
+    /**
+     * Keywords or tags used to describe some item. Multiple textual entries in
+     * a keywords list are typically delimited by commas, or by repeating the
+     * property.
+     *
+     * @param \Spatie\SchemaOrg\Contracts\DefinedTermContract|\Spatie\SchemaOrg\Contracts\DefinedTermContract[]|string|string[] $keywords
+     *
+     * @return static
+     *
+     * @see https://schema.org/keywords
+     */
+    public function keywords($keywords)
+    {
+        return $this->setProperty('keywords', $keywords);
     }
 
     /**

@@ -50,9 +50,9 @@ class VideoGame extends BaseType implements VideoGameContract, CreativeWorkContr
 
     /**
      * The human sensory perceptual system or cognitive faculty through which a
-     * person may process or perceive information. Expected values include:
-     * auditory, tactile, textual, visual, colorDependent, chartOnVisual,
-     * chemOnVisual, diagramOnVisual, mathOnVisual, musicOnVisual, textOnVisual.
+     * person may process or perceive information. Values should be drawn from
+     * the [approved
+     * vocabulary](https://www.w3.org/2021/a11y-discov-vocab/latest/#accessMode-vocabulary).
      *
      * @param string|string[] $accessMode
      *
@@ -68,8 +68,9 @@ class VideoGame extends BaseType implements VideoGameContract, CreativeWorkContr
 
     /**
      * A list of single or combined accessModes that are sufficient to
-     * understand all the intellectual content of a resource. Expected values
-     * include:  auditory, tactile, textual, visual.
+     * understand all the intellectual content of a resource. Values should be
+     * drawn from the [approved
+     * vocabulary](https://www.w3.org/2021/a11y-discov-vocab/latest/#accessModeSufficient-vocabulary).
      *
      * @param \Spatie\SchemaOrg\Contracts\ItemListContract|\Spatie\SchemaOrg\Contracts\ItemListContract[] $accessModeSufficient
      *
@@ -85,8 +86,8 @@ class VideoGame extends BaseType implements VideoGameContract, CreativeWorkContr
 
     /**
      * Indicates that the resource is compatible with the referenced
-     * accessibility API ([WebSchemas wiki lists possible
-     * values](http://www.w3.org/wiki/WebSchemas/Accessibility)).
+     * accessibility API. Values should be drawn from the [approved
+     * vocabulary](https://www.w3.org/2021/a11y-discov-vocab/latest/#accessibilityAPI-vocabulary).
      *
      * @param string|string[] $accessibilityAPI
      *
@@ -101,8 +102,8 @@ class VideoGame extends BaseType implements VideoGameContract, CreativeWorkContr
 
     /**
      * Identifies input methods that are sufficient to fully control the
-     * described resource ([WebSchemas wiki lists possible
-     * values](http://www.w3.org/wiki/WebSchemas/Accessibility)).
+     * described resource. Values should be drawn from the [approved
+     * vocabulary](https://www.w3.org/2021/a11y-discov-vocab/latest/#accessibilityControl-vocabulary).
      *
      * @param string|string[] $accessibilityControl
      *
@@ -117,8 +118,9 @@ class VideoGame extends BaseType implements VideoGameContract, CreativeWorkContr
 
     /**
      * Content features of the resource, such as accessible media, alternatives
-     * and supported enhancements for accessibility ([WebSchemas wiki lists
-     * possible values](http://www.w3.org/wiki/WebSchemas/Accessibility)).
+     * and supported enhancements for accessibility. Values should be drawn from
+     * the [approved
+     * vocabulary](https://www.w3.org/2021/a11y-discov-vocab/latest/#accessibilityFeature-vocabulary).
      *
      * @param string|string[] $accessibilityFeature
      *
@@ -133,9 +135,9 @@ class VideoGame extends BaseType implements VideoGameContract, CreativeWorkContr
 
     /**
      * A characteristic of the described resource that is physiologically
-     * dangerous to some users. Related to WCAG 2.0 guideline 2.3 ([WebSchemas
-     * wiki lists possible
-     * values](http://www.w3.org/wiki/WebSchemas/Accessibility)).
+     * dangerous to some users. Related to WCAG 2.0 guideline 2.3. Values should
+     * be drawn from the [approved
+     * vocabulary](https://www.w3.org/2021/a11y-discov-vocab/latest/#accessibilityHazard-vocabulary).
      *
      * @param string|string[] $accessibilityHazard
      *
@@ -1213,6 +1215,36 @@ class VideoGame extends BaseType implements VideoGameContract, CreativeWorkContr
     }
 
     /**
+     * A [[Grant]] that directly or indirectly provide funding or sponsorship
+     * for this item. See also [[ownershipFundingInfo]].
+     *
+     * @param \Spatie\SchemaOrg\Contracts\GrantContract|\Spatie\SchemaOrg\Contracts\GrantContract[] $funding
+     *
+     * @return static
+     *
+     * @see https://schema.org/funding
+     * @see https://pending.schema.org
+     */
+    public function funding($funding)
+    {
+        return $this->setProperty('funding', $funding);
+    }
+
+    /**
+     * The edition of a video game.
+     *
+     * @param string|string[] $gameEdition
+     *
+     * @return static
+     *
+     * @see https://schema.org/gameEdition
+     */
+    public function gameEdition($gameEdition)
+    {
+        return $this->setProperty('gameEdition', $gameEdition);
+    }
+
+    /**
      * An item is an object within the game world that can be collected by a
      * player or, occasionally, a non-player character.
      *
@@ -1519,8 +1551,9 @@ class VideoGame extends BaseType implements VideoGameContract, CreativeWorkContr
     }
 
     /**
-     * Keywords or tags used to describe this content. Multiple entries in a
-     * keywords list are typically delimited by commas.
+     * Keywords or tags used to describe some item. Multiple textual entries in
+     * a keywords list are typically delimited by commas, or by repeating the
+     * property.
      *
      * @param \Spatie\SchemaOrg\Contracts\DefinedTermContract|\Spatie\SchemaOrg\Contracts\DefinedTermContract[]|string|string[] $keywords
      *
@@ -1893,7 +1926,7 @@ class VideoGame extends BaseType implements VideoGameContract, CreativeWorkContr
      * @return static
      *
      * @see https://schema.org/provider
-     * @link https://github.com/schemaorg/schemaorg/issues/2289
+     * @see https://pending.schema.org
      */
     public function provider($provider)
     {

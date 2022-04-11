@@ -18,6 +18,8 @@ interface DDxElementContract
 
     public function distinguishingSign($distinguishingSign);
 
+    public function funding($funding);
+
     public function guideline($guideline);
 
     public function identifier($identifier);

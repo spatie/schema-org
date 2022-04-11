@@ -503,6 +503,22 @@ class Corporation extends BaseType implements CorporationContract, OrganizationC
     }
 
     /**
+     * A [[Grant]] that directly or indirectly provide funding or sponsorship
+     * for this item. See also [[ownershipFundingInfo]].
+     *
+     * @param \Spatie\SchemaOrg\Contracts\GrantContract|\Spatie\SchemaOrg\Contracts\GrantContract[] $funding
+     *
+     * @return static
+     *
+     * @see https://schema.org/funding
+     * @see https://pending.schema.org
+     */
+    public function funding($funding)
+    {
+        return $this->setProperty('funding', $funding);
+    }
+
+    /**
      * The [Global Location Number](http://www.gs1.org/gln) (GLN, sometimes also
      * referred to as International Location Number or ILN) of the respective
      * organization, person, or place. The GLN is a 13-digit number used to
@@ -663,6 +679,43 @@ class Corporation extends BaseType implements CorporationContract, OrganizationC
     public function isicV4($isicV4)
     {
         return $this->setProperty('isicV4', $isicV4);
+    }
+
+    /**
+     * An organization identifier as defined in ISO 6523(-1). Note that many
+     * existing organization identifiers such as
+     * [leiCode](https://schema.org/leiCode), [duns](https://schema.org/duns)
+     * and [vatID](https://schema.org/vatID) can be expressed as an ISO 6523
+     * identifier by setting the ICD part of the ISO 6523 identifier
+     * accordingly.
+     *
+     * @param string|string[] $iso6523Code
+     *
+     * @return static
+     *
+     * @see https://schema.org/iso6523Code
+     * @see https://pending.schema.org
+     * @link https://github.com/schemaorg/schemaorg/issues/2915
+     */
+    public function iso6523Code($iso6523Code)
+    {
+        return $this->setProperty('iso6523Code', $iso6523Code);
+    }
+
+    /**
+     * Keywords or tags used to describe some item. Multiple textual entries in
+     * a keywords list are typically delimited by commas, or by repeating the
+     * property.
+     *
+     * @param \Spatie\SchemaOrg\Contracts\DefinedTermContract|\Spatie\SchemaOrg\Contracts\DefinedTermContract[]|string|string[] $keywords
+     *
+     * @return static
+     *
+     * @see https://schema.org/keywords
+     */
+    public function keywords($keywords)
+    {
+        return $this->setProperty('keywords', $keywords);
     }
 
     /**

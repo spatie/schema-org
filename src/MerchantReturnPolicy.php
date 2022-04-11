@@ -73,6 +73,23 @@ class MerchantReturnPolicy extends BaseType implements MerchantReturnPolicyContr
     }
 
     /**
+     * A country where a particular merchant return policy applies to, for
+     * example the two-letter ISO 3166-1 alpha-2 country code.
+     *
+     * @param \Spatie\SchemaOrg\Contracts\CountryContract|\Spatie\SchemaOrg\Contracts\CountryContract[]|string|string[] $applicableCountry
+     *
+     * @return static
+     *
+     * @see https://schema.org/applicableCountry
+     * @see https://pending.schema.org
+     * @link https://github.com/schemaorg/schemaorg/issues/3001
+     */
+    public function applicableCountry($applicableCountry)
+    {
+        return $this->setProperty('applicableCountry', $applicableCountry);
+    }
+
+    /**
      * The type of return fees if the product is returned due to customer
      * remorse.
      *

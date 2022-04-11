@@ -228,7 +228,7 @@ class OfferForLease extends BaseType implements OfferForLeaseContract, Intangibl
      * A category for the item. Greater signs or slashes can be used to
      * informally indicate a category hierarchy.
      *
-     * @param \Spatie\SchemaOrg\Contracts\PhysicalActivityCategoryContract|\Spatie\SchemaOrg\Contracts\PhysicalActivityCategoryContract[]|\Spatie\SchemaOrg\Contracts\ThingContract|\Spatie\SchemaOrg\Contracts\ThingContract[]|string|string[] $category
+     * @param \Spatie\SchemaOrg\Contracts\CategoryCodeContract|\Spatie\SchemaOrg\Contracts\CategoryCodeContract[]|\Spatie\SchemaOrg\Contracts\PhysicalActivityCategoryContract|\Spatie\SchemaOrg\Contracts\PhysicalActivityCategoryContract[]|\Spatie\SchemaOrg\Contracts\ThingContract|\Spatie\SchemaOrg\Contracts\ThingContract[]|string|string[] $category
      *
      * @return static
      *
@@ -478,6 +478,23 @@ class OfferForLease extends BaseType implements OfferForLeaseContract, Intangibl
     }
 
     /**
+     * Used to tag an item to be intended or suitable for consumption or use by
+     * adults only.
+     *
+     * @param \Spatie\SchemaOrg\Contracts\AdultOrientedEnumerationContract|\Spatie\SchemaOrg\Contracts\AdultOrientedEnumerationContract[] $hasAdultConsideration
+     *
+     * @return static
+     *
+     * @see https://schema.org/hasAdultConsideration
+     * @see https://pending.schema.org
+     * @link https://github.com/schemaorg/schemaorg/issues/2989
+     */
+    public function hasAdultConsideration($hasAdultConsideration)
+    {
+        return $this->setProperty('hasAdultConsideration', $hasAdultConsideration);
+    }
+
+    /**
      * A product measurement, for example the inseam of pants, the wheel size of
      * a bicycle, or the gauge of a screw. Usually an exact measurement, but can
      * also be a range of measurements for adjustable products, for example
@@ -595,6 +612,20 @@ class OfferForLease extends BaseType implements OfferForLeaseContract, Intangibl
     public function inventoryLevel($inventoryLevel)
     {
         return $this->setProperty('inventoryLevel', $inventoryLevel);
+    }
+
+    /**
+     * Indicates whether this content is family friendly.
+     *
+     * @param bool|bool[] $isFamilyFriendly
+     *
+     * @return static
+     *
+     * @see https://schema.org/isFamilyFriendly
+     */
+    public function isFamilyFriendly($isFamilyFriendly)
+    {
+        return $this->setProperty('isFamilyFriendly', $isFamilyFriendly);
     }
 
     /**

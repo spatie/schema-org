@@ -38,6 +38,8 @@ interface DrugContract
 
     public function foodWarning($foodWarning);
 
+    public function funding($funding);
+
     public function guideline($guideline);
 
     public function identifier($identifier);

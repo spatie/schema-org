@@ -264,7 +264,7 @@ class BroadcastService extends BaseType implements BroadcastServiceContract, Int
      * A category for the item. Greater signs or slashes can be used to
      * informally indicate a category hierarchy.
      *
-     * @param \Spatie\SchemaOrg\Contracts\PhysicalActivityCategoryContract|\Spatie\SchemaOrg\Contracts\PhysicalActivityCategoryContract[]|\Spatie\SchemaOrg\Contracts\ThingContract|\Spatie\SchemaOrg\Contracts\ThingContract[]|string|string[] $category
+     * @param \Spatie\SchemaOrg\Contracts\CategoryCodeContract|\Spatie\SchemaOrg\Contracts\CategoryCodeContract[]|\Spatie\SchemaOrg\Contracts\PhysicalActivityCategoryContract|\Spatie\SchemaOrg\Contracts\PhysicalActivityCategoryContract[]|\Spatie\SchemaOrg\Contracts\ThingContract|\Spatie\SchemaOrg\Contracts\ThingContract[]|string|string[] $category
      *
      * @return static
      *
@@ -554,7 +554,7 @@ class BroadcastService extends BaseType implements BroadcastServiceContract, Int
      * @return static
      *
      * @see https://schema.org/provider
-     * @link https://github.com/schemaorg/schemaorg/issues/2289
+     * @see https://pending.schema.org
      */
     public function provider($provider)
     {
