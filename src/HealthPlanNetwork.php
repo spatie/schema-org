@@ -81,8 +81,7 @@ class HealthPlanNetwork extends BaseType implements HealthPlanNetworkContract, I
     }
 
     /**
-     * Whether The costs to the patient for services under this network or
-     * formulary.
+     * The costs to the patient for services under this network or formulary.
      *
      * @param bool|bool[] $healthPlanCostSharing
      *
@@ -99,7 +98,7 @@ class HealthPlanNetwork extends BaseType implements HealthPlanNetworkContract, I
 
     /**
      * Name or unique ID of network. (Networks are often reused across different
-     * insurance plans).
+     * insurance plans.)
      *
      * @param string|string[] $healthPlanNetworkId
      *

@@ -188,7 +188,7 @@ class ProgramMembership extends BaseType implements ProgramMembershipContract, I
 
     /**
      * The number of membership points earned by the member. If necessary, the
-     * unitText can be used to express the units the points are issued in. (e.g.
+     * unitText can be used to express the units the points are issued in. (E.g.
      * stars, miles, etc.)
      *
      * @param \Spatie\SchemaOrg\Contracts\QuantitativeValueContract|\Spatie\SchemaOrg\Contracts\QuantitativeValueContract[]|float|float[]|int|int[] $membershipPointsEarned

@@ -82,8 +82,7 @@ class HealthPlanFormulary extends BaseType implements HealthPlanFormularyContrac
     }
 
     /**
-     * Whether The costs to the patient for services under this network or
-     * formulary.
+     * The costs to the patient for services under this network or formulary.
      *
      * @param bool|bool[] $healthPlanCostSharing
      *

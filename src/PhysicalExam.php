@@ -37,7 +37,7 @@ class PhysicalExam extends BaseType implements PhysicalExamContract, Enumeration
      const Appearance = 'https://schema.org/Appearance';
 
     /**
-     * Cardiovascular system assessment withclinical examination.
+     * Cardiovascular system assessment with clinical examination.
      *
      * @see https://schema.org/CardiovascularExam
      * @see https://health-lifesci.schema.org
@@ -53,7 +53,7 @@ class PhysicalExam extends BaseType implements PhysicalExamContract, Enumeration
      const Ear = 'https://schema.org/Ear';
 
     /**
-     * Eye or ophtalmological function assessment with clinical examination.
+     * Eye or ophthalmological function assessment with clinical examination.
      *
      * @see https://schema.org/Eye
      * @see https://health-lifesci.schema.org

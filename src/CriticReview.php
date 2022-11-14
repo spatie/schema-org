@@ -551,7 +551,7 @@ class CriticReview extends BaseType implements CriticReviewContract, CreativeWor
     }
 
     /**
-     * Official rating of a piece of content&#x2014;for example,'MPAA PG-13'.
+     * Official rating of a piece of content&#x2014;for example, 'MPAA PG-13'.
      *
      * @param \Spatie\SchemaOrg\Contracts\RatingContract|\Spatie\SchemaOrg\Contracts\RatingContract[]|string|string[] $contentRating
      *
@@ -829,7 +829,7 @@ class CriticReview extends BaseType implements CriticReviewContract, CreativeWor
      * or television.
      * 
      * For example, the motion picture known as "Ghostbusters" whose
-     * [[titleEIDR]] is "10.5240/7EC7-228A-510A-053E-CBB8-J", has several edits
+     * [[titleEIDR]] is "10.5240/7EC7-228A-510A-053E-CBB8-J" has several edits,
      * e.g. "10.5240/1F2A-E1C5-680A-14C6-E76B-I" and
      * "10.5240/8A35-3BEE-6497-5D12-9E4F-3".
      * 
@@ -935,9 +935,9 @@ class CriticReview extends BaseType implements CriticReviewContract, CreativeWor
      * Media type typically expressed using a MIME format (see [IANA
      * site](http://www.iana.org/assignments/media-types/media-types.xhtml) and
      * [MDN
-     * reference](https://developer.mozilla.org/en-US/docs/Web/HTTP/Basics_of_HTTP/MIME_types))
+     * reference](https://developer.mozilla.org/en-US/docs/Web/HTTP/Basics_of_HTTP/MIME_types)),
      * e.g. application/zip for a SoftwareApplication binary, audio/mpeg for
-     * .mp3 etc.).
+     * .mp3 etc.
      * 
      * In cases where a [[CreativeWork]] has several media type representations,
      * [[encoding]] can be used to indicate each [[MediaObject]] alongside
@@ -1009,7 +1009,7 @@ class CriticReview extends BaseType implements CriticReviewContract, CreativeWor
     /**
      * Media type, typically MIME format (see [IANA
      * site](http://www.iana.org/assignments/media-types/media-types.xhtml)) of
-     * the content e.g. application/zip of a SoftwareApplication binary. In
+     * the content, e.g. application/zip of a SoftwareApplication binary. In
      * cases where a CreativeWork has several media type representations,
      * 'encoding' can be used to indicate each MediaObject alongside particular
      * fileFormat information. Unregistered or niche file formats can be
@@ -1473,9 +1473,19 @@ class CriticReview extends BaseType implements CriticReviewContract, CreativeWor
     }
 
     /**
-     * Indicates, in the context of a [[Review]] (e.g. framed as 'pro' vs 'con'
-     * considerations), negative considerations - either as unstructured text,
-     * or a list.
+     * Provides negative considerations regarding something, most typically in
+     * pro/con lists for reviews (alongside [[positiveNotes]]). For symmetry 
+     * 
+     * In the case of a [[Review]], the property describes the [[itemReviewed]]
+     * from the perspective of the review; in the case of a [[Product]], the
+     * product itself is being described. Since product descriptions 
+     * tend to emphasise positive claims, it may be relatively unusual to find
+     * [[negativeNotes]] used in this way. Nevertheless for the sake of
+     * symmetry, [[negativeNotes]] can be used on [[Product]].
+     * 
+     * The property values can be expressed either as unstructured text
+     * (repeated as necessary), or if ordered, as a list (in which case the most
+     * negative is at the beginning of the list).
      *
      * @param \Spatie\SchemaOrg\Contracts\ItemListContract|\Spatie\SchemaOrg\Contracts\ItemListContract[]|\Spatie\SchemaOrg\Contracts\ListItemContract|\Spatie\SchemaOrg\Contracts\ListItemContract[]|\Spatie\SchemaOrg\Contracts\WebContentContract|\Spatie\SchemaOrg\Contracts\WebContentContract[]|string|string[] $negativeNotes
      *
@@ -1545,9 +1555,16 @@ class CriticReview extends BaseType implements CriticReviewContract, CreativeWor
     }
 
     /**
-     * Indicates, in the context of a [[Review]] (e.g. framed as 'pro' vs 'con'
-     * considerations), positive considerations - either as unstructured text,
-     * or a list.
+     * Provides positive considerations regarding something, for example product
+     * highlights or (alongside [[negativeNotes]]) pro/con lists for reviews.
+     * 
+     * In the case of a [[Review]], the property describes the [[itemReviewed]]
+     * from the perspective of the review; in the case of a [[Product]], the
+     * product itself is being described.
+     * 
+     * The property values can be expressed either as unstructured text
+     * (repeated as necessary), or if ordered, as a list (in which case the most
+     * positive is at the beginning of the list).
      *
      * @param \Spatie\SchemaOrg\Contracts\ItemListContract|\Spatie\SchemaOrg\Contracts\ItemListContract[]|\Spatie\SchemaOrg\Contracts\ListItemContract|\Spatie\SchemaOrg\Contracts\ListItemContract[]|\Spatie\SchemaOrg\Contracts\WebContentContract|\Spatie\SchemaOrg\Contracts\WebContentContract[]|string|string[] $positiveNotes
      *
@@ -1579,7 +1596,7 @@ class CriticReview extends BaseType implements CriticReviewContract, CreativeWor
 
     /**
      * The person or organization who produced the work (e.g. music album,
-     * movie, tv/radio series etc.).
+     * movie, TV/radio series etc.).
      *
      * @param \Spatie\SchemaOrg\Contracts\OrganizationContract|\Spatie\SchemaOrg\Contracts\OrganizationContract[]|\Spatie\SchemaOrg\Contracts\PersonContract|\Spatie\SchemaOrg\Contracts\PersonContract[] $producer
      *
@@ -1655,7 +1672,7 @@ class CriticReview extends BaseType implements CriticReviewContract, CreativeWor
     /**
      * The publishingPrinciples property indicates (typically via [[URL]]) a
      * document describing the editorial principles of an [[Organization]] (or
-     * individual e.g. a [[Person]] writing a blog) that relate to their
+     * individual, e.g. a [[Person]] writing a blog) that relate to their
      * activities as a publisher, e.g. ethics or diversity policies. When
      * applied to a [[CreativeWork]] (e.g. [[NewsArticle]]) the principles are
      * those of the party primarily responsible for the creation of the
@@ -1946,7 +1963,7 @@ class CriticReview extends BaseType implements CriticReviewContract, CreativeWor
 
     /**
      * A person or organization that supports a thing through a pledge, promise,
-     * or financial contribution. e.g. a sponsor of a Medical Study or a
+     * or financial contribution. E.g. a sponsor of a Medical Study or a
      * corporate sponsor of an event.
      *
      * @param \Spatie\SchemaOrg\Contracts\OrganizationContract|\Spatie\SchemaOrg\Contracts\OrganizationContract[]|\Spatie\SchemaOrg\Contracts\PersonContract|\Spatie\SchemaOrg\Contracts\PersonContract[] $sponsor
@@ -2016,8 +2033,8 @@ class CriticReview extends BaseType implements CriticReviewContract, CreativeWor
      * format](https://en.wikipedia.org/wiki/ISO_8601#Time_intervals). In
      *       the case of a Dataset it will typically indicate the relevant time
      * period in a precise notation (e.g. for a 2011 census dataset, the year
-     * 2011 would be written "2011/2012"). Other forms of content e.g.
-     * ScholarlyArticle, Book, TVSeries or TVEpisode may indicate their
+     * 2011 would be written "2011/2012"). Other forms of content, e.g.
+     * ScholarlyArticle, Book, TVSeries or TVEpisode, may indicate their
      * temporalCoverage in broader terms - textually or via well-known URL.
      *       Written works such as books may sometimes have precise temporal
      * coverage too, e.g. a work set in 1939 - 1945 can be indicated in ISO 8601
@@ -2084,8 +2101,8 @@ class CriticReview extends BaseType implements CriticReviewContract, CreativeWor
     }
 
     /**
-     * The work that this work has been translated from. e.g. 物种起源 is a
-     * translationOf “On the Origin of Species”
+     * The work that this work has been translated from. E.g. 物种起源 is a
+     * translationOf “On the Origin of Species”.
      *
      * @param \Spatie\SchemaOrg\Contracts\CreativeWorkContract|\Spatie\SchemaOrg\Contracts\CreativeWorkContract[] $translationOfWork
      *
@@ -2147,7 +2164,7 @@ class CriticReview extends BaseType implements CriticReviewContract, CreativeWor
      * The schema.org [[usageInfo]] property indicates further information about
      * a [[CreativeWork]]. This property is applicable both to works that are
      * freely available and to those that require payment or other transactions.
-     * It can reference additional information e.g. community expectations on
+     * It can reference additional information, e.g. community expectations on
      * preferred linking and citation conventions, as well as purchasing
      * details. For something that can be commercially licensed, usageInfo can
      * provide detailed, resource-specific information about licensing options.
@@ -2201,7 +2218,7 @@ class CriticReview extends BaseType implements CriticReviewContract, CreativeWor
 
     /**
      * Example/instance/realization/derivation of the concept of this creative
-     * work. eg. The paperback edition, first edition, or eBook.
+     * work. E.g. the paperback edition, first edition, or e-book.
      *
      * @param \Spatie\SchemaOrg\Contracts\CreativeWorkContract|\Spatie\SchemaOrg\Contracts\CreativeWorkContract[] $workExample
      *
@@ -2216,8 +2233,8 @@ class CriticReview extends BaseType implements CriticReviewContract, CreativeWor
     }
 
     /**
-     * A work that is a translation of the content of this work. e.g. 西遊記
-     * has an English workTranslation “Journey to the West”,a German
+     * A work that is a translation of the content of this work. E.g. 西遊記
+     * has an English workTranslation “Journey to the West”, a German
      * workTranslation “Monkeys Pilgerfahrt” and a Vietnamese  translation
      * Tây du ký bình khảo.
      *

@@ -429,7 +429,7 @@ class ChemicalSubstance extends BaseType implements ChemicalSubstanceContract, B
 
     /**
      * The taxonomic grouping of the organism that expresses, encodes, or in
-     * someway related to the BioChemEntity.
+     * some way related to the BioChemEntity.
      *
      * @param \Spatie\SchemaOrg\Contracts\DefinedTermContract|\Spatie\SchemaOrg\Contracts\DefinedTermContract[]|\Spatie\SchemaOrg\Contracts\TaxonContract|\Spatie\SchemaOrg\Contracts\TaxonContract[]|string|string[] $taxonomicRange
      *

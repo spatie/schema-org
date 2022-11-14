@@ -12,6 +12,8 @@ interface ProductGroupContract
 
     public function alternateName($alternateName);
 
+    public function asin($asin);
+
     public function audience($audience);
 
     public function award($award);
@@ -92,17 +94,23 @@ interface ProductGroupContract
 
     public function material($material);
 
+    public function mobileUrl($mobileUrl);
+
     public function model($model);
 
     public function mpn($mpn);
 
     public function name($name);
 
+    public function negativeNotes($negativeNotes);
+
     public function nsn($nsn);
 
     public function offers($offers);
 
     public function pattern($pattern);
+
+    public function positiveNotes($positiveNotes);
 
     public function potentialAction($potentialAction);
 

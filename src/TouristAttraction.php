@@ -19,9 +19,9 @@ use \Spatie\SchemaOrg\Contracts\ThingContract;
 class TouristAttraction extends BaseType implements TouristAttractionContract, PlaceContract, ThingContract
 {
     /**
-     * A property-value pair representing an additional characteristics of the
-     * entitity, e.g. a product feature or another characteristic for which
-     * there is no matching property in schema.org.
+     * A property-value pair representing an additional characteristic of the
+     * entity, e.g. a product feature or another characteristic for which there
+     * is no matching property in schema.org.
      * 
      * Note: Publishers should be aware that applications designed to use
      * specific schema.org properties (e.g. https://schema.org/width,
@@ -123,7 +123,7 @@ class TouristAttraction extends BaseType implements TouristAttractionContract, P
     /**
      * A language someone may use with or at the item, service or place. Please
      * use one of the language codes from the [IETF BCP 47
-     * standard](http://tools.ietf.org/html/bcp47). See also [[inLanguage]]
+     * standard](http://tools.ietf.org/html/bcp47). See also [[inLanguage]].
      *
      * @param \Spatie\SchemaOrg\Contracts\LanguageContract|\Spatie\SchemaOrg\Contracts\LanguageContract[]|string|string[] $availableLanguage
      *
@@ -358,9 +358,9 @@ class TouristAttraction extends BaseType implements TouristAttractionContract, P
 
     /**
      * Represents spatial relations in which two geometries (or the places they
-     * represent) are topologically disjoint: they have no point in common. They
-     * form a set of disconnected geometries." (a symmetric relationship, as
-     * defined in [DE-9IM](https://en.wikipedia.org/wiki/DE-9IM))
+     * represent) are topologically disjoint: "they have no point in common.
+     * They form a set of disconnected geometries." (A symmetric relationship,
+     * as defined in [DE-9IM](https://en.wikipedia.org/wiki/DE-9IM).)
      *
      * @param \Spatie\SchemaOrg\Contracts\GeospatialGeometryContract|\Spatie\SchemaOrg\Contracts\GeospatialGeometryContract[]|\Spatie\SchemaOrg\Contracts\PlaceContract|\Spatie\SchemaOrg\Contracts\PlaceContract[] $geoDisjoint
      *
@@ -379,7 +379,7 @@ class TouristAttraction extends BaseType implements TouristAttractionContract, P
      * [DE-9IM](https://en.wikipedia.org/wiki/DE-9IM). "Two geometries are
      * topologically equal if their interiors intersect and no part of the
      * interior or boundary of one geometry intersects the exterior of the
-     * other" (a symmetric relationship)
+     * other" (a symmetric relationship).
      *
      * @param \Spatie\SchemaOrg\Contracts\GeospatialGeometryContract|\Spatie\SchemaOrg\Contracts\GeospatialGeometryContract[]|\Spatie\SchemaOrg\Contracts\PlaceContract|\Spatie\SchemaOrg\Contracts\PlaceContract[] $geoEquals
      *
@@ -427,9 +427,9 @@ class TouristAttraction extends BaseType implements TouristAttractionContract, P
 
     /**
      * Represents spatial relations in which two geometries (or the places they
-     * represent) touch: they have at least one boundary point in common, but no
-     * interior points." (a symmetric relationship, as defined in
-     * [DE-9IM](https://en.wikipedia.org/wiki/DE-9IM) )
+     * represent) touch: "they have at least one boundary point in common, but
+     * no interior points." (A symmetric relationship, as defined in
+     * [DE-9IM](https://en.wikipedia.org/wiki/DE-9IM).)
      *
      * @param \Spatie\SchemaOrg\Contracts\GeospatialGeometryContract|\Spatie\SchemaOrg\Contracts\GeospatialGeometryContract[]|\Spatie\SchemaOrg\Contracts\PlaceContract|\Spatie\SchemaOrg\Contracts\PlaceContract[] $geoTouches
      *
@@ -920,8 +920,8 @@ class TouristAttraction extends BaseType implements TouristAttractionContract, P
     }
 
     /**
-     * Attraction suitable for type(s) of tourist. eg. Children, visitors from a
-     * particular country, etc.
+     * Attraction suitable for type(s) of tourist. E.g. children, visitors from
+     * a particular country, etc.
      *
      * @param \Spatie\SchemaOrg\Contracts\AudienceContract|\Spatie\SchemaOrg\Contracts\AudienceContract[]|string|string[] $touristType
      *

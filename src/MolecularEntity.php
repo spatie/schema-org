@@ -421,7 +421,7 @@ class MolecularEntity extends BaseType implements MolecularEntityContract, BioCh
      * The monoisotopic mass is the sum of the masses of the atoms in a molecule
      * using the unbound, ground-state, rest mass of the principal (most
      * abundant) isotope for each element instead of the isotopic average mass.
-     * Please include the units the form '<Number> <unit>', for example
+     * Please include the units in the form '<Number> <unit>', for example
      * '770.230488 g/mol' or as '<QuantitativeValue>.
      *
      * @param \Spatie\SchemaOrg\Contracts\QuantitativeValueContract|\Spatie\SchemaOrg\Contracts\QuantitativeValueContract[]|string|string[] $monoisotopicMolecularWeight
@@ -531,7 +531,7 @@ class MolecularEntity extends BaseType implements MolecularEntityContract, BioCh
 
     /**
      * The taxonomic grouping of the organism that expresses, encodes, or in
-     * someway related to the BioChemEntity.
+     * some way related to the BioChemEntity.
      *
      * @param \Spatie\SchemaOrg\Contracts\DefinedTermContract|\Spatie\SchemaOrg\Contracts\DefinedTermContract[]|\Spatie\SchemaOrg\Contracts\TaxonContract|\Spatie\SchemaOrg\Contracts\TaxonContract[]|string|string[] $taxonomicRange
      *

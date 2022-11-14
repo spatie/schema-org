@@ -181,7 +181,7 @@ class Protein extends BaseType implements ProteinContract, BioChemEntityContract
     }
 
     /**
-     * A symbolic representation of a BioChemEnity. For example, a nucleotide
+     * A symbolic representation of a BioChemEntity. For example, a nucleotide
      * sequence of a Gene or an amino acid sequence of a Protein.
      *
      * @param string|string[] $hasBioPolymerSequence
@@ -402,7 +402,7 @@ class Protein extends BaseType implements ProteinContract, BioChemEntityContract
 
     /**
      * The taxonomic grouping of the organism that expresses, encodes, or in
-     * someway related to the BioChemEntity.
+     * some way related to the BioChemEntity.
      *
      * @param \Spatie\SchemaOrg\Contracts\DefinedTermContract|\Spatie\SchemaOrg\Contracts\DefinedTermContract[]|\Spatie\SchemaOrg\Contracts\TaxonContract|\Spatie\SchemaOrg\Contracts\TaxonContract[]|string|string[] $taxonomicRange
      *

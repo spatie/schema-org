@@ -38,6 +38,8 @@ interface ProductCollectionContract
 
     public function archivedAt($archivedAt);
 
+    public function asin($asin);
+
     public function assesses($assesses);
 
     public function associatedMedia($associatedMedia);
@@ -228,11 +230,15 @@ interface ProductCollectionContract
 
     public function mentions($mentions);
 
+    public function mobileUrl($mobileUrl);
+
     public function model($model);
 
     public function mpn($mpn);
 
     public function name($name);
+
+    public function negativeNotes($negativeNotes);
 
     public function nsn($nsn);
 
@@ -241,6 +247,8 @@ interface ProductCollectionContract
     public function pattern($pattern);
 
     public function position($position);
+
+    public function positiveNotes($positiveNotes);
 
     public function potentialAction($potentialAction);
 

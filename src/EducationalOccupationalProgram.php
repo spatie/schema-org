@@ -152,7 +152,7 @@ class EducationalOccupationalProgram extends BaseType implements EducationalOccu
     }
 
     /**
-     * Similar to courseMode, The medium or means of delivery of the program as
+     * Similar to courseMode, the medium or means of delivery of the program as
      * a whole. The value may either be a text label (e.g. "online", "onsite" or
      * "blended"; "synchronous" or "asynchronous"; "full-time" or "part-time")
      * or a URL reference to a term from a controlled vocabulary (e.g.
@@ -416,7 +416,7 @@ class EducationalOccupationalProgram extends BaseType implements EducationalOccu
 
     /**
      * The type of educational or occupational program. For example, classroom,
-     * internship, alternance, etc..
+     * internship, alternance, etc.
      *
      * @param \Spatie\SchemaOrg\Contracts\DefinedTermContract|\Spatie\SchemaOrg\Contracts\DefinedTermContract[]|string|string[] $programType
      *

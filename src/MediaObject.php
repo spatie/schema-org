@@ -8,10 +8,11 @@ use \Spatie\SchemaOrg\Contracts\ThingContract;
 
 /**
  * A media object, such as an image, video, or audio object embedded in a web
- * page or a downloadable dataset i.e. DataDownload. Note that a creative work
+ * page or a downloadable dataset, i.e. DataDownload. Note that a creative work
  * may have many media objects associated with it on the same web page. For
  * example, a page about a single song (MusicRecording) may have a music video
- * (VideoObject), and a high and low bandwidth audio stream (2 AudioObject's).
+ * (VideoObject), and a high and low bandwidth audio stream (2
+ * [[AudioObject]]s).
  *
  * @see https://schema.org/MediaObject
  *
@@ -514,7 +515,7 @@ class MediaObject extends BaseType implements MediaObjectContract, CreativeWorkC
     }
 
     /**
-     * Official rating of a piece of content&#x2014;for example,'MPAA PG-13'.
+     * Official rating of a piece of content&#x2014;for example, 'MPAA PG-13'.
      *
      * @param \Spatie\SchemaOrg\Contracts\RatingContract|\Spatie\SchemaOrg\Contracts\RatingContract[]|string|string[] $contentRating
      *
@@ -545,7 +546,7 @@ class MediaObject extends BaseType implements MediaObjectContract, CreativeWorkC
     }
 
     /**
-     * File size in (mega/kilo) bytes.
+     * File size in (mega/kilo)bytes.
      *
      * @param string|string[] $contentSize
      *
@@ -836,7 +837,7 @@ class MediaObject extends BaseType implements MediaObjectContract, CreativeWorkC
      * or television.
      * 
      * For example, the motion picture known as "Ghostbusters" whose
-     * [[titleEIDR]] is "10.5240/7EC7-228A-510A-053E-CBB8-J", has several edits
+     * [[titleEIDR]] is "10.5240/7EC7-228A-510A-053E-CBB8-J" has several edits,
      * e.g. "10.5240/1F2A-E1C5-680A-14C6-E76B-I" and
      * "10.5240/8A35-3BEE-6497-5D12-9E4F-3".
      * 
@@ -972,9 +973,9 @@ class MediaObject extends BaseType implements MediaObjectContract, CreativeWorkC
      * Media type typically expressed using a MIME format (see [IANA
      * site](http://www.iana.org/assignments/media-types/media-types.xhtml) and
      * [MDN
-     * reference](https://developer.mozilla.org/en-US/docs/Web/HTTP/Basics_of_HTTP/MIME_types))
+     * reference](https://developer.mozilla.org/en-US/docs/Web/HTTP/Basics_of_HTTP/MIME_types)),
      * e.g. application/zip for a SoftwareApplication binary, audio/mpeg for
-     * .mp3 etc.).
+     * .mp3 etc.
      * 
      * In cases where a [[CreativeWork]] has several media type representations,
      * [[encoding]] can be used to indicate each [[MediaObject]] alongside
@@ -1012,7 +1013,7 @@ class MediaObject extends BaseType implements MediaObjectContract, CreativeWorkC
     /**
      * The endTime of something. For a reserved event or service (e.g.
      * FoodEstablishmentReservation), the time that it is expected to end. For
-     * actions that span a period of time, when the action was performed. e.g.
+     * actions that span a period of time, when the action was performed. E.g.
      * John wrote a book from January to *December*. For media, including audio
      * and video, it's the time offset of the end of a clip within a larger
      * file.
@@ -1070,7 +1071,7 @@ class MediaObject extends BaseType implements MediaObjectContract, CreativeWorkC
     /**
      * Media type, typically MIME format (see [IANA
      * site](http://www.iana.org/assignments/media-types/media-types.xhtml)) of
-     * the content e.g. application/zip of a SoftwareApplication binary. In
+     * the content, e.g. application/zip of a SoftwareApplication binary. In
      * cases where a CreativeWork has several media type representations,
      * 'encoding' can be used to indicate each MediaObject alongside particular
      * fileFormat information. Unregistered or niche file formats can be
@@ -1639,7 +1640,7 @@ class MediaObject extends BaseType implements MediaObjectContract, CreativeWorkC
 
     /**
      * The person or organization who produced the work (e.g. music album,
-     * movie, tv/radio series etc.).
+     * movie, TV/radio series etc.).
      *
      * @param \Spatie\SchemaOrg\Contracts\OrganizationContract|\Spatie\SchemaOrg\Contracts\OrganizationContract[]|\Spatie\SchemaOrg\Contracts\PersonContract|\Spatie\SchemaOrg\Contracts\PersonContract[] $producer
      *
@@ -1653,7 +1654,7 @@ class MediaObject extends BaseType implements MediaObjectContract, CreativeWorkC
     }
 
     /**
-     * The production company or studio responsible for the item e.g. series,
+     * The production company or studio responsible for the item, e.g. series,
      * video game, episode etc.
      *
      * @param \Spatie\SchemaOrg\Contracts\OrganizationContract|\Spatie\SchemaOrg\Contracts\OrganizationContract[] $productionCompany
@@ -1730,7 +1731,7 @@ class MediaObject extends BaseType implements MediaObjectContract, CreativeWorkC
     /**
      * The publishingPrinciples property indicates (typically via [[URL]]) a
      * document describing the editorial principles of an [[Organization]] (or
-     * individual e.g. a [[Person]] writing a blog) that relate to their
+     * individual, e.g. a [[Person]] writing a blog) that relate to their
      * activities as a publisher, e.g. ethics or diversity policies. When
      * applied to a [[CreativeWork]] (e.g. [[NewsArticle]]) the principles are
      * those of the party primarily responsible for the creation of the
@@ -2025,7 +2026,7 @@ class MediaObject extends BaseType implements MediaObjectContract, CreativeWorkC
 
     /**
      * A person or organization that supports a thing through a pledge, promise,
-     * or financial contribution. e.g. a sponsor of a Medical Study or a
+     * or financial contribution. E.g. a sponsor of a Medical Study or a
      * corporate sponsor of an event.
      *
      * @param \Spatie\SchemaOrg\Contracts\OrganizationContract|\Spatie\SchemaOrg\Contracts\OrganizationContract[]|\Spatie\SchemaOrg\Contracts\PersonContract|\Spatie\SchemaOrg\Contracts\PersonContract[] $sponsor
@@ -2042,7 +2043,7 @@ class MediaObject extends BaseType implements MediaObjectContract, CreativeWorkC
     /**
      * The startTime of something. For a reserved event or service (e.g.
      * FoodEstablishmentReservation), the time that it is expected to start. For
-     * actions that span a period of time, when the action was performed. e.g.
+     * actions that span a period of time, when the action was performed. E.g.
      * John wrote a book from *January* to December. For media, including audio
      * and video, it's the time offset of the start of a clip within a larger
      * file.
@@ -2119,8 +2120,8 @@ class MediaObject extends BaseType implements MediaObjectContract, CreativeWorkC
      * format](https://en.wikipedia.org/wiki/ISO_8601#Time_intervals). In
      *       the case of a Dataset it will typically indicate the relevant time
      * period in a precise notation (e.g. for a 2011 census dataset, the year
-     * 2011 would be written "2011/2012"). Other forms of content e.g.
-     * ScholarlyArticle, Book, TVSeries or TVEpisode may indicate their
+     * 2011 would be written "2011/2012"). Other forms of content, e.g.
+     * ScholarlyArticle, Book, TVSeries or TVEpisode, may indicate their
      * temporalCoverage in broader terms - textually or via well-known URL.
      *       Written works such as books may sometimes have precise temporal
      * coverage too, e.g. a work set in 1939 - 1945 can be indicated in ISO 8601
@@ -2187,8 +2188,8 @@ class MediaObject extends BaseType implements MediaObjectContract, CreativeWorkC
     }
 
     /**
-     * The work that this work has been translated from. e.g. 物种起源 is a
-     * translationOf “On the Origin of Species”
+     * The work that this work has been translated from. E.g. 物种起源 is a
+     * translationOf “On the Origin of Species”.
      *
      * @param \Spatie\SchemaOrg\Contracts\CreativeWorkContract|\Spatie\SchemaOrg\Contracts\CreativeWorkContract[] $translationOfWork
      *
@@ -2264,7 +2265,7 @@ class MediaObject extends BaseType implements MediaObjectContract, CreativeWorkC
      * The schema.org [[usageInfo]] property indicates further information about
      * a [[CreativeWork]]. This property is applicable both to works that are
      * freely available and to those that require payment or other transactions.
-     * It can reference additional information e.g. community expectations on
+     * It can reference additional information, e.g. community expectations on
      * preferred linking and citation conventions, as well as purchasing
      * details. For something that can be commercially licensed, usageInfo can
      * provide detailed, resource-specific information about licensing options.
@@ -2332,7 +2333,7 @@ class MediaObject extends BaseType implements MediaObjectContract, CreativeWorkC
 
     /**
      * Example/instance/realization/derivation of the concept of this creative
-     * work. eg. The paperback edition, first edition, or eBook.
+     * work. E.g. the paperback edition, first edition, or e-book.
      *
      * @param \Spatie\SchemaOrg\Contracts\CreativeWorkContract|\Spatie\SchemaOrg\Contracts\CreativeWorkContract[] $workExample
      *
@@ -2347,8 +2348,8 @@ class MediaObject extends BaseType implements MediaObjectContract, CreativeWorkC
     }
 
     /**
-     * A work that is a translation of the content of this work. e.g. 西遊記
-     * has an English workTranslation “Journey to the West”,a German
+     * A work that is a translation of the content of this work. E.g. 西遊記
+     * has an English workTranslation “Journey to the West”, a German
      * workTranslation “Monkeys Pilgerfahrt” and a Vietnamese  translation
      * Tây du ký bình khảo.
      *

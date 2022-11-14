@@ -98,8 +98,7 @@ class HealthPlanCostSharingSpecification extends BaseType implements HealthPlanC
     }
 
     /**
-     * Whether The rate of coinsurance expressed as a number between 0.0 and
-     * 1.0.
+     * The rate of coinsurance expressed as a number between 0.0 and 1.0.
      *
      * @param float|float[]|int|int[] $healthPlanCoinsuranceRate
      *
@@ -115,7 +114,7 @@ class HealthPlanCostSharingSpecification extends BaseType implements HealthPlanC
     }
 
     /**
-     * Whether The copay amount.
+     * The copay amount.
      *
      * @param \Spatie\SchemaOrg\Contracts\PriceSpecificationContract|\Spatie\SchemaOrg\Contracts\PriceSpecificationContract[] $healthPlanCopay
      *

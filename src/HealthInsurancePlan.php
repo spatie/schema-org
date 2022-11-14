@@ -333,7 +333,7 @@ class HealthInsurancePlan extends BaseType implements HealthInsurancePlanContrac
     }
 
     /**
-     * The standard for interpreting thePlan ID. The preferred is "HIOS". See
+     * The standard for interpreting the Plan ID. The preferred is "HIOS". See
      * the Centers for Medicare & Medicaid Services for more details.
      *
      * @param string|string[] $usesHealthPlanIdStandard

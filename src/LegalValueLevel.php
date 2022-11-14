@@ -21,8 +21,8 @@ class LegalValueLevel extends BaseType implements LegalValueLevelContract, Enume
      * Indicates that the publisher gives some special status to the publication
      * of the document. ("The Queens Printer" version of a UK Act of Parliament,
      * or the PDF version of a Directive published by the EU Office of
-     * Publications). Something "Authoritative" is considered to be also
-     * [[OfficialLegalValue]]".
+     * Publications.) Something "Authoritative" is considered to be also
+     * [[OfficialLegalValue]].
      *
      * @see https://schema.org/AuthoritativeLegalValue
      * @see https://pending.schema.org
@@ -31,7 +31,7 @@ class LegalValueLevel extends BaseType implements LegalValueLevelContract, Enume
 
     /**
      * Indicates a document for which the text is conclusively what the law says
-     * and is legally binding. (e.g. The digitally signed version of an Official
+     * and is legally binding. (E.g. the digitally signed version of an Official
      * Journal.)
      *   Something "Definitive" is considered to be also
      * [[AuthoritativeLegalValue]].
@@ -45,7 +45,7 @@ class LegalValueLevel extends BaseType implements LegalValueLevelContract, Enume
      * All the documents published by an official publisher should have at least
      * the legal value level "OfficialLegalValue". This indicates that the
      * document was published by an organisation with the public task of making
-     * it available (e.g. a consolidated version of a EU directive published by
+     * it available (e.g. a consolidated version of an EU directive published by
      * the EU Office of Publications).
      *
      * @see https://schema.org/OfficialLegalValue

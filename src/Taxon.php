@@ -235,8 +235,8 @@ class Taxon extends BaseType implements TaxonContract, ThingContract
 
     /**
      * The taxonomic rank of this taxon given preferably as a URI from a
-     * controlled vocabulary – (typically the ranks from TDWG TaxonRank
-     * ontology or equivalent Wikidata URIs).
+     * controlled vocabulary – typically the ranks from TDWG TaxonRank
+     * ontology or equivalent Wikidata URIs.
      *
      * @param \Spatie\SchemaOrg\Contracts\PropertyValueContract|\Spatie\SchemaOrg\Contracts\PropertyValueContract[]|string|string[] $taxonRank
      *

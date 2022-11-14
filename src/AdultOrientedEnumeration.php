@@ -54,7 +54,7 @@ class AdultOrientedEnumeration extends BaseType implements AdultOrientedEnumerat
     /**
      * Item is a narcotic as defined by the [1961 UN
      * convention](https://www.incb.org/incb/en/narcotic-drugs/Yellowlist/yellow-list.html),
-     * for example marijuna or heroin.
+     * for example marijuana or heroin.
      *
      * @see https://schema.org/NarcoticConsideration
      * @see https://pending.schema.org

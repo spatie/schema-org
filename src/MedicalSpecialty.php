@@ -76,7 +76,7 @@ class MedicalSpecialty extends BaseType implements MedicalSpecialtyContract, Enu
      const Dermatology = 'https://schema.org/Dermatology';
 
     /**
-     * Dietetic and nutrition as a medical specialty.
+     * Dietetics and nutrition as a medical specialty.
      *
      * @see https://schema.org/DietNutrition
      * @see https://health-lifesci.schema.org
@@ -150,7 +150,7 @@ class MedicalSpecialty extends BaseType implements MedicalSpecialtyContract, Enu
      const Hematologic = 'https://schema.org/Hematologic';
 
     /**
-     * Something in medical science that pertains to infectious diseases i.e
+     * Something in medical science that pertains to infectious diseases, i.e.
      * caused by bacterial, viral, fungal or parasitic infections.
      *
      * @see https://schema.org/Infectious
@@ -275,7 +275,7 @@ class MedicalSpecialty extends BaseType implements MedicalSpecialtyContract, Enu
     /**
      * The practice of treatment of disease, injury, or deformity by physical
      * methods such as massage, heat treatment, and exercise rather than by
-     * drugs or surgery..
+     * drugs or surgery.
      *
      * @see https://schema.org/Physiotherapy
      * @see https://health-lifesci.schema.org

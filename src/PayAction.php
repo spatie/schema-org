@@ -49,7 +49,7 @@ class PayAction extends BaseType implements PayActionContract, ActionContract, T
     }
 
     /**
-     * The direct performer or driver of the action (animate or inanimate). e.g.
+     * The direct performer or driver of the action (animate or inanimate). E.g.
      * *John* wrote a book.
      *
      * @param \Spatie\SchemaOrg\Contracts\OrganizationContract|\Spatie\SchemaOrg\Contracts\OrganizationContract[]|\Spatie\SchemaOrg\Contracts\PersonContract|\Spatie\SchemaOrg\Contracts\PersonContract[] $agent
@@ -111,7 +111,7 @@ class PayAction extends BaseType implements PayActionContract, ActionContract, T
     /**
      * The endTime of something. For a reserved event or service (e.g.
      * FoodEstablishmentReservation), the time that it is expected to end. For
-     * actions that span a period of time, when the action was performed. e.g.
+     * actions that span a period of time, when the action was performed. E.g.
      * John wrote a book from January to *December*. For media, including audio
      * and video, it's the time offset of the end of a clip within a larger
      * file.
@@ -180,7 +180,7 @@ class PayAction extends BaseType implements PayActionContract, ActionContract, T
     }
 
     /**
-     * The object that helped the agent perform the action. e.g. John wrote a
+     * The object that helped the agent perform the action. E.g. John wrote a
      * book with *a pen*.
      *
      * @param \Spatie\SchemaOrg\Contracts\ThingContract|\Spatie\SchemaOrg\Contracts\ThingContract[] $instrument
@@ -242,7 +242,7 @@ class PayAction extends BaseType implements PayActionContract, ActionContract, T
     /**
      * The object upon which the action is carried out, whose state is kept
      * intact or changed. Also known as the semantic roles patient, affected or
-     * undergoer (which change their state) or theme (which doesn't). e.g. John
+     * undergoer (which change their state) or theme (which doesn't). E.g. John
      * read *a book*.
      *
      * @param \Spatie\SchemaOrg\Contracts\ThingContract|\Spatie\SchemaOrg\Contracts\ThingContract[] $object
@@ -257,7 +257,7 @@ class PayAction extends BaseType implements PayActionContract, ActionContract, T
     }
 
     /**
-     * Other co-agents that participated in the action indirectly. e.g. John
+     * Other co-agents that participated in the action indirectly. E.g. John
      * wrote a book with *Steve*.
      *
      * @param \Spatie\SchemaOrg\Contracts\OrganizationContract|\Spatie\SchemaOrg\Contracts\OrganizationContract[]|\Spatie\SchemaOrg\Contracts\PersonContract|\Spatie\SchemaOrg\Contracts\PersonContract[] $participant
@@ -293,12 +293,12 @@ class PayAction extends BaseType implements PayActionContract, ActionContract, T
      * Usage guidelines:
      * 
      * * Use the [[priceCurrency]] property (with standard formats: [ISO 4217
-     * currency format](http://en.wikipedia.org/wiki/ISO_4217) e.g. "USD";
+     * currency format](http://en.wikipedia.org/wiki/ISO_4217), e.g. "USD";
      * [Ticker symbol](https://en.wikipedia.org/wiki/List_of_cryptocurrencies)
-     * for cryptocurrencies e.g. "BTC"; well known names for [Local Exchange
-     * Tradings
+     * for cryptocurrencies, e.g. "BTC"; well known names for [Local Exchange
+     * Trading
      * Systems](https://en.wikipedia.org/wiki/Local_exchange_trading_system)
-     * (LETS) and other currency types e.g. "Ithaca HOUR") instead of including
+     * (LETS) and other currency types, e.g. "Ithaca HOUR") instead of including
      * [ambiguous
      * symbols](http://en.wikipedia.org/wiki/Dollar_sign#Currencies_that_use_the_dollar_or_peso_sign)
      * such as '$' in the value.
@@ -310,7 +310,7 @@ class PayAction extends BaseType implements PayActionContract, ActionContract, T
      * publishing simple machine-readable values alongside more human-friendly
      * formatting.
      * * Use values from 0123456789 (Unicode 'DIGIT ZERO' (U+0030) to 'DIGIT
-     * NINE' (U+0039)) rather than superficially similiar Unicode symbols.
+     * NINE' (U+0039)) rather than superficially similar Unicode symbols.
      *
      * @param float|float[]|int|int[]|string|string[] $price
      *
@@ -328,12 +328,12 @@ class PayAction extends BaseType implements PayActionContract, ActionContract, T
      * [[PriceSpecification]] and its subtypes.
      * 
      * Use standard formats: [ISO 4217 currency
-     * format](http://en.wikipedia.org/wiki/ISO_4217) e.g. "USD"; [Ticker
+     * format](http://en.wikipedia.org/wiki/ISO_4217), e.g. "USD"; [Ticker
      * symbol](https://en.wikipedia.org/wiki/List_of_cryptocurrencies) for
-     * cryptocurrencies e.g. "BTC"; well known names for [Local Exchange
-     * Tradings
+     * cryptocurrencies, e.g. "BTC"; well known names for [Local Exchange
+     * Trading
      * Systems](https://en.wikipedia.org/wiki/Local_exchange_trading_system)
-     * (LETS) and other currency types e.g. "Ithaca HOUR".
+     * (LETS) and other currency types, e.g. "Ithaca HOUR".
      *
      * @param string|string[] $priceCurrency
      *
@@ -395,7 +395,7 @@ class PayAction extends BaseType implements PayActionContract, ActionContract, T
     }
 
     /**
-     * The result produced in the action. e.g. John wrote *a book*.
+     * The result produced in the action. E.g. John wrote *a book*.
      *
      * @param \Spatie\SchemaOrg\Contracts\ThingContract|\Spatie\SchemaOrg\Contracts\ThingContract[] $result
      *
@@ -427,7 +427,7 @@ class PayAction extends BaseType implements PayActionContract, ActionContract, T
     /**
      * The startTime of something. For a reserved event or service (e.g.
      * FoodEstablishmentReservation), the time that it is expected to start. For
-     * actions that span a period of time, when the action was performed. e.g.
+     * actions that span a period of time, when the action was performed. E.g.
      * John wrote a book from *January* to December. For media, including audio
      * and video, it's the time offset of the start of a clip within a larger
      * file.
@@ -464,9 +464,9 @@ class PayAction extends BaseType implements PayActionContract, ActionContract, T
     }
 
     /**
-     * Indicates a target EntryPoint for an Action.
+     * Indicates a target EntryPoint, or url, for an Action.
      *
-     * @param \Spatie\SchemaOrg\Contracts\EntryPointContract|\Spatie\SchemaOrg\Contracts\EntryPointContract[] $target
+     * @param \Spatie\SchemaOrg\Contracts\EntryPointContract|\Spatie\SchemaOrg\Contracts\EntryPointContract[]|string|string[] $target
      *
      * @return static
      *

@@ -23,7 +23,7 @@ use \Spatie\SchemaOrg\Contracts\ThingContract;
 class Accommodation extends BaseType implements AccommodationContract, PlaceContract, ThingContract
 {
     /**
-     * Category of an [[Accommodation]], following real estate conventions e.g.
+     * Category of an [[Accommodation]], following real estate conventions, e.g.
      * RESO (see
      * [PropertySubType](https://ddwiki.reso.org/display/DDW17/PropertySubType+Field),
      * and
@@ -60,9 +60,9 @@ class Accommodation extends BaseType implements AccommodationContract, PlaceCont
     }
 
     /**
-     * A property-value pair representing an additional characteristics of the
-     * entitity, e.g. a product feature or another characteristic for which
-     * there is no matching property in schema.org.
+     * A property-value pair representing an additional characteristic of the
+     * entity, e.g. a product feature or another characteristic for which there
+     * is no matching property in schema.org.
      * 
      * Note: Publishers should be aware that applications designed to use
      * specific schema.org properties (e.g. https://schema.org/width,
@@ -420,9 +420,9 @@ class Accommodation extends BaseType implements AccommodationContract, PlaceCont
 
     /**
      * Represents spatial relations in which two geometries (or the places they
-     * represent) are topologically disjoint: they have no point in common. They
-     * form a set of disconnected geometries." (a symmetric relationship, as
-     * defined in [DE-9IM](https://en.wikipedia.org/wiki/DE-9IM))
+     * represent) are topologically disjoint: "they have no point in common.
+     * They form a set of disconnected geometries." (A symmetric relationship,
+     * as defined in [DE-9IM](https://en.wikipedia.org/wiki/DE-9IM).)
      *
      * @param \Spatie\SchemaOrg\Contracts\GeospatialGeometryContract|\Spatie\SchemaOrg\Contracts\GeospatialGeometryContract[]|\Spatie\SchemaOrg\Contracts\PlaceContract|\Spatie\SchemaOrg\Contracts\PlaceContract[] $geoDisjoint
      *
@@ -441,7 +441,7 @@ class Accommodation extends BaseType implements AccommodationContract, PlaceCont
      * [DE-9IM](https://en.wikipedia.org/wiki/DE-9IM). "Two geometries are
      * topologically equal if their interiors intersect and no part of the
      * interior or boundary of one geometry intersects the exterior of the
-     * other" (a symmetric relationship)
+     * other" (a symmetric relationship).
      *
      * @param \Spatie\SchemaOrg\Contracts\GeospatialGeometryContract|\Spatie\SchemaOrg\Contracts\GeospatialGeometryContract[]|\Spatie\SchemaOrg\Contracts\PlaceContract|\Spatie\SchemaOrg\Contracts\PlaceContract[] $geoEquals
      *
@@ -489,9 +489,9 @@ class Accommodation extends BaseType implements AccommodationContract, PlaceCont
 
     /**
      * Represents spatial relations in which two geometries (or the places they
-     * represent) touch: they have at least one boundary point in common, but no
-     * interior points." (a symmetric relationship, as defined in
-     * [DE-9IM](https://en.wikipedia.org/wiki/DE-9IM) )
+     * represent) touch: "they have at least one boundary point in common, but
+     * no interior points." (A symmetric relationship, as defined in
+     * [DE-9IM](https://en.wikipedia.org/wiki/DE-9IM).)
      *
      * @param \Spatie\SchemaOrg\Contracts\GeospatialGeometryContract|\Spatie\SchemaOrg\Contracts\GeospatialGeometryContract[]|\Spatie\SchemaOrg\Contracts\PlaceContract|\Spatie\SchemaOrg\Contracts\PlaceContract[] $geoTouches
      *
@@ -788,7 +788,7 @@ class Accommodation extends BaseType implements AccommodationContract, PlaceCont
     }
 
     /**
-     * The total integer number of bathrooms in a some [[Accommodation]],
+     * The total integer number of bathrooms in some [[Accommodation]],
      * following real estate conventions as [documented in
      * RESO](https://ddwiki.reso.org/display/DDW17/BathroomsTotalInteger+Field):
      * "The simple sum of the number of bathrooms. For example for a property

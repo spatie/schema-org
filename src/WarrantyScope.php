@@ -8,7 +8,7 @@ use \Spatie\SchemaOrg\Contracts\IntangibleContract;
 use \Spatie\SchemaOrg\Contracts\ThingContract;
 
 /**
- * A range of of services that will be provided to a customer free of charge in
+ * A range of services that will be provided to a customer free of charge in
  * case of a defect or malfunction of a product.
  * 
  * Commonly used values:

@@ -13,7 +13,7 @@ use \Spatie\SchemaOrg\Contracts\ThingContract;
  * includes content for every item currently in the feed.
  * 
  * This is the equivalent of Atom's element as defined in Feed Paging and
- * Archiving [RFC 5005](https://tools.ietf.org/html/rfc5005), For example (and
+ * Archiving [RFC 5005](https://tools.ietf.org/html/rfc5005), for example (and
  * as defined for Atom), when using data from a feed that represents a
  * collection of items that varies over time (e.g. "Top Twenty Records") there
  * is no need to have newer entries mixed in alongside older, obsolete entries.
@@ -510,7 +510,7 @@ class CompleteDataFeed extends BaseType implements CompleteDataFeedContract, Cre
     }
 
     /**
-     * Official rating of a piece of content&#x2014;for example,'MPAA PG-13'.
+     * Official rating of a piece of content&#x2014;for example, 'MPAA PG-13'.
      *
      * @param \Spatie\SchemaOrg\Contracts\RatingContract|\Spatie\SchemaOrg\Contracts\RatingContract[]|string|string[] $contentRating
      *
@@ -694,7 +694,7 @@ class CompleteDataFeed extends BaseType implements CompleteDataFeedContract, Cre
     }
 
     /**
-     * An item within in a data feed. Data feeds may have many elements.
+     * An item within a data feed. Data feeds may have many elements.
      *
      * @param \Spatie\SchemaOrg\Contracts\DataFeedItemContract|\Spatie\SchemaOrg\Contracts\DataFeedItemContract[]|\Spatie\SchemaOrg\Contracts\ThingContract|\Spatie\SchemaOrg\Contracts\ThingContract[]|string|string[] $dataFeedElement
      *
@@ -813,7 +813,12 @@ class CompleteDataFeed extends BaseType implements CompleteDataFeedContract, Cre
 
     /**
      * A downloadable form of this dataset, at a specific location, in a
-     * specific format.
+     * specific format. This property can be repeated if different variations
+     * are available. There is no expectation that different downloadable
+     * distributions must contain exactly equivalent information (see also
+     * [DCAT](https://www.w3.org/TR/vocab-dcat-3/#Class:Distribution) on this
+     * point). Different distributions might include or exclude different
+     * subsets of the entire dataset, for example.
      *
      * @param \Spatie\SchemaOrg\Contracts\DataDownloadContract|\Spatie\SchemaOrg\Contracts\DataDownloadContract[] $distribution
      *
@@ -832,7 +837,7 @@ class CompleteDataFeed extends BaseType implements CompleteDataFeedContract, Cre
      * or television.
      * 
      * For example, the motion picture known as "Ghostbusters" whose
-     * [[titleEIDR]] is "10.5240/7EC7-228A-510A-053E-CBB8-J", has several edits
+     * [[titleEIDR]] is "10.5240/7EC7-228A-510A-053E-CBB8-J" has several edits,
      * e.g. "10.5240/1F2A-E1C5-680A-14C6-E76B-I" and
      * "10.5240/8A35-3BEE-6497-5D12-9E4F-3".
      * 
@@ -938,9 +943,9 @@ class CompleteDataFeed extends BaseType implements CompleteDataFeedContract, Cre
      * Media type typically expressed using a MIME format (see [IANA
      * site](http://www.iana.org/assignments/media-types/media-types.xhtml) and
      * [MDN
-     * reference](https://developer.mozilla.org/en-US/docs/Web/HTTP/Basics_of_HTTP/MIME_types))
+     * reference](https://developer.mozilla.org/en-US/docs/Web/HTTP/Basics_of_HTTP/MIME_types)),
      * e.g. application/zip for a SoftwareApplication binary, audio/mpeg for
-     * .mp3 etc.).
+     * .mp3 etc.
      * 
      * In cases where a [[CreativeWork]] has several media type representations,
      * [[encoding]] can be used to indicate each [[MediaObject]] alongside
@@ -1012,7 +1017,7 @@ class CompleteDataFeed extends BaseType implements CompleteDataFeedContract, Cre
     /**
      * Media type, typically MIME format (see [IANA
      * site](http://www.iana.org/assignments/media-types/media-types.xhtml)) of
-     * the content e.g. application/zip of a SoftwareApplication binary. In
+     * the content, e.g. application/zip of a SoftwareApplication binary. In
      * cases where a CreativeWork has several media type representations,
      * 'encoding' can be used to indicate each MediaObject alongside particular
      * fileFormat information. Unregistered or niche file formats can be
@@ -1612,7 +1617,7 @@ class CompleteDataFeed extends BaseType implements CompleteDataFeedContract, Cre
 
     /**
      * The person or organization who produced the work (e.g. music album,
-     * movie, tv/radio series etc.).
+     * movie, TV/radio series etc.).
      *
      * @param \Spatie\SchemaOrg\Contracts\OrganizationContract|\Spatie\SchemaOrg\Contracts\OrganizationContract[]|\Spatie\SchemaOrg\Contracts\PersonContract|\Spatie\SchemaOrg\Contracts\PersonContract[] $producer
      *
@@ -1688,7 +1693,7 @@ class CompleteDataFeed extends BaseType implements CompleteDataFeedContract, Cre
     /**
      * The publishingPrinciples property indicates (typically via [[URL]]) a
      * document describing the editorial principles of an [[Organization]] (or
-     * individual e.g. a [[Person]] writing a blog) that relate to their
+     * individual, e.g. a [[Person]] writing a blog) that relate to their
      * activities as a publisher, e.g. ethics or diversity policies. When
      * applied to a [[CreativeWork]] (e.g. [[NewsArticle]]) the principles are
      * those of the party primarily responsible for the creation of the
@@ -1932,7 +1937,7 @@ class CompleteDataFeed extends BaseType implements CompleteDataFeedContract, Cre
 
     /**
      * A person or organization that supports a thing through a pledge, promise,
-     * or financial contribution. e.g. a sponsor of a Medical Study or a
+     * or financial contribution. E.g. a sponsor of a Medical Study or a
      * corporate sponsor of an event.
      *
      * @param \Spatie\SchemaOrg\Contracts\OrganizationContract|\Spatie\SchemaOrg\Contracts\OrganizationContract[]|\Spatie\SchemaOrg\Contracts\PersonContract|\Spatie\SchemaOrg\Contracts\PersonContract[] $sponsor
@@ -2002,8 +2007,8 @@ class CompleteDataFeed extends BaseType implements CompleteDataFeedContract, Cre
      * format](https://en.wikipedia.org/wiki/ISO_8601#Time_intervals). In
      *       the case of a Dataset it will typically indicate the relevant time
      * period in a precise notation (e.g. for a 2011 census dataset, the year
-     * 2011 would be written "2011/2012"). Other forms of content e.g.
-     * ScholarlyArticle, Book, TVSeries or TVEpisode may indicate their
+     * 2011 would be written "2011/2012"). Other forms of content, e.g.
+     * ScholarlyArticle, Book, TVSeries or TVEpisode, may indicate their
      * temporalCoverage in broader terms - textually or via well-known URL.
      *       Written works such as books may sometimes have precise temporal
      * coverage too, e.g. a work set in 1939 - 1945 can be indicated in ISO 8601
@@ -2070,8 +2075,8 @@ class CompleteDataFeed extends BaseType implements CompleteDataFeedContract, Cre
     }
 
     /**
-     * The work that this work has been translated from. e.g. 物种起源 is a
-     * translationOf “On the Origin of Species”
+     * The work that this work has been translated from. E.g. 物种起源 is a
+     * translationOf “On the Origin of Species”.
      *
      * @param \Spatie\SchemaOrg\Contracts\CreativeWorkContract|\Spatie\SchemaOrg\Contracts\CreativeWorkContract[] $translationOfWork
      *
@@ -2133,7 +2138,7 @@ class CompleteDataFeed extends BaseType implements CompleteDataFeedContract, Cre
      * The schema.org [[usageInfo]] property indicates further information about
      * a [[CreativeWork]]. This property is applicable both to works that are
      * freely available and to those that require payment or other transactions.
-     * It can reference additional information e.g. community expectations on
+     * It can reference additional information, e.g. community expectations on
      * preferred linking and citation conventions, as well as purchasing
      * details. For something that can be commercially licensed, usageInfo can
      * provide detailed, resource-specific information about licensing options.
@@ -2176,7 +2181,7 @@ class CompleteDataFeed extends BaseType implements CompleteDataFeedContract, Cre
     }
 
     /**
-     * Originally named [[variablesMeasured]], The [[variableMeasured]] property
+     * Originally named [[variablesMeasured]], the [[variableMeasured]] property
      * can indicate (repeated as necessary) the  variables that are measured in
      * some dataset, either described as text or as pairs of identifier and
      * description using PropertyValue.
@@ -2223,7 +2228,7 @@ class CompleteDataFeed extends BaseType implements CompleteDataFeedContract, Cre
 
     /**
      * Example/instance/realization/derivation of the concept of this creative
-     * work. eg. The paperback edition, first edition, or eBook.
+     * work. E.g. the paperback edition, first edition, or e-book.
      *
      * @param \Spatie\SchemaOrg\Contracts\CreativeWorkContract|\Spatie\SchemaOrg\Contracts\CreativeWorkContract[] $workExample
      *
@@ -2238,8 +2243,8 @@ class CompleteDataFeed extends BaseType implements CompleteDataFeedContract, Cre
     }
 
     /**
-     * A work that is a translation of the content of this work. e.g. 西遊記
-     * has an English workTranslation “Journey to the West”,a German
+     * A work that is a translation of the content of this work. E.g. 西遊記
+     * has an English workTranslation “Journey to the West”, a German
      * workTranslation “Monkeys Pilgerfahrt” and a Vietnamese  translation
      * Tây du ký bình khảo.
      *

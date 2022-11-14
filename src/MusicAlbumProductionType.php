@@ -8,7 +8,7 @@ use \Spatie\SchemaOrg\Contracts\IntangibleContract;
 use \Spatie\SchemaOrg\Contracts\ThingContract;
 
 /**
- * Classification of the album by it's type of content: soundtrack, live album,
+ * Classification of the album by its type of content: soundtrack, live album,
  * studio album, etc.
  *
  * @see https://schema.org/MusicAlbumProductionType

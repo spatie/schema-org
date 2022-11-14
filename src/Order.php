@@ -186,12 +186,12 @@ class Order extends BaseType implements OrderContract, IntangibleContract, Thing
      * The currency of the discount.
      * 
      * Use standard formats: [ISO 4217 currency
-     * format](http://en.wikipedia.org/wiki/ISO_4217) e.g. "USD"; [Ticker
+     * format](http://en.wikipedia.org/wiki/ISO_4217), e.g. "USD"; [Ticker
      * symbol](https://en.wikipedia.org/wiki/List_of_cryptocurrencies) for
-     * cryptocurrencies e.g. "BTC"; well known names for [Local Exchange
-     * Tradings
+     * cryptocurrencies, e.g. "BTC"; well known names for [Local Exchange
+     * Trading
      * Systems](https://en.wikipedia.org/wiki/Local_exchange_trading_system)
-     * (LETS) and other currency types e.g. "Ithaca HOUR".
+     * (LETS) and other currency types, e.g. "Ithaca HOUR".
      *
      * @param string|string[] $discountCurrency
      *
@@ -238,7 +238,8 @@ class Order extends BaseType implements OrderContract, IntangibleContract, Thing
     }
 
     /**
-     * Was the offer accepted as a gift for someone other than the buyer.
+     * Indicates whether the offer was accepted as a gift for someone other than
+     * the buyer.
      *
      * @param bool|bool[] $isGift
      *

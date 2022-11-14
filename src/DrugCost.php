@@ -101,7 +101,7 @@ class DrugCost extends BaseType implements DrugCostContract, MedicalEntityContra
     }
 
     /**
-     * The currency (in 3-letter of the drug cost. See:
+     * The currency (in 3-letter) of the drug cost. See:
      * http://en.wikipedia.org/wiki/ISO_4217.
      *
      * @param string|string[] $costCurrency

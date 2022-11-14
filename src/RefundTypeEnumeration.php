@@ -29,7 +29,7 @@ class RefundTypeEnumeration extends BaseType implements RefundTypeEnumerationCon
 
     /**
      * Specifies that a refund can be done in the full amount the customer paid
-     * for the product
+     * for the product.
      *
      * @see https://schema.org/FullRefund
      * @see https://pending.schema.org
@@ -39,7 +39,7 @@ class RefundTypeEnumeration extends BaseType implements RefundTypeEnumerationCon
 
     /**
      * Specifies that the customer receives a store credit as refund when
-     * returning a product
+     * returning a product.
      *
      * @see https://schema.org/StoreCreditRefund
      * @see https://pending.schema.org

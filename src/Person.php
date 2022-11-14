@@ -585,7 +585,7 @@ class Person extends BaseType implements PersonContract, ThingContract
     }
 
     /**
-     * An honorific suffix following a Person's name such as M.D. /PhD/MSCSW.
+     * An honorific suffix following a Person's name such as M.D./PhD/MSCSW.
      *
      * @param string|string[] $honorificSuffix
      *
@@ -911,7 +911,7 @@ class Person extends BaseType implements PersonContract, ThingContract
     /**
      * The publishingPrinciples property indicates (typically via [[URL]]) a
      * document describing the editorial principles of an [[Organization]] (or
-     * individual e.g. a [[Person]] writing a blog) that relate to their
+     * individual, e.g. a [[Person]] writing a blog) that relate to their
      * activities as a publisher, e.g. ethics or diversity policies. When
      * applied to a [[CreativeWork]] (e.g. [[NewsArticle]]) the principles are
      * those of the party primarily responsible for the creation of the
@@ -1008,7 +1008,7 @@ class Person extends BaseType implements PersonContract, ThingContract
 
     /**
      * A person or organization that supports a thing through a pledge, promise,
-     * or financial contribution. e.g. a sponsor of a Medical Study or a
+     * or financial contribution. E.g. a sponsor of a Medical Study or a
      * corporate sponsor of an event.
      *
      * @param \Spatie\SchemaOrg\Contracts\OrganizationContract|\Spatie\SchemaOrg\Contracts\OrganizationContract[]|\Spatie\SchemaOrg\Contracts\PersonContract|\Spatie\SchemaOrg\Contracts\PersonContract[] $sponsor

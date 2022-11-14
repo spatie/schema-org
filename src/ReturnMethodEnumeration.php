@@ -28,7 +28,7 @@ class ReturnMethodEnumeration extends BaseType implements ReturnMethodEnumeratio
      const ReturnAtKiosk = 'https://schema.org/ReturnAtKiosk';
 
     /**
-     * Specifies that product returns must to be done by mail.
+     * Specifies that product returns must be done by mail.
      *
      * @see https://schema.org/ReturnByMail
      * @see https://pending.schema.org

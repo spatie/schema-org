@@ -18,7 +18,7 @@ use \Spatie\SchemaOrg\Contracts\ThingContract;
 class ActionStatusType extends BaseType implements ActionStatusTypeContract, EnumerationContract, IntangibleContract, StatusEnumerationContract, ThingContract
 {
     /**
-     * An in-progress action (e.g, while watching the movie, or driving to a
+     * An in-progress action (e.g., while watching the movie, or driving to a
      * location).
      *
      * @see https://schema.org/ActiveActionStatus

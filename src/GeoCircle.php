@@ -150,7 +150,7 @@ class GeoCircle extends BaseType implements GeoCircleContract, GeoShapeContract,
     /**
      * The elevation of a location ([WGS
      * 84](https://en.wikipedia.org/wiki/World_Geodetic_System)). Values may be
-     * of the form 'NUMBER UNIT_OF_MEASUREMENT' (e.g., '1,000 m', '3,200 ft')
+     * of the form 'NUMBER UNIT\_OF\_MEASUREMENT' (e.g., '1,000 m', '3,200 ft')
      * while numbers alone should be assumed to be a value in meters.
      *
      * @param float|float[]|int|int[]|string|string[] $elevation
@@ -165,7 +165,7 @@ class GeoCircle extends BaseType implements GeoCircleContract, GeoShapeContract,
     }
 
     /**
-     * Indicates the GeoCoordinates at the centre of a GeoShape e.g. GeoCircle.
+     * Indicates the GeoCoordinates at the centre of a GeoShape, e.g. GeoCircle.
      *
      * @param \Spatie\SchemaOrg\Contracts\GeoCoordinatesContract|\Spatie\SchemaOrg\Contracts\GeoCoordinatesContract[] $geoMidpoint
      *

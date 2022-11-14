@@ -103,8 +103,8 @@ class ShippingRateSettings extends BaseType implements ShippingRateSettingsContr
     }
 
     /**
-     * A monetary value above which (or equal to) the shipping rate becomes
-     * free. Intended to be used via an [[OfferShippingDetails]] with
+     * A monetary value above (or at) which the shipping rate becomes free.
+     * Intended to be used via an [[OfferShippingDetails]] with
      * [[shippingSettingsLink]] matching this [[ShippingRateSettings]].
      *
      * @param \Spatie\SchemaOrg\Contracts\DeliveryChargeSpecificationContract|\Spatie\SchemaOrg\Contracts\DeliveryChargeSpecificationContract[]|\Spatie\SchemaOrg\Contracts\MonetaryAmountContract|\Spatie\SchemaOrg\Contracts\MonetaryAmountContract[] $freeShippingThreshold
@@ -239,7 +239,7 @@ class ShippingRateSettings extends BaseType implements ShippingRateSettingsContr
 
     /**
      * indicates (possibly multiple) shipping destinations. These can be defined
-     * in several ways e.g. postalCode ranges.
+     * in several ways, e.g. postalCode ranges.
      *
      * @param \Spatie\SchemaOrg\Contracts\DefinedRegionContract|\Spatie\SchemaOrg\Contracts\DefinedRegionContract[] $shippingDestination
      *

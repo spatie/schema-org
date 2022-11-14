@@ -16,6 +16,8 @@ interface BusOrCoachContract
 
     public function alternateName($alternateName);
 
+    public function asin($asin);
+
     public function audience($audience);
 
     public function award($award);
@@ -120,6 +122,8 @@ interface BusOrCoachContract
 
     public function mileageFromOdometer($mileageFromOdometer);
 
+    public function mobileUrl($mobileUrl);
+
     public function model($model);
 
     public function modelDate($modelDate);
@@ -127,6 +131,8 @@ interface BusOrCoachContract
     public function mpn($mpn);
 
     public function name($name);
+
+    public function negativeNotes($negativeNotes);
 
     public function nsn($nsn);
 
@@ -145,6 +151,8 @@ interface BusOrCoachContract
     public function pattern($pattern);
 
     public function payload($payload);
+
+    public function positiveNotes($positiveNotes);
 
     public function potentialAction($potentialAction);
 

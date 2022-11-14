@@ -18,6 +18,8 @@ interface AggregateOfferContract
 
     public function areaServed($areaServed);
 
+    public function asin($asin);
+
     public function availability($availability);
 
     public function availabilityEnds($availabilityEnds);
@@ -31,6 +33,8 @@ interface AggregateOfferContract
     public function businessFunction($businessFunction);
 
     public function category($category);
+
+    public function checkoutPageURLTemplate($checkoutPageURLTemplate);
 
     public function deliveryLeadTime($deliveryLeadTime);
 
@@ -87,6 +91,8 @@ interface AggregateOfferContract
     public function lowPrice($lowPrice);
 
     public function mainEntityOfPage($mainEntityOfPage);
+
+    public function mobileUrl($mobileUrl);
 
     public function mpn($mpn);
 

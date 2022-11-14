@@ -240,7 +240,7 @@ class USNonprofitType extends BaseType implements USNonprofitTypeContract, Enume
 
     /**
      * Nonprofit501c3: Non-profit type referring to Religious, Educational,
-     * Charitable, Scientific, Literary, Testing for Public Safety, to Foster
+     * Charitable, Scientific, Literary, Testing for Public Safety, Fostering
      * National or International Amateur Sports Competition, or Prevention of
      * Cruelty to Children or Animals Organizations.
      *
@@ -369,7 +369,7 @@ class USNonprofitType extends BaseType implements USNonprofitTypeContract, Enume
      const Nonprofit501q = 'https://schema.org/Nonprofit501q';
 
     /**
-     * Nonprofit527: Non-profit type referring to Political organizations.
+     * Nonprofit527: Non-profit type referring to political organizations.
      *
      * @see https://schema.org/Nonprofit527
      * @see https://pending.schema.org

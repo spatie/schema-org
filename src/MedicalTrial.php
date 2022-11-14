@@ -8,10 +8,10 @@ use \Spatie\SchemaOrg\Contracts\MedicalStudyContract;
 use \Spatie\SchemaOrg\Contracts\ThingContract;
 
 /**
- * A medical trial is a type of medical study that uses scientific process used
- * to compare the safety and efficacy of medical therapies or medical
- * procedures. In general, medical trials are controlled and subjects are
- * allocated at random to the different treatment and/or control groups.
+ * A medical trial is a type of medical study that uses a scientific process to
+ * compare the safety and efficacy of medical therapies or medical procedures.
+ * In general, medical trials are controlled and subjects are allocated at
+ * random to the different treatment and/or control groups.
  *
  * @see https://schema.org/MedicalTrial
  * @see https://health-lifesci.schema.org
@@ -305,7 +305,7 @@ class MedicalTrial extends BaseType implements MedicalTrialContract, MedicalEnti
 
     /**
      * A person or organization that supports a thing through a pledge, promise,
-     * or financial contribution. e.g. a sponsor of a Medical Study or a
+     * or financial contribution. E.g. a sponsor of a Medical Study or a
      * corporate sponsor of an event.
      *
      * @param \Spatie\SchemaOrg\Contracts\OrganizationContract|\Spatie\SchemaOrg\Contracts\OrganizationContract[]|\Spatie\SchemaOrg\Contracts\PersonContract|\Spatie\SchemaOrg\Contracts\PersonContract[] $sponsor

@@ -177,7 +177,7 @@ class MediaManipulationRatingEnumeration extends BaseType implements MediaManipu
      * video, add or remove visual elements or dub audio. Deepfakes are also a
      * subset of transformation.
      * 
-     * For an [[ImageObject]] to be transformed content': Adding or deleting
+     * For an [[ImageObject]] to be 'transformed content': Adding or deleting
      * visual elements to give the image a different meaning with the intention
      * to mislead.
      * 

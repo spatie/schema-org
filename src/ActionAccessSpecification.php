@@ -7,7 +7,7 @@ use \Spatie\SchemaOrg\Contracts\IntangibleContract;
 use \Spatie\SchemaOrg\Contracts\ThingContract;
 
 /**
- * A set of requirements that a must be fulfilled in order to perform an Action.
+ * A set of requirements that must be fulfilled in order to perform an Action.
  *
  * @see https://schema.org/ActionAccessSpecification
  * @link https://github.com/schemaorg/schemaorg/issues/1741

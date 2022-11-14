@@ -13,7 +13,7 @@ use \Spatie\SchemaOrg\Contracts\ThingContract;
  * ending with the current page.
  * 
  * The [[position]] property is used to reconstruct the order of the items in a
- * BreadcrumbList The convention is that a breadcrumb list has an
+ * BreadcrumbList. The convention is that a breadcrumb list has an
  * [[itemListOrder]] of [[ItemListOrderAscending]] (lower values listed first),
  * and that the first items in this list correspond to the "top" or beginning of
  * the breadcrumb trail, e.g. with a site or section homepage. The specific

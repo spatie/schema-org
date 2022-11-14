@@ -282,8 +282,8 @@ class CDCPMDRecord extends BaseType implements CDCPMDRecordContract, IntangibleC
     }
 
     /**
-     * numtotbeds - ALL HOSPITAL BEDS: Total number of all Inpatient and
-     * outpatient beds, including all staffed,ICU, licensed, and overflow
+     * numtotbeds - ALL HOSPITAL BEDS: Total number of all inpatient and
+     * outpatient beds, including all staffed, ICU, licensed, and overflow
      * (surge) beds used for inpatients or outpatients.
      *
      * @param float|float[]|int|int[] $cvdNumTotBeds

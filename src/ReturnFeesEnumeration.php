@@ -39,7 +39,7 @@ class ReturnFeesEnumeration extends BaseType implements ReturnFeesEnumerationCon
 
     /**
      * Specifies that the customer must pay a restocking fee when returning a
-     * product
+     * product.
      *
      * @see https://schema.org/RestockingFees
      * @see https://pending.schema.org
@@ -59,7 +59,7 @@ class ReturnFeesEnumeration extends BaseType implements ReturnFeesEnumerationCon
 
     /**
      * Specifies that the customer must pay the return shipping costs when
-     * returning a product
+     * returning a product.
      *
      * @see https://schema.org/ReturnShippingFees
      * @see https://pending.schema.org

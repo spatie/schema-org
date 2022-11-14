@@ -133,6 +133,32 @@ class AggregateOffer extends BaseType implements AggregateOfferContract, Intangi
     }
 
     /**
+     * An Amazon Standard Identification Number (ASIN) is a 10-character
+     * alphanumeric unique identifier assigned by Amazon.com and its partners
+     * for product identification within the Amazon organization (summary from
+     * [Wikipedia](https://en.wikipedia.org/wiki/Amazon_Standard_Identification_Number)'s
+     * article).
+     * 
+     * Note also that this is a definition for how to include ASINs in
+     * Schema.org data, and not a definition of ASINs in general - see
+     * documentation from Amazon for authoritative details.
+     * ASINs are most commonly encoded as text strings, but the [asin] property
+     * supports URL/URI as potential values too.
+     *
+     * @param string|string[] $asin
+     *
+     * @return static
+     *
+     * @see https://schema.org/asin
+     * @see https://pending.schema.org
+     * @link https://github.com/schemaorg/schemaorg/issues/2288
+     */
+    public function asin($asin)
+    {
+        return $this->setProperty('asin', $asin);
+    }
+
+    /**
      * The availability of this item&#x2014;for example In stock, Out of stock,
      * Pre-order, etc.
      *
@@ -237,6 +263,26 @@ class AggregateOffer extends BaseType implements AggregateOfferContract, Intangi
     public function category($category)
     {
         return $this->setProperty('category', $category);
+    }
+
+    /**
+     * A URL template (RFC 6570) for a checkout page for an offer. This approach
+     * allows merchants to specify a URL for online checkout of the offered
+     * product, by interpolating parameters such as the logged in user ID,
+     * product ID, quantity, discount code etc. Parameter naming and
+     * standardization are not specified here.
+     *
+     * @param string|string[] $checkoutPageURLTemplate
+     *
+     * @return static
+     *
+     * @see https://schema.org/checkoutPageURLTemplate
+     * @see https://pending.schema.org
+     * @link https://github.com/schemaorg/schemaorg/issues/3135
+     */
+    public function checkoutPageURLTemplate($checkoutPageURLTemplate)
+    {
+        return $this->setProperty('checkoutPageURLTemplate', $checkoutPageURLTemplate);
     }
 
     /**
@@ -374,20 +420,29 @@ class AggregateOffer extends BaseType implements AggregateOfferContract, Intangi
      * A Global Trade Item Number
      * ([GTIN](https://www.gs1.org/standards/id-keys/gtin)). GTINs identify
      * trade items, including products and services, using numeric
-     * identification codes. The [[gtin]] property generalizes the earlier
-     * [[gtin8]], [[gtin12]], [[gtin13]], and [[gtin14]] properties. The GS1
-     * [digital link
+     * identification codes.
+     * 
+     * The GS1 [digital link
      * specifications](https://www.gs1.org/standards/Digital-Link/) express
-     * GTINs as URLs. A correct [[gtin]] value should be a valid GTIN, which
-     * means that it should be an all-numeric string of either 8, 12, 13 or 14
-     * digits, or a "GS1 Digital Link" URL based on such a string. The numeric
-     * component should also have a [valid GS1 check
+     * GTINs as URLs (URIs, IRIs, etc.). Details including regular expression
+     * examples can be found in, Section 6 of the GS1 URI Syntax specification;
+     * see also [schema.org tracking
+     * issue](https://github.com/schemaorg/schemaorg/issues/3156#issuecomment-1209522809)
+     * for schema.org-specific discussion. A correct [[gtin]] value should be a
+     * valid GTIN, which means that it should be an all-numeric string of either
+     * 8, 12, 13 or 14 digits, or a "GS1 Digital Link" URL based on such a
+     * string. The numeric component should also have a [valid GS1 check
      * digit](https://www.gs1.org/services/check-digit-calculator) and meet the
      * other rules for valid GTINs. See also [GS1's GTIN
      * Summary](http://www.gs1.org/barcodes/technical/idkeys/gtin) and
      * [Wikipedia](https://en.wikipedia.org/wiki/Global_Trade_Item_Number) for
      * more details. Left-padding of the gtin values is not required or
-     * encouraged.
+     * encouraged. The [[gtin]] property generalizes the earlier [[gtin8]],
+     * [[gtin12]], [[gtin13]], and [[gtin14]] properties.
+     * 
+     * Note also that this is a definition for how to include GTINs in
+     * Schema.org data, and not a definition of GTINs in general - see the GS1
+     * documentation for authoritative details.
      *
      * @param string|string[] $gtin
      *
@@ -535,7 +590,7 @@ class AggregateOffer extends BaseType implements AggregateOfferContract, Intangi
      * Usage guidelines:
      * 
      * * Use values from 0123456789 (Unicode 'DIGIT ZERO' (U+0030) to 'DIGIT
-     * NINE' (U+0039)) rather than superficially similiar Unicode symbols.
+     * NINE' (U+0039)) rather than superficially similar Unicode symbols.
      * * Use '.' (Unicode 'FULL STOP' (U+002E)) rather than ',' to indicate a
      * decimal point. Avoid using these symbols as a readability separator.
      *
@@ -707,7 +762,7 @@ class AggregateOffer extends BaseType implements AggregateOfferContract, Intangi
      * Usage guidelines:
      * 
      * * Use values from 0123456789 (Unicode 'DIGIT ZERO' (U+0030) to 'DIGIT
-     * NINE' (U+0039)) rather than superficially similiar Unicode symbols.
+     * NINE' (U+0039)) rather than superficially similar Unicode symbols.
      * * Use '.' (Unicode 'FULL STOP' (U+002E)) rather than ',' to indicate a
      * decimal point. Avoid using these symbols as a readability separator.
      *
@@ -736,6 +791,38 @@ class AggregateOffer extends BaseType implements AggregateOfferContract, Intangi
     public function mainEntityOfPage($mainEntityOfPage)
     {
         return $this->setProperty('mainEntityOfPage', $mainEntityOfPage);
+    }
+
+    /**
+     * The [[mobileUrl]] property is provided for specific situations in which
+     * data consumers need to determine whether one of several provided URLs is
+     * a dedicated 'mobile site'.
+     * 
+     * To discourage over-use, and reflecting intial usecases, the property is
+     * expected only on [[Product]] and [[Offer]], rather than [[Thing]]. The
+     * general trend in web technology is towards [responsive
+     * design](https://en.wikipedia.org/wiki/Responsive_web_design) in which
+     * content can be flexibly adapted to a wide range of browsing environments.
+     * Pages and sites referenced with the long-established [[url]] property
+     * should ideally also be usable on a wide variety of devices, including
+     * mobile phones. In most cases, it would be pointless and counter
+     * productive to attempt to update all [[url]] markup to use [[mobileUrl]]
+     * for more mobile-oriented pages. The property is intended for the case
+     * when items (primarily [[Product]] and [[Offer]]) have extra URLs hosted
+     * on an additional "mobile site" alongside the main one. It should not be
+     * taken as an endorsement of this publication style.
+     *
+     * @param string|string[] $mobileUrl
+     *
+     * @return static
+     *
+     * @see https://schema.org/mobileUrl
+     * @see https://pending.schema.org
+     * @link https://github.com/schemaorg/schemaorg/issues/3134
+     */
+    public function mobileUrl($mobileUrl)
+    {
+        return $this->setProperty('mobileUrl', $mobileUrl);
     }
 
     /**
@@ -840,12 +927,12 @@ class AggregateOffer extends BaseType implements AggregateOfferContract, Intangi
      * Usage guidelines:
      * 
      * * Use the [[priceCurrency]] property (with standard formats: [ISO 4217
-     * currency format](http://en.wikipedia.org/wiki/ISO_4217) e.g. "USD";
+     * currency format](http://en.wikipedia.org/wiki/ISO_4217), e.g. "USD";
      * [Ticker symbol](https://en.wikipedia.org/wiki/List_of_cryptocurrencies)
-     * for cryptocurrencies e.g. "BTC"; well known names for [Local Exchange
-     * Tradings
+     * for cryptocurrencies, e.g. "BTC"; well known names for [Local Exchange
+     * Trading
      * Systems](https://en.wikipedia.org/wiki/Local_exchange_trading_system)
-     * (LETS) and other currency types e.g. "Ithaca HOUR") instead of including
+     * (LETS) and other currency types, e.g. "Ithaca HOUR") instead of including
      * [ambiguous
      * symbols](http://en.wikipedia.org/wiki/Dollar_sign#Currencies_that_use_the_dollar_or_peso_sign)
      * such as '$' in the value.
@@ -857,7 +944,7 @@ class AggregateOffer extends BaseType implements AggregateOfferContract, Intangi
      * publishing simple machine-readable values alongside more human-friendly
      * formatting.
      * * Use values from 0123456789 (Unicode 'DIGIT ZERO' (U+0030) to 'DIGIT
-     * NINE' (U+0039)) rather than superficially similiar Unicode symbols.
+     * NINE' (U+0039)) rather than superficially similar Unicode symbols.
      *
      * @param float|float[]|int|int[]|string|string[] $price
      *
@@ -875,12 +962,12 @@ class AggregateOffer extends BaseType implements AggregateOfferContract, Intangi
      * [[PriceSpecification]] and its subtypes.
      * 
      * Use standard formats: [ISO 4217 currency
-     * format](http://en.wikipedia.org/wiki/ISO_4217) e.g. "USD"; [Ticker
+     * format](http://en.wikipedia.org/wiki/ISO_4217), e.g. "USD"; [Ticker
      * symbol](https://en.wikipedia.org/wiki/List_of_cryptocurrencies) for
-     * cryptocurrencies e.g. "BTC"; well known names for [Local Exchange
-     * Tradings
+     * cryptocurrencies, e.g. "BTC"; well known names for [Local Exchange
+     * Trading
      * Systems](https://en.wikipedia.org/wiki/Local_exchange_trading_system)
-     * (LETS) and other currency types e.g. "Ithaca HOUR".
+     * (LETS) and other currency types, e.g. "Ithaca HOUR".
      *
      * @param string|string[] $priceCurrency
      *

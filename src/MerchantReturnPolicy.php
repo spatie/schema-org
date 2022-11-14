@@ -18,9 +18,9 @@ use \Spatie\SchemaOrg\Contracts\ThingContract;
 class MerchantReturnPolicy extends BaseType implements MerchantReturnPolicyContract, IntangibleContract, ThingContract
 {
     /**
-     * A property-value pair representing an additional characteristics of the
-     * entitity, e.g. a product feature or another characteristic for which
-     * there is no matching property in schema.org.
+     * A property-value pair representing an additional characteristic of the
+     * entity, e.g. a product feature or another characteristic for which there
+     * is no matching property in schema.org.
      * 
      * Note: Publishers should be aware that applications designed to use
      * specific schema.org properties (e.g. https://schema.org/width,
@@ -206,8 +206,8 @@ class MerchantReturnPolicy extends BaseType implements MerchantReturnPolicyContr
     }
 
     /**
-     * Are in-store returns offered? (for more advanced return methods use the
-     * [[returnMethod]] property)
+     * Are in-store returns offered? (For more advanced return methods use the
+     * [[returnMethod]] property.)
      *
      * @param bool|bool[] $inStoreReturnsOffered
      *
@@ -404,7 +404,7 @@ class MerchantReturnPolicy extends BaseType implements MerchantReturnPolicyContr
     }
 
     /**
-     * The type of return fees for purchased products (for any return reason)
+     * The type of return fees for purchased products (for any return reason).
      *
      * @param \Spatie\SchemaOrg\Contracts\ReturnFeesEnumerationContract|\Spatie\SchemaOrg\Contracts\ReturnFeesEnumerationContract[] $returnFees
      *
@@ -474,7 +474,7 @@ class MerchantReturnPolicy extends BaseType implements MerchantReturnPolicyContr
      * provide the two-letter [ISO 3166-1 alpha-2 country
      * code](http://en.wikipedia.org/wiki/ISO_3166-1). Note that this can be
      * different from the country where the product was originally shipped from
-     * or sent too.
+     * or sent to.
      *
      * @param \Spatie\SchemaOrg\Contracts\CountryContract|\Spatie\SchemaOrg\Contracts\CountryContract[]|string|string[] $returnPolicyCountry
      *

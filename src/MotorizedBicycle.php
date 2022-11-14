@@ -44,9 +44,9 @@ class MotorizedBicycle extends BaseType implements MotorizedBicycleContract, Pro
     }
 
     /**
-     * A property-value pair representing an additional characteristics of the
-     * entitity, e.g. a product feature or another characteristic for which
-     * there is no matching property in schema.org.
+     * A property-value pair representing an additional characteristic of the
+     * entity, e.g. a product feature or another characteristic for which there
+     * is no matching property in schema.org.
      * 
      * Note: Publishers should be aware that applications designed to use
      * specific schema.org properties (e.g. https://schema.org/width,
@@ -111,6 +111,32 @@ class MotorizedBicycle extends BaseType implements MotorizedBicycleContract, Pro
     public function alternateName($alternateName)
     {
         return $this->setProperty('alternateName', $alternateName);
+    }
+
+    /**
+     * An Amazon Standard Identification Number (ASIN) is a 10-character
+     * alphanumeric unique identifier assigned by Amazon.com and its partners
+     * for product identification within the Amazon organization (summary from
+     * [Wikipedia](https://en.wikipedia.org/wiki/Amazon_Standard_Identification_Number)'s
+     * article).
+     * 
+     * Note also that this is a definition for how to include ASINs in
+     * Schema.org data, and not a definition of ASINs in general - see
+     * documentation from Amazon for authoritative details.
+     * ASINs are most commonly encoded as text strings, but the [asin] property
+     * supports URL/URI as potential values too.
+     *
+     * @param string|string[] $asin
+     *
+     * @return static
+     *
+     * @see https://schema.org/asin
+     * @see https://pending.schema.org
+     * @link https://github.com/schemaorg/schemaorg/issues/2288
+     */
+    public function asin($asin)
+    {
+        return $this->setProperty('asin', $asin);
     }
 
     /**
@@ -521,20 +547,29 @@ class MotorizedBicycle extends BaseType implements MotorizedBicycleContract, Pro
      * A Global Trade Item Number
      * ([GTIN](https://www.gs1.org/standards/id-keys/gtin)). GTINs identify
      * trade items, including products and services, using numeric
-     * identification codes. The [[gtin]] property generalizes the earlier
-     * [[gtin8]], [[gtin12]], [[gtin13]], and [[gtin14]] properties. The GS1
-     * [digital link
+     * identification codes.
+     * 
+     * The GS1 [digital link
      * specifications](https://www.gs1.org/standards/Digital-Link/) express
-     * GTINs as URLs. A correct [[gtin]] value should be a valid GTIN, which
-     * means that it should be an all-numeric string of either 8, 12, 13 or 14
-     * digits, or a "GS1 Digital Link" URL based on such a string. The numeric
-     * component should also have a [valid GS1 check
+     * GTINs as URLs (URIs, IRIs, etc.). Details including regular expression
+     * examples can be found in, Section 6 of the GS1 URI Syntax specification;
+     * see also [schema.org tracking
+     * issue](https://github.com/schemaorg/schemaorg/issues/3156#issuecomment-1209522809)
+     * for schema.org-specific discussion. A correct [[gtin]] value should be a
+     * valid GTIN, which means that it should be an all-numeric string of either
+     * 8, 12, 13 or 14 digits, or a "GS1 Digital Link" URL based on such a
+     * string. The numeric component should also have a [valid GS1 check
      * digit](https://www.gs1.org/services/check-digit-calculator) and meet the
      * other rules for valid GTINs. See also [GS1's GTIN
      * Summary](http://www.gs1.org/barcodes/technical/idkeys/gtin) and
      * [Wikipedia](https://en.wikipedia.org/wiki/Global_Trade_Item_Number) for
      * more details. Left-padding of the gtin values is not required or
-     * encouraged.
+     * encouraged. The [[gtin]] property generalizes the earlier [[gtin8]],
+     * [[gtin12]], [[gtin13]], and [[gtin14]] properties.
+     * 
+     * Note also that this is a definition for how to include GTINs in
+     * Schema.org data, and not a definition of GTINs in general - see the GS1
+     * documentation for authoritative details.
      *
      * @param string|string[] $gtin
      *
@@ -1019,6 +1054,38 @@ class MotorizedBicycle extends BaseType implements MotorizedBicycleContract, Pro
     }
 
     /**
+     * The [[mobileUrl]] property is provided for specific situations in which
+     * data consumers need to determine whether one of several provided URLs is
+     * a dedicated 'mobile site'.
+     * 
+     * To discourage over-use, and reflecting intial usecases, the property is
+     * expected only on [[Product]] and [[Offer]], rather than [[Thing]]. The
+     * general trend in web technology is towards [responsive
+     * design](https://en.wikipedia.org/wiki/Responsive_web_design) in which
+     * content can be flexibly adapted to a wide range of browsing environments.
+     * Pages and sites referenced with the long-established [[url]] property
+     * should ideally also be usable on a wide variety of devices, including
+     * mobile phones. In most cases, it would be pointless and counter
+     * productive to attempt to update all [[url]] markup to use [[mobileUrl]]
+     * for more mobile-oriented pages. The property is intended for the case
+     * when items (primarily [[Product]] and [[Offer]]) have extra URLs hosted
+     * on an additional "mobile site" alongside the main one. It should not be
+     * taken as an endorsement of this publication style.
+     *
+     * @param string|string[] $mobileUrl
+     *
+     * @return static
+     *
+     * @see https://schema.org/mobileUrl
+     * @see https://pending.schema.org
+     * @link https://github.com/schemaorg/schemaorg/issues/3134
+     */
+    public function mobileUrl($mobileUrl)
+    {
+        return $this->setProperty('mobileUrl', $mobileUrl);
+    }
+
+    /**
      * The model of the product. Use with the URL of a ProductModel or a textual
      * representation of the model identifier. The URL of the ProductModel can
      * be from an external source. It is recommended to additionally provide
@@ -1081,6 +1148,34 @@ class MotorizedBicycle extends BaseType implements MotorizedBicycleContract, Pro
     public function name($name)
     {
         return $this->setProperty('name', $name);
+    }
+
+    /**
+     * Provides negative considerations regarding something, most typically in
+     * pro/con lists for reviews (alongside [[positiveNotes]]). For symmetry 
+     * 
+     * In the case of a [[Review]], the property describes the [[itemReviewed]]
+     * from the perspective of the review; in the case of a [[Product]], the
+     * product itself is being described. Since product descriptions 
+     * tend to emphasise positive claims, it may be relatively unusual to find
+     * [[negativeNotes]] used in this way. Nevertheless for the sake of
+     * symmetry, [[negativeNotes]] can be used on [[Product]].
+     * 
+     * The property values can be expressed either as unstructured text
+     * (repeated as necessary), or if ordered, as a list (in which case the most
+     * negative is at the beginning of the list).
+     *
+     * @param \Spatie\SchemaOrg\Contracts\ItemListContract|\Spatie\SchemaOrg\Contracts\ItemListContract[]|\Spatie\SchemaOrg\Contracts\ListItemContract|\Spatie\SchemaOrg\Contracts\ListItemContract[]|\Spatie\SchemaOrg\Contracts\WebContentContract|\Spatie\SchemaOrg\Contracts\WebContentContract[]|string|string[] $negativeNotes
+     *
+     * @return static
+     *
+     * @see https://schema.org/negativeNotes
+     * @see https://pending.schema.org
+     * @link https://github.com/schemaorg/schemaorg/issues/2832
+     */
+    public function negativeNotes($negativeNotes)
+    {
+        return $this->setProperty('negativeNotes', $negativeNotes);
     }
 
     /**
@@ -1254,6 +1349,31 @@ class MotorizedBicycle extends BaseType implements MotorizedBicycleContract, Pro
     }
 
     /**
+     * Provides positive considerations regarding something, for example product
+     * highlights or (alongside [[negativeNotes]]) pro/con lists for reviews.
+     * 
+     * In the case of a [[Review]], the property describes the [[itemReviewed]]
+     * from the perspective of the review; in the case of a [[Product]], the
+     * product itself is being described.
+     * 
+     * The property values can be expressed either as unstructured text
+     * (repeated as necessary), or if ordered, as a list (in which case the most
+     * positive is at the beginning of the list).
+     *
+     * @param \Spatie\SchemaOrg\Contracts\ItemListContract|\Spatie\SchemaOrg\Contracts\ItemListContract[]|\Spatie\SchemaOrg\Contracts\ListItemContract|\Spatie\SchemaOrg\Contracts\ListItemContract[]|\Spatie\SchemaOrg\Contracts\WebContentContract|\Spatie\SchemaOrg\Contracts\WebContentContract[]|string|string[] $positiveNotes
+     *
+     * @return static
+     *
+     * @see https://schema.org/positiveNotes
+     * @see https://pending.schema.org
+     * @link https://github.com/schemaorg/schemaorg/issues/2832
+     */
+    public function positiveNotes($positiveNotes)
+    {
+        return $this->setProperty('positiveNotes', $positiveNotes);
+    }
+
+    /**
      * Indicates a potential Action, which describes an idealized action in
      * which this thing would play an 'object' role.
      *
@@ -1299,7 +1419,7 @@ class MotorizedBicycle extends BaseType implements MotorizedBicycleContract, Pro
     }
 
     /**
-     * The date the item e.g. vehicle was purchased by the current owner.
+     * The date the item, e.g. vehicle, was purchased by the current owner.
      *
      * @param \DateTimeInterface|\DateTimeInterface[] $purchaseDate
      *
@@ -1445,7 +1565,7 @@ class MotorizedBicycle extends BaseType implements MotorizedBicycleContract, Pro
 
     /**
      * The speed range of the vehicle. If the vehicle is powered by an engine,
-     * the upper limit of the speed range (indicated by [[maxValue]] should be
+     * the upper limit of the speed range (indicated by [[maxValue]]) should be
      * the maximum speed achievable under regular conditions.
      * 
      * Typical unit code(s): KMH for km/h, HM for mile per hour (0.447 04 m/s),
@@ -1518,7 +1638,7 @@ class MotorizedBicycle extends BaseType implements MotorizedBicycleContract, Pro
     /**
      * The permitted vertical load (TWR) of a trailer attached to the vehicle.
      * Also referred to as Tongue Load Rating (TLR) or Vertical Load Rating
-     * (VLR)
+     * (VLR).
      * 
      * Typical unit code(s): KGM for kilogram, LBR for pound
      * 

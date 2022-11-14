@@ -157,7 +157,7 @@ class DataFeedItem extends BaseType implements DataFeedItemContract, IntangibleC
 
     /**
      * An entity represented by an entry in a list or data feed (e.g. an
-     * 'artist' in a list of 'artists')’.
+     * 'artist' in a list of 'artists').
      *
      * @param \Spatie\SchemaOrg\Contracts\ThingContract|\Spatie\SchemaOrg\Contracts\ThingContract[] $item
      *

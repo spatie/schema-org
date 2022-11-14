@@ -126,7 +126,7 @@ class Permit extends BaseType implements PermitContract, IntangibleContract, Thi
     }
 
     /**
-     * The service through with the permit was granted.
+     * The service through which the permit was granted.
      *
      * @param \Spatie\SchemaOrg\Contracts\ServiceContract|\Spatie\SchemaOrg\Contracts\ServiceContract[] $issuedThrough
      *

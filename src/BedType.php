@@ -19,9 +19,9 @@ use \Spatie\SchemaOrg\Contracts\ThingContract;
 class BedType extends BaseType implements BedTypeContract, EnumerationContract, IntangibleContract, QualitativeValueContract, ThingContract
 {
     /**
-     * A property-value pair representing an additional characteristics of the
-     * entitity, e.g. a product feature or another characteristic for which
-     * there is no matching property in schema.org.
+     * A property-value pair representing an additional characteristic of the
+     * entity, e.g. a product feature or another characteristic for which there
+     * is no matching property in schema.org.
      * 
      * Note: Publishers should be aware that applications designed to use
      * specific schema.org properties (e.g. https://schema.org/width,

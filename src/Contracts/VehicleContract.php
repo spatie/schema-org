@@ -14,6 +14,8 @@ interface VehicleContract
 
     public function alternateName($alternateName);
 
+    public function asin($asin);
+
     public function audience($audience);
 
     public function award($award);
@@ -118,6 +120,8 @@ interface VehicleContract
 
     public function mileageFromOdometer($mileageFromOdometer);
 
+    public function mobileUrl($mobileUrl);
+
     public function model($model);
 
     public function modelDate($modelDate);
@@ -125,6 +129,8 @@ interface VehicleContract
     public function mpn($mpn);
 
     public function name($name);
+
+    public function negativeNotes($negativeNotes);
 
     public function nsn($nsn);
 
@@ -143,6 +149,8 @@ interface VehicleContract
     public function pattern($pattern);
 
     public function payload($payload);
+
+    public function positiveNotes($positiveNotes);
 
     public function potentialAction($potentialAction);
 

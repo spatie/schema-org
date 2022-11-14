@@ -14,8 +14,8 @@ use \Spatie\SchemaOrg\Contracts\ThingContract;
  * 
  * * [[JoinAction]]: Unlike JoinAction, RegisterAction implies you are
  * registering to be a user of a service, *not* a group/team of people.
- * * [FollowAction]]: Unlike FollowAction, RegisterAction doesn't imply that the
- * agent is expecting to poll for updates from the object.
+ * * [[FollowAction]]: Unlike FollowAction, RegisterAction doesn't imply that
+ * the agent is expecting to poll for updates from the object.
  * * [[SubscribeAction]]: Unlike SubscribeAction, RegisterAction doesn't imply
  * that the agent is expecting updates from the object.
  *
@@ -58,7 +58,7 @@ class RegisterAction extends BaseType implements RegisterActionContract, ActionC
     }
 
     /**
-     * The direct performer or driver of the action (animate or inanimate). e.g.
+     * The direct performer or driver of the action (animate or inanimate). E.g.
      * *John* wrote a book.
      *
      * @param \Spatie\SchemaOrg\Contracts\OrganizationContract|\Spatie\SchemaOrg\Contracts\OrganizationContract[]|\Spatie\SchemaOrg\Contracts\PersonContract|\Spatie\SchemaOrg\Contracts\PersonContract[] $agent
@@ -120,7 +120,7 @@ class RegisterAction extends BaseType implements RegisterActionContract, ActionC
     /**
      * The endTime of something. For a reserved event or service (e.g.
      * FoodEstablishmentReservation), the time that it is expected to end. For
-     * actions that span a period of time, when the action was performed. e.g.
+     * actions that span a period of time, when the action was performed. E.g.
      * John wrote a book from January to *December*. For media, including audio
      * and video, it's the time offset of the end of a clip within a larger
      * file.
@@ -189,7 +189,7 @@ class RegisterAction extends BaseType implements RegisterActionContract, ActionC
     }
 
     /**
-     * The object that helped the agent perform the action. e.g. John wrote a
+     * The object that helped the agent perform the action. E.g. John wrote a
      * book with *a pen*.
      *
      * @param \Spatie\SchemaOrg\Contracts\ThingContract|\Spatie\SchemaOrg\Contracts\ThingContract[] $instrument
@@ -251,7 +251,7 @@ class RegisterAction extends BaseType implements RegisterActionContract, ActionC
     /**
      * The object upon which the action is carried out, whose state is kept
      * intact or changed. Also known as the semantic roles patient, affected or
-     * undergoer (which change their state) or theme (which doesn't). e.g. John
+     * undergoer (which change their state) or theme (which doesn't). E.g. John
      * read *a book*.
      *
      * @param \Spatie\SchemaOrg\Contracts\ThingContract|\Spatie\SchemaOrg\Contracts\ThingContract[] $object
@@ -266,7 +266,7 @@ class RegisterAction extends BaseType implements RegisterActionContract, ActionC
     }
 
     /**
-     * Other co-agents that participated in the action indirectly. e.g. John
+     * Other co-agents that participated in the action indirectly. E.g. John
      * wrote a book with *Steve*.
      *
      * @param \Spatie\SchemaOrg\Contracts\OrganizationContract|\Spatie\SchemaOrg\Contracts\OrganizationContract[]|\Spatie\SchemaOrg\Contracts\PersonContract|\Spatie\SchemaOrg\Contracts\PersonContract[] $participant
@@ -313,7 +313,7 @@ class RegisterAction extends BaseType implements RegisterActionContract, ActionC
     }
 
     /**
-     * The result produced in the action. e.g. John wrote *a book*.
+     * The result produced in the action. E.g. John wrote *a book*.
      *
      * @param \Spatie\SchemaOrg\Contracts\ThingContract|\Spatie\SchemaOrg\Contracts\ThingContract[] $result
      *
@@ -345,7 +345,7 @@ class RegisterAction extends BaseType implements RegisterActionContract, ActionC
     /**
      * The startTime of something. For a reserved event or service (e.g.
      * FoodEstablishmentReservation), the time that it is expected to start. For
-     * actions that span a period of time, when the action was performed. e.g.
+     * actions that span a period of time, when the action was performed. E.g.
      * John wrote a book from *January* to December. For media, including audio
      * and video, it's the time offset of the start of a clip within a larger
      * file.
@@ -382,9 +382,9 @@ class RegisterAction extends BaseType implements RegisterActionContract, ActionC
     }
 
     /**
-     * Indicates a target EntryPoint for an Action.
+     * Indicates a target EntryPoint, or url, for an Action.
      *
-     * @param \Spatie\SchemaOrg\Contracts\EntryPointContract|\Spatie\SchemaOrg\Contracts\EntryPointContract[] $target
+     * @param \Spatie\SchemaOrg\Contracts\EntryPointContract|\Spatie\SchemaOrg\Contracts\EntryPointContract[]|string|string[] $target
      *
      * @return static
      *

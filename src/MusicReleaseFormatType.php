@@ -8,7 +8,7 @@ use \Spatie\SchemaOrg\Contracts\IntangibleContract;
 use \Spatie\SchemaOrg\Contracts\ThingContract;
 
 /**
- * Format of this release (the type of recording media used, ie. compact disc,
+ * Format of this release (the type of recording media used, i.e. compact disc,
  * digital media, LP, etc.).
  *
  * @see https://schema.org/MusicReleaseFormatType

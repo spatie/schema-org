@@ -10,7 +10,7 @@ use \Spatie\SchemaOrg\Contracts\ThingContract;
 /**
  * A DeliveryTimeSettings represents re-usable pieces of shipping information,
  * relating to timing. It is designed for publication on an URL that may be
- * referenced via the [[shippingSettingsLink]] property of a
+ * referenced via the [[shippingSettingsLink]] property of an
  * [[OfferShippingDetails]]. Several occurrences can be published, distinguished
  * (and identified/referenced) by their different values for
  * [[transitTimeLabel]].
@@ -222,7 +222,7 @@ class DeliveryTimeSettings extends BaseType implements DeliveryTimeSettingsContr
 
     /**
      * indicates (possibly multiple) shipping destinations. These can be defined
-     * in several ways e.g. postalCode ranges.
+     * in several ways, e.g. postalCode ranges.
      *
      * @param \Spatie\SchemaOrg\Contracts\DefinedRegionContract|\Spatie\SchemaOrg\Contracts\DefinedRegionContract[] $shippingDestination
      *

@@ -44,7 +44,7 @@ class DeliveryEvent extends BaseType implements DeliveryEventContract, EventCont
     }
 
     /**
-     * An actor, e.g. in tv, radio, movie, video games etc., or in an event.
+     * An actor, e.g. in TV, radio, movie, video games etc., or in an event.
      * Actors can be associated with individual items or with a series, episode,
      * clip.
      *
@@ -222,7 +222,7 @@ class DeliveryEvent extends BaseType implements DeliveryEventContract, EventCont
     }
 
     /**
-     * A director of e.g. tv, radio, movie, video gaming etc. content, or of an
+     * A director of e.g. TV, radio, movie, video gaming etc. content, or of an
      * event. Directors can be associated with individual items or with a
      * series, episode, clip.
      *
@@ -741,7 +741,7 @@ class DeliveryEvent extends BaseType implements DeliveryEventContract, EventCont
 
     /**
      * A person or organization that supports a thing through a pledge, promise,
-     * or financial contribution. e.g. a sponsor of a Medical Study or a
+     * or financial contribution. E.g. a sponsor of a Medical Study or a
      * corporate sponsor of an event.
      *
      * @param \Spatie\SchemaOrg\Contracts\OrganizationContract|\Spatie\SchemaOrg\Contracts\OrganizationContract[]|\Spatie\SchemaOrg\Contracts\PersonContract|\Spatie\SchemaOrg\Contracts\PersonContract[] $sponsor

@@ -10,11 +10,15 @@ interface OfferShippingDetailsContract
 
     public function deliveryTime($deliveryTime);
 
+    public function depth($depth);
+
     public function description($description);
 
     public function disambiguatingDescription($disambiguatingDescription);
 
     public function doesNotShip($doesNotShip);
+
+    public function height($height);
 
     public function identifier($identifier);
 
@@ -32,6 +36,8 @@ interface OfferShippingDetailsContract
 
     public function shippingLabel($shippingLabel);
 
+    public function shippingOrigin($shippingOrigin);
+
     public function shippingRate($shippingRate);
 
     public function shippingSettingsLink($shippingSettingsLink);
@@ -41,5 +47,9 @@ interface OfferShippingDetailsContract
     public function transitTimeLabel($transitTimeLabel);
 
     public function url($url);
+
+    public function weight($weight);
+
+    public function width($width);
 
 }

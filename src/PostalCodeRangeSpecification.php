@@ -8,7 +8,7 @@ use \Spatie\SchemaOrg\Contracts\StructuredValueContract;
 use \Spatie\SchemaOrg\Contracts\ThingContract;
 
 /**
- * Indicates a range of postalcodes, usually defined as the set of valid codes
+ * Indicates a range of postal codes, usually defined as the set of valid codes
  * between [[postalCodeBegin]] and [[postalCodeEnd]], inclusively.
  *
  * @see https://schema.org/PostalCodeRangeSpecification

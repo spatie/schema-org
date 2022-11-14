@@ -12,8 +12,8 @@ use \Spatie\SchemaOrg\Contracts\ThingContract;
  * specify the type. Any property that can be used on instances of that type can
  * appear on the statistical population. For example, a
  * [[StatisticalPopulation]] representing all [[Person]]s with a
- * [[homeLocation]] of East Podunk California, would be described by applying
- * the appropriate [[homeLocation]] and [[populationType]] properties to a
+ * [[homeLocation]] of East Podunk California would be described by applying the
+ * appropriate [[homeLocation]] and [[populationType]] properties to a
  * [[StatisticalPopulation]] item that stands for that set of people.
  * The properties [[numConstraints]] and [[constrainingProperty]] are used to
  * specify which of the populations properties are used to specify the

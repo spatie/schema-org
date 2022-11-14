@@ -315,9 +315,9 @@ class JobPosting extends BaseType implements JobPostingContract, IntangibleContr
     }
 
     /**
-     * Organization offering the job position.
+     * Organization or Person offering the job position.
      *
-     * @param \Spatie\SchemaOrg\Contracts\OrganizationContract|\Spatie\SchemaOrg\Contracts\OrganizationContract[] $hiringOrganization
+     * @param \Spatie\SchemaOrg\Contracts\OrganizationContract|\Spatie\SchemaOrg\Contracts\OrganizationContract[]|\Spatie\SchemaOrg\Contracts\PersonContract|\Spatie\SchemaOrg\Contracts\PersonContract[] $hiringOrganization
      *
      * @return static
      *
@@ -450,7 +450,8 @@ class JobPosting extends BaseType implements JobPostingContract, IntangibleContr
     }
 
     /**
-     * A description of the job location (e.g TELECOMMUTE for telecommute jobs).
+     * A description of the job location (e.g. TELECOMMUTE for telecommute
+     * jobs).
      *
      * @param string|string[] $jobLocationType
      *
@@ -618,7 +619,7 @@ class JobPosting extends BaseType implements JobPostingContract, IntangibleContr
 
     /**
      * The currency (coded using [ISO
-     * 4217](http://en.wikipedia.org/wiki/ISO_4217) ) used for the main salary
+     * 4217](http://en.wikipedia.org/wiki/ISO_4217)) used for the main salary
      * information in this job posting or for this employee.
      *
      * @param string|string[] $salaryCurrency

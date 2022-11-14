@@ -116,7 +116,7 @@ class HowToTool extends BaseType implements HowToToolContract, HowToItemContract
 
     /**
      * An entity represented by an entry in a list or data feed (e.g. an
-     * 'artist' in a list of 'artists')’.
+     * 'artist' in a list of 'artists').
      *
      * @param \Spatie\SchemaOrg\Contracts\ThingContract|\Spatie\SchemaOrg\Contracts\ThingContract[] $item
      *
@@ -203,7 +203,7 @@ class HowToTool extends BaseType implements HowToToolContract, HowToItemContract
     }
 
     /**
-     * A link to the ListItem that preceeds the current one.
+     * A link to the ListItem that precedes the current one.
      *
      * @param \Spatie\SchemaOrg\Contracts\ListItemContract|\Spatie\SchemaOrg\Contracts\ListItemContract[] $previousItem
      *

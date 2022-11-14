@@ -181,7 +181,7 @@ class BroadcastService extends BaseType implements BroadcastServiceContract, Int
 
     /**
      * The frequency used for over-the-air broadcasts. Numeric values or simple
-     * ranges e.g. 87-99. In addition a shortcut idiom is supported for
+     * ranges, e.g. 87-99. In addition a shortcut idiom is supported for
      * frequences of AM and FM radio channels, e.g. "87 FM".
      *
      * @param \Spatie\SchemaOrg\Contracts\BroadcastFrequencySpecificationContract|\Spatie\SchemaOrg\Contracts\BroadcastFrequencySpecificationContract[]|string|string[] $broadcastFrequency
@@ -198,7 +198,7 @@ class BroadcastService extends BaseType implements BroadcastServiceContract, Int
 
     /**
      * The timezone in [ISO 8601 format](http://en.wikipedia.org/wiki/ISO_8601)
-     * for which the service bases its broadcasts
+     * for which the service bases its broadcasts.
      *
      * @param string|string[] $broadcastTimezone
      *

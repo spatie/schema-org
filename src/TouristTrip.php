@@ -13,7 +13,7 @@ use \Spatie\SchemaOrg\Contracts\TripContract;
  * similar theme, geographic area, or interest to a particular [[touristType]].
  * The [UNWTO](http://www2.unwto.org/) defines tourism trip as the Trip taken by
  * visitors.
- *   (See examples below).
+ *   (See examples below.)
  *
  * @see https://schema.org/TouristTrip
  * @see https://pending.schema.org
@@ -311,8 +311,8 @@ class TouristTrip extends BaseType implements TouristTripContract, IntangibleCon
     }
 
     /**
-     * Attraction suitable for type(s) of tourist. eg. Children, visitors from a
-     * particular country, etc.
+     * Attraction suitable for type(s) of tourist. E.g. children, visitors from
+     * a particular country, etc.
      *
      * @param \Spatie\SchemaOrg\Contracts\AudienceContract|\Spatie\SchemaOrg\Contracts\AudienceContract[]|string|string[] $touristType
      *

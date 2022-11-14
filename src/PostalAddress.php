@@ -69,7 +69,7 @@ class PostalAddress extends BaseType implements PostalAddressContract, ContactPo
     /**
      * The region in which the locality is, and which is in the country. For
      * example, California or another appropriate first-level [Administrative
-     * division](https://en.wikipedia.org/wiki/List_of_administrative_divisions_by_country)
+     * division](https://en.wikipedia.org/wiki/List_of_administrative_divisions_by_country).
      *
      * @param string|string[] $addressRegion
      *
@@ -114,7 +114,7 @@ class PostalAddress extends BaseType implements PostalAddressContract, ContactPo
     /**
      * A language someone may use with or at the item, service or place. Please
      * use one of the language codes from the [IETF BCP 47
-     * standard](http://tools.ietf.org/html/bcp47). See also [[inLanguage]]
+     * standard](http://tools.ietf.org/html/bcp47). See also [[inLanguage]].
      *
      * @param \Spatie\SchemaOrg\Contracts\LanguageContract|\Spatie\SchemaOrg\Contracts\LanguageContract[]|string|string[] $availableLanguage
      *

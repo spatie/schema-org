@@ -257,7 +257,7 @@ class FloorPlan extends BaseType implements FloorPlanContract, IntangibleContrac
     }
 
     /**
-     * The total integer number of bathrooms in a some [[Accommodation]],
+     * The total integer number of bathrooms in some [[Accommodation]],
      * following real estate conventions as [documented in
      * RESO](https://ddwiki.reso.org/display/DDW17/BathroomsTotalInteger+Field):
      * "The simple sum of the number of bathrooms. For example for a property

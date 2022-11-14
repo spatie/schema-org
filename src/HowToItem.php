@@ -9,7 +9,7 @@ use \Spatie\SchemaOrg\Contracts\ThingContract;
 
 /**
  * An item used as either a tool or supply when performing the instructions for
- * how to to achieve a result.
+ * how to achieve a result.
  *
  * @see https://schema.org/HowToItem
  *
@@ -115,7 +115,7 @@ class HowToItem extends BaseType implements HowToItemContract, IntangibleContrac
 
     /**
      * An entity represented by an entry in a list or data feed (e.g. an
-     * 'artist' in a list of 'artists')’.
+     * 'artist' in a list of 'artists').
      *
      * @param \Spatie\SchemaOrg\Contracts\ThingContract|\Spatie\SchemaOrg\Contracts\ThingContract[] $item
      *
@@ -202,7 +202,7 @@ class HowToItem extends BaseType implements HowToItemContract, IntangibleContrac
     }
 
     /**
-     * A link to the ListItem that preceeds the current one.
+     * A link to the ListItem that precedes the current one.
      *
      * @param \Spatie\SchemaOrg\Contracts\ListItemContract|\Spatie\SchemaOrg\Contracts\ListItemContract[] $previousItem
      *
