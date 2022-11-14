@@ -2,6 +2,14 @@
 
 All Notable changes to `schema-org` will be documented in this file.
 
+## 3.13.0 - 2022-11-14
+
+### What's Changed
+
+- add support for complex context by @Gummibeer in https://github.com/spatie/schema-org/pull/189
+
+**Full Changelog**: https://github.com/spatie/schema-org/compare/3.12.0...3.13.0
+
 ## 3.12.0 - 2022-11-14
 
 ### What's Changed
