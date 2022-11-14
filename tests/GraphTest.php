@@ -223,5 +223,26 @@ it('can use references', function () {
 
 it('can be initialized with different context', function () {
     $graph = new Graph('https://foobar.com');
+
     expect($graph->getContext())->toBe('https://foobar.com');
+
+    expect($graph->toScript())->toBe(
+        '<script type="application/ld+json">{"@context":"https:\/\/foobar.com","@graph":[]}</script>'
+    );
+});
+
+it('can be initialized with complex context', function () {
+    $graph = new Graph([
+        '@vocab' => 'https://schema.org/',
+        '@base' => 'https://domain.com/',
+    ]);
+
+    expect($graph->getContext())->toBe([
+        '@vocab' => 'https://schema.org/',
+        '@base' => 'https://domain.com/',
+    ]);
+
+    expect($graph->toScript())->toBe(
+        '<script type="application/ld+json">{"@context":{"@vocab":"https:\/\/schema.org\/","@base":"https:\/\/domain.com\/"},"@graph":[]}</script>'
+    );
 });
