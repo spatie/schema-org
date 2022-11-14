@@ -2,6 +2,18 @@
 
 All Notable changes to `schema-org` will be documented in this file.
 
+## 3.12.0 - 2022-11-14
+
+### What's Changed
+
+- Update generator to use schema v15 by @osopolar in https://github.com/spatie/schema-org/pull/188
+
+### New Contributors
+
+- @osopolar made their first contribution in https://github.com/spatie/schema-org/pull/188
+
+**Full Changelog**: https://github.com/spatie/schema-org/compare/3.11.0...3.12.0
+
 ## 3.11.0 - 2022-04-11
 
 ## What's Changed
