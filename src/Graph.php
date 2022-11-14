@@ -912,7 +912,7 @@ class Graph implements Type, ArrayAccess, JsonSerializable
     /** @var string|null */
     protected $context;
 
-    public function __construct(?string $context = null)
+    public function __construct(string|array|null $context = null)
     {
         $this->context = $context;
     }
@@ -1058,7 +1058,7 @@ class Graph implements Type, ArrayAccess, JsonSerializable
     {
         // show all
         if ($identifier === null) {
-            $this->hidden[$type] = false;
+            unset($this->hidden[$type]);
 
             return $this;
         }
@@ -1152,7 +1152,7 @@ class Graph implements Type, ArrayAccess, JsonSerializable
         return $this->nodes;
     }
 
-    public function getContext(): string
+    public function getContext(): string|array
     {
         return $this->context ?? 'https://schema.org';
     }
