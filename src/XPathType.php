@@ -2,7 +2,7 @@
 
 namespace Spatie\SchemaOrg;
 
-use \Spatie\SchemaOrg\Contracts\XPathTypeContract;
+use Spatie\SchemaOrg\Contracts\XPathTypeContract;
 
 /**
  * Text representing an XPath (typically but not necessarily version 1.0).

@@ -2,10 +2,10 @@
 
 namespace Spatie\SchemaOrg;
 
-use \Spatie\SchemaOrg\Contracts\UserCommentsContract;
-use \Spatie\SchemaOrg\Contracts\EventContract;
-use \Spatie\SchemaOrg\Contracts\ThingContract;
-use \Spatie\SchemaOrg\Contracts\UserInteractionContract;
+use Spatie\SchemaOrg\Contracts\EventContract;
+use Spatie\SchemaOrg\Contracts\ThingContract;
+use Spatie\SchemaOrg\Contracts\UserCommentsContract;
+use Spatie\SchemaOrg\Contracts\UserInteractionContract;
 
 /**
  * UserInteraction and its subtypes is an old way of talking about users
@@ -926,5 +926,4 @@ class UserComments extends BaseType implements UserCommentsContract, EventContra
     {
         return $this->setProperty('workPerformed', $workPerformed);
     }
-
 }

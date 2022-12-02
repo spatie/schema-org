@@ -49,5 +49,4 @@ interface PeopleAudienceContract
     public function suggestedMinAge($suggestedMinAge);
 
     public function url($url);
-
 }

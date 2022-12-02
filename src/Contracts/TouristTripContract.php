@@ -43,5 +43,4 @@ interface TouristTripContract
     public function touristType($touristType);
 
     public function url($url);
-
 }

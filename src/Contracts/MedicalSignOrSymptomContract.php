@@ -75,5 +75,4 @@ interface MedicalSignOrSymptomContract
     public function typicalTest($typicalTest);
 
     public function url($url);
-
 }

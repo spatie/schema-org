@@ -2,10 +2,10 @@
 
 namespace Spatie\SchemaOrg;
 
-use \Spatie\SchemaOrg\Contracts\BrainStructureContract;
-use \Spatie\SchemaOrg\Contracts\AnatomicalStructureContract;
-use \Spatie\SchemaOrg\Contracts\MedicalEntityContract;
-use \Spatie\SchemaOrg\Contracts\ThingContract;
+use Spatie\SchemaOrg\Contracts\AnatomicalStructureContract;
+use Spatie\SchemaOrg\Contracts\BrainStructureContract;
+use Spatie\SchemaOrg\Contracts\MedicalEntityContract;
+use Spatie\SchemaOrg\Contracts\ThingContract;
 
 /**
  * Any anatomical structure which pertains to the soft nervous tissue
@@ -452,5 +452,4 @@ class BrainStructure extends BaseType implements BrainStructureContract, Anatomi
     {
         return $this->setProperty('url', $url);
     }
-
 }

@@ -35,5 +35,4 @@ interface TaxonContract
     public function taxonRank($taxonRank);
 
     public function url($url);
-
 }

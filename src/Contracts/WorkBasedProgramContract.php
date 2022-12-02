@@ -75,5 +75,4 @@ interface WorkBasedProgramContract
     public function typicalCreditsPerTerm($typicalCreditsPerTerm);
 
     public function url($url);
-
 }

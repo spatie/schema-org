@@ -2,9 +2,9 @@
 
 namespace Spatie\SchemaOrg;
 
-use \Spatie\SchemaOrg\Contracts\EntryPointContract;
-use \Spatie\SchemaOrg\Contracts\IntangibleContract;
-use \Spatie\SchemaOrg\Contracts\ThingContract;
+use Spatie\SchemaOrg\Contracts\EntryPointContract;
+use Spatie\SchemaOrg\Contracts\IntangibleContract;
+use Spatie\SchemaOrg\Contracts\ThingContract;
 
 /**
  * An entry point, within some Web-based protocol.
@@ -303,5 +303,4 @@ class EntryPoint extends BaseType implements EntryPointContract, IntangibleContr
     {
         return $this->setProperty('urlTemplate', $urlTemplate);
     }
-
 }

@@ -2,10 +2,10 @@
 
 namespace Spatie\SchemaOrg;
 
-use \Spatie\SchemaOrg\Contracts\AdultOrientedEnumerationContract;
-use \Spatie\SchemaOrg\Contracts\EnumerationContract;
-use \Spatie\SchemaOrg\Contracts\IntangibleContract;
-use \Spatie\SchemaOrg\Contracts\ThingContract;
+use Spatie\SchemaOrg\Contracts\AdultOrientedEnumerationContract;
+use Spatie\SchemaOrg\Contracts\EnumerationContract;
+use Spatie\SchemaOrg\Contracts\IntangibleContract;
+use Spatie\SchemaOrg\Contracts\ThingContract;
 
 /**
  * Enumeration of considerations that make a product relevant or potentially
@@ -26,7 +26,7 @@ class AdultOrientedEnumeration extends BaseType implements AdultOrientedEnumerat
      * @see https://pending.schema.org
      * @link https://github.com/schemaorg/schemaorg/issues/2989
      */
-     const AlcoholConsideration = 'https://schema.org/AlcoholConsideration';
+    public const AlcoholConsideration = 'https://schema.org/AlcoholConsideration';
 
     /**
      * The item is dangerous and requires careful handling and/or special
@@ -39,7 +39,7 @@ class AdultOrientedEnumeration extends BaseType implements AdultOrientedEnumerat
      * @see https://pending.schema.org
      * @link https://github.com/schemaorg/schemaorg/issues/2989
      */
-     const DangerousGoodConsideration = 'https://schema.org/DangerousGoodConsideration';
+    public const DangerousGoodConsideration = 'https://schema.org/DangerousGoodConsideration';
 
     /**
      * Item is a pharmaceutical (e.g., a prescription or OTC drug) or a
@@ -49,7 +49,7 @@ class AdultOrientedEnumeration extends BaseType implements AdultOrientedEnumerat
      * @see https://pending.schema.org
      * @link https://github.com/schemaorg/schemaorg/issues/2989
      */
-     const HealthcareConsideration = 'https://schema.org/HealthcareConsideration';
+    public const HealthcareConsideration = 'https://schema.org/HealthcareConsideration';
 
     /**
      * Item is a narcotic as defined by the [1961 UN
@@ -60,7 +60,7 @@ class AdultOrientedEnumeration extends BaseType implements AdultOrientedEnumerat
      * @see https://pending.schema.org
      * @link https://github.com/schemaorg/schemaorg/issues/2989
      */
-     const NarcoticConsideration = 'https://schema.org/NarcoticConsideration';
+    public const NarcoticConsideration = 'https://schema.org/NarcoticConsideration';
 
     /**
      * A general code for cases where relevance to children is reduced, e.g.
@@ -70,7 +70,7 @@ class AdultOrientedEnumeration extends BaseType implements AdultOrientedEnumerat
      * @see https://pending.schema.org
      * @link https://github.com/schemaorg/schemaorg/issues/2989
      */
-     const ReducedRelevanceForChildrenConsideration = 'https://schema.org/ReducedRelevanceForChildrenConsideration';
+    public const ReducedRelevanceForChildrenConsideration = 'https://schema.org/ReducedRelevanceForChildrenConsideration';
 
     /**
      * The item contains sexually oriented content such as nudity, suggestive or
@@ -82,7 +82,7 @@ class AdultOrientedEnumeration extends BaseType implements AdultOrientedEnumerat
      * @see https://pending.schema.org
      * @link https://github.com/schemaorg/schemaorg/issues/2989
      */
-     const SexualContentConsideration = 'https://schema.org/SexualContentConsideration';
+    public const SexualContentConsideration = 'https://schema.org/SexualContentConsideration';
 
     /**
      * Item contains tobacco and/or nicotine, for example cigars, cigarettes,
@@ -92,7 +92,7 @@ class AdultOrientedEnumeration extends BaseType implements AdultOrientedEnumerat
      * @see https://pending.schema.org
      * @link https://github.com/schemaorg/schemaorg/issues/2989
      */
-     const TobaccoNicotineConsideration = 'https://schema.org/TobaccoNicotineConsideration';
+    public const TobaccoNicotineConsideration = 'https://schema.org/TobaccoNicotineConsideration';
 
     /**
      * The item is suitable only for adults, without indicating why. Due to
@@ -103,7 +103,7 @@ class AdultOrientedEnumeration extends BaseType implements AdultOrientedEnumerat
      * @see https://pending.schema.org
      * @link https://github.com/schemaorg/schemaorg/issues/2989
      */
-     const UnclassifiedAdultConsideration = 'https://schema.org/UnclassifiedAdultConsideration';
+    public const UnclassifiedAdultConsideration = 'https://schema.org/UnclassifiedAdultConsideration';
 
     /**
      * Item shows or promotes violence.
@@ -112,7 +112,7 @@ class AdultOrientedEnumeration extends BaseType implements AdultOrientedEnumerat
      * @see https://pending.schema.org
      * @link https://github.com/schemaorg/schemaorg/issues/2989
      */
-     const ViolenceConsideration = 'https://schema.org/ViolenceConsideration';
+    public const ViolenceConsideration = 'https://schema.org/ViolenceConsideration';
 
     /**
      * The item is intended to induce bodily harm, for example guns, mace,
@@ -122,7 +122,7 @@ class AdultOrientedEnumeration extends BaseType implements AdultOrientedEnumerat
      * @see https://pending.schema.org
      * @link https://github.com/schemaorg/schemaorg/issues/2989
      */
-     const WeaponConsideration = 'https://schema.org/WeaponConsideration';
+    public const WeaponConsideration = 'https://schema.org/WeaponConsideration';
 
     /**
      * An additional type for the item, typically used for adding more specific
@@ -310,5 +310,4 @@ class AdultOrientedEnumeration extends BaseType implements AdultOrientedEnumerat
     {
         return $this->setProperty('url', $url);
     }
-
 }

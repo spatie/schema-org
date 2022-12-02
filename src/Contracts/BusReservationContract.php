@@ -53,5 +53,4 @@ interface BusReservationContract
     public function underName($underName);
 
     public function url($url);
-
 }

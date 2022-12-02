@@ -2,11 +2,11 @@
 
 namespace Spatie\SchemaOrg;
 
-use \Spatie\SchemaOrg\Contracts\MedicalTherapyContract;
-use \Spatie\SchemaOrg\Contracts\MedicalEntityContract;
-use \Spatie\SchemaOrg\Contracts\MedicalProcedureContract;
-use \Spatie\SchemaOrg\Contracts\TherapeuticProcedureContract;
-use \Spatie\SchemaOrg\Contracts\ThingContract;
+use Spatie\SchemaOrg\Contracts\MedicalEntityContract;
+use Spatie\SchemaOrg\Contracts\MedicalProcedureContract;
+use Spatie\SchemaOrg\Contracts\MedicalTherapyContract;
+use Spatie\SchemaOrg\Contracts\TherapeuticProcedureContract;
+use Spatie\SchemaOrg\Contracts\ThingContract;
 
 /**
  * Any medical intervention designed to prevent, treat, and cure human diseases
@@ -526,5 +526,4 @@ class MedicalTherapy extends BaseType implements MedicalTherapyContract, Medical
     {
         return $this->setProperty('url', $url);
     }
-
 }

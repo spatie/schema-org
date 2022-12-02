@@ -2,10 +2,10 @@
 
 namespace Spatie\SchemaOrg;
 
-use \Spatie\SchemaOrg\Contracts\GovernmentBenefitsTypeContract;
-use \Spatie\SchemaOrg\Contracts\EnumerationContract;
-use \Spatie\SchemaOrg\Contracts\IntangibleContract;
-use \Spatie\SchemaOrg\Contracts\ThingContract;
+use Spatie\SchemaOrg\Contracts\EnumerationContract;
+use Spatie\SchemaOrg\Contracts\GovernmentBenefitsTypeContract;
+use Spatie\SchemaOrg\Contracts\IntangibleContract;
+use Spatie\SchemaOrg\Contracts\ThingContract;
 
 /**
  * GovernmentBenefitsType enumerates several kinds of government benefits to
@@ -27,7 +27,7 @@ class GovernmentBenefitsType extends BaseType implements GovernmentBenefitsTypeC
      * @see https://pending.schema.org
      * @link https://github.com/schemaorg/schemaorg/issues/2534
      */
-     const BasicIncome = 'https://schema.org/BasicIncome';
+    public const BasicIncome = 'https://schema.org/BasicIncome';
 
     /**
      * BusinessSupport: this is a benefit for supporting businesses.
@@ -36,7 +36,7 @@ class GovernmentBenefitsType extends BaseType implements GovernmentBenefitsTypeC
      * @see https://pending.schema.org
      * @link https://github.com/schemaorg/schemaorg/issues/2534
      */
-     const BusinessSupport = 'https://schema.org/BusinessSupport';
+    public const BusinessSupport = 'https://schema.org/BusinessSupport';
 
     /**
      * DisabilitySupport: this is a benefit for disability support.
@@ -45,7 +45,7 @@ class GovernmentBenefitsType extends BaseType implements GovernmentBenefitsTypeC
      * @see https://pending.schema.org
      * @link https://github.com/schemaorg/schemaorg/issues/2534
      */
-     const DisabilitySupport = 'https://schema.org/DisabilitySupport';
+    public const DisabilitySupport = 'https://schema.org/DisabilitySupport';
 
     /**
      * HealthCare: this is a benefit for health care.
@@ -54,7 +54,7 @@ class GovernmentBenefitsType extends BaseType implements GovernmentBenefitsTypeC
      * @see https://pending.schema.org
      * @link https://github.com/schemaorg/schemaorg/issues/2534
      */
-     const HealthCare = 'https://schema.org/HealthCare';
+    public const HealthCare = 'https://schema.org/HealthCare';
 
     /**
      * OneTimePayments: this is a benefit for one-time payments for individuals.
@@ -63,7 +63,7 @@ class GovernmentBenefitsType extends BaseType implements GovernmentBenefitsTypeC
      * @see https://pending.schema.org
      * @link https://github.com/schemaorg/schemaorg/issues/2534
      */
-     const OneTimePayments = 'https://schema.org/OneTimePayments';
+    public const OneTimePayments = 'https://schema.org/OneTimePayments';
 
     /**
      * PaidLeave: this is a benefit for paid leave.
@@ -72,7 +72,7 @@ class GovernmentBenefitsType extends BaseType implements GovernmentBenefitsTypeC
      * @see https://pending.schema.org
      * @link https://github.com/schemaorg/schemaorg/issues/2534
      */
-     const PaidLeave = 'https://schema.org/PaidLeave';
+    public const PaidLeave = 'https://schema.org/PaidLeave';
 
     /**
      * ParentalSupport: this is a benefit for parental support.
@@ -81,7 +81,7 @@ class GovernmentBenefitsType extends BaseType implements GovernmentBenefitsTypeC
      * @see https://pending.schema.org
      * @link https://github.com/schemaorg/schemaorg/issues/2534
      */
-     const ParentalSupport = 'https://schema.org/ParentalSupport';
+    public const ParentalSupport = 'https://schema.org/ParentalSupport';
 
     /**
      * UnemploymentSupport: this is a benefit for unemployment support.
@@ -90,7 +90,7 @@ class GovernmentBenefitsType extends BaseType implements GovernmentBenefitsTypeC
      * @see https://pending.schema.org
      * @link https://github.com/schemaorg/schemaorg/issues/2534
      */
-     const UnemploymentSupport = 'https://schema.org/UnemploymentSupport';
+    public const UnemploymentSupport = 'https://schema.org/UnemploymentSupport';
 
     /**
      * An additional type for the item, typically used for adding more specific
@@ -278,5 +278,4 @@ class GovernmentBenefitsType extends BaseType implements GovernmentBenefitsTypeC
     {
         return $this->setProperty('url', $url);
     }
-
 }

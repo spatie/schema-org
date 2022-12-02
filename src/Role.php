@@ -2,9 +2,9 @@
 
 namespace Spatie\SchemaOrg;
 
-use \Spatie\SchemaOrg\Contracts\RoleContract;
-use \Spatie\SchemaOrg\Contracts\IntangibleContract;
-use \Spatie\SchemaOrg\Contracts\ThingContract;
+use Spatie\SchemaOrg\Contracts\IntangibleContract;
+use Spatie\SchemaOrg\Contracts\RoleContract;
+use Spatie\SchemaOrg\Contracts\ThingContract;
 
 /**
  * Represents additional information about a relationship or property. For
@@ -13,7 +13,7 @@ use \Spatie\SchemaOrg\Contracts\ThingContract;
  * Person's 'actor' role in a Movie was for some particular characterName. Such
  * properties can be attached to a Role entity, which is then associated with
  * the main entities using ordinary properties like 'member' or 'actor'.
- * 
+ *
  * See also [blog post](http://blog.schema.org/2014/06/introducing-role.html).
  *
  * @see https://schema.org/Role
@@ -272,5 +272,4 @@ class Role extends BaseType implements RoleContract, IntangibleContract, ThingCo
     {
         return $this->setProperty('url', $url);
     }
-
 }

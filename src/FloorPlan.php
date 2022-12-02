@@ -2,9 +2,9 @@
 
 namespace Spatie\SchemaOrg;
 
-use \Spatie\SchemaOrg\Contracts\FloorPlanContract;
-use \Spatie\SchemaOrg\Contracts\IntangibleContract;
-use \Spatie\SchemaOrg\Contracts\ThingContract;
+use Spatie\SchemaOrg\Contracts\FloorPlanContract;
+use Spatie\SchemaOrg\Contracts\IntangibleContract;
+use Spatie\SchemaOrg\Contracts\ThingContract;
 
 /**
  * A FloorPlan is an explicit representation of a collection of similar
@@ -423,5 +423,4 @@ class FloorPlan extends BaseType implements FloorPlanContract, IntangibleContrac
     {
         return $this->setProperty('url', $url);
     }
-
 }

@@ -2,10 +2,10 @@
 
 namespace Spatie\SchemaOrg;
 
-use \Spatie\SchemaOrg\Contracts\MusicReleaseFormatTypeContract;
-use \Spatie\SchemaOrg\Contracts\EnumerationContract;
-use \Spatie\SchemaOrg\Contracts\IntangibleContract;
-use \Spatie\SchemaOrg\Contracts\ThingContract;
+use Spatie\SchemaOrg\Contracts\EnumerationContract;
+use Spatie\SchemaOrg\Contracts\IntangibleContract;
+use Spatie\SchemaOrg\Contracts\MusicReleaseFormatTypeContract;
+use Spatie\SchemaOrg\Contracts\ThingContract;
 
 /**
  * Format of this release (the type of recording media used, i.e. compact disc,
@@ -24,7 +24,7 @@ class MusicReleaseFormatType extends BaseType implements MusicReleaseFormatTypeC
      * @see https://schema.org/CDFormat
      * @link http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#MBZ
      */
-     const CDFormat = 'https://schema.org/CDFormat';
+    public const CDFormat = 'https://schema.org/CDFormat';
 
     /**
      * CassetteFormat.
@@ -32,7 +32,7 @@ class MusicReleaseFormatType extends BaseType implements MusicReleaseFormatTypeC
      * @see https://schema.org/CassetteFormat
      * @link http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#MBZ
      */
-     const CassetteFormat = 'https://schema.org/CassetteFormat';
+    public const CassetteFormat = 'https://schema.org/CassetteFormat';
 
     /**
      * DVDFormat.
@@ -40,7 +40,7 @@ class MusicReleaseFormatType extends BaseType implements MusicReleaseFormatTypeC
      * @see https://schema.org/DVDFormat
      * @link http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#MBZ
      */
-     const DVDFormat = 'https://schema.org/DVDFormat';
+    public const DVDFormat = 'https://schema.org/DVDFormat';
 
     /**
      * DigitalAudioTapeFormat.
@@ -48,7 +48,7 @@ class MusicReleaseFormatType extends BaseType implements MusicReleaseFormatTypeC
      * @see https://schema.org/DigitalAudioTapeFormat
      * @link http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#MBZ
      */
-     const DigitalAudioTapeFormat = 'https://schema.org/DigitalAudioTapeFormat';
+    public const DigitalAudioTapeFormat = 'https://schema.org/DigitalAudioTapeFormat';
 
     /**
      * DigitalFormat.
@@ -56,7 +56,7 @@ class MusicReleaseFormatType extends BaseType implements MusicReleaseFormatTypeC
      * @see https://schema.org/DigitalFormat
      * @link http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#MBZ
      */
-     const DigitalFormat = 'https://schema.org/DigitalFormat';
+    public const DigitalFormat = 'https://schema.org/DigitalFormat';
 
     /**
      * LaserDiscFormat.
@@ -64,7 +64,7 @@ class MusicReleaseFormatType extends BaseType implements MusicReleaseFormatTypeC
      * @see https://schema.org/LaserDiscFormat
      * @link http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#MBZ
      */
-     const LaserDiscFormat = 'https://schema.org/LaserDiscFormat';
+    public const LaserDiscFormat = 'https://schema.org/LaserDiscFormat';
 
     /**
      * VinylFormat.
@@ -72,7 +72,7 @@ class MusicReleaseFormatType extends BaseType implements MusicReleaseFormatTypeC
      * @see https://schema.org/VinylFormat
      * @link http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#MBZ
      */
-     const VinylFormat = 'https://schema.org/VinylFormat';
+    public const VinylFormat = 'https://schema.org/VinylFormat';
 
     /**
      * An additional type for the item, typically used for adding more specific
@@ -260,5 +260,4 @@ class MusicReleaseFormatType extends BaseType implements MusicReleaseFormatTypeC
     {
         return $this->setProperty('url', $url);
     }
-
 }

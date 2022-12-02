@@ -53,5 +53,4 @@ interface TrainTripContract
     public function trainNumber($trainNumber);
 
     public function url($url);
-
 }

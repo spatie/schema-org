@@ -2,10 +2,10 @@
 
 namespace Spatie\SchemaOrg;
 
-use \Spatie\SchemaOrg\Contracts\VesselContract;
-use \Spatie\SchemaOrg\Contracts\AnatomicalStructureContract;
-use \Spatie\SchemaOrg\Contracts\MedicalEntityContract;
-use \Spatie\SchemaOrg\Contracts\ThingContract;
+use Spatie\SchemaOrg\Contracts\AnatomicalStructureContract;
+use Spatie\SchemaOrg\Contracts\MedicalEntityContract;
+use Spatie\SchemaOrg\Contracts\ThingContract;
+use Spatie\SchemaOrg\Contracts\VesselContract;
 
 /**
  * A component of the human body circulatory system comprised of an intricate
@@ -451,5 +451,4 @@ class Vessel extends BaseType implements VesselContract, AnatomicalStructureCont
     {
         return $this->setProperty('url', $url);
     }
-
 }

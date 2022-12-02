@@ -2,10 +2,10 @@
 
 namespace Spatie\SchemaOrg;
 
-use \Spatie\SchemaOrg\Contracts\ProductReturnEnumerationContract;
-use \Spatie\SchemaOrg\Contracts\EnumerationContract;
-use \Spatie\SchemaOrg\Contracts\IntangibleContract;
-use \Spatie\SchemaOrg\Contracts\ThingContract;
+use Spatie\SchemaOrg\Contracts\EnumerationContract;
+use Spatie\SchemaOrg\Contracts\IntangibleContract;
+use Spatie\SchemaOrg\Contracts\ProductReturnEnumerationContract;
+use Spatie\SchemaOrg\Contracts\ThingContract;
 
 /**
  * ProductReturnEnumeration enumerates several kinds of product return policy.
@@ -27,7 +27,7 @@ class ProductReturnEnumeration extends BaseType implements ProductReturnEnumerat
      * @see https://attic.schema.org
      * @link https://github.com/schemaorg/schemaorg/issues/2288
      */
-     const ProductReturnFiniteReturnWindow = 'https://schema.org/ProductReturnFiniteReturnWindow';
+    public const ProductReturnFiniteReturnWindow = 'https://schema.org/ProductReturnFiniteReturnWindow';
 
     /**
      * ProductReturnNotPermitted: product returns are not permitted.
@@ -36,7 +36,7 @@ class ProductReturnEnumeration extends BaseType implements ProductReturnEnumerat
      * @see https://attic.schema.org
      * @link https://github.com/schemaorg/schemaorg/issues/2288
      */
-     const ProductReturnNotPermitted = 'https://schema.org/ProductReturnNotPermitted';
+    public const ProductReturnNotPermitted = 'https://schema.org/ProductReturnNotPermitted';
 
     /**
      * ProductReturnUnlimitedWindow: there is an unlimited window for product
@@ -46,7 +46,7 @@ class ProductReturnEnumeration extends BaseType implements ProductReturnEnumerat
      * @see https://attic.schema.org
      * @link https://github.com/schemaorg/schemaorg/issues/2288
      */
-     const ProductReturnUnlimitedWindow = 'https://schema.org/ProductReturnUnlimitedWindow';
+    public const ProductReturnUnlimitedWindow = 'https://schema.org/ProductReturnUnlimitedWindow';
 
     /**
      * ProductReturnUnspecified: a product return policy is not specified here.
@@ -55,7 +55,7 @@ class ProductReturnEnumeration extends BaseType implements ProductReturnEnumerat
      * @see https://attic.schema.org
      * @link https://github.com/schemaorg/schemaorg/issues/2288
      */
-     const ProductReturnUnspecified = 'https://schema.org/ProductReturnUnspecified';
+    public const ProductReturnUnspecified = 'https://schema.org/ProductReturnUnspecified';
 
     /**
      * An additional type for the item, typically used for adding more specific
@@ -243,5 +243,4 @@ class ProductReturnEnumeration extends BaseType implements ProductReturnEnumerat
     {
         return $this->setProperty('url', $url);
     }
-
 }

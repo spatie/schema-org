@@ -2,11 +2,11 @@
 
 namespace Spatie\SchemaOrg;
 
-use \Spatie\SchemaOrg\Contracts\WearableSizeGroupEnumerationContract;
-use \Spatie\SchemaOrg\Contracts\EnumerationContract;
-use \Spatie\SchemaOrg\Contracts\IntangibleContract;
-use \Spatie\SchemaOrg\Contracts\SizeGroupEnumerationContract;
-use \Spatie\SchemaOrg\Contracts\ThingContract;
+use Spatie\SchemaOrg\Contracts\EnumerationContract;
+use Spatie\SchemaOrg\Contracts\IntangibleContract;
+use Spatie\SchemaOrg\Contracts\SizeGroupEnumerationContract;
+use Spatie\SchemaOrg\Contracts\ThingContract;
+use Spatie\SchemaOrg\Contracts\WearableSizeGroupEnumerationContract;
 
 /**
  * Enumerates common size groups (also known as "size types") for wearable
@@ -27,7 +27,7 @@ class WearableSizeGroupEnumeration extends BaseType implements WearableSizeGroup
      * @see https://pending.schema.org
      * @link https://github.com/schemaorg/schemaorg/issues/2811
      */
-     const WearableSizeGroupBig = 'https://schema.org/WearableSizeGroupBig';
+    public const WearableSizeGroupBig = 'https://schema.org/WearableSizeGroupBig';
 
     /**
      * Size group "Boys" for wearables.
@@ -36,7 +36,7 @@ class WearableSizeGroupEnumeration extends BaseType implements WearableSizeGroup
      * @see https://pending.schema.org
      * @link https://github.com/schemaorg/schemaorg/issues/2811
      */
-     const WearableSizeGroupBoys = 'https://schema.org/WearableSizeGroupBoys';
+    public const WearableSizeGroupBoys = 'https://schema.org/WearableSizeGroupBoys';
 
     /**
      * Size group "Extra Short" for wearables.
@@ -45,7 +45,7 @@ class WearableSizeGroupEnumeration extends BaseType implements WearableSizeGroup
      * @see https://pending.schema.org
      * @link https://github.com/schemaorg/schemaorg/issues/2811
      */
-     const WearableSizeGroupExtraShort = 'https://schema.org/WearableSizeGroupExtraShort';
+    public const WearableSizeGroupExtraShort = 'https://schema.org/WearableSizeGroupExtraShort';
 
     /**
      * Size group "Extra Tall" for wearables.
@@ -54,7 +54,7 @@ class WearableSizeGroupEnumeration extends BaseType implements WearableSizeGroup
      * @see https://pending.schema.org
      * @link https://github.com/schemaorg/schemaorg/issues/2811
      */
-     const WearableSizeGroupExtraTall = 'https://schema.org/WearableSizeGroupExtraTall';
+    public const WearableSizeGroupExtraTall = 'https://schema.org/WearableSizeGroupExtraTall';
 
     /**
      * Size group "Girls" for wearables.
@@ -63,7 +63,7 @@ class WearableSizeGroupEnumeration extends BaseType implements WearableSizeGroup
      * @see https://pending.schema.org
      * @link https://github.com/schemaorg/schemaorg/issues/2811
      */
-     const WearableSizeGroupGirls = 'https://schema.org/WearableSizeGroupGirls';
+    public const WearableSizeGroupGirls = 'https://schema.org/WearableSizeGroupGirls';
 
     /**
      * Size group "Husky" (or "Stocky") for wearables.
@@ -72,7 +72,7 @@ class WearableSizeGroupEnumeration extends BaseType implements WearableSizeGroup
      * @see https://pending.schema.org
      * @link https://github.com/schemaorg/schemaorg/issues/2811
      */
-     const WearableSizeGroupHusky = 'https://schema.org/WearableSizeGroupHusky';
+    public const WearableSizeGroupHusky = 'https://schema.org/WearableSizeGroupHusky';
 
     /**
      * Size group "Infants" for wearables.
@@ -81,7 +81,7 @@ class WearableSizeGroupEnumeration extends BaseType implements WearableSizeGroup
      * @see https://pending.schema.org
      * @link https://github.com/schemaorg/schemaorg/issues/2811
      */
-     const WearableSizeGroupInfants = 'https://schema.org/WearableSizeGroupInfants';
+    public const WearableSizeGroupInfants = 'https://schema.org/WearableSizeGroupInfants';
 
     /**
      * Size group "Juniors" for wearables.
@@ -90,7 +90,7 @@ class WearableSizeGroupEnumeration extends BaseType implements WearableSizeGroup
      * @see https://pending.schema.org
      * @link https://github.com/schemaorg/schemaorg/issues/2811
      */
-     const WearableSizeGroupJuniors = 'https://schema.org/WearableSizeGroupJuniors';
+    public const WearableSizeGroupJuniors = 'https://schema.org/WearableSizeGroupJuniors';
 
     /**
      * Size group "Maternity" for wearables.
@@ -99,7 +99,7 @@ class WearableSizeGroupEnumeration extends BaseType implements WearableSizeGroup
      * @see https://pending.schema.org
      * @link https://github.com/schemaorg/schemaorg/issues/2811
      */
-     const WearableSizeGroupMaternity = 'https://schema.org/WearableSizeGroupMaternity';
+    public const WearableSizeGroupMaternity = 'https://schema.org/WearableSizeGroupMaternity';
 
     /**
      * Size group "Mens" for wearables.
@@ -108,7 +108,7 @@ class WearableSizeGroupEnumeration extends BaseType implements WearableSizeGroup
      * @see https://pending.schema.org
      * @link https://github.com/schemaorg/schemaorg/issues/2811
      */
-     const WearableSizeGroupMens = 'https://schema.org/WearableSizeGroupMens';
+    public const WearableSizeGroupMens = 'https://schema.org/WearableSizeGroupMens';
 
     /**
      * Size group "Misses" (also known as "Missy") for wearables.
@@ -117,7 +117,7 @@ class WearableSizeGroupEnumeration extends BaseType implements WearableSizeGroup
      * @see https://pending.schema.org
      * @link https://github.com/schemaorg/schemaorg/issues/2811
      */
-     const WearableSizeGroupMisses = 'https://schema.org/WearableSizeGroupMisses';
+    public const WearableSizeGroupMisses = 'https://schema.org/WearableSizeGroupMisses';
 
     /**
      * Size group "Petite" for wearables.
@@ -126,7 +126,7 @@ class WearableSizeGroupEnumeration extends BaseType implements WearableSizeGroup
      * @see https://pending.schema.org
      * @link https://github.com/schemaorg/schemaorg/issues/2811
      */
-     const WearableSizeGroupPetite = 'https://schema.org/WearableSizeGroupPetite';
+    public const WearableSizeGroupPetite = 'https://schema.org/WearableSizeGroupPetite';
 
     /**
      * Size group "Plus" for wearables.
@@ -135,7 +135,7 @@ class WearableSizeGroupEnumeration extends BaseType implements WearableSizeGroup
      * @see https://pending.schema.org
      * @link https://github.com/schemaorg/schemaorg/issues/2811
      */
-     const WearableSizeGroupPlus = 'https://schema.org/WearableSizeGroupPlus';
+    public const WearableSizeGroupPlus = 'https://schema.org/WearableSizeGroupPlus';
 
     /**
      * Size group "Regular" for wearables.
@@ -144,7 +144,7 @@ class WearableSizeGroupEnumeration extends BaseType implements WearableSizeGroup
      * @see https://pending.schema.org
      * @link https://github.com/schemaorg/schemaorg/issues/2811
      */
-     const WearableSizeGroupRegular = 'https://schema.org/WearableSizeGroupRegular';
+    public const WearableSizeGroupRegular = 'https://schema.org/WearableSizeGroupRegular';
 
     /**
      * Size group "Short" for wearables.
@@ -153,7 +153,7 @@ class WearableSizeGroupEnumeration extends BaseType implements WearableSizeGroup
      * @see https://pending.schema.org
      * @link https://github.com/schemaorg/schemaorg/issues/2811
      */
-     const WearableSizeGroupShort = 'https://schema.org/WearableSizeGroupShort';
+    public const WearableSizeGroupShort = 'https://schema.org/WearableSizeGroupShort';
 
     /**
      * Size group "Tall" for wearables.
@@ -162,7 +162,7 @@ class WearableSizeGroupEnumeration extends BaseType implements WearableSizeGroup
      * @see https://pending.schema.org
      * @link https://github.com/schemaorg/schemaorg/issues/2811
      */
-     const WearableSizeGroupTall = 'https://schema.org/WearableSizeGroupTall';
+    public const WearableSizeGroupTall = 'https://schema.org/WearableSizeGroupTall';
 
     /**
      * Size group "Womens" for wearables.
@@ -171,7 +171,7 @@ class WearableSizeGroupEnumeration extends BaseType implements WearableSizeGroup
      * @see https://pending.schema.org
      * @link https://github.com/schemaorg/schemaorg/issues/2811
      */
-     const WearableSizeGroupWomens = 'https://schema.org/WearableSizeGroupWomens';
+    public const WearableSizeGroupWomens = 'https://schema.org/WearableSizeGroupWomens';
 
     /**
      * An additional type for the item, typically used for adding more specific
@@ -359,5 +359,4 @@ class WearableSizeGroupEnumeration extends BaseType implements WearableSizeGroup
     {
         return $this->setProperty('url', $url);
     }
-
 }

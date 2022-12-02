@@ -55,5 +55,4 @@ interface ImagingTestContract
     public function usedToDiagnose($usedToDiagnose);
 
     public function usesDevice($usesDevice);
-
 }

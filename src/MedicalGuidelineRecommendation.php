@@ -2,10 +2,10 @@
 
 namespace Spatie\SchemaOrg;
 
-use \Spatie\SchemaOrg\Contracts\MedicalGuidelineRecommendationContract;
-use \Spatie\SchemaOrg\Contracts\MedicalEntityContract;
-use \Spatie\SchemaOrg\Contracts\MedicalGuidelineContract;
-use \Spatie\SchemaOrg\Contracts\ThingContract;
+use Spatie\SchemaOrg\Contracts\MedicalEntityContract;
+use Spatie\SchemaOrg\Contracts\MedicalGuidelineContract;
+use Spatie\SchemaOrg\Contracts\MedicalGuidelineRecommendationContract;
+use Spatie\SchemaOrg\Contracts\ThingContract;
 
 /**
  * A guideline recommendation that is regarded as efficacious and where quality
@@ -406,5 +406,4 @@ class MedicalGuidelineRecommendation extends BaseType implements MedicalGuidelin
     {
         return $this->setProperty('url', $url);
     }
-
 }

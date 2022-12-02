@@ -2,10 +2,10 @@
 
 namespace Spatie\SchemaOrg;
 
-use \Spatie\SchemaOrg\Contracts\MedicalGuidelineContraindicationContract;
-use \Spatie\SchemaOrg\Contracts\MedicalEntityContract;
-use \Spatie\SchemaOrg\Contracts\MedicalGuidelineContract;
-use \Spatie\SchemaOrg\Contracts\ThingContract;
+use Spatie\SchemaOrg\Contracts\MedicalEntityContract;
+use Spatie\SchemaOrg\Contracts\MedicalGuidelineContract;
+use Spatie\SchemaOrg\Contracts\MedicalGuidelineContraindicationContract;
+use Spatie\SchemaOrg\Contracts\ThingContract;
 
 /**
  * A guideline contraindication that designates a process as harmful and where
@@ -391,5 +391,4 @@ class MedicalGuidelineContraindication extends BaseType implements MedicalGuidel
     {
         return $this->setProperty('url', $url);
     }
-
 }

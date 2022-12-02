@@ -2,10 +2,10 @@
 
 namespace Spatie\SchemaOrg;
 
-use \Spatie\SchemaOrg\Contracts\SurgicalProcedureContract;
-use \Spatie\SchemaOrg\Contracts\MedicalEntityContract;
-use \Spatie\SchemaOrg\Contracts\MedicalProcedureContract;
-use \Spatie\SchemaOrg\Contracts\ThingContract;
+use Spatie\SchemaOrg\Contracts\MedicalEntityContract;
+use Spatie\SchemaOrg\Contracts\MedicalProcedureContract;
+use Spatie\SchemaOrg\Contracts\SurgicalProcedureContract;
+use Spatie\SchemaOrg\Contracts\ThingContract;
 
 /**
  * A medical procedure involving an incision with instruments; performed for
@@ -420,5 +420,4 @@ class SurgicalProcedure extends BaseType implements SurgicalProcedureContract, M
     {
         return $this->setProperty('url', $url);
     }
-
 }

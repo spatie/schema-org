@@ -53,5 +53,4 @@ interface BioChemEntityContract
     public function taxonomicRange($taxonomicRange);
 
     public function url($url);
-
 }

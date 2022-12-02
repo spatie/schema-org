@@ -55,5 +55,4 @@ interface AddActionContract
     public function targetCollection($targetCollection);
 
     public function url($url);
-
 }

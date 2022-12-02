@@ -2,11 +2,11 @@
 
 namespace Spatie\SchemaOrg;
 
-use \Spatie\SchemaOrg\Contracts\UnitPriceSpecificationContract;
-use \Spatie\SchemaOrg\Contracts\IntangibleContract;
-use \Spatie\SchemaOrg\Contracts\PriceSpecificationContract;
-use \Spatie\SchemaOrg\Contracts\StructuredValueContract;
-use \Spatie\SchemaOrg\Contracts\ThingContract;
+use Spatie\SchemaOrg\Contracts\IntangibleContract;
+use Spatie\SchemaOrg\Contracts\PriceSpecificationContract;
+use Spatie\SchemaOrg\Contracts\StructuredValueContract;
+use Spatie\SchemaOrg\Contracts\ThingContract;
+use Spatie\SchemaOrg\Contracts\UnitPriceSpecificationContract;
 
 /**
  * The price asked for a given offer by the respective organization or person.
@@ -283,9 +283,9 @@ class UnitPriceSpecification extends BaseType implements UnitPriceSpecificationC
     /**
      * The offer price of a product, or of a price component when attached to
      * PriceSpecification and its subtypes.
-     * 
+     *
      * Usage guidelines:
-     * 
+     *
      * * Use the [[priceCurrency]] property (with standard formats: [ISO 4217
      * currency format](http://en.wikipedia.org/wiki/ISO_4217), e.g. "USD";
      * [Ticker symbol](https://en.wikipedia.org/wiki/List_of_cryptocurrencies)
@@ -337,7 +337,7 @@ class UnitPriceSpecification extends BaseType implements UnitPriceSpecificationC
     /**
      * The currency of the price, or a price component when attached to
      * [[PriceSpecification]] and its subtypes.
-     * 
+     *
      * Use standard formats: [ISO 4217 currency
      * format](http://en.wikipedia.org/wiki/ISO_4217), e.g. "USD"; [Ticker
      * symbol](https://en.wikipedia.org/wiki/List_of_cryptocurrencies) for
@@ -519,5 +519,4 @@ class UnitPriceSpecification extends BaseType implements UnitPriceSpecificationC
     {
         return $this->setProperty('valueAddedTaxIncluded', $valueAddedTaxIncluded);
     }
-
 }

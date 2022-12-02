@@ -27,5 +27,4 @@ interface BusinessFunctionContract
     public function subjectOf($subjectOf);
 
     public function url($url);
-
 }

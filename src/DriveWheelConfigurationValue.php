@@ -2,11 +2,11 @@
 
 namespace Spatie\SchemaOrg;
 
-use \Spatie\SchemaOrg\Contracts\DriveWheelConfigurationValueContract;
-use \Spatie\SchemaOrg\Contracts\EnumerationContract;
-use \Spatie\SchemaOrg\Contracts\IntangibleContract;
-use \Spatie\SchemaOrg\Contracts\QualitativeValueContract;
-use \Spatie\SchemaOrg\Contracts\ThingContract;
+use Spatie\SchemaOrg\Contracts\DriveWheelConfigurationValueContract;
+use Spatie\SchemaOrg\Contracts\EnumerationContract;
+use Spatie\SchemaOrg\Contracts\IntangibleContract;
+use Spatie\SchemaOrg\Contracts\QualitativeValueContract;
+use Spatie\SchemaOrg\Contracts\ThingContract;
 
 /**
  * A value indicating which roadwheels will receive torque.
@@ -25,7 +25,7 @@ class DriveWheelConfigurationValue extends BaseType implements DriveWheelConfigu
      * @see https://schema.org/AllWheelDriveConfiguration
      * @link http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#Automotive_Ontology_Working_Group
      */
-     const AllWheelDriveConfiguration = 'https://schema.org/AllWheelDriveConfiguration';
+    public const AllWheelDriveConfiguration = 'https://schema.org/AllWheelDriveConfiguration';
 
     /**
      * Four-wheel drive is a transmission layout where the engine primarily
@@ -34,7 +34,7 @@ class DriveWheelConfigurationValue extends BaseType implements DriveWheelConfigu
      * @see https://schema.org/FourWheelDriveConfiguration
      * @link http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#Automotive_Ontology_Working_Group
      */
-     const FourWheelDriveConfiguration = 'https://schema.org/FourWheelDriveConfiguration';
+    public const FourWheelDriveConfiguration = 'https://schema.org/FourWheelDriveConfiguration';
 
     /**
      * Front-wheel drive is a transmission layout where the engine drives the
@@ -43,7 +43,7 @@ class DriveWheelConfigurationValue extends BaseType implements DriveWheelConfigu
      * @see https://schema.org/FrontWheelDriveConfiguration
      * @link http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#Automotive_Ontology_Working_Group
      */
-     const FrontWheelDriveConfiguration = 'https://schema.org/FrontWheelDriveConfiguration';
+    public const FrontWheelDriveConfiguration = 'https://schema.org/FrontWheelDriveConfiguration';
 
     /**
      * Real-wheel drive is a transmission layout where the engine drives the
@@ -52,13 +52,13 @@ class DriveWheelConfigurationValue extends BaseType implements DriveWheelConfigu
      * @see https://schema.org/RearWheelDriveConfiguration
      * @link http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#Automotive_Ontology_Working_Group
      */
-     const RearWheelDriveConfiguration = 'https://schema.org/RearWheelDriveConfiguration';
+    public const RearWheelDriveConfiguration = 'https://schema.org/RearWheelDriveConfiguration';
 
     /**
      * A property-value pair representing an additional characteristic of the
      * entity, e.g. a product feature or another characteristic for which there
      * is no matching property in schema.org.
-     * 
+     *
      * Note: Publishers should be aware that applications designed to use
      * specific schema.org properties (e.g. https://schema.org/width,
      * https://schema.org/color, https://schema.org/gtin13, ...) will typically
@@ -374,5 +374,4 @@ class DriveWheelConfigurationValue extends BaseType implements DriveWheelConfigu
     {
         return $this->setProperty('valueReference', $valueReference);
     }
-
 }

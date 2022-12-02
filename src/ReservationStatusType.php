@@ -2,11 +2,11 @@
 
 namespace Spatie\SchemaOrg;
 
-use \Spatie\SchemaOrg\Contracts\ReservationStatusTypeContract;
-use \Spatie\SchemaOrg\Contracts\EnumerationContract;
-use \Spatie\SchemaOrg\Contracts\IntangibleContract;
-use \Spatie\SchemaOrg\Contracts\StatusEnumerationContract;
-use \Spatie\SchemaOrg\Contracts\ThingContract;
+use Spatie\SchemaOrg\Contracts\EnumerationContract;
+use Spatie\SchemaOrg\Contracts\IntangibleContract;
+use Spatie\SchemaOrg\Contracts\ReservationStatusTypeContract;
+use Spatie\SchemaOrg\Contracts\StatusEnumerationContract;
+use Spatie\SchemaOrg\Contracts\ThingContract;
 
 /**
  * Enumerated status values for Reservation.
@@ -22,14 +22,14 @@ class ReservationStatusType extends BaseType implements ReservationStatusTypeCon
      *
      * @see https://schema.org/ReservationCancelled
      */
-     const ReservationCancelled = 'https://schema.org/ReservationCancelled';
+    public const ReservationCancelled = 'https://schema.org/ReservationCancelled';
 
     /**
      * The status of a confirmed reservation.
      *
      * @see https://schema.org/ReservationConfirmed
      */
-     const ReservationConfirmed = 'https://schema.org/ReservationConfirmed';
+    public const ReservationConfirmed = 'https://schema.org/ReservationConfirmed';
 
     /**
      * The status of a reservation on hold pending an update like credit card
@@ -37,7 +37,7 @@ class ReservationStatusType extends BaseType implements ReservationStatusTypeCon
      *
      * @see https://schema.org/ReservationHold
      */
-     const ReservationHold = 'https://schema.org/ReservationHold';
+    public const ReservationHold = 'https://schema.org/ReservationHold';
 
     /**
      * The status of a reservation when a request has been sent, but not
@@ -45,7 +45,7 @@ class ReservationStatusType extends BaseType implements ReservationStatusTypeCon
      *
      * @see https://schema.org/ReservationPending
      */
-     const ReservationPending = 'https://schema.org/ReservationPending';
+    public const ReservationPending = 'https://schema.org/ReservationPending';
 
     /**
      * An additional type for the item, typically used for adding more specific
@@ -233,5 +233,4 @@ class ReservationStatusType extends BaseType implements ReservationStatusTypeCon
     {
         return $this->setProperty('url', $url);
     }
-
 }

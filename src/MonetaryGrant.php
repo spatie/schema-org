@@ -2,10 +2,10 @@
 
 namespace Spatie\SchemaOrg;
 
-use \Spatie\SchemaOrg\Contracts\MonetaryGrantContract;
-use \Spatie\SchemaOrg\Contracts\GrantContract;
-use \Spatie\SchemaOrg\Contracts\IntangibleContract;
-use \Spatie\SchemaOrg\Contracts\ThingContract;
+use Spatie\SchemaOrg\Contracts\GrantContract;
+use Spatie\SchemaOrg\Contracts\IntangibleContract;
+use Spatie\SchemaOrg\Contracts\MonetaryGrantContract;
+use Spatie\SchemaOrg\Contracts\ThingContract;
 
 /**
  * A monetary grant.
@@ -263,5 +263,4 @@ class MonetaryGrant extends BaseType implements MonetaryGrantContract, GrantCont
     {
         return $this->setProperty('url', $url);
     }
-
 }

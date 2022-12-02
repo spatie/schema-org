@@ -2,10 +2,10 @@
 
 namespace Spatie\SchemaOrg;
 
-use \Spatie\SchemaOrg\Contracts\NutritionInformationContract;
-use \Spatie\SchemaOrg\Contracts\IntangibleContract;
-use \Spatie\SchemaOrg\Contracts\StructuredValueContract;
-use \Spatie\SchemaOrg\Contracts\ThingContract;
+use Spatie\SchemaOrg\Contracts\IntangibleContract;
+use Spatie\SchemaOrg\Contracts\NutritionInformationContract;
+use Spatie\SchemaOrg\Contracts\StructuredValueContract;
+use Spatie\SchemaOrg\Contracts\ThingContract;
 
 /**
  * Nutritional information about the recipe.
@@ -369,5 +369,4 @@ class NutritionInformation extends BaseType implements NutritionInformationContr
     {
         return $this->setProperty('url', $url);
     }
-
 }

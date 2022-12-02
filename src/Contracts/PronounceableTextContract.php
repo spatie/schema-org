@@ -11,5 +11,4 @@ interface PronounceableTextContract
     public function speechToTextMarkup($speechToTextMarkup);
 
     public function textValue($textValue);
-
 }

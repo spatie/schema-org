@@ -2,11 +2,11 @@
 
 namespace Spatie\SchemaOrg;
 
-use \Spatie\SchemaOrg\Contracts\RadioBroadcastServiceContract;
-use \Spatie\SchemaOrg\Contracts\BroadcastServiceContract;
-use \Spatie\SchemaOrg\Contracts\IntangibleContract;
-use \Spatie\SchemaOrg\Contracts\ServiceContract;
-use \Spatie\SchemaOrg\Contracts\ThingContract;
+use Spatie\SchemaOrg\Contracts\BroadcastServiceContract;
+use Spatie\SchemaOrg\Contracts\IntangibleContract;
+use Spatie\SchemaOrg\Contracts\RadioBroadcastServiceContract;
+use Spatie\SchemaOrg\Contracts\ServiceContract;
+use Spatie\SchemaOrg\Contracts\ThingContract;
 
 /**
  * A delivery service through which radio content is provided via broadcast over
@@ -739,5 +739,4 @@ class RadioBroadcastService extends BaseType implements RadioBroadcastServiceCon
     {
         return $this->setProperty('videoFormat', $videoFormat);
     }
-
 }

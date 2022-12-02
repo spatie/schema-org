@@ -143,5 +143,4 @@ interface CampingPitchContract
     public function url($url);
 
     public function yearBuilt($yearBuilt);
-
 }

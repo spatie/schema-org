@@ -2,9 +2,9 @@
 
 namespace Spatie\SchemaOrg;
 
-use \Spatie\SchemaOrg\Contracts\SubstanceContract;
-use \Spatie\SchemaOrg\Contracts\MedicalEntityContract;
-use \Spatie\SchemaOrg\Contracts\ThingContract;
+use Spatie\SchemaOrg\Contracts\MedicalEntityContract;
+use Spatie\SchemaOrg\Contracts\SubstanceContract;
+use Spatie\SchemaOrg\Contracts\ThingContract;
 
 /**
  * Any matter of defined composition that has discrete existence, whose origin
@@ -359,5 +359,4 @@ class Substance extends BaseType implements SubstanceContract, MedicalEntityCont
     {
         return $this->setProperty('url', $url);
     }
-
 }

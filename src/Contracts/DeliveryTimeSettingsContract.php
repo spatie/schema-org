@@ -35,5 +35,4 @@ interface DeliveryTimeSettingsContract
     public function transitTimeLabel($transitTimeLabel);
 
     public function url($url);
-
 }

@@ -2,11 +2,11 @@
 
 namespace Spatie\SchemaOrg;
 
-use \Spatie\SchemaOrg\Contracts\ActionStatusTypeContract;
-use \Spatie\SchemaOrg\Contracts\EnumerationContract;
-use \Spatie\SchemaOrg\Contracts\IntangibleContract;
-use \Spatie\SchemaOrg\Contracts\StatusEnumerationContract;
-use \Spatie\SchemaOrg\Contracts\ThingContract;
+use Spatie\SchemaOrg\Contracts\ActionStatusTypeContract;
+use Spatie\SchemaOrg\Contracts\EnumerationContract;
+use Spatie\SchemaOrg\Contracts\IntangibleContract;
+use Spatie\SchemaOrg\Contracts\StatusEnumerationContract;
+use Spatie\SchemaOrg\Contracts\ThingContract;
 
 /**
  * The status of an Action.
@@ -23,14 +23,14 @@ class ActionStatusType extends BaseType implements ActionStatusTypeContract, Enu
      *
      * @see https://schema.org/ActiveActionStatus
      */
-     const ActiveActionStatus = 'https://schema.org/ActiveActionStatus';
+    public const ActiveActionStatus = 'https://schema.org/ActiveActionStatus';
 
     /**
      * An action that has already taken place.
      *
      * @see https://schema.org/CompletedActionStatus
      */
-     const CompletedActionStatus = 'https://schema.org/CompletedActionStatus';
+    public const CompletedActionStatus = 'https://schema.org/CompletedActionStatus';
 
     /**
      * An action that failed to complete. The action's error property and the
@@ -38,14 +38,14 @@ class ActionStatusType extends BaseType implements ActionStatusTypeContract, Enu
      *
      * @see https://schema.org/FailedActionStatus
      */
-     const FailedActionStatus = 'https://schema.org/FailedActionStatus';
+    public const FailedActionStatus = 'https://schema.org/FailedActionStatus';
 
     /**
      * A description of an action that is supported.
      *
      * @see https://schema.org/PotentialActionStatus
      */
-     const PotentialActionStatus = 'https://schema.org/PotentialActionStatus';
+    public const PotentialActionStatus = 'https://schema.org/PotentialActionStatus';
 
     /**
      * An additional type for the item, typically used for adding more specific
@@ -233,5 +233,4 @@ class ActionStatusType extends BaseType implements ActionStatusTypeContract, Enu
     {
         return $this->setProperty('url', $url);
     }
-
 }

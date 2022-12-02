@@ -2,11 +2,11 @@
 
 namespace Spatie\SchemaOrg;
 
-use \Spatie\SchemaOrg\Contracts\MedicalDevicePurposeContract;
-use \Spatie\SchemaOrg\Contracts\EnumerationContract;
-use \Spatie\SchemaOrg\Contracts\IntangibleContract;
-use \Spatie\SchemaOrg\Contracts\MedicalEnumerationContract;
-use \Spatie\SchemaOrg\Contracts\ThingContract;
+use Spatie\SchemaOrg\Contracts\EnumerationContract;
+use Spatie\SchemaOrg\Contracts\IntangibleContract;
+use Spatie\SchemaOrg\Contracts\MedicalDevicePurposeContract;
+use Spatie\SchemaOrg\Contracts\MedicalEnumerationContract;
+use Spatie\SchemaOrg\Contracts\ThingContract;
 
 /**
  * Categories of medical devices, organized by the purpose or intended use of
@@ -25,7 +25,7 @@ class MedicalDevicePurpose extends BaseType implements MedicalDevicePurposeContr
      * @see https://schema.org/Diagnostic
      * @see https://health-lifesci.schema.org
      */
-     const Diagnostic = 'https://schema.org/Diagnostic';
+    public const Diagnostic = 'https://schema.org/Diagnostic';
 
     /**
      * A medical device used for therapeutic purposes.
@@ -33,7 +33,7 @@ class MedicalDevicePurpose extends BaseType implements MedicalDevicePurposeContr
      * @see https://schema.org/Therapeutic
      * @see https://health-lifesci.schema.org
      */
-     const Therapeutic = 'https://schema.org/Therapeutic';
+    public const Therapeutic = 'https://schema.org/Therapeutic';
 
     /**
      * An additional type for the item, typically used for adding more specific
@@ -221,5 +221,4 @@ class MedicalDevicePurpose extends BaseType implements MedicalDevicePurposeContr
     {
         return $this->setProperty('url', $url);
     }
-
 }

@@ -27,5 +27,4 @@ interface DrugPrescriptionStatusContract
     public function subjectOf($subjectOf);
 
     public function url($url);
-
 }

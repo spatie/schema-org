@@ -2,11 +2,11 @@
 
 namespace Spatie\SchemaOrg;
 
-use \Spatie\SchemaOrg\Contracts\MedicalAudienceContract;
-use \Spatie\SchemaOrg\Contracts\AudienceContract;
-use \Spatie\SchemaOrg\Contracts\IntangibleContract;
-use \Spatie\SchemaOrg\Contracts\PeopleAudienceContract;
-use \Spatie\SchemaOrg\Contracts\ThingContract;
+use Spatie\SchemaOrg\Contracts\AudienceContract;
+use Spatie\SchemaOrg\Contracts\IntangibleContract;
+use Spatie\SchemaOrg\Contracts\MedicalAudienceContract;
+use Spatie\SchemaOrg\Contracts\PeopleAudienceContract;
+use Spatie\SchemaOrg\Contracts\ThingContract;
 
 /**
  * Target audiences for medical web pages.
@@ -368,5 +368,4 @@ class MedicalAudience extends BaseType implements MedicalAudienceContract, Audie
     {
         return $this->setProperty('url', $url);
     }
-
 }

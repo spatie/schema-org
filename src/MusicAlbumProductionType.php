@@ -2,10 +2,10 @@
 
 namespace Spatie\SchemaOrg;
 
-use \Spatie\SchemaOrg\Contracts\MusicAlbumProductionTypeContract;
-use \Spatie\SchemaOrg\Contracts\EnumerationContract;
-use \Spatie\SchemaOrg\Contracts\IntangibleContract;
-use \Spatie\SchemaOrg\Contracts\ThingContract;
+use Spatie\SchemaOrg\Contracts\EnumerationContract;
+use Spatie\SchemaOrg\Contracts\IntangibleContract;
+use Spatie\SchemaOrg\Contracts\MusicAlbumProductionTypeContract;
+use Spatie\SchemaOrg\Contracts\ThingContract;
 
 /**
  * Classification of the album by its type of content: soundtrack, live album,
@@ -24,7 +24,7 @@ class MusicAlbumProductionType extends BaseType implements MusicAlbumProductionT
      * @see https://schema.org/CompilationAlbum
      * @link http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#MBZ
      */
-     const CompilationAlbum = 'https://schema.org/CompilationAlbum';
+    public const CompilationAlbum = 'https://schema.org/CompilationAlbum';
 
     /**
      * DJMixAlbum.
@@ -32,7 +32,7 @@ class MusicAlbumProductionType extends BaseType implements MusicAlbumProductionT
      * @see https://schema.org/DJMixAlbum
      * @link http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#MBZ
      */
-     const DJMixAlbum = 'https://schema.org/DJMixAlbum';
+    public const DJMixAlbum = 'https://schema.org/DJMixAlbum';
 
     /**
      * DemoAlbum.
@@ -40,7 +40,7 @@ class MusicAlbumProductionType extends BaseType implements MusicAlbumProductionT
      * @see https://schema.org/DemoAlbum
      * @link http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#MBZ
      */
-     const DemoAlbum = 'https://schema.org/DemoAlbum';
+    public const DemoAlbum = 'https://schema.org/DemoAlbum';
 
     /**
      * LiveAlbum.
@@ -48,7 +48,7 @@ class MusicAlbumProductionType extends BaseType implements MusicAlbumProductionT
      * @see https://schema.org/LiveAlbum
      * @link http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#MBZ
      */
-     const LiveAlbum = 'https://schema.org/LiveAlbum';
+    public const LiveAlbum = 'https://schema.org/LiveAlbum';
 
     /**
      * MixtapeAlbum.
@@ -56,7 +56,7 @@ class MusicAlbumProductionType extends BaseType implements MusicAlbumProductionT
      * @see https://schema.org/MixtapeAlbum
      * @link http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#MBZ
      */
-     const MixtapeAlbum = 'https://schema.org/MixtapeAlbum';
+    public const MixtapeAlbum = 'https://schema.org/MixtapeAlbum';
 
     /**
      * RemixAlbum.
@@ -64,7 +64,7 @@ class MusicAlbumProductionType extends BaseType implements MusicAlbumProductionT
      * @see https://schema.org/RemixAlbum
      * @link http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#MBZ
      */
-     const RemixAlbum = 'https://schema.org/RemixAlbum';
+    public const RemixAlbum = 'https://schema.org/RemixAlbum';
 
     /**
      * SoundtrackAlbum.
@@ -72,7 +72,7 @@ class MusicAlbumProductionType extends BaseType implements MusicAlbumProductionT
      * @see https://schema.org/SoundtrackAlbum
      * @link http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#MBZ
      */
-     const SoundtrackAlbum = 'https://schema.org/SoundtrackAlbum';
+    public const SoundtrackAlbum = 'https://schema.org/SoundtrackAlbum';
 
     /**
      * SpokenWordAlbum.
@@ -80,7 +80,7 @@ class MusicAlbumProductionType extends BaseType implements MusicAlbumProductionT
      * @see https://schema.org/SpokenWordAlbum
      * @link http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#MBZ
      */
-     const SpokenWordAlbum = 'https://schema.org/SpokenWordAlbum';
+    public const SpokenWordAlbum = 'https://schema.org/SpokenWordAlbum';
 
     /**
      * StudioAlbum.
@@ -88,7 +88,7 @@ class MusicAlbumProductionType extends BaseType implements MusicAlbumProductionT
      * @see https://schema.org/StudioAlbum
      * @link http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#MBZ
      */
-     const StudioAlbum = 'https://schema.org/StudioAlbum';
+    public const StudioAlbum = 'https://schema.org/StudioAlbum';
 
     /**
      * An additional type for the item, typically used for adding more specific
@@ -276,5 +276,4 @@ class MusicAlbumProductionType extends BaseType implements MusicAlbumProductionT
     {
         return $this->setProperty('url', $url);
     }
-
 }

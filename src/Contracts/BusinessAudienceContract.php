@@ -37,5 +37,4 @@ interface BusinessAudienceContract
     public function yearlyRevenue($yearlyRevenue);
 
     public function yearsInOperation($yearsInOperation);
-
 }

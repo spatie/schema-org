@@ -2,11 +2,11 @@
 
 namespace Spatie\SchemaOrg;
 
-use \Spatie\SchemaOrg\Contracts\NLNonprofitTypeContract;
-use \Spatie\SchemaOrg\Contracts\EnumerationContract;
-use \Spatie\SchemaOrg\Contracts\IntangibleContract;
-use \Spatie\SchemaOrg\Contracts\NonprofitTypeContract;
-use \Spatie\SchemaOrg\Contracts\ThingContract;
+use Spatie\SchemaOrg\Contracts\EnumerationContract;
+use Spatie\SchemaOrg\Contracts\IntangibleContract;
+use Spatie\SchemaOrg\Contracts\NLNonprofitTypeContract;
+use Spatie\SchemaOrg\Contracts\NonprofitTypeContract;
+use Spatie\SchemaOrg\Contracts\ThingContract;
 
 /**
  * NLNonprofitType: Non-profit organization type originating from the
@@ -28,7 +28,7 @@ class NLNonprofitType extends BaseType implements NLNonprofitTypeContract, Enume
      * @see https://pending.schema.org
      * @link https://github.com/schemaorg/schemaorg/issues/2543
      */
-     const NonprofitANBI = 'https://schema.org/NonprofitANBI';
+    public const NonprofitANBI = 'https://schema.org/NonprofitANBI';
 
     /**
      * NonprofitSBBI: Non-profit type referring to a Social Interest Promoting
@@ -38,7 +38,7 @@ class NLNonprofitType extends BaseType implements NLNonprofitTypeContract, Enume
      * @see https://pending.schema.org
      * @link https://github.com/schemaorg/schemaorg/issues/2543
      */
-     const NonprofitSBBI = 'https://schema.org/NonprofitSBBI';
+    public const NonprofitSBBI = 'https://schema.org/NonprofitSBBI';
 
     /**
      * An additional type for the item, typically used for adding more specific
@@ -226,5 +226,4 @@ class NLNonprofitType extends BaseType implements NLNonprofitTypeContract, Enume
     {
         return $this->setProperty('url', $url);
     }
-
 }

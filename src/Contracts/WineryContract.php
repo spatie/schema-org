@@ -245,5 +245,4 @@ interface WineryContract
     public function url($url);
 
     public function vatID($vatID);
-
 }

@@ -51,5 +51,4 @@ interface DeactivateActionContract
     public function target($target);
 
     public function url($url);
-
 }

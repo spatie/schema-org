@@ -2,10 +2,10 @@
 
 namespace Spatie\SchemaOrg;
 
-use \Spatie\SchemaOrg\Contracts\WorkBasedProgramContract;
-use \Spatie\SchemaOrg\Contracts\EducationalOccupationalProgramContract;
-use \Spatie\SchemaOrg\Contracts\IntangibleContract;
-use \Spatie\SchemaOrg\Contracts\ThingContract;
+use Spatie\SchemaOrg\Contracts\EducationalOccupationalProgramContract;
+use Spatie\SchemaOrg\Contracts\IntangibleContract;
+use Spatie\SchemaOrg\Contracts\ThingContract;
+use Spatie\SchemaOrg\Contracts\WorkBasedProgramContract;
 
 /**
  * A program with both an educational and employment component. Typically based
@@ -327,7 +327,7 @@ class WorkBasedProgram extends BaseType implements WorkBasedProgramContract, Edu
      * similar, with the property repeated for each applicable value. Ideally
      * the taxonomy should be identified, and both the textual label and formal
      * code for the category should be provided.
-     * 
+     *
      * Note: for historical reasons, any textual label and formal code provided
      * as a literal may be assumed to be from O*NET-SOC.
      *
@@ -626,5 +626,4 @@ class WorkBasedProgram extends BaseType implements WorkBasedProgramContract, Edu
     {
         return $this->setProperty('url', $url);
     }
-
 }

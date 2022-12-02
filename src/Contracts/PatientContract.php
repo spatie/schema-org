@@ -179,5 +179,4 @@ interface PatientContract
     public function workLocation($workLocation);
 
     public function worksFor($worksFor);
-
 }

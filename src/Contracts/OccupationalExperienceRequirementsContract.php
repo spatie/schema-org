@@ -29,5 +29,4 @@ interface OccupationalExperienceRequirementsContract
     public function subjectOf($subjectOf);
 
     public function url($url);
-
 }

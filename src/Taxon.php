@@ -2,8 +2,8 @@
 
 namespace Spatie\SchemaOrg;
 
-use \Spatie\SchemaOrg\Contracts\TaxonContract;
-use \Spatie\SchemaOrg\Contracts\ThingContract;
+use Spatie\SchemaOrg\Contracts\TaxonContract;
+use Spatie\SchemaOrg\Contracts\ThingContract;
 
 /**
  * A set of organisms asserted to represent a natural cohesive biological unit.
@@ -263,5 +263,4 @@ class Taxon extends BaseType implements TaxonContract, ThingContract
     {
         return $this->setProperty('url', $url);
     }
-
 }

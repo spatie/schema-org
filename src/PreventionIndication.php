@@ -2,10 +2,10 @@
 
 namespace Spatie\SchemaOrg;
 
-use \Spatie\SchemaOrg\Contracts\PreventionIndicationContract;
-use \Spatie\SchemaOrg\Contracts\MedicalEntityContract;
-use \Spatie\SchemaOrg\Contracts\MedicalIndicationContract;
-use \Spatie\SchemaOrg\Contracts\ThingContract;
+use Spatie\SchemaOrg\Contracts\MedicalEntityContract;
+use Spatie\SchemaOrg\Contracts\MedicalIndicationContract;
+use Spatie\SchemaOrg\Contracts\PreventionIndicationContract;
+use Spatie\SchemaOrg\Contracts\ThingContract;
 
 /**
  * An indication for preventing an underlying condition, symptom, etc.
@@ -327,5 +327,4 @@ class PreventionIndication extends BaseType implements PreventionIndicationContr
     {
         return $this->setProperty('url', $url);
     }
-
 }

@@ -2,9 +2,9 @@
 
 namespace Spatie\SchemaOrg;
 
-use \Spatie\SchemaOrg\Contracts\ExhibitionEventContract;
-use \Spatie\SchemaOrg\Contracts\EventContract;
-use \Spatie\SchemaOrg\Contracts\ThingContract;
+use Spatie\SchemaOrg\Contracts\EventContract;
+use Spatie\SchemaOrg\Contracts\ExhibitionEventContract;
+use Spatie\SchemaOrg\Contracts\ThingContract;
 
 /**
  * Event type: Exhibition event, e.g. at a museum, library, archive, tradeshow,
@@ -852,5 +852,4 @@ class ExhibitionEvent extends BaseType implements ExhibitionEventContract, Event
     {
         return $this->setProperty('workPerformed', $workPerformed);
     }
-
 }

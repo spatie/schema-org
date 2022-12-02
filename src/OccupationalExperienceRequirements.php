@@ -2,9 +2,9 @@
 
 namespace Spatie\SchemaOrg;
 
-use \Spatie\SchemaOrg\Contracts\OccupationalExperienceRequirementsContract;
-use \Spatie\SchemaOrg\Contracts\IntangibleContract;
-use \Spatie\SchemaOrg\Contracts\ThingContract;
+use Spatie\SchemaOrg\Contracts\IntangibleContract;
+use Spatie\SchemaOrg\Contracts\OccupationalExperienceRequirementsContract;
+use Spatie\SchemaOrg\Contracts\ThingContract;
 
 /**
  * Indicates employment-related experience requirements, e.g.
@@ -220,5 +220,4 @@ class OccupationalExperienceRequirements extends BaseType implements Occupationa
     {
         return $this->setProperty('url', $url);
     }
-
 }

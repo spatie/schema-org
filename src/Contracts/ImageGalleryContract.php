@@ -271,5 +271,4 @@ interface ImageGalleryContract
     public function workExample($workExample);
 
     public function workTranslation($workTranslation);
-
 }

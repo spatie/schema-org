@@ -2,18 +2,18 @@
 
 namespace Spatie\SchemaOrg;
 
-use \Spatie\SchemaOrg\Contracts\MeetingRoomContract;
-use \Spatie\SchemaOrg\Contracts\AccommodationContract;
-use \Spatie\SchemaOrg\Contracts\PlaceContract;
-use \Spatie\SchemaOrg\Contracts\RoomContract;
-use \Spatie\SchemaOrg\Contracts\ThingContract;
+use Spatie\SchemaOrg\Contracts\AccommodationContract;
+use Spatie\SchemaOrg\Contracts\MeetingRoomContract;
+use Spatie\SchemaOrg\Contracts\PlaceContract;
+use Spatie\SchemaOrg\Contracts\RoomContract;
+use Spatie\SchemaOrg\Contracts\ThingContract;
 
 /**
  * A meeting room, conference room, or conference hall is a room provided for
  * singular events such as business conferences and meetings (source: Wikipedia,
  * the free encyclopedia, see <a
  * href="http://en.wikipedia.org/wiki/Conference_hall">http://en.wikipedia.org/wiki/Conference_hall</a>).
- * 
+ *
  * See also the <a href="/docs/hotels.html">dedicated document on the use of
  * schema.org for marking up hotels and other forms of accommodations</a>.
  *
@@ -64,7 +64,7 @@ class MeetingRoom extends BaseType implements MeetingRoomContract, Accommodation
      * A property-value pair representing an additional characteristic of the
      * entity, e.g. a product feature or another characteristic for which there
      * is no matching property in schema.org.
-     * 
+     *
      * Note: Publishers should be aware that applications designed to use
      * specific schema.org properties (e.g. https://schema.org/width,
      * https://schema.org/color, https://schema.org/gtin13, ...) will typically
@@ -166,7 +166,7 @@ class MeetingRoom extends BaseType implements MeetingRoomContract, Accommodation
      * A short textual code (also called "store code") that uniquely identifies
      * a place of business. The code is typically assigned by the
      * parentOrganization and used in structured URLs.
-     * 
+     *
      * For example, in the URL
      * http://www.starbucks.co.uk/store-locator/etc/detail/3047 the code "3047"
      * is a branchCode for a particular branch.
@@ -1060,7 +1060,7 @@ class MeetingRoom extends BaseType implements MeetingRoomContract, Accommodation
 
     /**
      * The special opening hours of a certain place.
-     * 
+     *
      * Use this to explicitly override general opening hours brought in scope by
      * [[openingHoursSpecification]] or [[openingHours]].
      *
@@ -1153,5 +1153,4 @@ class MeetingRoom extends BaseType implements MeetingRoomContract, Accommodation
     {
         return $this->setProperty('yearBuilt', $yearBuilt);
     }
-
 }

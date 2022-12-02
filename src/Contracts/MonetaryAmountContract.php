@@ -39,5 +39,4 @@ interface MonetaryAmountContract
     public function validThrough($validThrough);
 
     public function value($value);
-
 }

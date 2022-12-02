@@ -2,10 +2,10 @@
 
 namespace Spatie\SchemaOrg;
 
-use \Spatie\SchemaOrg\Contracts\ReturnLabelSourceEnumerationContract;
-use \Spatie\SchemaOrg\Contracts\EnumerationContract;
-use \Spatie\SchemaOrg\Contracts\IntangibleContract;
-use \Spatie\SchemaOrg\Contracts\ThingContract;
+use Spatie\SchemaOrg\Contracts\EnumerationContract;
+use Spatie\SchemaOrg\Contracts\IntangibleContract;
+use Spatie\SchemaOrg\Contracts\ReturnLabelSourceEnumerationContract;
+use Spatie\SchemaOrg\Contracts\ThingContract;
 
 /**
  * Enumerates several types of return labels for product returns.
@@ -26,7 +26,7 @@ class ReturnLabelSourceEnumeration extends BaseType implements ReturnLabelSource
      * @see https://pending.schema.org
      * @link https://github.com/schemaorg/schemaorg/issues/2880
      */
-     const ReturnLabelCustomerResponsibility = 'https://schema.org/ReturnLabelCustomerResponsibility';
+    public const ReturnLabelCustomerResponsibility = 'https://schema.org/ReturnLabelCustomerResponsibility';
 
     /**
      * Indicated that a return label must be downloaded and printed by the
@@ -36,7 +36,7 @@ class ReturnLabelSourceEnumeration extends BaseType implements ReturnLabelSource
      * @see https://pending.schema.org
      * @link https://github.com/schemaorg/schemaorg/issues/2880
      */
-     const ReturnLabelDownloadAndPrint = 'https://schema.org/ReturnLabelDownloadAndPrint';
+    public const ReturnLabelDownloadAndPrint = 'https://schema.org/ReturnLabelDownloadAndPrint';
 
     /**
      * Specifies that a return label will be provided by the seller in the
@@ -46,7 +46,7 @@ class ReturnLabelSourceEnumeration extends BaseType implements ReturnLabelSource
      * @see https://pending.schema.org
      * @link https://github.com/schemaorg/schemaorg/issues/2880
      */
-     const ReturnLabelInBox = 'https://schema.org/ReturnLabelInBox';
+    public const ReturnLabelInBox = 'https://schema.org/ReturnLabelInBox';
 
     /**
      * An additional type for the item, typically used for adding more specific
@@ -234,5 +234,4 @@ class ReturnLabelSourceEnumeration extends BaseType implements ReturnLabelSource
     {
         return $this->setProperty('url', $url);
     }
-
 }

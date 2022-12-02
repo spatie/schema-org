@@ -2,9 +2,9 @@
 
 namespace Spatie\SchemaOrg;
 
-use \Spatie\SchemaOrg\Contracts\MedicalIndicationContract;
-use \Spatie\SchemaOrg\Contracts\MedicalEntityContract;
-use \Spatie\SchemaOrg\Contracts\ThingContract;
+use Spatie\SchemaOrg\Contracts\MedicalEntityContract;
+use Spatie\SchemaOrg\Contracts\MedicalIndicationContract;
+use Spatie\SchemaOrg\Contracts\ThingContract;
 
 /**
  * A condition or factor that indicates use of a medical therapy, including
@@ -327,5 +327,4 @@ class MedicalIndication extends BaseType implements MedicalIndicationContract, M
     {
         return $this->setProperty('url', $url);
     }
-
 }

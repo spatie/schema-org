@@ -2,9 +2,9 @@
 
 namespace Spatie\SchemaOrg;
 
-use \Spatie\SchemaOrg\Contracts\SeekToActionContract;
-use \Spatie\SchemaOrg\Contracts\ActionContract;
-use \Spatie\SchemaOrg\Contracts\ThingContract;
+use Spatie\SchemaOrg\Contracts\ActionContract;
+use Spatie\SchemaOrg\Contracts\SeekToActionContract;
+use Spatie\SchemaOrg\Contracts\ThingContract;
 
 /**
  * This is the [[Action]] of navigating to a specific [[startOffset]] timestamp
@@ -118,7 +118,7 @@ class SeekToAction extends BaseType implements SeekToActionContract, ActionContr
      * John wrote a book from January to *December*. For media, including audio
      * and video, it's the time offset of the end of a clip within a larger
      * file.
-     * 
+     *
      * Note that Event uses startDate/endDate instead of startTime/endTime, even
      * when describing dates with times. This situation may be clarified in
      * future revisions.
@@ -360,7 +360,7 @@ class SeekToAction extends BaseType implements SeekToActionContract, ActionContr
      * John wrote a book from *January* to December. For media, including audio
      * and video, it's the time offset of the start of a clip within a larger
      * file.
-     * 
+     *
      * Note that Event uses startDate/endDate instead of startTime/endTime, even
      * when describing dates with times. This situation may be clarified in
      * future revisions.
@@ -419,5 +419,4 @@ class SeekToAction extends BaseType implements SeekToActionContract, ActionContr
     {
         return $this->setProperty('url', $url);
     }
-
 }

@@ -2,11 +2,11 @@
 
 namespace Spatie\SchemaOrg;
 
-use \Spatie\SchemaOrg\Contracts\HowToSupplyContract;
-use \Spatie\SchemaOrg\Contracts\HowToItemContract;
-use \Spatie\SchemaOrg\Contracts\IntangibleContract;
-use \Spatie\SchemaOrg\Contracts\ListItemContract;
-use \Spatie\SchemaOrg\Contracts\ThingContract;
+use Spatie\SchemaOrg\Contracts\HowToItemContract;
+use Spatie\SchemaOrg\Contracts\HowToSupplyContract;
+use Spatie\SchemaOrg\Contracts\IntangibleContract;
+use Spatie\SchemaOrg\Contracts\ListItemContract;
+use Spatie\SchemaOrg\Contracts\ThingContract;
 
 /**
  * A supply consumed when performing the instructions for how to achieve a
@@ -289,5 +289,4 @@ class HowToSupply extends BaseType implements HowToSupplyContract, HowToItemCont
     {
         return $this->setProperty('url', $url);
     }
-
 }

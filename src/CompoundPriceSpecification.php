@@ -2,11 +2,11 @@
 
 namespace Spatie\SchemaOrg;
 
-use \Spatie\SchemaOrg\Contracts\CompoundPriceSpecificationContract;
-use \Spatie\SchemaOrg\Contracts\IntangibleContract;
-use \Spatie\SchemaOrg\Contracts\PriceSpecificationContract;
-use \Spatie\SchemaOrg\Contracts\StructuredValueContract;
-use \Spatie\SchemaOrg\Contracts\ThingContract;
+use Spatie\SchemaOrg\Contracts\CompoundPriceSpecificationContract;
+use Spatie\SchemaOrg\Contracts\IntangibleContract;
+use Spatie\SchemaOrg\Contracts\PriceSpecificationContract;
+use Spatie\SchemaOrg\Contracts\StructuredValueContract;
+use Spatie\SchemaOrg\Contracts\ThingContract;
 
 /**
  * A compound price specification is one that bundles multiple prices that all
@@ -230,9 +230,9 @@ class CompoundPriceSpecification extends BaseType implements CompoundPriceSpecif
     /**
      * The offer price of a product, or of a price component when attached to
      * PriceSpecification and its subtypes.
-     * 
+     *
      * Usage guidelines:
-     * 
+     *
      * * Use the [[priceCurrency]] property (with standard formats: [ISO 4217
      * currency format](http://en.wikipedia.org/wiki/ISO_4217), e.g. "USD";
      * [Ticker symbol](https://en.wikipedia.org/wiki/List_of_cryptocurrencies)
@@ -283,7 +283,7 @@ class CompoundPriceSpecification extends BaseType implements CompoundPriceSpecif
     /**
      * The currency of the price, or a price component when attached to
      * [[PriceSpecification]] and its subtypes.
-     * 
+     *
      * Use standard formats: [ISO 4217 currency
      * format](http://en.wikipedia.org/wiki/ISO_4217), e.g. "USD"; [Ticker
      * symbol](https://en.wikipedia.org/wiki/List_of_cryptocurrencies) for
@@ -415,5 +415,4 @@ class CompoundPriceSpecification extends BaseType implements CompoundPriceSpecif
     {
         return $this->setProperty('valueAddedTaxIncluded', $valueAddedTaxIncluded);
     }
-
 }

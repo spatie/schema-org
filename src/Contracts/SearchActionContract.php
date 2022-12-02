@@ -53,5 +53,4 @@ interface SearchActionContract
     public function target($target);
 
     public function url($url);
-
 }

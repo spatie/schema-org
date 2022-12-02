@@ -2,10 +2,10 @@
 
 namespace Spatie\SchemaOrg;
 
-use \Spatie\SchemaOrg\Contracts\EnergyContract;
-use \Spatie\SchemaOrg\Contracts\IntangibleContract;
-use \Spatie\SchemaOrg\Contracts\QuantityContract;
-use \Spatie\SchemaOrg\Contracts\ThingContract;
+use Spatie\SchemaOrg\Contracts\EnergyContract;
+use Spatie\SchemaOrg\Contracts\IntangibleContract;
+use Spatie\SchemaOrg\Contracts\QuantityContract;
+use Spatie\SchemaOrg\Contracts\ThingContract;
 
 /**
  * Properties that take Energy as values are of the form '<Number> <Energy unit
@@ -202,5 +202,4 @@ class Energy extends BaseType implements EnergyContract, IntangibleContract, Qua
     {
         return $this->setProperty('url', $url);
     }
-
 }

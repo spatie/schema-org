@@ -2,10 +2,10 @@
 
 namespace Spatie\SchemaOrg;
 
-use \Spatie\SchemaOrg\Contracts\DatedMoneySpecificationContract;
-use \Spatie\SchemaOrg\Contracts\IntangibleContract;
-use \Spatie\SchemaOrg\Contracts\StructuredValueContract;
-use \Spatie\SchemaOrg\Contracts\ThingContract;
+use Spatie\SchemaOrg\Contracts\DatedMoneySpecificationContract;
+use Spatie\SchemaOrg\Contracts\IntangibleContract;
+use Spatie\SchemaOrg\Contracts\StructuredValueContract;
+use Spatie\SchemaOrg\Contracts\ThingContract;
 
 /**
  * A DatedMoneySpecification represents monetary values with optional start and
@@ -67,7 +67,7 @@ class DatedMoneySpecification extends BaseType implements DatedMoneySpecificatio
 
     /**
      * The currency in which the monetary amount is expressed.
-     * 
+     *
      * Use standard formats: [ISO 4217 currency
      * format](http://en.wikipedia.org/wiki/ISO_4217), e.g. "USD"; [Ticker
      * symbol](https://en.wikipedia.org/wiki/List_of_cryptocurrencies) for
@@ -273,5 +273,4 @@ class DatedMoneySpecification extends BaseType implements DatedMoneySpecificatio
     {
         return $this->setProperty('url', $url);
     }
-
 }

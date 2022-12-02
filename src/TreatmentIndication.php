@@ -2,10 +2,10 @@
 
 namespace Spatie\SchemaOrg;
 
-use \Spatie\SchemaOrg\Contracts\TreatmentIndicationContract;
-use \Spatie\SchemaOrg\Contracts\MedicalEntityContract;
-use \Spatie\SchemaOrg\Contracts\MedicalIndicationContract;
-use \Spatie\SchemaOrg\Contracts\ThingContract;
+use Spatie\SchemaOrg\Contracts\MedicalEntityContract;
+use Spatie\SchemaOrg\Contracts\MedicalIndicationContract;
+use Spatie\SchemaOrg\Contracts\ThingContract;
+use Spatie\SchemaOrg\Contracts\TreatmentIndicationContract;
 
 /**
  * An indication for treating an underlying condition, symptom, etc.
@@ -327,5 +327,4 @@ class TreatmentIndication extends BaseType implements TreatmentIndicationContrac
     {
         return $this->setProperty('url', $url);
     }
-
 }

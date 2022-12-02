@@ -55,5 +55,4 @@ interface MedicalTestPanelContract
     public function usedToDiagnose($usedToDiagnose);
 
     public function usesDevice($usesDevice);
-
 }

@@ -2,10 +2,10 @@
 
 namespace Spatie\SchemaOrg;
 
-use \Spatie\SchemaOrg\Contracts\RestrictedDietContract;
-use \Spatie\SchemaOrg\Contracts\EnumerationContract;
-use \Spatie\SchemaOrg\Contracts\IntangibleContract;
-use \Spatie\SchemaOrg\Contracts\ThingContract;
+use Spatie\SchemaOrg\Contracts\EnumerationContract;
+use Spatie\SchemaOrg\Contracts\IntangibleContract;
+use Spatie\SchemaOrg\Contracts\RestrictedDietContract;
+use Spatie\SchemaOrg\Contracts\ThingContract;
 
 /**
  * A diet restricted to certain foods or preparations for cultural, religious,
@@ -22,77 +22,77 @@ class RestrictedDiet extends BaseType implements RestrictedDietContract, Enumera
      *
      * @see https://schema.org/DiabeticDiet
      */
-     const DiabeticDiet = 'https://schema.org/DiabeticDiet';
+    public const DiabeticDiet = 'https://schema.org/DiabeticDiet';
 
     /**
      * A diet exclusive of gluten.
      *
      * @see https://schema.org/GlutenFreeDiet
      */
-     const GlutenFreeDiet = 'https://schema.org/GlutenFreeDiet';
+    public const GlutenFreeDiet = 'https://schema.org/GlutenFreeDiet';
 
     /**
      * A diet conforming to Islamic dietary practices.
      *
      * @see https://schema.org/HalalDiet
      */
-     const HalalDiet = 'https://schema.org/HalalDiet';
+    public const HalalDiet = 'https://schema.org/HalalDiet';
 
     /**
      * A diet conforming to Hindu dietary practices, in particular, beef-free.
      *
      * @see https://schema.org/HinduDiet
      */
-     const HinduDiet = 'https://schema.org/HinduDiet';
+    public const HinduDiet = 'https://schema.org/HinduDiet';
 
     /**
      * A diet conforming to Jewish dietary practices.
      *
      * @see https://schema.org/KosherDiet
      */
-     const KosherDiet = 'https://schema.org/KosherDiet';
+    public const KosherDiet = 'https://schema.org/KosherDiet';
 
     /**
      * A diet focused on reduced calorie intake.
      *
      * @see https://schema.org/LowCalorieDiet
      */
-     const LowCalorieDiet = 'https://schema.org/LowCalorieDiet';
+    public const LowCalorieDiet = 'https://schema.org/LowCalorieDiet';
 
     /**
      * A diet focused on reduced fat and cholesterol intake.
      *
      * @see https://schema.org/LowFatDiet
      */
-     const LowFatDiet = 'https://schema.org/LowFatDiet';
+    public const LowFatDiet = 'https://schema.org/LowFatDiet';
 
     /**
      * A diet appropriate for people with lactose intolerance.
      *
      * @see https://schema.org/LowLactoseDiet
      */
-     const LowLactoseDiet = 'https://schema.org/LowLactoseDiet';
+    public const LowLactoseDiet = 'https://schema.org/LowLactoseDiet';
 
     /**
      * A diet focused on reduced sodium intake.
      *
      * @see https://schema.org/LowSaltDiet
      */
-     const LowSaltDiet = 'https://schema.org/LowSaltDiet';
+    public const LowSaltDiet = 'https://schema.org/LowSaltDiet';
 
     /**
      * A diet exclusive of all animal products.
      *
      * @see https://schema.org/VeganDiet
      */
-     const VeganDiet = 'https://schema.org/VeganDiet';
+    public const VeganDiet = 'https://schema.org/VeganDiet';
 
     /**
      * A diet exclusive of animal meat.
      *
      * @see https://schema.org/VegetarianDiet
      */
-     const VegetarianDiet = 'https://schema.org/VegetarianDiet';
+    public const VegetarianDiet = 'https://schema.org/VegetarianDiet';
 
     /**
      * An additional type for the item, typically used for adding more specific
@@ -280,5 +280,4 @@ class RestrictedDiet extends BaseType implements RestrictedDietContract, Enumera
     {
         return $this->setProperty('url', $url);
     }
-
 }

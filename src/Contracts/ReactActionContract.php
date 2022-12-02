@@ -51,5 +51,4 @@ interface ReactActionContract
     public function target($target);
 
     public function url($url);
-
 }

@@ -251,5 +251,4 @@ interface DrawingContract
     public function workExample($workExample);
 
     public function workTranslation($workTranslation);
-
 }

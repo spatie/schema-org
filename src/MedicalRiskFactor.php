@@ -2,9 +2,9 @@
 
 namespace Spatie\SchemaOrg;
 
-use \Spatie\SchemaOrg\Contracts\MedicalRiskFactorContract;
-use \Spatie\SchemaOrg\Contracts\MedicalEntityContract;
-use \Spatie\SchemaOrg\Contracts\ThingContract;
+use Spatie\SchemaOrg\Contracts\MedicalEntityContract;
+use Spatie\SchemaOrg\Contracts\MedicalRiskFactorContract;
+use Spatie\SchemaOrg\Contracts\ThingContract;
 
 /**
  * A risk factor is anything that increases a person's likelihood of developing
@@ -342,5 +342,4 @@ class MedicalRiskFactor extends BaseType implements MedicalRiskFactorContract, M
     {
         return $this->setProperty('url', $url);
     }
-
 }

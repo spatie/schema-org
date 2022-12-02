@@ -2,11 +2,11 @@
 
 namespace Spatie\SchemaOrg;
 
-use \Spatie\SchemaOrg\Contracts\MaximumDoseScheduleContract;
-use \Spatie\SchemaOrg\Contracts\DoseScheduleContract;
-use \Spatie\SchemaOrg\Contracts\MedicalEntityContract;
-use \Spatie\SchemaOrg\Contracts\MedicalIntangibleContract;
-use \Spatie\SchemaOrg\Contracts\ThingContract;
+use Spatie\SchemaOrg\Contracts\DoseScheduleContract;
+use Spatie\SchemaOrg\Contracts\MaximumDoseScheduleContract;
+use Spatie\SchemaOrg\Contracts\MedicalEntityContract;
+use Spatie\SchemaOrg\Contracts\MedicalIntangibleContract;
+use Spatie\SchemaOrg\Contracts\ThingContract;
 
 /**
  * The maximum dosing schedule considered safe for a drug or supplement as
@@ -392,5 +392,4 @@ class MaximumDoseSchedule extends BaseType implements MaximumDoseScheduleContrac
     {
         return $this->setProperty('url', $url);
     }
-
 }

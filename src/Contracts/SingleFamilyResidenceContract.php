@@ -145,5 +145,4 @@ interface SingleFamilyResidenceContract
     public function url($url);
 
     public function yearBuilt($yearBuilt);
-
 }

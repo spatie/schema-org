@@ -2,10 +2,10 @@
 
 namespace Spatie\SchemaOrg;
 
-use \Spatie\SchemaOrg\Contracts\MedicalConditionStageContract;
-use \Spatie\SchemaOrg\Contracts\MedicalEntityContract;
-use \Spatie\SchemaOrg\Contracts\MedicalIntangibleContract;
-use \Spatie\SchemaOrg\Contracts\ThingContract;
+use Spatie\SchemaOrg\Contracts\MedicalConditionStageContract;
+use Spatie\SchemaOrg\Contracts\MedicalEntityContract;
+use Spatie\SchemaOrg\Contracts\MedicalIntangibleContract;
+use Spatie\SchemaOrg\Contracts\ThingContract;
 
 /**
  * A stage of a medical condition, such as 'Stage IIIa'.
@@ -357,5 +357,4 @@ class MedicalConditionStage extends BaseType implements MedicalConditionStageCon
     {
         return $this->setProperty('url', $url);
     }
-
 }

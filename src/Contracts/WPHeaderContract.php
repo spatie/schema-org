@@ -255,5 +255,4 @@ interface WPHeaderContract
     public function workTranslation($workTranslation);
 
     public function xpath($xpath);
-
 }

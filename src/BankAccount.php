@@ -2,11 +2,11 @@
 
 namespace Spatie\SchemaOrg;
 
-use \Spatie\SchemaOrg\Contracts\BankAccountContract;
-use \Spatie\SchemaOrg\Contracts\FinancialProductContract;
-use \Spatie\SchemaOrg\Contracts\IntangibleContract;
-use \Spatie\SchemaOrg\Contracts\ServiceContract;
-use \Spatie\SchemaOrg\Contracts\ThingContract;
+use Spatie\SchemaOrg\Contracts\BankAccountContract;
+use Spatie\SchemaOrg\Contracts\FinancialProductContract;
+use Spatie\SchemaOrg\Contracts\IntangibleContract;
+use Spatie\SchemaOrg\Contracts\ServiceContract;
+use Spatie\SchemaOrg\Contracts\ThingContract;
 
 /**
  * A product or service offered by a bank whereby one may deposit, withdraw or
@@ -666,5 +666,4 @@ class BankAccount extends BaseType implements BankAccountContract, FinancialProd
     {
         return $this->setProperty('url', $url);
     }
-
 }

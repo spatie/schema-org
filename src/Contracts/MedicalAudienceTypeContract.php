@@ -27,5 +27,4 @@ interface MedicalAudienceTypeContract
     public function subjectOf($subjectOf);
 
     public function url($url);
-
 }

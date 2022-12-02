@@ -2,9 +2,9 @@
 
 namespace Spatie\SchemaOrg;
 
-use \Spatie\SchemaOrg\Contracts\BrandContract;
-use \Spatie\SchemaOrg\Contracts\IntangibleContract;
-use \Spatie\SchemaOrg\Contracts\ThingContract;
+use Spatie\SchemaOrg\Contracts\BrandContract;
+use Spatie\SchemaOrg\Contracts\IntangibleContract;
+use Spatie\SchemaOrg\Contracts\ThingContract;
 
 /**
  * A brand is a name used by an organization or business person for labeling a
@@ -260,5 +260,4 @@ class Brand extends BaseType implements BrandContract, IntangibleContract, Thing
     {
         return $this->setProperty('url', $url);
     }
-
 }

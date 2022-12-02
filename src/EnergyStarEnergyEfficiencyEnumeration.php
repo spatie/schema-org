@@ -2,11 +2,11 @@
 
 namespace Spatie\SchemaOrg;
 
-use \Spatie\SchemaOrg\Contracts\EnergyStarEnergyEfficiencyEnumerationContract;
-use \Spatie\SchemaOrg\Contracts\EnergyEfficiencyEnumerationContract;
-use \Spatie\SchemaOrg\Contracts\EnumerationContract;
-use \Spatie\SchemaOrg\Contracts\IntangibleContract;
-use \Spatie\SchemaOrg\Contracts\ThingContract;
+use Spatie\SchemaOrg\Contracts\EnergyEfficiencyEnumerationContract;
+use Spatie\SchemaOrg\Contracts\EnergyStarEnergyEfficiencyEnumerationContract;
+use Spatie\SchemaOrg\Contracts\EnumerationContract;
+use Spatie\SchemaOrg\Contracts\IntangibleContract;
+use Spatie\SchemaOrg\Contracts\ThingContract;
 
 /**
  * Used to indicate whether a product is EnergyStar certified.
@@ -26,7 +26,7 @@ class EnergyStarEnergyEfficiencyEnumeration extends BaseType implements EnergySt
      * @see https://pending.schema.org
      * @link https://github.com/schemaorg/schemaorg/issues/2670
      */
-     const EnergyStarCertified = 'https://schema.org/EnergyStarCertified';
+    public const EnergyStarCertified = 'https://schema.org/EnergyStarCertified';
 
     /**
      * An additional type for the item, typically used for adding more specific
@@ -214,5 +214,4 @@ class EnergyStarEnergyEfficiencyEnumeration extends BaseType implements EnergySt
     {
         return $this->setProperty('url', $url);
     }
-
 }

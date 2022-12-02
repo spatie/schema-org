@@ -2,9 +2,9 @@
 
 namespace Spatie\SchemaOrg;
 
-use \Spatie\SchemaOrg\Contracts\MedicalGuidelineContract;
-use \Spatie\SchemaOrg\Contracts\MedicalEntityContract;
-use \Spatie\SchemaOrg\Contracts\ThingContract;
+use Spatie\SchemaOrg\Contracts\MedicalEntityContract;
+use Spatie\SchemaOrg\Contracts\MedicalGuidelineContract;
+use Spatie\SchemaOrg\Contracts\ThingContract;
 
 /**
  * Any recommendation made by a standard society (e.g. ACC/AHA) or consensus
@@ -395,5 +395,4 @@ class MedicalGuideline extends BaseType implements MedicalGuidelineContract, Med
     {
         return $this->setProperty('url', $url);
     }
-
 }

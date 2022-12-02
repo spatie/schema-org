@@ -75,5 +75,4 @@ interface EducationalOccupationalProgramContract
     public function typicalCreditsPerTerm($typicalCreditsPerTerm);
 
     public function url($url);
-
 }

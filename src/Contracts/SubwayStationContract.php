@@ -119,5 +119,4 @@ interface SubwayStationContract
     public function tourBookingPage($tourBookingPage);
 
     public function url($url);
-
 }

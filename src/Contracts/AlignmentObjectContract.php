@@ -37,5 +37,4 @@ interface AlignmentObjectContract
     public function targetUrl($targetUrl);
 
     public function url($url);
-
 }

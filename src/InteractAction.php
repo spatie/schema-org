@@ -2,9 +2,9 @@
 
 namespace Spatie\SchemaOrg;
 
-use \Spatie\SchemaOrg\Contracts\InteractActionContract;
-use \Spatie\SchemaOrg\Contracts\ActionContract;
-use \Spatie\SchemaOrg\Contracts\ThingContract;
+use Spatie\SchemaOrg\Contracts\ActionContract;
+use Spatie\SchemaOrg\Contracts\InteractActionContract;
+use Spatie\SchemaOrg\Contracts\ThingContract;
 
 /**
  * The act of interacting with another person or organization.
@@ -114,7 +114,7 @@ class InteractAction extends BaseType implements InteractActionContract, ActionC
      * John wrote a book from January to *December*. For media, including audio
      * and video, it's the time offset of the end of a clip within a larger
      * file.
-     * 
+     *
      * Note that Event uses startDate/endDate instead of startTime/endTime, even
      * when describing dates with times. This situation may be clarified in
      * future revisions.
@@ -339,7 +339,7 @@ class InteractAction extends BaseType implements InteractActionContract, ActionC
      * John wrote a book from *January* to December. For media, including audio
      * and video, it's the time offset of the start of a clip within a larger
      * file.
-     * 
+     *
      * Note that Event uses startDate/endDate instead of startTime/endTime, even
      * when describing dates with times. This situation may be clarified in
      * future revisions.
@@ -398,5 +398,4 @@ class InteractAction extends BaseType implements InteractActionContract, ActionC
     {
         return $this->setProperty('url', $url);
     }
-
 }

@@ -2,9 +2,9 @@
 
 namespace Spatie\SchemaOrg;
 
-use \Spatie\SchemaOrg\Contracts\SportsEventContract;
-use \Spatie\SchemaOrg\Contracts\EventContract;
-use \Spatie\SchemaOrg\Contracts\ThingContract;
+use Spatie\SchemaOrg\Contracts\EventContract;
+use Spatie\SchemaOrg\Contracts\SportsEventContract;
+use Spatie\SchemaOrg\Contracts\ThingContract;
 
 /**
  * Event type: Sports event.
@@ -909,5 +909,4 @@ class SportsEvent extends BaseType implements SportsEventContract, EventContract
     {
         return $this->setProperty('workPerformed', $workPerformed);
     }
-
 }

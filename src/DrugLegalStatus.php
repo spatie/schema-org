@@ -2,10 +2,10 @@
 
 namespace Spatie\SchemaOrg;
 
-use \Spatie\SchemaOrg\Contracts\DrugLegalStatusContract;
-use \Spatie\SchemaOrg\Contracts\MedicalEntityContract;
-use \Spatie\SchemaOrg\Contracts\MedicalIntangibleContract;
-use \Spatie\SchemaOrg\Contracts\ThingContract;
+use Spatie\SchemaOrg\Contracts\DrugLegalStatusContract;
+use Spatie\SchemaOrg\Contracts\MedicalEntityContract;
+use Spatie\SchemaOrg\Contracts\MedicalIntangibleContract;
+use Spatie\SchemaOrg\Contracts\ThingContract;
 
 /**
  * The legal availability status of a medical drug.
@@ -342,5 +342,4 @@ class DrugLegalStatus extends BaseType implements DrugLegalStatusContract, Medic
     {
         return $this->setProperty('url', $url);
     }
-
 }

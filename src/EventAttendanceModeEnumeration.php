@@ -2,10 +2,10 @@
 
 namespace Spatie\SchemaOrg;
 
-use \Spatie\SchemaOrg\Contracts\EventAttendanceModeEnumerationContract;
-use \Spatie\SchemaOrg\Contracts\EnumerationContract;
-use \Spatie\SchemaOrg\Contracts\IntangibleContract;
-use \Spatie\SchemaOrg\Contracts\ThingContract;
+use Spatie\SchemaOrg\Contracts\EnumerationContract;
+use Spatie\SchemaOrg\Contracts\EventAttendanceModeEnumerationContract;
+use Spatie\SchemaOrg\Contracts\IntangibleContract;
+use Spatie\SchemaOrg\Contracts\ThingContract;
 
 /**
  * An EventAttendanceModeEnumeration value is one of potentially several modes
@@ -27,7 +27,7 @@ class EventAttendanceModeEnumeration extends BaseType implements EventAttendance
      * @see https://pending.schema.org
      * @link https://github.com/schemaorg/schemaorg/issues/1842
      */
-     const MixedEventAttendanceMode = 'https://schema.org/MixedEventAttendanceMode';
+    public const MixedEventAttendanceMode = 'https://schema.org/MixedEventAttendanceMode';
 
     /**
      * OfflineEventAttendanceMode - an event that is primarily conducted
@@ -37,7 +37,7 @@ class EventAttendanceModeEnumeration extends BaseType implements EventAttendance
      * @see https://pending.schema.org
      * @link https://github.com/schemaorg/schemaorg/issues/1842
      */
-     const OfflineEventAttendanceMode = 'https://schema.org/OfflineEventAttendanceMode';
+    public const OfflineEventAttendanceMode = 'https://schema.org/OfflineEventAttendanceMode';
 
     /**
      * OnlineEventAttendanceMode - an event that is primarily conducted online.
@@ -46,7 +46,7 @@ class EventAttendanceModeEnumeration extends BaseType implements EventAttendance
      * @see https://pending.schema.org
      * @link https://github.com/schemaorg/schemaorg/issues/1842
      */
-     const OnlineEventAttendanceMode = 'https://schema.org/OnlineEventAttendanceMode';
+    public const OnlineEventAttendanceMode = 'https://schema.org/OnlineEventAttendanceMode';
 
     /**
      * An additional type for the item, typically used for adding more specific
@@ -234,5 +234,4 @@ class EventAttendanceModeEnumeration extends BaseType implements EventAttendance
     {
         return $this->setProperty('url', $url);
     }
-
 }

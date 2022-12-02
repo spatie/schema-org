@@ -59,5 +59,4 @@ interface ChemicalSubstanceContract
     public function taxonomicRange($taxonomicRange);
 
     public function url($url);
-
 }

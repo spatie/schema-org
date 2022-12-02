@@ -267,5 +267,4 @@ interface ArticleContract
     public function workExample($workExample);
 
     public function workTranslation($workTranslation);
-
 }

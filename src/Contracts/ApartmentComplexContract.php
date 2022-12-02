@@ -127,5 +127,4 @@ interface ApartmentComplexContract
     public function tourBookingPage($tourBookingPage);
 
     public function url($url);
-
 }

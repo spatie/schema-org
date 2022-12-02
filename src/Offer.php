@@ -2,21 +2,21 @@
 
 namespace Spatie\SchemaOrg;
 
-use \Spatie\SchemaOrg\Contracts\OfferContract;
-use \Spatie\SchemaOrg\Contracts\IntangibleContract;
-use \Spatie\SchemaOrg\Contracts\ThingContract;
+use Spatie\SchemaOrg\Contracts\IntangibleContract;
+use Spatie\SchemaOrg\Contracts\OfferContract;
+use Spatie\SchemaOrg\Contracts\ThingContract;
 
 /**
  * An offer to transfer some rights to an item or to provide a service — for
  * example, an offer to sell tickets to an event, to rent the DVD of a movie, to
  * stream a TV show over the internet, to repair a motorcycle, or to loan a
  * book.
- * 
+ *
  * Note: As the [[businessFunction]] property, which identifies the form of
  * offer (e.g. sell, lease, repair, dispose), defaults to
  * http://purl.org/goodrelations/v1#Sell; an Offer without a defined
  * businessFunction value can be assumed to be an offer to sell.
- * 
+ *
  * For [GTIN](http://www.gs1.org/barcodes/technical/idkeys/gtin)-related fields,
  * see [Check Digit
  * calculator](http://www.gs1.org/barcodes/support/check_digit_calculator) and
@@ -146,7 +146,7 @@ class Offer extends BaseType implements OfferContract, IntangibleContract, Thing
      * for product identification within the Amazon organization (summary from
      * [Wikipedia](https://en.wikipedia.org/wiki/Amazon_Standard_Identification_Number)'s
      * article).
-     * 
+     *
      * Note also that this is a definition for how to include ASINs in
      * Schema.org data, and not a definition of ASINs in general - see
      * documentation from Amazon for authoritative details.
@@ -392,7 +392,7 @@ class Offer extends BaseType implements OfferContract, IntangibleContract, Thing
      * The ISO 3166-1 (ISO 3166-1 alpha-2) or ISO 3166-2 code, the place, or the
      * GeoShape for the geo-political region(s) for which the offer or delivery
      * charge specification is valid.
-     * 
+     *
      * See also [[ineligibleRegion]].
      *
      * @param \Spatie\SchemaOrg\Contracts\GeoShapeContract|\Spatie\SchemaOrg\Contracts\GeoShapeContract[]|\Spatie\SchemaOrg\Contracts\PlaceContract|\Spatie\SchemaOrg\Contracts\PlaceContract[]|string|string[] $eligibleRegion
@@ -429,7 +429,7 @@ class Offer extends BaseType implements OfferContract, IntangibleContract, Thing
      * ([GTIN](https://www.gs1.org/standards/id-keys/gtin)). GTINs identify
      * trade items, including products and services, using numeric
      * identification codes.
-     * 
+     *
      * The GS1 [digital link
      * specifications](https://www.gs1.org/standards/Digital-Link/) express
      * GTINs as URLs (URIs, IRIs, etc.). Details including regular expression
@@ -447,7 +447,7 @@ class Offer extends BaseType implements OfferContract, IntangibleContract, Thing
      * more details. Left-padding of the gtin values is not required or
      * encouraged. The [[gtin]] property generalizes the earlier [[gtin8]],
      * [[gtin12]], [[gtin13]], and [[gtin14]] properties.
-     * 
+     *
      * Note also that this is a definition for how to include GTINs in
      * Schema.org data, and not a definition of GTINs in general - see the GS1
      * documentation for authoritative details.
@@ -646,7 +646,7 @@ class Offer extends BaseType implements OfferContract, IntangibleContract, Thing
      * GeoShape for the geo-political region(s) for which the offer or delivery
      * charge specification is not valid, e.g. a region where the transaction is
      * not allowed.
-     * 
+     *
      * See also [[eligibleRegion]].
      *
      * @param \Spatie\SchemaOrg\Contracts\GeoShapeContract|\Spatie\SchemaOrg\Contracts\GeoShapeContract[]|\Spatie\SchemaOrg\Contracts\PlaceContract|\Spatie\SchemaOrg\Contracts\PlaceContract[]|string|string[] $ineligibleRegion
@@ -763,7 +763,7 @@ class Offer extends BaseType implements OfferContract, IntangibleContract, Thing
      * The [[mobileUrl]] property is provided for specific situations in which
      * data consumers need to determine whether one of several provided URLs is
      * a dedicated 'mobile site'.
-     * 
+     *
      * To discourage over-use, and reflecting intial usecases, the property is
      * expected only on [[Product]] and [[Offer]], rather than [[Thing]]. The
      * general trend in web technology is towards [responsive
@@ -853,9 +853,9 @@ class Offer extends BaseType implements OfferContract, IntangibleContract, Thing
     /**
      * The offer price of a product, or of a price component when attached to
      * PriceSpecification and its subtypes.
-     * 
+     *
      * Usage guidelines:
-     * 
+     *
      * * Use the [[priceCurrency]] property (with standard formats: [ISO 4217
      * currency format](http://en.wikipedia.org/wiki/ISO_4217), e.g. "USD";
      * [Ticker symbol](https://en.wikipedia.org/wiki/List_of_cryptocurrencies)
@@ -890,7 +890,7 @@ class Offer extends BaseType implements OfferContract, IntangibleContract, Thing
     /**
      * The currency of the price, or a price component when attached to
      * [[PriceSpecification]] and its subtypes.
-     * 
+     *
      * Use standard formats: [ISO 4217 currency
      * format](http://en.wikipedia.org/wiki/ISO_4217), e.g. "USD"; [Ticker
      * symbol](https://en.wikipedia.org/wiki/List_of_cryptocurrencies) for
@@ -1123,5 +1123,4 @@ class Offer extends BaseType implements OfferContract, IntangibleContract, Thing
     {
         return $this->setProperty('warranty', $warranty);
     }
-
 }

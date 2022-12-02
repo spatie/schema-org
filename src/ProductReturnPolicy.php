@@ -2,9 +2,9 @@
 
 namespace Spatie\SchemaOrg;
 
-use \Spatie\SchemaOrg\Contracts\ProductReturnPolicyContract;
-use \Spatie\SchemaOrg\Contracts\IntangibleContract;
-use \Spatie\SchemaOrg\Contracts\ThingContract;
+use Spatie\SchemaOrg\Contracts\IntangibleContract;
+use Spatie\SchemaOrg\Contracts\ProductReturnPolicyContract;
+use Spatie\SchemaOrg\Contracts\ThingContract;
 
 /**
  * A ProductReturnPolicy provides information about product return policies
@@ -236,5 +236,4 @@ class ProductReturnPolicy extends BaseType implements ProductReturnPolicyContrac
     {
         return $this->setProperty('url', $url);
     }
-
 }

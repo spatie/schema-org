@@ -2,9 +2,9 @@
 
 namespace Spatie\SchemaOrg;
 
-use \Spatie\SchemaOrg\Contracts\NewsMediaOrganizationContract;
-use \Spatie\SchemaOrg\Contracts\OrganizationContract;
-use \Spatie\SchemaOrg\Contracts\ThingContract;
+use Spatie\SchemaOrg\Contracts\NewsMediaOrganizationContract;
+use Spatie\SchemaOrg\Contracts\OrganizationContract;
+use Spatie\SchemaOrg\Contracts\ThingContract;
 
 /**
  * A News/Media organization such as a newspaper or TV station.
@@ -1071,7 +1071,7 @@ class NewsMediaOrganization extends BaseType implements NewsMediaOrganizationCon
      * applied to a [[CreativeWork]] (e.g. [[NewsArticle]]) the principles are
      * those of the party primarily responsible for the creation of the
      * [[CreativeWork]].
-     * 
+     *
      * While such policies are most typically expressed in natural language,
      * sometimes related information (e.g. indicating a [[funder]]) can be
      * expressed using schema.org terminology.
@@ -1313,5 +1313,4 @@ class NewsMediaOrganization extends BaseType implements NewsMediaOrganizationCon
     {
         return $this->setProperty('verificationFactCheckingPolicy', $verificationFactCheckingPolicy);
     }
-
 }

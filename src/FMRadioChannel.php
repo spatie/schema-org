@@ -2,11 +2,11 @@
 
 namespace Spatie\SchemaOrg;
 
-use \Spatie\SchemaOrg\Contracts\FMRadioChannelContract;
-use \Spatie\SchemaOrg\Contracts\BroadcastChannelContract;
-use \Spatie\SchemaOrg\Contracts\IntangibleContract;
-use \Spatie\SchemaOrg\Contracts\RadioChannelContract;
-use \Spatie\SchemaOrg\Contracts\ThingContract;
+use Spatie\SchemaOrg\Contracts\BroadcastChannelContract;
+use Spatie\SchemaOrg\Contracts\FMRadioChannelContract;
+use Spatie\SchemaOrg\Contracts\IntangibleContract;
+use Spatie\SchemaOrg\Contracts\RadioChannelContract;
+use Spatie\SchemaOrg\Contracts\ThingContract;
 
 /**
  * A radio channel that uses FM.
@@ -292,5 +292,4 @@ class FMRadioChannel extends BaseType implements FMRadioChannelContract, Broadca
     {
         return $this->setProperty('url', $url);
     }
-
 }

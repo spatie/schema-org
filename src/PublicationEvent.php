@@ -2,9 +2,9 @@
 
 namespace Spatie\SchemaOrg;
 
-use \Spatie\SchemaOrg\Contracts\PublicationEventContract;
-use \Spatie\SchemaOrg\Contracts\EventContract;
-use \Spatie\SchemaOrg\Contracts\ThingContract;
+use Spatie\SchemaOrg\Contracts\EventContract;
+use Spatie\SchemaOrg\Contracts\PublicationEventContract;
+use Spatie\SchemaOrg\Contracts\ThingContract;
 
 /**
  * A PublicationEvent corresponds indifferently to the event of publication for
@@ -896,5 +896,4 @@ class PublicationEvent extends BaseType implements PublicationEventContract, Eve
     {
         return $this->setProperty('workPerformed', $workPerformed);
     }
-
 }

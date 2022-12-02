@@ -2,12 +2,12 @@
 
 namespace Spatie\SchemaOrg;
 
-use \Spatie\SchemaOrg\Contracts\PhysicalTherapyContract;
-use \Spatie\SchemaOrg\Contracts\MedicalEntityContract;
-use \Spatie\SchemaOrg\Contracts\MedicalProcedureContract;
-use \Spatie\SchemaOrg\Contracts\MedicalTherapyContract;
-use \Spatie\SchemaOrg\Contracts\TherapeuticProcedureContract;
-use \Spatie\SchemaOrg\Contracts\ThingContract;
+use Spatie\SchemaOrg\Contracts\MedicalEntityContract;
+use Spatie\SchemaOrg\Contracts\MedicalProcedureContract;
+use Spatie\SchemaOrg\Contracts\MedicalTherapyContract;
+use Spatie\SchemaOrg\Contracts\PhysicalTherapyContract;
+use Spatie\SchemaOrg\Contracts\TherapeuticProcedureContract;
+use Spatie\SchemaOrg\Contracts\ThingContract;
 
 /**
  * A process of progressive physical care and rehabilitation aimed at improving
@@ -523,5 +523,4 @@ class PhysicalTherapy extends BaseType implements PhysicalTherapyContract, Medic
     {
         return $this->setProperty('url', $url);
     }
-
 }

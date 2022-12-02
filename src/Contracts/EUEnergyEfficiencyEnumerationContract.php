@@ -27,5 +27,4 @@ interface EUEnergyEfficiencyEnumerationContract
     public function subjectOf($subjectOf);
 
     public function url($url);
-
 }

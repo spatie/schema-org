@@ -2,11 +2,11 @@
 
 namespace Spatie\SchemaOrg;
 
-use \Spatie\SchemaOrg\Contracts\GameServerStatusContract;
-use \Spatie\SchemaOrg\Contracts\EnumerationContract;
-use \Spatie\SchemaOrg\Contracts\IntangibleContract;
-use \Spatie\SchemaOrg\Contracts\StatusEnumerationContract;
-use \Spatie\SchemaOrg\Contracts\ThingContract;
+use Spatie\SchemaOrg\Contracts\EnumerationContract;
+use Spatie\SchemaOrg\Contracts\GameServerStatusContract;
+use Spatie\SchemaOrg\Contracts\IntangibleContract;
+use Spatie\SchemaOrg\Contracts\StatusEnumerationContract;
+use Spatie\SchemaOrg\Contracts\ThingContract;
 
 /**
  * Status of a game server.
@@ -23,7 +23,7 @@ class GameServerStatus extends BaseType implements GameServerStatusContract, Enu
      *
      * @see https://schema.org/OfflinePermanently
      */
-     const OfflinePermanently = 'https://schema.org/OfflinePermanently';
+    public const OfflinePermanently = 'https://schema.org/OfflinePermanently';
 
     /**
      * Game server status: OfflineTemporarily. Server is offline now but it can
@@ -31,14 +31,14 @@ class GameServerStatus extends BaseType implements GameServerStatusContract, Enu
      *
      * @see https://schema.org/OfflineTemporarily
      */
-     const OfflineTemporarily = 'https://schema.org/OfflineTemporarily';
+    public const OfflineTemporarily = 'https://schema.org/OfflineTemporarily';
 
     /**
      * Game server status: Online. Server is available.
      *
      * @see https://schema.org/Online
      */
-     const Online = 'https://schema.org/Online';
+    public const Online = 'https://schema.org/Online';
 
     /**
      * Game server status: OnlineFull. Server is online but unavailable. The
@@ -46,7 +46,7 @@ class GameServerStatus extends BaseType implements GameServerStatusContract, Enu
      *
      * @see https://schema.org/OnlineFull
      */
-     const OnlineFull = 'https://schema.org/OnlineFull';
+    public const OnlineFull = 'https://schema.org/OnlineFull';
 
     /**
      * An additional type for the item, typically used for adding more specific
@@ -234,5 +234,4 @@ class GameServerStatus extends BaseType implements GameServerStatusContract, Enu
     {
         return $this->setProperty('url', $url);
     }
-
 }

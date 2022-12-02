@@ -2,10 +2,10 @@
 
 namespace Spatie\SchemaOrg;
 
-use \Spatie\SchemaOrg\Contracts\InstallActionContract;
-use \Spatie\SchemaOrg\Contracts\ActionContract;
-use \Spatie\SchemaOrg\Contracts\ConsumeActionContract;
-use \Spatie\SchemaOrg\Contracts\ThingContract;
+use Spatie\SchemaOrg\Contracts\ActionContract;
+use Spatie\SchemaOrg\Contracts\ConsumeActionContract;
+use Spatie\SchemaOrg\Contracts\InstallActionContract;
+use Spatie\SchemaOrg\Contracts\ThingContract;
 
 /**
  * The act of installing an application.
@@ -132,7 +132,7 @@ class InstallAction extends BaseType implements InstallActionContract, ActionCon
      * John wrote a book from January to *December*. For media, including audio
      * and video, it's the time offset of the end of a clip within a larger
      * file.
-     * 
+     *
      * Note that Event uses startDate/endDate instead of startTime/endTime, even
      * when describing dates with times. This situation may be clarified in
      * future revisions.
@@ -374,7 +374,7 @@ class InstallAction extends BaseType implements InstallActionContract, ActionCon
      * John wrote a book from *January* to December. For media, including audio
      * and video, it's the time offset of the start of a clip within a larger
      * file.
-     * 
+     *
      * Note that Event uses startDate/endDate instead of startTime/endTime, even
      * when describing dates with times. This situation may be clarified in
      * future revisions.
@@ -433,5 +433,4 @@ class InstallAction extends BaseType implements InstallActionContract, ActionCon
     {
         return $this->setProperty('url', $url);
     }
-
 }

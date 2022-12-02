@@ -39,5 +39,4 @@ interface RatingContract
     public function url($url);
 
     public function worstRating($worstRating);
-
 }

@@ -2,10 +2,10 @@
 
 namespace Spatie\SchemaOrg;
 
-use \Spatie\SchemaOrg\Contracts\DurationContract;
-use \Spatie\SchemaOrg\Contracts\IntangibleContract;
-use \Spatie\SchemaOrg\Contracts\QuantityContract;
-use \Spatie\SchemaOrg\Contracts\ThingContract;
+use Spatie\SchemaOrg\Contracts\DurationContract;
+use Spatie\SchemaOrg\Contracts\IntangibleContract;
+use Spatie\SchemaOrg\Contracts\QuantityContract;
+use Spatie\SchemaOrg\Contracts\ThingContract;
 
 /**
  * Quantity: Duration (use [ISO 8601 duration
@@ -202,5 +202,4 @@ class Duration extends BaseType implements DurationContract, IntangibleContract,
     {
         return $this->setProperty('url', $url);
     }
-
 }

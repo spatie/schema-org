@@ -2,9 +2,9 @@
 
 namespace Spatie\SchemaOrg;
 
-use \Spatie\SchemaOrg\Contracts\SpeakableSpecificationContract;
-use \Spatie\SchemaOrg\Contracts\IntangibleContract;
-use \Spatie\SchemaOrg\Contracts\ThingContract;
+use Spatie\SchemaOrg\Contracts\IntangibleContract;
+use Spatie\SchemaOrg\Contracts\SpeakableSpecificationContract;
+use Spatie\SchemaOrg\Contracts\ThingContract;
 
 /**
  * A SpeakableSpecification indicates (typically via [[xpath]] or
@@ -238,5 +238,4 @@ class SpeakableSpecification extends BaseType implements SpeakableSpecificationC
     {
         return $this->setProperty('xpath', $xpath);
     }
-
 }

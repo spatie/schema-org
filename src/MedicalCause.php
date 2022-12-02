@@ -2,9 +2,9 @@
 
 namespace Spatie\SchemaOrg;
 
-use \Spatie\SchemaOrg\Contracts\MedicalCauseContract;
-use \Spatie\SchemaOrg\Contracts\MedicalEntityContract;
-use \Spatie\SchemaOrg\Contracts\ThingContract;
+use Spatie\SchemaOrg\Contracts\MedicalCauseContract;
+use Spatie\SchemaOrg\Contracts\MedicalEntityContract;
+use Spatie\SchemaOrg\Contracts\ThingContract;
 
 /**
  * The causative agent(s) that are responsible for the pathophysiologic process
@@ -356,5 +356,4 @@ class MedicalCause extends BaseType implements MedicalCauseContract, MedicalEnti
     {
         return $this->setProperty('url', $url);
     }
-
 }

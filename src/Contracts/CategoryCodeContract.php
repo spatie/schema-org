@@ -35,5 +35,4 @@ interface CategoryCodeContract
     public function termCode($termCode);
 
     public function url($url);
-
 }

@@ -35,5 +35,4 @@ interface OwnershipInfoContract
     public function typeOfGood($typeOfGood);
 
     public function url($url);
-
 }

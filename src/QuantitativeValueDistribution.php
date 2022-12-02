@@ -2,10 +2,10 @@
 
 namespace Spatie\SchemaOrg;
 
-use \Spatie\SchemaOrg\Contracts\QuantitativeValueDistributionContract;
-use \Spatie\SchemaOrg\Contracts\IntangibleContract;
-use \Spatie\SchemaOrg\Contracts\StructuredValueContract;
-use \Spatie\SchemaOrg\Contracts\ThingContract;
+use Spatie\SchemaOrg\Contracts\IntangibleContract;
+use Spatie\SchemaOrg\Contracts\QuantitativeValueDistributionContract;
+use Spatie\SchemaOrg\Contracts\StructuredValueContract;
+use Spatie\SchemaOrg\Contracts\ThingContract;
 
 /**
  * A statistical distribution of values.
@@ -292,5 +292,4 @@ class QuantitativeValueDistribution extends BaseType implements QuantitativeValu
     {
         return $this->setProperty('url', $url);
     }
-
 }

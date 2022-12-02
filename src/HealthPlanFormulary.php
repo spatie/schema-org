@@ -2,9 +2,9 @@
 
 namespace Spatie\SchemaOrg;
 
-use \Spatie\SchemaOrg\Contracts\HealthPlanFormularyContract;
-use \Spatie\SchemaOrg\Contracts\IntangibleContract;
-use \Spatie\SchemaOrg\Contracts\ThingContract;
+use Spatie\SchemaOrg\Contracts\HealthPlanFormularyContract;
+use Spatie\SchemaOrg\Contracts\IntangibleContract;
+use Spatie\SchemaOrg\Contracts\ThingContract;
 
 /**
  * For a given health insurance plan, the specification for costs and coverage
@@ -251,5 +251,4 @@ class HealthPlanFormulary extends BaseType implements HealthPlanFormularyContrac
     {
         return $this->setProperty('url', $url);
     }
-
 }

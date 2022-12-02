@@ -2,10 +2,10 @@
 
 namespace Spatie\SchemaOrg;
 
-use \Spatie\SchemaOrg\Contracts\MapCategoryTypeContract;
-use \Spatie\SchemaOrg\Contracts\EnumerationContract;
-use \Spatie\SchemaOrg\Contracts\IntangibleContract;
-use \Spatie\SchemaOrg\Contracts\ThingContract;
+use Spatie\SchemaOrg\Contracts\EnumerationContract;
+use Spatie\SchemaOrg\Contracts\IntangibleContract;
+use Spatie\SchemaOrg\Contracts\MapCategoryTypeContract;
+use Spatie\SchemaOrg\Contracts\ThingContract;
 
 /**
  * An enumeration of several kinds of Map.
@@ -21,28 +21,28 @@ class MapCategoryType extends BaseType implements MapCategoryTypeContract, Enume
      *
      * @see https://schema.org/ParkingMap
      */
-     const ParkingMap = 'https://schema.org/ParkingMap';
+    public const ParkingMap = 'https://schema.org/ParkingMap';
 
     /**
      * A seating map.
      *
      * @see https://schema.org/SeatingMap
      */
-     const SeatingMap = 'https://schema.org/SeatingMap';
+    public const SeatingMap = 'https://schema.org/SeatingMap';
 
     /**
      * A transit map.
      *
      * @see https://schema.org/TransitMap
      */
-     const TransitMap = 'https://schema.org/TransitMap';
+    public const TransitMap = 'https://schema.org/TransitMap';
 
     /**
      * A venue map (e.g. for malls, auditoriums, museums, etc.).
      *
      * @see https://schema.org/VenueMap
      */
-     const VenueMap = 'https://schema.org/VenueMap';
+    public const VenueMap = 'https://schema.org/VenueMap';
 
     /**
      * An additional type for the item, typically used for adding more specific
@@ -230,5 +230,4 @@ class MapCategoryType extends BaseType implements MapCategoryTypeContract, Enume
     {
         return $this->setProperty('url', $url);
     }
-
 }

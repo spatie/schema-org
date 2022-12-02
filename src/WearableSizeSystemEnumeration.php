@@ -2,11 +2,11 @@
 
 namespace Spatie\SchemaOrg;
 
-use \Spatie\SchemaOrg\Contracts\WearableSizeSystemEnumerationContract;
-use \Spatie\SchemaOrg\Contracts\EnumerationContract;
-use \Spatie\SchemaOrg\Contracts\IntangibleContract;
-use \Spatie\SchemaOrg\Contracts\SizeSystemEnumerationContract;
-use \Spatie\SchemaOrg\Contracts\ThingContract;
+use Spatie\SchemaOrg\Contracts\EnumerationContract;
+use Spatie\SchemaOrg\Contracts\IntangibleContract;
+use Spatie\SchemaOrg\Contracts\SizeSystemEnumerationContract;
+use Spatie\SchemaOrg\Contracts\ThingContract;
+use Spatie\SchemaOrg\Contracts\WearableSizeSystemEnumerationContract;
 
 /**
  * Enumerates common size systems specific for wearable products
@@ -26,7 +26,7 @@ class WearableSizeSystemEnumeration extends BaseType implements WearableSizeSyst
      * @see https://pending.schema.org
      * @link https://github.com/schemaorg/schemaorg/issues/2811
      */
-     const WearableSizeSystemAU = 'https://schema.org/WearableSizeSystemAU';
+    public const WearableSizeSystemAU = 'https://schema.org/WearableSizeSystemAU';
 
     /**
      * Brazilian size system for wearables.
@@ -35,7 +35,7 @@ class WearableSizeSystemEnumeration extends BaseType implements WearableSizeSyst
      * @see https://pending.schema.org
      * @link https://github.com/schemaorg/schemaorg/issues/2811
      */
-     const WearableSizeSystemBR = 'https://schema.org/WearableSizeSystemBR';
+    public const WearableSizeSystemBR = 'https://schema.org/WearableSizeSystemBR';
 
     /**
      * Chinese size system for wearables.
@@ -44,7 +44,7 @@ class WearableSizeSystemEnumeration extends BaseType implements WearableSizeSyst
      * @see https://pending.schema.org
      * @link https://github.com/schemaorg/schemaorg/issues/2811
      */
-     const WearableSizeSystemCN = 'https://schema.org/WearableSizeSystemCN';
+    public const WearableSizeSystemCN = 'https://schema.org/WearableSizeSystemCN';
 
     /**
      * Continental size system for wearables.
@@ -53,7 +53,7 @@ class WearableSizeSystemEnumeration extends BaseType implements WearableSizeSyst
      * @see https://pending.schema.org
      * @link https://github.com/schemaorg/schemaorg/issues/2811
      */
-     const WearableSizeSystemContinental = 'https://schema.org/WearableSizeSystemContinental';
+    public const WearableSizeSystemContinental = 'https://schema.org/WearableSizeSystemContinental';
 
     /**
      * German size system for wearables.
@@ -62,7 +62,7 @@ class WearableSizeSystemEnumeration extends BaseType implements WearableSizeSyst
      * @see https://pending.schema.org
      * @link https://github.com/schemaorg/schemaorg/issues/2811
      */
-     const WearableSizeSystemDE = 'https://schema.org/WearableSizeSystemDE';
+    public const WearableSizeSystemDE = 'https://schema.org/WearableSizeSystemDE';
 
     /**
      * EN 13402 (joint European standard for size labelling of clothes).
@@ -71,7 +71,7 @@ class WearableSizeSystemEnumeration extends BaseType implements WearableSizeSyst
      * @see https://pending.schema.org
      * @link https://github.com/schemaorg/schemaorg/issues/2811
      */
-     const WearableSizeSystemEN13402 = 'https://schema.org/WearableSizeSystemEN13402';
+    public const WearableSizeSystemEN13402 = 'https://schema.org/WearableSizeSystemEN13402';
 
     /**
      * European size system for wearables.
@@ -80,7 +80,7 @@ class WearableSizeSystemEnumeration extends BaseType implements WearableSizeSyst
      * @see https://pending.schema.org
      * @link https://github.com/schemaorg/schemaorg/issues/2811
      */
-     const WearableSizeSystemEurope = 'https://schema.org/WearableSizeSystemEurope';
+    public const WearableSizeSystemEurope = 'https://schema.org/WearableSizeSystemEurope';
 
     /**
      * French size system for wearables.
@@ -89,7 +89,7 @@ class WearableSizeSystemEnumeration extends BaseType implements WearableSizeSyst
      * @see https://pending.schema.org
      * @link https://github.com/schemaorg/schemaorg/issues/2811
      */
-     const WearableSizeSystemFR = 'https://schema.org/WearableSizeSystemFR';
+    public const WearableSizeSystemFR = 'https://schema.org/WearableSizeSystemFR';
 
     /**
      * GS1 (formerly NRF) size system for wearables.
@@ -98,7 +98,7 @@ class WearableSizeSystemEnumeration extends BaseType implements WearableSizeSyst
      * @see https://pending.schema.org
      * @link https://github.com/schemaorg/schemaorg/issues/2811
      */
-     const WearableSizeSystemGS1 = 'https://schema.org/WearableSizeSystemGS1';
+    public const WearableSizeSystemGS1 = 'https://schema.org/WearableSizeSystemGS1';
 
     /**
      * Italian size system for wearables.
@@ -107,7 +107,7 @@ class WearableSizeSystemEnumeration extends BaseType implements WearableSizeSyst
      * @see https://pending.schema.org
      * @link https://github.com/schemaorg/schemaorg/issues/2811
      */
-     const WearableSizeSystemIT = 'https://schema.org/WearableSizeSystemIT';
+    public const WearableSizeSystemIT = 'https://schema.org/WearableSizeSystemIT';
 
     /**
      * Japanese size system for wearables.
@@ -116,7 +116,7 @@ class WearableSizeSystemEnumeration extends BaseType implements WearableSizeSyst
      * @see https://pending.schema.org
      * @link https://github.com/schemaorg/schemaorg/issues/2811
      */
-     const WearableSizeSystemJP = 'https://schema.org/WearableSizeSystemJP';
+    public const WearableSizeSystemJP = 'https://schema.org/WearableSizeSystemJP';
 
     /**
      * Mexican size system for wearables.
@@ -125,7 +125,7 @@ class WearableSizeSystemEnumeration extends BaseType implements WearableSizeSyst
      * @see https://pending.schema.org
      * @link https://github.com/schemaorg/schemaorg/issues/2811
      */
-     const WearableSizeSystemMX = 'https://schema.org/WearableSizeSystemMX';
+    public const WearableSizeSystemMX = 'https://schema.org/WearableSizeSystemMX';
 
     /**
      * United Kingdom size system for wearables.
@@ -134,7 +134,7 @@ class WearableSizeSystemEnumeration extends BaseType implements WearableSizeSyst
      * @see https://pending.schema.org
      * @link https://github.com/schemaorg/schemaorg/issues/2811
      */
-     const WearableSizeSystemUK = 'https://schema.org/WearableSizeSystemUK';
+    public const WearableSizeSystemUK = 'https://schema.org/WearableSizeSystemUK';
 
     /**
      * United States size system for wearables.
@@ -143,7 +143,7 @@ class WearableSizeSystemEnumeration extends BaseType implements WearableSizeSyst
      * @see https://pending.schema.org
      * @link https://github.com/schemaorg/schemaorg/issues/2811
      */
-     const WearableSizeSystemUS = 'https://schema.org/WearableSizeSystemUS';
+    public const WearableSizeSystemUS = 'https://schema.org/WearableSizeSystemUS';
 
     /**
      * An additional type for the item, typically used for adding more specific
@@ -331,5 +331,4 @@ class WearableSizeSystemEnumeration extends BaseType implements WearableSizeSyst
     {
         return $this->setProperty('url', $url);
     }
-
 }

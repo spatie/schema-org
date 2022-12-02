@@ -37,5 +37,4 @@ interface EngineSpecificationContract
     public function torque($torque);
 
     public function url($url);
-
 }

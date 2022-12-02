@@ -2,10 +2,10 @@
 
 namespace Spatie\SchemaOrg;
 
-use \Spatie\SchemaOrg\Contracts\RefundTypeEnumerationContract;
-use \Spatie\SchemaOrg\Contracts\EnumerationContract;
-use \Spatie\SchemaOrg\Contracts\IntangibleContract;
-use \Spatie\SchemaOrg\Contracts\ThingContract;
+use Spatie\SchemaOrg\Contracts\EnumerationContract;
+use Spatie\SchemaOrg\Contracts\IntangibleContract;
+use Spatie\SchemaOrg\Contracts\RefundTypeEnumerationContract;
+use Spatie\SchemaOrg\Contracts\ThingContract;
 
 /**
  * Enumerates several kinds of product return refund types.
@@ -25,7 +25,7 @@ class RefundTypeEnumeration extends BaseType implements RefundTypeEnumerationCon
      * @see https://pending.schema.org
      * @link https://github.com/schemaorg/schemaorg/issues/2288
      */
-     const ExchangeRefund = 'https://schema.org/ExchangeRefund';
+    public const ExchangeRefund = 'https://schema.org/ExchangeRefund';
 
     /**
      * Specifies that a refund can be done in the full amount the customer paid
@@ -35,7 +35,7 @@ class RefundTypeEnumeration extends BaseType implements RefundTypeEnumerationCon
      * @see https://pending.schema.org
      * @link https://github.com/schemaorg/schemaorg/issues/2288
      */
-     const FullRefund = 'https://schema.org/FullRefund';
+    public const FullRefund = 'https://schema.org/FullRefund';
 
     /**
      * Specifies that the customer receives a store credit as refund when
@@ -45,7 +45,7 @@ class RefundTypeEnumeration extends BaseType implements RefundTypeEnumerationCon
      * @see https://pending.schema.org
      * @link https://github.com/schemaorg/schemaorg/issues/2288
      */
-     const StoreCreditRefund = 'https://schema.org/StoreCreditRefund';
+    public const StoreCreditRefund = 'https://schema.org/StoreCreditRefund';
 
     /**
      * An additional type for the item, typically used for adding more specific
@@ -233,5 +233,4 @@ class RefundTypeEnumeration extends BaseType implements RefundTypeEnumerationCon
     {
         return $this->setProperty('url', $url);
     }
-
 }

@@ -2,9 +2,9 @@
 
 namespace Spatie\SchemaOrg;
 
-use \Spatie\SchemaOrg\Contracts\PerformingGroupContract;
-use \Spatie\SchemaOrg\Contracts\OrganizationContract;
-use \Spatie\SchemaOrg\Contracts\ThingContract;
+use Spatie\SchemaOrg\Contracts\OrganizationContract;
+use Spatie\SchemaOrg\Contracts\PerformingGroupContract;
+use Spatie\SchemaOrg\Contracts\ThingContract;
 
 /**
  * A performance group, such as a band, an orchestra, or a circus.
@@ -1022,7 +1022,7 @@ class PerformingGroup extends BaseType implements PerformingGroupContract, Organ
      * applied to a [[CreativeWork]] (e.g. [[NewsArticle]]) the principles are
      * those of the party primarily responsible for the creation of the
      * [[CreativeWork]].
-     * 
+     *
      * While such policies are most typically expressed in natural language,
      * sometimes related information (e.g. indicating a [[funder]]) can be
      * expressed using schema.org terminology.
@@ -1248,5 +1248,4 @@ class PerformingGroup extends BaseType implements PerformingGroupContract, Organ
     {
         return $this->setProperty('vatID', $vatID);
     }
-
 }

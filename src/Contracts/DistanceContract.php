@@ -27,5 +27,4 @@ interface DistanceContract
     public function subjectOf($subjectOf);
 
     public function url($url);
-
 }

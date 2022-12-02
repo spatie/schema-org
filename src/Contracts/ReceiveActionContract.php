@@ -59,5 +59,4 @@ interface ReceiveActionContract
     public function toLocation($toLocation);
 
     public function url($url);
-
 }

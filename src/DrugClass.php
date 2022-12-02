@@ -2,9 +2,9 @@
 
 namespace Spatie\SchemaOrg;
 
-use \Spatie\SchemaOrg\Contracts\DrugClassContract;
-use \Spatie\SchemaOrg\Contracts\MedicalEntityContract;
-use \Spatie\SchemaOrg\Contracts\ThingContract;
+use Spatie\SchemaOrg\Contracts\DrugClassContract;
+use Spatie\SchemaOrg\Contracts\MedicalEntityContract;
+use Spatie\SchemaOrg\Contracts\ThingContract;
 
 /**
  * A class of medical drugs, e.g., statins. Classes can represent general
@@ -343,5 +343,4 @@ class DrugClass extends BaseType implements DrugClassContract, MedicalEntityCont
     {
         return $this->setProperty('url', $url);
     }
-
 }

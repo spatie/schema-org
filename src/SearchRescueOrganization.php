@@ -2,9 +2,9 @@
 
 namespace Spatie\SchemaOrg;
 
-use \Spatie\SchemaOrg\Contracts\SearchRescueOrganizationContract;
-use \Spatie\SchemaOrg\Contracts\OrganizationContract;
-use \Spatie\SchemaOrg\Contracts\ThingContract;
+use Spatie\SchemaOrg\Contracts\OrganizationContract;
+use Spatie\SchemaOrg\Contracts\SearchRescueOrganizationContract;
+use Spatie\SchemaOrg\Contracts\ThingContract;
 
 /**
  * A Search and Rescue organization of some kind.
@@ -1024,7 +1024,7 @@ class SearchRescueOrganization extends BaseType implements SearchRescueOrganizat
      * applied to a [[CreativeWork]] (e.g. [[NewsArticle]]) the principles are
      * those of the party primarily responsible for the creation of the
      * [[CreativeWork]].
-     * 
+     *
      * While such policies are most typically expressed in natural language,
      * sometimes related information (e.g. indicating a [[funder]]) can be
      * expressed using schema.org terminology.
@@ -1250,5 +1250,4 @@ class SearchRescueOrganization extends BaseType implements SearchRescueOrganizat
     {
         return $this->setProperty('vatID', $vatID);
     }
-
 }

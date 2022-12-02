@@ -55,5 +55,4 @@ interface ArriveActionContract
     public function toLocation($toLocation);
 
     public function url($url);
-
 }

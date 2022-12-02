@@ -51,5 +51,4 @@ interface OfferShippingDetailsContract
     public function weight($weight);
 
     public function width($width);
-
 }

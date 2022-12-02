@@ -2,7 +2,7 @@
 
 namespace Spatie\SchemaOrg;
 
-use \Spatie\SchemaOrg\Contracts\CssSelectorTypeContract;
+use Spatie\SchemaOrg\Contracts\CssSelectorTypeContract;
 
 /**
  * Text representing a CSS selector.
