@@ -43,5 +43,4 @@ interface BedTypeContract
     public function url($url);
 
     public function valueReference($valueReference);
-
 }

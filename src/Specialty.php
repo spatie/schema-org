@@ -2,10 +2,10 @@
 
 namespace Spatie\SchemaOrg;
 
-use \Spatie\SchemaOrg\Contracts\SpecialtyContract;
-use \Spatie\SchemaOrg\Contracts\EnumerationContract;
-use \Spatie\SchemaOrg\Contracts\IntangibleContract;
-use \Spatie\SchemaOrg\Contracts\ThingContract;
+use Spatie\SchemaOrg\Contracts\EnumerationContract;
+use Spatie\SchemaOrg\Contracts\IntangibleContract;
+use Spatie\SchemaOrg\Contracts\SpecialtyContract;
+use Spatie\SchemaOrg\Contracts\ThingContract;
 
 /**
  * Any branch of a field in which people typically develop specific expertise,
@@ -203,5 +203,4 @@ class Specialty extends BaseType implements SpecialtyContract, EnumerationContra
     {
         return $this->setProperty('url', $url);
     }
-
 }

@@ -2,8 +2,8 @@
 
 namespace Spatie\SchemaOrg;
 
-use \Spatie\SchemaOrg\Contracts\EventContract;
-use \Spatie\SchemaOrg\Contracts\ThingContract;
+use Spatie\SchemaOrg\Contracts\EventContract;
+use Spatie\SchemaOrg\Contracts\ThingContract;
 
 /**
  * An event happening at a certain time and location, such as a concert,
@@ -852,5 +852,4 @@ class Event extends BaseType implements EventContract, ThingContract
     {
         return $this->setProperty('workPerformed', $workPerformed);
     }
-
 }

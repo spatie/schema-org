@@ -2,9 +2,9 @@
 
 namespace Spatie\SchemaOrg;
 
-use \Spatie\SchemaOrg\Contracts\LibrarySystemContract;
-use \Spatie\SchemaOrg\Contracts\OrganizationContract;
-use \Spatie\SchemaOrg\Contracts\ThingContract;
+use Spatie\SchemaOrg\Contracts\LibrarySystemContract;
+use Spatie\SchemaOrg\Contracts\OrganizationContract;
+use Spatie\SchemaOrg\Contracts\ThingContract;
 
 /**
  * A [[LibrarySystem]] is a collaborative system amongst several libraries.
@@ -1024,7 +1024,7 @@ class LibrarySystem extends BaseType implements LibrarySystemContract, Organizat
      * applied to a [[CreativeWork]] (e.g. [[NewsArticle]]) the principles are
      * those of the party primarily responsible for the creation of the
      * [[CreativeWork]].
-     * 
+     *
      * While such policies are most typically expressed in natural language,
      * sometimes related information (e.g. indicating a [[funder]]) can be
      * expressed using schema.org terminology.
@@ -1250,5 +1250,4 @@ class LibrarySystem extends BaseType implements LibrarySystemContract, Organizat
     {
         return $this->setProperty('vatID', $vatID);
     }
-
 }

@@ -55,5 +55,4 @@ interface ProteinContract
     public function taxonomicRange($taxonomicRange);
 
     public function url($url);
-
 }

@@ -2,11 +2,11 @@
 
 namespace Spatie\SchemaOrg;
 
-use \Spatie\SchemaOrg\Contracts\MedicalSignContract;
-use \Spatie\SchemaOrg\Contracts\MedicalConditionContract;
-use \Spatie\SchemaOrg\Contracts\MedicalEntityContract;
-use \Spatie\SchemaOrg\Contracts\MedicalSignOrSymptomContract;
-use \Spatie\SchemaOrg\Contracts\ThingContract;
+use Spatie\SchemaOrg\Contracts\MedicalConditionContract;
+use Spatie\SchemaOrg\Contracts\MedicalEntityContract;
+use Spatie\SchemaOrg\Contracts\MedicalSignContract;
+use Spatie\SchemaOrg\Contracts\MedicalSignOrSymptomContract;
+use Spatie\SchemaOrg\Contracts\ThingContract;
 
 /**
  * Any physical manifestation of a person's medical condition discoverable by
@@ -616,5 +616,4 @@ class MedicalSign extends BaseType implements MedicalSignContract, MedicalCondit
     {
         return $this->setProperty('url', $url);
     }
-
 }

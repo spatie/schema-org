@@ -43,5 +43,4 @@ interface QualitativeValueContract
     public function url($url);
 
     public function valueReference($valueReference);
-
 }

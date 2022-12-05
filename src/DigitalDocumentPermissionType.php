@@ -2,10 +2,10 @@
 
 namespace Spatie\SchemaOrg;
 
-use \Spatie\SchemaOrg\Contracts\DigitalDocumentPermissionTypeContract;
-use \Spatie\SchemaOrg\Contracts\EnumerationContract;
-use \Spatie\SchemaOrg\Contracts\IntangibleContract;
-use \Spatie\SchemaOrg\Contracts\ThingContract;
+use Spatie\SchemaOrg\Contracts\DigitalDocumentPermissionTypeContract;
+use Spatie\SchemaOrg\Contracts\EnumerationContract;
+use Spatie\SchemaOrg\Contracts\IntangibleContract;
+use Spatie\SchemaOrg\Contracts\ThingContract;
 
 /**
  * A type of permission which can be granted for accessing a digital document.
@@ -21,21 +21,21 @@ class DigitalDocumentPermissionType extends BaseType implements DigitalDocumentP
      *
      * @see https://schema.org/CommentPermission
      */
-     const CommentPermission = 'https://schema.org/CommentPermission';
+    public const CommentPermission = 'https://schema.org/CommentPermission';
 
     /**
      * Permission to read or view the document.
      *
      * @see https://schema.org/ReadPermission
      */
-     const ReadPermission = 'https://schema.org/ReadPermission';
+    public const ReadPermission = 'https://schema.org/ReadPermission';
 
     /**
      * Permission to write or edit the document.
      *
      * @see https://schema.org/WritePermission
      */
-     const WritePermission = 'https://schema.org/WritePermission';
+    public const WritePermission = 'https://schema.org/WritePermission';
 
     /**
      * An additional type for the item, typically used for adding more specific
@@ -223,5 +223,4 @@ class DigitalDocumentPermissionType extends BaseType implements DigitalDocumentP
     {
         return $this->setProperty('url', $url);
     }
-
 }

@@ -53,5 +53,4 @@ interface MedicalTestContract
     public function usedToDiagnose($usedToDiagnose);
 
     public function usesDevice($usesDevice);
-
 }

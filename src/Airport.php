@@ -2,10 +2,10 @@
 
 namespace Spatie\SchemaOrg;
 
-use \Spatie\SchemaOrg\Contracts\AirportContract;
-use \Spatie\SchemaOrg\Contracts\CivicStructureContract;
-use \Spatie\SchemaOrg\Contracts\PlaceContract;
-use \Spatie\SchemaOrg\Contracts\ThingContract;
+use Spatie\SchemaOrg\Contracts\AirportContract;
+use Spatie\SchemaOrg\Contracts\CivicStructureContract;
+use Spatie\SchemaOrg\Contracts\PlaceContract;
+use Spatie\SchemaOrg\Contracts\ThingContract;
 
 /**
  * An airport.
@@ -19,7 +19,7 @@ class Airport extends BaseType implements AirportContract, CivicStructureContrac
      * A property-value pair representing an additional characteristic of the
      * entity, e.g. a product feature or another characteristic for which there
      * is no matching property in schema.org.
-     * 
+     *
      * Note: Publishers should be aware that applications designed to use
      * specific schema.org properties (e.g. https://schema.org/width,
      * https://schema.org/color, https://schema.org/gtin13, ...) will typically
@@ -121,7 +121,7 @@ class Airport extends BaseType implements AirportContract, CivicStructureContrac
      * A short textual code (also called "store code") that uniquely identifies
      * a place of business. The code is typically assigned by the
      * parentOrganization and used in structured URLs.
-     * 
+     *
      * For example, in the URL
      * http://www.starbucks.co.uk/store-locator/etc/detail/3047 the code "3047"
      * is a branchCode for a particular branch.
@@ -722,11 +722,11 @@ class Airport extends BaseType implements AirportContract, CivicStructureContrac
      * as a weekly time range, starting with days, then times per day. Multiple
      * days can be listed with commas ',' separating each day. Day or time
      * ranges are specified using a hyphen '-'.
-     * 
+     *
      * * Days are specified using the following two-letter combinations:
      * ```Mo```, ```Tu```, ```We```, ```Th```, ```Fr```, ```Sa```, ```Su```.
      * * Times are specified using 24:00 format. For example, 3pm is specified
-     * as ```15:00```, 10am as ```10:00```. 
+     * as ```15:00```, 10am as ```10:00```.
      * * Here is an example: ```<time itemprop="openingHours" datetime="Tu,Th
      * 16:00-20:00">Tuesdays and Thursdays 4-8pm</time>```.
      * * If a business is open 7 days a week, then it can be specified as
@@ -893,7 +893,7 @@ class Airport extends BaseType implements AirportContract, CivicStructureContrac
 
     /**
      * The special opening hours of a certain place.
-     * 
+     *
      * Use this to explicitly override general opening hours brought in scope by
      * [[openingHoursSpecification]] or [[openingHours]].
      *
@@ -968,5 +968,4 @@ class Airport extends BaseType implements AirportContract, CivicStructureContrac
     {
         return $this->setProperty('url', $url);
     }
-
 }

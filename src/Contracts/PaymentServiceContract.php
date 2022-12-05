@@ -81,5 +81,4 @@ interface PaymentServiceContract
     public function termsOfService($termsOfService);
 
     public function url($url);
-
 }

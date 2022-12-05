@@ -2,10 +2,10 @@
 
 namespace Spatie\SchemaOrg;
 
-use \Spatie\SchemaOrg\Contracts\AggregateRatingContract;
-use \Spatie\SchemaOrg\Contracts\IntangibleContract;
-use \Spatie\SchemaOrg\Contracts\RatingContract;
-use \Spatie\SchemaOrg\Contracts\ThingContract;
+use Spatie\SchemaOrg\Contracts\AggregateRatingContract;
+use Spatie\SchemaOrg\Contracts\IntangibleContract;
+use Spatie\SchemaOrg\Contracts\RatingContract;
+use Spatie\SchemaOrg\Contracts\ThingContract;
 
 /**
  * The average rating based on multiple ratings or reviews.
@@ -237,9 +237,9 @@ class AggregateRating extends BaseType implements AggregateRatingContract, Intan
 
     /**
      * The rating for the content.
-     * 
+     *
      * Usage guidelines:
-     * 
+     *
      * * Use values from 0123456789 (Unicode 'DIGIT ZERO' (U+0030) to 'DIGIT
      * NINE' (U+0039)) rather than superficially similar Unicode symbols.
      * * Use '.' (Unicode 'FULL STOP' (U+002E)) rather than ',' to indicate a
@@ -345,5 +345,4 @@ class AggregateRating extends BaseType implements AggregateRatingContract, Intan
     {
         return $this->setProperty('worstRating', $worstRating);
     }
-
 }

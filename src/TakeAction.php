@@ -2,17 +2,17 @@
 
 namespace Spatie\SchemaOrg;
 
-use \Spatie\SchemaOrg\Contracts\TakeActionContract;
-use \Spatie\SchemaOrg\Contracts\ActionContract;
-use \Spatie\SchemaOrg\Contracts\ThingContract;
-use \Spatie\SchemaOrg\Contracts\TransferActionContract;
+use Spatie\SchemaOrg\Contracts\ActionContract;
+use Spatie\SchemaOrg\Contracts\TakeActionContract;
+use Spatie\SchemaOrg\Contracts\ThingContract;
+use Spatie\SchemaOrg\Contracts\TransferActionContract;
 
 /**
  * The act of gaining ownership of an object from an origin. Reciprocal of
  * GiveAction.
- * 
+ *
  * Related actions:
- * 
+ *
  * * [[GiveAction]]: The reciprocal of TakeAction.
  * * [[ReceiveAction]]: Unlike ReceiveAction, TakeAction implies that ownership
  * has been transferred.
@@ -122,7 +122,7 @@ class TakeAction extends BaseType implements TakeActionContract, ActionContract,
      * John wrote a book from January to *December*. For media, including audio
      * and video, it's the time offset of the end of a clip within a larger
      * file.
-     * 
+     *
      * Note that Event uses startDate/endDate instead of startTime/endTime, even
      * when describing dates with times. This situation may be clarified in
      * future revisions.
@@ -362,7 +362,7 @@ class TakeAction extends BaseType implements TakeActionContract, ActionContract,
      * John wrote a book from *January* to December. For media, including audio
      * and video, it's the time offset of the start of a clip within a larger
      * file.
-     * 
+     *
      * Note that Event uses startDate/endDate instead of startTime/endTime, even
      * when describing dates with times. This situation may be clarified in
      * future revisions.
@@ -436,5 +436,4 @@ class TakeAction extends BaseType implements TakeActionContract, ActionContract,
     {
         return $this->setProperty('url', $url);
     }
-
 }

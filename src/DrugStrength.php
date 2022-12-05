@@ -2,10 +2,10 @@
 
 namespace Spatie\SchemaOrg;
 
-use \Spatie\SchemaOrg\Contracts\DrugStrengthContract;
-use \Spatie\SchemaOrg\Contracts\MedicalEntityContract;
-use \Spatie\SchemaOrg\Contracts\MedicalIntangibleContract;
-use \Spatie\SchemaOrg\Contracts\ThingContract;
+use Spatie\SchemaOrg\Contracts\DrugStrengthContract;
+use Spatie\SchemaOrg\Contracts\MedicalEntityContract;
+use Spatie\SchemaOrg\Contracts\MedicalIntangibleContract;
+use Spatie\SchemaOrg\Contracts\ThingContract;
 
 /**
  * A specific strength in which a medical drug is available in a specific
@@ -405,5 +405,4 @@ class DrugStrength extends BaseType implements DrugStrengthContract, MedicalEnti
     {
         return $this->setProperty('url', $url);
     }
-
 }

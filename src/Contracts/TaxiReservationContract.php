@@ -59,5 +59,4 @@ interface TaxiReservationContract
     public function underName($underName);
 
     public function url($url);
-
 }

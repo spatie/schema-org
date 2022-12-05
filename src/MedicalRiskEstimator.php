@@ -2,9 +2,9 @@
 
 namespace Spatie\SchemaOrg;
 
-use \Spatie\SchemaOrg\Contracts\MedicalRiskEstimatorContract;
-use \Spatie\SchemaOrg\Contracts\MedicalEntityContract;
-use \Spatie\SchemaOrg\Contracts\ThingContract;
+use Spatie\SchemaOrg\Contracts\MedicalEntityContract;
+use Spatie\SchemaOrg\Contracts\MedicalRiskEstimatorContract;
+use Spatie\SchemaOrg\Contracts\ThingContract;
 
 /**
  * Any rule set or interactive tool for estimating the risk of developing a
@@ -358,5 +358,4 @@ class MedicalRiskEstimator extends BaseType implements MedicalRiskEstimatorContr
     {
         return $this->setProperty('url', $url);
     }
-
 }

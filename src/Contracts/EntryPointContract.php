@@ -41,5 +41,4 @@ interface EntryPointContract
     public function url($url);
 
     public function urlTemplate($urlTemplate);
-
 }

@@ -2,9 +2,9 @@
 
 namespace Spatie\SchemaOrg;
 
-use \Spatie\SchemaOrg\Contracts\SuperficialAnatomyContract;
-use \Spatie\SchemaOrg\Contracts\MedicalEntityContract;
-use \Spatie\SchemaOrg\Contracts\ThingContract;
+use Spatie\SchemaOrg\Contracts\MedicalEntityContract;
+use Spatie\SchemaOrg\Contracts\SuperficialAnatomyContract;
+use Spatie\SchemaOrg\Contracts\ThingContract;
 
 /**
  * Anatomical features that can be observed by sight (without dissection),
@@ -422,5 +422,4 @@ class SuperficialAnatomy extends BaseType implements SuperficialAnatomyContract,
     {
         return $this->setProperty('url', $url);
     }
-
 }

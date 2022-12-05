@@ -27,5 +27,4 @@ interface EnergyContract
     public function subjectOf($subjectOf);
 
     public function url($url);
-
 }

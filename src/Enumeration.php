@@ -2,9 +2,9 @@
 
 namespace Spatie\SchemaOrg;
 
-use \Spatie\SchemaOrg\Contracts\EnumerationContract;
-use \Spatie\SchemaOrg\Contracts\IntangibleContract;
-use \Spatie\SchemaOrg\Contracts\ThingContract;
+use Spatie\SchemaOrg\Contracts\EnumerationContract;
+use Spatie\SchemaOrg\Contracts\IntangibleContract;
+use Spatie\SchemaOrg\Contracts\ThingContract;
 
 /**
  * Lists or enumerations—for example, a list of cuisines or music genres, etc.
@@ -201,5 +201,4 @@ class Enumeration extends BaseType implements EnumerationContract, IntangibleCon
     {
         return $this->setProperty('url', $url);
     }
-
 }

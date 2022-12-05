@@ -59,5 +59,4 @@ interface FoodEstablishmentReservationContract
     public function underName($underName);
 
     public function url($url);
-
 }

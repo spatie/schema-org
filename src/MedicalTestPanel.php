@@ -2,10 +2,10 @@
 
 namespace Spatie\SchemaOrg;
 
-use \Spatie\SchemaOrg\Contracts\MedicalTestPanelContract;
-use \Spatie\SchemaOrg\Contracts\MedicalEntityContract;
-use \Spatie\SchemaOrg\Contracts\MedicalTestContract;
-use \Spatie\SchemaOrg\Contracts\ThingContract;
+use Spatie\SchemaOrg\Contracts\MedicalEntityContract;
+use Spatie\SchemaOrg\Contracts\MedicalTestContract;
+use Spatie\SchemaOrg\Contracts\MedicalTestPanelContract;
+use Spatie\SchemaOrg\Contracts\ThingContract;
 
 /**
  * Any collection of tests commonly ordered together.
@@ -417,5 +417,4 @@ class MedicalTestPanel extends BaseType implements MedicalTestPanelContract, Med
     {
         return $this->setProperty('usesDevice', $usesDevice);
     }
-
 }

@@ -2,10 +2,10 @@
 
 namespace Spatie\SchemaOrg;
 
-use \Spatie\SchemaOrg\Contracts\BusinessFunctionContract;
-use \Spatie\SchemaOrg\Contracts\EnumerationContract;
-use \Spatie\SchemaOrg\Contracts\IntangibleContract;
-use \Spatie\SchemaOrg\Contracts\ThingContract;
+use Spatie\SchemaOrg\Contracts\BusinessFunctionContract;
+use Spatie\SchemaOrg\Contracts\EnumerationContract;
+use Spatie\SchemaOrg\Contracts\IntangibleContract;
+use Spatie\SchemaOrg\Contracts\ThingContract;
 
 /**
  * The business function specifies the type of activity or access (i.e., the
@@ -13,9 +13,9 @@ use \Spatie\SchemaOrg\Contracts\ThingContract;
  * offer. Typical are sell, rental or lease, maintenance or repair, manufacture
  * / produce, recycle / dispose, engineering / construction, or installation.
  * Proprietary specifications of access rights are also instances of this class.
- * 
+ *
  * Commonly used values:
- * 
+ *
  * * http://purl.org/goodrelations/v1#ConstructionInstallation
  * * http://purl.org/goodrelations/v1#Dispose
  * * http://purl.org/goodrelations/v1#LeaseOut
@@ -218,5 +218,4 @@ class BusinessFunction extends BaseType implements BusinessFunctionContract, Enu
     {
         return $this->setProperty('url', $url);
     }
-
 }

@@ -2,9 +2,9 @@
 
 namespace Spatie\SchemaOrg;
 
-use \Spatie\SchemaOrg\Contracts\SeriesContract;
-use \Spatie\SchemaOrg\Contracts\IntangibleContract;
-use \Spatie\SchemaOrg\Contracts\ThingContract;
+use Spatie\SchemaOrg\Contracts\IntangibleContract;
+use Spatie\SchemaOrg\Contracts\SeriesContract;
+use Spatie\SchemaOrg\Contracts\ThingContract;
 
 /**
  * A Series in schema.org is a group of related items, typically but not
@@ -202,5 +202,4 @@ class Series extends BaseType implements SeriesContract, IntangibleContract, Thi
     {
         return $this->setProperty('url', $url);
     }
-
 }

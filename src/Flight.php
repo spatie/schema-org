@@ -2,10 +2,10 @@
 
 namespace Spatie\SchemaOrg;
 
-use \Spatie\SchemaOrg\Contracts\FlightContract;
-use \Spatie\SchemaOrg\Contracts\IntangibleContract;
-use \Spatie\SchemaOrg\Contracts\ThingContract;
-use \Spatie\SchemaOrg\Contracts\TripContract;
+use Spatie\SchemaOrg\Contracts\FlightContract;
+use Spatie\SchemaOrg\Contracts\IntangibleContract;
+use Spatie\SchemaOrg\Contracts\ThingContract;
+use Spatie\SchemaOrg\Contracts\TripContract;
 
 /**
  * An airline flight.
@@ -532,5 +532,4 @@ class Flight extends BaseType implements FlightContract, IntangibleContract, Thi
     {
         return $this->setProperty('webCheckinTime', $webCheckinTime);
     }
-
 }

@@ -2,10 +2,10 @@
 
 namespace Spatie\SchemaOrg;
 
-use \Spatie\SchemaOrg\Contracts\ItemListOrderTypeContract;
-use \Spatie\SchemaOrg\Contracts\EnumerationContract;
-use \Spatie\SchemaOrg\Contracts\IntangibleContract;
-use \Spatie\SchemaOrg\Contracts\ThingContract;
+use Spatie\SchemaOrg\Contracts\EnumerationContract;
+use Spatie\SchemaOrg\Contracts\IntangibleContract;
+use Spatie\SchemaOrg\Contracts\ItemListOrderTypeContract;
+use Spatie\SchemaOrg\Contracts\ThingContract;
 
 /**
  * Enumerated for values for itemListOrder for indicating how an ordered
@@ -22,21 +22,21 @@ class ItemListOrderType extends BaseType implements ItemListOrderTypeContract, E
      *
      * @see https://schema.org/ItemListOrderAscending
      */
-     const ItemListOrderAscending = 'https://schema.org/ItemListOrderAscending';
+    public const ItemListOrderAscending = 'https://schema.org/ItemListOrderAscending';
 
     /**
      * An ItemList ordered with higher values listed first.
      *
      * @see https://schema.org/ItemListOrderDescending
      */
-     const ItemListOrderDescending = 'https://schema.org/ItemListOrderDescending';
+    public const ItemListOrderDescending = 'https://schema.org/ItemListOrderDescending';
 
     /**
      * An ItemList ordered with no explicit order.
      *
      * @see https://schema.org/ItemListUnordered
      */
-     const ItemListUnordered = 'https://schema.org/ItemListUnordered';
+    public const ItemListUnordered = 'https://schema.org/ItemListUnordered';
 
     /**
      * An additional type for the item, typically used for adding more specific
@@ -224,5 +224,4 @@ class ItemListOrderType extends BaseType implements ItemListOrderTypeContract, E
     {
         return $this->setProperty('url', $url);
     }
-
 }

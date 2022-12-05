@@ -119,5 +119,4 @@ interface DefenceEstablishmentContract
     public function tourBookingPage($tourBookingPage);
 
     public function url($url);
-
 }

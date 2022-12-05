@@ -2,9 +2,9 @@
 
 namespace Spatie\SchemaOrg;
 
-use \Spatie\SchemaOrg\Contracts\ObservationContract;
-use \Spatie\SchemaOrg\Contracts\IntangibleContract;
-use \Spatie\SchemaOrg\Contracts\ThingContract;
+use Spatie\SchemaOrg\Contracts\IntangibleContract;
+use Spatie\SchemaOrg\Contracts\ObservationContract;
+use Spatie\SchemaOrg\Contracts\ThingContract;
 
 /**
  * Instances of the class [[Observation]] are used to specify observations about
@@ -280,5 +280,4 @@ class Observation extends BaseType implements ObservationContract, IntangibleCon
     {
         return $this->setProperty('url', $url);
     }
-
 }

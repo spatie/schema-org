@@ -61,5 +61,4 @@ interface SellActionContract
     public function url($url);
 
     public function warrantyPromise($warrantyPromise);
-
 }

@@ -2,10 +2,10 @@
 
 namespace Spatie\SchemaOrg;
 
-use \Spatie\SchemaOrg\Contracts\CarUsageTypeContract;
-use \Spatie\SchemaOrg\Contracts\EnumerationContract;
-use \Spatie\SchemaOrg\Contracts\IntangibleContract;
-use \Spatie\SchemaOrg\Contracts\ThingContract;
+use Spatie\SchemaOrg\Contracts\CarUsageTypeContract;
+use Spatie\SchemaOrg\Contracts\EnumerationContract;
+use Spatie\SchemaOrg\Contracts\IntangibleContract;
+use Spatie\SchemaOrg\Contracts\ThingContract;
 
 /**
  * A value indicating a special usage of a car, e.g. commercial rental, driving
@@ -26,7 +26,7 @@ class CarUsageType extends BaseType implements CarUsageTypeContract, Enumeration
      * @see https://auto.schema.org
      * @link http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#Automotive_Ontology_Working_Group
      */
-     const DrivingSchoolVehicleUsage = 'https://schema.org/DrivingSchoolVehicleUsage';
+    public const DrivingSchoolVehicleUsage = 'https://schema.org/DrivingSchoolVehicleUsage';
 
     /**
      * Indicates the usage of the vehicle as a rental car.
@@ -35,7 +35,7 @@ class CarUsageType extends BaseType implements CarUsageTypeContract, Enumeration
      * @see https://auto.schema.org
      * @link http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#Automotive_Ontology_Working_Group
      */
-     const RentalVehicleUsage = 'https://schema.org/RentalVehicleUsage';
+    public const RentalVehicleUsage = 'https://schema.org/RentalVehicleUsage';
 
     /**
      * Indicates the usage of the car as a taxi.
@@ -44,7 +44,7 @@ class CarUsageType extends BaseType implements CarUsageTypeContract, Enumeration
      * @see https://auto.schema.org
      * @link http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#Automotive_Ontology_Working_Group
      */
-     const TaxiVehicleUsage = 'https://schema.org/TaxiVehicleUsage';
+    public const TaxiVehicleUsage = 'https://schema.org/TaxiVehicleUsage';
 
     /**
      * An additional type for the item, typically used for adding more specific
@@ -232,5 +232,4 @@ class CarUsageType extends BaseType implements CarUsageTypeContract, Enumeration
     {
         return $this->setProperty('url', $url);
     }
-
 }

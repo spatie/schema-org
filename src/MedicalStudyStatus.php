@@ -2,11 +2,11 @@
 
 namespace Spatie\SchemaOrg;
 
-use \Spatie\SchemaOrg\Contracts\MedicalStudyStatusContract;
-use \Spatie\SchemaOrg\Contracts\EnumerationContract;
-use \Spatie\SchemaOrg\Contracts\IntangibleContract;
-use \Spatie\SchemaOrg\Contracts\MedicalEnumerationContract;
-use \Spatie\SchemaOrg\Contracts\ThingContract;
+use Spatie\SchemaOrg\Contracts\EnumerationContract;
+use Spatie\SchemaOrg\Contracts\IntangibleContract;
+use Spatie\SchemaOrg\Contracts\MedicalEnumerationContract;
+use Spatie\SchemaOrg\Contracts\MedicalStudyStatusContract;
+use Spatie\SchemaOrg\Contracts\ThingContract;
 
 /**
  * The status of a medical study. Enumerated type.
@@ -24,7 +24,7 @@ class MedicalStudyStatus extends BaseType implements MedicalStudyStatusContract,
      * @see https://schema.org/ActiveNotRecruiting
      * @see https://health-lifesci.schema.org
      */
-     const ActiveNotRecruiting = 'https://schema.org/ActiveNotRecruiting';
+    public const ActiveNotRecruiting = 'https://schema.org/ActiveNotRecruiting';
 
     /**
      * Completed.
@@ -32,7 +32,7 @@ class MedicalStudyStatus extends BaseType implements MedicalStudyStatusContract,
      * @see https://schema.org/Completed
      * @see https://health-lifesci.schema.org
      */
-     const Completed = 'https://schema.org/Completed';
+    public const Completed = 'https://schema.org/Completed';
 
     /**
      * Enrolling participants by invitation only.
@@ -40,7 +40,7 @@ class MedicalStudyStatus extends BaseType implements MedicalStudyStatusContract,
      * @see https://schema.org/EnrollingByInvitation
      * @see https://health-lifesci.schema.org
      */
-     const EnrollingByInvitation = 'https://schema.org/EnrollingByInvitation';
+    public const EnrollingByInvitation = 'https://schema.org/EnrollingByInvitation';
 
     /**
      * Not yet recruiting.
@@ -48,7 +48,7 @@ class MedicalStudyStatus extends BaseType implements MedicalStudyStatusContract,
      * @see https://schema.org/NotYetRecruiting
      * @see https://health-lifesci.schema.org
      */
-     const NotYetRecruiting = 'https://schema.org/NotYetRecruiting';
+    public const NotYetRecruiting = 'https://schema.org/NotYetRecruiting';
 
     /**
      * Recruiting participants.
@@ -56,7 +56,7 @@ class MedicalStudyStatus extends BaseType implements MedicalStudyStatusContract,
      * @see https://schema.org/Recruiting
      * @see https://health-lifesci.schema.org
      */
-     const Recruiting = 'https://schema.org/Recruiting';
+    public const Recruiting = 'https://schema.org/Recruiting';
 
     /**
      * Results are available.
@@ -64,7 +64,7 @@ class MedicalStudyStatus extends BaseType implements MedicalStudyStatusContract,
      * @see https://schema.org/ResultsAvailable
      * @see https://health-lifesci.schema.org
      */
-     const ResultsAvailable = 'https://schema.org/ResultsAvailable';
+    public const ResultsAvailable = 'https://schema.org/ResultsAvailable';
 
     /**
      * Results are not available.
@@ -72,7 +72,7 @@ class MedicalStudyStatus extends BaseType implements MedicalStudyStatusContract,
      * @see https://schema.org/ResultsNotAvailable
      * @see https://health-lifesci.schema.org
      */
-     const ResultsNotAvailable = 'https://schema.org/ResultsNotAvailable';
+    public const ResultsNotAvailable = 'https://schema.org/ResultsNotAvailable';
 
     /**
      * Suspended.
@@ -80,7 +80,7 @@ class MedicalStudyStatus extends BaseType implements MedicalStudyStatusContract,
      * @see https://schema.org/Suspended
      * @see https://health-lifesci.schema.org
      */
-     const Suspended = 'https://schema.org/Suspended';
+    public const Suspended = 'https://schema.org/Suspended';
 
     /**
      * Terminated.
@@ -88,7 +88,7 @@ class MedicalStudyStatus extends BaseType implements MedicalStudyStatusContract,
      * @see https://schema.org/Terminated
      * @see https://health-lifesci.schema.org
      */
-     const Terminated = 'https://schema.org/Terminated';
+    public const Terminated = 'https://schema.org/Terminated';
 
     /**
      * Withdrawn.
@@ -96,7 +96,7 @@ class MedicalStudyStatus extends BaseType implements MedicalStudyStatusContract,
      * @see https://schema.org/Withdrawn
      * @see https://health-lifesci.schema.org
      */
-     const Withdrawn = 'https://schema.org/Withdrawn';
+    public const Withdrawn = 'https://schema.org/Withdrawn';
 
     /**
      * An additional type for the item, typically used for adding more specific
@@ -284,5 +284,4 @@ class MedicalStudyStatus extends BaseType implements MedicalStudyStatusContract,
     {
         return $this->setProperty('url', $url);
     }
-
 }

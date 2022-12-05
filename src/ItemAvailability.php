@@ -2,10 +2,10 @@
 
 namespace Spatie\SchemaOrg;
 
-use \Spatie\SchemaOrg\Contracts\ItemAvailabilityContract;
-use \Spatie\SchemaOrg\Contracts\EnumerationContract;
-use \Spatie\SchemaOrg\Contracts\IntangibleContract;
-use \Spatie\SchemaOrg\Contracts\ThingContract;
+use Spatie\SchemaOrg\Contracts\EnumerationContract;
+use Spatie\SchemaOrg\Contracts\IntangibleContract;
+use Spatie\SchemaOrg\Contracts\ItemAvailabilityContract;
+use Spatie\SchemaOrg\Contracts\ThingContract;
 
 /**
  * A list of possible product availability options.
@@ -21,56 +21,56 @@ class ItemAvailability extends BaseType implements ItemAvailabilityContract, Enu
      *
      * @see https://schema.org/BackOrder
      */
-     const BackOrder = 'https://schema.org/BackOrder';
+    public const BackOrder = 'https://schema.org/BackOrder';
 
     /**
      * Indicates that the item has been discontinued.
      *
      * @see https://schema.org/Discontinued
      */
-     const Discontinued = 'https://schema.org/Discontinued';
+    public const Discontinued = 'https://schema.org/Discontinued';
 
     /**
      * Indicates that the item is in stock.
      *
      * @see https://schema.org/InStock
      */
-     const InStock = 'https://schema.org/InStock';
+    public const InStock = 'https://schema.org/InStock';
 
     /**
      * Indicates that the item is available only at physical locations.
      *
      * @see https://schema.org/InStoreOnly
      */
-     const InStoreOnly = 'https://schema.org/InStoreOnly';
+    public const InStoreOnly = 'https://schema.org/InStoreOnly';
 
     /**
      * Indicates that the item has limited availability.
      *
      * @see https://schema.org/LimitedAvailability
      */
-     const LimitedAvailability = 'https://schema.org/LimitedAvailability';
+    public const LimitedAvailability = 'https://schema.org/LimitedAvailability';
 
     /**
      * Indicates that the item is available only online.
      *
      * @see https://schema.org/OnlineOnly
      */
-     const OnlineOnly = 'https://schema.org/OnlineOnly';
+    public const OnlineOnly = 'https://schema.org/OnlineOnly';
 
     /**
      * Indicates that the item is out of stock.
      *
      * @see https://schema.org/OutOfStock
      */
-     const OutOfStock = 'https://schema.org/OutOfStock';
+    public const OutOfStock = 'https://schema.org/OutOfStock';
 
     /**
      * Indicates that the item is available for pre-order.
      *
      * @see https://schema.org/PreOrder
      */
-     const PreOrder = 'https://schema.org/PreOrder';
+    public const PreOrder = 'https://schema.org/PreOrder';
 
     /**
      * Indicates that the item is available for ordering and delivery before
@@ -78,14 +78,14 @@ class ItemAvailability extends BaseType implements ItemAvailabilityContract, Enu
      *
      * @see https://schema.org/PreSale
      */
-     const PreSale = 'https://schema.org/PreSale';
+    public const PreSale = 'https://schema.org/PreSale';
 
     /**
      * Indicates that the item has sold out.
      *
      * @see https://schema.org/SoldOut
      */
-     const SoldOut = 'https://schema.org/SoldOut';
+    public const SoldOut = 'https://schema.org/SoldOut';
 
     /**
      * An additional type for the item, typically used for adding more specific
@@ -273,5 +273,4 @@ class ItemAvailability extends BaseType implements ItemAvailabilityContract, Enu
     {
         return $this->setProperty('url', $url);
     }
-
 }

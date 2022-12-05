@@ -59,5 +59,4 @@ interface LigamentContract
     public function subjectOf($subjectOf);
 
     public function url($url);
-
 }

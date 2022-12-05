@@ -37,5 +37,4 @@ interface HealthPlanCostSharingSpecificationContract
     public function subjectOf($subjectOf);
 
     public function url($url);
-
 }

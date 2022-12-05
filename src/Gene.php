@@ -2,9 +2,9 @@
 
 namespace Spatie\SchemaOrg;
 
-use \Spatie\SchemaOrg\Contracts\GeneContract;
-use \Spatie\SchemaOrg\Contracts\BioChemEntityContract;
-use \Spatie\SchemaOrg\Contracts\ThingContract;
+use Spatie\SchemaOrg\Contracts\BioChemEntityContract;
+use Spatie\SchemaOrg\Contracts\GeneContract;
+use Spatie\SchemaOrg\Contracts\ThingContract;
 
 /**
  * A discrete unit of inheritance which affects one or more biological traits
@@ -473,5 +473,4 @@ class Gene extends BaseType implements GeneContract, BioChemEntityContract, Thin
     {
         return $this->setProperty('url', $url);
     }
-
 }

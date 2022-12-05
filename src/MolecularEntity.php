@@ -2,9 +2,9 @@
 
 namespace Spatie\SchemaOrg;
 
-use \Spatie\SchemaOrg\Contracts\MolecularEntityContract;
-use \Spatie\SchemaOrg\Contracts\BioChemEntityContract;
-use \Spatie\SchemaOrg\Contracts\ThingContract;
+use Spatie\SchemaOrg\Contracts\BioChemEntityContract;
+use Spatie\SchemaOrg\Contracts\MolecularEntityContract;
+use Spatie\SchemaOrg\Contracts\ThingContract;
 
 /**
  * Any constitutionally or isotopically distinct atom, molecule, ion, ion pair,
@@ -558,5 +558,4 @@ class MolecularEntity extends BaseType implements MolecularEntityContract, BioCh
     {
         return $this->setProperty('url', $url);
     }
-
 }

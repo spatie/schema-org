@@ -2,9 +2,9 @@
 
 namespace Spatie\SchemaOrg;
 
-use \Spatie\SchemaOrg\Contracts\DefinedTermContract;
-use \Spatie\SchemaOrg\Contracts\IntangibleContract;
-use \Spatie\SchemaOrg\Contracts\ThingContract;
+use Spatie\SchemaOrg\Contracts\DefinedTermContract;
+use Spatie\SchemaOrg\Contracts\IntangibleContract;
+use Spatie\SchemaOrg\Contracts\ThingContract;
 
 /**
  * A word, name, acronym, phrase, etc. with a formal definition. Often used in
@@ -238,5 +238,4 @@ class DefinedTerm extends BaseType implements DefinedTermContract, IntangibleCon
     {
         return $this->setProperty('url', $url);
     }
-
 }

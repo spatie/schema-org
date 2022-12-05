@@ -2,9 +2,9 @@
 
 namespace Spatie\SchemaOrg;
 
-use \Spatie\SchemaOrg\Contracts\CourseInstanceContract;
-use \Spatie\SchemaOrg\Contracts\EventContract;
-use \Spatie\SchemaOrg\Contracts\ThingContract;
+use Spatie\SchemaOrg\Contracts\CourseInstanceContract;
+use Spatie\SchemaOrg\Contracts\EventContract;
+use Spatie\SchemaOrg\Contracts\ThingContract;
 
 /**
  * An instance of a [[Course]] which is distinct from other instances because it
@@ -905,5 +905,4 @@ class CourseInstance extends BaseType implements CourseInstanceContract, EventCo
     {
         return $this->setProperty('workPerformed', $workPerformed);
     }
-
 }

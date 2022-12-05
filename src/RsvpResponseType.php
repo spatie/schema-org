@@ -2,10 +2,10 @@
 
 namespace Spatie\SchemaOrg;
 
-use \Spatie\SchemaOrg\Contracts\RsvpResponseTypeContract;
-use \Spatie\SchemaOrg\Contracts\EnumerationContract;
-use \Spatie\SchemaOrg\Contracts\IntangibleContract;
-use \Spatie\SchemaOrg\Contracts\ThingContract;
+use Spatie\SchemaOrg\Contracts\EnumerationContract;
+use Spatie\SchemaOrg\Contracts\IntangibleContract;
+use Spatie\SchemaOrg\Contracts\RsvpResponseTypeContract;
+use Spatie\SchemaOrg\Contracts\ThingContract;
 
 /**
  * RsvpResponseType is an enumeration type whose instances represent responding
@@ -22,21 +22,21 @@ class RsvpResponseType extends BaseType implements RsvpResponseTypeContract, Enu
      *
      * @see https://schema.org/RsvpResponseMaybe
      */
-     const RsvpResponseMaybe = 'https://schema.org/RsvpResponseMaybe';
+    public const RsvpResponseMaybe = 'https://schema.org/RsvpResponseMaybe';
 
     /**
      * The invitee will not attend.
      *
      * @see https://schema.org/RsvpResponseNo
      */
-     const RsvpResponseNo = 'https://schema.org/RsvpResponseNo';
+    public const RsvpResponseNo = 'https://schema.org/RsvpResponseNo';
 
     /**
      * The invitee will attend.
      *
      * @see https://schema.org/RsvpResponseYes
      */
-     const RsvpResponseYes = 'https://schema.org/RsvpResponseYes';
+    public const RsvpResponseYes = 'https://schema.org/RsvpResponseYes';
 
     /**
      * An additional type for the item, typically used for adding more specific
@@ -224,5 +224,4 @@ class RsvpResponseType extends BaseType implements RsvpResponseTypeContract, Enu
     {
         return $this->setProperty('url', $url);
     }
-
 }

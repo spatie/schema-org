@@ -55,5 +55,4 @@ interface UpdateActionContract
     public function targetCollection($targetCollection);
 
     public function url($url);
-
 }

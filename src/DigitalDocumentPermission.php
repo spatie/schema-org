@@ -2,9 +2,9 @@
 
 namespace Spatie\SchemaOrg;
 
-use \Spatie\SchemaOrg\Contracts\DigitalDocumentPermissionContract;
-use \Spatie\SchemaOrg\Contracts\IntangibleContract;
-use \Spatie\SchemaOrg\Contracts\ThingContract;
+use Spatie\SchemaOrg\Contracts\DigitalDocumentPermissionContract;
+use Spatie\SchemaOrg\Contracts\IntangibleContract;
+use Spatie\SchemaOrg\Contracts\ThingContract;
 
 /**
  * A permission for a particular person or group to access a particular file.
@@ -229,5 +229,4 @@ class DigitalDocumentPermission extends BaseType implements DigitalDocumentPermi
     {
         return $this->setProperty('url', $url);
     }
-
 }

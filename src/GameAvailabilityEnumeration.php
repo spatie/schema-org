@@ -2,10 +2,10 @@
 
 namespace Spatie\SchemaOrg;
 
-use \Spatie\SchemaOrg\Contracts\GameAvailabilityEnumerationContract;
-use \Spatie\SchemaOrg\Contracts\EnumerationContract;
-use \Spatie\SchemaOrg\Contracts\IntangibleContract;
-use \Spatie\SchemaOrg\Contracts\ThingContract;
+use Spatie\SchemaOrg\Contracts\EnumerationContract;
+use Spatie\SchemaOrg\Contracts\GameAvailabilityEnumerationContract;
+use Spatie\SchemaOrg\Contracts\IntangibleContract;
+use Spatie\SchemaOrg\Contracts\ThingContract;
 
 /**
  * For a [[VideoGame]], such as used with a [[PlayGameAction]], an enumeration
@@ -27,7 +27,7 @@ class GameAvailabilityEnumeration extends BaseType implements GameAvailabilityEn
      * @see https://pending.schema.org
      * @link https://github.com/schemaorg/schemaorg/issues/3058
      */
-     const DemoGameAvailability = 'https://schema.org/DemoGameAvailability';
+    public const DemoGameAvailability = 'https://schema.org/DemoGameAvailability';
 
     /**
      * Indicates full game availability.
@@ -36,7 +36,7 @@ class GameAvailabilityEnumeration extends BaseType implements GameAvailabilityEn
      * @see https://pending.schema.org
      * @link https://github.com/schemaorg/schemaorg/issues/3058
      */
-     const FullGameAvailability = 'https://schema.org/FullGameAvailability';
+    public const FullGameAvailability = 'https://schema.org/FullGameAvailability';
 
     /**
      * An additional type for the item, typically used for adding more specific
@@ -224,5 +224,4 @@ class GameAvailabilityEnumeration extends BaseType implements GameAvailabilityEn
     {
         return $this->setProperty('url', $url);
     }
-
 }

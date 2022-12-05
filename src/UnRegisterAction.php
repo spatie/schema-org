@@ -2,16 +2,16 @@
 
 namespace Spatie\SchemaOrg;
 
-use \Spatie\SchemaOrg\Contracts\UnRegisterActionContract;
-use \Spatie\SchemaOrg\Contracts\ActionContract;
-use \Spatie\SchemaOrg\Contracts\InteractActionContract;
-use \Spatie\SchemaOrg\Contracts\ThingContract;
+use Spatie\SchemaOrg\Contracts\ActionContract;
+use Spatie\SchemaOrg\Contracts\InteractActionContract;
+use Spatie\SchemaOrg\Contracts\ThingContract;
+use Spatie\SchemaOrg\Contracts\UnRegisterActionContract;
 
 /**
  * The act of un-registering from a service.
- * 
+ *
  * Related actions:
- * 
+ *
  * * [[RegisterAction]]: antonym of UnRegisterAction.
  * * [[LeaveAction]]: Unlike LeaveAction, UnRegisterAction implies that you are
  * unregistering from a service you were previously registered, rather than
@@ -122,7 +122,7 @@ class UnRegisterAction extends BaseType implements UnRegisterActionContract, Act
      * John wrote a book from January to *December*. For media, including audio
      * and video, it's the time offset of the end of a clip within a larger
      * file.
-     * 
+     *
      * Note that Event uses startDate/endDate instead of startTime/endTime, even
      * when describing dates with times. This situation may be clarified in
      * future revisions.
@@ -347,7 +347,7 @@ class UnRegisterAction extends BaseType implements UnRegisterActionContract, Act
      * John wrote a book from *January* to December. For media, including audio
      * and video, it's the time offset of the start of a clip within a larger
      * file.
-     * 
+     *
      * Note that Event uses startDate/endDate instead of startTime/endTime, even
      * when describing dates with times. This situation may be clarified in
      * future revisions.
@@ -406,5 +406,4 @@ class UnRegisterAction extends BaseType implements UnRegisterActionContract, Act
     {
         return $this->setProperty('url', $url);
     }
-
 }

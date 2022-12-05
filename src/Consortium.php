@@ -2,9 +2,9 @@
 
 namespace Spatie\SchemaOrg;
 
-use \Spatie\SchemaOrg\Contracts\ConsortiumContract;
-use \Spatie\SchemaOrg\Contracts\OrganizationContract;
-use \Spatie\SchemaOrg\Contracts\ThingContract;
+use Spatie\SchemaOrg\Contracts\ConsortiumContract;
+use Spatie\SchemaOrg\Contracts\OrganizationContract;
+use Spatie\SchemaOrg\Contracts\ThingContract;
 
 /**
  * A Consortium is a membership [[Organization]] whose members are typically
@@ -1025,7 +1025,7 @@ class Consortium extends BaseType implements ConsortiumContract, OrganizationCon
      * applied to a [[CreativeWork]] (e.g. [[NewsArticle]]) the principles are
      * those of the party primarily responsible for the creation of the
      * [[CreativeWork]].
-     * 
+     *
      * While such policies are most typically expressed in natural language,
      * sometimes related information (e.g. indicating a [[funder]]) can be
      * expressed using schema.org terminology.
@@ -1251,5 +1251,4 @@ class Consortium extends BaseType implements ConsortiumContract, OrganizationCon
     {
         return $this->setProperty('vatID', $vatID);
     }
-
 }

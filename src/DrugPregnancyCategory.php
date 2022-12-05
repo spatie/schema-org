@@ -2,11 +2,11 @@
 
 namespace Spatie\SchemaOrg;
 
-use \Spatie\SchemaOrg\Contracts\DrugPregnancyCategoryContract;
-use \Spatie\SchemaOrg\Contracts\EnumerationContract;
-use \Spatie\SchemaOrg\Contracts\IntangibleContract;
-use \Spatie\SchemaOrg\Contracts\MedicalEnumerationContract;
-use \Spatie\SchemaOrg\Contracts\ThingContract;
+use Spatie\SchemaOrg\Contracts\DrugPregnancyCategoryContract;
+use Spatie\SchemaOrg\Contracts\EnumerationContract;
+use Spatie\SchemaOrg\Contracts\IntangibleContract;
+use Spatie\SchemaOrg\Contracts\MedicalEnumerationContract;
+use Spatie\SchemaOrg\Contracts\ThingContract;
 
 /**
  * Categories that represent an assessment of the risk of fetal injury due to a
@@ -28,7 +28,7 @@ class DrugPregnancyCategory extends BaseType implements DrugPregnancyCategoryCon
      * @see https://schema.org/FDAcategoryA
      * @see https://health-lifesci.schema.org
      */
-     const FDAcategoryA = 'https://schema.org/FDAcategoryA';
+    public const FDAcategoryA = 'https://schema.org/FDAcategoryA';
 
     /**
      * A designation by the US FDA signifying that animal reproduction studies
@@ -38,7 +38,7 @@ class DrugPregnancyCategory extends BaseType implements DrugPregnancyCategoryCon
      * @see https://schema.org/FDAcategoryB
      * @see https://health-lifesci.schema.org
      */
-     const FDAcategoryB = 'https://schema.org/FDAcategoryB';
+    public const FDAcategoryB = 'https://schema.org/FDAcategoryB';
 
     /**
      * A designation by the US FDA signifying that animal reproduction studies
@@ -49,7 +49,7 @@ class DrugPregnancyCategory extends BaseType implements DrugPregnancyCategoryCon
      * @see https://schema.org/FDAcategoryC
      * @see https://health-lifesci.schema.org
      */
-     const FDAcategoryC = 'https://schema.org/FDAcategoryC';
+    public const FDAcategoryC = 'https://schema.org/FDAcategoryC';
 
     /**
      * A designation by the US FDA signifying that there is positive evidence of
@@ -60,7 +60,7 @@ class DrugPregnancyCategory extends BaseType implements DrugPregnancyCategoryCon
      * @see https://schema.org/FDAcategoryD
      * @see https://health-lifesci.schema.org
      */
-     const FDAcategoryD = 'https://schema.org/FDAcategoryD';
+    public const FDAcategoryD = 'https://schema.org/FDAcategoryD';
 
     /**
      * A designation by the US FDA signifying that studies in animals or humans
@@ -72,7 +72,7 @@ class DrugPregnancyCategory extends BaseType implements DrugPregnancyCategoryCon
      * @see https://schema.org/FDAcategoryX
      * @see https://health-lifesci.schema.org
      */
-     const FDAcategoryX = 'https://schema.org/FDAcategoryX';
+    public const FDAcategoryX = 'https://schema.org/FDAcategoryX';
 
     /**
      * A designation that the drug in question has not been assigned a pregnancy
@@ -81,7 +81,7 @@ class DrugPregnancyCategory extends BaseType implements DrugPregnancyCategoryCon
      * @see https://schema.org/FDAnotEvaluated
      * @see https://health-lifesci.schema.org
      */
-     const FDAnotEvaluated = 'https://schema.org/FDAnotEvaluated';
+    public const FDAnotEvaluated = 'https://schema.org/FDAnotEvaluated';
 
     /**
      * An additional type for the item, typically used for adding more specific
@@ -269,5 +269,4 @@ class DrugPregnancyCategory extends BaseType implements DrugPregnancyCategoryCon
     {
         return $this->setProperty('url', $url);
     }
-
 }

@@ -143,5 +143,4 @@ interface RoomContract
     public function url($url);
 
     public function yearBuilt($yearBuilt);
-
 }

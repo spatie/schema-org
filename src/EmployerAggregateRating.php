@@ -2,11 +2,11 @@
 
 namespace Spatie\SchemaOrg;
 
-use \Spatie\SchemaOrg\Contracts\EmployerAggregateRatingContract;
-use \Spatie\SchemaOrg\Contracts\AggregateRatingContract;
-use \Spatie\SchemaOrg\Contracts\IntangibleContract;
-use \Spatie\SchemaOrg\Contracts\RatingContract;
-use \Spatie\SchemaOrg\Contracts\ThingContract;
+use Spatie\SchemaOrg\Contracts\AggregateRatingContract;
+use Spatie\SchemaOrg\Contracts\EmployerAggregateRatingContract;
+use Spatie\SchemaOrg\Contracts\IntangibleContract;
+use Spatie\SchemaOrg\Contracts\RatingContract;
+use Spatie\SchemaOrg\Contracts\ThingContract;
 
 /**
  * An aggregate rating of an Organization related to its role as an employer.
@@ -239,9 +239,9 @@ class EmployerAggregateRating extends BaseType implements EmployerAggregateRatin
 
     /**
      * The rating for the content.
-     * 
+     *
      * Usage guidelines:
-     * 
+     *
      * * Use values from 0123456789 (Unicode 'DIGIT ZERO' (U+0030) to 'DIGIT
      * NINE' (U+0039)) rather than superficially similar Unicode symbols.
      * * Use '.' (Unicode 'FULL STOP' (U+002E)) rather than ',' to indicate a
@@ -347,5 +347,4 @@ class EmployerAggregateRating extends BaseType implements EmployerAggregateRatin
     {
         return $this->setProperty('worstRating', $worstRating);
     }
-
 }

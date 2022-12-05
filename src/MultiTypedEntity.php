@@ -1003,10 +1003,10 @@ class MultiTypedEntity implements Type, JsonSerializable
         $properties = [];
         $types = [];
 
-        foreach($this->nodes as $node) {
+        foreach ($this->nodes as $node) {
             $temp = $this->serializeNode($node);
 
-            if(isset($temp['@type'])) {
+            if (isset($temp['@type'])) {
                 array_push($types, $temp['@type']);
                 unset($temp['@type']);
             }

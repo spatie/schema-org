@@ -81,5 +81,4 @@ interface InfectiousDiseaseContract
     public function typicalTest($typicalTest);
 
     public function url($url);
-
 }

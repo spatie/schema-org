@@ -2,9 +2,9 @@
 
 namespace Spatie\SchemaOrg;
 
-use \Spatie\SchemaOrg\Contracts\HealthPlanCostSharingSpecificationContract;
-use \Spatie\SchemaOrg\Contracts\IntangibleContract;
-use \Spatie\SchemaOrg\Contracts\ThingContract;
+use Spatie\SchemaOrg\Contracts\HealthPlanCostSharingSpecificationContract;
+use Spatie\SchemaOrg\Contracts\IntangibleContract;
+use Spatie\SchemaOrg\Contracts\ThingContract;
 
 /**
  * A description of costs to the patient under a given network or formulary.
@@ -284,5 +284,4 @@ class HealthPlanCostSharingSpecification extends BaseType implements HealthPlanC
     {
         return $this->setProperty('url', $url);
     }
-
 }

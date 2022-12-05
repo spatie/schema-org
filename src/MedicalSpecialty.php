@@ -2,12 +2,12 @@
 
 namespace Spatie\SchemaOrg;
 
-use \Spatie\SchemaOrg\Contracts\MedicalSpecialtyContract;
-use \Spatie\SchemaOrg\Contracts\EnumerationContract;
-use \Spatie\SchemaOrg\Contracts\IntangibleContract;
-use \Spatie\SchemaOrg\Contracts\MedicalEnumerationContract;
-use \Spatie\SchemaOrg\Contracts\SpecialtyContract;
-use \Spatie\SchemaOrg\Contracts\ThingContract;
+use Spatie\SchemaOrg\Contracts\EnumerationContract;
+use Spatie\SchemaOrg\Contracts\IntangibleContract;
+use Spatie\SchemaOrg\Contracts\MedicalEnumerationContract;
+use Spatie\SchemaOrg\Contracts\MedicalSpecialtyContract;
+use Spatie\SchemaOrg\Contracts\SpecialtyContract;
+use Spatie\SchemaOrg\Contracts\ThingContract;
 
 /**
  * Any specific branch of medical science or practice. Medical specialities
@@ -29,7 +29,7 @@ class MedicalSpecialty extends BaseType implements MedicalSpecialtyContract, Enu
      * @see https://schema.org/Anesthesia
      * @see https://health-lifesci.schema.org
      */
-     const Anesthesia = 'https://schema.org/Anesthesia';
+    public const Anesthesia = 'https://schema.org/Anesthesia';
 
     /**
      * A specific branch of medical science that pertains to diagnosis and
@@ -38,7 +38,7 @@ class MedicalSpecialty extends BaseType implements MedicalSpecialtyContract, Enu
      * @see https://schema.org/Cardiovascular
      * @see https://health-lifesci.schema.org
      */
-     const Cardiovascular = 'https://schema.org/Cardiovascular';
+    public const Cardiovascular = 'https://schema.org/Cardiovascular';
 
     /**
      * A field of public health focusing on improving health characteristics of
@@ -48,7 +48,7 @@ class MedicalSpecialty extends BaseType implements MedicalSpecialtyContract, Enu
      * @see https://schema.org/CommunityHealth
      * @see https://health-lifesci.schema.org
      */
-     const CommunityHealth = 'https://schema.org/CommunityHealth';
+    public const CommunityHealth = 'https://schema.org/CommunityHealth';
 
     /**
      * A branch of medicine that is involved in the dental care.
@@ -56,7 +56,7 @@ class MedicalSpecialty extends BaseType implements MedicalSpecialtyContract, Enu
      * @see https://schema.org/Dentistry
      * @see https://health-lifesci.schema.org
      */
-     const Dentistry = 'https://schema.org/Dentistry';
+    public const Dentistry = 'https://schema.org/Dentistry';
 
     /**
      * Something relating to or practicing dermatology.
@@ -64,7 +64,7 @@ class MedicalSpecialty extends BaseType implements MedicalSpecialtyContract, Enu
      * @see https://schema.org/Dermatologic
      * @see https://health-lifesci.schema.org
      */
-     const Dermatologic = 'https://schema.org/Dermatologic';
+    public const Dermatologic = 'https://schema.org/Dermatologic';
 
     /**
      * A specific branch of medical science that pertains to diagnosis and
@@ -73,7 +73,7 @@ class MedicalSpecialty extends BaseType implements MedicalSpecialtyContract, Enu
      * @see https://schema.org/Dermatology
      * @see https://health-lifesci.schema.org
      */
-     const Dermatology = 'https://schema.org/Dermatology';
+    public const Dermatology = 'https://schema.org/Dermatology';
 
     /**
      * Dietetics and nutrition as a medical specialty.
@@ -81,7 +81,7 @@ class MedicalSpecialty extends BaseType implements MedicalSpecialtyContract, Enu
      * @see https://schema.org/DietNutrition
      * @see https://health-lifesci.schema.org
      */
-     const DietNutrition = 'https://schema.org/DietNutrition';
+    public const DietNutrition = 'https://schema.org/DietNutrition';
 
     /**
      * A specific branch of medical science that deals with the evaluation and
@@ -91,7 +91,7 @@ class MedicalSpecialty extends BaseType implements MedicalSpecialtyContract, Enu
      * @see https://schema.org/Emergency
      * @see https://health-lifesci.schema.org
      */
-     const Emergency = 'https://schema.org/Emergency';
+    public const Emergency = 'https://schema.org/Emergency';
 
     /**
      * A specific branch of medical science that pertains to diagnosis and
@@ -100,7 +100,7 @@ class MedicalSpecialty extends BaseType implements MedicalSpecialtyContract, Enu
      * @see https://schema.org/Endocrine
      * @see https://health-lifesci.schema.org
      */
-     const Endocrine = 'https://schema.org/Endocrine';
+    public const Endocrine = 'https://schema.org/Endocrine';
 
     /**
      * A specific branch of medical science that pertains to diagnosis and
@@ -109,7 +109,7 @@ class MedicalSpecialty extends BaseType implements MedicalSpecialtyContract, Enu
      * @see https://schema.org/Gastroenterologic
      * @see https://health-lifesci.schema.org
      */
-     const Gastroenterologic = 'https://schema.org/Gastroenterologic';
+    public const Gastroenterologic = 'https://schema.org/Gastroenterologic';
 
     /**
      * A specific branch of medical science that pertains to hereditary
@@ -119,7 +119,7 @@ class MedicalSpecialty extends BaseType implements MedicalSpecialtyContract, Enu
      * @see https://schema.org/Genetic
      * @see https://health-lifesci.schema.org
      */
-     const Genetic = 'https://schema.org/Genetic';
+    public const Genetic = 'https://schema.org/Genetic';
 
     /**
      * A specific branch of medical science that is concerned with the diagnosis
@@ -128,7 +128,7 @@ class MedicalSpecialty extends BaseType implements MedicalSpecialtyContract, Enu
      * @see https://schema.org/Geriatric
      * @see https://health-lifesci.schema.org
      */
-     const Geriatric = 'https://schema.org/Geriatric';
+    public const Geriatric = 'https://schema.org/Geriatric';
 
     /**
      * A specific branch of medical science that pertains to the health care of
@@ -138,7 +138,7 @@ class MedicalSpecialty extends BaseType implements MedicalSpecialtyContract, Enu
      * @see https://schema.org/Gynecologic
      * @see https://health-lifesci.schema.org
      */
-     const Gynecologic = 'https://schema.org/Gynecologic';
+    public const Gynecologic = 'https://schema.org/Gynecologic';
 
     /**
      * A specific branch of medical science that pertains to diagnosis and
@@ -147,7 +147,7 @@ class MedicalSpecialty extends BaseType implements MedicalSpecialtyContract, Enu
      * @see https://schema.org/Hematologic
      * @see https://health-lifesci.schema.org
      */
-     const Hematologic = 'https://schema.org/Hematologic';
+    public const Hematologic = 'https://schema.org/Hematologic';
 
     /**
      * Something in medical science that pertains to infectious diseases, i.e.
@@ -156,7 +156,7 @@ class MedicalSpecialty extends BaseType implements MedicalSpecialtyContract, Enu
      * @see https://schema.org/Infectious
      * @see https://health-lifesci.schema.org
      */
-     const Infectious = 'https://schema.org/Infectious';
+    public const Infectious = 'https://schema.org/Infectious';
 
     /**
      * A medical science pertaining to chemical, hematological, immunologic,
@@ -165,7 +165,7 @@ class MedicalSpecialty extends BaseType implements MedicalSpecialtyContract, Enu
      * @see https://schema.org/LaboratoryScience
      * @see https://health-lifesci.schema.org
      */
-     const LaboratoryScience = 'https://schema.org/LaboratoryScience';
+    public const LaboratoryScience = 'https://schema.org/LaboratoryScience';
 
     /**
      * A nurse-like health profession that deals with pregnancy, childbirth, and
@@ -175,7 +175,7 @@ class MedicalSpecialty extends BaseType implements MedicalSpecialtyContract, Enu
      * @see https://schema.org/Midwifery
      * @see https://health-lifesci.schema.org
      */
-     const Midwifery = 'https://schema.org/Midwifery';
+    public const Midwifery = 'https://schema.org/Midwifery';
 
     /**
      * A specific branch of medical science that pertains to diagnosis and
@@ -184,7 +184,7 @@ class MedicalSpecialty extends BaseType implements MedicalSpecialtyContract, Enu
      * @see https://schema.org/Musculoskeletal
      * @see https://health-lifesci.schema.org
      */
-     const Musculoskeletal = 'https://schema.org/Musculoskeletal';
+    public const Musculoskeletal = 'https://schema.org/Musculoskeletal';
 
     /**
      * A specific branch of medical science that studies the nerves and nervous
@@ -193,7 +193,7 @@ class MedicalSpecialty extends BaseType implements MedicalSpecialtyContract, Enu
      * @see https://schema.org/Neurologic
      * @see https://health-lifesci.schema.org
      */
-     const Neurologic = 'https://schema.org/Neurologic';
+    public const Neurologic = 'https://schema.org/Neurologic';
 
     /**
      * A health profession of a person formally educated and trained in the care
@@ -202,7 +202,7 @@ class MedicalSpecialty extends BaseType implements MedicalSpecialtyContract, Enu
      * @see https://schema.org/Nursing
      * @see https://health-lifesci.schema.org
      */
-     const Nursing = 'https://schema.org/Nursing';
+    public const Nursing = 'https://schema.org/Nursing';
 
     /**
      * A specific branch of medical science that specializes in the care of
@@ -212,7 +212,7 @@ class MedicalSpecialty extends BaseType implements MedicalSpecialtyContract, Enu
      * @see https://schema.org/Obstetric
      * @see https://health-lifesci.schema.org
      */
-     const Obstetric = 'https://schema.org/Obstetric';
+    public const Obstetric = 'https://schema.org/Obstetric';
 
     /**
      * A specific branch of medical science that deals with benign and malignant
@@ -222,7 +222,7 @@ class MedicalSpecialty extends BaseType implements MedicalSpecialtyContract, Enu
      * @see https://schema.org/Oncologic
      * @see https://health-lifesci.schema.org
      */
-     const Oncologic = 'https://schema.org/Oncologic';
+    public const Oncologic = 'https://schema.org/Oncologic';
 
     /**
      * The science or practice of testing visual acuity and prescribing
@@ -231,7 +231,7 @@ class MedicalSpecialty extends BaseType implements MedicalSpecialtyContract, Enu
      * @see https://schema.org/Optometric
      * @see https://health-lifesci.schema.org
      */
-     const Optometric = 'https://schema.org/Optometric';
+    public const Optometric = 'https://schema.org/Optometric';
 
     /**
      * A specific branch of medical science that is concerned with the ear, nose
@@ -240,7 +240,7 @@ class MedicalSpecialty extends BaseType implements MedicalSpecialtyContract, Enu
      * @see https://schema.org/Otolaryngologic
      * @see https://health-lifesci.schema.org
      */
-     const Otolaryngologic = 'https://schema.org/Otolaryngologic';
+    public const Otolaryngologic = 'https://schema.org/Otolaryngologic';
 
     /**
      * A specific branch of medical science that is concerned with the study of
@@ -252,7 +252,7 @@ class MedicalSpecialty extends BaseType implements MedicalSpecialtyContract, Enu
      * @see https://schema.org/Pathology
      * @see https://health-lifesci.schema.org
      */
-     const Pathology = 'https://schema.org/Pathology';
+    public const Pathology = 'https://schema.org/Pathology';
 
     /**
      * A specific branch of medical science that specializes in the care of
@@ -261,7 +261,7 @@ class MedicalSpecialty extends BaseType implements MedicalSpecialtyContract, Enu
      * @see https://schema.org/Pediatric
      * @see https://health-lifesci.schema.org
      */
-     const Pediatric = 'https://schema.org/Pediatric';
+    public const Pediatric = 'https://schema.org/Pediatric';
 
     /**
      * The practice or art and science of preparing and dispensing drugs and
@@ -270,7 +270,7 @@ class MedicalSpecialty extends BaseType implements MedicalSpecialtyContract, Enu
      * @see https://schema.org/PharmacySpecialty
      * @see https://health-lifesci.schema.org
      */
-     const PharmacySpecialty = 'https://schema.org/PharmacySpecialty';
+    public const PharmacySpecialty = 'https://schema.org/PharmacySpecialty';
 
     /**
      * The practice of treatment of disease, injury, or deformity by physical
@@ -280,7 +280,7 @@ class MedicalSpecialty extends BaseType implements MedicalSpecialtyContract, Enu
      * @see https://schema.org/Physiotherapy
      * @see https://health-lifesci.schema.org
      */
-     const Physiotherapy = 'https://schema.org/Physiotherapy';
+    public const Physiotherapy = 'https://schema.org/Physiotherapy';
 
     /**
      * A specific branch of medical science that pertains to therapeutic or
@@ -290,7 +290,7 @@ class MedicalSpecialty extends BaseType implements MedicalSpecialtyContract, Enu
      * @see https://schema.org/PlasticSurgery
      * @see https://health-lifesci.schema.org
      */
-     const PlasticSurgery = 'https://schema.org/PlasticSurgery';
+    public const PlasticSurgery = 'https://schema.org/PlasticSurgery';
 
     /**
      * Podiatry is the care of the human foot, especially the diagnosis and
@@ -299,7 +299,7 @@ class MedicalSpecialty extends BaseType implements MedicalSpecialtyContract, Enu
      * @see https://schema.org/Podiatric
      * @see https://health-lifesci.schema.org
      */
-     const Podiatric = 'https://schema.org/Podiatric';
+    public const Podiatric = 'https://schema.org/Podiatric';
 
     /**
      * The medical care by a physician, or other health-care professional, who
@@ -309,7 +309,7 @@ class MedicalSpecialty extends BaseType implements MedicalSpecialtyContract, Enu
      * @see https://schema.org/PrimaryCare
      * @see https://health-lifesci.schema.org
      */
-     const PrimaryCare = 'https://schema.org/PrimaryCare';
+    public const PrimaryCare = 'https://schema.org/PrimaryCare';
 
     /**
      * A specific branch of medical science that is concerned with the study,
@@ -319,7 +319,7 @@ class MedicalSpecialty extends BaseType implements MedicalSpecialtyContract, Enu
      * @see https://schema.org/Psychiatric
      * @see https://health-lifesci.schema.org
      */
-     const Psychiatric = 'https://schema.org/Psychiatric';
+    public const Psychiatric = 'https://schema.org/Psychiatric';
 
     /**
      * Branch of medicine that pertains to the health services to improve and
@@ -329,7 +329,7 @@ class MedicalSpecialty extends BaseType implements MedicalSpecialtyContract, Enu
      * @see https://schema.org/PublicHealth
      * @see https://health-lifesci.schema.org
      */
-     const PublicHealth = 'https://schema.org/PublicHealth';
+    public const PublicHealth = 'https://schema.org/PublicHealth';
 
     /**
      * A specific branch of medical science that pertains to the study of the
@@ -338,7 +338,7 @@ class MedicalSpecialty extends BaseType implements MedicalSpecialtyContract, Enu
      * @see https://schema.org/Pulmonary
      * @see https://health-lifesci.schema.org
      */
-     const Pulmonary = 'https://schema.org/Pulmonary';
+    public const Pulmonary = 'https://schema.org/Pulmonary';
 
     /**
      * A specific branch of medical science that pertains to the study of the
@@ -347,7 +347,7 @@ class MedicalSpecialty extends BaseType implements MedicalSpecialtyContract, Enu
      * @see https://schema.org/Renal
      * @see https://health-lifesci.schema.org
      */
-     const Renal = 'https://schema.org/Renal';
+    public const Renal = 'https://schema.org/Renal';
 
     /**
      * The therapy that is concerned with the maintenance or improvement of
@@ -356,7 +356,7 @@ class MedicalSpecialty extends BaseType implements MedicalSpecialtyContract, Enu
      * @see https://schema.org/RespiratoryTherapy
      * @see https://health-lifesci.schema.org
      */
-     const RespiratoryTherapy = 'https://schema.org/RespiratoryTherapy';
+    public const RespiratoryTherapy = 'https://schema.org/RespiratoryTherapy';
 
     /**
      * A specific branch of medical science that deals with the study and
@@ -365,7 +365,7 @@ class MedicalSpecialty extends BaseType implements MedicalSpecialtyContract, Enu
      * @see https://schema.org/Rheumatologic
      * @see https://health-lifesci.schema.org
      */
-     const Rheumatologic = 'https://schema.org/Rheumatologic';
+    public const Rheumatologic = 'https://schema.org/Rheumatologic';
 
     /**
      * The scientific study and treatment of defects, disorders, and
@@ -375,7 +375,7 @@ class MedicalSpecialty extends BaseType implements MedicalSpecialtyContract, Enu
      * @see https://schema.org/SpeechPathology
      * @see https://health-lifesci.schema.org
      */
-     const SpeechPathology = 'https://schema.org/SpeechPathology';
+    public const SpeechPathology = 'https://schema.org/SpeechPathology';
 
     /**
      * A specific branch of medical science that pertains to treating diseases,
@@ -384,7 +384,7 @@ class MedicalSpecialty extends BaseType implements MedicalSpecialtyContract, Enu
      * @see https://schema.org/Surgical
      * @see https://health-lifesci.schema.org
      */
-     const Surgical = 'https://schema.org/Surgical';
+    public const Surgical = 'https://schema.org/Surgical';
 
     /**
      * A specific branch of medical science that is concerned with poisons,
@@ -394,7 +394,7 @@ class MedicalSpecialty extends BaseType implements MedicalSpecialtyContract, Enu
      * @see https://schema.org/Toxicologic
      * @see https://health-lifesci.schema.org
      */
-     const Toxicologic = 'https://schema.org/Toxicologic';
+    public const Toxicologic = 'https://schema.org/Toxicologic';
 
     /**
      * A specific branch of medical science that is concerned with the diagnosis
@@ -404,7 +404,7 @@ class MedicalSpecialty extends BaseType implements MedicalSpecialtyContract, Enu
      * @see https://schema.org/Urologic
      * @see https://health-lifesci.schema.org
      */
-     const Urologic = 'https://schema.org/Urologic';
+    public const Urologic = 'https://schema.org/Urologic';
 
     /**
      * An additional type for the item, typically used for adding more specific
@@ -592,5 +592,4 @@ class MedicalSpecialty extends BaseType implements MedicalSpecialtyContract, Enu
     {
         return $this->setProperty('url', $url);
     }
-
 }

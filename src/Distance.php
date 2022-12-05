@@ -2,10 +2,10 @@
 
 namespace Spatie\SchemaOrg;
 
-use \Spatie\SchemaOrg\Contracts\DistanceContract;
-use \Spatie\SchemaOrg\Contracts\IntangibleContract;
-use \Spatie\SchemaOrg\Contracts\QuantityContract;
-use \Spatie\SchemaOrg\Contracts\ThingContract;
+use Spatie\SchemaOrg\Contracts\DistanceContract;
+use Spatie\SchemaOrg\Contracts\IntangibleContract;
+use Spatie\SchemaOrg\Contracts\QuantityContract;
+use Spatie\SchemaOrg\Contracts\ThingContract;
 
 /**
  * Properties that take Distances as values are of the form '<Number> <Length
@@ -202,5 +202,4 @@ class Distance extends BaseType implements DistanceContract, IntangibleContract,
     {
         return $this->setProperty('url', $url);
     }
-
 }

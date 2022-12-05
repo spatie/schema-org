@@ -2,11 +2,11 @@
 
 namespace Spatie\SchemaOrg;
 
-use \Spatie\SchemaOrg\Contracts\DrugPrescriptionStatusContract;
-use \Spatie\SchemaOrg\Contracts\EnumerationContract;
-use \Spatie\SchemaOrg\Contracts\IntangibleContract;
-use \Spatie\SchemaOrg\Contracts\MedicalEnumerationContract;
-use \Spatie\SchemaOrg\Contracts\ThingContract;
+use Spatie\SchemaOrg\Contracts\DrugPrescriptionStatusContract;
+use Spatie\SchemaOrg\Contracts\EnumerationContract;
+use Spatie\SchemaOrg\Contracts\IntangibleContract;
+use Spatie\SchemaOrg\Contracts\MedicalEnumerationContract;
+use Spatie\SchemaOrg\Contracts\ThingContract;
 
 /**
  * Indicates whether this drug is available by prescription or over-the-counter.
@@ -25,7 +25,7 @@ class DrugPrescriptionStatus extends BaseType implements DrugPrescriptionStatusC
      * @see https://schema.org/OTC
      * @see https://health-lifesci.schema.org
      */
-     const OTC = 'https://schema.org/OTC';
+    public const OTC = 'https://schema.org/OTC';
 
     /**
      * Available by prescription only.
@@ -33,7 +33,7 @@ class DrugPrescriptionStatus extends BaseType implements DrugPrescriptionStatusC
      * @see https://schema.org/PrescriptionOnly
      * @see https://health-lifesci.schema.org
      */
-     const PrescriptionOnly = 'https://schema.org/PrescriptionOnly';
+    public const PrescriptionOnly = 'https://schema.org/PrescriptionOnly';
 
     /**
      * An additional type for the item, typically used for adding more specific
@@ -221,5 +221,4 @@ class DrugPrescriptionStatus extends BaseType implements DrugPrescriptionStatusC
     {
         return $this->setProperty('url', $url);
     }
-
 }

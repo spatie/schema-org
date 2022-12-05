@@ -2,10 +2,10 @@
 
 namespace Spatie\SchemaOrg;
 
-use \Spatie\SchemaOrg\Contracts\MotorcycleContract;
-use \Spatie\SchemaOrg\Contracts\ProductContract;
-use \Spatie\SchemaOrg\Contracts\ThingContract;
-use \Spatie\SchemaOrg\Contracts\VehicleContract;
+use Spatie\SchemaOrg\Contracts\MotorcycleContract;
+use Spatie\SchemaOrg\Contracts\ProductContract;
+use Spatie\SchemaOrg\Contracts\ThingContract;
+use Spatie\SchemaOrg\Contracts\VehicleContract;
 
 /**
  * A motorcycle or motorbike is a single-track, two-wheeled motor vehicle.
@@ -20,9 +20,9 @@ class Motorcycle extends BaseType implements MotorcycleContract, ProductContract
     /**
      * The time needed to accelerate the vehicle from a given start velocity to
      * a given target velocity.
-     * 
+     *
      * Typical unit code(s): SEC for seconds
-     * 
+     *
      * * Note: There are unfortunately no standard unit codes for seconds/0..100
      * km/h or seconds/0..60 mph. Simply use "SEC" for seconds and indicate the
      * velocities in the [[name]] of the [[QuantitativeValue]], or use
@@ -46,7 +46,7 @@ class Motorcycle extends BaseType implements MotorcycleContract, ProductContract
      * A property-value pair representing an additional characteristic of the
      * entity, e.g. a product feature or another characteristic for which there
      * is no matching property in schema.org.
-     * 
+     *
      * Note: Publishers should be aware that applications designed to use
      * specific schema.org properties (e.g. https://schema.org/width,
      * https://schema.org/color, https://schema.org/gtin13, ...) will typically
@@ -118,7 +118,7 @@ class Motorcycle extends BaseType implements MotorcycleContract, ProductContract
      * for product identification within the Amazon organization (summary from
      * [Wikipedia](https://en.wikipedia.org/wiki/Amazon_Standard_Identification_Number)'s
      * article).
-     * 
+     *
      * Note also that this is a definition for how to include ASINs in
      * Schema.org data, and not a definition of ASINs in general - see
      * documentation from Amazon for authoritative details.
@@ -233,9 +233,9 @@ class Motorcycle extends BaseType implements MotorcycleContract, ProductContract
     /**
      * The available volume for cargo or luggage. For automobiles, this is
      * usually the trunk volume.
-     * 
+     *
      * Typical unit code(s): LTR for liters, FTQ for cubic foot/feet
-     * 
+     *
      * Note: You can use [[minValue]] and [[maxValue]] to indicate ranges.
      *
      * @param \Spatie\SchemaOrg\Contracts\QuantitativeValueContract|\Spatie\SchemaOrg\Contracts\QuantitativeValueContract[] $cargoVolume
@@ -316,13 +316,13 @@ class Motorcycle extends BaseType implements MotorcycleContract, ProductContract
     /**
      * The country of origin of something, including products as well as
      * creative  works such as movie and TV content.
-     * 
+     *
      * In the case of TV and movie, this would be the country of the principle
      * offices of the production company or individual responsible for the
      * movie. For other kinds of [[CreativeWork]] it is difficult to provide
      * fully general guidance, and properties such as [[contentLocation]] and
      * [[locationCreated]] may be more applicable.
-     * 
+     *
      * In the case of products, the country of origin of the product. The exact
      * interpretation of this may vary by context and product type, and cannot
      * be fully enumerated here.
@@ -438,7 +438,7 @@ class Motorcycle extends BaseType implements MotorcycleContract, ProductContract
      * The capacity of the fuel tank or in the case of electric cars, the
      * battery. If there are multiple components for storage, this should
      * indicate the total of all storage of the same type.
-     * 
+     *
      * Typical unit code(s): LTR for liters, GLL of US gallons, GLI for UK /
      * imperial gallons, AMH for ampere-hours (for electrical vehicles).
      *
@@ -458,7 +458,7 @@ class Motorcycle extends BaseType implements MotorcycleContract, ProductContract
     /**
      * The amount of fuel consumed for traveling a particular distance or
      * temporal duration with the given vehicle (e.g. liters per 100 km).
-     * 
+     *
      * * Note 1: There are unfortunately no standard unit codes for liters per
      * 100 km.  Use [[unitText]] to indicate the unit of measurement, e.g. L/100
      * km.
@@ -485,7 +485,7 @@ class Motorcycle extends BaseType implements MotorcycleContract, ProductContract
     /**
      * The distance traveled per unit of fuel used; most commonly miles per
      * gallon (mpg) or kilometers per liter (km/L).
-     * 
+     *
      * * Note 1: There are unfortunately no standard unit codes for miles per
      * gallon or kilometers per liter. Use [[unitText]] to indicate the unit of
      * measurement, e.g. mpg or km/L.
@@ -547,7 +547,7 @@ class Motorcycle extends BaseType implements MotorcycleContract, ProductContract
      * ([GTIN](https://www.gs1.org/standards/id-keys/gtin)). GTINs identify
      * trade items, including products and services, using numeric
      * identification codes.
-     * 
+     *
      * The GS1 [digital link
      * specifications](https://www.gs1.org/standards/Digital-Link/) express
      * GTINs as URLs (URIs, IRIs, etc.). Details including regular expression
@@ -565,7 +565,7 @@ class Motorcycle extends BaseType implements MotorcycleContract, ProductContract
      * more details. Left-padding of the gtin values is not required or
      * encouraged. The [[gtin]] property generalizes the earlier [[gtin8]],
      * [[gtin12]], [[gtin13]], and [[gtin14]] properties.
-     * 
+     *
      * Note also that this is a definition for how to include GTINs in
      * Schema.org data, and not a definition of GTINs in general - see the GS1
      * documentation for authoritative details.
@@ -1037,7 +1037,7 @@ class Motorcycle extends BaseType implements MotorcycleContract, ProductContract
     /**
      * The total distance travelled by the particular vehicle since its initial
      * production, as read from its odometer.
-     * 
+     *
      * Typical unit code(s): KMT for kilometers, SMI for statute miles
      *
      * @param \Spatie\SchemaOrg\Contracts\QuantitativeValueContract|\Spatie\SchemaOrg\Contracts\QuantitativeValueContract[] $mileageFromOdometer
@@ -1056,7 +1056,7 @@ class Motorcycle extends BaseType implements MotorcycleContract, ProductContract
      * The [[mobileUrl]] property is provided for specific situations in which
      * data consumers need to determine whether one of several provided URLs is
      * a dedicated 'mobile site'.
-     * 
+     *
      * To discourage over-use, and reflecting intial usecases, the property is
      * expected only on [[Product]] and [[Offer]], rather than [[Thing]]. The
      * general trend in web technology is towards [responsive
@@ -1151,15 +1151,15 @@ class Motorcycle extends BaseType implements MotorcycleContract, ProductContract
 
     /**
      * Provides negative considerations regarding something, most typically in
-     * pro/con lists for reviews (alongside [[positiveNotes]]). For symmetry 
-     * 
+     * pro/con lists for reviews (alongside [[positiveNotes]]). For symmetry
+     *
      * In the case of a [[Review]], the property describes the [[itemReviewed]]
      * from the perspective of the review; in the case of a [[Product]], the
-     * product itself is being described. Since product descriptions 
+     * product itself is being described. Since product descriptions
      * tend to emphasise positive claims, it may be relatively unusual to find
      * [[negativeNotes]] used in this way. Nevertheless for the sake of
      * symmetry, [[negativeNotes]] can be used on [[Product]].
-     * 
+     *
      * The property values can be expressed either as unstructured text
      * (repeated as necessary), or if ordered, as a list (in which case the most
      * negative is at the beginning of the list).
@@ -1212,7 +1212,7 @@ class Motorcycle extends BaseType implements MotorcycleContract, ProductContract
 
     /**
      * The number of axles.
-     * 
+     *
      * Typical unit code(s): C62
      *
      * @param \Spatie\SchemaOrg\Contracts\QuantitativeValueContract|\Spatie\SchemaOrg\Contracts\QuantitativeValueContract[]|float|float[]|int|int[] $numberOfAxles
@@ -1229,7 +1229,7 @@ class Motorcycle extends BaseType implements MotorcycleContract, ProductContract
 
     /**
      * The number of doors.
-     * 
+     *
      * Typical unit code(s): C62
      *
      * @param \Spatie\SchemaOrg\Contracts\QuantitativeValueContract|\Spatie\SchemaOrg\Contracts\QuantitativeValueContract[]|float|float[]|int|int[] $numberOfDoors
@@ -1247,7 +1247,7 @@ class Motorcycle extends BaseType implements MotorcycleContract, ProductContract
     /**
      * The total number of forward gears available for the transmission system
      * of the vehicle.
-     * 
+     *
      * Typical unit code(s): C62
      *
      * @param \Spatie\SchemaOrg\Contracts\QuantitativeValueContract|\Spatie\SchemaOrg\Contracts\QuantitativeValueContract[]|float|float[]|int|int[] $numberOfForwardGears
@@ -1264,7 +1264,7 @@ class Motorcycle extends BaseType implements MotorcycleContract, ProductContract
 
     /**
      * The number of owners of the vehicle, including the current one.
-     * 
+     *
      * Typical unit code(s): C62
      *
      * @param \Spatie\SchemaOrg\Contracts\QuantitativeValueContract|\Spatie\SchemaOrg\Contracts\QuantitativeValueContract[]|float|float[]|int|int[] $numberOfPreviousOwners
@@ -1322,9 +1322,9 @@ class Motorcycle extends BaseType implements MotorcycleContract, ProductContract
     /**
      * The permitted weight of passengers and cargo, EXCLUDING the weight of the
      * empty vehicle.
-     * 
+     *
      * Typical unit code(s): KGM for kilogram, LBR for pound
-     * 
+     *
      * * Note 1: Many databases specify the permitted TOTAL weight instead,
      * which is the sum of [[weight]] and [[payload]]
      * * Note 2: You can indicate additional information in the [[name]] of the
@@ -1350,11 +1350,11 @@ class Motorcycle extends BaseType implements MotorcycleContract, ProductContract
     /**
      * Provides positive considerations regarding something, for example product
      * highlights or (alongside [[negativeNotes]]) pro/con lists for reviews.
-     * 
+     *
      * In the case of a [[Review]], the property describes the [[itemReviewed]]
      * from the perspective of the review; in the case of a [[Product]], the
      * product itself is being described.
-     * 
+     *
      * The property values can be expressed either as unstructured text
      * (repeated as necessary), or if ordered, as a list (in which case the most
      * positive is at the beginning of the list).
@@ -1496,7 +1496,7 @@ class Motorcycle extends BaseType implements MotorcycleContract, ProductContract
      * The number of persons that can be seated (e.g. in a vehicle), both in
      * terms of the physical space available, and in terms of limitations set by
      * law.
-     * 
+     *
      * Typical unit code(s): C62 for persons
      *
      * @param \Spatie\SchemaOrg\Contracts\QuantitativeValueContract|\Spatie\SchemaOrg\Contracts\QuantitativeValueContract[]|float|float[]|int|int[] $seatingCapacity
@@ -1514,7 +1514,7 @@ class Motorcycle extends BaseType implements MotorcycleContract, ProductContract
 
     /**
      * A standardized size of a product or creative work, specified either
-     * through a simple textual string (for example 'XL', '32Wx34L'), a 
+     * through a simple textual string (for example 'XL', '32Wx34L'), a
      * QuantitativeValue with a unitCode, or a comprehensive and structured
      * [[SizeSpecification]]; in other cases, the [[width]], [[height]],
      * [[depth]] and [[weight]] properties may be more applicable.
@@ -1566,10 +1566,10 @@ class Motorcycle extends BaseType implements MotorcycleContract, ProductContract
      * The speed range of the vehicle. If the vehicle is powered by an engine,
      * the upper limit of the speed range (indicated by [[maxValue]]) should be
      * the maximum speed achievable under regular conditions.
-     * 
+     *
      * Typical unit code(s): KMH for km/h, HM for mile per hour (0.447 04 m/s),
      * KNT for knot
-     * 
+     *
      * *Note 1: Use [[minValue]] and [[maxValue]] to indicate the range.
      * Typically, the minimal value is zero.
      * * Note 2: There are many different ways of measuring the speed range. You
@@ -1638,9 +1638,9 @@ class Motorcycle extends BaseType implements MotorcycleContract, ProductContract
      * The permitted vertical load (TWR) of a trailer attached to the vehicle.
      * Also referred to as Tongue Load Rating (TLR) or Vertical Load Rating
      * (VLR).
-     * 
+     *
      * Typical unit code(s): KGM for kilogram, LBR for pound
-     * 
+     *
      * * Note 1: You can indicate additional information in the [[name]] of the
      * [[QuantitativeValue]] node.
      * * Note 2: You may also link to a [[QualitativeValue]] node that provides
@@ -1663,7 +1663,7 @@ class Motorcycle extends BaseType implements MotorcycleContract, ProductContract
 
     /**
      * The permitted weight of a trailer attached to the vehicle.
-     * 
+     *
      * Typical unit code(s): KGM for kilogram, LBR for pound
      * * Note 1: You can indicate additional information in the [[name]] of the
      * [[QuantitativeValue]] node.
@@ -1798,7 +1798,7 @@ class Motorcycle extends BaseType implements MotorcycleContract, ProductContract
     /**
      * The number of passengers that can be seated in the vehicle, both in terms
      * of the physical space available, and in terms of limitations set by law.
-     * 
+     *
      * Typical unit code(s): C62 for persons.
      *
      * @param \Spatie\SchemaOrg\Contracts\QuantitativeValueContract|\Spatie\SchemaOrg\Contracts\QuantitativeValueContract[]|float|float[]|int|int[] $vehicleSeatingCapacity
@@ -1867,9 +1867,9 @@ class Motorcycle extends BaseType implements MotorcycleContract, ProductContract
     /**
      * The permitted total weight of the loaded vehicle, including passengers
      * and cargo and the weight of the empty vehicle.
-     * 
+     *
      * Typical unit code(s): KGM for kilogram, LBR for pound
-     * 
+     *
      * * Note 1: You can indicate additional information in the [[name]] of the
      * [[QuantitativeValue]] node.
      * * Note 2: You may also link to a [[QualitativeValue]] node that provides
@@ -1892,7 +1892,7 @@ class Motorcycle extends BaseType implements MotorcycleContract, ProductContract
 
     /**
      * The distance between the centers of the front and rear wheels.
-     * 
+     *
      * Typical unit code(s): CMT for centimeters, MTR for meters, INH for
      * inches, FOT for foot/feet
      *
@@ -1922,5 +1922,4 @@ class Motorcycle extends BaseType implements MotorcycleContract, ProductContract
     {
         return $this->setProperty('width', $width);
     }
-
 }

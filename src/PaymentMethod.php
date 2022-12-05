@@ -2,19 +2,19 @@
 
 namespace Spatie\SchemaOrg;
 
-use \Spatie\SchemaOrg\Contracts\PaymentMethodContract;
-use \Spatie\SchemaOrg\Contracts\EnumerationContract;
-use \Spatie\SchemaOrg\Contracts\IntangibleContract;
-use \Spatie\SchemaOrg\Contracts\ThingContract;
+use Spatie\SchemaOrg\Contracts\EnumerationContract;
+use Spatie\SchemaOrg\Contracts\IntangibleContract;
+use Spatie\SchemaOrg\Contracts\PaymentMethodContract;
+use Spatie\SchemaOrg\Contracts\ThingContract;
 
 /**
  * A payment method is a standardized procedure for transferring the monetary
  * amount for a purchase. Payment methods are characterized by the legal and
  * technical structures used, and by the organization or group carrying out the
  * transaction.
- * 
+ *
  * Commonly used values:
- * 
+ *
  * * http://purl.org/goodrelations/v1#ByBankTransferInAdvance
  * * http://purl.org/goodrelations/v1#ByInvoice
  * * http://purl.org/goodrelations/v1#Cash
@@ -218,5 +218,4 @@ class PaymentMethod extends BaseType implements PaymentMethodContract, Enumerati
     {
         return $this->setProperty('url', $url);
     }
-
 }

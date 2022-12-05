@@ -2,10 +2,10 @@
 
 namespace Spatie\SchemaOrg;
 
-use \Spatie\SchemaOrg\Contracts\ArriveActionContract;
-use \Spatie\SchemaOrg\Contracts\ActionContract;
-use \Spatie\SchemaOrg\Contracts\MoveActionContract;
-use \Spatie\SchemaOrg\Contracts\ThingContract;
+use Spatie\SchemaOrg\Contracts\ActionContract;
+use Spatie\SchemaOrg\Contracts\ArriveActionContract;
+use Spatie\SchemaOrg\Contracts\MoveActionContract;
+use Spatie\SchemaOrg\Contracts\ThingContract;
 
 /**
  * The act of arriving at a place. An agent arrives at a destination from a
@@ -116,7 +116,7 @@ class ArriveAction extends BaseType implements ArriveActionContract, ActionContr
      * John wrote a book from January to *December*. For media, including audio
      * and video, it's the time offset of the end of a clip within a larger
      * file.
-     * 
+     *
      * Note that Event uses startDate/endDate instead of startTime/endTime, even
      * when describing dates with times. This situation may be clarified in
      * future revisions.
@@ -356,7 +356,7 @@ class ArriveAction extends BaseType implements ArriveActionContract, ActionContr
      * John wrote a book from *January* to December. For media, including audio
      * and video, it's the time offset of the start of a clip within a larger
      * file.
-     * 
+     *
      * Note that Event uses startDate/endDate instead of startTime/endTime, even
      * when describing dates with times. This situation may be clarified in
      * future revisions.
@@ -430,5 +430,4 @@ class ArriveAction extends BaseType implements ArriveActionContract, ActionContr
     {
         return $this->setProperty('url', $url);
     }
-
 }

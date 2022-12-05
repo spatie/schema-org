@@ -2,10 +2,10 @@
 
 namespace Spatie\SchemaOrg;
 
-use \Spatie\SchemaOrg\Contracts\BookFormatTypeContract;
-use \Spatie\SchemaOrg\Contracts\EnumerationContract;
-use \Spatie\SchemaOrg\Contracts\IntangibleContract;
-use \Spatie\SchemaOrg\Contracts\ThingContract;
+use Spatie\SchemaOrg\Contracts\BookFormatTypeContract;
+use Spatie\SchemaOrg\Contracts\EnumerationContract;
+use Spatie\SchemaOrg\Contracts\IntangibleContract;
+use Spatie\SchemaOrg\Contracts\ThingContract;
 
 /**
  * The publication format of the book.
@@ -23,14 +23,14 @@ class BookFormatType extends BaseType implements BookFormatTypeContract, Enumera
      *
      * @see https://schema.org/AudiobookFormat
      */
-     const AudiobookFormat = 'https://schema.org/AudiobookFormat';
+    public const AudiobookFormat = 'https://schema.org/AudiobookFormat';
 
     /**
      * Book format: Ebook.
      *
      * @see https://schema.org/EBook
      */
-     const EBook = 'https://schema.org/EBook';
+    public const EBook = 'https://schema.org/EBook';
 
     /**
      * Book format: GraphicNovel. May represent a bound collection of ComicIssue
@@ -39,21 +39,21 @@ class BookFormatType extends BaseType implements BookFormatTypeContract, Enumera
      * @see https://schema.org/GraphicNovel
      * @see https://bib.schema.org
      */
-     const GraphicNovel = 'https://schema.org/GraphicNovel';
+    public const GraphicNovel = 'https://schema.org/GraphicNovel';
 
     /**
      * Book format: Hardcover.
      *
      * @see https://schema.org/Hardcover
      */
-     const Hardcover = 'https://schema.org/Hardcover';
+    public const Hardcover = 'https://schema.org/Hardcover';
 
     /**
      * Book format: Paperback.
      *
      * @see https://schema.org/Paperback
      */
-     const Paperback = 'https://schema.org/Paperback';
+    public const Paperback = 'https://schema.org/Paperback';
 
     /**
      * An additional type for the item, typically used for adding more specific
@@ -241,5 +241,4 @@ class BookFormatType extends BaseType implements BookFormatTypeContract, Enumera
     {
         return $this->setProperty('url', $url);
     }
-
 }

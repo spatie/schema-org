@@ -2,9 +2,9 @@
 
 namespace Spatie\SchemaOrg;
 
-use \Spatie\SchemaOrg\Contracts\OrderItemContract;
-use \Spatie\SchemaOrg\Contracts\IntangibleContract;
-use \Spatie\SchemaOrg\Contracts\ThingContract;
+use Spatie\SchemaOrg\Contracts\IntangibleContract;
+use Spatie\SchemaOrg\Contracts\OrderItemContract;
+use Spatie\SchemaOrg\Contracts\ThingContract;
 
 /**
  * An order item is a line of an order. It includes the quantity and shipping
@@ -272,5 +272,4 @@ class OrderItem extends BaseType implements OrderItemContract, IntangibleContrac
     {
         return $this->setProperty('url', $url);
     }
-
 }

@@ -2,12 +2,12 @@
 
 namespace Spatie\SchemaOrg;
 
-use \Spatie\SchemaOrg\Contracts\InvestmentFundContract;
-use \Spatie\SchemaOrg\Contracts\FinancialProductContract;
-use \Spatie\SchemaOrg\Contracts\IntangibleContract;
-use \Spatie\SchemaOrg\Contracts\InvestmentOrDepositContract;
-use \Spatie\SchemaOrg\Contracts\ServiceContract;
-use \Spatie\SchemaOrg\Contracts\ThingContract;
+use Spatie\SchemaOrg\Contracts\FinancialProductContract;
+use Spatie\SchemaOrg\Contracts\IntangibleContract;
+use Spatie\SchemaOrg\Contracts\InvestmentFundContract;
+use Spatie\SchemaOrg\Contracts\InvestmentOrDepositContract;
+use Spatie\SchemaOrg\Contracts\ServiceContract;
+use Spatie\SchemaOrg\Contracts\ThingContract;
 
 /**
  * A company or fund that gathers capital from a number of investors to create a
@@ -633,5 +633,4 @@ class InvestmentFund extends BaseType implements InvestmentFundContract, Financi
     {
         return $this->setProperty('url', $url);
     }
-
 }

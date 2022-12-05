@@ -53,5 +53,4 @@ interface BoatReservationContract
     public function underName($underName);
 
     public function url($url);
-
 }

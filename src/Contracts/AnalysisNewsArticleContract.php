@@ -277,5 +277,4 @@ interface AnalysisNewsArticleContract
     public function workExample($workExample);
 
     public function workTranslation($workTranslation);
-
 }

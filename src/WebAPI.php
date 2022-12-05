@@ -2,10 +2,10 @@
 
 namespace Spatie\SchemaOrg;
 
-use \Spatie\SchemaOrg\Contracts\WebAPIContract;
-use \Spatie\SchemaOrg\Contracts\IntangibleContract;
-use \Spatie\SchemaOrg\Contracts\ServiceContract;
-use \Spatie\SchemaOrg\Contracts\ThingContract;
+use Spatie\SchemaOrg\Contracts\IntangibleContract;
+use Spatie\SchemaOrg\Contracts\ServiceContract;
+use Spatie\SchemaOrg\Contracts\ThingContract;
+use Spatie\SchemaOrg\Contracts\WebAPIContract;
 
 /**
  * An application programming interface accessible over Web/Internet
@@ -584,5 +584,4 @@ class WebAPI extends BaseType implements WebAPIContract, IntangibleContract, Ser
     {
         return $this->setProperty('url', $url);
     }
-
 }

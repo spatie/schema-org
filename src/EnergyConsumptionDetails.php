@@ -2,9 +2,9 @@
 
 namespace Spatie\SchemaOrg;
 
-use \Spatie\SchemaOrg\Contracts\EnergyConsumptionDetailsContract;
-use \Spatie\SchemaOrg\Contracts\IntangibleContract;
-use \Spatie\SchemaOrg\Contracts\ThingContract;
+use Spatie\SchemaOrg\Contracts\EnergyConsumptionDetailsContract;
+use Spatie\SchemaOrg\Contracts\IntangibleContract;
+use Spatie\SchemaOrg\Contracts\ThingContract;
 
 /**
  * EnergyConsumptionDetails represents information related to the energy
@@ -264,5 +264,4 @@ class EnergyConsumptionDetails extends BaseType implements EnergyConsumptionDeta
     {
         return $this->setProperty('url', $url);
     }
-
 }

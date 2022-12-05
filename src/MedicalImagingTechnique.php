@@ -2,11 +2,11 @@
 
 namespace Spatie\SchemaOrg;
 
-use \Spatie\SchemaOrg\Contracts\MedicalImagingTechniqueContract;
-use \Spatie\SchemaOrg\Contracts\EnumerationContract;
-use \Spatie\SchemaOrg\Contracts\IntangibleContract;
-use \Spatie\SchemaOrg\Contracts\MedicalEnumerationContract;
-use \Spatie\SchemaOrg\Contracts\ThingContract;
+use Spatie\SchemaOrg\Contracts\EnumerationContract;
+use Spatie\SchemaOrg\Contracts\IntangibleContract;
+use Spatie\SchemaOrg\Contracts\MedicalEnumerationContract;
+use Spatie\SchemaOrg\Contracts\MedicalImagingTechniqueContract;
+use Spatie\SchemaOrg\Contracts\ThingContract;
 
 /**
  * Any medical imaging modality typically used for diagnostic purposes.
@@ -25,7 +25,7 @@ class MedicalImagingTechnique extends BaseType implements MedicalImagingTechniqu
      * @see https://schema.org/CT
      * @see https://health-lifesci.schema.org
      */
-     const CT = 'https://schema.org/CT';
+    public const CT = 'https://schema.org/CT';
 
     /**
      * Magnetic resonance imaging.
@@ -33,7 +33,7 @@ class MedicalImagingTechnique extends BaseType implements MedicalImagingTechniqu
      * @see https://schema.org/MRI
      * @see https://health-lifesci.schema.org
      */
-     const MRI = 'https://schema.org/MRI';
+    public const MRI = 'https://schema.org/MRI';
 
     /**
      * Positron emission tomography imaging.
@@ -41,7 +41,7 @@ class MedicalImagingTechnique extends BaseType implements MedicalImagingTechniqu
      * @see https://schema.org/PET
      * @see https://health-lifesci.schema.org
      */
-     const PET = 'https://schema.org/PET';
+    public const PET = 'https://schema.org/PET';
 
     /**
      * Ultrasound imaging.
@@ -49,7 +49,7 @@ class MedicalImagingTechnique extends BaseType implements MedicalImagingTechniqu
      * @see https://schema.org/Ultrasound
      * @see https://health-lifesci.schema.org
      */
-     const Ultrasound = 'https://schema.org/Ultrasound';
+    public const Ultrasound = 'https://schema.org/Ultrasound';
 
     /**
      * X-ray imaging.
@@ -57,7 +57,7 @@ class MedicalImagingTechnique extends BaseType implements MedicalImagingTechniqu
      * @see https://schema.org/XRay
      * @see https://health-lifesci.schema.org
      */
-     const XRay = 'https://schema.org/XRay';
+    public const XRay = 'https://schema.org/XRay';
 
     /**
      * An additional type for the item, typically used for adding more specific
@@ -245,5 +245,4 @@ class MedicalImagingTechnique extends BaseType implements MedicalImagingTechniqu
     {
         return $this->setProperty('url', $url);
     }
-
 }

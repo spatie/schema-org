@@ -2,10 +2,10 @@
 
 namespace Spatie\SchemaOrg;
 
-use \Spatie\SchemaOrg\Contracts\TaxiServiceContract;
-use \Spatie\SchemaOrg\Contracts\IntangibleContract;
-use \Spatie\SchemaOrg\Contracts\ServiceContract;
-use \Spatie\SchemaOrg\Contracts\ThingContract;
+use Spatie\SchemaOrg\Contracts\IntangibleContract;
+use Spatie\SchemaOrg\Contracts\ServiceContract;
+use Spatie\SchemaOrg\Contracts\TaxiServiceContract;
+use Spatie\SchemaOrg\Contracts\ThingContract;
 
 /**
  * A service for a vehicle for hire with a driver for local travel. Fares are
@@ -566,5 +566,4 @@ class TaxiService extends BaseType implements TaxiServiceContract, IntangibleCon
     {
         return $this->setProperty('url', $url);
     }
-
 }

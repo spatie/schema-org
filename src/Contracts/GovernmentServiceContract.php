@@ -79,5 +79,4 @@ interface GovernmentServiceContract
     public function termsOfService($termsOfService);
 
     public function url($url);
-
 }

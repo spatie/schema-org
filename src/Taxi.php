@@ -2,10 +2,10 @@
 
 namespace Spatie\SchemaOrg;
 
-use \Spatie\SchemaOrg\Contracts\TaxiContract;
-use \Spatie\SchemaOrg\Contracts\IntangibleContract;
-use \Spatie\SchemaOrg\Contracts\ServiceContract;
-use \Spatie\SchemaOrg\Contracts\ThingContract;
+use Spatie\SchemaOrg\Contracts\IntangibleContract;
+use Spatie\SchemaOrg\Contracts\ServiceContract;
+use Spatie\SchemaOrg\Contracts\TaxiContract;
+use Spatie\SchemaOrg\Contracts\ThingContract;
 
 /**
  * A taxi.
@@ -565,5 +565,4 @@ class Taxi extends BaseType implements TaxiContract, IntangibleContract, Service
     {
         return $this->setProperty('url', $url);
     }
-
 }

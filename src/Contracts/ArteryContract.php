@@ -63,5 +63,4 @@ interface ArteryContract
     public function supplyTo($supplyTo);
 
     public function url($url);
-
 }

@@ -57,5 +57,4 @@ interface PreOrderActionContract
     public function target($target);
 
     public function url($url);
-
 }

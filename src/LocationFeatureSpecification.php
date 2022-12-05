@@ -2,11 +2,11 @@
 
 namespace Spatie\SchemaOrg;
 
-use \Spatie\SchemaOrg\Contracts\LocationFeatureSpecificationContract;
-use \Spatie\SchemaOrg\Contracts\IntangibleContract;
-use \Spatie\SchemaOrg\Contracts\PropertyValueContract;
-use \Spatie\SchemaOrg\Contracts\StructuredValueContract;
-use \Spatie\SchemaOrg\Contracts\ThingContract;
+use Spatie\SchemaOrg\Contracts\IntangibleContract;
+use Spatie\SchemaOrg\Contracts\LocationFeatureSpecificationContract;
+use Spatie\SchemaOrg\Contracts\PropertyValueContract;
+use Spatie\SchemaOrg\Contracts\StructuredValueContract;
+use Spatie\SchemaOrg\Contracts\ThingContract;
 
 /**
  * Specifies a location feature by providing a structured value representing a
@@ -169,15 +169,15 @@ class LocationFeatureSpecification extends BaseType implements LocationFeatureSp
      * towards scientific and scholarly dataset publication but may have broader
      * applicability; it is not intended as a full representation of
      * measurement, but rather as a high level summary for dataset discovery.
-     * 
+     *
      * For example, if [[variableMeasured]] is: molecule concentration,
      * [[measurementTechnique]] could be: "mass spectrometry" or "nmr
      * spectroscopy" or "colorimetry" or "immunofluorescence".
-     * 
+     *
      * If the [[variableMeasured]] is "depression rating", the
      * [[measurementTechnique]] could be "Zung Scale" or "HAM-D" or "Beck
      * Depression Inventory".
-     * 
+     *
      * If there are several [[variableMeasured]] properties recorded for some
      * given data object, use a [[PropertyValue]] for each [[variableMeasured]]
      * and attach the corresponding [[measurementTechnique]].
@@ -374,7 +374,7 @@ class LocationFeatureSpecification extends BaseType implements LocationFeatureSp
 
     /**
      * The value of the quantitative value or property value node.
-     * 
+     *
      * * For [[QuantitativeValue]] and [[MonetaryAmount]], the recommended type
      * for values is 'Number'.
      * * For [[PropertyValue]], it can be 'Text', 'Number', 'Boolean', or
@@ -411,5 +411,4 @@ class LocationFeatureSpecification extends BaseType implements LocationFeatureSp
     {
         return $this->setProperty('valueReference', $valueReference);
     }
-
 }

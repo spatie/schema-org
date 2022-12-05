@@ -2,11 +2,11 @@
 
 namespace Spatie\SchemaOrg;
 
-use \Spatie\SchemaOrg\Contracts\MedicalEvidenceLevelContract;
-use \Spatie\SchemaOrg\Contracts\EnumerationContract;
-use \Spatie\SchemaOrg\Contracts\IntangibleContract;
-use \Spatie\SchemaOrg\Contracts\MedicalEnumerationContract;
-use \Spatie\SchemaOrg\Contracts\ThingContract;
+use Spatie\SchemaOrg\Contracts\EnumerationContract;
+use Spatie\SchemaOrg\Contracts\IntangibleContract;
+use Spatie\SchemaOrg\Contracts\MedicalEnumerationContract;
+use Spatie\SchemaOrg\Contracts\MedicalEvidenceLevelContract;
+use Spatie\SchemaOrg\Contracts\ThingContract;
 
 /**
  * Level of evidence for a medical guideline. Enumerated type.
@@ -24,7 +24,7 @@ class MedicalEvidenceLevel extends BaseType implements MedicalEvidenceLevelContr
      * @see https://schema.org/EvidenceLevelA
      * @see https://health-lifesci.schema.org
      */
-     const EvidenceLevelA = 'https://schema.org/EvidenceLevelA';
+    public const EvidenceLevelA = 'https://schema.org/EvidenceLevelA';
 
     /**
      * Data derived from a single randomized trial, or nonrandomized studies.
@@ -32,7 +32,7 @@ class MedicalEvidenceLevel extends BaseType implements MedicalEvidenceLevelContr
      * @see https://schema.org/EvidenceLevelB
      * @see https://health-lifesci.schema.org
      */
-     const EvidenceLevelB = 'https://schema.org/EvidenceLevelB';
+    public const EvidenceLevelB = 'https://schema.org/EvidenceLevelB';
 
     /**
      * Only consensus opinion of experts, case studies, or standard-of-care.
@@ -40,7 +40,7 @@ class MedicalEvidenceLevel extends BaseType implements MedicalEvidenceLevelContr
      * @see https://schema.org/EvidenceLevelC
      * @see https://health-lifesci.schema.org
      */
-     const EvidenceLevelC = 'https://schema.org/EvidenceLevelC';
+    public const EvidenceLevelC = 'https://schema.org/EvidenceLevelC';
 
     /**
      * An additional type for the item, typically used for adding more specific
@@ -228,5 +228,4 @@ class MedicalEvidenceLevel extends BaseType implements MedicalEvidenceLevelContr
     {
         return $this->setProperty('url', $url);
     }
-
 }

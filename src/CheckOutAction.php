@@ -2,19 +2,19 @@
 
 namespace Spatie\SchemaOrg;
 
-use \Spatie\SchemaOrg\Contracts\CheckOutActionContract;
-use \Spatie\SchemaOrg\Contracts\ActionContract;
-use \Spatie\SchemaOrg\Contracts\CommunicateActionContract;
-use \Spatie\SchemaOrg\Contracts\InteractActionContract;
-use \Spatie\SchemaOrg\Contracts\ThingContract;
+use Spatie\SchemaOrg\Contracts\ActionContract;
+use Spatie\SchemaOrg\Contracts\CheckOutActionContract;
+use Spatie\SchemaOrg\Contracts\CommunicateActionContract;
+use Spatie\SchemaOrg\Contracts\InteractActionContract;
+use Spatie\SchemaOrg\Contracts\ThingContract;
 
 /**
  * The act of an agent communicating (service provider, social media, etc) their
  * departure of a previously reserved service (e.g. flight check-in) or place
  * (e.g. hotel).
- * 
+ *
  * Related actions:
- * 
+ *
  * * [[CheckInAction]]: The antonym of CheckOutAction.
  * * [[DepartAction]]: Unlike DepartAction, CheckOutAction implies that the
  * agent is informing/confirming the end of a previously reserved service.
@@ -141,7 +141,7 @@ class CheckOutAction extends BaseType implements CheckOutActionContract, ActionC
      * John wrote a book from January to *December*. For media, including audio
      * and video, it's the time offset of the end of a clip within a larger
      * file.
-     * 
+     *
      * Note that Event uses startDate/endDate instead of startTime/endTime, even
      * when describing dates with times. This situation may be clarified in
      * future revisions.
@@ -413,7 +413,7 @@ class CheckOutAction extends BaseType implements CheckOutActionContract, ActionC
      * John wrote a book from *January* to December. For media, including audio
      * and video, it's the time offset of the start of a clip within a larger
      * file.
-     * 
+     *
      * Note that Event uses startDate/endDate instead of startTime/endTime, even
      * when describing dates with times. This situation may be clarified in
      * future revisions.
@@ -472,5 +472,4 @@ class CheckOutAction extends BaseType implements CheckOutActionContract, ActionC
     {
         return $this->setProperty('url', $url);
     }
-
 }

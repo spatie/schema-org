@@ -2,10 +2,10 @@
 
 namespace Spatie\SchemaOrg;
 
-use \Spatie\SchemaOrg\Contracts\PriceTypeEnumerationContract;
-use \Spatie\SchemaOrg\Contracts\EnumerationContract;
-use \Spatie\SchemaOrg\Contracts\IntangibleContract;
-use \Spatie\SchemaOrg\Contracts\ThingContract;
+use Spatie\SchemaOrg\Contracts\EnumerationContract;
+use Spatie\SchemaOrg\Contracts\IntangibleContract;
+use Spatie\SchemaOrg\Contracts\PriceTypeEnumerationContract;
+use Spatie\SchemaOrg\Contracts\ThingContract;
 
 /**
  * Enumerates different price types, for example list price, invoice price, and
@@ -26,7 +26,7 @@ class PriceTypeEnumeration extends BaseType implements PriceTypeEnumerationContr
      * @see https://pending.schema.org
      * @link https://github.com/schemaorg/schemaorg/issues/2712
      */
-     const InvoicePrice = 'https://schema.org/InvoicePrice';
+    public const InvoicePrice = 'https://schema.org/InvoicePrice';
 
     /**
      * Represents the list price (the price a product is actually advertised
@@ -36,7 +36,7 @@ class PriceTypeEnumeration extends BaseType implements PriceTypeEnumerationContr
      * @see https://pending.schema.org
      * @link https://github.com/schemaorg/schemaorg/issues/2712
      */
-     const ListPrice = 'https://schema.org/ListPrice';
+    public const ListPrice = 'https://schema.org/ListPrice';
 
     /**
      * Represents the manufacturer suggested retail price ("MSRP") of an offered
@@ -46,7 +46,7 @@ class PriceTypeEnumeration extends BaseType implements PriceTypeEnumerationContr
      * @see https://pending.schema.org
      * @link https://github.com/schemaorg/schemaorg/issues/2712
      */
-     const MSRP = 'https://schema.org/MSRP';
+    public const MSRP = 'https://schema.org/MSRP';
 
     /**
      * Represents the minimum advertised price ("MAP") (as dictated by the
@@ -56,7 +56,7 @@ class PriceTypeEnumeration extends BaseType implements PriceTypeEnumerationContr
      * @see https://pending.schema.org
      * @link https://github.com/schemaorg/schemaorg/issues/2712
      */
-     const MinimumAdvertisedPrice = 'https://schema.org/MinimumAdvertisedPrice';
+    public const MinimumAdvertisedPrice = 'https://schema.org/MinimumAdvertisedPrice';
 
     /**
      * Represents the suggested retail price ("SRP") of an offered product.
@@ -65,7 +65,7 @@ class PriceTypeEnumeration extends BaseType implements PriceTypeEnumerationContr
      * @see https://pending.schema.org
      * @link https://github.com/schemaorg/schemaorg/issues/2712
      */
-     const SRP = 'https://schema.org/SRP';
+    public const SRP = 'https://schema.org/SRP';
 
     /**
      * Represents a sale price (usually active for a limited period) of an
@@ -75,7 +75,7 @@ class PriceTypeEnumeration extends BaseType implements PriceTypeEnumerationContr
      * @see https://pending.schema.org
      * @link https://github.com/schemaorg/schemaorg/issues/2712
      */
-     const SalePrice = 'https://schema.org/SalePrice';
+    public const SalePrice = 'https://schema.org/SalePrice';
 
     /**
      * An additional type for the item, typically used for adding more specific
@@ -263,5 +263,4 @@ class PriceTypeEnumeration extends BaseType implements PriceTypeEnumerationContr
     {
         return $this->setProperty('url', $url);
     }
-
 }

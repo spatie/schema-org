@@ -2,9 +2,9 @@
 
 namespace Spatie\SchemaOrg;
 
-use \Spatie\SchemaOrg\Contracts\QuantityContract;
-use \Spatie\SchemaOrg\Contracts\IntangibleContract;
-use \Spatie\SchemaOrg\Contracts\ThingContract;
+use Spatie\SchemaOrg\Contracts\IntangibleContract;
+use Spatie\SchemaOrg\Contracts\QuantityContract;
+use Spatie\SchemaOrg\Contracts\ThingContract;
 
 /**
  * Quantities such as distance, time, mass, weight, etc. Particular instances of
@@ -201,5 +201,4 @@ class Quantity extends BaseType implements QuantityContract, IntangibleContract,
     {
         return $this->setProperty('url', $url);
     }
-
 }

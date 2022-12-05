@@ -2,11 +2,11 @@
 
 namespace Spatie\SchemaOrg;
 
-use \Spatie\SchemaOrg\Contracts\VeinContract;
-use \Spatie\SchemaOrg\Contracts\AnatomicalStructureContract;
-use \Spatie\SchemaOrg\Contracts\MedicalEntityContract;
-use \Spatie\SchemaOrg\Contracts\ThingContract;
-use \Spatie\SchemaOrg\Contracts\VesselContract;
+use Spatie\SchemaOrg\Contracts\AnatomicalStructureContract;
+use Spatie\SchemaOrg\Contracts\MedicalEntityContract;
+use Spatie\SchemaOrg\Contracts\ThingContract;
+use Spatie\SchemaOrg\Contracts\VeinContract;
+use Spatie\SchemaOrg\Contracts\VesselContract;
 
 /**
  * A type of blood vessel that specifically carries blood to the heart.
@@ -498,5 +498,4 @@ class Vein extends BaseType implements VeinContract, AnatomicalStructureContract
     {
         return $this->setProperty('url', $url);
     }
-
 }

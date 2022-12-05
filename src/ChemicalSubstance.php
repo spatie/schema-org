@@ -2,9 +2,9 @@
 
 namespace Spatie\SchemaOrg;
 
-use \Spatie\SchemaOrg\Contracts\ChemicalSubstanceContract;
-use \Spatie\SchemaOrg\Contracts\BioChemEntityContract;
-use \Spatie\SchemaOrg\Contracts\ThingContract;
+use Spatie\SchemaOrg\Contracts\BioChemEntityContract;
+use Spatie\SchemaOrg\Contracts\ChemicalSubstanceContract;
+use Spatie\SchemaOrg\Contracts\ThingContract;
 
 /**
  * A chemical substance is 'a portion of matter of constant composition,
@@ -456,5 +456,4 @@ class ChemicalSubstance extends BaseType implements ChemicalSubstanceContract, B
     {
         return $this->setProperty('url', $url);
     }
-
 }

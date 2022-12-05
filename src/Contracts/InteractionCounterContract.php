@@ -39,5 +39,4 @@ interface InteractionCounterContract
     public function url($url);
 
     public function userInteractionCount($userInteractionCount);
-
 }

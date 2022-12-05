@@ -2,11 +2,11 @@
 
 namespace Spatie\SchemaOrg;
 
-use \Spatie\SchemaOrg\Contracts\ProductCollectionContract;
-use \Spatie\SchemaOrg\Contracts\CollectionContract;
-use \Spatie\SchemaOrg\Contracts\CreativeWorkContract;
-use \Spatie\SchemaOrg\Contracts\ProductContract;
-use \Spatie\SchemaOrg\Contracts\ThingContract;
+use Spatie\SchemaOrg\Contracts\CollectionContract;
+use Spatie\SchemaOrg\Contracts\CreativeWorkContract;
+use Spatie\SchemaOrg\Contracts\ProductCollectionContract;
+use Spatie\SchemaOrg\Contracts\ProductContract;
+use Spatie\SchemaOrg\Contracts\ThingContract;
 
 /**
  * A set of products (either [[ProductGroup]]s or specific variants) that are
@@ -206,7 +206,7 @@ class ProductCollection extends BaseType implements ProductCollectionContract, C
      * A property-value pair representing an additional characteristic of the
      * entity, e.g. a product feature or another characteristic for which there
      * is no matching property in schema.org.
-     * 
+     *
      * Note: Publishers should be aware that applications designed to use
      * specific schema.org properties (e.g. https://schema.org/width,
      * https://schema.org/color, https://schema.org/gtin13, ...) will typically
@@ -312,7 +312,7 @@ class ProductCollection extends BaseType implements ProductCollectionContract, C
      * for product identification within the Amazon organization (summary from
      * [Wikipedia](https://en.wikipedia.org/wiki/Amazon_Standard_Identification_Number)'s
      * article).
-     * 
+     *
      * Note also that this is a definition for how to include ASINs in
      * Schema.org data, and not a definition of ASINs in general - see
      * documentation from Amazon for authoritative details.
@@ -563,7 +563,7 @@ class ProductCollection extends BaseType implements ProductCollectionContract, C
      * held by an [[ArchiveOrganization]]. This property is not suitable for use
      * as a general Web access control mechanism. It is expressed only in
      * natural language.
-     * 
+     *
      * For example "Available by appointment from the Reading Room" or
      * "Accessible only from logged-in accounts ".
      *
@@ -739,13 +739,13 @@ class ProductCollection extends BaseType implements ProductCollectionContract, C
     /**
      * The country of origin of something, including products as well as
      * creative  works such as movie and TV content.
-     * 
+     *
      * In the case of TV and movie, this would be the country of the principle
      * offices of the production company or individual responsible for the
      * movie. For other kinds of [[CreativeWork]] it is difficult to provide
      * fully general guidance, and properties such as [[contentLocation]] and
      * [[locationCreated]] may be more applicable.
-     * 
+     *
      * In the case of products, the country of origin of the product. The exact
      * interpretation of this may vary by context and product type, and cannot
      * be fully enumerated here.
@@ -920,12 +920,12 @@ class ProductCollection extends BaseType implements ProductCollectionContract, C
      * An [EIDR](https://eidr.org/) (Entertainment Identifier Registry)
      * [[identifier]] representing a specific edit / edition for a work of film
      * or television.
-     * 
+     *
      * For example, the motion picture known as "Ghostbusters" whose
      * [[titleEIDR]] is "10.5240/7EC7-228A-510A-053E-CBB8-J" has several edits,
      * e.g. "10.5240/1F2A-E1C5-680A-14C6-E76B-I" and
      * "10.5240/8A35-3BEE-6497-5D12-9E4F-3".
-     * 
+     *
      * Since schema.org types like [[Movie]] and [[TVEpisode]] can be used for
      * both works and their multiple expressions, it is possible to use
      * [[titleEIDR]] alone (for a general description), or alongside
@@ -960,7 +960,7 @@ class ProductCollection extends BaseType implements ProductCollectionContract, C
 
     /**
      * An alignment to an established educational framework.
-     * 
+     *
      * This property should not be used where the nature of the alignment can be
      * described using a simple property, for example to express that a resource
      * [[teaches]] or [[assesses]] a competency.
@@ -1031,11 +1031,11 @@ class ProductCollection extends BaseType implements ProductCollectionContract, C
      * reference](https://developer.mozilla.org/en-US/docs/Web/HTTP/Basics_of_HTTP/MIME_types)),
      * e.g. application/zip for a SoftwareApplication binary, audio/mpeg for
      * .mp3 etc.
-     * 
+     *
      * In cases where a [[CreativeWork]] has several media type representations,
      * [[encoding]] can be used to indicate each [[MediaObject]] alongside
      * particular [[encodingFormat]] information.
-     * 
+     *
      * Unregistered or niche encoding and file formats can be indicated instead
      * via the most appropriate URL, e.g. defining Web page or a
      * Wikipedia/Wikidata entry.
@@ -1170,7 +1170,7 @@ class ProductCollection extends BaseType implements ProductCollectionContract, C
      * ([GTIN](https://www.gs1.org/standards/id-keys/gtin)). GTINs identify
      * trade items, including products and services, using numeric
      * identification codes.
-     * 
+     *
      * The GS1 [digital link
      * specifications](https://www.gs1.org/standards/Digital-Link/) express
      * GTINs as URLs (URIs, IRIs, etc.). Details including regular expression
@@ -1188,7 +1188,7 @@ class ProductCollection extends BaseType implements ProductCollectionContract, C
      * more details. Left-padding of the gtin values is not required or
      * encouraged. The [[gtin]] property generalizes the earlier [[gtin8]],
      * [[gtin12]], [[gtin13]], and [[gtin14]] properties.
-     * 
+     *
      * Note also that this is a definition for how to include GTINs in
      * Schema.org data, and not a definition of GTINs in general - see the GS1
      * documentation for authoritative details.
@@ -1924,7 +1924,7 @@ class ProductCollection extends BaseType implements ProductCollectionContract, C
      * The [[mobileUrl]] property is provided for specific situations in which
      * data consumers need to determine whether one of several provided URLs is
      * a dedicated 'mobile site'.
-     * 
+     *
      * To discourage over-use, and reflecting intial usecases, the property is
      * expected only on [[Product]] and [[Offer]], rather than [[Thing]]. The
      * general trend in web technology is towards [responsive
@@ -2002,15 +2002,15 @@ class ProductCollection extends BaseType implements ProductCollectionContract, C
 
     /**
      * Provides negative considerations regarding something, most typically in
-     * pro/con lists for reviews (alongside [[positiveNotes]]). For symmetry 
-     * 
+     * pro/con lists for reviews (alongside [[positiveNotes]]). For symmetry
+     *
      * In the case of a [[Review]], the property describes the [[itemReviewed]]
      * from the perspective of the review; in the case of a [[Product]], the
-     * product itself is being described. Since product descriptions 
+     * product itself is being described. Since product descriptions
      * tend to emphasise positive claims, it may be relatively unusual to find
      * [[negativeNotes]] used in this way. Nevertheless for the sake of
      * symmetry, [[negativeNotes]] can be used on [[Product]].
-     * 
+     *
      * The property values can be expressed either as unstructured text
      * (repeated as necessary), or if ordered, as a list (in which case the most
      * negative is at the beginning of the list).
@@ -2103,11 +2103,11 @@ class ProductCollection extends BaseType implements ProductCollectionContract, C
     /**
      * Provides positive considerations regarding something, for example product
      * highlights or (alongside [[negativeNotes]]) pro/con lists for reviews.
-     * 
+     *
      * In the case of a [[Review]], the property describes the [[itemReviewed]]
      * from the perspective of the review; in the case of a [[Product]], the
      * product itself is being described.
-     * 
+     *
      * The property values can be expressed either as unstructured text
      * (repeated as necessary), or if ordered, as a list (in which case the most
      * positive is at the beginning of the list).
@@ -2253,7 +2253,7 @@ class ProductCollection extends BaseType implements ProductCollectionContract, C
      * applied to a [[CreativeWork]] (e.g. [[NewsArticle]]) the principles are
      * those of the party primarily responsible for the creation of the
      * [[CreativeWork]].
-     * 
+     *
      * While such policies are most typically expressed in natural language,
      * sometimes related information (e.g. indicating a [[funder]]) can be
      * expressed using schema.org terminology.
@@ -2454,7 +2454,7 @@ class ProductCollection extends BaseType implements ProductCollectionContract, C
 
     /**
      * A standardized size of a product or creative work, specified either
-     * through a simple textual string (for example 'XL', '32Wx34L'), a 
+     * through a simple textual string (for example 'XL', '32Wx34L'), a
      * QuantitativeValue with a unitCode, or a comprehensive and structured
      * [[SizeSpecification]]; in other cases, the [[width]], [[height]],
      * [[depth]] and [[weight]] properties may be more applicable.
@@ -2629,7 +2629,7 @@ class ProductCollection extends BaseType implements ProductCollectionContract, C
      *       Written works such as books may sometimes have precise temporal
      * coverage too, e.g. a work set in 1939 - 1945 can be indicated in ISO 8601
      * interval format format via "1939/1945".
-     * 
+     *
      * Open-ended date ranges can be written with ".." in place of the end date.
      * For example, "2015-11/.." indicates a range beginning in November 2015
      * and with no specified final date. This is tentative and might be updated
@@ -2758,7 +2758,7 @@ class ProductCollection extends BaseType implements ProductCollectionContract, C
      * preferred linking and citation conventions, as well as purchasing
      * details. For something that can be commercially licensed, usageInfo can
      * provide detailed, resource-specific information about licensing options.
-     * 
+     *
      * This property can be used alongside the license property which indicates
      * license(s) applicable to some piece of content. The usageInfo property
      * can provide information about other licensing options, e.g. acquiring
@@ -2868,5 +2868,4 @@ class ProductCollection extends BaseType implements ProductCollectionContract, C
     {
         return $this->setProperty('workTranslation', $workTranslation);
     }
-
 }

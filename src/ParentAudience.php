@@ -2,11 +2,11 @@
 
 namespace Spatie\SchemaOrg;
 
-use \Spatie\SchemaOrg\Contracts\ParentAudienceContract;
-use \Spatie\SchemaOrg\Contracts\AudienceContract;
-use \Spatie\SchemaOrg\Contracts\IntangibleContract;
-use \Spatie\SchemaOrg\Contracts\PeopleAudienceContract;
-use \Spatie\SchemaOrg\Contracts\ThingContract;
+use Spatie\SchemaOrg\Contracts\AudienceContract;
+use Spatie\SchemaOrg\Contracts\IntangibleContract;
+use Spatie\SchemaOrg\Contracts\ParentAudienceContract;
+use Spatie\SchemaOrg\Contracts\PeopleAudienceContract;
+use Spatie\SchemaOrg\Contracts\ThingContract;
 
 /**
  * A set of characteristics describing parents, who can be interested in viewing
@@ -396,5 +396,4 @@ class ParentAudience extends BaseType implements ParentAudienceContract, Audienc
     {
         return $this->setProperty('url', $url);
     }
-
 }

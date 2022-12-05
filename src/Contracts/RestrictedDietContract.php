@@ -27,5 +27,4 @@ interface RestrictedDietContract
     public function subjectOf($subjectOf);
 
     public function url($url);
-
 }

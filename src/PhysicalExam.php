@@ -2,13 +2,13 @@
 
 namespace Spatie\SchemaOrg;
 
-use \Spatie\SchemaOrg\Contracts\PhysicalExamContract;
-use \Spatie\SchemaOrg\Contracts\EnumerationContract;
-use \Spatie\SchemaOrg\Contracts\IntangibleContract;
-use \Spatie\SchemaOrg\Contracts\MedicalEntityContract;
-use \Spatie\SchemaOrg\Contracts\MedicalEnumerationContract;
-use \Spatie\SchemaOrg\Contracts\MedicalProcedureContract;
-use \Spatie\SchemaOrg\Contracts\ThingContract;
+use Spatie\SchemaOrg\Contracts\EnumerationContract;
+use Spatie\SchemaOrg\Contracts\IntangibleContract;
+use Spatie\SchemaOrg\Contracts\MedicalEntityContract;
+use Spatie\SchemaOrg\Contracts\MedicalEnumerationContract;
+use Spatie\SchemaOrg\Contracts\MedicalProcedureContract;
+use Spatie\SchemaOrg\Contracts\PhysicalExamContract;
+use Spatie\SchemaOrg\Contracts\ThingContract;
 
 /**
  * A type of physical examination of a patient performed by a physician.
@@ -26,7 +26,7 @@ class PhysicalExam extends BaseType implements PhysicalExamContract, Enumeration
      * @see https://schema.org/Abdomen
      * @see https://health-lifesci.schema.org
      */
-     const Abdomen = 'https://schema.org/Abdomen';
+    public const Abdomen = 'https://schema.org/Abdomen';
 
     /**
      * Appearance assessment with clinical examination.
@@ -34,7 +34,7 @@ class PhysicalExam extends BaseType implements PhysicalExamContract, Enumeration
      * @see https://schema.org/Appearance
      * @see https://health-lifesci.schema.org
      */
-     const Appearance = 'https://schema.org/Appearance';
+    public const Appearance = 'https://schema.org/Appearance';
 
     /**
      * Cardiovascular system assessment with clinical examination.
@@ -42,7 +42,7 @@ class PhysicalExam extends BaseType implements PhysicalExamContract, Enumeration
      * @see https://schema.org/CardiovascularExam
      * @see https://health-lifesci.schema.org
      */
-     const CardiovascularExam = 'https://schema.org/CardiovascularExam';
+    public const CardiovascularExam = 'https://schema.org/CardiovascularExam';
 
     /**
      * Ear function assessment with clinical examination.
@@ -50,7 +50,7 @@ class PhysicalExam extends BaseType implements PhysicalExamContract, Enumeration
      * @see https://schema.org/Ear
      * @see https://health-lifesci.schema.org
      */
-     const Ear = 'https://schema.org/Ear';
+    public const Ear = 'https://schema.org/Ear';
 
     /**
      * Eye or ophthalmological function assessment with clinical examination.
@@ -58,7 +58,7 @@ class PhysicalExam extends BaseType implements PhysicalExamContract, Enumeration
      * @see https://schema.org/Eye
      * @see https://health-lifesci.schema.org
      */
-     const Eye = 'https://schema.org/Eye';
+    public const Eye = 'https://schema.org/Eye';
 
     /**
      * Genitourinary system function assessment with clinical examination.
@@ -66,7 +66,7 @@ class PhysicalExam extends BaseType implements PhysicalExamContract, Enumeration
      * @see https://schema.org/Genitourinary
      * @see https://health-lifesci.schema.org
      */
-     const Genitourinary = 'https://schema.org/Genitourinary';
+    public const Genitourinary = 'https://schema.org/Genitourinary';
 
     /**
      * Head assessment with clinical examination.
@@ -74,7 +74,7 @@ class PhysicalExam extends BaseType implements PhysicalExamContract, Enumeration
      * @see https://schema.org/Head
      * @see https://health-lifesci.schema.org
      */
-     const Head = 'https://schema.org/Head';
+    public const Head = 'https://schema.org/Head';
 
     /**
      * Lung and respiratory system clinical examination.
@@ -82,7 +82,7 @@ class PhysicalExam extends BaseType implements PhysicalExamContract, Enumeration
      * @see https://schema.org/Lung
      * @see https://health-lifesci.schema.org
      */
-     const Lung = 'https://schema.org/Lung';
+    public const Lung = 'https://schema.org/Lung';
 
     /**
      * Musculoskeletal system clinical examination.
@@ -90,7 +90,7 @@ class PhysicalExam extends BaseType implements PhysicalExamContract, Enumeration
      * @see https://schema.org/MusculoskeletalExam
      * @see https://health-lifesci.schema.org
      */
-     const MusculoskeletalExam = 'https://schema.org/MusculoskeletalExam';
+    public const MusculoskeletalExam = 'https://schema.org/MusculoskeletalExam';
 
     /**
      * Neck assessment with clinical examination.
@@ -98,7 +98,7 @@ class PhysicalExam extends BaseType implements PhysicalExamContract, Enumeration
      * @see https://schema.org/Neck
      * @see https://health-lifesci.schema.org
      */
-     const Neck = 'https://schema.org/Neck';
+    public const Neck = 'https://schema.org/Neck';
 
     /**
      * Neurological system clinical examination.
@@ -106,7 +106,7 @@ class PhysicalExam extends BaseType implements PhysicalExamContract, Enumeration
      * @see https://schema.org/Neuro
      * @see https://health-lifesci.schema.org
      */
-     const Neuro = 'https://schema.org/Neuro';
+    public const Neuro = 'https://schema.org/Neuro';
 
     /**
      * Nose function assessment with clinical examination.
@@ -114,7 +114,7 @@ class PhysicalExam extends BaseType implements PhysicalExamContract, Enumeration
      * @see https://schema.org/Nose
      * @see https://health-lifesci.schema.org
      */
-     const Nose = 'https://schema.org/Nose';
+    public const Nose = 'https://schema.org/Nose';
 
     /**
      * Skin assessment with clinical examination.
@@ -122,7 +122,7 @@ class PhysicalExam extends BaseType implements PhysicalExamContract, Enumeration
      * @see https://schema.org/Skin
      * @see https://health-lifesci.schema.org
      */
-     const Skin = 'https://schema.org/Skin';
+    public const Skin = 'https://schema.org/Skin';
 
     /**
      * Throat assessment with  clinical examination.
@@ -130,7 +130,7 @@ class PhysicalExam extends BaseType implements PhysicalExamContract, Enumeration
      * @see https://schema.org/Throat
      * @see https://health-lifesci.schema.org
      */
-     const Throat = 'https://schema.org/Throat';
+    public const Throat = 'https://schema.org/Throat';
 
     /**
      * An additional type for the item, typically used for adding more specific
@@ -535,5 +535,4 @@ class PhysicalExam extends BaseType implements PhysicalExamContract, Enumeration
     {
         return $this->setProperty('url', $url);
     }
-
 }

@@ -109,5 +109,4 @@ interface EventContract
     public function workFeatured($workFeatured);
 
     public function workPerformed($workPerformed);
-
 }

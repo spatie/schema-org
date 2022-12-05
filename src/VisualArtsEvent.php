@@ -2,9 +2,9 @@
 
 namespace Spatie\SchemaOrg;
 
-use \Spatie\SchemaOrg\Contracts\VisualArtsEventContract;
-use \Spatie\SchemaOrg\Contracts\EventContract;
-use \Spatie\SchemaOrg\Contracts\ThingContract;
+use Spatie\SchemaOrg\Contracts\EventContract;
+use Spatie\SchemaOrg\Contracts\ThingContract;
+use Spatie\SchemaOrg\Contracts\VisualArtsEventContract;
 
 /**
  * Event type: Visual arts event.
@@ -851,5 +851,4 @@ class VisualArtsEvent extends BaseType implements VisualArtsEventContract, Event
     {
         return $this->setProperty('workPerformed', $workPerformed);
     }
-
 }

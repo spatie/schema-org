@@ -53,5 +53,4 @@ interface ParentAudienceContract
     public function suggestedMinAge($suggestedMinAge);
 
     public function url($url);
-
 }

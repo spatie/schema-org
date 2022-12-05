@@ -2,15 +2,15 @@
 
 namespace Spatie\SchemaOrg;
 
-use \Spatie\SchemaOrg\Contracts\ActionContract;
-use \Spatie\SchemaOrg\Contracts\ThingContract;
+use Spatie\SchemaOrg\Contracts\ActionContract;
+use Spatie\SchemaOrg\Contracts\ThingContract;
 
 /**
  * An action performed by a direct agent and indirect participants upon a direct
  * object. Optionally happens at a location with the help of an inanimate
  * instrument. The execution of the action may produce a result. Specific action
  * sub-type documentation specifies the exact expectation of each argument/role.
- * 
+ *
  * See also [blog
  * post](http://blog.schema.org/2014/04/announcing-schemaorg-actions.html) and
  * [Actions overview document](https://schema.org/docs/actions.html).
@@ -121,7 +121,7 @@ class Action extends BaseType implements ActionContract, ThingContract
      * John wrote a book from January to *December*. For media, including audio
      * and video, it's the time offset of the end of a clip within a larger
      * file.
-     * 
+     *
      * Note that Event uses startDate/endDate instead of startTime/endTime, even
      * when describing dates with times. This situation may be clarified in
      * future revisions.
@@ -346,7 +346,7 @@ class Action extends BaseType implements ActionContract, ThingContract
      * John wrote a book from *January* to December. For media, including audio
      * and video, it's the time offset of the start of a clip within a larger
      * file.
-     * 
+     *
      * Note that Event uses startDate/endDate instead of startTime/endTime, even
      * when describing dates with times. This situation may be clarified in
      * future revisions.
@@ -405,5 +405,4 @@ class Action extends BaseType implements ActionContract, ThingContract
     {
         return $this->setProperty('url', $url);
     }
-
 }

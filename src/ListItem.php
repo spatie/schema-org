@@ -2,9 +2,9 @@
 
 namespace Spatie\SchemaOrg;
 
-use \Spatie\SchemaOrg\Contracts\ListItemContract;
-use \Spatie\SchemaOrg\Contracts\IntangibleContract;
-use \Spatie\SchemaOrg\Contracts\ThingContract;
+use Spatie\SchemaOrg\Contracts\IntangibleContract;
+use Spatie\SchemaOrg\Contracts\ListItemContract;
+use Spatie\SchemaOrg\Contracts\ThingContract;
 
 /**
  * An list item, e.g. a step in a checklist or how-to description.
@@ -257,5 +257,4 @@ class ListItem extends BaseType implements ListItemContract, IntangibleContract,
     {
         return $this->setProperty('url', $url);
     }
-
 }

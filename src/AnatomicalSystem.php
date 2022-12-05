@@ -2,9 +2,9 @@
 
 namespace Spatie\SchemaOrg;
 
-use \Spatie\SchemaOrg\Contracts\AnatomicalSystemContract;
-use \Spatie\SchemaOrg\Contracts\MedicalEntityContract;
-use \Spatie\SchemaOrg\Contracts\ThingContract;
+use Spatie\SchemaOrg\Contracts\AnatomicalSystemContract;
+use Spatie\SchemaOrg\Contracts\MedicalEntityContract;
+use Spatie\SchemaOrg\Contracts\ThingContract;
 
 /**
  * An anatomical system is a group of anatomical structures that work together
@@ -411,5 +411,4 @@ class AnatomicalSystem extends BaseType implements AnatomicalSystemContract, Med
     {
         return $this->setProperty('url', $url);
     }
-
 }

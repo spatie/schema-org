@@ -2,10 +2,10 @@
 
 namespace Spatie\SchemaOrg;
 
-use \Spatie\SchemaOrg\Contracts\UserPageVisitsContract;
-use \Spatie\SchemaOrg\Contracts\EventContract;
-use \Spatie\SchemaOrg\Contracts\ThingContract;
-use \Spatie\SchemaOrg\Contracts\UserInteractionContract;
+use Spatie\SchemaOrg\Contracts\EventContract;
+use Spatie\SchemaOrg\Contracts\ThingContract;
+use Spatie\SchemaOrg\Contracts\UserInteractionContract;
+use Spatie\SchemaOrg\Contracts\UserPageVisitsContract;
 
 /**
  * UserInteraction and its subtypes is an old way of talking about users
@@ -854,5 +854,4 @@ class UserPageVisits extends BaseType implements UserPageVisitsContract, EventCo
     {
         return $this->setProperty('workPerformed', $workPerformed);
     }
-
 }

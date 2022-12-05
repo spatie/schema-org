@@ -27,5 +27,4 @@ interface MassContract
     public function subjectOf($subjectOf);
 
     public function url($url);
-
 }

@@ -2,9 +2,9 @@
 
 namespace Spatie\SchemaOrg;
 
-use \Spatie\SchemaOrg\Contracts\MedicalStudyContract;
-use \Spatie\SchemaOrg\Contracts\MedicalEntityContract;
-use \Spatie\SchemaOrg\Contracts\ThingContract;
+use Spatie\SchemaOrg\Contracts\MedicalEntityContract;
+use Spatie\SchemaOrg\Contracts\MedicalStudyContract;
+use Spatie\SchemaOrg\Contracts\ThingContract;
 
 /**
  * A medical study is an umbrella type covering all kinds of research studies
@@ -412,5 +412,4 @@ class MedicalStudy extends BaseType implements MedicalStudyContract, MedicalEnti
     {
         return $this->setProperty('url', $url);
     }
-
 }

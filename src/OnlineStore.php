@@ -2,10 +2,10 @@
 
 namespace Spatie\SchemaOrg;
 
-use \Spatie\SchemaOrg\Contracts\OnlineStoreContract;
-use \Spatie\SchemaOrg\Contracts\OnlineBusinessContract;
-use \Spatie\SchemaOrg\Contracts\OrganizationContract;
-use \Spatie\SchemaOrg\Contracts\ThingContract;
+use Spatie\SchemaOrg\Contracts\OnlineBusinessContract;
+use Spatie\SchemaOrg\Contracts\OnlineStoreContract;
+use Spatie\SchemaOrg\Contracts\OrganizationContract;
+use Spatie\SchemaOrg\Contracts\ThingContract;
 
 /**
  * An eCommerce site.
@@ -1025,7 +1025,7 @@ class OnlineStore extends BaseType implements OnlineStoreContract, OnlineBusines
      * applied to a [[CreativeWork]] (e.g. [[NewsArticle]]) the principles are
      * those of the party primarily responsible for the creation of the
      * [[CreativeWork]].
-     * 
+     *
      * While such policies are most typically expressed in natural language,
      * sometimes related information (e.g. indicating a [[funder]]) can be
      * expressed using schema.org terminology.
@@ -1251,5 +1251,4 @@ class OnlineStore extends BaseType implements OnlineStoreContract, OnlineBusines
     {
         return $this->setProperty('vatID', $vatID);
     }
-
 }

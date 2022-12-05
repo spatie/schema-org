@@ -43,5 +43,4 @@ interface PropertyValueContract
     public function value($value);
 
     public function valueReference($valueReference);
-
 }

@@ -2,11 +2,11 @@
 
 namespace Spatie\SchemaOrg;
 
-use \Spatie\SchemaOrg\Contracts\EmployeeRoleContract;
-use \Spatie\SchemaOrg\Contracts\IntangibleContract;
-use \Spatie\SchemaOrg\Contracts\OrganizationRoleContract;
-use \Spatie\SchemaOrg\Contracts\RoleContract;
-use \Spatie\SchemaOrg\Contracts\ThingContract;
+use Spatie\SchemaOrg\Contracts\EmployeeRoleContract;
+use Spatie\SchemaOrg\Contracts\IntangibleContract;
+use Spatie\SchemaOrg\Contracts\OrganizationRoleContract;
+use Spatie\SchemaOrg\Contracts\RoleContract;
+use Spatie\SchemaOrg\Contracts\ThingContract;
 
 /**
  * A subclass of OrganizationRole used to describe employee relationships.
@@ -312,5 +312,4 @@ class EmployeeRole extends BaseType implements EmployeeRoleContract, IntangibleC
     {
         return $this->setProperty('url', $url);
     }
-
 }

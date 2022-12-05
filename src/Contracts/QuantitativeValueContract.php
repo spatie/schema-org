@@ -41,5 +41,4 @@ interface QuantitativeValueContract
     public function value($value);
 
     public function valueReference($valueReference);
-
 }

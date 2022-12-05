@@ -31,5 +31,4 @@ interface DigitalDocumentPermissionContract
     public function subjectOf($subjectOf);
 
     public function url($url);
-
 }

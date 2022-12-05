@@ -249,5 +249,4 @@ interface HotelContract
     public function url($url);
 
     public function vatID($vatID);
-
 }

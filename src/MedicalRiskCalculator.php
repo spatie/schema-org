@@ -2,10 +2,10 @@
 
 namespace Spatie\SchemaOrg;
 
-use \Spatie\SchemaOrg\Contracts\MedicalRiskCalculatorContract;
-use \Spatie\SchemaOrg\Contracts\MedicalEntityContract;
-use \Spatie\SchemaOrg\Contracts\MedicalRiskEstimatorContract;
-use \Spatie\SchemaOrg\Contracts\ThingContract;
+use Spatie\SchemaOrg\Contracts\MedicalEntityContract;
+use Spatie\SchemaOrg\Contracts\MedicalRiskCalculatorContract;
+use Spatie\SchemaOrg\Contracts\MedicalRiskEstimatorContract;
+use Spatie\SchemaOrg\Contracts\ThingContract;
 
 /**
  * A complex mathematical calculation requiring an online calculator, used to
@@ -360,5 +360,4 @@ class MedicalRiskCalculator extends BaseType implements MedicalRiskCalculatorCon
     {
         return $this->setProperty('url', $url);
     }
-
 }

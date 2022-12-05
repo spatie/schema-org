@@ -45,5 +45,4 @@ interface EmployerAggregateRatingContract
     public function url($url);
 
     public function worstRating($worstRating);
-
 }

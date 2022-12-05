@@ -2,10 +2,10 @@
 
 namespace Spatie\SchemaOrg;
 
-use \Spatie\SchemaOrg\Contracts\PhysicalActivityContract;
-use \Spatie\SchemaOrg\Contracts\LifestyleModificationContract;
-use \Spatie\SchemaOrg\Contracts\MedicalEntityContract;
-use \Spatie\SchemaOrg\Contracts\ThingContract;
+use Spatie\SchemaOrg\Contracts\LifestyleModificationContract;
+use Spatie\SchemaOrg\Contracts\MedicalEntityContract;
+use Spatie\SchemaOrg\Contracts\PhysicalActivityContract;
+use Spatie\SchemaOrg\Contracts\ThingContract;
 
 /**
  * Any bodily activity that enhances or maintains physical fitness and overall
@@ -393,5 +393,4 @@ class PhysicalActivity extends BaseType implements PhysicalActivityContract, Lif
     {
         return $this->setProperty('url', $url);
     }
-
 }

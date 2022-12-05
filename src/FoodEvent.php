@@ -2,9 +2,9 @@
 
 namespace Spatie\SchemaOrg;
 
-use \Spatie\SchemaOrg\Contracts\FoodEventContract;
-use \Spatie\SchemaOrg\Contracts\EventContract;
-use \Spatie\SchemaOrg\Contracts\ThingContract;
+use Spatie\SchemaOrg\Contracts\EventContract;
+use Spatie\SchemaOrg\Contracts\FoodEventContract;
+use Spatie\SchemaOrg\Contracts\ThingContract;
 
 /**
  * Event type: Food event.
@@ -851,5 +851,4 @@ class FoodEvent extends BaseType implements FoodEventContract, EventContract, Th
     {
         return $this->setProperty('workPerformed', $workPerformed);
     }
-
 }

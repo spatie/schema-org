@@ -2,10 +2,10 @@
 
 namespace Spatie\SchemaOrg;
 
-use \Spatie\SchemaOrg\Contracts\QualitativeValueContract;
-use \Spatie\SchemaOrg\Contracts\EnumerationContract;
-use \Spatie\SchemaOrg\Contracts\IntangibleContract;
-use \Spatie\SchemaOrg\Contracts\ThingContract;
+use Spatie\SchemaOrg\Contracts\EnumerationContract;
+use Spatie\SchemaOrg\Contracts\IntangibleContract;
+use Spatie\SchemaOrg\Contracts\QualitativeValueContract;
+use Spatie\SchemaOrg\Contracts\ThingContract;
 
 /**
  * A predefined value for a product characteristic, e.g. the power cord plug
@@ -22,7 +22,7 @@ class QualitativeValue extends BaseType implements QualitativeValueContract, Enu
      * A property-value pair representing an additional characteristic of the
      * entity, e.g. a product feature or another characteristic for which there
      * is no matching property in schema.org.
-     * 
+     *
      * Note: Publishers should be aware that applications designed to use
      * specific schema.org properties (e.g. https://schema.org/width,
      * https://schema.org/color, https://schema.org/gtin13, ...) will typically
@@ -338,5 +338,4 @@ class QualitativeValue extends BaseType implements QualitativeValueContract, Enu
     {
         return $this->setProperty('valueReference', $valueReference);
     }
-
 }

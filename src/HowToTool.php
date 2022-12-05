@@ -2,11 +2,11 @@
 
 namespace Spatie\SchemaOrg;
 
-use \Spatie\SchemaOrg\Contracts\HowToToolContract;
-use \Spatie\SchemaOrg\Contracts\HowToItemContract;
-use \Spatie\SchemaOrg\Contracts\IntangibleContract;
-use \Spatie\SchemaOrg\Contracts\ListItemContract;
-use \Spatie\SchemaOrg\Contracts\ThingContract;
+use Spatie\SchemaOrg\Contracts\HowToItemContract;
+use Spatie\SchemaOrg\Contracts\HowToToolContract;
+use Spatie\SchemaOrg\Contracts\IntangibleContract;
+use Spatie\SchemaOrg\Contracts\ListItemContract;
+use Spatie\SchemaOrg\Contracts\ThingContract;
 
 /**
  * A tool used (but not consumed) when performing instructions for how to
@@ -274,5 +274,4 @@ class HowToTool extends BaseType implements HowToToolContract, HowToItemContract
     {
         return $this->setProperty('url', $url);
     }
-
 }

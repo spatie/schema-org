@@ -2,17 +2,17 @@
 
 namespace Spatie\SchemaOrg;
 
-use \Spatie\SchemaOrg\Contracts\AcceptActionContract;
-use \Spatie\SchemaOrg\Contracts\ActionContract;
-use \Spatie\SchemaOrg\Contracts\AllocateActionContract;
-use \Spatie\SchemaOrg\Contracts\OrganizeActionContract;
-use \Spatie\SchemaOrg\Contracts\ThingContract;
+use Spatie\SchemaOrg\Contracts\AcceptActionContract;
+use Spatie\SchemaOrg\Contracts\ActionContract;
+use Spatie\SchemaOrg\Contracts\AllocateActionContract;
+use Spatie\SchemaOrg\Contracts\OrganizeActionContract;
+use Spatie\SchemaOrg\Contracts\ThingContract;
 
 /**
  * The act of committing to/adopting an object.
- * 
+ *
  * Related actions:
- * 
+ *
  * * [[RejectAction]]: The antonym of AcceptAction.
  *
  * @see https://schema.org/AcceptAction
@@ -120,7 +120,7 @@ class AcceptAction extends BaseType implements AcceptActionContract, ActionContr
      * John wrote a book from January to *December*. For media, including audio
      * and video, it's the time offset of the end of a clip within a larger
      * file.
-     * 
+     *
      * Note that Event uses startDate/endDate instead of startTime/endTime, even
      * when describing dates with times. This situation may be clarified in
      * future revisions.
@@ -345,7 +345,7 @@ class AcceptAction extends BaseType implements AcceptActionContract, ActionContr
      * John wrote a book from *January* to December. For media, including audio
      * and video, it's the time offset of the start of a clip within a larger
      * file.
-     * 
+     *
      * Note that Event uses startDate/endDate instead of startTime/endTime, even
      * when describing dates with times. This situation may be clarified in
      * future revisions.
@@ -404,5 +404,4 @@ class AcceptAction extends BaseType implements AcceptActionContract, ActionContr
     {
         return $this->setProperty('url', $url);
     }
-
 }

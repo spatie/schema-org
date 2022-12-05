@@ -2,10 +2,10 @@
 
 namespace Spatie\SchemaOrg;
 
-use \Spatie\SchemaOrg\Contracts\GenderTypeContract;
-use \Spatie\SchemaOrg\Contracts\EnumerationContract;
-use \Spatie\SchemaOrg\Contracts\IntangibleContract;
-use \Spatie\SchemaOrg\Contracts\ThingContract;
+use Spatie\SchemaOrg\Contracts\EnumerationContract;
+use Spatie\SchemaOrg\Contracts\GenderTypeContract;
+use Spatie\SchemaOrg\Contracts\IntangibleContract;
+use Spatie\SchemaOrg\Contracts\ThingContract;
 
 /**
  * An enumeration of genders.
@@ -21,14 +21,14 @@ class GenderType extends BaseType implements GenderTypeContract, EnumerationCont
      *
      * @see https://schema.org/Female
      */
-     const Female = 'https://schema.org/Female';
+    public const Female = 'https://schema.org/Female';
 
     /**
      * The male gender.
      *
      * @see https://schema.org/Male
      */
-     const Male = 'https://schema.org/Male';
+    public const Male = 'https://schema.org/Male';
 
     /**
      * An additional type for the item, typically used for adding more specific
@@ -216,5 +216,4 @@ class GenderType extends BaseType implements GenderTypeContract, EnumerationCont
     {
         return $this->setProperty('url', $url);
     }
-
 }

@@ -2,10 +2,10 @@
 
 namespace Spatie\SchemaOrg;
 
-use \Spatie\SchemaOrg\Contracts\HowToItemContract;
-use \Spatie\SchemaOrg\Contracts\IntangibleContract;
-use \Spatie\SchemaOrg\Contracts\ListItemContract;
-use \Spatie\SchemaOrg\Contracts\ThingContract;
+use Spatie\SchemaOrg\Contracts\HowToItemContract;
+use Spatie\SchemaOrg\Contracts\IntangibleContract;
+use Spatie\SchemaOrg\Contracts\ListItemContract;
+use Spatie\SchemaOrg\Contracts\ThingContract;
 
 /**
  * An item used as either a tool or supply when performing the instructions for
@@ -273,5 +273,4 @@ class HowToItem extends BaseType implements HowToItemContract, IntangibleContrac
     {
         return $this->setProperty('url', $url);
     }
-
 }
