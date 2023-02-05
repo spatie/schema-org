@@ -21,6 +21,9 @@ class MultiTypedEntity implements Type, JsonSerializable
     /** @var Type[] */
     protected $nodes = [];
 
+    /** @var string */
+    protected $nonce = '';
+
     /**
      * This overloads all \Spatie\SchemaOrg\Schema construction methods.
      * You can call them the same like on the \Spatie\SchemaOrg\Schema class.
@@ -94,6 +97,13 @@ class MultiTypedEntity implements Type, JsonSerializable
         return $this;
     }
 
+    public function setNonce(string $nonce)
+    {
+        $this->nonce = $nonce;
+
+        return $this;
+    }
+
     public function get(string $type): Type
     {
         if (! $this->has($type)) {
@@ -162,9 +172,20 @@ class MultiTypedEntity implements Type, JsonSerializable
         return 'https://schema.org';
     }
 
+    public function nonceAttr(): string
+    {
+        if ($this->nonce) {
+            $attr = ' nonce="'.$this->nonce.'"';
+        } else {
+            $attr = '';
+        }
+
+        return $attr;
+    }
+
     public function toScript(): string
     {
-        return '<script type="application/ld+json">'.json_encode($this, JSON_UNESCAPED_UNICODE).'</script>';
+        return '<script type="application/ld+json"'.$this->nonceAttr().'>'.json_encode($this, JSON_UNESCAPED_UNICODE).'</script>';
     }
 
     public function jsonSerialize(): mixed

@@ -14,6 +14,9 @@ abstract class BaseType implements Type, ArrayAccess, JsonSerializable
     /** @var array */
     protected $properties = [];
 
+    /** @var string */
+    protected $nonce = '';
+
     public function getContext(): string
     {
         return 'https://schema.org';
@@ -47,6 +50,13 @@ abstract class BaseType implements Type, ArrayAccess, JsonSerializable
         if ($condition) {
             $callback($this);
         }
+
+        return $this;
+    }
+
+    public function setNonce(string $nonce)
+    {
+        $this->nonce = $nonce;
 
         return $this;
     }
@@ -137,9 +147,20 @@ abstract class BaseType implements Type, ArrayAccess, JsonSerializable
         }
     }
 
+    public function nonceAttr(): string
+    {
+        if ($this->nonce) {
+            $attr = ' nonce="'.$this->nonce.'"';
+        } else {
+            $attr = '';
+        }
+
+        return $attr;
+    }
+
     public function toScript(): string
     {
-        return '<script type="application/ld+json">'.json_encode($this->toArray(), JSON_UNESCAPED_UNICODE).'</script>';
+        return '<script type="application/ld+json"'.$this->nonceAttr().'>'.json_encode($this->toArray(), JSON_UNESCAPED_UNICODE).'</script>';
     }
 
     public function jsonSerialize(): mixed

@@ -162,6 +162,20 @@ it('can create an ld json script tag', function () {
     expect($type->toScript())->toBe($expected);
 });
 
+it('can create an ld json script tag with nonce attribute', function () {
+    $type = new DummyType();
+
+    $type->setProperty('foo', 'bar');
+
+    $type->setNonce('baz');
+
+    $expected = '<script type="application/ld+json" nonce="baz">'.
+        '{"@context":"https:\/\/schema.org","@type":"DummyType","foo":"bar"}'.
+        '</script>';
+
+    expect($type->toScript())->toBe($expected);
+});
+
 it('can set a property via a magic call method', function () {
     $type = new DummyType();
 
