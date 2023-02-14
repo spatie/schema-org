@@ -2,6 +2,20 @@
 
 All Notable changes to `schema-org` will be documented in this file.
 
+## 3.14.0 - 2023-02-14
+
+### What's Changed
+
+- Add PHP 8.2 Support by @patinthehat in https://github.com/spatie/schema-org/pull/190
+- Add support for nonce attribute by @smortexa in https://github.com/spatie/schema-org/pull/191
+
+### New Contributors
+
+- @patinthehat made their first contribution in https://github.com/spatie/schema-org/pull/190
+- @smortexa made their first contribution in https://github.com/spatie/schema-org/pull/191
+
+**Full Changelog**: https://github.com/spatie/schema-org/compare/3.13.0...3.14.0
+
 ## 3.13.0 - 2022-11-14
 
 ### What's Changed
