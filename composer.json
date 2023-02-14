@@ -52,7 +52,8 @@
         "sort-packages": true
     },
     "scripts": {
-        "generate": "php ./generate.php",
-        "test": "vendor/bin/pest"
+        "fix": "@php vendor/bin/php-cs-fixer fix --config=.php-cs-fixer.dist.php --allow-risky=yes",
+        "generate": "@php ./generate.php",
+        "test": "@php vendor/bin/pest"
     }
 }
