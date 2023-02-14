@@ -912,6 +912,9 @@ class Graph implements Type, ArrayAccess, JsonSerializable
     /** @var string|null */
     protected $context;
 
+    /** @var string */
+    protected $nonce = '';
+
     public function __construct(string|array|null $context = null)
     {
         $this->context = $context;
@@ -1103,6 +1106,13 @@ class Graph implements Type, ArrayAccess, JsonSerializable
         return $this;
     }
 
+    public function setNonce(string $nonce)
+    {
+        $this->nonce = $nonce;
+
+        return $this;
+    }
+
     public function toArray(): array
     {
         $nodes = $this->getNodes();
@@ -1157,9 +1167,20 @@ class Graph implements Type, ArrayAccess, JsonSerializable
         return $this->context ?? 'https://schema.org';
     }
 
+    public function nonceAttr(): string
+    {
+        if ($this->nonce) {
+            $attr = ' nonce="'.$this->nonce.'"';
+        } else {
+            $attr = '';
+        }
+
+        return $attr;
+    }
+
     public function toScript(): string
     {
-        return '<script type="application/ld+json">'.json_encode($this, JSON_UNESCAPED_UNICODE).'</script>';
+        return '<script type="application/ld+json"'.$this->nonceAttr().'>'.json_encode($this, JSON_UNESCAPED_UNICODE).'</script>';
     }
 
     public function jsonSerialize(): mixed
