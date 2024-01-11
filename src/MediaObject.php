@@ -7,11 +7,12 @@ use Spatie\SchemaOrg\Contracts\MediaObjectContract;
 use Spatie\SchemaOrg\Contracts\ThingContract;
 
 /**
- * A media object, such as an image, video, audio, or text object embedded in a
- * web page or a downloadable dataset i.e. DataDownload. Note that a creative
- * work may have many media objects associated with it on the same web page. For
+ * A media object, such as an image, video, or audio object embedded in a web
+ * page or a downloadable dataset, i.e. DataDownload. Note that a creative work
+ * may have many media objects associated with it on the same web page. For
  * example, a page about a single song (MusicRecording) may have a music video
- * (VideoObject), and a high and low bandwidth audio stream (2 AudioObject's).
+ * (VideoObject), and a high and low bandwidth audio stream (2
+ * [[AudioObject]]s).
  *
  * @see https://schema.org/MediaObject
  *
@@ -778,7 +779,7 @@ class MediaObject extends BaseType implements MediaObjectContract, CreativeWorkC
     /**
      * A description of the item.
      *
-     * @param \Spatie\SchemaOrg\Contracts\TextObjectContract|\Spatie\SchemaOrg\Contracts\TextObjectContract[]|string|string[] $description
+     * @param string|string[] $description
      *
      * @return static
      *

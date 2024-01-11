@@ -722,7 +722,7 @@ class Statement extends BaseType implements StatementContract, CreativeWorkContr
     /**
      * A description of the item.
      *
-     * @param \Spatie\SchemaOrg\Contracts\TextObjectContract|\Spatie\SchemaOrg\Contracts\TextObjectContract[]|string|string[] $description
+     * @param string|string[] $description
      *
      * @return static
      *
