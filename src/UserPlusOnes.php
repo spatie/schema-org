@@ -502,7 +502,7 @@ class UserPlusOnes extends BaseType implements UserPlusOnesContract, EventContra
     }
 
     /**
-     * The maximum physical attendee capacity of an [[Event]] whose
+     * The maximum virtual attendee capacity of an [[Event]] whose
      * [[eventAttendanceMode]] is [[OnlineEventAttendanceMode]] (or the online
      * aspects, in the case of a [[MixedEventAttendanceMode]]).
      *
