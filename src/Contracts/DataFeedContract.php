@@ -182,6 +182,8 @@ interface DataFeedContract
 
     public function materialExtent($materialExtent);
 
+    public function measurementMethod($measurementMethod);
+
     public function measurementTechnique($measurementTechnique);
 
     public function mentions($mentions);
@@ -245,6 +247,8 @@ interface DataFeedContract
     public function temporalCoverage($temporalCoverage);
 
     public function text($text);
+
+    public function thumbnail($thumbnail);
 
     public function thumbnailUrl($thumbnailUrl);
 

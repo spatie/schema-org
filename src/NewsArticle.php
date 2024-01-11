@@ -205,10 +205,14 @@ class NewsArticle extends BaseType implements NewsArticleContract, ArticleContra
     /**
      * An additional type for the item, typically used for adding more specific
      * types from external vocabularies in microdata syntax. This is a
-     * relationship between something and a class that the thing is in. In RDFa
-     * syntax, it is better to use the native RDFa syntax - the 'typeof'
-     * attribute - for multiple types. Schema.org tools may have only weaker
-     * understanding of extra types, in particular those defined externally.
+     * relationship between something and a class that the thing is in.
+     * Typically the value is a URI-identified RDF class, and in this case
+     * corresponds to the
+     *     use of rdf:type in RDF. Text values can be used sparingly, for cases
+     * where useful information can be added without their being an appropriate
+     * schema to reference. In the case of text values, the class label should
+     * follow the schema.org [style
+     * guide](https://schema.org/docs/styleguide.html)
      *
      * @param string|string[] $additionalType
      *
@@ -431,6 +435,7 @@ class NewsArticle extends BaseType implements NewsArticleContract, ArticleContra
      *
      * @see https://schema.org/backstory
      * @see https://pending.schema.org
+     * @link https://github.com/schemaorg/schemaorg/issues/1688
      */
     public function backstory($backstory)
     {
@@ -636,6 +641,7 @@ class NewsArticle extends BaseType implements NewsArticleContract, ArticleContra
      *
      * @see https://schema.org/correction
      * @see https://pending.schema.org
+     * @link https://github.com/schemaorg/schemaorg/issues/1950
      */
     public function correction($correction)
     {
@@ -992,7 +998,6 @@ class NewsArticle extends BaseType implements NewsArticleContract, ArticleContra
      * @return static
      *
      * @see https://schema.org/exampleOfWork
-     * @link http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#source_bibex
      */
     public function exampleOfWork($exampleOfWork)
     {
@@ -1063,6 +1068,7 @@ class NewsArticle extends BaseType implements NewsArticleContract, ArticleContra
      *
      * @see https://schema.org/funding
      * @see https://pending.schema.org
+     * @link https://github.com/schemaorg/schemaorg/issues/383
      */
     public function funding($funding)
     {
@@ -1092,7 +1098,6 @@ class NewsArticle extends BaseType implements NewsArticleContract, ArticleContra
      * @return static
      *
      * @see https://schema.org/hasPart
-     * @link http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#source_bibex
      */
     public function hasPart($hasPart)
     {
@@ -1230,7 +1235,7 @@ class NewsArticle extends BaseType implements NewsArticleContract, ArticleContra
 
     /**
      * A resource from which this work is derived or from which it is a
-     * modification or adaption.
+     * modification or adaptation.
      *
      * @param \Spatie\SchemaOrg\Contracts\CreativeWorkContract|\Spatie\SchemaOrg\Contracts\CreativeWorkContract[]|\Spatie\SchemaOrg\Contracts\ProductContract|\Spatie\SchemaOrg\Contracts\ProductContract[]|string|string[] $isBasedOn
      *
@@ -1499,7 +1504,6 @@ class NewsArticle extends BaseType implements NewsArticleContract, ArticleContra
      * @return static
      *
      * @see https://schema.org/pageEnd
-     * @link http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#source_bibex
      */
     public function pageEnd($pageEnd)
     {
@@ -1514,7 +1518,6 @@ class NewsArticle extends BaseType implements NewsArticleContract, ArticleContra
      * @return static
      *
      * @see https://schema.org/pageStart
-     * @link http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#source_bibex
      */
     public function pageStart($pageStart)
     {
@@ -1530,7 +1533,6 @@ class NewsArticle extends BaseType implements NewsArticleContract, ArticleContra
      * @return static
      *
      * @see https://schema.org/pagination
-     * @link http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#source_bibex
      */
     public function pagination($pagination)
     {
@@ -2114,6 +2116,20 @@ class NewsArticle extends BaseType implements NewsArticleContract, ArticleContra
     }
 
     /**
+     * Thumbnail image for an image or video.
+     *
+     * @param \Spatie\SchemaOrg\Contracts\ImageObjectContract|\Spatie\SchemaOrg\Contracts\ImageObjectContract[] $thumbnail
+     *
+     * @return static
+     *
+     * @see https://schema.org/thumbnail
+     */
+    public function thumbnail($thumbnail)
+    {
+        return $this->setProperty('thumbnail', $thumbnail);
+    }
+
+    /**
      * A thumbnail image relevant to the Thing.
      *
      * @param string|string[] $thumbnailUrl
@@ -2128,9 +2144,8 @@ class NewsArticle extends BaseType implements NewsArticleContract, ArticleContra
     }
 
     /**
-     * Approximate or typical time it takes to work with or through this
-     * learning resource for the typical intended target audience, e.g. 'PT30M',
-     * 'PT1H25M'.
+     * Approximate or typical time it usually takes to work with or through the
+     * content of this work for the typical or target audience.
      *
      * @param \Spatie\SchemaOrg\Contracts\DurationContract|\Spatie\SchemaOrg\Contracts\DurationContract[] $timeRequired
      *
@@ -2282,7 +2297,6 @@ class NewsArticle extends BaseType implements NewsArticleContract, ArticleContra
      * @return static
      *
      * @see https://schema.org/workExample
-     * @link http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#source_bibex
      */
     public function workExample($workExample)
     {

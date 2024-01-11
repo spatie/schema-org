@@ -4,6 +4,8 @@ namespace Spatie\SchemaOrg\Contracts;
 
 interface ObservationContract
 {
+    public function additionalProperty($additionalProperty);
+
     public function additionalType($additionalType);
 
     public function alternateName($alternateName);
@@ -20,13 +22,25 @@ interface ObservationContract
 
     public function marginOfError($marginOfError);
 
+    public function maxValue($maxValue);
+
     public function measuredProperty($measuredProperty);
+
+    public function measurementDenominator($measurementDenominator);
+
+    public function measurementMethod($measurementMethod);
+
+    public function measurementQualifier($measurementQualifier);
+
+    public function measurementTechnique($measurementTechnique);
+
+    public function minValue($minValue);
 
     public function name($name);
 
-    public function observationDate($observationDate);
+    public function observationAbout($observationAbout);
 
-    public function observedNode($observedNode);
+    public function observationDate($observationDate);
 
     public function potentialAction($potentialAction);
 
@@ -34,5 +48,15 @@ interface ObservationContract
 
     public function subjectOf($subjectOf);
 
+    public function unitCode($unitCode);
+
+    public function unitText($unitText);
+
     public function url($url);
+
+    public function value($value);
+
+    public function valueReference($valueReference);
+
+    public function variableMeasured($variableMeasured);
 }

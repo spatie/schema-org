@@ -20,6 +20,8 @@ interface PropertyValueContract
 
     public function maxValue($maxValue);
 
+    public function measurementMethod($measurementMethod);
+
     public function measurementTechnique($measurementTechnique);
 
     public function minValue($minValue);
