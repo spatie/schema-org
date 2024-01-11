@@ -2,6 +2,15 @@
 
 All Notable changes to `schema-org` will be documented in this file.
 
+## 3.15.0 - 2024-01-11
+
+### What's Changed
+
+* upgrade to schema.org v16 by @Gummibeer in https://github.com/spatie/schema-org/pull/204
+* add support/test-run for php8.3 by @Gummibeer in https://github.com/spatie/schema-org/pull/205
+
+**Full Changelog**: https://github.com/spatie/schema-org/compare/3.14.0...3.15.0
+
 ## 3.14.0 - 2023-02-14
 
 ### What's Changed
