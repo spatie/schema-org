@@ -55,7 +55,7 @@ class SizeSpecification extends BaseType implements SizeSpecificationContract, E
      * where useful information can be added without their being an appropriate
      * schema to reference. In the case of text values, the class label should
      * follow the schema.org [style
-     * guide](https://schema.org/docs/styleguide.html)
+     * guide](https://schema.org/docs/styleguide.html).
      *
      * @param string|string[] $additionalType
      *
@@ -321,7 +321,7 @@ class SizeSpecification extends BaseType implements SizeSpecificationContract, E
      * groups are common in the fashion industry to define size segments and
      * suggested audiences for wearable products. Multiple values can be
      * combined, for example "men's big and tall", "petite maternity" or
-     * "regular"
+     * "regular".
      *
      * @param \Spatie\SchemaOrg\Contracts\SizeGroupEnumerationContract|\Spatie\SchemaOrg\Contracts\SizeGroupEnumerationContract[]|string|string[] $sizeGroup
      *
