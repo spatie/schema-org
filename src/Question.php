@@ -761,6 +761,23 @@ class Question extends BaseType implements QuestionContract, CommentContract, Cr
     }
 
     /**
+     * Indicates an IPTCDigitalSourceEnumeration code indicating the nature of
+     * the digital source(s) for some [[CreativeWork]].
+     *
+     * @param \Spatie\SchemaOrg\Contracts\IPTCDigitalSourceEnumerationContract|\Spatie\SchemaOrg\Contracts\IPTCDigitalSourceEnumerationContract[] $digitalSourceType
+     *
+     * @return static
+     *
+     * @see https://schema.org/digitalSourceType
+     * @see https://pending.schema.org
+     * @link https://github.com/schemaorg/schemaorg/issues/3392
+     */
+    public function digitalSourceType($digitalSourceType)
+    {
+        return $this->setProperty('digitalSourceType', $digitalSourceType);
+    }
+
+    /**
      * A sub property of description. A short description of the item used to
      * disambiguate from other, similar items. Information from other properties
      * (in particular, name) may be necessary for the description to be useful

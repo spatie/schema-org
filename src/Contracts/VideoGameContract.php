@@ -114,6 +114,8 @@ interface VideoGameContract
 
     public function device($device);
 
+    public function digitalSourceType($digitalSourceType);
+
     public function director($director);
 
     public function directors($directors);
