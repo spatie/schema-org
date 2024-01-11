@@ -377,7 +377,7 @@ class RealEstateAgent extends BaseType implements RealEstateAgentContract, Local
     /**
      * A description of the item.
      *
-     * @param string|string[] $description
+     * @param \Spatie\SchemaOrg\Contracts\TextObjectContract|\Spatie\SchemaOrg\Contracts\TextObjectContract[]|string|string[] $description
      *
      * @return static
      *

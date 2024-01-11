@@ -815,6 +815,7 @@ use Spatie\SchemaOrg\Exceptions\TypeNotInMultiTypedEntity;
  * @method self|TelevisionStation televisionStation(\Closure|null $callback = null)
  * @method self|TennisComplex tennisComplex(\Closure|null $callback = null)
  * @method self|TextDigitalDocument textDigitalDocument(\Closure|null $callback = null)
+ * @method self|TextObject textObject(\Closure|null $callback = null)
  * @method self|TheaterEvent theaterEvent(\Closure|null $callback = null)
  * @method self|TheaterGroup theaterGroup(\Closure|null $callback = null)
  * @method self|TherapeuticProcedure therapeuticProcedure(\Closure|null $callback = null)

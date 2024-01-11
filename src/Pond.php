@@ -187,7 +187,7 @@ class Pond extends BaseType implements PondContract, BodyOfWaterContract, Landfo
     /**
      * A description of the item.
      *
-     * @param string|string[] $description
+     * @param \Spatie\SchemaOrg\Contracts\TextObjectContract|\Spatie\SchemaOrg\Contracts\TextObjectContract[]|string|string[] $description
      *
      * @return static
      *

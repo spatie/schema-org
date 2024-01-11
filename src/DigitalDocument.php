@@ -717,7 +717,7 @@ class DigitalDocument extends BaseType implements DigitalDocumentContract, Creat
     /**
      * A description of the item.
      *
-     * @param string|string[] $description
+     * @param \Spatie\SchemaOrg\Contracts\TextObjectContract|\Spatie\SchemaOrg\Contracts\TextObjectContract[]|string|string[] $description
      *
      * @return static
      *
