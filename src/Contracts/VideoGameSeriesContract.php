@@ -102,6 +102,8 @@ interface VideoGameSeriesContract
 
     public function description($description);
 
+    public function digitalSourceType($digitalSourceType);
+
     public function director($director);
 
     public function directors($directors);

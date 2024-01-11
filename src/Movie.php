@@ -760,6 +760,23 @@ class Movie extends BaseType implements MovieContract, CreativeWorkContract, Thi
     }
 
     /**
+     * Indicates an IPTCDigitalSourceEnumeration code indicating the nature of
+     * the digital source(s) for some [[CreativeWork]].
+     *
+     * @param \Spatie\SchemaOrg\Contracts\IPTCDigitalSourceEnumerationContract|\Spatie\SchemaOrg\Contracts\IPTCDigitalSourceEnumerationContract[] $digitalSourceType
+     *
+     * @return static
+     *
+     * @see https://schema.org/digitalSourceType
+     * @see https://pending.schema.org
+     * @link https://github.com/schemaorg/schemaorg/issues/3392
+     */
+    public function digitalSourceType($digitalSourceType)
+    {
+        return $this->setProperty('digitalSourceType', $digitalSourceType);
+    }
+
+    /**
      * A director of e.g. TV, radio, movie, video gaming etc. content, or of an
      * event. Directors can be associated with individual items or with a
      * series, episode, clip.

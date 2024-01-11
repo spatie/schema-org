@@ -1842,6 +1842,11 @@ class Schema
         return new HyperTocEntry();
     }
 
+    public static function iPTCDigitalSourceEnumeration(): IPTCDigitalSourceEnumeration
+    {
+        return new IPTCDigitalSourceEnumeration();
+    }
+
     public static function iceCreamShop(): IceCreamShop
     {
         return new IceCreamShop();
@@ -1870,6 +1875,11 @@ class Schema
     public static function imagingTest(): ImagingTest
     {
         return new ImagingTest();
+    }
+
+    public static function individualPhysician(): IndividualPhysician
+    {
+        return new IndividualPhysician();
     }
 
     public static function individualProduct(): IndividualProduct
@@ -2190,6 +2200,11 @@ class Schema
     public static function measurementTypeEnumeration(): MeasurementTypeEnumeration
     {
         return new MeasurementTypeEnumeration();
+    }
+
+    public static function mediaEnumeration(): MediaEnumeration
+    {
+        return new MediaEnumeration();
     }
 
     public static function mediaGallery(): MediaGallery
@@ -3030,6 +3045,11 @@ class Schema
     public static function physician(): Physician
     {
         return new Physician();
+    }
+
+    public static function physiciansOffice(): PhysiciansOffice
+    {
+        return new PhysiciansOffice();
     }
 
     public static function place(): Place

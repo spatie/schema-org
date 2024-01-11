@@ -108,6 +108,8 @@ interface WebApplicationContract
 
     public function device($device);
 
+    public function digitalSourceType($digitalSourceType);
+
     public function disambiguatingDescription($disambiguatingDescription);
 
     public function discussionUrl($discussionUrl);

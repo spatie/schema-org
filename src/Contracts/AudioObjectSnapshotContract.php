@@ -102,6 +102,8 @@ interface AudioObjectSnapshotContract
 
     public function description($description);
 
+    public function digitalSourceType($digitalSourceType);
+
     public function disambiguatingDescription($disambiguatingDescription);
 
     public function discussionUrl($discussionUrl);
