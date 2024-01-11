@@ -84,7 +84,7 @@ class TieAction extends BaseType implements TieActionContract, AchieveActionCont
     /**
      * A description of the item.
      *
-     * @param string|string[] $description
+     * @param \Spatie\SchemaOrg\Contracts\TextObjectContract|\Spatie\SchemaOrg\Contracts\TextObjectContract[]|string|string[] $description
      *
      * @return static
      *

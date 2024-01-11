@@ -258,6 +258,8 @@ interface TVSeasonContract
 
     public function timeRequired($timeRequired);
 
+    public function titleEIDR($titleEIDR);
+
     public function trailer($trailer);
 
     public function translationOfWork($translationOfWork);

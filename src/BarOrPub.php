@@ -394,7 +394,7 @@ class BarOrPub extends BaseType implements BarOrPubContract, FoodEstablishmentCo
     /**
      * A description of the item.
      *
-     * @param string|string[] $description
+     * @param \Spatie\SchemaOrg\Contracts\TextObjectContract|\Spatie\SchemaOrg\Contracts\TextObjectContract[]|string|string[] $description
      *
      * @return static
      *
