@@ -96,7 +96,7 @@ class Observation extends BaseType implements ObservationContract, IntangibleCon
     /**
      * A description of the item.
      *
-     * @param string|string[] $description
+     * @param \Spatie\SchemaOrg\Contracts\TextObjectContract|\Spatie\SchemaOrg\Contracts\TextObjectContract[]|string|string[] $description
      *
      * @return static
      *
@@ -244,7 +244,7 @@ class Observation extends BaseType implements ObservationContract, IntangibleCon
      * A subproperty of [[measurementTechnique]] that can be used for specifying
      * specific methods, in particular via [[MeasurementMethodEnum]].
      *
-     * @param \Spatie\SchemaOrg\Contracts\MeasurementMethodEnumContract|\Spatie\SchemaOrg\Contracts\MeasurementMethodEnumContract[]|string|string[] $measurementMethod
+     * @param \Spatie\SchemaOrg\Contracts\DefinedTermContract|\Spatie\SchemaOrg\Contracts\DefinedTermContract[]|\Spatie\SchemaOrg\Contracts\MeasurementMethodEnumContract|\Spatie\SchemaOrg\Contracts\MeasurementMethodEnumContract[]|string|string[] $measurementMethod
      *
      * @return static
      *
@@ -304,7 +304,7 @@ class Observation extends BaseType implements ObservationContract, IntangibleCon
      * and attach the corresponding [[measurementTechnique]]. The value can also
      * be from an enumeration, organized as a [[MeasurementMetholdEnumeration]].
      *
-     * @param \Spatie\SchemaOrg\Contracts\MeasurementMethodEnumContract|\Spatie\SchemaOrg\Contracts\MeasurementMethodEnumContract[]|string|string[] $measurementTechnique
+     * @param \Spatie\SchemaOrg\Contracts\DefinedTermContract|\Spatie\SchemaOrg\Contracts\DefinedTermContract[]|\Spatie\SchemaOrg\Contracts\MeasurementMethodEnumContract|\Spatie\SchemaOrg\Contracts\MeasurementMethodEnumContract[]|string|string[] $measurementTechnique
      *
      * @return static
      *

@@ -749,7 +749,7 @@ class TVEpisode extends BaseType implements TVEpisodeContract, CreativeWorkContr
     /**
      * A description of the item.
      *
-     * @param string|string[] $description
+     * @param \Spatie\SchemaOrg\Contracts\TextObjectContract|\Spatie\SchemaOrg\Contracts\TextObjectContract[]|string|string[] $description
      *
      * @return static
      *
@@ -2123,10 +2123,10 @@ class TVEpisode extends BaseType implements TVEpisodeContract, CreativeWorkContr
      * of  "10.5240/7EC7-228A-510A-053E-CBB8-J". This title (or work) may have
      * several variants, which EIDR calls "edits". See [[editEIDR]].
      *
-     * Since schema.org types like [[Movie]] and [[TVEpisode]] can be used for
-     * both works and their multiple expressions, it is possible to use
-     * [[titleEIDR]] alone (for a general description), or alongside
-     * [[editEIDR]] for a more edit-specific description.
+     * Since schema.org types like [[Movie]], [[TVEpisode]], [[TVSeason]], and
+     * [[TVSeries]] can be used for both works and their multiple expressions,
+     * it is possible to use [[titleEIDR]] alone (for a general description), or
+     * alongside [[editEIDR]] for a more edit-specific description.
      *
      * @param string|string[] $titleEIDR
      *

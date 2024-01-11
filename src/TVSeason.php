@@ -734,7 +734,7 @@ class TVSeason extends BaseType implements TVSeasonContract, CreativeWorkContrac
     /**
      * A description of the item.
      *
-     * @param string|string[] $description
+     * @param \Spatie\SchemaOrg\Contracts\TextObjectContract|\Spatie\SchemaOrg\Contracts\TextObjectContract[]|string|string[] $description
      *
      * @return static
      *
@@ -2096,6 +2096,33 @@ class TVSeason extends BaseType implements TVSeasonContract, CreativeWorkContrac
     public function timeRequired($timeRequired)
     {
         return $this->setProperty('timeRequired', $timeRequired);
+    }
+
+    /**
+     * An [EIDR](https://eidr.org/) (Entertainment Identifier Registry)
+     * [[identifier]] representing at the most general/abstract level, a work of
+     * film or television.
+     *
+     * For example, the motion picture known as "Ghostbusters" has a titleEIDR
+     * of  "10.5240/7EC7-228A-510A-053E-CBB8-J". This title (or work) may have
+     * several variants, which EIDR calls "edits". See [[editEIDR]].
+     *
+     * Since schema.org types like [[Movie]], [[TVEpisode]], [[TVSeason]], and
+     * [[TVSeries]] can be used for both works and their multiple expressions,
+     * it is possible to use [[titleEIDR]] alone (for a general description), or
+     * alongside [[editEIDR]] for a more edit-specific description.
+     *
+     * @param string|string[] $titleEIDR
+     *
+     * @return static
+     *
+     * @see https://schema.org/titleEIDR
+     * @see https://pending.schema.org
+     * @link https://github.com/schemaorg/schemaorg/issues/2469
+     */
+    public function titleEIDR($titleEIDR)
+    {
+        return $this->setProperty('titleEIDR', $titleEIDR);
     }
 
     /**
