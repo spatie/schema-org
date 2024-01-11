@@ -238,7 +238,7 @@ class NewsMediaOrganization extends BaseType implements NewsMediaOrganizationCon
     /**
      * A description of the item.
      *
-     * @param \Spatie\SchemaOrg\Contracts\TextObjectContract|\Spatie\SchemaOrg\Contracts\TextObjectContract[]|string|string[] $description
+     * @param string|string[] $description
      *
      * @return static
      *

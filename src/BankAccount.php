@@ -244,7 +244,7 @@ class BankAccount extends BaseType implements BankAccountContract, FinancialProd
     /**
      * A description of the item.
      *
-     * @param \Spatie\SchemaOrg\Contracts\TextObjectContract|\Spatie\SchemaOrg\Contracts\TextObjectContract[]|string|string[] $description
+     * @param string|string[] $description
      *
      * @return static
      *

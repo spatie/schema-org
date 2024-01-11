@@ -4022,11 +4022,6 @@ class Schema
         return new TextDigitalDocument();
     }
 
-    public static function textObject(): TextObject
-    {
-        return new TextObject();
-    }
-
     public static function theaterEvent(): TheaterEvent
     {
         return new TheaterEvent();

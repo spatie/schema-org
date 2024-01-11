@@ -816,7 +816,6 @@ use Spatie\SchemaOrg\Exceptions\TypeNotInGraph;
  * @method self|TelevisionStation televisionStation(string|\Closure|null $identifier = null, \Closure|null $callback = null)
  * @method self|TennisComplex tennisComplex(string|\Closure|null $identifier = null, \Closure|null $callback = null)
  * @method self|TextDigitalDocument textDigitalDocument(string|\Closure|null $identifier = null, \Closure|null $callback = null)
- * @method self|TextObject textObject(string|\Closure|null $identifier = null, \Closure|null $callback = null)
  * @method self|TheaterEvent theaterEvent(string|\Closure|null $identifier = null, \Closure|null $callback = null)
  * @method self|TheaterGroup theaterGroup(string|\Closure|null $identifier = null, \Closure|null $callback = null)
  * @method self|TherapeuticProcedure therapeuticProcedure(string|\Closure|null $identifier = null, \Closure|null $callback = null)
