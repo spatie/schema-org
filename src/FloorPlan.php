@@ -27,10 +27,14 @@ class FloorPlan extends BaseType implements FloorPlanContract, IntangibleContrac
     /**
      * An additional type for the item, typically used for adding more specific
      * types from external vocabularies in microdata syntax. This is a
-     * relationship between something and a class that the thing is in. In RDFa
-     * syntax, it is better to use the native RDFa syntax - the 'typeof'
-     * attribute - for multiple types. Schema.org tools may have only weaker
-     * understanding of extra types, in particular those defined externally.
+     * relationship between something and a class that the thing is in.
+     * Typically the value is a URI-identified RDF class, and in this case
+     * corresponds to the
+     *     use of rdf:type in RDF. Text values can be used sparingly, for cases
+     * where useful information can be added without their being an appropriate
+     * schema to reference. In the case of text values, the class label should
+     * follow the schema.org [style
+     * guide](https://schema.org/docs/styleguide.html).
      *
      * @param string|string[] $additionalType
      *
@@ -68,7 +72,6 @@ class FloorPlan extends BaseType implements FloorPlanContract, IntangibleContrac
      * @return static
      *
      * @see https://schema.org/amenityFeature
-     * @link https://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#STI_Accommodation_Ontology
      */
     public function amenityFeature($amenityFeature)
     {
@@ -78,7 +81,7 @@ class FloorPlan extends BaseType implements FloorPlanContract, IntangibleContrac
     /**
      * A description of the item.
      *
-     * @param string|string[] $description
+     * @param \Spatie\SchemaOrg\Contracts\TextObjectContract|\Spatie\SchemaOrg\Contracts\TextObjectContract[]|string|string[] $description
      *
      * @return static
      *
@@ -109,14 +112,13 @@ class FloorPlan extends BaseType implements FloorPlanContract, IntangibleContrac
     /**
      * The size of the accommodation, e.g. in square meter or squarefoot.
      * Typical unit code(s): MTK for square meter, FTK for square foot, or YDK
-     * for square yard
+     * for square yard.
      *
      * @param \Spatie\SchemaOrg\Contracts\QuantitativeValueContract|\Spatie\SchemaOrg\Contracts\QuantitativeValueContract[] $floorSize
      *
      * @return static
      *
      * @see https://schema.org/floorSize
-     * @link https://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#STI_Accommodation_Ontology
      */
     public function floorSize($floorSize)
     {
@@ -341,7 +343,6 @@ class FloorPlan extends BaseType implements FloorPlanContract, IntangibleContrac
      * @return static
      *
      * @see https://schema.org/numberOfRooms
-     * @link https://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#STI_Accommodation_Ontology
      */
     public function numberOfRooms($numberOfRooms)
     {
@@ -357,7 +358,6 @@ class FloorPlan extends BaseType implements FloorPlanContract, IntangibleContrac
      * @return static
      *
      * @see https://schema.org/petsAllowed
-     * @link https://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#STI_Accommodation_Ontology
      */
     public function petsAllowed($petsAllowed)
     {

@@ -50,10 +50,14 @@ class CourseInstance extends BaseType implements CourseInstanceContract, EventCo
     /**
      * An additional type for the item, typically used for adding more specific
      * types from external vocabularies in microdata syntax. This is a
-     * relationship between something and a class that the thing is in. In RDFa
-     * syntax, it is better to use the native RDFa syntax - the 'typeof'
-     * attribute - for multiple types. Schema.org tools may have only weaker
-     * understanding of extra types, in particular those defined externally.
+     * relationship between something and a class that the thing is in.
+     * Typically the value is a URI-identified RDF class, and in this case
+     * corresponds to the
+     *     use of rdf:type in RDF. Text values can be used sparingly, for cases
+     * where useful information can be added without their being an appropriate
+     * schema to reference. In the case of text values, the class label should
+     * follow the schema.org [style
+     * guide](https://schema.org/docs/styleguide.html).
      *
      * @param string|string[] $additionalType
      *
@@ -146,7 +150,6 @@ class CourseInstance extends BaseType implements CourseInstanceContract, EventCo
      * @return static
      *
      * @see https://schema.org/composer
-     * @link http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#MBZ
      */
     public function composer($composer)
     {
@@ -186,6 +189,22 @@ class CourseInstance extends BaseType implements CourseInstanceContract, EventCo
     }
 
     /**
+     * Represents the length and pace of a course, expressed as a [[Schedule]].
+     *
+     * @param \Spatie\SchemaOrg\Contracts\ScheduleContract|\Spatie\SchemaOrg\Contracts\ScheduleContract[] $courseSchedule
+     *
+     * @return static
+     *
+     * @see https://schema.org/courseSchedule
+     * @see https://pending.schema.org
+     * @link https://github.com/schemaorg/schemaorg/issues/3281
+     */
+    public function courseSchedule($courseSchedule)
+    {
+        return $this->setProperty('courseSchedule', $courseSchedule);
+    }
+
+    /**
      * The amount of work expected of students taking the course, often provided
      * as a figure per week or per month, and may be broken down by type. For
      * example, "2 hours of lectures, 1 hour of lab work and 3 hours of
@@ -207,7 +226,7 @@ class CourseInstance extends BaseType implements CourseInstanceContract, EventCo
     /**
      * A description of the item.
      *
-     * @param string|string[] $description
+     * @param \Spatie\SchemaOrg\Contracts\TextObjectContract|\Spatie\SchemaOrg\Contracts\TextObjectContract[]|string|string[] $description
      *
      * @return static
      *
@@ -383,6 +402,7 @@ class CourseInstance extends BaseType implements CourseInstanceContract, EventCo
      *
      * @see https://schema.org/funding
      * @see https://pending.schema.org
+     * @link https://github.com/schemaorg/schemaorg/issues/383
      */
     public function funding($funding)
     {
@@ -549,7 +569,7 @@ class CourseInstance extends BaseType implements CourseInstanceContract, EventCo
     }
 
     /**
-     * The maximum physical attendee capacity of an [[Event]] whose
+     * The maximum virtual attendee capacity of an [[Event]] whose
      * [[eventAttendanceMode]] is [[OnlineEventAttendanceMode]] (or the online
      * aspects, in the case of a [[MixedEventAttendanceMode]]).
      *

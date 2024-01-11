@@ -15,7 +15,6 @@ use Spatie\SchemaOrg\Contracts\ThingContract;
  * payment with an account.
  *
  * @see https://schema.org/PaymentCard
- * @link http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#FIBO
  *
  * @method static supersededBy($supersededBy) The value should be instance of pending types Class|Class[]|Enumeration|Enumeration[]|Property|Property[]
  */
@@ -24,10 +23,14 @@ class PaymentCard extends BaseType implements PaymentCardContract, EnumerationCo
     /**
      * An additional type for the item, typically used for adding more specific
      * types from external vocabularies in microdata syntax. This is a
-     * relationship between something and a class that the thing is in. In RDFa
-     * syntax, it is better to use the native RDFa syntax - the 'typeof'
-     * attribute - for multiple types. Schema.org tools may have only weaker
-     * understanding of extra types, in particular those defined externally.
+     * relationship between something and a class that the thing is in.
+     * Typically the value is a URI-identified RDF class, and in this case
+     * corresponds to the
+     *     use of rdf:type in RDF. Text values can be used sparingly, for cases
+     * where useful information can be added without their being an appropriate
+     * schema to reference. In the case of text values, the class label should
+     * follow the schema.org [style
+     * guide](https://schema.org/docs/styleguide.html).
      *
      * @param string|string[] $additionalType
      *
@@ -80,7 +83,6 @@ class PaymentCard extends BaseType implements PaymentCardContract, EnumerationCo
      * @return static
      *
      * @see https://schema.org/annualPercentageRate
-     * @link http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#FIBO
      */
     public function annualPercentageRate($annualPercentageRate)
     {
@@ -186,6 +188,7 @@ class PaymentCard extends BaseType implements PaymentCardContract, EnumerationCo
      *
      * @see https://schema.org/cashBack
      * @see https://pending.schema.org
+     * @link https://github.com/schemaorg/schemaorg/issues/1253
      */
     public function cashBack($cashBack)
     {
@@ -217,6 +220,7 @@ class PaymentCard extends BaseType implements PaymentCardContract, EnumerationCo
      *
      * @see https://schema.org/contactlessPayment
      * @see https://pending.schema.org
+     * @link https://github.com/schemaorg/schemaorg/issues/1253
      */
     public function contactlessPayment($contactlessPayment)
     {
@@ -226,7 +230,7 @@ class PaymentCard extends BaseType implements PaymentCardContract, EnumerationCo
     /**
      * A description of the item.
      *
-     * @param string|string[] $description
+     * @param \Spatie\SchemaOrg\Contracts\TextObjectContract|\Spatie\SchemaOrg\Contracts\TextObjectContract[]|string|string[] $description
      *
      * @return static
      *
@@ -263,7 +267,6 @@ class PaymentCard extends BaseType implements PaymentCardContract, EnumerationCo
      * @return static
      *
      * @see https://schema.org/feesAndCommissionsSpecification
-     * @link http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#FIBO
      */
     public function feesAndCommissionsSpecification($feesAndCommissionsSpecification)
     {
@@ -280,6 +283,7 @@ class PaymentCard extends BaseType implements PaymentCardContract, EnumerationCo
      *
      * @see https://schema.org/floorLimit
      * @see https://pending.schema.org
+     * @link https://github.com/schemaorg/schemaorg/issues/1253
      */
     public function floorLimit($floorLimit)
     {
@@ -357,7 +361,6 @@ class PaymentCard extends BaseType implements PaymentCardContract, EnumerationCo
      * @return static
      *
      * @see https://schema.org/interestRate
-     * @link http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#FIBO
      */
     public function interestRate($interestRate)
     {
@@ -372,7 +375,6 @@ class PaymentCard extends BaseType implements PaymentCardContract, EnumerationCo
      * @return static
      *
      * @see https://schema.org/isRelatedTo
-     * @link http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#source_GoodRelationsTerms
      */
     public function isRelatedTo($isRelatedTo)
     {
@@ -388,7 +390,6 @@ class PaymentCard extends BaseType implements PaymentCardContract, EnumerationCo
      * @return static
      *
      * @see https://schema.org/isSimilarTo
-     * @link http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#source_GoodRelationsTerms
      */
     public function isSimilarTo($isSimilarTo)
     {
@@ -403,7 +404,6 @@ class PaymentCard extends BaseType implements PaymentCardContract, EnumerationCo
      * @return static
      *
      * @see https://schema.org/logo
-     * @link http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#source_GoodRelationsTerms
      */
     public function logo($logo)
     {
@@ -436,6 +436,7 @@ class PaymentCard extends BaseType implements PaymentCardContract, EnumerationCo
      *
      * @see https://schema.org/monthlyMinimumRepaymentAmount
      * @see https://pending.schema.org
+     * @link https://github.com/schemaorg/schemaorg/issues/1253
      */
     public function monthlyMinimumRepaymentAmount($monthlyMinimumRepaymentAmount)
     {

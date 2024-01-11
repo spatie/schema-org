@@ -12,7 +12,6 @@ use Spatie\SchemaOrg\Contracts\ThingContract;
  * A value indicating a steering position.
  *
  * @see https://schema.org/SteeringPositionValue
- * @link http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#Automotive_Ontology_Working_Group
  *
  * @method static supersededBy($supersededBy) The value should be instance of pending types Class|Class[]|Enumeration|Enumeration[]|Property|Property[]
  */
@@ -23,7 +22,6 @@ class SteeringPositionValue extends BaseType implements SteeringPositionValueCon
      * main direction of driving).
      *
      * @see https://schema.org/LeftHandDriving
-     * @link http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#Automotive_Ontology_Working_Group
      */
     public const LeftHandDriving = 'https://schema.org/LeftHandDriving';
 
@@ -32,7 +30,6 @@ class SteeringPositionValue extends BaseType implements SteeringPositionValueCon
      * the main direction of driving).
      *
      * @see https://schema.org/RightHandDriving
-     * @link http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#Automotive_Ontology_Working_Group
      */
     public const RightHandDriving = 'https://schema.org/RightHandDriving';
 
@@ -61,10 +58,14 @@ class SteeringPositionValue extends BaseType implements SteeringPositionValueCon
     /**
      * An additional type for the item, typically used for adding more specific
      * types from external vocabularies in microdata syntax. This is a
-     * relationship between something and a class that the thing is in. In RDFa
-     * syntax, it is better to use the native RDFa syntax - the 'typeof'
-     * attribute - for multiple types. Schema.org tools may have only weaker
-     * understanding of extra types, in particular those defined externally.
+     * relationship between something and a class that the thing is in.
+     * Typically the value is a URI-identified RDF class, and in this case
+     * corresponds to the
+     *     use of rdf:type in RDF. Text values can be used sparingly, for cases
+     * where useful information can be added without their being an appropriate
+     * schema to reference. In the case of text values, the class label should
+     * follow the schema.org [style
+     * guide](https://schema.org/docs/styleguide.html).
      *
      * @param string|string[] $additionalType
      *
@@ -94,7 +95,7 @@ class SteeringPositionValue extends BaseType implements SteeringPositionValueCon
     /**
      * A description of the item.
      *
-     * @param string|string[] $description
+     * @param \Spatie\SchemaOrg\Contracts\TextObjectContract|\Spatie\SchemaOrg\Contracts\TextObjectContract[]|string|string[] $description
      *
      * @return static
      *
@@ -131,7 +132,6 @@ class SteeringPositionValue extends BaseType implements SteeringPositionValueCon
      * @return static
      *
      * @see https://schema.org/equal
-     * @link http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#source_GoodRelationsTerms
      */
     public function equal($equal)
     {
@@ -147,7 +147,6 @@ class SteeringPositionValue extends BaseType implements SteeringPositionValueCon
      * @return static
      *
      * @see https://schema.org/greater
-     * @link http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#source_GoodRelationsTerms
      */
     public function greater($greater)
     {
@@ -163,7 +162,6 @@ class SteeringPositionValue extends BaseType implements SteeringPositionValueCon
      * @return static
      *
      * @see https://schema.org/greaterOrEqual
-     * @link http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#source_GoodRelationsTerms
      */
     public function greaterOrEqual($greaterOrEqual)
     {
@@ -212,7 +210,6 @@ class SteeringPositionValue extends BaseType implements SteeringPositionValueCon
      * @return static
      *
      * @see https://schema.org/lesser
-     * @link http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#source_GoodRelationsTerms
      */
     public function lesser($lesser)
     {
@@ -228,7 +225,6 @@ class SteeringPositionValue extends BaseType implements SteeringPositionValueCon
      * @return static
      *
      * @see https://schema.org/lesserOrEqual
-     * @link http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#source_GoodRelationsTerms
      */
     public function lesserOrEqual($lesserOrEqual)
     {
@@ -274,7 +270,6 @@ class SteeringPositionValue extends BaseType implements SteeringPositionValueCon
      * @return static
      *
      * @see https://schema.org/nonEqual
-     * @link http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#source_GoodRelationsTerms
      */
     public function nonEqual($nonEqual)
     {
@@ -350,7 +345,6 @@ class SteeringPositionValue extends BaseType implements SteeringPositionValueCon
      * @return static
      *
      * @see https://schema.org/valueReference
-     * @link http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#source_GoodRelationsTerms
      */
     public function valueReference($valueReference)
     {

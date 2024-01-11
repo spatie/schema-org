@@ -19,7 +19,6 @@ use Spatie\SchemaOrg\Contracts\ThingContract;
  * [[opens]] property then the hour range is assumed to span over the next day.
  *
  * @see https://schema.org/OpeningHoursSpecification
- * @link http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#source_GoodRelationsClass
  *
  */
 class OpeningHoursSpecification extends BaseType implements OpeningHoursSpecificationContract, IntangibleContract, StructuredValueContract, ThingContract
@@ -27,10 +26,14 @@ class OpeningHoursSpecification extends BaseType implements OpeningHoursSpecific
     /**
      * An additional type for the item, typically used for adding more specific
      * types from external vocabularies in microdata syntax. This is a
-     * relationship between something and a class that the thing is in. In RDFa
-     * syntax, it is better to use the native RDFa syntax - the 'typeof'
-     * attribute - for multiple types. Schema.org tools may have only weaker
-     * understanding of extra types, in particular those defined externally.
+     * relationship between something and a class that the thing is in.
+     * Typically the value is a URI-identified RDF class, and in this case
+     * corresponds to the
+     *     use of rdf:type in RDF. Text values can be used sparingly, for cases
+     * where useful information can be added without their being an appropriate
+     * schema to reference. In the case of text values, the class label should
+     * follow the schema.org [style
+     * guide](https://schema.org/docs/styleguide.html).
      *
      * @param string|string[] $additionalType
      *
@@ -65,7 +68,6 @@ class OpeningHoursSpecification extends BaseType implements OpeningHoursSpecific
      * @return static
      *
      * @see https://schema.org/closes
-     * @link http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#source_GoodRelationsTerms
      */
     public function closes($closes)
     {
@@ -80,7 +82,6 @@ class OpeningHoursSpecification extends BaseType implements OpeningHoursSpecific
      * @return static
      *
      * @see https://schema.org/dayOfWeek
-     * @link http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#source_GoodRelationsTerms
      */
     public function dayOfWeek($dayOfWeek)
     {
@@ -90,7 +91,7 @@ class OpeningHoursSpecification extends BaseType implements OpeningHoursSpecific
     /**
      * A description of the item.
      *
-     * @param string|string[] $description
+     * @param \Spatie\SchemaOrg\Contracts\TextObjectContract|\Spatie\SchemaOrg\Contracts\TextObjectContract[]|string|string[] $description
      *
      * @return static
      *
@@ -189,7 +190,6 @@ class OpeningHoursSpecification extends BaseType implements OpeningHoursSpecific
      * @return static
      *
      * @see https://schema.org/opens
-     * @link http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#source_GoodRelationsTerms
      */
     public function opens($opens)
     {
@@ -264,7 +264,6 @@ class OpeningHoursSpecification extends BaseType implements OpeningHoursSpecific
      * @return static
      *
      * @see https://schema.org/validFrom
-     * @link http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#source_GoodRelationsTerms
      */
     public function validFrom($validFrom)
     {
@@ -280,7 +279,6 @@ class OpeningHoursSpecification extends BaseType implements OpeningHoursSpecific
      * @return static
      *
      * @see https://schema.org/validThrough
-     * @link http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#source_GoodRelationsTerms
      */
     public function validThrough($validThrough)
     {

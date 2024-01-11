@@ -12,6 +12,7 @@ use Spatie\SchemaOrg\Contracts\ThingContract;
  *
  * @see https://schema.org/RepaymentSpecification
  * @see https://pending.schema.org
+ * @link https://github.com/schemaorg/schemaorg/issues/1253
  *
  */
 class RepaymentSpecification extends BaseType implements RepaymentSpecificationContract, IntangibleContract, StructuredValueContract, ThingContract
@@ -19,10 +20,14 @@ class RepaymentSpecification extends BaseType implements RepaymentSpecificationC
     /**
      * An additional type for the item, typically used for adding more specific
      * types from external vocabularies in microdata syntax. This is a
-     * relationship between something and a class that the thing is in. In RDFa
-     * syntax, it is better to use the native RDFa syntax - the 'typeof'
-     * attribute - for multiple types. Schema.org tools may have only weaker
-     * understanding of extra types, in particular those defined externally.
+     * relationship between something and a class that the thing is in.
+     * Typically the value is a URI-identified RDF class, and in this case
+     * corresponds to the
+     *     use of rdf:type in RDF. Text values can be used sparingly, for cases
+     * where useful information can be added without their being an appropriate
+     * schema to reference. In the case of text values, the class label should
+     * follow the schema.org [style
+     * guide](https://schema.org/docs/styleguide.html).
      *
      * @param string|string[] $additionalType
      *
@@ -52,7 +57,7 @@ class RepaymentSpecification extends BaseType implements RepaymentSpecificationC
     /**
      * A description of the item.
      *
-     * @param string|string[] $description
+     * @param \Spatie\SchemaOrg\Contracts\TextObjectContract|\Spatie\SchemaOrg\Contracts\TextObjectContract[]|string|string[] $description
      *
      * @return static
      *
@@ -91,6 +96,7 @@ class RepaymentSpecification extends BaseType implements RepaymentSpecificationC
      *
      * @see https://schema.org/downPayment
      * @see https://pending.schema.org
+     * @link https://github.com/schemaorg/schemaorg/issues/1253
      */
     public function downPayment($downPayment)
     {
@@ -107,6 +113,7 @@ class RepaymentSpecification extends BaseType implements RepaymentSpecificationC
      *
      * @see https://schema.org/earlyPrepaymentPenalty
      * @see https://pending.schema.org
+     * @link https://github.com/schemaorg/schemaorg/issues/1253
      */
     public function earlyPrepaymentPenalty($earlyPrepaymentPenalty)
     {
@@ -155,6 +162,7 @@ class RepaymentSpecification extends BaseType implements RepaymentSpecificationC
      *
      * @see https://schema.org/loanPaymentAmount
      * @see https://pending.schema.org
+     * @link https://github.com/schemaorg/schemaorg/issues/1253
      */
     public function loanPaymentAmount($loanPaymentAmount)
     {
@@ -171,6 +179,7 @@ class RepaymentSpecification extends BaseType implements RepaymentSpecificationC
      *
      * @see https://schema.org/loanPaymentFrequency
      * @see https://pending.schema.org
+     * @link https://github.com/schemaorg/schemaorg/issues/1253
      */
     public function loanPaymentFrequency($loanPaymentFrequency)
     {
@@ -218,6 +227,7 @@ class RepaymentSpecification extends BaseType implements RepaymentSpecificationC
      *
      * @see https://schema.org/numberOfLoanPayments
      * @see https://pending.schema.org
+     * @link https://github.com/schemaorg/schemaorg/issues/1253
      */
     public function numberOfLoanPayments($numberOfLoanPayments)
     {

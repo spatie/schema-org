@@ -12,7 +12,6 @@ use Spatie\SchemaOrg\Contracts\ThingContract;
  * studio album, etc.
  *
  * @see https://schema.org/MusicAlbumProductionType
- * @link http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#MBZ
  *
  * @method static supersededBy($supersededBy) The value should be instance of pending types Class|Class[]|Enumeration|Enumeration[]|Property|Property[]
  */
@@ -22,7 +21,6 @@ class MusicAlbumProductionType extends BaseType implements MusicAlbumProductionT
      * CompilationAlbum.
      *
      * @see https://schema.org/CompilationAlbum
-     * @link http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#MBZ
      */
     public const CompilationAlbum = 'https://schema.org/CompilationAlbum';
 
@@ -30,7 +28,6 @@ class MusicAlbumProductionType extends BaseType implements MusicAlbumProductionT
      * DJMixAlbum.
      *
      * @see https://schema.org/DJMixAlbum
-     * @link http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#MBZ
      */
     public const DJMixAlbum = 'https://schema.org/DJMixAlbum';
 
@@ -38,7 +35,6 @@ class MusicAlbumProductionType extends BaseType implements MusicAlbumProductionT
      * DemoAlbum.
      *
      * @see https://schema.org/DemoAlbum
-     * @link http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#MBZ
      */
     public const DemoAlbum = 'https://schema.org/DemoAlbum';
 
@@ -46,7 +42,6 @@ class MusicAlbumProductionType extends BaseType implements MusicAlbumProductionT
      * LiveAlbum.
      *
      * @see https://schema.org/LiveAlbum
-     * @link http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#MBZ
      */
     public const LiveAlbum = 'https://schema.org/LiveAlbum';
 
@@ -54,7 +49,6 @@ class MusicAlbumProductionType extends BaseType implements MusicAlbumProductionT
      * MixtapeAlbum.
      *
      * @see https://schema.org/MixtapeAlbum
-     * @link http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#MBZ
      */
     public const MixtapeAlbum = 'https://schema.org/MixtapeAlbum';
 
@@ -62,7 +56,6 @@ class MusicAlbumProductionType extends BaseType implements MusicAlbumProductionT
      * RemixAlbum.
      *
      * @see https://schema.org/RemixAlbum
-     * @link http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#MBZ
      */
     public const RemixAlbum = 'https://schema.org/RemixAlbum';
 
@@ -70,7 +63,6 @@ class MusicAlbumProductionType extends BaseType implements MusicAlbumProductionT
      * SoundtrackAlbum.
      *
      * @see https://schema.org/SoundtrackAlbum
-     * @link http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#MBZ
      */
     public const SoundtrackAlbum = 'https://schema.org/SoundtrackAlbum';
 
@@ -78,7 +70,6 @@ class MusicAlbumProductionType extends BaseType implements MusicAlbumProductionT
      * SpokenWordAlbum.
      *
      * @see https://schema.org/SpokenWordAlbum
-     * @link http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#MBZ
      */
     public const SpokenWordAlbum = 'https://schema.org/SpokenWordAlbum';
 
@@ -86,17 +77,20 @@ class MusicAlbumProductionType extends BaseType implements MusicAlbumProductionT
      * StudioAlbum.
      *
      * @see https://schema.org/StudioAlbum
-     * @link http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#MBZ
      */
     public const StudioAlbum = 'https://schema.org/StudioAlbum';
 
     /**
      * An additional type for the item, typically used for adding more specific
      * types from external vocabularies in microdata syntax. This is a
-     * relationship between something and a class that the thing is in. In RDFa
-     * syntax, it is better to use the native RDFa syntax - the 'typeof'
-     * attribute - for multiple types. Schema.org tools may have only weaker
-     * understanding of extra types, in particular those defined externally.
+     * relationship between something and a class that the thing is in.
+     * Typically the value is a URI-identified RDF class, and in this case
+     * corresponds to the
+     *     use of rdf:type in RDF. Text values can be used sparingly, for cases
+     * where useful information can be added without their being an appropriate
+     * schema to reference. In the case of text values, the class label should
+     * follow the schema.org [style
+     * guide](https://schema.org/docs/styleguide.html).
      *
      * @param string|string[] $additionalType
      *
@@ -126,7 +120,7 @@ class MusicAlbumProductionType extends BaseType implements MusicAlbumProductionT
     /**
      * A description of the item.
      *
-     * @param string|string[] $description
+     * @param \Spatie\SchemaOrg\Contracts\TextObjectContract|\Spatie\SchemaOrg\Contracts\TextObjectContract[]|string|string[] $description
      *
      * @return static
      *

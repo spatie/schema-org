@@ -25,7 +25,6 @@ use Spatie\SchemaOrg\Contracts\ThingContract;
  * [GS1](http://www.gs1.org/).
  *
  * @see https://schema.org/Offer
- * @link http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#source_GoodRelationsTerms
  *
  */
 class Offer extends BaseType implements OfferContract, IntangibleContract, ThingContract
@@ -38,7 +37,6 @@ class Offer extends BaseType implements OfferContract, IntangibleContract, Thing
      * @return static
      *
      * @see https://schema.org/acceptedPaymentMethod
-     * @link http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#source_GoodRelationsTerms
      */
     public function acceptedPaymentMethod($acceptedPaymentMethod)
     {
@@ -55,7 +53,6 @@ class Offer extends BaseType implements OfferContract, IntangibleContract, Thing
      * @return static
      *
      * @see https://schema.org/addOn
-     * @link http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#source_GoodRelationsTerms
      */
     public function addOn($addOn)
     {
@@ -65,10 +62,14 @@ class Offer extends BaseType implements OfferContract, IntangibleContract, Thing
     /**
      * An additional type for the item, typically used for adding more specific
      * types from external vocabularies in microdata syntax. This is a
-     * relationship between something and a class that the thing is in. In RDFa
-     * syntax, it is better to use the native RDFa syntax - the 'typeof'
-     * attribute - for multiple types. Schema.org tools may have only weaker
-     * understanding of extra types, in particular those defined externally.
+     * relationship between something and a class that the thing is in.
+     * Typically the value is a URI-identified RDF class, and in this case
+     * corresponds to the
+     *     use of rdf:type in RDF. Text values can be used sparingly, for cases
+     * where useful information can be added without their being an appropriate
+     * schema to reference. In the case of text values, the class label should
+     * follow the schema.org [style
+     * guide](https://schema.org/docs/styleguide.html).
      *
      * @param string|string[] $additionalType
      *
@@ -90,7 +91,6 @@ class Offer extends BaseType implements OfferContract, IntangibleContract, Thing
      * @return static
      *
      * @see https://schema.org/advanceBookingRequirement
-     * @link http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#source_GoodRelationsTerms
      */
     public function advanceBookingRequirement($advanceBookingRequirement)
     {
@@ -190,6 +190,7 @@ class Offer extends BaseType implements OfferContract, IntangibleContract, Thing
      * @return static
      *
      * @see https://schema.org/availabilityEnds
+     * @link https://github.com/schemaorg/schemaorg/issues/1741
      */
     public function availabilityEnds($availabilityEnds)
     {
@@ -205,6 +206,7 @@ class Offer extends BaseType implements OfferContract, IntangibleContract, Thing
      * @return static
      *
      * @see https://schema.org/availabilityStarts
+     * @link https://github.com/schemaorg/schemaorg/issues/1741
      */
     public function availabilityStarts($availabilityStarts)
     {
@@ -219,7 +221,6 @@ class Offer extends BaseType implements OfferContract, IntangibleContract, Thing
      * @return static
      *
      * @see https://schema.org/availableAtOrFrom
-     * @link http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#source_GoodRelationsTerms
      */
     public function availableAtOrFrom($availableAtOrFrom)
     {
@@ -234,7 +235,6 @@ class Offer extends BaseType implements OfferContract, IntangibleContract, Thing
      * @return static
      *
      * @see https://schema.org/availableDeliveryMethod
-     * @link http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#source_GoodRelationsTerms
      */
     public function availableDeliveryMethod($availableDeliveryMethod)
     {
@@ -251,7 +251,6 @@ class Offer extends BaseType implements OfferContract, IntangibleContract, Thing
      * @return static
      *
      * @see https://schema.org/businessFunction
-     * @link http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#source_GoodRelationsTerms
      */
     public function businessFunction($businessFunction)
     {
@@ -303,7 +302,6 @@ class Offer extends BaseType implements OfferContract, IntangibleContract, Thing
      * @return static
      *
      * @see https://schema.org/deliveryLeadTime
-     * @link http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#source_GoodRelationsTerms
      */
     public function deliveryLeadTime($deliveryLeadTime)
     {
@@ -313,7 +311,7 @@ class Offer extends BaseType implements OfferContract, IntangibleContract, Thing
     /**
      * A description of the item.
      *
-     * @param string|string[] $description
+     * @param \Spatie\SchemaOrg\Contracts\TextObjectContract|\Spatie\SchemaOrg\Contracts\TextObjectContract[]|string|string[] $description
      *
      * @return static
      *
@@ -349,7 +347,6 @@ class Offer extends BaseType implements OfferContract, IntangibleContract, Thing
      * @return static
      *
      * @see https://schema.org/eligibleCustomerType
-     * @link http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#source_GoodRelationsTerms
      */
     public function eligibleCustomerType($eligibleCustomerType)
     {
@@ -364,7 +361,6 @@ class Offer extends BaseType implements OfferContract, IntangibleContract, Thing
      * @return static
      *
      * @see https://schema.org/eligibleDuration
-     * @link http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#source_GoodRelationsTerms
      */
     public function eligibleDuration($eligibleDuration)
     {
@@ -381,7 +377,6 @@ class Offer extends BaseType implements OfferContract, IntangibleContract, Thing
      * @return static
      *
      * @see https://schema.org/eligibleQuantity
-     * @link http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#source_GoodRelationsTerms
      */
     public function eligibleQuantity($eligibleQuantity)
     {
@@ -400,6 +395,7 @@ class Offer extends BaseType implements OfferContract, IntangibleContract, Thing
      * @return static
      *
      * @see https://schema.org/eligibleRegion
+     * @link https://github.com/schemaorg/schemaorg/issues/1741
      */
     public function eligibleRegion($eligibleRegion)
     {
@@ -417,7 +413,6 @@ class Offer extends BaseType implements OfferContract, IntangibleContract, Thing
      * @return static
      *
      * @see https://schema.org/eligibleTransactionVolume
-     * @link http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#source_GoodRelationsTerms
      */
     public function eligibleTransactionVolume($eligibleTransactionVolume)
     {
@@ -497,7 +492,6 @@ class Offer extends BaseType implements OfferContract, IntangibleContract, Thing
      * @return static
      *
      * @see https://schema.org/gtin13
-     * @link http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#source_GoodRelationsTerms
      */
     public function gtin13($gtin13)
     {
@@ -515,7 +509,6 @@ class Offer extends BaseType implements OfferContract, IntangibleContract, Thing
      * @return static
      *
      * @see https://schema.org/gtin14
-     * @link http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#source_GoodRelationsTerms
      */
     public function gtin14($gtin14)
     {
@@ -533,7 +526,6 @@ class Offer extends BaseType implements OfferContract, IntangibleContract, Thing
      * @return static
      *
      * @see https://schema.org/gtin8
-     * @link http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#source_GoodRelationsTerms
      */
     public function gtin8($gtin8)
     {
@@ -634,7 +626,6 @@ class Offer extends BaseType implements OfferContract, IntangibleContract, Thing
      * @return static
      *
      * @see https://schema.org/includesObject
-     * @link http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#source_GoodRelationsTerms
      */
     public function includesObject($includesObject)
     {
@@ -670,7 +661,6 @@ class Offer extends BaseType implements OfferContract, IntangibleContract, Thing
      * @return static
      *
      * @see https://schema.org/inventoryLevel
-     * @link http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#source_GoodRelationsTerms
      */
     public function inventoryLevel($inventoryLevel)
     {
@@ -800,7 +790,6 @@ class Offer extends BaseType implements OfferContract, IntangibleContract, Thing
      * @return static
      *
      * @see https://schema.org/mpn
-     * @link http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#source_GoodRelationsTerms
      */
     public function mpn($mpn)
     {
@@ -919,7 +908,6 @@ class Offer extends BaseType implements OfferContract, IntangibleContract, Thing
      * @return static
      *
      * @see https://schema.org/priceSpecification
-     * @link http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#source_GoodRelationsTerms
      */
     public function priceSpecification($priceSpecification)
     {
@@ -1009,7 +997,6 @@ class Offer extends BaseType implements OfferContract, IntangibleContract, Thing
      * @return static
      *
      * @see https://schema.org/serialNumber
-     * @link http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#source_GoodRelationsTerms
      */
     public function serialNumber($serialNumber)
     {
@@ -1042,7 +1029,6 @@ class Offer extends BaseType implements OfferContract, IntangibleContract, Thing
      * @return static
      *
      * @see https://schema.org/sku
-     * @link http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#source_GoodRelationsTerms
      */
     public function sku($sku)
     {
@@ -1086,7 +1072,6 @@ class Offer extends BaseType implements OfferContract, IntangibleContract, Thing
      * @return static
      *
      * @see https://schema.org/validFrom
-     * @link http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#source_GoodRelationsTerms
      */
     public function validFrom($validFrom)
     {
@@ -1102,7 +1087,6 @@ class Offer extends BaseType implements OfferContract, IntangibleContract, Thing
      * @return static
      *
      * @see https://schema.org/validThrough
-     * @link http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#source_GoodRelationsTerms
      */
     public function validThrough($validThrough)
     {
@@ -1117,7 +1101,6 @@ class Offer extends BaseType implements OfferContract, IntangibleContract, Thing
      * @return static
      *
      * @see https://schema.org/warranty
-     * @link http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#source_GoodRelationsTerms
      */
     public function warranty($warranty)
     {

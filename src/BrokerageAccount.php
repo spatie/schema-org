@@ -15,6 +15,7 @@ use Spatie\SchemaOrg\Contracts\ThingContract;
  *
  * @see https://schema.org/BrokerageAccount
  * @see https://pending.schema.org
+ * @link https://github.com/schemaorg/schemaorg/issues/1253
  *
  */
 class BrokerageAccount extends BaseType implements BrokerageAccountContract, FinancialProductContract, IntangibleContract, InvestmentOrDepositContract, ServiceContract, ThingContract
@@ -22,10 +23,14 @@ class BrokerageAccount extends BaseType implements BrokerageAccountContract, Fin
     /**
      * An additional type for the item, typically used for adding more specific
      * types from external vocabularies in microdata syntax. This is a
-     * relationship between something and a class that the thing is in. In RDFa
-     * syntax, it is better to use the native RDFa syntax - the 'typeof'
-     * attribute - for multiple types. Schema.org tools may have only weaker
-     * understanding of extra types, in particular those defined externally.
+     * relationship between something and a class that the thing is in.
+     * Typically the value is a URI-identified RDF class, and in this case
+     * corresponds to the
+     *     use of rdf:type in RDF. Text values can be used sparingly, for cases
+     * where useful information can be added without their being an appropriate
+     * schema to reference. In the case of text values, the class label should
+     * follow the schema.org [style
+     * guide](https://schema.org/docs/styleguide.html).
      *
      * @param string|string[] $additionalType
      *
@@ -92,7 +97,6 @@ class BrokerageAccount extends BaseType implements BrokerageAccountContract, Fin
      * @return static
      *
      * @see https://schema.org/annualPercentageRate
-     * @link http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#FIBO
      */
     public function annualPercentageRate($annualPercentageRate)
     {
@@ -206,7 +210,7 @@ class BrokerageAccount extends BaseType implements BrokerageAccountContract, Fin
     /**
      * A description of the item.
      *
-     * @param string|string[] $description
+     * @param \Spatie\SchemaOrg\Contracts\TextObjectContract|\Spatie\SchemaOrg\Contracts\TextObjectContract[]|string|string[] $description
      *
      * @return static
      *
@@ -243,7 +247,6 @@ class BrokerageAccount extends BaseType implements BrokerageAccountContract, Fin
      * @return static
      *
      * @see https://schema.org/feesAndCommissionsSpecification
-     * @link http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#FIBO
      */
     public function feesAndCommissionsSpecification($feesAndCommissionsSpecification)
     {
@@ -321,7 +324,6 @@ class BrokerageAccount extends BaseType implements BrokerageAccountContract, Fin
      * @return static
      *
      * @see https://schema.org/interestRate
-     * @link http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#FIBO
      */
     public function interestRate($interestRate)
     {
@@ -336,7 +338,6 @@ class BrokerageAccount extends BaseType implements BrokerageAccountContract, Fin
      * @return static
      *
      * @see https://schema.org/isRelatedTo
-     * @link http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#source_GoodRelationsTerms
      */
     public function isRelatedTo($isRelatedTo)
     {
@@ -352,7 +353,6 @@ class BrokerageAccount extends BaseType implements BrokerageAccountContract, Fin
      * @return static
      *
      * @see https://schema.org/isSimilarTo
-     * @link http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#source_GoodRelationsTerms
      */
     public function isSimilarTo($isSimilarTo)
     {
@@ -367,7 +367,6 @@ class BrokerageAccount extends BaseType implements BrokerageAccountContract, Fin
      * @return static
      *
      * @see https://schema.org/logo
-     * @link http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#source_GoodRelationsTerms
      */
     public function logo($logo)
     {

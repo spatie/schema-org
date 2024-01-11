@@ -33,7 +33,6 @@ class Vehicle extends BaseType implements VehicleContract, ProductContract, Thin
      *
      * @see https://schema.org/accelerationTime
      * @see https://auto.schema.org
-     * @link http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#Automotive_Ontology_Working_Group
      */
     public function accelerationTime($accelerationTime)
     {
@@ -65,10 +64,14 @@ class Vehicle extends BaseType implements VehicleContract, ProductContract, Thin
     /**
      * An additional type for the item, typically used for adding more specific
      * types from external vocabularies in microdata syntax. This is a
-     * relationship between something and a class that the thing is in. In RDFa
-     * syntax, it is better to use the native RDFa syntax - the 'typeof'
-     * attribute - for multiple types. Schema.org tools may have only weaker
-     * understanding of extra types, in particular those defined externally.
+     * relationship between something and a class that the thing is in.
+     * Typically the value is a URI-identified RDF class, and in this case
+     * corresponds to the
+     *     use of rdf:type in RDF. Text values can be used sparingly, for cases
+     * where useful information can be added without their being an appropriate
+     * schema to reference. In the case of text values, the class label should
+     * follow the schema.org [style
+     * guide](https://schema.org/docs/styleguide.html).
      *
      * @param string|string[] $additionalType
      *
@@ -188,7 +191,6 @@ class Vehicle extends BaseType implements VehicleContract, ProductContract, Thin
      *
      * @see https://schema.org/bodyType
      * @see https://auto.schema.org
-     * @link http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#Automotive_Ontology_Working_Group
      */
     public function bodyType($bodyType)
     {
@@ -241,7 +243,6 @@ class Vehicle extends BaseType implements VehicleContract, ProductContract, Thin
      * @return static
      *
      * @see https://schema.org/cargoVolume
-     * @link http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#Automotive_Ontology_Working_Group
      */
     public function cargoVolume($cargoVolume)
     {
@@ -271,7 +272,6 @@ class Vehicle extends BaseType implements VehicleContract, ProductContract, Thin
      * @return static
      *
      * @see https://schema.org/color
-     * @link http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#source_GoodRelationsTerms
      */
     public function color($color)
     {
@@ -345,7 +345,6 @@ class Vehicle extends BaseType implements VehicleContract, ProductContract, Thin
      * @return static
      *
      * @see https://schema.org/dateVehicleFirstRegistered
-     * @link http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#Automotive_Ontology_Working_Group
      */
     public function dateVehicleFirstRegistered($dateVehicleFirstRegistered)
     {
@@ -360,7 +359,6 @@ class Vehicle extends BaseType implements VehicleContract, ProductContract, Thin
      * @return static
      *
      * @see https://schema.org/depth
-     * @link http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#source_GoodRelationsTerms
      */
     public function depth($depth)
     {
@@ -370,7 +368,7 @@ class Vehicle extends BaseType implements VehicleContract, ProductContract, Thin
     /**
      * A description of the item.
      *
-     * @param string|string[] $description
+     * @param \Spatie\SchemaOrg\Contracts\TextObjectContract|\Spatie\SchemaOrg\Contracts\TextObjectContract[]|string|string[] $description
      *
      * @return static
      *
@@ -407,7 +405,6 @@ class Vehicle extends BaseType implements VehicleContract, ProductContract, Thin
      * @return static
      *
      * @see https://schema.org/driveWheelConfiguration
-     * @link http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#Automotive_Ontology_Working_Group
      */
     public function driveWheelConfiguration($driveWheelConfiguration)
     {
@@ -425,7 +422,6 @@ class Vehicle extends BaseType implements VehicleContract, ProductContract, Thin
      *
      * @see https://schema.org/emissionsCO2
      * @see https://auto.schema.org
-     * @link http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#Automotive_Ontology_Working_Group
      */
     public function emissionsCO2($emissionsCO2)
     {
@@ -446,7 +442,6 @@ class Vehicle extends BaseType implements VehicleContract, ProductContract, Thin
      *
      * @see https://schema.org/fuelCapacity
      * @see https://auto.schema.org
-     * @link http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#Automotive_Ontology_Working_Group
      */
     public function fuelCapacity($fuelCapacity)
     {
@@ -473,7 +468,6 @@ class Vehicle extends BaseType implements VehicleContract, ProductContract, Thin
      * @return static
      *
      * @see https://schema.org/fuelConsumption
-     * @link http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#Automotive_Ontology_Working_Group
      */
     public function fuelConsumption($fuelConsumption)
     {
@@ -500,7 +494,6 @@ class Vehicle extends BaseType implements VehicleContract, ProductContract, Thin
      * @return static
      *
      * @see https://schema.org/fuelEfficiency
-     * @link http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#Automotive_Ontology_Working_Group
      */
     public function fuelEfficiency($fuelEfficiency)
     {
@@ -517,7 +510,6 @@ class Vehicle extends BaseType implements VehicleContract, ProductContract, Thin
      * @return static
      *
      * @see https://schema.org/fuelType
-     * @link http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#Automotive_Ontology_Working_Group
      */
     public function fuelType($fuelType)
     {
@@ -534,6 +526,7 @@ class Vehicle extends BaseType implements VehicleContract, ProductContract, Thin
      *
      * @see https://schema.org/funding
      * @see https://pending.schema.org
+     * @link https://github.com/schemaorg/schemaorg/issues/383
      */
     public function funding($funding)
     {
@@ -613,7 +606,6 @@ class Vehicle extends BaseType implements VehicleContract, ProductContract, Thin
      * @return static
      *
      * @see https://schema.org/gtin13
-     * @link http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#source_GoodRelationsTerms
      */
     public function gtin13($gtin13)
     {
@@ -631,7 +623,6 @@ class Vehicle extends BaseType implements VehicleContract, ProductContract, Thin
      * @return static
      *
      * @see https://schema.org/gtin14
-     * @link http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#source_GoodRelationsTerms
      */
     public function gtin14($gtin14)
     {
@@ -649,7 +640,6 @@ class Vehicle extends BaseType implements VehicleContract, ProductContract, Thin
      * @return static
      *
      * @see https://schema.org/gtin8
-     * @link http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#source_GoodRelationsTerms
      */
     public function gtin8($gtin8)
     {
@@ -815,7 +805,6 @@ class Vehicle extends BaseType implements VehicleContract, ProductContract, Thin
      * @return static
      *
      * @see https://schema.org/isAccessoryOrSparePartFor
-     * @link http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#source_GoodRelationsTerms
      */
     public function isAccessoryOrSparePartFor($isAccessoryOrSparePartFor)
     {
@@ -831,7 +820,6 @@ class Vehicle extends BaseType implements VehicleContract, ProductContract, Thin
      * @return static
      *
      * @see https://schema.org/isConsumableFor
-     * @link http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#source_GoodRelationsTerms
      */
     public function isConsumableFor($isConsumableFor)
     {
@@ -860,7 +848,6 @@ class Vehicle extends BaseType implements VehicleContract, ProductContract, Thin
      * @return static
      *
      * @see https://schema.org/isRelatedTo
-     * @link http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#source_GoodRelationsTerms
      */
     public function isRelatedTo($isRelatedTo)
     {
@@ -876,7 +863,6 @@ class Vehicle extends BaseType implements VehicleContract, ProductContract, Thin
      * @return static
      *
      * @see https://schema.org/isSimilarTo
-     * @link http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#source_GoodRelationsTerms
      */
     public function isSimilarTo($isSimilarTo)
     {
@@ -901,7 +887,6 @@ class Vehicle extends BaseType implements VehicleContract, ProductContract, Thin
      * @return static
      *
      * @see https://schema.org/isVariantOf
-     * @link http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#source_GoodRelationsTerms
      */
     public function isVariantOf($isVariantOf)
     {
@@ -949,7 +934,6 @@ class Vehicle extends BaseType implements VehicleContract, ProductContract, Thin
      * @return static
      *
      * @see https://schema.org/knownVehicleDamages
-     * @link http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#Automotive_Ontology_Working_Group
      */
     public function knownVehicleDamages($knownVehicleDamages)
     {
@@ -964,7 +948,6 @@ class Vehicle extends BaseType implements VehicleContract, ProductContract, Thin
      * @return static
      *
      * @see https://schema.org/logo
-     * @link http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#source_GoodRelationsTerms
      */
     public function logo($logo)
     {
@@ -1025,7 +1008,6 @@ class Vehicle extends BaseType implements VehicleContract, ProductContract, Thin
      *
      * @see https://schema.org/meetsEmissionStandard
      * @see https://auto.schema.org
-     * @link http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#Automotive_Ontology_Working_Group
      */
     public function meetsEmissionStandard($meetsEmissionStandard)
     {
@@ -1036,14 +1018,13 @@ class Vehicle extends BaseType implements VehicleContract, ProductContract, Thin
      * The total distance travelled by the particular vehicle since its initial
      * production, as read from its odometer.
      *
-     * Typical unit code(s): KMT for kilometers, SMI for statute miles
+     * Typical unit code(s): KMT for kilometers, SMI for statute miles.
      *
      * @param \Spatie\SchemaOrg\Contracts\QuantitativeValueContract|\Spatie\SchemaOrg\Contracts\QuantitativeValueContract[] $mileageFromOdometer
      *
      * @return static
      *
      * @see https://schema.org/mileageFromOdometer
-     * @link http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#Automotive_Ontology_Working_Group
      */
     public function mileageFromOdometer($mileageFromOdometer)
     {
@@ -1110,7 +1091,6 @@ class Vehicle extends BaseType implements VehicleContract, ProductContract, Thin
      *
      * @see https://schema.org/modelDate
      * @see https://auto.schema.org
-     * @link http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#Automotive_Ontology_Working_Group
      */
     public function modelDate($modelDate)
     {
@@ -1126,7 +1106,6 @@ class Vehicle extends BaseType implements VehicleContract, ProductContract, Thin
      * @return static
      *
      * @see https://schema.org/mpn
-     * @link http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#source_GoodRelationsTerms
      */
     public function mpn($mpn)
     {
@@ -1201,7 +1180,6 @@ class Vehicle extends BaseType implements VehicleContract, ProductContract, Thin
      * @return static
      *
      * @see https://schema.org/numberOfAirbags
-     * @link http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#Automotive_Ontology_Working_Group
      */
     public function numberOfAirbags($numberOfAirbags)
     {
@@ -1211,14 +1189,13 @@ class Vehicle extends BaseType implements VehicleContract, ProductContract, Thin
     /**
      * The number of axles.
      *
-     * Typical unit code(s): C62
+     * Typical unit code(s): C62.
      *
      * @param \Spatie\SchemaOrg\Contracts\QuantitativeValueContract|\Spatie\SchemaOrg\Contracts\QuantitativeValueContract[]|float|float[]|int|int[] $numberOfAxles
      *
      * @return static
      *
      * @see https://schema.org/numberOfAxles
-     * @link http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#Automotive_Ontology_Working_Group
      */
     public function numberOfAxles($numberOfAxles)
     {
@@ -1228,14 +1205,13 @@ class Vehicle extends BaseType implements VehicleContract, ProductContract, Thin
     /**
      * The number of doors.
      *
-     * Typical unit code(s): C62
+     * Typical unit code(s): C62.
      *
      * @param \Spatie\SchemaOrg\Contracts\QuantitativeValueContract|\Spatie\SchemaOrg\Contracts\QuantitativeValueContract[]|float|float[]|int|int[] $numberOfDoors
      *
      * @return static
      *
      * @see https://schema.org/numberOfDoors
-     * @link http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#Automotive_Ontology_Working_Group
      */
     public function numberOfDoors($numberOfDoors)
     {
@@ -1246,14 +1222,13 @@ class Vehicle extends BaseType implements VehicleContract, ProductContract, Thin
      * The total number of forward gears available for the transmission system
      * of the vehicle.
      *
-     * Typical unit code(s): C62
+     * Typical unit code(s): C62.
      *
      * @param \Spatie\SchemaOrg\Contracts\QuantitativeValueContract|\Spatie\SchemaOrg\Contracts\QuantitativeValueContract[]|float|float[]|int|int[] $numberOfForwardGears
      *
      * @return static
      *
      * @see https://schema.org/numberOfForwardGears
-     * @link http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#Automotive_Ontology_Working_Group
      */
     public function numberOfForwardGears($numberOfForwardGears)
     {
@@ -1263,14 +1238,13 @@ class Vehicle extends BaseType implements VehicleContract, ProductContract, Thin
     /**
      * The number of owners of the vehicle, including the current one.
      *
-     * Typical unit code(s): C62
+     * Typical unit code(s): C62.
      *
      * @param \Spatie\SchemaOrg\Contracts\QuantitativeValueContract|\Spatie\SchemaOrg\Contracts\QuantitativeValueContract[]|float|float[]|int|int[] $numberOfPreviousOwners
      *
      * @return static
      *
      * @see https://schema.org/numberOfPreviousOwners
-     * @link http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#Automotive_Ontology_Working_Group
      */
     public function numberOfPreviousOwners($numberOfPreviousOwners)
     {
@@ -1338,7 +1312,6 @@ class Vehicle extends BaseType implements VehicleContract, ProductContract, Thin
      *
      * @see https://schema.org/payload
      * @see https://auto.schema.org
-     * @link http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#Automotive_Ontology_Working_Group
      */
     public function payload($payload)
     {
@@ -1408,7 +1381,6 @@ class Vehicle extends BaseType implements VehicleContract, ProductContract, Thin
      * @return static
      *
      * @see https://schema.org/productionDate
-     * @link http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#Automotive_Ontology_Working_Group
      */
     public function productionDate($productionDate)
     {
@@ -1423,7 +1395,6 @@ class Vehicle extends BaseType implements VehicleContract, ProductContract, Thin
      * @return static
      *
      * @see https://schema.org/purchaseDate
-     * @link http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#Automotive_Ontology_Working_Group
      */
     public function purchaseDate($purchaseDate)
     {
@@ -1439,7 +1410,6 @@ class Vehicle extends BaseType implements VehicleContract, ProductContract, Thin
      * @return static
      *
      * @see https://schema.org/releaseDate
-     * @link http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#source_GoodRelationsTerms
      */
     public function releaseDate($releaseDate)
     {
@@ -1495,7 +1465,7 @@ class Vehicle extends BaseType implements VehicleContract, ProductContract, Thin
      * terms of the physical space available, and in terms of limitations set by
      * law.
      *
-     * Typical unit code(s): C62 for persons
+     * Typical unit code(s): C62 for persons.
      *
      * @param \Spatie\SchemaOrg\Contracts\QuantitativeValueContract|\Spatie\SchemaOrg\Contracts\QuantitativeValueContract[]|float|float[]|int|int[] $seatingCapacity
      *
@@ -1503,7 +1473,6 @@ class Vehicle extends BaseType implements VehicleContract, ProductContract, Thin
      *
      * @see https://schema.org/seatingCapacity
      * @see https://auto.schema.org
-     * @link http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#Automotive_Ontology_Working_Group
      */
     public function seatingCapacity($seatingCapacity)
     {
@@ -1539,7 +1508,6 @@ class Vehicle extends BaseType implements VehicleContract, ProductContract, Thin
      * @return static
      *
      * @see https://schema.org/sku
-     * @link http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#source_GoodRelationsTerms
      */
     public function sku($sku)
     {
@@ -1580,7 +1548,6 @@ class Vehicle extends BaseType implements VehicleContract, ProductContract, Thin
      *
      * @see https://schema.org/speed
      * @see https://auto.schema.org
-     * @link http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#Automotive_Ontology_Working_Group
      */
     public function speed($speed)
     {
@@ -1595,7 +1562,6 @@ class Vehicle extends BaseType implements VehicleContract, ProductContract, Thin
      * @return static
      *
      * @see https://schema.org/steeringPosition
-     * @link http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#Automotive_Ontology_Working_Group
      */
     public function steeringPosition($steeringPosition)
     {
@@ -1603,7 +1569,7 @@ class Vehicle extends BaseType implements VehicleContract, ProductContract, Thin
     }
 
     /**
-     * This is a StupidProperty! - for testing only
+     * This is a StupidProperty! - for testing only.
      *
      * @param \Spatie\SchemaOrg\Contracts\QuantitativeValueContract|\Spatie\SchemaOrg\Contracts\QuantitativeValueContract[] $stupidProperty
      *
@@ -1652,7 +1618,6 @@ class Vehicle extends BaseType implements VehicleContract, ProductContract, Thin
      *
      * @see https://schema.org/tongueWeight
      * @see https://auto.schema.org
-     * @link http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#Automotive_Ontology_Working_Group
      */
     public function tongueWeight($tongueWeight)
     {
@@ -1676,7 +1641,6 @@ class Vehicle extends BaseType implements VehicleContract, ProductContract, Thin
      *
      * @see https://schema.org/trailerWeight
      * @see https://auto.schema.org
-     * @link http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#Automotive_Ontology_Working_Group
      */
     public function trailerWeight($trailerWeight)
     {
@@ -1706,7 +1670,6 @@ class Vehicle extends BaseType implements VehicleContract, ProductContract, Thin
      * @return static
      *
      * @see https://schema.org/vehicleConfiguration
-     * @link http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#Automotive_Ontology_Working_Group
      */
     public function vehicleConfiguration($vehicleConfiguration)
     {
@@ -1721,7 +1684,6 @@ class Vehicle extends BaseType implements VehicleContract, ProductContract, Thin
      * @return static
      *
      * @see https://schema.org/vehicleEngine
-     * @link http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#Automotive_Ontology_Working_Group
      */
     public function vehicleEngine($vehicleEngine)
     {
@@ -1737,7 +1699,6 @@ class Vehicle extends BaseType implements VehicleContract, ProductContract, Thin
      * @return static
      *
      * @see https://schema.org/vehicleIdentificationNumber
-     * @link http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#Automotive_Ontology_Working_Group
      */
     public function vehicleIdentificationNumber($vehicleIdentificationNumber)
     {
@@ -1752,7 +1713,6 @@ class Vehicle extends BaseType implements VehicleContract, ProductContract, Thin
      * @return static
      *
      * @see https://schema.org/vehicleInteriorColor
-     * @link http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#Automotive_Ontology_Working_Group
      */
     public function vehicleInteriorColor($vehicleInteriorColor)
     {
@@ -1770,7 +1730,6 @@ class Vehicle extends BaseType implements VehicleContract, ProductContract, Thin
      * @return static
      *
      * @see https://schema.org/vehicleInteriorType
-     * @link http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#Automotive_Ontology_Working_Group
      */
     public function vehicleInteriorType($vehicleInteriorType)
     {
@@ -1786,7 +1745,6 @@ class Vehicle extends BaseType implements VehicleContract, ProductContract, Thin
      * @return static
      *
      * @see https://schema.org/vehicleModelDate
-     * @link http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#Automotive_Ontology_Working_Group
      */
     public function vehicleModelDate($vehicleModelDate)
     {
@@ -1804,7 +1762,6 @@ class Vehicle extends BaseType implements VehicleContract, ProductContract, Thin
      * @return static
      *
      * @see https://schema.org/vehicleSeatingCapacity
-     * @link http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#Automotive_Ontology_Working_Group
      */
     public function vehicleSeatingCapacity($vehicleSeatingCapacity)
     {
@@ -1823,7 +1780,6 @@ class Vehicle extends BaseType implements VehicleContract, ProductContract, Thin
      *
      * @see https://schema.org/vehicleSpecialUsage
      * @see https://auto.schema.org
-     * @link http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#Automotive_Ontology_Working_Group
      */
     public function vehicleSpecialUsage($vehicleSpecialUsage)
     {
@@ -1840,7 +1796,6 @@ class Vehicle extends BaseType implements VehicleContract, ProductContract, Thin
      * @return static
      *
      * @see https://schema.org/vehicleTransmission
-     * @link http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#Automotive_Ontology_Working_Group
      */
     public function vehicleTransmission($vehicleTransmission)
     {
@@ -1855,7 +1810,6 @@ class Vehicle extends BaseType implements VehicleContract, ProductContract, Thin
      * @return static
      *
      * @see https://schema.org/weight
-     * @link http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#source_GoodRelationsTerms
      */
     public function weight($weight)
     {
@@ -1881,7 +1835,6 @@ class Vehicle extends BaseType implements VehicleContract, ProductContract, Thin
      *
      * @see https://schema.org/weightTotal
      * @see https://auto.schema.org
-     * @link http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#Automotive_Ontology_Working_Group
      */
     public function weightTotal($weightTotal)
     {
@@ -1892,7 +1845,7 @@ class Vehicle extends BaseType implements VehicleContract, ProductContract, Thin
      * The distance between the centers of the front and rear wheels.
      *
      * Typical unit code(s): CMT for centimeters, MTR for meters, INH for
-     * inches, FOT for foot/feet
+     * inches, FOT for foot/feet.
      *
      * @param \Spatie\SchemaOrg\Contracts\QuantitativeValueContract|\Spatie\SchemaOrg\Contracts\QuantitativeValueContract[] $wheelbase
      *
@@ -1900,7 +1853,6 @@ class Vehicle extends BaseType implements VehicleContract, ProductContract, Thin
      *
      * @see https://schema.org/wheelbase
      * @see https://auto.schema.org
-     * @link http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#Automotive_Ontology_Working_Group
      */
     public function wheelbase($wheelbase)
     {

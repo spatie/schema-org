@@ -12,7 +12,6 @@ use Spatie\SchemaOrg\Contracts\ThingContract;
  * A service to convert funds from one currency to another currency.
  *
  * @see https://schema.org/CurrencyConversionService
- * @link http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#FIBO
  *
  */
 class CurrencyConversionService extends BaseType implements CurrencyConversionServiceContract, FinancialProductContract, IntangibleContract, ServiceContract, ThingContract
@@ -20,10 +19,14 @@ class CurrencyConversionService extends BaseType implements CurrencyConversionSe
     /**
      * An additional type for the item, typically used for adding more specific
      * types from external vocabularies in microdata syntax. This is a
-     * relationship between something and a class that the thing is in. In RDFa
-     * syntax, it is better to use the native RDFa syntax - the 'typeof'
-     * attribute - for multiple types. Schema.org tools may have only weaker
-     * understanding of extra types, in particular those defined externally.
+     * relationship between something and a class that the thing is in.
+     * Typically the value is a URI-identified RDF class, and in this case
+     * corresponds to the
+     *     use of rdf:type in RDF. Text values can be used sparingly, for cases
+     * where useful information can be added without their being an appropriate
+     * schema to reference. In the case of text values, the class label should
+     * follow the schema.org [style
+     * guide](https://schema.org/docs/styleguide.html).
      *
      * @param string|string[] $additionalType
      *
@@ -76,7 +79,6 @@ class CurrencyConversionService extends BaseType implements CurrencyConversionSe
      * @return static
      *
      * @see https://schema.org/annualPercentageRate
-     * @link http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#FIBO
      */
     public function annualPercentageRate($annualPercentageRate)
     {
@@ -190,7 +192,7 @@ class CurrencyConversionService extends BaseType implements CurrencyConversionSe
     /**
      * A description of the item.
      *
-     * @param string|string[] $description
+     * @param \Spatie\SchemaOrg\Contracts\TextObjectContract|\Spatie\SchemaOrg\Contracts\TextObjectContract[]|string|string[] $description
      *
      * @return static
      *
@@ -227,7 +229,6 @@ class CurrencyConversionService extends BaseType implements CurrencyConversionSe
      * @return static
      *
      * @see https://schema.org/feesAndCommissionsSpecification
-     * @link http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#FIBO
      */
     public function feesAndCommissionsSpecification($feesAndCommissionsSpecification)
     {
@@ -305,7 +306,6 @@ class CurrencyConversionService extends BaseType implements CurrencyConversionSe
      * @return static
      *
      * @see https://schema.org/interestRate
-     * @link http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#FIBO
      */
     public function interestRate($interestRate)
     {
@@ -320,7 +320,6 @@ class CurrencyConversionService extends BaseType implements CurrencyConversionSe
      * @return static
      *
      * @see https://schema.org/isRelatedTo
-     * @link http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#source_GoodRelationsTerms
      */
     public function isRelatedTo($isRelatedTo)
     {
@@ -336,7 +335,6 @@ class CurrencyConversionService extends BaseType implements CurrencyConversionSe
      * @return static
      *
      * @see https://schema.org/isSimilarTo
-     * @link http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#source_GoodRelationsTerms
      */
     public function isSimilarTo($isSimilarTo)
     {
@@ -351,7 +349,6 @@ class CurrencyConversionService extends BaseType implements CurrencyConversionSe
      * @return static
      *
      * @see https://schema.org/logo
-     * @link http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#source_GoodRelationsTerms
      */
     public function logo($logo)
     {

@@ -176,6 +176,7 @@ use Spatie\SchemaOrg\Exceptions\TypeNotInMultiTypedEntity;
  * @method self|ComputerStore computerStore(\Closure|null $callback = null)
  * @method self|ConfirmAction confirmAction(\Closure|null $callback = null)
  * @method self|Consortium consortium(\Closure|null $callback = null)
+ * @method self|ConstraintNode constraintNode(\Closure|null $callback = null)
  * @method self|ConsumeAction consumeAction(\Closure|null $callback = null)
  * @method self|ContactPage contactPage(\Closure|null $callback = null)
  * @method self|ContactPoint contactPoint(\Closure|null $callback = null)
@@ -446,6 +447,7 @@ use Spatie\SchemaOrg\Exceptions\TypeNotInMultiTypedEntity;
  * @method self|Mass mass(\Closure|null $callback = null)
  * @method self|MathSolver mathSolver(\Closure|null $callback = null)
  * @method self|MaximumDoseSchedule maximumDoseSchedule(\Closure|null $callback = null)
+ * @method self|MeasurementMethodEnum measurementMethodEnum(\Closure|null $callback = null)
  * @method self|MeasurementTypeEnumeration measurementTypeEnumeration(\Closure|null $callback = null)
  * @method self|MediaGallery mediaGallery(\Closure|null $callback = null)
  * @method self|MediaManipulationRatingEnumeration mediaManipulationRatingEnumeration(\Closure|null $callback = null)
@@ -627,6 +629,7 @@ use Spatie\SchemaOrg\Exceptions\TypeNotInMultiTypedEntity;
  * @method self|PodcastSeason podcastSeason(\Closure|null $callback = null)
  * @method self|PodcastSeries podcastSeries(\Closure|null $callback = null)
  * @method self|PoliceStation policeStation(\Closure|null $callback = null)
+ * @method self|PoliticalParty politicalParty(\Closure|null $callback = null)
  * @method self|Pond pond(\Closure|null $callback = null)
  * @method self|PostOffice postOffice(\Closure|null $callback = null)
  * @method self|PostalAddress postalAddress(\Closure|null $callback = null)
@@ -781,6 +784,7 @@ use Spatie\SchemaOrg\Exceptions\TypeNotInMultiTypedEntity;
  * @method self|State state(\Closure|null $callback = null)
  * @method self|Statement statement(\Closure|null $callback = null)
  * @method self|StatisticalPopulation statisticalPopulation(\Closure|null $callback = null)
+ * @method self|StatisticalVariable statisticalVariable(\Closure|null $callback = null)
  * @method self|StatusEnumeration statusEnumeration(\Closure|null $callback = null)
  * @method self|SteeringPositionValue steeringPositionValue(\Closure|null $callback = null)
  * @method self|Store store(\Closure|null $callback = null)
@@ -793,6 +797,7 @@ use Spatie\SchemaOrg\Exceptions\TypeNotInMultiTypedEntity;
  * @method self|SuperficialAnatomy superficialAnatomy(\Closure|null $callback = null)
  * @method self|SurgicalProcedure surgicalProcedure(\Closure|null $callback = null)
  * @method self|SuspendAction suspendAction(\Closure|null $callback = null)
+ * @method self|Syllabus syllabus(\Closure|null $callback = null)
  * @method self|Synagogue synagogue(\Closure|null $callback = null)
  * @method self|TVClip tVClip(\Closure|null $callback = null)
  * @method self|TVEpisode tVEpisode(\Closure|null $callback = null)
@@ -811,6 +816,7 @@ use Spatie\SchemaOrg\Exceptions\TypeNotInMultiTypedEntity;
  * @method self|TelevisionStation televisionStation(\Closure|null $callback = null)
  * @method self|TennisComplex tennisComplex(\Closure|null $callback = null)
  * @method self|TextDigitalDocument textDigitalDocument(\Closure|null $callback = null)
+ * @method self|TextObject textObject(\Closure|null $callback = null)
  * @method self|TheaterEvent theaterEvent(\Closure|null $callback = null)
  * @method self|TheaterGroup theaterGroup(\Closure|null $callback = null)
  * @method self|TherapeuticProcedure therapeuticProcedure(\Closure|null $callback = null)
@@ -853,6 +859,7 @@ use Spatie\SchemaOrg\Exceptions\TypeNotInMultiTypedEntity;
  * @method self|UserPlusOnes userPlusOnes(\Closure|null $callback = null)
  * @method self|UserReview userReview(\Closure|null $callback = null)
  * @method self|UserTweets userTweets(\Closure|null $callback = null)
+ * @method self|VacationRental vacationRental(\Closure|null $callback = null)
  * @method self|Vehicle vehicle(\Closure|null $callback = null)
  * @method self|Vein vein(\Closure|null $callback = null)
  * @method self|Vessel vessel(\Closure|null $callback = null)
@@ -1013,10 +1020,10 @@ class MultiTypedEntity implements Type, JsonSerializable
         $properties = [];
         $types = [];
 
-        foreach ($this->nodes as $node) {
+        foreach($this->nodes as $node) {
             $temp = $this->serializeNode($node);
 
-            if (isset($temp['@type'])) {
+            if(isset($temp['@type'])) {
                 array_push($types, $temp['@type']);
                 unset($temp['@type']);
             }

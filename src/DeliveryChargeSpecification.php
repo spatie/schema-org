@@ -12,7 +12,6 @@ use Spatie\SchemaOrg\Contracts\ThingContract;
  * The price for the delivery of an offer using a particular delivery method.
  *
  * @see https://schema.org/DeliveryChargeSpecification
- * @link http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#source_GoodRelationsClass
  *
  */
 class DeliveryChargeSpecification extends BaseType implements DeliveryChargeSpecificationContract, IntangibleContract, PriceSpecificationContract, StructuredValueContract, ThingContract
@@ -20,10 +19,14 @@ class DeliveryChargeSpecification extends BaseType implements DeliveryChargeSpec
     /**
      * An additional type for the item, typically used for adding more specific
      * types from external vocabularies in microdata syntax. This is a
-     * relationship between something and a class that the thing is in. In RDFa
-     * syntax, it is better to use the native RDFa syntax - the 'typeof'
-     * attribute - for multiple types. Schema.org tools may have only weaker
-     * understanding of extra types, in particular those defined externally.
+     * relationship between something and a class that the thing is in.
+     * Typically the value is a URI-identified RDF class, and in this case
+     * corresponds to the
+     *     use of rdf:type in RDF. Text values can be used sparingly, for cases
+     * where useful information can be added without their being an appropriate
+     * schema to reference. In the case of text values, the class label should
+     * follow the schema.org [style
+     * guide](https://schema.org/docs/styleguide.html).
      *
      * @param string|string[] $additionalType
      *
@@ -59,7 +62,6 @@ class DeliveryChargeSpecification extends BaseType implements DeliveryChargeSpec
      * @return static
      *
      * @see https://schema.org/appliesToDeliveryMethod
-     * @link http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#source_GoodRelationsTerms
      */
     public function appliesToDeliveryMethod($appliesToDeliveryMethod)
     {
@@ -83,7 +85,7 @@ class DeliveryChargeSpecification extends BaseType implements DeliveryChargeSpec
     /**
      * A description of the item.
      *
-     * @param string|string[] $description
+     * @param \Spatie\SchemaOrg\Contracts\TextObjectContract|\Spatie\SchemaOrg\Contracts\TextObjectContract[]|string|string[] $description
      *
      * @return static
      *
@@ -121,7 +123,6 @@ class DeliveryChargeSpecification extends BaseType implements DeliveryChargeSpec
      * @return static
      *
      * @see https://schema.org/eligibleQuantity
-     * @link http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#source_GoodRelationsTerms
      */
     public function eligibleQuantity($eligibleQuantity)
     {
@@ -140,6 +141,7 @@ class DeliveryChargeSpecification extends BaseType implements DeliveryChargeSpec
      * @return static
      *
      * @see https://schema.org/eligibleRegion
+     * @link https://github.com/schemaorg/schemaorg/issues/1741
      */
     public function eligibleRegion($eligibleRegion)
     {
@@ -157,7 +159,6 @@ class DeliveryChargeSpecification extends BaseType implements DeliveryChargeSpec
      * @return static
      *
      * @see https://schema.org/eligibleTransactionVolume
-     * @link http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#source_GoodRelationsTerms
      */
     public function eligibleTransactionVolume($eligibleTransactionVolume)
     {
@@ -242,7 +243,6 @@ class DeliveryChargeSpecification extends BaseType implements DeliveryChargeSpec
      * @return static
      *
      * @see https://schema.org/maxPrice
-     * @link http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#source_GoodRelationsTerms
      */
     public function maxPrice($maxPrice)
     {
@@ -257,7 +257,6 @@ class DeliveryChargeSpecification extends BaseType implements DeliveryChargeSpec
      * @return static
      *
      * @see https://schema.org/minPrice
-     * @link http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#source_GoodRelationsTerms
      */
     public function minPrice($minPrice)
     {
@@ -406,7 +405,6 @@ class DeliveryChargeSpecification extends BaseType implements DeliveryChargeSpec
      * @return static
      *
      * @see https://schema.org/validFrom
-     * @link http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#source_GoodRelationsTerms
      */
     public function validFrom($validFrom)
     {
@@ -422,7 +420,6 @@ class DeliveryChargeSpecification extends BaseType implements DeliveryChargeSpec
      * @return static
      *
      * @see https://schema.org/validThrough
-     * @link http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#source_GoodRelationsTerms
      */
     public function validThrough($validThrough)
     {
@@ -438,7 +435,6 @@ class DeliveryChargeSpecification extends BaseType implements DeliveryChargeSpec
      * @return static
      *
      * @see https://schema.org/valueAddedTaxIncluded
-     * @link http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#source_GoodRelationsTerms
      */
     public function valueAddedTaxIncluded($valueAddedTaxIncluded)
     {

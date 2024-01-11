@@ -20,6 +20,8 @@ interface ApartmentContract
 
     public function amenityFeature($amenityFeature);
 
+    public function bed($bed);
+
     public function branchCode($branchCode);
 
     public function containedIn($containedIn);

@@ -18,7 +18,6 @@ use Spatie\SchemaOrg\Contracts\ThingContract;
  * schema.org for marking up hotels and other forms of accommodations</a>.
  *
  * @see https://schema.org/MeetingRoom
- * @link https://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#STI_Accommodation_Ontology
  *
  */
 class MeetingRoom extends BaseType implements MeetingRoomContract, AccommodationContract, PlaceContract, RoomContract, ThingContract
@@ -85,10 +84,14 @@ class MeetingRoom extends BaseType implements MeetingRoomContract, Accommodation
     /**
      * An additional type for the item, typically used for adding more specific
      * types from external vocabularies in microdata syntax. This is a
-     * relationship between something and a class that the thing is in. In RDFa
-     * syntax, it is better to use the native RDFa syntax - the 'typeof'
-     * attribute - for multiple types. Schema.org tools may have only weaker
-     * understanding of extra types, in particular those defined externally.
+     * relationship between something and a class that the thing is in.
+     * Typically the value is a URI-identified RDF class, and in this case
+     * corresponds to the
+     *     use of rdf:type in RDF. Text values can be used sparingly, for cases
+     * where useful information can be added without their being an appropriate
+     * schema to reference. In the case of text values, the class label should
+     * follow the schema.org [style
+     * guide](https://schema.org/docs/styleguide.html).
      *
      * @param string|string[] $additionalType
      *
@@ -155,11 +158,28 @@ class MeetingRoom extends BaseType implements MeetingRoomContract, Accommodation
      * @return static
      *
      * @see https://schema.org/amenityFeature
-     * @link https://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#STI_Accommodation_Ontology
      */
     public function amenityFeature($amenityFeature)
     {
         return $this->setProperty('amenityFeature', $amenityFeature);
+    }
+
+    /**
+     * The type of bed or beds included in the accommodation. For the single
+     * case of just one bed of a certain type, you use bed directly with a text.
+     *       If you want to indicate the quantity of a certain kind of bed, use
+     * an instance of BedDetails. For more detailed information, use the
+     * amenityFeature property.
+     *
+     * @param \Spatie\SchemaOrg\Contracts\BedDetailsContract|\Spatie\SchemaOrg\Contracts\BedDetailsContract[]|\Spatie\SchemaOrg\Contracts\BedTypeContract|\Spatie\SchemaOrg\Contracts\BedTypeContract[]|string|string[] $bed
+     *
+     * @return static
+     *
+     * @see https://schema.org/bed
+     */
+    public function bed($bed)
+    {
+        return $this->setProperty('bed', $bed);
     }
 
     /**
@@ -228,7 +248,7 @@ class MeetingRoom extends BaseType implements MeetingRoomContract, Accommodation
     /**
      * A description of the item.
      *
-     * @param string|string[] $description
+     * @param \Spatie\SchemaOrg\Contracts\TextObjectContract|\Spatie\SchemaOrg\Contracts\TextObjectContract[]|string|string[] $description
      *
      * @return static
      *
@@ -322,14 +342,13 @@ class MeetingRoom extends BaseType implements MeetingRoomContract, Accommodation
     /**
      * The size of the accommodation, e.g. in square meter or squarefoot.
      * Typical unit code(s): MTK for square meter, FTK for square foot, or YDK
-     * for square yard
+     * for square yard.
      *
      * @param \Spatie\SchemaOrg\Contracts\QuantitativeValueContract|\Spatie\SchemaOrg\Contracts\QuantitativeValueContract[] $floorSize
      *
      * @return static
      *
      * @see https://schema.org/floorSize
-     * @link https://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#STI_Accommodation_Ontology
      */
     public function floorSize($floorSize)
     {
@@ -533,7 +552,6 @@ class MeetingRoom extends BaseType implements MeetingRoomContract, Accommodation
      * @return static
      *
      * @see https://schema.org/globalLocationNumber
-     * @link http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#source_GoodRelationsTerms
      */
     public function globalLocationNumber($globalLocationNumber)
     {
@@ -631,7 +649,6 @@ class MeetingRoom extends BaseType implements MeetingRoomContract, Accommodation
      * @return static
      *
      * @see https://schema.org/isicV4
-     * @link http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#source_GoodRelationsTerms
      */
     public function isicV4($isicV4)
     {
@@ -694,7 +711,6 @@ class MeetingRoom extends BaseType implements MeetingRoomContract, Accommodation
      * @return static
      *
      * @see https://schema.org/logo
-     * @link http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#source_GoodRelationsTerms
      */
     public function logo($logo)
     {
@@ -873,11 +889,28 @@ class MeetingRoom extends BaseType implements MeetingRoomContract, Accommodation
      * @return static
      *
      * @see https://schema.org/numberOfRooms
-     * @link https://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#STI_Accommodation_Ontology
      */
     public function numberOfRooms($numberOfRooms)
     {
         return $this->setProperty('numberOfRooms', $numberOfRooms);
+    }
+
+    /**
+     * The allowed total occupancy for the accommodation in persons (including
+     * infants etc). For individual accommodations, this is not necessarily the
+     * legal maximum but defines the permitted usage as per the contractual
+     * agreement (e.g. a double room used by a single person).
+     * Typical unit code(s): C62 for person.
+     *
+     * @param \Spatie\SchemaOrg\Contracts\QuantitativeValueContract|\Spatie\SchemaOrg\Contracts\QuantitativeValueContract[] $occupancy
+     *
+     * @return static
+     *
+     * @see https://schema.org/occupancy
+     */
+    public function occupancy($occupancy)
+    {
+        return $this->setProperty('occupancy', $occupancy);
     }
 
     /**
@@ -888,7 +921,6 @@ class MeetingRoom extends BaseType implements MeetingRoomContract, Accommodation
      * @return static
      *
      * @see https://schema.org/openingHoursSpecification
-     * @link http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#source_GoodRelationsTerms
      */
     public function openingHoursSpecification($openingHoursSpecification)
     {
@@ -903,7 +935,6 @@ class MeetingRoom extends BaseType implements MeetingRoomContract, Accommodation
      * @return static
      *
      * @see https://schema.org/permittedUsage
-     * @link https://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#STI_Accommodation_Ontology
      */
     public function permittedUsage($permittedUsage)
     {
@@ -919,7 +950,6 @@ class MeetingRoom extends BaseType implements MeetingRoomContract, Accommodation
      * @return static
      *
      * @see https://schema.org/petsAllowed
-     * @link https://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#STI_Accommodation_Ontology
      */
     public function petsAllowed($petsAllowed)
     {
@@ -971,7 +1001,7 @@ class MeetingRoom extends BaseType implements MeetingRoomContract, Accommodation
 
     /**
      * A flag to signal that the [[Place]] is open to public visitors.  If this
-     * property is omitted there is no assumed default boolean value
+     * property is omitted there is no assumed default boolean value.
      *
      * @param bool|bool[] $publicAccess
      *
@@ -1051,7 +1081,6 @@ class MeetingRoom extends BaseType implements MeetingRoomContract, Accommodation
      * @return static
      *
      * @see https://schema.org/smokingAllowed
-     * @link https://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#STI_Accommodation_Ontology
      */
     public function smokingAllowed($smokingAllowed)
     {

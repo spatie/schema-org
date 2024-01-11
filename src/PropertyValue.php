@@ -18,7 +18,6 @@ use Spatie\SchemaOrg\Contracts\ThingContract;
  * the same effect as using the original, specific property.
  *
  * @see https://schema.org/PropertyValue
- * @link http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#source_GoodRelationsClass
  *
  */
 class PropertyValue extends BaseType implements PropertyValueContract, IntangibleContract, StructuredValueContract, ThingContract
@@ -26,10 +25,14 @@ class PropertyValue extends BaseType implements PropertyValueContract, Intangibl
     /**
      * An additional type for the item, typically used for adding more specific
      * types from external vocabularies in microdata syntax. This is a
-     * relationship between something and a class that the thing is in. In RDFa
-     * syntax, it is better to use the native RDFa syntax - the 'typeof'
-     * attribute - for multiple types. Schema.org tools may have only weaker
-     * understanding of extra types, in particular those defined externally.
+     * relationship between something and a class that the thing is in.
+     * Typically the value is a URI-identified RDF class, and in this case
+     * corresponds to the
+     *     use of rdf:type in RDF. Text values can be used sparingly, for cases
+     * where useful information can be added without their being an appropriate
+     * schema to reference. In the case of text values, the class label should
+     * follow the schema.org [style
+     * guide](https://schema.org/docs/styleguide.html).
      *
      * @param string|string[] $additionalType
      *
@@ -59,7 +62,7 @@ class PropertyValue extends BaseType implements PropertyValueContract, Intangibl
     /**
      * A description of the item.
      *
-     * @param string|string[] $description
+     * @param \Spatie\SchemaOrg\Contracts\TextObjectContract|\Spatie\SchemaOrg\Contracts\TextObjectContract[]|string|string[] $description
      *
      * @return static
      *
@@ -144,7 +147,6 @@ class PropertyValue extends BaseType implements PropertyValueContract, Intangibl
      * @return static
      *
      * @see https://schema.org/maxValue
-     * @link http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#source_GoodRelationsTerms
      */
     public function maxValue($maxValue)
     {
@@ -152,27 +154,53 @@ class PropertyValue extends BaseType implements PropertyValueContract, Intangibl
     }
 
     /**
-     * A technique or technology used in a [[Dataset]] (or [[DataDownload]],
-     * [[DataCatalog]]),
-     * corresponding to the method used for measuring the corresponding
-     * variable(s) (described using [[variableMeasured]]). This is oriented
+     * A subproperty of [[measurementTechnique]] that can be used for specifying
+     * specific methods, in particular via [[MeasurementMethodEnum]].
+     *
+     * @param \Spatie\SchemaOrg\Contracts\DefinedTermContract|\Spatie\SchemaOrg\Contracts\DefinedTermContract[]|\Spatie\SchemaOrg\Contracts\MeasurementMethodEnumContract|\Spatie\SchemaOrg\Contracts\MeasurementMethodEnumContract[]|string|string[] $measurementMethod
+     *
+     * @return static
+     *
+     * @see https://schema.org/measurementMethod
+     * @see https://pending.schema.org
+     * @link https://github.com/schemaorg/schemaorg/issues/1425
+     */
+    public function measurementMethod($measurementMethod)
+    {
+        return $this->setProperty('measurementMethod', $measurementMethod);
+    }
+
+    /**
+     * A technique, method or technology used in an [[Observation]],
+     * [[StatisticalVariable]] or [[Dataset]] (or [[DataDownload]],
+     * [[DataCatalog]]), corresponding to the method used for measuring the
+     * corresponding variable(s) (for datasets, described using
+     * [[variableMeasured]]; for [[Observation]], a [[StatisticalVariable]]).
+     * Often but not necessarily each [[variableMeasured]] will have an explicit
+     * representation as (or mapping to) an property such as those defined in
+     * Schema.org, or other RDF vocabularies and "knowledge graphs". In that
+     * case the subproperty of [[variableMeasured]] called [[measuredProperty]]
+     * is applicable.
+     *
+     * The [[measurementTechnique]] property helps when extra clarification is
+     * needed about how a [[measuredProperty]] was measured. This is oriented
      * towards scientific and scholarly dataset publication but may have broader
      * applicability; it is not intended as a full representation of
-     * measurement, but rather as a high level summary for dataset discovery.
+     * measurement, but can often serve as a high level summary for dataset
+     * discovery.
      *
      * For example, if [[variableMeasured]] is: molecule concentration,
      * [[measurementTechnique]] could be: "mass spectrometry" or "nmr
-     * spectroscopy" or "colorimetry" or "immunofluorescence".
-     *
-     * If the [[variableMeasured]] is "depression rating", the
-     * [[measurementTechnique]] could be "Zung Scale" or "HAM-D" or "Beck
-     * Depression Inventory".
+     * spectroscopy" or "colorimetry" or "immunofluorescence". If the
+     * [[variableMeasured]] is "depression rating", the [[measurementTechnique]]
+     * could be "Zung Scale" or "HAM-D" or "Beck Depression Inventory".
      *
      * If there are several [[variableMeasured]] properties recorded for some
      * given data object, use a [[PropertyValue]] for each [[variableMeasured]]
-     * and attach the corresponding [[measurementTechnique]].
+     * and attach the corresponding [[measurementTechnique]]. The value can also
+     * be from an enumeration, organized as a [[MeasurementMetholdEnumeration]].
      *
-     * @param string|string[] $measurementTechnique
+     * @param \Spatie\SchemaOrg\Contracts\DefinedTermContract|\Spatie\SchemaOrg\Contracts\DefinedTermContract[]|\Spatie\SchemaOrg\Contracts\MeasurementMethodEnumContract|\Spatie\SchemaOrg\Contracts\MeasurementMethodEnumContract[]|string|string[] $measurementTechnique
      *
      * @return static
      *
@@ -193,7 +221,6 @@ class PropertyValue extends BaseType implements PropertyValueContract, Intangibl
      * @return static
      *
      * @see https://schema.org/minValue
-     * @link http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#source_GoodRelationsTerms
      */
     public function minValue($minValue)
     {
@@ -294,7 +321,6 @@ class PropertyValue extends BaseType implements PropertyValueContract, Intangibl
      * @return static
      *
      * @see https://schema.org/unitCode
-     * @link http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#source_GoodRelationsTerms
      */
     public function unitCode($unitCode)
     {
@@ -332,7 +358,8 @@ class PropertyValue extends BaseType implements PropertyValueContract, Intangibl
     }
 
     /**
-     * The value of the quantitative value or property value node.
+     * The value of a [[QuantitativeValue]] (including [[Observation]]) or
+     * property value node.
      *
      * * For [[QuantitativeValue]] and [[MonetaryAmount]], the recommended type
      * for values is 'Number'.
@@ -348,7 +375,6 @@ class PropertyValue extends BaseType implements PropertyValueContract, Intangibl
      * @return static
      *
      * @see https://schema.org/value
-     * @link http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#source_GoodRelationsTerms
      */
     public function value($value)
     {
@@ -364,7 +390,6 @@ class PropertyValue extends BaseType implements PropertyValueContract, Intangibl
      * @return static
      *
      * @see https://schema.org/valueReference
-     * @link http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#source_GoodRelationsTerms
      */
     public function valueReference($valueReference)
     {

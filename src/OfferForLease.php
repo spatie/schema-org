@@ -30,7 +30,6 @@ class OfferForLease extends BaseType implements OfferForLeaseContract, Intangibl
      * @return static
      *
      * @see https://schema.org/acceptedPaymentMethod
-     * @link http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#source_GoodRelationsTerms
      */
     public function acceptedPaymentMethod($acceptedPaymentMethod)
     {
@@ -47,7 +46,6 @@ class OfferForLease extends BaseType implements OfferForLeaseContract, Intangibl
      * @return static
      *
      * @see https://schema.org/addOn
-     * @link http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#source_GoodRelationsTerms
      */
     public function addOn($addOn)
     {
@@ -57,10 +55,14 @@ class OfferForLease extends BaseType implements OfferForLeaseContract, Intangibl
     /**
      * An additional type for the item, typically used for adding more specific
      * types from external vocabularies in microdata syntax. This is a
-     * relationship between something and a class that the thing is in. In RDFa
-     * syntax, it is better to use the native RDFa syntax - the 'typeof'
-     * attribute - for multiple types. Schema.org tools may have only weaker
-     * understanding of extra types, in particular those defined externally.
+     * relationship between something and a class that the thing is in.
+     * Typically the value is a URI-identified RDF class, and in this case
+     * corresponds to the
+     *     use of rdf:type in RDF. Text values can be used sparingly, for cases
+     * where useful information can be added without their being an appropriate
+     * schema to reference. In the case of text values, the class label should
+     * follow the schema.org [style
+     * guide](https://schema.org/docs/styleguide.html).
      *
      * @param string|string[] $additionalType
      *
@@ -82,7 +84,6 @@ class OfferForLease extends BaseType implements OfferForLeaseContract, Intangibl
      * @return static
      *
      * @see https://schema.org/advanceBookingRequirement
-     * @link http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#source_GoodRelationsTerms
      */
     public function advanceBookingRequirement($advanceBookingRequirement)
     {
@@ -182,6 +183,7 @@ class OfferForLease extends BaseType implements OfferForLeaseContract, Intangibl
      * @return static
      *
      * @see https://schema.org/availabilityEnds
+     * @link https://github.com/schemaorg/schemaorg/issues/1741
      */
     public function availabilityEnds($availabilityEnds)
     {
@@ -197,6 +199,7 @@ class OfferForLease extends BaseType implements OfferForLeaseContract, Intangibl
      * @return static
      *
      * @see https://schema.org/availabilityStarts
+     * @link https://github.com/schemaorg/schemaorg/issues/1741
      */
     public function availabilityStarts($availabilityStarts)
     {
@@ -211,7 +214,6 @@ class OfferForLease extends BaseType implements OfferForLeaseContract, Intangibl
      * @return static
      *
      * @see https://schema.org/availableAtOrFrom
-     * @link http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#source_GoodRelationsTerms
      */
     public function availableAtOrFrom($availableAtOrFrom)
     {
@@ -226,7 +228,6 @@ class OfferForLease extends BaseType implements OfferForLeaseContract, Intangibl
      * @return static
      *
      * @see https://schema.org/availableDeliveryMethod
-     * @link http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#source_GoodRelationsTerms
      */
     public function availableDeliveryMethod($availableDeliveryMethod)
     {
@@ -243,7 +244,6 @@ class OfferForLease extends BaseType implements OfferForLeaseContract, Intangibl
      * @return static
      *
      * @see https://schema.org/businessFunction
-     * @link http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#source_GoodRelationsTerms
      */
     public function businessFunction($businessFunction)
     {
@@ -295,7 +295,6 @@ class OfferForLease extends BaseType implements OfferForLeaseContract, Intangibl
      * @return static
      *
      * @see https://schema.org/deliveryLeadTime
-     * @link http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#source_GoodRelationsTerms
      */
     public function deliveryLeadTime($deliveryLeadTime)
     {
@@ -305,7 +304,7 @@ class OfferForLease extends BaseType implements OfferForLeaseContract, Intangibl
     /**
      * A description of the item.
      *
-     * @param string|string[] $description
+     * @param \Spatie\SchemaOrg\Contracts\TextObjectContract|\Spatie\SchemaOrg\Contracts\TextObjectContract[]|string|string[] $description
      *
      * @return static
      *
@@ -341,7 +340,6 @@ class OfferForLease extends BaseType implements OfferForLeaseContract, Intangibl
      * @return static
      *
      * @see https://schema.org/eligibleCustomerType
-     * @link http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#source_GoodRelationsTerms
      */
     public function eligibleCustomerType($eligibleCustomerType)
     {
@@ -356,7 +354,6 @@ class OfferForLease extends BaseType implements OfferForLeaseContract, Intangibl
      * @return static
      *
      * @see https://schema.org/eligibleDuration
-     * @link http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#source_GoodRelationsTerms
      */
     public function eligibleDuration($eligibleDuration)
     {
@@ -373,7 +370,6 @@ class OfferForLease extends BaseType implements OfferForLeaseContract, Intangibl
      * @return static
      *
      * @see https://schema.org/eligibleQuantity
-     * @link http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#source_GoodRelationsTerms
      */
     public function eligibleQuantity($eligibleQuantity)
     {
@@ -392,6 +388,7 @@ class OfferForLease extends BaseType implements OfferForLeaseContract, Intangibl
      * @return static
      *
      * @see https://schema.org/eligibleRegion
+     * @link https://github.com/schemaorg/schemaorg/issues/1741
      */
     public function eligibleRegion($eligibleRegion)
     {
@@ -409,7 +406,6 @@ class OfferForLease extends BaseType implements OfferForLeaseContract, Intangibl
      * @return static
      *
      * @see https://schema.org/eligibleTransactionVolume
-     * @link http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#source_GoodRelationsTerms
      */
     public function eligibleTransactionVolume($eligibleTransactionVolume)
     {
@@ -489,7 +485,6 @@ class OfferForLease extends BaseType implements OfferForLeaseContract, Intangibl
      * @return static
      *
      * @see https://schema.org/gtin13
-     * @link http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#source_GoodRelationsTerms
      */
     public function gtin13($gtin13)
     {
@@ -507,7 +502,6 @@ class OfferForLease extends BaseType implements OfferForLeaseContract, Intangibl
      * @return static
      *
      * @see https://schema.org/gtin14
-     * @link http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#source_GoodRelationsTerms
      */
     public function gtin14($gtin14)
     {
@@ -525,7 +519,6 @@ class OfferForLease extends BaseType implements OfferForLeaseContract, Intangibl
      * @return static
      *
      * @see https://schema.org/gtin8
-     * @link http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#source_GoodRelationsTerms
      */
     public function gtin8($gtin8)
     {
@@ -626,7 +619,6 @@ class OfferForLease extends BaseType implements OfferForLeaseContract, Intangibl
      * @return static
      *
      * @see https://schema.org/includesObject
-     * @link http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#source_GoodRelationsTerms
      */
     public function includesObject($includesObject)
     {
@@ -662,7 +654,6 @@ class OfferForLease extends BaseType implements OfferForLeaseContract, Intangibl
      * @return static
      *
      * @see https://schema.org/inventoryLevel
-     * @link http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#source_GoodRelationsTerms
      */
     public function inventoryLevel($inventoryLevel)
     {
@@ -792,7 +783,6 @@ class OfferForLease extends BaseType implements OfferForLeaseContract, Intangibl
      * @return static
      *
      * @see https://schema.org/mpn
-     * @link http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#source_GoodRelationsTerms
      */
     public function mpn($mpn)
     {
@@ -911,7 +901,6 @@ class OfferForLease extends BaseType implements OfferForLeaseContract, Intangibl
      * @return static
      *
      * @see https://schema.org/priceSpecification
-     * @link http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#source_GoodRelationsTerms
      */
     public function priceSpecification($priceSpecification)
     {
@@ -1001,7 +990,6 @@ class OfferForLease extends BaseType implements OfferForLeaseContract, Intangibl
      * @return static
      *
      * @see https://schema.org/serialNumber
-     * @link http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#source_GoodRelationsTerms
      */
     public function serialNumber($serialNumber)
     {
@@ -1034,7 +1022,6 @@ class OfferForLease extends BaseType implements OfferForLeaseContract, Intangibl
      * @return static
      *
      * @see https://schema.org/sku
-     * @link http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#source_GoodRelationsTerms
      */
     public function sku($sku)
     {
@@ -1078,7 +1065,6 @@ class OfferForLease extends BaseType implements OfferForLeaseContract, Intangibl
      * @return static
      *
      * @see https://schema.org/validFrom
-     * @link http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#source_GoodRelationsTerms
      */
     public function validFrom($validFrom)
     {
@@ -1094,7 +1080,6 @@ class OfferForLease extends BaseType implements OfferForLeaseContract, Intangibl
      * @return static
      *
      * @see https://schema.org/validThrough
-     * @link http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#source_GoodRelationsTerms
      */
     public function validThrough($validThrough)
     {
@@ -1109,7 +1094,6 @@ class OfferForLease extends BaseType implements OfferForLeaseContract, Intangibl
      * @return static
      *
      * @see https://schema.org/warranty
-     * @link http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#source_GoodRelationsTerms
      */
     public function warranty($warranty)
     {

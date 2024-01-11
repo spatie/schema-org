@@ -11,7 +11,6 @@ use Spatie\SchemaOrg\Contracts\ThingContract;
  * An audio file.
  *
  * @see https://schema.org/AudioObject
- * @link http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#source_rNews
  *
  */
 class AudioObject extends BaseType implements AudioObjectContract, CreativeWorkContract, MediaObjectContract, ThingContract
@@ -154,7 +153,7 @@ class AudioObject extends BaseType implements AudioObjectContract, CreativeWorkC
      * deficiencies, consistent with the other accessibility metadata but
      * expressing subtleties such as "short descriptions are present but long
      * descriptions will be needed for non-visual users" or "short descriptions
-     * are present and no long descriptions are needed."
+     * are present and no long descriptions are needed".
      *
      * @param string|string[] $accessibilitySummary
      *
@@ -202,10 +201,14 @@ class AudioObject extends BaseType implements AudioObjectContract, CreativeWorkC
     /**
      * An additional type for the item, typically used for adding more specific
      * types from external vocabularies in microdata syntax. This is a
-     * relationship between something and a class that the thing is in. In RDFa
-     * syntax, it is better to use the native RDFa syntax - the 'typeof'
-     * attribute - for multiple types. Schema.org tools may have only weaker
-     * understanding of extra types, in particular those defined externally.
+     * relationship between something and a class that the thing is in.
+     * Typically the value is a URI-identified RDF class, and in this case
+     * corresponds to the
+     *     use of rdf:type in RDF. Text values can be used sparingly, for cases
+     * where useful information can be added without their being an appropriate
+     * schema to reference. In the case of text values, the class label should
+     * follow the schema.org [style
+     * guide](https://schema.org/docs/styleguide.html).
      *
      * @param string|string[] $additionalType
      *
@@ -658,6 +661,7 @@ class AudioObject extends BaseType implements AudioObjectContract, CreativeWorkC
      *
      * @see https://schema.org/correction
      * @see https://pending.schema.org
+     * @link https://github.com/schemaorg/schemaorg/issues/1950
      */
     public function correction($correction)
     {
@@ -787,7 +791,7 @@ class AudioObject extends BaseType implements AudioObjectContract, CreativeWorkC
     /**
      * A description of the item.
      *
-     * @param string|string[] $description
+     * @param \Spatie\SchemaOrg\Contracts\TextObjectContract|\Spatie\SchemaOrg\Contracts\TextObjectContract[]|string|string[] $description
      *
      * @return static
      *
@@ -1073,7 +1077,6 @@ class AudioObject extends BaseType implements AudioObjectContract, CreativeWorkC
      * @return static
      *
      * @see https://schema.org/exampleOfWork
-     * @link http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#source_bibex
      */
     public function exampleOfWork($exampleOfWork)
     {
@@ -1144,6 +1147,7 @@ class AudioObject extends BaseType implements AudioObjectContract, CreativeWorkC
      *
      * @see https://schema.org/funding
      * @see https://pending.schema.org
+     * @link https://github.com/schemaorg/schemaorg/issues/383
      */
     public function funding($funding)
     {
@@ -1173,7 +1177,6 @@ class AudioObject extends BaseType implements AudioObjectContract, CreativeWorkC
      * @return static
      *
      * @see https://schema.org/hasPart
-     * @link http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#source_bibex
      */
     public function hasPart($hasPart)
     {
@@ -1346,7 +1349,7 @@ class AudioObject extends BaseType implements AudioObjectContract, CreativeWorkC
 
     /**
      * A resource from which this work is derived or from which it is a
-     * modification or adaption.
+     * modification or adaptation.
      *
      * @param \Spatie\SchemaOrg\Contracts\CreativeWorkContract|\Spatie\SchemaOrg\Contracts\CreativeWorkContract[]|\Spatie\SchemaOrg\Contracts\ProductContract|\Spatie\SchemaOrg\Contracts\ProductContract[]|string|string[] $isBasedOn
      *
@@ -1913,7 +1916,7 @@ class AudioObject extends BaseType implements AudioObjectContract, CreativeWorkC
 
     /**
      * Indicates the date on which the current structured data was generated /
-     * published. Typically used alongside [[sdPublisher]]
+     * published. Typically used alongside [[sdPublisher]].
      *
      * @param \DateTimeInterface|\DateTimeInterface[] $sdDatePublished
      *
@@ -1970,7 +1973,7 @@ class AudioObject extends BaseType implements AudioObjectContract, CreativeWorkC
     /**
      * The [SHA-2](https://en.wikipedia.org/wiki/SHA-2) SHA256 hash of the
      * content of the item. For example, a zero-length input has value
-     * 'e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855'
+     * 'e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855'.
      *
      * @param string|string[] $sha256
      *
@@ -2188,6 +2191,20 @@ class AudioObject extends BaseType implements AudioObjectContract, CreativeWorkC
     }
 
     /**
+     * Thumbnail image for an image or video.
+     *
+     * @param \Spatie\SchemaOrg\Contracts\ImageObjectContract|\Spatie\SchemaOrg\Contracts\ImageObjectContract[] $thumbnail
+     *
+     * @return static
+     *
+     * @see https://schema.org/thumbnail
+     */
+    public function thumbnail($thumbnail)
+    {
+        return $this->setProperty('thumbnail', $thumbnail);
+    }
+
+    /**
      * A thumbnail image relevant to the Thing.
      *
      * @param string|string[] $thumbnailUrl
@@ -2202,9 +2219,8 @@ class AudioObject extends BaseType implements AudioObjectContract, CreativeWorkC
     }
 
     /**
-     * Approximate or typical time it takes to work with or through this
-     * learning resource for the typical intended target audience, e.g. 'PT30M',
-     * 'PT1H25M'.
+     * Approximate or typical time it usually takes to work with or through the
+     * content of this work for the typical or target audience.
      *
      * @param \Spatie\SchemaOrg\Contracts\DurationContract|\Spatie\SchemaOrg\Contracts\DurationContract[] $timeRequired
      *
@@ -2279,7 +2295,8 @@ class AudioObject extends BaseType implements AudioObjectContract, CreativeWorkC
     }
 
     /**
-     * Date when this media object was uploaded to this site.
+     * Date (including time if available) when this media object was uploaded to
+     * this site.
      *
      * @param \DateTimeInterface|\DateTimeInterface[] $uploadDate
      *
@@ -2385,7 +2402,6 @@ class AudioObject extends BaseType implements AudioObjectContract, CreativeWorkC
      * @return static
      *
      * @see https://schema.org/workExample
-     * @link http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#source_bibex
      */
     public function workExample($workExample)
     {

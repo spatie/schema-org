@@ -40,10 +40,14 @@ class MusicVenue extends BaseType implements MusicVenueContract, CivicStructureC
     /**
      * An additional type for the item, typically used for adding more specific
      * types from external vocabularies in microdata syntax. This is a
-     * relationship between something and a class that the thing is in. In RDFa
-     * syntax, it is better to use the native RDFa syntax - the 'typeof'
-     * attribute - for multiple types. Schema.org tools may have only weaker
-     * understanding of extra types, in particular those defined externally.
+     * relationship between something and a class that the thing is in.
+     * Typically the value is a URI-identified RDF class, and in this case
+     * corresponds to the
+     *     use of rdf:type in RDF. Text values can be used sparingly, for cases
+     * where useful information can be added without their being an appropriate
+     * schema to reference. In the case of text values, the class label should
+     * follow the schema.org [style
+     * guide](https://schema.org/docs/styleguide.html).
      *
      * @param string|string[] $additionalType
      *
@@ -110,7 +114,6 @@ class MusicVenue extends BaseType implements MusicVenueContract, CivicStructureC
      * @return static
      *
      * @see https://schema.org/amenityFeature
-     * @link https://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#STI_Accommodation_Ontology
      */
     public function amenityFeature($amenityFeature)
     {
@@ -183,7 +186,7 @@ class MusicVenue extends BaseType implements MusicVenueContract, CivicStructureC
     /**
      * A description of the item.
      *
-     * @param string|string[] $description
+     * @param \Spatie\SchemaOrg\Contracts\TextObjectContract|\Spatie\SchemaOrg\Contracts\TextObjectContract[]|string|string[] $description
      *
      * @return static
      *
@@ -451,7 +454,6 @@ class MusicVenue extends BaseType implements MusicVenueContract, CivicStructureC
      * @return static
      *
      * @see https://schema.org/globalLocationNumber
-     * @link http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#source_GoodRelationsTerms
      */
     public function globalLocationNumber($globalLocationNumber)
     {
@@ -549,7 +551,6 @@ class MusicVenue extends BaseType implements MusicVenueContract, CivicStructureC
      * @return static
      *
      * @see https://schema.org/isicV4
-     * @link http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#source_GoodRelationsTerms
      */
     public function isicV4($isicV4)
     {
@@ -595,7 +596,6 @@ class MusicVenue extends BaseType implements MusicVenueContract, CivicStructureC
      * @return static
      *
      * @see https://schema.org/logo
-     * @link http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#source_GoodRelationsTerms
      */
     public function logo($logo)
     {
@@ -724,7 +724,6 @@ class MusicVenue extends BaseType implements MusicVenueContract, CivicStructureC
      * @return static
      *
      * @see https://schema.org/openingHoursSpecification
-     * @link http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#source_GoodRelationsTerms
      */
     public function openingHoursSpecification($openingHoursSpecification)
     {
@@ -776,7 +775,7 @@ class MusicVenue extends BaseType implements MusicVenueContract, CivicStructureC
 
     /**
      * A flag to signal that the [[Place]] is open to public visitors.  If this
-     * property is omitted there is no assumed default boolean value
+     * property is omitted there is no assumed default boolean value.
      *
      * @param bool|bool[] $publicAccess
      *
@@ -856,7 +855,6 @@ class MusicVenue extends BaseType implements MusicVenueContract, CivicStructureC
      * @return static
      *
      * @see https://schema.org/smokingAllowed
-     * @link https://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#STI_Accommodation_Ontology
      */
     public function smokingAllowed($smokingAllowed)
     {

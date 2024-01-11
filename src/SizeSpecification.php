@@ -48,10 +48,14 @@ class SizeSpecification extends BaseType implements SizeSpecificationContract, E
     /**
      * An additional type for the item, typically used for adding more specific
      * types from external vocabularies in microdata syntax. This is a
-     * relationship between something and a class that the thing is in. In RDFa
-     * syntax, it is better to use the native RDFa syntax - the 'typeof'
-     * attribute - for multiple types. Schema.org tools may have only weaker
-     * understanding of extra types, in particular those defined externally.
+     * relationship between something and a class that the thing is in.
+     * Typically the value is a URI-identified RDF class, and in this case
+     * corresponds to the
+     *     use of rdf:type in RDF. Text values can be used sparingly, for cases
+     * where useful information can be added without their being an appropriate
+     * schema to reference. In the case of text values, the class label should
+     * follow the schema.org [style
+     * guide](https://schema.org/docs/styleguide.html).
      *
      * @param string|string[] $additionalType
      *
@@ -81,7 +85,7 @@ class SizeSpecification extends BaseType implements SizeSpecificationContract, E
     /**
      * A description of the item.
      *
-     * @param string|string[] $description
+     * @param \Spatie\SchemaOrg\Contracts\TextObjectContract|\Spatie\SchemaOrg\Contracts\TextObjectContract[]|string|string[] $description
      *
      * @return static
      *
@@ -118,7 +122,6 @@ class SizeSpecification extends BaseType implements SizeSpecificationContract, E
      * @return static
      *
      * @see https://schema.org/equal
-     * @link http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#source_GoodRelationsTerms
      */
     public function equal($equal)
     {
@@ -134,7 +137,6 @@ class SizeSpecification extends BaseType implements SizeSpecificationContract, E
      * @return static
      *
      * @see https://schema.org/greater
-     * @link http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#source_GoodRelationsTerms
      */
     public function greater($greater)
     {
@@ -150,7 +152,6 @@ class SizeSpecification extends BaseType implements SizeSpecificationContract, E
      * @return static
      *
      * @see https://schema.org/greaterOrEqual
-     * @link http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#source_GoodRelationsTerms
      */
     public function greaterOrEqual($greaterOrEqual)
     {
@@ -218,7 +219,6 @@ class SizeSpecification extends BaseType implements SizeSpecificationContract, E
      * @return static
      *
      * @see https://schema.org/lesser
-     * @link http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#source_GoodRelationsTerms
      */
     public function lesser($lesser)
     {
@@ -234,7 +234,6 @@ class SizeSpecification extends BaseType implements SizeSpecificationContract, E
      * @return static
      *
      * @see https://schema.org/lesserOrEqual
-     * @link http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#source_GoodRelationsTerms
      */
     public function lesserOrEqual($lesserOrEqual)
     {
@@ -280,7 +279,6 @@ class SizeSpecification extends BaseType implements SizeSpecificationContract, E
      * @return static
      *
      * @see https://schema.org/nonEqual
-     * @link http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#source_GoodRelationsTerms
      */
     public function nonEqual($nonEqual)
     {
@@ -323,7 +321,7 @@ class SizeSpecification extends BaseType implements SizeSpecificationContract, E
      * groups are common in the fashion industry to define size segments and
      * suggested audiences for wearable products. Multiple values can be
      * combined, for example "men's big and tall", "petite maternity" or
-     * "regular"
+     * "regular".
      *
      * @param \Spatie\SchemaOrg\Contracts\SizeGroupEnumerationContract|\Spatie\SchemaOrg\Contracts\SizeGroupEnumerationContract[]|string|string[] $sizeGroup
      *
@@ -445,7 +443,6 @@ class SizeSpecification extends BaseType implements SizeSpecificationContract, E
      * @return static
      *
      * @see https://schema.org/valueReference
-     * @link http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#source_GoodRelationsTerms
      */
     public function valueReference($valueReference)
     {

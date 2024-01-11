@@ -10,7 +10,6 @@ use Spatie\SchemaOrg\Contracts\ThingContract;
  * A body of structured information describing some topic(s) of interest.
  *
  * @see https://schema.org/Dataset
- * @link http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#source_DatasetClass
  *
  */
 class Dataset extends BaseType implements DatasetContract, CreativeWorkContract, ThingContract
@@ -153,7 +152,7 @@ class Dataset extends BaseType implements DatasetContract, CreativeWorkContract,
      * deficiencies, consistent with the other accessibility metadata but
      * expressing subtleties such as "short descriptions are present but long
      * descriptions will be needed for non-visual users" or "short descriptions
-     * are present and no long descriptions are needed."
+     * are present and no long descriptions are needed".
      *
      * @param string|string[] $accessibilitySummary
      *
@@ -201,10 +200,14 @@ class Dataset extends BaseType implements DatasetContract, CreativeWorkContract,
     /**
      * An additional type for the item, typically used for adding more specific
      * types from external vocabularies in microdata syntax. This is a
-     * relationship between something and a class that the thing is in. In RDFa
-     * syntax, it is better to use the native RDFa syntax - the 'typeof'
-     * attribute - for multiple types. Schema.org tools may have only weaker
-     * understanding of extra types, in particular those defined externally.
+     * relationship between something and a class that the thing is in.
+     * Typically the value is a URI-identified RDF class, and in this case
+     * corresponds to the
+     *     use of rdf:type in RDF. Text values can be used sparingly, for cases
+     * where useful information can be added without their being an appropriate
+     * schema to reference. In the case of text values, the class label should
+     * follow the schema.org [style
+     * guide](https://schema.org/docs/styleguide.html).
      *
      * @param string|string[] $additionalType
      *
@@ -598,6 +601,7 @@ class Dataset extends BaseType implements DatasetContract, CreativeWorkContract,
      *
      * @see https://schema.org/correction
      * @see https://pending.schema.org
+     * @link https://github.com/schemaorg/schemaorg/issues/1950
      */
     public function correction($correction)
     {
@@ -742,7 +746,7 @@ class Dataset extends BaseType implements DatasetContract, CreativeWorkContract,
     /**
      * A description of the item.
      *
-     * @param string|string[] $description
+     * @param \Spatie\SchemaOrg\Contracts\TextObjectContract|\Spatie\SchemaOrg\Contracts\TextObjectContract[]|string|string[] $description
      *
      * @return static
      *
@@ -962,7 +966,6 @@ class Dataset extends BaseType implements DatasetContract, CreativeWorkContract,
      * @return static
      *
      * @see https://schema.org/exampleOfWork
-     * @link http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#source_bibex
      */
     public function exampleOfWork($exampleOfWork)
     {
@@ -1033,6 +1036,7 @@ class Dataset extends BaseType implements DatasetContract, CreativeWorkContract,
      *
      * @see https://schema.org/funding
      * @see https://pending.schema.org
+     * @link https://github.com/schemaorg/schemaorg/issues/383
      */
     public function funding($funding)
     {
@@ -1062,7 +1066,6 @@ class Dataset extends BaseType implements DatasetContract, CreativeWorkContract,
      * @return static
      *
      * @see https://schema.org/hasPart
-     * @link http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#source_bibex
      */
     public function hasPart($hasPart)
     {
@@ -1229,7 +1232,7 @@ class Dataset extends BaseType implements DatasetContract, CreativeWorkContract,
 
     /**
      * A resource from which this work is derived or from which it is a
-     * modification or adaption.
+     * modification or adaptation.
      *
      * @param \Spatie\SchemaOrg\Contracts\CreativeWorkContract|\Spatie\SchemaOrg\Contracts\CreativeWorkContract[]|\Spatie\SchemaOrg\Contracts\ProductContract|\Spatie\SchemaOrg\Contracts\ProductContract[]|string|string[] $isBasedOn
      *
@@ -1297,7 +1300,6 @@ class Dataset extends BaseType implements DatasetContract, CreativeWorkContract,
      * @return static
      *
      * @see https://schema.org/issn
-     * @link http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#source_bibex
      */
     public function issn($issn)
     {
@@ -1457,27 +1459,53 @@ class Dataset extends BaseType implements DatasetContract, CreativeWorkContract,
     }
 
     /**
-     * A technique or technology used in a [[Dataset]] (or [[DataDownload]],
-     * [[DataCatalog]]),
-     * corresponding to the method used for measuring the corresponding
-     * variable(s) (described using [[variableMeasured]]). This is oriented
+     * A subproperty of [[measurementTechnique]] that can be used for specifying
+     * specific methods, in particular via [[MeasurementMethodEnum]].
+     *
+     * @param \Spatie\SchemaOrg\Contracts\DefinedTermContract|\Spatie\SchemaOrg\Contracts\DefinedTermContract[]|\Spatie\SchemaOrg\Contracts\MeasurementMethodEnumContract|\Spatie\SchemaOrg\Contracts\MeasurementMethodEnumContract[]|string|string[] $measurementMethod
+     *
+     * @return static
+     *
+     * @see https://schema.org/measurementMethod
+     * @see https://pending.schema.org
+     * @link https://github.com/schemaorg/schemaorg/issues/1425
+     */
+    public function measurementMethod($measurementMethod)
+    {
+        return $this->setProperty('measurementMethod', $measurementMethod);
+    }
+
+    /**
+     * A technique, method or technology used in an [[Observation]],
+     * [[StatisticalVariable]] or [[Dataset]] (or [[DataDownload]],
+     * [[DataCatalog]]), corresponding to the method used for measuring the
+     * corresponding variable(s) (for datasets, described using
+     * [[variableMeasured]]; for [[Observation]], a [[StatisticalVariable]]).
+     * Often but not necessarily each [[variableMeasured]] will have an explicit
+     * representation as (or mapping to) an property such as those defined in
+     * Schema.org, or other RDF vocabularies and "knowledge graphs". In that
+     * case the subproperty of [[variableMeasured]] called [[measuredProperty]]
+     * is applicable.
+     *
+     * The [[measurementTechnique]] property helps when extra clarification is
+     * needed about how a [[measuredProperty]] was measured. This is oriented
      * towards scientific and scholarly dataset publication but may have broader
      * applicability; it is not intended as a full representation of
-     * measurement, but rather as a high level summary for dataset discovery.
+     * measurement, but can often serve as a high level summary for dataset
+     * discovery.
      *
      * For example, if [[variableMeasured]] is: molecule concentration,
      * [[measurementTechnique]] could be: "mass spectrometry" or "nmr
-     * spectroscopy" or "colorimetry" or "immunofluorescence".
-     *
-     * If the [[variableMeasured]] is "depression rating", the
-     * [[measurementTechnique]] could be "Zung Scale" or "HAM-D" or "Beck
-     * Depression Inventory".
+     * spectroscopy" or "colorimetry" or "immunofluorescence". If the
+     * [[variableMeasured]] is "depression rating", the [[measurementTechnique]]
+     * could be "Zung Scale" or "HAM-D" or "Beck Depression Inventory".
      *
      * If there are several [[variableMeasured]] properties recorded for some
      * given data object, use a [[PropertyValue]] for each [[variableMeasured]]
-     * and attach the corresponding [[measurementTechnique]].
+     * and attach the corresponding [[measurementTechnique]]. The value can also
+     * be from an enumeration, organized as a [[MeasurementMetholdEnumeration]].
      *
-     * @param string|string[] $measurementTechnique
+     * @param \Spatie\SchemaOrg\Contracts\DefinedTermContract|\Spatie\SchemaOrg\Contracts\DefinedTermContract[]|\Spatie\SchemaOrg\Contracts\MeasurementMethodEnumContract|\Spatie\SchemaOrg\Contracts\MeasurementMethodEnumContract[]|string|string[] $measurementTechnique
      *
      * @return static
      *
@@ -1785,7 +1813,7 @@ class Dataset extends BaseType implements DatasetContract, CreativeWorkContract,
 
     /**
      * Indicates the date on which the current structured data was generated /
-     * published. Typically used alongside [[sdPublisher]]
+     * published. Typically used alongside [[sdPublisher]].
      *
      * @param \DateTimeInterface|\DateTimeInterface[] $sdDatePublished
      *
@@ -2018,6 +2046,20 @@ class Dataset extends BaseType implements DatasetContract, CreativeWorkContract,
     }
 
     /**
+     * Thumbnail image for an image or video.
+     *
+     * @param \Spatie\SchemaOrg\Contracts\ImageObjectContract|\Spatie\SchemaOrg\Contracts\ImageObjectContract[] $thumbnail
+     *
+     * @return static
+     *
+     * @see https://schema.org/thumbnail
+     */
+    public function thumbnail($thumbnail)
+    {
+        return $this->setProperty('thumbnail', $thumbnail);
+    }
+
+    /**
      * A thumbnail image relevant to the Thing.
      *
      * @param string|string[] $thumbnailUrl
@@ -2032,9 +2074,8 @@ class Dataset extends BaseType implements DatasetContract, CreativeWorkContract,
     }
 
     /**
-     * Approximate or typical time it takes to work with or through this
-     * learning resource for the typical intended target audience, e.g. 'PT30M',
-     * 'PT1H25M'.
+     * Approximate or typical time it usually takes to work with or through the
+     * content of this work for the typical or target audience.
      *
      * @param \Spatie\SchemaOrg\Contracts\DurationContract|\Spatie\SchemaOrg\Contracts\DurationContract[] $timeRequired
      *
@@ -2138,9 +2179,10 @@ class Dataset extends BaseType implements DatasetContract, CreativeWorkContract,
     /**
      * The variableMeasured property can indicate (repeated as necessary) the
      * variables that are measured in some dataset, either described as text or
-     * as pairs of identifier and description using PropertyValue.
+     * as pairs of identifier and description using PropertyValue, or more
+     * explicitly as a [[StatisticalVariable]].
      *
-     * @param \Spatie\SchemaOrg\Contracts\PropertyValueContract|\Spatie\SchemaOrg\Contracts\PropertyValueContract[]|string|string[] $variableMeasured
+     * @param \Spatie\SchemaOrg\Contracts\PropertyContract|\Spatie\SchemaOrg\Contracts\PropertyValueContract|\Spatie\SchemaOrg\Contracts\PropertyValueContract[]|\Spatie\SchemaOrg\Contracts\PropertyContract[]|\Spatie\SchemaOrg\Contracts\StatisticalVariableContract|\Spatie\SchemaOrg\Contracts\StatisticalVariableContract[]|string|string[] $variableMeasured
      *
      * @return static
      *
@@ -2208,7 +2250,6 @@ class Dataset extends BaseType implements DatasetContract, CreativeWorkContract,
      * @return static
      *
      * @see https://schema.org/workExample
-     * @link http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#source_bibex
      */
     public function workExample($workExample)
     {

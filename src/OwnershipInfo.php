@@ -12,7 +12,6 @@ use Spatie\SchemaOrg\Contracts\ThingContract;
  * person owned a certain product.
  *
  * @see https://schema.org/OwnershipInfo
- * @link http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#source_GoodRelationsClass
  *
  */
 class OwnershipInfo extends BaseType implements OwnershipInfoContract, IntangibleContract, StructuredValueContract, ThingContract
@@ -25,7 +24,6 @@ class OwnershipInfo extends BaseType implements OwnershipInfoContract, Intangibl
      * @return static
      *
      * @see https://schema.org/acquiredFrom
-     * @link http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#source_GoodRelationsTerms
      */
     public function acquiredFrom($acquiredFrom)
     {
@@ -35,10 +33,14 @@ class OwnershipInfo extends BaseType implements OwnershipInfoContract, Intangibl
     /**
      * An additional type for the item, typically used for adding more specific
      * types from external vocabularies in microdata syntax. This is a
-     * relationship between something and a class that the thing is in. In RDFa
-     * syntax, it is better to use the native RDFa syntax - the 'typeof'
-     * attribute - for multiple types. Schema.org tools may have only weaker
-     * understanding of extra types, in particular those defined externally.
+     * relationship between something and a class that the thing is in.
+     * Typically the value is a URI-identified RDF class, and in this case
+     * corresponds to the
+     *     use of rdf:type in RDF. Text values can be used sparingly, for cases
+     * where useful information can be added without their being an appropriate
+     * schema to reference. In the case of text values, the class label should
+     * follow the schema.org [style
+     * guide](https://schema.org/docs/styleguide.html).
      *
      * @param string|string[] $additionalType
      *
@@ -68,7 +70,7 @@ class OwnershipInfo extends BaseType implements OwnershipInfoContract, Intangibl
     /**
      * A description of the item.
      *
-     * @param string|string[] $description
+     * @param \Spatie\SchemaOrg\Contracts\TextObjectContract|\Spatie\SchemaOrg\Contracts\TextObjectContract[]|string|string[] $description
      *
      * @return static
      *
@@ -167,7 +169,6 @@ class OwnershipInfo extends BaseType implements OwnershipInfoContract, Intangibl
      * @return static
      *
      * @see https://schema.org/ownedFrom
-     * @link http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#source_GoodRelationsTerms
      */
     public function ownedFrom($ownedFrom)
     {
@@ -182,7 +183,6 @@ class OwnershipInfo extends BaseType implements OwnershipInfoContract, Intangibl
      * @return static
      *
      * @see https://schema.org/ownedThrough
-     * @link http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#source_GoodRelationsTerms
      */
     public function ownedThrough($ownedThrough)
     {
@@ -243,7 +243,6 @@ class OwnershipInfo extends BaseType implements OwnershipInfoContract, Intangibl
      * @return static
      *
      * @see https://schema.org/typeOfGood
-     * @link http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#source_GoodRelationsTerms
      */
     public function typeOfGood($typeOfGood)
     {

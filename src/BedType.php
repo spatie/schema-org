@@ -13,6 +13,7 @@ use Spatie\SchemaOrg\Contracts\ThingContract;
  * accommodation.
  *
  * @see https://schema.org/BedType
+ * @link https://github.com/schemaorg/schemaorg/issues/1262
  *
  * @method static supersededBy($supersededBy) The value should be instance of pending types Class|Class[]|Enumeration|Enumeration[]|Property|Property[]
  */
@@ -43,10 +44,14 @@ class BedType extends BaseType implements BedTypeContract, EnumerationContract, 
     /**
      * An additional type for the item, typically used for adding more specific
      * types from external vocabularies in microdata syntax. This is a
-     * relationship between something and a class that the thing is in. In RDFa
-     * syntax, it is better to use the native RDFa syntax - the 'typeof'
-     * attribute - for multiple types. Schema.org tools may have only weaker
-     * understanding of extra types, in particular those defined externally.
+     * relationship between something and a class that the thing is in.
+     * Typically the value is a URI-identified RDF class, and in this case
+     * corresponds to the
+     *     use of rdf:type in RDF. Text values can be used sparingly, for cases
+     * where useful information can be added without their being an appropriate
+     * schema to reference. In the case of text values, the class label should
+     * follow the schema.org [style
+     * guide](https://schema.org/docs/styleguide.html).
      *
      * @param string|string[] $additionalType
      *
@@ -76,7 +81,7 @@ class BedType extends BaseType implements BedTypeContract, EnumerationContract, 
     /**
      * A description of the item.
      *
-     * @param string|string[] $description
+     * @param \Spatie\SchemaOrg\Contracts\TextObjectContract|\Spatie\SchemaOrg\Contracts\TextObjectContract[]|string|string[] $description
      *
      * @return static
      *
@@ -113,7 +118,6 @@ class BedType extends BaseType implements BedTypeContract, EnumerationContract, 
      * @return static
      *
      * @see https://schema.org/equal
-     * @link http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#source_GoodRelationsTerms
      */
     public function equal($equal)
     {
@@ -129,7 +133,6 @@ class BedType extends BaseType implements BedTypeContract, EnumerationContract, 
      * @return static
      *
      * @see https://schema.org/greater
-     * @link http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#source_GoodRelationsTerms
      */
     public function greater($greater)
     {
@@ -145,7 +148,6 @@ class BedType extends BaseType implements BedTypeContract, EnumerationContract, 
      * @return static
      *
      * @see https://schema.org/greaterOrEqual
-     * @link http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#source_GoodRelationsTerms
      */
     public function greaterOrEqual($greaterOrEqual)
     {
@@ -194,7 +196,6 @@ class BedType extends BaseType implements BedTypeContract, EnumerationContract, 
      * @return static
      *
      * @see https://schema.org/lesser
-     * @link http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#source_GoodRelationsTerms
      */
     public function lesser($lesser)
     {
@@ -210,7 +211,6 @@ class BedType extends BaseType implements BedTypeContract, EnumerationContract, 
      * @return static
      *
      * @see https://schema.org/lesserOrEqual
-     * @link http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#source_GoodRelationsTerms
      */
     public function lesserOrEqual($lesserOrEqual)
     {
@@ -256,7 +256,6 @@ class BedType extends BaseType implements BedTypeContract, EnumerationContract, 
      * @return static
      *
      * @see https://schema.org/nonEqual
-     * @link http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#source_GoodRelationsTerms
      */
     public function nonEqual($nonEqual)
     {
@@ -332,7 +331,6 @@ class BedType extends BaseType implements BedTypeContract, EnumerationContract, 
      * @return static
      *
      * @see https://schema.org/valueReference
-     * @link http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#source_GoodRelationsTerms
      */
     public function valueReference($valueReference)
     {

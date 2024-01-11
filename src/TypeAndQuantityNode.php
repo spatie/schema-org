@@ -12,7 +12,6 @@ use Spatie\SchemaOrg\Contracts\TypeAndQuantityNodeContract;
  * function of goods included in a bundle offer.
  *
  * @see https://schema.org/TypeAndQuantityNode
- * @link http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#source_GoodRelationsClass
  *
  */
 class TypeAndQuantityNode extends BaseType implements TypeAndQuantityNodeContract, IntangibleContract, StructuredValueContract, ThingContract
@@ -20,10 +19,14 @@ class TypeAndQuantityNode extends BaseType implements TypeAndQuantityNodeContrac
     /**
      * An additional type for the item, typically used for adding more specific
      * types from external vocabularies in microdata syntax. This is a
-     * relationship between something and a class that the thing is in. In RDFa
-     * syntax, it is better to use the native RDFa syntax - the 'typeof'
-     * attribute - for multiple types. Schema.org tools may have only weaker
-     * understanding of extra types, in particular those defined externally.
+     * relationship between something and a class that the thing is in.
+     * Typically the value is a URI-identified RDF class, and in this case
+     * corresponds to the
+     *     use of rdf:type in RDF. Text values can be used sparingly, for cases
+     * where useful information can be added without their being an appropriate
+     * schema to reference. In the case of text values, the class label should
+     * follow the schema.org [style
+     * guide](https://schema.org/docs/styleguide.html).
      *
      * @param string|string[] $additionalType
      *
@@ -58,7 +61,6 @@ class TypeAndQuantityNode extends BaseType implements TypeAndQuantityNodeContrac
      * @return static
      *
      * @see https://schema.org/amountOfThisGood
-     * @link http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#source_GoodRelationsTerms
      */
     public function amountOfThisGood($amountOfThisGood)
     {
@@ -75,7 +77,6 @@ class TypeAndQuantityNode extends BaseType implements TypeAndQuantityNodeContrac
      * @return static
      *
      * @see https://schema.org/businessFunction
-     * @link http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#source_GoodRelationsTerms
      */
     public function businessFunction($businessFunction)
     {
@@ -85,7 +86,7 @@ class TypeAndQuantityNode extends BaseType implements TypeAndQuantityNodeContrac
     /**
      * A description of the item.
      *
-     * @param string|string[] $description
+     * @param \Spatie\SchemaOrg\Contracts\TextObjectContract|\Spatie\SchemaOrg\Contracts\TextObjectContract[]|string|string[] $description
      *
      * @return static
      *
@@ -230,7 +231,6 @@ class TypeAndQuantityNode extends BaseType implements TypeAndQuantityNodeContrac
      * @return static
      *
      * @see https://schema.org/typeOfGood
-     * @link http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#source_GoodRelationsTerms
      */
     public function typeOfGood($typeOfGood)
     {
@@ -247,7 +247,6 @@ class TypeAndQuantityNode extends BaseType implements TypeAndQuantityNodeContrac
      * @return static
      *
      * @see https://schema.org/unitCode
-     * @link http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#source_GoodRelationsTerms
      */
     public function unitCode($unitCode)
     {

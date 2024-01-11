@@ -20,10 +20,14 @@ class BoatTrip extends BaseType implements BoatTripContract, IntangibleContract,
     /**
      * An additional type for the item, typically used for adding more specific
      * types from external vocabularies in microdata syntax. This is a
-     * relationship between something and a class that the thing is in. In RDFa
-     * syntax, it is better to use the native RDFa syntax - the 'typeof'
-     * attribute - for multiple types. Schema.org tools may have only weaker
-     * understanding of extra types, in particular those defined externally.
+     * relationship between something and a class that the thing is in.
+     * Typically the value is a URI-identified RDF class, and in this case
+     * corresponds to the
+     *     use of rdf:type in RDF. Text values can be used sparingly, for cases
+     * where useful information can be added without their being an appropriate
+     * schema to reference. In the case of text values, the class label should
+     * follow the schema.org [style
+     * guide](https://schema.org/docs/styleguide.html).
      *
      * @param string|string[] $additionalType
      *
@@ -113,7 +117,7 @@ class BoatTrip extends BaseType implements BoatTripContract, IntangibleContract,
     /**
      * A description of the item.
      *
-     * @param string|string[] $description
+     * @param \Spatie\SchemaOrg\Contracts\TextObjectContract|\Spatie\SchemaOrg\Contracts\TextObjectContract[]|string|string[] $description
      *
      * @return static
      *
@@ -185,6 +189,7 @@ class BoatTrip extends BaseType implements BoatTripContract, IntangibleContract,
      *
      * @see https://schema.org/itinerary
      * @see https://pending.schema.org
+     * @link https://github.com/schemaorg/schemaorg/issues/1810
      */
     public function itinerary($itinerary)
     {
@@ -253,6 +258,7 @@ class BoatTrip extends BaseType implements BoatTripContract, IntangibleContract,
      *
      * @see https://schema.org/partOfTrip
      * @see https://pending.schema.org
+     * @link https://github.com/schemaorg/schemaorg/issues/1810
      */
     public function partOfTrip($partOfTrip)
     {
@@ -317,6 +323,7 @@ class BoatTrip extends BaseType implements BoatTripContract, IntangibleContract,
      *
      * @see https://schema.org/subTrip
      * @see https://pending.schema.org
+     * @link https://github.com/schemaorg/schemaorg/issues/1810
      */
     public function subTrip($subTrip)
     {
@@ -336,6 +343,20 @@ class BoatTrip extends BaseType implements BoatTripContract, IntangibleContract,
     public function subjectOf($subjectOf)
     {
         return $this->setProperty('subjectOf', $subjectOf);
+    }
+
+    /**
+     * The location of origin of the trip, prior to any destination(s).
+     *
+     * @param \Spatie\SchemaOrg\Contracts\PlaceContract|\Spatie\SchemaOrg\Contracts\PlaceContract[] $tripOrigin
+     *
+     * @return static
+     *
+     * @see https://schema.org/tripOrigin
+     */
+    public function tripOrigin($tripOrigin)
+    {
+        return $this->setProperty('tripOrigin', $tripOrigin);
     }
 
     /**

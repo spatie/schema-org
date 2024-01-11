@@ -12,7 +12,6 @@ use Spatie\SchemaOrg\Contracts\UnitPriceSpecificationContract;
  * The price asked for a given offer by the respective organization or person.
  *
  * @see https://schema.org/UnitPriceSpecification
- * @link http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#source_GoodRelationsClass
  *
  */
 class UnitPriceSpecification extends BaseType implements UnitPriceSpecificationContract, IntangibleContract, PriceSpecificationContract, StructuredValueContract, ThingContract
@@ -20,10 +19,14 @@ class UnitPriceSpecification extends BaseType implements UnitPriceSpecificationC
     /**
      * An additional type for the item, typically used for adding more specific
      * types from external vocabularies in microdata syntax. This is a
-     * relationship between something and a class that the thing is in. In RDFa
-     * syntax, it is better to use the native RDFa syntax - the 'typeof'
-     * attribute - for multiple types. Schema.org tools may have only weaker
-     * understanding of extra types, in particular those defined externally.
+     * relationship between something and a class that the thing is in.
+     * Typically the value is a URI-identified RDF class, and in this case
+     * corresponds to the
+     *     use of rdf:type in RDF. Text values can be used sparingly, for cases
+     * where useful information can be added without their being an appropriate
+     * schema to reference. In the case of text values, the class label should
+     * follow the schema.org [style
+     * guide](https://schema.org/docs/styleguide.html).
      *
      * @param string|string[] $additionalType
      *
@@ -80,7 +83,6 @@ class UnitPriceSpecification extends BaseType implements UnitPriceSpecificationC
      * @return static
      *
      * @see https://schema.org/billingIncrement
-     * @link http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#source_GoodRelationsTerms
      */
     public function billingIncrement($billingIncrement)
     {
@@ -109,7 +111,7 @@ class UnitPriceSpecification extends BaseType implements UnitPriceSpecificationC
     /**
      * A description of the item.
      *
-     * @param string|string[] $description
+     * @param \Spatie\SchemaOrg\Contracts\TextObjectContract|\Spatie\SchemaOrg\Contracts\TextObjectContract[]|string|string[] $description
      *
      * @return static
      *
@@ -147,7 +149,6 @@ class UnitPriceSpecification extends BaseType implements UnitPriceSpecificationC
      * @return static
      *
      * @see https://schema.org/eligibleQuantity
-     * @link http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#source_GoodRelationsTerms
      */
     public function eligibleQuantity($eligibleQuantity)
     {
@@ -165,7 +166,6 @@ class UnitPriceSpecification extends BaseType implements UnitPriceSpecificationC
      * @return static
      *
      * @see https://schema.org/eligibleTransactionVolume
-     * @link http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#source_GoodRelationsTerms
      */
     public function eligibleTransactionVolume($eligibleTransactionVolume)
     {
@@ -229,7 +229,6 @@ class UnitPriceSpecification extends BaseType implements UnitPriceSpecificationC
      * @return static
      *
      * @see https://schema.org/maxPrice
-     * @link http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#source_GoodRelationsTerms
      */
     public function maxPrice($maxPrice)
     {
@@ -244,7 +243,6 @@ class UnitPriceSpecification extends BaseType implements UnitPriceSpecificationC
      * @return static
      *
      * @see https://schema.org/minPrice
-     * @link http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#source_GoodRelationsTerms
      */
     public function minPrice($minPrice)
     {
@@ -371,7 +369,6 @@ class UnitPriceSpecification extends BaseType implements UnitPriceSpecificationC
      * @return static
      *
      * @see https://schema.org/priceType
-     * @link http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#source_GoodRelationsTerms
      */
     public function priceType($priceType)
     {
@@ -436,7 +433,6 @@ class UnitPriceSpecification extends BaseType implements UnitPriceSpecificationC
      * @return static
      *
      * @see https://schema.org/unitCode
-     * @link http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#source_GoodRelationsTerms
      */
     public function unitCode($unitCode)
     {
@@ -481,7 +477,6 @@ class UnitPriceSpecification extends BaseType implements UnitPriceSpecificationC
      * @return static
      *
      * @see https://schema.org/validFrom
-     * @link http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#source_GoodRelationsTerms
      */
     public function validFrom($validFrom)
     {
@@ -497,7 +492,6 @@ class UnitPriceSpecification extends BaseType implements UnitPriceSpecificationC
      * @return static
      *
      * @see https://schema.org/validThrough
-     * @link http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#source_GoodRelationsTerms
      */
     public function validThrough($validThrough)
     {
@@ -513,7 +507,6 @@ class UnitPriceSpecification extends BaseType implements UnitPriceSpecificationC
      * @return static
      *
      * @see https://schema.org/valueAddedTaxIncluded
-     * @link http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#source_GoodRelationsTerms
      */
     public function valueAddedTaxIncluded($valueAddedTaxIncluded)
     {

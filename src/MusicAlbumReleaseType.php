@@ -11,7 +11,6 @@ use Spatie\SchemaOrg\Contracts\ThingContract;
  * The kind of release which this album is: single, EP or album.
  *
  * @see https://schema.org/MusicAlbumReleaseType
- * @link http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#MBZ
  *
  * @method static supersededBy($supersededBy) The value should be instance of pending types Class|Class[]|Enumeration|Enumeration[]|Property|Property[]
  */
@@ -21,7 +20,6 @@ class MusicAlbumReleaseType extends BaseType implements MusicAlbumReleaseTypeCon
      * AlbumRelease.
      *
      * @see https://schema.org/AlbumRelease
-     * @link http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#MBZ
      */
     public const AlbumRelease = 'https://schema.org/AlbumRelease';
 
@@ -29,7 +27,6 @@ class MusicAlbumReleaseType extends BaseType implements MusicAlbumReleaseTypeCon
      * BroadcastRelease.
      *
      * @see https://schema.org/BroadcastRelease
-     * @link http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#MBZ
      */
     public const BroadcastRelease = 'https://schema.org/BroadcastRelease';
 
@@ -37,7 +34,6 @@ class MusicAlbumReleaseType extends BaseType implements MusicAlbumReleaseTypeCon
      * EPRelease.
      *
      * @see https://schema.org/EPRelease
-     * @link http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#MBZ
      */
     public const EPRelease = 'https://schema.org/EPRelease';
 
@@ -45,17 +41,20 @@ class MusicAlbumReleaseType extends BaseType implements MusicAlbumReleaseTypeCon
      * SingleRelease.
      *
      * @see https://schema.org/SingleRelease
-     * @link http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#MBZ
      */
     public const SingleRelease = 'https://schema.org/SingleRelease';
 
     /**
      * An additional type for the item, typically used for adding more specific
      * types from external vocabularies in microdata syntax. This is a
-     * relationship between something and a class that the thing is in. In RDFa
-     * syntax, it is better to use the native RDFa syntax - the 'typeof'
-     * attribute - for multiple types. Schema.org tools may have only weaker
-     * understanding of extra types, in particular those defined externally.
+     * relationship between something and a class that the thing is in.
+     * Typically the value is a URI-identified RDF class, and in this case
+     * corresponds to the
+     *     use of rdf:type in RDF. Text values can be used sparingly, for cases
+     * where useful information can be added without their being an appropriate
+     * schema to reference. In the case of text values, the class label should
+     * follow the schema.org [style
+     * guide](https://schema.org/docs/styleguide.html).
      *
      * @param string|string[] $additionalType
      *
@@ -85,7 +84,7 @@ class MusicAlbumReleaseType extends BaseType implements MusicAlbumReleaseTypeCon
     /**
      * A description of the item.
      *
-     * @param string|string[] $description
+     * @param \Spatie\SchemaOrg\Contracts\TextObjectContract|\Spatie\SchemaOrg\Contracts\TextObjectContract[]|string|string[] $description
      *
      * @return static
      *

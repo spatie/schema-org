@@ -61,10 +61,14 @@ class DietarySupplement extends BaseType implements DietarySupplementContract, M
     /**
      * An additional type for the item, typically used for adding more specific
      * types from external vocabularies in microdata syntax. This is a
-     * relationship between something and a class that the thing is in. In RDFa
-     * syntax, it is better to use the native RDFa syntax - the 'typeof'
-     * attribute - for multiple types. Schema.org tools may have only weaker
-     * understanding of extra types, in particular those defined externally.
+     * relationship between something and a class that the thing is in.
+     * Typically the value is a URI-identified RDF class, and in this case
+     * corresponds to the
+     *     use of rdf:type in RDF. Text values can be used sparingly, for cases
+     * where useful information can be added without their being an appropriate
+     * schema to reference. In the case of text values, the class label should
+     * follow the schema.org [style
+     * guide](https://schema.org/docs/styleguide.html).
      *
      * @param string|string[] $additionalType
      *
@@ -228,7 +232,6 @@ class DietarySupplement extends BaseType implements DietarySupplementContract, M
      * @return static
      *
      * @see https://schema.org/color
-     * @link http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#source_GoodRelationsTerms
      */
     public function color($color)
     {
@@ -301,7 +304,6 @@ class DietarySupplement extends BaseType implements DietarySupplementContract, M
      * @return static
      *
      * @see https://schema.org/depth
-     * @link http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#source_GoodRelationsTerms
      */
     public function depth($depth)
     {
@@ -311,7 +313,7 @@ class DietarySupplement extends BaseType implements DietarySupplementContract, M
     /**
      * A description of the item.
      *
-     * @param string|string[] $description
+     * @param \Spatie\SchemaOrg\Contracts\TextObjectContract|\Spatie\SchemaOrg\Contracts\TextObjectContract[]|string|string[] $description
      *
      * @return static
      *
@@ -349,6 +351,7 @@ class DietarySupplement extends BaseType implements DietarySupplementContract, M
      *
      * @see https://schema.org/funding
      * @see https://pending.schema.org
+     * @link https://github.com/schemaorg/schemaorg/issues/383
      */
     public function funding($funding)
     {
@@ -428,7 +431,6 @@ class DietarySupplement extends BaseType implements DietarySupplementContract, M
      * @return static
      *
      * @see https://schema.org/gtin13
-     * @link http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#source_GoodRelationsTerms
      */
     public function gtin13($gtin13)
     {
@@ -446,7 +448,6 @@ class DietarySupplement extends BaseType implements DietarySupplementContract, M
      * @return static
      *
      * @see https://schema.org/gtin14
-     * @link http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#source_GoodRelationsTerms
      */
     public function gtin14($gtin14)
     {
@@ -464,7 +465,6 @@ class DietarySupplement extends BaseType implements DietarySupplementContract, M
      * @return static
      *
      * @see https://schema.org/gtin8
-     * @link http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#source_GoodRelationsTerms
      */
     public function gtin8($gtin8)
     {
@@ -645,7 +645,6 @@ class DietarySupplement extends BaseType implements DietarySupplementContract, M
      * @return static
      *
      * @see https://schema.org/isAccessoryOrSparePartFor
-     * @link http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#source_GoodRelationsTerms
      */
     public function isAccessoryOrSparePartFor($isAccessoryOrSparePartFor)
     {
@@ -661,7 +660,6 @@ class DietarySupplement extends BaseType implements DietarySupplementContract, M
      * @return static
      *
      * @see https://schema.org/isConsumableFor
-     * @link http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#source_GoodRelationsTerms
      */
     public function isConsumableFor($isConsumableFor)
     {
@@ -705,7 +703,6 @@ class DietarySupplement extends BaseType implements DietarySupplementContract, M
      * @return static
      *
      * @see https://schema.org/isRelatedTo
-     * @link http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#source_GoodRelationsTerms
      */
     public function isRelatedTo($isRelatedTo)
     {
@@ -721,7 +718,6 @@ class DietarySupplement extends BaseType implements DietarySupplementContract, M
      * @return static
      *
      * @see https://schema.org/isSimilarTo
-     * @link http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#source_GoodRelationsTerms
      */
     public function isSimilarTo($isSimilarTo)
     {
@@ -746,7 +742,6 @@ class DietarySupplement extends BaseType implements DietarySupplementContract, M
      * @return static
      *
      * @see https://schema.org/isVariantOf
-     * @link http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#source_GoodRelationsTerms
      */
     public function isVariantOf($isVariantOf)
     {
@@ -810,7 +805,6 @@ class DietarySupplement extends BaseType implements DietarySupplementContract, M
      * @return static
      *
      * @see https://schema.org/logo
-     * @link http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#source_GoodRelationsTerms
      */
     public function logo($logo)
     {
@@ -969,7 +963,6 @@ class DietarySupplement extends BaseType implements DietarySupplementContract, M
      * @return static
      *
      * @see https://schema.org/mpn
-     * @link http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#source_GoodRelationsTerms
      */
     public function mpn($mpn)
     {
@@ -1154,7 +1147,6 @@ class DietarySupplement extends BaseType implements DietarySupplementContract, M
      * @return static
      *
      * @see https://schema.org/productionDate
-     * @link http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#Automotive_Ontology_Working_Group
      */
     public function productionDate($productionDate)
     {
@@ -1185,7 +1177,6 @@ class DietarySupplement extends BaseType implements DietarySupplementContract, M
      * @return static
      *
      * @see https://schema.org/purchaseDate
-     * @link http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#Automotive_Ontology_Working_Group
      */
     public function purchaseDate($purchaseDate)
     {
@@ -1233,7 +1224,6 @@ class DietarySupplement extends BaseType implements DietarySupplementContract, M
      * @return static
      *
      * @see https://schema.org/releaseDate
-     * @link http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#source_GoodRelationsTerms
      */
     public function releaseDate($releaseDate)
     {
@@ -1345,7 +1335,6 @@ class DietarySupplement extends BaseType implements DietarySupplementContract, M
      * @return static
      *
      * @see https://schema.org/sku
-     * @link http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#source_GoodRelationsTerms
      */
     public function sku($sku)
     {
@@ -1434,7 +1423,6 @@ class DietarySupplement extends BaseType implements DietarySupplementContract, M
      * @return static
      *
      * @see https://schema.org/weight
-     * @link http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#source_GoodRelationsTerms
      */
     public function weight($weight)
     {

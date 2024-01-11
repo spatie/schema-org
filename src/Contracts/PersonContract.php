@@ -12,6 +12,8 @@ interface PersonContract
 
     public function affiliation($affiliation);
 
+    public function agentInteractionStatistic($agentInteractionStatistic);
+
     public function alternateName($alternateName);
 
     public function alumniOf($alumniOf);

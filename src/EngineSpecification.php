@@ -12,7 +12,6 @@ use Spatie\SchemaOrg\Contracts\ThingContract;
  * engines represented by multiple engine specification entities.
  *
  * @see https://schema.org/EngineSpecification
- * @link http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#Automotive_Ontology_Working_Group
  *
  */
 class EngineSpecification extends BaseType implements EngineSpecificationContract, IntangibleContract, StructuredValueContract, ThingContract
@@ -20,10 +19,14 @@ class EngineSpecification extends BaseType implements EngineSpecificationContrac
     /**
      * An additional type for the item, typically used for adding more specific
      * types from external vocabularies in microdata syntax. This is a
-     * relationship between something and a class that the thing is in. In RDFa
-     * syntax, it is better to use the native RDFa syntax - the 'typeof'
-     * attribute - for multiple types. Schema.org tools may have only weaker
-     * understanding of extra types, in particular those defined externally.
+     * relationship between something and a class that the thing is in.
+     * Typically the value is a URI-identified RDF class, and in this case
+     * corresponds to the
+     *     use of rdf:type in RDF. Text values can be used sparingly, for cases
+     * where useful information can be added without their being an appropriate
+     * schema to reference. In the case of text values, the class label should
+     * follow the schema.org [style
+     * guide](https://schema.org/docs/styleguide.html).
      *
      * @param string|string[] $additionalType
      *
@@ -53,7 +56,7 @@ class EngineSpecification extends BaseType implements EngineSpecificationContrac
     /**
      * A description of the item.
      *
-     * @param string|string[] $description
+     * @param \Spatie\SchemaOrg\Contracts\TextObjectContract|\Spatie\SchemaOrg\Contracts\TextObjectContract[]|string|string[] $description
      *
      * @return static
      *
@@ -97,7 +100,6 @@ class EngineSpecification extends BaseType implements EngineSpecificationContrac
      *
      * @see https://schema.org/engineDisplacement
      * @see https://auto.schema.org
-     * @link http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#Automotive_Ontology_Working_Group
      */
     public function engineDisplacement($engineDisplacement)
     {
@@ -122,7 +124,6 @@ class EngineSpecification extends BaseType implements EngineSpecificationContrac
      *
      * @see https://schema.org/enginePower
      * @see https://auto.schema.org
-     * @link http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#Automotive_Ontology_Working_Group
      */
     public function enginePower($enginePower)
     {
@@ -138,7 +139,6 @@ class EngineSpecification extends BaseType implements EngineSpecificationContrac
      *
      * @see https://schema.org/engineType
      * @see https://auto.schema.org
-     * @link http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#Automotive_Ontology_Working_Group
      */
     public function engineType($engineType)
     {
@@ -155,7 +155,6 @@ class EngineSpecification extends BaseType implements EngineSpecificationContrac
      * @return static
      *
      * @see https://schema.org/fuelType
-     * @link http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#Automotive_Ontology_Working_Group
      */
     public function fuelType($fuelType)
     {
@@ -287,7 +286,6 @@ class EngineSpecification extends BaseType implements EngineSpecificationContrac
      *
      * @see https://schema.org/torque
      * @see https://auto.schema.org
-     * @link http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#Automotive_Ontology_Working_Group
      */
     public function torque($torque)
     {

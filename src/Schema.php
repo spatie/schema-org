@@ -827,6 +827,11 @@ class Schema
         return new Consortium();
     }
 
+    public static function constraintNode(): ConstraintNode
+    {
+        return new ConstraintNode();
+    }
+
     public static function consumeAction(): ConsumeAction
     {
         return new ConsumeAction();
@@ -2177,6 +2182,11 @@ class Schema
         return new MaximumDoseSchedule();
     }
 
+    public static function measurementMethodEnum(): MeasurementMethodEnum
+    {
+        return new MeasurementMethodEnum();
+    }
+
     public static function measurementTypeEnumeration(): MeasurementTypeEnumeration
     {
         return new MeasurementTypeEnumeration();
@@ -3082,6 +3092,11 @@ class Schema
         return new PoliceStation();
     }
 
+    public static function politicalParty(): PoliticalParty
+    {
+        return new PoliticalParty();
+    }
+
     public static function pond(): Pond
     {
         return new Pond();
@@ -3852,6 +3867,11 @@ class Schema
         return new StatisticalPopulation();
     }
 
+    public static function statisticalVariable(): StatisticalVariable
+    {
+        return new StatisticalVariable();
+    }
+
     public static function statusEnumeration(): StatusEnumeration
     {
         return new StatusEnumeration();
@@ -3910,6 +3930,11 @@ class Schema
     public static function suspendAction(): SuspendAction
     {
         return new SuspendAction();
+    }
+
+    public static function syllabus(): Syllabus
+    {
+        return new Syllabus();
     }
 
     public static function synagogue(): Synagogue
@@ -4000,6 +4025,11 @@ class Schema
     public static function textDigitalDocument(): TextDigitalDocument
     {
         return new TextDigitalDocument();
+    }
+
+    public static function textObject(): TextObject
+    {
+        return new TextObject();
     }
 
     public static function theaterEvent(): TheaterEvent
@@ -4210,6 +4240,11 @@ class Schema
     public static function userTweets(): UserTweets
     {
         return new UserTweets();
+    }
+
+    public static function vacationRental(): VacationRental
+    {
+        return new VacationRental();
     }
 
     public static function vehicle(): Vehicle

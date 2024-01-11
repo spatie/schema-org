@@ -12,7 +12,6 @@ use Spatie\SchemaOrg\Contracts\ThingContract;
  * digital media, LP, etc.).
  *
  * @see https://schema.org/MusicReleaseFormatType
- * @link http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#MBZ
  *
  * @method static supersededBy($supersededBy) The value should be instance of pending types Class|Class[]|Enumeration|Enumeration[]|Property|Property[]
  */
@@ -22,7 +21,6 @@ class MusicReleaseFormatType extends BaseType implements MusicReleaseFormatTypeC
      * CDFormat.
      *
      * @see https://schema.org/CDFormat
-     * @link http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#MBZ
      */
     public const CDFormat = 'https://schema.org/CDFormat';
 
@@ -30,7 +28,6 @@ class MusicReleaseFormatType extends BaseType implements MusicReleaseFormatTypeC
      * CassetteFormat.
      *
      * @see https://schema.org/CassetteFormat
-     * @link http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#MBZ
      */
     public const CassetteFormat = 'https://schema.org/CassetteFormat';
 
@@ -38,7 +35,6 @@ class MusicReleaseFormatType extends BaseType implements MusicReleaseFormatTypeC
      * DVDFormat.
      *
      * @see https://schema.org/DVDFormat
-     * @link http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#MBZ
      */
     public const DVDFormat = 'https://schema.org/DVDFormat';
 
@@ -46,7 +42,6 @@ class MusicReleaseFormatType extends BaseType implements MusicReleaseFormatTypeC
      * DigitalAudioTapeFormat.
      *
      * @see https://schema.org/DigitalAudioTapeFormat
-     * @link http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#MBZ
      */
     public const DigitalAudioTapeFormat = 'https://schema.org/DigitalAudioTapeFormat';
 
@@ -54,7 +49,6 @@ class MusicReleaseFormatType extends BaseType implements MusicReleaseFormatTypeC
      * DigitalFormat.
      *
      * @see https://schema.org/DigitalFormat
-     * @link http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#MBZ
      */
     public const DigitalFormat = 'https://schema.org/DigitalFormat';
 
@@ -62,7 +56,6 @@ class MusicReleaseFormatType extends BaseType implements MusicReleaseFormatTypeC
      * LaserDiscFormat.
      *
      * @see https://schema.org/LaserDiscFormat
-     * @link http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#MBZ
      */
     public const LaserDiscFormat = 'https://schema.org/LaserDiscFormat';
 
@@ -70,17 +63,20 @@ class MusicReleaseFormatType extends BaseType implements MusicReleaseFormatTypeC
      * VinylFormat.
      *
      * @see https://schema.org/VinylFormat
-     * @link http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#MBZ
      */
     public const VinylFormat = 'https://schema.org/VinylFormat';
 
     /**
      * An additional type for the item, typically used for adding more specific
      * types from external vocabularies in microdata syntax. This is a
-     * relationship between something and a class that the thing is in. In RDFa
-     * syntax, it is better to use the native RDFa syntax - the 'typeof'
-     * attribute - for multiple types. Schema.org tools may have only weaker
-     * understanding of extra types, in particular those defined externally.
+     * relationship between something and a class that the thing is in.
+     * Typically the value is a URI-identified RDF class, and in this case
+     * corresponds to the
+     *     use of rdf:type in RDF. Text values can be used sparingly, for cases
+     * where useful information can be added without their being an appropriate
+     * schema to reference. In the case of text values, the class label should
+     * follow the schema.org [style
+     * guide](https://schema.org/docs/styleguide.html).
      *
      * @param string|string[] $additionalType
      *
@@ -110,7 +106,7 @@ class MusicReleaseFormatType extends BaseType implements MusicReleaseFormatTypeC
     /**
      * A description of the item.
      *
-     * @param string|string[] $description
+     * @param \Spatie\SchemaOrg\Contracts\TextObjectContract|\Spatie\SchemaOrg\Contracts\TextObjectContract[]|string|string[] $description
      *
      * @return static
      *

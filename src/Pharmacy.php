@@ -30,6 +30,7 @@ class Pharmacy extends BaseType implements PharmacyContract, LocalBusinessContra
      *
      * @see https://schema.org/actionableFeedbackPolicy
      * @see https://pending.schema.org
+     * @link https://github.com/schemaorg/schemaorg/issues/1525
      */
     public function actionableFeedbackPolicy($actionableFeedbackPolicy)
     {
@@ -61,10 +62,14 @@ class Pharmacy extends BaseType implements PharmacyContract, LocalBusinessContra
     /**
      * An additional type for the item, typically used for adding more specific
      * types from external vocabularies in microdata syntax. This is a
-     * relationship between something and a class that the thing is in. In RDFa
-     * syntax, it is better to use the native RDFa syntax - the 'typeof'
-     * attribute - for multiple types. Schema.org tools may have only weaker
-     * understanding of extra types, in particular those defined externally.
+     * relationship between something and a class that the thing is in.
+     * Typically the value is a URI-identified RDF class, and in this case
+     * corresponds to the
+     *     use of rdf:type in RDF. Text values can be used sparingly, for cases
+     * where useful information can be added without their being an appropriate
+     * schema to reference. In the case of text values, the class label should
+     * follow the schema.org [style
+     * guide](https://schema.org/docs/styleguide.html).
      *
      * @param string|string[] $additionalType
      *
@@ -89,6 +94,24 @@ class Pharmacy extends BaseType implements PharmacyContract, LocalBusinessContra
     public function address($address)
     {
         return $this->setProperty('address', $address);
+    }
+
+    /**
+     * The number of completed interactions for this entity, in a particular
+     * role (the 'agent'), in a particular action (indicated in the statistic),
+     * and in a particular context (i.e. interactionService).
+     *
+     * @param \Spatie\SchemaOrg\Contracts\InteractionCounterContract|\Spatie\SchemaOrg\Contracts\InteractionCounterContract[] $agentInteractionStatistic
+     *
+     * @return static
+     *
+     * @see https://schema.org/agentInteractionStatistic
+     * @see https://pending.schema.org
+     * @link https://github.com/schemaorg/schemaorg/issues/2858
+     */
+    public function agentInteractionStatistic($agentInteractionStatistic)
+    {
+        return $this->setProperty('agentInteractionStatistic', $agentInteractionStatistic);
     }
 
     /**
@@ -145,7 +168,6 @@ class Pharmacy extends BaseType implements PharmacyContract, LocalBusinessContra
      * @return static
      *
      * @see https://schema.org/amenityFeature
-     * @link https://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#STI_Accommodation_Ontology
      */
     public function amenityFeature($amenityFeature)
     {
@@ -326,6 +348,7 @@ class Pharmacy extends BaseType implements PharmacyContract, LocalBusinessContra
      *
      * @see https://schema.org/correctionsPolicy
      * @see https://pending.schema.org
+     * @link https://github.com/schemaorg/schemaorg/issues/1525
      */
     public function correctionsPolicy($correctionsPolicy)
     {
@@ -374,7 +397,7 @@ class Pharmacy extends BaseType implements PharmacyContract, LocalBusinessContra
     /**
      * A description of the item.
      *
-     * @param string|string[] $description
+     * @param \Spatie\SchemaOrg\Contracts\TextObjectContract|\Spatie\SchemaOrg\Contracts\TextObjectContract[]|string|string[] $description
      *
      * @return static
      *
@@ -428,6 +451,7 @@ class Pharmacy extends BaseType implements PharmacyContract, LocalBusinessContra
      *
      * @see https://schema.org/diversityPolicy
      * @see https://pending.schema.org
+     * @link https://github.com/schemaorg/schemaorg/issues/1525
      */
     public function diversityPolicy($diversityPolicy)
     {
@@ -446,6 +470,7 @@ class Pharmacy extends BaseType implements PharmacyContract, LocalBusinessContra
      *
      * @see https://schema.org/diversityStaffingReport
      * @see https://pending.schema.org
+     * @link https://github.com/schemaorg/schemaorg/issues/1525
      */
     public function diversityStaffingReport($diversityStaffingReport)
     {
@@ -461,7 +486,6 @@ class Pharmacy extends BaseType implements PharmacyContract, LocalBusinessContra
      * @return static
      *
      * @see https://schema.org/duns
-     * @link http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#source_GoodRelationsTerms
      */
     public function duns($duns)
     {
@@ -655,6 +679,7 @@ class Pharmacy extends BaseType implements PharmacyContract, LocalBusinessContra
      *
      * @see https://schema.org/funding
      * @see https://pending.schema.org
+     * @link https://github.com/schemaorg/schemaorg/issues/383
      */
     public function funding($funding)
     {
@@ -858,7 +883,6 @@ class Pharmacy extends BaseType implements PharmacyContract, LocalBusinessContra
      * @return static
      *
      * @see https://schema.org/globalLocationNumber
-     * @link http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#source_GoodRelationsTerms
      */
     public function globalLocationNumber($globalLocationNumber)
     {
@@ -954,7 +978,6 @@ class Pharmacy extends BaseType implements PharmacyContract, LocalBusinessContra
      * @return static
      *
      * @see https://schema.org/hasPOS
-     * @link http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#source_GoodRelationsTerms
      */
     public function hasPOS($hasPOS)
     {
@@ -1084,7 +1107,6 @@ class Pharmacy extends BaseType implements PharmacyContract, LocalBusinessContra
      * @return static
      *
      * @see https://schema.org/isicV4
-     * @link http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#source_GoodRelationsTerms
      */
     public function isicV4($isicV4)
     {
@@ -1140,6 +1162,7 @@ class Pharmacy extends BaseType implements PharmacyContract, LocalBusinessContra
      *
      * @see https://schema.org/knowsAbout
      * @see https://pending.schema.org
+     * @link https://github.com/schemaorg/schemaorg/issues/1688
      */
     public function knowsAbout($knowsAbout)
     {
@@ -1158,6 +1181,7 @@ class Pharmacy extends BaseType implements PharmacyContract, LocalBusinessContra
      *
      * @see https://schema.org/knowsLanguage
      * @see https://pending.schema.org
+     * @link https://github.com/schemaorg/schemaorg/issues/1688
      */
     public function knowsLanguage($knowsLanguage)
     {
@@ -1187,7 +1211,6 @@ class Pharmacy extends BaseType implements PharmacyContract, LocalBusinessContra
      * @return static
      *
      * @see https://schema.org/legalName
-     * @link http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#source_GoodRelationsTerms
      */
     public function legalName($legalName)
     {
@@ -1232,7 +1255,6 @@ class Pharmacy extends BaseType implements PharmacyContract, LocalBusinessContra
      * @return static
      *
      * @see https://schema.org/logo
-     * @link http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#source_GoodRelationsTerms
      */
     public function logo($logo)
     {
@@ -1278,7 +1300,6 @@ class Pharmacy extends BaseType implements PharmacyContract, LocalBusinessContra
      * @return static
      *
      * @see https://schema.org/makesOffer
-     * @link http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#source_GoodRelationsTerms
      */
     public function makesOffer($makesOffer)
     {
@@ -1395,7 +1416,6 @@ class Pharmacy extends BaseType implements PharmacyContract, LocalBusinessContra
      * @return static
      *
      * @see https://schema.org/naics
-     * @link http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#source_GoodRelationsTerms
      */
     public function naics($naics)
     {
@@ -1482,7 +1502,6 @@ class Pharmacy extends BaseType implements PharmacyContract, LocalBusinessContra
      * @return static
      *
      * @see https://schema.org/openingHoursSpecification
-     * @link http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#source_GoodRelationsTerms
      */
     public function openingHoursSpecification($openingHoursSpecification)
     {
@@ -1503,6 +1522,7 @@ class Pharmacy extends BaseType implements PharmacyContract, LocalBusinessContra
      *
      * @see https://schema.org/ownershipFundingInfo
      * @see https://pending.schema.org
+     * @link https://github.com/schemaorg/schemaorg/issues/1525
      */
     public function ownershipFundingInfo($ownershipFundingInfo)
     {
@@ -1517,7 +1537,6 @@ class Pharmacy extends BaseType implements PharmacyContract, LocalBusinessContra
      * @return static
      *
      * @see https://schema.org/owns
-     * @link http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#source_GoodRelationsTerms
      */
     public function owns($owns)
     {
@@ -1612,7 +1631,7 @@ class Pharmacy extends BaseType implements PharmacyContract, LocalBusinessContra
 
     /**
      * A flag to signal that the [[Place]] is open to public visitors.  If this
-     * property is omitted there is no assumed default boolean value
+     * property is omitted there is no assumed default boolean value.
      *
      * @param bool|bool[] $publicAccess
      *
@@ -1702,7 +1721,6 @@ class Pharmacy extends BaseType implements PharmacyContract, LocalBusinessContra
      * @return static
      *
      * @see https://schema.org/seeks
-     * @link http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#source_GoodRelationsTerms
      */
     public function seeks($seeks)
     {
@@ -1746,7 +1764,6 @@ class Pharmacy extends BaseType implements PharmacyContract, LocalBusinessContra
      * @return static
      *
      * @see https://schema.org/smokingAllowed
-     * @link https://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#STI_Accommodation_Ontology
      */
     public function smokingAllowed($smokingAllowed)
     {
@@ -1826,7 +1843,6 @@ class Pharmacy extends BaseType implements PharmacyContract, LocalBusinessContra
      * @return static
      *
      * @see https://schema.org/taxID
-     * @link http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#source_GoodRelationsTerms
      */
     public function taxID($taxID)
     {
@@ -1876,6 +1892,7 @@ class Pharmacy extends BaseType implements PharmacyContract, LocalBusinessContra
      *
      * @see https://schema.org/unnamedSourcesPolicy
      * @see https://pending.schema.org
+     * @link https://github.com/schemaorg/schemaorg/issues/1525
      */
     public function unnamedSourcesPolicy($unnamedSourcesPolicy)
     {
@@ -1904,7 +1921,6 @@ class Pharmacy extends BaseType implements PharmacyContract, LocalBusinessContra
      * @return static
      *
      * @see https://schema.org/vatID
-     * @link http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#source_GoodRelationsTerms
      */
     public function vatID($vatID)
     {

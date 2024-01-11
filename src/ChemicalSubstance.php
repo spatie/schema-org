@@ -21,10 +21,14 @@ class ChemicalSubstance extends BaseType implements ChemicalSubstanceContract, B
     /**
      * An additional type for the item, typically used for adding more specific
      * types from external vocabularies in microdata syntax. This is a
-     * relationship between something and a class that the thing is in. In RDFa
-     * syntax, it is better to use the native RDFa syntax - the 'typeof'
-     * attribute - for multiple types. Schema.org tools may have only weaker
-     * understanding of extra types, in particular those defined externally.
+     * relationship between something and a class that the thing is in.
+     * Typically the value is a URI-identified RDF class, and in this case
+     * corresponds to the
+     *     use of rdf:type in RDF. Text values can be used sparingly, for cases
+     * where useful information can be added without their being an appropriate
+     * schema to reference. In the case of text values, the class label should
+     * follow the schema.org [style
+     * guide](https://schema.org/docs/styleguide.html).
      *
      * @param string|string[] $additionalType
      *
@@ -62,6 +66,7 @@ class ChemicalSubstance extends BaseType implements ChemicalSubstanceContract, B
      *
      * @see https://schema.org/associatedDisease
      * @see https://pending.schema.org
+     * @link http://www.bioschemas.org/BioChemEntity
      */
     public function associatedDisease($associatedDisease)
     {
@@ -77,6 +82,7 @@ class ChemicalSubstance extends BaseType implements ChemicalSubstanceContract, B
      *
      * @see https://schema.org/bioChemInteraction
      * @see https://pending.schema.org
+     * @link http://www.bioschemas.org
      */
     public function bioChemInteraction($bioChemInteraction)
     {
@@ -93,6 +99,7 @@ class ChemicalSubstance extends BaseType implements ChemicalSubstanceContract, B
      *
      * @see https://schema.org/bioChemSimilarity
      * @see https://pending.schema.org
+     * @link http://www.bioschemas.org
      */
     public function bioChemSimilarity($bioChemSimilarity)
     {
@@ -108,6 +115,7 @@ class ChemicalSubstance extends BaseType implements ChemicalSubstanceContract, B
      *
      * @see https://schema.org/biologicalRole
      * @see https://pending.schema.org
+     * @link http://www.bioschemas.org
      */
     public function biologicalRole($biologicalRole)
     {
@@ -124,6 +132,7 @@ class ChemicalSubstance extends BaseType implements ChemicalSubstanceContract, B
      *
      * @see https://schema.org/chemicalComposition
      * @see https://pending.schema.org
+     * @link http://www.bioschemas.org/ChemicalSubstance
      */
     public function chemicalComposition($chemicalComposition)
     {
@@ -139,6 +148,7 @@ class ChemicalSubstance extends BaseType implements ChemicalSubstanceContract, B
      *
      * @see https://schema.org/chemicalRole
      * @see https://pending.schema.org
+     * @link http://www.bioschemas.org/ChemicalSubstance
      */
     public function chemicalRole($chemicalRole)
     {
@@ -148,7 +158,7 @@ class ChemicalSubstance extends BaseType implements ChemicalSubstanceContract, B
     /**
      * A description of the item.
      *
-     * @param string|string[] $description
+     * @param \Spatie\SchemaOrg\Contracts\TextObjectContract|\Spatie\SchemaOrg\Contracts\TextObjectContract[]|string|string[] $description
      *
      * @return static
      *
@@ -186,6 +196,7 @@ class ChemicalSubstance extends BaseType implements ChemicalSubstanceContract, B
      *
      * @see https://schema.org/funding
      * @see https://pending.schema.org
+     * @link https://github.com/schemaorg/schemaorg/issues/383
      */
     public function funding($funding)
     {
@@ -202,6 +213,7 @@ class ChemicalSubstance extends BaseType implements ChemicalSubstanceContract, B
      *
      * @see https://schema.org/hasBioChemEntityPart
      * @see https://pending.schema.org
+     * @link http://www.bioschemas.org
      */
     public function hasBioChemEntityPart($hasBioChemEntityPart)
     {
@@ -218,6 +230,7 @@ class ChemicalSubstance extends BaseType implements ChemicalSubstanceContract, B
      *
      * @see https://schema.org/hasMolecularFunction
      * @see https://pending.schema.org
+     * @link http://www.bioschemas.org/BioChemEntity
      */
     public function hasMolecularFunction($hasMolecularFunction)
     {
@@ -234,6 +247,7 @@ class ChemicalSubstance extends BaseType implements ChemicalSubstanceContract, B
      *
      * @see https://schema.org/hasRepresentation
      * @see https://pending.schema.org
+     * @link http://www.bioschemas.org
      */
     public function hasRepresentation($hasRepresentation)
     {
@@ -282,6 +296,7 @@ class ChemicalSubstance extends BaseType implements ChemicalSubstanceContract, B
      *
      * @see https://schema.org/isEncodedByBioChemEntity
      * @see https://pending.schema.org
+     * @link http://www.bioschemas.org/Gene
      */
     public function isEncodedByBioChemEntity($isEncodedByBioChemEntity)
     {
@@ -298,6 +313,7 @@ class ChemicalSubstance extends BaseType implements ChemicalSubstanceContract, B
      *
      * @see https://schema.org/isInvolvedInBiologicalProcess
      * @see https://pending.schema.org
+     * @link http://www.bioschemas.org/BioChemEntity
      */
     public function isInvolvedInBiologicalProcess($isInvolvedInBiologicalProcess)
     {
@@ -314,6 +330,7 @@ class ChemicalSubstance extends BaseType implements ChemicalSubstanceContract, B
      *
      * @see https://schema.org/isLocatedInSubcellularLocation
      * @see https://pending.schema.org
+     * @link http://www.bioschemas.org/BioChemEntity
      */
     public function isLocatedInSubcellularLocation($isLocatedInSubcellularLocation)
     {
@@ -330,6 +347,7 @@ class ChemicalSubstance extends BaseType implements ChemicalSubstanceContract, B
      *
      * @see https://schema.org/isPartOfBioChemEntity
      * @see https://pending.schema.org
+     * @link http://www.bioschemas.org
      */
     public function isPartOfBioChemEntity($isPartOfBioChemEntity)
     {
@@ -390,6 +408,7 @@ class ChemicalSubstance extends BaseType implements ChemicalSubstanceContract, B
      *
      * @see https://schema.org/potentialUse
      * @see https://pending.schema.org
+     * @link http://www.bioschemas.org/ChemicalSubstance
      */
     public function potentialUse($potentialUse)
     {
@@ -437,6 +456,7 @@ class ChemicalSubstance extends BaseType implements ChemicalSubstanceContract, B
      *
      * @see https://schema.org/taxonomicRange
      * @see https://pending.schema.org
+     * @link http://www.bioschemas.org
      */
     public function taxonomicRange($taxonomicRange)
     {
