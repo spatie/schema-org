@@ -42,6 +42,8 @@ interface ObservationContract
 
     public function observationDate($observationDate);
 
+    public function observationPeriod($observationPeriod);
+
     public function potentialAction($potentialAction);
 
     public function sameAs($sameAs);

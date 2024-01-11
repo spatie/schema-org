@@ -171,22 +171,6 @@ class CourseInstance extends BaseType implements CourseInstanceContract, EventCo
     }
 
     /**
-     * Represents the length and pace of a course.
-     *
-     * @param \Spatie\SchemaOrg\Contracts\ScheduleContract|\Spatie\SchemaOrg\Contracts\ScheduleContract[] $courseLength
-     *
-     * @return static
-     *
-     * @see https://schema.org/courseLength
-     * @see https://pending.schema.org
-     * @link https://github.com/schemaorg/schemaorg/issues/3281
-     */
-    public function courseLength($courseLength)
-    {
-        return $this->setProperty('courseLength', $courseLength);
-    }
-
-    /**
      * The medium or means of delivery of the course instance or the mode of
      * study, either as a text label (e.g. "online", "onsite" or "blended";
      * "synchronous" or "asynchronous"; "full-time" or "part-time") or as a URL
@@ -202,6 +186,22 @@ class CourseInstance extends BaseType implements CourseInstanceContract, EventCo
     public function courseMode($courseMode)
     {
         return $this->setProperty('courseMode', $courseMode);
+    }
+
+    /**
+     * Represents the length and pace of a course, expressed as a [[Schedule]].
+     *
+     * @param \Spatie\SchemaOrg\Contracts\ScheduleContract|\Spatie\SchemaOrg\Contracts\ScheduleContract[] $courseSchedule
+     *
+     * @return static
+     *
+     * @see https://schema.org/courseSchedule
+     * @see https://pending.schema.org
+     * @link https://github.com/schemaorg/schemaorg/issues/3281
+     */
+    public function courseSchedule($courseSchedule)
+    {
+        return $this->setProperty('courseSchedule', $courseSchedule);
     }
 
     /**
@@ -226,7 +226,7 @@ class CourseInstance extends BaseType implements CourseInstanceContract, EventCo
     /**
      * A description of the item.
      *
-     * @param string|string[] $description
+     * @param \Spatie\SchemaOrg\Contracts\TextObjectContract|\Spatie\SchemaOrg\Contracts\TextObjectContract[]|string|string[] $description
      *
      * @return static
      *

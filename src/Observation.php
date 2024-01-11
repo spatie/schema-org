@@ -96,7 +96,7 @@ class Observation extends BaseType implements ObservationContract, IntangibleCon
     /**
      * A description of the item.
      *
-     * @param string|string[] $description
+     * @param \Spatie\SchemaOrg\Contracts\TextObjectContract|\Spatie\SchemaOrg\Contracts\TextObjectContract[]|string|string[] $description
      *
      * @return static
      *
@@ -376,6 +376,24 @@ class Observation extends BaseType implements ObservationContract, IntangibleCon
     public function observationDate($observationDate)
     {
         return $this->setProperty('observationDate', $observationDate);
+    }
+
+    /**
+     * The length of time an Observation took place over. The format follows
+     * `P[0-9]*[Y|M|D|h|m|s]`. For example, P1Y is Period 1 Year, P3M is Period
+     * 3 Months, P3h is Period 3 hours.
+     *
+     * @param string|string[] $observationPeriod
+     *
+     * @return static
+     *
+     * @see https://schema.org/observationPeriod
+     * @see https://pending.schema.org
+     * @link https://github.com/schemaorg/schemaorg/issues/2564
+     */
+    public function observationPeriod($observationPeriod)
+    {
+        return $this->setProperty('observationPeriod', $observationPeriod);
     }
 
     /**

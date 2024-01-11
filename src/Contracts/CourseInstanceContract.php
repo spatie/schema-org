@@ -24,9 +24,9 @@ interface CourseInstanceContract
 
     public function contributor($contributor);
 
-    public function courseLength($courseLength);
-
     public function courseMode($courseMode);
+
+    public function courseSchedule($courseSchedule);
 
     public function courseWorkload($courseWorkload);
 
