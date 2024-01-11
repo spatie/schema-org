@@ -2,6 +2,14 @@
 
 All Notable changes to `schema-org` will be documented in this file.
 
+## 3.19.0 - 2024-01-11
+
+### What's Changed
+
+* upgrade to schema.org v20 by @Gummibeer in https://github.com/spatie/schema-org/pull/209
+
+**Full Changelog**: https://github.com/spatie/schema-org/compare/3.18.0...3.19.0
+
 ## 3.18.0 - 2024-01-11
 
 ### What's Changed
