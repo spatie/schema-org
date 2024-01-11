@@ -216,6 +216,8 @@ interface AnswerContract
 
     public function sdPublisher($sdPublisher);
 
+    public function sharedContent($sharedContent);
+
     public function size($size);
 
     public function sourceOrganization($sourceOrganization);

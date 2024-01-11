@@ -12,6 +12,8 @@ interface HobbyShopContract
 
     public function address($address);
 
+    public function agentInteractionStatistic($agentInteractionStatistic);
+
     public function aggregateRating($aggregateRating);
 
     public function alternateName($alternateName);

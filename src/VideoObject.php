@@ -153,7 +153,7 @@ class VideoObject extends BaseType implements VideoObjectContract, CreativeWorkC
      * deficiencies, consistent with the other accessibility metadata but
      * expressing subtleties such as "short descriptions are present but long
      * descriptions will be needed for non-visual users" or "short descriptions
-     * are present and no long descriptions are needed."
+     * are present and no long descriptions are needed".
      *
      * @param string|string[] $accessibilitySummary
      *
@@ -239,7 +239,7 @@ class VideoObject extends BaseType implements VideoObjectContract, CreativeWorkC
      * where useful information can be added without their being an appropriate
      * schema to reference. In the case of text values, the class label should
      * follow the schema.org [style
-     * guide](https://schema.org/docs/styleguide.html)
+     * guide](https://schema.org/docs/styleguide.html).
      *
      * @param string|string[] $additionalType
      *
@@ -1992,7 +1992,7 @@ class VideoObject extends BaseType implements VideoObjectContract, CreativeWorkC
 
     /**
      * Indicates the date on which the current structured data was generated /
-     * published. Typically used alongside [[sdPublisher]]
+     * published. Typically used alongside [[sdPublisher]].
      *
      * @param \DateTimeInterface|\DateTimeInterface[] $sdDatePublished
      *
@@ -2049,7 +2049,7 @@ class VideoObject extends BaseType implements VideoObjectContract, CreativeWorkC
     /**
      * The [SHA-2](https://en.wikipedia.org/wiki/SHA-2) SHA256 hash of the
      * content of the item. For example, a zero-length input has value
-     * 'e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855'
+     * 'e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855'.
      *
      * @param string|string[] $sha256
      *
@@ -2371,7 +2371,8 @@ class VideoObject extends BaseType implements VideoObjectContract, CreativeWorkC
     }
 
     /**
-     * Date when this media object was uploaded to this site.
+     * Date (including time if available) when this media object was uploaded to
+     * this site.
      *
      * @param \DateTimeInterface|\DateTimeInterface[] $uploadDate
      *

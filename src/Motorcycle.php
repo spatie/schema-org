@@ -72,7 +72,7 @@ class Motorcycle extends BaseType implements MotorcycleContract, ProductContract
      * where useful information can be added without their being an appropriate
      * schema to reference. In the case of text values, the class label should
      * follow the schema.org [style
-     * guide](https://schema.org/docs/styleguide.html)
+     * guide](https://schema.org/docs/styleguide.html).
      *
      * @param string|string[] $additionalType
      *
@@ -1019,7 +1019,7 @@ class Motorcycle extends BaseType implements MotorcycleContract, ProductContract
      * The total distance travelled by the particular vehicle since its initial
      * production, as read from its odometer.
      *
-     * Typical unit code(s): KMT for kilometers, SMI for statute miles
+     * Typical unit code(s): KMT for kilometers, SMI for statute miles.
      *
      * @param \Spatie\SchemaOrg\Contracts\QuantitativeValueContract|\Spatie\SchemaOrg\Contracts\QuantitativeValueContract[] $mileageFromOdometer
      *
@@ -1190,7 +1190,7 @@ class Motorcycle extends BaseType implements MotorcycleContract, ProductContract
     /**
      * The number of axles.
      *
-     * Typical unit code(s): C62
+     * Typical unit code(s): C62.
      *
      * @param \Spatie\SchemaOrg\Contracts\QuantitativeValueContract|\Spatie\SchemaOrg\Contracts\QuantitativeValueContract[]|float|float[]|int|int[] $numberOfAxles
      *
@@ -1206,7 +1206,7 @@ class Motorcycle extends BaseType implements MotorcycleContract, ProductContract
     /**
      * The number of doors.
      *
-     * Typical unit code(s): C62
+     * Typical unit code(s): C62.
      *
      * @param \Spatie\SchemaOrg\Contracts\QuantitativeValueContract|\Spatie\SchemaOrg\Contracts\QuantitativeValueContract[]|float|float[]|int|int[] $numberOfDoors
      *
@@ -1223,7 +1223,7 @@ class Motorcycle extends BaseType implements MotorcycleContract, ProductContract
      * The total number of forward gears available for the transmission system
      * of the vehicle.
      *
-     * Typical unit code(s): C62
+     * Typical unit code(s): C62.
      *
      * @param \Spatie\SchemaOrg\Contracts\QuantitativeValueContract|\Spatie\SchemaOrg\Contracts\QuantitativeValueContract[]|float|float[]|int|int[] $numberOfForwardGears
      *
@@ -1239,7 +1239,7 @@ class Motorcycle extends BaseType implements MotorcycleContract, ProductContract
     /**
      * The number of owners of the vehicle, including the current one.
      *
-     * Typical unit code(s): C62
+     * Typical unit code(s): C62.
      *
      * @param \Spatie\SchemaOrg\Contracts\QuantitativeValueContract|\Spatie\SchemaOrg\Contracts\QuantitativeValueContract[]|float|float[]|int|int[] $numberOfPreviousOwners
      *
@@ -1466,7 +1466,7 @@ class Motorcycle extends BaseType implements MotorcycleContract, ProductContract
      * terms of the physical space available, and in terms of limitations set by
      * law.
      *
-     * Typical unit code(s): C62 for persons
+     * Typical unit code(s): C62 for persons.
      *
      * @param \Spatie\SchemaOrg\Contracts\QuantitativeValueContract|\Spatie\SchemaOrg\Contracts\QuantitativeValueContract[]|float|float[]|int|int[] $seatingCapacity
      *
@@ -1570,7 +1570,7 @@ class Motorcycle extends BaseType implements MotorcycleContract, ProductContract
     }
 
     /**
-     * This is a StupidProperty! - for testing only
+     * This is a StupidProperty! - for testing only.
      *
      * @param \Spatie\SchemaOrg\Contracts\QuantitativeValueContract|\Spatie\SchemaOrg\Contracts\QuantitativeValueContract[] $stupidProperty
      *
@@ -1846,7 +1846,7 @@ class Motorcycle extends BaseType implements MotorcycleContract, ProductContract
      * The distance between the centers of the front and rear wheels.
      *
      * Typical unit code(s): CMT for centimeters, MTR for meters, INH for
-     * inches, FOT for foot/feet
+     * inches, FOT for foot/feet.
      *
      * @param \Spatie\SchemaOrg\Contracts\QuantitativeValueContract|\Spatie\SchemaOrg\Contracts\QuantitativeValueContract[] $wheelbase
      *

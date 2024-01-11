@@ -87,7 +87,7 @@ class House extends BaseType implements HouseContract, AccommodationContract, Pl
      * where useful information can be added without their being an appropriate
      * schema to reference. In the case of text values, the class label should
      * follow the schema.org [style
-     * guide](https://schema.org/docs/styleguide.html)
+     * guide](https://schema.org/docs/styleguide.html).
      *
      * @param string|string[] $additionalType
      *
@@ -338,7 +338,7 @@ class House extends BaseType implements HouseContract, AccommodationContract, Pl
     /**
      * The size of the accommodation, e.g. in square meter or squarefoot.
      * Typical unit code(s): MTK for square meter, FTK for square foot, or YDK
-     * for square yard
+     * for square yard.
      *
      * @param \Spatie\SchemaOrg\Contracts\QuantitativeValueContract|\Spatie\SchemaOrg\Contracts\QuantitativeValueContract[] $floorSize
      *
@@ -896,7 +896,7 @@ class House extends BaseType implements HouseContract, AccommodationContract, Pl
      * infants etc). For individual accommodations, this is not necessarily the
      * legal maximum but defines the permitted usage as per the contractual
      * agreement (e.g. a double room used by a single person).
-     * Typical unit code(s): C62 for person
+     * Typical unit code(s): C62 for person.
      *
      * @param \Spatie\SchemaOrg\Contracts\QuantitativeValueContract|\Spatie\SchemaOrg\Contracts\QuantitativeValueContract[] $occupancy
      *
@@ -997,7 +997,7 @@ class House extends BaseType implements HouseContract, AccommodationContract, Pl
 
     /**
      * A flag to signal that the [[Place]] is open to public visitors.  If this
-     * property is omitted there is no assumed default boolean value
+     * property is omitted there is no assumed default boolean value.
      *
      * @param bool|bool[] $publicAccess
      *

@@ -34,7 +34,7 @@ class FloorPlan extends BaseType implements FloorPlanContract, IntangibleContrac
      * where useful information can be added without their being an appropriate
      * schema to reference. In the case of text values, the class label should
      * follow the schema.org [style
-     * guide](https://schema.org/docs/styleguide.html)
+     * guide](https://schema.org/docs/styleguide.html).
      *
      * @param string|string[] $additionalType
      *
@@ -112,7 +112,7 @@ class FloorPlan extends BaseType implements FloorPlanContract, IntangibleContrac
     /**
      * The size of the accommodation, e.g. in square meter or squarefoot.
      * Typical unit code(s): MTK for square meter, FTK for square foot, or YDK
-     * for square yard
+     * for square yard.
      *
      * @param \Spatie\SchemaOrg\Contracts\QuantitativeValueContract|\Spatie\SchemaOrg\Contracts\QuantitativeValueContract[] $floorSize
      *

@@ -67,7 +67,7 @@ class EducationalOrganization extends BaseType implements EducationalOrganizatio
      * where useful information can be added without their being an appropriate
      * schema to reference. In the case of text values, the class label should
      * follow the schema.org [style
-     * guide](https://schema.org/docs/styleguide.html)
+     * guide](https://schema.org/docs/styleguide.html).
      *
      * @param string|string[] $additionalType
      *
@@ -92,6 +92,24 @@ class EducationalOrganization extends BaseType implements EducationalOrganizatio
     public function address($address)
     {
         return $this->setProperty('address', $address);
+    }
+
+    /**
+     * The number of completed interactions for this entity, in a particular
+     * role (the 'agent'), in a particular action (indicated in the statistic),
+     * and in a particular context (i.e. interactionService).
+     *
+     * @param \Spatie\SchemaOrg\Contracts\InteractionCounterContract|\Spatie\SchemaOrg\Contracts\InteractionCounterContract[] $agentInteractionStatistic
+     *
+     * @return static
+     *
+     * @see https://schema.org/agentInteractionStatistic
+     * @see https://pending.schema.org
+     * @link https://github.com/schemaorg/schemaorg/issues/2858
+     */
+    public function agentInteractionStatistic($agentInteractionStatistic)
+    {
+        return $this->setProperty('agentInteractionStatistic', $agentInteractionStatistic);
     }
 
     /**
@@ -1498,7 +1516,7 @@ class EducationalOrganization extends BaseType implements EducationalOrganizatio
 
     /**
      * A flag to signal that the [[Place]] is open to public visitors.  If this
-     * property is omitted there is no assumed default boolean value
+     * property is omitted there is no assumed default boolean value.
      *
      * @param bool|bool[] $publicAccess
      *

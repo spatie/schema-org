@@ -20,7 +20,7 @@ use Spatie\SchemaOrg\Contracts\WearableMeasurementTypeEnumerationContract;
 class WearableMeasurementTypeEnumeration extends BaseType implements WearableMeasurementTypeEnumerationContract, EnumerationContract, IntangibleContract, MeasurementTypeEnumerationContract, ThingContract
 {
     /**
-     * Measurement of the back section, for example of a jacket
+     * Measurement of the back section, for example of a jacket.
      *
      * @see https://schema.org/WearableMeasurementBack
      * @see https://pending.schema.org
@@ -29,7 +29,7 @@ class WearableMeasurementTypeEnumeration extends BaseType implements WearableMea
     public const WearableMeasurementBack = 'https://schema.org/WearableMeasurementBack';
 
     /**
-     * Measurement of the chest/bust section, for example of a suit
+     * Measurement of the chest/bust section, for example of a suit.
      *
      * @see https://schema.org/WearableMeasurementChestOrBust
      * @see https://pending.schema.org
@@ -38,7 +38,7 @@ class WearableMeasurementTypeEnumeration extends BaseType implements WearableMea
     public const WearableMeasurementChestOrBust = 'https://schema.org/WearableMeasurementChestOrBust';
 
     /**
-     * Measurement of the collar, for example of a shirt
+     * Measurement of the collar, for example of a shirt.
      *
      * @see https://schema.org/WearableMeasurementCollar
      * @see https://pending.schema.org
@@ -47,7 +47,7 @@ class WearableMeasurementTypeEnumeration extends BaseType implements WearableMea
     public const WearableMeasurementCollar = 'https://schema.org/WearableMeasurementCollar';
 
     /**
-     * Measurement of the cup, for example of a bra
+     * Measurement of the cup, for example of a bra.
      *
      * @see https://schema.org/WearableMeasurementCup
      * @see https://pending.schema.org
@@ -56,7 +56,7 @@ class WearableMeasurementTypeEnumeration extends BaseType implements WearableMea
     public const WearableMeasurementCup = 'https://schema.org/WearableMeasurementCup';
 
     /**
-     * Measurement of the height, for example the heel height of a shoe
+     * Measurement of the height, for example the heel height of a shoe.
      *
      * @see https://schema.org/WearableMeasurementHeight
      * @see https://pending.schema.org
@@ -65,7 +65,7 @@ class WearableMeasurementTypeEnumeration extends BaseType implements WearableMea
     public const WearableMeasurementHeight = 'https://schema.org/WearableMeasurementHeight';
 
     /**
-     * Measurement of the hip section, for example of a skirt
+     * Measurement of the hip section, for example of a skirt.
      *
      * @see https://schema.org/WearableMeasurementHips
      * @see https://pending.schema.org
@@ -74,7 +74,7 @@ class WearableMeasurementTypeEnumeration extends BaseType implements WearableMea
     public const WearableMeasurementHips = 'https://schema.org/WearableMeasurementHips';
 
     /**
-     * Measurement of the inseam, for example of pants
+     * Measurement of the inseam, for example of pants.
      *
      * @see https://schema.org/WearableMeasurementInseam
      * @see https://pending.schema.org
@@ -83,7 +83,7 @@ class WearableMeasurementTypeEnumeration extends BaseType implements WearableMea
     public const WearableMeasurementInseam = 'https://schema.org/WearableMeasurementInseam';
 
     /**
-     * Represents the length, for example of a dress
+     * Represents the length, for example of a dress.
      *
      * @see https://schema.org/WearableMeasurementLength
      * @see https://pending.schema.org
@@ -92,7 +92,7 @@ class WearableMeasurementTypeEnumeration extends BaseType implements WearableMea
     public const WearableMeasurementLength = 'https://schema.org/WearableMeasurementLength';
 
     /**
-     * Measurement of the outside leg, for example of pants
+     * Measurement of the outside leg, for example of pants.
      *
      * @see https://schema.org/WearableMeasurementOutsideLeg
      * @see https://pending.schema.org
@@ -101,7 +101,7 @@ class WearableMeasurementTypeEnumeration extends BaseType implements WearableMea
     public const WearableMeasurementOutsideLeg = 'https://schema.org/WearableMeasurementOutsideLeg';
 
     /**
-     * Measurement of the sleeve length, for example of a shirt
+     * Measurement of the sleeve length, for example of a shirt.
      *
      * @see https://schema.org/WearableMeasurementSleeve
      * @see https://pending.schema.org
@@ -110,7 +110,7 @@ class WearableMeasurementTypeEnumeration extends BaseType implements WearableMea
     public const WearableMeasurementSleeve = 'https://schema.org/WearableMeasurementSleeve';
 
     /**
-     * Measurement of the waist section, for example of pants
+     * Measurement of the waist section, for example of pants.
      *
      * @see https://schema.org/WearableMeasurementWaist
      * @see https://pending.schema.org
@@ -119,7 +119,7 @@ class WearableMeasurementTypeEnumeration extends BaseType implements WearableMea
     public const WearableMeasurementWaist = 'https://schema.org/WearableMeasurementWaist';
 
     /**
-     * Measurement of the width, for example of shoes
+     * Measurement of the width, for example of shoes.
      *
      * @see https://schema.org/WearableMeasurementWidth
      * @see https://pending.schema.org
@@ -137,7 +137,7 @@ class WearableMeasurementTypeEnumeration extends BaseType implements WearableMea
      * where useful information can be added without their being an appropriate
      * schema to reference. In the case of text values, the class label should
      * follow the schema.org [style
-     * guide](https://schema.org/docs/styleguide.html)
+     * guide](https://schema.org/docs/styleguide.html).
      *
      * @param string|string[] $additionalType
      *

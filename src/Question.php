@@ -170,7 +170,7 @@ class Question extends BaseType implements QuestionContract, CommentContract, Cr
      * deficiencies, consistent with the other accessibility metadata but
      * expressing subtleties such as "short descriptions are present but long
      * descriptions will be needed for non-visual users" or "short descriptions
-     * are present and no long descriptions are needed."
+     * are present and no long descriptions are needed".
      *
      * @param string|string[] $accessibilitySummary
      *
@@ -225,7 +225,7 @@ class Question extends BaseType implements QuestionContract, CommentContract, Cr
      * where useful information can be added without their being an appropriate
      * schema to reference. In the case of text values, the class label should
      * follow the schema.org [style
-     * guide](https://schema.org/docs/styleguide.html)
+     * guide](https://schema.org/docs/styleguide.html).
      *
      * @param string|string[] $additionalType
      *
@@ -1481,9 +1481,12 @@ class Question extends BaseType implements QuestionContract, CommentContract, Cr
     }
 
     /**
-     * The parent of a question, answer or item in general.
+     * The parent of a question, answer or item in general. Typically used for
+     * Q/A discussion threads e.g. a chain of comments with the first comment
+     * being an [[Article]] or other [[CreativeWork]]. See also [[comment]]
+     * which points from something to a comment about it.
      *
-     * @param \Spatie\SchemaOrg\Contracts\CommentContract|\Spatie\SchemaOrg\Contracts\CommentContract[] $parentItem
+     * @param \Spatie\SchemaOrg\Contracts\CommentContract|\Spatie\SchemaOrg\Contracts\CommentContract[]|\Spatie\SchemaOrg\Contracts\CreativeWorkContract|\Spatie\SchemaOrg\Contracts\CreativeWorkContract[] $parentItem
      *
      * @return static
      *
@@ -1738,7 +1741,7 @@ class Question extends BaseType implements QuestionContract, CommentContract, Cr
 
     /**
      * Indicates the date on which the current structured data was generated /
-     * published. Typically used alongside [[sdPublisher]]
+     * published. Typically used alongside [[sdPublisher]].
      *
      * @param \DateTimeInterface|\DateTimeInterface[] $sdDatePublished
      *
@@ -1790,6 +1793,21 @@ class Question extends BaseType implements QuestionContract, CommentContract, Cr
     public function sdPublisher($sdPublisher)
     {
         return $this->setProperty('sdPublisher', $sdPublisher);
+    }
+
+    /**
+     * A CreativeWork such as an image, video, or audio clip shared as part of
+     * this posting.
+     *
+     * @param \Spatie\SchemaOrg\Contracts\CreativeWorkContract|\Spatie\SchemaOrg\Contracts\CreativeWorkContract[] $sharedContent
+     *
+     * @return static
+     *
+     * @see https://schema.org/sharedContent
+     */
+    public function sharedContent($sharedContent)
+    {
+        return $this->setProperty('sharedContent', $sharedContent);
     }
 
     /**
