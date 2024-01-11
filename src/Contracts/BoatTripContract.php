@@ -44,5 +44,7 @@ interface BoatTripContract
 
     public function subjectOf($subjectOf);
 
+    public function tripOrigin($tripOrigin);
+
     public function url($url);
 }

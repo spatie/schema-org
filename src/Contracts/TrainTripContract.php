@@ -52,5 +52,7 @@ interface TrainTripContract
 
     public function trainNumber($trainNumber);
 
+    public function tripOrigin($tripOrigin);
+
     public function url($url);
 }

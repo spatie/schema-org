@@ -513,6 +513,20 @@ class Flight extends BaseType implements FlightContract, IntangibleContract, Thi
     }
 
     /**
+     * The location of origin of the trip, prior to any destination(s).
+     *
+     * @param \Spatie\SchemaOrg\Contracts\PlaceContract|\Spatie\SchemaOrg\Contracts\PlaceContract[] $tripOrigin
+     *
+     * @return static
+     *
+     * @see https://schema.org/tripOrigin
+     */
+    public function tripOrigin($tripOrigin)
+    {
+        return $this->setProperty('tripOrigin', $tripOrigin);
+    }
+
+    /**
      * URL of the item.
      *
      * @param string|string[] $url
