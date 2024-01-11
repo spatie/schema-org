@@ -3092,6 +3092,11 @@ class Schema
         return new PoliceStation();
     }
 
+    public static function politicalParty(): PoliticalParty
+    {
+        return new PoliticalParty();
+    }
+
     public static function pond(): Pond
     {
         return new Pond();

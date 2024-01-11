@@ -630,6 +630,7 @@ use Spatie\SchemaOrg\Exceptions\TypeNotInGraph;
  * @method self|PodcastSeason podcastSeason(string|\Closure|null $identifier = null, \Closure|null $callback = null)
  * @method self|PodcastSeries podcastSeries(string|\Closure|null $identifier = null, \Closure|null $callback = null)
  * @method self|PoliceStation policeStation(string|\Closure|null $identifier = null, \Closure|null $callback = null)
+ * @method self|PoliticalParty politicalParty(string|\Closure|null $identifier = null, \Closure|null $callback = null)
  * @method self|Pond pond(string|\Closure|null $identifier = null, \Closure|null $callback = null)
  * @method self|PostOffice postOffice(string|\Closure|null $identifier = null, \Closure|null $callback = null)
  * @method self|PostalAddress postalAddress(string|\Closure|null $identifier = null, \Closure|null $callback = null)

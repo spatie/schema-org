@@ -629,6 +629,7 @@ use Spatie\SchemaOrg\Exceptions\TypeNotInMultiTypedEntity;
  * @method self|PodcastSeason podcastSeason(\Closure|null $callback = null)
  * @method self|PodcastSeries podcastSeries(\Closure|null $callback = null)
  * @method self|PoliceStation policeStation(\Closure|null $callback = null)
+ * @method self|PoliticalParty politicalParty(\Closure|null $callback = null)
  * @method self|Pond pond(\Closure|null $callback = null)
  * @method self|PostOffice postOffice(\Closure|null $callback = null)
  * @method self|PostalAddress postalAddress(\Closure|null $callback = null)
