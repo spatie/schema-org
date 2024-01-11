@@ -36,10 +36,14 @@ class Patient extends BaseType implements PatientContract, AudienceContract, Int
     /**
      * An additional type for the item, typically used for adding more specific
      * types from external vocabularies in microdata syntax. This is a
-     * relationship between something and a class that the thing is in. In RDFa
-     * syntax, it is better to use the native RDFa syntax - the 'typeof'
-     * attribute - for multiple types. Schema.org tools may have only weaker
-     * understanding of extra types, in particular those defined externally.
+     * relationship between something and a class that the thing is in.
+     * Typically the value is a URI-identified RDF class, and in this case
+     * corresponds to the
+     *     use of rdf:type in RDF. Text values can be used sparingly, for cases
+     * where useful information can be added without their being an appropriate
+     * schema to reference. In the case of text values, the class label should
+     * follow the schema.org [style
+     * guide](https://schema.org/docs/styleguide.html)
      *
      * @param string|string[] $additionalType
      *
@@ -382,7 +386,6 @@ class Patient extends BaseType implements PatientContract, AudienceContract, Int
      * @return static
      *
      * @see https://schema.org/duns
-     * @link http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#source_GoodRelationsTerms
      */
     public function duns($duns)
     {
@@ -470,6 +473,7 @@ class Patient extends BaseType implements PatientContract, AudienceContract, Int
      *
      * @see https://schema.org/funding
      * @see https://pending.schema.org
+     * @link https://github.com/schemaorg/schemaorg/issues/383
      */
     public function funding($funding)
     {
@@ -538,7 +542,6 @@ class Patient extends BaseType implements PatientContract, AudienceContract, Int
      * @return static
      *
      * @see https://schema.org/globalLocationNumber
-     * @link http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#source_GoodRelationsTerms
      */
     public function globalLocationNumber($globalLocationNumber)
     {
@@ -600,7 +603,6 @@ class Patient extends BaseType implements PatientContract, AudienceContract, Int
      * @return static
      *
      * @see https://schema.org/hasPOS
-     * @link http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#source_GoodRelationsTerms
      */
     public function hasPOS($hasPOS)
     {
@@ -739,7 +741,6 @@ class Patient extends BaseType implements PatientContract, AudienceContract, Int
      * @return static
      *
      * @see https://schema.org/isicV4
-     * @link http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#source_GoodRelationsTerms
      */
     public function isicV4($isicV4)
     {
@@ -788,6 +789,7 @@ class Patient extends BaseType implements PatientContract, AudienceContract, Int
      *
      * @see https://schema.org/knowsAbout
      * @see https://pending.schema.org
+     * @link https://github.com/schemaorg/schemaorg/issues/1688
      */
     public function knowsAbout($knowsAbout)
     {
@@ -806,6 +808,7 @@ class Patient extends BaseType implements PatientContract, AudienceContract, Int
      *
      * @see https://schema.org/knowsLanguage
      * @see https://pending.schema.org
+     * @link https://github.com/schemaorg/schemaorg/issues/1688
      */
     public function knowsLanguage($knowsLanguage)
     {
@@ -836,7 +839,6 @@ class Patient extends BaseType implements PatientContract, AudienceContract, Int
      * @return static
      *
      * @see https://schema.org/makesOffer
-     * @link http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#source_GoodRelationsTerms
      */
     public function makesOffer($makesOffer)
     {
@@ -867,7 +869,6 @@ class Patient extends BaseType implements PatientContract, AudienceContract, Int
      * @return static
      *
      * @see https://schema.org/naics
-     * @link http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#source_GoodRelationsTerms
      */
     public function naics($naics)
     {
@@ -925,7 +926,6 @@ class Patient extends BaseType implements PatientContract, AudienceContract, Int
      * @return static
      *
      * @see https://schema.org/owns
-     * @link http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#source_GoodRelationsTerms
      */
     public function owns($owns)
     {
@@ -1094,7 +1094,6 @@ class Patient extends BaseType implements PatientContract, AudienceContract, Int
      * @return static
      *
      * @see https://schema.org/seeks
-     * @link http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#source_GoodRelationsTerms
      */
     public function seeks($seeks)
     {
@@ -1261,7 +1260,6 @@ class Patient extends BaseType implements PatientContract, AudienceContract, Int
      * @return static
      *
      * @see https://schema.org/taxID
-     * @link http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#source_GoodRelationsTerms
      */
     public function taxID($taxID)
     {
@@ -1304,7 +1302,6 @@ class Patient extends BaseType implements PatientContract, AudienceContract, Int
      * @return static
      *
      * @see https://schema.org/vatID
-     * @link http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#source_GoodRelationsTerms
      */
     public function vatID($vatID)
     {
@@ -1319,7 +1316,6 @@ class Patient extends BaseType implements PatientContract, AudienceContract, Int
      * @return static
      *
      * @see https://schema.org/weight
-     * @link http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#source_GoodRelationsTerms
      */
     public function weight($weight)
     {

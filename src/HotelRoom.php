@@ -15,7 +15,6 @@ use Spatie\SchemaOrg\Contracts\ThingContract;
  * schema.org for marking up hotels and other forms of accommodations</a>.
  *
  * @see https://schema.org/HotelRoom
- * @link https://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#STI_Accommodation_Ontology
  *
  */
 class HotelRoom extends BaseType implements HotelRoomContract, AccommodationContract, PlaceContract, RoomContract, ThingContract
@@ -82,10 +81,14 @@ class HotelRoom extends BaseType implements HotelRoomContract, AccommodationCont
     /**
      * An additional type for the item, typically used for adding more specific
      * types from external vocabularies in microdata syntax. This is a
-     * relationship between something and a class that the thing is in. In RDFa
-     * syntax, it is better to use the native RDFa syntax - the 'typeof'
-     * attribute - for multiple types. Schema.org tools may have only weaker
-     * understanding of extra types, in particular those defined externally.
+     * relationship between something and a class that the thing is in.
+     * Typically the value is a URI-identified RDF class, and in this case
+     * corresponds to the
+     *     use of rdf:type in RDF. Text values can be used sparingly, for cases
+     * where useful information can be added without their being an appropriate
+     * schema to reference. In the case of text values, the class label should
+     * follow the schema.org [style
+     * guide](https://schema.org/docs/styleguide.html)
      *
      * @param string|string[] $additionalType
      *
@@ -152,7 +155,6 @@ class HotelRoom extends BaseType implements HotelRoomContract, AccommodationCont
      * @return static
      *
      * @see https://schema.org/amenityFeature
-     * @link https://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#STI_Accommodation_Ontology
      */
     public function amenityFeature($amenityFeature)
     {
@@ -171,7 +173,6 @@ class HotelRoom extends BaseType implements HotelRoomContract, AccommodationCont
      * @return static
      *
      * @see https://schema.org/bed
-     * @link https://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#STI_Accommodation_Ontology
      */
     public function bed($bed)
     {
@@ -345,7 +346,6 @@ class HotelRoom extends BaseType implements HotelRoomContract, AccommodationCont
      * @return static
      *
      * @see https://schema.org/floorSize
-     * @link https://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#STI_Accommodation_Ontology
      */
     public function floorSize($floorSize)
     {
@@ -549,7 +549,6 @@ class HotelRoom extends BaseType implements HotelRoomContract, AccommodationCont
      * @return static
      *
      * @see https://schema.org/globalLocationNumber
-     * @link http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#source_GoodRelationsTerms
      */
     public function globalLocationNumber($globalLocationNumber)
     {
@@ -647,7 +646,6 @@ class HotelRoom extends BaseType implements HotelRoomContract, AccommodationCont
      * @return static
      *
      * @see https://schema.org/isicV4
-     * @link http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#source_GoodRelationsTerms
      */
     public function isicV4($isicV4)
     {
@@ -710,7 +708,6 @@ class HotelRoom extends BaseType implements HotelRoomContract, AccommodationCont
      * @return static
      *
      * @see https://schema.org/logo
-     * @link http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#source_GoodRelationsTerms
      */
     public function logo($logo)
     {
@@ -889,7 +886,6 @@ class HotelRoom extends BaseType implements HotelRoomContract, AccommodationCont
      * @return static
      *
      * @see https://schema.org/numberOfRooms
-     * @link https://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#STI_Accommodation_Ontology
      */
     public function numberOfRooms($numberOfRooms)
     {
@@ -908,7 +904,6 @@ class HotelRoom extends BaseType implements HotelRoomContract, AccommodationCont
      * @return static
      *
      * @see https://schema.org/occupancy
-     * @link https://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#STI_Accommodation_Ontology
      */
     public function occupancy($occupancy)
     {
@@ -923,7 +918,6 @@ class HotelRoom extends BaseType implements HotelRoomContract, AccommodationCont
      * @return static
      *
      * @see https://schema.org/openingHoursSpecification
-     * @link http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#source_GoodRelationsTerms
      */
     public function openingHoursSpecification($openingHoursSpecification)
     {
@@ -938,7 +932,6 @@ class HotelRoom extends BaseType implements HotelRoomContract, AccommodationCont
      * @return static
      *
      * @see https://schema.org/permittedUsage
-     * @link https://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#STI_Accommodation_Ontology
      */
     public function permittedUsage($permittedUsage)
     {
@@ -954,7 +947,6 @@ class HotelRoom extends BaseType implements HotelRoomContract, AccommodationCont
      * @return static
      *
      * @see https://schema.org/petsAllowed
-     * @link https://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#STI_Accommodation_Ontology
      */
     public function petsAllowed($petsAllowed)
     {
@@ -1086,7 +1078,6 @@ class HotelRoom extends BaseType implements HotelRoomContract, AccommodationCont
      * @return static
      *
      * @see https://schema.org/smokingAllowed
-     * @link https://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#STI_Accommodation_Ontology
      */
     public function smokingAllowed($smokingAllowed)
     {

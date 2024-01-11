@@ -20,6 +20,8 @@ interface CampingPitchContract
 
     public function amenityFeature($amenityFeature);
 
+    public function bed($bed);
+
     public function branchCode($branchCode);
 
     public function containedIn($containedIn);
@@ -107,6 +109,8 @@ interface CampingPitchContract
     public function numberOfPartialBathrooms($numberOfPartialBathrooms);
 
     public function numberOfRooms($numberOfRooms);
+
+    public function occupancy($occupancy);
 
     public function openingHoursSpecification($openingHoursSpecification);
 

@@ -827,6 +827,11 @@ class Schema
         return new Consortium();
     }
 
+    public static function constraintNode(): ConstraintNode
+    {
+        return new ConstraintNode();
+    }
+
     public static function consumeAction(): ConsumeAction
     {
         return new ConsumeAction();
@@ -2175,6 +2180,11 @@ class Schema
     public static function maximumDoseSchedule(): MaximumDoseSchedule
     {
         return new MaximumDoseSchedule();
+    }
+
+    public static function measurementMethodEnum(): MeasurementMethodEnum
+    {
+        return new MeasurementMethodEnum();
     }
 
     public static function measurementTypeEnumeration(): MeasurementTypeEnumeration
@@ -3852,6 +3862,11 @@ class Schema
         return new StatisticalPopulation();
     }
 
+    public static function statisticalVariable(): StatisticalVariable
+    {
+        return new StatisticalVariable();
+    }
+
     public static function statusEnumeration(): StatusEnumeration
     {
         return new StatusEnumeration();
@@ -3910,6 +3925,11 @@ class Schema
     public static function suspendAction(): SuspendAction
     {
         return new SuspendAction();
+    }
+
+    public static function syllabus(): Syllabus
+    {
+        return new Syllabus();
     }
 
     public static function synagogue(): Synagogue
@@ -4210,6 +4230,11 @@ class Schema
     public static function userTweets(): UserTweets
     {
         return new UserTweets();
+    }
+
+    public static function vacationRental(): VacationRental
+    {
+        return new VacationRental();
     }
 
     public static function vehicle(): Vehicle

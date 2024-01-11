@@ -14,7 +14,6 @@ use Spatie\SchemaOrg\Contracts\ThingContract;
  * href="http://en.wikipedia.org/wiki/Apartment">http://en.wikipedia.org/wiki/Apartment</a>).
  *
  * @see https://schema.org/Apartment
- * @link https://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#STI_Accommodation_Ontology
  *
  */
 class Apartment extends BaseType implements ApartmentContract, AccommodationContract, PlaceContract, ThingContract
@@ -81,10 +80,14 @@ class Apartment extends BaseType implements ApartmentContract, AccommodationCont
     /**
      * An additional type for the item, typically used for adding more specific
      * types from external vocabularies in microdata syntax. This is a
-     * relationship between something and a class that the thing is in. In RDFa
-     * syntax, it is better to use the native RDFa syntax - the 'typeof'
-     * attribute - for multiple types. Schema.org tools may have only weaker
-     * understanding of extra types, in particular those defined externally.
+     * relationship between something and a class that the thing is in.
+     * Typically the value is a URI-identified RDF class, and in this case
+     * corresponds to the
+     *     use of rdf:type in RDF. Text values can be used sparingly, for cases
+     * where useful information can be added without their being an appropriate
+     * schema to reference. In the case of text values, the class label should
+     * follow the schema.org [style
+     * guide](https://schema.org/docs/styleguide.html)
      *
      * @param string|string[] $additionalType
      *
@@ -151,11 +154,28 @@ class Apartment extends BaseType implements ApartmentContract, AccommodationCont
      * @return static
      *
      * @see https://schema.org/amenityFeature
-     * @link https://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#STI_Accommodation_Ontology
      */
     public function amenityFeature($amenityFeature)
     {
         return $this->setProperty('amenityFeature', $amenityFeature);
+    }
+
+    /**
+     * The type of bed or beds included in the accommodation. For the single
+     * case of just one bed of a certain type, you use bed directly with a text.
+     *       If you want to indicate the quantity of a certain kind of bed, use
+     * an instance of BedDetails. For more detailed information, use the
+     * amenityFeature property.
+     *
+     * @param \Spatie\SchemaOrg\Contracts\BedDetailsContract|\Spatie\SchemaOrg\Contracts\BedDetailsContract[]|\Spatie\SchemaOrg\Contracts\BedTypeContract|\Spatie\SchemaOrg\Contracts\BedTypeContract[]|string|string[] $bed
+     *
+     * @return static
+     *
+     * @see https://schema.org/bed
+     */
+    public function bed($bed)
+    {
+        return $this->setProperty('bed', $bed);
     }
 
     /**
@@ -325,7 +345,6 @@ class Apartment extends BaseType implements ApartmentContract, AccommodationCont
      * @return static
      *
      * @see https://schema.org/floorSize
-     * @link https://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#STI_Accommodation_Ontology
      */
     public function floorSize($floorSize)
     {
@@ -529,7 +548,6 @@ class Apartment extends BaseType implements ApartmentContract, AccommodationCont
      * @return static
      *
      * @see https://schema.org/globalLocationNumber
-     * @link http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#source_GoodRelationsTerms
      */
     public function globalLocationNumber($globalLocationNumber)
     {
@@ -627,7 +645,6 @@ class Apartment extends BaseType implements ApartmentContract, AccommodationCont
      * @return static
      *
      * @see https://schema.org/isicV4
-     * @link http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#source_GoodRelationsTerms
      */
     public function isicV4($isicV4)
     {
@@ -690,7 +707,6 @@ class Apartment extends BaseType implements ApartmentContract, AccommodationCont
      * @return static
      *
      * @see https://schema.org/logo
-     * @link http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#source_GoodRelationsTerms
      */
     public function logo($logo)
     {
@@ -869,7 +885,6 @@ class Apartment extends BaseType implements ApartmentContract, AccommodationCont
      * @return static
      *
      * @see https://schema.org/numberOfRooms
-     * @link https://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#STI_Accommodation_Ontology
      */
     public function numberOfRooms($numberOfRooms)
     {
@@ -888,7 +903,6 @@ class Apartment extends BaseType implements ApartmentContract, AccommodationCont
      * @return static
      *
      * @see https://schema.org/occupancy
-     * @link https://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#STI_Accommodation_Ontology
      */
     public function occupancy($occupancy)
     {
@@ -903,7 +917,6 @@ class Apartment extends BaseType implements ApartmentContract, AccommodationCont
      * @return static
      *
      * @see https://schema.org/openingHoursSpecification
-     * @link http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#source_GoodRelationsTerms
      */
     public function openingHoursSpecification($openingHoursSpecification)
     {
@@ -918,7 +931,6 @@ class Apartment extends BaseType implements ApartmentContract, AccommodationCont
      * @return static
      *
      * @see https://schema.org/permittedUsage
-     * @link https://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#STI_Accommodation_Ontology
      */
     public function permittedUsage($permittedUsage)
     {
@@ -934,7 +946,6 @@ class Apartment extends BaseType implements ApartmentContract, AccommodationCont
      * @return static
      *
      * @see https://schema.org/petsAllowed
-     * @link https://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#STI_Accommodation_Ontology
      */
     public function petsAllowed($petsAllowed)
     {
@@ -1066,7 +1077,6 @@ class Apartment extends BaseType implements ApartmentContract, AccommodationCont
      * @return static
      *
      * @see https://schema.org/smokingAllowed
-     * @link https://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#STI_Accommodation_Ontology
      */
     public function smokingAllowed($smokingAllowed)
     {
