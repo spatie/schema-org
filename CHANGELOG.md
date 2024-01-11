@@ -2,6 +2,19 @@
 
 All Notable changes to `schema-org` will be documented in this file.
 
+## 3.23.0 - 2024-01-11
+
+### What's Changed
+
+* Update generator to use schema v24 by @indyjonesnl in https://github.com/spatie/schema-org/pull/201
+* Schema 24 by @Gummibeer in https://github.com/spatie/schema-org/pull/213
+
+### New Contributors
+
+* @indyjonesnl made their first contribution in https://github.com/spatie/schema-org/pull/201
+
+**Full Changelog**: https://github.com/spatie/schema-org/compare/3.22.0...3.23.0
+
 ## 3.22.0 - 2024-01-11
 
 ### What's Changed
