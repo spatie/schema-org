@@ -28,6 +28,8 @@ interface TaxiContract
 
     public function disambiguatingDescription($disambiguatingDescription);
 
+    public function hasCertification($hasCertification);
+
     public function hasOfferCatalog($hasOfferCatalog);
 
     public function hoursAvailable($hoursAvailable);

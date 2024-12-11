@@ -17,7 +17,6 @@ use Spatie\SchemaOrg\Contracts\ThingContract;
  * or might be considered mutually incompatible by upstream maintainers of the
  * definitions. See the IPTC
  * [documentation](https://www.iptc.org/std/photometadata/documentation/userguide/)
- *
  *  for [detailed definitions](https://cv.iptc.org/newscodes/digitalsourcetype/)
  * of all terms.
  *
@@ -64,6 +63,18 @@ class IPTCDigitalSourceEnumeration extends BaseType implements IPTCDigitalSource
      * @link https://github.com/schemaorg/schemaorg/issues/3392
      */
     public const CompositeCaptureDigitalSource = 'https://schema.org/CompositeCaptureDigitalSource';
+
+    /**
+     * Content coded as '[algorithmic
+     * media](https://cv.iptc.org/newscodes/digitalsourcetype/algorithmicMedia)'
+     * using the IPTC [digital source
+     * type](https://cv.iptc.org/newscodes/digitalsourcetype/) vocabulary.
+     *
+     * @see https://schema.org/CompositeDigitalSource
+     * @see https://pending.schema.org
+     * @link https://github.com/schemaorg/schemaorg/issues/3392
+     */
+    public const CompositeDigitalSource = 'https://schema.org/CompositeDigitalSource';
 
     /**
      * Content coded as '[composite
@@ -138,6 +149,18 @@ class IPTCDigitalSourceEnumeration extends BaseType implements IPTCDigitalSource
     public const MinorHumanEditsDigitalSource = 'https://schema.org/MinorHumanEditsDigitalSource';
 
     /**
+     * Content coded as '[algorithmic
+     * media](https://cv.iptc.org/newscodes/digitalsourcetype/algorithmicMedia)'
+     * using the IPTC [digital source
+     * type](https://cv.iptc.org/newscodes/digitalsourcetype/) vocabulary.
+     *
+     * @see https://schema.org/MultiFrameComputationalCaptureDigitalSource
+     * @see https://pending.schema.org
+     * @link https://github.com/schemaorg/schemaorg/issues/3392
+     */
+    public const MultiFrameComputationalCaptureDigitalSource = 'https://schema.org/MultiFrameComputationalCaptureDigitalSource';
+
+    /**
      * Content coded as '[negative
      * film](https://cv.iptc.org/newscodes/digitalsourcetype/negativeFilm)</a>'
      * using the IPTC [digital source
@@ -172,6 +195,18 @@ class IPTCDigitalSourceEnumeration extends BaseType implements IPTCDigitalSource
      * @link https://github.com/schemaorg/schemaorg/issues/3392
      */
     public const PrintDigitalSource = 'https://schema.org/PrintDigitalSource';
+
+    /**
+     * Content coded as '[algorithmic
+     * media](https://cv.iptc.org/newscodes/digitalsourcetype/algorithmicMedia)'
+     * using the IPTC [digital source
+     * type](https://cv.iptc.org/newscodes/digitalsourcetype/) vocabulary.
+     *
+     * @see https://schema.org/ScreenCaptureDigitalSource
+     * @see https://pending.schema.org
+     * @link https://github.com/schemaorg/schemaorg/issues/3392
+     */
+    public const ScreenCaptureDigitalSource = 'https://schema.org/ScreenCaptureDigitalSource';
 
     /**
      * Content coded as '[trained algorithmic

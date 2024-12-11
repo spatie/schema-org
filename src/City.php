@@ -461,6 +461,22 @@ class City extends BaseType implements CityContract, AdministrativeAreaContract,
     }
 
     /**
+     * Certification information about a product, organization, service, place,
+     * or person.
+     *
+     * @param \Spatie\SchemaOrg\Contracts\CertificationContract|\Spatie\SchemaOrg\Contracts\CertificationContract[] $hasCertification
+     *
+     * @return static
+     *
+     * @see https://schema.org/hasCertification
+     * @link https://github.com/schemaorg/schemaorg/issues/3230
+     */
+    public function hasCertification($hasCertification)
+    {
+        return $this->setProperty('hasCertification', $hasCertification);
+    }
+
+    /**
      * Indicates whether some facility (e.g. [[FoodEstablishment]],
      * [[CovidTestingFacility]]) offers a service that can be used by driving
      * through in a car. In the case of [[CovidTestingFacility]] such facilities
@@ -478,6 +494,34 @@ class City extends BaseType implements CityContract, AdministrativeAreaContract,
     public function hasDriveThroughService($hasDriveThroughService)
     {
         return $this->setProperty('hasDriveThroughService', $hasDriveThroughService);
+    }
+
+    /**
+     * The [GS1 digital link](https://www.gs1.org/standards/gs1-digital-link)
+     * associated with the object. This URL should conform to the particular
+     * requirements of digital links. The link should only contain the
+     * Application Identifiers (AIs) that are relevant for the entity being
+     * annotated, for instance a [[Product]] or an [[Organization]], and for the
+     * correct granularity. In particular, for products:<ul>* A Digital Link
+     * that contains a serial number (AI ```21```) should only be present on
+     * instances of [[IndividualProduct]]* A Digital Link that contains a lot
+     * number (AI ```10```) should be annotated as [[SomeProduct]] if only
+     * products from that lot are sold, or [[IndividualProduct]] if there is
+     * only a specific product.* A Digital Link that contains a global model
+     * number (AI ```8013```)  should be attached to a [[Product]] or a
+     * [[ProductModel]]. Other item types should be adapted similarly.
+     *
+     * @param string|string[] $hasGS1DigitalLink
+     *
+     * @return static
+     *
+     * @see https://schema.org/hasGS1DigitalLink
+     * @see https://pending.schema.org
+     * @link https://github.com/schemaorg/schemaorg/issues/3475
+     */
+    public function hasGS1DigitalLink($hasGS1DigitalLink)
+    {
+        return $this->setProperty('hasGS1DigitalLink', $hasGS1DigitalLink);
     }
 
     /**

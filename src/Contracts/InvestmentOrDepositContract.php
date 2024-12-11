@@ -34,6 +34,8 @@ interface InvestmentOrDepositContract
 
     public function feesAndCommissionsSpecification($feesAndCommissionsSpecification);
 
+    public function hasCertification($hasCertification);
+
     public function hasOfferCatalog($hasOfferCatalog);
 
     public function hoursAvailable($hoursAvailable);

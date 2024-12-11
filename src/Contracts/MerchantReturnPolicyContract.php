@@ -69,4 +69,6 @@ interface MerchantReturnPolicyContract
     public function subjectOf($subjectOf);
 
     public function url($url);
+
+    public function validForMemberTier($validForMemberTier);
 }

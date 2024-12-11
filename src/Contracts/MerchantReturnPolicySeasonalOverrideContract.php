@@ -26,7 +26,17 @@ interface MerchantReturnPolicySeasonalOverrideContract
 
     public function potentialAction($potentialAction);
 
+    public function refundType($refundType);
+
+    public function restockingFee($restockingFee);
+
+    public function returnFees($returnFees);
+
+    public function returnMethod($returnMethod);
+
     public function returnPolicyCategory($returnPolicyCategory);
+
+    public function returnShippingFeesAmount($returnShippingFeesAmount);
 
     public function sameAs($sameAs);
 

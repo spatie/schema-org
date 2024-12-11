@@ -140,6 +140,8 @@ use Spatie\SchemaOrg\Exceptions\TypeNotInMultiTypedEntity;
  * @method self|CategoryCodeSet categoryCodeSet(\Closure|null $callback = null)
  * @method self|CatholicChurch catholicChurch(\Closure|null $callback = null)
  * @method self|Cemetery cemetery(\Closure|null $callback = null)
+ * @method self|Certification certification(\Closure|null $callback = null)
+ * @method self|CertificationStatusEnumeration certificationStatusEnumeration(\Closure|null $callback = null)
  * @method self|Chapter chapter(\Closure|null $callback = null)
  * @method self|CheckAction checkAction(\Closure|null $callback = null)
  * @method self|CheckInAction checkInAction(\Closure|null $callback = null)
@@ -502,6 +504,8 @@ use Spatie\SchemaOrg\Exceptions\TypeNotInMultiTypedEntity;
  * @method self|MedicalWebPage medicalWebPage(\Closure|null $callback = null)
  * @method self|MedicineSystem medicineSystem(\Closure|null $callback = null)
  * @method self|MeetingRoom meetingRoom(\Closure|null $callback = null)
+ * @method self|MemberProgram memberProgram(\Closure|null $callback = null)
+ * @method self|MemberProgramTier memberProgramTier(\Closure|null $callback = null)
  * @method self|MensClothingStore mensClothingStore(\Closure|null $callback = null)
  * @method self|Menu menu(\Closure|null $callback = null)
  * @method self|MenuItem menuItem(\Closure|null $callback = null)
@@ -601,6 +605,7 @@ use Spatie\SchemaOrg\Exceptions\TypeNotInMultiTypedEntity;
  * @method self|PaymentCard paymentCard(\Closure|null $callback = null)
  * @method self|PaymentChargeSpecification paymentChargeSpecification(\Closure|null $callback = null)
  * @method self|PaymentMethod paymentMethod(\Closure|null $callback = null)
+ * @method self|PaymentMethodType paymentMethodType(\Closure|null $callback = null)
  * @method self|PaymentService paymentService(\Closure|null $callback = null)
  * @method self|PaymentStatusType paymentStatusType(\Closure|null $callback = null)
  * @method self|PeopleAudience peopleAudience(\Closure|null $callback = null)
@@ -828,6 +833,7 @@ use Spatie\SchemaOrg\Exceptions\TypeNotInMultiTypedEntity;
  * @method self|Thing thing(\Closure|null $callback = null)
  * @method self|Ticket ticket(\Closure|null $callback = null)
  * @method self|TieAction tieAction(\Closure|null $callback = null)
+ * @method self|TierBenefitEnumeration tierBenefitEnumeration(\Closure|null $callback = null)
  * @method self|TipAction tipAction(\Closure|null $callback = null)
  * @method self|TireShop tireShop(\Closure|null $callback = null)
  * @method self|TouristAttraction touristAttraction(\Closure|null $callback = null)
@@ -1024,10 +1030,10 @@ class MultiTypedEntity implements Type, JsonSerializable
         $properties = [];
         $types = [];
 
-        foreach($this->nodes as $node) {
+        foreach ($this->nodes as $node) {
             $temp = $this->serializeNode($node);
 
-            if(isset($temp['@type'])) {
+            if (isset($temp['@type'])) {
                 array_push($types, $temp['@type']);
                 unset($temp['@type']);
             }

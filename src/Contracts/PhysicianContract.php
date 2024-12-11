@@ -4,7 +4,11 @@ namespace Spatie\SchemaOrg\Contracts;
 
 interface PhysicianContract
 {
+    public function acceptedPaymentMethod($acceptedPaymentMethod);
+
     public function actionableFeedbackPolicy($actionableFeedbackPolicy);
+
+    public function additionalProperty($additionalProperty);
 
     public function additionalType($additionalType);
 
@@ -18,6 +22,8 @@ interface PhysicianContract
 
     public function alumni($alumni);
 
+    public function amenityFeature($amenityFeature);
+
     public function areaServed($areaServed);
 
     public function availableService($availableService);
@@ -26,13 +32,25 @@ interface PhysicianContract
 
     public function awards($awards);
 
+    public function branchCode($branchCode);
+
+    public function branchOf($branchOf);
+
     public function brand($brand);
 
     public function contactPoint($contactPoint);
 
     public function contactPoints($contactPoints);
 
+    public function containedIn($containedIn);
+
+    public function containedInPlace($containedInPlace);
+
+    public function containsPlace($containsPlace);
+
     public function correctionsPolicy($correctionsPolicy);
+
+    public function currenciesAccepted($currenciesAccepted);
 
     public function department($department);
 
@@ -74,9 +92,41 @@ interface PhysicianContract
 
     public function funding($funding);
 
+    public function geo($geo);
+
+    public function geoContains($geoContains);
+
+    public function geoCoveredBy($geoCoveredBy);
+
+    public function geoCovers($geoCovers);
+
+    public function geoCrosses($geoCrosses);
+
+    public function geoDisjoint($geoDisjoint);
+
+    public function geoEquals($geoEquals);
+
+    public function geoIntersects($geoIntersects);
+
+    public function geoOverlaps($geoOverlaps);
+
+    public function geoTouches($geoTouches);
+
+    public function geoWithin($geoWithin);
+
     public function globalLocationNumber($globalLocationNumber);
 
+    public function hasCertification($hasCertification);
+
     public function hasCredential($hasCredential);
+
+    public function hasDriveThroughService($hasDriveThroughService);
+
+    public function hasGS1DigitalLink($hasGS1DigitalLink);
+
+    public function hasMap($hasMap);
+
+    public function hasMemberProgram($hasMemberProgram);
 
     public function hasMerchantReturnPolicy($hasMerchantReturnPolicy);
 
@@ -98,6 +148,8 @@ interface PhysicianContract
 
     public function isAcceptingNewPatients($isAcceptingNewPatients);
 
+    public function isAccessibleForFree($isAccessibleForFree);
+
     public function isicV4($isicV4);
 
     public function iso6523Code($iso6523Code);
@@ -108,6 +160,8 @@ interface PhysicianContract
 
     public function knowsLanguage($knowsLanguage);
 
+    public function latitude($latitude);
+
     public function legalName($legalName);
 
     public function leiCode($leiCode);
@@ -116,9 +170,17 @@ interface PhysicianContract
 
     public function logo($logo);
 
+    public function longitude($longitude);
+
     public function mainEntityOfPage($mainEntityOfPage);
 
     public function makesOffer($makesOffer);
+
+    public function map($map);
+
+    public function maps($maps);
+
+    public function maximumAttendeeCapacity($maximumAttendeeCapacity);
 
     public function medicalSpecialty($medicalSpecialty);
 
@@ -138,13 +200,27 @@ interface PhysicianContract
 
     public function occupationalCategory($occupationalCategory);
 
+    public function openingHours($openingHours);
+
+    public function openingHoursSpecification($openingHoursSpecification);
+
     public function ownershipFundingInfo($ownershipFundingInfo);
 
     public function owns($owns);
 
     public function parentOrganization($parentOrganization);
 
+    public function paymentAccepted($paymentAccepted);
+
+    public function photo($photo);
+
+    public function photos($photos);
+
     public function potentialAction($potentialAction);
+
+    public function priceRange($priceRange);
+
+    public function publicAccess($publicAccess);
 
     public function publishingPrinciples($publishingPrinciples);
 
@@ -158,7 +234,13 @@ interface PhysicianContract
 
     public function serviceArea($serviceArea);
 
+    public function skills($skills);
+
     public function slogan($slogan);
+
+    public function smokingAllowed($smokingAllowed);
+
+    public function specialOpeningHoursSpecification($specialOpeningHoursSpecification);
 
     public function sponsor($sponsor);
 
@@ -169,6 +251,8 @@ interface PhysicianContract
     public function taxID($taxID);
 
     public function telephone($telephone);
+
+    public function tourBookingPage($tourBookingPage);
 
     public function unnamedSourcesPolicy($unnamedSourcesPolicy);
 

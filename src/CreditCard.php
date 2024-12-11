@@ -3,7 +3,6 @@
 namespace Spatie\SchemaOrg;
 
 use Spatie\SchemaOrg\Contracts\CreditCardContract;
-use Spatie\SchemaOrg\Contracts\EnumerationContract;
 use Spatie\SchemaOrg\Contracts\FinancialProductContract;
 use Spatie\SchemaOrg\Contracts\IntangibleContract;
 use Spatie\SchemaOrg\Contracts\LoanOrCreditContract;
@@ -28,9 +27,8 @@ use Spatie\SchemaOrg\Contracts\ThingContract;
  *
  * @see https://schema.org/CreditCard
  *
- * @method static supersededBy($supersededBy) The value should be instance of pending types Class|Class[]|Enumeration|Enumeration[]|Property|Property[]
  */
-class CreditCard extends BaseType implements CreditCardContract, EnumerationContract, FinancialProductContract, IntangibleContract, LoanOrCreditContract, PaymentCardContract, PaymentMethodContract, ServiceContract, ThingContract
+class CreditCard extends BaseType implements CreditCardContract, FinancialProductContract, IntangibleContract, LoanOrCreditContract, PaymentCardContract, PaymentMethodContract, ServiceContract, ThingContract
 {
     /**
      * An additional type for the item, typically used for adding more specific
@@ -357,6 +355,22 @@ class CreditCard extends BaseType implements CreditCardContract, EnumerationCont
     }
 
     /**
+     * Certification information about a product, organization, service, place,
+     * or person.
+     *
+     * @param \Spatie\SchemaOrg\Contracts\CertificationContract|\Spatie\SchemaOrg\Contracts\CertificationContract[] $hasCertification
+     *
+     * @return static
+     *
+     * @see https://schema.org/hasCertification
+     * @link https://github.com/schemaorg/schemaorg/issues/3230
+     */
+    public function hasCertification($hasCertification)
+    {
+        return $this->setProperty('hasCertification', $hasCertification);
+    }
+
+    /**
      * Indicates an OfferCatalog listing for this Organization, Person, or
      * Service.
      *
@@ -591,6 +605,22 @@ class CreditCard extends BaseType implements CreditCardContract, EnumerationCont
     public function offers($offers)
     {
         return $this->setProperty('offers', $offers);
+    }
+
+    /**
+     * The type of a payment method.
+     *
+     * @param \Spatie\SchemaOrg\Contracts\PaymentMethodTypeContract|\Spatie\SchemaOrg\Contracts\PaymentMethodTypeContract[] $paymentMethodType
+     *
+     * @return static
+     *
+     * @see https://schema.org/paymentMethodType
+     * @see https://pending.schema.org
+     * @link https://github.com/schemaorg/schemaorg/issues/3537
+     */
+    public function paymentMethodType($paymentMethodType)
+    {
+        return $this->setProperty('paymentMethodType', $paymentMethodType);
     }
 
     /**

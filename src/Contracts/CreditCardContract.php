@@ -44,6 +44,8 @@ interface CreditCardContract
 
     public function gracePeriod($gracePeriod);
 
+    public function hasCertification($hasCertification);
+
     public function hasOfferCatalog($hasOfferCatalog);
 
     public function hoursAvailable($hoursAvailable);
@@ -73,6 +75,8 @@ interface CreditCardContract
     public function name($name);
 
     public function offers($offers);
+
+    public function paymentMethodType($paymentMethodType);
 
     public function potentialAction($potentialAction);
 

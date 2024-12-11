@@ -38,6 +38,8 @@ interface LoanOrCreditContract
 
     public function gracePeriod($gracePeriod);
 
+    public function hasCertification($hasCertification);
+
     public function hasOfferCatalog($hasOfferCatalog);
 
     public function hoursAvailable($hoursAvailable);

@@ -31,11 +31,11 @@ class BroadcastEvent extends BaseType implements BroadcastEventContract, EventCo
     }
 
     /**
-     * An actor, e.g. in TV, radio, movie, video games etc., or in an event.
-     * Actors can be associated with individual items or with a series, episode,
-     * clip.
+     * An actor (individual or a group), e.g. in TV, radio, movie, video games
+     * etc., or in an event. Actors can be associated with individual items or
+     * with a series, episode, clip.
      *
-     * @param \Spatie\SchemaOrg\Contracts\PersonContract|\Spatie\SchemaOrg\Contracts\PersonContract[] $actor
+     * @param \Spatie\SchemaOrg\Contracts\PerformingGroupContract|\Spatie\SchemaOrg\Contracts\PerformingGroupContract[]|\Spatie\SchemaOrg\Contracts\PersonContract|\Spatie\SchemaOrg\Contracts\PersonContract[] $actor
      *
      * @return static
      *
@@ -246,7 +246,7 @@ class BroadcastEvent extends BaseType implements BroadcastEventContract, EventCo
 
     /**
      * The duration of the item (movie, audio recording, event, etc.) in [ISO
-     * 8601 date format](http://en.wikipedia.org/wiki/ISO_8601).
+     * 8601 duration format](http://en.wikipedia.org/wiki/ISO_8601).
      *
      * @param \Spatie\SchemaOrg\Contracts\DurationContract|\Spatie\SchemaOrg\Contracts\DurationContract[] $duration
      *

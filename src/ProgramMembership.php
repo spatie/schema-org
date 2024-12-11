@@ -84,8 +84,8 @@ class ProgramMembership extends BaseType implements ProgramMembershipContract, I
     }
 
     /**
-     * The organization (airline, travelers' club, etc.) the membership is made
-     * with.
+     * The Organization (airline, travelers' club, retailer, etc.) the
+     * membership is made with or which offers the  MemberProgram.
      *
      * @param \Spatie\SchemaOrg\Contracts\OrganizationContract|\Spatie\SchemaOrg\Contracts\OrganizationContract[] $hostingOrganization
      *
@@ -238,7 +238,24 @@ class ProgramMembership extends BaseType implements ProgramMembershipContract, I
     }
 
     /**
-     * The program providing the membership.
+     * The [MemberProgram](https://schema.org/MemberProgram) associated with a
+     * [ProgramMembership](https://schema.org/ProgramMembership).
+     *
+     * @param \Spatie\SchemaOrg\Contracts\MemberProgramContract|\Spatie\SchemaOrg\Contracts\MemberProgramContract[] $program
+     *
+     * @return static
+     *
+     * @see https://schema.org/program
+     * @link https://github.com/schemaorg/schemaorg/issues/3563
+     */
+    public function program($program)
+    {
+        return $this->setProperty('program', $program);
+    }
+
+    /**
+     * The program providing the membership. It is preferable to use
+     * [:program](https://schema.org/program) instead.
      *
      * @param string|string[] $programName
      *

@@ -198,6 +198,72 @@ class MerchantReturnPolicySeasonalOverride extends BaseType implements MerchantR
     }
 
     /**
+     * A refund type, from an enumerated list.
+     *
+     * @param \Spatie\SchemaOrg\Contracts\RefundTypeEnumerationContract|\Spatie\SchemaOrg\Contracts\RefundTypeEnumerationContract[] $refundType
+     *
+     * @return static
+     *
+     * @see https://schema.org/refundType
+     * @see https://pending.schema.org
+     * @link https://github.com/schemaorg/schemaorg/issues/2288
+     */
+    public function refundType($refundType)
+    {
+        return $this->setProperty('refundType', $refundType);
+    }
+
+    /**
+     * Use [[MonetaryAmount]] to specify a fixed restocking fee for product
+     * returns, or use [[Number]] to specify a percentage of the product price
+     * paid by the customer.
+     *
+     * @param \Spatie\SchemaOrg\Contracts\MonetaryAmountContract|\Spatie\SchemaOrg\Contracts\MonetaryAmountContract[]|float|float[]|int|int[] $restockingFee
+     *
+     * @return static
+     *
+     * @see https://schema.org/restockingFee
+     * @see https://pending.schema.org
+     * @link https://github.com/schemaorg/schemaorg/issues/2880
+     */
+    public function restockingFee($restockingFee)
+    {
+        return $this->setProperty('restockingFee', $restockingFee);
+    }
+
+    /**
+     * The type of return fees for purchased products (for any return reason).
+     *
+     * @param \Spatie\SchemaOrg\Contracts\ReturnFeesEnumerationContract|\Spatie\SchemaOrg\Contracts\ReturnFeesEnumerationContract[] $returnFees
+     *
+     * @return static
+     *
+     * @see https://schema.org/returnFees
+     * @see https://pending.schema.org
+     * @link https://github.com/schemaorg/schemaorg/issues/2288
+     */
+    public function returnFees($returnFees)
+    {
+        return $this->setProperty('returnFees', $returnFees);
+    }
+
+    /**
+     * The type of return method offered, specified from an enumeration.
+     *
+     * @param \Spatie\SchemaOrg\Contracts\ReturnMethodEnumerationContract|\Spatie\SchemaOrg\Contracts\ReturnMethodEnumerationContract[] $returnMethod
+     *
+     * @return static
+     *
+     * @see https://schema.org/returnMethod
+     * @see https://pending.schema.org
+     * @link https://github.com/schemaorg/schemaorg/issues/2880
+     */
+    public function returnMethod($returnMethod)
+    {
+        return $this->setProperty('returnMethod', $returnMethod);
+    }
+
+    /**
      * Specifies an applicable return policy (from an enumeration).
      *
      * @param \Spatie\SchemaOrg\Contracts\MerchantReturnEnumerationContract|\Spatie\SchemaOrg\Contracts\MerchantReturnEnumerationContract[] $returnPolicyCategory
@@ -211,6 +277,23 @@ class MerchantReturnPolicySeasonalOverride extends BaseType implements MerchantR
     public function returnPolicyCategory($returnPolicyCategory)
     {
         return $this->setProperty('returnPolicyCategory', $returnPolicyCategory);
+    }
+
+    /**
+     * Amount of shipping costs for product returns (for any reason). Applicable
+     * when property [[returnFees]] equals [[ReturnShippingFees]].
+     *
+     * @param \Spatie\SchemaOrg\Contracts\MonetaryAmountContract|\Spatie\SchemaOrg\Contracts\MonetaryAmountContract[] $returnShippingFeesAmount
+     *
+     * @return static
+     *
+     * @see https://schema.org/returnShippingFeesAmount
+     * @see https://pending.schema.org
+     * @link https://github.com/schemaorg/schemaorg/issues/2880
+     */
+    public function returnShippingFeesAmount($returnShippingFeesAmount)
+    {
+        return $this->setProperty('returnShippingFeesAmount', $returnShippingFeesAmount);
     }
 
     /**

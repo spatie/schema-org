@@ -32,6 +32,8 @@ interface ProgramMembershipContract
 
     public function potentialAction($potentialAction);
 
+    public function program($program);
+
     public function programName($programName);
 
     public function sameAs($sameAs);

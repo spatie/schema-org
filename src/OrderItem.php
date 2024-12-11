@@ -192,7 +192,7 @@ class OrderItem extends BaseType implements OrderItemContract, IntangibleContrac
      * The number of the item ordered. If the property is not set, assume the
      * quantity is one.
      *
-     * @param float|float[]|int|int[] $orderQuantity
+     * @param \Spatie\SchemaOrg\Contracts\QuantitativeValueContract|\Spatie\SchemaOrg\Contracts\QuantitativeValueContract[]|float|float[]|int|int[] $orderQuantity
      *
      * @return static
      *

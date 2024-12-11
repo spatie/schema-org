@@ -4,6 +4,8 @@ namespace Spatie\SchemaOrg\Contracts;
 
 interface AccountingServiceContract
 {
+    public function acceptedPaymentMethod($acceptedPaymentMethod);
+
     public function actionableFeedbackPolicy($actionableFeedbackPolicy);
 
     public function additionalProperty($additionalProperty);
@@ -114,11 +116,17 @@ interface AccountingServiceContract
 
     public function globalLocationNumber($globalLocationNumber);
 
+    public function hasCertification($hasCertification);
+
     public function hasCredential($hasCredential);
 
     public function hasDriveThroughService($hasDriveThroughService);
 
+    public function hasGS1DigitalLink($hasGS1DigitalLink);
+
     public function hasMap($hasMap);
+
+    public function hasMemberProgram($hasMemberProgram);
 
     public function hasMerchantReturnPolicy($hasMerchantReturnPolicy);
 
@@ -215,6 +223,8 @@ interface AccountingServiceContract
     public function seeks($seeks);
 
     public function serviceArea($serviceArea);
+
+    public function skills($skills);
 
     public function slogan($slogan);
 

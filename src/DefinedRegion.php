@@ -26,7 +26,6 @@ use Spatie\SchemaOrg\Contracts\ThingContract;
  * Region = state, canton, prefecture, autonomous community...
  *
  * @see https://schema.org/DefinedRegion
- * @see https://pending.schema.org
  * @link https://github.com/schemaorg/schemaorg/issues/2506
  *
  */
@@ -56,8 +55,12 @@ class DefinedRegion extends BaseType implements DefinedRegionContract, Intangibl
     }
 
     /**
-     * The country. For example, USA. You can also provide the two-letter [ISO
-     * 3166-1 alpha-2 country code](http://en.wikipedia.org/wiki/ISO_3166-1).
+     * The country. Recommended to be in 2-letter [ISO 3166-1
+     * alpha-2](http://en.wikipedia.org/wiki/ISO_3166-1) format, for example
+     * "US". For backward compatibility, a 3-letter [ISO 3166-1
+     * alpha-3](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-3) country code
+     * such as "SGP" or a full country name such as "Singapore" can also be
+     * used.
      *
      * @param \Spatie\SchemaOrg\Contracts\CountryContract|\Spatie\SchemaOrg\Contracts\CountryContract[]|string|string[] $addressCountry
      *
@@ -220,7 +223,6 @@ class DefinedRegion extends BaseType implements DefinedRegionContract, Intangibl
      * @return static
      *
      * @see https://schema.org/postalCodePrefix
-     * @see https://pending.schema.org
      * @link https://github.com/schemaorg/schemaorg/issues/2506
      */
     public function postalCodePrefix($postalCodePrefix)
@@ -236,7 +238,6 @@ class DefinedRegion extends BaseType implements DefinedRegionContract, Intangibl
      * @return static
      *
      * @see https://schema.org/postalCodeRange
-     * @see https://pending.schema.org
      * @link https://github.com/schemaorg/schemaorg/issues/2506
      */
     public function postalCodeRange($postalCodeRange)

@@ -18,13 +18,15 @@ use Spatie\SchemaOrg\Contracts\ThingContract;
 class Demand extends BaseType implements DemandContract, IntangibleContract, ThingContract
 {
     /**
-     * The payment method(s) accepted by seller for this offer.
+     * The payment method(s) that are accepted in general by an organization, or
+     * for some specific demand or offer.
      *
-     * @param \Spatie\SchemaOrg\Contracts\LoanOrCreditContract|\Spatie\SchemaOrg\Contracts\LoanOrCreditContract[]|\Spatie\SchemaOrg\Contracts\PaymentMethodContract|\Spatie\SchemaOrg\Contracts\PaymentMethodContract[] $acceptedPaymentMethod
+     * @param \Spatie\SchemaOrg\Contracts\LoanOrCreditContract|\Spatie\SchemaOrg\Contracts\LoanOrCreditContract[]|\Spatie\SchemaOrg\Contracts\PaymentMethodContract|\Spatie\SchemaOrg\Contracts\PaymentMethodContract[]|string|string[] $acceptedPaymentMethod
      *
      * @return static
      *
      * @see https://schema.org/acceptedPaymentMethod
+     * @link https://github.com/schemaorg/schemaorg/issues/3537
      */
     public function acceptedPaymentMethod($acceptedPaymentMethod)
     {
@@ -347,16 +349,10 @@ class Demand extends BaseType implements DemandContract, IntangibleContract, Thi
      * trade items, including products and services, using numeric
      * identification codes.
      *
-     * The GS1 [digital link
-     * specifications](https://www.gs1.org/standards/Digital-Link/) express
-     * GTINs as URLs (URIs, IRIs, etc.). Details including regular expression
-     * examples can be found in, Section 6 of the GS1 URI Syntax specification;
-     * see also [schema.org tracking
-     * issue](https://github.com/schemaorg/schemaorg/issues/3156#issuecomment-1209522809)
-     * for schema.org-specific discussion. A correct [[gtin]] value should be a
-     * valid GTIN, which means that it should be an all-numeric string of either
-     * 8, 12, 13 or 14 digits, or a "GS1 Digital Link" URL based on such a
-     * string. The numeric component should also have a [valid GS1 check
+     * A correct [[gtin]] value should be a valid GTIN, which means that it
+     * should be an all-numeric string of either 8, 12, 13 or 14 digits, or a
+     * "GS1 Digital Link" URL based on such a string. The numeric component
+     * should also have a [valid GS1 check
      * digit](https://www.gs1.org/services/check-digit-calculator) and meet the
      * other rules for valid GTINs. See also [GS1's GTIN
      * Summary](http://www.gs1.org/barcodes/technical/idkeys/gtin) and
@@ -364,6 +360,12 @@ class Demand extends BaseType implements DemandContract, IntangibleContract, Thi
      * more details. Left-padding of the gtin values is not required or
      * encouraged. The [[gtin]] property generalizes the earlier [[gtin8]],
      * [[gtin12]], [[gtin13]], and [[gtin14]] properties.
+     *
+     * The GS1 [digital link
+     * specifications](https://www.gs1.org/standards/Digital-Link/) expresses
+     * GTINs as URLs (URIs, IRIs, etc.).
+     * Digital Links should be populated into the [[hasGS1DigitalLink]]
+     * attribute.
      *
      * Note also that this is a definition for how to include GTINs in
      * Schema.org data, and not a definition of GTINs in general - see the GS1

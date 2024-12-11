@@ -4,6 +4,8 @@ namespace Spatie\SchemaOrg\Contracts;
 
 interface AirlineContract
 {
+    public function acceptedPaymentMethod($acceptedPaymentMethod);
+
     public function actionableFeedbackPolicy($actionableFeedbackPolicy);
 
     public function additionalType($additionalType);
@@ -76,7 +78,13 @@ interface AirlineContract
 
     public function globalLocationNumber($globalLocationNumber);
 
+    public function hasCertification($hasCertification);
+
     public function hasCredential($hasCredential);
+
+    public function hasGS1DigitalLink($hasGS1DigitalLink);
+
+    public function hasMemberProgram($hasMemberProgram);
 
     public function hasMerchantReturnPolicy($hasMerchantReturnPolicy);
 
@@ -149,6 +157,8 @@ interface AirlineContract
     public function seeks($seeks);
 
     public function serviceArea($serviceArea);
+
+    public function skills($skills);
 
     public function slogan($slogan);
 

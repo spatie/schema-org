@@ -796,7 +796,8 @@ class VisualArtwork extends BaseType implements VisualArtworkContract, CreativeW
     }
 
     /**
-     * Date of first broadcast/publication.
+     * Date of first publication or broadcast. For example the date a
+     * [[CreativeWork]] was broadcast or a [[Certification]] was issued.
      *
      * @param \DateTimeInterface|\DateTimeInterface[] $datePublished
      *
@@ -1052,9 +1053,10 @@ class VisualArtwork extends BaseType implements VisualArtworkContract, CreativeW
     /**
      * Date the content expires and is no longer useful or available. For
      * example a [[VideoObject]] or [[NewsArticle]] whose availability or
-     * relevance is time-limited, or a [[ClaimReview]] fact check whose
-     * publisher wants to indicate that it may no longer be relevant (or helpful
-     * to highlight) after some date.
+     * relevance is time-limited, a [[ClaimReview]] fact check whose publisher
+     * wants to indicate that it may no longer be relevant (or helpful to
+     * highlight) after some date, or a [[Certification]] the validity has
+     * expired.
      *
      * @param \DateTimeInterface|\DateTimeInterface[] $expires
      *
@@ -2250,6 +2252,20 @@ class VisualArtwork extends BaseType implements VisualArtworkContract, CreativeW
     public function video($video)
     {
         return $this->setProperty('video', $video);
+    }
+
+    /**
+     * The weight of the product or person.
+     *
+     * @param \Spatie\SchemaOrg\Contracts\QuantitativeValueContract|\Spatie\SchemaOrg\Contracts\QuantitativeValueContract[] $weight
+     *
+     * @return static
+     *
+     * @see https://schema.org/weight
+     */
+    public function weight($weight)
+    {
+        return $this->setProperty('weight', $weight);
     }
 
     /**

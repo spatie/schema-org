@@ -8,6 +8,8 @@ interface AggregateOfferContract
 
     public function addOn($addOn);
 
+    public function additionalProperty($additionalProperty);
+
     public function additionalType($additionalType);
 
     public function advanceBookingRequirement($advanceBookingRequirement);
@@ -63,6 +65,8 @@ interface AggregateOfferContract
     public function gtin8($gtin8);
 
     public function hasAdultConsideration($hasAdultConsideration);
+
+    public function hasGS1DigitalLink($hasGS1DigitalLink);
 
     public function hasMeasurement($hasMeasurement);
 
@@ -131,6 +135,8 @@ interface AggregateOfferContract
     public function subjectOf($subjectOf);
 
     public function url($url);
+
+    public function validForMemberTier($validForMemberTier);
 
     public function validFrom($validFrom);
 

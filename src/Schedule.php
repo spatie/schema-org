@@ -165,7 +165,7 @@ class Schedule extends BaseType implements ScheduleContract, IntangibleContract,
 
     /**
      * The duration of the item (movie, audio recording, event, etc.) in [ISO
-     * 8601 date format](http://en.wikipedia.org/wiki/ISO_8601).
+     * 8601 duration format](http://en.wikipedia.org/wiki/ISO_8601).
      *
      * @param \Spatie\SchemaOrg\Contracts\DurationContract|\Spatie\SchemaOrg\Contracts\DurationContract[] $duration
      *

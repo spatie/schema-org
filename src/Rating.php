@@ -68,8 +68,7 @@ class Rating extends BaseType implements RatingContract, IntangibleContract, Thi
     }
 
     /**
-     * The highest value allowed in this rating system. If bestRating is
-     * omitted, 5 is assumed.
+     * The highest value allowed in this rating system.
      *
      * @param float|float[]|int|int[]|string|string[] $bestRating
      *
@@ -293,8 +292,7 @@ class Rating extends BaseType implements RatingContract, IntangibleContract, Thi
     }
 
     /**
-     * The lowest value allowed in this rating system. If worstRating is
-     * omitted, 1 is assumed.
+     * The lowest value allowed in this rating system.
      *
      * @param float|float[]|int|int[]|string|string[] $worstRating
      *

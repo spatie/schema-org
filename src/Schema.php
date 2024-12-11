@@ -647,6 +647,16 @@ class Schema
         return new Cemetery();
     }
 
+    public static function certification(): Certification
+    {
+        return new Certification();
+    }
+
+    public static function certificationStatusEnumeration(): CertificationStatusEnumeration
+    {
+        return new CertificationStatusEnumeration();
+    }
+
     public static function chapter(): Chapter
     {
         return new Chapter();
@@ -2457,6 +2467,16 @@ class Schema
         return new MeetingRoom();
     }
 
+    public static function memberProgram(): MemberProgram
+    {
+        return new MemberProgram();
+    }
+
+    public static function memberProgramTier(): MemberProgramTier
+    {
+        return new MemberProgramTier();
+    }
+
     public static function mensClothingStore(): MensClothingStore
     {
         return new MensClothingStore();
@@ -2950,6 +2970,11 @@ class Schema
     public static function paymentMethod(): PaymentMethod
     {
         return new PaymentMethod();
+    }
+
+    public static function paymentMethodType(): PaymentMethodType
+    {
+        return new PaymentMethodType();
     }
 
     public static function paymentService(): PaymentService
@@ -4085,6 +4110,11 @@ class Schema
     public static function tieAction(): TieAction
     {
         return new TieAction();
+    }
+
+    public static function tierBenefitEnumeration(): TierBenefitEnumeration
+    {
+        return new TierBenefitEnumeration();
     }
 
     public static function tipAction(): TipAction

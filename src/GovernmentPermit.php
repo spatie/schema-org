@@ -117,7 +117,8 @@ class GovernmentPermit extends BaseType implements GovernmentPermitContract, Int
     }
 
     /**
-     * The organization issuing the ticket or permit.
+     * The organization issuing the item, for example a [[Permit]], [[Ticket]],
+     * or [[Certification]].
      *
      * @param \Spatie\SchemaOrg\Contracts\OrganizationContract|\Spatie\SchemaOrg\Contracts\OrganizationContract[] $issuedBy
      *
@@ -278,7 +279,9 @@ class GovernmentPermit extends BaseType implements GovernmentPermitContract, Int
     }
 
     /**
-     * The geographic area where a permit or similar thing is valid.
+     * The geographic area where the item is valid. Applies for example to a
+     * [[Permit]], a [[Certification]], or an
+     * [[EducationalOccupationalCredential]].
      *
      * @param \Spatie\SchemaOrg\Contracts\AdministrativeAreaContract|\Spatie\SchemaOrg\Contracts\AdministrativeAreaContract[] $validIn
      *

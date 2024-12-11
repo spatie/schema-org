@@ -52,6 +52,13 @@ class ItemAvailability extends BaseType implements ItemAvailabilityContract, Enu
     public const LimitedAvailability = 'https://schema.org/LimitedAvailability';
 
     /**
+     * Indicates that the item is made to order (custom made).
+     *
+     * @see https://schema.org/MadeToOrder
+     */
+    public const MadeToOrder = 'https://schema.org/MadeToOrder';
+
+    /**
      * Indicates that the item is available only online.
      *
      * @see https://schema.org/OnlineOnly
@@ -79,6 +86,13 @@ class ItemAvailability extends BaseType implements ItemAvailabilityContract, Enu
      * @see https://schema.org/PreSale
      */
     public const PreSale = 'https://schema.org/PreSale';
+
+    /**
+     * Indicates that the item is reserved and therefore not available.
+     *
+     * @see https://schema.org/Reserved
+     */
+    public const Reserved = 'https://schema.org/Reserved';
 
     /**
      * Indicates that the item has sold out.

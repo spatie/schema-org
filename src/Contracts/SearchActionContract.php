@@ -4,6 +4,8 @@ namespace Spatie\SchemaOrg\Contracts;
 
 interface SearchActionContract
 {
+    public function actionProcess($actionProcess);
+
     public function actionStatus($actionStatus);
 
     public function additionalType($additionalType);

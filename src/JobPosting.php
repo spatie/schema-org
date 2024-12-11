@@ -690,8 +690,9 @@ class JobPosting extends BaseType implements JobPostingContract, IntangibleContr
 
     /**
      * A statement of knowledge, skill, ability, task or any other assertion
-     * expressing a competency that is desired or required to fulfill this role
-     * or to work in this occupation.
+     * expressing a competency that is either claimed by a person, an
+     * organization or desired or required to fulfill a role or to work in an
+     * occupation.
      *
      * @param \Spatie\SchemaOrg\Contracts\DefinedTermContract|\Spatie\SchemaOrg\Contracts\DefinedTermContract[]|string|string[] $skills
      *
