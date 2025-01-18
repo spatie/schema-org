@@ -20,7 +20,7 @@ it('can be rendered with properties', function () {
         ->email('info@spatie.be');
 
     $expected = '<script type="application/ld+json">'.
-        '{"@context":"https:\/\/schema.org","@type":"LocalBusiness","name":"Spatie","email":"info@spatie.be"}'.
+        '{"@context":"https://schema.org","@type":"LocalBusiness","name":"Spatie","email":"info@spatie.be"}'.
         '</script>';
 
     expect($localBusiness->toScript())->toBe($expected);
@@ -32,7 +32,7 @@ it('can be rendered with child properties', function () {
         ->contactPoint(Schema::contactPoint()->areaServed('Worldwide'));
 
     $expected = '<script type="application/ld+json">'.
-        '{"@context":"https:\/\/schema.org","@type":"LocalBusiness","name":"Spatie",'.
+        '{"@context":"https://schema.org","@type":"LocalBusiness","name":"Spatie",'.
         '"contactPoint":{"@type":"ContactPoint","areaServed":"Worldwide"}}'.
         '</script>';
 

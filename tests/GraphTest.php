@@ -14,7 +14,7 @@ use Spatie\SchemaOrg\Type;
 it('can render empty', function () {
     $graph = new Graph();
 
-    expect((string) $graph)->toBe('<script type="application/ld+json">{"@context":"https:\/\/schema.org","@graph":[]}</script>');
+    expect((string) $graph)->toBe('<script type="application/ld+json">{"@context":"https://schema.org","@graph":[]}</script>');
 });
 
 it('can render single item', function () {
@@ -22,7 +22,7 @@ it('can render single item', function () {
     $graph->add(Schema::organization()->name('My Company'));
 
     expect($graph->toScript())->toBe(
-        '<script type="application/ld+json">{"@context":"https:\/\/schema.org","@graph":[{"@type":"Organization","name":"My Company"}]}</script>'
+        '<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"Organization","name":"My Company"}]}</script>'
     );
 });
 
@@ -32,7 +32,7 @@ it('can render multiple items', function () {
     $graph->add(Schema::product()->name('My Product'));
 
     expect($graph->toScript())->toBe(
-        '<script type="application/ld+json">{"@context":"https:\/\/schema.org","@graph":[{"@type":"Organization","name":"My Company"},{"@type":"Product","name":"My Product"}]}</script>'
+        '<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"Organization","name":"My Company"},{"@type":"Product","name":"My Product"}]}</script>'
     );
 });
 
@@ -42,7 +42,7 @@ it('can manipulate item', function () {
     $graph->get(Organization::class)->email('contact@example.com');
 
     expect($graph->toScript())->toBe(
-        '<script type="application/ld+json">{"@context":"https:\/\/schema.org","@graph":[{"@type":"Organization","name":"My Company","email":"contact@example.com"}]}</script>'
+        '<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"Organization","name":"My Company","email":"contact@example.com"}]}</script>'
     );
 });
 
@@ -52,7 +52,7 @@ it('can get existing or new item', function () {
     $graph->getOrCreate(Organization::class)->email('contact@example.com');
 
     expect($graph->toScript())->toBe(
-        '<script type="application/ld+json">{"@context":"https:\/\/schema.org","@graph":[{"@type":"Organization","name":"My Company","email":"contact@example.com"}]}</script>'
+        '<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"Organization","name":"My Company","email":"contact@example.com"}]}</script>'
     );
 });
 
@@ -62,7 +62,7 @@ it('can link items', function () {
     $graph->getOrCreate(Organization::class)->name('My Company')->email('contact@example.com');
 
     expect($graph->toScript())->toBe(
-        '<script type="application/ld+json">{"@context":"https:\/\/schema.org","@graph":[{"@type":"Organization","name":"My Company","email":"contact@example.com"},{"@type":"Product","brand":{"@type":"Organization","name":"My Company","email":"contact@example.com"}}]}</script>'
+        '<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"Organization","name":"My Company","email":"contact@example.com"},{"@type":"Product","brand":{"@type":"Organization","name":"My Company","email":"contact@example.com"}}]}</script>'
     );
 });
 
@@ -73,7 +73,7 @@ it('can hide items', function () {
     $graph->getOrCreate(Organization::class)->name('My Company')->email('contact@example.com');
 
     expect($graph->toScript())->toBe(
-        '<script type="application/ld+json">{"@context":"https:\/\/schema.org","@graph":[{"@type":"Product","brand":{"@type":"Organization","name":"My Company","email":"contact@example.com"}}]}</script>'
+        '<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"Product","brand":{"@type":"Organization","name":"My Company","email":"contact@example.com"}}]}</script>'
     );
 });
 
@@ -86,7 +86,7 @@ it('can show again hidden items', function () {
     $graph->show(Organization::class);
 
     expect($graph->toScript())->toBe(
-        '<script type="application/ld+json">{"@context":"https:\/\/schema.org","@graph":[{"@type":"Organization","name":"My Company","email":"contact@example.com"},{"@type":"Product","brand":{"@type":"Organization","name":"My Company","email":"contact@example.com"}}]}</script>'
+        '<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"Organization","name":"My Company","email":"contact@example.com"},{"@type":"Product","brand":{"@type":"Organization","name":"My Company","email":"contact@example.com"}}]}</script>'
     );
 });
 
@@ -130,7 +130,7 @@ it('can call overloaded schema methods', function () {
 
     expect($organization)->toBeInstanceOf(Organization::class);
     expect($graph->toScript())->toBe(
-        '<script type="application/ld+json">{"@context":"https:\/\/schema.org","@graph":[{"@type":"Organization","name":"My Company"}]}</script>'
+        '<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"Organization","name":"My Company"}]}</script>'
     );
 });
 
@@ -143,7 +143,7 @@ it('can call overloaded schema methods with callback', function () {
     expect($graph)->toBeInstanceOf(Graph::class);
     expect($graph->organization())->toBeInstanceOf(Organization::class);
     expect($graph->toScript())->toBe(
-        '<script type="application/ld+json">{"@context":"https:\/\/schema.org","@graph":[{"@type":"Organization","name":"My Company"}]}</script>'
+        '<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"Organization","name":"My Company"}]}</script>'
     );
 });
 
@@ -159,7 +159,7 @@ it('can call overloaded schema methods with callback multiple times', function (
     expect($graph)->toBeInstanceOf(Graph::class);
     expect($graph->organization())->toBeInstanceOf(Organization::class);
     expect($graph->toScript())->toBe(
-        '<script type="application/ld+json">{"@context":"https:\/\/schema.org","@graph":[{"@type":"Organization","name":"My Company","description":"This is my awesome Company."}]}</script>'
+        '<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"Organization","name":"My Company","description":"This is my awesome Company."}]}</script>'
     );
 });
 
@@ -179,7 +179,7 @@ it('can call overloaded schema methods with callback and access schemas in child
     expect($graph->organization())->toBeInstanceOf(Organization::class);
     expect($graph->product())->toBeInstanceOf(Product::class);
     expect($graph->toScript())->toBe(
-        '<script type="application/ld+json">{"@context":"https:\/\/schema.org","@graph":[{"@type":"Product","name":"My Product","brand":{"@type":"Organization","name":"My Company"}}]}</script>'
+        '<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"Product","name":"My Product","brand":{"@type":"Organization","name":"My Company"}}]}</script>'
     );
 });
 
@@ -217,7 +217,7 @@ it('can use references', function () {
         ->email('contact@example.com');
 
     expect($graph->toScript())->toBe(
-        '<script type="application/ld+json">{"@context":"https:\/\/schema.org","@graph":[{"@type":"BlogPosting","author":{"@id":"https:\/\/example.com\/#organization"},"publisher":{"@id":"https:\/\/example.com\/#organization"},"@id":"https:\/\/example.com\/blog\/my-post\/#blogPosting"},{"@type":"Organization","name":"organization","url":"https:\/\/example.com","email":"contact@example.com","@id":"https:\/\/example.com\/#organization"}]}</script>'
+        '<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"BlogPosting","author":{"@id":"https://example.com/#organization"},"publisher":{"@id":"https://example.com/#organization"},"@id":"https://example.com/blog/my-post/#blogPosting"},{"@type":"Organization","name":"organization","url":"https://example.com","email":"contact@example.com","@id":"https://example.com/#organization"}]}</script>'
     );
 });
 
@@ -227,7 +227,7 @@ it('can be initialized with different context', function () {
     expect($graph->getContext())->toBe('https://foobar.com');
 
     expect($graph->toScript())->toBe(
-        '<script type="application/ld+json">{"@context":"https:\/\/foobar.com","@graph":[]}</script>'
+        '<script type="application/ld+json">{"@context":"https://foobar.com","@graph":[]}</script>'
     );
 });
 
@@ -243,6 +243,6 @@ it('can be initialized with complex context', function () {
     ]);
 
     expect($graph->toScript())->toBe(
-        '<script type="application/ld+json">{"@context":{"@vocab":"https:\/\/schema.org\/","@base":"https:\/\/domain.com\/"},"@graph":[]}</script>'
+        '<script type="application/ld+json">{"@context":{"@vocab":"https://schema.org/","@base":"https://domain.com/"},"@graph":[]}</script>'
     );
 });
