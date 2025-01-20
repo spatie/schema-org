@@ -9,7 +9,7 @@ class AnalysisTest extends TestCase
 {
     use AnalysisTrait;
 
-    protected function getPaths()
+    protected static function getPaths(): array
     {
         return [
             __DIR__.'/../src',
