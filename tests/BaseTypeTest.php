@@ -156,7 +156,7 @@ it('can create an ld json script tag', function () {
     $type->setProperty('foo', 'bar');
 
     $expected = '<script type="application/ld+json">'.
-        '{"@context":"https:\/\/schema.org","@type":"DummyType","foo":"bar"}'.
+        '{"@context":"https://schema.org","@type":"DummyType","foo":"bar"}'.
         '</script>';
 
     expect($type->toScript())->toBe($expected);
@@ -170,7 +170,7 @@ it('can create an ld json script tag with nonce attribute', function () {
     $type->setNonce('baz');
 
     $expected = '<script type="application/ld+json" nonce="baz">'.
-        '{"@context":"https:\/\/schema.org","@type":"DummyType","foo":"bar"}'.
+        '{"@context":"https://schema.org","@type":"DummyType","foo":"bar"}'.
         '</script>';
 
     expect($type->toScript())->toBe($expected);
@@ -273,7 +273,7 @@ it('can be casted to string', function () {
     $type->setProperty('foo', 'bar');
 
     $expected = '<script type="application/ld+json">'.
-        '{"@context":"https:\/\/schema.org","@type":"DummyType","foo":"bar"}'.
+        '{"@context":"https://schema.org","@type":"DummyType","foo":"bar"}'.
         '</script>';
 
     expect((string) $type)->toBe($expected);

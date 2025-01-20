@@ -1191,7 +1191,7 @@ class Graph implements Type, ArrayAccess, JsonSerializable
 
     public function toScript(): string
     {
-        return '<script type="application/ld+json"'.$this->nonceAttr().'>'.json_encode($this, JSON_UNESCAPED_UNICODE).'</script>';
+        return '<script type="application/ld+json"'.$this->nonceAttr().'>'.json_encode($this, JSON_UNESCAPED_UNICODE | JSON_UNESCAPED_SLASHES).'</script>';
     }
 
     public function jsonSerialize(): mixed

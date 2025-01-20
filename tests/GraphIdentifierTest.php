@@ -13,7 +13,7 @@ it('can manipulate item', function () {
     $graph->get(Organization::class, Graph::IDENTIFIER_DEFAULT)->email('contact@example.com');
 
     expect($graph->toScript())->toBe(
-        '<script type="application/ld+json">{"@context":"https:\/\/schema.org","@graph":[{"@type":"Organization","name":"My Company","email":"contact@example.com"}]}</script>'
+        '<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"Organization","name":"My Company","email":"contact@example.com"}]}</script>'
     );
 });
 
@@ -23,7 +23,7 @@ it('can get existing or new item', function () {
     $graph->getOrCreate(Organization::class, Graph::IDENTIFIER_DEFAULT)->email('contact@example.com');
 
     expect($graph->toScript())->toBe(
-        '<script type="application/ld+json">{"@context":"https:\/\/schema.org","@graph":[{"@type":"Organization","name":"My Company","email":"contact@example.com"}]}</script>'
+        '<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"Organization","name":"My Company","email":"contact@example.com"}]}</script>'
     );
 });
 
@@ -33,7 +33,7 @@ it('can link items', function () {
     $graph->getOrCreate(Organization::class, Graph::IDENTIFIER_DEFAULT)->name('My Company')->email('contact@example.com');
 
     expect($graph->toScript())->toBe(
-        '<script type="application/ld+json">{"@context":"https:\/\/schema.org","@graph":[{"@type":"Organization","name":"My Company","email":"contact@example.com"},{"@type":"Product","brand":{"@type":"Organization","name":"My Company","email":"contact@example.com"}}]}</script>'
+        '<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"Organization","name":"My Company","email":"contact@example.com"},{"@type":"Product","brand":{"@type":"Organization","name":"My Company","email":"contact@example.com"}}]}</script>'
     );
 });
 
@@ -44,7 +44,7 @@ it('can hide single items', function () {
     $graph->hide(Organization::class, 'astrotomic');
 
     expect($graph->toScript())->toBe(
-        '<script type="application/ld+json">{"@context":"https:\/\/schema.org","@graph":[{"@type":"Organization","name":"spatie"}]}</script>'
+        '<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"Organization","name":"spatie"}]}</script>'
     );
 });
 
@@ -56,7 +56,7 @@ it('can hide all items', function () {
     $graph->product()->brand($graph->organization('spatie'));
 
     expect($graph->toScript())->toBe(
-        '<script type="application/ld+json">{"@context":"https:\/\/schema.org","@graph":[{"@type":"Product","brand":{"@type":"Organization","name":"spatie"}}]}</script>'
+        '<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"Product","brand":{"@type":"Organization","name":"spatie"}}]}</script>'
     );
 });
 
@@ -69,7 +69,7 @@ it('can show all items', function () {
     $graph->show(Organization::class, null);
 
     expect($graph->toScript())->toBe(
-        '<script type="application/ld+json">{"@context":"https:\/\/schema.org","@graph":[{"@type":"Organization","name":"spatie"},{"@type":"Organization","name":"astrotomic"},{"@type":"Product","brand":{"@type":"Organization","name":"spatie"}}]}</script>'
+        '<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"Organization","name":"spatie"},{"@type":"Organization","name":"astrotomic"},{"@type":"Product","brand":{"@type":"Organization","name":"spatie"}}]}</script>'
     );
 });
 
@@ -82,7 +82,7 @@ it('can show single item if everything is hidden', function () {
     $graph->show(Organization::class, 'spatie');
 
     expect($graph->toScript())->toBe(
-        '<script type="application/ld+json">{"@context":"https:\/\/schema.org","@graph":[{"@type":"Organization","name":"spatie"},{"@type":"Product","brand":{"@type":"Organization","name":"spatie"}}]}</script>'
+        '<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"Organization","name":"spatie"},{"@type":"Product","brand":{"@type":"Organization","name":"spatie"}}]}</script>'
     );
 });
 
@@ -95,7 +95,7 @@ it('can hide single item if everything is shown', function () {
     $graph->hide(Organization::class, 'astrotomic');
 
     expect($graph->toScript())->toBe(
-        '<script type="application/ld+json">{"@context":"https:\/\/schema.org","@graph":[{"@type":"Organization","name":"spatie"},{"@type":"Product","brand":{"@type":"Organization","name":"spatie"}}]}</script>'
+        '<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"Organization","name":"spatie"},{"@type":"Product","brand":{"@type":"Organization","name":"spatie"}}]}</script>'
     );
 });
 
@@ -107,7 +107,7 @@ it('can show single item if everything is shown', function () {
     $graph->show(Organization::class, 'spatie');
 
     expect($graph->toScript())->toBe(
-        '<script type="application/ld+json">{"@context":"https:\/\/schema.org","@graph":[{"@type":"Organization","name":"spatie"},{"@type":"Product","brand":{"@type":"Organization","name":"spatie"}}]}</script>'
+        '<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"Organization","name":"spatie"},{"@type":"Product","brand":{"@type":"Organization","name":"spatie"}}]}</script>'
     );
 });
 
@@ -118,7 +118,7 @@ it('can show single item', function () {
     $graph->product()->brand($graph->organization('spatie'));
 
     expect($graph->toScript())->toBe(
-        '<script type="application/ld+json">{"@context":"https:\/\/schema.org","@graph":[{"@type":"Organization","name":"spatie"},{"@type":"Product","brand":{"@type":"Organization","name":"spatie"}}]}</script>'
+        '<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"Organization","name":"spatie"},{"@type":"Product","brand":{"@type":"Organization","name":"spatie"}}]}</script>'
     );
 });
 
@@ -130,7 +130,7 @@ it('can show single item before it was created', function () {
     $graph->product()->brand($graph->organization('spatie'));
 
     expect($graph->toScript())->toBe(
-        '<script type="application/ld+json">{"@context":"https:\/\/schema.org","@graph":[{"@type":"Organization","name":"spatie"},{"@type":"Product","brand":{"@type":"Organization","name":"spatie"}}]}</script>'
+        '<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"Organization","name":"spatie"},{"@type":"Product","brand":{"@type":"Organization","name":"spatie"}}]}</script>'
     );
 });
 
