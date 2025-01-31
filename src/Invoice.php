@@ -278,11 +278,12 @@ class Invoice extends BaseType implements InvoiceContract, IntangibleContract, T
     /**
      * The name of the credit card or other method of payment for the order.
      *
-     * @param \Spatie\SchemaOrg\Contracts\PaymentMethodContract|\Spatie\SchemaOrg\Contracts\PaymentMethodContract[] $paymentMethod
+     * @param \Spatie\SchemaOrg\Contracts\PaymentMethodContract|\Spatie\SchemaOrg\Contracts\PaymentMethodContract[]|string|string[] $paymentMethod
      *
      * @return static
      *
      * @see https://schema.org/paymentMethod
+     * @link https://github.com/schemaorg/schemaorg/issues/3537
      */
     public function paymentMethod($paymentMethod)
     {

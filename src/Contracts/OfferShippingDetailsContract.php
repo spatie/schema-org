@@ -48,6 +48,8 @@ interface OfferShippingDetailsContract
 
     public function url($url);
 
+    public function validForMemberTier($validForMemberTier);
+
     public function weight($weight);
 
     public function width($width);

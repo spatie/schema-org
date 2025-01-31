@@ -130,7 +130,8 @@ class Ticket extends BaseType implements TicketContract, IntangibleContract, Thi
     }
 
     /**
-     * The organization issuing the ticket or permit.
+     * The organization issuing the item, for example a [[Permit]], [[Ticket]],
+     * or [[Certification]].
      *
      * @param \Spatie\SchemaOrg\Contracts\OrganizationContract|\Spatie\SchemaOrg\Contracts\OrganizationContract[] $issuedBy
      *

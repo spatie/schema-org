@@ -30,6 +30,8 @@ interface UnitPriceSpecificationContract
 
     public function maxPrice($maxPrice);
 
+    public function membershipPointsEarned($membershipPointsEarned);
+
     public function minPrice($minPrice);
 
     public function name($name);
@@ -55,6 +57,8 @@ interface UnitPriceSpecificationContract
     public function unitText($unitText);
 
     public function url($url);
+
+    public function validForMemberTier($validForMemberTier);
 
     public function validFrom($validFrom);
 

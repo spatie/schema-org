@@ -204,6 +204,22 @@ class GovernmentService extends BaseType implements GovernmentServiceContract, I
     }
 
     /**
+     * Certification information about a product, organization, service, place,
+     * or person.
+     *
+     * @param \Spatie\SchemaOrg\Contracts\CertificationContract|\Spatie\SchemaOrg\Contracts\CertificationContract[] $hasCertification
+     *
+     * @return static
+     *
+     * @see https://schema.org/hasCertification
+     * @link https://github.com/schemaorg/schemaorg/issues/3230
+     */
+    public function hasCertification($hasCertification)
+    {
+        return $this->setProperty('hasCertification', $hasCertification);
+    }
+
+    /**
      * Indicates an OfferCatalog listing for this Organization, Person, or
      * Service.
      *

@@ -15,7 +15,6 @@ use Spatie\SchemaOrg\Contracts\ThingContract;
  * identified/referenced) by their different values for [[shippingLabel]].
  *
  * @see https://schema.org/ShippingRateSettings
- * @see https://pending.schema.org
  * @link https://github.com/schemaorg/schemaorg/issues/2506
  *
  */
@@ -98,7 +97,6 @@ class ShippingRateSettings extends BaseType implements ShippingRateSettingsContr
      * @return static
      *
      * @see https://schema.org/doesNotShip
-     * @see https://pending.schema.org
      * @link https://github.com/schemaorg/schemaorg/issues/2506
      */
     public function doesNotShip($doesNotShip)
@@ -116,7 +114,6 @@ class ShippingRateSettings extends BaseType implements ShippingRateSettingsContr
      * @return static
      *
      * @see https://schema.org/freeShippingThreshold
-     * @see https://pending.schema.org
      * @link https://github.com/schemaorg/schemaorg/issues/2506
      */
     public function freeShippingThreshold($freeShippingThreshold)
@@ -172,7 +169,6 @@ class ShippingRateSettings extends BaseType implements ShippingRateSettingsContr
      * @return static
      *
      * @see https://schema.org/isUnlabelledFallback
-     * @see https://pending.schema.org
      * @link https://github.com/schemaorg/schemaorg/issues/2506
      */
     public function isUnlabelledFallback($isUnlabelledFallback)
@@ -250,7 +246,6 @@ class ShippingRateSettings extends BaseType implements ShippingRateSettingsContr
      * @return static
      *
      * @see https://schema.org/shippingDestination
-     * @see https://pending.schema.org
      * @link https://github.com/schemaorg/schemaorg/issues/2506
      */
     public function shippingDestination($shippingDestination)
@@ -268,7 +263,6 @@ class ShippingRateSettings extends BaseType implements ShippingRateSettingsContr
      * @return static
      *
      * @see https://schema.org/shippingLabel
-     * @see https://pending.schema.org
      * @link https://github.com/schemaorg/schemaorg/issues/2506
      */
     public function shippingLabel($shippingLabel)
@@ -286,7 +280,6 @@ class ShippingRateSettings extends BaseType implements ShippingRateSettingsContr
      * @return static
      *
      * @see https://schema.org/shippingRate
-     * @see https://pending.schema.org
      * @link https://github.com/schemaorg/schemaorg/issues/2506
      */
     public function shippingRate($shippingRate)

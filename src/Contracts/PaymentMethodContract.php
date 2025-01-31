@@ -20,6 +20,8 @@ interface PaymentMethodContract
 
     public function name($name);
 
+    public function paymentMethodType($paymentMethodType);
+
     public function potentialAction($potentialAction);
 
     public function sameAs($sameAs);

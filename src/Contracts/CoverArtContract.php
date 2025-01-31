@@ -276,6 +276,8 @@ interface CoverArtContract
 
     public function video($video);
 
+    public function weight($weight);
+
     public function width($width);
 
     public function workExample($workExample);

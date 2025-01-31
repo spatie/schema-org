@@ -66,6 +66,8 @@ interface ProductCollectionContract
 
     public function color($color);
 
+    public function colorSwatch($colorSwatch);
+
     public function comment($comment);
 
     public function commentCount($commentCount);
@@ -156,7 +158,11 @@ interface ProductCollectionContract
 
     public function hasAdultConsideration($hasAdultConsideration);
 
+    public function hasCertification($hasCertification);
+
     public function hasEnergyConsumptionDetails($hasEnergyConsumptionDetails);
+
+    public function hasGS1DigitalLink($hasGS1DigitalLink);
 
     public function hasMeasurement($hasMeasurement);
 

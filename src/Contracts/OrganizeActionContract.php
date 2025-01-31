@@ -4,6 +4,8 @@ namespace Spatie\SchemaOrg\Contracts;
 
 interface OrganizeActionContract
 {
+    public function actionProcess($actionProcess);
+
     public function actionStatus($actionStatus);
 
     public function additionalType($additionalType);

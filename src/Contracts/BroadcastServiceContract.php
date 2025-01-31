@@ -44,6 +44,8 @@ interface BroadcastServiceContract
 
     public function hasBroadcastChannel($hasBroadcastChannel);
 
+    public function hasCertification($hasCertification);
+
     public function hasOfferCatalog($hasOfferCatalog);
 
     public function hoursAvailable($hoursAvailable);

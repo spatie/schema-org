@@ -4,6 +4,8 @@ namespace Spatie\SchemaOrg\Contracts;
 
 interface TieActionContract
 {
+    public function actionProcess($actionProcess);
+
     public function actionStatus($actionStatus);
 
     public function additionalType($additionalType);

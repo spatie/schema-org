@@ -34,6 +34,8 @@ interface VehicleContract
 
     public function color($color);
 
+    public function colorSwatch($colorSwatch);
+
     public function countryOfAssembly($countryOfAssembly);
 
     public function countryOfLastProcessing($countryOfLastProcessing);
@@ -74,7 +76,11 @@ interface VehicleContract
 
     public function hasAdultConsideration($hasAdultConsideration);
 
+    public function hasCertification($hasCertification);
+
     public function hasEnergyConsumptionDetails($hasEnergyConsumptionDetails);
+
+    public function hasGS1DigitalLink($hasGS1DigitalLink);
 
     public function hasMeasurement($hasMeasurement);
 

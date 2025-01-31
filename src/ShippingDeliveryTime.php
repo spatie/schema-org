@@ -12,7 +12,6 @@ use Spatie\SchemaOrg\Contracts\ThingContract;
  * times for shipping.
  *
  * @see https://schema.org/ShippingDeliveryTime
- * @see https://pending.schema.org
  * @link https://github.com/schemaorg/schemaorg/issues/2506
  *
  */
@@ -64,7 +63,6 @@ class ShippingDeliveryTime extends BaseType implements ShippingDeliveryTimeContr
      * @return static
      *
      * @see https://schema.org/businessDays
-     * @see https://pending.schema.org
      * @link https://github.com/schemaorg/schemaorg/issues/2506
      */
     public function businessDays($businessDays)
@@ -87,7 +85,6 @@ class ShippingDeliveryTime extends BaseType implements ShippingDeliveryTimeContr
      * @return static
      *
      * @see https://schema.org/cutoffTime
-     * @see https://pending.schema.org
      * @link https://github.com/schemaorg/schemaorg/issues/2506
      */
     public function cutoffTime($cutoffTime)
@@ -139,7 +136,6 @@ class ShippingDeliveryTime extends BaseType implements ShippingDeliveryTimeContr
      * @return static
      *
      * @see https://schema.org/handlingTime
-     * @see https://pending.schema.org
      * @link https://github.com/schemaorg/schemaorg/issues/2506
      */
     public function handlingTime($handlingTime)
@@ -266,7 +262,6 @@ class ShippingDeliveryTime extends BaseType implements ShippingDeliveryTimeContr
      * @return static
      *
      * @see https://schema.org/transitTime
-     * @see https://pending.schema.org
      * @link https://github.com/schemaorg/schemaorg/issues/2506
      */
     public function transitTime($transitTime)

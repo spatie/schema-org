@@ -59,10 +59,12 @@ class EducationalOccupationalProgram extends BaseType implements EducationalOccu
     }
 
     /**
-     * The date at which the program stops collecting applications for the next
-     * enrollment cycle.
+     * The date on which the program stops collecting applications for the next
+     * enrollment cycle. Flexible application deadlines (for example, a program
+     * with rolling admissions) can be described in a textual string, rather
+     * than as a DateTime.
      *
-     * @param \DateTimeInterface|\DateTimeInterface[] $applicationDeadline
+     * @param \DateTimeInterface|\DateTimeInterface[]|string|string[] $applicationDeadline
      *
      * @return static
      *

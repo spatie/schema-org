@@ -24,6 +24,8 @@ interface CompoundPriceSpecificationContract
 
     public function maxPrice($maxPrice);
 
+    public function membershipPointsEarned($membershipPointsEarned);
+
     public function minPrice($minPrice);
 
     public function name($name);
@@ -43,6 +45,8 @@ interface CompoundPriceSpecificationContract
     public function subjectOf($subjectOf);
 
     public function url($url);
+
+    public function validForMemberTier($validForMemberTier);
 
     public function validFrom($validFrom);
 

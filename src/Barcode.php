@@ -776,7 +776,8 @@ class Barcode extends BaseType implements BarcodeContract, CreativeWorkContract,
     }
 
     /**
-     * Date of first broadcast/publication.
+     * Date of first publication or broadcast. For example the date a
+     * [[CreativeWork]] was broadcast or a [[Certification]] was issued.
      *
      * @param \DateTimeInterface|\DateTimeInterface[] $datePublished
      *
@@ -853,7 +854,7 @@ class Barcode extends BaseType implements BarcodeContract, CreativeWorkContract,
 
     /**
      * The duration of the item (movie, audio recording, event, etc.) in [ISO
-     * 8601 date format](http://en.wikipedia.org/wiki/ISO_8601).
+     * 8601 duration format](http://en.wikipedia.org/wiki/ISO_8601).
      *
      * @param \Spatie\SchemaOrg\Contracts\DurationContract|\Spatie\SchemaOrg\Contracts\DurationContract[] $duration
      *
@@ -1118,9 +1119,10 @@ class Barcode extends BaseType implements BarcodeContract, CreativeWorkContract,
     /**
      * Date the content expires and is no longer useful or available. For
      * example a [[VideoObject]] or [[NewsArticle]] whose availability or
-     * relevance is time-limited, or a [[ClaimReview]] fact check whose
-     * publisher wants to indicate that it may no longer be relevant (or helpful
-     * to highlight) after some date.
+     * relevance is time-limited, a [[ClaimReview]] fact check whose publisher
+     * wants to indicate that it may no longer be relevant (or helpful to
+     * highlight) after some date, or a [[Certification]] the validity has
+     * expired.
      *
      * @param \DateTimeInterface|\DateTimeInterface[] $expires
      *

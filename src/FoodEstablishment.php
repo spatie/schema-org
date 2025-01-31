@@ -17,6 +17,22 @@ use Spatie\SchemaOrg\Contracts\ThingContract;
 class FoodEstablishment extends BaseType implements FoodEstablishmentContract, LocalBusinessContract, OrganizationContract, PlaceContract, ThingContract
 {
     /**
+     * The payment method(s) that are accepted in general by an organization, or
+     * for some specific demand or offer.
+     *
+     * @param \Spatie\SchemaOrg\Contracts\LoanOrCreditContract|\Spatie\SchemaOrg\Contracts\LoanOrCreditContract[]|\Spatie\SchemaOrg\Contracts\PaymentMethodContract|\Spatie\SchemaOrg\Contracts\PaymentMethodContract[]|string|string[] $acceptedPaymentMethod
+     *
+     * @return static
+     *
+     * @see https://schema.org/acceptedPaymentMethod
+     * @link https://github.com/schemaorg/schemaorg/issues/3537
+     */
+    public function acceptedPaymentMethod($acceptedPaymentMethod)
+    {
+        return $this->setProperty('acceptedPaymentMethod', $acceptedPaymentMethod);
+    }
+
+    /**
      * Indicates whether a FoodEstablishment accepts reservations. Values can be
      * Boolean, an URL at which reservations can be made or (for backwards
      * compatibility) the strings ```Yes``` or ```No```.
@@ -613,9 +629,9 @@ class FoodEstablishment extends BaseType implements FoodEstablishmentContract, L
     }
 
     /**
-     * A person who founded this organization.
+     * A person or organization who founded this organization.
      *
-     * @param \Spatie\SchemaOrg\Contracts\PersonContract|\Spatie\SchemaOrg\Contracts\PersonContract[] $founder
+     * @param \Spatie\SchemaOrg\Contracts\OrganizationContract|\Spatie\SchemaOrg\Contracts\OrganizationContract[]|\Spatie\SchemaOrg\Contracts\PersonContract|\Spatie\SchemaOrg\Contracts\PersonContract[] $founder
      *
      * @return static
      *
@@ -904,6 +920,22 @@ class FoodEstablishment extends BaseType implements FoodEstablishmentContract, L
     }
 
     /**
+     * Certification information about a product, organization, service, place,
+     * or person.
+     *
+     * @param \Spatie\SchemaOrg\Contracts\CertificationContract|\Spatie\SchemaOrg\Contracts\CertificationContract[] $hasCertification
+     *
+     * @return static
+     *
+     * @see https://schema.org/hasCertification
+     * @link https://github.com/schemaorg/schemaorg/issues/3230
+     */
+    public function hasCertification($hasCertification)
+    {
+        return $this->setProperty('hasCertification', $hasCertification);
+    }
+
+    /**
      * A credential awarded to the Person or Organization.
      *
      * @param \Spatie\SchemaOrg\Contracts\EducationalOccupationalCredentialContract|\Spatie\SchemaOrg\Contracts\EducationalOccupationalCredentialContract[] $hasCredential
@@ -940,6 +972,34 @@ class FoodEstablishment extends BaseType implements FoodEstablishmentContract, L
     }
 
     /**
+     * The [GS1 digital link](https://www.gs1.org/standards/gs1-digital-link)
+     * associated with the object. This URL should conform to the particular
+     * requirements of digital links. The link should only contain the
+     * Application Identifiers (AIs) that are relevant for the entity being
+     * annotated, for instance a [[Product]] or an [[Organization]], and for the
+     * correct granularity. In particular, for products:<ul>* A Digital Link
+     * that contains a serial number (AI ```21```) should only be present on
+     * instances of [[IndividualProduct]]* A Digital Link that contains a lot
+     * number (AI ```10```) should be annotated as [[SomeProduct]] if only
+     * products from that lot are sold, or [[IndividualProduct]] if there is
+     * only a specific product.* A Digital Link that contains a global model
+     * number (AI ```8013```)  should be attached to a [[Product]] or a
+     * [[ProductModel]]. Other item types should be adapted similarly.
+     *
+     * @param string|string[] $hasGS1DigitalLink
+     *
+     * @return static
+     *
+     * @see https://schema.org/hasGS1DigitalLink
+     * @see https://pending.schema.org
+     * @link https://github.com/schemaorg/schemaorg/issues/3475
+     */
+    public function hasGS1DigitalLink($hasGS1DigitalLink)
+    {
+        return $this->setProperty('hasGS1DigitalLink', $hasGS1DigitalLink);
+    }
+
+    /**
      * A URL to a map of the place.
      *
      * @param \Spatie\SchemaOrg\Contracts\MapContract|\Spatie\SchemaOrg\Contracts\MapContract[]|string|string[] $hasMap
@@ -951,6 +1011,22 @@ class FoodEstablishment extends BaseType implements FoodEstablishmentContract, L
     public function hasMap($hasMap)
     {
         return $this->setProperty('hasMap', $hasMap);
+    }
+
+    /**
+     * MemberProgram offered by an Organization, for example an eCommerce
+     * merchant or an airline.
+     *
+     * @param \Spatie\SchemaOrg\Contracts\MemberProgramContract|\Spatie\SchemaOrg\Contracts\MemberProgramContract[] $hasMemberProgram
+     *
+     * @return static
+     *
+     * @see https://schema.org/hasMemberProgram
+     * @link https://github.com/schemaorg/schemaorg/issues/3563
+     */
+    public function hasMemberProgram($hasMemberProgram)
+    {
+        return $this->setProperty('hasMemberProgram', $hasMemberProgram);
     }
 
     /**
@@ -1110,12 +1186,22 @@ class FoodEstablishment extends BaseType implements FoodEstablishmentContract, L
     }
 
     /**
-     * An organization identifier as defined in ISO 6523(-1). Note that many
-     * existing organization identifiers such as
-     * [leiCode](https://schema.org/leiCode), [duns](https://schema.org/duns)
-     * and [vatID](https://schema.org/vatID) can be expressed as an ISO 6523
-     * identifier by setting the ICD part of the ISO 6523 identifier
-     * accordingly.
+     * An organization identifier as defined in [ISO
+     * 6523(-1)](https://en.wikipedia.org/wiki/ISO/IEC_6523). The identifier
+     * should be in the `XXXX:YYYYYY:ZZZ` or `XXXX:YYYYYY`format. Where `XXXX`
+     * is a 4 digit _ICD_ (International Code Designator), `YYYYYY` is an _OID_
+     * (Organization Identifier) with all formatting characters (dots, dashes,
+     * spaces) removed with a maximal length of 35 characters, and `ZZZ` is an
+     * optional OPI (Organization Part Identifier) with a maximum length of 35
+     * characters. The various components (ICD, OID, OPI) are joined with a
+     * colon character (ASCII `0x3a`). Note that many existing organization
+     * identifiers defined as attributes like
+     * [leiCode](https://schema.org/leiCode) (`0199`),
+     * [duns](https://schema.org/duns) (`0060`) or
+     * [GLN](https://schema.org/globalLocationNumber) (`0088`) can be expressed
+     * using ISO-6523. If possible, ISO-6523 codes should be preferred to
+     * populating [vatID](https://schema.org/vatID) or
+     * [taxID](https://schema.org/taxID), as ISO identifiers are less ambiguous.
      *
      * @param string|string[] $iso6523Code
      *
@@ -1363,7 +1449,7 @@ class FoodEstablishment extends BaseType implements FoodEstablishmentContract, L
      * An Organization (or ProgramMembership) to which this Person or
      * Organization belongs.
      *
-     * @param \Spatie\SchemaOrg\Contracts\OrganizationContract|\Spatie\SchemaOrg\Contracts\OrganizationContract[]|\Spatie\SchemaOrg\Contracts\ProgramMembershipContract|\Spatie\SchemaOrg\Contracts\ProgramMembershipContract[] $memberOf
+     * @param \Spatie\SchemaOrg\Contracts\MemberProgramTierContract|\Spatie\SchemaOrg\Contracts\MemberProgramTierContract[]|\Spatie\SchemaOrg\Contracts\OrganizationContract|\Spatie\SchemaOrg\Contracts\OrganizationContract[]|\Spatie\SchemaOrg\Contracts\ProgramMembershipContract|\Spatie\SchemaOrg\Contracts\ProgramMembershipContract[] $memberOf
      *
      * @return static
      *
@@ -1749,6 +1835,23 @@ class FoodEstablishment extends BaseType implements FoodEstablishmentContract, L
     public function serviceArea($serviceArea)
     {
         return $this->setProperty('serviceArea', $serviceArea);
+    }
+
+    /**
+     * A statement of knowledge, skill, ability, task or any other assertion
+     * expressing a competency that is either claimed by a person, an
+     * organization or desired or required to fulfill a role or to work in an
+     * occupation.
+     *
+     * @param \Spatie\SchemaOrg\Contracts\DefinedTermContract|\Spatie\SchemaOrg\Contracts\DefinedTermContract[]|string|string[] $skills
+     *
+     * @return static
+     *
+     * @see https://schema.org/skills
+     */
+    public function skills($skills)
+    {
+        return $this->setProperty('skills', $skills);
     }
 
     /**

@@ -5,7 +5,7 @@ namespace Spatie\SchemaOrg;
 use Spatie\SchemaOrg\Contracts\ActionContract;
 use Spatie\SchemaOrg\Contracts\DonateActionContract;
 use Spatie\SchemaOrg\Contracts\ThingContract;
-use Spatie\SchemaOrg\Contracts\TradeActionContract;
+use Spatie\SchemaOrg\Contracts\TransferActionContract;
 
 /**
  * The act of providing goods, services, or money without compensation, often
@@ -14,8 +14,22 @@ use Spatie\SchemaOrg\Contracts\TradeActionContract;
  * @see https://schema.org/DonateAction
  *
  */
-class DonateAction extends BaseType implements DonateActionContract, ActionContract, ThingContract, TradeActionContract
+class DonateAction extends BaseType implements DonateActionContract, ActionContract, ThingContract, TransferActionContract
 {
+    /**
+     * Description of the process by which the action was performed.
+     *
+     * @param \Spatie\SchemaOrg\Contracts\HowToContract|\Spatie\SchemaOrg\Contracts\HowToContract[] $actionProcess
+     *
+     * @return static
+     *
+     * @see https://schema.org/actionProcess
+     */
+    public function actionProcess($actionProcess)
+    {
+        return $this->setProperty('actionProcess', $actionProcess);
+    }
+
     /**
      * Indicates the current disposition of the Action.
      *
@@ -149,6 +163,21 @@ class DonateAction extends BaseType implements DonateActionContract, ActionContr
     public function error($error)
     {
         return $this->setProperty('error', $error);
+    }
+
+    /**
+     * A sub property of location. The original location of the object or the
+     * agent before the action.
+     *
+     * @param \Spatie\SchemaOrg\Contracts\PlaceContract|\Spatie\SchemaOrg\Contracts\PlaceContract[] $fromLocation
+     *
+     * @return static
+     *
+     * @see https://schema.org/fromLocation
+     */
+    public function fromLocation($fromLocation)
+    {
+        return $this->setProperty('fromLocation', $fromLocation);
     }
 
     /**
@@ -479,6 +508,21 @@ class DonateAction extends BaseType implements DonateActionContract, ActionContr
     public function target($target)
     {
         return $this->setProperty('target', $target);
+    }
+
+    /**
+     * A sub property of location. The final location of the object or the agent
+     * after the action.
+     *
+     * @param \Spatie\SchemaOrg\Contracts\PlaceContract|\Spatie\SchemaOrg\Contracts\PlaceContract[] $toLocation
+     *
+     * @return static
+     *
+     * @see https://schema.org/toLocation
+     */
+    public function toLocation($toLocation)
+    {
+        return $this->setProperty('toLocation', $toLocation);
     }
 
     /**

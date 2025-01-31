@@ -354,9 +354,9 @@ class StatisticalVariable extends BaseType implements StatisticalVariableContrac
     /**
      * Indicates the kind of statistic represented by a [[StatisticalVariable]],
      * e.g. mean, count etc. The value of statType is a property, either from
-     * within Schema.org (e.g. [[count]], [[median]], [[marginOfError]],
-     * [[maxValue]], [[minValue]]) or from other compatible (e.g. RDF) systems
-     * such as DataCommons.org or Wikidata.org.
+     * within Schema.org (e.g. [[median]], [[marginOfError]], [[maxValue]],
+     * [[minValue]]) or from other compatible (e.g. RDF) systems such as
+     * DataCommons.org or Wikidata.org.
      *
      * @param \Spatie\SchemaOrg\Contracts\PropertyContract|\Spatie\SchemaOrg\Contracts\PropertyContract[]|string|string[] $statType
      *

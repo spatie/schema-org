@@ -29,8 +29,8 @@ class PriceTypeEnumeration extends BaseType implements PriceTypeEnumerationContr
     public const InvoicePrice = 'https://schema.org/InvoicePrice';
 
     /**
-     * Represents the list price (the price a product is actually advertised
-     * for) of an offered product.
+     * Represents the list price of an offered product. Typically the same as
+     * the [MSRP](https://schema.org/MSRP).
      *
      * @see https://schema.org/ListPrice
      * @see https://pending.schema.org
@@ -59,6 +59,17 @@ class PriceTypeEnumeration extends BaseType implements PriceTypeEnumerationContr
     public const MinimumAdvertisedPrice = 'https://schema.org/MinimumAdvertisedPrice';
 
     /**
+     * Represents the regular price of an offered product. This is usually the
+     * advertised price before a temporary sale. Once the sale period ends the
+     * advertised price will go back to the regular price.
+     *
+     * @see https://schema.org/RegularPrice
+     * @see https://pending.schema.org
+     * @link https://github.com/schemaorg/schemaorg/issues/3583
+     */
+    public const RegularPrice = 'https://schema.org/RegularPrice';
+
+    /**
      * Represents the suggested retail price ("SRP") of an offered product.
      *
      * @see https://schema.org/SRP
@@ -76,6 +87,16 @@ class PriceTypeEnumeration extends BaseType implements PriceTypeEnumerationContr
      * @link https://github.com/schemaorg/schemaorg/issues/2712
      */
     public const SalePrice = 'https://schema.org/SalePrice';
+
+    /**
+     * Represents the strikethrough price (the previous advertised price) of an
+     * offered product.
+     *
+     * @see https://schema.org/StrikethroughPrice
+     * @see https://pending.schema.org
+     * @link https://github.com/schemaorg/schemaorg/issues/3583
+     */
+    public const StrikethroughPrice = 'https://schema.org/StrikethroughPrice';
 
     /**
      * An additional type for the item, typically used for adding more specific

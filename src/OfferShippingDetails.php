@@ -25,7 +25,6 @@ use Spatie\SchemaOrg\Contracts\ThingContract;
  * or Fast and expensive: $15 in 1-2 days.
  *
  * @see https://schema.org/OfferShippingDetails
- * @see https://pending.schema.org
  * @link https://github.com/schemaorg/schemaorg/issues/2506
  *
  */
@@ -77,7 +76,6 @@ class OfferShippingDetails extends BaseType implements OfferShippingDetailsContr
      * @return static
      *
      * @see https://schema.org/deliveryTime
-     * @see https://pending.schema.org
      * @link https://github.com/schemaorg/schemaorg/issues/2506
      */
     public function deliveryTime($deliveryTime)
@@ -139,7 +137,6 @@ class OfferShippingDetails extends BaseType implements OfferShippingDetailsContr
      * @return static
      *
      * @see https://schema.org/doesNotShip
-     * @see https://pending.schema.org
      * @link https://github.com/schemaorg/schemaorg/issues/2506
      */
     public function doesNotShip($doesNotShip)
@@ -264,7 +261,6 @@ class OfferShippingDetails extends BaseType implements OfferShippingDetailsContr
      * @return static
      *
      * @see https://schema.org/shippingDestination
-     * @see https://pending.schema.org
      * @link https://github.com/schemaorg/schemaorg/issues/2506
      */
     public function shippingDestination($shippingDestination)
@@ -282,7 +278,6 @@ class OfferShippingDetails extends BaseType implements OfferShippingDetailsContr
      * @return static
      *
      * @see https://schema.org/shippingLabel
-     * @see https://pending.schema.org
      * @link https://github.com/schemaorg/schemaorg/issues/2506
      */
     public function shippingLabel($shippingLabel)
@@ -298,7 +293,6 @@ class OfferShippingDetails extends BaseType implements OfferShippingDetailsContr
      * @return static
      *
      * @see https://schema.org/shippingOrigin
-     * @see https://pending.schema.org
      * @link https://github.com/schemaorg/schemaorg/issues/3122
      */
     public function shippingOrigin($shippingOrigin)
@@ -316,7 +310,6 @@ class OfferShippingDetails extends BaseType implements OfferShippingDetailsContr
      * @return static
      *
      * @see https://schema.org/shippingRate
-     * @see https://pending.schema.org
      * @link https://github.com/schemaorg/schemaorg/issues/2506
      */
     public function shippingRate($shippingRate)
@@ -333,7 +326,6 @@ class OfferShippingDetails extends BaseType implements OfferShippingDetailsContr
      * @return static
      *
      * @see https://schema.org/shippingSettingsLink
-     * @see https://pending.schema.org
      * @link https://github.com/schemaorg/schemaorg/issues/2506
      */
     public function shippingSettingsLink($shippingSettingsLink)
@@ -366,7 +358,6 @@ class OfferShippingDetails extends BaseType implements OfferShippingDetailsContr
      * @return static
      *
      * @see https://schema.org/transitTimeLabel
-     * @see https://pending.schema.org
      * @link https://github.com/schemaorg/schemaorg/issues/2506
      */
     public function transitTimeLabel($transitTimeLabel)
@@ -386,6 +377,23 @@ class OfferShippingDetails extends BaseType implements OfferShippingDetailsContr
     public function url($url)
     {
         return $this->setProperty('url', $url);
+    }
+
+    /**
+     * The membership program tier an Offer (or a PriceSpecification,
+     * OfferShippingDetails, or MerchantReturnPolicy under an Offer) is valid
+     * for.
+     *
+     * @param \Spatie\SchemaOrg\Contracts\MemberProgramTierContract|\Spatie\SchemaOrg\Contracts\MemberProgramTierContract[] $validForMemberTier
+     *
+     * @return static
+     *
+     * @see https://schema.org/validForMemberTier
+     * @link https://github.com/schemaorg/schemaorg/issues/3563
+     */
+    public function validForMemberTier($validForMemberTier)
+    {
+        return $this->setProperty('validForMemberTier', $validForMemberTier);
     }
 
     /**

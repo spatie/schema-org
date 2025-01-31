@@ -4,6 +4,8 @@ namespace Spatie\SchemaOrg\Contracts;
 
 interface DonateActionContract
 {
+    public function actionProcess($actionProcess);
+
     public function actionStatus($actionStatus);
 
     public function additionalType($additionalType);
@@ -19,6 +21,8 @@ interface DonateActionContract
     public function endTime($endTime);
 
     public function error($error);
+
+    public function fromLocation($fromLocation);
 
     public function identifier($identifier);
 
@@ -57,6 +61,8 @@ interface DonateActionContract
     public function subjectOf($subjectOf);
 
     public function target($target);
+
+    public function toLocation($toLocation);
 
     public function url($url);
 }

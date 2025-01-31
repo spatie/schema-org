@@ -38,6 +38,8 @@ interface PaymentCardContract
 
     public function floorLimit($floorLimit);
 
+    public function hasCertification($hasCertification);
+
     public function hasOfferCatalog($hasOfferCatalog);
 
     public function hoursAvailable($hoursAvailable);
@@ -61,6 +63,8 @@ interface PaymentCardContract
     public function name($name);
 
     public function offers($offers);
+
+    public function paymentMethodType($paymentMethodType);
 
     public function potentialAction($potentialAction);
 

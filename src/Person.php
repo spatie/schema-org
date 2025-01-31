@@ -501,6 +501,22 @@ class Person extends BaseType implements PersonContract, ThingContract
     }
 
     /**
+     * Certification information about a product, organization, service, place,
+     * or person.
+     *
+     * @param \Spatie\SchemaOrg\Contracts\CertificationContract|\Spatie\SchemaOrg\Contracts\CertificationContract[] $hasCertification
+     *
+     * @return static
+     *
+     * @see https://schema.org/hasCertification
+     * @link https://github.com/schemaorg/schemaorg/issues/3230
+     */
+    public function hasCertification($hasCertification)
+    {
+        return $this->setProperty('hasCertification', $hasCertification);
+    }
+
+    /**
      * A credential awarded to the Person or Organization.
      *
      * @param \Spatie\SchemaOrg\Contracts\EducationalOccupationalCredentialContract|\Spatie\SchemaOrg\Contracts\EducationalOccupationalCredentialContract[] $hasCredential
@@ -785,7 +801,7 @@ class Person extends BaseType implements PersonContract, ThingContract
      * An Organization (or ProgramMembership) to which this Person or
      * Organization belongs.
      *
-     * @param \Spatie\SchemaOrg\Contracts\OrganizationContract|\Spatie\SchemaOrg\Contracts\OrganizationContract[]|\Spatie\SchemaOrg\Contracts\ProgramMembershipContract|\Spatie\SchemaOrg\Contracts\ProgramMembershipContract[] $memberOf
+     * @param \Spatie\SchemaOrg\Contracts\MemberProgramTierContract|\Spatie\SchemaOrg\Contracts\MemberProgramTierContract[]|\Spatie\SchemaOrg\Contracts\OrganizationContract|\Spatie\SchemaOrg\Contracts\OrganizationContract[]|\Spatie\SchemaOrg\Contracts\ProgramMembershipContract|\Spatie\SchemaOrg\Contracts\ProgramMembershipContract[] $memberOf
      *
      * @return static
      *
@@ -1020,6 +1036,23 @@ class Person extends BaseType implements PersonContract, ThingContract
     public function siblings($siblings)
     {
         return $this->setProperty('siblings', $siblings);
+    }
+
+    /**
+     * A statement of knowledge, skill, ability, task or any other assertion
+     * expressing a competency that is either claimed by a person, an
+     * organization or desired or required to fulfill a role or to work in an
+     * occupation.
+     *
+     * @param \Spatie\SchemaOrg\Contracts\DefinedTermContract|\Spatie\SchemaOrg\Contracts\DefinedTermContract[]|string|string[] $skills
+     *
+     * @return static
+     *
+     * @see https://schema.org/skills
+     */
+    public function skills($skills)
+    {
+        return $this->setProperty('skills', $skills);
     }
 
     /**

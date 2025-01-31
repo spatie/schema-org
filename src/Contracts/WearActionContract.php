@@ -6,6 +6,8 @@ interface WearActionContract
 {
     public function actionAccessibilityRequirement($actionAccessibilityRequirement);
 
+    public function actionProcess($actionProcess);
+
     public function actionStatus($actionStatus);
 
     public function additionalType($additionalType);

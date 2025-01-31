@@ -68,6 +68,8 @@ interface PersonContract
 
     public function globalLocationNumber($globalLocationNumber);
 
+    public function hasCertification($hasCertification);
+
     public function hasCredential($hasCredential);
 
     public function hasOccupation($hasOccupation);
@@ -135,6 +137,8 @@ interface PersonContract
     public function sibling($sibling);
 
     public function siblings($siblings);
+
+    public function skills($skills);
 
     public function sponsor($sponsor);
 

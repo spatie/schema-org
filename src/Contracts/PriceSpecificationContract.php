@@ -24,6 +24,8 @@ interface PriceSpecificationContract
 
     public function maxPrice($maxPrice);
 
+    public function membershipPointsEarned($membershipPointsEarned);
+
     public function minPrice($minPrice);
 
     public function name($name);
@@ -39,6 +41,8 @@ interface PriceSpecificationContract
     public function subjectOf($subjectOf);
 
     public function url($url);
+
+    public function validForMemberTier($validForMemberTier);
 
     public function validFrom($validFrom);
 

@@ -531,6 +531,24 @@ class ProductCollection extends BaseType implements ProductCollectionContract, C
     }
 
     /**
+     * A color swatch image, visualizing the color of a [[Product]]. Should
+     * match the textual description specified in the [[color]] property. This
+     * can be a URL or a fully described ImageObject.
+     *
+     * @param \Spatie\SchemaOrg\Contracts\ImageObjectContract|\Spatie\SchemaOrg\Contracts\ImageObjectContract[]|string|string[] $colorSwatch
+     *
+     * @return static
+     *
+     * @see https://schema.org/colorSwatch
+     * @see https://pending.schema.org
+     * @link https://github.com/schemaorg/schemaorg/issues/3423
+     */
+    public function colorSwatch($colorSwatch)
+    {
+        return $this->setProperty('colorSwatch', $colorSwatch);
+    }
+
+    /**
      * Comments, typically from users.
      *
      * @param \Spatie\SchemaOrg\Contracts\CommentContract|\Spatie\SchemaOrg\Contracts\CommentContract[] $comment
@@ -847,7 +865,8 @@ class ProductCollection extends BaseType implements ProductCollectionContract, C
     }
 
     /**
-     * Date of first broadcast/publication.
+     * Date of first publication or broadcast. For example the date a
+     * [[CreativeWork]] was broadcast or a [[Certification]] was issued.
      *
      * @param \DateTimeInterface|\DateTimeInterface[] $datePublished
      *
@@ -1103,9 +1122,10 @@ class ProductCollection extends BaseType implements ProductCollectionContract, C
     /**
      * Date the content expires and is no longer useful or available. For
      * example a [[VideoObject]] or [[NewsArticle]] whose availability or
-     * relevance is time-limited, or a [[ClaimReview]] fact check whose
-     * publisher wants to indicate that it may no longer be relevant (or helpful
-     * to highlight) after some date.
+     * relevance is time-limited, a [[ClaimReview]] fact check whose publisher
+     * wants to indicate that it may no longer be relevant (or helpful to
+     * highlight) after some date, or a [[Certification]] the validity has
+     * expired.
      *
      * @param \DateTimeInterface|\DateTimeInterface[] $expires
      *
@@ -1191,16 +1211,10 @@ class ProductCollection extends BaseType implements ProductCollectionContract, C
      * trade items, including products and services, using numeric
      * identification codes.
      *
-     * The GS1 [digital link
-     * specifications](https://www.gs1.org/standards/Digital-Link/) express
-     * GTINs as URLs (URIs, IRIs, etc.). Details including regular expression
-     * examples can be found in, Section 6 of the GS1 URI Syntax specification;
-     * see also [schema.org tracking
-     * issue](https://github.com/schemaorg/schemaorg/issues/3156#issuecomment-1209522809)
-     * for schema.org-specific discussion. A correct [[gtin]] value should be a
-     * valid GTIN, which means that it should be an all-numeric string of either
-     * 8, 12, 13 or 14 digits, or a "GS1 Digital Link" URL based on such a
-     * string. The numeric component should also have a [valid GS1 check
+     * A correct [[gtin]] value should be a valid GTIN, which means that it
+     * should be an all-numeric string of either 8, 12, 13 or 14 digits, or a
+     * "GS1 Digital Link" URL based on such a string. The numeric component
+     * should also have a [valid GS1 check
      * digit](https://www.gs1.org/services/check-digit-calculator) and meet the
      * other rules for valid GTINs. See also [GS1's GTIN
      * Summary](http://www.gs1.org/barcodes/technical/idkeys/gtin) and
@@ -1208,6 +1222,12 @@ class ProductCollection extends BaseType implements ProductCollectionContract, C
      * more details. Left-padding of the gtin values is not required or
      * encouraged. The [[gtin]] property generalizes the earlier [[gtin8]],
      * [[gtin12]], [[gtin13]], and [[gtin14]] properties.
+     *
+     * The GS1 [digital link
+     * specifications](https://www.gs1.org/standards/Digital-Link/) expresses
+     * GTINs as URLs (URIs, IRIs, etc.).
+     * Digital Links should be populated into the [[hasGS1DigitalLink]]
+     * attribute.
      *
      * Note also that this is a definition for how to include GTINs in
      * Schema.org data, and not a definition of GTINs in general - see the GS1
@@ -1316,6 +1336,22 @@ class ProductCollection extends BaseType implements ProductCollectionContract, C
     }
 
     /**
+     * Certification information about a product, organization, service, place,
+     * or person.
+     *
+     * @param \Spatie\SchemaOrg\Contracts\CertificationContract|\Spatie\SchemaOrg\Contracts\CertificationContract[] $hasCertification
+     *
+     * @return static
+     *
+     * @see https://schema.org/hasCertification
+     * @link https://github.com/schemaorg/schemaorg/issues/3230
+     */
+    public function hasCertification($hasCertification)
+    {
+        return $this->setProperty('hasCertification', $hasCertification);
+    }
+
+    /**
      * Defines the energy efficiency Category (also known as "class" or
      * "rating") for a product according to an international energy efficiency
      * standard.
@@ -1334,8 +1370,37 @@ class ProductCollection extends BaseType implements ProductCollectionContract, C
     }
 
     /**
-     * A product measurement, for example the inseam of pants, the wheel size of
-     * a bicycle, or the gauge of a screw. Usually an exact measurement, but can
+     * The [GS1 digital link](https://www.gs1.org/standards/gs1-digital-link)
+     * associated with the object. This URL should conform to the particular
+     * requirements of digital links. The link should only contain the
+     * Application Identifiers (AIs) that are relevant for the entity being
+     * annotated, for instance a [[Product]] or an [[Organization]], and for the
+     * correct granularity. In particular, for products:<ul>* A Digital Link
+     * that contains a serial number (AI ```21```) should only be present on
+     * instances of [[IndividualProduct]]* A Digital Link that contains a lot
+     * number (AI ```10```) should be annotated as [[SomeProduct]] if only
+     * products from that lot are sold, or [[IndividualProduct]] if there is
+     * only a specific product.* A Digital Link that contains a global model
+     * number (AI ```8013```)  should be attached to a [[Product]] or a
+     * [[ProductModel]]. Other item types should be adapted similarly.
+     *
+     * @param string|string[] $hasGS1DigitalLink
+     *
+     * @return static
+     *
+     * @see https://schema.org/hasGS1DigitalLink
+     * @see https://pending.schema.org
+     * @link https://github.com/schemaorg/schemaorg/issues/3475
+     */
+    public function hasGS1DigitalLink($hasGS1DigitalLink)
+    {
+        return $this->setProperty('hasGS1DigitalLink', $hasGS1DigitalLink);
+    }
+
+    /**
+     * A measurement of an item, For example, the inseam of pants, the wheel
+     * size of a bicycle, the gauge of a screw, or the carbon footprint measured
+     * for certification by an authority. Usually an exact measurement, but can
      * also be a range of measurements for adjustable products, for example
      * belts and ski bindings.
      *

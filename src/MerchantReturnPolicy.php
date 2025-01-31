@@ -570,4 +570,21 @@ class MerchantReturnPolicy extends BaseType implements MerchantReturnPolicyContr
     {
         return $this->setProperty('url', $url);
     }
+
+    /**
+     * The membership program tier an Offer (or a PriceSpecification,
+     * OfferShippingDetails, or MerchantReturnPolicy under an Offer) is valid
+     * for.
+     *
+     * @param \Spatie\SchemaOrg\Contracts\MemberProgramTierContract|\Spatie\SchemaOrg\Contracts\MemberProgramTierContract[] $validForMemberTier
+     *
+     * @return static
+     *
+     * @see https://schema.org/validForMemberTier
+     * @link https://github.com/schemaorg/schemaorg/issues/3563
+     */
+    public function validForMemberTier($validForMemberTier)
+    {
+        return $this->setProperty('validForMemberTier', $validForMemberTier);
+    }
 }

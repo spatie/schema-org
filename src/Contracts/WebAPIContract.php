@@ -30,6 +30,8 @@ interface WebAPIContract
 
     public function documentation($documentation);
 
+    public function hasCertification($hasCertification);
+
     public function hasOfferCatalog($hasOfferCatalog);
 
     public function hoursAvailable($hoursAvailable);

@@ -202,11 +202,11 @@ class PodcastSeason extends BaseType implements PodcastSeasonContract, CreativeW
     }
 
     /**
-     * An actor, e.g. in TV, radio, movie, video games etc., or in an event.
-     * Actors can be associated with individual items or with a series, episode,
-     * clip.
+     * An actor (individual or a group), e.g. in TV, radio, movie, video games
+     * etc., or in an event. Actors can be associated with individual items or
+     * with a series, episode, clip.
      *
-     * @param \Spatie\SchemaOrg\Contracts\PersonContract|\Spatie\SchemaOrg\Contracts\PersonContract[] $actor
+     * @param \Spatie\SchemaOrg\Contracts\PerformingGroupContract|\Spatie\SchemaOrg\Contracts\PerformingGroupContract[]|\Spatie\SchemaOrg\Contracts\PersonContract|\Spatie\SchemaOrg\Contracts\PersonContract[] $actor
      *
      * @return static
      *
@@ -721,7 +721,8 @@ class PodcastSeason extends BaseType implements PodcastSeasonContract, CreativeW
     }
 
     /**
-     * Date of first broadcast/publication.
+     * Date of first publication or broadcast. For example the date a
+     * [[CreativeWork]] was broadcast or a [[Certification]] was issued.
      *
      * @param \DateTimeInterface|\DateTimeInterface[] $datePublished
      *
@@ -1023,9 +1024,10 @@ class PodcastSeason extends BaseType implements PodcastSeasonContract, CreativeW
     /**
      * Date the content expires and is no longer useful or available. For
      * example a [[VideoObject]] or [[NewsArticle]] whose availability or
-     * relevance is time-limited, or a [[ClaimReview]] fact check whose
-     * publisher wants to indicate that it may no longer be relevant (or helpful
-     * to highlight) after some date.
+     * relevance is time-limited, a [[ClaimReview]] fact check whose publisher
+     * wants to indicate that it may no longer be relevant (or helpful to
+     * highlight) after some date, or a [[Certification]] the validity has
+     * expired.
      *
      * @param \DateTimeInterface|\DateTimeInterface[] $expires
      *

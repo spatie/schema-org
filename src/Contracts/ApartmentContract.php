@@ -68,7 +68,11 @@ interface ApartmentContract
 
     public function globalLocationNumber($globalLocationNumber);
 
+    public function hasCertification($hasCertification);
+
     public function hasDriveThroughService($hasDriveThroughService);
+
+    public function hasGS1DigitalLink($hasGS1DigitalLink);
 
     public function hasMap($hasMap);
 

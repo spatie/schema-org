@@ -71,7 +71,7 @@ class TelevisionChannel extends BaseType implements TelevisionChannelContract, B
     /**
      * The frequency used for over-the-air broadcasts. Numeric values or simple
      * ranges, e.g. 87-99. In addition a shortcut idiom is supported for
-     * frequences of AM and FM radio channels, e.g. "87 FM".
+     * frequencies of AM and FM radio channels, e.g. "87 FM".
      *
      * @param \Spatie\SchemaOrg\Contracts\BroadcastFrequencySpecificationContract|\Spatie\SchemaOrg\Contracts\BroadcastFrequencySpecificationContract[]|string|string[] $broadcastFrequency
      *

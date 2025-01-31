@@ -37,6 +37,20 @@ class ReplyAction extends BaseType implements ReplyActionContract, ActionContrac
     }
 
     /**
+     * Description of the process by which the action was performed.
+     *
+     * @param \Spatie\SchemaOrg\Contracts\HowToContract|\Spatie\SchemaOrg\Contracts\HowToContract[] $actionProcess
+     *
+     * @return static
+     *
+     * @see https://schema.org/actionProcess
+     */
+    public function actionProcess($actionProcess)
+    {
+        return $this->setProperty('actionProcess', $actionProcess);
+    }
+
+    /**
      * Indicates the current disposition of the Action.
      *
      * @param \Spatie\SchemaOrg\Contracts\ActionStatusTypeContract|\Spatie\SchemaOrg\Contracts\ActionStatusTypeContract[] $actionStatus

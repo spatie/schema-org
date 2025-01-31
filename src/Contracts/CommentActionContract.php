@@ -6,6 +6,8 @@ interface CommentActionContract
 {
     public function about($about);
 
+    public function actionProcess($actionProcess);
+
     public function actionStatus($actionStatus);
 
     public function additionalType($additionalType);

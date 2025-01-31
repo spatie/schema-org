@@ -2,7 +2,6 @@
 
 namespace Spatie\SchemaOrg;
 
-use Spatie\SchemaOrg\Contracts\EnumerationContract;
 use Spatie\SchemaOrg\Contracts\IntangibleContract;
 use Spatie\SchemaOrg\Contracts\PaymentMethodContract;
 use Spatie\SchemaOrg\Contracts\ThingContract;
@@ -11,9 +10,8 @@ use Spatie\SchemaOrg\Contracts\ThingContract;
  * A payment method is a standardized procedure for transferring the monetary
  * amount for a purchase. Payment methods are characterized by the legal and
  * technical structures used, and by the organization or group carrying out the
- * transaction.
+ * transaction. The following legacy values should be accepted:
  *
- * Commonly used values:
  *
  * * http://purl.org/goodrelations/v1#ByBankTransferInAdvance
  * * http://purl.org/goodrelations/v1#ByInvoice
@@ -25,11 +23,13 @@ use Spatie\SchemaOrg\Contracts\ThingContract;
  * * http://purl.org/goodrelations/v1#PayPal
  * * http://purl.org/goodrelations/v1#PaySwarm
  *
- * @see https://schema.org/PaymentMethod
+ * Structured values are recommended for newer payment methods.
  *
- * @method static supersededBy($supersededBy) The value should be instance of pending types Class|Class[]|Enumeration|Enumeration[]|Property|Property[]
+ * @see https://schema.org/PaymentMethod
+ * @link https://github.com/schemaorg/schemaorg/issues/3537
+ *
  */
-class PaymentMethod extends BaseType implements PaymentMethodContract, EnumerationContract, IntangibleContract, ThingContract
+class PaymentMethod extends BaseType implements PaymentMethodContract, IntangibleContract, ThingContract
 {
     /**
      * An additional type for the item, typically used for adding more specific
@@ -160,6 +160,22 @@ class PaymentMethod extends BaseType implements PaymentMethodContract, Enumerati
     public function name($name)
     {
         return $this->setProperty('name', $name);
+    }
+
+    /**
+     * The type of a payment method.
+     *
+     * @param \Spatie\SchemaOrg\Contracts\PaymentMethodTypeContract|\Spatie\SchemaOrg\Contracts\PaymentMethodTypeContract[] $paymentMethodType
+     *
+     * @return static
+     *
+     * @see https://schema.org/paymentMethodType
+     * @see https://pending.schema.org
+     * @link https://github.com/schemaorg/schemaorg/issues/3537
+     */
+    public function paymentMethodType($paymentMethodType)
+    {
+        return $this->setProperty('paymentMethodType', $paymentMethodType);
     }
 
     /**

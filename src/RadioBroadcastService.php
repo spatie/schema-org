@@ -189,7 +189,7 @@ class RadioBroadcastService extends BaseType implements RadioBroadcastServiceCon
     /**
      * The frequency used for over-the-air broadcasts. Numeric values or simple
      * ranges, e.g. 87-99. In addition a shortcut idiom is supported for
-     * frequences of AM and FM radio channels, e.g. "87 FM".
+     * frequencies of AM and FM radio channels, e.g. "87 FM".
      *
      * @param \Spatie\SchemaOrg\Contracts\BroadcastFrequencySpecificationContract|\Spatie\SchemaOrg\Contracts\BroadcastFrequencySpecificationContract[]|string|string[] $broadcastFrequency
      *
@@ -326,6 +326,22 @@ class RadioBroadcastService extends BaseType implements RadioBroadcastServiceCon
     public function hasBroadcastChannel($hasBroadcastChannel)
     {
         return $this->setProperty('hasBroadcastChannel', $hasBroadcastChannel);
+    }
+
+    /**
+     * Certification information about a product, organization, service, place,
+     * or person.
+     *
+     * @param \Spatie\SchemaOrg\Contracts\CertificationContract|\Spatie\SchemaOrg\Contracts\CertificationContract[] $hasCertification
+     *
+     * @return static
+     *
+     * @see https://schema.org/hasCertification
+     * @link https://github.com/schemaorg/schemaorg/issues/3230
+     */
+    public function hasCertification($hasCertification)
+    {
+        return $this->setProperty('hasCertification', $hasCertification);
     }
 
     /**

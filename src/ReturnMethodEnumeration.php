@@ -19,6 +19,16 @@ use Spatie\SchemaOrg\Contracts\ThingContract;
 class ReturnMethodEnumeration extends BaseType implements ReturnMethodEnumerationContract, EnumerationContract, IntangibleContract, ThingContract
 {
     /**
+     * Specifies that the consumer can keep the product, even when receiving a
+     * refund or store credit.
+     *
+     * @see https://schema.org/KeepProduct
+     * @see https://pending.schema.org
+     * @link https://github.com/schemaorg/schemaorg/issues/2880
+     */
+    public const KeepProduct = 'https://schema.org/KeepProduct';
+
+    /**
      * Specifies that product returns must be made at a kiosk.
      *
      * @see https://schema.org/ReturnAtKiosk

@@ -184,6 +184,24 @@ class CompoundPriceSpecification extends BaseType implements CompoundPriceSpecif
     }
 
     /**
+     * The number of membership points earned by the member. If necessary, the
+     * unitText can be used to express the units the points are issued in. (E.g.
+     * stars, miles, etc.)
+     *
+     * @param \Spatie\SchemaOrg\Contracts\QuantitativeValueContract|\Spatie\SchemaOrg\Contracts\QuantitativeValueContract[]|float|float[]|int|int[] $membershipPointsEarned
+     *
+     * @return static
+     *
+     * @see https://schema.org/membershipPointsEarned
+     * @see https://pending.schema.org
+     * @link https://github.com/schemaorg/schemaorg/issues/2085
+     */
+    public function membershipPointsEarned($membershipPointsEarned)
+    {
+        return $this->setProperty('membershipPointsEarned', $membershipPointsEarned);
+    }
+
+    /**
      * The lowest price if the price is a range.
      *
      * @param float|float[]|int|int[] $minPrice
@@ -364,6 +382,23 @@ class CompoundPriceSpecification extends BaseType implements CompoundPriceSpecif
     public function url($url)
     {
         return $this->setProperty('url', $url);
+    }
+
+    /**
+     * The membership program tier an Offer (or a PriceSpecification,
+     * OfferShippingDetails, or MerchantReturnPolicy under an Offer) is valid
+     * for.
+     *
+     * @param \Spatie\SchemaOrg\Contracts\MemberProgramTierContract|\Spatie\SchemaOrg\Contracts\MemberProgramTierContract[] $validForMemberTier
+     *
+     * @return static
+     *
+     * @see https://schema.org/validForMemberTier
+     * @link https://github.com/schemaorg/schemaorg/issues/3563
+     */
+    public function validForMemberTier($validForMemberTier)
+    {
+        return $this->setProperty('validForMemberTier', $validForMemberTier);
     }
 
     /**
