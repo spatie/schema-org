@@ -2,6 +2,21 @@
 
 All Notable changes to `schema-org` will be documented in this file.
 
+## 3.23.1 - 2025-01-31
+
+### What's Changed
+
+* Unescape slashes in output by @patrickomeara in https://github.com/spatie/schema-org/pull/223
+* Update graham-campbell/analyzer by @freekmurze in https://github.com/spatie/schema-org/pull/224
+* Upgrade to schema.org v28.1 by @Soean in https://github.com/spatie/schema-org/pull/222
+
+### New Contributors
+
+* @patrickomeara made their first contribution in https://github.com/spatie/schema-org/pull/223
+* @Soean made their first contribution in https://github.com/spatie/schema-org/pull/222
+
+**Full Changelog**: https://github.com/spatie/schema-org/compare/3.23.0...3.23.1
+
 ## 3.23.0 - 2024-01-11
 
 ### What's Changed
