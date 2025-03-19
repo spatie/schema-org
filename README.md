@@ -1,5 +1,7 @@
 # A Fluent Builder For Schema.org Types And ld+json Generator
 
+**Note:** This fork includes types and extensions defined in the Municipio schema definition available at [https://schema.municipio.tech/schema.jsonld](https://schema.municipio.tech/schema.jsonld).
+
 [![Latest Version on Packagist](https://img.shields.io/packagist/v/spatie/schema-org.svg?style=flat-square)](https://packagist.org/packages/spatie/schema-org)
 [![MIT License](https://img.shields.io/badge/license-MIT-brightgreen.svg?style=flat-square)](LICENSE.md)
 [![GitHub Workflow Status](https://img.shields.io/github/workflow/status/spatie/schema-org/run-tests?style=flat-square&logoColor=white&logo=github&label=Tests)](https://github.com/spatie/schema-org/actions?query=workflow%3Arun-tests)

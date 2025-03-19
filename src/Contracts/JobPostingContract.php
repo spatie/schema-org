@@ -52,6 +52,8 @@ interface JobPostingContract
 
     public function industry($industry);
 
+    public function isInternal($isInternal);
+
     public function jobBenefits($jobBenefits);
 
     public function jobImmediateStart($jobImmediateStart);

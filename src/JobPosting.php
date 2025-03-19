@@ -408,6 +408,20 @@ class JobPosting extends BaseType implements JobPostingContract, IntangibleContr
     }
 
     /**
+     * Indicates whether the job posting is for an internal position.
+     *
+     * @param bool|bool[] $isInternal
+     *
+     * @return static
+     *
+     * @see municipio:isInternal
+     */
+    public function isInternal($isInternal)
+    {
+        return $this->setProperty('isInternal', $isInternal);
+    }
+
+    /**
      * Description of benefits associated with the job.
      *
      * @param string|string[] $jobBenefits
