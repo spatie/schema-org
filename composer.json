@@ -1,9 +1,9 @@
 {
-    "name": "spatie/schema-org",
+    "name": "helsingborg-stad/schema-org",
     "description": "A fluent builder Schema.org types and ld+json generator",
     "license": "MIT",
     "keywords": [
-        "spatie",
+        "helsingborg",
         "schema-org"
     ],
     "authors": [
