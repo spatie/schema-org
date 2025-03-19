@@ -661,6 +661,7 @@ use Spatie\SchemaOrg\Exceptions\TypeNotInMultiTypedEntity;
  * @method self|ProfessionalService professionalService(\Closure|null $callback = null)
  * @method self|ProfilePage profilePage(\Closure|null $callback = null)
  * @method self|ProgramMembership programMembership(\Closure|null $callback = null)
+ * @method self|ProgressStatus progressStatus(\Closure|null $callback = null)
  * @method self|Project project(\Closure|null $callback = null)
  * @method self|PronounceableText pronounceableText(\Closure|null $callback = null)
  * @method self|Property property(\Closure|null $callback = null)

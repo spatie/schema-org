@@ -662,6 +662,7 @@ use Spatie\SchemaOrg\Exceptions\TypeNotInGraph;
  * @method self|ProfessionalService professionalService(string|\Closure|null $identifier = null, \Closure|null $callback = null)
  * @method self|ProfilePage profilePage(string|\Closure|null $identifier = null, \Closure|null $callback = null)
  * @method self|ProgramMembership programMembership(string|\Closure|null $identifier = null, \Closure|null $callback = null)
+ * @method self|ProgressStatus progressStatus(string|\Closure|null $identifier = null, \Closure|null $callback = null)
  * @method self|Project project(string|\Closure|null $identifier = null, \Closure|null $callback = null)
  * @method self|PronounceableText pronounceableText(string|\Closure|null $identifier = null, \Closure|null $callback = null)
  * @method self|Property property(string|\Closure|null $identifier = null, \Closure|null $callback = null)

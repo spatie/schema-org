@@ -1268,6 +1268,20 @@ class ResearchProject extends BaseType implements ResearchProjectContract, Organ
     }
 
     /**
+     * The project status.
+     *
+     * @param \Spatie\SchemaOrg\Contracts\ProgressStatusContract|\Spatie\SchemaOrg\Contracts\ProgressStatusContract[] $status
+     *
+     * @return static
+     *
+     * @see municipio:status
+     */
+    public function status($status)
+    {
+        return $this->setProperty('status', $status);
+    }
+
+    /**
      * A relationship between two organizations where the first includes the
      * second, e.g., as a subsidiary. See also: the more specific 'department'
      * property.
