@@ -26,7 +26,13 @@ class Definitions
 
     public function query(string $selector): Collection
     {
-        return (new JsonLdParser($this->loadSource('core')))->filter($selector);
+        $items = [];
+        
+        foreach(array_keys($this->sources) as $source) {
+            $items = [...$items, ...(new JsonLdParser($this->loadSource($source)))->filter($selector)->all()];
+        }
+
+        return new Collection($items);
     }
 
     protected function loadSource(string $sourceId, bool $fromCache = true): string
