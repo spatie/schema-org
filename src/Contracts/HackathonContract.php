@@ -76,6 +76,8 @@ interface HackathonContract
 
     public function performers($performers);
 
+    public function physicalAccessibilityFeatures($physicalAccessibilityFeatures);
+
     public function potentialAction($potentialAction);
 
     public function previousStartDate($previousStartDate);

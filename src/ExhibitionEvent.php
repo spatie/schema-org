@@ -598,6 +598,22 @@ class ExhibitionEvent extends BaseType implements ExhibitionEventContract, Event
     }
 
     /**
+     * A list of physical features that are available at the event, e.g.
+     * wheelchair access. Multiple textual entries in a list are typically
+     * delimited by commas, or by repeating the property.
+     *
+     * @param string|string[] $physicalAccessibilityFeatures
+     *
+     * @return static
+     *
+     * @see municipio:physicalAccessibilityFeatures
+     */
+    public function physicalAccessibilityFeatures($physicalAccessibilityFeatures)
+    {
+        return $this->setProperty('physicalAccessibilityFeatures', $physicalAccessibilityFeatures);
+    }
+
+    /**
      * Indicates a potential Action, which describes an idealized action in
      * which this thing would play an 'object' role.
      *
