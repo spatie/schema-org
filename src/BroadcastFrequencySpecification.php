@@ -2,9 +2,9 @@
 
 namespace Spatie\SchemaOrg;
 
-use Spatie\SchemaOrg\Contracts\BroadcastFrequencySpecificationContract;
-use Spatie\SchemaOrg\Contracts\IntangibleContract;
-use Spatie\SchemaOrg\Contracts\ThingContract;
+use \Spatie\SchemaOrg\Contracts\BroadcastFrequencySpecificationContract;
+use \Spatie\SchemaOrg\Contracts\IntangibleContract;
+use \Spatie\SchemaOrg\Contracts\ThingContract;
 
 /**
  * The frequency in MHz and the modulation used for a particular
@@ -253,4 +253,5 @@ class BroadcastFrequencySpecification extends BaseType implements BroadcastFrequ
     {
         return $this->setProperty('url', $url);
     }
+
 }

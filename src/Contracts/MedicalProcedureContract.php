@@ -55,4 +55,5 @@ interface MedicalProcedureContract
     public function subjectOf($subjectOf);
 
     public function url($url);
+
 }

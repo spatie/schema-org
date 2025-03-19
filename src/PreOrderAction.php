@@ -2,10 +2,10 @@
 
 namespace Spatie\SchemaOrg;
 
-use Spatie\SchemaOrg\Contracts\ActionContract;
-use Spatie\SchemaOrg\Contracts\PreOrderActionContract;
-use Spatie\SchemaOrg\Contracts\ThingContract;
-use Spatie\SchemaOrg\Contracts\TradeActionContract;
+use \Spatie\SchemaOrg\Contracts\PreOrderActionContract;
+use \Spatie\SchemaOrg\Contracts\ActionContract;
+use \Spatie\SchemaOrg\Contracts\ThingContract;
+use \Spatie\SchemaOrg\Contracts\TradeActionContract;
 
 /**
  * An agent orders a (not yet released) object/product/service to be
@@ -135,7 +135,7 @@ class PreOrderAction extends BaseType implements PreOrderActionContract, ActionC
      * John wrote a book from January to *December*. For media, including audio
      * and video, it's the time offset of the end of a clip within a larger
      * file.
-     *
+     * 
      * Note that Event uses startDate/endDate instead of startTime/endTime, even
      * when describing dates with times. This situation may be clarified in
      * future revisions.
@@ -309,9 +309,9 @@ class PreOrderAction extends BaseType implements PreOrderActionContract, ActionC
     /**
      * The offer price of a product, or of a price component when attached to
      * PriceSpecification and its subtypes.
-     *
+     * 
      * Usage guidelines:
-     *
+     * 
      * * Use the [[priceCurrency]] property (with standard formats: [ISO 4217
      * currency format](http://en.wikipedia.org/wiki/ISO_4217), e.g. "USD";
      * [Ticker symbol](https://en.wikipedia.org/wiki/List_of_cryptocurrencies)
@@ -346,7 +346,7 @@ class PreOrderAction extends BaseType implements PreOrderActionContract, ActionC
     /**
      * The currency of the price, or a price component when attached to
      * [[PriceSpecification]] and its subtypes.
-     *
+     * 
      * Use standard formats: [ISO 4217 currency
      * format](http://en.wikipedia.org/wiki/ISO_4217), e.g. "USD"; [Ticker
      * symbol](https://en.wikipedia.org/wiki/List_of_cryptocurrencies) for
@@ -435,7 +435,7 @@ class PreOrderAction extends BaseType implements PreOrderActionContract, ActionC
      * John wrote a book from *January* to December. For media, including audio
      * and video, it's the time offset of the start of a clip within a larger
      * file.
-     *
+     * 
      * Note that Event uses startDate/endDate instead of startTime/endTime, even
      * when describing dates with times. This situation may be clarified in
      * future revisions.
@@ -494,4 +494,5 @@ class PreOrderAction extends BaseType implements PreOrderActionContract, ActionC
     {
         return $this->setProperty('url', $url);
     }
+
 }

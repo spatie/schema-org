@@ -2,12 +2,12 @@
 
 namespace Spatie\SchemaOrg;
 
-use Spatie\SchemaOrg\Contracts\BrokerageAccountContract;
-use Spatie\SchemaOrg\Contracts\FinancialProductContract;
-use Spatie\SchemaOrg\Contracts\IntangibleContract;
-use Spatie\SchemaOrg\Contracts\InvestmentOrDepositContract;
-use Spatie\SchemaOrg\Contracts\ServiceContract;
-use Spatie\SchemaOrg\Contracts\ThingContract;
+use \Spatie\SchemaOrg\Contracts\BrokerageAccountContract;
+use \Spatie\SchemaOrg\Contracts\FinancialProductContract;
+use \Spatie\SchemaOrg\Contracts\IntangibleContract;
+use \Spatie\SchemaOrg\Contracts\InvestmentOrDepositContract;
+use \Spatie\SchemaOrg\Contracts\ServiceContract;
+use \Spatie\SchemaOrg\Contracts\ThingContract;
 
 /**
  * An account that allows an investor to deposit funds and place investment
@@ -648,4 +648,5 @@ class BrokerageAccount extends BaseType implements BrokerageAccountContract, Fin
     {
         return $this->setProperty('url', $url);
     }
+
 }

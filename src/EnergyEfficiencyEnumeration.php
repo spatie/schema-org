@@ -2,10 +2,10 @@
 
 namespace Spatie\SchemaOrg;
 
-use Spatie\SchemaOrg\Contracts\EnergyEfficiencyEnumerationContract;
-use Spatie\SchemaOrg\Contracts\EnumerationContract;
-use Spatie\SchemaOrg\Contracts\IntangibleContract;
-use Spatie\SchemaOrg\Contracts\ThingContract;
+use \Spatie\SchemaOrg\Contracts\EnergyEfficiencyEnumerationContract;
+use \Spatie\SchemaOrg\Contracts\EnumerationContract;
+use \Spatie\SchemaOrg\Contracts\IntangibleContract;
+use \Spatie\SchemaOrg\Contracts\ThingContract;
 
 /**
  * Enumerates energy efficiency levels (also known as "classes" or "ratings")
@@ -210,4 +210,5 @@ class EnergyEfficiencyEnumeration extends BaseType implements EnergyEfficiencyEn
     {
         return $this->setProperty('url', $url);
     }
+
 }

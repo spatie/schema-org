@@ -2,10 +2,10 @@
 
 namespace Spatie\SchemaOrg;
 
-use Spatie\SchemaOrg\Contracts\IntangibleContract;
-use Spatie\SchemaOrg\Contracts\LinkRoleContract;
-use Spatie\SchemaOrg\Contracts\RoleContract;
-use Spatie\SchemaOrg\Contracts\ThingContract;
+use \Spatie\SchemaOrg\Contracts\LinkRoleContract;
+use \Spatie\SchemaOrg\Contracts\IntangibleContract;
+use \Spatie\SchemaOrg\Contracts\RoleContract;
+use \Spatie\SchemaOrg\Contracts\ThingContract;
 
 /**
  * A Role that represents a Web link, e.g. as expressed via the 'url' property.
@@ -310,4 +310,5 @@ class LinkRole extends BaseType implements LinkRoleContract, IntangibleContract,
     {
         return $this->setProperty('url', $url);
     }
+
 }

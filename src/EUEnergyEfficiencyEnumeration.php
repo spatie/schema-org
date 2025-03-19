@@ -2,11 +2,11 @@
 
 namespace Spatie\SchemaOrg;
 
-use Spatie\SchemaOrg\Contracts\EnergyEfficiencyEnumerationContract;
-use Spatie\SchemaOrg\Contracts\EnumerationContract;
-use Spatie\SchemaOrg\Contracts\EUEnergyEfficiencyEnumerationContract;
-use Spatie\SchemaOrg\Contracts\IntangibleContract;
-use Spatie\SchemaOrg\Contracts\ThingContract;
+use \Spatie\SchemaOrg\Contracts\EUEnergyEfficiencyEnumerationContract;
+use \Spatie\SchemaOrg\Contracts\EnergyEfficiencyEnumerationContract;
+use \Spatie\SchemaOrg\Contracts\EnumerationContract;
+use \Spatie\SchemaOrg\Contracts\IntangibleContract;
+use \Spatie\SchemaOrg\Contracts\ThingContract;
 
 /**
  * Enumerates the EU energy efficiency classes A-G as well as A+, A++, and A+++
@@ -28,7 +28,7 @@ class EUEnergyEfficiencyEnumeration extends BaseType implements EUEnergyEfficien
      * @see https://pending.schema.org
      * @link https://github.com/schemaorg/schemaorg/issues/2670
      */
-    public const EUEnergyEfficiencyCategoryA = 'https://schema.org/EUEnergyEfficiencyCategoryA';
+     const EUEnergyEfficiencyCategoryA = 'https://schema.org/EUEnergyEfficiencyCategoryA';
 
     /**
      * Represents EU Energy Efficiency Class A+ as defined in EU energy labeling
@@ -38,7 +38,7 @@ class EUEnergyEfficiencyEnumeration extends BaseType implements EUEnergyEfficien
      * @see https://pending.schema.org
      * @link https://github.com/schemaorg/schemaorg/issues/2670
      */
-    public const EUEnergyEfficiencyCategoryA1Plus = 'https://schema.org/EUEnergyEfficiencyCategoryA1Plus';
+     const EUEnergyEfficiencyCategoryA1Plus = 'https://schema.org/EUEnergyEfficiencyCategoryA1Plus';
 
     /**
      * Represents EU Energy Efficiency Class A++ as defined in EU energy
@@ -48,7 +48,7 @@ class EUEnergyEfficiencyEnumeration extends BaseType implements EUEnergyEfficien
      * @see https://pending.schema.org
      * @link https://github.com/schemaorg/schemaorg/issues/2670
      */
-    public const EUEnergyEfficiencyCategoryA2Plus = 'https://schema.org/EUEnergyEfficiencyCategoryA2Plus';
+     const EUEnergyEfficiencyCategoryA2Plus = 'https://schema.org/EUEnergyEfficiencyCategoryA2Plus';
 
     /**
      * Represents EU Energy Efficiency Class A+++ as defined in EU energy
@@ -58,7 +58,7 @@ class EUEnergyEfficiencyEnumeration extends BaseType implements EUEnergyEfficien
      * @see https://pending.schema.org
      * @link https://github.com/schemaorg/schemaorg/issues/2670
      */
-    public const EUEnergyEfficiencyCategoryA3Plus = 'https://schema.org/EUEnergyEfficiencyCategoryA3Plus';
+     const EUEnergyEfficiencyCategoryA3Plus = 'https://schema.org/EUEnergyEfficiencyCategoryA3Plus';
 
     /**
      * Represents EU Energy Efficiency Class B as defined in EU energy labeling
@@ -68,7 +68,7 @@ class EUEnergyEfficiencyEnumeration extends BaseType implements EUEnergyEfficien
      * @see https://pending.schema.org
      * @link https://github.com/schemaorg/schemaorg/issues/2670
      */
-    public const EUEnergyEfficiencyCategoryB = 'https://schema.org/EUEnergyEfficiencyCategoryB';
+     const EUEnergyEfficiencyCategoryB = 'https://schema.org/EUEnergyEfficiencyCategoryB';
 
     /**
      * Represents EU Energy Efficiency Class C as defined in EU energy labeling
@@ -78,7 +78,7 @@ class EUEnergyEfficiencyEnumeration extends BaseType implements EUEnergyEfficien
      * @see https://pending.schema.org
      * @link https://github.com/schemaorg/schemaorg/issues/2670
      */
-    public const EUEnergyEfficiencyCategoryC = 'https://schema.org/EUEnergyEfficiencyCategoryC';
+     const EUEnergyEfficiencyCategoryC = 'https://schema.org/EUEnergyEfficiencyCategoryC';
 
     /**
      * Represents EU Energy Efficiency Class D as defined in EU energy labeling
@@ -88,7 +88,7 @@ class EUEnergyEfficiencyEnumeration extends BaseType implements EUEnergyEfficien
      * @see https://pending.schema.org
      * @link https://github.com/schemaorg/schemaorg/issues/2670
      */
-    public const EUEnergyEfficiencyCategoryD = 'https://schema.org/EUEnergyEfficiencyCategoryD';
+     const EUEnergyEfficiencyCategoryD = 'https://schema.org/EUEnergyEfficiencyCategoryD';
 
     /**
      * Represents EU Energy Efficiency Class E as defined in EU energy labeling
@@ -98,7 +98,7 @@ class EUEnergyEfficiencyEnumeration extends BaseType implements EUEnergyEfficien
      * @see https://pending.schema.org
      * @link https://github.com/schemaorg/schemaorg/issues/2670
      */
-    public const EUEnergyEfficiencyCategoryE = 'https://schema.org/EUEnergyEfficiencyCategoryE';
+     const EUEnergyEfficiencyCategoryE = 'https://schema.org/EUEnergyEfficiencyCategoryE';
 
     /**
      * Represents EU Energy Efficiency Class F as defined in EU energy labeling
@@ -108,7 +108,7 @@ class EUEnergyEfficiencyEnumeration extends BaseType implements EUEnergyEfficien
      * @see https://pending.schema.org
      * @link https://github.com/schemaorg/schemaorg/issues/2670
      */
-    public const EUEnergyEfficiencyCategoryF = 'https://schema.org/EUEnergyEfficiencyCategoryF';
+     const EUEnergyEfficiencyCategoryF = 'https://schema.org/EUEnergyEfficiencyCategoryF';
 
     /**
      * Represents EU Energy Efficiency Class G as defined in EU energy labeling
@@ -118,7 +118,7 @@ class EUEnergyEfficiencyEnumeration extends BaseType implements EUEnergyEfficien
      * @see https://pending.schema.org
      * @link https://github.com/schemaorg/schemaorg/issues/2670
      */
-    public const EUEnergyEfficiencyCategoryG = 'https://schema.org/EUEnergyEfficiencyCategoryG';
+     const EUEnergyEfficiencyCategoryG = 'https://schema.org/EUEnergyEfficiencyCategoryG';
 
     /**
      * An additional type for the item, typically used for adding more specific
@@ -310,4 +310,5 @@ class EUEnergyEfficiencyEnumeration extends BaseType implements EUEnergyEfficien
     {
         return $this->setProperty('url', $url);
     }
+
 }

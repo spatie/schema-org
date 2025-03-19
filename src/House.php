@@ -2,10 +2,10 @@
 
 namespace Spatie\SchemaOrg;
 
-use Spatie\SchemaOrg\Contracts\AccommodationContract;
-use Spatie\SchemaOrg\Contracts\HouseContract;
-use Spatie\SchemaOrg\Contracts\PlaceContract;
-use Spatie\SchemaOrg\Contracts\ThingContract;
+use \Spatie\SchemaOrg\Contracts\HouseContract;
+use \Spatie\SchemaOrg\Contracts\AccommodationContract;
+use \Spatie\SchemaOrg\Contracts\PlaceContract;
+use \Spatie\SchemaOrg\Contracts\ThingContract;
 
 /**
  * A house is a building or structure that has the ability to be occupied for
@@ -59,7 +59,7 @@ class House extends BaseType implements HouseContract, AccommodationContract, Pl
      * A property-value pair representing an additional characteristic of the
      * entity, e.g. a product feature or another characteristic for which there
      * is no matching property in schema.org.
-     *
+     * 
      * Note: Publishers should be aware that applications designed to use
      * specific schema.org properties (e.g. https://schema.org/width,
      * https://schema.org/color, https://schema.org/gtin13, ...) will typically
@@ -182,7 +182,7 @@ class House extends BaseType implements HouseContract, AccommodationContract, Pl
      * A short textual code (also called "store code") that uniquely identifies
      * a place of business. The code is typically assigned by the
      * parentOrganization and used in structured URLs.
-     *
+     * 
      * For example, in the URL
      * http://www.starbucks.co.uk/store-locator/etc/detail/3047 the code "3047"
      * is a branchCode for a particular branch.
@@ -1129,7 +1129,7 @@ class House extends BaseType implements HouseContract, AccommodationContract, Pl
 
     /**
      * The special opening hours of a certain place.
-     *
+     * 
      * Use this to explicitly override general opening hours brought in scope by
      * [[openingHoursSpecification]] or [[openingHours]].
      *
@@ -1222,4 +1222,5 @@ class House extends BaseType implements HouseContract, AccommodationContract, Pl
     {
         return $this->setProperty('yearBuilt', $yearBuilt);
     }
+
 }

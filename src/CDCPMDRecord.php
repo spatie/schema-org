@@ -2,10 +2,10 @@
 
 namespace Spatie\SchemaOrg;
 
-use Spatie\SchemaOrg\Contracts\CDCPMDRecordContract;
-use Spatie\SchemaOrg\Contracts\IntangibleContract;
-use Spatie\SchemaOrg\Contracts\StructuredValueContract;
-use Spatie\SchemaOrg\Contracts\ThingContract;
+use \Spatie\SchemaOrg\Contracts\CDCPMDRecordContract;
+use \Spatie\SchemaOrg\Contracts\IntangibleContract;
+use \Spatie\SchemaOrg\Contracts\StructuredValueContract;
+use \Spatie\SchemaOrg\Contracts\ThingContract;
 
 /**
  * A CDCPMDRecord is a data structure representing a record in a CDC tabular
@@ -503,4 +503,5 @@ class CDCPMDRecord extends BaseType implements CDCPMDRecordContract, IntangibleC
     {
         return $this->setProperty('url', $url);
     }
+
 }

@@ -27,4 +27,5 @@ interface WarrantyScopeContract
     public function subjectOf($subjectOf);
 
     public function url($url);
+
 }

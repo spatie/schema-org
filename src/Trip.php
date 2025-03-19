@@ -2,9 +2,9 @@
 
 namespace Spatie\SchemaOrg;
 
-use Spatie\SchemaOrg\Contracts\IntangibleContract;
-use Spatie\SchemaOrg\Contracts\ThingContract;
-use Spatie\SchemaOrg\Contracts\TripContract;
+use \Spatie\SchemaOrg\Contracts\TripContract;
+use \Spatie\SchemaOrg\Contracts\IntangibleContract;
+use \Spatie\SchemaOrg\Contracts\ThingContract;
 
 /**
  * A trip or journey. An itinerary of visits to one or more places.
@@ -337,4 +337,5 @@ class Trip extends BaseType implements TripContract, IntangibleContract, ThingCo
     {
         return $this->setProperty('url', $url);
     }
+
 }

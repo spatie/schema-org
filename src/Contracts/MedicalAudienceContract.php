@@ -49,4 +49,5 @@ interface MedicalAudienceContract
     public function suggestedMinAge($suggestedMinAge);
 
     public function url($url);
+
 }

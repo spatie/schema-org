@@ -53,4 +53,5 @@ interface LikeActionContract
     public function target($target);
 
     public function url($url);
+
 }

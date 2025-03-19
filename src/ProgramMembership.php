@@ -2,9 +2,9 @@
 
 namespace Spatie\SchemaOrg;
 
-use Spatie\SchemaOrg\Contracts\IntangibleContract;
-use Spatie\SchemaOrg\Contracts\ProgramMembershipContract;
-use Spatie\SchemaOrg\Contracts\ThingContract;
+use \Spatie\SchemaOrg\Contracts\ProgramMembershipContract;
+use \Spatie\SchemaOrg\Contracts\IntangibleContract;
+use \Spatie\SchemaOrg\Contracts\ThingContract;
 
 /**
  * Used to describe membership in a loyalty programs (e.g. "StarAliance"),
@@ -312,4 +312,5 @@ class ProgramMembership extends BaseType implements ProgramMembershipContract, I
     {
         return $this->setProperty('url', $url);
     }
+
 }

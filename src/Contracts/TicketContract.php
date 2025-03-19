@@ -43,4 +43,5 @@ interface TicketContract
     public function underName($underName);
 
     public function url($url);
+
 }

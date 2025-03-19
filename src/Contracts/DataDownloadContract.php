@@ -295,4 +295,5 @@ interface DataDownloadContract
     public function workExample($workExample);
 
     public function workTranslation($workTranslation);
+
 }

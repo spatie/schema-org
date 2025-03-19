@@ -2,11 +2,11 @@
 
 namespace Spatie\SchemaOrg;
 
-use Spatie\SchemaOrg\Contracts\DoseScheduleContract;
-use Spatie\SchemaOrg\Contracts\MedicalEntityContract;
-use Spatie\SchemaOrg\Contracts\MedicalIntangibleContract;
-use Spatie\SchemaOrg\Contracts\RecommendedDoseScheduleContract;
-use Spatie\SchemaOrg\Contracts\ThingContract;
+use \Spatie\SchemaOrg\Contracts\RecommendedDoseScheduleContract;
+use \Spatie\SchemaOrg\Contracts\DoseScheduleContract;
+use \Spatie\SchemaOrg\Contracts\MedicalEntityContract;
+use \Spatie\SchemaOrg\Contracts\MedicalIntangibleContract;
+use \Spatie\SchemaOrg\Contracts\ThingContract;
 
 /**
  * A recommended dosing schedule for a drug or supplement as prescribed or
@@ -397,4 +397,5 @@ class RecommendedDoseSchedule extends BaseType implements RecommendedDoseSchedul
     {
         return $this->setProperty('url', $url);
     }
+
 }

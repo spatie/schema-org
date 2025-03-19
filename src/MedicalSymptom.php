@@ -2,11 +2,11 @@
 
 namespace Spatie\SchemaOrg;
 
-use Spatie\SchemaOrg\Contracts\MedicalConditionContract;
-use Spatie\SchemaOrg\Contracts\MedicalEntityContract;
-use Spatie\SchemaOrg\Contracts\MedicalSignOrSymptomContract;
-use Spatie\SchemaOrg\Contracts\MedicalSymptomContract;
-use Spatie\SchemaOrg\Contracts\ThingContract;
+use \Spatie\SchemaOrg\Contracts\MedicalSymptomContract;
+use \Spatie\SchemaOrg\Contracts\MedicalConditionContract;
+use \Spatie\SchemaOrg\Contracts\MedicalEntityContract;
+use \Spatie\SchemaOrg\Contracts\MedicalSignOrSymptomContract;
+use \Spatie\SchemaOrg\Contracts\ThingContract;
 
 /**
  * Any complaint sensed and expressed by the patient (therefore defined as
@@ -591,4 +591,5 @@ class MedicalSymptom extends BaseType implements MedicalSymptomContract, Medical
     {
         return $this->setProperty('url', $url);
     }
+
 }

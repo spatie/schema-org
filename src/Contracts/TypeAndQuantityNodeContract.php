@@ -37,4 +37,5 @@ interface TypeAndQuantityNodeContract
     public function unitText($unitText);
 
     public function url($url);
+
 }

@@ -2,8 +2,8 @@
 
 namespace Spatie\SchemaOrg;
 
-use Spatie\SchemaOrg\Contracts\BioChemEntityContract;
-use Spatie\SchemaOrg\Contracts\ThingContract;
+use \Spatie\SchemaOrg\Contracts\BioChemEntityContract;
+use \Spatie\SchemaOrg\Contracts\ThingContract;
 
 /**
  * Any biological, chemical, or biochemical thing. For example: a protein; a
@@ -425,4 +425,5 @@ class BioChemEntity extends BaseType implements BioChemEntityContract, ThingCont
     {
         return $this->setProperty('url', $url);
     }
+
 }

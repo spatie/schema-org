@@ -51,4 +51,5 @@ interface BusTripContract
     public function tripOrigin($tripOrigin);
 
     public function url($url);
+
 }

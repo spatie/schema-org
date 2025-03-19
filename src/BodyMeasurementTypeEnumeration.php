@@ -2,11 +2,11 @@
 
 namespace Spatie\SchemaOrg;
 
-use Spatie\SchemaOrg\Contracts\BodyMeasurementTypeEnumerationContract;
-use Spatie\SchemaOrg\Contracts\EnumerationContract;
-use Spatie\SchemaOrg\Contracts\IntangibleContract;
-use Spatie\SchemaOrg\Contracts\MeasurementTypeEnumerationContract;
-use Spatie\SchemaOrg\Contracts\ThingContract;
+use \Spatie\SchemaOrg\Contracts\BodyMeasurementTypeEnumerationContract;
+use \Spatie\SchemaOrg\Contracts\EnumerationContract;
+use \Spatie\SchemaOrg\Contracts\IntangibleContract;
+use \Spatie\SchemaOrg\Contracts\MeasurementTypeEnumerationContract;
+use \Spatie\SchemaOrg\Contracts\ThingContract;
 
 /**
  * Enumerates types (or dimensions) of a person's body measurements, for example
@@ -28,7 +28,7 @@ class BodyMeasurementTypeEnumeration extends BaseType implements BodyMeasurement
      * @see https://pending.schema.org
      * @link https://github.com/schemaorg/schemaorg/issues/2811
      */
-    public const BodyMeasurementArm = 'https://schema.org/BodyMeasurementArm';
+     const BodyMeasurementArm = 'https://schema.org/BodyMeasurementArm';
 
     /**
      * Maximum girth of bust. Used, for example, to fit women's suits.
@@ -37,7 +37,7 @@ class BodyMeasurementTypeEnumeration extends BaseType implements BodyMeasurement
      * @see https://pending.schema.org
      * @link https://github.com/schemaorg/schemaorg/issues/2811
      */
-    public const BodyMeasurementBust = 'https://schema.org/BodyMeasurementBust';
+     const BodyMeasurementBust = 'https://schema.org/BodyMeasurementBust';
 
     /**
      * Maximum girth of chest. Used, for example, to fit men's suits.
@@ -46,7 +46,7 @@ class BodyMeasurementTypeEnumeration extends BaseType implements BodyMeasurement
      * @see https://pending.schema.org
      * @link https://github.com/schemaorg/schemaorg/issues/2811
      */
-    public const BodyMeasurementChest = 'https://schema.org/BodyMeasurementChest';
+     const BodyMeasurementChest = 'https://schema.org/BodyMeasurementChest';
 
     /**
      * Foot length (measured between end of the most prominent toe and the most
@@ -56,7 +56,7 @@ class BodyMeasurementTypeEnumeration extends BaseType implements BodyMeasurement
      * @see https://pending.schema.org
      * @link https://github.com/schemaorg/schemaorg/issues/2811
      */
-    public const BodyMeasurementFoot = 'https://schema.org/BodyMeasurementFoot';
+     const BodyMeasurementFoot = 'https://schema.org/BodyMeasurementFoot';
 
     /**
      * Maximum hand girth (measured over the knuckles of the open right hand
@@ -66,7 +66,7 @@ class BodyMeasurementTypeEnumeration extends BaseType implements BodyMeasurement
      * @see https://pending.schema.org
      * @link https://github.com/schemaorg/schemaorg/issues/2811
      */
-    public const BodyMeasurementHand = 'https://schema.org/BodyMeasurementHand';
+     const BodyMeasurementHand = 'https://schema.org/BodyMeasurementHand';
 
     /**
      * Maximum girth of head above the ears. Used, for example, to fit hats.
@@ -75,7 +75,7 @@ class BodyMeasurementTypeEnumeration extends BaseType implements BodyMeasurement
      * @see https://pending.schema.org
      * @link https://github.com/schemaorg/schemaorg/issues/2811
      */
-    public const BodyMeasurementHead = 'https://schema.org/BodyMeasurementHead';
+     const BodyMeasurementHead = 'https://schema.org/BodyMeasurementHead';
 
     /**
      * Body height (measured between crown of head and soles of feet). Used, for
@@ -85,7 +85,7 @@ class BodyMeasurementTypeEnumeration extends BaseType implements BodyMeasurement
      * @see https://pending.schema.org
      * @link https://github.com/schemaorg/schemaorg/issues/2811
      */
-    public const BodyMeasurementHeight = 'https://schema.org/BodyMeasurementHeight';
+     const BodyMeasurementHeight = 'https://schema.org/BodyMeasurementHeight';
 
     /**
      * Girth of hips (measured around the buttocks). Used, for example, to fit
@@ -95,7 +95,7 @@ class BodyMeasurementTypeEnumeration extends BaseType implements BodyMeasurement
      * @see https://pending.schema.org
      * @link https://github.com/schemaorg/schemaorg/issues/2811
      */
-    public const BodyMeasurementHips = 'https://schema.org/BodyMeasurementHips';
+     const BodyMeasurementHips = 'https://schema.org/BodyMeasurementHips';
 
     /**
      * Inside leg (measured between crotch and soles of feet). Used, for
@@ -105,7 +105,7 @@ class BodyMeasurementTypeEnumeration extends BaseType implements BodyMeasurement
      * @see https://pending.schema.org
      * @link https://github.com/schemaorg/schemaorg/issues/2811
      */
-    public const BodyMeasurementInsideLeg = 'https://schema.org/BodyMeasurementInsideLeg';
+     const BodyMeasurementInsideLeg = 'https://schema.org/BodyMeasurementInsideLeg';
 
     /**
      * Girth of neck. Used, for example, to fit shirts.
@@ -114,7 +114,7 @@ class BodyMeasurementTypeEnumeration extends BaseType implements BodyMeasurement
      * @see https://pending.schema.org
      * @link https://github.com/schemaorg/schemaorg/issues/2811
      */
-    public const BodyMeasurementNeck = 'https://schema.org/BodyMeasurementNeck';
+     const BodyMeasurementNeck = 'https://schema.org/BodyMeasurementNeck';
 
     /**
      * Girth of body just below the bust. Used, for example, to fit women's
@@ -124,7 +124,7 @@ class BodyMeasurementTypeEnumeration extends BaseType implements BodyMeasurement
      * @see https://pending.schema.org
      * @link https://github.com/schemaorg/schemaorg/issues/2811
      */
-    public const BodyMeasurementUnderbust = 'https://schema.org/BodyMeasurementUnderbust';
+     const BodyMeasurementUnderbust = 'https://schema.org/BodyMeasurementUnderbust';
 
     /**
      * Girth of natural waistline (between hip bones and lower ribs). Used, for
@@ -134,7 +134,7 @@ class BodyMeasurementTypeEnumeration extends BaseType implements BodyMeasurement
      * @see https://pending.schema.org
      * @link https://github.com/schemaorg/schemaorg/issues/2811
      */
-    public const BodyMeasurementWaist = 'https://schema.org/BodyMeasurementWaist';
+     const BodyMeasurementWaist = 'https://schema.org/BodyMeasurementWaist';
 
     /**
      * Body weight. Used, for example, to measure pantyhose.
@@ -143,7 +143,7 @@ class BodyMeasurementTypeEnumeration extends BaseType implements BodyMeasurement
      * @see https://pending.schema.org
      * @link https://github.com/schemaorg/schemaorg/issues/2811
      */
-    public const BodyMeasurementWeight = 'https://schema.org/BodyMeasurementWeight';
+     const BodyMeasurementWeight = 'https://schema.org/BodyMeasurementWeight';
 
     /**
      * An additional type for the item, typically used for adding more specific
@@ -335,4 +335,5 @@ class BodyMeasurementTypeEnumeration extends BaseType implements BodyMeasurement
     {
         return $this->setProperty('url', $url);
     }
+
 }

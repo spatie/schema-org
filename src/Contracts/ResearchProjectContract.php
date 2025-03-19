@@ -160,6 +160,8 @@ interface ResearchProjectContract
 
     public function sponsor($sponsor);
 
+    public function status($status);
+
     public function subOrganization($subOrganization);
 
     public function subjectOf($subjectOf);
@@ -173,4 +175,5 @@ interface ResearchProjectContract
     public function url($url);
 
     public function vatID($vatID);
+
 }

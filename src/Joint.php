@@ -2,10 +2,10 @@
 
 namespace Spatie\SchemaOrg;
 
-use Spatie\SchemaOrg\Contracts\AnatomicalStructureContract;
-use Spatie\SchemaOrg\Contracts\JointContract;
-use Spatie\SchemaOrg\Contracts\MedicalEntityContract;
-use Spatie\SchemaOrg\Contracts\ThingContract;
+use \Spatie\SchemaOrg\Contracts\JointContract;
+use \Spatie\SchemaOrg\Contracts\AnatomicalStructureContract;
+use \Spatie\SchemaOrg\Contracts\MedicalEntityContract;
+use \Spatie\SchemaOrg\Contracts\ThingContract;
 
 /**
  * The anatomical location at which two or more bones make contact.
@@ -500,4 +500,5 @@ class Joint extends BaseType implements JointContract, AnatomicalStructureContra
     {
         return $this->setProperty('url', $url);
     }
+
 }

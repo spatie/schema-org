@@ -2,20 +2,20 @@
 
 namespace Spatie\SchemaOrg;
 
-use Spatie\SchemaOrg\Contracts\ActionContract;
-use Spatie\SchemaOrg\Contracts\CheckInActionContract;
-use Spatie\SchemaOrg\Contracts\CommunicateActionContract;
-use Spatie\SchemaOrg\Contracts\InteractActionContract;
-use Spatie\SchemaOrg\Contracts\ThingContract;
+use \Spatie\SchemaOrg\Contracts\CheckInActionContract;
+use \Spatie\SchemaOrg\Contracts\ActionContract;
+use \Spatie\SchemaOrg\Contracts\CommunicateActionContract;
+use \Spatie\SchemaOrg\Contracts\InteractActionContract;
+use \Spatie\SchemaOrg\Contracts\ThingContract;
 
 /**
  * The act of an agent communicating (service provider, social media, etc) their
  * arrival by registering/confirming for a previously reserved service (e.g.
  * flight check-in) or at a place (e.g. hotel), possibly resulting in a result
  * (boarding pass, etc).
- *
+ * 
  * Related actions:
- *
+ * 
  * * [[CheckOutAction]]: The antonym of CheckInAction.
  * * [[ArriveAction]]: Unlike ArriveAction, CheckInAction implies that the agent
  * is informing/confirming the start of a previously reserved service.
@@ -161,7 +161,7 @@ class CheckInAction extends BaseType implements CheckInActionContract, ActionCon
      * John wrote a book from January to *December*. For media, including audio
      * and video, it's the time offset of the end of a clip within a larger
      * file.
-     *
+     * 
      * Note that Event uses startDate/endDate instead of startTime/endTime, even
      * when describing dates with times. This situation may be clarified in
      * future revisions.
@@ -433,7 +433,7 @@ class CheckInAction extends BaseType implements CheckInActionContract, ActionCon
      * John wrote a book from *January* to December. For media, including audio
      * and video, it's the time offset of the start of a clip within a larger
      * file.
-     *
+     * 
      * Note that Event uses startDate/endDate instead of startTime/endTime, even
      * when describing dates with times. This situation may be clarified in
      * future revisions.
@@ -492,4 +492,5 @@ class CheckInAction extends BaseType implements CheckInActionContract, ActionCon
     {
         return $this->setProperty('url', $url);
     }
+
 }

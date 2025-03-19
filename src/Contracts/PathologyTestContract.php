@@ -55,4 +55,5 @@ interface PathologyTestContract
     public function usedToDiagnose($usedToDiagnose);
 
     public function usesDevice($usesDevice);
+
 }

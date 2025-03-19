@@ -661,6 +661,7 @@ use Spatie\SchemaOrg\Exceptions\TypeNotInMultiTypedEntity;
  * @method self|ProfessionalService professionalService(\Closure|null $callback = null)
  * @method self|ProfilePage profilePage(\Closure|null $callback = null)
  * @method self|ProgramMembership programMembership(\Closure|null $callback = null)
+ * @method self|ProgressStatus progressStatus(\Closure|null $callback = null)
  * @method self|Project project(\Closure|null $callback = null)
  * @method self|PronounceableText pronounceableText(\Closure|null $callback = null)
  * @method self|Property property(\Closure|null $callback = null)
@@ -1030,10 +1031,10 @@ class MultiTypedEntity implements Type, JsonSerializable
         $properties = [];
         $types = [];
 
-        foreach ($this->nodes as $node) {
+        foreach($this->nodes as $node) {
             $temp = $this->serializeNode($node);
 
-            if (isset($temp['@type'])) {
+            if(isset($temp['@type'])) {
                 array_push($types, $temp['@type']);
                 unset($temp['@type']);
             }

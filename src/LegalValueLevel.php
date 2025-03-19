@@ -2,10 +2,10 @@
 
 namespace Spatie\SchemaOrg;
 
-use Spatie\SchemaOrg\Contracts\EnumerationContract;
-use Spatie\SchemaOrg\Contracts\IntangibleContract;
-use Spatie\SchemaOrg\Contracts\LegalValueLevelContract;
-use Spatie\SchemaOrg\Contracts\ThingContract;
+use \Spatie\SchemaOrg\Contracts\LegalValueLevelContract;
+use \Spatie\SchemaOrg\Contracts\EnumerationContract;
+use \Spatie\SchemaOrg\Contracts\IntangibleContract;
+use \Spatie\SchemaOrg\Contracts\ThingContract;
 
 /**
  * A list of possible levels for the legal validity of a legislation.
@@ -29,7 +29,7 @@ class LegalValueLevel extends BaseType implements LegalValueLevelContract, Enume
      * @see https://pending.schema.org
      * @link https://github.com/schemaorg/schemaorg/issues/1156
      */
-    public const AuthoritativeLegalValue = 'https://schema.org/AuthoritativeLegalValue';
+     const AuthoritativeLegalValue = 'https://schema.org/AuthoritativeLegalValue';
 
     /**
      * Indicates a document for which the text is conclusively what the law says
@@ -42,7 +42,7 @@ class LegalValueLevel extends BaseType implements LegalValueLevelContract, Enume
      * @see https://pending.schema.org
      * @link https://github.com/schemaorg/schemaorg/issues/1156
      */
-    public const DefinitiveLegalValue = 'https://schema.org/DefinitiveLegalValue';
+     const DefinitiveLegalValue = 'https://schema.org/DefinitiveLegalValue';
 
     /**
      * All the documents published by an official publisher should have at least
@@ -55,7 +55,7 @@ class LegalValueLevel extends BaseType implements LegalValueLevelContract, Enume
      * @see https://pending.schema.org
      * @link https://github.com/schemaorg/schemaorg/issues/1156
      */
-    public const OfficialLegalValue = 'https://schema.org/OfficialLegalValue';
+     const OfficialLegalValue = 'https://schema.org/OfficialLegalValue';
 
     /**
      * Indicates that a document has no particular or special standing (e.g. a
@@ -65,7 +65,7 @@ class LegalValueLevel extends BaseType implements LegalValueLevelContract, Enume
      * @see https://pending.schema.org
      * @link https://github.com/schemaorg/schemaorg/issues/1156
      */
-    public const UnofficialLegalValue = 'https://schema.org/UnofficialLegalValue';
+     const UnofficialLegalValue = 'https://schema.org/UnofficialLegalValue';
 
     /**
      * An additional type for the item, typically used for adding more specific
@@ -257,4 +257,5 @@ class LegalValueLevel extends BaseType implements LegalValueLevelContract, Enume
     {
         return $this->setProperty('url', $url);
     }
+
 }

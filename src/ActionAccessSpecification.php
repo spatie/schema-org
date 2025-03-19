@@ -2,9 +2,9 @@
 
 namespace Spatie\SchemaOrg;
 
-use Spatie\SchemaOrg\Contracts\ActionAccessSpecificationContract;
-use Spatie\SchemaOrg\Contracts\IntangibleContract;
-use Spatie\SchemaOrg\Contracts\ThingContract;
+use \Spatie\SchemaOrg\Contracts\ActionAccessSpecificationContract;
+use \Spatie\SchemaOrg\Contracts\IntangibleContract;
+use \Spatie\SchemaOrg\Contracts\ThingContract;
 
 /**
  * A set of requirements that must be fulfilled in order to perform an Action.
@@ -134,7 +134,7 @@ class ActionAccessSpecification extends BaseType implements ActionAccessSpecific
      * The ISO 3166-1 (ISO 3166-1 alpha-2) or ISO 3166-2 code, the place, or the
      * GeoShape for the geo-political region(s) for which the offer or delivery
      * charge specification is valid.
-     *
+     * 
      * See also [[ineligibleRegion]].
      *
      * @param \Spatie\SchemaOrg\Contracts\GeoShapeContract|\Spatie\SchemaOrg\Contracts\GeoShapeContract[]|\Spatie\SchemaOrg\Contracts\PlaceContract|\Spatie\SchemaOrg\Contracts\PlaceContract[]|string|string[] $eligibleRegion
@@ -204,7 +204,7 @@ class ActionAccessSpecification extends BaseType implements ActionAccessSpecific
      * GeoShape for the geo-political region(s) for which the offer or delivery
      * charge specification is not valid, e.g. a region where the transaction is
      * not allowed.
-     *
+     * 
      * See also [[eligibleRegion]].
      *
      * @param \Spatie\SchemaOrg\Contracts\GeoShapeContract|\Spatie\SchemaOrg\Contracts\GeoShapeContract[]|\Spatie\SchemaOrg\Contracts\PlaceContract|\Spatie\SchemaOrg\Contracts\PlaceContract[]|string|string[] $ineligibleRegion
@@ -326,4 +326,5 @@ class ActionAccessSpecification extends BaseType implements ActionAccessSpecific
     {
         return $this->setProperty('url', $url);
     }
+
 }

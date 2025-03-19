@@ -2,9 +2,9 @@
 
 namespace Spatie\SchemaOrg;
 
-use Spatie\SchemaOrg\Contracts\IntangibleContract;
-use Spatie\SchemaOrg\Contracts\ParcelDeliveryContract;
-use Spatie\SchemaOrg\Contracts\ThingContract;
+use \Spatie\SchemaOrg\Contracts\ParcelDeliveryContract;
+use \Spatie\SchemaOrg\Contracts\IntangibleContract;
+use \Spatie\SchemaOrg\Contracts\ThingContract;
 
 /**
  * The delivery of a parcel either via the postal service or a commercial
@@ -378,4 +378,5 @@ class ParcelDelivery extends BaseType implements ParcelDeliveryContract, Intangi
     {
         return $this->setProperty('url', $url);
     }
+
 }

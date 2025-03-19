@@ -2,10 +2,10 @@
 
 namespace Spatie\SchemaOrg;
 
-use Spatie\SchemaOrg\Contracts\OrganizationContract;
-use Spatie\SchemaOrg\Contracts\ProjectContract;
-use Spatie\SchemaOrg\Contracts\ResearchProjectContract;
-use Spatie\SchemaOrg\Contracts\ThingContract;
+use \Spatie\SchemaOrg\Contracts\ResearchProjectContract;
+use \Spatie\SchemaOrg\Contracts\OrganizationContract;
+use \Spatie\SchemaOrg\Contracts\ProjectContract;
+use \Spatie\SchemaOrg\Contracts\ThingContract;
 
 /**
  * A Research project.
@@ -1131,7 +1131,7 @@ class ResearchProject extends BaseType implements ResearchProjectContract, Organ
      * applied to a [[CreativeWork]] (e.g. [[NewsArticle]]) the principles are
      * those of the party primarily responsible for the creation of the
      * [[CreativeWork]].
-     *
+     * 
      * While such policies are most typically expressed in natural language,
      * sometimes related information (e.g. indicating a [[funder]]) can be
      * expressed using schema.org terminology.
@@ -1268,6 +1268,20 @@ class ResearchProject extends BaseType implements ResearchProjectContract, Organ
     }
 
     /**
+     * The project status.
+     *
+     * @param \Spatie\SchemaOrg\Contracts\ProgressStatusContract|\Spatie\SchemaOrg\Contracts\ProgressStatusContract[] $status
+     *
+     * @return static
+     *
+     * @see municipio:status
+     */
+    public function status($status)
+    {
+        return $this->setProperty('status', $status);
+    }
+
+    /**
      * A relationship between two organizations where the first includes the
      * second, e.g., as a subsidiary. See also: the more specific 'department'
      * property.
@@ -1372,4 +1386,5 @@ class ResearchProject extends BaseType implements ResearchProjectContract, Organ
     {
         return $this->setProperty('vatID', $vatID);
     }
+
 }

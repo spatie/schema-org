@@ -2,9 +2,9 @@
 
 namespace Spatie\SchemaOrg;
 
-use Spatie\SchemaOrg\Contracts\GeospatialGeometryContract;
-use Spatie\SchemaOrg\Contracts\IntangibleContract;
-use Spatie\SchemaOrg\Contracts\ThingContract;
+use \Spatie\SchemaOrg\Contracts\GeospatialGeometryContract;
+use \Spatie\SchemaOrg\Contracts\IntangibleContract;
+use \Spatie\SchemaOrg\Contracts\ThingContract;
 
 /**
  * (Eventually to be defined as) a supertype of GeoShape designed to accommodate
@@ -379,4 +379,5 @@ class GeospatialGeometry extends BaseType implements GeospatialGeometryContract,
     {
         return $this->setProperty('url', $url);
     }
+
 }

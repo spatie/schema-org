@@ -2,10 +2,10 @@
 
 namespace Spatie\SchemaOrg;
 
-use Spatie\SchemaOrg\Contracts\EnumerationContract;
-use Spatie\SchemaOrg\Contracts\IntangibleContract;
-use Spatie\SchemaOrg\Contracts\MediaEnumerationContract;
-use Spatie\SchemaOrg\Contracts\ThingContract;
+use \Spatie\SchemaOrg\Contracts\MediaEnumerationContract;
+use \Spatie\SchemaOrg\Contracts\EnumerationContract;
+use \Spatie\SchemaOrg\Contracts\IntangibleContract;
+use \Spatie\SchemaOrg\Contracts\ThingContract;
 
 /**
  * MediaEnumeration enumerations are lists of codes, labels etc. useful for
@@ -210,4 +210,5 @@ class MediaEnumeration extends BaseType implements MediaEnumerationContract, Enu
     {
         return $this->setProperty('url', $url);
     }
+
 }

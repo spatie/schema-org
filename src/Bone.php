@@ -2,10 +2,10 @@
 
 namespace Spatie\SchemaOrg;
 
-use Spatie\SchemaOrg\Contracts\AnatomicalStructureContract;
-use Spatie\SchemaOrg\Contracts\BoneContract;
-use Spatie\SchemaOrg\Contracts\MedicalEntityContract;
-use Spatie\SchemaOrg\Contracts\ThingContract;
+use \Spatie\SchemaOrg\Contracts\BoneContract;
+use \Spatie\SchemaOrg\Contracts\AnatomicalStructureContract;
+use \Spatie\SchemaOrg\Contracts\MedicalEntityContract;
+use \Spatie\SchemaOrg\Contracts\ThingContract;
 
 /**
  * Rigid connective tissue that comprises up the skeletal structure of the human
@@ -456,4 +456,5 @@ class Bone extends BaseType implements BoneContract, AnatomicalStructureContract
     {
         return $this->setProperty('url', $url);
     }
+
 }

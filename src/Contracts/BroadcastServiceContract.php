@@ -99,4 +99,5 @@ interface BroadcastServiceContract
     public function url($url);
 
     public function videoFormat($videoFormat);
+
 }

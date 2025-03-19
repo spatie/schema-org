@@ -31,4 +31,5 @@ interface BedDetailsContract
     public function typeOfBed($typeOfBed);
 
     public function url($url);
+
 }

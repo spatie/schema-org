@@ -2,12 +2,12 @@
 
 namespace Spatie\SchemaOrg;
 
-use Spatie\SchemaOrg\Contracts\FinancialProductContract;
-use Spatie\SchemaOrg\Contracts\IntangibleContract;
-use Spatie\SchemaOrg\Contracts\PaymentCardContract;
-use Spatie\SchemaOrg\Contracts\PaymentMethodContract;
-use Spatie\SchemaOrg\Contracts\ServiceContract;
-use Spatie\SchemaOrg\Contracts\ThingContract;
+use \Spatie\SchemaOrg\Contracts\PaymentCardContract;
+use \Spatie\SchemaOrg\Contracts\FinancialProductContract;
+use \Spatie\SchemaOrg\Contracts\IntangibleContract;
+use \Spatie\SchemaOrg\Contracts\PaymentMethodContract;
+use \Spatie\SchemaOrg\Contracts\ServiceContract;
+use \Spatie\SchemaOrg\Contracts\ThingContract;
 
 /**
  * A payment method using a credit, debit, store or other card to associate the
@@ -716,4 +716,5 @@ class PaymentCard extends BaseType implements PaymentCardContract, FinancialProd
     {
         return $this->setProperty('url', $url);
     }
+
 }

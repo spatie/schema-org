@@ -2,10 +2,10 @@
 
 namespace Spatie\SchemaOrg;
 
-use Spatie\SchemaOrg\Contracts\MedicalEntityContract;
-use Spatie\SchemaOrg\Contracts\MedicalRiskEstimatorContract;
-use Spatie\SchemaOrg\Contracts\MedicalRiskScoreContract;
-use Spatie\SchemaOrg\Contracts\ThingContract;
+use \Spatie\SchemaOrg\Contracts\MedicalRiskScoreContract;
+use \Spatie\SchemaOrg\Contracts\MedicalEntityContract;
+use \Spatie\SchemaOrg\Contracts\MedicalRiskEstimatorContract;
+use \Spatie\SchemaOrg\Contracts\ThingContract;
 
 /**
  * A simple system that adds up the number of risk factors to yield a score that
@@ -379,4 +379,5 @@ class MedicalRiskScore extends BaseType implements MedicalRiskScoreContract, Med
     {
         return $this->setProperty('url', $url);
     }
+
 }

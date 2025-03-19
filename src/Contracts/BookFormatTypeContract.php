@@ -27,4 +27,5 @@ interface BookFormatTypeContract
     public function subjectOf($subjectOf);
 
     public function url($url);
+
 }

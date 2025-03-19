@@ -2,17 +2,17 @@
 
 namespace Spatie\SchemaOrg;
 
-use Spatie\SchemaOrg\Contracts\ActionContract;
-use Spatie\SchemaOrg\Contracts\AskActionContract;
-use Spatie\SchemaOrg\Contracts\CommunicateActionContract;
-use Spatie\SchemaOrg\Contracts\InteractActionContract;
-use Spatie\SchemaOrg\Contracts\ThingContract;
+use \Spatie\SchemaOrg\Contracts\AskActionContract;
+use \Spatie\SchemaOrg\Contracts\ActionContract;
+use \Spatie\SchemaOrg\Contracts\CommunicateActionContract;
+use \Spatie\SchemaOrg\Contracts\InteractActionContract;
+use \Spatie\SchemaOrg\Contracts\ThingContract;
 
 /**
  * The act of posing a question / favor to someone.
- *
+ * 
  * Related actions:
- *
+ * 
  * * [[ReplyAction]]: Appears generally as a response to AskAction.
  *
  * @see https://schema.org/AskAction
@@ -153,7 +153,7 @@ class AskAction extends BaseType implements AskActionContract, ActionContract, C
      * John wrote a book from January to *December*. For media, including audio
      * and video, it's the time offset of the end of a clip within a larger
      * file.
-     *
+     * 
      * Note that Event uses startDate/endDate instead of startTime/endTime, even
      * when describing dates with times. This situation may be clarified in
      * future revisions.
@@ -439,7 +439,7 @@ class AskAction extends BaseType implements AskActionContract, ActionContract, C
      * John wrote a book from *January* to December. For media, including audio
      * and video, it's the time offset of the start of a clip within a larger
      * file.
-     *
+     * 
      * Note that Event uses startDate/endDate instead of startTime/endTime, even
      * when describing dates with times. This situation may be clarified in
      * future revisions.
@@ -498,4 +498,5 @@ class AskAction extends BaseType implements AskActionContract, ActionContract, C
     {
         return $this->setProperty('url', $url);
     }
+
 }

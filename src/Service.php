@@ -2,9 +2,9 @@
 
 namespace Spatie\SchemaOrg;
 
-use Spatie\SchemaOrg\Contracts\IntangibleContract;
-use Spatie\SchemaOrg\Contracts\ServiceContract;
-use Spatie\SchemaOrg\Contracts\ThingContract;
+use \Spatie\SchemaOrg\Contracts\ServiceContract;
+use \Spatie\SchemaOrg\Contracts\IntangibleContract;
+use \Spatie\SchemaOrg\Contracts\ThingContract;
 
 /**
  * A service provided by an organization, e.g. delivery service, print services,
@@ -582,4 +582,5 @@ class Service extends BaseType implements ServiceContract, IntangibleContract, T
     {
         return $this->setProperty('url', $url);
     }
+
 }

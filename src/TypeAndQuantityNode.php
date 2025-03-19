@@ -2,10 +2,10 @@
 
 namespace Spatie\SchemaOrg;
 
-use Spatie\SchemaOrg\Contracts\IntangibleContract;
-use Spatie\SchemaOrg\Contracts\StructuredValueContract;
-use Spatie\SchemaOrg\Contracts\ThingContract;
-use Spatie\SchemaOrg\Contracts\TypeAndQuantityNodeContract;
+use \Spatie\SchemaOrg\Contracts\TypeAndQuantityNodeContract;
+use \Spatie\SchemaOrg\Contracts\IntangibleContract;
+use \Spatie\SchemaOrg\Contracts\StructuredValueContract;
+use \Spatie\SchemaOrg\Contracts\ThingContract;
 
 /**
  * A structured value indicating the quantity, unit of measurement, and business
@@ -282,4 +282,5 @@ class TypeAndQuantityNode extends BaseType implements TypeAndQuantityNodeContrac
     {
         return $this->setProperty('url', $url);
     }
+
 }

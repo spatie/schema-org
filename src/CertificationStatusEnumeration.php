@@ -2,10 +2,10 @@
 
 namespace Spatie\SchemaOrg;
 
-use Spatie\SchemaOrg\Contracts\CertificationStatusEnumerationContract;
-use Spatie\SchemaOrg\Contracts\EnumerationContract;
-use Spatie\SchemaOrg\Contracts\IntangibleContract;
-use Spatie\SchemaOrg\Contracts\ThingContract;
+use \Spatie\SchemaOrg\Contracts\CertificationStatusEnumerationContract;
+use \Spatie\SchemaOrg\Contracts\EnumerationContract;
+use \Spatie\SchemaOrg\Contracts\IntangibleContract;
+use \Spatie\SchemaOrg\Contracts\ThingContract;
 
 /**
  * Enumerates the different statuses of a Certification (Active and Inactive).
@@ -25,7 +25,7 @@ class CertificationStatusEnumeration extends BaseType implements CertificationSt
      * @see https://pending.schema.org
      * @link https://github.com/schemaorg/schemaorg/issues/3230
      */
-    public const CertificationActive = 'https://schema.org/CertificationActive';
+     const CertificationActive = 'https://schema.org/CertificationActive';
 
     /**
      * Specifies that a certification is inactive (no longer in effect).
@@ -34,7 +34,7 @@ class CertificationStatusEnumeration extends BaseType implements CertificationSt
      * @see https://pending.schema.org
      * @link https://github.com/schemaorg/schemaorg/issues/3230
      */
-    public const CertificationInactive = 'https://schema.org/CertificationInactive';
+     const CertificationInactive = 'https://schema.org/CertificationInactive';
 
     /**
      * An additional type for the item, typically used for adding more specific
@@ -226,4 +226,5 @@ class CertificationStatusEnumeration extends BaseType implements CertificationSt
     {
         return $this->setProperty('url', $url);
     }
+
 }

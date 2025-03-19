@@ -2,16 +2,16 @@
 
 namespace Spatie\SchemaOrg;
 
-use Spatie\SchemaOrg\Contracts\ActionContract;
-use Spatie\SchemaOrg\Contracts\PlayActionContract;
-use Spatie\SchemaOrg\Contracts\ThingContract;
+use \Spatie\SchemaOrg\Contracts\PlayActionContract;
+use \Spatie\SchemaOrg\Contracts\ActionContract;
+use \Spatie\SchemaOrg\Contracts\ThingContract;
 
 /**
  * The act of playing/exercising/training/performing for enjoyment, leisure,
  * recreation, competition or exercise.
- *
+ * 
  * Related actions:
- *
+ * 
  * * [[ListenAction]]: Unlike ListenAction (which is under ConsumeAction),
  * PlayAction refers to performing for an audience or at an event, rather than
  * consuming music.
@@ -156,7 +156,7 @@ class PlayAction extends BaseType implements PlayActionContract, ActionContract,
      * John wrote a book from January to *December*. For media, including audio
      * and video, it's the time offset of the end of a clip within a larger
      * file.
-     *
+     * 
      * Note that Event uses startDate/endDate instead of startTime/endTime, even
      * when describing dates with times. This situation may be clarified in
      * future revisions.
@@ -396,7 +396,7 @@ class PlayAction extends BaseType implements PlayActionContract, ActionContract,
      * John wrote a book from *January* to December. For media, including audio
      * and video, it's the time offset of the start of a clip within a larger
      * file.
-     *
+     * 
      * Note that Event uses startDate/endDate instead of startTime/endTime, even
      * when describing dates with times. This situation may be clarified in
      * future revisions.
@@ -455,4 +455,5 @@ class PlayAction extends BaseType implements PlayActionContract, ActionContract,
     {
         return $this->setProperty('url', $url);
     }
+
 }

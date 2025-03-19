@@ -77,4 +77,5 @@ interface FoodServiceContract
     public function termsOfService($termsOfService);
 
     public function url($url);
+
 }

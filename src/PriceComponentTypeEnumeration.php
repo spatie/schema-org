@@ -2,10 +2,10 @@
 
 namespace Spatie\SchemaOrg;
 
-use Spatie\SchemaOrg\Contracts\EnumerationContract;
-use Spatie\SchemaOrg\Contracts\IntangibleContract;
-use Spatie\SchemaOrg\Contracts\PriceComponentTypeEnumerationContract;
-use Spatie\SchemaOrg\Contracts\ThingContract;
+use \Spatie\SchemaOrg\Contracts\PriceComponentTypeEnumerationContract;
+use \Spatie\SchemaOrg\Contracts\EnumerationContract;
+use \Spatie\SchemaOrg\Contracts\IntangibleContract;
+use \Spatie\SchemaOrg\Contracts\ThingContract;
 
 /**
  * Enumerates different price components that together make up the total price
@@ -27,7 +27,7 @@ class PriceComponentTypeEnumeration extends BaseType implements PriceComponentTy
      * @see https://pending.schema.org
      * @link https://github.com/schemaorg/schemaorg/issues/2689
      */
-    public const ActivationFee = 'https://schema.org/ActivationFee';
+     const ActivationFee = 'https://schema.org/ActivationFee';
 
     /**
      * Represents the cleaning fee part of the total price for an offered
@@ -37,7 +37,7 @@ class PriceComponentTypeEnumeration extends BaseType implements PriceComponentTy
      * @see https://pending.schema.org
      * @link https://github.com/schemaorg/schemaorg/issues/2689
      */
-    public const CleaningFee = 'https://schema.org/CleaningFee';
+     const CleaningFee = 'https://schema.org/CleaningFee';
 
     /**
      * Represents the distance fee (e.g., price per km or mile) part of the
@@ -47,7 +47,7 @@ class PriceComponentTypeEnumeration extends BaseType implements PriceComponentTy
      * @see https://pending.schema.org
      * @link https://github.com/schemaorg/schemaorg/issues/2689
      */
-    public const DistanceFee = 'https://schema.org/DistanceFee';
+     const DistanceFee = 'https://schema.org/DistanceFee';
 
     /**
      * Represents the downpayment (up-front payment) price component of the
@@ -58,7 +58,7 @@ class PriceComponentTypeEnumeration extends BaseType implements PriceComponentTy
      * @see https://pending.schema.org
      * @link https://github.com/schemaorg/schemaorg/issues/2689
      */
-    public const Downpayment = 'https://schema.org/Downpayment';
+     const Downpayment = 'https://schema.org/Downpayment';
 
     /**
      * Represents the installment pricing component of the total price for an
@@ -68,7 +68,7 @@ class PriceComponentTypeEnumeration extends BaseType implements PriceComponentTy
      * @see https://pending.schema.org
      * @link https://github.com/schemaorg/schemaorg/issues/2689
      */
-    public const Installment = 'https://schema.org/Installment';
+     const Installment = 'https://schema.org/Installment';
 
     /**
      * Represents the subscription pricing component of the total price for an
@@ -78,7 +78,7 @@ class PriceComponentTypeEnumeration extends BaseType implements PriceComponentTy
      * @see https://pending.schema.org
      * @link https://github.com/schemaorg/schemaorg/issues/2689
      */
-    public const Subscription = 'https://schema.org/Subscription';
+     const Subscription = 'https://schema.org/Subscription';
 
     /**
      * An additional type for the item, typically used for adding more specific
@@ -270,4 +270,5 @@ class PriceComponentTypeEnumeration extends BaseType implements PriceComponentTy
     {
         return $this->setProperty('url', $url);
     }
+
 }

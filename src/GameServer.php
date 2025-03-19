@@ -2,9 +2,9 @@
 
 namespace Spatie\SchemaOrg;
 
-use Spatie\SchemaOrg\Contracts\GameServerContract;
-use Spatie\SchemaOrg\Contracts\IntangibleContract;
-use Spatie\SchemaOrg\Contracts\ThingContract;
+use \Spatie\SchemaOrg\Contracts\GameServerContract;
+use \Spatie\SchemaOrg\Contracts\IntangibleContract;
+use \Spatie\SchemaOrg\Contracts\ThingContract;
 
 /**
  * Server that provides game interaction in a multiplayer game.
@@ -246,4 +246,5 @@ class GameServer extends BaseType implements GameServerContract, IntangibleContr
     {
         return $this->setProperty('url', $url);
     }
+
 }

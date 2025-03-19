@@ -2,10 +2,10 @@
 
 namespace Spatie\SchemaOrg;
 
-use Spatie\SchemaOrg\Contracts\ActionContract;
-use Spatie\SchemaOrg\Contracts\CheckActionContract;
-use Spatie\SchemaOrg\Contracts\FindActionContract;
-use Spatie\SchemaOrg\Contracts\ThingContract;
+use \Spatie\SchemaOrg\Contracts\CheckActionContract;
+use \Spatie\SchemaOrg\Contracts\ActionContract;
+use \Spatie\SchemaOrg\Contracts\FindActionContract;
+use \Spatie\SchemaOrg\Contracts\ThingContract;
 
 /**
  * An agent inspects, determines, investigates, inquires, or examines an
@@ -134,7 +134,7 @@ class CheckAction extends BaseType implements CheckActionContract, ActionContrac
      * John wrote a book from January to *December*. For media, including audio
      * and video, it's the time offset of the end of a clip within a larger
      * file.
-     *
+     * 
      * Note that Event uses startDate/endDate instead of startTime/endTime, even
      * when describing dates with times. This situation may be clarified in
      * future revisions.
@@ -359,7 +359,7 @@ class CheckAction extends BaseType implements CheckActionContract, ActionContrac
      * John wrote a book from *January* to December. For media, including audio
      * and video, it's the time offset of the start of a clip within a larger
      * file.
-     *
+     * 
      * Note that Event uses startDate/endDate instead of startTime/endTime, even
      * when describing dates with times. This situation may be clarified in
      * future revisions.
@@ -418,4 +418,5 @@ class CheckAction extends BaseType implements CheckActionContract, ActionContrac
     {
         return $this->setProperty('url', $url);
     }
+
 }

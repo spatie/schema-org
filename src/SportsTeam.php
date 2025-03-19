@@ -2,10 +2,10 @@
 
 namespace Spatie\SchemaOrg;
 
-use Spatie\SchemaOrg\Contracts\OrganizationContract;
-use Spatie\SchemaOrg\Contracts\SportsOrganizationContract;
-use Spatie\SchemaOrg\Contracts\SportsTeamContract;
-use Spatie\SchemaOrg\Contracts\ThingContract;
+use \Spatie\SchemaOrg\Contracts\SportsTeamContract;
+use \Spatie\SchemaOrg\Contracts\OrganizationContract;
+use \Spatie\SchemaOrg\Contracts\SportsOrganizationContract;
+use \Spatie\SchemaOrg\Contracts\ThingContract;
 
 /**
  * Organization: Sports team.
@@ -1182,7 +1182,7 @@ class SportsTeam extends BaseType implements SportsTeamContract, OrganizationCon
      * applied to a [[CreativeWork]] (e.g. [[NewsArticle]]) the principles are
      * those of the party primarily responsible for the creation of the
      * [[CreativeWork]].
-     *
+     * 
      * While such policies are most typically expressed in natural language,
      * sometimes related information (e.g. indicating a [[funder]]) can be
      * expressed using schema.org terminology.
@@ -1439,4 +1439,5 @@ class SportsTeam extends BaseType implements SportsTeamContract, OrganizationCon
     {
         return $this->setProperty('vatID', $vatID);
     }
+
 }

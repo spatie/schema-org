@@ -47,4 +47,5 @@ interface ContactPointContract
     public function telephone($telephone);
 
     public function url($url);
+
 }

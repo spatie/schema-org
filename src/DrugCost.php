@@ -2,9 +2,9 @@
 
 namespace Spatie\SchemaOrg;
 
-use Spatie\SchemaOrg\Contracts\DrugCostContract;
-use Spatie\SchemaOrg\Contracts\MedicalEntityContract;
-use Spatie\SchemaOrg\Contracts\ThingContract;
+use \Spatie\SchemaOrg\Contracts\DrugCostContract;
+use \Spatie\SchemaOrg\Contracts\MedicalEntityContract;
+use \Spatie\SchemaOrg\Contracts\ThingContract;
 
 /**
  * The cost per unit of a medical drug. Note that this type is not meant to
@@ -429,4 +429,5 @@ class DrugCost extends BaseType implements DrugCostContract, MedicalEntityContra
     {
         return $this->setProperty('url', $url);
     }
+
 }

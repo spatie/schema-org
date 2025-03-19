@@ -2,10 +2,10 @@
 
 namespace Spatie\SchemaOrg;
 
-use Spatie\SchemaOrg\Contracts\MedicalOrganizationContract;
-use Spatie\SchemaOrg\Contracts\OrganizationContract;
-use Spatie\SchemaOrg\Contracts\ThingContract;
-use Spatie\SchemaOrg\Contracts\VeterinaryCareContract;
+use \Spatie\SchemaOrg\Contracts\VeterinaryCareContract;
+use \Spatie\SchemaOrg\Contracts\MedicalOrganizationContract;
+use \Spatie\SchemaOrg\Contracts\OrganizationContract;
+use \Spatie\SchemaOrg\Contracts\ThingContract;
 
 /**
  * A vet's office.
@@ -1179,7 +1179,7 @@ class VeterinaryCare extends BaseType implements VeterinaryCareContract, Medical
      * applied to a [[CreativeWork]] (e.g. [[NewsArticle]]) the principles are
      * those of the party primarily responsible for the creation of the
      * [[CreativeWork]].
-     *
+     * 
      * While such policies are most typically expressed in natural language,
      * sometimes related information (e.g. indicating a [[funder]]) can be
      * expressed using schema.org terminology.
@@ -1420,4 +1420,5 @@ class VeterinaryCare extends BaseType implements VeterinaryCareContract, Medical
     {
         return $this->setProperty('vatID', $vatID);
     }
+
 }

@@ -277,4 +277,5 @@ interface RadioEpisodeContract
     public function workExample($workExample);
 
     public function workTranslation($workTranslation);
+
 }

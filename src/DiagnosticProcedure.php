@@ -2,10 +2,10 @@
 
 namespace Spatie\SchemaOrg;
 
-use Spatie\SchemaOrg\Contracts\DiagnosticProcedureContract;
-use Spatie\SchemaOrg\Contracts\MedicalEntityContract;
-use Spatie\SchemaOrg\Contracts\MedicalProcedureContract;
-use Spatie\SchemaOrg\Contracts\ThingContract;
+use \Spatie\SchemaOrg\Contracts\DiagnosticProcedureContract;
+use \Spatie\SchemaOrg\Contracts\MedicalEntityContract;
+use \Spatie\SchemaOrg\Contracts\MedicalProcedureContract;
+use \Spatie\SchemaOrg\Contracts\ThingContract;
 
 /**
  * A medical procedure intended primarily for diagnostic, as opposed to
@@ -425,4 +425,5 @@ class DiagnosticProcedure extends BaseType implements DiagnosticProcedureContrac
     {
         return $this->setProperty('url', $url);
     }
+
 }

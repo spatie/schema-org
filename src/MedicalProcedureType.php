@@ -2,11 +2,11 @@
 
 namespace Spatie\SchemaOrg;
 
-use Spatie\SchemaOrg\Contracts\EnumerationContract;
-use Spatie\SchemaOrg\Contracts\IntangibleContract;
-use Spatie\SchemaOrg\Contracts\MedicalEnumerationContract;
-use Spatie\SchemaOrg\Contracts\MedicalProcedureTypeContract;
-use Spatie\SchemaOrg\Contracts\ThingContract;
+use \Spatie\SchemaOrg\Contracts\MedicalProcedureTypeContract;
+use \Spatie\SchemaOrg\Contracts\EnumerationContract;
+use \Spatie\SchemaOrg\Contracts\IntangibleContract;
+use \Spatie\SchemaOrg\Contracts\MedicalEnumerationContract;
+use \Spatie\SchemaOrg\Contracts\ThingContract;
 
 /**
  * An enumeration that describes different types of medical procedures.
@@ -24,7 +24,7 @@ class MedicalProcedureType extends BaseType implements MedicalProcedureTypeContr
      * @see https://schema.org/NoninvasiveProcedure
      * @see https://health-lifesci.schema.org
      */
-    public const NoninvasiveProcedure = 'https://schema.org/NoninvasiveProcedure';
+     const NoninvasiveProcedure = 'https://schema.org/NoninvasiveProcedure';
 
     /**
      * A type of medical procedure that involves percutaneous techniques, where
@@ -34,7 +34,7 @@ class MedicalProcedureType extends BaseType implements MedicalProcedureTypeContr
      * @see https://schema.org/PercutaneousProcedure
      * @see https://health-lifesci.schema.org
      */
-    public const PercutaneousProcedure = 'https://schema.org/PercutaneousProcedure';
+     const PercutaneousProcedure = 'https://schema.org/PercutaneousProcedure';
 
     /**
      * An additional type for the item, typically used for adding more specific
@@ -226,4 +226,5 @@ class MedicalProcedureType extends BaseType implements MedicalProcedureTypeContr
     {
         return $this->setProperty('url', $url);
     }
+
 }

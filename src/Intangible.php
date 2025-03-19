@@ -2,8 +2,8 @@
 
 namespace Spatie\SchemaOrg;
 
-use Spatie\SchemaOrg\Contracts\IntangibleContract;
-use Spatie\SchemaOrg\Contracts\ThingContract;
+use \Spatie\SchemaOrg\Contracts\IntangibleContract;
+use \Spatie\SchemaOrg\Contracts\ThingContract;
 
 /**
  * A utility class that serves as the umbrella for a number of 'intangible'
@@ -204,4 +204,5 @@ class Intangible extends BaseType implements IntangibleContract, ThingContract
     {
         return $this->setProperty('url', $url);
     }
+
 }

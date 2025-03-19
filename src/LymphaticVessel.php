@@ -2,11 +2,11 @@
 
 namespace Spatie\SchemaOrg;
 
-use Spatie\SchemaOrg\Contracts\AnatomicalStructureContract;
-use Spatie\SchemaOrg\Contracts\LymphaticVesselContract;
-use Spatie\SchemaOrg\Contracts\MedicalEntityContract;
-use Spatie\SchemaOrg\Contracts\ThingContract;
-use Spatie\SchemaOrg\Contracts\VesselContract;
+use \Spatie\SchemaOrg\Contracts\LymphaticVesselContract;
+use \Spatie\SchemaOrg\Contracts\AnatomicalStructureContract;
+use \Spatie\SchemaOrg\Contracts\MedicalEntityContract;
+use \Spatie\SchemaOrg\Contracts\ThingContract;
+use \Spatie\SchemaOrg\Contracts\VesselContract;
 
 /**
  * A type of blood vessel that specifically carries lymph fluid unidirectionally
@@ -503,4 +503,5 @@ class LymphaticVessel extends BaseType implements LymphaticVesselContract, Anato
     {
         return $this->setProperty('url', $url);
     }
+
 }

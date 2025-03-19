@@ -2,9 +2,9 @@
 
 namespace Spatie\SchemaOrg;
 
-use Spatie\SchemaOrg\Contracts\IntangibleContract;
-use Spatie\SchemaOrg\Contracts\ThingContract;
-use Spatie\SchemaOrg\Contracts\VirtualLocationContract;
+use \Spatie\SchemaOrg\Contracts\VirtualLocationContract;
+use \Spatie\SchemaOrg\Contracts\IntangibleContract;
+use \Spatie\SchemaOrg\Contracts\ThingContract;
 
 /**
  * An online or virtual location for attending events. For example, one may
@@ -209,4 +209,5 @@ class VirtualLocation extends BaseType implements VirtualLocationContract, Intan
     {
         return $this->setProperty('url', $url);
     }
+
 }

@@ -2,22 +2,22 @@
 
 namespace Spatie\SchemaOrg;
 
-use Spatie\SchemaOrg\Contracts\CreditCardContract;
-use Spatie\SchemaOrg\Contracts\FinancialProductContract;
-use Spatie\SchemaOrg\Contracts\IntangibleContract;
-use Spatie\SchemaOrg\Contracts\LoanOrCreditContract;
-use Spatie\SchemaOrg\Contracts\PaymentCardContract;
-use Spatie\SchemaOrg\Contracts\PaymentMethodContract;
-use Spatie\SchemaOrg\Contracts\ServiceContract;
-use Spatie\SchemaOrg\Contracts\ThingContract;
+use \Spatie\SchemaOrg\Contracts\CreditCardContract;
+use \Spatie\SchemaOrg\Contracts\FinancialProductContract;
+use \Spatie\SchemaOrg\Contracts\IntangibleContract;
+use \Spatie\SchemaOrg\Contracts\LoanOrCreditContract;
+use \Spatie\SchemaOrg\Contracts\PaymentCardContract;
+use \Spatie\SchemaOrg\Contracts\PaymentMethodContract;
+use \Spatie\SchemaOrg\Contracts\ServiceContract;
+use \Spatie\SchemaOrg\Contracts\ThingContract;
 
 /**
  * A card payment method of a particular brand or name.  Used to mark up a
  * particular payment method and/or the financial product/service that supplies
  * the card account.
- *
+ * 
  * Commonly used values:
- *
+ * 
  * * http://purl.org/goodrelations/v1#AmericanExpress
  * * http://purl.org/goodrelations/v1#DinersClub
  * * http://purl.org/goodrelations/v1#Discover
@@ -253,7 +253,7 @@ class CreditCard extends BaseType implements CreditCardContract, FinancialProduc
 
     /**
      * The currency in which the monetary amount is expressed.
-     *
+     * 
      * Use standard formats: [ISO 4217 currency
      * format](http://en.wikipedia.org/wiki/ISO_4217), e.g. "USD"; [Ticker
      * symbol](https://en.wikipedia.org/wiki/List_of_cryptocurrencies) for
@@ -880,4 +880,5 @@ class CreditCard extends BaseType implements CreditCardContract, FinancialProduc
     {
         return $this->setProperty('url', $url);
     }
+
 }

@@ -2,9 +2,9 @@
 
 namespace Spatie\SchemaOrg;
 
-use Spatie\SchemaOrg\Contracts\IntangibleContract;
-use Spatie\SchemaOrg\Contracts\PropertyContract;
-use Spatie\SchemaOrg\Contracts\ThingContract;
+use \Spatie\SchemaOrg\Contracts\PropertyContract;
+use \Spatie\SchemaOrg\Contracts\IntangibleContract;
+use \Spatie\SchemaOrg\Contracts\ThingContract;
 
 /**
  * A property, used to indicate attributes and relationships of some Thing;
@@ -228,4 +228,5 @@ class Property extends BaseType implements PropertyContract, IntangibleContract,
     {
         return $this->setProperty('url', $url);
     }
+
 }

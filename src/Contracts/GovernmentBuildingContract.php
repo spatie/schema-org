@@ -123,4 +123,5 @@ interface GovernmentBuildingContract
     public function tourBookingPage($tourBookingPage);
 
     public function url($url);
+
 }

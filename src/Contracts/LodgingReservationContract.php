@@ -65,4 +65,5 @@ interface LodgingReservationContract
     public function underName($underName);
 
     public function url($url);
+
 }

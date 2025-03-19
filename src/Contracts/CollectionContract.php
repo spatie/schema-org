@@ -257,4 +257,5 @@ interface CollectionContract
     public function workExample($workExample);
 
     public function workTranslation($workTranslation);
+
 }

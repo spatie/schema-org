@@ -2,16 +2,16 @@
 
 namespace Spatie\SchemaOrg;
 
-use Spatie\SchemaOrg\Contracts\BreadcrumbListContract;
-use Spatie\SchemaOrg\Contracts\IntangibleContract;
-use Spatie\SchemaOrg\Contracts\ItemListContract;
-use Spatie\SchemaOrg\Contracts\ThingContract;
+use \Spatie\SchemaOrg\Contracts\BreadcrumbListContract;
+use \Spatie\SchemaOrg\Contracts\IntangibleContract;
+use \Spatie\SchemaOrg\Contracts\ItemListContract;
+use \Spatie\SchemaOrg\Contracts\ThingContract;
 
 /**
  * A BreadcrumbList is an ItemList consisting of a chain of linked Web pages,
  * typically described using at least their URL and their name, and typically
  * ending with the current page.
- *
+ * 
  * The [[position]] property is used to reconstruct the order of the items in a
  * BreadcrumbList. The convention is that a breadcrumb list has an
  * [[itemListOrder]] of [[ItemListOrderAscending]] (lower values listed first),
@@ -129,13 +129,13 @@ class BreadcrumbList extends BaseType implements BreadcrumbListContract, Intangi
     /**
      * For itemListElement values, you can use simple strings (e.g. "Peter",
      * "Paul", "Mary"), existing entities, or use ListItem.
-     *
+     * 
      * Text values are best if the elements in the list are plain strings.
      * Existing entities are best for a simple, unordered list of existing
      * things in your data. ListItem is used with ordered lists when you want to
      * provide additional context about the element in that list or when the
      * same item might be in different places in different lists.
-     *
+     * 
      * Note: The order of elements in your mark-up is not sufficient for
      * indicating the order or elements.  Use ListItem with a 'position'
      * property in such cases.
@@ -270,4 +270,5 @@ class BreadcrumbList extends BaseType implements BreadcrumbListContract, Intangi
     {
         return $this->setProperty('url', $url);
     }
+
 }

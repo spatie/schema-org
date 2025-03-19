@@ -61,4 +61,5 @@ interface PsychologicalTreatmentContract
     public function subjectOf($subjectOf);
 
     public function url($url);
+
 }

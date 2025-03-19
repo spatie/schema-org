@@ -53,4 +53,5 @@ interface TrainReservationContract
     public function underName($underName);
 
     public function url($url);
+
 }

@@ -2,9 +2,9 @@
 
 namespace Spatie\SchemaOrg;
 
-use Spatie\SchemaOrg\Contracts\MedicalConditionContract;
-use Spatie\SchemaOrg\Contracts\MedicalEntityContract;
-use Spatie\SchemaOrg\Contracts\ThingContract;
+use \Spatie\SchemaOrg\Contracts\MedicalConditionContract;
+use \Spatie\SchemaOrg\Contracts\MedicalEntityContract;
+use \Spatie\SchemaOrg\Contracts\ThingContract;
 
 /**
  * Any condition of the human body that affects the normal functioning of a
@@ -590,4 +590,5 @@ class MedicalCondition extends BaseType implements MedicalConditionContract, Med
     {
         return $this->setProperty('url', $url);
     }
+
 }

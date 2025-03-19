@@ -2,10 +2,10 @@
 
 namespace Spatie\SchemaOrg;
 
-use Spatie\SchemaOrg\Contracts\ActionContract;
-use Spatie\SchemaOrg\Contracts\AddActionContract;
-use Spatie\SchemaOrg\Contracts\ThingContract;
-use Spatie\SchemaOrg\Contracts\UpdateActionContract;
+use \Spatie\SchemaOrg\Contracts\AddActionContract;
+use \Spatie\SchemaOrg\Contracts\ActionContract;
+use \Spatie\SchemaOrg\Contracts\ThingContract;
+use \Spatie\SchemaOrg\Contracts\UpdateActionContract;
 
 /**
  * The act of editing by adding an object to a collection.
@@ -147,7 +147,7 @@ class AddAction extends BaseType implements AddActionContract, ActionContract, T
      * John wrote a book from January to *December*. For media, including audio
      * and video, it's the time offset of the end of a clip within a larger
      * file.
-     *
+     * 
      * Note that Event uses startDate/endDate instead of startTime/endTime, even
      * when describing dates with times. This situation may be clarified in
      * future revisions.
@@ -372,7 +372,7 @@ class AddAction extends BaseType implements AddActionContract, ActionContract, T
      * John wrote a book from *January* to December. For media, including audio
      * and video, it's the time offset of the start of a clip within a larger
      * file.
-     *
+     * 
      * Note that Event uses startDate/endDate instead of startTime/endTime, even
      * when describing dates with times. This situation may be clarified in
      * future revisions.
@@ -445,4 +445,5 @@ class AddAction extends BaseType implements AddActionContract, ActionContract, T
     {
         return $this->setProperty('url', $url);
     }
+
 }

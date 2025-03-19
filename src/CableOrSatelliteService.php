@@ -2,10 +2,10 @@
 
 namespace Spatie\SchemaOrg;
 
-use Spatie\SchemaOrg\Contracts\CableOrSatelliteServiceContract;
-use Spatie\SchemaOrg\Contracts\IntangibleContract;
-use Spatie\SchemaOrg\Contracts\ServiceContract;
-use Spatie\SchemaOrg\Contracts\ThingContract;
+use \Spatie\SchemaOrg\Contracts\CableOrSatelliteServiceContract;
+use \Spatie\SchemaOrg\Contracts\IntangibleContract;
+use \Spatie\SchemaOrg\Contracts\ServiceContract;
+use \Spatie\SchemaOrg\Contracts\ThingContract;
 
 /**
  * A service which provides access to media programming like TV or radio. Access
@@ -583,4 +583,5 @@ class CableOrSatelliteService extends BaseType implements CableOrSatelliteServic
     {
         return $this->setProperty('url', $url);
     }
+
 }

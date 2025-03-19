@@ -2,10 +2,10 @@
 
 namespace Spatie\SchemaOrg;
 
-use Spatie\SchemaOrg\Contracts\IntangibleContract;
-use Spatie\SchemaOrg\Contracts\StructuredValueContract;
-use Spatie\SchemaOrg\Contracts\ThingContract;
-use Spatie\SchemaOrg\Contracts\WarrantyPromiseContract;
+use \Spatie\SchemaOrg\Contracts\WarrantyPromiseContract;
+use \Spatie\SchemaOrg\Contracts\IntangibleContract;
+use \Spatie\SchemaOrg\Contracts\StructuredValueContract;
+use \Spatie\SchemaOrg\Contracts\ThingContract;
 
 /**
  * A structured value representing the duration and scope of services that will
@@ -236,4 +236,5 @@ class WarrantyPromise extends BaseType implements WarrantyPromiseContract, Intan
     {
         return $this->setProperty('warrantyScope', $warrantyScope);
     }
+
 }

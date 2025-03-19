@@ -259,4 +259,5 @@ interface SiteNavigationElementContract
     public function workTranslation($workTranslation);
 
     public function xpath($xpath);
+
 }

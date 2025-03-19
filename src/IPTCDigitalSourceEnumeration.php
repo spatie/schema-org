@@ -2,11 +2,11 @@
 
 namespace Spatie\SchemaOrg;
 
-use Spatie\SchemaOrg\Contracts\EnumerationContract;
-use Spatie\SchemaOrg\Contracts\IntangibleContract;
-use Spatie\SchemaOrg\Contracts\IPTCDigitalSourceEnumerationContract;
-use Spatie\SchemaOrg\Contracts\MediaEnumerationContract;
-use Spatie\SchemaOrg\Contracts\ThingContract;
+use \Spatie\SchemaOrg\Contracts\IPTCDigitalSourceEnumerationContract;
+use \Spatie\SchemaOrg\Contracts\EnumerationContract;
+use \Spatie\SchemaOrg\Contracts\IntangibleContract;
+use \Spatie\SchemaOrg\Contracts\MediaEnumerationContract;
+use \Spatie\SchemaOrg\Contracts\ThingContract;
 
 /**
  * [IPTC](https://www.iptc.org/) "Digital Source" codes for use with the
@@ -38,7 +38,7 @@ class IPTCDigitalSourceEnumeration extends BaseType implements IPTCDigitalSource
      * @see https://pending.schema.org
      * @link https://github.com/schemaorg/schemaorg/issues/3392
      */
-    public const AlgorithmicMediaDigitalSource = 'https://schema.org/AlgorithmicMediaDigitalSource';
+     const AlgorithmicMediaDigitalSource = 'https://schema.org/AlgorithmicMediaDigitalSource';
 
     /**
      * Content coded as '[algorithmically
@@ -50,7 +50,7 @@ class IPTCDigitalSourceEnumeration extends BaseType implements IPTCDigitalSource
      * @see https://pending.schema.org
      * @link https://github.com/schemaorg/schemaorg/issues/3392
      */
-    public const AlgorithmicallyEnhancedDigitalSource = 'https://schema.org/AlgorithmicallyEnhancedDigitalSource';
+     const AlgorithmicallyEnhancedDigitalSource = 'https://schema.org/AlgorithmicallyEnhancedDigitalSource';
 
     /**
      * Content coded as '[composite
@@ -62,7 +62,7 @@ class IPTCDigitalSourceEnumeration extends BaseType implements IPTCDigitalSource
      * @see https://pending.schema.org
      * @link https://github.com/schemaorg/schemaorg/issues/3392
      */
-    public const CompositeCaptureDigitalSource = 'https://schema.org/CompositeCaptureDigitalSource';
+     const CompositeCaptureDigitalSource = 'https://schema.org/CompositeCaptureDigitalSource';
 
     /**
      * Content coded as '[algorithmic
@@ -74,7 +74,7 @@ class IPTCDigitalSourceEnumeration extends BaseType implements IPTCDigitalSource
      * @see https://pending.schema.org
      * @link https://github.com/schemaorg/schemaorg/issues/3392
      */
-    public const CompositeDigitalSource = 'https://schema.org/CompositeDigitalSource';
+     const CompositeDigitalSource = 'https://schema.org/CompositeDigitalSource';
 
     /**
      * Content coded as '[composite
@@ -86,7 +86,7 @@ class IPTCDigitalSourceEnumeration extends BaseType implements IPTCDigitalSource
      * @see https://pending.schema.org
      * @link https://github.com/schemaorg/schemaorg/issues/3392
      */
-    public const CompositeSyntheticDigitalSource = 'https://schema.org/CompositeSyntheticDigitalSource';
+     const CompositeSyntheticDigitalSource = 'https://schema.org/CompositeSyntheticDigitalSource';
 
     /**
      * Content coded as '[composite with trained algorithmic
@@ -98,7 +98,7 @@ class IPTCDigitalSourceEnumeration extends BaseType implements IPTCDigitalSource
      * @see https://pending.schema.org
      * @link https://github.com/schemaorg/schemaorg/issues/3392
      */
-    public const CompositeWithTrainedAlgorithmicMediaDigitalSource = 'https://schema.org/CompositeWithTrainedAlgorithmicMediaDigitalSource';
+     const CompositeWithTrainedAlgorithmicMediaDigitalSource = 'https://schema.org/CompositeWithTrainedAlgorithmicMediaDigitalSource';
 
     /**
      * Content coded as '[data driven
@@ -110,7 +110,7 @@ class IPTCDigitalSourceEnumeration extends BaseType implements IPTCDigitalSource
      * @see https://pending.schema.org
      * @link https://github.com/schemaorg/schemaorg/issues/3392
      */
-    public const DataDrivenMediaDigitalSource = 'https://schema.org/DataDrivenMediaDigitalSource';
+     const DataDrivenMediaDigitalSource = 'https://schema.org/DataDrivenMediaDigitalSource';
 
     /**
      * Content coded as '[digital
@@ -122,7 +122,7 @@ class IPTCDigitalSourceEnumeration extends BaseType implements IPTCDigitalSource
      * @see https://pending.schema.org
      * @link https://github.com/schemaorg/schemaorg/issues/3392
      */
-    public const DigitalArtDigitalSource = 'https://schema.org/DigitalArtDigitalSource';
+     const DigitalArtDigitalSource = 'https://schema.org/DigitalArtDigitalSource';
 
     /**
      * Content coded as '[digital
@@ -134,7 +134,7 @@ class IPTCDigitalSourceEnumeration extends BaseType implements IPTCDigitalSource
      * @see https://pending.schema.org
      * @link https://github.com/schemaorg/schemaorg/issues/3392
      */
-    public const DigitalCaptureDigitalSource = 'https://schema.org/DigitalCaptureDigitalSource';
+     const DigitalCaptureDigitalSource = 'https://schema.org/DigitalCaptureDigitalSource';
 
     /**
      * Content coded as '[minor human
@@ -146,7 +146,7 @@ class IPTCDigitalSourceEnumeration extends BaseType implements IPTCDigitalSource
      * @see https://pending.schema.org
      * @link https://github.com/schemaorg/schemaorg/issues/3392
      */
-    public const MinorHumanEditsDigitalSource = 'https://schema.org/MinorHumanEditsDigitalSource';
+     const MinorHumanEditsDigitalSource = 'https://schema.org/MinorHumanEditsDigitalSource';
 
     /**
      * Content coded as '[algorithmic
@@ -158,7 +158,7 @@ class IPTCDigitalSourceEnumeration extends BaseType implements IPTCDigitalSource
      * @see https://pending.schema.org
      * @link https://github.com/schemaorg/schemaorg/issues/3392
      */
-    public const MultiFrameComputationalCaptureDigitalSource = 'https://schema.org/MultiFrameComputationalCaptureDigitalSource';
+     const MultiFrameComputationalCaptureDigitalSource = 'https://schema.org/MultiFrameComputationalCaptureDigitalSource';
 
     /**
      * Content coded as '[negative
@@ -170,7 +170,7 @@ class IPTCDigitalSourceEnumeration extends BaseType implements IPTCDigitalSource
      * @see https://pending.schema.org
      * @link https://github.com/schemaorg/schemaorg/issues/3392
      */
-    public const NegativeFilmDigitalSource = 'https://schema.org/NegativeFilmDigitalSource';
+     const NegativeFilmDigitalSource = 'https://schema.org/NegativeFilmDigitalSource';
 
     /**
      * Content coded as '[positive
@@ -182,7 +182,7 @@ class IPTCDigitalSourceEnumeration extends BaseType implements IPTCDigitalSource
      * @see https://pending.schema.org
      * @link https://github.com/schemaorg/schemaorg/issues/3392
      */
-    public const PositiveFilmDigitalSource = 'https://schema.org/PositiveFilmDigitalSource';
+     const PositiveFilmDigitalSource = 'https://schema.org/PositiveFilmDigitalSource';
 
     /**
      * Content coded as
@@ -194,7 +194,7 @@ class IPTCDigitalSourceEnumeration extends BaseType implements IPTCDigitalSource
      * @see https://pending.schema.org
      * @link https://github.com/schemaorg/schemaorg/issues/3392
      */
-    public const PrintDigitalSource = 'https://schema.org/PrintDigitalSource';
+     const PrintDigitalSource = 'https://schema.org/PrintDigitalSource';
 
     /**
      * Content coded as '[algorithmic
@@ -206,7 +206,7 @@ class IPTCDigitalSourceEnumeration extends BaseType implements IPTCDigitalSource
      * @see https://pending.schema.org
      * @link https://github.com/schemaorg/schemaorg/issues/3392
      */
-    public const ScreenCaptureDigitalSource = 'https://schema.org/ScreenCaptureDigitalSource';
+     const ScreenCaptureDigitalSource = 'https://schema.org/ScreenCaptureDigitalSource';
 
     /**
      * Content coded as '[trained algorithmic
@@ -218,7 +218,7 @@ class IPTCDigitalSourceEnumeration extends BaseType implements IPTCDigitalSource
      * @see https://pending.schema.org
      * @link https://github.com/schemaorg/schemaorg/issues/3392
      */
-    public const TrainedAlgorithmicMediaDigitalSource = 'https://schema.org/TrainedAlgorithmicMediaDigitalSource';
+     const TrainedAlgorithmicMediaDigitalSource = 'https://schema.org/TrainedAlgorithmicMediaDigitalSource';
 
     /**
      * Content coded as '[virtual
@@ -230,7 +230,7 @@ class IPTCDigitalSourceEnumeration extends BaseType implements IPTCDigitalSource
      * @see https://pending.schema.org
      * @link https://github.com/schemaorg/schemaorg/issues/3392
      */
-    public const VirtualRecordingDigitalSource = 'https://schema.org/VirtualRecordingDigitalSource';
+     const VirtualRecordingDigitalSource = 'https://schema.org/VirtualRecordingDigitalSource';
 
     /**
      * An additional type for the item, typically used for adding more specific
@@ -422,4 +422,5 @@ class IPTCDigitalSourceEnumeration extends BaseType implements IPTCDigitalSource
     {
         return $this->setProperty('url', $url);
     }
+
 }

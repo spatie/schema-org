@@ -2,16 +2,16 @@
 
 namespace Spatie\SchemaOrg;
 
-use Spatie\SchemaOrg\Contracts\AccommodationContract;
-use Spatie\SchemaOrg\Contracts\CampingPitchContract;
-use Spatie\SchemaOrg\Contracts\PlaceContract;
-use Spatie\SchemaOrg\Contracts\ThingContract;
+use \Spatie\SchemaOrg\Contracts\CampingPitchContract;
+use \Spatie\SchemaOrg\Contracts\AccommodationContract;
+use \Spatie\SchemaOrg\Contracts\PlaceContract;
+use \Spatie\SchemaOrg\Contracts\ThingContract;
 
 /**
  * A [[CampingPitch]] is an individual place for overnight stay in the outdoors,
  * typically being part of a larger camping site, or [[Campground]].
- *
- *
+ * 
+ * 
  * In British English a campsite, or campground, is an area, usually divided
  * into a number of pitches, where people can camp overnight using tents or
  * camper vans or caravans; this British English use of the word is synonymous
@@ -21,8 +21,8 @@ use Spatie\SchemaOrg\Contracts\ThingContract;
  * many campsites.
  * (Source: Wikipedia, see
  * [https://en.wikipedia.org/wiki/Campsite](https://en.wikipedia.org/wiki/Campsite).)
- *
- *
+ * 
+ * 
  * See also the dedicated [document on the use of schema.org for marking up
  * hotels and other forms of accommodations](/docs/hotels.html).
  *
@@ -72,7 +72,7 @@ class CampingPitch extends BaseType implements CampingPitchContract, Accommodati
      * A property-value pair representing an additional characteristic of the
      * entity, e.g. a product feature or another characteristic for which there
      * is no matching property in schema.org.
-     *
+     * 
      * Note: Publishers should be aware that applications designed to use
      * specific schema.org properties (e.g. https://schema.org/width,
      * https://schema.org/color, https://schema.org/gtin13, ...) will typically
@@ -195,7 +195,7 @@ class CampingPitch extends BaseType implements CampingPitchContract, Accommodati
      * A short textual code (also called "store code") that uniquely identifies
      * a place of business. The code is typically assigned by the
      * parentOrganization and used in structured URLs.
-     *
+     * 
      * For example, in the URL
      * http://www.starbucks.co.uk/store-locator/etc/detail/3047 the code "3047"
      * is a branchCode for a particular branch.
@@ -1142,7 +1142,7 @@ class CampingPitch extends BaseType implements CampingPitchContract, Accommodati
 
     /**
      * The special opening hours of a certain place.
-     *
+     * 
      * Use this to explicitly override general opening hours brought in scope by
      * [[openingHoursSpecification]] or [[openingHours]].
      *
@@ -1235,4 +1235,5 @@ class CampingPitch extends BaseType implements CampingPitchContract, Accommodati
     {
         return $this->setProperty('yearBuilt', $yearBuilt);
     }
+
 }

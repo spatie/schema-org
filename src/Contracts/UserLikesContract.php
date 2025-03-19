@@ -111,4 +111,5 @@ interface UserLikesContract
     public function workFeatured($workFeatured);
 
     public function workPerformed($workPerformed);
+
 }

@@ -2,9 +2,9 @@
 
 namespace Spatie\SchemaOrg;
 
-use Spatie\SchemaOrg\Contracts\IntangibleContract;
-use Spatie\SchemaOrg\Contracts\OccupationContract;
-use Spatie\SchemaOrg\Contracts\ThingContract;
+use \Spatie\SchemaOrg\Contracts\OccupationContract;
+use \Spatie\SchemaOrg\Contracts\IntangibleContract;
+use \Spatie\SchemaOrg\Contracts\ThingContract;
 
 /**
  * A profession, may involve prolonged training and/or a formal qualification.
@@ -220,7 +220,7 @@ class Occupation extends BaseType implements OccupationContract, IntangibleContr
      * similar, with the property repeated for each applicable value. Ideally
      * the taxonomy should be identified, and both the textual label and formal
      * code for the category should be provided.
-     *
+     * 
      * Note: for historical reasons, any textual label and formal code provided
      * as a literal may be assumed to be from O*NET-SOC.
      *
@@ -342,4 +342,5 @@ class Occupation extends BaseType implements OccupationContract, IntangibleContr
     {
         return $this->setProperty('url', $url);
     }
+
 }

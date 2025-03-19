@@ -2,10 +2,10 @@
 
 namespace Spatie\SchemaOrg;
 
-use Spatie\SchemaOrg\Contracts\InfectiousDiseaseContract;
-use Spatie\SchemaOrg\Contracts\MedicalConditionContract;
-use Spatie\SchemaOrg\Contracts\MedicalEntityContract;
-use Spatie\SchemaOrg\Contracts\ThingContract;
+use \Spatie\SchemaOrg\Contracts\InfectiousDiseaseContract;
+use \Spatie\SchemaOrg\Contracts\MedicalConditionContract;
+use \Spatie\SchemaOrg\Contracts\MedicalEntityContract;
+use \Spatie\SchemaOrg\Contracts\ThingContract;
 
 /**
  * An infectious disease is a clinically evident human disease resulting from
@@ -640,4 +640,5 @@ class InfectiousDisease extends BaseType implements InfectiousDiseaseContract, M
     {
         return $this->setProperty('url', $url);
     }
+
 }

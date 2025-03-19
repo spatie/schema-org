@@ -27,4 +27,5 @@ interface VirtualLocationContract
     public function subjectOf($subjectOf);
 
     public function url($url);
+
 }

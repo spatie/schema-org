@@ -51,6 +51,6 @@ abstract class Task
      */
     protected function getResourceName(?array $schemaResource = null): string
     {
-        return str_replace('schema:', '', $this->getResource($schemaResource));
+        return preg_replace('/^[^:]+:/', '', $this->getResource($schemaResource));
     }
 }

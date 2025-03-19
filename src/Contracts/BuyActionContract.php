@@ -65,4 +65,5 @@ interface BuyActionContract
     public function vendor($vendor);
 
     public function warrantyPromise($warrantyPromise);
+
 }

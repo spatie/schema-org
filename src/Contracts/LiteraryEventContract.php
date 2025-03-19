@@ -111,4 +111,5 @@ interface LiteraryEventContract
     public function workFeatured($workFeatured);
 
     public function workPerformed($workPerformed);
+
 }

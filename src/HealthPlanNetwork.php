@@ -2,9 +2,9 @@
 
 namespace Spatie\SchemaOrg;
 
-use Spatie\SchemaOrg\Contracts\HealthPlanNetworkContract;
-use Spatie\SchemaOrg\Contracts\IntangibleContract;
-use Spatie\SchemaOrg\Contracts\ThingContract;
+use \Spatie\SchemaOrg\Contracts\HealthPlanNetworkContract;
+use \Spatie\SchemaOrg\Contracts\IntangibleContract;
+use \Spatie\SchemaOrg\Contracts\ThingContract;
 
 /**
  * A US-style health insurance plan network.
@@ -255,4 +255,5 @@ class HealthPlanNetwork extends BaseType implements HealthPlanNetworkContract, I
     {
         return $this->setProperty('url', $url);
     }
+
 }

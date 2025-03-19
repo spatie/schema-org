@@ -45,4 +45,5 @@ interface AggregateRatingContract
     public function url($url);
 
     public function worstRating($worstRating);
+
 }

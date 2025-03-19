@@ -2,9 +2,9 @@
 
 namespace Spatie\SchemaOrg;
 
-use Spatie\SchemaOrg\Contracts\IntangibleContract;
-use Spatie\SchemaOrg\Contracts\StructuredValueContract;
-use Spatie\SchemaOrg\Contracts\ThingContract;
+use \Spatie\SchemaOrg\Contracts\StructuredValueContract;
+use \Spatie\SchemaOrg\Contracts\IntangibleContract;
+use \Spatie\SchemaOrg\Contracts\ThingContract;
 
 /**
  * Structured values are used when the value of a property has a more complex
@@ -205,4 +205,5 @@ class StructuredValue extends BaseType implements StructuredValueContract, Intan
     {
         return $this->setProperty('url', $url);
     }
+
 }

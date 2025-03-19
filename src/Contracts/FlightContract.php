@@ -73,4 +73,5 @@ interface FlightContract
     public function url($url);
 
     public function webCheckinTime($webCheckinTime);
+
 }

@@ -2,17 +2,17 @@
 
 namespace Spatie\SchemaOrg;
 
-use Spatie\SchemaOrg\Contracts\ActionContract;
-use Spatie\SchemaOrg\Contracts\FollowActionContract;
-use Spatie\SchemaOrg\Contracts\InteractActionContract;
-use Spatie\SchemaOrg\Contracts\ThingContract;
+use \Spatie\SchemaOrg\Contracts\FollowActionContract;
+use \Spatie\SchemaOrg\Contracts\ActionContract;
+use \Spatie\SchemaOrg\Contracts\InteractActionContract;
+use \Spatie\SchemaOrg\Contracts\ThingContract;
 
 /**
  * The act of forming a personal connection with someone/something (object)
  * unidirectionally/asymmetrically to get updates polled from.
- *
+ * 
  * Related actions:
- *
+ * 
  * * [[BefriendAction]]: Unlike BefriendAction, FollowAction implies that the
  * connection is *not* necessarily reciprocal.
  * * [[SubscribeAction]]: Unlike SubscribeAction, FollowAction implies that the
@@ -148,7 +148,7 @@ class FollowAction extends BaseType implements FollowActionContract, ActionContr
      * John wrote a book from January to *December*. For media, including audio
      * and video, it's the time offset of the end of a clip within a larger
      * file.
-     *
+     * 
      * Note that Event uses startDate/endDate instead of startTime/endTime, even
      * when describing dates with times. This situation may be clarified in
      * future revisions.
@@ -387,7 +387,7 @@ class FollowAction extends BaseType implements FollowActionContract, ActionContr
      * John wrote a book from *January* to December. For media, including audio
      * and video, it's the time offset of the start of a clip within a larger
      * file.
-     *
+     * 
      * Note that Event uses startDate/endDate instead of startTime/endTime, even
      * when describing dates with times. This situation may be clarified in
      * future revisions.
@@ -446,4 +446,5 @@ class FollowAction extends BaseType implements FollowActionContract, ActionContr
     {
         return $this->setProperty('url', $url);
     }
+
 }

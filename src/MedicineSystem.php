@@ -2,11 +2,11 @@
 
 namespace Spatie\SchemaOrg;
 
-use Spatie\SchemaOrg\Contracts\EnumerationContract;
-use Spatie\SchemaOrg\Contracts\IntangibleContract;
-use Spatie\SchemaOrg\Contracts\MedicalEnumerationContract;
-use Spatie\SchemaOrg\Contracts\MedicineSystemContract;
-use Spatie\SchemaOrg\Contracts\ThingContract;
+use \Spatie\SchemaOrg\Contracts\MedicineSystemContract;
+use \Spatie\SchemaOrg\Contracts\EnumerationContract;
+use \Spatie\SchemaOrg\Contracts\IntangibleContract;
+use \Spatie\SchemaOrg\Contracts\MedicalEnumerationContract;
+use \Spatie\SchemaOrg\Contracts\ThingContract;
 
 /**
  * Systems of medical practice.
@@ -25,7 +25,7 @@ class MedicineSystem extends BaseType implements MedicineSystemContract, Enumera
      * @see https://schema.org/Ayurvedic
      * @see https://health-lifesci.schema.org
      */
-    public const Ayurvedic = 'https://schema.org/Ayurvedic';
+     const Ayurvedic = 'https://schema.org/Ayurvedic';
 
     /**
      * A system of medicine focused on the relationship between the body's
@@ -34,7 +34,7 @@ class MedicineSystem extends BaseType implements MedicineSystemContract, Enumera
      * @see https://schema.org/Chiropractic
      * @see https://health-lifesci.schema.org
      */
-    public const Chiropractic = 'https://schema.org/Chiropractic';
+     const Chiropractic = 'https://schema.org/Chiropractic';
 
     /**
      * A system of medicine based on the principle that a disease can be cured
@@ -43,7 +43,7 @@ class MedicineSystem extends BaseType implements MedicineSystemContract, Enumera
      * @see https://schema.org/Homeopathic
      * @see https://health-lifesci.schema.org
      */
-    public const Homeopathic = 'https://schema.org/Homeopathic';
+     const Homeopathic = 'https://schema.org/Homeopathic';
 
     /**
      * A system of medicine focused on promoting the body's innate ability to
@@ -52,7 +52,7 @@ class MedicineSystem extends BaseType implements MedicineSystemContract, Enumera
      * @see https://schema.org/Osteopathic
      * @see https://health-lifesci.schema.org
      */
-    public const Osteopathic = 'https://schema.org/Osteopathic';
+     const Osteopathic = 'https://schema.org/Osteopathic';
 
     /**
      * A system of medicine based on common theoretical concepts that originated
@@ -63,7 +63,7 @@ class MedicineSystem extends BaseType implements MedicineSystemContract, Enumera
      * @see https://schema.org/TraditionalChinese
      * @see https://health-lifesci.schema.org
      */
-    public const TraditionalChinese = 'https://schema.org/TraditionalChinese';
+     const TraditionalChinese = 'https://schema.org/TraditionalChinese';
 
     /**
      * The conventional Western system of medicine, that aims to apply the best
@@ -73,7 +73,7 @@ class MedicineSystem extends BaseType implements MedicineSystemContract, Enumera
      * @see https://schema.org/WesternConventional
      * @see https://health-lifesci.schema.org
      */
-    public const WesternConventional = 'https://schema.org/WesternConventional';
+     const WesternConventional = 'https://schema.org/WesternConventional';
 
     /**
      * An additional type for the item, typically used for adding more specific
@@ -265,4 +265,5 @@ class MedicineSystem extends BaseType implements MedicineSystemContract, Enumera
     {
         return $this->setProperty('url', $url);
     }
+
 }

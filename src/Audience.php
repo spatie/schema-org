@@ -2,9 +2,9 @@
 
 namespace Spatie\SchemaOrg;
 
-use Spatie\SchemaOrg\Contracts\AudienceContract;
-use Spatie\SchemaOrg\Contracts\IntangibleContract;
-use Spatie\SchemaOrg\Contracts\ThingContract;
+use \Spatie\SchemaOrg\Contracts\AudienceContract;
+use \Spatie\SchemaOrg\Contracts\IntangibleContract;
+use \Spatie\SchemaOrg\Contracts\ThingContract;
 
 /**
  * Intended audience for an item, i.e. the group for whom the item was created.
@@ -233,4 +233,5 @@ class Audience extends BaseType implements AudienceContract, IntangibleContract,
     {
         return $this->setProperty('url', $url);
     }
+
 }

@@ -41,4 +41,5 @@ interface EmployeeRoleContract
     public function subjectOf($subjectOf);
 
     public function url($url);
+
 }

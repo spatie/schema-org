@@ -2,14 +2,14 @@
 
 namespace Spatie\SchemaOrg;
 
-use Spatie\SchemaOrg\Contracts\IntangibleContract;
-use Spatie\SchemaOrg\Contracts\ReservationContract;
-use Spatie\SchemaOrg\Contracts\TaxiReservationContract;
-use Spatie\SchemaOrg\Contracts\ThingContract;
+use \Spatie\SchemaOrg\Contracts\TaxiReservationContract;
+use \Spatie\SchemaOrg\Contracts\IntangibleContract;
+use \Spatie\SchemaOrg\Contracts\ReservationContract;
+use \Spatie\SchemaOrg\Contracts\ThingContract;
 
 /**
  * A reservation for a taxi.
- *
+ * 
  * Note: This type is for information about actual reservations, e.g. in
  * confirmation emails or HTML pages with individual confirmations of
  * reservations. For offers of tickets, use [[Offer]].
@@ -270,7 +270,7 @@ class TaxiReservation extends BaseType implements TaxiReservationContract, Intan
     /**
      * The currency of the price, or a price component when attached to
      * [[PriceSpecification]] and its subtypes.
-     *
+     * 
      * Use standard formats: [ISO 4217 currency
      * format](http://en.wikipedia.org/wiki/ISO_4217), e.g. "USD"; [Ticker
      * symbol](https://en.wikipedia.org/wiki/List_of_cryptocurrencies) for
@@ -412,9 +412,9 @@ class TaxiReservation extends BaseType implements TaxiReservationContract, Intan
     /**
      * The total price for the reservation or ticket, including applicable
      * taxes, shipping, etc.
-     *
+     * 
      * Usage guidelines:
-     *
+     * 
      * * Use values from 0123456789 (Unicode 'DIGIT ZERO' (U+0030) to 'DIGIT
      * NINE' (U+0039)) rather than superficially similar Unicode symbols.
      * * Use '.' (Unicode 'FULL STOP' (U+002E)) rather than ',' to indicate a
@@ -458,4 +458,5 @@ class TaxiReservation extends BaseType implements TaxiReservationContract, Intan
     {
         return $this->setProperty('url', $url);
     }
+
 }

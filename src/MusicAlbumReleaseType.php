@@ -2,10 +2,10 @@
 
 namespace Spatie\SchemaOrg;
 
-use Spatie\SchemaOrg\Contracts\EnumerationContract;
-use Spatie\SchemaOrg\Contracts\IntangibleContract;
-use Spatie\SchemaOrg\Contracts\MusicAlbumReleaseTypeContract;
-use Spatie\SchemaOrg\Contracts\ThingContract;
+use \Spatie\SchemaOrg\Contracts\MusicAlbumReleaseTypeContract;
+use \Spatie\SchemaOrg\Contracts\EnumerationContract;
+use \Spatie\SchemaOrg\Contracts\IntangibleContract;
+use \Spatie\SchemaOrg\Contracts\ThingContract;
 
 /**
  * The kind of release which this album is: single, EP or album.
@@ -21,28 +21,28 @@ class MusicAlbumReleaseType extends BaseType implements MusicAlbumReleaseTypeCon
      *
      * @see https://schema.org/AlbumRelease
      */
-    public const AlbumRelease = 'https://schema.org/AlbumRelease';
+     const AlbumRelease = 'https://schema.org/AlbumRelease';
 
     /**
      * BroadcastRelease.
      *
      * @see https://schema.org/BroadcastRelease
      */
-    public const BroadcastRelease = 'https://schema.org/BroadcastRelease';
+     const BroadcastRelease = 'https://schema.org/BroadcastRelease';
 
     /**
      * EPRelease.
      *
      * @see https://schema.org/EPRelease
      */
-    public const EPRelease = 'https://schema.org/EPRelease';
+     const EPRelease = 'https://schema.org/EPRelease';
 
     /**
      * SingleRelease.
      *
      * @see https://schema.org/SingleRelease
      */
-    public const SingleRelease = 'https://schema.org/SingleRelease';
+     const SingleRelease = 'https://schema.org/SingleRelease';
 
     /**
      * An additional type for the item, typically used for adding more specific
@@ -234,4 +234,5 @@ class MusicAlbumReleaseType extends BaseType implements MusicAlbumReleaseTypeCon
     {
         return $this->setProperty('url', $url);
     }
+
 }

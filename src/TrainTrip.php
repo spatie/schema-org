@@ -2,10 +2,10 @@
 
 namespace Spatie\SchemaOrg;
 
-use Spatie\SchemaOrg\Contracts\IntangibleContract;
-use Spatie\SchemaOrg\Contracts\ThingContract;
-use Spatie\SchemaOrg\Contracts\TrainTripContract;
-use Spatie\SchemaOrg\Contracts\TripContract;
+use \Spatie\SchemaOrg\Contracts\TrainTripContract;
+use \Spatie\SchemaOrg\Contracts\IntangibleContract;
+use \Spatie\SchemaOrg\Contracts\ThingContract;
+use \Spatie\SchemaOrg\Contracts\TripContract;
 
 /**
  * A trip on a commercial train line.
@@ -422,4 +422,5 @@ class TrainTrip extends BaseType implements TrainTripContract, IntangibleContrac
     {
         return $this->setProperty('url', $url);
     }
+
 }

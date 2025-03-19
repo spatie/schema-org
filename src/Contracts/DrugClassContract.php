@@ -45,4 +45,5 @@ interface DrugClassContract
     public function subjectOf($subjectOf);
 
     public function url($url);
+
 }

@@ -2,9 +2,9 @@
 
 namespace Spatie\SchemaOrg;
 
-use Spatie\SchemaOrg\Contracts\IntangibleContract;
-use Spatie\SchemaOrg\Contracts\LanguageContract;
-use Spatie\SchemaOrg\Contracts\ThingContract;
+use \Spatie\SchemaOrg\Contracts\LanguageContract;
+use \Spatie\SchemaOrg\Contracts\IntangibleContract;
+use \Spatie\SchemaOrg\Contracts\ThingContract;
 
 /**
  * Natural languages such as Spanish, Tamil, Hindi, English, etc. Formal
@@ -209,4 +209,5 @@ class Language extends BaseType implements LanguageContract, IntangibleContract,
     {
         return $this->setProperty('url', $url);
     }
+
 }

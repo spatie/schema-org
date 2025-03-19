@@ -51,4 +51,5 @@ interface NutritionInformationContract
     public function unsaturatedFatContent($unsaturatedFatContent);
 
     public function url($url);
+
 }

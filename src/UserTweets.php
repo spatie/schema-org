@@ -2,10 +2,10 @@
 
 namespace Spatie\SchemaOrg;
 
-use Spatie\SchemaOrg\Contracts\EventContract;
-use Spatie\SchemaOrg\Contracts\ThingContract;
-use Spatie\SchemaOrg\Contracts\UserInteractionContract;
-use Spatie\SchemaOrg\Contracts\UserTweetsContract;
+use \Spatie\SchemaOrg\Contracts\UserTweetsContract;
+use \Spatie\SchemaOrg\Contracts\EventContract;
+use \Spatie\SchemaOrg\Contracts\ThingContract;
+use \Spatie\SchemaOrg\Contracts\UserInteractionContract;
 
 /**
  * UserInteraction and its subtypes is an old way of talking about users
@@ -874,4 +874,5 @@ class UserTweets extends BaseType implements UserTweetsContract, EventContract, 
     {
         return $this->setProperty('workPerformed', $workPerformed);
     }
+
 }

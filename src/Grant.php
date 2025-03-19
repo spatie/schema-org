@@ -2,9 +2,9 @@
 
 namespace Spatie\SchemaOrg;
 
-use Spatie\SchemaOrg\Contracts\GrantContract;
-use Spatie\SchemaOrg\Contracts\IntangibleContract;
-use Spatie\SchemaOrg\Contracts\ThingContract;
+use \Spatie\SchemaOrg\Contracts\GrantContract;
+use \Spatie\SchemaOrg\Contracts\IntangibleContract;
+use \Spatie\SchemaOrg\Contracts\ThingContract;
 
 /**
  * A grant, typically financial or otherwise quantifiable, of resources.
@@ -15,12 +15,12 @@ use Spatie\SchemaOrg\Contracts\ThingContract;
  * sponsorship, indicate the [[funder]] of a [[MonetaryGrant]]. For
  * non-financial support, indicate [[sponsor]] of [[Grant]]s of resources (e.g.
  * office space).
- *
+ * 
  * Grants support  activities directed towards some agreed collective goals,
  * often but not always organized as [[Project]]s. Long-lived projects are
  * sometimes sponsored by a variety of grants over time, but it is also common
  * for a project to be associated with a single grant.
- *
+ * 
  * The amount of a [[Grant]] is represented using [[amount]] as a
  * [[MonetaryAmount]].
  *
@@ -267,4 +267,5 @@ class Grant extends BaseType implements GrantContract, IntangibleContract, Thing
     {
         return $this->setProperty('url', $url);
     }
+
 }

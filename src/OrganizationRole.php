@@ -2,10 +2,10 @@
 
 namespace Spatie\SchemaOrg;
 
-use Spatie\SchemaOrg\Contracts\IntangibleContract;
-use Spatie\SchemaOrg\Contracts\OrganizationRoleContract;
-use Spatie\SchemaOrg\Contracts\RoleContract;
-use Spatie\SchemaOrg\Contracts\ThingContract;
+use \Spatie\SchemaOrg\Contracts\OrganizationRoleContract;
+use \Spatie\SchemaOrg\Contracts\IntangibleContract;
+use \Spatie\SchemaOrg\Contracts\RoleContract;
+use \Spatie\SchemaOrg\Contracts\ThingContract;
 
 /**
  * A subclass of Role used to describe roles within organizations.
@@ -285,4 +285,5 @@ class OrganizationRole extends BaseType implements OrganizationRoleContract, Int
     {
         return $this->setProperty('url', $url);
     }
+
 }

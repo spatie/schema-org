@@ -2,11 +2,11 @@
 
 namespace Spatie\SchemaOrg;
 
-use Spatie\SchemaOrg\Contracts\EnumerationContract;
-use Spatie\SchemaOrg\Contracts\IntangibleContract;
-use Spatie\SchemaOrg\Contracts\PaymentStatusTypeContract;
-use Spatie\SchemaOrg\Contracts\StatusEnumerationContract;
-use Spatie\SchemaOrg\Contracts\ThingContract;
+use \Spatie\SchemaOrg\Contracts\PaymentStatusTypeContract;
+use \Spatie\SchemaOrg\Contracts\EnumerationContract;
+use \Spatie\SchemaOrg\Contracts\IntangibleContract;
+use \Spatie\SchemaOrg\Contracts\StatusEnumerationContract;
+use \Spatie\SchemaOrg\Contracts\ThingContract;
 
 /**
  * A specific payment status. For example, PaymentDue, PaymentComplete, etc.
@@ -22,35 +22,35 @@ class PaymentStatusType extends BaseType implements PaymentStatusTypeContract, E
      *
      * @see https://schema.org/PaymentAutomaticallyApplied
      */
-    public const PaymentAutomaticallyApplied = 'https://schema.org/PaymentAutomaticallyApplied';
+     const PaymentAutomaticallyApplied = 'https://schema.org/PaymentAutomaticallyApplied';
 
     /**
      * The payment has been received and processed.
      *
      * @see https://schema.org/PaymentComplete
      */
-    public const PaymentComplete = 'https://schema.org/PaymentComplete';
+     const PaymentComplete = 'https://schema.org/PaymentComplete';
 
     /**
      * The payee received the payment, but it was declined for some reason.
      *
      * @see https://schema.org/PaymentDeclined
      */
-    public const PaymentDeclined = 'https://schema.org/PaymentDeclined';
+     const PaymentDeclined = 'https://schema.org/PaymentDeclined';
 
     /**
      * The payment is due, but still within an acceptable time to be received.
      *
      * @see https://schema.org/PaymentDue
      */
-    public const PaymentDue = 'https://schema.org/PaymentDue';
+     const PaymentDue = 'https://schema.org/PaymentDue';
 
     /**
      * The payment is due and considered late.
      *
      * @see https://schema.org/PaymentPastDue
      */
-    public const PaymentPastDue = 'https://schema.org/PaymentPastDue';
+     const PaymentPastDue = 'https://schema.org/PaymentPastDue';
 
     /**
      * An additional type for the item, typically used for adding more specific
@@ -242,4 +242,5 @@ class PaymentStatusType extends BaseType implements PaymentStatusTypeContract, E
     {
         return $this->setProperty('url', $url);
     }
+
 }

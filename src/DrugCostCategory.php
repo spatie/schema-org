@@ -2,11 +2,11 @@
 
 namespace Spatie\SchemaOrg;
 
-use Spatie\SchemaOrg\Contracts\DrugCostCategoryContract;
-use Spatie\SchemaOrg\Contracts\EnumerationContract;
-use Spatie\SchemaOrg\Contracts\IntangibleContract;
-use Spatie\SchemaOrg\Contracts\MedicalEnumerationContract;
-use Spatie\SchemaOrg\Contracts\ThingContract;
+use \Spatie\SchemaOrg\Contracts\DrugCostCategoryContract;
+use \Spatie\SchemaOrg\Contracts\EnumerationContract;
+use \Spatie\SchemaOrg\Contracts\IntangibleContract;
+use \Spatie\SchemaOrg\Contracts\MedicalEnumerationContract;
+use \Spatie\SchemaOrg\Contracts\ThingContract;
 
 /**
  * Enumerated categories of medical drug costs.
@@ -25,7 +25,7 @@ class DrugCostCategory extends BaseType implements DrugCostCategoryContract, Enu
      * @see https://schema.org/ReimbursementCap
      * @see https://health-lifesci.schema.org
      */
-    public const ReimbursementCap = 'https://schema.org/ReimbursementCap';
+     const ReimbursementCap = 'https://schema.org/ReimbursementCap';
 
     /**
      * The drug's cost represents the retail cost of the drug.
@@ -33,7 +33,7 @@ class DrugCostCategory extends BaseType implements DrugCostCategoryContract, Enu
      * @see https://schema.org/Retail
      * @see https://health-lifesci.schema.org
      */
-    public const Retail = 'https://schema.org/Retail';
+     const Retail = 'https://schema.org/Retail';
 
     /**
      * The drug's cost represents the wholesale acquisition cost of the drug.
@@ -41,7 +41,7 @@ class DrugCostCategory extends BaseType implements DrugCostCategoryContract, Enu
      * @see https://schema.org/Wholesale
      * @see https://health-lifesci.schema.org
      */
-    public const Wholesale = 'https://schema.org/Wholesale';
+     const Wholesale = 'https://schema.org/Wholesale';
 
     /**
      * An additional type for the item, typically used for adding more specific
@@ -233,4 +233,5 @@ class DrugCostCategory extends BaseType implements DrugCostCategoryContract, Enu
     {
         return $this->setProperty('url', $url);
     }
+
 }

@@ -121,4 +121,5 @@ interface ContinentContract
     public function tourBookingPage($tourBookingPage);
 
     public function url($url);
+
 }

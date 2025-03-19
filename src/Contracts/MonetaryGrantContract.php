@@ -35,4 +35,5 @@ interface MonetaryGrantContract
     public function subjectOf($subjectOf);
 
     public function url($url);
+
 }

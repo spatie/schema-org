@@ -2,10 +2,10 @@
 
 namespace Spatie\SchemaOrg;
 
-use Spatie\SchemaOrg\Contracts\AnatomicalStructureContract;
-use Spatie\SchemaOrg\Contracts\MedicalEntityContract;
-use Spatie\SchemaOrg\Contracts\MuscleContract;
-use Spatie\SchemaOrg\Contracts\ThingContract;
+use \Spatie\SchemaOrg\Contracts\MuscleContract;
+use \Spatie\SchemaOrg\Contracts\AnatomicalStructureContract;
+use \Spatie\SchemaOrg\Contracts\MedicalEntityContract;
+use \Spatie\SchemaOrg\Contracts\ThingContract;
 
 /**
  * A muscle is an anatomical structure consisting of a contractile form of
@@ -531,4 +531,5 @@ class Muscle extends BaseType implements MuscleContract, AnatomicalStructureCont
     {
         return $this->setProperty('url', $url);
     }
+
 }

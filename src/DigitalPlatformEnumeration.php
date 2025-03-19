@@ -2,10 +2,10 @@
 
 namespace Spatie\SchemaOrg;
 
-use Spatie\SchemaOrg\Contracts\DigitalPlatformEnumerationContract;
-use Spatie\SchemaOrg\Contracts\EnumerationContract;
-use Spatie\SchemaOrg\Contracts\IntangibleContract;
-use Spatie\SchemaOrg\Contracts\ThingContract;
+use \Spatie\SchemaOrg\Contracts\DigitalPlatformEnumerationContract;
+use \Spatie\SchemaOrg\Contracts\EnumerationContract;
+use \Spatie\SchemaOrg\Contracts\IntangibleContract;
+use \Spatie\SchemaOrg\Contracts\ThingContract;
 
 /**
  * Enumerates some common technology platforms, for use with properties such as
@@ -30,7 +30,7 @@ class DigitalPlatformEnumeration extends BaseType implements DigitalPlatformEnum
      * @see https://pending.schema.org
      * @link https://github.com/schemaorg/schemaorg/issues/3057
      */
-    public const AndroidPlatform = 'https://schema.org/AndroidPlatform';
+     const AndroidPlatform = 'https://schema.org/AndroidPlatform';
 
     /**
      * Represents the broad notion of 'desktop' browsers as a Web Platform.
@@ -39,7 +39,7 @@ class DigitalPlatformEnumeration extends BaseType implements DigitalPlatformEnum
      * @see https://pending.schema.org
      * @link https://github.com/schemaorg/schemaorg/issues/3057
      */
-    public const DesktopWebPlatform = 'https://schema.org/DesktopWebPlatform';
+     const DesktopWebPlatform = 'https://schema.org/DesktopWebPlatform';
 
     /**
      * Represents the generic notion of the Web Platform. More specific codes
@@ -50,7 +50,7 @@ class DigitalPlatformEnumeration extends BaseType implements DigitalPlatformEnum
      * @see https://pending.schema.org
      * @link https://github.com/schemaorg/schemaorg/issues/3057
      */
-    public const GenericWebPlatform = 'https://schema.org/GenericWebPlatform';
+     const GenericWebPlatform = 'https://schema.org/GenericWebPlatform';
 
     /**
      * Represents the broad notion of iOS-based operating systems.
@@ -59,7 +59,7 @@ class DigitalPlatformEnumeration extends BaseType implements DigitalPlatformEnum
      * @see https://pending.schema.org
      * @link https://github.com/schemaorg/schemaorg/issues/3057
      */
-    public const IOSPlatform = 'https://schema.org/IOSPlatform';
+     const IOSPlatform = 'https://schema.org/IOSPlatform';
 
     /**
      * Represents the broad notion of 'mobile' browsers as a Web Platform.
@@ -68,7 +68,7 @@ class DigitalPlatformEnumeration extends BaseType implements DigitalPlatformEnum
      * @see https://pending.schema.org
      * @link https://github.com/schemaorg/schemaorg/issues/3057
      */
-    public const MobileWebPlatform = 'https://schema.org/MobileWebPlatform';
+     const MobileWebPlatform = 'https://schema.org/MobileWebPlatform';
 
     /**
      * An additional type for the item, typically used for adding more specific
@@ -260,4 +260,5 @@ class DigitalPlatformEnumeration extends BaseType implements DigitalPlatformEnum
     {
         return $this->setProperty('url', $url);
     }
+
 }

@@ -2,11 +2,11 @@
 
 namespace Spatie\SchemaOrg;
 
-use Spatie\SchemaOrg\Contracts\MedicalEntityContract;
-use Spatie\SchemaOrg\Contracts\MedicalProcedureContract;
-use Spatie\SchemaOrg\Contracts\PsychologicalTreatmentContract;
-use Spatie\SchemaOrg\Contracts\TherapeuticProcedureContract;
-use Spatie\SchemaOrg\Contracts\ThingContract;
+use \Spatie\SchemaOrg\Contracts\PsychologicalTreatmentContract;
+use \Spatie\SchemaOrg\Contracts\MedicalEntityContract;
+use \Spatie\SchemaOrg\Contracts\MedicalProcedureContract;
+use \Spatie\SchemaOrg\Contracts\TherapeuticProcedureContract;
+use \Spatie\SchemaOrg\Contracts\ThingContract;
 
 /**
  * A process of care relying upon counseling, dialogue and communication  aimed
@@ -476,4 +476,5 @@ class PsychologicalTreatment extends BaseType implements PsychologicalTreatmentC
     {
         return $this->setProperty('url', $url);
     }
+
 }

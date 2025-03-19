@@ -43,4 +43,5 @@ interface SteeringPositionValueContract
     public function url($url);
 
     public function valueReference($valueReference);
+
 }

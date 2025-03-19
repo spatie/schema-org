@@ -2,11 +2,11 @@
 
 namespace Spatie\SchemaOrg;
 
-use Spatie\SchemaOrg\Contracts\EnumerationContract;
-use Spatie\SchemaOrg\Contracts\IntangibleContract;
-use Spatie\SchemaOrg\Contracts\NonprofitTypeContract;
-use Spatie\SchemaOrg\Contracts\ThingContract;
-use Spatie\SchemaOrg\Contracts\UKNonprofitTypeContract;
+use \Spatie\SchemaOrg\Contracts\UKNonprofitTypeContract;
+use \Spatie\SchemaOrg\Contracts\EnumerationContract;
+use \Spatie\SchemaOrg\Contracts\IntangibleContract;
+use \Spatie\SchemaOrg\Contracts\NonprofitTypeContract;
+use \Spatie\SchemaOrg\Contracts\ThingContract;
 
 /**
  * UKNonprofitType: Non-profit organization type originating from the United
@@ -28,7 +28,7 @@ class UKNonprofitType extends BaseType implements UKNonprofitTypeContract, Enume
      * @see https://pending.schema.org
      * @link https://github.com/schemaorg/schemaorg/issues/2543
      */
-    public const CharitableIncorporatedOrganization = 'https://schema.org/CharitableIncorporatedOrganization';
+     const CharitableIncorporatedOrganization = 'https://schema.org/CharitableIncorporatedOrganization';
 
     /**
      * LimitedByGuaranteeCharity: Non-profit type referring to a charitable
@@ -38,7 +38,7 @@ class UKNonprofitType extends BaseType implements UKNonprofitTypeContract, Enume
      * @see https://pending.schema.org
      * @link https://github.com/schemaorg/schemaorg/issues/2543
      */
-    public const LimitedByGuaranteeCharity = 'https://schema.org/LimitedByGuaranteeCharity';
+     const LimitedByGuaranteeCharity = 'https://schema.org/LimitedByGuaranteeCharity';
 
     /**
      * UKTrust: Non-profit type referring to a UK trust.
@@ -47,7 +47,7 @@ class UKNonprofitType extends BaseType implements UKNonprofitTypeContract, Enume
      * @see https://pending.schema.org
      * @link https://github.com/schemaorg/schemaorg/issues/2543
      */
-    public const UKTrust = 'https://schema.org/UKTrust';
+     const UKTrust = 'https://schema.org/UKTrust';
 
     /**
      * UnincorporatedAssociationCharity: Non-profit type referring to a
@@ -57,7 +57,7 @@ class UKNonprofitType extends BaseType implements UKNonprofitTypeContract, Enume
      * @see https://pending.schema.org
      * @link https://github.com/schemaorg/schemaorg/issues/2543
      */
-    public const UnincorporatedAssociationCharity = 'https://schema.org/UnincorporatedAssociationCharity';
+     const UnincorporatedAssociationCharity = 'https://schema.org/UnincorporatedAssociationCharity';
 
     /**
      * An additional type for the item, typically used for adding more specific
@@ -249,4 +249,5 @@ class UKNonprofitType extends BaseType implements UKNonprofitTypeContract, Enume
     {
         return $this->setProperty('url', $url);
     }
+
 }

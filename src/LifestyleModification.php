@@ -2,9 +2,9 @@
 
 namespace Spatie\SchemaOrg;
 
-use Spatie\SchemaOrg\Contracts\LifestyleModificationContract;
-use Spatie\SchemaOrg\Contracts\MedicalEntityContract;
-use Spatie\SchemaOrg\Contracts\ThingContract;
+use \Spatie\SchemaOrg\Contracts\LifestyleModificationContract;
+use \Spatie\SchemaOrg\Contracts\MedicalEntityContract;
+use \Spatie\SchemaOrg\Contracts\ThingContract;
 
 /**
  * A process of care involving exercise, changes to diet, fitness routines, and
@@ -332,4 +332,5 @@ class LifestyleModification extends BaseType implements LifestyleModificationCon
     {
         return $this->setProperty('url', $url);
     }
+
 }

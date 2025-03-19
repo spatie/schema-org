@@ -2,10 +2,10 @@
 
 namespace Spatie\SchemaOrg;
 
-use Spatie\SchemaOrg\Contracts\GovernmentServiceContract;
-use Spatie\SchemaOrg\Contracts\IntangibleContract;
-use Spatie\SchemaOrg\Contracts\ServiceContract;
-use Spatie\SchemaOrg\Contracts\ThingContract;
+use \Spatie\SchemaOrg\Contracts\GovernmentServiceContract;
+use \Spatie\SchemaOrg\Contracts\IntangibleContract;
+use \Spatie\SchemaOrg\Contracts\ServiceContract;
+use \Spatie\SchemaOrg\Contracts\ThingContract;
 
 /**
  * A service provided by a government organization, e.g. food stamps, veterans
@@ -616,4 +616,5 @@ class GovernmentService extends BaseType implements GovernmentServiceContract, I
     {
         return $this->setProperty('url', $url);
     }
+
 }

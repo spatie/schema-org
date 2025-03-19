@@ -2,10 +2,10 @@
 
 namespace Spatie\SchemaOrg;
 
-use Spatie\SchemaOrg\Contracts\CategoryCodeContract;
-use Spatie\SchemaOrg\Contracts\DefinedTermContract;
-use Spatie\SchemaOrg\Contracts\IntangibleContract;
-use Spatie\SchemaOrg\Contracts\ThingContract;
+use \Spatie\SchemaOrg\Contracts\CategoryCodeContract;
+use \Spatie\SchemaOrg\Contracts\DefinedTermContract;
+use \Spatie\SchemaOrg\Contracts\IntangibleContract;
+use \Spatie\SchemaOrg\Contracts\ThingContract;
 
 /**
  * A Category Code.
@@ -271,4 +271,5 @@ class CategoryCode extends BaseType implements CategoryCodeContract, DefinedTerm
     {
         return $this->setProperty('url', $url);
     }
+
 }

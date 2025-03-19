@@ -2,9 +2,9 @@
 
 namespace Spatie\SchemaOrg;
 
-use Spatie\SchemaOrg\Contracts\DanceEventContract;
-use Spatie\SchemaOrg\Contracts\EventContract;
-use Spatie\SchemaOrg\Contracts\ThingContract;
+use \Spatie\SchemaOrg\Contracts\DanceEventContract;
+use \Spatie\SchemaOrg\Contracts\EventContract;
+use \Spatie\SchemaOrg\Contracts\ThingContract;
 
 /**
  * Event type: A social dance.
@@ -871,4 +871,5 @@ class DanceEvent extends BaseType implements DanceEventContract, EventContract, 
     {
         return $this->setProperty('workPerformed', $workPerformed);
     }
+
 }

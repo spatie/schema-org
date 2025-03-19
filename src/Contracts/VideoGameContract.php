@@ -337,4 +337,5 @@ interface VideoGameContract
     public function workExample($workExample);
 
     public function workTranslation($workTranslation);
+
 }

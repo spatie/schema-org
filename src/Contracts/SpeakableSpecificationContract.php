@@ -31,4 +31,5 @@ interface SpeakableSpecificationContract
     public function url($url);
 
     public function xpath($xpath);
+
 }

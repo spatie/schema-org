@@ -2,10 +2,10 @@
 
 namespace Spatie\SchemaOrg;
 
-use Spatie\SchemaOrg\Contracts\ActionContract;
-use Spatie\SchemaOrg\Contracts\BookmarkActionContract;
-use Spatie\SchemaOrg\Contracts\OrganizeActionContract;
-use Spatie\SchemaOrg\Contracts\ThingContract;
+use \Spatie\SchemaOrg\Contracts\BookmarkActionContract;
+use \Spatie\SchemaOrg\Contracts\ActionContract;
+use \Spatie\SchemaOrg\Contracts\OrganizeActionContract;
+use \Spatie\SchemaOrg\Contracts\ThingContract;
 
 /**
  * An agent bookmarks/flags/labels/tags/marks an object.
@@ -133,7 +133,7 @@ class BookmarkAction extends BaseType implements BookmarkActionContract, ActionC
      * John wrote a book from January to *December*. For media, including audio
      * and video, it's the time offset of the end of a clip within a larger
      * file.
-     *
+     * 
      * Note that Event uses startDate/endDate instead of startTime/endTime, even
      * when describing dates with times. This situation may be clarified in
      * future revisions.
@@ -358,7 +358,7 @@ class BookmarkAction extends BaseType implements BookmarkActionContract, ActionC
      * John wrote a book from *January* to December. For media, including audio
      * and video, it's the time offset of the start of a clip within a larger
      * file.
-     *
+     * 
      * Note that Event uses startDate/endDate instead of startTime/endTime, even
      * when describing dates with times. This situation may be clarified in
      * future revisions.
@@ -417,4 +417,5 @@ class BookmarkAction extends BaseType implements BookmarkActionContract, ActionC
     {
         return $this->setProperty('url', $url);
     }
+
 }

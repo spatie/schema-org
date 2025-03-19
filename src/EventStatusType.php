@@ -2,11 +2,11 @@
 
 namespace Spatie\SchemaOrg;
 
-use Spatie\SchemaOrg\Contracts\EnumerationContract;
-use Spatie\SchemaOrg\Contracts\EventStatusTypeContract;
-use Spatie\SchemaOrg\Contracts\IntangibleContract;
-use Spatie\SchemaOrg\Contracts\StatusEnumerationContract;
-use Spatie\SchemaOrg\Contracts\ThingContract;
+use \Spatie\SchemaOrg\Contracts\EventStatusTypeContract;
+use \Spatie\SchemaOrg\Contracts\EnumerationContract;
+use \Spatie\SchemaOrg\Contracts\IntangibleContract;
+use \Spatie\SchemaOrg\Contracts\StatusEnumerationContract;
+use \Spatie\SchemaOrg\Contracts\ThingContract;
 
 /**
  * EventStatusType is an enumeration type whose instances represent several
@@ -25,7 +25,7 @@ class EventStatusType extends BaseType implements EventStatusTypeContract, Enume
      *
      * @see https://schema.org/EventCancelled
      */
-    public const EventCancelled = 'https://schema.org/EventCancelled';
+     const EventCancelled = 'https://schema.org/EventCancelled';
 
     /**
      * Indicates that the event was changed to allow online participation. See
@@ -34,7 +34,7 @@ class EventStatusType extends BaseType implements EventStatusTypeContract, Enume
      *
      * @see https://schema.org/EventMovedOnline
      */
-    public const EventMovedOnline = 'https://schema.org/EventMovedOnline';
+     const EventMovedOnline = 'https://schema.org/EventMovedOnline';
 
     /**
      * The event has been postponed and no new date has been set. The event's
@@ -42,7 +42,7 @@ class EventStatusType extends BaseType implements EventStatusTypeContract, Enume
      *
      * @see https://schema.org/EventPostponed
      */
-    public const EventPostponed = 'https://schema.org/EventPostponed';
+     const EventPostponed = 'https://schema.org/EventPostponed';
 
     /**
      * The event has been rescheduled. The event's previousStartDate should be
@@ -52,7 +52,7 @@ class EventStatusType extends BaseType implements EventStatusTypeContract, Enume
      *
      * @see https://schema.org/EventRescheduled
      */
-    public const EventRescheduled = 'https://schema.org/EventRescheduled';
+     const EventRescheduled = 'https://schema.org/EventRescheduled';
 
     /**
      * The event is taking place or has taken place on the startDate as
@@ -60,7 +60,7 @@ class EventStatusType extends BaseType implements EventStatusTypeContract, Enume
      *
      * @see https://schema.org/EventScheduled
      */
-    public const EventScheduled = 'https://schema.org/EventScheduled';
+     const EventScheduled = 'https://schema.org/EventScheduled';
 
     /**
      * An additional type for the item, typically used for adding more specific
@@ -252,4 +252,5 @@ class EventStatusType extends BaseType implements EventStatusTypeContract, Enume
     {
         return $this->setProperty('url', $url);
     }
+
 }

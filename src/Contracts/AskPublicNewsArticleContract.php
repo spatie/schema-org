@@ -281,4 +281,5 @@ interface AskPublicNewsArticleContract
     public function workExample($workExample);
 
     public function workTranslation($workTranslation);
+
 }

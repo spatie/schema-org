@@ -57,4 +57,5 @@ interface EatActionContract
     public function target($target);
 
     public function url($url);
+
 }

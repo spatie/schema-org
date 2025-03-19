@@ -39,4 +39,5 @@ interface EndorsementRatingContract
     public function url($url);
 
     public function worstRating($worstRating);
+
 }

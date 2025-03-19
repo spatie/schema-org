@@ -2,9 +2,9 @@
 
 namespace Spatie\SchemaOrg;
 
-use Spatie\SchemaOrg\Contracts\IntangibleContract;
-use Spatie\SchemaOrg\Contracts\OrderContract;
-use Spatie\SchemaOrg\Contracts\ThingContract;
+use \Spatie\SchemaOrg\Contracts\OrderContract;
+use \Spatie\SchemaOrg\Contracts\IntangibleContract;
+use \Spatie\SchemaOrg\Contracts\ThingContract;
 
 /**
  * An order is a confirmation of a transaction (a receipt), which can contain
@@ -188,7 +188,7 @@ class Order extends BaseType implements OrderContract, IntangibleContract, Thing
 
     /**
      * The currency of the discount.
-     *
+     * 
      * Use standard formats: [ISO 4217 currency
      * format](http://en.wikipedia.org/wiki/ISO_4217), e.g. "USD"; [Ticker
      * symbol](https://en.wikipedia.org/wiki/List_of_cryptocurrencies) for
@@ -530,4 +530,5 @@ class Order extends BaseType implements OrderContract, IntangibleContract, Thing
     {
         return $this->setProperty('url', $url);
     }
+
 }

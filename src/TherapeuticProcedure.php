@@ -2,10 +2,10 @@
 
 namespace Spatie\SchemaOrg;
 
-use Spatie\SchemaOrg\Contracts\MedicalEntityContract;
-use Spatie\SchemaOrg\Contracts\MedicalProcedureContract;
-use Spatie\SchemaOrg\Contracts\TherapeuticProcedureContract;
-use Spatie\SchemaOrg\Contracts\ThingContract;
+use \Spatie\SchemaOrg\Contracts\TherapeuticProcedureContract;
+use \Spatie\SchemaOrg\Contracts\MedicalEntityContract;
+use \Spatie\SchemaOrg\Contracts\MedicalProcedureContract;
+use \Spatie\SchemaOrg\Contracts\ThingContract;
 
 /**
  * A medical procedure intended primarily for therapeutic purposes, aimed at
@@ -475,4 +475,5 @@ class TherapeuticProcedure extends BaseType implements TherapeuticProcedureContr
     {
         return $this->setProperty('url', $url);
     }
+
 }

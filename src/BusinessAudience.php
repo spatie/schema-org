@@ -2,10 +2,10 @@
 
 namespace Spatie\SchemaOrg;
 
-use Spatie\SchemaOrg\Contracts\AudienceContract;
-use Spatie\SchemaOrg\Contracts\BusinessAudienceContract;
-use Spatie\SchemaOrg\Contracts\IntangibleContract;
-use Spatie\SchemaOrg\Contracts\ThingContract;
+use \Spatie\SchemaOrg\Contracts\BusinessAudienceContract;
+use \Spatie\SchemaOrg\Contracts\AudienceContract;
+use \Spatie\SchemaOrg\Contracts\IntangibleContract;
+use \Spatie\SchemaOrg\Contracts\ThingContract;
 
 /**
  * A set of characteristics belonging to businesses, e.g. who compose an item's
@@ -277,4 +277,5 @@ class BusinessAudience extends BaseType implements BusinessAudienceContract, Aud
     {
         return $this->setProperty('yearsInOperation', $yearsInOperation);
     }
+
 }

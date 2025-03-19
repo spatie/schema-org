@@ -53,4 +53,5 @@ interface CompoundPriceSpecificationContract
     public function validThrough($validThrough);
 
     public function valueAddedTaxIncluded($valueAddedTaxIncluded);
+
 }

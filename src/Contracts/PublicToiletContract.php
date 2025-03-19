@@ -123,4 +123,5 @@ interface PublicToiletContract
     public function tourBookingPage($tourBookingPage);
 
     public function url($url);
+
 }

@@ -2,10 +2,10 @@
 
 namespace Spatie\SchemaOrg;
 
-use Spatie\SchemaOrg\Contracts\IntangibleContract;
-use Spatie\SchemaOrg\Contracts\ShippingRateSettingsContract;
-use Spatie\SchemaOrg\Contracts\StructuredValueContract;
-use Spatie\SchemaOrg\Contracts\ThingContract;
+use \Spatie\SchemaOrg\Contracts\ShippingRateSettingsContract;
+use \Spatie\SchemaOrg\Contracts\IntangibleContract;
+use \Spatie\SchemaOrg\Contracts\StructuredValueContract;
+use \Spatie\SchemaOrg\Contracts\ThingContract;
 
 /**
  * A ShippingRateSettings represents re-usable pieces of shipping information.
@@ -315,4 +315,5 @@ class ShippingRateSettings extends BaseType implements ShippingRateSettingsContr
     {
         return $this->setProperty('url', $url);
     }
+
 }

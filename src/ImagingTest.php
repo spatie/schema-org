@@ -2,10 +2,10 @@
 
 namespace Spatie\SchemaOrg;
 
-use Spatie\SchemaOrg\Contracts\ImagingTestContract;
-use Spatie\SchemaOrg\Contracts\MedicalEntityContract;
-use Spatie\SchemaOrg\Contracts\MedicalTestContract;
-use Spatie\SchemaOrg\Contracts\ThingContract;
+use \Spatie\SchemaOrg\Contracts\ImagingTestContract;
+use \Spatie\SchemaOrg\Contracts\MedicalEntityContract;
+use \Spatie\SchemaOrg\Contracts\MedicalTestContract;
+use \Spatie\SchemaOrg\Contracts\ThingContract;
 
 /**
  * Any medical imaging modality typically used for diagnostic purposes.
@@ -422,4 +422,5 @@ class ImagingTest extends BaseType implements ImagingTestContract, MedicalEntity
     {
         return $this->setProperty('usesDevice', $usesDevice);
     }
+
 }

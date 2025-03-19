@@ -2,10 +2,10 @@
 
 namespace Spatie\SchemaOrg;
 
-use Spatie\SchemaOrg\Contracts\MedicalEntityContract;
-use Spatie\SchemaOrg\Contracts\MedicalTestContract;
-use Spatie\SchemaOrg\Contracts\PathologyTestContract;
-use Spatie\SchemaOrg\Contracts\ThingContract;
+use \Spatie\SchemaOrg\Contracts\PathologyTestContract;
+use \Spatie\SchemaOrg\Contracts\MedicalEntityContract;
+use \Spatie\SchemaOrg\Contracts\MedicalTestContract;
+use \Spatie\SchemaOrg\Contracts\ThingContract;
 
 /**
  * A medical test performed by a laboratory that typically involves examination
@@ -423,4 +423,5 @@ class PathologyTest extends BaseType implements PathologyTestContract, MedicalEn
     {
         return $this->setProperty('usesDevice', $usesDevice);
     }
+
 }

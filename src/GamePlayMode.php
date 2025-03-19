@@ -2,10 +2,10 @@
 
 namespace Spatie\SchemaOrg;
 
-use Spatie\SchemaOrg\Contracts\EnumerationContract;
-use Spatie\SchemaOrg\Contracts\GamePlayModeContract;
-use Spatie\SchemaOrg\Contracts\IntangibleContract;
-use Spatie\SchemaOrg\Contracts\ThingContract;
+use \Spatie\SchemaOrg\Contracts\GamePlayModeContract;
+use \Spatie\SchemaOrg\Contracts\EnumerationContract;
+use \Spatie\SchemaOrg\Contracts\IntangibleContract;
+use \Spatie\SchemaOrg\Contracts\ThingContract;
 
 /**
  * Indicates whether this game is multi-player, co-op or single-player.
@@ -22,7 +22,7 @@ class GamePlayMode extends BaseType implements GamePlayModeContract, Enumeration
      *
      * @see https://schema.org/CoOp
      */
-    public const CoOp = 'https://schema.org/CoOp';
+     const CoOp = 'https://schema.org/CoOp';
 
     /**
      * Play mode: MultiPlayer. Requiring or allowing multiple human players to
@@ -30,14 +30,14 @@ class GamePlayMode extends BaseType implements GamePlayModeContract, Enumeration
      *
      * @see https://schema.org/MultiPlayer
      */
-    public const MultiPlayer = 'https://schema.org/MultiPlayer';
+     const MultiPlayer = 'https://schema.org/MultiPlayer';
 
     /**
      * Play mode: SinglePlayer. Which is played by a lone player.
      *
      * @see https://schema.org/SinglePlayer
      */
-    public const SinglePlayer = 'https://schema.org/SinglePlayer';
+     const SinglePlayer = 'https://schema.org/SinglePlayer';
 
     /**
      * An additional type for the item, typically used for adding more specific
@@ -229,4 +229,5 @@ class GamePlayMode extends BaseType implements GamePlayModeContract, Enumeration
     {
         return $this->setProperty('url', $url);
     }
+
 }

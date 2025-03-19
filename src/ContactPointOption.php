@@ -2,10 +2,10 @@
 
 namespace Spatie\SchemaOrg;
 
-use Spatie\SchemaOrg\Contracts\ContactPointOptionContract;
-use Spatie\SchemaOrg\Contracts\EnumerationContract;
-use Spatie\SchemaOrg\Contracts\IntangibleContract;
-use Spatie\SchemaOrg\Contracts\ThingContract;
+use \Spatie\SchemaOrg\Contracts\ContactPointOptionContract;
+use \Spatie\SchemaOrg\Contracts\EnumerationContract;
+use \Spatie\SchemaOrg\Contracts\IntangibleContract;
+use \Spatie\SchemaOrg\Contracts\ThingContract;
 
 /**
  * Enumerated options related to a ContactPoint.
@@ -21,14 +21,14 @@ class ContactPointOption extends BaseType implements ContactPointOptionContract,
      *
      * @see https://schema.org/HearingImpairedSupported
      */
-    public const HearingImpairedSupported = 'https://schema.org/HearingImpairedSupported';
+     const HearingImpairedSupported = 'https://schema.org/HearingImpairedSupported';
 
     /**
      * The associated telephone number is toll free.
      *
      * @see https://schema.org/TollFree
      */
-    public const TollFree = 'https://schema.org/TollFree';
+     const TollFree = 'https://schema.org/TollFree';
 
     /**
      * An additional type for the item, typically used for adding more specific
@@ -220,4 +220,5 @@ class ContactPointOption extends BaseType implements ContactPointOptionContract,
     {
         return $this->setProperty('url', $url);
     }
+
 }

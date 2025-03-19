@@ -2,9 +2,9 @@
 
 namespace Spatie\SchemaOrg;
 
-use Spatie\SchemaOrg\Contracts\MedicalEntityContract;
-use Spatie\SchemaOrg\Contracts\MedicalIntangibleContract;
-use Spatie\SchemaOrg\Contracts\ThingContract;
+use \Spatie\SchemaOrg\Contracts\MedicalIntangibleContract;
+use \Spatie\SchemaOrg\Contracts\MedicalEntityContract;
+use \Spatie\SchemaOrg\Contracts\ThingContract;
 
 /**
  * A utility class that serves as the umbrella for a number of 'intangible'
@@ -332,4 +332,5 @@ class MedicalIntangible extends BaseType implements MedicalIntangibleContract, M
     {
         return $this->setProperty('url', $url);
     }
+
 }

@@ -2,11 +2,11 @@
 
 namespace Spatie\SchemaOrg;
 
-use Spatie\SchemaOrg\Contracts\FinancialProductContract;
-use Spatie\SchemaOrg\Contracts\IntangibleContract;
-use Spatie\SchemaOrg\Contracts\InvestmentOrDepositContract;
-use Spatie\SchemaOrg\Contracts\ServiceContract;
-use Spatie\SchemaOrg\Contracts\ThingContract;
+use \Spatie\SchemaOrg\Contracts\InvestmentOrDepositContract;
+use \Spatie\SchemaOrg\Contracts\FinancialProductContract;
+use \Spatie\SchemaOrg\Contracts\IntangibleContract;
+use \Spatie\SchemaOrg\Contracts\ServiceContract;
+use \Spatie\SchemaOrg\Contracts\ThingContract;
 
 /**
  * A type of financial product that typically requires the client to transfer
@@ -646,4 +646,5 @@ class InvestmentOrDeposit extends BaseType implements InvestmentOrDepositContrac
     {
         return $this->setProperty('url', $url);
     }
+
 }

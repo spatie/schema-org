@@ -293,4 +293,5 @@ interface ExercisePlanContract
     public function workTranslation($workTranslation);
 
     public function workload($workload);
+
 }

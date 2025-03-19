@@ -2,9 +2,9 @@
 
 namespace Spatie\SchemaOrg;
 
-use Spatie\SchemaOrg\Contracts\EventContract;
-use Spatie\SchemaOrg\Contracts\FestivalContract;
-use Spatie\SchemaOrg\Contracts\ThingContract;
+use \Spatie\SchemaOrg\Contracts\FestivalContract;
+use \Spatie\SchemaOrg\Contracts\EventContract;
+use \Spatie\SchemaOrg\Contracts\ThingContract;
 
 /**
  * Event type: Festival.
@@ -871,4 +871,5 @@ class Festival extends BaseType implements FestivalContract, EventContract, Thin
     {
         return $this->setProperty('workPerformed', $workPerformed);
     }
+
 }

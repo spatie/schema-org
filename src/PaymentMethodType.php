@@ -2,10 +2,10 @@
 
 namespace Spatie\SchemaOrg;
 
-use Spatie\SchemaOrg\Contracts\EnumerationContract;
-use Spatie\SchemaOrg\Contracts\IntangibleContract;
-use Spatie\SchemaOrg\Contracts\PaymentMethodTypeContract;
-use Spatie\SchemaOrg\Contracts\ThingContract;
+use \Spatie\SchemaOrg\Contracts\PaymentMethodTypeContract;
+use \Spatie\SchemaOrg\Contracts\EnumerationContract;
+use \Spatie\SchemaOrg\Contracts\IntangibleContract;
+use \Spatie\SchemaOrg\Contracts\ThingContract;
 
 /**
  * The type of payment method, only for generic payment types, specific forms of
@@ -26,7 +26,7 @@ class PaymentMethodType extends BaseType implements PaymentMethodTypeContract, E
      *
      * @see https://schema.org/ByBankTransferInAdvance
      */
-    public const ByBankTransferInAdvance = 'https://schema.org/ByBankTransferInAdvance';
+     const ByBankTransferInAdvance = 'https://schema.org/ByBankTransferInAdvance';
 
     /**
      * Payment by invoice, typically after the goods were delivered, equivalent
@@ -34,7 +34,7 @@ class PaymentMethodType extends BaseType implements PaymentMethodTypeContract, E
      *
      * @see https://schema.org/ByInvoice
      */
-    public const ByInvoice = 'https://schema.org/ByInvoice';
+     const ByInvoice = 'https://schema.org/ByInvoice';
 
     /**
      * Cash on Delivery (COD) payment, equivalent to
@@ -42,7 +42,7 @@ class PaymentMethodType extends BaseType implements PaymentMethodTypeContract, E
      *
      * @see https://schema.org/COD
      */
-    public const COD = 'https://schema.org/COD';
+     const COD = 'https://schema.org/COD';
 
     /**
      * Payment using cash, on premises, equivalent to
@@ -50,7 +50,7 @@ class PaymentMethodType extends BaseType implements PaymentMethodTypeContract, E
      *
      * @see https://schema.org/Cash
      */
-    public const Cash = 'https://schema.org/Cash';
+     const Cash = 'https://schema.org/Cash';
 
     /**
      * Payment in advance by sending a check, equivalent to
@@ -58,7 +58,7 @@ class PaymentMethodType extends BaseType implements PaymentMethodTypeContract, E
      *
      * @see https://schema.org/CheckInAdvance
      */
-    public const CheckInAdvance = 'https://schema.org/CheckInAdvance';
+     const CheckInAdvance = 'https://schema.org/CheckInAdvance';
 
     /**
      * Payment in advance by direct debit from the bank, equivalent to
@@ -66,7 +66,7 @@ class PaymentMethodType extends BaseType implements PaymentMethodTypeContract, E
      *
      * @see https://schema.org/DirectDebit
      */
-    public const DirectDebit = 'https://schema.org/DirectDebit';
+     const DirectDebit = 'https://schema.org/DirectDebit';
 
     /**
      * Payment in advance in some form of shop or kiosk for goods purchased
@@ -74,14 +74,14 @@ class PaymentMethodType extends BaseType implements PaymentMethodTypeContract, E
      *
      * @see https://schema.org/InStorePrepay
      */
-    public const InStorePrepay = 'https://schema.org/InStorePrepay';
+     const InStorePrepay = 'https://schema.org/InStorePrepay';
 
     /**
      * Payment by billing via the phone carrier.
      *
      * @see https://schema.org/PhoneCarrierPayment
      */
-    public const PhoneCarrierPayment = 'https://schema.org/PhoneCarrierPayment';
+     const PhoneCarrierPayment = 'https://schema.org/PhoneCarrierPayment';
 
     /**
      * An additional type for the item, typically used for adding more specific
@@ -273,4 +273,5 @@ class PaymentMethodType extends BaseType implements PaymentMethodTypeContract, E
     {
         return $this->setProperty('url', $url);
     }
+
 }

@@ -3252,6 +3252,11 @@ class Schema
         return new ProgramMembership();
     }
 
+    public static function progressStatus(): ProgressStatus
+    {
+        return new ProgressStatus();
+    }
+
     public static function project(): Project
     {
         return new Project();
@@ -4516,4 +4521,5 @@ class Schema
     {
         return new Zoo();
     }
+
 }

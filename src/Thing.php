@@ -2,7 +2,7 @@
 
 namespace Spatie\SchemaOrg;
 
-use Spatie\SchemaOrg\Contracts\ThingContract;
+use \Spatie\SchemaOrg\Contracts\ThingContract;
 
 /**
  * The most generic type of item.
@@ -202,4 +202,5 @@ class Thing extends BaseType implements ThingContract
     {
         return $this->setProperty('url', $url);
     }
+
 }

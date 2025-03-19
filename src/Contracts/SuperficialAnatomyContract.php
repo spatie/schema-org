@@ -53,4 +53,5 @@ interface SuperficialAnatomyContract
     public function subjectOf($subjectOf);
 
     public function url($url);
+
 }

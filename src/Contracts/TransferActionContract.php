@@ -57,4 +57,5 @@ interface TransferActionContract
     public function toLocation($toLocation);
 
     public function url($url);
+
 }

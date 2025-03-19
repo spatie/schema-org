@@ -47,4 +47,5 @@ interface MedicalConditionStageContract
     public function subjectOf($subjectOf);
 
     public function url($url);
+
 }

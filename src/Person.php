@@ -2,8 +2,8 @@
 
 namespace Spatie\SchemaOrg;
 
-use Spatie\SchemaOrg\Contracts\PersonContract;
-use Spatie\SchemaOrg\Contracts\ThingContract;
+use \Spatie\SchemaOrg\Contracts\PersonContract;
+use \Spatie\SchemaOrg\Contracts\ThingContract;
 
 /**
  * A person (alive, dead, undead, or fictional).
@@ -949,7 +949,7 @@ class Person extends BaseType implements PersonContract, ThingContract
      * applied to a [[CreativeWork]] (e.g. [[NewsArticle]]) the principles are
      * those of the party primarily responsible for the creation of the
      * [[CreativeWork]].
-     *
+     * 
      * While such policies are most typically expressed in natural language,
      * sometimes related information (e.g. indicating a [[funder]]) can be
      * expressed using schema.org terminology.
@@ -1198,4 +1198,5 @@ class Person extends BaseType implements PersonContract, ThingContract
     {
         return $this->setProperty('worksFor', $worksFor);
     }
+
 }

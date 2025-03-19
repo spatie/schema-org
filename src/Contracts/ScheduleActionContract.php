@@ -55,4 +55,5 @@ interface ScheduleActionContract
     public function target($target);
 
     public function url($url);
+
 }

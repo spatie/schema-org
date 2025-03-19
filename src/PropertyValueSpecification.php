@@ -2,9 +2,9 @@
 
 namespace Spatie\SchemaOrg;
 
-use Spatie\SchemaOrg\Contracts\IntangibleContract;
-use Spatie\SchemaOrg\Contracts\PropertyValueSpecificationContract;
-use Spatie\SchemaOrg\Contracts\ThingContract;
+use \Spatie\SchemaOrg\Contracts\PropertyValueSpecificationContract;
+use \Spatie\SchemaOrg\Contracts\IntangibleContract;
+use \Spatie\SchemaOrg\Contracts\ThingContract;
 
 /**
  * A Property value specification.
@@ -367,4 +367,5 @@ class PropertyValueSpecification extends BaseType implements PropertyValueSpecif
     {
         return $this->setProperty('valueRequired', $valueRequired);
     }
+
 }

@@ -2,11 +2,11 @@
 
 namespace Spatie\SchemaOrg;
 
-use Spatie\SchemaOrg\Contracts\AnatomicalStructureContract;
-use Spatie\SchemaOrg\Contracts\ArteryContract;
-use Spatie\SchemaOrg\Contracts\MedicalEntityContract;
-use Spatie\SchemaOrg\Contracts\ThingContract;
-use Spatie\SchemaOrg\Contracts\VesselContract;
+use \Spatie\SchemaOrg\Contracts\ArteryContract;
+use \Spatie\SchemaOrg\Contracts\AnatomicalStructureContract;
+use \Spatie\SchemaOrg\Contracts\MedicalEntityContract;
+use \Spatie\SchemaOrg\Contracts\ThingContract;
+use \Spatie\SchemaOrg\Contracts\VesselContract;
 
 /**
  * A type of blood vessel that specifically carries blood away from the heart.
@@ -486,4 +486,5 @@ class Artery extends BaseType implements ArteryContract, AnatomicalStructureCont
     {
         return $this->setProperty('url', $url);
     }
+
 }

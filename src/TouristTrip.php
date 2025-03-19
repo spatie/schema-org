@@ -2,10 +2,10 @@
 
 namespace Spatie\SchemaOrg;
 
-use Spatie\SchemaOrg\Contracts\IntangibleContract;
-use Spatie\SchemaOrg\Contracts\ThingContract;
-use Spatie\SchemaOrg\Contracts\TouristTripContract;
-use Spatie\SchemaOrg\Contracts\TripContract;
+use \Spatie\SchemaOrg\Contracts\TouristTripContract;
+use \Spatie\SchemaOrg\Contracts\IntangibleContract;
+use \Spatie\SchemaOrg\Contracts\ThingContract;
+use \Spatie\SchemaOrg\Contracts\TripContract;
 
 /**
  * A tourist trip. A created itinerary of visits to one or more places of
@@ -360,4 +360,5 @@ class TouristTrip extends BaseType implements TouristTripContract, IntangibleCon
     {
         return $this->setProperty('url', $url);
     }
+
 }

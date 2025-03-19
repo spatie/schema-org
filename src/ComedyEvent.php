@@ -2,9 +2,9 @@
 
 namespace Spatie\SchemaOrg;
 
-use Spatie\SchemaOrg\Contracts\ComedyEventContract;
-use Spatie\SchemaOrg\Contracts\EventContract;
-use Spatie\SchemaOrg\Contracts\ThingContract;
+use \Spatie\SchemaOrg\Contracts\ComedyEventContract;
+use \Spatie\SchemaOrg\Contracts\EventContract;
+use \Spatie\SchemaOrg\Contracts\ThingContract;
 
 /**
  * Event type: Comedy event.
@@ -871,4 +871,5 @@ class ComedyEvent extends BaseType implements ComedyEventContract, EventContract
     {
         return $this->setProperty('workPerformed', $workPerformed);
     }
+
 }
