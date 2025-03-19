@@ -2,9 +2,9 @@
 
 namespace Spatie\SchemaOrg;
 
-use Spatie\SchemaOrg\Contracts\MedicalDeviceContract;
-use Spatie\SchemaOrg\Contracts\MedicalEntityContract;
-use Spatie\SchemaOrg\Contracts\ThingContract;
+use \Spatie\SchemaOrg\Contracts\MedicalDeviceContract;
+use \Spatie\SchemaOrg\Contracts\MedicalEntityContract;
+use \Spatie\SchemaOrg\Contracts\ThingContract;
 
 /**
  * Any object used in a medical capacity, such as to diagnose or treat a
@@ -435,4 +435,5 @@ class MedicalDevice extends BaseType implements MedicalDeviceContract, MedicalEn
     {
         return $this->setProperty('url', $url);
     }
+
 }

@@ -55,4 +55,5 @@ interface ReservationPackageContract
     public function underName($underName);
 
     public function url($url);
+
 }

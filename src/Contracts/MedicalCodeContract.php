@@ -53,4 +53,5 @@ interface MedicalCodeContract
     public function termCode($termCode);
 
     public function url($url);
+
 }

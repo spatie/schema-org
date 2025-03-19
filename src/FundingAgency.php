@@ -2,10 +2,10 @@
 
 namespace Spatie\SchemaOrg;
 
-use Spatie\SchemaOrg\Contracts\FundingAgencyContract;
-use Spatie\SchemaOrg\Contracts\OrganizationContract;
-use Spatie\SchemaOrg\Contracts\ProjectContract;
-use Spatie\SchemaOrg\Contracts\ThingContract;
+use \Spatie\SchemaOrg\Contracts\FundingAgencyContract;
+use \Spatie\SchemaOrg\Contracts\OrganizationContract;
+use \Spatie\SchemaOrg\Contracts\ProjectContract;
+use \Spatie\SchemaOrg\Contracts\ThingContract;
 
 /**
  * A FundingAgency is an organization that implements one or more
@@ -13,7 +13,7 @@ use Spatie\SchemaOrg\Contracts\ThingContract;
  *     the granting process (via [[Grant]]s, typically [[MonetaryGrant]]s).
  *     A funding agency is not always required for grant funding, e.g.
  * philanthropic giving, corporate sponsorship etc.
- *
+ *     
  * Examples of funding agencies include ERC, REA, NIH, Bill and Melinda Gates
  * Foundation, ...
  *
@@ -1138,7 +1138,7 @@ class FundingAgency extends BaseType implements FundingAgencyContract, Organizat
      * applied to a [[CreativeWork]] (e.g. [[NewsArticle]]) the principles are
      * those of the party primarily responsible for the creation of the
      * [[CreativeWork]].
-     *
+     * 
      * While such policies are most typically expressed in natural language,
      * sometimes related information (e.g. indicating a [[funder]]) can be
      * expressed using schema.org terminology.
@@ -1379,4 +1379,5 @@ class FundingAgency extends BaseType implements FundingAgencyContract, Organizat
     {
         return $this->setProperty('vatID', $vatID);
     }
+
 }

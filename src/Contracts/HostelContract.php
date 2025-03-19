@@ -261,4 +261,5 @@ interface HostelContract
     public function url($url);
 
     public function vatID($vatID);
+
 }

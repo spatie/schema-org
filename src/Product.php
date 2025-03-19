@@ -2,8 +2,8 @@
 
 namespace Spatie\SchemaOrg;
 
-use Spatie\SchemaOrg\Contracts\ProductContract;
-use Spatie\SchemaOrg\Contracts\ThingContract;
+use \Spatie\SchemaOrg\Contracts\ProductContract;
+use \Spatie\SchemaOrg\Contracts\ThingContract;
 
 /**
  * Any offered product or service. For example: a pair of shoes; a concert
@@ -19,7 +19,7 @@ class Product extends BaseType implements ProductContract, ThingContract
      * A property-value pair representing an additional characteristic of the
      * entity, e.g. a product feature or another characteristic for which there
      * is no matching property in schema.org.
-     *
+     * 
      * Note: Publishers should be aware that applications designed to use
      * specific schema.org properties (e.g. https://schema.org/width,
      * https://schema.org/color, https://schema.org/gtin13, ...) will typically
@@ -95,7 +95,7 @@ class Product extends BaseType implements ProductContract, ThingContract
      * for product identification within the Amazon organization (summary from
      * [Wikipedia](https://en.wikipedia.org/wiki/Amazon_Standard_Identification_Number)'s
      * article).
-     *
+     * 
      * Note also that this is a definition for how to include ASINs in
      * Schema.org data, and not a definition of ASINs in general - see
      * documentation from Amazon for authoritative details.
@@ -255,13 +255,13 @@ class Product extends BaseType implements ProductContract, ThingContract
     /**
      * The country of origin of something, including products as well as
      * creative  works such as movie and TV content.
-     *
+     * 
      * In the case of TV and movie, this would be the country of the principle
      * offices of the production company or individual responsible for the
      * movie. For other kinds of [[CreativeWork]] it is difficult to provide
      * fully general guidance, and properties such as [[contentLocation]] and
      * [[locationCreated]] may be more applicable.
-     *
+     * 
      * In the case of products, the country of origin of the product. The exact
      * interpretation of this may vary by context and product type, and cannot
      * be fully enumerated here.
@@ -344,7 +344,7 @@ class Product extends BaseType implements ProductContract, ThingContract
      * ([GTIN](https://www.gs1.org/standards/id-keys/gtin)). GTINs identify
      * trade items, including products and services, using numeric
      * identification codes.
-     *
+     * 
      * A correct [[gtin]] value should be a valid GTIN, which means that it
      * should be an all-numeric string of either 8, 12, 13 or 14 digits, or a
      * "GS1 Digital Link" URL based on such a string. The numeric component
@@ -356,13 +356,13 @@ class Product extends BaseType implements ProductContract, ThingContract
      * more details. Left-padding of the gtin values is not required or
      * encouraged. The [[gtin]] property generalizes the earlier [[gtin8]],
      * [[gtin12]], [[gtin13]], and [[gtin14]] properties.
-     *
+     * 
      * The GS1 [digital link
      * specifications](https://www.gs1.org/standards/Digital-Link/) expresses
      * GTINs as URLs (URIs, IRIs, etc.).
      * Digital Links should be populated into the [[hasGS1DigitalLink]]
      * attribute.
-     *
+     * 
      * Note also that this is a definition for how to include GTINs in
      * Schema.org data, and not a definition of GTINs in general - see the GS1
      * documentation for authoritative details.
@@ -840,7 +840,7 @@ class Product extends BaseType implements ProductContract, ThingContract
      * The [[mobileUrl]] property is provided for specific situations in which
      * data consumers need to determine whether one of several provided URLs is
      * a dedicated 'mobile site'.
-     *
+     * 
      * To discourage over-use, and reflecting intial usecases, the property is
      * expected only on [[Product]] and [[Offer]], rather than [[Thing]]. The
      * general trend in web technology is towards [responsive
@@ -917,15 +917,15 @@ class Product extends BaseType implements ProductContract, ThingContract
 
     /**
      * Provides negative considerations regarding something, most typically in
-     * pro/con lists for reviews (alongside [[positiveNotes]]). For symmetry
-     *
+     * pro/con lists for reviews (alongside [[positiveNotes]]). For symmetry 
+     * 
      * In the case of a [[Review]], the property describes the [[itemReviewed]]
      * from the perspective of the review; in the case of a [[Product]], the
-     * product itself is being described. Since product descriptions
+     * product itself is being described. Since product descriptions 
      * tend to emphasise positive claims, it may be relatively unusual to find
      * [[negativeNotes]] used in this way. Nevertheless for the sake of
      * symmetry, [[negativeNotes]] can be used on [[Product]].
-     *
+     * 
      * The property values can be expressed either as unstructured text
      * (repeated as necessary), or if ordered, as a list (in which case the most
      * negative is at the beginning of the list).
@@ -1004,11 +1004,11 @@ class Product extends BaseType implements ProductContract, ThingContract
     /**
      * Provides positive considerations regarding something, for example product
      * highlights or (alongside [[negativeNotes]]) pro/con lists for reviews.
-     *
+     * 
      * In the case of a [[Review]], the property describes the [[itemReviewed]]
      * from the perspective of the review; in the case of a [[Product]], the
      * product itself is being described.
-     *
+     * 
      * The property values can be expressed either as unstructured text
      * (repeated as necessary), or if ordered, as a list (in which case the most
      * positive is at the beginning of the list).
@@ -1145,7 +1145,7 @@ class Product extends BaseType implements ProductContract, ThingContract
 
     /**
      * A standardized size of a product or creative work, specified either
-     * through a simple textual string (for example 'XL', '32Wx34L'), a
+     * through a simple textual string (for example 'XL', '32Wx34L'), a 
      * QuantitativeValue with a unitCode, or a comprehensive and structured
      * [[SizeSpecification]]; in other cases, the [[width]], [[height]],
      * [[depth]] and [[weight]] properties may be more applicable.
@@ -1248,4 +1248,5 @@ class Product extends BaseType implements ProductContract, ThingContract
     {
         return $this->setProperty('width', $width);
     }
+
 }

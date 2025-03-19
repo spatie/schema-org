@@ -2,11 +2,11 @@
 
 namespace Spatie\SchemaOrg;
 
-use Spatie\SchemaOrg\Contracts\EnumerationContract;
-use Spatie\SchemaOrg\Contracts\IntangibleContract;
-use Spatie\SchemaOrg\Contracts\LegalForceStatusContract;
-use Spatie\SchemaOrg\Contracts\StatusEnumerationContract;
-use Spatie\SchemaOrg\Contracts\ThingContract;
+use \Spatie\SchemaOrg\Contracts\LegalForceStatusContract;
+use \Spatie\SchemaOrg\Contracts\EnumerationContract;
+use \Spatie\SchemaOrg\Contracts\IntangibleContract;
+use \Spatie\SchemaOrg\Contracts\StatusEnumerationContract;
+use \Spatie\SchemaOrg\Contracts\ThingContract;
 
 /**
  * A list of possible statuses for the legal force of a legislation.
@@ -26,7 +26,7 @@ class LegalForceStatus extends BaseType implements LegalForceStatusContract, Enu
      * @see https://pending.schema.org
      * @link https://github.com/schemaorg/schemaorg/issues/1156
      */
-    public const InForce = 'https://schema.org/InForce';
+     const InForce = 'https://schema.org/InForce';
 
     /**
      * Indicates that a legislation is currently not in force.
@@ -35,7 +35,7 @@ class LegalForceStatus extends BaseType implements LegalForceStatusContract, Enu
      * @see https://pending.schema.org
      * @link https://github.com/schemaorg/schemaorg/issues/1156
      */
-    public const NotInForce = 'https://schema.org/NotInForce';
+     const NotInForce = 'https://schema.org/NotInForce';
 
     /**
      * Indicates that parts of the legislation are in force, and parts are not.
@@ -44,7 +44,7 @@ class LegalForceStatus extends BaseType implements LegalForceStatusContract, Enu
      * @see https://pending.schema.org
      * @link https://github.com/schemaorg/schemaorg/issues/1156
      */
-    public const PartiallyInForce = 'https://schema.org/PartiallyInForce';
+     const PartiallyInForce = 'https://schema.org/PartiallyInForce';
 
     /**
      * An additional type for the item, typically used for adding more specific
@@ -236,4 +236,5 @@ class LegalForceStatus extends BaseType implements LegalForceStatusContract, Enu
     {
         return $this->setProperty('url', $url);
     }
+
 }

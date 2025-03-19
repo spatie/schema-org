@@ -41,4 +41,5 @@ interface PermitContract
     public function validIn($validIn);
 
     public function validUntil($validUntil);
+
 }

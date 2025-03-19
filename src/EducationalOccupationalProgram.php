@@ -2,9 +2,9 @@
 
 namespace Spatie\SchemaOrg;
 
-use Spatie\SchemaOrg\Contracts\EducationalOccupationalProgramContract;
-use Spatie\SchemaOrg\Contracts\IntangibleContract;
-use Spatie\SchemaOrg\Contracts\ThingContract;
+use \Spatie\SchemaOrg\Contracts\EducationalOccupationalProgramContract;
+use \Spatie\SchemaOrg\Contracts\IntangibleContract;
+use \Spatie\SchemaOrg\Contracts\ThingContract;
 
 /**
  * A program offered by an institution which determines the learning progress to
@@ -332,7 +332,7 @@ class EducationalOccupationalProgram extends BaseType implements EducationalOccu
      * similar, with the property repeated for each applicable value. Ideally
      * the taxonomy should be identified, and both the textual label and formal
      * code for the category should be provided.
-     *
+     * 
      * Note: for historical reasons, any textual label and formal code provided
      * as a literal may be assumed to be from O*NET-SOC.
      *
@@ -631,4 +631,5 @@ class EducationalOccupationalProgram extends BaseType implements EducationalOccu
     {
         return $this->setProperty('url', $url);
     }
+
 }

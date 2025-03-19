@@ -2,10 +2,10 @@
 
 namespace Spatie\SchemaOrg;
 
-use Spatie\SchemaOrg\Contracts\IntangibleContract;
-use Spatie\SchemaOrg\Contracts\PostalCodeRangeSpecificationContract;
-use Spatie\SchemaOrg\Contracts\StructuredValueContract;
-use Spatie\SchemaOrg\Contracts\ThingContract;
+use \Spatie\SchemaOrg\Contracts\PostalCodeRangeSpecificationContract;
+use \Spatie\SchemaOrg\Contracts\IntangibleContract;
+use \Spatie\SchemaOrg\Contracts\StructuredValueContract;
+use \Spatie\SchemaOrg\Contracts\ThingContract;
 
 /**
  * Indicates a range of postal codes, usually defined as the set of valid codes
@@ -238,4 +238,5 @@ class PostalCodeRangeSpecification extends BaseType implements PostalCodeRangeSp
     {
         return $this->setProperty('url', $url);
     }
+
 }

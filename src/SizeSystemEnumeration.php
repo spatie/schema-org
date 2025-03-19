@@ -2,10 +2,10 @@
 
 namespace Spatie\SchemaOrg;
 
-use Spatie\SchemaOrg\Contracts\EnumerationContract;
-use Spatie\SchemaOrg\Contracts\IntangibleContract;
-use Spatie\SchemaOrg\Contracts\SizeSystemEnumerationContract;
-use Spatie\SchemaOrg\Contracts\ThingContract;
+use \Spatie\SchemaOrg\Contracts\SizeSystemEnumerationContract;
+use \Spatie\SchemaOrg\Contracts\EnumerationContract;
+use \Spatie\SchemaOrg\Contracts\IntangibleContract;
+use \Spatie\SchemaOrg\Contracts\ThingContract;
 
 /**
  * Enumerates common size systems for different categories of products, for
@@ -26,7 +26,7 @@ class SizeSystemEnumeration extends BaseType implements SizeSystemEnumerationCon
      * @see https://pending.schema.org
      * @link https://github.com/schemaorg/schemaorg/issues/2811
      */
-    public const SizeSystemImperial = 'https://schema.org/SizeSystemImperial';
+     const SizeSystemImperial = 'https://schema.org/SizeSystemImperial';
 
     /**
      * Metric size system.
@@ -35,7 +35,7 @@ class SizeSystemEnumeration extends BaseType implements SizeSystemEnumerationCon
      * @see https://pending.schema.org
      * @link https://github.com/schemaorg/schemaorg/issues/2811
      */
-    public const SizeSystemMetric = 'https://schema.org/SizeSystemMetric';
+     const SizeSystemMetric = 'https://schema.org/SizeSystemMetric';
 
     /**
      * An additional type for the item, typically used for adding more specific
@@ -227,4 +227,5 @@ class SizeSystemEnumeration extends BaseType implements SizeSystemEnumerationCon
     {
         return $this->setProperty('url', $url);
     }
+
 }

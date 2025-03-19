@@ -2,10 +2,10 @@
 
 namespace Spatie\SchemaOrg;
 
-use Spatie\SchemaOrg\Contracts\EventContract;
-use Spatie\SchemaOrg\Contracts\ThingContract;
-use Spatie\SchemaOrg\Contracts\UserInteractionContract;
-use Spatie\SchemaOrg\Contracts\UserLikesContract;
+use \Spatie\SchemaOrg\Contracts\UserLikesContract;
+use \Spatie\SchemaOrg\Contracts\EventContract;
+use \Spatie\SchemaOrg\Contracts\ThingContract;
+use \Spatie\SchemaOrg\Contracts\UserInteractionContract;
 
 /**
  * UserInteraction and its subtypes is an old way of talking about users
@@ -858,4 +858,5 @@ class UserLikes extends BaseType implements UserLikesContract, EventContract, Th
     {
         return $this->setProperty('workPerformed', $workPerformed);
     }
+
 }

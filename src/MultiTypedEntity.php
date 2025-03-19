@@ -1030,10 +1030,10 @@ class MultiTypedEntity implements Type, JsonSerializable
         $properties = [];
         $types = [];
 
-        foreach ($this->nodes as $node) {
+        foreach($this->nodes as $node) {
             $temp = $this->serializeNode($node);
 
-            if (isset($temp['@type'])) {
+            if(isset($temp['@type'])) {
                 array_push($types, $temp['@type']);
                 unset($temp['@type']);
             }
@@ -1084,7 +1084,7 @@ class MultiTypedEntity implements Type, JsonSerializable
 
     public function toScript(): string
     {
-        return '<script type="application/ld+json"'.$this->nonceAttr().'>'.json_encode($this, JSON_UNESCAPED_UNICODE | JSON_UNESCAPED_SLASHES).'</script>';
+        return '<script type="application/ld+json"'.$this->nonceAttr().'>'.json_encode($this, JSON_UNESCAPED_UNICODE).'</script>';
     }
 
     public function jsonSerialize(): mixed

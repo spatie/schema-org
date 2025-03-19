@@ -2,10 +2,10 @@
 
 namespace Spatie\SchemaOrg;
 
-use Spatie\SchemaOrg\Contracts\BoardingPolicyTypeContract;
-use Spatie\SchemaOrg\Contracts\EnumerationContract;
-use Spatie\SchemaOrg\Contracts\IntangibleContract;
-use Spatie\SchemaOrg\Contracts\ThingContract;
+use \Spatie\SchemaOrg\Contracts\BoardingPolicyTypeContract;
+use \Spatie\SchemaOrg\Contracts\EnumerationContract;
+use \Spatie\SchemaOrg\Contracts\IntangibleContract;
+use \Spatie\SchemaOrg\Contracts\ThingContract;
 
 /**
  * A type of boarding policy used by an airline.
@@ -21,14 +21,14 @@ class BoardingPolicyType extends BaseType implements BoardingPolicyTypeContract,
      *
      * @see https://schema.org/GroupBoardingPolicy
      */
-    public const GroupBoardingPolicy = 'https://schema.org/GroupBoardingPolicy';
+     const GroupBoardingPolicy = 'https://schema.org/GroupBoardingPolicy';
 
     /**
      * The airline boards by zones of the plane.
      *
      * @see https://schema.org/ZoneBoardingPolicy
      */
-    public const ZoneBoardingPolicy = 'https://schema.org/ZoneBoardingPolicy';
+     const ZoneBoardingPolicy = 'https://schema.org/ZoneBoardingPolicy';
 
     /**
      * An additional type for the item, typically used for adding more specific
@@ -220,4 +220,5 @@ class BoardingPolicyType extends BaseType implements BoardingPolicyTypeContract,
     {
         return $this->setProperty('url', $url);
     }
+
 }

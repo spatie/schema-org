@@ -2,10 +2,10 @@
 
 namespace Spatie\SchemaOrg;
 
-use Spatie\SchemaOrg\Contracts\MedicalEntityContract;
-use Spatie\SchemaOrg\Contracts\MedicalStudyContract;
-use Spatie\SchemaOrg\Contracts\MedicalTrialContract;
-use Spatie\SchemaOrg\Contracts\ThingContract;
+use \Spatie\SchemaOrg\Contracts\MedicalTrialContract;
+use \Spatie\SchemaOrg\Contracts\MedicalEntityContract;
+use \Spatie\SchemaOrg\Contracts\MedicalStudyContract;
+use \Spatie\SchemaOrg\Contracts\ThingContract;
 
 /**
  * A medical trial is a type of medical study that uses a scientific process to
@@ -428,4 +428,5 @@ class MedicalTrial extends BaseType implements MedicalTrialContract, MedicalEnti
     {
         return $this->setProperty('url', $url);
     }
+
 }

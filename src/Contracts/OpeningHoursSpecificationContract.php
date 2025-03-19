@@ -37,4 +37,5 @@ interface OpeningHoursSpecificationContract
     public function validFrom($validFrom);
 
     public function validThrough($validThrough);
+
 }

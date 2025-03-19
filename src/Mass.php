@@ -2,10 +2,10 @@
 
 namespace Spatie\SchemaOrg;
 
-use Spatie\SchemaOrg\Contracts\IntangibleContract;
-use Spatie\SchemaOrg\Contracts\MassContract;
-use Spatie\SchemaOrg\Contracts\QuantityContract;
-use Spatie\SchemaOrg\Contracts\ThingContract;
+use \Spatie\SchemaOrg\Contracts\MassContract;
+use \Spatie\SchemaOrg\Contracts\IntangibleContract;
+use \Spatie\SchemaOrg\Contracts\QuantityContract;
+use \Spatie\SchemaOrg\Contracts\ThingContract;
 
 /**
  * Properties that take Mass as values are of the form '<Number> <Mass unit of
@@ -206,4 +206,5 @@ class Mass extends BaseType implements MassContract, IntangibleContract, Quantit
     {
         return $this->setProperty('url', $url);
     }
+
 }

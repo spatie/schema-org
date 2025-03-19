@@ -2,11 +2,11 @@
 
 namespace Spatie\SchemaOrg;
 
-use Spatie\SchemaOrg\Contracts\EnumerationContract;
-use Spatie\SchemaOrg\Contracts\IntangibleContract;
-use Spatie\SchemaOrg\Contracts\MedicalEnumerationContract;
-use Spatie\SchemaOrg\Contracts\MedicalObservationalStudyDesignContract;
-use Spatie\SchemaOrg\Contracts\ThingContract;
+use \Spatie\SchemaOrg\Contracts\MedicalObservationalStudyDesignContract;
+use \Spatie\SchemaOrg\Contracts\EnumerationContract;
+use \Spatie\SchemaOrg\Contracts\IntangibleContract;
+use \Spatie\SchemaOrg\Contracts\MedicalEnumerationContract;
+use \Spatie\SchemaOrg\Contracts\ThingContract;
 
 /**
  * Design models for observational medical studies. Enumerated type.
@@ -31,7 +31,7 @@ class MedicalObservationalStudyDesign extends BaseType implements MedicalObserva
      * @see https://schema.org/CaseSeries
      * @see https://health-lifesci.schema.org
      */
-    public const CaseSeries = 'https://schema.org/CaseSeries';
+     const CaseSeries = 'https://schema.org/CaseSeries';
 
     /**
      * Also known as a panel study. A cohort study is a form of longitudinal
@@ -48,7 +48,7 @@ class MedicalObservationalStudyDesign extends BaseType implements MedicalObserva
      * @see https://schema.org/CohortStudy
      * @see https://health-lifesci.schema.org
      */
-    public const CohortStudy = 'https://schema.org/CohortStudy';
+     const CohortStudy = 'https://schema.org/CohortStudy';
 
     /**
      * Studies carried out on pre-existing data (usually from 'snapshot'
@@ -58,7 +58,7 @@ class MedicalObservationalStudyDesign extends BaseType implements MedicalObserva
      * @see https://schema.org/CrossSectional
      * @see https://health-lifesci.schema.org
      */
-    public const CrossSectional = 'https://schema.org/CrossSectional';
+     const CrossSectional = 'https://schema.org/CrossSectional';
 
     /**
      * Unlike cross-sectional studies, longitudinal studies track the same
@@ -70,7 +70,7 @@ class MedicalObservationalStudyDesign extends BaseType implements MedicalObserva
      * @see https://schema.org/Longitudinal
      * @see https://health-lifesci.schema.org
      */
-    public const Longitudinal = 'https://schema.org/Longitudinal';
+     const Longitudinal = 'https://schema.org/Longitudinal';
 
     /**
      * An observational study design.
@@ -78,7 +78,7 @@ class MedicalObservationalStudyDesign extends BaseType implements MedicalObserva
      * @see https://schema.org/Observational
      * @see https://health-lifesci.schema.org
      */
-    public const Observational = 'https://schema.org/Observational';
+     const Observational = 'https://schema.org/Observational';
 
     /**
      * A registry-based study design.
@@ -86,7 +86,7 @@ class MedicalObservationalStudyDesign extends BaseType implements MedicalObserva
      * @see https://schema.org/Registry
      * @see https://health-lifesci.schema.org
      */
-    public const Registry = 'https://schema.org/Registry';
+     const Registry = 'https://schema.org/Registry';
 
     /**
      * An additional type for the item, typically used for adding more specific
@@ -278,4 +278,5 @@ class MedicalObservationalStudyDesign extends BaseType implements MedicalObserva
     {
         return $this->setProperty('url', $url);
     }
+
 }

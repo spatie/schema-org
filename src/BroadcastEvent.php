@@ -2,10 +2,10 @@
 
 namespace Spatie\SchemaOrg;
 
-use Spatie\SchemaOrg\Contracts\BroadcastEventContract;
-use Spatie\SchemaOrg\Contracts\EventContract;
-use Spatie\SchemaOrg\Contracts\PublicationEventContract;
-use Spatie\SchemaOrg\Contracts\ThingContract;
+use \Spatie\SchemaOrg\Contracts\BroadcastEventContract;
+use \Spatie\SchemaOrg\Contracts\EventContract;
+use \Spatie\SchemaOrg\Contracts\PublicationEventContract;
+use \Spatie\SchemaOrg\Contracts\ThingContract;
 
 /**
  * An over the air or online broadcast event.
@@ -959,4 +959,5 @@ class BroadcastEvent extends BaseType implements BroadcastEventContract, EventCo
     {
         return $this->setProperty('workPerformed', $workPerformed);
     }
+
 }

@@ -67,4 +67,5 @@ interface MedicalTherapyContract
     public function subjectOf($subjectOf);
 
     public function url($url);
+
 }

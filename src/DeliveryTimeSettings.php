@@ -2,10 +2,10 @@
 
 namespace Spatie\SchemaOrg;
 
-use Spatie\SchemaOrg\Contracts\DeliveryTimeSettingsContract;
-use Spatie\SchemaOrg\Contracts\IntangibleContract;
-use Spatie\SchemaOrg\Contracts\StructuredValueContract;
-use Spatie\SchemaOrg\Contracts\ThingContract;
+use \Spatie\SchemaOrg\Contracts\DeliveryTimeSettingsContract;
+use \Spatie\SchemaOrg\Contracts\IntangibleContract;
+use \Spatie\SchemaOrg\Contracts\StructuredValueContract;
+use \Spatie\SchemaOrg\Contracts\ThingContract;
 
 /**
  * A DeliveryTimeSettings represents re-usable pieces of shipping information,
@@ -282,4 +282,5 @@ class DeliveryTimeSettings extends BaseType implements DeliveryTimeSettingsContr
     {
         return $this->setProperty('url', $url);
     }
+
 }

@@ -2,9 +2,9 @@
 
 namespace Spatie\SchemaOrg;
 
-use Spatie\SchemaOrg\Contracts\EventContract;
-use Spatie\SchemaOrg\Contracts\MusicEventContract;
-use Spatie\SchemaOrg\Contracts\ThingContract;
+use \Spatie\SchemaOrg\Contracts\MusicEventContract;
+use \Spatie\SchemaOrg\Contracts\EventContract;
+use \Spatie\SchemaOrg\Contracts\ThingContract;
 
 /**
  * Event type: Music event.
@@ -855,4 +855,5 @@ class MusicEvent extends BaseType implements MusicEventContract, EventContract, 
     {
         return $this->setProperty('workPerformed', $workPerformed);
     }
+
 }

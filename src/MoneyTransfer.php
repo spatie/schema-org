@@ -2,10 +2,10 @@
 
 namespace Spatie\SchemaOrg;
 
-use Spatie\SchemaOrg\Contracts\ActionContract;
-use Spatie\SchemaOrg\Contracts\MoneyTransferContract;
-use Spatie\SchemaOrg\Contracts\ThingContract;
-use Spatie\SchemaOrg\Contracts\TransferActionContract;
+use \Spatie\SchemaOrg\Contracts\MoneyTransferContract;
+use \Spatie\SchemaOrg\Contracts\ActionContract;
+use \Spatie\SchemaOrg\Contracts\ThingContract;
+use \Spatie\SchemaOrg\Contracts\TransferActionContract;
 
 /**
  * The act of transferring money from one place to another place. This may occur
@@ -168,7 +168,7 @@ class MoneyTransfer extends BaseType implements MoneyTransferContract, ActionCon
      * John wrote a book from January to *December*. For media, including audio
      * and video, it's the time offset of the end of a clip within a larger
      * file.
-     *
+     * 
      * Note that Event uses startDate/endDate instead of startTime/endTime, even
      * when describing dates with times. This situation may be clarified in
      * future revisions.
@@ -408,7 +408,7 @@ class MoneyTransfer extends BaseType implements MoneyTransferContract, ActionCon
      * John wrote a book from *January* to December. For media, including audio
      * and video, it's the time offset of the start of a clip within a larger
      * file.
-     *
+     * 
      * Note that Event uses startDate/endDate instead of startTime/endTime, even
      * when describing dates with times. This situation may be clarified in
      * future revisions.
@@ -482,4 +482,5 @@ class MoneyTransfer extends BaseType implements MoneyTransferContract, ActionCon
     {
         return $this->setProperty('url', $url);
     }
+
 }

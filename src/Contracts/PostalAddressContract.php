@@ -59,4 +59,5 @@ interface PostalAddressContract
     public function telephone($telephone);
 
     public function url($url);
+
 }

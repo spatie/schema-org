@@ -2,9 +2,9 @@
 
 namespace Spatie\SchemaOrg;
 
-use Spatie\SchemaOrg\Contracts\IntangibleContract;
-use Spatie\SchemaOrg\Contracts\SeatContract;
-use Spatie\SchemaOrg\Contracts\ThingContract;
+use \Spatie\SchemaOrg\Contracts\SeatContract;
+use \Spatie\SchemaOrg\Contracts\IntangibleContract;
+use \Spatie\SchemaOrg\Contracts\ThingContract;
 
 /**
  * Used to describe a seat, such as a reserved seat in an event reservation.
@@ -260,4 +260,5 @@ class Seat extends BaseType implements SeatContract, IntangibleContract, ThingCo
     {
         return $this->setProperty('url', $url);
     }
+
 }

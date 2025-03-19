@@ -2,10 +2,10 @@
 
 namespace Spatie\SchemaOrg;
 
-use Spatie\SchemaOrg\Contracts\MedicalConditionContract;
-use Spatie\SchemaOrg\Contracts\MedicalEntityContract;
-use Spatie\SchemaOrg\Contracts\MedicalSignOrSymptomContract;
-use Spatie\SchemaOrg\Contracts\ThingContract;
+use \Spatie\SchemaOrg\Contracts\MedicalSignOrSymptomContract;
+use \Spatie\SchemaOrg\Contracts\MedicalConditionContract;
+use \Spatie\SchemaOrg\Contracts\MedicalEntityContract;
+use \Spatie\SchemaOrg\Contracts\ThingContract;
 
 /**
  * Any feature associated or not with a medical condition. In medicine a symptom
@@ -590,4 +590,5 @@ class MedicalSignOrSymptom extends BaseType implements MedicalSignOrSymptomContr
     {
         return $this->setProperty('url', $url);
     }
+
 }

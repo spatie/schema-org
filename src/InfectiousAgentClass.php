@@ -2,11 +2,11 @@
 
 namespace Spatie\SchemaOrg;
 
-use Spatie\SchemaOrg\Contracts\EnumerationContract;
-use Spatie\SchemaOrg\Contracts\InfectiousAgentClassContract;
-use Spatie\SchemaOrg\Contracts\IntangibleContract;
-use Spatie\SchemaOrg\Contracts\MedicalEnumerationContract;
-use Spatie\SchemaOrg\Contracts\ThingContract;
+use \Spatie\SchemaOrg\Contracts\InfectiousAgentClassContract;
+use \Spatie\SchemaOrg\Contracts\EnumerationContract;
+use \Spatie\SchemaOrg\Contracts\IntangibleContract;
+use \Spatie\SchemaOrg\Contracts\MedicalEnumerationContract;
+use \Spatie\SchemaOrg\Contracts\ThingContract;
 
 /**
  * Classes of agents or pathogens that transmit infectious diseases. Enumerated
@@ -25,7 +25,7 @@ class InfectiousAgentClass extends BaseType implements InfectiousAgentClassContr
      * @see https://schema.org/Bacteria
      * @see https://health-lifesci.schema.org
      */
-    public const Bacteria = 'https://schema.org/Bacteria';
+     const Bacteria = 'https://schema.org/Bacteria';
 
     /**
      * Pathogenic fungus.
@@ -33,7 +33,7 @@ class InfectiousAgentClass extends BaseType implements InfectiousAgentClassContr
      * @see https://schema.org/Fungus
      * @see https://health-lifesci.schema.org
      */
-    public const Fungus = 'https://schema.org/Fungus';
+     const Fungus = 'https://schema.org/Fungus';
 
     /**
      * Multicellular parasite that causes an infection.
@@ -41,7 +41,7 @@ class InfectiousAgentClass extends BaseType implements InfectiousAgentClassContr
      * @see https://schema.org/MulticellularParasite
      * @see https://health-lifesci.schema.org
      */
-    public const MulticellularParasite = 'https://schema.org/MulticellularParasite';
+     const MulticellularParasite = 'https://schema.org/MulticellularParasite';
 
     /**
      * A prion is an infectious agent composed of protein in a misfolded form.
@@ -49,7 +49,7 @@ class InfectiousAgentClass extends BaseType implements InfectiousAgentClassContr
      * @see https://schema.org/Prion
      * @see https://health-lifesci.schema.org
      */
-    public const Prion = 'https://schema.org/Prion';
+     const Prion = 'https://schema.org/Prion';
 
     /**
      * Single-celled organism that causes an infection.
@@ -57,7 +57,7 @@ class InfectiousAgentClass extends BaseType implements InfectiousAgentClassContr
      * @see https://schema.org/Protozoa
      * @see https://health-lifesci.schema.org
      */
-    public const Protozoa = 'https://schema.org/Protozoa';
+     const Protozoa = 'https://schema.org/Protozoa';
 
     /**
      * Pathogenic virus that causes viral infection.
@@ -65,7 +65,7 @@ class InfectiousAgentClass extends BaseType implements InfectiousAgentClassContr
      * @see https://schema.org/Virus
      * @see https://health-lifesci.schema.org
      */
-    public const Virus = 'https://schema.org/Virus';
+     const Virus = 'https://schema.org/Virus';
 
     /**
      * An additional type for the item, typically used for adding more specific
@@ -257,4 +257,5 @@ class InfectiousAgentClass extends BaseType implements InfectiousAgentClassContr
     {
         return $this->setProperty('url', $url);
     }
+
 }

@@ -2,10 +2,10 @@
 
 namespace Spatie\SchemaOrg;
 
-use Spatie\SchemaOrg\Contracts\EndorsementRatingContract;
-use Spatie\SchemaOrg\Contracts\IntangibleContract;
-use Spatie\SchemaOrg\Contracts\RatingContract;
-use Spatie\SchemaOrg\Contracts\ThingContract;
+use \Spatie\SchemaOrg\Contracts\EndorsementRatingContract;
+use \Spatie\SchemaOrg\Contracts\IntangibleContract;
+use \Spatie\SchemaOrg\Contracts\RatingContract;
+use \Spatie\SchemaOrg\Contracts\ThingContract;
 
 /**
  * An EndorsementRating is a rating that expresses some level of endorsement,
@@ -16,7 +16,7 @@ use Spatie\SchemaOrg\Contracts\ThingContract;
  * some [[agent]]. As is common elsewhere in schema.org, it is sometimes more
  * useful to describe the results of such an action without explicitly
  * describing the [[Action]].
- *
+ * 
  * An [[EndorsementRating]] may be part of a numeric scale or organized system,
  * but this is not required: having an explicit type for indicating a positive,
  * endorsement rating is particularly useful in the absence of numeric scales as
@@ -225,9 +225,9 @@ class EndorsementRating extends BaseType implements EndorsementRatingContract, I
 
     /**
      * The rating for the content.
-     *
+     * 
      * Usage guidelines:
-     *
+     * 
      * * Use values from 0123456789 (Unicode 'DIGIT ZERO' (U+0030) to 'DIGIT
      * NINE' (U+0039)) rather than superficially similar Unicode symbols.
      * * Use '.' (Unicode 'FULL STOP' (U+002E)) rather than ',' to indicate a
@@ -318,4 +318,5 @@ class EndorsementRating extends BaseType implements EndorsementRatingContract, I
     {
         return $this->setProperty('worstRating', $worstRating);
     }
+
 }

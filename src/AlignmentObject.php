@@ -2,14 +2,14 @@
 
 namespace Spatie\SchemaOrg;
 
-use Spatie\SchemaOrg\Contracts\AlignmentObjectContract;
-use Spatie\SchemaOrg\Contracts\IntangibleContract;
-use Spatie\SchemaOrg\Contracts\ThingContract;
+use \Spatie\SchemaOrg\Contracts\AlignmentObjectContract;
+use \Spatie\SchemaOrg\Contracts\IntangibleContract;
+use \Spatie\SchemaOrg\Contracts\ThingContract;
 
 /**
  * An intangible item that describes an alignment between a learning resource
  * and a node in an educational framework.
- *
+ * 
  * Should not be used where the nature of the alignment can be described using a
  * simple property, for example to express that a resource [[teaches]] or
  * [[assesses]] a competency.
@@ -281,4 +281,5 @@ class AlignmentObject extends BaseType implements AlignmentObjectContract, Intan
     {
         return $this->setProperty('url', $url);
     }
+
 }

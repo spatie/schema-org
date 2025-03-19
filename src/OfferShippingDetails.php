@@ -2,25 +2,25 @@
 
 namespace Spatie\SchemaOrg;
 
-use Spatie\SchemaOrg\Contracts\IntangibleContract;
-use Spatie\SchemaOrg\Contracts\OfferShippingDetailsContract;
-use Spatie\SchemaOrg\Contracts\StructuredValueContract;
-use Spatie\SchemaOrg\Contracts\ThingContract;
+use \Spatie\SchemaOrg\Contracts\OfferShippingDetailsContract;
+use \Spatie\SchemaOrg\Contracts\IntangibleContract;
+use \Spatie\SchemaOrg\Contracts\StructuredValueContract;
+use \Spatie\SchemaOrg\Contracts\ThingContract;
 
 /**
  * OfferShippingDetails represents information about shipping destinations.
- *
+ * 
  * Multiple of these entities can be used to represent different shipping rates
  * for different destinations:
- *
+ * 
  * One entity for Alaska/Hawaii. A different one for continental US. A different
  * one for all France.
- *
+ * 
  * Multiple of these entities can be used to represent different shipping costs
  * and delivery times.
- *
+ * 
  * Two entities that are identical but differ in rate and time:
- *
+ * 
  * E.g. Cheaper and slower: $5 in 5-7 days
  * or Fast and expensive: $15 in 1-2 days.
  *
@@ -423,4 +423,5 @@ class OfferShippingDetails extends BaseType implements OfferShippingDetailsContr
     {
         return $this->setProperty('width', $width);
     }
+
 }

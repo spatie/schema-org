@@ -2,10 +2,10 @@
 
 namespace Spatie\SchemaOrg;
 
-use Spatie\SchemaOrg\Contracts\GovernmentPermitContract;
-use Spatie\SchemaOrg\Contracts\IntangibleContract;
-use Spatie\SchemaOrg\Contracts\PermitContract;
-use Spatie\SchemaOrg\Contracts\ThingContract;
+use \Spatie\SchemaOrg\Contracts\GovernmentPermitContract;
+use \Spatie\SchemaOrg\Contracts\IntangibleContract;
+use \Spatie\SchemaOrg\Contracts\PermitContract;
+use \Spatie\SchemaOrg\Contracts\ThingContract;
 
 /**
  * A permit issued by a government agency.
@@ -308,4 +308,5 @@ class GovernmentPermit extends BaseType implements GovernmentPermitContract, Int
     {
         return $this->setProperty('validUntil', $validUntil);
     }
+
 }

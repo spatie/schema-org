@@ -2,10 +2,10 @@
 
 namespace Spatie\SchemaOrg;
 
-use Spatie\SchemaOrg\Contracts\CarUsageTypeContract;
-use Spatie\SchemaOrg\Contracts\EnumerationContract;
-use Spatie\SchemaOrg\Contracts\IntangibleContract;
-use Spatie\SchemaOrg\Contracts\ThingContract;
+use \Spatie\SchemaOrg\Contracts\CarUsageTypeContract;
+use \Spatie\SchemaOrg\Contracts\EnumerationContract;
+use \Spatie\SchemaOrg\Contracts\IntangibleContract;
+use \Spatie\SchemaOrg\Contracts\ThingContract;
 
 /**
  * A value indicating a special usage of a car, e.g. commercial rental, driving
@@ -24,7 +24,7 @@ class CarUsageType extends BaseType implements CarUsageTypeContract, Enumeration
      * @see https://schema.org/DrivingSchoolVehicleUsage
      * @see https://auto.schema.org
      */
-    public const DrivingSchoolVehicleUsage = 'https://schema.org/DrivingSchoolVehicleUsage';
+     const DrivingSchoolVehicleUsage = 'https://schema.org/DrivingSchoolVehicleUsage';
 
     /**
      * Indicates the usage of the vehicle as a rental car.
@@ -32,7 +32,7 @@ class CarUsageType extends BaseType implements CarUsageTypeContract, Enumeration
      * @see https://schema.org/RentalVehicleUsage
      * @see https://auto.schema.org
      */
-    public const RentalVehicleUsage = 'https://schema.org/RentalVehicleUsage';
+     const RentalVehicleUsage = 'https://schema.org/RentalVehicleUsage';
 
     /**
      * Indicates the usage of the car as a taxi.
@@ -40,7 +40,7 @@ class CarUsageType extends BaseType implements CarUsageTypeContract, Enumeration
      * @see https://schema.org/TaxiVehicleUsage
      * @see https://auto.schema.org
      */
-    public const TaxiVehicleUsage = 'https://schema.org/TaxiVehicleUsage';
+     const TaxiVehicleUsage = 'https://schema.org/TaxiVehicleUsage';
 
     /**
      * An additional type for the item, typically used for adding more specific
@@ -232,4 +232,5 @@ class CarUsageType extends BaseType implements CarUsageTypeContract, Enumeration
     {
         return $this->setProperty('url', $url);
     }
+
 }

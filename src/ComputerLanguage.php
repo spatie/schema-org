@@ -2,9 +2,9 @@
 
 namespace Spatie\SchemaOrg;
 
-use Spatie\SchemaOrg\Contracts\ComputerLanguageContract;
-use Spatie\SchemaOrg\Contracts\IntangibleContract;
-use Spatie\SchemaOrg\Contracts\ThingContract;
+use \Spatie\SchemaOrg\Contracts\ComputerLanguageContract;
+use \Spatie\SchemaOrg\Contracts\IntangibleContract;
+use \Spatie\SchemaOrg\Contracts\ThingContract;
 
 /**
  * This type covers computer programming languages such as Scheme and Lisp, as
@@ -206,4 +206,5 @@ class ComputerLanguage extends BaseType implements ComputerLanguageContract, Int
     {
         return $this->setProperty('url', $url);
     }
+
 }

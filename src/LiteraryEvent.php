@@ -2,9 +2,9 @@
 
 namespace Spatie\SchemaOrg;
 
-use Spatie\SchemaOrg\Contracts\EventContract;
-use Spatie\SchemaOrg\Contracts\LiteraryEventContract;
-use Spatie\SchemaOrg\Contracts\ThingContract;
+use \Spatie\SchemaOrg\Contracts\LiteraryEventContract;
+use \Spatie\SchemaOrg\Contracts\EventContract;
+use \Spatie\SchemaOrg\Contracts\ThingContract;
 
 /**
  * Event type: Literary event.
@@ -855,4 +855,5 @@ class LiteraryEvent extends BaseType implements LiteraryEventContract, EventCont
     {
         return $this->setProperty('workPerformed', $workPerformed);
     }
+
 }

@@ -65,4 +65,5 @@ interface VeinContract
     public function tributary($tributary);
 
     public function url($url);
+
 }

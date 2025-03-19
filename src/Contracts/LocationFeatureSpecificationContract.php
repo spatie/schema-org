@@ -51,4 +51,5 @@ interface LocationFeatureSpecificationContract
     public function value($value);
 
     public function valueReference($valueReference);
+
 }

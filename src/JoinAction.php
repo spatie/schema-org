@@ -2,16 +2,16 @@
 
 namespace Spatie\SchemaOrg;
 
-use Spatie\SchemaOrg\Contracts\ActionContract;
-use Spatie\SchemaOrg\Contracts\InteractActionContract;
-use Spatie\SchemaOrg\Contracts\JoinActionContract;
-use Spatie\SchemaOrg\Contracts\ThingContract;
+use \Spatie\SchemaOrg\Contracts\JoinActionContract;
+use \Spatie\SchemaOrg\Contracts\ActionContract;
+use \Spatie\SchemaOrg\Contracts\InteractActionContract;
+use \Spatie\SchemaOrg\Contracts\ThingContract;
 
 /**
  * An agent joins an event/group with participants/friends at a location.
- *
+ * 
  * Related actions:
- *
+ * 
  * * [[RegisterAction]]: Unlike RegisterAction, JoinAction refers to joining a
  * group/team of people.
  * * [[SubscribeAction]]: Unlike SubscribeAction, JoinAction does not imply that
@@ -142,7 +142,7 @@ class JoinAction extends BaseType implements JoinActionContract, ActionContract,
      * John wrote a book from January to *December*. For media, including audio
      * and video, it's the time offset of the end of a clip within a larger
      * file.
-     *
+     * 
      * Note that Event uses startDate/endDate instead of startTime/endTime, even
      * when describing dates with times. This situation may be clarified in
      * future revisions.
@@ -382,7 +382,7 @@ class JoinAction extends BaseType implements JoinActionContract, ActionContract,
      * John wrote a book from *January* to December. For media, including audio
      * and video, it's the time offset of the start of a clip within a larger
      * file.
-     *
+     * 
      * Note that Event uses startDate/endDate instead of startTime/endTime, even
      * when describing dates with times. This situation may be clarified in
      * future revisions.
@@ -441,4 +441,5 @@ class JoinAction extends BaseType implements JoinActionContract, ActionContract,
     {
         return $this->setProperty('url', $url);
     }
+
 }

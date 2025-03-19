@@ -2,12 +2,12 @@
 
 namespace Spatie\SchemaOrg;
 
-use Spatie\SchemaOrg\Contracts\LocalBusinessContract;
-use Spatie\SchemaOrg\Contracts\LodgingBusinessContract;
-use Spatie\SchemaOrg\Contracts\OrganizationContract;
-use Spatie\SchemaOrg\Contracts\PlaceContract;
-use Spatie\SchemaOrg\Contracts\ResortContract;
-use Spatie\SchemaOrg\Contracts\ThingContract;
+use \Spatie\SchemaOrg\Contracts\ResortContract;
+use \Spatie\SchemaOrg\Contracts\LocalBusinessContract;
+use \Spatie\SchemaOrg\Contracts\LodgingBusinessContract;
+use \Spatie\SchemaOrg\Contracts\OrganizationContract;
+use \Spatie\SchemaOrg\Contracts\PlaceContract;
+use \Spatie\SchemaOrg\Contracts\ThingContract;
 
 /**
  * A resort is a place used for relaxation or recreation, attracting visitors
@@ -15,7 +15,7 @@ use Spatie\SchemaOrg\Contracts\ThingContract;
  * establishments operated by a single company (source: Wikipedia, the free
  * encyclopedia, see <a
  * href="http://en.wikipedia.org/wiki/Resort">http://en.wikipedia.org/wiki/Resort</a>).
- *
+ * 
  * See also the <a href="/docs/hotels.html">dedicated document on the use of
  * schema.org for marking up hotels and other forms of accommodations</a>.
  *
@@ -63,7 +63,7 @@ class Resort extends BaseType implements ResortContract, LocalBusinessContract, 
      * A property-value pair representing an additional characteristic of the
      * entity, e.g. a product feature or another characteristic for which there
      * is no matching property in schema.org.
-     *
+     * 
      * Note: Publishers should be aware that applications designed to use
      * specific schema.org properties (e.g. https://schema.org/width,
      * https://schema.org/color, https://schema.org/gtin13, ...) will typically
@@ -272,7 +272,7 @@ class Resort extends BaseType implements ResortContract, LocalBusinessContract, 
      * A short textual code (also called "store code") that uniquely identifies
      * a place of business. The code is typically assigned by the
      * parentOrganization and used in structured URLs.
-     *
+     * 
      * For example, in the URL
      * http://www.starbucks.co.uk/store-locator/etc/detail/3047 the code "3047"
      * is a branchCode for a particular branch.
@@ -437,7 +437,7 @@ class Resort extends BaseType implements ResortContract, LocalBusinessContract, 
 
     /**
      * The currency accepted.
-     *
+     * 
      * Use standard formats: [ISO 4217 currency
      * format](http://en.wikipedia.org/wiki/ISO_4217), e.g. "USD"; [Ticker
      * symbol](https://en.wikipedia.org/wiki/List_of_cryptocurrencies) for
@@ -1591,11 +1591,11 @@ class Resort extends BaseType implements ResortContract, LocalBusinessContract, 
      * as a weekly time range, starting with days, then times per day. Multiple
      * days can be listed with commas ',' separating each day. Day or time
      * ranges are specified using a hyphen '-'.
-     *
+     * 
      * * Days are specified using the following two-letter combinations:
      * ```Mo```, ```Tu```, ```We```, ```Th```, ```Fr```, ```Sa```, ```Su```.
      * * Times are specified using 24:00 format. For example, 3pm is specified
-     * as ```15:00```, 10am as ```10:00```.
+     * as ```15:00```, 10am as ```10:00```. 
      * * Here is an example: ```<time itemprop="openingHours" datetime="Tu,Th
      * 16:00-20:00">Tuesdays and Thursdays 4-8pm</time>```.
      * * If a business is open 7 days a week, then it can be specified as
@@ -1786,7 +1786,7 @@ class Resort extends BaseType implements ResortContract, LocalBusinessContract, 
      * applied to a [[CreativeWork]] (e.g. [[NewsArticle]]) the principles are
      * those of the party primarily responsible for the creation of the
      * [[CreativeWork]].
-     *
+     * 
      * While such policies are most typically expressed in natural language,
      * sometimes related information (e.g. indicating a [[funder]]) can be
      * expressed using schema.org terminology.
@@ -1923,7 +1923,7 @@ class Resort extends BaseType implements ResortContract, LocalBusinessContract, 
 
     /**
      * The special opening hours of a certain place.
-     *
+     * 
      * Use this to explicitly override general opening hours brought in scope by
      * [[openingHoursSpecification]] or [[openingHours]].
      *
@@ -2094,4 +2094,5 @@ class Resort extends BaseType implements ResortContract, LocalBusinessContract, 
     {
         return $this->setProperty('vatID', $vatID);
     }
+
 }

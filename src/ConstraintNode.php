@@ -2,9 +2,9 @@
 
 namespace Spatie\SchemaOrg;
 
-use Spatie\SchemaOrg\Contracts\ConstraintNodeContract;
-use Spatie\SchemaOrg\Contracts\IntangibleContract;
-use Spatie\SchemaOrg\Contracts\ThingContract;
+use \Spatie\SchemaOrg\Contracts\ConstraintNodeContract;
+use \Spatie\SchemaOrg\Contracts\IntangibleContract;
+use \Spatie\SchemaOrg\Contracts\ThingContract;
 
 /**
  * The ConstraintNode type is provided to support usecases in which a node in a
@@ -253,4 +253,5 @@ class ConstraintNode extends BaseType implements ConstraintNodeContract, Intangi
     {
         return $this->setProperty('url', $url);
     }
+
 }

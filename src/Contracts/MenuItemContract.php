@@ -35,4 +35,5 @@ interface MenuItemContract
     public function suitableForDiet($suitableForDiet);
 
     public function url($url);
+
 }

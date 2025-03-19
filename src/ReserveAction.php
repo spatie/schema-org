@@ -2,17 +2,17 @@
 
 namespace Spatie\SchemaOrg;
 
-use Spatie\SchemaOrg\Contracts\ActionContract;
-use Spatie\SchemaOrg\Contracts\OrganizeActionContract;
-use Spatie\SchemaOrg\Contracts\PlanActionContract;
-use Spatie\SchemaOrg\Contracts\ReserveActionContract;
-use Spatie\SchemaOrg\Contracts\ThingContract;
+use \Spatie\SchemaOrg\Contracts\ReserveActionContract;
+use \Spatie\SchemaOrg\Contracts\ActionContract;
+use \Spatie\SchemaOrg\Contracts\OrganizeActionContract;
+use \Spatie\SchemaOrg\Contracts\PlanActionContract;
+use \Spatie\SchemaOrg\Contracts\ThingContract;
 
 /**
  * Reserving a concrete object.
- *
+ * 
  * Related actions:
- *
+ * 
  * * [[ScheduleAction]]: Unlike ScheduleAction, ReserveAction reserves concrete
  * objects (e.g. a table, a hotel) towards a time slot / spatial allocation.
  *
@@ -139,7 +139,7 @@ class ReserveAction extends BaseType implements ReserveActionContract, ActionCon
      * John wrote a book from January to *December*. For media, including audio
      * and video, it's the time offset of the end of a clip within a larger
      * file.
-     *
+     * 
      * Note that Event uses startDate/endDate instead of startTime/endTime, even
      * when describing dates with times. This situation may be clarified in
      * future revisions.
@@ -378,7 +378,7 @@ class ReserveAction extends BaseType implements ReserveActionContract, ActionCon
      * John wrote a book from *January* to December. For media, including audio
      * and video, it's the time offset of the start of a clip within a larger
      * file.
-     *
+     * 
      * Note that Event uses startDate/endDate instead of startTime/endTime, even
      * when describing dates with times. This situation may be clarified in
      * future revisions.
@@ -437,4 +437,5 @@ class ReserveAction extends BaseType implements ReserveActionContract, ActionCon
     {
         return $this->setProperty('url', $url);
     }
+
 }

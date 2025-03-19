@@ -27,4 +27,5 @@ interface MeasurementTypeEnumerationContract
     public function subjectOf($subjectOf);
 
     public function url($url);
+
 }

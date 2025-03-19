@@ -2,17 +2,17 @@
 
 namespace Spatie\SchemaOrg;
 
-use Spatie\SchemaOrg\Contracts\EnumerationContract;
-use Spatie\SchemaOrg\Contracts\IntangibleContract;
-use Spatie\SchemaOrg\Contracts\ThingContract;
-use Spatie\SchemaOrg\Contracts\WarrantyScopeContract;
+use \Spatie\SchemaOrg\Contracts\WarrantyScopeContract;
+use \Spatie\SchemaOrg\Contracts\EnumerationContract;
+use \Spatie\SchemaOrg\Contracts\IntangibleContract;
+use \Spatie\SchemaOrg\Contracts\ThingContract;
 
 /**
  * A range of services that will be provided to a customer free of charge in
  * case of a defect or malfunction of a product.
- *
+ * 
  * Commonly used values:
- *
+ * 
  * * http://purl.org/goodrelations/v1#Labor-BringIn
  * * http://purl.org/goodrelations/v1#PartsAndLabor-BringIn
  * * http://purl.org/goodrelations/v1#PartsAndLabor-PickUp
@@ -213,4 +213,5 @@ class WarrantyScope extends BaseType implements WarrantyScopeContract, Enumerati
     {
         return $this->setProperty('url', $url);
     }
+
 }

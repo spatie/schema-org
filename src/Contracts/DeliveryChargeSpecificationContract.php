@@ -57,4 +57,5 @@ interface DeliveryChargeSpecificationContract
     public function validThrough($validThrough);
 
     public function valueAddedTaxIncluded($valueAddedTaxIncluded);
+
 }

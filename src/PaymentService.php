@@ -2,12 +2,12 @@
 
 namespace Spatie\SchemaOrg;
 
-use Spatie\SchemaOrg\Contracts\FinancialProductContract;
-use Spatie\SchemaOrg\Contracts\IntangibleContract;
-use Spatie\SchemaOrg\Contracts\PaymentMethodContract;
-use Spatie\SchemaOrg\Contracts\PaymentServiceContract;
-use Spatie\SchemaOrg\Contracts\ServiceContract;
-use Spatie\SchemaOrg\Contracts\ThingContract;
+use \Spatie\SchemaOrg\Contracts\PaymentServiceContract;
+use \Spatie\SchemaOrg\Contracts\FinancialProductContract;
+use \Spatie\SchemaOrg\Contracts\IntangibleContract;
+use \Spatie\SchemaOrg\Contracts\PaymentMethodContract;
+use \Spatie\SchemaOrg\Contracts\ServiceContract;
+use \Spatie\SchemaOrg\Contracts\ThingContract;
 
 /**
  * A Service to transfer funds from a person or organization to a beneficiary
@@ -648,4 +648,5 @@ class PaymentService extends BaseType implements PaymentServiceContract, Financi
     {
         return $this->setProperty('url', $url);
     }
+
 }

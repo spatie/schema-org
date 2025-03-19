@@ -2,9 +2,9 @@
 
 namespace Spatie\SchemaOrg;
 
-use Spatie\SchemaOrg\Contracts\MedicalContraindicationContract;
-use Spatie\SchemaOrg\Contracts\MedicalEntityContract;
-use Spatie\SchemaOrg\Contracts\ThingContract;
+use \Spatie\SchemaOrg\Contracts\MedicalContraindicationContract;
+use \Spatie\SchemaOrg\Contracts\MedicalEntityContract;
+use \Spatie\SchemaOrg\Contracts\ThingContract;
 
 /**
  * A condition or factor that serves as a reason to withhold a certain medical
@@ -335,4 +335,5 @@ class MedicalContraindication extends BaseType implements MedicalContraindicatio
     {
         return $this->setProperty('url', $url);
     }
+
 }

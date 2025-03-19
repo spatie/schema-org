@@ -57,4 +57,5 @@ interface UseActionContract
     public function target($target);
 
     public function url($url);
+
 }

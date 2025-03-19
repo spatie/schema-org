@@ -59,4 +59,5 @@ interface BoneContract
     public function subjectOf($subjectOf);
 
     public function url($url);
+
 }

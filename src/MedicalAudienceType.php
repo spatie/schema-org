@@ -2,11 +2,11 @@
 
 namespace Spatie\SchemaOrg;
 
-use Spatie\SchemaOrg\Contracts\EnumerationContract;
-use Spatie\SchemaOrg\Contracts\IntangibleContract;
-use Spatie\SchemaOrg\Contracts\MedicalAudienceTypeContract;
-use Spatie\SchemaOrg\Contracts\MedicalEnumerationContract;
-use Spatie\SchemaOrg\Contracts\ThingContract;
+use \Spatie\SchemaOrg\Contracts\MedicalAudienceTypeContract;
+use \Spatie\SchemaOrg\Contracts\EnumerationContract;
+use \Spatie\SchemaOrg\Contracts\IntangibleContract;
+use \Spatie\SchemaOrg\Contracts\MedicalEnumerationContract;
+use \Spatie\SchemaOrg\Contracts\ThingContract;
 
 /**
  * Target audiences types for medical web pages. Enumerated type.
@@ -25,7 +25,7 @@ class MedicalAudienceType extends BaseType implements MedicalAudienceTypeContrac
      * @see https://schema.org/Clinician
      * @see https://health-lifesci.schema.org
      */
-    public const Clinician = 'https://schema.org/Clinician';
+     const Clinician = 'https://schema.org/Clinician';
 
     /**
      * Medical researchers.
@@ -33,7 +33,7 @@ class MedicalAudienceType extends BaseType implements MedicalAudienceTypeContrac
      * @see https://schema.org/MedicalResearcher
      * @see https://health-lifesci.schema.org
      */
-    public const MedicalResearcher = 'https://schema.org/MedicalResearcher';
+     const MedicalResearcher = 'https://schema.org/MedicalResearcher';
 
     /**
      * An additional type for the item, typically used for adding more specific
@@ -225,4 +225,5 @@ class MedicalAudienceType extends BaseType implements MedicalAudienceTypeContrac
     {
         return $this->setProperty('url', $url);
     }
+
 }

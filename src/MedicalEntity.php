@@ -2,8 +2,8 @@
 
 namespace Spatie\SchemaOrg;
 
-use Spatie\SchemaOrg\Contracts\MedicalEntityContract;
-use Spatie\SchemaOrg\Contracts\ThingContract;
+use \Spatie\SchemaOrg\Contracts\MedicalEntityContract;
+use \Spatie\SchemaOrg\Contracts\ThingContract;
 
 /**
  * The most generic type of entity related to health and the practice of
@@ -331,4 +331,5 @@ class MedicalEntity extends BaseType implements MedicalEntityContract, ThingCont
     {
         return $this->setProperty('url', $url);
     }
+
 }

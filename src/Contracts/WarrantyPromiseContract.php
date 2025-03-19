@@ -31,4 +31,5 @@ interface WarrantyPromiseContract
     public function url($url);
 
     public function warrantyScope($warrantyScope);
+
 }

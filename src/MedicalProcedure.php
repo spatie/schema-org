@@ -2,9 +2,9 @@
 
 namespace Spatie\SchemaOrg;
 
-use Spatie\SchemaOrg\Contracts\MedicalEntityContract;
-use Spatie\SchemaOrg\Contracts\MedicalProcedureContract;
-use Spatie\SchemaOrg\Contracts\ThingContract;
+use \Spatie\SchemaOrg\Contracts\MedicalProcedureContract;
+use \Spatie\SchemaOrg\Contracts\MedicalEntityContract;
+use \Spatie\SchemaOrg\Contracts\ThingContract;
 
 /**
  * A process of care used in either a diagnostic, therapeutic, preventive or
@@ -425,4 +425,5 @@ class MedicalProcedure extends BaseType implements MedicalProcedureContract, Med
     {
         return $this->setProperty('url', $url);
     }
+
 }

@@ -2,10 +2,10 @@
 
 namespace Spatie\SchemaOrg;
 
-use Spatie\SchemaOrg\Contracts\EnumerationContract;
-use Spatie\SchemaOrg\Contracts\IntangibleContract;
-use Spatie\SchemaOrg\Contracts\MerchantReturnEnumerationContract;
-use Spatie\SchemaOrg\Contracts\ThingContract;
+use \Spatie\SchemaOrg\Contracts\MerchantReturnEnumerationContract;
+use \Spatie\SchemaOrg\Contracts\EnumerationContract;
+use \Spatie\SchemaOrg\Contracts\IntangibleContract;
+use \Spatie\SchemaOrg\Contracts\ThingContract;
 
 /**
  * Enumerates several kinds of product return policies.
@@ -25,7 +25,7 @@ class MerchantReturnEnumeration extends BaseType implements MerchantReturnEnumer
      * @see https://pending.schema.org
      * @link https://github.com/schemaorg/schemaorg/issues/2288
      */
-    public const MerchantReturnFiniteReturnWindow = 'https://schema.org/MerchantReturnFiniteReturnWindow';
+     const MerchantReturnFiniteReturnWindow = 'https://schema.org/MerchantReturnFiniteReturnWindow';
 
     /**
      * Specifies that product returns are not permitted.
@@ -34,7 +34,7 @@ class MerchantReturnEnumeration extends BaseType implements MerchantReturnEnumer
      * @see https://pending.schema.org
      * @link https://github.com/schemaorg/schemaorg/issues/2288
      */
-    public const MerchantReturnNotPermitted = 'https://schema.org/MerchantReturnNotPermitted';
+     const MerchantReturnNotPermitted = 'https://schema.org/MerchantReturnNotPermitted';
 
     /**
      * Specifies that there is an unlimited window for product returns.
@@ -43,7 +43,7 @@ class MerchantReturnEnumeration extends BaseType implements MerchantReturnEnumer
      * @see https://pending.schema.org
      * @link https://github.com/schemaorg/schemaorg/issues/2288
      */
-    public const MerchantReturnUnlimitedWindow = 'https://schema.org/MerchantReturnUnlimitedWindow';
+     const MerchantReturnUnlimitedWindow = 'https://schema.org/MerchantReturnUnlimitedWindow';
 
     /**
      * Specifies that a product return policy is not provided.
@@ -52,7 +52,7 @@ class MerchantReturnEnumeration extends BaseType implements MerchantReturnEnumer
      * @see https://pending.schema.org
      * @link https://github.com/schemaorg/schemaorg/issues/2288
      */
-    public const MerchantReturnUnspecified = 'https://schema.org/MerchantReturnUnspecified';
+     const MerchantReturnUnspecified = 'https://schema.org/MerchantReturnUnspecified';
 
     /**
      * An additional type for the item, typically used for adding more specific
@@ -244,4 +244,5 @@ class MerchantReturnEnumeration extends BaseType implements MerchantReturnEnumer
     {
         return $this->setProperty('url', $url);
     }
+
 }

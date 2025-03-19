@@ -2,9 +2,9 @@
 
 namespace Spatie\SchemaOrg;
 
-use Spatie\SchemaOrg\Contracts\IntangibleContract;
-use Spatie\SchemaOrg\Contracts\MenuItemContract;
-use Spatie\SchemaOrg\Contracts\ThingContract;
+use \Spatie\SchemaOrg\Contracts\MenuItemContract;
+use \Spatie\SchemaOrg\Contracts\IntangibleContract;
+use \Spatie\SchemaOrg\Contracts\ThingContract;
 
 /**
  * A food or drink item listed in a menu or menu section.
@@ -272,4 +272,5 @@ class MenuItem extends BaseType implements MenuItemContract, IntangibleContract,
     {
         return $this->setProperty('url', $url);
     }
+
 }

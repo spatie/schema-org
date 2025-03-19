@@ -2,10 +2,10 @@
 
 namespace Spatie\SchemaOrg;
 
-use Spatie\SchemaOrg\Contracts\AudienceContract;
-use Spatie\SchemaOrg\Contracts\EducationalAudienceContract;
-use Spatie\SchemaOrg\Contracts\IntangibleContract;
-use Spatie\SchemaOrg\Contracts\ThingContract;
+use \Spatie\SchemaOrg\Contracts\EducationalAudienceContract;
+use \Spatie\SchemaOrg\Contracts\AudienceContract;
+use \Spatie\SchemaOrg\Contracts\IntangibleContract;
+use \Spatie\SchemaOrg\Contracts\ThingContract;
 
 /**
  * An EducationalAudience.
@@ -248,4 +248,5 @@ class EducationalAudience extends BaseType implements EducationalAudienceContrac
     {
         return $this->setProperty('url', $url);
     }
+
 }

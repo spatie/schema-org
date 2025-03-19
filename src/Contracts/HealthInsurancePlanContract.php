@@ -45,4 +45,5 @@ interface HealthInsurancePlanContract
     public function url($url);
 
     public function usesHealthPlanIdStandard($usesHealthPlanIdStandard);
+
 }

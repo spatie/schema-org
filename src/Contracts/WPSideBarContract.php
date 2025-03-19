@@ -259,4 +259,5 @@ interface WPSideBarContract
     public function workTranslation($workTranslation);
 
     public function xpath($xpath);
+
 }

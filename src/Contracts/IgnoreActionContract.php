@@ -53,4 +53,5 @@ interface IgnoreActionContract
     public function target($target);
 
     public function url($url);
+
 }

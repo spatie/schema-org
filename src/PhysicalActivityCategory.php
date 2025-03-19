@@ -2,10 +2,10 @@
 
 namespace Spatie\SchemaOrg;
 
-use Spatie\SchemaOrg\Contracts\EnumerationContract;
-use Spatie\SchemaOrg\Contracts\IntangibleContract;
-use Spatie\SchemaOrg\Contracts\PhysicalActivityCategoryContract;
-use Spatie\SchemaOrg\Contracts\ThingContract;
+use \Spatie\SchemaOrg\Contracts\PhysicalActivityCategoryContract;
+use \Spatie\SchemaOrg\Contracts\EnumerationContract;
+use \Spatie\SchemaOrg\Contracts\IntangibleContract;
+use \Spatie\SchemaOrg\Contracts\ThingContract;
 
 /**
  * Categories of physical activity, organized by physiologic classification.
@@ -25,7 +25,7 @@ class PhysicalActivityCategory extends BaseType implements PhysicalActivityCateg
      * @see https://schema.org/AerobicActivity
      * @see https://health-lifesci.schema.org
      */
-    public const AerobicActivity = 'https://schema.org/AerobicActivity';
+     const AerobicActivity = 'https://schema.org/AerobicActivity';
 
     /**
      * Physical activity that is of high-intensity which utilizes the anaerobic
@@ -34,7 +34,7 @@ class PhysicalActivityCategory extends BaseType implements PhysicalActivityCateg
      * @see https://schema.org/AnaerobicActivity
      * @see https://health-lifesci.schema.org
      */
-    public const AnaerobicActivity = 'https://schema.org/AnaerobicActivity';
+     const AnaerobicActivity = 'https://schema.org/AnaerobicActivity';
 
     /**
      * Physical activity that is engaged to help maintain posture and balance.
@@ -42,7 +42,7 @@ class PhysicalActivityCategory extends BaseType implements PhysicalActivityCateg
      * @see https://schema.org/Balance
      * @see https://health-lifesci.schema.org
      */
-    public const Balance = 'https://schema.org/Balance';
+     const Balance = 'https://schema.org/Balance';
 
     /**
      * Physical activity that is engaged in to improve joint and muscle
@@ -51,7 +51,7 @@ class PhysicalActivityCategory extends BaseType implements PhysicalActivityCateg
      * @see https://schema.org/Flexibility
      * @see https://health-lifesci.schema.org
      */
-    public const Flexibility = 'https://schema.org/Flexibility';
+     const Flexibility = 'https://schema.org/Flexibility';
 
     /**
      * Any physical activity engaged in for recreational purposes. Examples may
@@ -60,7 +60,7 @@ class PhysicalActivityCategory extends BaseType implements PhysicalActivityCateg
      * @see https://schema.org/LeisureTimeActivity
      * @see https://health-lifesci.schema.org
      */
-    public const LeisureTimeActivity = 'https://schema.org/LeisureTimeActivity';
+     const LeisureTimeActivity = 'https://schema.org/LeisureTimeActivity';
 
     /**
      * Any physical activity engaged in for job-related purposes. Examples may
@@ -70,7 +70,7 @@ class PhysicalActivityCategory extends BaseType implements PhysicalActivityCateg
      * @see https://schema.org/OccupationalActivity
      * @see https://health-lifesci.schema.org
      */
-    public const OccupationalActivity = 'https://schema.org/OccupationalActivity';
+     const OccupationalActivity = 'https://schema.org/OccupationalActivity';
 
     /**
      * Physical activity that is engaged in to improve muscle and bone strength.
@@ -79,7 +79,7 @@ class PhysicalActivityCategory extends BaseType implements PhysicalActivityCateg
      * @see https://schema.org/StrengthTraining
      * @see https://health-lifesci.schema.org
      */
-    public const StrengthTraining = 'https://schema.org/StrengthTraining';
+     const StrengthTraining = 'https://schema.org/StrengthTraining';
 
     /**
      * An additional type for the item, typically used for adding more specific
@@ -271,4 +271,5 @@ class PhysicalActivityCategory extends BaseType implements PhysicalActivityCateg
     {
         return $this->setProperty('url', $url);
     }
+
 }

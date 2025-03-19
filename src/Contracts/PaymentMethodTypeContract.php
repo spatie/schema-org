@@ -27,4 +27,5 @@ interface PaymentMethodTypeContract
     public function subjectOf($subjectOf);
 
     public function url($url);
+
 }

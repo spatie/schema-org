@@ -147,4 +147,5 @@ interface IndividualProductContract
     public function weight($weight);
 
     public function width($width);
+
 }

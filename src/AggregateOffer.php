@@ -2,16 +2,16 @@
 
 namespace Spatie\SchemaOrg;
 
-use Spatie\SchemaOrg\Contracts\AggregateOfferContract;
-use Spatie\SchemaOrg\Contracts\IntangibleContract;
-use Spatie\SchemaOrg\Contracts\OfferContract;
-use Spatie\SchemaOrg\Contracts\ThingContract;
+use \Spatie\SchemaOrg\Contracts\AggregateOfferContract;
+use \Spatie\SchemaOrg\Contracts\IntangibleContract;
+use \Spatie\SchemaOrg\Contracts\OfferContract;
+use \Spatie\SchemaOrg\Contracts\ThingContract;
 
 /**
  * When a single product is associated with multiple offers (for example, the
  * same pair of shoes is offered by different merchants), then AggregateOffer
  * can be used.
- *
+ * 
  * Note: AggregateOffers are normally expected to associate multiple offers that
  * all share the same defined [[businessFunction]] value, or default to
  * http://purl.org/goodrelations/v1#Sell if businessFunction is not explicitly
@@ -58,7 +58,7 @@ class AggregateOffer extends BaseType implements AggregateOfferContract, Intangi
      * A property-value pair representing an additional characteristic of the
      * entity, e.g. a product feature or another characteristic for which there
      * is no matching property in schema.org.
-     *
+     * 
      * Note: Publishers should be aware that applications designed to use
      * specific schema.org properties (e.g. https://schema.org/width,
      * https://schema.org/color, https://schema.org/gtin13, ...) will typically
@@ -163,7 +163,7 @@ class AggregateOffer extends BaseType implements AggregateOfferContract, Intangi
      * for product identification within the Amazon organization (summary from
      * [Wikipedia](https://en.wikipedia.org/wiki/Amazon_Standard_Identification_Number)'s
      * article).
-     *
+     * 
      * Note also that this is a definition for how to include ASINs in
      * Schema.org data, and not a definition of ASINs in general - see
      * documentation from Amazon for authoritative details.
@@ -404,7 +404,7 @@ class AggregateOffer extends BaseType implements AggregateOfferContract, Intangi
      * The ISO 3166-1 (ISO 3166-1 alpha-2) or ISO 3166-2 code, the place, or the
      * GeoShape for the geo-political region(s) for which the offer or delivery
      * charge specification is valid.
-     *
+     * 
      * See also [[ineligibleRegion]].
      *
      * @param \Spatie\SchemaOrg\Contracts\GeoShapeContract|\Spatie\SchemaOrg\Contracts\GeoShapeContract[]|\Spatie\SchemaOrg\Contracts\PlaceContract|\Spatie\SchemaOrg\Contracts\PlaceContract[]|string|string[] $eligibleRegion
@@ -441,7 +441,7 @@ class AggregateOffer extends BaseType implements AggregateOfferContract, Intangi
      * ([GTIN](https://www.gs1.org/standards/id-keys/gtin)). GTINs identify
      * trade items, including products and services, using numeric
      * identification codes.
-     *
+     * 
      * A correct [[gtin]] value should be a valid GTIN, which means that it
      * should be an all-numeric string of either 8, 12, 13 or 14 digits, or a
      * "GS1 Digital Link" URL based on such a string. The numeric component
@@ -453,13 +453,13 @@ class AggregateOffer extends BaseType implements AggregateOfferContract, Intangi
      * more details. Left-padding of the gtin values is not required or
      * encouraged. The [[gtin]] property generalizes the earlier [[gtin8]],
      * [[gtin12]], [[gtin13]], and [[gtin14]] properties.
-     *
+     * 
      * The GS1 [digital link
      * specifications](https://www.gs1.org/standards/Digital-Link/) expresses
      * GTINs as URLs (URIs, IRIs, etc.).
      * Digital Links should be populated into the [[hasGS1DigitalLink]]
      * attribute.
-     *
+     * 
      * Note also that this is a definition for how to include GTINs in
      * Schema.org data, and not a definition of GTINs in general - see the GS1
      * documentation for authoritative details.
@@ -632,9 +632,9 @@ class AggregateOffer extends BaseType implements AggregateOfferContract, Intangi
 
     /**
      * The highest price of all offers available.
-     *
+     * 
      * Usage guidelines:
-     *
+     * 
      * * Use values from 0123456789 (Unicode 'DIGIT ZERO' (U+0030) to 'DIGIT
      * NINE' (U+0039)) rather than superficially similar Unicode symbols.
      * * Use '.' (Unicode 'FULL STOP' (U+002E)) rather than ',' to indicate a
@@ -704,7 +704,7 @@ class AggregateOffer extends BaseType implements AggregateOfferContract, Intangi
      * GeoShape for the geo-political region(s) for which the offer or delivery
      * charge specification is not valid, e.g. a region where the transaction is
      * not allowed.
-     *
+     * 
      * See also [[eligibleRegion]].
      *
      * @param \Spatie\SchemaOrg\Contracts\GeoShapeContract|\Spatie\SchemaOrg\Contracts\GeoShapeContract[]|\Spatie\SchemaOrg\Contracts\PlaceContract|\Spatie\SchemaOrg\Contracts\PlaceContract[]|string|string[] $ineligibleRegion
@@ -802,9 +802,9 @@ class AggregateOffer extends BaseType implements AggregateOfferContract, Intangi
 
     /**
      * The lowest price of all offers available.
-     *
+     * 
      * Usage guidelines:
-     *
+     * 
      * * Use values from 0123456789 (Unicode 'DIGIT ZERO' (U+0030) to 'DIGIT
      * NINE' (U+0039)) rather than superficially similar Unicode symbols.
      * * Use '.' (Unicode 'FULL STOP' (U+002E)) rather than ',' to indicate a
@@ -841,7 +841,7 @@ class AggregateOffer extends BaseType implements AggregateOfferContract, Intangi
      * The [[mobileUrl]] property is provided for specific situations in which
      * data consumers need to determine whether one of several provided URLs is
      * a dedicated 'mobile site'.
-     *
+     * 
      * To discourage over-use, and reflecting intial usecases, the property is
      * expected only on [[Product]] and [[Offer]], rather than [[Thing]]. The
      * general trend in web technology is towards [responsive
@@ -966,9 +966,9 @@ class AggregateOffer extends BaseType implements AggregateOfferContract, Intangi
     /**
      * The offer price of a product, or of a price component when attached to
      * PriceSpecification and its subtypes.
-     *
+     * 
      * Usage guidelines:
-     *
+     * 
      * * Use the [[priceCurrency]] property (with standard formats: [ISO 4217
      * currency format](http://en.wikipedia.org/wiki/ISO_4217), e.g. "USD";
      * [Ticker symbol](https://en.wikipedia.org/wiki/List_of_cryptocurrencies)
@@ -1003,7 +1003,7 @@ class AggregateOffer extends BaseType implements AggregateOfferContract, Intangi
     /**
      * The currency of the price, or a price component when attached to
      * [[PriceSpecification]] and its subtypes.
-     *
+     * 
      * Use standard formats: [ISO 4217 currency
      * format](http://en.wikipedia.org/wiki/ISO_4217), e.g. "USD"; [Ticker
      * symbol](https://en.wikipedia.org/wiki/List_of_cryptocurrencies) for
@@ -1246,4 +1246,5 @@ class AggregateOffer extends BaseType implements AggregateOfferContract, Intangi
     {
         return $this->setProperty('warranty', $warranty);
     }
+
 }

@@ -49,4 +49,5 @@ interface PropertyValueSpecificationContract
     public function valuePattern($valuePattern);
 
     public function valueRequired($valueRequired);
+
 }

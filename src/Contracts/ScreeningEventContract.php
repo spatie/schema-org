@@ -115,4 +115,5 @@ interface ScreeningEventContract
     public function workPerformed($workPerformed);
 
     public function workPresented($workPresented);
+
 }

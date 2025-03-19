@@ -263,4 +263,5 @@ interface IndividualPhysicianContract
     public function usNPI($usNPI);
 
     public function vatID($vatID);
+
 }

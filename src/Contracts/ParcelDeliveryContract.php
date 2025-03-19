@@ -51,4 +51,5 @@ interface ParcelDeliveryContract
     public function trackingUrl($trackingUrl);
 
     public function url($url);
+
 }

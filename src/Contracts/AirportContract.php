@@ -127,4 +127,5 @@ interface AirportContract
     public function tourBookingPage($tourBookingPage);
 
     public function url($url);
+
 }

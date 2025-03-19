@@ -2,9 +2,9 @@
 
 namespace Spatie\SchemaOrg;
 
-use Spatie\SchemaOrg\Contracts\IntangibleContract;
-use Spatie\SchemaOrg\Contracts\ServiceChannelContract;
-use Spatie\SchemaOrg\Contracts\ThingContract;
+use \Spatie\SchemaOrg\Contracts\ServiceChannelContract;
+use \Spatie\SchemaOrg\Contracts\IntangibleContract;
+use \Spatie\SchemaOrg\Contracts\ThingContract;
 
 /**
  * A means for accessing a service, e.g. a government office location, web site,
@@ -320,4 +320,5 @@ class ServiceChannel extends BaseType implements ServiceChannelContract, Intangi
     {
         return $this->setProperty('url', $url);
     }
+
 }

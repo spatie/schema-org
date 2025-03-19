@@ -2,10 +2,10 @@
 
 namespace Spatie\SchemaOrg;
 
-use Spatie\SchemaOrg\Contracts\CreativeWorkContract;
-use Spatie\SchemaOrg\Contracts\QAPageContract;
-use Spatie\SchemaOrg\Contracts\ThingContract;
-use Spatie\SchemaOrg\Contracts\WebPageContract;
+use \Spatie\SchemaOrg\Contracts\QAPageContract;
+use \Spatie\SchemaOrg\Contracts\CreativeWorkContract;
+use \Spatie\SchemaOrg\Contracts\ThingContract;
+use \Spatie\SchemaOrg\Contracts\WebPageContract;
 
 /**
  * A QAPage is a WebPage focussed on a specific Question and its Answer(s), e.g.
@@ -471,7 +471,7 @@ class QAPage extends BaseType implements QAPageContract, CreativeWorkContract, T
      * held by an [[ArchiveOrganization]]. This property is not suitable for use
      * as a general Web access control mechanism. It is expressed only in
      * natural language.
-     *
+     * 
      * For example "Available by appointment from the Reading Room" or
      * "Accessible only from logged-in accounts ".
      *
@@ -615,13 +615,13 @@ class QAPage extends BaseType implements QAPageContract, CreativeWorkContract, T
     /**
      * The country of origin of something, including products as well as
      * creative  works such as movie and TV content.
-     *
+     * 
      * In the case of TV and movie, this would be the country of the principle
      * offices of the production company or individual responsible for the
      * movie. For other kinds of [[CreativeWork]] it is difficult to provide
      * fully general guidance, and properties such as [[contentLocation]] and
      * [[locationCreated]] may be more applicable.
-     *
+     * 
      * In the case of products, the country of origin of the product. The exact
      * interpretation of this may vary by context and product type, and cannot
      * be fully enumerated here.
@@ -799,12 +799,12 @@ class QAPage extends BaseType implements QAPageContract, CreativeWorkContract, T
      * An [EIDR](https://eidr.org/) (Entertainment Identifier Registry)
      * [[identifier]] representing a specific edit / edition for a work of film
      * or television.
-     *
+     * 
      * For example, the motion picture known as "Ghostbusters" whose
      * [[titleEIDR]] is "10.5240/7EC7-228A-510A-053E-CBB8-J" has several edits,
      * e.g. "10.5240/1F2A-E1C5-680A-14C6-E76B-I" and
      * "10.5240/8A35-3BEE-6497-5D12-9E4F-3".
-     *
+     * 
      * Since schema.org types like [[Movie]] and [[TVEpisode]] can be used for
      * both works and their multiple expressions, it is possible to use
      * [[titleEIDR]] alone (for a general description), or alongside
@@ -839,7 +839,7 @@ class QAPage extends BaseType implements QAPageContract, CreativeWorkContract, T
 
     /**
      * An alignment to an established educational framework.
-     *
+     * 
      * This property should not be used where the nature of the alignment can be
      * described using a simple property, for example to express that a resource
      * [[teaches]] or [[assesses]] a competency.
@@ -910,11 +910,11 @@ class QAPage extends BaseType implements QAPageContract, CreativeWorkContract, T
      * reference](https://developer.mozilla.org/en-US/docs/Web/HTTP/Basics_of_HTTP/MIME_types)),
      * e.g. application/zip for a SoftwareApplication binary, audio/mpeg for
      * .mp3 etc.
-     *
+     * 
      * In cases where a [[CreativeWork]] has several media type representations,
      * [[encoding]] can be used to indicate each [[MediaObject]] alongside
      * particular [[encodingFormat]] information.
-     *
+     * 
      * Unregistered or niche encoding and file formats can be indicated instead
      * via the most appropriate URL, e.g. defining Web page or a
      * Wikipedia/Wikidata entry.
@@ -1625,7 +1625,7 @@ class QAPage extends BaseType implements QAPageContract, CreativeWorkContract, T
      * applied to a [[CreativeWork]] (e.g. [[NewsArticle]]) the principles are
      * those of the party primarily responsible for the creation of the
      * [[CreativeWork]].
-     *
+     * 
      * While such policies are most typically expressed in natural language,
      * sometimes related information (e.g. indicating a [[funder]]) can be
      * expressed using schema.org terminology.
@@ -1854,7 +1854,7 @@ class QAPage extends BaseType implements QAPageContract, CreativeWorkContract, T
 
     /**
      * A standardized size of a product or creative work, specified either
-     * through a simple textual string (for example 'XL', '32Wx34L'), a
+     * through a simple textual string (for example 'XL', '32Wx34L'), a 
      * QuantitativeValue with a unitCode, or a comprehensive and structured
      * [[SizeSpecification]]; in other cases, the [[width]], [[height]],
      * [[depth]] and [[weight]] properties may be more applicable.
@@ -1927,22 +1927,22 @@ class QAPage extends BaseType implements QAPageContract, CreativeWorkContract, T
      * text-to-speech conversion. Other sections of a page may also be usefully
      * spoken in particular circumstances; the 'speakable' property serves to
      * indicate the parts most likely to be generally useful for speech.
-     *
+     * 
      * The *speakable* property can be repeated an arbitrary number of times,
      * with three kinds of possible 'content-locator' values:
-     *
+     * 
      * 1.) *id-value* URL references - uses *id-value* of an element in the page
      * being annotated. The simplest use of *speakable* has (potentially
      * relative) URL values, referencing identified sections of the document
      * concerned.
-     *
+     * 
      * 2.) CSS Selectors - addresses content in the annotated page, e.g. via
      * class attribute. Use the [[cssSelector]] property.
-     *
+     * 
      * 3.)  XPaths - addresses content via XPaths (assuming an XML view of the
      * content). Use the [[xpath]] property.
-     *
-     *
+     * 
+     * 
      * For more sophisticated markup of speakable sections beyond simple ID
      * references, either CSS selectors or XPath expressions to pick out
      * document section(s) as speakable. For this
@@ -2053,7 +2053,7 @@ class QAPage extends BaseType implements QAPageContract, CreativeWorkContract, T
      *       Written works such as books may sometimes have precise temporal
      * coverage too, e.g. a work set in 1939 - 1945 can be indicated in ISO 8601
      * interval format format via "1939/1945".
-     *
+     * 
      * Open-ended date ranges can be written with ".." in place of the end date.
      * For example, "2015-11/.." indicates a range beginning in November 2015
      * and with no specified final date. This is tentative and might be updated
@@ -2195,7 +2195,7 @@ class QAPage extends BaseType implements QAPageContract, CreativeWorkContract, T
      * preferred linking and citation conventions, as well as purchasing
      * details. For something that can be commercially licensed, usageInfo can
      * provide detailed, resource-specific information about licensing options.
-     *
+     * 
      * This property can be used alongside the license property which indicates
      * license(s) applicable to some piece of content. The usageInfo property
      * can provide information about other licensing options, e.g. acquiring
@@ -2275,4 +2275,5 @@ class QAPage extends BaseType implements QAPageContract, CreativeWorkContract, T
     {
         return $this->setProperty('workTranslation', $workTranslation);
     }
+
 }

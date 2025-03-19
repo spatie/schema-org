@@ -2,10 +2,10 @@
 
 namespace Spatie\SchemaOrg;
 
-use Spatie\SchemaOrg\Contracts\IntangibleContract;
-use Spatie\SchemaOrg\Contracts\MonetaryAmountContract;
-use Spatie\SchemaOrg\Contracts\StructuredValueContract;
-use Spatie\SchemaOrg\Contracts\ThingContract;
+use \Spatie\SchemaOrg\Contracts\MonetaryAmountContract;
+use \Spatie\SchemaOrg\Contracts\IntangibleContract;
+use \Spatie\SchemaOrg\Contracts\StructuredValueContract;
+use \Spatie\SchemaOrg\Contracts\ThingContract;
 
 /**
  * A monetary value or range. This type can be used to describe an amount of
@@ -58,7 +58,7 @@ class MonetaryAmount extends BaseType implements MonetaryAmountContract, Intangi
 
     /**
      * The currency in which the monetary amount is expressed.
-     *
+     * 
      * Use standard formats: [ISO 4217 currency
      * format](http://en.wikipedia.org/wiki/ISO_4217), e.g. "USD"; [Ticker
      * symbol](https://en.wikipedia.org/wiki/List_of_cryptocurrencies) for
@@ -293,7 +293,7 @@ class MonetaryAmount extends BaseType implements MonetaryAmountContract, Intangi
     /**
      * The value of a [[QuantitativeValue]] (including [[Observation]]) or
      * property value node.
-     *
+     * 
      * * For [[QuantitativeValue]] and [[MonetaryAmount]], the recommended type
      * for values is 'Number'.
      * * For [[PropertyValue]], it can be 'Text', 'Number', 'Boolean', or
@@ -313,4 +313,5 @@ class MonetaryAmount extends BaseType implements MonetaryAmountContract, Intangi
     {
         return $this->setProperty('value', $value);
     }
+
 }

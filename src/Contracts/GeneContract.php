@@ -61,4 +61,5 @@ interface GeneContract
     public function taxonomicRange($taxonomicRange);
 
     public function url($url);
+
 }

@@ -53,4 +53,5 @@ interface ActivateActionContract
     public function target($target);
 
     public function url($url);
+
 }

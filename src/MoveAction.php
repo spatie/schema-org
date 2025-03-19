@@ -2,15 +2,15 @@
 
 namespace Spatie\SchemaOrg;
 
-use Spatie\SchemaOrg\Contracts\ActionContract;
-use Spatie\SchemaOrg\Contracts\MoveActionContract;
-use Spatie\SchemaOrg\Contracts\ThingContract;
+use \Spatie\SchemaOrg\Contracts\MoveActionContract;
+use \Spatie\SchemaOrg\Contracts\ActionContract;
+use \Spatie\SchemaOrg\Contracts\ThingContract;
 
 /**
  * The act of an agent relocating to a place.
- *
+ * 
  * Related actions:
- *
+ * 
  * * [[TransferAction]]: Unlike TransferAction, the subject of the move is a
  * living Person or Organization rather than an inanimate object.
  *
@@ -137,7 +137,7 @@ class MoveAction extends BaseType implements MoveActionContract, ActionContract,
      * John wrote a book from January to *December*. For media, including audio
      * and video, it's the time offset of the end of a clip within a larger
      * file.
-     *
+     * 
      * Note that Event uses startDate/endDate instead of startTime/endTime, even
      * when describing dates with times. This situation may be clarified in
      * future revisions.
@@ -377,7 +377,7 @@ class MoveAction extends BaseType implements MoveActionContract, ActionContract,
      * John wrote a book from *January* to December. For media, including audio
      * and video, it's the time offset of the start of a clip within a larger
      * file.
-     *
+     * 
      * Note that Event uses startDate/endDate instead of startTime/endTime, even
      * when describing dates with times. This situation may be clarified in
      * future revisions.
@@ -451,4 +451,5 @@ class MoveAction extends BaseType implements MoveActionContract, ActionContract,
     {
         return $this->setProperty('url', $url);
     }
+
 }

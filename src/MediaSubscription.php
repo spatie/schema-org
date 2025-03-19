@@ -2,9 +2,9 @@
 
 namespace Spatie\SchemaOrg;
 
-use Spatie\SchemaOrg\Contracts\IntangibleContract;
-use Spatie\SchemaOrg\Contracts\MediaSubscriptionContract;
-use Spatie\SchemaOrg\Contracts\ThingContract;
+use \Spatie\SchemaOrg\Contracts\MediaSubscriptionContract;
+use \Spatie\SchemaOrg\Contracts\IntangibleContract;
+use \Spatie\SchemaOrg\Contracts\ThingContract;
 
 /**
  * A subscription which allows a user to access media including audio, video,
@@ -240,4 +240,5 @@ class MediaSubscription extends BaseType implements MediaSubscriptionContract, I
     {
         return $this->setProperty('url', $url);
     }
+
 }

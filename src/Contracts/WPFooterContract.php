@@ -259,4 +259,5 @@ interface WPFooterContract
     public function workTranslation($workTranslation);
 
     public function xpath($xpath);
+
 }

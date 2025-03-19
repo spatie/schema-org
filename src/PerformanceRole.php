@@ -2,10 +2,10 @@
 
 namespace Spatie\SchemaOrg;
 
-use Spatie\SchemaOrg\Contracts\IntangibleContract;
-use Spatie\SchemaOrg\Contracts\PerformanceRoleContract;
-use Spatie\SchemaOrg\Contracts\RoleContract;
-use Spatie\SchemaOrg\Contracts\ThingContract;
+use \Spatie\SchemaOrg\Contracts\PerformanceRoleContract;
+use \Spatie\SchemaOrg\Contracts\IntangibleContract;
+use \Spatie\SchemaOrg\Contracts\RoleContract;
+use \Spatie\SchemaOrg\Contracts\ThingContract;
 
 /**
  * A PerformanceRole is a Role that some entity places with regard to a
@@ -286,4 +286,5 @@ class PerformanceRole extends BaseType implements PerformanceRoleContract, Intan
     {
         return $this->setProperty('url', $url);
     }
+
 }

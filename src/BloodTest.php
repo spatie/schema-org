@@ -2,10 +2,10 @@
 
 namespace Spatie\SchemaOrg;
 
-use Spatie\SchemaOrg\Contracts\BloodTestContract;
-use Spatie\SchemaOrg\Contracts\MedicalEntityContract;
-use Spatie\SchemaOrg\Contracts\MedicalTestContract;
-use Spatie\SchemaOrg\Contracts\ThingContract;
+use \Spatie\SchemaOrg\Contracts\BloodTestContract;
+use \Spatie\SchemaOrg\Contracts\MedicalEntityContract;
+use \Spatie\SchemaOrg\Contracts\MedicalTestContract;
+use \Spatie\SchemaOrg\Contracts\ThingContract;
 
 /**
  * A medical test performed on a sample of a patient's blood.
@@ -407,4 +407,5 @@ class BloodTest extends BaseType implements BloodTestContract, MedicalEntityCont
     {
         return $this->setProperty('usesDevice', $usesDevice);
     }
+
 }

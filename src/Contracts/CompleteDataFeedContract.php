@@ -277,4 +277,5 @@ interface CompleteDataFeedContract
     public function workExample($workExample);
 
     public function workTranslation($workTranslation);
+
 }

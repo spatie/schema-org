@@ -2,9 +2,9 @@
 
 namespace Spatie\SchemaOrg;
 
-use Spatie\SchemaOrg\Contracts\BedDetailsContract;
-use Spatie\SchemaOrg\Contracts\IntangibleContract;
-use Spatie\SchemaOrg\Contracts\ThingContract;
+use \Spatie\SchemaOrg\Contracts\BedDetailsContract;
+use \Spatie\SchemaOrg\Contracts\IntangibleContract;
+use \Spatie\SchemaOrg\Contracts\ThingContract;
 
 /**
  * An entity holding detailed information about the available bed types, e.g.
@@ -237,4 +237,5 @@ class BedDetails extends BaseType implements BedDetailsContract, IntangibleContr
     {
         return $this->setProperty('url', $url);
     }
+
 }

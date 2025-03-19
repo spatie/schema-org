@@ -99,4 +99,5 @@ interface RadioBroadcastServiceContract
     public function url($url);
 
     public function videoFormat($videoFormat);
+
 }

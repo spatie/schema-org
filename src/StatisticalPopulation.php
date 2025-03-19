@@ -2,9 +2,9 @@
 
 namespace Spatie\SchemaOrg;
 
-use Spatie\SchemaOrg\Contracts\IntangibleContract;
-use Spatie\SchemaOrg\Contracts\StatisticalPopulationContract;
-use Spatie\SchemaOrg\Contracts\ThingContract;
+use \Spatie\SchemaOrg\Contracts\StatisticalPopulationContract;
+use \Spatie\SchemaOrg\Contracts\IntangibleContract;
+use \Spatie\SchemaOrg\Contracts\ThingContract;
 
 /**
  * A StatisticalPopulation is a set of instances of a certain given type that
@@ -223,4 +223,5 @@ class StatisticalPopulation extends BaseType implements StatisticalPopulationCon
     {
         return $this->setProperty('url', $url);
     }
+
 }

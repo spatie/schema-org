@@ -55,4 +55,5 @@ interface MedicalTrialContract
     public function trialDesign($trialDesign);
 
     public function url($url);
+
 }

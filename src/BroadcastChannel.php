@@ -2,9 +2,9 @@
 
 namespace Spatie\SchemaOrg;
 
-use Spatie\SchemaOrg\Contracts\BroadcastChannelContract;
-use Spatie\SchemaOrg\Contracts\IntangibleContract;
-use Spatie\SchemaOrg\Contracts\ThingContract;
+use \Spatie\SchemaOrg\Contracts\BroadcastChannelContract;
+use \Spatie\SchemaOrg\Contracts\IntangibleContract;
+use \Spatie\SchemaOrg\Contracts\ThingContract;
 
 /**
  * A unique instance of a BroadcastService on a CableOrSatelliteService lineup.
@@ -293,4 +293,5 @@ class BroadcastChannel extends BaseType implements BroadcastChannelContract, Int
     {
         return $this->setProperty('url', $url);
     }
+
 }

@@ -2,10 +2,10 @@
 
 namespace Spatie\SchemaOrg;
 
-use Spatie\SchemaOrg\Contracts\ConstraintNodeContract;
-use Spatie\SchemaOrg\Contracts\IntangibleContract;
-use Spatie\SchemaOrg\Contracts\StatisticalVariableContract;
-use Spatie\SchemaOrg\Contracts\ThingContract;
+use \Spatie\SchemaOrg\Contracts\StatisticalVariableContract;
+use \Spatie\SchemaOrg\Contracts\ConstraintNodeContract;
+use \Spatie\SchemaOrg\Contracts\IntangibleContract;
+use \Spatie\SchemaOrg\Contracts\ThingContract;
 
 /**
  * [[StatisticalVariable]] represents any type of statistical metric that can be
@@ -254,20 +254,20 @@ class StatisticalVariable extends BaseType implements StatisticalVariableContrac
      * Schema.org, or other RDF vocabularies and "knowledge graphs". In that
      * case the subproperty of [[variableMeasured]] called [[measuredProperty]]
      * is applicable.
-     *
+     *     
      * The [[measurementTechnique]] property helps when extra clarification is
      * needed about how a [[measuredProperty]] was measured. This is oriented
      * towards scientific and scholarly dataset publication but may have broader
      * applicability; it is not intended as a full representation of
      * measurement, but can often serve as a high level summary for dataset
-     * discovery.
-     *
+     * discovery. 
+     * 
      * For example, if [[variableMeasured]] is: molecule concentration,
      * [[measurementTechnique]] could be: "mass spectrometry" or "nmr
      * spectroscopy" or "colorimetry" or "immunofluorescence". If the
      * [[variableMeasured]] is "depression rating", the [[measurementTechnique]]
-     * could be "Zung Scale" or "HAM-D" or "Beck Depression Inventory".
-     *
+     * could be "Zung Scale" or "HAM-D" or "Beck Depression Inventory". 
+     * 
      * If there are several [[variableMeasured]] properties recorded for some
      * given data object, use a [[PropertyValue]] for each [[variableMeasured]]
      * and attach the corresponding [[measurementTechnique]]. The value can also
@@ -399,4 +399,5 @@ class StatisticalVariable extends BaseType implements StatisticalVariableContrac
     {
         return $this->setProperty('url', $url);
     }
+
 }

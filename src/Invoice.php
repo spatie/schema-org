@@ -2,9 +2,9 @@
 
 namespace Spatie\SchemaOrg;
 
-use Spatie\SchemaOrg\Contracts\IntangibleContract;
-use Spatie\SchemaOrg\Contracts\InvoiceContract;
-use Spatie\SchemaOrg\Contracts\ThingContract;
+use \Spatie\SchemaOrg\Contracts\InvoiceContract;
+use \Spatie\SchemaOrg\Contracts\IntangibleContract;
+use \Spatie\SchemaOrg\Contracts\ThingContract;
 
 /**
  * A statement of the money due for goods or services; a bill.
@@ -438,4 +438,5 @@ class Invoice extends BaseType implements InvoiceContract, IntangibleContract, T
     {
         return $this->setProperty('url', $url);
     }
+
 }

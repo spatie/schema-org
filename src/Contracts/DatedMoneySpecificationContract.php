@@ -35,4 +35,5 @@ interface DatedMoneySpecificationContract
     public function subjectOf($subjectOf);
 
     public function url($url);
+
 }

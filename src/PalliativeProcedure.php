@@ -2,12 +2,12 @@
 
 namespace Spatie\SchemaOrg;
 
-use Spatie\SchemaOrg\Contracts\MedicalEntityContract;
-use Spatie\SchemaOrg\Contracts\MedicalProcedureContract;
-use Spatie\SchemaOrg\Contracts\MedicalTherapyContract;
-use Spatie\SchemaOrg\Contracts\PalliativeProcedureContract;
-use Spatie\SchemaOrg\Contracts\TherapeuticProcedureContract;
-use Spatie\SchemaOrg\Contracts\ThingContract;
+use \Spatie\SchemaOrg\Contracts\PalliativeProcedureContract;
+use \Spatie\SchemaOrg\Contracts\MedicalEntityContract;
+use \Spatie\SchemaOrg\Contracts\MedicalProcedureContract;
+use \Spatie\SchemaOrg\Contracts\MedicalTherapyContract;
+use \Spatie\SchemaOrg\Contracts\TherapeuticProcedureContract;
+use \Spatie\SchemaOrg\Contracts\ThingContract;
 
 /**
  * A medical procedure intended primarily for palliative purposes, aimed at
@@ -528,4 +528,5 @@ class PalliativeProcedure extends BaseType implements PalliativeProcedureContrac
     {
         return $this->setProperty('url', $url);
     }
+
 }

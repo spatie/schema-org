@@ -2,9 +2,9 @@
 
 namespace Spatie\SchemaOrg;
 
-use Spatie\SchemaOrg\Contracts\ChildrensEventContract;
-use Spatie\SchemaOrg\Contracts\EventContract;
-use Spatie\SchemaOrg\Contracts\ThingContract;
+use \Spatie\SchemaOrg\Contracts\ChildrensEventContract;
+use \Spatie\SchemaOrg\Contracts\EventContract;
+use \Spatie\SchemaOrg\Contracts\ThingContract;
 
 /**
  * Event type: Children's event.
@@ -855,4 +855,5 @@ class ChildrensEvent extends BaseType implements ChildrensEventContract, EventCo
     {
         return $this->setProperty('workPerformed', $workPerformed);
     }
+
 }

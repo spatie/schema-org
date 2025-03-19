@@ -35,4 +35,5 @@ interface ShippingDeliveryTimeContract
     public function transitTime($transitTime);
 
     public function url($url);
+
 }

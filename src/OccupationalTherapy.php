@@ -2,12 +2,12 @@
 
 namespace Spatie\SchemaOrg;
 
-use Spatie\SchemaOrg\Contracts\MedicalEntityContract;
-use Spatie\SchemaOrg\Contracts\MedicalProcedureContract;
-use Spatie\SchemaOrg\Contracts\MedicalTherapyContract;
-use Spatie\SchemaOrg\Contracts\OccupationalTherapyContract;
-use Spatie\SchemaOrg\Contracts\TherapeuticProcedureContract;
-use Spatie\SchemaOrg\Contracts\ThingContract;
+use \Spatie\SchemaOrg\Contracts\OccupationalTherapyContract;
+use \Spatie\SchemaOrg\Contracts\MedicalEntityContract;
+use \Spatie\SchemaOrg\Contracts\MedicalProcedureContract;
+use \Spatie\SchemaOrg\Contracts\MedicalTherapyContract;
+use \Spatie\SchemaOrg\Contracts\TherapeuticProcedureContract;
+use \Spatie\SchemaOrg\Contracts\ThingContract;
 
 /**
  * A treatment of people with physical, emotional, or social problems, using
@@ -529,4 +529,5 @@ class OccupationalTherapy extends BaseType implements OccupationalTherapyContrac
     {
         return $this->setProperty('url', $url);
     }
+
 }

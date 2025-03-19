@@ -2,13 +2,13 @@
 
 namespace Spatie\SchemaOrg;
 
-use Spatie\SchemaOrg\Contracts\CategoryCodeContract;
-use Spatie\SchemaOrg\Contracts\DefinedTermContract;
-use Spatie\SchemaOrg\Contracts\IntangibleContract;
-use Spatie\SchemaOrg\Contracts\MedicalCodeContract;
-use Spatie\SchemaOrg\Contracts\MedicalEntityContract;
-use Spatie\SchemaOrg\Contracts\MedicalIntangibleContract;
-use Spatie\SchemaOrg\Contracts\ThingContract;
+use \Spatie\SchemaOrg\Contracts\MedicalCodeContract;
+use \Spatie\SchemaOrg\Contracts\CategoryCodeContract;
+use \Spatie\SchemaOrg\Contracts\DefinedTermContract;
+use \Spatie\SchemaOrg\Contracts\IntangibleContract;
+use \Spatie\SchemaOrg\Contracts\MedicalEntityContract;
+use \Spatie\SchemaOrg\Contracts\MedicalIntangibleContract;
+use \Spatie\SchemaOrg\Contracts\ThingContract;
 
 /**
  * A code for a medical entity.
@@ -414,4 +414,5 @@ class MedicalCode extends BaseType implements MedicalCodeContract, CategoryCodeC
     {
         return $this->setProperty('url', $url);
     }
+
 }

@@ -2,8 +2,8 @@
 
 namespace Spatie\SchemaOrg;
 
-use Spatie\SchemaOrg\Contracts\StupidTypeContract;
-use Spatie\SchemaOrg\Contracts\ThingContract;
+use \Spatie\SchemaOrg\Contracts\StupidTypeContract;
+use \Spatie\SchemaOrg\Contracts\ThingContract;
 
 /**
  * A StupidType for testing.
@@ -219,4 +219,5 @@ class StupidType extends BaseType implements StupidTypeContract, ThingContract
     {
         return $this->setProperty('url', $url);
     }
+
 }

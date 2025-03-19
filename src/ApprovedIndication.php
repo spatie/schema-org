@@ -2,10 +2,10 @@
 
 namespace Spatie\SchemaOrg;
 
-use Spatie\SchemaOrg\Contracts\ApprovedIndicationContract;
-use Spatie\SchemaOrg\Contracts\MedicalEntityContract;
-use Spatie\SchemaOrg\Contracts\MedicalIndicationContract;
-use Spatie\SchemaOrg\Contracts\ThingContract;
+use \Spatie\SchemaOrg\Contracts\ApprovedIndicationContract;
+use \Spatie\SchemaOrg\Contracts\MedicalEntityContract;
+use \Spatie\SchemaOrg\Contracts\MedicalIndicationContract;
+use \Spatie\SchemaOrg\Contracts\ThingContract;
 
 /**
  * An indication for a medical therapy that has been formally specified or
@@ -334,4 +334,5 @@ class ApprovedIndication extends BaseType implements ApprovedIndicationContract,
     {
         return $this->setProperty('url', $url);
     }
+
 }

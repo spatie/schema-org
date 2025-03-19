@@ -2,10 +2,10 @@
 
 namespace Spatie\SchemaOrg;
 
-use Spatie\SchemaOrg\Contracts\MedicalEntityContract;
-use Spatie\SchemaOrg\Contracts\MedicalObservationalStudyContract;
-use Spatie\SchemaOrg\Contracts\MedicalStudyContract;
-use Spatie\SchemaOrg\Contracts\ThingContract;
+use \Spatie\SchemaOrg\Contracts\MedicalObservationalStudyContract;
+use \Spatie\SchemaOrg\Contracts\MedicalEntityContract;
+use \Spatie\SchemaOrg\Contracts\MedicalStudyContract;
+use \Spatie\SchemaOrg\Contracts\ThingContract;
 
 /**
  * An observational study is a type of medical study that attempts to infer the
@@ -432,4 +432,5 @@ class MedicalObservationalStudy extends BaseType implements MedicalObservational
     {
         return $this->setProperty('url', $url);
     }
+
 }

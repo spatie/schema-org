@@ -53,4 +53,5 @@ interface BloodTestContract
     public function usedToDiagnose($usedToDiagnose);
 
     public function usesDevice($usesDevice);
+
 }

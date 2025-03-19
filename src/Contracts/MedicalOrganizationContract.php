@@ -179,4 +179,5 @@ interface MedicalOrganizationContract
     public function url($url);
 
     public function vatID($vatID);
+
 }

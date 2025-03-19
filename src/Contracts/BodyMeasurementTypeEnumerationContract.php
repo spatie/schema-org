@@ -27,4 +27,5 @@ interface BodyMeasurementTypeEnumerationContract
     public function subjectOf($subjectOf);
 
     public function url($url);
+
 }

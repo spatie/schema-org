@@ -27,4 +27,5 @@ interface OfferItemConditionContract
     public function subjectOf($subjectOf);
 
     public function url($url);
+
 }

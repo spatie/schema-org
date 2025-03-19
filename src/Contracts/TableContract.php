@@ -259,4 +259,5 @@ interface TableContract
     public function workTranslation($workTranslation);
 
     public function xpath($xpath);
+
 }

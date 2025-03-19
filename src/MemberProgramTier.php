@@ -2,9 +2,9 @@
 
 namespace Spatie\SchemaOrg;
 
-use Spatie\SchemaOrg\Contracts\IntangibleContract;
-use Spatie\SchemaOrg\Contracts\MemberProgramTierContract;
-use Spatie\SchemaOrg\Contracts\ThingContract;
+use \Spatie\SchemaOrg\Contracts\MemberProgramTierContract;
+use \Spatie\SchemaOrg\Contracts\IntangibleContract;
+use \Spatie\SchemaOrg\Contracts\ThingContract;
 
 /**
  * A MemberProgramTier specifies a tier under a loyalty (member) program, for
@@ -275,4 +275,5 @@ class MemberProgramTier extends BaseType implements MemberProgramTierContract, I
     {
         return $this->setProperty('url', $url);
     }
+
 }

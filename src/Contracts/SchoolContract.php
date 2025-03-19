@@ -239,4 +239,5 @@ interface SchoolContract
     public function url($url);
 
     public function vatID($vatID);
+
 }

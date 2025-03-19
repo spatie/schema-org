@@ -59,4 +59,5 @@ interface InvoiceContract
     public function totalPaymentDue($totalPaymentDue);
 
     public function url($url);
+
 }

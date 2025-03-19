@@ -2,9 +2,9 @@
 
 namespace Spatie\SchemaOrg;
 
-use Spatie\SchemaOrg\Contracts\IntangibleContract;
-use Spatie\SchemaOrg\Contracts\MemberProgramContract;
-use Spatie\SchemaOrg\Contracts\ThingContract;
+use \Spatie\SchemaOrg\Contracts\MemberProgramContract;
+use \Spatie\SchemaOrg\Contracts\IntangibleContract;
+use \Spatie\SchemaOrg\Contracts\ThingContract;
 
 /**
  * A MemberProgram defines a loyalty (or membership) program that provides its
@@ -240,4 +240,5 @@ class MemberProgram extends BaseType implements MemberProgramContract, Intangibl
     {
         return $this->setProperty('url', $url);
     }
+
 }

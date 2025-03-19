@@ -2,10 +2,10 @@
 
 namespace Spatie\SchemaOrg;
 
-use Spatie\SchemaOrg\Contracts\EnumerationContract;
-use Spatie\SchemaOrg\Contracts\IntangibleContract;
-use Spatie\SchemaOrg\Contracts\MusicAlbumProductionTypeContract;
-use Spatie\SchemaOrg\Contracts\ThingContract;
+use \Spatie\SchemaOrg\Contracts\MusicAlbumProductionTypeContract;
+use \Spatie\SchemaOrg\Contracts\EnumerationContract;
+use \Spatie\SchemaOrg\Contracts\IntangibleContract;
+use \Spatie\SchemaOrg\Contracts\ThingContract;
 
 /**
  * Classification of the album by its type of content: soundtrack, live album,
@@ -22,63 +22,63 @@ class MusicAlbumProductionType extends BaseType implements MusicAlbumProductionT
      *
      * @see https://schema.org/CompilationAlbum
      */
-    public const CompilationAlbum = 'https://schema.org/CompilationAlbum';
+     const CompilationAlbum = 'https://schema.org/CompilationAlbum';
 
     /**
      * DJMixAlbum.
      *
      * @see https://schema.org/DJMixAlbum
      */
-    public const DJMixAlbum = 'https://schema.org/DJMixAlbum';
+     const DJMixAlbum = 'https://schema.org/DJMixAlbum';
 
     /**
      * DemoAlbum.
      *
      * @see https://schema.org/DemoAlbum
      */
-    public const DemoAlbum = 'https://schema.org/DemoAlbum';
+     const DemoAlbum = 'https://schema.org/DemoAlbum';
 
     /**
      * LiveAlbum.
      *
      * @see https://schema.org/LiveAlbum
      */
-    public const LiveAlbum = 'https://schema.org/LiveAlbum';
+     const LiveAlbum = 'https://schema.org/LiveAlbum';
 
     /**
      * MixtapeAlbum.
      *
      * @see https://schema.org/MixtapeAlbum
      */
-    public const MixtapeAlbum = 'https://schema.org/MixtapeAlbum';
+     const MixtapeAlbum = 'https://schema.org/MixtapeAlbum';
 
     /**
      * RemixAlbum.
      *
      * @see https://schema.org/RemixAlbum
      */
-    public const RemixAlbum = 'https://schema.org/RemixAlbum';
+     const RemixAlbum = 'https://schema.org/RemixAlbum';
 
     /**
      * SoundtrackAlbum.
      *
      * @see https://schema.org/SoundtrackAlbum
      */
-    public const SoundtrackAlbum = 'https://schema.org/SoundtrackAlbum';
+     const SoundtrackAlbum = 'https://schema.org/SoundtrackAlbum';
 
     /**
      * SpokenWordAlbum.
      *
      * @see https://schema.org/SpokenWordAlbum
      */
-    public const SpokenWordAlbum = 'https://schema.org/SpokenWordAlbum';
+     const SpokenWordAlbum = 'https://schema.org/SpokenWordAlbum';
 
     /**
      * StudioAlbum.
      *
      * @see https://schema.org/StudioAlbum
      */
-    public const StudioAlbum = 'https://schema.org/StudioAlbum';
+     const StudioAlbum = 'https://schema.org/StudioAlbum';
 
     /**
      * An additional type for the item, typically used for adding more specific
@@ -270,4 +270,5 @@ class MusicAlbumProductionType extends BaseType implements MusicAlbumProductionT
     {
         return $this->setProperty('url', $url);
     }
+
 }

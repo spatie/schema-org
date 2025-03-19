@@ -2,7 +2,7 @@
 
 namespace Spatie\SchemaOrg;
 
-use Spatie\SchemaOrg\Contracts\PronounceableTextContract;
+use \Spatie\SchemaOrg\Contracts\PronounceableTextContract;
 
 /**
  * Data type: PronounceableText.
@@ -82,4 +82,5 @@ class PronounceableText extends BaseType implements PronounceableTextContract
     {
         return $this->setProperty('textValue', $textValue);
     }
+
 }

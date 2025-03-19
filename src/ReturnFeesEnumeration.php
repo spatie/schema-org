@@ -2,10 +2,10 @@
 
 namespace Spatie\SchemaOrg;
 
-use Spatie\SchemaOrg\Contracts\EnumerationContract;
-use Spatie\SchemaOrg\Contracts\IntangibleContract;
-use Spatie\SchemaOrg\Contracts\ReturnFeesEnumerationContract;
-use Spatie\SchemaOrg\Contracts\ThingContract;
+use \Spatie\SchemaOrg\Contracts\ReturnFeesEnumerationContract;
+use \Spatie\SchemaOrg\Contracts\EnumerationContract;
+use \Spatie\SchemaOrg\Contracts\IntangibleContract;
+use \Spatie\SchemaOrg\Contracts\ThingContract;
 
 /**
  * Enumerates several kinds of policies for product return fees.
@@ -25,7 +25,7 @@ class ReturnFeesEnumeration extends BaseType implements ReturnFeesEnumerationCon
      * @see https://pending.schema.org
      * @link https://github.com/schemaorg/schemaorg/issues/2880
      */
-    public const FreeReturn = 'https://schema.org/FreeReturn';
+     const FreeReturn = 'https://schema.org/FreeReturn';
 
     /**
      * Specifies that the customer must pay the original shipping costs when
@@ -35,7 +35,7 @@ class ReturnFeesEnumeration extends BaseType implements ReturnFeesEnumerationCon
      * @see https://pending.schema.org
      * @link https://github.com/schemaorg/schemaorg/issues/2288
      */
-    public const OriginalShippingFees = 'https://schema.org/OriginalShippingFees';
+     const OriginalShippingFees = 'https://schema.org/OriginalShippingFees';
 
     /**
      * Specifies that the customer must pay a restocking fee when returning a
@@ -45,7 +45,7 @@ class ReturnFeesEnumeration extends BaseType implements ReturnFeesEnumerationCon
      * @see https://pending.schema.org
      * @link https://github.com/schemaorg/schemaorg/issues/2288
      */
-    public const RestockingFees = 'https://schema.org/RestockingFees';
+     const RestockingFees = 'https://schema.org/RestockingFees';
 
     /**
      * Specifies that product returns must be paid for, and are the
@@ -55,7 +55,7 @@ class ReturnFeesEnumeration extends BaseType implements ReturnFeesEnumerationCon
      * @see https://pending.schema.org
      * @link https://github.com/schemaorg/schemaorg/issues/2880
      */
-    public const ReturnFeesCustomerResponsibility = 'https://schema.org/ReturnFeesCustomerResponsibility';
+     const ReturnFeesCustomerResponsibility = 'https://schema.org/ReturnFeesCustomerResponsibility';
 
     /**
      * Specifies that the customer must pay the return shipping costs when
@@ -65,7 +65,7 @@ class ReturnFeesEnumeration extends BaseType implements ReturnFeesEnumerationCon
      * @see https://pending.schema.org
      * @link https://github.com/schemaorg/schemaorg/issues/2288
      */
-    public const ReturnShippingFees = 'https://schema.org/ReturnShippingFees';
+     const ReturnShippingFees = 'https://schema.org/ReturnShippingFees';
 
     /**
      * An additional type for the item, typically used for adding more specific
@@ -257,4 +257,5 @@ class ReturnFeesEnumeration extends BaseType implements ReturnFeesEnumerationCon
     {
         return $this->setProperty('url', $url);
     }
+
 }

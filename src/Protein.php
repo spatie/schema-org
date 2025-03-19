@@ -2,9 +2,9 @@
 
 namespace Spatie\SchemaOrg;
 
-use Spatie\SchemaOrg\Contracts\BioChemEntityContract;
-use Spatie\SchemaOrg\Contracts\ProteinContract;
-use Spatie\SchemaOrg\Contracts\ThingContract;
+use \Spatie\SchemaOrg\Contracts\ProteinContract;
+use \Spatie\SchemaOrg\Contracts\BioChemEntityContract;
+use \Spatie\SchemaOrg\Contracts\ThingContract;
 
 /**
  * Protein is here used in its widest possible definition, as classes of amino
@@ -448,4 +448,5 @@ class Protein extends BaseType implements ProteinContract, BioChemEntityContract
     {
         return $this->setProperty('url', $url);
     }
+
 }

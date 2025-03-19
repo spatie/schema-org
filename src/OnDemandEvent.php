@@ -2,10 +2,10 @@
 
 namespace Spatie\SchemaOrg;
 
-use Spatie\SchemaOrg\Contracts\EventContract;
-use Spatie\SchemaOrg\Contracts\OnDemandEventContract;
-use Spatie\SchemaOrg\Contracts\PublicationEventContract;
-use Spatie\SchemaOrg\Contracts\ThingContract;
+use \Spatie\SchemaOrg\Contracts\OnDemandEventContract;
+use \Spatie\SchemaOrg\Contracts\EventContract;
+use \Spatie\SchemaOrg\Contracts\PublicationEventContract;
+use \Spatie\SchemaOrg\Contracts\ThingContract;
 
 /**
  * A publication event, e.g. catch-up TV or radio podcast, during which a
@@ -900,4 +900,5 @@ class OnDemandEvent extends BaseType implements OnDemandEventContract, EventCont
     {
         return $this->setProperty('workPerformed', $workPerformed);
     }
+
 }

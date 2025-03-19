@@ -2,11 +2,11 @@
 
 namespace Spatie\SchemaOrg;
 
-use Spatie\SchemaOrg\Contracts\IntangibleContract;
-use Spatie\SchemaOrg\Contracts\ObservationContract;
-use Spatie\SchemaOrg\Contracts\QuantitativeValueContract;
-use Spatie\SchemaOrg\Contracts\StructuredValueContract;
-use Spatie\SchemaOrg\Contracts\ThingContract;
+use \Spatie\SchemaOrg\Contracts\ObservationContract;
+use \Spatie\SchemaOrg\Contracts\IntangibleContract;
+use \Spatie\SchemaOrg\Contracts\QuantitativeValueContract;
+use \Spatie\SchemaOrg\Contracts\StructuredValueContract;
+use \Spatie\SchemaOrg\Contracts\ThingContract;
 
 /**
  * Instances of the class [[Observation]] are used to specify observations about
@@ -17,12 +17,12 @@ use Spatie\SchemaOrg\Contracts\ThingContract;
  * be about a [[StatisticalVariable]], which is an abstract specification about
  * which we can make observations that are grounded at a particular location and
  * time.
- *
+ * 
  * Observations can also encode a subset of simple RDF-like statements (its
  * observationAbout, a StatisticalVariable, defining the measuredPoperty; its
  * observationAbout property indicating the entity the statement is about, and
  * [[value]] )
- *
+ * 
  * In the context of a quantitative knowledge graph, typical properties could
  * include [[measuredProperty]], [[observationAbout]], [[observationDate]],
  * [[value]], [[unitCode]], [[unitText]], [[measurementMethod]].
@@ -38,7 +38,7 @@ class Observation extends BaseType implements ObservationContract, IntangibleCon
      * A property-value pair representing an additional characteristic of the
      * entity, e.g. a product feature or another characteristic for which there
      * is no matching property in schema.org.
-     *
+     * 
      * Note: Publishers should be aware that applications designed to use
      * specific schema.org properties (e.g. https://schema.org/width,
      * https://schema.org/color, https://schema.org/gtin13, ...) will typically
@@ -285,20 +285,20 @@ class Observation extends BaseType implements ObservationContract, IntangibleCon
      * Schema.org, or other RDF vocabularies and "knowledge graphs". In that
      * case the subproperty of [[variableMeasured]] called [[measuredProperty]]
      * is applicable.
-     *
+     *     
      * The [[measurementTechnique]] property helps when extra clarification is
      * needed about how a [[measuredProperty]] was measured. This is oriented
      * towards scientific and scholarly dataset publication but may have broader
      * applicability; it is not intended as a full representation of
      * measurement, but can often serve as a high level summary for dataset
-     * discovery.
-     *
+     * discovery. 
+     * 
      * For example, if [[variableMeasured]] is: molecule concentration,
      * [[measurementTechnique]] could be: "mass spectrometry" or "nmr
      * spectroscopy" or "colorimetry" or "immunofluorescence". If the
      * [[variableMeasured]] is "depression rating", the [[measurementTechnique]]
-     * could be "Zung Scale" or "HAM-D" or "Beck Depression Inventory".
-     *
+     * could be "Zung Scale" or "HAM-D" or "Beck Depression Inventory". 
+     * 
      * If there are several [[variableMeasured]] properties recorded for some
      * given data object, use a [[PropertyValue]] for each [[variableMeasured]]
      * and attach the corresponding [[measurementTechnique]]. The value can also
@@ -491,7 +491,7 @@ class Observation extends BaseType implements ObservationContract, IntangibleCon
     /**
      * The value of a [[QuantitativeValue]] (including [[Observation]]) or
      * property value node.
-     *
+     * 
      * * For [[QuantitativeValue]] and [[MonetaryAmount]], the recommended type
      * for values is 'Number'.
      * * For [[PropertyValue]], it can be 'Text', 'Number', 'Boolean', or
@@ -528,7 +528,7 @@ class Observation extends BaseType implements ObservationContract, IntangibleCon
     }
 
     /**
-     * The variableMeasured property can indicate (repeated as necessary) the
+     * The variableMeasured property can indicate (repeated as necessary) the 
      * variables that are measured in some dataset, either described as text or
      * as pairs of identifier and description using PropertyValue, or more
      * explicitly as a [[StatisticalVariable]].
@@ -545,4 +545,5 @@ class Observation extends BaseType implements ObservationContract, IntangibleCon
     {
         return $this->setProperty('variableMeasured', $variableMeasured);
     }
+
 }

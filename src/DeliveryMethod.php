@@ -2,10 +2,10 @@
 
 namespace Spatie\SchemaOrg;
 
-use Spatie\SchemaOrg\Contracts\DeliveryMethodContract;
-use Spatie\SchemaOrg\Contracts\EnumerationContract;
-use Spatie\SchemaOrg\Contracts\IntangibleContract;
-use Spatie\SchemaOrg\Contracts\ThingContract;
+use \Spatie\SchemaOrg\Contracts\DeliveryMethodContract;
+use \Spatie\SchemaOrg\Contracts\EnumerationContract;
+use \Spatie\SchemaOrg\Contracts\IntangibleContract;
+use \Spatie\SchemaOrg\Contracts\ThingContract;
 
 /**
  * A delivery method is a standardized procedure for transferring the product or
@@ -13,9 +13,9 @@ use Spatie\SchemaOrg\Contracts\ThingContract;
  * methods are characterized by the means of transportation used, and by the
  * organization or group that is the contracting party for the sending
  * organization or person.
- *
+ * 
  * Commonly used values:
- *
+ * 
  * * http://purl.org/goodrelations/v1#DeliveryModeDirectDownload
  * * http://purl.org/goodrelations/v1#DeliveryModeFreight
  * * http://purl.org/goodrelations/v1#DeliveryModeMail
@@ -36,7 +36,7 @@ class DeliveryMethod extends BaseType implements DeliveryMethodContract, Enumera
      *
      * @see https://schema.org/LockerDelivery
      */
-    public const LockerDelivery = 'https://schema.org/LockerDelivery';
+     const LockerDelivery = 'https://schema.org/LockerDelivery';
 
     /**
      * A DeliveryMethod in which an item is collected on site, e.g. in a store
@@ -44,21 +44,21 @@ class DeliveryMethod extends BaseType implements DeliveryMethodContract, Enumera
      *
      * @see https://schema.org/OnSitePickup
      */
-    public const OnSitePickup = 'https://schema.org/OnSitePickup';
+     const OnSitePickup = 'https://schema.org/OnSitePickup';
 
     /**
      * A private parcel service as the delivery mode available for a certain
      * offer.
-     *
+     * 
      * Commonly used values:
-     *
+     * 
      * * http://purl.org/goodrelations/v1#DHL
      * * http://purl.org/goodrelations/v1#FederalExpress
      * * http://purl.org/goodrelations/v1#UPS
      *
      * @see https://schema.org/ParcelService
      */
-    public const ParcelService = 'https://schema.org/ParcelService';
+     const ParcelService = 'https://schema.org/ParcelService';
 
     /**
      * An additional type for the item, typically used for adding more specific
@@ -250,4 +250,5 @@ class DeliveryMethod extends BaseType implements DeliveryMethodContract, Enumera
     {
         return $this->setProperty('url', $url);
     }
+
 }

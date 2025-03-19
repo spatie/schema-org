@@ -41,4 +41,5 @@ interface GovernmentPermitContract
     public function validIn($validIn);
 
     public function validUntil($validUntil);
+
 }

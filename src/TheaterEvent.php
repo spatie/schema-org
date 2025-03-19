@@ -2,9 +2,9 @@
 
 namespace Spatie\SchemaOrg;
 
-use Spatie\SchemaOrg\Contracts\EventContract;
-use Spatie\SchemaOrg\Contracts\TheaterEventContract;
-use Spatie\SchemaOrg\Contracts\ThingContract;
+use \Spatie\SchemaOrg\Contracts\TheaterEventContract;
+use \Spatie\SchemaOrg\Contracts\EventContract;
+use \Spatie\SchemaOrg\Contracts\ThingContract;
 
 /**
  * Event type: Theater performance.
@@ -855,4 +855,5 @@ class TheaterEvent extends BaseType implements TheaterEventContract, EventContra
     {
         return $this->setProperty('workPerformed', $workPerformed);
     }
+
 }

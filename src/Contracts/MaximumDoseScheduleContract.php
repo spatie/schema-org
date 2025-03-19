@@ -51,4 +51,5 @@ interface MaximumDoseScheduleContract
     public function targetPopulation($targetPopulation);
 
     public function url($url);
+
 }

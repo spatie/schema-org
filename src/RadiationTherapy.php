@@ -2,12 +2,12 @@
 
 namespace Spatie\SchemaOrg;
 
-use Spatie\SchemaOrg\Contracts\MedicalEntityContract;
-use Spatie\SchemaOrg\Contracts\MedicalProcedureContract;
-use Spatie\SchemaOrg\Contracts\MedicalTherapyContract;
-use Spatie\SchemaOrg\Contracts\RadiationTherapyContract;
-use Spatie\SchemaOrg\Contracts\TherapeuticProcedureContract;
-use Spatie\SchemaOrg\Contracts\ThingContract;
+use \Spatie\SchemaOrg\Contracts\RadiationTherapyContract;
+use \Spatie\SchemaOrg\Contracts\MedicalEntityContract;
+use \Spatie\SchemaOrg\Contracts\MedicalProcedureContract;
+use \Spatie\SchemaOrg\Contracts\MedicalTherapyContract;
+use \Spatie\SchemaOrg\Contracts\TherapeuticProcedureContract;
+use \Spatie\SchemaOrg\Contracts\ThingContract;
 
 /**
  * A process of care using radiation aimed at improving a health condition.
@@ -527,4 +527,5 @@ class RadiationTherapy extends BaseType implements RadiationTherapyContract, Med
     {
         return $this->setProperty('url', $url);
     }
+
 }

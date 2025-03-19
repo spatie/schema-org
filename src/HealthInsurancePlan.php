@@ -2,9 +2,9 @@
 
 namespace Spatie\SchemaOrg;
 
-use Spatie\SchemaOrg\Contracts\HealthInsurancePlanContract;
-use Spatie\SchemaOrg\Contracts\IntangibleContract;
-use Spatie\SchemaOrg\Contracts\ThingContract;
+use \Spatie\SchemaOrg\Contracts\HealthInsurancePlanContract;
+use \Spatie\SchemaOrg\Contracts\IntangibleContract;
+use \Spatie\SchemaOrg\Contracts\ThingContract;
 
 /**
  * A US-style health insurance plan, including PPOs, EPOs, and HMOs.
@@ -352,4 +352,5 @@ class HealthInsurancePlan extends BaseType implements HealthInsurancePlanContrac
     {
         return $this->setProperty('usesHealthPlanIdStandard', $usesHealthPlanIdStandard);
     }
+
 }

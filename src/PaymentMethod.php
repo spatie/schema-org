@@ -2,17 +2,17 @@
 
 namespace Spatie\SchemaOrg;
 
-use Spatie\SchemaOrg\Contracts\IntangibleContract;
-use Spatie\SchemaOrg\Contracts\PaymentMethodContract;
-use Spatie\SchemaOrg\Contracts\ThingContract;
+use \Spatie\SchemaOrg\Contracts\PaymentMethodContract;
+use \Spatie\SchemaOrg\Contracts\IntangibleContract;
+use \Spatie\SchemaOrg\Contracts\ThingContract;
 
 /**
  * A payment method is a standardized procedure for transferring the monetary
  * amount for a purchase. Payment methods are characterized by the legal and
  * technical structures used, and by the organization or group carrying out the
  * transaction. The following legacy values should be accepted:
- *
- *
+ *     
+ * 
  * * http://purl.org/goodrelations/v1#ByBankTransferInAdvance
  * * http://purl.org/goodrelations/v1#ByInvoice
  * * http://purl.org/goodrelations/v1#Cash
@@ -22,7 +22,7 @@ use Spatie\SchemaOrg\Contracts\ThingContract;
  * * http://purl.org/goodrelations/v1#GoogleCheckout
  * * http://purl.org/goodrelations/v1#PayPal
  * * http://purl.org/goodrelations/v1#PaySwarm
- *
+ * 
  * Structured values are recommended for newer payment methods.
  *
  * @see https://schema.org/PaymentMethod
@@ -237,4 +237,5 @@ class PaymentMethod extends BaseType implements PaymentMethodContract, Intangibl
     {
         return $this->setProperty('url', $url);
     }
+
 }

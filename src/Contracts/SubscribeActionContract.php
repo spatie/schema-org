@@ -53,4 +53,5 @@ interface SubscribeActionContract
     public function target($target);
 
     public function url($url);
+
 }

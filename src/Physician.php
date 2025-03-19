@@ -2,13 +2,13 @@
 
 namespace Spatie\SchemaOrg;
 
-use Spatie\SchemaOrg\Contracts\LocalBusinessContract;
-use Spatie\SchemaOrg\Contracts\MedicalBusinessContract;
-use Spatie\SchemaOrg\Contracts\MedicalOrganizationContract;
-use Spatie\SchemaOrg\Contracts\OrganizationContract;
-use Spatie\SchemaOrg\Contracts\PhysicianContract;
-use Spatie\SchemaOrg\Contracts\PlaceContract;
-use Spatie\SchemaOrg\Contracts\ThingContract;
+use \Spatie\SchemaOrg\Contracts\PhysicianContract;
+use \Spatie\SchemaOrg\Contracts\LocalBusinessContract;
+use \Spatie\SchemaOrg\Contracts\MedicalBusinessContract;
+use \Spatie\SchemaOrg\Contracts\MedicalOrganizationContract;
+use \Spatie\SchemaOrg\Contracts\OrganizationContract;
+use \Spatie\SchemaOrg\Contracts\PlaceContract;
+use \Spatie\SchemaOrg\Contracts\ThingContract;
 
 /**
  * An individual physician or a physician's office considered as a
@@ -58,7 +58,7 @@ class Physician extends BaseType implements PhysicianContract, LocalBusinessCont
      * A property-value pair representing an additional characteristic of the
      * entity, e.g. a product feature or another characteristic for which there
      * is no matching property in schema.org.
-     *
+     * 
      * Note: Publishers should be aware that applications designed to use
      * specific schema.org properties (e.g. https://schema.org/width,
      * https://schema.org/color, https://schema.org/gtin13, ...) will typically
@@ -252,7 +252,7 @@ class Physician extends BaseType implements PhysicianContract, LocalBusinessCont
      * A short textual code (also called "store code") that uniquely identifies
      * a place of business. The code is typically assigned by the
      * parentOrganization and used in structured URLs.
-     *
+     * 
      * For example, in the URL
      * http://www.starbucks.co.uk/store-locator/etc/detail/3047 the code "3047"
      * is a branchCode for a particular branch.
@@ -389,7 +389,7 @@ class Physician extends BaseType implements PhysicianContract, LocalBusinessCont
 
     /**
      * The currency accepted.
-     *
+     * 
      * Use standard formats: [ISO 4217 currency
      * format](http://en.wikipedia.org/wiki/ISO_4217), e.g. "USD"; [Ticker
      * symbol](https://en.wikipedia.org/wiki/List_of_cryptocurrencies) for
@@ -1591,7 +1591,7 @@ class Physician extends BaseType implements PhysicianContract, LocalBusinessCont
      * similar, with the property repeated for each applicable value. Ideally
      * the taxonomy should be identified, and both the textual label and formal
      * code for the category should be provided.
-     *
+     * 
      * Note: for historical reasons, any textual label and formal code provided
      * as a literal may be assumed to be from O*NET-SOC.
      *
@@ -1612,11 +1612,11 @@ class Physician extends BaseType implements PhysicianContract, LocalBusinessCont
      * as a weekly time range, starting with days, then times per day. Multiple
      * days can be listed with commas ',' separating each day. Day or time
      * ranges are specified using a hyphen '-'.
-     *
+     * 
      * * Days are specified using the following two-letter combinations:
      * ```Mo```, ```Tu```, ```We```, ```Th```, ```Fr```, ```Sa```, ```Su```.
      * * Times are specified using 24:00 format. For example, 3pm is specified
-     * as ```15:00```, 10am as ```10:00```.
+     * as ```15:00```, 10am as ```10:00```. 
      * * Here is an example: ```<time itemprop="openingHours" datetime="Tu,Th
      * 16:00-20:00">Tuesdays and Thursdays 4-8pm</time>```.
      * * If a business is open 7 days a week, then it can be specified as
@@ -1792,7 +1792,7 @@ class Physician extends BaseType implements PhysicianContract, LocalBusinessCont
      * applied to a [[CreativeWork]] (e.g. [[NewsArticle]]) the principles are
      * those of the party primarily responsible for the creation of the
      * [[CreativeWork]].
-     *
+     * 
      * While such policies are most typically expressed in natural language,
      * sometimes related information (e.g. indicating a [[funder]]) can be
      * expressed using schema.org terminology.
@@ -1929,7 +1929,7 @@ class Physician extends BaseType implements PhysicianContract, LocalBusinessCont
 
     /**
      * The special opening hours of a certain place.
-     *
+     * 
      * Use this to explicitly override general opening hours brought in scope by
      * [[openingHoursSpecification]] or [[openingHours]].
      *
@@ -2073,7 +2073,7 @@ class Physician extends BaseType implements PhysicianContract, LocalBusinessCont
     /**
      * A [National Provider
      * Identifier](https://en.wikipedia.org/wiki/National_Provider_Identifier)
-     * (NPI)
+     * (NPI) 
      *     is a unique 10-digit identification number issued to health care
      * providers in the United States by the Centers for Medicare and Medicaid
      * Services.
@@ -2104,4 +2104,5 @@ class Physician extends BaseType implements PhysicianContract, LocalBusinessCont
     {
         return $this->setProperty('vatID', $vatID);
     }
+
 }

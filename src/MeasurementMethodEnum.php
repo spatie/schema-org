@@ -2,10 +2,10 @@
 
 namespace Spatie\SchemaOrg;
 
-use Spatie\SchemaOrg\Contracts\EnumerationContract;
-use Spatie\SchemaOrg\Contracts\IntangibleContract;
-use Spatie\SchemaOrg\Contracts\MeasurementMethodEnumContract;
-use Spatie\SchemaOrg\Contracts\ThingContract;
+use \Spatie\SchemaOrg\Contracts\MeasurementMethodEnumContract;
+use \Spatie\SchemaOrg\Contracts\EnumerationContract;
+use \Spatie\SchemaOrg\Contracts\IntangibleContract;
+use \Spatie\SchemaOrg\Contracts\ThingContract;
 
 /**
  * Enumeration(s) for use with [[measurementMethod]].
@@ -26,7 +26,7 @@ class MeasurementMethodEnum extends BaseType implements MeasurementMethodEnumCon
      * @see https://pending.schema.org
      * @link https://github.com/schemaorg/schemaorg/issues/2564
      */
-    public const ExampleMeasurementMethodEnum = 'https://schema.org/ExampleMeasurementMethodEnum';
+     const ExampleMeasurementMethodEnum = 'https://schema.org/ExampleMeasurementMethodEnum';
 
     /**
      * An additional type for the item, typically used for adding more specific
@@ -218,4 +218,5 @@ class MeasurementMethodEnum extends BaseType implements MeasurementMethodEnumCon
     {
         return $this->setProperty('url', $url);
     }
+
 }

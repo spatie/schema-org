@@ -123,4 +123,5 @@ interface ResidenceContract
     public function tourBookingPage($tourBookingPage);
 
     public function url($url);
+
 }

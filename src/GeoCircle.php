@@ -2,11 +2,11 @@
 
 namespace Spatie\SchemaOrg;
 
-use Spatie\SchemaOrg\Contracts\GeoCircleContract;
-use Spatie\SchemaOrg\Contracts\GeoShapeContract;
-use Spatie\SchemaOrg\Contracts\IntangibleContract;
-use Spatie\SchemaOrg\Contracts\StructuredValueContract;
-use Spatie\SchemaOrg\Contracts\ThingContract;
+use \Spatie\SchemaOrg\Contracts\GeoCircleContract;
+use \Spatie\SchemaOrg\Contracts\GeoShapeContract;
+use \Spatie\SchemaOrg\Contracts\IntangibleContract;
+use \Spatie\SchemaOrg\Contracts\StructuredValueContract;
+use \Spatie\SchemaOrg\Contracts\ThingContract;
 
 /**
  * A GeoCircle is a GeoShape representing a circular geographic area. As it is a
@@ -370,4 +370,5 @@ class GeoCircle extends BaseType implements GeoCircleContract, GeoShapeContract,
     {
         return $this->setProperty('url', $url);
     }
+
 }

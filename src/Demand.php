@@ -2,9 +2,9 @@
 
 namespace Spatie\SchemaOrg;
 
-use Spatie\SchemaOrg\Contracts\DemandContract;
-use Spatie\SchemaOrg\Contracts\IntangibleContract;
-use Spatie\SchemaOrg\Contracts\ThingContract;
+use \Spatie\SchemaOrg\Contracts\DemandContract;
+use \Spatie\SchemaOrg\Contracts\IntangibleContract;
+use \Spatie\SchemaOrg\Contracts\ThingContract;
 
 /**
  * A demand entity represents the public, not necessarily binding, not
@@ -105,7 +105,7 @@ class Demand extends BaseType implements DemandContract, IntangibleContract, Thi
      * for product identification within the Amazon organization (summary from
      * [Wikipedia](https://en.wikipedia.org/wiki/Amazon_Standard_Identification_Number)'s
      * article).
-     *
+     * 
      * Note also that this is a definition for how to include ASINs in
      * Schema.org data, and not a definition of ASINs in general - see
      * documentation from Amazon for authoritative details.
@@ -311,7 +311,7 @@ class Demand extends BaseType implements DemandContract, IntangibleContract, Thi
      * The ISO 3166-1 (ISO 3166-1 alpha-2) or ISO 3166-2 code, the place, or the
      * GeoShape for the geo-political region(s) for which the offer or delivery
      * charge specification is valid.
-     *
+     * 
      * See also [[ineligibleRegion]].
      *
      * @param \Spatie\SchemaOrg\Contracts\GeoShapeContract|\Spatie\SchemaOrg\Contracts\GeoShapeContract[]|\Spatie\SchemaOrg\Contracts\PlaceContract|\Spatie\SchemaOrg\Contracts\PlaceContract[]|string|string[] $eligibleRegion
@@ -348,7 +348,7 @@ class Demand extends BaseType implements DemandContract, IntangibleContract, Thi
      * ([GTIN](https://www.gs1.org/standards/id-keys/gtin)). GTINs identify
      * trade items, including products and services, using numeric
      * identification codes.
-     *
+     * 
      * A correct [[gtin]] value should be a valid GTIN, which means that it
      * should be an all-numeric string of either 8, 12, 13 or 14 digits, or a
      * "GS1 Digital Link" URL based on such a string. The numeric component
@@ -360,13 +360,13 @@ class Demand extends BaseType implements DemandContract, IntangibleContract, Thi
      * more details. Left-padding of the gtin values is not required or
      * encouraged. The [[gtin]] property generalizes the earlier [[gtin8]],
      * [[gtin12]], [[gtin13]], and [[gtin14]] properties.
-     *
+     * 
      * The GS1 [digital link
      * specifications](https://www.gs1.org/standards/Digital-Link/) expresses
      * GTINs as URLs (URIs, IRIs, etc.).
      * Digital Links should be populated into the [[hasGS1DigitalLink]]
      * attribute.
-     *
+     * 
      * Note also that this is a definition for how to include GTINs in
      * Schema.org data, and not a definition of GTINs in general - see the GS1
      * documentation for authoritative details.
@@ -509,7 +509,7 @@ class Demand extends BaseType implements DemandContract, IntangibleContract, Thi
      * GeoShape for the geo-political region(s) for which the offer or delivery
      * charge specification is not valid, e.g. a region where the transaction is
      * not allowed.
-     *
+     * 
      * See also [[eligibleRegion]].
      *
      * @param \Spatie\SchemaOrg\Contracts\GeoShapeContract|\Spatie\SchemaOrg\Contracts\GeoShapeContract[]|\Spatie\SchemaOrg\Contracts\PlaceContract|\Spatie\SchemaOrg\Contracts\PlaceContract[]|string|string[] $ineligibleRegion
@@ -782,4 +782,5 @@ class Demand extends BaseType implements DemandContract, IntangibleContract, Thi
     {
         return $this->setProperty('warranty', $warranty);
     }
+
 }

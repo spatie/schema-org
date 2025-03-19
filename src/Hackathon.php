@@ -2,9 +2,9 @@
 
 namespace Spatie\SchemaOrg;
 
-use Spatie\SchemaOrg\Contracts\EventContract;
-use Spatie\SchemaOrg\Contracts\HackathonContract;
-use Spatie\SchemaOrg\Contracts\ThingContract;
+use \Spatie\SchemaOrg\Contracts\HackathonContract;
+use \Spatie\SchemaOrg\Contracts\EventContract;
+use \Spatie\SchemaOrg\Contracts\ThingContract;
 
 /**
  * A [hackathon](https://en.wikipedia.org/wiki/Hackathon) event.
@@ -857,4 +857,5 @@ class Hackathon extends BaseType implements HackathonContract, EventContract, Th
     {
         return $this->setProperty('workPerformed', $workPerformed);
     }
+
 }

@@ -49,4 +49,5 @@ interface PriceSpecificationContract
     public function validThrough($validThrough);
 
     public function valueAddedTaxIncluded($valueAddedTaxIncluded);
+
 }

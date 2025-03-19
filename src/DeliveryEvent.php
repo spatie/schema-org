@@ -2,9 +2,9 @@
 
 namespace Spatie\SchemaOrg;
 
-use Spatie\SchemaOrg\Contracts\DeliveryEventContract;
-use Spatie\SchemaOrg\Contracts\EventContract;
-use Spatie\SchemaOrg\Contracts\ThingContract;
+use \Spatie\SchemaOrg\Contracts\DeliveryEventContract;
+use \Spatie\SchemaOrg\Contracts\EventContract;
+use \Spatie\SchemaOrg\Contracts\ThingContract;
 
 /**
  * An event involving the delivery of an item.
@@ -911,4 +911,5 @@ class DeliveryEvent extends BaseType implements DeliveryEventContract, EventCont
     {
         return $this->setProperty('workPerformed', $workPerformed);
     }
+
 }

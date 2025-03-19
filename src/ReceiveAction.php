@@ -2,17 +2,17 @@
 
 namespace Spatie\SchemaOrg;
 
-use Spatie\SchemaOrg\Contracts\ActionContract;
-use Spatie\SchemaOrg\Contracts\ReceiveActionContract;
-use Spatie\SchemaOrg\Contracts\ThingContract;
-use Spatie\SchemaOrg\Contracts\TransferActionContract;
+use \Spatie\SchemaOrg\Contracts\ReceiveActionContract;
+use \Spatie\SchemaOrg\Contracts\ActionContract;
+use \Spatie\SchemaOrg\Contracts\ThingContract;
+use \Spatie\SchemaOrg\Contracts\TransferActionContract;
 
 /**
  * The act of physically/electronically taking delivery of an object that has
  * been transferred from an origin to a destination. Reciprocal of SendAction.
- *
+ * 
  * Related actions:
- *
+ * 
  * * [[SendAction]]: The reciprocal of ReceiveAction.
  * * [[TakeAction]]: Unlike TakeAction, ReceiveAction does not imply that the
  * ownership has been transferred (e.g. I can receive a package, but it does not
@@ -155,7 +155,7 @@ class ReceiveAction extends BaseType implements ReceiveActionContract, ActionCon
      * John wrote a book from January to *December*. For media, including audio
      * and video, it's the time offset of the end of a clip within a larger
      * file.
-     *
+     * 
      * Note that Event uses startDate/endDate instead of startTime/endTime, even
      * when describing dates with times. This situation may be clarified in
      * future revisions.
@@ -410,7 +410,7 @@ class ReceiveAction extends BaseType implements ReceiveActionContract, ActionCon
      * John wrote a book from *January* to December. For media, including audio
      * and video, it's the time offset of the start of a clip within a larger
      * file.
-     *
+     * 
      * Note that Event uses startDate/endDate instead of startTime/endTime, even
      * when describing dates with times. This situation may be clarified in
      * future revisions.
@@ -484,4 +484,5 @@ class ReceiveAction extends BaseType implements ReceiveActionContract, ActionCon
     {
         return $this->setProperty('url', $url);
     }
+
 }

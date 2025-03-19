@@ -2,10 +2,10 @@
 
 namespace Spatie\SchemaOrg;
 
-use Spatie\SchemaOrg\Contracts\EnumerationContract;
-use Spatie\SchemaOrg\Contracts\IntangibleContract;
-use Spatie\SchemaOrg\Contracts\PriceTypeEnumerationContract;
-use Spatie\SchemaOrg\Contracts\ThingContract;
+use \Spatie\SchemaOrg\Contracts\PriceTypeEnumerationContract;
+use \Spatie\SchemaOrg\Contracts\EnumerationContract;
+use \Spatie\SchemaOrg\Contracts\IntangibleContract;
+use \Spatie\SchemaOrg\Contracts\ThingContract;
 
 /**
  * Enumerates different price types, for example list price, invoice price, and
@@ -26,7 +26,7 @@ class PriceTypeEnumeration extends BaseType implements PriceTypeEnumerationContr
      * @see https://pending.schema.org
      * @link https://github.com/schemaorg/schemaorg/issues/2712
      */
-    public const InvoicePrice = 'https://schema.org/InvoicePrice';
+     const InvoicePrice = 'https://schema.org/InvoicePrice';
 
     /**
      * Represents the list price of an offered product. Typically the same as
@@ -36,7 +36,7 @@ class PriceTypeEnumeration extends BaseType implements PriceTypeEnumerationContr
      * @see https://pending.schema.org
      * @link https://github.com/schemaorg/schemaorg/issues/2712
      */
-    public const ListPrice = 'https://schema.org/ListPrice';
+     const ListPrice = 'https://schema.org/ListPrice';
 
     /**
      * Represents the manufacturer suggested retail price ("MSRP") of an offered
@@ -46,7 +46,7 @@ class PriceTypeEnumeration extends BaseType implements PriceTypeEnumerationContr
      * @see https://pending.schema.org
      * @link https://github.com/schemaorg/schemaorg/issues/2712
      */
-    public const MSRP = 'https://schema.org/MSRP';
+     const MSRP = 'https://schema.org/MSRP';
 
     /**
      * Represents the minimum advertised price ("MAP") (as dictated by the
@@ -56,7 +56,7 @@ class PriceTypeEnumeration extends BaseType implements PriceTypeEnumerationContr
      * @see https://pending.schema.org
      * @link https://github.com/schemaorg/schemaorg/issues/2712
      */
-    public const MinimumAdvertisedPrice = 'https://schema.org/MinimumAdvertisedPrice';
+     const MinimumAdvertisedPrice = 'https://schema.org/MinimumAdvertisedPrice';
 
     /**
      * Represents the regular price of an offered product. This is usually the
@@ -67,7 +67,7 @@ class PriceTypeEnumeration extends BaseType implements PriceTypeEnumerationContr
      * @see https://pending.schema.org
      * @link https://github.com/schemaorg/schemaorg/issues/3583
      */
-    public const RegularPrice = 'https://schema.org/RegularPrice';
+     const RegularPrice = 'https://schema.org/RegularPrice';
 
     /**
      * Represents the suggested retail price ("SRP") of an offered product.
@@ -76,7 +76,7 @@ class PriceTypeEnumeration extends BaseType implements PriceTypeEnumerationContr
      * @see https://pending.schema.org
      * @link https://github.com/schemaorg/schemaorg/issues/2712
      */
-    public const SRP = 'https://schema.org/SRP';
+     const SRP = 'https://schema.org/SRP';
 
     /**
      * Represents a sale price (usually active for a limited period) of an
@@ -86,7 +86,7 @@ class PriceTypeEnumeration extends BaseType implements PriceTypeEnumerationContr
      * @see https://pending.schema.org
      * @link https://github.com/schemaorg/schemaorg/issues/2712
      */
-    public const SalePrice = 'https://schema.org/SalePrice';
+     const SalePrice = 'https://schema.org/SalePrice';
 
     /**
      * Represents the strikethrough price (the previous advertised price) of an
@@ -96,7 +96,7 @@ class PriceTypeEnumeration extends BaseType implements PriceTypeEnumerationContr
      * @see https://pending.schema.org
      * @link https://github.com/schemaorg/schemaorg/issues/3583
      */
-    public const StrikethroughPrice = 'https://schema.org/StrikethroughPrice';
+     const StrikethroughPrice = 'https://schema.org/StrikethroughPrice';
 
     /**
      * An additional type for the item, typically used for adding more specific
@@ -288,4 +288,5 @@ class PriceTypeEnumeration extends BaseType implements PriceTypeEnumerationContr
     {
         return $this->setProperty('url', $url);
     }
+
 }

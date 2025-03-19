@@ -51,4 +51,5 @@ interface MedicalGuidelineContraindicationContract
     public function subjectOf($subjectOf);
 
     public function url($url);
+
 }

@@ -2,15 +2,15 @@
 
 namespace Spatie\SchemaOrg;
 
-use Spatie\SchemaOrg\Contracts\ActionContract;
-use Spatie\SchemaOrg\Contracts\SendActionContract;
-use Spatie\SchemaOrg\Contracts\ThingContract;
-use Spatie\SchemaOrg\Contracts\TransferActionContract;
+use \Spatie\SchemaOrg\Contracts\SendActionContract;
+use \Spatie\SchemaOrg\Contracts\ActionContract;
+use \Spatie\SchemaOrg\Contracts\ThingContract;
+use \Spatie\SchemaOrg\Contracts\TransferActionContract;
 
 /**
  * The act of physically/electronically dispatching an object for transfer from
  * an origin to a destination. Related actions:
- *
+ * 
  * * [[ReceiveAction]]: The reciprocal of SendAction.
  * * [[GiveAction]]: Unlike GiveAction, SendAction does not imply the transfer
  * of ownership (e.g. I can send you my laptop, but I'm not necessarily giving
@@ -153,7 +153,7 @@ class SendAction extends BaseType implements SendActionContract, ActionContract,
      * John wrote a book from January to *December*. For media, including audio
      * and video, it's the time offset of the end of a clip within a larger
      * file.
-     *
+     * 
      * Note that Event uses startDate/endDate instead of startTime/endTime, even
      * when describing dates with times. This situation may be clarified in
      * future revisions.
@@ -408,7 +408,7 @@ class SendAction extends BaseType implements SendActionContract, ActionContract,
      * John wrote a book from *January* to December. For media, including audio
      * and video, it's the time offset of the start of a clip within a larger
      * file.
-     *
+     * 
      * Note that Event uses startDate/endDate instead of startTime/endTime, even
      * when describing dates with times. This situation may be clarified in
      * future revisions.
@@ -482,4 +482,5 @@ class SendAction extends BaseType implements SendActionContract, ActionContract,
     {
         return $this->setProperty('url', $url);
     }
+
 }

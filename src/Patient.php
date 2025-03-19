@@ -2,13 +2,13 @@
 
 namespace Spatie\SchemaOrg;
 
-use Spatie\SchemaOrg\Contracts\AudienceContract;
-use Spatie\SchemaOrg\Contracts\IntangibleContract;
-use Spatie\SchemaOrg\Contracts\MedicalAudienceContract;
-use Spatie\SchemaOrg\Contracts\PatientContract;
-use Spatie\SchemaOrg\Contracts\PeopleAudienceContract;
-use Spatie\SchemaOrg\Contracts\PersonContract;
-use Spatie\SchemaOrg\Contracts\ThingContract;
+use \Spatie\SchemaOrg\Contracts\PatientContract;
+use \Spatie\SchemaOrg\Contracts\AudienceContract;
+use \Spatie\SchemaOrg\Contracts\IntangibleContract;
+use \Spatie\SchemaOrg\Contracts\MedicalAudienceContract;
+use \Spatie\SchemaOrg\Contracts\PeopleAudienceContract;
+use \Spatie\SchemaOrg\Contracts\PersonContract;
+use \Spatie\SchemaOrg\Contracts\ThingContract;
 
 /**
  * A patient is any person recipient of health care services.
@@ -1031,7 +1031,7 @@ class Patient extends BaseType implements PatientContract, AudienceContract, Int
      * applied to a [[CreativeWork]] (e.g. [[NewsArticle]]) the principles are
      * those of the party primarily responsible for the creation of the
      * [[CreativeWork]].
-     *
+     * 
      * While such policies are most typically expressed in natural language,
      * sometimes related information (e.g. indicating a [[funder]]) can be
      * expressed using schema.org terminology.
@@ -1400,4 +1400,5 @@ class Patient extends BaseType implements PatientContract, AudienceContract, Int
     {
         return $this->setProperty('worksFor', $worksFor);
     }
+
 }

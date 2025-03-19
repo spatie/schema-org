@@ -53,4 +53,5 @@ interface BookmarkActionContract
     public function target($target);
 
     public function url($url);
+
 }

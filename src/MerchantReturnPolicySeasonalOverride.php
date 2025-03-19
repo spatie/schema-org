@@ -2,9 +2,9 @@
 
 namespace Spatie\SchemaOrg;
 
-use Spatie\SchemaOrg\Contracts\IntangibleContract;
-use Spatie\SchemaOrg\Contracts\MerchantReturnPolicySeasonalOverrideContract;
-use Spatie\SchemaOrg\Contracts\ThingContract;
+use \Spatie\SchemaOrg\Contracts\MerchantReturnPolicySeasonalOverrideContract;
+use \Spatie\SchemaOrg\Contracts\IntangibleContract;
+use \Spatie\SchemaOrg\Contracts\ThingContract;
 
 /**
  * A seasonal override of a return policy, for example used for holidays.
@@ -356,4 +356,5 @@ class MerchantReturnPolicySeasonalOverride extends BaseType implements MerchantR
     {
         return $this->setProperty('url', $url);
     }
+
 }

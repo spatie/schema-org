@@ -2,9 +2,9 @@
 
 namespace Spatie\SchemaOrg;
 
-use Spatie\SchemaOrg\Contracts\EventContract;
-use Spatie\SchemaOrg\Contracts\SaleEventContract;
-use Spatie\SchemaOrg\Contracts\ThingContract;
+use \Spatie\SchemaOrg\Contracts\SaleEventContract;
+use \Spatie\SchemaOrg\Contracts\EventContract;
+use \Spatie\SchemaOrg\Contracts\ThingContract;
 
 /**
  * Event type: Sales event.
@@ -855,4 +855,5 @@ class SaleEvent extends BaseType implements SaleEventContract, EventContract, Th
     {
         return $this->setProperty('workPerformed', $workPerformed);
     }
+
 }

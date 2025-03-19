@@ -2,12 +2,12 @@
 
 namespace Spatie\SchemaOrg;
 
-use Spatie\SchemaOrg\Contracts\MedicalConditionContract;
-use Spatie\SchemaOrg\Contracts\MedicalEntityContract;
-use Spatie\SchemaOrg\Contracts\MedicalSignContract;
-use Spatie\SchemaOrg\Contracts\MedicalSignOrSymptomContract;
-use Spatie\SchemaOrg\Contracts\ThingContract;
-use Spatie\SchemaOrg\Contracts\VitalSignContract;
+use \Spatie\SchemaOrg\Contracts\VitalSignContract;
+use \Spatie\SchemaOrg\Contracts\MedicalConditionContract;
+use \Spatie\SchemaOrg\Contracts\MedicalEntityContract;
+use \Spatie\SchemaOrg\Contracts\MedicalSignContract;
+use \Spatie\SchemaOrg\Contracts\MedicalSignOrSymptomContract;
+use \Spatie\SchemaOrg\Contracts\ThingContract;
 
 /**
  * Vital signs are measures of various physiological functions in order to
@@ -622,4 +622,5 @@ class VitalSign extends BaseType implements VitalSignContract, MedicalConditionC
     {
         return $this->setProperty('url', $url);
     }
+
 }

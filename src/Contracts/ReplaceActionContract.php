@@ -61,4 +61,5 @@ interface ReplaceActionContract
     public function targetCollection($targetCollection);
 
     public function url($url);
+
 }

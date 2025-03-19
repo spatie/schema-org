@@ -2,10 +2,10 @@
 
 namespace Spatie\SchemaOrg;
 
-use Spatie\SchemaOrg\Contracts\IntangibleContract;
-use Spatie\SchemaOrg\Contracts\QuantitativeValueContract;
-use Spatie\SchemaOrg\Contracts\StructuredValueContract;
-use Spatie\SchemaOrg\Contracts\ThingContract;
+use \Spatie\SchemaOrg\Contracts\QuantitativeValueContract;
+use \Spatie\SchemaOrg\Contracts\IntangibleContract;
+use \Spatie\SchemaOrg\Contracts\StructuredValueContract;
+use \Spatie\SchemaOrg\Contracts\ThingContract;
 
 /**
  *  A point value or interval for product characteristics and other purposes.
@@ -19,7 +19,7 @@ class QuantitativeValue extends BaseType implements QuantitativeValueContract, I
      * A property-value pair representing an additional characteristic of the
      * entity, e.g. a product feature or another characteristic for which there
      * is no matching property in schema.org.
-     *
+     * 
      * Note: Publishers should be aware that applications designed to use
      * specific schema.org properties (e.g. https://schema.org/width,
      * https://schema.org/color, https://schema.org/gtin13, ...) will typically
@@ -291,7 +291,7 @@ class QuantitativeValue extends BaseType implements QuantitativeValueContract, I
     /**
      * The value of a [[QuantitativeValue]] (including [[Observation]]) or
      * property value node.
-     *
+     * 
      * * For [[QuantitativeValue]] and [[MonetaryAmount]], the recommended type
      * for values is 'Number'.
      * * For [[PropertyValue]], it can be 'Text', 'Number', 'Boolean', or
@@ -326,4 +326,5 @@ class QuantitativeValue extends BaseType implements QuantitativeValueContract, I
     {
         return $this->setProperty('valueReference', $valueReference);
     }
+
 }

@@ -57,4 +57,5 @@ interface DeleteActionContract
     public function targetCollection($targetCollection);
 
     public function url($url);
+
 }
