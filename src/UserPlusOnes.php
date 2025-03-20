@@ -326,6 +326,20 @@ class UserPlusOnes extends BaseType implements UserPlusOnesContract, EventContra
     }
 
     /**
+     * A list of events that are part of the same series as the event.
+     *
+     * @param \Spatie\SchemaOrg\Contracts\EventContract|\Spatie\SchemaOrg\Contracts\EventContract[] $eventsSeries
+     *
+     * @return static
+     *
+     * @see municipio:eventsSeries
+     */
+    public function eventsSeries($eventsSeries)
+    {
+        return $this->setProperty('eventsSeries', $eventsSeries);
+    }
+
+    /**
      * A person or organization that supports (sponsors) something through some
      * kind of financial contribution.
      *

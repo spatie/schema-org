@@ -325,6 +325,20 @@ class PublicationEvent extends BaseType implements PublicationEventContract, Eve
     }
 
     /**
+     * A list of events that are part of the same series as the event.
+     *
+     * @param \Spatie\SchemaOrg\Contracts\EventContract|\Spatie\SchemaOrg\Contracts\EventContract[] $eventsSeries
+     *
+     * @return static
+     *
+     * @see municipio:eventsSeries
+     */
+    public function eventsSeries($eventsSeries)
+    {
+        return $this->setProperty('eventsSeries', $eventsSeries);
+    }
+
+    /**
      * A flag to signal that the item, event, or place is accessible for free.
      *
      * @param bool|bool[] $free

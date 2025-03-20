@@ -42,6 +42,8 @@ interface UserPlusOnesContract
 
     public function eventStatus($eventStatus);
 
+    public function eventsSeries($eventsSeries);
+
     public function funder($funder);
 
     public function funding($funding);

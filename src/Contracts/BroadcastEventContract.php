@@ -44,6 +44,8 @@ interface BroadcastEventContract
 
     public function eventStatus($eventStatus);
 
+    public function eventsSeries($eventsSeries);
+
     public function free($free);
 
     public function funder($funder);
