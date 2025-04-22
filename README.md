@@ -2,7 +2,7 @@
     <a href="https://spatie.be/open-source?utm_source=github&utm_medium=banner&utm_campaign=schema-org">
       <picture>
         <source media="(prefers-color-scheme: dark)" srcset="https://spatie.be/packages/header/schema-org/html/dark.webp">
-        <img alt="Logo for schema-org" src=" https://spatie.be/packages/header/schema-org/html/light.webp" height="190">
+        <img alt="Logo for schema-org" src="https://spatie.be/packages/header/schema-org/html/light.webp" height="190">
       </picture>
     </a>
 
