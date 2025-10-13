@@ -28,10 +28,10 @@
     "require-dev": {
         "friendsofphp/php-cs-fixer": "^3.88.2",
         "graham-campbell/analyzer": "^5.0.0",
-        "illuminate/collections": "^12.33",
-        "league/flysystem": "^2.3.0 || ^3.30",
+        "illuminate/collections": "^10",
+        "league/flysystem": "^3.30",
         "pestphp/pest": "^2.36",
-        "symfony/console": "^5.3.7 || ^6.0 || ^7.3.4",
+        "symfony/console": "^6.0 || ^7.3.4",
         "twig/twig": "^3.21.1"
     },
     "autoload": {
