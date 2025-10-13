@@ -15,7 +15,7 @@ use Spatie\SchemaOrg\Contracts\ThingContract;
  * magazine, scholarly journal, or newspaper.
  *
  * See also [blog
- * post](http://blog.schema.org/2014/09/schemaorg-support-for-bibliographic_2.html).
+ * post](https://blog.schema.org/2014/09/02/schema-org-support-for-bibliographic-relationships-and-periodicals/).
  *
  * @see https://schema.org/Periodical
  *

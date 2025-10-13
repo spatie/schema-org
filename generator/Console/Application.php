@@ -14,7 +14,7 @@ class Application extends ConsoleApplication
         $this->setDefaultCommand('generate', true);
     }
 
-    public function getLongVersion()
+    public function getLongVersion(): string
     {
         return parent::getLongVersion().' by <comment>Spatie</comment>';
     }
