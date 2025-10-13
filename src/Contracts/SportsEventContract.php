@@ -88,6 +88,8 @@ interface SportsEventContract
 
     public function recordedIn($recordedIn);
 
+    public function referee($referee);
+
     public function remainingAttendeeCapacity($remainingAttendeeCapacity);
 
     public function review($review);

@@ -97,7 +97,6 @@ class ShippingRateSettings extends BaseType implements ShippingRateSettingsContr
      * @return static
      *
      * @see https://schema.org/doesNotShip
-     * @link https://github.com/schemaorg/schemaorg/issues/2506
      */
     public function doesNotShip($doesNotShip)
     {
@@ -207,6 +206,22 @@ class ShippingRateSettings extends BaseType implements ShippingRateSettingsContr
     }
 
     /**
+     * Fraction of the value of the order that is charged as shipping cost.
+     *
+     * @param float|float[]|int|int[] $orderPercentage
+     *
+     * @return static
+     *
+     * @see https://schema.org/orderPercentage
+     * @see https://pending.schema.org
+     * @link https://github.com/schemaorg/schemaorg/issues/3617
+     */
+    public function orderPercentage($orderPercentage)
+    {
+        return $this->setProperty('orderPercentage', $orderPercentage);
+    }
+
+    /**
      * Indicates a potential Action, which describes an idealized action in
      * which this thing would play an 'object' role.
      *
@@ -246,7 +261,6 @@ class ShippingRateSettings extends BaseType implements ShippingRateSettingsContr
      * @return static
      *
      * @see https://schema.org/shippingDestination
-     * @link https://github.com/schemaorg/schemaorg/issues/2506
      */
     public function shippingDestination($shippingDestination)
     {
@@ -263,6 +277,7 @@ class ShippingRateSettings extends BaseType implements ShippingRateSettingsContr
      * @return static
      *
      * @see https://schema.org/shippingLabel
+     * @see https://attic.schema.org
      * @link https://github.com/schemaorg/schemaorg/issues/2506
      */
     public function shippingLabel($shippingLabel)
@@ -275,12 +290,11 @@ class ShippingRateSettings extends BaseType implements ShippingRateSettingsContr
      * Typically, the maxValue and currency values (of the [[MonetaryAmount]])
      * are most appropriate.
      *
-     * @param \Spatie\SchemaOrg\Contracts\MonetaryAmountContract|\Spatie\SchemaOrg\Contracts\MonetaryAmountContract[] $shippingRate
+     * @param \Spatie\SchemaOrg\Contracts\MonetaryAmountContract|\Spatie\SchemaOrg\Contracts\MonetaryAmountContract[]|\Spatie\SchemaOrg\Contracts\ShippingRateSettingsContract|\Spatie\SchemaOrg\Contracts\ShippingRateSettingsContract[] $shippingRate
      *
      * @return static
      *
      * @see https://schema.org/shippingRate
-     * @link https://github.com/schemaorg/schemaorg/issues/2506
      */
     public function shippingRate($shippingRate)
     {
@@ -314,5 +328,21 @@ class ShippingRateSettings extends BaseType implements ShippingRateSettingsContr
     public function url($url)
     {
         return $this->setProperty('url', $url);
+    }
+
+    /**
+     * Fraction of the weight that is used to compute the shipping price.
+     *
+     * @param float|float[]|int|int[] $weightPercentage
+     *
+     * @return static
+     *
+     * @see https://schema.org/weightPercentage
+     * @see https://pending.schema.org
+     * @link https://github.com/schemaorg/schemaorg/issues/3617
+     */
+    public function weightPercentage($weightPercentage)
+    {
+        return $this->setProperty('weightPercentage', $weightPercentage);
     }
 }

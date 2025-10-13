@@ -1626,7 +1626,7 @@ class AdvertiserContentArticle extends BaseType implements AdvertiserContentArti
     }
 
     /**
-     * The publisher of the creative work.
+     * The publisher of the article in question.
      *
      * @param \Spatie\SchemaOrg\Contracts\OrganizationContract|\Spatie\SchemaOrg\Contracts\OrganizationContract[]|\Spatie\SchemaOrg\Contracts\PersonContract|\Spatie\SchemaOrg\Contracts\PersonContract[] $publisher
      *
@@ -2208,7 +2208,8 @@ class AdvertiserContentArticle extends BaseType implements AdvertiserContentArti
     }
 
     /**
-     * The number of words in the text of the Article.
+     * The number of words in the text of the CreativeWork such as an Article,
+     * Book, etc.
      *
      * @param int|int[] $wordCount
      *

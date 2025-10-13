@@ -18,6 +18,8 @@ interface OfferShippingDetailsContract
 
     public function doesNotShip($doesNotShip);
 
+    public function hasShippingService($hasShippingService);
+
     public function height($height);
 
     public function identifier($identifier);

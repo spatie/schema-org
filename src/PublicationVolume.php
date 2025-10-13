@@ -12,7 +12,7 @@ use Spatie\SchemaOrg\Contracts\ThingContract;
  * year.
  *
  * See also [blog
- * post](https://blog.schema.org/2014/09/02/schema-org-support-for-bibliographic-relationships-and-periodicals/).
+ * post](https://blog-schema.org/2014/09/02/schema-org-support-for-bibliographic-relationships-and-periodicals/).
  *
  * @see https://schema.org/PublicationVolume
  *
@@ -1576,7 +1576,7 @@ class PublicationVolume extends BaseType implements PublicationVolumeContract, C
     }
 
     /**
-     * The publisher of the creative work.
+     * The publisher of the article in question.
      *
      * @param \Spatie\SchemaOrg\Contracts\OrganizationContract|\Spatie\SchemaOrg\Contracts\OrganizationContract[]|\Spatie\SchemaOrg\Contracts\PersonContract|\Spatie\SchemaOrg\Contracts\PersonContract[] $publisher
      *
@@ -2130,6 +2130,21 @@ class PublicationVolume extends BaseType implements PublicationVolumeContract, C
     public function volumeNumber($volumeNumber)
     {
         return $this->setProperty('volumeNumber', $volumeNumber);
+    }
+
+    /**
+     * The number of words in the text of the CreativeWork such as an Article,
+     * Book, etc.
+     *
+     * @param int|int[] $wordCount
+     *
+     * @return static
+     *
+     * @see https://schema.org/wordCount
+     */
+    public function wordCount($wordCount)
+    {
+        return $this->setProperty('wordCount', $wordCount);
     }
 
     /**

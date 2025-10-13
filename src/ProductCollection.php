@@ -887,6 +887,7 @@ class ProductCollection extends BaseType implements ProductCollectionContract, C
      * @return static
      *
      * @see https://schema.org/depth
+     * @link https://github.com/schemaorg/schemaorg/issues/3617
      */
     public function depth($depth)
     {
@@ -1486,6 +1487,7 @@ class ProductCollection extends BaseType implements ProductCollectionContract, C
      * @return static
      *
      * @see https://schema.org/height
+     * @link https://github.com/schemaorg/schemaorg/issues/3617
      */
     public function height($height)
     {
@@ -2289,7 +2291,7 @@ class ProductCollection extends BaseType implements ProductCollectionContract, C
     }
 
     /**
-     * The publisher of the creative work.
+     * The publisher of the article in question.
      *
      * @param \Spatie\SchemaOrg\Contracts\OrganizationContract|\Spatie\SchemaOrg\Contracts\OrganizationContract[]|\Spatie\SchemaOrg\Contracts\PersonContract|\Spatie\SchemaOrg\Contracts\PersonContract[] $publisher
      *
@@ -2891,11 +2893,12 @@ class ProductCollection extends BaseType implements ProductCollectionContract, C
     /**
      * The weight of the product or person.
      *
-     * @param \Spatie\SchemaOrg\Contracts\QuantitativeValueContract|\Spatie\SchemaOrg\Contracts\QuantitativeValueContract[] $weight
+     * @param \Spatie\SchemaOrg\Contracts\MassContract|\Spatie\SchemaOrg\Contracts\MassContract[]|\Spatie\SchemaOrg\Contracts\QuantitativeValueContract|\Spatie\SchemaOrg\Contracts\QuantitativeValueContract[] $weight
      *
      * @return static
      *
      * @see https://schema.org/weight
+     * @link https://github.com/schemaorg/schemaorg/issues/3617
      */
     public function weight($weight)
     {
@@ -2910,10 +2913,26 @@ class ProductCollection extends BaseType implements ProductCollectionContract, C
      * @return static
      *
      * @see https://schema.org/width
+     * @link https://github.com/schemaorg/schemaorg/issues/3617
      */
     public function width($width)
     {
         return $this->setProperty('width', $width);
+    }
+
+    /**
+     * The number of words in the text of the CreativeWork such as an Article,
+     * Book, etc.
+     *
+     * @param int|int[] $wordCount
+     *
+     * @return static
+     *
+     * @see https://schema.org/wordCount
+     */
+    public function wordCount($wordCount)
+    {
+        return $this->setProperty('wordCount', $wordCount);
     }
 
     /**

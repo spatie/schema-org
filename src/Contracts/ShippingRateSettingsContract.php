@@ -26,6 +26,8 @@ interface ShippingRateSettingsContract
 
     public function name($name);
 
+    public function orderPercentage($orderPercentage);
+
     public function potentialAction($potentialAction);
 
     public function sameAs($sameAs);
@@ -39,4 +41,6 @@ interface ShippingRateSettingsContract
     public function subjectOf($subjectOf);
 
     public function url($url);
+
+    public function weightPercentage($weightPercentage);
 }

@@ -220,6 +220,21 @@ class Airline extends BaseType implements AirlineContract, OrganizationContract,
     }
 
     /**
+     * The official registration number of a business including the organization
+     * that issued it such as Company House or Chamber of Commerce.
+     *
+     * @param \Spatie\SchemaOrg\Contracts\CertificationContract|\Spatie\SchemaOrg\Contracts\CertificationContract[] $companyRegistration
+     *
+     * @return static
+     *
+     * @see https://schema.org/companyRegistration
+     */
+    public function companyRegistration($companyRegistration)
+    {
+        return $this->setProperty('companyRegistration', $companyRegistration);
+    }
+
+    /**
      * A contact point for a person or organization.
      *
      * @param \Spatie\SchemaOrg\Contracts\ContactPointContract|\Spatie\SchemaOrg\Contracts\ContactPointContract[] $contactPoint
@@ -729,6 +744,22 @@ class Airline extends BaseType implements AirlineContract, OrganizationContract,
     }
 
     /**
+     * Specification of a shipping service offered by the organization.
+     *
+     * @param \Spatie\SchemaOrg\Contracts\ShippingServiceContract|\Spatie\SchemaOrg\Contracts\ShippingServiceContract[] $hasShippingService
+     *
+     * @return static
+     *
+     * @see https://schema.org/hasShippingService
+     * @see https://pending.schema.org
+     * @link https://github.com/schemaorg/schemaorg/issues/3617
+     */
+    public function hasShippingService($hasShippingService)
+    {
+        return $this->setProperty('hasShippingService', $hasShippingService);
+    }
+
+    /**
      * IATA identifier for an airline or airport.
      *
      * @param string|string[] $iataCode
@@ -894,6 +925,23 @@ class Airline extends BaseType implements AirlineContract, OrganizationContract,
     }
 
     /**
+     * The legal address of an organization which acts as the officially
+     * registered address used for legal and tax purposes. The legal address can
+     * be different from the place of operations of a business and other
+     * addresses can be part of an organization.
+     *
+     * @param \Spatie\SchemaOrg\Contracts\PostalAddressContract|\Spatie\SchemaOrg\Contracts\PostalAddressContract[] $legalAddress
+     *
+     * @return static
+     *
+     * @see https://schema.org/legalAddress
+     */
+    public function legalAddress($legalAddress)
+    {
+        return $this->setProperty('legalAddress', $legalAddress);
+    }
+
+    /**
      * The official name of the organization, e.g. the registered company name.
      *
      * @param string|string[] $legalName
@@ -905,6 +953,21 @@ class Airline extends BaseType implements AirlineContract, OrganizationContract,
     public function legalName($legalName)
     {
         return $this->setProperty('legalName', $legalName);
+    }
+
+    /**
+     * One or multiple persons who represent this organization legally such as
+     * CEO or sole administrator.
+     *
+     * @param \Spatie\SchemaOrg\Contracts\PersonContract|\Spatie\SchemaOrg\Contracts\PersonContract[] $legalRepresentative
+     *
+     * @return static
+     *
+     * @see https://schema.org/legalRepresentative
+     */
+    public function legalRepresentative($legalRepresentative)
+    {
+        return $this->setProperty('legalRepresentative', $legalRepresentative);
     }
 
     /**

@@ -28,6 +28,8 @@ interface PostalAddressContract
 
     public function email($email);
 
+    public function extendedAddress($extendedAddress);
+
     public function faxNumber($faxNumber);
 
     public function hoursAvailable($hoursAvailable);

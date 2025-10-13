@@ -260,6 +260,8 @@ interface PublicationVolumeContract
 
     public function volumeNumber($volumeNumber);
 
+    public function wordCount($wordCount);
+
     public function workExample($workExample);
 
     public function workTranslation($workTranslation);

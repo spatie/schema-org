@@ -44,6 +44,8 @@ interface SkiResortContract
 
     public function checkoutTime($checkoutTime);
 
+    public function companyRegistration($companyRegistration);
+
     public function contactPoint($contactPoint);
 
     public function contactPoints($contactPoints);
@@ -142,6 +144,8 @@ interface SkiResortContract
 
     public function hasProductReturnPolicy($hasProductReturnPolicy);
 
+    public function hasShippingService($hasShippingService);
+
     public function identifier($identifier);
 
     public function image($image);
@@ -162,7 +166,11 @@ interface SkiResortContract
 
     public function latitude($latitude);
 
+    public function legalAddress($legalAddress);
+
     public function legalName($legalName);
+
+    public function legalRepresentative($legalRepresentative);
 
     public function leiCode($leiCode);
 

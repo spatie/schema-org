@@ -450,11 +450,11 @@ class Person extends BaseType implements PersonContract, ThingContract
      * Gender of something, typically a [[Person]], but possibly also fictional
      * characters, animals, etc. While https://schema.org/Male and
      * https://schema.org/Female may be used, text strings are also acceptable
-     * for people who do not identify as a binary gender. The [[gender]]
-     * property can also be used in an extended sense to cover e.g. the gender
-     * of sports teams. As with the gender of individuals, we do not try to
-     * enumerate all possibilities. A mixed-gender [[SportsTeam]] can be
-     * indicated with a text value of "Mixed".
+     * for people who are not a binary gender. The [[gender]] property can also
+     * be used in an extended sense to cover e.g. the gender of sports teams. As
+     * with the gender of individuals, we do not try to enumerate all
+     * possibilities. A mixed-gender [[SportsTeam]] can be indicated with a text
+     * value of "Mixed".
      *
      * @param \Spatie\SchemaOrg\Contracts\GenderTypeContract|\Spatie\SchemaOrg\Contracts\GenderTypeContract[]|string|string[] $gender
      *
@@ -585,6 +585,7 @@ class Person extends BaseType implements PersonContract, ThingContract
      * @return static
      *
      * @see https://schema.org/height
+     * @link https://github.com/schemaorg/schemaorg/issues/3617
      */
     public function height($height)
     {
@@ -856,8 +857,8 @@ class Person extends BaseType implements PersonContract, ThingContract
     }
 
     /**
-     * The total financial value of the person as calculated by subtracting
-     * assets from liabilities.
+     * The total financial value of the person as calculated by subtracting the
+     * total value of liabilities from the total value of assets.
      *
      * @param \Spatie\SchemaOrg\Contracts\MonetaryAmountContract|\Spatie\SchemaOrg\Contracts\MonetaryAmountContract[]|\Spatie\SchemaOrg\Contracts\PriceSpecificationContract|\Spatie\SchemaOrg\Contracts\PriceSpecificationContract[] $netWorth
      *
@@ -939,6 +940,34 @@ class Person extends BaseType implements PersonContract, ThingContract
     public function potentialAction($potentialAction)
     {
         return $this->setProperty('potentialAction', $potentialAction);
+    }
+
+    /**
+     * A short string listing or describing pronouns for a person. Typically the
+     * person concerned is the best authority as pronouns are a critical part of
+     * personal identity and expression. Publishers and consumers of this
+     * information are reminded to treat this data responsibly, take
+     * country-specific laws related to gender expression into account, and be
+     * wary of out-of-date data and drawing unwarranted inferences about the
+     * person being described.
+     *
+     * In English, formulations such as "they/them", "she/her", and "he/him" are
+     * commonly used online and can also be used here. We do not intend to
+     * enumerate all possible micro-syntaxes in all languages. More structured
+     * and well-defined external values for pronouns can be referenced using the
+     * [[StructuredValue]] or [[DefinedTerm]] values.
+     *
+     * @param \Spatie\SchemaOrg\Contracts\DefinedTermContract|\Spatie\SchemaOrg\Contracts\DefinedTermContract[]|\Spatie\SchemaOrg\Contracts\StructuredValueContract|\Spatie\SchemaOrg\Contracts\StructuredValueContract[]|string|string[] $pronouns
+     *
+     * @return static
+     *
+     * @see https://schema.org/pronouns
+     * @see https://pending.schema.org
+     * @link https://github.com/schemaorg/schemaorg/issues/2935
+     */
+    public function pronouns($pronouns)
+    {
+        return $this->setProperty('pronouns', $pronouns);
     }
 
     /**
@@ -1160,11 +1189,12 @@ class Person extends BaseType implements PersonContract, ThingContract
     /**
      * The weight of the product or person.
      *
-     * @param \Spatie\SchemaOrg\Contracts\QuantitativeValueContract|\Spatie\SchemaOrg\Contracts\QuantitativeValueContract[] $weight
+     * @param \Spatie\SchemaOrg\Contracts\MassContract|\Spatie\SchemaOrg\Contracts\MassContract[]|\Spatie\SchemaOrg\Contracts\QuantitativeValueContract|\Spatie\SchemaOrg\Contracts\QuantitativeValueContract[] $weight
      *
      * @return static
      *
      * @see https://schema.org/weight
+     * @link https://github.com/schemaorg/schemaorg/issues/3617
      */
     public function weight($weight)
     {

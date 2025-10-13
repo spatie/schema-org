@@ -28,6 +28,8 @@ interface HowToSectionContract
 
     public function additionalType($additionalType);
 
+    public function aggregateElement($aggregateElement);
+
     public function aggregateRating($aggregateRating);
 
     public function alternateName($alternateName);
@@ -265,6 +267,8 @@ interface HowToSectionContract
     public function version($version);
 
     public function video($video);
+
+    public function wordCount($wordCount);
 
     public function workExample($workExample);
 

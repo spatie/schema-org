@@ -13,7 +13,6 @@ use Spatie\SchemaOrg\Contracts\ThingContract;
  *
  * @see https://schema.org/LegalForceStatus
  * @see https://pending.schema.org
- * @link https://github.com/schemaorg/schemaorg/issues/1156
  *
  * @method static supersededBy($supersededBy) The value should be instance of pending types Class|Class[]|Enumeration|Enumeration[]|Property|Property[]
  */
@@ -24,7 +23,6 @@ class LegalForceStatus extends BaseType implements LegalForceStatusContract, Enu
      *
      * @see https://schema.org/InForce
      * @see https://pending.schema.org
-     * @link https://github.com/schemaorg/schemaorg/issues/1156
      */
     public const InForce = 'https://schema.org/InForce';
 
@@ -33,7 +31,6 @@ class LegalForceStatus extends BaseType implements LegalForceStatusContract, Enu
      *
      * @see https://schema.org/NotInForce
      * @see https://pending.schema.org
-     * @link https://github.com/schemaorg/schemaorg/issues/1156
      */
     public const NotInForce = 'https://schema.org/NotInForce';
 
@@ -42,7 +39,6 @@ class LegalForceStatus extends BaseType implements LegalForceStatusContract, Enu
      *
      * @see https://schema.org/PartiallyInForce
      * @see https://pending.schema.org
-     * @link https://github.com/schemaorg/schemaorg/issues/1156
      */
     public const PartiallyInForce = 'https://schema.org/PartiallyInForce';
 

@@ -212,6 +212,21 @@ class PostalAddress extends BaseType implements PostalAddressContract, ContactPo
     }
 
     /**
+     * An address extension such as an apartment number, C/O or alternative
+     * name.
+     *
+     * @param string|string[] $extendedAddress
+     *
+     * @return static
+     *
+     * @see https://schema.org/extendedAddress
+     */
+    public function extendedAddress($extendedAddress)
+    {
+        return $this->setProperty('extendedAddress', $extendedAddress);
+    }
+
+    /**
      * The fax number.
      *
      * @param string|string[] $faxNumber

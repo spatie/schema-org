@@ -12,7 +12,6 @@ use Spatie\SchemaOrg\Contracts\ThingContract;
  *
  * @see https://schema.org/LegalValueLevel
  * @see https://pending.schema.org
- * @link https://github.com/schemaorg/schemaorg/issues/1156
  *
  * @method static supersededBy($supersededBy) The value should be instance of pending types Class|Class[]|Enumeration|Enumeration[]|Property|Property[]
  */
@@ -22,25 +21,23 @@ class LegalValueLevel extends BaseType implements LegalValueLevelContract, Enume
      * Indicates that the publisher gives some special status to the publication
      * of the document. ("The Queens Printer" version of a UK Act of Parliament,
      * or the PDF version of a Directive published by the EU Office of
-     * Publications.) Something "Authoritative" is considered to be also
-     * [[OfficialLegalValue]].
+     * Publications). Something "Authoritative" is considered to be also
+     * [[OfficialLegalValue]]".
      *
      * @see https://schema.org/AuthoritativeLegalValue
      * @see https://pending.schema.org
-     * @link https://github.com/schemaorg/schemaorg/issues/1156
      */
     public const AuthoritativeLegalValue = 'https://schema.org/AuthoritativeLegalValue';
 
     /**
      * Indicates a document for which the text is conclusively what the law says
-     * and is legally binding. (E.g. the digitally signed version of an Official
+     * and is legally binding. (e.g. The digitally signed version of an Official
      * Journal.)
      *   Something "Definitive" is considered to be also
      * [[AuthoritativeLegalValue]].
      *
      * @see https://schema.org/DefinitiveLegalValue
      * @see https://pending.schema.org
-     * @link https://github.com/schemaorg/schemaorg/issues/1156
      */
     public const DefinitiveLegalValue = 'https://schema.org/DefinitiveLegalValue';
 
@@ -48,12 +45,11 @@ class LegalValueLevel extends BaseType implements LegalValueLevelContract, Enume
      * All the documents published by an official publisher should have at least
      * the legal value level "OfficialLegalValue". This indicates that the
      * document was published by an organisation with the public task of making
-     * it available (e.g. a consolidated version of an EU directive published by
+     * it available (e.g. a consolidated version of a EU directive published by
      * the EU Office of Publications).
      *
      * @see https://schema.org/OfficialLegalValue
      * @see https://pending.schema.org
-     * @link https://github.com/schemaorg/schemaorg/issues/1156
      */
     public const OfficialLegalValue = 'https://schema.org/OfficialLegalValue';
 
@@ -63,7 +59,6 @@ class LegalValueLevel extends BaseType implements LegalValueLevelContract, Enume
      *
      * @see https://schema.org/UnofficialLegalValue
      * @see https://pending.schema.org
-     * @link https://github.com/schemaorg/schemaorg/issues/1156
      */
     public const UnofficialLegalValue = 'https://schema.org/UnofficialLegalValue';
 

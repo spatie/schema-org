@@ -136,6 +136,8 @@ interface PatientContract
 
     public function potentialAction($potentialAction);
 
+    public function pronouns($pronouns);
+
     public function publishingPrinciples($publishingPrinciples);
 
     public function relatedTo($relatedTo);

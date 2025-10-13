@@ -91,6 +91,7 @@ class OfferShippingDetails extends BaseType implements OfferShippingDetailsContr
      * @return static
      *
      * @see https://schema.org/depth
+     * @link https://github.com/schemaorg/schemaorg/issues/3617
      */
     public function depth($depth)
     {
@@ -137,11 +138,26 @@ class OfferShippingDetails extends BaseType implements OfferShippingDetailsContr
      * @return static
      *
      * @see https://schema.org/doesNotShip
-     * @link https://github.com/schemaorg/schemaorg/issues/2506
      */
     public function doesNotShip($doesNotShip)
     {
         return $this->setProperty('doesNotShip', $doesNotShip);
+    }
+
+    /**
+     * Specification of a shipping service offered by the organization.
+     *
+     * @param \Spatie\SchemaOrg\Contracts\ShippingServiceContract|\Spatie\SchemaOrg\Contracts\ShippingServiceContract[] $hasShippingService
+     *
+     * @return static
+     *
+     * @see https://schema.org/hasShippingService
+     * @see https://pending.schema.org
+     * @link https://github.com/schemaorg/schemaorg/issues/3617
+     */
+    public function hasShippingService($hasShippingService)
+    {
+        return $this->setProperty('hasShippingService', $hasShippingService);
     }
 
     /**
@@ -152,6 +168,7 @@ class OfferShippingDetails extends BaseType implements OfferShippingDetailsContr
      * @return static
      *
      * @see https://schema.org/height
+     * @link https://github.com/schemaorg/schemaorg/issues/3617
      */
     public function height($height)
     {
@@ -261,7 +278,6 @@ class OfferShippingDetails extends BaseType implements OfferShippingDetailsContr
      * @return static
      *
      * @see https://schema.org/shippingDestination
-     * @link https://github.com/schemaorg/schemaorg/issues/2506
      */
     public function shippingDestination($shippingDestination)
     {
@@ -278,6 +294,7 @@ class OfferShippingDetails extends BaseType implements OfferShippingDetailsContr
      * @return static
      *
      * @see https://schema.org/shippingLabel
+     * @see https://attic.schema.org
      * @link https://github.com/schemaorg/schemaorg/issues/2506
      */
     public function shippingLabel($shippingLabel)
@@ -293,7 +310,6 @@ class OfferShippingDetails extends BaseType implements OfferShippingDetailsContr
      * @return static
      *
      * @see https://schema.org/shippingOrigin
-     * @link https://github.com/schemaorg/schemaorg/issues/3122
      */
     public function shippingOrigin($shippingOrigin)
     {
@@ -305,12 +321,11 @@ class OfferShippingDetails extends BaseType implements OfferShippingDetailsContr
      * Typically, the maxValue and currency values (of the [[MonetaryAmount]])
      * are most appropriate.
      *
-     * @param \Spatie\SchemaOrg\Contracts\MonetaryAmountContract|\Spatie\SchemaOrg\Contracts\MonetaryAmountContract[] $shippingRate
+     * @param \Spatie\SchemaOrg\Contracts\MonetaryAmountContract|\Spatie\SchemaOrg\Contracts\MonetaryAmountContract[]|\Spatie\SchemaOrg\Contracts\ShippingRateSettingsContract|\Spatie\SchemaOrg\Contracts\ShippingRateSettingsContract[] $shippingRate
      *
      * @return static
      *
      * @see https://schema.org/shippingRate
-     * @link https://github.com/schemaorg/schemaorg/issues/2506
      */
     public function shippingRate($shippingRate)
     {
@@ -326,6 +341,7 @@ class OfferShippingDetails extends BaseType implements OfferShippingDetailsContr
      * @return static
      *
      * @see https://schema.org/shippingSettingsLink
+     * @see https://attic.schema.org
      * @link https://github.com/schemaorg/schemaorg/issues/2506
      */
     public function shippingSettingsLink($shippingSettingsLink)
@@ -358,6 +374,7 @@ class OfferShippingDetails extends BaseType implements OfferShippingDetailsContr
      * @return static
      *
      * @see https://schema.org/transitTimeLabel
+     * @see https://attic.schema.org
      * @link https://github.com/schemaorg/schemaorg/issues/2506
      */
     public function transitTimeLabel($transitTimeLabel)
@@ -389,7 +406,7 @@ class OfferShippingDetails extends BaseType implements OfferShippingDetailsContr
      * @return static
      *
      * @see https://schema.org/validForMemberTier
-     * @link https://github.com/schemaorg/schemaorg/issues/3563
+     * @see https://pending.schema.org
      */
     public function validForMemberTier($validForMemberTier)
     {
@@ -399,11 +416,12 @@ class OfferShippingDetails extends BaseType implements OfferShippingDetailsContr
     /**
      * The weight of the product or person.
      *
-     * @param \Spatie\SchemaOrg\Contracts\QuantitativeValueContract|\Spatie\SchemaOrg\Contracts\QuantitativeValueContract[] $weight
+     * @param \Spatie\SchemaOrg\Contracts\MassContract|\Spatie\SchemaOrg\Contracts\MassContract[]|\Spatie\SchemaOrg\Contracts\QuantitativeValueContract|\Spatie\SchemaOrg\Contracts\QuantitativeValueContract[] $weight
      *
      * @return static
      *
      * @see https://schema.org/weight
+     * @link https://github.com/schemaorg/schemaorg/issues/3617
      */
     public function weight($weight)
     {
@@ -418,6 +436,7 @@ class OfferShippingDetails extends BaseType implements OfferShippingDetailsContr
      * @return static
      *
      * @see https://schema.org/width
+     * @link https://github.com/schemaorg/schemaorg/issues/3617
      */
     public function width($width)
     {

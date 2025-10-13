@@ -1197,7 +1197,7 @@ class AggregateOffer extends BaseType implements AggregateOfferContract, Intangi
      * @return static
      *
      * @see https://schema.org/validForMemberTier
-     * @link https://github.com/schemaorg/schemaorg/issues/3563
+     * @see https://pending.schema.org
      */
     public function validForMemberTier($validForMemberTier)
     {
