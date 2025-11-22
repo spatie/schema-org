@@ -31,7 +31,7 @@
         "illuminate/collections": "^8.62.0",
         "league/flysystem": "^2.3.0 || ^3.0",
         "pestphp/pest": "^1.21",
-        "symfony/console": "^5.3.7 || 6.0",
+        "symfony/console": "^5.3.7|^6.0|^7.0|^8.0",
         "twig/twig": "^3.3.3"
     },
     "autoload": {
