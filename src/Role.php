@@ -14,7 +14,7 @@ use Spatie\SchemaOrg\Contracts\ThingContract;
  * properties can be attached to a Role entity, which is then associated with
  * the main entities using ordinary properties like 'member' or 'actor'.
  *
- * See also [blog post](http://blog.schema.org/2014/06/introducing-role.html).
+ * See also [blog post](https://blog.schema.org/2014/06/16/introducing-role/).
  *
  * @see https://schema.org/Role
  *

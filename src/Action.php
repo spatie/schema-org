@@ -12,7 +12,7 @@ use Spatie\SchemaOrg\Contracts\ThingContract;
  * sub-type documentation specifies the exact expectation of each argument/role.
  *
  * See also [blog
- * post](http://blog.schema.org/2014/04/announcing-schemaorg-actions.html) and
+ * post](https://blog.schema.org/2014/04/16/announcing-schema-org-actions/) and
  * [Actions overview document](https://schema.org/docs/actions.html).
  *
  * @see https://schema.org/Action
