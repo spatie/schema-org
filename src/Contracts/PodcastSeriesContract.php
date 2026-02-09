@@ -262,6 +262,8 @@ interface PodcastSeriesContract
 
     public function webFeed($webFeed);
 
+    public function wordCount($wordCount);
+
     public function workExample($workExample);
 
     public function workTranslation($workTranslation);

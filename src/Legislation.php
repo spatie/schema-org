@@ -12,7 +12,6 @@ use Spatie\SchemaOrg\Contracts\ThingContract;
  *
  * @see https://schema.org/Legislation
  * @see https://pending.schema.org
- * @link https://github.com/schemaorg/schemaorg/issues/1156
  *
  */
 class Legislation extends BaseType implements LegislationContract, CreativeWorkContract, ThingContract
@@ -1283,6 +1282,22 @@ class Legislation extends BaseType implements LegislationContract, CreativeWorkC
     }
 
     /**
+     * Another legislation that this legislation amends, introducing legal
+     * changes.
+     *
+     * @param \Spatie\SchemaOrg\Contracts\LegislationContract|\Spatie\SchemaOrg\Contracts\LegislationContract[] $legislationAmends
+     *
+     * @return static
+     *
+     * @see https://schema.org/legislationAmends
+     * @see https://pending.schema.org
+     */
+    public function legislationAmends($legislationAmends)
+    {
+        return $this->setProperty('legislationAmends', $legislationAmends);
+    }
+
+    /**
      * Indicates that this legislation (or part of a legislation) somehow
      * transfers another legislation in a different legislative context. This is
      * an informative link, and it has no legal value. For legally-binding links
@@ -1297,7 +1312,6 @@ class Legislation extends BaseType implements LegislationContract, CreativeWorkC
      *
      * @see https://schema.org/legislationApplies
      * @see https://pending.schema.org
-     * @link https://github.com/schemaorg/schemaorg/issues/1156
      */
     public function legislationApplies($legislationApplies)
     {
@@ -1320,11 +1334,25 @@ class Legislation extends BaseType implements LegislationContract, CreativeWorkC
      *
      * @see https://schema.org/legislationChanges
      * @see https://pending.schema.org
-     * @link https://github.com/schemaorg/schemaorg/issues/1156
      */
     public function legislationChanges($legislationChanges)
     {
         return $this->setProperty('legislationChanges', $legislationChanges);
+    }
+
+    /**
+     * Another legislation that this one sets into force.
+     *
+     * @param \Spatie\SchemaOrg\Contracts\LegislationContract|\Spatie\SchemaOrg\Contracts\LegislationContract[] $legislationCommences
+     *
+     * @return static
+     *
+     * @see https://schema.org/legislationCommences
+     * @see https://pending.schema.org
+     */
+    public function legislationCommences($legislationCommences)
+    {
+        return $this->setProperty('legislationCommences', $legislationCommences);
     }
 
     /**
@@ -1340,11 +1368,47 @@ class Legislation extends BaseType implements LegislationContract, CreativeWorkC
      *
      * @see https://schema.org/legislationConsolidates
      * @see https://pending.schema.org
-     * @link https://github.com/schemaorg/schemaorg/issues/1156
      */
     public function legislationConsolidates($legislationConsolidates)
     {
         return $this->setProperty('legislationConsolidates', $legislationConsolidates);
+    }
+
+    /**
+     * Another legislation in which this one introduces textual changes, like
+     * correction of spelling mistakes, with no legal impact (for modifications
+     * that have legal impact, use [legislationAmends](/legislationAmends)).
+     *
+     * @param \Spatie\SchemaOrg\Contracts\LegislationContract|\Spatie\SchemaOrg\Contracts\LegislationContract[] $legislationCorrects
+     *
+     * @return static
+     *
+     * @see https://schema.org/legislationCorrects
+     * @see https://pending.schema.org
+     */
+    public function legislationCorrects($legislationCorrects)
+    {
+        return $this->setProperty('legislationCorrects', $legislationCorrects);
+    }
+
+    /**
+     * The person or organization that countersigned the legislation. Depending
+     * on the legal context, a countersignature can indicate that the signed
+     * authority undertakes to assume responsibility for texts emanating from a
+     * person who is inviolable and irresponsible, (for example a King, Grand
+     * Duc or President), or that the authority is in charge of the
+     * implementation of the text.
+     *
+     * @param \Spatie\SchemaOrg\Contracts\OrganizationContract|\Spatie\SchemaOrg\Contracts\OrganizationContract[]|\Spatie\SchemaOrg\Contracts\PersonContract|\Spatie\SchemaOrg\Contracts\PersonContract[] $legislationCountersignedBy
+     *
+     * @return static
+     *
+     * @see https://schema.org/legislationCountersignedBy
+     * @see https://pending.schema.org
+     */
+    public function legislationCountersignedBy($legislationCountersignedBy)
+    {
+        return $this->setProperty('legislationCountersignedBy', $legislationCountersignedBy);
     }
 
     /**
@@ -1358,11 +1422,27 @@ class Legislation extends BaseType implements LegislationContract, CreativeWorkC
      *
      * @see https://schema.org/legislationDate
      * @see https://pending.schema.org
-     * @link https://github.com/schemaorg/schemaorg/issues/1156
      */
     public function legislationDate($legislationDate)
     {
         return $this->setProperty('legislationDate', $legislationDate);
+    }
+
+    /**
+     * The date at which the Legislation becomes applicable. This can sometimes
+     * be distinct from the date of entry into force : a text may come in force
+     * today, and state it will become applicable in 3 months.
+     *
+     * @param \DateTimeInterface|\DateTimeInterface[] $legislationDateOfApplicability
+     *
+     * @return static
+     *
+     * @see https://schema.org/legislationDateOfApplicability
+     * @see https://pending.schema.org
+     */
+    public function legislationDateOfApplicability($legislationDateOfApplicability)
+    {
+        return $this->setProperty('legislationDateOfApplicability', $legislationDateOfApplicability);
     }
 
     /**
@@ -1377,11 +1457,29 @@ class Legislation extends BaseType implements LegislationContract, CreativeWorkC
      *
      * @see https://schema.org/legislationDateVersion
      * @see https://pending.schema.org
-     * @link https://github.com/schemaorg/schemaorg/issues/1156
      */
     public function legislationDateVersion($legislationDateVersion)
     {
         return $this->setProperty('legislationDateVersion', $legislationDateVersion);
+    }
+
+    /**
+     * Indicates that this Legislation ensures the implementation of another
+     * Legislation, for example by modifying national legislations so that they
+     * do not contradict to an EU regulation or decision. This implies a legal
+     * meaning. Transpositions of EU Directive should be captured with
+     * [legislationTransposes](/legislationTransposes).
+     *
+     * @param \Spatie\SchemaOrg\Contracts\LegislationContract|\Spatie\SchemaOrg\Contracts\LegislationContract[] $legislationEnsuresImplementationOf
+     *
+     * @return static
+     *
+     * @see https://schema.org/legislationEnsuresImplementationOf
+     * @see https://pending.schema.org
+     */
+    public function legislationEnsuresImplementationOf($legislationEnsuresImplementationOf)
+    {
+        return $this->setProperty('legislationEnsuresImplementationOf', $legislationEnsuresImplementationOf);
     }
 
     /**
@@ -1396,7 +1494,6 @@ class Legislation extends BaseType implements LegislationContract, CreativeWorkC
      *
      * @see https://schema.org/legislationIdentifier
      * @see https://pending.schema.org
-     * @link https://github.com/schemaorg/schemaorg/issues/1156
      */
     public function legislationIdentifier($legislationIdentifier)
     {
@@ -1412,7 +1509,6 @@ class Legislation extends BaseType implements LegislationContract, CreativeWorkC
      *
      * @see https://schema.org/legislationJurisdiction
      * @see https://pending.schema.org
-     * @link https://github.com/schemaorg/schemaorg/issues/1156
      */
     public function legislationJurisdiction($legislationJurisdiction)
     {
@@ -1429,7 +1525,6 @@ class Legislation extends BaseType implements LegislationContract, CreativeWorkC
      *
      * @see https://schema.org/legislationLegalForce
      * @see https://pending.schema.org
-     * @link https://github.com/schemaorg/schemaorg/issues/1156
      */
     public function legislationLegalForce($legislationLegalForce)
     {
@@ -1448,11 +1543,25 @@ class Legislation extends BaseType implements LegislationContract, CreativeWorkC
      *
      * @see https://schema.org/legislationPassedBy
      * @see https://pending.schema.org
-     * @link https://github.com/schemaorg/schemaorg/issues/1156
      */
     public function legislationPassedBy($legislationPassedBy)
     {
         return $this->setProperty('legislationPassedBy', $legislationPassedBy);
+    }
+
+    /**
+     * Another legislation that this legislation repeals (cancels, abrogates).
+     *
+     * @param \Spatie\SchemaOrg\Contracts\LegislationContract|\Spatie\SchemaOrg\Contracts\LegislationContract[] $legislationRepeals
+     *
+     * @return static
+     *
+     * @see https://schema.org/legislationRepeals
+     * @see https://pending.schema.org
+     */
+    public function legislationRepeals($legislationRepeals)
+    {
+        return $this->setProperty('legislationRepeals', $legislationRepeals);
     }
 
     /**
@@ -1467,7 +1576,6 @@ class Legislation extends BaseType implements LegislationContract, CreativeWorkC
      *
      * @see https://schema.org/legislationResponsible
      * @see https://pending.schema.org
-     * @link https://github.com/schemaorg/schemaorg/issues/1156
      */
     public function legislationResponsible($legislationResponsible)
     {
@@ -1487,7 +1595,6 @@ class Legislation extends BaseType implements LegislationContract, CreativeWorkC
      *
      * @see https://schema.org/legislationTransposes
      * @see https://pending.schema.org
-     * @link https://github.com/schemaorg/schemaorg/issues/1156
      */
     public function legislationTransposes($legislationTransposes)
     {
@@ -1505,7 +1612,6 @@ class Legislation extends BaseType implements LegislationContract, CreativeWorkC
      *
      * @see https://schema.org/legislationType
      * @see https://pending.schema.org
-     * @link https://github.com/schemaorg/schemaorg/issues/1156
      */
     public function legislationType($legislationType)
     {
@@ -1778,7 +1884,7 @@ class Legislation extends BaseType implements LegislationContract, CreativeWorkC
     }
 
     /**
-     * The publisher of the creative work.
+     * The publisher of the article in question.
      *
      * @param \Spatie\SchemaOrg\Contracts\OrganizationContract|\Spatie\SchemaOrg\Contracts\OrganizationContract[]|\Spatie\SchemaOrg\Contracts\PersonContract|\Spatie\SchemaOrg\Contracts\PersonContract[] $publisher
      *
@@ -2317,6 +2423,21 @@ class Legislation extends BaseType implements LegislationContract, CreativeWorkC
     public function video($video)
     {
         return $this->setProperty('video', $video);
+    }
+
+    /**
+     * The number of words in the text of the CreativeWork such as an Article,
+     * Book, etc.
+     *
+     * @param int|int[] $wordCount
+     *
+     * @return static
+     *
+     * @see https://schema.org/wordCount
+     */
+    public function wordCount($wordCount)
+    {
+        return $this->setProperty('wordCount', $wordCount);
     }
 
     /**

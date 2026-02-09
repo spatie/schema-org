@@ -49,6 +49,23 @@ class BreadcrumbList extends BaseType implements BreadcrumbListContract, Intangi
     }
 
     /**
+     * Indicates a prototype of the elements in the list that is used to hold
+     * aggregate information (ratings, offers, etc.).
+     *
+     * @param \Spatie\SchemaOrg\Contracts\ThingContract|\Spatie\SchemaOrg\Contracts\ThingContract[] $aggregateElement
+     *
+     * @return static
+     *
+     * @see https://schema.org/aggregateElement
+     * @see https://pending.schema.org
+     * @link https://github.com/schemaorg/schemaorg/issues/4321
+     */
+    public function aggregateElement($aggregateElement)
+    {
+        return $this->setProperty('aggregateElement', $aggregateElement);
+    }
+
+    /**
      * An alias for the item.
      *
      * @param string|string[] $alternateName

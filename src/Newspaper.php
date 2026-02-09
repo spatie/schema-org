@@ -1568,7 +1568,7 @@ class Newspaper extends BaseType implements NewspaperContract, CreativeWorkContr
     }
 
     /**
-     * The publisher of the creative work.
+     * The publisher of the article in question.
      *
      * @param \Spatie\SchemaOrg\Contracts\OrganizationContract|\Spatie\SchemaOrg\Contracts\OrganizationContract[]|\Spatie\SchemaOrg\Contracts\PersonContract|\Spatie\SchemaOrg\Contracts\PersonContract[] $publisher
      *
@@ -2123,6 +2123,21 @@ class Newspaper extends BaseType implements NewspaperContract, CreativeWorkContr
     public function video($video)
     {
         return $this->setProperty('video', $video);
+    }
+
+    /**
+     * The number of words in the text of the CreativeWork such as an Article,
+     * Book, etc.
+     *
+     * @param int|int[] $wordCount
+     *
+     * @return static
+     *
+     * @see https://schema.org/wordCount
+     */
+    public function wordCount($wordCount)
+    {
+        return $this->setProperty('wordCount', $wordCount);
     }
 
     /**

@@ -38,6 +38,8 @@ interface CovidTestingFacilityContract
 
     public function brand($brand);
 
+    public function companyRegistration($companyRegistration);
+
     public function contactPoint($contactPoint);
 
     public function contactPoints($contactPoints);
@@ -136,6 +138,8 @@ interface CovidTestingFacilityContract
 
     public function hasProductReturnPolicy($hasProductReturnPolicy);
 
+    public function hasShippingService($hasShippingService);
+
     public function healthPlanNetworkId($healthPlanNetworkId);
 
     public function identifier($identifier);
@@ -160,7 +164,11 @@ interface CovidTestingFacilityContract
 
     public function latitude($latitude);
 
+    public function legalAddress($legalAddress);
+
     public function legalName($legalName);
+
+    public function legalRepresentative($legalRepresentative);
 
     public function leiCode($leiCode);
 

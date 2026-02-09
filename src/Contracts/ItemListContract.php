@@ -6,6 +6,8 @@ interface ItemListContract
 {
     public function additionalType($additionalType);
 
+    public function aggregateElement($aggregateElement);
+
     public function alternateName($alternateName);
 
     public function description($description);

@@ -842,7 +842,7 @@ class AmpStory extends BaseType implements AmpStoryContract, CreativeWorkContrac
      * The duration of the item (movie, audio recording, event, etc.) in [ISO
      * 8601 duration format](http://en.wikipedia.org/wiki/ISO_8601).
      *
-     * @param \Spatie\SchemaOrg\Contracts\DurationContract|\Spatie\SchemaOrg\Contracts\DurationContract[] $duration
+     * @param \Spatie\SchemaOrg\Contracts\DurationContract|\Spatie\SchemaOrg\Contracts\DurationContract[]|\Spatie\SchemaOrg\Contracts\QuantitativeValueContract|\Spatie\SchemaOrg\Contracts\QuantitativeValueContract[] $duration
      *
      * @return static
      *
@@ -1194,6 +1194,7 @@ class AmpStory extends BaseType implements AmpStoryContract, CreativeWorkContrac
      * @return static
      *
      * @see https://schema.org/height
+     * @link https://github.com/schemaorg/schemaorg/issues/3617
      */
     public function height($height)
     {
@@ -1722,7 +1723,7 @@ class AmpStory extends BaseType implements AmpStoryContract, CreativeWorkContrac
     }
 
     /**
-     * The publisher of the creative work.
+     * The publisher of the article in question.
      *
      * @param \Spatie\SchemaOrg\Contracts\OrganizationContract|\Spatie\SchemaOrg\Contracts\OrganizationContract[]|\Spatie\SchemaOrg\Contracts\PersonContract|\Spatie\SchemaOrg\Contracts\PersonContract[] $publisher
      *
@@ -2361,10 +2362,26 @@ class AmpStory extends BaseType implements AmpStoryContract, CreativeWorkContrac
      * @return static
      *
      * @see https://schema.org/width
+     * @link https://github.com/schemaorg/schemaorg/issues/3617
      */
     public function width($width)
     {
         return $this->setProperty('width', $width);
+    }
+
+    /**
+     * The number of words in the text of the CreativeWork such as an Article,
+     * Book, etc.
+     *
+     * @param int|int[] $wordCount
+     *
+     * @return static
+     *
+     * @see https://schema.org/wordCount
+     */
+    public function wordCount($wordCount)
+    {
+        return $this->setProperty('wordCount', $wordCount);
     }
 
     /**

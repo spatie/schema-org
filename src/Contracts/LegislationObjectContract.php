@@ -178,15 +178,27 @@ interface LegislationObjectContract
 
     public function learningResourceType($learningResourceType);
 
+    public function legislationAmends($legislationAmends);
+
     public function legislationApplies($legislationApplies);
 
     public function legislationChanges($legislationChanges);
 
+    public function legislationCommences($legislationCommences);
+
     public function legislationConsolidates($legislationConsolidates);
+
+    public function legislationCorrects($legislationCorrects);
+
+    public function legislationCountersignedBy($legislationCountersignedBy);
 
     public function legislationDate($legislationDate);
 
+    public function legislationDateOfApplicability($legislationDateOfApplicability);
+
     public function legislationDateVersion($legislationDateVersion);
+
+    public function legislationEnsuresImplementationOf($legislationEnsuresImplementationOf);
 
     public function legislationIdentifier($legislationIdentifier);
 
@@ -197,6 +209,8 @@ interface LegislationObjectContract
     public function legislationLegalValue($legislationLegalValue);
 
     public function legislationPassedBy($legislationPassedBy);
+
+    public function legislationRepeals($legislationRepeals);
 
     public function legislationResponsible($legislationResponsible);
 
@@ -315,6 +329,8 @@ interface LegislationObjectContract
     public function video($video);
 
     public function width($width);
+
+    public function wordCount($wordCount);
 
     public function workExample($workExample);
 

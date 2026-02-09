@@ -261,7 +261,7 @@ class SportsEvent extends BaseType implements SportsEventContract, EventContract
      * The duration of the item (movie, audio recording, event, etc.) in [ISO
      * 8601 duration format](http://en.wikipedia.org/wiki/ISO_8601).
      *
-     * @param \Spatie\SchemaOrg\Contracts\DurationContract|\Spatie\SchemaOrg\Contracts\DurationContract[] $duration
+     * @param \Spatie\SchemaOrg\Contracts\DurationContract|\Spatie\SchemaOrg\Contracts\DurationContract[]|\Spatie\SchemaOrg\Contracts\QuantitativeValueContract|\Spatie\SchemaOrg\Contracts\QuantitativeValueContract[] $duration
      *
      * @return static
      *
@@ -683,6 +683,23 @@ class SportsEvent extends BaseType implements SportsEventContract, EventContract
     public function recordedIn($recordedIn)
     {
         return $this->setProperty('recordedIn', $recordedIn);
+    }
+
+    /**
+     * An official who watches a game or match closely to enforce the rules and
+     * arbitrate on matters arising from the play such as referees, umpires or
+     * judges. The name of the effective function can vary according to the
+     * sport.
+     *
+     * @param \Spatie\SchemaOrg\Contracts\PersonContract|\Spatie\SchemaOrg\Contracts\PersonContract[] $referee
+     *
+     * @return static
+     *
+     * @see https://schema.org/referee
+     */
+    public function referee($referee)
+    {
+        return $this->setProperty('referee', $referee);
     }
 
     /**

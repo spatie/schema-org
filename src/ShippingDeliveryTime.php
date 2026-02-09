@@ -58,12 +58,11 @@ class ShippingDeliveryTime extends BaseType implements ShippingDeliveryTimeContr
      * Days of the week when the merchant typically operates, indicated via
      * opening hours markup.
      *
-     * @param \Spatie\SchemaOrg\Contracts\OpeningHoursSpecificationContract|\Spatie\SchemaOrg\Contracts\OpeningHoursSpecificationContract[] $businessDays
+     * @param \Spatie\SchemaOrg\Contracts\DayOfWeekContract|\Spatie\SchemaOrg\Contracts\DayOfWeekContract[]|\Spatie\SchemaOrg\Contracts\OpeningHoursSpecificationContract|\Spatie\SchemaOrg\Contracts\OpeningHoursSpecificationContract[] $businessDays
      *
      * @return static
      *
      * @see https://schema.org/businessDays
-     * @link https://github.com/schemaorg/schemaorg/issues/2506
      */
     public function businessDays($businessDays)
     {
@@ -85,7 +84,6 @@ class ShippingDeliveryTime extends BaseType implements ShippingDeliveryTimeContr
      * @return static
      *
      * @see https://schema.org/cutoffTime
-     * @link https://github.com/schemaorg/schemaorg/issues/2506
      */
     public function cutoffTime($cutoffTime)
     {
@@ -126,17 +124,22 @@ class ShippingDeliveryTime extends BaseType implements ShippingDeliveryTimeContr
     /**
      * The typical delay between the receipt of the order and the goods either
      * leaving the warehouse or being prepared for pickup, in case the delivery
-     * method is on site pickup. Typical properties: minValue, maxValue,
-     * unitCode (d for DAY).  This is by common convention assumed to mean
-     * business days (if a unitCode is used, coded as "d"), i.e. only counting
-     * days when the business normally operates.
+     * method is on site pickup.
      *
-     * @param \Spatie\SchemaOrg\Contracts\QuantitativeValueContract|\Spatie\SchemaOrg\Contracts\QuantitativeValueContract[] $handlingTime
+     * In the context of [[ShippingDeliveryTime]], Typical properties: minValue,
+     * maxValue, unitCode (d for DAY).  This is by common convention assumed to
+     * mean business days (if a unitCode is used, coded as "d"), i.e. only
+     * counting days when the business normally operates.
+     *
+     * In the context of [[ShippingService]], use the [[ServicePeriod]] format,
+     * that contains the same information in a structured form, with cut-off
+     * time, business days and duration.
+     *
+     * @param \Spatie\SchemaOrg\Contracts\QuantitativeValueContract|\Spatie\SchemaOrg\Contracts\QuantitativeValueContract[]|\Spatie\SchemaOrg\Contracts\ServicePeriodContract|\Spatie\SchemaOrg\Contracts\ServicePeriodContract[] $handlingTime
      *
      * @return static
      *
      * @see https://schema.org/handlingTime
-     * @link https://github.com/schemaorg/schemaorg/issues/2506
      */
     public function handlingTime($handlingTime)
     {
@@ -254,15 +257,21 @@ class ShippingDeliveryTime extends BaseType implements ShippingDeliveryTimeContr
 
     /**
      * The typical delay the order has been sent for delivery and the goods
-     * reach the final customer. Typical properties: minValue, maxValue,
-     * unitCode (d for DAY).
+     * reach the final customer.
      *
-     * @param \Spatie\SchemaOrg\Contracts\QuantitativeValueContract|\Spatie\SchemaOrg\Contracts\QuantitativeValueContract[] $transitTime
+     *   In the context of [[ShippingDeliveryTime]], use the
+     * [[QuantitativeValue]]. Typical properties: minValue, maxValue, unitCode
+     * (d for DAY).
+     *
+     *   In the context of [[ShippingConditions]], use the [[ServicePeriod]]. It
+     * has a duration (as a [[QuantitativeValue]]) and also business days and a
+     * cut-off time.
+     *
+     * @param \Spatie\SchemaOrg\Contracts\QuantitativeValueContract|\Spatie\SchemaOrg\Contracts\QuantitativeValueContract[]|\Spatie\SchemaOrg\Contracts\ServicePeriodContract|\Spatie\SchemaOrg\Contracts\ServicePeriodContract[] $transitTime
      *
      * @return static
      *
      * @see https://schema.org/transitTime
-     * @link https://github.com/schemaorg/schemaorg/issues/2506
      */
     public function transitTime($transitTime)
     {

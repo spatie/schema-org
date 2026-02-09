@@ -254,6 +254,8 @@ interface PresentationDigitalDocumentContract
 
     public function video($video);
 
+    public function wordCount($wordCount);
+
     public function workExample($workExample);
 
     public function workTranslation($workTranslation);

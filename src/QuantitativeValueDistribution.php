@@ -88,7 +88,7 @@ class QuantitativeValueDistribution extends BaseType implements QuantitativeValu
      * The duration of the item (movie, audio recording, event, etc.) in [ISO
      * 8601 duration format](http://en.wikipedia.org/wiki/ISO_8601).
      *
-     * @param \Spatie\SchemaOrg\Contracts\DurationContract|\Spatie\SchemaOrg\Contracts\DurationContract[] $duration
+     * @param \Spatie\SchemaOrg\Contracts\DurationContract|\Spatie\SchemaOrg\Contracts\DurationContract[]|\Spatie\SchemaOrg\Contracts\QuantitativeValueContract|\Spatie\SchemaOrg\Contracts\QuantitativeValueContract[] $duration
      *
      * @return static
      *

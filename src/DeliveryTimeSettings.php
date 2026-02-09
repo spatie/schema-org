@@ -16,6 +16,7 @@ use Spatie\SchemaOrg\Contracts\ThingContract;
  * [[transitTimeLabel]].
  *
  * @see https://schema.org/DeliveryTimeSettings
+ * @see https://attic.schema.org
  * @link https://github.com/schemaorg/schemaorg/issues/2506
  *
  */
@@ -230,7 +231,6 @@ class DeliveryTimeSettings extends BaseType implements DeliveryTimeSettingsContr
      * @return static
      *
      * @see https://schema.org/shippingDestination
-     * @link https://github.com/schemaorg/schemaorg/issues/2506
      */
     public function shippingDestination($shippingDestination)
     {
@@ -262,6 +262,7 @@ class DeliveryTimeSettings extends BaseType implements DeliveryTimeSettingsContr
      * @return static
      *
      * @see https://schema.org/transitTimeLabel
+     * @see https://attic.schema.org
      * @link https://github.com/schemaorg/schemaorg/issues/2506
      */
     public function transitTimeLabel($transitTimeLabel)

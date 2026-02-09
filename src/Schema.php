@@ -887,6 +887,11 @@ class Schema
         return new CookAction();
     }
 
+    public static function cooperative(): Cooperative
+    {
+        return new Cooperative();
+    }
+
     public static function corporation(): Corporation
     {
         return new Corporation();
@@ -1477,6 +1482,11 @@ class Schema
         return new FilmAction();
     }
 
+    public static function financialIncentive(): FinancialIncentive
+    {
+        return new FinancialIncentive();
+    }
+
     public static function financialProduct(): FinancialProduct
     {
         return new FinancialProduct();
@@ -1540,6 +1550,11 @@ class Schema
     public static function foodService(): FoodService
     {
         return new FoodService();
+    }
+
+    public static function fulfillmentTypeEnumeration(): FulfillmentTypeEnumeration
+    {
+        return new FulfillmentTypeEnumeration();
     }
 
     public static function fundingAgency(): FundingAgency
@@ -1885,6 +1900,21 @@ class Schema
     public static function imagingTest(): ImagingTest
     {
         return new ImagingTest();
+    }
+
+    public static function incentiveQualifiedExpenseType(): IncentiveQualifiedExpenseType
+    {
+        return new IncentiveQualifiedExpenseType();
+    }
+
+    public static function incentiveStatus(): IncentiveStatus
+    {
+        return new IncentiveStatus();
+    }
+
+    public static function incentiveType(): IncentiveType
+    {
+        return new IncentiveType();
     }
 
     public static function individualPhysician(): IndividualPhysician
@@ -2837,6 +2867,11 @@ class Schema
         return new OnlineBusiness();
     }
 
+    public static function onlineMarketplace(): OnlineMarketplace
+    {
+        return new OnlineMarketplace();
+    }
+
     public static function onlineStore(): OnlineStore
     {
         return new OnlineStore();
@@ -3312,6 +3347,11 @@ class Schema
         return new PublicationVolume();
     }
 
+    public static function purchaseType(): PurchaseType
+    {
+        return new PurchaseType();
+    }
+
     public static function qAPage(): QAPage
     {
         return new QAPage();
@@ -3747,6 +3787,11 @@ class Schema
         return new ServiceChannel();
     }
 
+    public static function servicePeriod(): ServicePeriod
+    {
+        return new ServicePeriod();
+    }
+
     public static function shareAction(): ShareAction
     {
         return new ShareAction();
@@ -3757,6 +3802,11 @@ class Schema
         return new SheetMusic();
     }
 
+    public static function shippingConditions(): ShippingConditions
+    {
+        return new ShippingConditions();
+    }
+
     public static function shippingDeliveryTime(): ShippingDeliveryTime
     {
         return new ShippingDeliveryTime();
@@ -3765,6 +3815,11 @@ class Schema
     public static function shippingRateSettings(): ShippingRateSettings
     {
         return new ShippingRateSettings();
+    }
+
+    public static function shippingService(): ShippingService
+    {
+        return new ShippingService();
     }
 
     public static function shoeStore(): ShoeStore

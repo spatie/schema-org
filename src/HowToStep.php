@@ -225,6 +225,23 @@ class HowToStep extends BaseType implements HowToStepContract, CreativeWorkContr
     }
 
     /**
+     * Indicates a prototype of the elements in the list that is used to hold
+     * aggregate information (ratings, offers, etc.).
+     *
+     * @param \Spatie\SchemaOrg\Contracts\ThingContract|\Spatie\SchemaOrg\Contracts\ThingContract[] $aggregateElement
+     *
+     * @return static
+     *
+     * @see https://schema.org/aggregateElement
+     * @see https://pending.schema.org
+     * @link https://github.com/schemaorg/schemaorg/issues/4321
+     */
+    public function aggregateElement($aggregateElement)
+    {
+        return $this->setProperty('aggregateElement', $aggregateElement);
+    }
+
+    /**
      * The overall rating, based on a collection of reviews or ratings, of the
      * item.
      *
@@ -1630,7 +1647,7 @@ class HowToStep extends BaseType implements HowToStepContract, CreativeWorkContr
     }
 
     /**
-     * The publisher of the creative work.
+     * The publisher of the article in question.
      *
      * @param \Spatie\SchemaOrg\Contracts\OrganizationContract|\Spatie\SchemaOrg\Contracts\OrganizationContract[]|\Spatie\SchemaOrg\Contracts\PersonContract|\Spatie\SchemaOrg\Contracts\PersonContract[] $publisher
      *
@@ -2169,6 +2186,21 @@ class HowToStep extends BaseType implements HowToStepContract, CreativeWorkContr
     public function video($video)
     {
         return $this->setProperty('video', $video);
+    }
+
+    /**
+     * The number of words in the text of the CreativeWork such as an Article,
+     * Book, etc.
+     *
+     * @param int|int[] $wordCount
+     *
+     * @return static
+     *
+     * @see https://schema.org/wordCount
+     */
+    public function wordCount($wordCount)
+    {
+        return $this->setProperty('wordCount', $wordCount);
     }
 
     /**

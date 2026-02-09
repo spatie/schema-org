@@ -379,6 +379,7 @@ class MotorizedBicycle extends BaseType implements MotorizedBicycleContract, Pro
      * @return static
      *
      * @see https://schema.org/depth
+     * @link https://github.com/schemaorg/schemaorg/issues/3617
      */
     public function depth($depth)
     {
@@ -805,6 +806,7 @@ class MotorizedBicycle extends BaseType implements MotorizedBicycleContract, Pro
      * @return static
      *
      * @see https://schema.org/height
+     * @link https://github.com/schemaorg/schemaorg/issues/3617
      */
     public function height($height)
     {
@@ -1870,11 +1872,12 @@ class MotorizedBicycle extends BaseType implements MotorizedBicycleContract, Pro
     /**
      * The weight of the product or person.
      *
-     * @param \Spatie\SchemaOrg\Contracts\QuantitativeValueContract|\Spatie\SchemaOrg\Contracts\QuantitativeValueContract[] $weight
+     * @param \Spatie\SchemaOrg\Contracts\MassContract|\Spatie\SchemaOrg\Contracts\MassContract[]|\Spatie\SchemaOrg\Contracts\QuantitativeValueContract|\Spatie\SchemaOrg\Contracts\QuantitativeValueContract[] $weight
      *
      * @return static
      *
      * @see https://schema.org/weight
+     * @link https://github.com/schemaorg/schemaorg/issues/3617
      */
     public function weight($weight)
     {
@@ -1932,6 +1935,7 @@ class MotorizedBicycle extends BaseType implements MotorizedBicycleContract, Pro
      * @return static
      *
      * @see https://schema.org/width
+     * @link https://github.com/schemaorg/schemaorg/issues/3617
      */
     public function width($width)
     {
