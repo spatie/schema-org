@@ -2,6 +2,18 @@
 
 All Notable changes to `schema-org` will be documented in this file.
 
+## 4.0.0 - 2026-02-09
+
+### What's Changed
+
+- Upgrade schema.org definitions to v29.3 (#238 by @Soean)
+- Drop PHP 8.0 and 8.1 support (now requires PHP ^8.2)
+- Add PHP 8.5 support
+- Add `JSON_UNESCAPED_SLASHES` to `toScript()` output
+- Upgrade dev dependencies (Pest 2/3, PHPUnit 10, Symfony 6/7)
+- Upgrade phpunit.xml.dist to PHPUnit 10 format
+- Add return type declarations to generator commands
+
 ## 3.23.1 - 2025-01-31
 
 ### What's Changed
