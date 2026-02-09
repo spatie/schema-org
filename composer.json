@@ -22,7 +22,7 @@
     ],
     "homepage": "https://github.com/spatie/schema-org",
     "require": {
-        "php": "^8.1",
+        "php": "^8.2",
         "ext-json": "*"
     },
     "require-dev": {
@@ -30,7 +30,7 @@
         "graham-campbell/analyzer": "^5.0.0",
         "illuminate/collections": "^10",
         "league/flysystem": "^3.30",
-        "pestphp/pest": "^2.36",
+        "pestphp/pest": "^2.36.1 || ^3.0",
         "symfony/console": "^6.0 || ^7.3.4",
         "twig/twig": "^3.21.1"
     },
