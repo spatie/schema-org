@@ -2,6 +2,14 @@
 
 All Notable changes to `schema-org` will be documented in this file.
 
+## 4.0.1 - 2026-04-16
+
+### What's Changed
+
+* Resolve @id without cascading toArray() in ReferencedType by @freekmurze in https://github.com/spatie/schema-org/pull/241
+
+**Full Changelog**: https://github.com/spatie/schema-org/compare/4.0.0...4.0.1
+
 ## 4.0.0 - 2026-02-09
 
 ### What's Changed
