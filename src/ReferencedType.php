@@ -17,8 +17,23 @@ class ReferencedType implements Type, JsonSerializable
     public function toArray(): array
     {
         return [
-            '@id' => $this->type->toArray()['@id'] ?? null,
+            '@id' => $this->resolveIdentifier(),
         ];
+    }
+
+    protected function resolveIdentifier()
+    {
+        if (! $this->type instanceof BaseType) {
+            return $this->type->toArray()['@id'] ?? null;
+        }
+
+        $identifier = $this->type->getProperty('identifier');
+
+        if ($identifier === null || $identifier instanceof Type) {
+            $identifier = $this->type->getProperty('@id');
+        }
+
+        return $identifier instanceof Type ? null : $identifier;
     }
 
     public function toScript(): string

@@ -332,6 +332,23 @@ it('can reference type by identifier', function () {
     expect($type2->toArray())->toBe($expected);
 });
 
+it('can reference two types that reference each other without looping', function () {
+    $type1 = new DummyType();
+    $type1->setProperty('identifier', '#1');
+    $type2 = new AnotherDummyType();
+    $type2->setProperty('identifier', '#2');
+
+    $type1->setProperty('partner', $type2->referenced());
+    $type2->setProperty('partner', $type1->referenced());
+
+    expect($type1->toArray())->toBe([
+        '@context' => 'https://schema.org',
+        '@type' => 'DummyType',
+        'partner' => ['@id' => '#2'],
+        '@id' => '#1',
+    ]);
+});
+
 class DummyType extends BaseType
 {
 }
