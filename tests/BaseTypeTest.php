@@ -162,6 +162,18 @@ it('can create an ld json script tag', function () {
     expect($type->toScript())->toBe($expected);
 });
 
+it('escapes html tags in property values to prevent script break-out', function () {
+    $type = new DummyType();
+
+    $type->setProperty('foo', '</script><script>alert(1)</script>');
+
+    $expected = '<script type="application/ld+json">'.
+        '{"@context":"https://schema.org","@type":"DummyType","foo":"\u003C/script\u003E\u003Cscript\u003Ealert(1)\u003C/script\u003E"}'.
+        '</script>';
+
+    expect($type->toScript())->toBe($expected);
+});
+
 it('can create an ld json script tag with nonce attribute', function () {
     $type = new DummyType();
 
