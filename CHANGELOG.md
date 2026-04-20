@@ -2,6 +2,16 @@
 
 All Notable changes to `schema-org` will be documented in this file.
 
+## 4.0.2 - 2026-04-20
+
+### What's Changed
+
+* Escape HTML tags in `toScript()` output to prevent script break-out by @freekmurze in https://github.com/spatie/schema-org/pull/242
+
+Values containing `</script>` passed as schema properties could break out of the generated `<script type="application/ld+json">` block and execute injected HTML when the value was attacker-controlled. `toScript()` now emits `<` and `>` as `\u003C` / `\u003E`, which is valid JSON-LD and is no longer parsed as an HTML tag by the browser. Affects 3.23.1 through 4.0.1.
+
+**Full Changelog**: https://github.com/spatie/schema-org/compare/4.0.1...4.0.2
+
 ## 4.0.1 - 2026-04-16
 
 ### What's Changed
