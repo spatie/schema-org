@@ -2,6 +2,18 @@
 
 All Notable changes to `schema-org` will be documented in this file.
 
+## 3.23.2 - 2026-05-29
+
+### What's Changed
+
+Backport of the `</script>` break-out fix (#242) onto the 3.x line, so projects still on `spatie/schema-org` 3.x can apply the security patch without upgrading to 4.x.
+
+`toScript()` now adds `JSON_HEX_TAG` to the `json_encode` flags, so `<` and `>` in property values are serialized as `<` / `>`. This is valid JSON-LD but cannot be parsed as an HTML tag, neutralizing the break-out vector reported in the advisory (affected: 3.23.1 through 4.0.1).
+
+Thanks to @hacklian for reporting (#243) and supplying the backport patch.
+
+**Full Changelog**: https://github.com/spatie/schema-org/compare/3.23.1...3.23.2
+
 ## 4.0.2 - 2026-04-20
 
 ### What's Changed
