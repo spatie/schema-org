@@ -214,6 +214,21 @@ class Trip extends BaseType implements TripContract, IntangibleContract, ThingCo
     }
 
     /**
+     * A person or organization who owns this Thing.
+     *
+     * @param \Spatie\SchemaOrg\Contracts\OrganizationContract|\Spatie\SchemaOrg\Contracts\OrganizationContract[]|\Spatie\SchemaOrg\Contracts\PersonContract|\Spatie\SchemaOrg\Contracts\PersonContract[] $owner
+     *
+     * @return static
+     *
+     * @see https://schema.org/owner
+     * @link https://github.com/schemaorg/schemaorg/issues/4603
+     */
+    public function owner($owner)
+    {
+        return $this->setProperty('owner', $owner);
+    }
+
+    /**
      * Identifies that this [[Trip]] is a subTrip of another Trip.  For example
      * Day 1, Day 2, etc. of a multi-day trip.
      *

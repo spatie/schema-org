@@ -104,6 +104,8 @@ interface MediaReviewContract
 
     public function discussionUrl($discussionUrl);
 
+    public function displayLocation($displayLocation);
+
     public function editEIDR($editEIDR);
 
     public function editor($editor);
@@ -191,6 +193,8 @@ interface MediaReviewContract
     public function originalMediaContextDescription($originalMediaContextDescription);
 
     public function originalMediaLink($originalMediaLink);
+
+    public function owner($owner);
 
     public function pattern($pattern);
 

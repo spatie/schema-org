@@ -24,6 +24,8 @@ interface TaxonContract
 
     public function name($name);
 
+    public function owner($owner);
+
     public function parentTaxon($parentTaxon);
 
     public function potentialAction($potentialAction);

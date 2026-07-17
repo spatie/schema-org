@@ -237,6 +237,21 @@ class Occupation extends BaseType implements OccupationContract, IntangibleContr
     }
 
     /**
+     * A person or organization who owns this Thing.
+     *
+     * @param \Spatie\SchemaOrg\Contracts\OrganizationContract|\Spatie\SchemaOrg\Contracts\OrganizationContract[]|\Spatie\SchemaOrg\Contracts\PersonContract|\Spatie\SchemaOrg\Contracts\PersonContract[] $owner
+     *
+     * @return static
+     *
+     * @see https://schema.org/owner
+     * @link https://github.com/schemaorg/schemaorg/issues/4603
+     */
+    public function owner($owner)
+    {
+        return $this->setProperty('owner', $owner);
+    }
+
+    /**
      * Indicates a potential Action, which describes an idealized action in
      * which this thing would play an 'object' role.
      *
@@ -254,7 +269,7 @@ class Occupation extends BaseType implements OccupationContract, IntangibleContr
     /**
      * Specific qualifications required for this role or Occupation.
      *
-     * @param \Spatie\SchemaOrg\Contracts\EducationalOccupationalCredentialContract|\Spatie\SchemaOrg\Contracts\EducationalOccupationalCredentialContract[]|string|string[] $qualifications
+     * @param \Spatie\SchemaOrg\Contracts\CredentialContract|\Spatie\SchemaOrg\Contracts\CredentialContract[]|string|string[] $qualifications
      *
      * @return static
      *

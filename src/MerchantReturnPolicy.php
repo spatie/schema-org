@@ -359,6 +359,21 @@ class MerchantReturnPolicy extends BaseType implements MerchantReturnPolicyContr
     }
 
     /**
+     * A person or organization who owns this Thing.
+     *
+     * @param \Spatie\SchemaOrg\Contracts\OrganizationContract|\Spatie\SchemaOrg\Contracts\OrganizationContract[]|\Spatie\SchemaOrg\Contracts\PersonContract|\Spatie\SchemaOrg\Contracts\PersonContract[] $owner
+     *
+     * @return static
+     *
+     * @see https://schema.org/owner
+     * @link https://github.com/schemaorg/schemaorg/issues/4603
+     */
+    public function owner($owner)
+    {
+        return $this->setProperty('owner', $owner);
+    }
+
+    /**
      * Indicates a potential Action, which describes an idealized action in
      * which this thing would play an 'object' role.
      *
@@ -572,7 +587,7 @@ class MerchantReturnPolicy extends BaseType implements MerchantReturnPolicyContr
     }
 
     /**
-     * The membership program tier an Offer (or a PriceSpecification,
+     * The membership program tier(s) an Offer (or a PriceSpecification,
      * OfferShippingDetails, or MerchantReturnPolicy under an Offer) is valid
      * for.
      *

@@ -171,7 +171,7 @@ class FinancialIncentive extends BaseType implements FinancialIncentiveContract,
      *         “maxValue”: 7500,
      *         "unitCode": "USD"
      *     }
-     * <p>[[QuantitivateValue]] can also be used for percentage amounts. In such
+     * <p>[[QuantitativeValue]] can also be used for percentage amounts. In such
      * cases, value is used to represent the incentive’s percentage, while
      * maxValue represents a limit (if one exists) to that incentive. The
      * unitCode should be 'P1' and the unitText should be '%', while
@@ -374,6 +374,21 @@ class FinancialIncentive extends BaseType implements FinancialIncentiveContract,
     public function name($name)
     {
         return $this->setProperty('name', $name);
+    }
+
+    /**
+     * A person or organization who owns this Thing.
+     *
+     * @param \Spatie\SchemaOrg\Contracts\OrganizationContract|\Spatie\SchemaOrg\Contracts\OrganizationContract[]|\Spatie\SchemaOrg\Contracts\PersonContract|\Spatie\SchemaOrg\Contracts\PersonContract[] $owner
+     *
+     * @return static
+     *
+     * @see https://schema.org/owner
+     * @link https://github.com/schemaorg/schemaorg/issues/4603
+     */
+    public function owner($owner)
+    {
+        return $this->setProperty('owner', $owner);
     }
 
     /**

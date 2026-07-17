@@ -72,6 +72,21 @@ class MedicalSign extends BaseType implements MedicalSignContract, MedicalCondit
     }
 
     /**
+     * The cause of a medical condition.
+     *
+     * @param \Spatie\SchemaOrg\Contracts\MedicalCauseContract|\Spatie\SchemaOrg\Contracts\MedicalCauseContract[] $cause
+     *
+     * @return static
+     *
+     * @see https://schema.org/cause
+     * @see https://health-lifesci.schema.org
+     */
+    public function cause($cause)
+    {
+        return $this->setProperty('cause', $cause);
+    }
+
+    /**
      * A medical code for the entity, taken from a controlled vocabulary or
      * ontology such as ICD-9, DiseasesDB, MeSH, SNOMED-CT, RxNorm, etc.
      *
@@ -359,6 +374,21 @@ class MedicalSign extends BaseType implements MedicalSignContract, MedicalCondit
     }
 
     /**
+     * A person or organization who owns this Thing.
+     *
+     * @param \Spatie\SchemaOrg\Contracts\OrganizationContract|\Spatie\SchemaOrg\Contracts\OrganizationContract[]|\Spatie\SchemaOrg\Contracts\PersonContract|\Spatie\SchemaOrg\Contracts\PersonContract[] $owner
+     *
+     * @return static
+     *
+     * @see https://schema.org/owner
+     * @link https://github.com/schemaorg/schemaorg/issues/4603
+     */
+    public function owner($owner)
+    {
+        return $this->setProperty('owner', $owner);
+    }
+
+    /**
      * Changes in the normal mechanical, physical, and biochemical functions
      * that are associated with this activity or condition.
      *
@@ -394,7 +424,7 @@ class MedicalSign extends BaseType implements MedicalSignContract, MedicalCondit
     /**
      * A possible treatment to address this condition, sign or symptom.
      *
-     * @param \Spatie\SchemaOrg\Contracts\MedicalTherapyContract|\Spatie\SchemaOrg\Contracts\MedicalTherapyContract[] $possibleTreatment
+     * @param \Spatie\SchemaOrg\Contracts\DrugContract|\Spatie\SchemaOrg\Contracts\DrugClassContract|\Spatie\SchemaOrg\Contracts\DrugClassContract[]|\Spatie\SchemaOrg\Contracts\DrugContract[]|\Spatie\SchemaOrg\Contracts\LifestyleModificationContract|\Spatie\SchemaOrg\Contracts\LifestyleModificationContract[]|\Spatie\SchemaOrg\Contracts\MedicalTherapyContract|\Spatie\SchemaOrg\Contracts\MedicalTherapyContract[] $possibleTreatment
      *
      * @return static
      *
@@ -504,7 +534,7 @@ class MedicalSign extends BaseType implements MedicalSignContract, MedicalCondit
      * A preventative therapy used to prevent reoccurrence of the medical
      * condition after an initial episode of the condition.
      *
-     * @param \Spatie\SchemaOrg\Contracts\MedicalTherapyContract|\Spatie\SchemaOrg\Contracts\MedicalTherapyContract[] $secondaryPrevention
+     * @param \Spatie\SchemaOrg\Contracts\DrugContract|\Spatie\SchemaOrg\Contracts\DrugClassContract|\Spatie\SchemaOrg\Contracts\DrugClassContract[]|\Spatie\SchemaOrg\Contracts\DrugContract[]|\Spatie\SchemaOrg\Contracts\LifestyleModificationContract|\Spatie\SchemaOrg\Contracts\LifestyleModificationContract[]|\Spatie\SchemaOrg\Contracts\MedicalTherapyContract|\Spatie\SchemaOrg\Contracts\MedicalTherapyContract[] $secondaryPrevention
      *
      * @return static
      *

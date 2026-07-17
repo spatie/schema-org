@@ -48,6 +48,8 @@ interface MuscleContract
 
     public function nerve($nerve);
 
+    public function owner($owner);
+
     public function partOfSystem($partOfSystem);
 
     public function potentialAction($potentialAction);

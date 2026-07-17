@@ -15,14 +15,13 @@ use Spatie\SchemaOrg\Contracts\ThingContract;
 class EducationEvent extends BaseType implements EducationEventContract, EventContract, ThingContract
 {
     /**
-     * The subject matter of the content.
+     * The subject matter of an object.
      *
      * @param \Spatie\SchemaOrg\Contracts\ThingContract|\Spatie\SchemaOrg\Contracts\ThingContract[] $about
      *
      * @return static
      *
      * @see https://schema.org/about
-     * @link https://github.com/schemaorg/schemaorg/issues/1670
      */
     public function about($about)
     {
@@ -390,6 +389,40 @@ class EducationEvent extends BaseType implements EducationEventContract, EventCo
     }
 
     /**
+     * An offer to participate in the event, for example, Call for Proposals,
+     * Call for Speakers, or Call for Performers.
+     *
+     * @param \Spatie\SchemaOrg\Contracts\OfferContract|\Spatie\SchemaOrg\Contracts\OfferContract[] $hasParticipationOffer
+     *
+     * @return static
+     *
+     * @see https://schema.org/hasParticipationOffer
+     * @see https://pending.schema.org
+     * @link https://github.com/schemaorg/schemaorg/issues/4495
+     */
+    public function hasParticipationOffer($hasParticipationOffer)
+    {
+        return $this->setProperty('hasParticipationOffer', $hasParticipationOffer);
+    }
+
+    /**
+     * An offer to sponsor the event, for example, Sponsorship Prospectus,
+     * Sponsorship Opportunities, or Sponsor Packages.
+     *
+     * @param \Spatie\SchemaOrg\Contracts\OfferContract|\Spatie\SchemaOrg\Contracts\OfferContract[] $hasSponsorshipOffer
+     *
+     * @return static
+     *
+     * @see https://schema.org/hasSponsorshipOffer
+     * @see https://pending.schema.org
+     * @link https://github.com/schemaorg/schemaorg/issues/4495
+     */
+    public function hasSponsorshipOffer($hasSponsorshipOffer)
+    {
+        return $this->setProperty('hasSponsorshipOffer', $hasSponsorshipOffer);
+    }
+
+    /**
      * The identifier property represents any kind of identifier for any kind of
      * [[Thing]], such as ISBNs, GTIN codes, UUIDs etc. Schema.org provides
      * dedicated properties for representing many of these, either as textual
@@ -599,6 +632,21 @@ class EducationEvent extends BaseType implements EducationEventContract, EventCo
     public function organizer($organizer)
     {
         return $this->setProperty('organizer', $organizer);
+    }
+
+    /**
+     * A person or organization who owns this Thing.
+     *
+     * @param \Spatie\SchemaOrg\Contracts\OrganizationContract|\Spatie\SchemaOrg\Contracts\OrganizationContract[]|\Spatie\SchemaOrg\Contracts\PersonContract|\Spatie\SchemaOrg\Contracts\PersonContract[] $owner
+     *
+     * @return static
+     *
+     * @see https://schema.org/owner
+     * @link https://github.com/schemaorg/schemaorg/issues/4603
+     */
+    public function owner($owner)
+    {
+        return $this->setProperty('owner', $owner);
     }
 
     /**

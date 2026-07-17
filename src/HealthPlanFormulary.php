@@ -88,7 +88,7 @@ class HealthPlanFormulary extends BaseType implements HealthPlanFormularyContrac
     /**
      * The costs to the patient for services under this network or formulary.
      *
-     * @param bool|bool[] $healthPlanCostSharing
+     * @param \Spatie\SchemaOrg\Contracts\HealthPlanCostSharingSpecificationContract|\Spatie\SchemaOrg\Contracts\HealthPlanCostSharingSpecificationContract[]|bool|bool[] $healthPlanCostSharing
      *
      * @return static
      *
@@ -194,6 +194,21 @@ class HealthPlanFormulary extends BaseType implements HealthPlanFormularyContrac
     public function offersPrescriptionByMail($offersPrescriptionByMail)
     {
         return $this->setProperty('offersPrescriptionByMail', $offersPrescriptionByMail);
+    }
+
+    /**
+     * A person or organization who owns this Thing.
+     *
+     * @param \Spatie\SchemaOrg\Contracts\OrganizationContract|\Spatie\SchemaOrg\Contracts\OrganizationContract[]|\Spatie\SchemaOrg\Contracts\PersonContract|\Spatie\SchemaOrg\Contracts\PersonContract[] $owner
+     *
+     * @return static
+     *
+     * @see https://schema.org/owner
+     * @link https://github.com/schemaorg/schemaorg/issues/4603
+     */
+    public function owner($owner)
+    {
+        return $this->setProperty('owner', $owner);
     }
 
     /**

@@ -54,6 +54,8 @@ interface JobPostingContract
 
     public function jobBenefits($jobBenefits);
 
+    public function jobDuration($jobDuration);
+
     public function jobImmediateStart($jobImmediateStart);
 
     public function jobLocation($jobLocation);
@@ -67,6 +69,8 @@ interface JobPostingContract
     public function name($name);
 
     public function occupationalCategory($occupationalCategory);
+
+    public function owner($owner);
 
     public function physicalRequirement($physicalRequirement);
 

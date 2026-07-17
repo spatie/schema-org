@@ -4,6 +4,8 @@ namespace Spatie\SchemaOrg\Contracts;
 
 interface DefinedTermContract
 {
+    public function about($about);
+
     public function additionalType($additionalType);
 
     public function alternateName($alternateName);
@@ -21,6 +23,8 @@ interface DefinedTermContract
     public function mainEntityOfPage($mainEntityOfPage);
 
     public function name($name);
+
+    public function owner($owner);
 
     public function potentialAction($potentialAction);
 

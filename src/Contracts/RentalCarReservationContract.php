@@ -32,6 +32,8 @@ interface RentalCarReservationContract
 
     public function name($name);
 
+    public function owner($owner);
+
     public function pickupLocation($pickupLocation);
 
     public function pickupTime($pickupTime);

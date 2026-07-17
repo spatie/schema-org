@@ -292,6 +292,21 @@ class Ligament extends BaseType implements LigamentContract, AnatomicalStructure
     }
 
     /**
+     * A person or organization who owns this Thing.
+     *
+     * @param \Spatie\SchemaOrg\Contracts\OrganizationContract|\Spatie\SchemaOrg\Contracts\OrganizationContract[]|\Spatie\SchemaOrg\Contracts\PersonContract|\Spatie\SchemaOrg\Contracts\PersonContract[] $owner
+     *
+     * @return static
+     *
+     * @see https://schema.org/owner
+     * @link https://github.com/schemaorg/schemaorg/issues/4603
+     */
+    public function owner($owner)
+    {
+        return $this->setProperty('owner', $owner);
+    }
+
+    /**
      * The anatomical or organ system that this structure is part of.
      *
      * @param \Spatie\SchemaOrg\Contracts\AnatomicalSystemContract|\Spatie\SchemaOrg\Contracts\AnatomicalSystemContract[] $partOfSystem

@@ -104,6 +104,8 @@ interface CompleteDataFeedContract
 
     public function discussionUrl($discussionUrl);
 
+    public function displayLocation($displayLocation);
+
     public function distribution($distribution);
 
     public function editEIDR($editEIDR);
@@ -193,6 +195,8 @@ interface CompleteDataFeedContract
     public function name($name);
 
     public function offers($offers);
+
+    public function owner($owner);
 
     public function pattern($pattern);
 

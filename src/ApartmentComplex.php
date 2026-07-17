@@ -274,6 +274,25 @@ class ApartmentComplex extends BaseType implements ApartmentComplexContract, Pla
     }
 
     /**
+     * The floor level for an [[Accommodation]] in a multi-storey building.
+     * Since counting
+     *   systems [vary
+     * internationally](https://en.wikipedia.org/wiki/Storey#Consecutive_number_floor_designations),
+     * the local system should be used where possible.
+     *
+     * @param string|string[] $floorLevel
+     *
+     * @return static
+     *
+     * @see https://schema.org/floorLevel
+     * @see https://pending.schema.org
+     */
+    public function floorLevel($floorLevel)
+    {
+        return $this->setProperty('floorLevel', $floorLevel);
+    }
+
+    /**
      * The geo coordinates of the place.
      *
      * @param \Spatie\SchemaOrg\Contracts\GeoCoordinatesContract|\Spatie\SchemaOrg\Contracts\GeoCoordinatesContract[]|\Spatie\SchemaOrg\Contracts\GeoShapeContract|\Spatie\SchemaOrg\Contracts\GeoShapeContract[] $geo
@@ -521,10 +540,10 @@ class ApartmentComplex extends BaseType implements ApartmentComplexContract, Pla
      * correct granularity. In particular, for products:<ul>* A Digital Link
      * that contains a serial number (AI ```21```) should only be present on
      * instances of [[IndividualProduct]]* A Digital Link that contains a lot
-     * number (AI ```10```) should be annotated as [[SomeProduct]] if only
+     * number (AI ```10```) should be annotated as [[SomeProducts]] if only
      * products from that lot are sold, or [[IndividualProduct]] if there is
      * only a specific product.* A Digital Link that contains a global model
-     * number (AI ```8013```)  should be attached to a [[Product]] or a
+     * number (AI ```8013```) should be attached to a [[Product]] or a
      * [[ProductModel]]. Other item types should be adapted similarly.
      *
      * @param string|string[] $hasGS1DigitalLink
@@ -816,6 +835,21 @@ class ApartmentComplex extends BaseType implements ApartmentComplexContract, Pla
     public function openingHoursSpecification($openingHoursSpecification)
     {
         return $this->setProperty('openingHoursSpecification', $openingHoursSpecification);
+    }
+
+    /**
+     * A person or organization who owns this Thing.
+     *
+     * @param \Spatie\SchemaOrg\Contracts\OrganizationContract|\Spatie\SchemaOrg\Contracts\OrganizationContract[]|\Spatie\SchemaOrg\Contracts\PersonContract|\Spatie\SchemaOrg\Contracts\PersonContract[] $owner
+     *
+     * @return static
+     *
+     * @see https://schema.org/owner
+     * @link https://github.com/schemaorg/schemaorg/issues/4603
+     */
+    public function owner($owner)
+    {
+        return $this->setProperty('owner', $owner);
     }
 
     /**

@@ -42,6 +42,8 @@ interface NerveContract
 
     public function nerveMotor($nerveMotor);
 
+    public function owner($owner);
+
     public function partOfSystem($partOfSystem);
 
     public function potentialAction($potentialAction);

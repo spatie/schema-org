@@ -106,6 +106,8 @@ interface MusicAlbumContract
 
     public function discussionUrl($discussionUrl);
 
+    public function displayLocation($displayLocation);
+
     public function editEIDR($editEIDR);
 
     public function editor($editor);
@@ -185,6 +187,8 @@ interface MusicAlbumContract
     public function numTracks($numTracks);
 
     public function offers($offers);
+
+    public function owner($owner);
 
     public function pattern($pattern);
 

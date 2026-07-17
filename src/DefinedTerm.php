@@ -11,7 +11,8 @@ use Spatie\SchemaOrg\Contracts\ThingContract;
  * the context of category or subject classification, glossaries or
  * dictionaries, product or creative work types, etc. Use the name property for
  * the term being defined, use termCode if the term has an alpha-numeric code
- * allocated, use description to provide the definition of the term.
+ * allocated, use description to provide the definition of the term. Use the
+ * about property to specify what the term is about.
  *
  * @see https://schema.org/DefinedTerm
  * @see https://pending.schema.org
@@ -20,6 +21,20 @@ use Spatie\SchemaOrg\Contracts\ThingContract;
  */
 class DefinedTerm extends BaseType implements DefinedTermContract, IntangibleContract, ThingContract
 {
+    /**
+     * The subject matter of an object.
+     *
+     * @param \Spatie\SchemaOrg\Contracts\ThingContract|\Spatie\SchemaOrg\Contracts\ThingContract[] $about
+     *
+     * @return static
+     *
+     * @see https://schema.org/about
+     */
+    public function about($about)
+    {
+        return $this->setProperty('about', $about);
+    }
+
     /**
      * An additional type for the item, typically used for adding more specific
      * types from external vocabularies in microdata syntax. This is a
@@ -165,6 +180,21 @@ class DefinedTerm extends BaseType implements DefinedTermContract, IntangibleCon
     public function name($name)
     {
         return $this->setProperty('name', $name);
+    }
+
+    /**
+     * A person or organization who owns this Thing.
+     *
+     * @param \Spatie\SchemaOrg\Contracts\OrganizationContract|\Spatie\SchemaOrg\Contracts\OrganizationContract[]|\Spatie\SchemaOrg\Contracts\PersonContract|\Spatie\SchemaOrg\Contracts\PersonContract[] $owner
+     *
+     * @return static
+     *
+     * @see https://schema.org/owner
+     * @link https://github.com/schemaorg/schemaorg/issues/4603
+     */
+    public function owner($owner)
+    {
+        return $this->setProperty('owner', $owner);
     }
 
     /**

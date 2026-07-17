@@ -574,10 +574,10 @@ class OfferForPurchase extends BaseType implements OfferForPurchaseContract, Int
      * correct granularity. In particular, for products:<ul>* A Digital Link
      * that contains a serial number (AI ```21```) should only be present on
      * instances of [[IndividualProduct]]* A Digital Link that contains a lot
-     * number (AI ```10```) should be annotated as [[SomeProduct]] if only
+     * number (AI ```10```) should be annotated as [[SomeProducts]] if only
      * products from that lot are sold, or [[IndividualProduct]] if there is
      * only a specific product.* A Digital Link that contains a global model
-     * number (AI ```8013```)  should be attached to a [[Product]] or a
+     * number (AI ```8013```) should be attached to a [[Product]] or a
      * [[ProductModel]]. Other item types should be adapted similarly.
      *
      * @param string|string[] $hasGS1DigitalLink
@@ -870,6 +870,21 @@ class OfferForPurchase extends BaseType implements OfferForPurchaseContract, Int
     }
 
     /**
+     * A person or organization who owns this Thing.
+     *
+     * @param \Spatie\SchemaOrg\Contracts\OrganizationContract|\Spatie\SchemaOrg\Contracts\OrganizationContract[]|\Spatie\SchemaOrg\Contracts\PersonContract|\Spatie\SchemaOrg\Contracts\PersonContract[] $owner
+     *
+     * @return static
+     *
+     * @see https://schema.org/owner
+     * @link https://github.com/schemaorg/schemaorg/issues/4603
+     */
+    public function owner($owner)
+    {
+        return $this->setProperty('owner', $owner);
+    }
+
+    /**
      * Indicates a potential Action, which describes an idealized action in
      * which this thing would play an 'object' role.
      *
@@ -1109,7 +1124,7 @@ class OfferForPurchase extends BaseType implements OfferForPurchaseContract, Int
     }
 
     /**
-     * The membership program tier an Offer (or a PriceSpecification,
+     * The membership program tier(s) an Offer (or a PriceSpecification,
      * OfferShippingDetails, or MerchantReturnPolicy under an Offer) is valid
      * for.
      *

@@ -48,6 +48,8 @@ interface ChemicalSubstanceContract
 
     public function name($name);
 
+    public function owner($owner);
+
     public function potentialAction($potentialAction);
 
     public function potentialUse($potentialUse);

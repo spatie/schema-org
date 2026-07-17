@@ -17,14 +17,13 @@ use Spatie\SchemaOrg\Contracts\ThingContract;
 class MobileApplication extends BaseType implements MobileApplicationContract, CreativeWorkContract, SoftwareApplicationContract, ThingContract
 {
     /**
-     * The subject matter of the content.
+     * The subject matter of an object.
      *
      * @param \Spatie\SchemaOrg\Contracts\ThingContract|\Spatie\SchemaOrg\Contracts\ThingContract[] $about
      *
      * @return static
      *
      * @see https://schema.org/about
-     * @link https://github.com/schemaorg/schemaorg/issues/1670
      */
     public function about($about)
     {
@@ -49,8 +48,9 @@ class MobileApplication extends BaseType implements MobileApplicationContract, C
 
     /**
      * The human sensory perceptual system or cognitive faculty through which a
-     * person may process or perceive information. Values should be drawn from
-     * the [approved
+     * person may process or perceive the intellectual content of a resource,
+     * not including any adaptations of the content (e.g., text alternatives for
+     * images). Values should be drawn from the [approved
      * vocabulary](https://www.w3.org/2021/a11y-discov-vocab/latest/#accessMode-vocabulary).
      *
      * @param string|string[] $accessMode
@@ -66,9 +66,9 @@ class MobileApplication extends BaseType implements MobileApplicationContract, C
     }
 
     /**
-     * A list of single or combined accessModes that are sufficient to
-     * understand all the intellectual content of a resource. Values should be
-     * drawn from the [approved
+     * A list of single or combined access modes that are sufficient to
+     * understand all the intellectual content of a resource, including any
+     * adaptations. Values should be drawn from the [approved
      * vocabulary](https://www.w3.org/2021/a11y-discov-vocab/latest/#accessModeSufficient-vocabulary).
      *
      * @param \Spatie\SchemaOrg\Contracts\ItemListContract|\Spatie\SchemaOrg\Contracts\ItemListContract[] $accessModeSufficient
@@ -898,6 +898,22 @@ class MobileApplication extends BaseType implements MobileApplicationContract, C
     }
 
     /**
+     * The location at which an item can be viewed or experienced in-person.
+     *
+     * @param \Spatie\SchemaOrg\Contracts\PlaceContract|\Spatie\SchemaOrg\Contracts\PlaceContract[] $displayLocation
+     *
+     * @return static
+     *
+     * @see https://schema.org/displayLocation
+     * @see https://pending.schema.org
+     * @link https://github.com/schemaorg/schemaorg/issues/4513
+     */
+    public function displayLocation($displayLocation)
+    {
+        return $this->setProperty('displayLocation', $displayLocation);
+    }
+
+    /**
      * If the file can be downloaded, URL to download the binary.
      *
      * @param string|string[] $downloadUrl
@@ -1180,7 +1196,7 @@ class MobileApplication extends BaseType implements MobileApplicationContract, C
     /**
      * Genre of the creative work, broadcast channel or group.
      *
-     * @param string|string[] $genre
+     * @param \Spatie\SchemaOrg\Contracts\DefinedTermContract|\Spatie\SchemaOrg\Contracts\DefinedTermContract[]|string|string[] $genre
      *
      * @return static
      *
@@ -1630,7 +1646,7 @@ class MobileApplication extends BaseType implements MobileApplicationContract, C
     /**
      * Operating systems supported (Windows 7, OS X 10.6, Android 1.6).
      *
-     * @param string|string[] $operatingSystem
+     * @param \Spatie\SchemaOrg\Contracts\OperatingSystemContract|\Spatie\SchemaOrg\Contracts\OperatingSystemContract[]|string|string[] $operatingSystem
      *
      * @return static
      *
@@ -1639,6 +1655,21 @@ class MobileApplication extends BaseType implements MobileApplicationContract, C
     public function operatingSystem($operatingSystem)
     {
         return $this->setProperty('operatingSystem', $operatingSystem);
+    }
+
+    /**
+     * A person or organization who owns this Thing.
+     *
+     * @param \Spatie\SchemaOrg\Contracts\OrganizationContract|\Spatie\SchemaOrg\Contracts\OrganizationContract[]|\Spatie\SchemaOrg\Contracts\PersonContract|\Spatie\SchemaOrg\Contracts\PersonContract[] $owner
+     *
+     * @return static
+     *
+     * @see https://schema.org/owner
+     * @link https://github.com/schemaorg/schemaorg/issues/4603
+     */
+    public function owner($owner)
+    {
+        return $this->setProperty('owner', $owner);
     }
 
     /**
@@ -1906,6 +1937,21 @@ class MobileApplication extends BaseType implements MobileApplicationContract, C
     }
 
     /**
+     * Runtime platform or script interpreter dependencies (example: Java v1,
+     * Python 2.3, .NET Framework 3.0).
+     *
+     * @param \Spatie\SchemaOrg\Contracts\RuntimePlatformContract|\Spatie\SchemaOrg\Contracts\RuntimePlatformContract[]|string|string[] $runtimePlatform
+     *
+     * @return static
+     *
+     * @see https://schema.org/runtimePlatform
+     */
+    public function runtimePlatform($runtimePlatform)
+    {
+        return $this->setProperty('runtimePlatform', $runtimePlatform);
+    }
+
+    /**
      * URL of a reference Web page that unambiguously indicates the item's
      * identity. E.g. the URL of the item's Wikipedia page, Wikidata entry, or
      * official website.
@@ -2067,7 +2113,7 @@ class MobileApplication extends BaseType implements MobileApplicationContract, C
      * application distribution package, but required to run the application
      * (examples: DirectX, Java or .NET runtime).
      *
-     * @param string|string[] $softwareRequirements
+     * @param \Spatie\SchemaOrg\Contracts\SoftwareApplicationContract|\Spatie\SchemaOrg\Contracts\SoftwareApplicationContract[]|string|string[] $softwareRequirements
      *
      * @return static
      *

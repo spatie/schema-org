@@ -24,6 +24,8 @@ interface QuantitativeValueDistributionContract
 
     public function name($name);
 
+    public function owner($owner);
+
     public function percentile10($percentile10);
 
     public function percentile25($percentile25);

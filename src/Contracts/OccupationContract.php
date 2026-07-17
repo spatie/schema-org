@@ -30,6 +30,8 @@ interface OccupationContract
 
     public function occupationalCategory($occupationalCategory);
 
+    public function owner($owner);
+
     public function potentialAction($potentialAction);
 
     public function qualifications($qualifications);

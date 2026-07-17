@@ -102,6 +102,8 @@ interface PersonContract
 
     public function knowsLanguage($knowsLanguage);
 
+    public function lifeEvent($lifeEvent);
+
     public function mainEntityOfPage($mainEntityOfPage);
 
     public function makesOffer($makesOffer);
@@ -115,6 +117,8 @@ interface PersonContract
     public function nationality($nationality);
 
     public function netWorth($netWorth);
+
+    public function owner($owner);
 
     public function owns($owns);
 

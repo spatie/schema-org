@@ -28,6 +28,8 @@ interface TripContract
 
     public function offers($offers);
 
+    public function owner($owner);
+
     public function partOfTrip($partOfTrip);
 
     public function potentialAction($potentialAction);

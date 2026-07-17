@@ -76,6 +76,8 @@ interface CreditCardContract
 
     public function offers($offers);
 
+    public function owner($owner);
+
     public function paymentMethodType($paymentMethodType);
 
     public function potentialAction($potentialAction);

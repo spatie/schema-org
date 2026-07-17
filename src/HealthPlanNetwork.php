@@ -87,7 +87,7 @@ class HealthPlanNetwork extends BaseType implements HealthPlanNetworkContract, I
     /**
      * The costs to the patient for services under this network or formulary.
      *
-     * @param bool|bool[] $healthPlanCostSharing
+     * @param \Spatie\SchemaOrg\Contracts\HealthPlanCostSharingSpecificationContract|\Spatie\SchemaOrg\Contracts\HealthPlanCostSharingSpecificationContract[]|bool|bool[] $healthPlanCostSharing
      *
      * @return static
      *
@@ -194,6 +194,21 @@ class HealthPlanNetwork extends BaseType implements HealthPlanNetworkContract, I
     public function name($name)
     {
         return $this->setProperty('name', $name);
+    }
+
+    /**
+     * A person or organization who owns this Thing.
+     *
+     * @param \Spatie\SchemaOrg\Contracts\OrganizationContract|\Spatie\SchemaOrg\Contracts\OrganizationContract[]|\Spatie\SchemaOrg\Contracts\PersonContract|\Spatie\SchemaOrg\Contracts\PersonContract[] $owner
+     *
+     * @return static
+     *
+     * @see https://schema.org/owner
+     * @link https://github.com/schemaorg/schemaorg/issues/4603
+     */
+    public function owner($owner)
+    {
+        return $this->setProperty('owner', $owner);
     }
 
     /**

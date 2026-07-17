@@ -112,6 +112,8 @@ interface ReviewNewsArticleContract
 
     public function discussionUrl($discussionUrl);
 
+    public function displayLocation($displayLocation);
+
     public function editEIDR($editEIDR);
 
     public function editor($editor);
@@ -193,6 +195,8 @@ interface ReviewNewsArticleContract
     public function negativeNotes($negativeNotes);
 
     public function offers($offers);
+
+    public function owner($owner);
 
     public function pageEnd($pageEnd);
 

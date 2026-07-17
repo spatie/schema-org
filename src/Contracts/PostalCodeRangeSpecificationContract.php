@@ -20,6 +20,8 @@ interface PostalCodeRangeSpecificationContract
 
     public function name($name);
 
+    public function owner($owner);
+
     public function postalCodeBegin($postalCodeBegin);
 
     public function postalCodeEnd($postalCodeEnd);

@@ -118,6 +118,8 @@ interface HouseContract
 
     public function openingHoursSpecification($openingHoursSpecification);
 
+    public function owner($owner);
+
     public function permittedUsage($permittedUsage);
 
     public function petsAllowed($petsAllowed);

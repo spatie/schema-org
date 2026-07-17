@@ -46,6 +46,8 @@ interface WorkBasedProgramContract
 
     public function offers($offers);
 
+    public function owner($owner);
+
     public function potentialAction($potentialAction);
 
     public function programPrerequisites($programPrerequisites);

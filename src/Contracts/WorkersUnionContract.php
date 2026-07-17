@@ -142,6 +142,8 @@ interface WorkersUnionContract
 
     public function numberOfEmployees($numberOfEmployees);
 
+    public function owner($owner);
+
     public function ownershipFundingInfo($ownershipFundingInfo);
 
     public function owns($owns);

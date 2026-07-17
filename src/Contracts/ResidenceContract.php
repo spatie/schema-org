@@ -36,6 +36,8 @@ interface ResidenceContract
 
     public function faxNumber($faxNumber);
 
+    public function floorLevel($floorLevel);
+
     public function geo($geo);
 
     public function geoContains($geoContains);
@@ -95,6 +97,8 @@ interface ResidenceContract
     public function name($name);
 
     public function openingHoursSpecification($openingHoursSpecification);
+
+    public function owner($owner);
 
     public function photo($photo);
 

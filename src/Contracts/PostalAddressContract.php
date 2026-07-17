@@ -42,6 +42,8 @@ interface PostalAddressContract
 
     public function name($name);
 
+    public function owner($owner);
+
     public function postOfficeBoxNumber($postOfficeBoxNumber);
 
     public function postalCode($postalCode);

@@ -40,6 +40,8 @@ interface ChooseActionContract
 
     public function option($option);
 
+    public function owner($owner);
+
     public function participant($participant);
 
     public function potentialAction($potentialAction);

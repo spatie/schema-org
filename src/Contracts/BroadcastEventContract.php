@@ -50,6 +50,10 @@ interface BroadcastEventContract
 
     public function funding($funding);
 
+    public function hasParticipationOffer($hasParticipationOffer);
+
+    public function hasSponsorshipOffer($hasSponsorshipOffer);
+
     public function identifier($identifier);
 
     public function image($image);
@@ -77,6 +81,8 @@ interface BroadcastEventContract
     public function offers($offers);
 
     public function organizer($organizer);
+
+    public function owner($owner);
 
     public function performer($performer);
 

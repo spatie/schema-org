@@ -80,6 +80,8 @@ interface GeneralContractorContract
 
     public function faxNumber($faxNumber);
 
+    public function floorLevel($floorLevel);
+
     public function founder($founder);
 
     public function founders($founders);
@@ -199,6 +201,8 @@ interface GeneralContractorContract
     public function openingHours($openingHours);
 
     public function openingHoursSpecification($openingHoursSpecification);
+
+    public function owner($owner);
 
     public function ownershipFundingInfo($ownershipFundingInfo);
 

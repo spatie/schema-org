@@ -28,6 +28,8 @@ interface LinkRoleContract
 
     public function namedPosition($namedPosition);
 
+    public function owner($owner);
+
     public function potentialAction($potentialAction);
 
     public function roleName($roleName);

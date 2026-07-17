@@ -230,6 +230,21 @@ class CompoundPriceSpecification extends BaseType implements CompoundPriceSpecif
     }
 
     /**
+     * A person or organization who owns this Thing.
+     *
+     * @param \Spatie\SchemaOrg\Contracts\OrganizationContract|\Spatie\SchemaOrg\Contracts\OrganizationContract[]|\Spatie\SchemaOrg\Contracts\PersonContract|\Spatie\SchemaOrg\Contracts\PersonContract[] $owner
+     *
+     * @return static
+     *
+     * @see https://schema.org/owner
+     * @link https://github.com/schemaorg/schemaorg/issues/4603
+     */
+    public function owner($owner)
+    {
+        return $this->setProperty('owner', $owner);
+    }
+
+    /**
      * Indicates a potential Action, which describes an idealized action in
      * which this thing would play an 'object' role.
      *
@@ -285,7 +300,7 @@ class CompoundPriceSpecification extends BaseType implements CompoundPriceSpecif
      * This property links to all [[UnitPriceSpecification]] nodes that apply in
      * parallel for the [[CompoundPriceSpecification]] node.
      *
-     * @param \Spatie\SchemaOrg\Contracts\UnitPriceSpecificationContract|\Spatie\SchemaOrg\Contracts\UnitPriceSpecificationContract[] $priceComponent
+     * @param \Spatie\SchemaOrg\Contracts\PriceSpecificationContract|\Spatie\SchemaOrg\Contracts\PriceSpecificationContract[] $priceComponent
      *
      * @return static
      *
@@ -325,8 +340,9 @@ class CompoundPriceSpecification extends BaseType implements CompoundPriceSpecif
      * price. If multiple prices are specified for an offer the [[priceType]]
      * property can be used to identify the type of each such specified price.
      * The value of priceType can be specified as a value from enumeration
-     * PriceTypeEnumeration or as a free form text string for price types that
-     * are not already predefined in PriceTypeEnumeration.
+     * PriceTypeEnumeration or, a UN/EDIFACT 5387 code, or as a free form text
+     * string for price types that are not already predefined in
+     * PriceTypeEnumeration.
      *
      * @param \Spatie\SchemaOrg\Contracts\PriceTypeEnumerationContract|\Spatie\SchemaOrg\Contracts\PriceTypeEnumerationContract[]|string|string[] $priceType
      *
@@ -385,7 +401,7 @@ class CompoundPriceSpecification extends BaseType implements CompoundPriceSpecif
     }
 
     /**
-     * The membership program tier an Offer (or a PriceSpecification,
+     * The membership program tier(s) an Offer (or a PriceSpecification,
      * OfferShippingDetails, or MerchantReturnPolicy under an Offer) is valid
      * for.
      *

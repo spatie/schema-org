@@ -160,6 +160,7 @@ class GiveAction extends BaseType implements GiveActionContract, ActionContract,
 
     /**
      * For failed actions, more information on the cause of the failure.
+     * Consider using the Error type.
      *
      * @param \Spatie\SchemaOrg\Contracts\ThingContract|\Spatie\SchemaOrg\Contracts\ThingContract[] $error
      *
@@ -295,6 +296,21 @@ class GiveAction extends BaseType implements GiveActionContract, ActionContract,
     public function object($object)
     {
         return $this->setProperty('object', $object);
+    }
+
+    /**
+     * A person or organization who owns this Thing.
+     *
+     * @param \Spatie\SchemaOrg\Contracts\OrganizationContract|\Spatie\SchemaOrg\Contracts\OrganizationContract[]|\Spatie\SchemaOrg\Contracts\PersonContract|\Spatie\SchemaOrg\Contracts\PersonContract[] $owner
+     *
+     * @return static
+     *
+     * @see https://schema.org/owner
+     * @link https://github.com/schemaorg/schemaorg/issues/4603
+     */
+    public function owner($owner)
+    {
+        return $this->setProperty('owner', $owner);
     }
 
     /**

@@ -22,14 +22,13 @@ use Spatie\SchemaOrg\Contracts\ThingContract;
 class Guide extends BaseType implements GuideContract, CreativeWorkContract, ThingContract
 {
     /**
-     * The subject matter of the content.
+     * The subject matter of an object.
      *
      * @param \Spatie\SchemaOrg\Contracts\ThingContract|\Spatie\SchemaOrg\Contracts\ThingContract[] $about
      *
      * @return static
      *
      * @see https://schema.org/about
-     * @link https://github.com/schemaorg/schemaorg/issues/1670
      */
     public function about($about)
     {
@@ -54,8 +53,9 @@ class Guide extends BaseType implements GuideContract, CreativeWorkContract, Thi
 
     /**
      * The human sensory perceptual system or cognitive faculty through which a
-     * person may process or perceive information. Values should be drawn from
-     * the [approved
+     * person may process or perceive the intellectual content of a resource,
+     * not including any adaptations of the content (e.g., text alternatives for
+     * images). Values should be drawn from the [approved
      * vocabulary](https://www.w3.org/2021/a11y-discov-vocab/latest/#accessMode-vocabulary).
      *
      * @param string|string[] $accessMode
@@ -71,9 +71,9 @@ class Guide extends BaseType implements GuideContract, CreativeWorkContract, Thi
     }
 
     /**
-     * A list of single or combined accessModes that are sufficient to
-     * understand all the intellectual content of a resource. Values should be
-     * drawn from the [approved
+     * A list of single or combined access modes that are sufficient to
+     * understand all the intellectual content of a resource, including any
+     * adaptations. Values should be drawn from the [approved
      * vocabulary](https://www.w3.org/2021/a11y-discov-vocab/latest/#accessModeSufficient-vocabulary).
      *
      * @param \Spatie\SchemaOrg\Contracts\ItemListContract|\Spatie\SchemaOrg\Contracts\ItemListContract[] $accessModeSufficient
@@ -393,6 +393,21 @@ class Guide extends BaseType implements GuideContract, CreativeWorkContract, Thi
     public function awards($awards)
     {
         return $this->setProperty('awards', $awards);
+    }
+
+    /**
+     * A category for the item. Greater signs or slashes can be used to
+     * informally indicate a category hierarchy.
+     *
+     * @param \Spatie\SchemaOrg\Contracts\CategoryCodeContract|\Spatie\SchemaOrg\Contracts\CategoryCodeContract[]|\Spatie\SchemaOrg\Contracts\PhysicalActivityCategoryContract|\Spatie\SchemaOrg\Contracts\PhysicalActivityCategoryContract[]|\Spatie\SchemaOrg\Contracts\ThingContract|\Spatie\SchemaOrg\Contracts\ThingContract[]|string|string[] $category
+     *
+     * @return static
+     *
+     * @see https://schema.org/category
+     */
+    public function category($category)
+    {
+        return $this->setProperty('category', $category);
     }
 
     /**
@@ -785,6 +800,22 @@ class Guide extends BaseType implements GuideContract, CreativeWorkContract, Thi
     }
 
     /**
+     * The location at which an item can be viewed or experienced in-person.
+     *
+     * @param \Spatie\SchemaOrg\Contracts\PlaceContract|\Spatie\SchemaOrg\Contracts\PlaceContract[] $displayLocation
+     *
+     * @return static
+     *
+     * @see https://schema.org/displayLocation
+     * @see https://pending.schema.org
+     * @link https://github.com/schemaorg/schemaorg/issues/4513
+     */
+    public function displayLocation($displayLocation)
+    {
+        return $this->setProperty('displayLocation', $displayLocation);
+    }
+
+    /**
      * An [EIDR](https://eidr.org/) (Entertainment Identifier Registry)
      * [[identifier]] representing a specific edit / edition for a work of film
      * or television.
@@ -1023,7 +1054,7 @@ class Guide extends BaseType implements GuideContract, CreativeWorkContract, Thi
     /**
      * Genre of the creative work, broadcast channel or group.
      *
-     * @param string|string[] $genre
+     * @param \Spatie\SchemaOrg\Contracts\DefinedTermContract|\Spatie\SchemaOrg\Contracts\DefinedTermContract[]|string|string[] $genre
      *
      * @return static
      *
@@ -1442,6 +1473,21 @@ class Guide extends BaseType implements GuideContract, CreativeWorkContract, Thi
     }
 
     /**
+     * A person or organization who owns this Thing.
+     *
+     * @param \Spatie\SchemaOrg\Contracts\OrganizationContract|\Spatie\SchemaOrg\Contracts\OrganizationContract[]|\Spatie\SchemaOrg\Contracts\PersonContract|\Spatie\SchemaOrg\Contracts\PersonContract[] $owner
+     *
+     * @return static
+     *
+     * @see https://schema.org/owner
+     * @link https://github.com/schemaorg/schemaorg/issues/4603
+     */
+    public function owner($owner)
+    {
+        return $this->setProperty('owner', $owner);
+    }
+
+    /**
      * A pattern that something has, for example 'polka dot', 'striped',
      * 'Canadian flag'. Values are typically expressed as text, although links
      * to controlled value schemes are also supported.
@@ -1635,7 +1681,7 @@ class Guide extends BaseType implements GuideContract, CreativeWorkContract, Thi
      * This Review or Rating is relevant to this part or facet of the
      * itemReviewed.
      *
-     * @param string|string[] $reviewAspect
+     * @param \Spatie\SchemaOrg\Contracts\StructuredValueContract|\Spatie\SchemaOrg\Contracts\StructuredValueContract[]|string|string[] $reviewAspect
      *
      * @return static
      *

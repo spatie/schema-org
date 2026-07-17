@@ -280,6 +280,21 @@ class GeoCircle extends BaseType implements GeoCircleContract, GeoShapeContract,
     }
 
     /**
+     * A person or organization who owns this Thing.
+     *
+     * @param \Spatie\SchemaOrg\Contracts\OrganizationContract|\Spatie\SchemaOrg\Contracts\OrganizationContract[]|\Spatie\SchemaOrg\Contracts\PersonContract|\Spatie\SchemaOrg\Contracts\PersonContract[] $owner
+     *
+     * @return static
+     *
+     * @see https://schema.org/owner
+     * @link https://github.com/schemaorg/schemaorg/issues/4603
+     */
+    public function owner($owner)
+    {
+        return $this->setProperty('owner', $owner);
+    }
+
+    /**
      * A polygon is the area enclosed by a point-to-point path for which the
      * starting and ending points are the same. A polygon is expressed as a
      * series of four or more space delimited points where the first and final

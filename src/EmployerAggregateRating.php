@@ -193,6 +193,21 @@ class EmployerAggregateRating extends BaseType implements EmployerAggregateRatin
     }
 
     /**
+     * A person or organization who owns this Thing.
+     *
+     * @param \Spatie\SchemaOrg\Contracts\OrganizationContract|\Spatie\SchemaOrg\Contracts\OrganizationContract[]|\Spatie\SchemaOrg\Contracts\PersonContract|\Spatie\SchemaOrg\Contracts\PersonContract[] $owner
+     *
+     * @return static
+     *
+     * @see https://schema.org/owner
+     * @link https://github.com/schemaorg/schemaorg/issues/4603
+     */
+    public function owner($owner)
+    {
+        return $this->setProperty('owner', $owner);
+    }
+
+    /**
      * Indicates a potential Action, which describes an idealized action in
      * which this thing would play an 'object' role.
      *
@@ -265,7 +280,7 @@ class EmployerAggregateRating extends BaseType implements EmployerAggregateRatin
      * This Review or Rating is relevant to this part or facet of the
      * itemReviewed.
      *
-     * @param string|string[] $reviewAspect
+     * @param \Spatie\SchemaOrg\Contracts\StructuredValueContract|\Spatie\SchemaOrg\Contracts\StructuredValueContract[]|string|string[] $reviewAspect
      *
      * @return static
      *

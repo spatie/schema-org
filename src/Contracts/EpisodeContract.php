@@ -106,6 +106,8 @@ interface EpisodeContract
 
     public function discussionUrl($discussionUrl);
 
+    public function displayLocation($displayLocation);
+
     public function duration($duration);
 
     public function editEIDR($editEIDR);
@@ -189,6 +191,8 @@ interface EpisodeContract
     public function name($name);
 
     public function offers($offers);
+
+    public function owner($owner);
 
     public function partOfSeason($partOfSeason);
 

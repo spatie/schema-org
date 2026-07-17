@@ -102,6 +102,8 @@ interface HowToDirectionContract
 
     public function discussionUrl($discussionUrl);
 
+    public function displayLocation($displayLocation);
+
     public function duringMedia($duringMedia);
 
     public function editEIDR($editEIDR);
@@ -185,6 +187,8 @@ interface HowToDirectionContract
     public function nextItem($nextItem);
 
     public function offers($offers);
+
+    public function owner($owner);
 
     public function pattern($pattern);
 

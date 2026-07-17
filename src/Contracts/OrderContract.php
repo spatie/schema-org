@@ -50,6 +50,8 @@ interface OrderContract
 
     public function orderedItem($orderedItem);
 
+    public function owner($owner);
+
     public function partOfInvoice($partOfInvoice);
 
     public function paymentDue($paymentDue);
