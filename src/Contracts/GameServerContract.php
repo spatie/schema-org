@@ -22,6 +22,8 @@ interface GameServerContract
 
     public function name($name);
 
+    public function owner($owner);
+
     public function playersOnline($playersOnline);
 
     public function potentialAction($potentialAction);

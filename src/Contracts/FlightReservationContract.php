@@ -30,6 +30,8 @@ interface FlightReservationContract
 
     public function name($name);
 
+    public function owner($owner);
+
     public function passengerPriorityStatus($passengerPriorityStatus);
 
     public function passengerSequenceNumber($passengerSequenceNumber);

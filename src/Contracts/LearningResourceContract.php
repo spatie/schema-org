@@ -100,6 +100,8 @@ interface LearningResourceContract
 
     public function discussionUrl($discussionUrl);
 
+    public function displayLocation($displayLocation);
+
     public function editEIDR($editEIDR);
 
     public function editor($editor);
@@ -177,6 +179,8 @@ interface LearningResourceContract
     public function name($name);
 
     public function offers($offers);
+
+    public function owner($owner);
 
     public function pattern($pattern);
 

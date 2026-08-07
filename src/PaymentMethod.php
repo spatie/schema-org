@@ -12,7 +12,6 @@ use Spatie\SchemaOrg\Contracts\ThingContract;
  * technical structures used, and by the organization or group carrying out the
  * transaction. The following legacy values should be accepted:
  *
- *
  * * http://purl.org/goodrelations/v1#ByBankTransferInAdvance
  * * http://purl.org/goodrelations/v1#ByInvoice
  * * http://purl.org/goodrelations/v1#Cash
@@ -23,7 +22,9 @@ use Spatie\SchemaOrg\Contracts\ThingContract;
  * * http://purl.org/goodrelations/v1#PayPal
  * * http://purl.org/goodrelations/v1#PaySwarm
  *
- * Structured values are recommended for newer payment methods.
+ * Structured values, or [UNCE payment
+ * means](https://vocabulary.uncefact.org/PaymentMeans) are recommended or for
+ * newer annotations.
  *
  * @see https://schema.org/PaymentMethod
  * @link https://github.com/schemaorg/schemaorg/issues/3537
@@ -160,6 +161,21 @@ class PaymentMethod extends BaseType implements PaymentMethodContract, Intangibl
     public function name($name)
     {
         return $this->setProperty('name', $name);
+    }
+
+    /**
+     * A person or organization who owns this Thing.
+     *
+     * @param \Spatie\SchemaOrg\Contracts\OrganizationContract|\Spatie\SchemaOrg\Contracts\OrganizationContract[]|\Spatie\SchemaOrg\Contracts\PersonContract|\Spatie\SchemaOrg\Contracts\PersonContract[] $owner
+     *
+     * @return static
+     *
+     * @see https://schema.org/owner
+     * @link https://github.com/schemaorg/schemaorg/issues/4603
+     */
+    public function owner($owner)
+    {
+        return $this->setProperty('owner', $owner);
     }
 
     /**

@@ -36,6 +36,8 @@ interface ApartmentComplexContract
 
     public function faxNumber($faxNumber);
 
+    public function floorLevel($floorLevel);
+
     public function geo($geo);
 
     public function geoContains($geoContains);
@@ -101,6 +103,8 @@ interface ApartmentComplexContract
     public function numberOfBedrooms($numberOfBedrooms);
 
     public function openingHoursSpecification($openingHoursSpecification);
+
+    public function owner($owner);
 
     public function petsAllowed($petsAllowed);
 

@@ -98,6 +98,8 @@ interface CommentContract
 
     public function discussionUrl($discussionUrl);
 
+    public function displayLocation($displayLocation);
+
     public function downvoteCount($downvoteCount);
 
     public function editEIDR($editEIDR);
@@ -177,6 +179,8 @@ interface CommentContract
     public function name($name);
 
     public function offers($offers);
+
+    public function owner($owner);
 
     public function parentItem($parentItem);
 

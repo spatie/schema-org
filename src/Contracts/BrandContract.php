@@ -24,6 +24,8 @@ interface BrandContract
 
     public function name($name);
 
+    public function owner($owner);
+
     public function potentialAction($potentialAction);
 
     public function review($review);

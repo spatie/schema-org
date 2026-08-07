@@ -2,19 +2,90 @@
 
 namespace Spatie\SchemaOrg;
 
+use Spatie\SchemaOrg\Contracts\EnumerationContract;
 use Spatie\SchemaOrg\Contracts\IntangibleContract;
-use Spatie\SchemaOrg\Contracts\QuantityContract;
+use Spatie\SchemaOrg\Contracts\ITNonprofitTypeContract;
+use Spatie\SchemaOrg\Contracts\NonprofitTypeContract;
 use Spatie\SchemaOrg\Contracts\ThingContract;
 
 /**
- * Quantities such as distance, time, mass, weight, etc. Particular instances of
- * say Mass are entities like '3 kg' or '4 milligrams'.
+ * ITNonprofitType: Non-profit organization type originating from Italy.
  *
- * @see https://schema.org/Quantity
+ * @see https://schema.org/ITNonprofitType
+ * @see https://pending.schema.org
+ * @link https://github.com/schemaorg/schemaorg/issues/3629
  *
+ * @method static supersededBy($supersededBy) The value should be instance of pending types Class|Class[]|Enumeration|Enumeration[]|Property|Property[]
  */
-class Quantity extends BaseType implements QuantityContract, IntangibleContract, ThingContract
+class ITNonprofitType extends BaseType implements ITNonprofitTypeContract, EnumerationContract, IntangibleContract, NonprofitTypeContract, ThingContract
 {
+    /**
+     * ITCooperativeCharity: Non-profit type referring to Cooperatives with
+     * charitable missions (Ital. Cooperativa Sociale) according to Italian Law
+     * 112 of 2017.
+     *
+     * @see https://schema.org/ITCooperativeCharity
+     * @see https://pending.schema.org
+     * @link https://github.com/schemaorg/schemaorg/issues/3629
+     */
+    public const ITCooperativeCharity = 'https://schema.org/ITCooperativeCharity';
+
+    /**
+     * ITMutualAidCharity: Non-profit type referring to associations providing
+     * financial aid to people need (Ital. Società di mutuo soccorso or SOMS)
+     * according to Italian Law 3818 of 1886.
+     *
+     * @see https://schema.org/ITMutualAidCharity
+     * @see https://pending.schema.org
+     * @link https://github.com/schemaorg/schemaorg/issues/3629
+     */
+    public const ITMutualAidCharity = 'https://schema.org/ITMutualAidCharity';
+
+    /**
+     * ITSocialCompanyCharity: Non-profit type referring to companies with
+     * charitable missions (Ital. Imprese Sociali or IS) according to Italian
+     * Law 112 of 2017.
+     *
+     * @see https://schema.org/ITSocialCompanyCharity
+     * @see https://pending.schema.org
+     * @link https://github.com/schemaorg/schemaorg/issues/3629
+     */
+    public const ITSocialCompanyCharity = 'https://schema.org/ITSocialCompanyCharity';
+
+    /**
+     * ITSocialPromotionCharity: Non-profit type referring to associations
+     * promoting charitable causes (Ital. Associazioni di promozione sociale or
+     * APS) according to Italian Law 383 of 2000.
+     *
+     * @see https://schema.org/ITSocialPromotionCharity
+     * @see https://pending.schema.org
+     * @link https://github.com/schemaorg/schemaorg/issues/3629
+     */
+    public const ITSocialPromotionCharity = 'https://schema.org/ITSocialPromotionCharity';
+
+    /**
+     * ITSportCompanyCharity: Non-profit type referring to Companies that
+     * organize sports activities for the public or inscribed members (Ital.
+     * Società Sportiva Dilettantistica or SSD) according to Italian Law 289 of
+     * 2002.
+     *
+     * @see https://schema.org/ITSportCompanyCharity
+     * @see https://pending.schema.org
+     * @link https://github.com/schemaorg/schemaorg/issues/3629
+     */
+    public const ITSportCompanyCharity = 'https://schema.org/ITSportCompanyCharity';
+
+    /**
+     * ITVolunteerAssociationCharity: Non-profit type referring to associations
+     * organising charitable volunteer activities (Ital. Organizzazioni di
+     * volontariato or ODV) according to Italian Law 266 of 1991.
+     *
+     * @see https://schema.org/ITVolunteerAssociationCharity
+     * @see https://pending.schema.org
+     * @link https://github.com/schemaorg/schemaorg/issues/3629
+     */
+    public const ITVolunteerAssociationCharity = 'https://schema.org/ITVolunteerAssociationCharity';
+
     /**
      * An additional type for the item, typically used for adding more specific
      * types from external vocabularies in microdata syntax. This is a
@@ -144,6 +215,21 @@ class Quantity extends BaseType implements QuantityContract, IntangibleContract,
     public function name($name)
     {
         return $this->setProperty('name', $name);
+    }
+
+    /**
+     * A person or organization who owns this Thing.
+     *
+     * @param \Spatie\SchemaOrg\Contracts\OrganizationContract|\Spatie\SchemaOrg\Contracts\OrganizationContract[]|\Spatie\SchemaOrg\Contracts\PersonContract|\Spatie\SchemaOrg\Contracts\PersonContract[] $owner
+     *
+     * @return static
+     *
+     * @see https://schema.org/owner
+     * @link https://github.com/schemaorg/schemaorg/issues/4603
+     */
+    public function owner($owner)
+    {
+        return $this->setProperty('owner', $owner);
     }
 
     /**

@@ -100,6 +100,8 @@ interface OfferContract
 
     public function offeredBy($offeredBy);
 
+    public function owner($owner);
+
     public function potentialAction($potentialAction);
 
     public function price($price);

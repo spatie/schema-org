@@ -33,6 +33,12 @@ class BookFormatType extends BaseType implements BookFormatTypeContract, Enumera
     public const EBook = 'https://schema.org/EBook';
 
     /**
+     * This type is deprecated: GraphicNovel does not fit the BookFormatType
+     * enumeration, as it can appear in multiple formats (e.g., Hardcover,
+     * eBook). It is not mutually exclusive and therefore deprecated. Use
+     * standard BookFormatType values instead in combination with the
+     * SequentialArt.
+     *
      * Book format: GraphicNovel. May represent a bound collection of ComicIssue
      * instances.
      *
@@ -42,14 +48,27 @@ class BookFormatType extends BaseType implements BookFormatTypeContract, Enumera
     public const GraphicNovel = 'https://schema.org/GraphicNovel';
 
     /**
-     * Book format: Hardcover.
+     * A durable, archival-quality book featuring a rigid protective shell made
+     * of heavy board wrapped in cloth or paper, designed to withstand heavy use
+     * and preservation on a shelf.
      *
      * @see https://schema.org/Hardcover
      */
     public const Hardcover = 'https://schema.org/Hardcover';
 
     /**
-     * Book format: Paperback.
+     * A small, unbound or stapled booklet consisting of few pages with a
+     * flexible paper cover, designed for the economical distribution of focused
+     * information on a single subject.
+     *
+     * @see https://schema.org/Pamphlet
+     */
+    public const Pamphlet = 'https://schema.org/Pamphlet';
+
+    /**
+     * A flexible, lightweight book bound with a thick paper or cardstock cover
+     * and glued spine, prioritizing portability and affordability over
+     * long-term durability.
      *
      * @see https://schema.org/Paperback
      */
@@ -184,6 +203,21 @@ class BookFormatType extends BaseType implements BookFormatTypeContract, Enumera
     public function name($name)
     {
         return $this->setProperty('name', $name);
+    }
+
+    /**
+     * A person or organization who owns this Thing.
+     *
+     * @param \Spatie\SchemaOrg\Contracts\OrganizationContract|\Spatie\SchemaOrg\Contracts\OrganizationContract[]|\Spatie\SchemaOrg\Contracts\PersonContract|\Spatie\SchemaOrg\Contracts\PersonContract[] $owner
+     *
+     * @return static
+     *
+     * @see https://schema.org/owner
+     * @link https://github.com/schemaorg/schemaorg/issues/4603
+     */
+    public function owner($owner)
+    {
+        return $this->setProperty('owner', $owner);
     }
 
     /**

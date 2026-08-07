@@ -422,6 +422,25 @@ class JobPosting extends BaseType implements JobPostingContract, IntangibleContr
     }
 
     /**
+     * The expected duration of an employment offer as advertised by the
+     * employer. Relevant for job postings that have a clearly defined period in
+     * mind such as seasonal work, substitutes for maternal leave or any other
+     * temporary employment.
+     *
+     * @param \Spatie\SchemaOrg\Contracts\DurationContract|\Spatie\SchemaOrg\Contracts\DurationContract[]|\Spatie\SchemaOrg\Contracts\QuantitativeValueContract|\Spatie\SchemaOrg\Contracts\QuantitativeValueContract[] $jobDuration
+     *
+     * @return static
+     *
+     * @see https://schema.org/jobDuration
+     * @see https://pending.schema.org
+     * @link https://github.com/schemaorg/schemaorg/issues/4475
+     */
+    public function jobDuration($jobDuration)
+    {
+        return $this->setProperty('jobDuration', $jobDuration);
+    }
+
+    /**
      * An indicator as to whether a position is available for an immediate
      * start.
      *
@@ -543,6 +562,21 @@ class JobPosting extends BaseType implements JobPostingContract, IntangibleContr
     }
 
     /**
+     * A person or organization who owns this Thing.
+     *
+     * @param \Spatie\SchemaOrg\Contracts\OrganizationContract|\Spatie\SchemaOrg\Contracts\OrganizationContract[]|\Spatie\SchemaOrg\Contracts\PersonContract|\Spatie\SchemaOrg\Contracts\PersonContract[] $owner
+     *
+     * @return static
+     *
+     * @see https://schema.org/owner
+     * @link https://github.com/schemaorg/schemaorg/issues/4603
+     */
+    public function owner($owner)
+    {
+        return $this->setProperty('owner', $owner);
+    }
+
+    /**
      * A description of the types of physical activity associated with the job.
      * Defined terms such as those in O*net may be used, but note that there is
      * no way to specify the level of ability as well as its nature when using a
@@ -579,7 +613,7 @@ class JobPosting extends BaseType implements JobPostingContract, IntangibleContr
     /**
      * Specific qualifications required for this role or Occupation.
      *
-     * @param \Spatie\SchemaOrg\Contracts\EducationalOccupationalCredentialContract|\Spatie\SchemaOrg\Contracts\EducationalOccupationalCredentialContract[]|string|string[] $qualifications
+     * @param \Spatie\SchemaOrg\Contracts\CredentialContract|\Spatie\SchemaOrg\Contracts\CredentialContract[]|string|string[] $qualifications
      *
      * @return static
      *

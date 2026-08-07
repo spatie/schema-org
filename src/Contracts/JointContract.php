@@ -42,6 +42,8 @@ interface JointContract
 
     public function name($name);
 
+    public function owner($owner);
+
     public function partOfSystem($partOfSystem);
 
     public function potentialAction($potentialAction);

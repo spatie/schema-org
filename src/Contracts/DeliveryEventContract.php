@@ -54,6 +54,10 @@ interface DeliveryEventContract
 
     public function hasDeliveryMethod($hasDeliveryMethod);
 
+    public function hasParticipationOffer($hasParticipationOffer);
+
+    public function hasSponsorshipOffer($hasSponsorshipOffer);
+
     public function identifier($identifier);
 
     public function image($image);
@@ -79,6 +83,8 @@ interface DeliveryEventContract
     public function offers($offers);
 
     public function organizer($organizer);
+
+    public function owner($owner);
 
     public function performer($performer);
 

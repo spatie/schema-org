@@ -32,6 +32,8 @@ interface ActionAccessSpecificationContract
 
     public function name($name);
 
+    public function owner($owner);
+
     public function potentialAction($potentialAction);
 
     public function requiresSubscription($requiresSubscription);

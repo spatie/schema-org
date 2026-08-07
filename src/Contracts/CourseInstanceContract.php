@@ -52,6 +52,10 @@ interface CourseInstanceContract
 
     public function funding($funding);
 
+    public function hasParticipationOffer($hasParticipationOffer);
+
+    public function hasSponsorshipOffer($hasSponsorshipOffer);
+
     public function identifier($identifier);
 
     public function image($image);
@@ -79,6 +83,8 @@ interface CourseInstanceContract
     public function offers($offers);
 
     public function organizer($organizer);
+
+    public function owner($owner);
 
     public function performer($performer);
 

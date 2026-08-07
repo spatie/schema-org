@@ -4,6 +4,8 @@ namespace Spatie\SchemaOrg\Contracts;
 
 interface MedicalCodeContract
 {
+    public function about($about);
+
     public function additionalType($additionalType);
 
     public function alternateName($alternateName);
@@ -37,6 +39,8 @@ interface MedicalCodeContract
     public function medicineSystem($medicineSystem);
 
     public function name($name);
+
+    public function owner($owner);
 
     public function potentialAction($potentialAction);
 

@@ -26,6 +26,8 @@ interface OwnershipInfoContract
 
     public function ownedThrough($ownedThrough);
 
+    public function owner($owner);
+
     public function potentialAction($potentialAction);
 
     public function sameAs($sameAs);

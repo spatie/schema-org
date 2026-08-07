@@ -9,7 +9,6 @@ use Spatie\SchemaOrg\Contracts\ThingContract;
 /**
  * An intangible item that describes an alignment between a learning resource
  * and a node in an educational framework.
- *
  * Should not be used where the nature of the alignment can be described using a
  * simple property, for example to express that a resource [[teaches]] or
  * [[assesses]] a competency.
@@ -178,6 +177,21 @@ class AlignmentObject extends BaseType implements AlignmentObjectContract, Intan
     public function name($name)
     {
         return $this->setProperty('name', $name);
+    }
+
+    /**
+     * A person or organization who owns this Thing.
+     *
+     * @param \Spatie\SchemaOrg\Contracts\OrganizationContract|\Spatie\SchemaOrg\Contracts\OrganizationContract[]|\Spatie\SchemaOrg\Contracts\PersonContract|\Spatie\SchemaOrg\Contracts\PersonContract[] $owner
+     *
+     * @return static
+     *
+     * @see https://schema.org/owner
+     * @link https://github.com/schemaorg/schemaorg/issues/4603
+     */
+    public function owner($owner)
+    {
+        return $this->setProperty('owner', $owner);
     }
 
     /**

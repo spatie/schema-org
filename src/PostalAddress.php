@@ -77,9 +77,10 @@ class PostalAddress extends BaseType implements PostalAddressContract, ContactPo
     /**
      * The region in which the locality is, and which is in the country. For
      * example, California or another appropriate first-level [Administrative
-     * division](https://en.wikipedia.org/wiki/List_of_administrative_divisions_by_country).
+     * division](https://en.wikipedia.org/wiki/List_of_administrative_divisions_by_country)
+     * such as the Province in Italy or Region in Germany.
      *
-     * @param string|string[] $addressRegion
+     * @param \Spatie\SchemaOrg\Contracts\AdministrativeAreaContract|\Spatie\SchemaOrg\Contracts\AdministrativeAreaContract[]|string|string[] $addressRegion
      *
      * @return static
      *
@@ -315,6 +316,21 @@ class PostalAddress extends BaseType implements PostalAddressContract, ContactPo
     public function name($name)
     {
         return $this->setProperty('name', $name);
+    }
+
+    /**
+     * A person or organization who owns this Thing.
+     *
+     * @param \Spatie\SchemaOrg\Contracts\OrganizationContract|\Spatie\SchemaOrg\Contracts\OrganizationContract[]|\Spatie\SchemaOrg\Contracts\PersonContract|\Spatie\SchemaOrg\Contracts\PersonContract[] $owner
+     *
+     * @return static
+     *
+     * @see https://schema.org/owner
+     * @link https://github.com/schemaorg/schemaorg/issues/4603
+     */
+    public function owner($owner)
+    {
+        return $this->setProperty('owner', $owner);
     }
 
     /**

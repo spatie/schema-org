@@ -30,6 +30,8 @@ interface OrderItemContract
 
     public function orderedItem($orderedItem);
 
+    public function owner($owner);
+
     public function potentialAction($potentialAction);
 
     public function sameAs($sameAs);

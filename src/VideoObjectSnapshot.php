@@ -24,14 +24,13 @@ use Spatie\SchemaOrg\Contracts\VideoObjectSnapshotContract;
 class VideoObjectSnapshot extends BaseType implements VideoObjectSnapshotContract, CreativeWorkContract, MediaObjectContract, ThingContract, VideoObjectContract
 {
     /**
-     * The subject matter of the content.
+     * The subject matter of an object.
      *
      * @param \Spatie\SchemaOrg\Contracts\ThingContract|\Spatie\SchemaOrg\Contracts\ThingContract[] $about
      *
      * @return static
      *
      * @see https://schema.org/about
-     * @link https://github.com/schemaorg/schemaorg/issues/1670
      */
     public function about($about)
     {
@@ -56,8 +55,9 @@ class VideoObjectSnapshot extends BaseType implements VideoObjectSnapshotContrac
 
     /**
      * The human sensory perceptual system or cognitive faculty through which a
-     * person may process or perceive information. Values should be drawn from
-     * the [approved
+     * person may process or perceive the intellectual content of a resource,
+     * not including any adaptations of the content (e.g., text alternatives for
+     * images). Values should be drawn from the [approved
      * vocabulary](https://www.w3.org/2021/a11y-discov-vocab/latest/#accessMode-vocabulary).
      *
      * @param string|string[] $accessMode
@@ -73,9 +73,9 @@ class VideoObjectSnapshot extends BaseType implements VideoObjectSnapshotContrac
     }
 
     /**
-     * A list of single or combined accessModes that are sufficient to
-     * understand all the intellectual content of a resource. Values should be
-     * drawn from the [approved
+     * A list of single or combined access modes that are sufficient to
+     * understand all the intellectual content of a resource, including any
+     * adaptations. Values should be drawn from the [approved
      * vocabulary](https://www.w3.org/2021/a11y-discov-vocab/latest/#accessModeSufficient-vocabulary).
      *
      * @param \Spatie\SchemaOrg\Contracts\ItemListContract|\Spatie\SchemaOrg\Contracts\ItemListContract[] $accessModeSufficient
@@ -922,6 +922,22 @@ class VideoObjectSnapshot extends BaseType implements VideoObjectSnapshotContrac
     }
 
     /**
+     * The location at which an item can be viewed or experienced in-person.
+     *
+     * @param \Spatie\SchemaOrg\Contracts\PlaceContract|\Spatie\SchemaOrg\Contracts\PlaceContract[] $displayLocation
+     *
+     * @return static
+     *
+     * @see https://schema.org/displayLocation
+     * @see https://pending.schema.org
+     * @link https://github.com/schemaorg/schemaorg/issues/4513
+     */
+    public function displayLocation($displayLocation)
+    {
+        return $this->setProperty('displayLocation', $displayLocation);
+    }
+
+    /**
      * The duration of the item (movie, audio recording, event, etc.) in [ISO
      * 8601 duration format](http://en.wikipedia.org/wiki/ISO_8601).
      *
@@ -1246,7 +1262,7 @@ class VideoObjectSnapshot extends BaseType implements VideoObjectSnapshotContrac
     /**
      * Genre of the creative work, broadcast channel or group.
      *
-     * @param string|string[] $genre
+     * @param \Spatie\SchemaOrg\Contracts\DefinedTermContract|\Spatie\SchemaOrg\Contracts\DefinedTermContract[]|string|string[] $genre
      *
      * @return static
      *
@@ -1712,6 +1728,21 @@ class VideoObjectSnapshot extends BaseType implements VideoObjectSnapshotContrac
     public function offers($offers)
     {
         return $this->setProperty('offers', $offers);
+    }
+
+    /**
+     * A person or organization who owns this Thing.
+     *
+     * @param \Spatie\SchemaOrg\Contracts\OrganizationContract|\Spatie\SchemaOrg\Contracts\OrganizationContract[]|\Spatie\SchemaOrg\Contracts\PersonContract|\Spatie\SchemaOrg\Contracts\PersonContract[] $owner
+     *
+     * @return static
+     *
+     * @see https://schema.org/owner
+     * @link https://github.com/schemaorg/schemaorg/issues/4603
+     */
+    public function owner($owner)
+    {
+        return $this->setProperty('owner', $owner);
     }
 
     /**

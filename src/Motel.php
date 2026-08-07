@@ -343,8 +343,9 @@ class Motel extends BaseType implements MotelContract, LocalBusinessContract, Lo
     }
 
     /**
-     * The official registration number of a business including the organization
-     * that issued it such as Company House or Chamber of Commerce.
+     * The official registration information of a business including the
+     * organization that issued it such as Company House or Chamber of Commerce
+     * in form of a Certification.
      *
      * @param \Spatie\SchemaOrg\Contracts\CertificationContract|\Spatie\SchemaOrg\Contracts\CertificationContract[] $companyRegistration
      *
@@ -690,6 +691,25 @@ class Motel extends BaseType implements MotelContract, LocalBusinessContract, Lo
     }
 
     /**
+     * The floor level for an [[Accommodation]] in a multi-storey building.
+     * Since counting
+     *   systems [vary
+     * internationally](https://en.wikipedia.org/wiki/Storey#Consecutive_number_floor_designations),
+     * the local system should be used where possible.
+     *
+     * @param string|string[] $floorLevel
+     *
+     * @return static
+     *
+     * @see https://schema.org/floorLevel
+     * @see https://pending.schema.org
+     */
+    public function floorLevel($floorLevel)
+    {
+        return $this->setProperty('floorLevel', $floorLevel);
+    }
+
+    /**
      * A person or organization who founded this organization.
      *
      * @param \Spatie\SchemaOrg\Contracts\OrganizationContract|\Spatie\SchemaOrg\Contracts\OrganizationContract[]|\Spatie\SchemaOrg\Contracts\PersonContract|\Spatie\SchemaOrg\Contracts\PersonContract[] $founder
@@ -999,7 +1019,7 @@ class Motel extends BaseType implements MotelContract, LocalBusinessContract, Lo
     /**
      * A credential awarded to the Person or Organization.
      *
-     * @param \Spatie\SchemaOrg\Contracts\EducationalOccupationalCredentialContract|\Spatie\SchemaOrg\Contracts\EducationalOccupationalCredentialContract[] $hasCredential
+     * @param \Spatie\SchemaOrg\Contracts\CredentialContract|\Spatie\SchemaOrg\Contracts\CredentialContract[] $hasCredential
      *
      * @return static
      *
@@ -1041,10 +1061,10 @@ class Motel extends BaseType implements MotelContract, LocalBusinessContract, Lo
      * correct granularity. In particular, for products:<ul>* A Digital Link
      * that contains a serial number (AI ```21```) should only be present on
      * instances of [[IndividualProduct]]* A Digital Link that contains a lot
-     * number (AI ```10```) should be annotated as [[SomeProduct]] if only
+     * number (AI ```10```) should be annotated as [[SomeProducts]] if only
      * products from that lot are sold, or [[IndividualProduct]] if there is
      * only a specific product.* A Digital Link that contains a global model
-     * number (AI ```8013```)  should be attached to a [[Product]] or a
+     * number (AI ```8013```) should be attached to a [[Product]] or a
      * [[ProductModel]]. Other item types should be adapted similarly.
      *
      * @param string|string[] $hasGS1DigitalLink
@@ -1687,6 +1707,21 @@ class Motel extends BaseType implements MotelContract, LocalBusinessContract, Lo
     }
 
     /**
+     * A person or organization who owns this Thing.
+     *
+     * @param \Spatie\SchemaOrg\Contracts\OrganizationContract|\Spatie\SchemaOrg\Contracts\OrganizationContract[]|\Spatie\SchemaOrg\Contracts\PersonContract|\Spatie\SchemaOrg\Contracts\PersonContract[] $owner
+     *
+     * @return static
+     *
+     * @see https://schema.org/owner
+     * @link https://github.com/schemaorg/schemaorg/issues/4603
+     */
+    public function owner($owner)
+    {
+        return $this->setProperty('owner', $owner);
+    }
+
+    /**
      * For an [[Organization]] (often but not necessarily a
      * [[NewsMediaOrganization]]), a description of organizational ownership
      * structure; funding and grants. In a news/media setting, this is with
@@ -1708,13 +1743,14 @@ class Motel extends BaseType implements MotelContract, LocalBusinessContract, Lo
     }
 
     /**
-     * Products owned by the organization or person.
+     * Things owned by the organization or person.
      *
-     * @param \Spatie\SchemaOrg\Contracts\OwnershipInfoContract|\Spatie\SchemaOrg\Contracts\OwnershipInfoContract[]|\Spatie\SchemaOrg\Contracts\ProductContract|\Spatie\SchemaOrg\Contracts\ProductContract[] $owns
+     * @param \Spatie\SchemaOrg\Contracts\ThingContract|\Spatie\SchemaOrg\Contracts\ThingContract[] $owns
      *
      * @return static
      *
      * @see https://schema.org/owns
+     * @link https://github.com/schemaorg/schemaorg/issues/4603
      */
     public function owns($owns)
     {
@@ -2141,7 +2177,9 @@ class Motel extends BaseType implements MotelContract, LocalBusinessContract, Lo
     }
 
     /**
-     * The Value-added Tax ID of the organization or person.
+     * The value-added Tax ID of the organization or person with national prefix
+     * (for example IT123456789). Can also be described as [[iso6523Code]] with
+     * proper prefix.
      *
      * @param string|string[] $vatID
      *

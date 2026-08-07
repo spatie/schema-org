@@ -56,6 +56,8 @@ interface DrugContract
 
     public function disambiguatingDescription($disambiguatingDescription);
 
+    public function displayLocation($displayLocation);
+
     public function dosageForm($dosageForm);
 
     public function doseSchedule($doseSchedule);
@@ -161,6 +163,8 @@ interface DrugContract
     public function offers($offers);
 
     public function overdosage($overdosage);
+
+    public function owner($owner);
 
     public function pattern($pattern);
 

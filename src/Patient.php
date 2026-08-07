@@ -585,7 +585,7 @@ class Patient extends BaseType implements PatientContract, AudienceContract, Int
     /**
      * A credential awarded to the Person or Organization.
      *
-     * @param \Spatie\SchemaOrg\Contracts\EducationalOccupationalCredentialContract|\Spatie\SchemaOrg\Contracts\EducationalOccupationalCredentialContract[] $hasCredential
+     * @param \Spatie\SchemaOrg\Contracts\CredentialContract|\Spatie\SchemaOrg\Contracts\CredentialContract[] $hasCredential
      *
      * @return static
      *
@@ -851,6 +851,23 @@ class Patient extends BaseType implements PatientContract, AudienceContract, Int
     }
 
     /**
+     * A life event like baptism, communions, Bar Mitzvahs, Aqiqah, Namakarana,
+     * Miyamairi, burial, ....
+     *
+     * @param \Spatie\SchemaOrg\Contracts\EventContract|\Spatie\SchemaOrg\Contracts\EventContract[] $lifeEvent
+     *
+     * @return static
+     *
+     * @see https://schema.org/lifeEvent
+     * @see https://pending.schema.org
+     * @link https://github.com/schemaorg/schemaorg/issues/4540
+     */
+    public function lifeEvent($lifeEvent)
+    {
+        return $this->setProperty('lifeEvent', $lifeEvent);
+    }
+
+    /**
      * Indicates a page (or other CreativeWork) for which this thing is the main
      * entity being described. See [background
      * notes](/docs/datamodel.html#mainEntityBackground) for details.
@@ -954,13 +971,29 @@ class Patient extends BaseType implements PatientContract, AudienceContract, Int
     }
 
     /**
-     * Products owned by the organization or person.
+     * A person or organization who owns this Thing.
      *
-     * @param \Spatie\SchemaOrg\Contracts\OwnershipInfoContract|\Spatie\SchemaOrg\Contracts\OwnershipInfoContract[]|\Spatie\SchemaOrg\Contracts\ProductContract|\Spatie\SchemaOrg\Contracts\ProductContract[] $owns
+     * @param \Spatie\SchemaOrg\Contracts\OrganizationContract|\Spatie\SchemaOrg\Contracts\OrganizationContract[]|\Spatie\SchemaOrg\Contracts\PersonContract|\Spatie\SchemaOrg\Contracts\PersonContract[] $owner
+     *
+     * @return static
+     *
+     * @see https://schema.org/owner
+     * @link https://github.com/schemaorg/schemaorg/issues/4603
+     */
+    public function owner($owner)
+    {
+        return $this->setProperty('owner', $owner);
+    }
+
+    /**
+     * Things owned by the organization or person.
+     *
+     * @param \Spatie\SchemaOrg\Contracts\ThingContract|\Spatie\SchemaOrg\Contracts\ThingContract[] $owns
      *
      * @return static
      *
      * @see https://schema.org/owns
+     * @link https://github.com/schemaorg/schemaorg/issues/4603
      */
     public function owns($owns)
     {
@@ -1375,7 +1408,9 @@ class Patient extends BaseType implements PatientContract, AudienceContract, Int
     }
 
     /**
-     * The Value-added Tax ID of the organization or person.
+     * The value-added Tax ID of the organization or person with national prefix
+     * (for example IT123456789). Can also be described as [[iso6523Code]] with
+     * proper prefix.
      *
      * @param string|string[] $vatID
      *

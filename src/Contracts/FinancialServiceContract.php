@@ -82,6 +82,8 @@ interface FinancialServiceContract
 
     public function feesAndCommissionsSpecification($feesAndCommissionsSpecification);
 
+    public function floorLevel($floorLevel);
+
     public function founder($founder);
 
     public function founders($founders);
@@ -201,6 +203,8 @@ interface FinancialServiceContract
     public function openingHours($openingHours);
 
     public function openingHoursSpecification($openingHoursSpecification);
+
+    public function owner($owner);
 
     public function ownershipFundingInfo($ownershipFundingInfo);
 

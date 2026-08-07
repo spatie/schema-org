@@ -50,6 +50,8 @@ interface VehicleContract
 
     public function disambiguatingDescription($disambiguatingDescription);
 
+    public function displayLocation($displayLocation);
+
     public function driveWheelConfiguration($driveWheelConfiguration);
 
     public function emissionsCO2($emissionsCO2);
@@ -151,6 +153,8 @@ interface VehicleContract
     public function numberOfPreviousOwners($numberOfPreviousOwners);
 
     public function offers($offers);
+
+    public function owner($owner);
 
     public function pattern($pattern);
 

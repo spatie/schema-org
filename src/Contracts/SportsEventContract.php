@@ -50,6 +50,10 @@ interface SportsEventContract
 
     public function funding($funding);
 
+    public function hasParticipationOffer($hasParticipationOffer);
+
+    public function hasSponsorshipOffer($hasSponsorshipOffer);
+
     public function homeTeam($homeTeam);
 
     public function identifier($identifier);
@@ -77,6 +81,8 @@ interface SportsEventContract
     public function offers($offers);
 
     public function organizer($organizer);
+
+    public function owner($owner);
 
     public function performer($performer);
 

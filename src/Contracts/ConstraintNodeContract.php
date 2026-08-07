@@ -24,6 +24,8 @@ interface ConstraintNodeContract
 
     public function numConstraints($numConstraints);
 
+    public function owner($owner);
+
     public function potentialAction($potentialAction);
 
     public function sameAs($sameAs);

@@ -24,6 +24,8 @@ interface HowToItemContract
 
     public function nextItem($nextItem);
 
+    public function owner($owner);
+
     public function position($position);
 
     public function potentialAction($potentialAction);

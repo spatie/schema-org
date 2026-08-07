@@ -24,6 +24,8 @@ interface GovernmentPermitContract
 
     public function name($name);
 
+    public function owner($owner);
+
     public function permitAudience($permitAudience);
 
     public function potentialAction($potentialAction);

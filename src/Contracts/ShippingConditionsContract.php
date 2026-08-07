@@ -30,6 +30,8 @@ interface ShippingConditionsContract
 
     public function orderValue($orderValue);
 
+    public function owner($owner);
+
     public function potentialAction($potentialAction);
 
     public function sameAs($sameAs);

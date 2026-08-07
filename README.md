@@ -318,7 +318,6 @@ There isn't a real rule in place how the properties are merged. It only uses `ar
 ## Known Issues
 
 - The `Float` type isn't available since it's a reserved keyword in PHP
-- The `Physician` type isn't available since it extends a type from the `health` extension spec
 
 ## Changelog
 

@@ -34,6 +34,8 @@ interface MedicalTestContract
 
     public function normalRange($normalRange);
 
+    public function owner($owner);
+
     public function potentialAction($potentialAction);
 
     public function recognizingAuthority($recognizingAuthority);

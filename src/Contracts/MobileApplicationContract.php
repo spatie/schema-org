@@ -114,6 +114,8 @@ interface MobileApplicationContract
 
     public function discussionUrl($discussionUrl);
 
+    public function displayLocation($displayLocation);
+
     public function downloadUrl($downloadUrl);
 
     public function editEIDR($editEIDR);
@@ -204,6 +206,8 @@ interface MobileApplicationContract
 
     public function operatingSystem($operatingSystem);
 
+    public function owner($owner);
+
     public function pattern($pattern);
 
     public function permissions($permissions);
@@ -237,6 +241,8 @@ interface MobileApplicationContract
     public function review($review);
 
     public function reviews($reviews);
+
+    public function runtimePlatform($runtimePlatform);
 
     public function sameAs($sameAs);
 

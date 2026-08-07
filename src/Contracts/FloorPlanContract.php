@@ -42,6 +42,8 @@ interface FloorPlanContract
 
     public function numberOfRooms($numberOfRooms);
 
+    public function owner($owner);
+
     public function petsAllowed($petsAllowed);
 
     public function potentialAction($potentialAction);

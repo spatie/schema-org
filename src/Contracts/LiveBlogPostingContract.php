@@ -108,6 +108,8 @@ interface LiveBlogPostingContract
 
     public function discussionUrl($discussionUrl);
 
+    public function displayLocation($displayLocation);
+
     public function editEIDR($editEIDR);
 
     public function editor($editor);
@@ -187,6 +189,8 @@ interface LiveBlogPostingContract
     public function name($name);
 
     public function offers($offers);
+
+    public function owner($owner);
 
     public function pageEnd($pageEnd);
 

@@ -22,6 +22,8 @@ interface DigitalDocumentPermissionContract
 
     public function name($name);
 
+    public function owner($owner);
+
     public function permissionType($permissionType);
 
     public function potentialAction($potentialAction);

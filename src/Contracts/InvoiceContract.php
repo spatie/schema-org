@@ -34,6 +34,8 @@ interface InvoiceContract
 
     public function name($name);
 
+    public function owner($owner);
+
     public function paymentDue($paymentDue);
 
     public function paymentDueDate($paymentDueDate);

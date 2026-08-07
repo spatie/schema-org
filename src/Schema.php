@@ -272,6 +272,11 @@ class Schema
         return new Audiobook();
     }
 
+    public static function authenticateAction(): AuthenticateAction
+    {
+        return new AuthenticateAction();
+    }
+
     public static function authorizeAction(): AuthorizeAction
     {
         return new AuthorizeAction();
@@ -827,6 +832,11 @@ class Schema
         return new ComputerStore();
     }
 
+    public static function conferenceEvent(): ConferenceEvent
+    {
+        return new ConferenceEvent();
+    }
+
     public static function confirmAction(): ConfirmAction
     {
         return new ConfirmAction();
@@ -952,6 +962,11 @@ class Schema
         return new CreativeWorkSeries();
     }
 
+    public static function credential(): Credential
+    {
+        return new Credential();
+    }
+
     public static function creditCard(): CreditCard
     {
         return new CreditCard();
@@ -980,6 +995,11 @@ class Schema
     public static function dDxElement(): DDxElement
     {
         return new DDxElement();
+    }
+
+    public static function dENonprofitType(): DENonprofitType
+    {
+        return new DENonprofitType();
     }
 
     public static function danceEvent(): DanceEvent
@@ -1400,6 +1420,11 @@ class Schema
     public static function episode(): Episode
     {
         return new Episode();
+    }
+
+    public static function error(): Error
+    {
+        return new Error();
     }
 
     public static function event(): Event
@@ -1872,6 +1897,11 @@ class Schema
         return new IPTCDigitalSourceEnumeration();
     }
 
+    public static function iTNonprofitType(): ITNonprofitType
+    {
+        return new ITNonprofitType();
+    }
+
     public static function iceCreamShop(): IceCreamShop
     {
         return new IceCreamShop();
@@ -1950,6 +1980,11 @@ class Schema
     public static function installAction(): InstallAction
     {
         return new InstallAction();
+    }
+
+    public static function instantaneousEvent(): InstantaneousEvent
+    {
+        return new InstantaneousEvent();
     }
 
     public static function insuranceAgency(): InsuranceAgency
@@ -2185,6 +2220,11 @@ class Schema
     public static function lodgingReservation(): LodgingReservation
     {
         return new LodgingReservation();
+    }
+
+    public static function loginAction(): LoginAction
+    {
+        return new LoginAction();
     }
 
     public static function loseAction(): LoseAction
@@ -2882,6 +2922,11 @@ class Schema
         return new OpeningHoursSpecification();
     }
 
+    public static function operatingSystem(): OperatingSystem
+    {
+        return new OperatingSystem();
+    }
+
     public static function opinionNewsArticle(): OpinionNewsArticle
     {
         return new OpinionNewsArticle();
@@ -3035,6 +3080,11 @@ class Schema
     public static function performanceRole(): PerformanceRole
     {
         return new PerformanceRole();
+    }
+
+    public static function performingArtsEvent(): PerformingArtsEvent
+    {
+        return new PerformingArtsEvent();
     }
 
     public static function performingArtsTheater(): PerformingArtsTheater
@@ -3372,11 +3422,6 @@ class Schema
         return new QuantitativeValueDistribution();
     }
 
-    public static function quantity(): Quantity
-    {
-        return new Quantity();
-    }
-
     public static function question(): Question
     {
         return new Question();
@@ -3587,6 +3632,11 @@ class Schema
         return new Reservoir();
     }
 
+    public static function resetPasswordAction(): ResetPasswordAction
+    {
+        return new ResetPasswordAction();
+    }
+
     public static function residence(): Residence
     {
         return new Residence();
@@ -3675,6 +3725,11 @@ class Schema
     public static function rsvpResponseType(): RsvpResponseType
     {
         return new RsvpResponseType();
+    }
+
+    public static function runtimePlatform(): RuntimePlatform
+    {
+        return new RuntimePlatform();
     }
 
     public static function saleEvent(): SaleEvent
@@ -3770,6 +3825,11 @@ class Schema
     public static function sendAction(): SendAction
     {
         return new SendAction();
+    }
+
+    public static function sequentialArt(): SequentialArt
+    {
+        return new SequentialArt();
     }
 
     public static function series(): Series

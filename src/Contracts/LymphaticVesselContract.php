@@ -40,6 +40,8 @@ interface LymphaticVesselContract
 
     public function originatesFrom($originatesFrom);
 
+    public function owner($owner);
+
     public function partOfSystem($partOfSystem);
 
     public function potentialAction($potentialAction);

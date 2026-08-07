@@ -28,6 +28,8 @@ interface TaxiReservationContract
 
     public function name($name);
 
+    public function owner($owner);
+
     public function partySize($partySize);
 
     public function pickupLocation($pickupLocation);

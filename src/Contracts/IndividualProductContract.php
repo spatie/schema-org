@@ -40,6 +40,8 @@ interface IndividualProductContract
 
     public function disambiguatingDescription($disambiguatingDescription);
 
+    public function displayLocation($displayLocation);
+
     public function funding($funding);
 
     public function gtin($gtin);
@@ -111,6 +113,8 @@ interface IndividualProductContract
     public function nsn($nsn);
 
     public function offers($offers);
+
+    public function owner($owner);
 
     public function pattern($pattern);
 

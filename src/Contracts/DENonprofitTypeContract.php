@@ -2,7 +2,7 @@
 
 namespace Spatie\SchemaOrg\Contracts;
 
-interface QuantityContract
+interface DENonprofitTypeContract
 {
     public function additionalType($additionalType);
 
@@ -19,6 +19,8 @@ interface QuantityContract
     public function mainEntityOfPage($mainEntityOfPage);
 
     public function name($name);
+
+    public function owner($owner);
 
     public function potentialAction($potentialAction);
 

@@ -118,6 +118,8 @@ interface ProductCollectionContract
 
     public function discussionUrl($discussionUrl);
 
+    public function displayLocation($displayLocation);
+
     public function editEIDR($editEIDR);
 
     public function editor($editor);
@@ -251,6 +253,8 @@ interface ProductCollectionContract
     public function nsn($nsn);
 
     public function offers($offers);
+
+    public function owner($owner);
 
     public function pattern($pattern);
 

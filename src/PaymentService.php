@@ -426,6 +426,21 @@ class PaymentService extends BaseType implements PaymentServiceContract, Financi
     }
 
     /**
+     * A person or organization who owns this Thing.
+     *
+     * @param \Spatie\SchemaOrg\Contracts\OrganizationContract|\Spatie\SchemaOrg\Contracts\OrganizationContract[]|\Spatie\SchemaOrg\Contracts\PersonContract|\Spatie\SchemaOrg\Contracts\PersonContract[] $owner
+     *
+     * @return static
+     *
+     * @see https://schema.org/owner
+     * @link https://github.com/schemaorg/schemaorg/issues/4603
+     */
+    public function owner($owner)
+    {
+        return $this->setProperty('owner', $owner);
+    }
+
+    /**
      * The type of a payment method.
      *
      * @param \Spatie\SchemaOrg\Contracts\PaymentMethodTypeContract|\Spatie\SchemaOrg\Contracts\PaymentMethodTypeContract[] $paymentMethodType

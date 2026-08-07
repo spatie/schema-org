@@ -206,7 +206,9 @@ class ShippingRateSettings extends BaseType implements ShippingRateSettingsContr
     }
 
     /**
-     * Fraction of the value of the order that is charged as shipping cost.
+     * Value representing the fraction of the value of the order that is charged
+     * as shipping cost. Example: 0.10 would mean shipping rate is 10% of the
+     * total order value.
      *
      * @param float|float[]|int|int[] $orderPercentage
      *
@@ -219,6 +221,21 @@ class ShippingRateSettings extends BaseType implements ShippingRateSettingsContr
     public function orderPercentage($orderPercentage)
     {
         return $this->setProperty('orderPercentage', $orderPercentage);
+    }
+
+    /**
+     * A person or organization who owns this Thing.
+     *
+     * @param \Spatie\SchemaOrg\Contracts\OrganizationContract|\Spatie\SchemaOrg\Contracts\OrganizationContract[]|\Spatie\SchemaOrg\Contracts\PersonContract|\Spatie\SchemaOrg\Contracts\PersonContract[] $owner
+     *
+     * @return static
+     *
+     * @see https://schema.org/owner
+     * @link https://github.com/schemaorg/schemaorg/issues/4603
+     */
+    public function owner($owner)
+    {
+        return $this->setProperty('owner', $owner);
     }
 
     /**
@@ -331,7 +348,9 @@ class ShippingRateSettings extends BaseType implements ShippingRateSettingsContr
     }
 
     /**
-     * Fraction of the weight that is used to compute the shipping price.
+     * Value representing the fraction of the weight that is used to compute the
+     * shipping price. Example: 0.10 and a shipping weight of 15kg would add
+     * $1.5 to the order price, where the $ is the currency of the order.
      *
      * @param float|float[]|int|int[] $weightPercentage
      *

@@ -324,6 +324,22 @@ class IndividualProduct extends BaseType implements IndividualProductContract, P
     }
 
     /**
+     * The location at which an item can be viewed or experienced in-person.
+     *
+     * @param \Spatie\SchemaOrg\Contracts\PlaceContract|\Spatie\SchemaOrg\Contracts\PlaceContract[] $displayLocation
+     *
+     * @return static
+     *
+     * @see https://schema.org/displayLocation
+     * @see https://pending.schema.org
+     * @link https://github.com/schemaorg/schemaorg/issues/4513
+     */
+    public function displayLocation($displayLocation)
+    {
+        return $this->setProperty('displayLocation', $displayLocation);
+    }
+
+    /**
      * A [[Grant]] that directly or indirectly provide funding or sponsorship
      * for this item. See also [[ownershipFundingInfo]].
      *
@@ -513,10 +529,10 @@ class IndividualProduct extends BaseType implements IndividualProductContract, P
      * correct granularity. In particular, for products:<ul>* A Digital Link
      * that contains a serial number (AI ```21```) should only be present on
      * instances of [[IndividualProduct]]* A Digital Link that contains a lot
-     * number (AI ```10```) should be annotated as [[SomeProduct]] if only
+     * number (AI ```10```) should be annotated as [[SomeProducts]] if only
      * products from that lot are sold, or [[IndividualProduct]] if there is
      * only a specific product.* A Digital Link that contains a global model
-     * number (AI ```8013```)  should be attached to a [[Product]] or a
+     * number (AI ```8013```) should be attached to a [[Product]] or a
      * [[ProductModel]]. Other item types should be adapted similarly.
      *
      * @param string|string[] $hasGS1DigitalLink
@@ -983,6 +999,21 @@ class IndividualProduct extends BaseType implements IndividualProductContract, P
     public function offers($offers)
     {
         return $this->setProperty('offers', $offers);
+    }
+
+    /**
+     * A person or organization who owns this Thing.
+     *
+     * @param \Spatie\SchemaOrg\Contracts\OrganizationContract|\Spatie\SchemaOrg\Contracts\OrganizationContract[]|\Spatie\SchemaOrg\Contracts\PersonContract|\Spatie\SchemaOrg\Contracts\PersonContract[] $owner
+     *
+     * @return static
+     *
+     * @see https://schema.org/owner
+     * @link https://github.com/schemaorg/schemaorg/issues/4603
+     */
+    public function owner($owner)
+    {
+        return $this->setProperty('owner', $owner);
     }
 
     /**

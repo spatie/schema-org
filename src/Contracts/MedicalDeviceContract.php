@@ -34,6 +34,8 @@ interface MedicalDeviceContract
 
     public function name($name);
 
+    public function owner($owner);
+
     public function postOp($postOp);
 
     public function potentialAction($potentialAction);

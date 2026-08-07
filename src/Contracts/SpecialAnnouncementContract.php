@@ -108,6 +108,8 @@ interface SpecialAnnouncementContract
 
     public function diseaseSpreadStatistics($diseaseSpreadStatistics);
 
+    public function displayLocation($displayLocation);
+
     public function editEIDR($editEIDR);
 
     public function editor($editor);
@@ -191,6 +193,8 @@ interface SpecialAnnouncementContract
     public function newsUpdatesAndGuidelines($newsUpdatesAndGuidelines);
 
     public function offers($offers);
+
+    public function owner($owner);
 
     public function pattern($pattern);
 

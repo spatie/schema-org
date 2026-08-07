@@ -100,6 +100,8 @@ interface MusicRecordingContract
 
     public function discussionUrl($discussionUrl);
 
+    public function displayLocation($displayLocation);
+
     public function duration($duration);
 
     public function editEIDR($editEIDR);
@@ -185,6 +187,8 @@ interface MusicRecordingContract
     public function name($name);
 
     public function offers($offers);
+
+    public function owner($owner);
 
     public function pattern($pattern);
 

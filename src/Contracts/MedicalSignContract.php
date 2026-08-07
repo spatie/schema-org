@@ -10,6 +10,8 @@ interface MedicalSignContract
 
     public function associatedAnatomy($associatedAnatomy);
 
+    public function cause($cause);
+
     public function code($code);
 
     public function description($description);
@@ -45,6 +47,8 @@ interface MedicalSignContract
     public function name($name);
 
     public function naturalProgression($naturalProgression);
+
+    public function owner($owner);
 
     public function pathophysiology($pathophysiology);
 

@@ -196,6 +196,8 @@ interface CollegeOrUniversityContract
 
     public function openingHoursSpecification($openingHoursSpecification);
 
+    public function owner($owner);
+
     public function ownershipFundingInfo($ownershipFundingInfo);
 
     public function owns($owns);

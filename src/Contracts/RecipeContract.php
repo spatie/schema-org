@@ -102,6 +102,8 @@ interface RecipeContract
 
     public function discussionUrl($discussionUrl);
 
+    public function displayLocation($displayLocation);
+
     public function editEIDR($editEIDR);
 
     public function editor($editor);
@@ -185,6 +187,8 @@ interface RecipeContract
     public function nutrition($nutrition);
 
     public function offers($offers);
+
+    public function owner($owner);
 
     public function pattern($pattern);
 

@@ -36,6 +36,8 @@ interface ParcelDeliveryContract
 
     public function originAddress($originAddress);
 
+    public function owner($owner);
+
     public function partOfOrder($partOfOrder);
 
     public function potentialAction($potentialAction);

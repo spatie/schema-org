@@ -102,6 +102,8 @@ interface RadioSeasonContract
 
     public function discussionUrl($discussionUrl);
 
+    public function displayLocation($displayLocation);
+
     public function editEIDR($editEIDR);
 
     public function editor($editor);
@@ -187,6 +189,8 @@ interface RadioSeasonContract
     public function numberOfEpisodes($numberOfEpisodes);
 
     public function offers($offers);
+
+    public function owner($owner);
 
     public function partOfSeries($partOfSeries);
 

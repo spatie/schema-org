@@ -20,6 +20,20 @@ use Spatie\SchemaOrg\Contracts\ThingContract;
 class MedicalCode extends BaseType implements MedicalCodeContract, CategoryCodeContract, DefinedTermContract, IntangibleContract, MedicalEntityContract, MedicalIntangibleContract, ThingContract
 {
     /**
+     * The subject matter of an object.
+     *
+     * @param \Spatie\SchemaOrg\Contracts\ThingContract|\Spatie\SchemaOrg\Contracts\ThingContract[] $about
+     *
+     * @return static
+     *
+     * @see https://schema.org/about
+     */
+    public function about($about)
+    {
+        return $this->setProperty('about', $about);
+    }
+
+    /**
      * An additional type for the item, typically used for adding more specific
      * types from external vocabularies in microdata syntax. This is a
      * relationship between something and a class that the thing is in.
@@ -291,6 +305,21 @@ class MedicalCode extends BaseType implements MedicalCodeContract, CategoryCodeC
     public function name($name)
     {
         return $this->setProperty('name', $name);
+    }
+
+    /**
+     * A person or organization who owns this Thing.
+     *
+     * @param \Spatie\SchemaOrg\Contracts\OrganizationContract|\Spatie\SchemaOrg\Contracts\OrganizationContract[]|\Spatie\SchemaOrg\Contracts\PersonContract|\Spatie\SchemaOrg\Contracts\PersonContract[] $owner
+     *
+     * @return static
+     *
+     * @see https://schema.org/owner
+     * @link https://github.com/schemaorg/schemaorg/issues/4603
+     */
+    public function owner($owner)
+    {
+        return $this->setProperty('owner', $owner);
     }
 
     /**

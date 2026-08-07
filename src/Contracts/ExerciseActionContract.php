@@ -58,6 +58,8 @@ interface ExerciseActionContract
 
     public function opponent($opponent);
 
+    public function owner($owner);
+
     public function participant($participant);
 
     public function potentialAction($potentialAction);

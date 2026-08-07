@@ -68,6 +68,8 @@ interface RadioBroadcastServiceContract
 
     public function offers($offers);
 
+    public function owner($owner);
+
     public function parentService($parentService);
 
     public function potentialAction($potentialAction);

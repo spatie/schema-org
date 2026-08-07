@@ -106,6 +106,8 @@ interface CourseContract
 
     public function discussionUrl($discussionUrl);
 
+    public function displayLocation($displayLocation);
+
     public function editEIDR($editEIDR);
 
     public function editor($editor);
@@ -193,6 +195,8 @@ interface CourseContract
     public function occupationalCredentialAwarded($occupationalCredentialAwarded);
 
     public function offers($offers);
+
+    public function owner($owner);
 
     public function pattern($pattern);
 

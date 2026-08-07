@@ -36,6 +36,8 @@ interface PreOrderActionContract
 
     public function object($object);
 
+    public function owner($owner);
+
     public function participant($participant);
 
     public function potentialAction($potentialAction);

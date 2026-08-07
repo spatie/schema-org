@@ -4,6 +4,7 @@ namespace Spatie\SchemaOrg;
 
 use Spatie\SchemaOrg\Contracts\IntangibleContract;
 use Spatie\SchemaOrg\Contracts\OrderItemContract;
+use Spatie\SchemaOrg\Contracts\StructuredValueContract;
 use Spatie\SchemaOrg\Contracts\ThingContract;
 
 /**
@@ -13,7 +14,7 @@ use Spatie\SchemaOrg\Contracts\ThingContract;
  * @see https://schema.org/OrderItem
  *
  */
-class OrderItem extends BaseType implements OrderItemContract, IntangibleContract, ThingContract
+class OrderItem extends BaseType implements OrderItemContract, IntangibleContract, StructuredValueContract, ThingContract
 {
     /**
      * An additional type for the item, typically used for adding more specific
@@ -215,6 +216,21 @@ class OrderItem extends BaseType implements OrderItemContract, IntangibleContrac
     public function orderedItem($orderedItem)
     {
         return $this->setProperty('orderedItem', $orderedItem);
+    }
+
+    /**
+     * A person or organization who owns this Thing.
+     *
+     * @param \Spatie\SchemaOrg\Contracts\OrganizationContract|\Spatie\SchemaOrg\Contracts\OrganizationContract[]|\Spatie\SchemaOrg\Contracts\PersonContract|\Spatie\SchemaOrg\Contracts\PersonContract[] $owner
+     *
+     * @return static
+     *
+     * @see https://schema.org/owner
+     * @link https://github.com/schemaorg/schemaorg/issues/4603
+     */
+    public function owner($owner)
+    {
+        return $this->setProperty('owner', $owner);
     }
 
     /**

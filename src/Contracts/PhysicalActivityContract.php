@@ -36,6 +36,8 @@ interface PhysicalActivityContract
 
     public function name($name);
 
+    public function owner($owner);
+
     public function pathophysiology($pathophysiology);
 
     public function potentialAction($potentialAction);

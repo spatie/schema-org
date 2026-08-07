@@ -50,6 +50,8 @@ interface GuideContract
 
     public function awards($awards);
 
+    public function category($category);
+
     public function character($character);
 
     public function citation($citation);
@@ -97,6 +99,8 @@ interface GuideContract
     public function disambiguatingDescription($disambiguatingDescription);
 
     public function discussionUrl($discussionUrl);
+
+    public function displayLocation($displayLocation);
 
     public function editEIDR($editEIDR);
 
@@ -175,6 +179,8 @@ interface GuideContract
     public function name($name);
 
     public function offers($offers);
+
+    public function owner($owner);
 
     public function pattern($pattern);
 

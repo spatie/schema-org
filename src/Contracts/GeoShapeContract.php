@@ -32,6 +32,8 @@ interface GeoShapeContract
 
     public function name($name);
 
+    public function owner($owner);
+
     public function polygon($polygon);
 
     public function postalCode($postalCode);

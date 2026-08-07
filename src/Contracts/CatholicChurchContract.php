@@ -96,6 +96,8 @@ interface CatholicChurchContract
 
     public function openingHoursSpecification($openingHoursSpecification);
 
+    public function owner($owner);
+
     public function photo($photo);
 
     public function photos($photos);

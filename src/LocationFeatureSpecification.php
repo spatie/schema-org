@@ -208,7 +208,7 @@ class LocationFeatureSpecification extends BaseType implements LocationFeatureSp
      * If there are several [[variableMeasured]] properties recorded for some
      * given data object, use a [[PropertyValue]] for each [[variableMeasured]]
      * and attach the corresponding [[measurementTechnique]]. The value can also
-     * be from an enumeration, organized as a [[MeasurementMetholdEnumeration]].
+     * be from an enumeration, organized as a [[MeasurementMethodEnum]].
      *
      * @param \Spatie\SchemaOrg\Contracts\DefinedTermContract|\Spatie\SchemaOrg\Contracts\DefinedTermContract[]|\Spatie\SchemaOrg\Contracts\MeasurementMethodEnumContract|\Spatie\SchemaOrg\Contracts\MeasurementMethodEnumContract[]|string|string[] $measurementTechnique
      *
@@ -249,6 +249,21 @@ class LocationFeatureSpecification extends BaseType implements LocationFeatureSp
     public function name($name)
     {
         return $this->setProperty('name', $name);
+    }
+
+    /**
+     * A person or organization who owns this Thing.
+     *
+     * @param \Spatie\SchemaOrg\Contracts\OrganizationContract|\Spatie\SchemaOrg\Contracts\OrganizationContract[]|\Spatie\SchemaOrg\Contracts\PersonContract|\Spatie\SchemaOrg\Contracts\PersonContract[] $owner
+     *
+     * @return static
+     *
+     * @see https://schema.org/owner
+     * @link https://github.com/schemaorg/schemaorg/issues/4603
+     */
+    public function owner($owner)
+    {
+        return $this->setProperty('owner', $owner);
     }
 
     /**
