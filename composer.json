@@ -22,7 +22,7 @@
     ],
     "homepage": "https://github.com/spatie/schema-org",
     "require": {
-        "php": "^8.2",
+        "php": "^8.4",
         "ext-json": "*"
     },
     "require-dev": {
