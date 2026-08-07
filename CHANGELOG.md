@@ -2,6 +2,32 @@
 
 All Notable changes to `schema-org` will be documented in this file.
 
+## 5.0.0 - 2026-08-07
+
+### Breaking changes
+
+**Requires PHP 8.4.** Support for PHP 8.2 and 8.3 has been dropped.
+
+**`Quantity` is gone.** schema.org v30.0 reclassified `Quantity` as a DataType (like `Text` and `Number`), so it is no longer generated as a class. `Spatie\SchemaOrg\Quantity`, `Contracts\QuantityContract` and `Schema::quantity()` have been removed.
+
+**`Distance`, `Duration`, `Energy` and `Mass` lost their inherited properties.** Because their only parent was `Quantity`, they no longer declare the twelve `Thing` properties (`name`, `description`, `url`, `identifier`, …) and no longer implement `ThingContract`, `IntangibleContract` or `QuantityContract`. Calls like `Schema::distance()->name('…')` still work at runtime through `BaseType::__call`, but static analysis, IDE completion and `instanceof` checks against those contracts will not.
+
+### Other changes
+
+Thirteen new types: `AuthenticateAction`, `ConferenceEvent`, `Credential`, `DENonprofitType`, `Error`, `ITNonprofitType`, `InstantaneousEvent`, `LoginAction`, `OperatingSystem`, `PerformingArtsEvent`, `ResetPasswordAction`, `RuntimePlatform`, `SequentialArt`.
+
+### What's Changed
+
+* Upgrade schema.org definitions to v30.0 by @endelwar in https://github.com/spatie/schema-org/pull/244
+* Keep the ReferencedType generator template in sync with src by @freekmurze in https://github.com/spatie/schema-org/pull/246
+* Upgrade test suite to Pest 5 by @freekmurze in https://github.com/spatie/schema-org/pull/245
+
+### New Contributors
+
+* @endelwar made their first contribution in https://github.com/spatie/schema-org/pull/244
+
+**Full Changelog**: https://github.com/spatie/schema-org/compare/4.0.2...5.0.0
+
 ## 3.23.2 - 2026-05-29
 
 ### What's Changed
