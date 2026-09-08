@@ -44,6 +44,17 @@ class MedicalImagingTechnique extends BaseType implements MedicalImagingTechniqu
     public const PET = 'https://schema.org/PET';
 
     /**
+     * Radiography is an imaging technique that uses electromagnetic radiation
+     * other than visible light, especially X-rays, to view the internal
+     * structure of a non-uniformly composed and opaque object such as the human
+     * body.
+     *
+     * @see https://schema.org/Radiography
+     * @see https://health-lifesci.schema.org
+     */
+    public const Radiography = 'https://schema.org/Radiography';
+
+    /**
      * Ultrasound imaging.
      *
      * @see https://schema.org/Ultrasound

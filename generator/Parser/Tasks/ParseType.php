@@ -20,6 +20,10 @@ class ParseType extends Task
             return null;
         }
 
+        if ($this->isDataType()) {
+            return null;
+        }
+
         $subClassOf = $this->getWrappedDefinitionProperty('rdfs:subClassOf');
 
         if ($subClassOf->count() > 0) {
@@ -44,5 +48,10 @@ class ParseType extends Task
         $type->source = $this->definition['schema:source']['@id'] ?? null;
 
         return $type;
+    }
+
+    protected function isDataType(): bool
+    {
+        return in_array('schema:DataType', (array) ($this->definition['@type'] ?? []), true);
     }
 }
