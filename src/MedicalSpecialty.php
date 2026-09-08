@@ -341,6 +341,17 @@ class MedicalSpecialty extends BaseType implements MedicalSpecialtyContract, Enu
     public const Pulmonary = 'https://schema.org/Pulmonary';
 
     /**
+     * Radiography is an imaging technique that uses electromagnetic radiation
+     * other than visible light, especially X-rays, to view the internal
+     * structure of a non-uniformly composed and opaque object such as the human
+     * body.
+     *
+     * @see https://schema.org/Radiography
+     * @see https://health-lifesci.schema.org
+     */
+    public const Radiography = 'https://schema.org/Radiography';
+
+    /**
      * A specific branch of medical science that pertains to the study of the
      * kidneys and its respective disease states.
      *

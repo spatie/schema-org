@@ -17,7 +17,11 @@ class JsonLdParser
     public function filter(string $selector): Collection
     {
         return $this->jsonLdGraph->filter(static function ($schema) use ($selector): bool {
-            return array_key_exists('@type', $schema) && $schema['@type'] === $selector;
+            if (! array_key_exists('@type', $schema)) {
+                return false;
+            }
+
+            return in_array($selector, (array) $schema['@type'], true);
         });
     }
 }
