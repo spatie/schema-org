@@ -2,6 +2,12 @@
 
 All Notable changes to `schema-org` will be documented in this file.
 
+## 5.0.1 - 2026-09-08
+
+- Add the missing `Radiography` constant to `MedicalImagingTechnique` and `MedicalSpecialty` (#248)
+
+The generator dropped every schema.org definition that declares more than one `@type`, which is why `schema:Radiography` never made it into the package.
+
 ## 5.0.0 - 2026-08-07
 
 ### Breaking changes
