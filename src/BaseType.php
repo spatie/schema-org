@@ -7,15 +7,15 @@ use DateTime;
 use DateTimeInterface;
 use JsonSerializable;
 use ReflectionClass;
+use Spatie\SchemaOrg\Concerns\RendersScript;
 use Spatie\SchemaOrg\Exceptions\InvalidProperty;
 
 abstract class BaseType implements Type, ArrayAccess, JsonSerializable
 {
+    use RendersScript;
+
     /** @var array */
     protected $properties = [];
-
-    /** @var string */
-    protected $nonce = '';
 
     public function getContext(): string
     {
@@ -50,13 +50,6 @@ abstract class BaseType implements Type, ArrayAccess, JsonSerializable
         if ($condition) {
             $callback($this);
         }
-
-        return $this;
-    }
-
-    public function setNonce(string $nonce)
-    {
-        $this->nonce = $nonce;
 
         return $this;
     }
@@ -147,22 +140,6 @@ abstract class BaseType implements Type, ArrayAccess, JsonSerializable
         }
     }
 
-    public function nonceAttr(): string
-    {
-        if ($this->nonce) {
-            $attr = ' nonce="'.$this->nonce.'"';
-        } else {
-            $attr = '';
-        }
-
-        return $attr;
-    }
-
-    public function toScript(): string
-    {
-        return '<script type="application/ld+json"'.$this->nonceAttr().'>'.json_encode($this->toArray(), JSON_UNESCAPED_UNICODE | JSON_UNESCAPED_SLASHES | JSON_HEX_TAG).'</script>';
-    }
-
     public function jsonSerialize(): mixed
     {
         return $this->toArray();
@@ -171,10 +148,5 @@ abstract class BaseType implements Type, ArrayAccess, JsonSerializable
     public function __call(string $method, array $arguments)
     {
         return $this->setProperty($method, $arguments[0] ?? '');
-    }
-
-    public function __toString(): string
-    {
-        return $this->toScript();
     }
 }
