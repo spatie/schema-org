@@ -7,6 +7,7 @@ use Closure;
 use JsonSerializable;
 use ReflectionClass;
 use ReflectionNamedType;
+use Spatie\SchemaOrg\Concerns\RendersScript;
 use Spatie\SchemaOrg\Exceptions\InvalidType;
 use Spatie\SchemaOrg\Exceptions\TypeAlreadyInMultiTypedEntity;
 use Spatie\SchemaOrg\Exceptions\TypeNotInMultiTypedEntity;
@@ -940,11 +941,10 @@ use Spatie\SchemaOrg\Exceptions\TypeNotInMultiTypedEntity;
  */
 class MultiTypedEntity implements Type, JsonSerializable
 {
+    use RendersScript;
+
     /** @var Type[] */
     protected $nodes = [];
-
-    /** @var string */
-    protected $nonce = '';
 
     /**
      * This overloads all \Spatie\SchemaOrg\Schema construction methods.
@@ -1019,13 +1019,6 @@ class MultiTypedEntity implements Type, JsonSerializable
         return $this;
     }
 
-    public function setNonce(string $nonce)
-    {
-        $this->nonce = $nonce;
-
-        return $this;
-    }
-
     public function get(string $type): Type
     {
         if (! $this->has($type)) {
@@ -1094,29 +1087,8 @@ class MultiTypedEntity implements Type, JsonSerializable
         return 'https://schema.org';
     }
 
-    public function nonceAttr(): string
-    {
-        if ($this->nonce) {
-            $attr = ' nonce="'.$this->nonce.'"';
-        } else {
-            $attr = '';
-        }
-
-        return $attr;
-    }
-
-    public function toScript(): string
-    {
-        return '<script type="application/ld+json"'.$this->nonceAttr().'>'.json_encode($this, JSON_UNESCAPED_UNICODE | JSON_UNESCAPED_SLASHES | JSON_HEX_TAG).'</script>';
-    }
-
     public function jsonSerialize(): mixed
     {
         return $this->toArray();
-    }
-
-    public function __toString(): string
-    {
-        return $this->toScript();
     }
 }

@@ -44,3 +44,21 @@ it('can render multiple items', function () {
         '<script type="application/ld+json">{"@context":"https://schema.org","@type":["HotelRoom","Product"],"name":"The Presidential Suite","offers":{"@type":"Offer","name":"One Night","price":100000,"priceCurrency":"USD"},"aggregateRating":{"@type":"AggregateRating","bestRating":5,"worstRating":4}}</script>'
     );
 });
+
+it('can render a nonce attribute', function () {
+    $mte = new MultiTypedEntity();
+    $mte->setNonce('r4nd0m+N0nce/Value==');
+
+    expect($mte->toScript())->toBe(
+        '<script type="application/ld+json" nonce="r4nd0m+N0nce/Value==">{"@context":"https://schema.org","@type":[]}</script>'
+    );
+});
+
+it('escapes quotes and html tags in the nonce attribute', function () {
+    $mte = new MultiTypedEntity();
+    $mte->setNonce('"></script><script>alert(1)</script>');
+
+    expect($mte->toScript())->toBe(
+        '<script type="application/ld+json" nonce="&quot;&gt;&lt;/script&gt;&lt;script&gt;alert(1)&lt;/script&gt;">{"@context":"https://schema.org","@type":[]}</script>'
+    );
+});

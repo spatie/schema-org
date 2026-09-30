@@ -8,6 +8,7 @@ use Closure;
 use JsonSerializable;
 use ReflectionClass;
 use ReflectionNamedType;
+use Spatie\SchemaOrg\Concerns\RendersScript;
 use Spatie\SchemaOrg\Exceptions\InvalidType;
 use Spatie\SchemaOrg\Exceptions\TypeAlreadyInGraph;
 use Spatie\SchemaOrg\Exceptions\TypeNotInGraph;
@@ -19,6 +20,8 @@ use Spatie\SchemaOrg\Exceptions\TypeNotInGraph;
  */
 class Graph implements Type, ArrayAccess, JsonSerializable
 {
+    use RendersScript;
+
     public const IDENTIFIER_DEFAULT = 'default';
 
     /** @var Type[] */
@@ -29,9 +32,6 @@ class Graph implements Type, ArrayAccess, JsonSerializable
 
     /** @var string|null */
     protected $context;
-
-    /** @var string */
-    protected $nonce = '';
 
     public function __construct(string|array|null $context = null)
     {
@@ -224,13 +224,6 @@ class Graph implements Type, ArrayAccess, JsonSerializable
         return $this;
     }
 
-    public function setNonce(string $nonce)
-    {
-        $this->nonce = $nonce;
-
-        return $this;
-    }
-
     public function toArray(): array
     {
         $nodes = $this->getNodes();
@@ -285,30 +278,9 @@ class Graph implements Type, ArrayAccess, JsonSerializable
         return $this->context ?? 'https://schema.org';
     }
 
-    public function nonceAttr(): string
-    {
-        if ($this->nonce) {
-            $attr = ' nonce="'.$this->nonce.'"';
-        } else {
-            $attr = '';
-        }
-
-        return $attr;
-    }
-
-    public function toScript(): string
-    {
-        return '<script type="application/ld+json"'.$this->nonceAttr().'>'.json_encode($this, JSON_UNESCAPED_UNICODE | JSON_UNESCAPED_SLASHES | JSON_HEX_TAG).'</script>';
-    }
-
     public function jsonSerialize(): mixed
     {
         return $this->toArray();
-    }
-
-    public function __toString(): string
-    {
-        return $this->toScript();
     }
 
     protected function getTypeAndIdentifier(string $key): array

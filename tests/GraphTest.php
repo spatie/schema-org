@@ -246,3 +246,21 @@ it('can be initialized with complex context', function () {
         '<script type="application/ld+json">{"@context":{"@vocab":"https://schema.org/","@base":"https://domain.com/"},"@graph":[]}</script>'
     );
 });
+
+it('can render a nonce attribute', function () {
+    $graph = new Graph();
+    $graph->setNonce('r4nd0m+N0nce/Value==');
+
+    expect($graph->toScript())->toBe(
+        '<script type="application/ld+json" nonce="r4nd0m+N0nce/Value==">{"@context":"https://schema.org","@graph":[]}</script>'
+    );
+});
+
+it('escapes quotes and html tags in the nonce attribute', function () {
+    $graph = new Graph();
+    $graph->setNonce('"></script><script>alert(1)</script>');
+
+    expect($graph->toScript())->toBe(
+        '<script type="application/ld+json" nonce="&quot;&gt;&lt;/script&gt;&lt;script&gt;alert(1)&lt;/script&gt;">{"@context":"https://schema.org","@graph":[]}</script>'
+    );
+});

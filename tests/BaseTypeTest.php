@@ -188,6 +188,28 @@ it('can create an ld json script tag with nonce attribute', function () {
     expect($type->toScript())->toBe($expected);
 });
 
+it('keeps an ordinary base64 nonce unchanged', function () {
+    $type = new DummyType();
+
+    $type->setNonce('r4nd0m+N0nce/Value==');
+
+    expect($type->nonceAttr())->toBe(' nonce="r4nd0m+N0nce/Value=="');
+});
+
+it('escapes quotes and html tags in the nonce attribute', function () {
+    $type = new DummyType();
+
+    $type->setProperty('foo', 'bar');
+
+    $type->setNonce('"></script><img src=x onerror=\'alert(1)\'>');
+
+    $expected = '<script type="application/ld+json" nonce="&quot;&gt;&lt;/script&gt;&lt;img src=x onerror=&#039;alert(1)&#039;&gt;">'.
+        '{"@context":"https://schema.org","@type":"DummyType","foo":"bar"}'.
+        '</script>';
+
+    expect($type->toScript())->toBe($expected);
+});
+
 it('can set a property via a magic call method', function () {
     $type = new DummyType();
 
